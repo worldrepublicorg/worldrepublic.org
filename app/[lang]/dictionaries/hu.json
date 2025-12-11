@@ -191,7 +191,7 @@
         "description": "3-30 karakter, alfanumerikus, aláhúzás és kötőjelek"
       },
       "history": {
-        "title": "Előzmények"
+        "title": "ELŐZMÉNYEK"
       },
       "transactions": {
         "failed_to_load": "Betöltés sikertelen",

@@ -191,7 +191,7 @@
         "description": "3-30 karakter, alfanumerik, garis bawah dan tanda hubung"
       },
       "history": {
-        "title": "Riwayat"
+        "title": "RIWAYAT"
       },
       "transactions": {
         "failed_to_load": "Gagal memuat",

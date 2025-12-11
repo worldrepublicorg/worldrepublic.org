@@ -191,7 +191,7 @@
         "description": "3-30 Zeichen, alphanumerisch, Unterstriche und Bindestriche"
       },
       "history": {
-        "title": "Verlauf"
+        "title": "VERLAUF"
       },
       "transactions": {
         "failed_to_load": "Laden fehlgeschlagen",

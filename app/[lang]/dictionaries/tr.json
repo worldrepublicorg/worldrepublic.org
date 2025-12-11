@@ -191,7 +191,7 @@
         "description": "3-30 karakter, alfanumerik, alt çizgi ve tire"
       },
       "history": {
-        "title": "Geçmiş"
+        "title": "GEÇMİŞ"
       },
       "transactions": {
         "failed_to_load": "Yüklenemedi",

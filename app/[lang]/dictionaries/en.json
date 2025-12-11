@@ -191,7 +191,7 @@
         "description": "3-30 characters, alphanumeric, underscores, and hyphens"
       },
       "history": {
-        "title": "History"
+        "title": "HISTORY"
       },
       "transactions": {
         "failed_to_load": "Failed to load",

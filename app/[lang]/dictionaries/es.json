@@ -191,7 +191,7 @@
         "description": "3-30 caracteres, alfanuméricos, guiones bajos y guiones"
       },
       "history": {
-        "title": "Historial"
+        "title": "HISTORIAL"
       },
       "transactions": {
         "failed_to_load": "Error al cargar",

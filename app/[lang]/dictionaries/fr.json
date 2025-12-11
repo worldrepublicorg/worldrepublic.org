@@ -191,7 +191,7 @@
         "description": "3-30 caractères, alphanumériques, tirets bas et tirets"
       },
       "history": {
-        "title": "Historique"
+        "title": "HISTORIQUE"
       },
       "transactions": {
         "failed_to_load": "Échec du chargement",

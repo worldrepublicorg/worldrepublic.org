@@ -191,7 +191,7 @@
         "description": "3-30 znaków, alfanumeryczne, podkreślenia i myślniki"
       },
       "history": {
-        "title": "Historia"
+        "title": "HISTORIA"
       },
       "transactions": {
         "failed_to_load": "Nie udało się załadować",

@@ -62,7 +62,7 @@ export function useSelfVerification(
         return;
       }
       const callback = resolveCallbackUrl(lang);
-      const nextTarget = `/${lang || "en"}/wallet`;
+      const nextTarget = `/${lang || "en"}/`;
 
       if (!callback) {
         setCallbackReachable(false);

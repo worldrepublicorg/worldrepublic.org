@@ -191,7 +191,7 @@
         "description": "3-30 znaků, alfanumerické, podtržítka a pomlčky"
       },
       "history": {
-        "title": "Historie"
+        "title": "HISTORIE"
       },
       "transactions": {
         "failed_to_load": "Nepodařilo se načíst",

@@ -191,7 +191,7 @@
         "description": "3-30 caracteres, alfanuméricos, sublinhados e hífens"
       },
       "history": {
-        "title": "Histórico"
+        "title": "HISTÓRICO"
       },
       "transactions": {
         "failed_to_load": "Falha ao carregar",
