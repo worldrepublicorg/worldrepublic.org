@@ -284,7 +284,7 @@ export default function WalletPageClient({
             {displayBalance} WDD
           </Typography>
 
-          <div className="flex flex-row w-full justify-around mt-6 px-6">
+          <div className="flex flex-row w-full justify-around mt-6 px-4">
             {/* Send */}
             <AlertDialog
               open={isSendChoiceDialogOpen}
