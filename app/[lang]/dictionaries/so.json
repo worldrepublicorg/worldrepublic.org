@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "AASAS",
         "account": "AKOONKA",
         "danger_zone": "GOOBTA KHATARADA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Sawir QR-kan si aad isaga xaqiijiso adigoo adeegsanaya Self.",
-        "status_completed": "La xaqiijiyay",
-        "status_not_completed": "Lama xaqiijin",
         "mobile_dialog_description": "Waxaa lagu geyn doonaa app-ka Self si aad u dhammaystirto xaqiijinta.",
         "supported_countries": "Dalalka la taageeray",
         "support_telegram": "Taageerada Self"
       },
       "verification_warning": {
         "title": "Heli xaqiijinta"
-      },
-      "verification_explainer": {
-        "title": "Xaqiijinta ayaa loo baahan yahay",
-        "description": "Fadlan dhameeyso xaqiijinta si aad u soo saarto tokens."
-      },
-      "re_verification_explainer": {
-        "title": "Xaqiijinta dib ayaa loo baahan yahay",
-        "description": "Si aad u ilaaliso ammaankaaga, waxaan u baahanahay xaqiijin cusub ka hor hawlaha khatarta ah sida soo saarista. Tani waxay kaaga caawinaysaa inaad ilaaliso akoonkaaga ka dib gelitaanka aan loo ogolayn."
       }
     },
     "wdd_import_info": {

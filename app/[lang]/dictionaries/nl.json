@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICATIE",
         "account": "ACCOUNT",
         "danger_zone": "GEVAARZONE",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scan deze QR-code om je te verifiëren met Self.",
-        "status_completed": "Geverifieerd",
-        "status_not_completed": "Niet geverifieerd",
         "mobile_dialog_description": "Je wordt doorgestuurd naar de Self-app om de verificatie te voltooien.",
         "supported_countries": "Ondersteunde landen",
         "support_telegram": "Self-support"
       },
       "verification_warning": {
         "title": "Verificatie krijgen"
-      },
-      "verification_explainer": {
-        "title": "Verificatie vereist",
-        "description": "Voltooi de verificatie om tokens op te nemen."
-      },
-      "re_verification_explainer": {
-        "title": "Herverificatie vereist",
-        "description": "Voor uw veiligheid vereisen we een recente verificatie vóór gevoelige acties zoals opnames. Dit helpt uw account te beschermen tegen ongeautoriseerde toegang."
       }
     },
     "wdd_import_info": {

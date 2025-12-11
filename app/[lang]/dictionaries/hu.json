@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "AZONOSÍTÁS",
         "account": "FIÓK",
         "danger_zone": "VESZÉLYES ZÓNA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Olvasd be ezt a QR‑kódot a Selfes ellenőrzéshez.",
-        "status_completed": "Ellenőrizve",
-        "status_not_completed": "Nincs ellenőrizve",
         "mobile_dialog_description": "Átirányítunk a Self appba a hitelesítés befejezéséhez.",
         "supported_countries": "Támogatott országok",
         "support_telegram": "Self ügyfélszolgálat"
       },
       "verification_warning": {
         "title": "Igazolás kérése"
-      },
-      "verification_explainer": {
-        "title": "Igazolás szükséges",
-        "description": "Kérjük, fejezze be az igazolást a tokenek kivonásához."
-      },
-      "re_verification_explainer": {
-        "title": "Újraigazolás szükséges",
-        "description": "Biztonsága érdekében friss igazolást igényelünk érzékeny műveletek, például kivonások előtt. Ez segít megvédeni fiókját a jogosulatlan hozzáféréstől."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTYFIKACJA",
         "account": "KONTO",
         "danger_zone": "STREFA NIEBEZPIECZEŃSTWA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Zeskanuj ten kod QR, aby zweryfikować się w Self.",
-        "status_completed": "Zweryfikowano",
-        "status_not_completed": "Nie zweryfikowano",
         "mobile_dialog_description": "Zostaniesz przekierowany do aplikacji Self, aby dokończyć weryfikację.",
         "supported_countries": "Obsługiwane kraje",
         "support_telegram": "Wsparcie Self"
       },
       "verification_warning": {
         "title": "Uzyskaj weryfikację"
-      },
-      "verification_explainer": {
-        "title": "Wymagana weryfikacja",
-        "description": "Proszę ukończyć weryfikację, aby wypłacić tokeny."
-      },
-      "re_verification_explainer": {
-        "title": "Wymagana ponowna weryfikacja",
-        "description": "Dla Twojego bezpieczeństwa wymagamy świeżej weryfikacji przed wrażliwymi działaniami, takimi jak wypłaty. Pomaga to chronić Twoje konto przed nieautoryzowanym dostępem."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKÁCIA",
         "account": "ÚČET",
         "danger_zone": "NEBEZPEČNÁ ZÓNA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
-        "status_completed": "Overené",
-        "status_not_completed": "Neoverené",
         "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na dokončenie overenia.",
         "supported_countries": "Podporované krajiny",
         "support_telegram": "Podpora Self"
       },
       "verification_warning": {
         "title": "Získajte overenie"
-      },
-      "verification_explainer": {
-        "title": "Overenie sa vyžaduje",
-        "description": "Prosím dokončite overenie na výber tokenov."
-      },
-      "re_verification_explainer": {
-        "title": "Opätovné overenie sa vyžaduje",
-        "description": "Pre vašu bezpečnosť vyžadujeme aktuálne overenie pred citlivými akciami, ako sú výbery. To pomáha chrániť váš účet pred neoprávneným prístupom."
       }
     },
     "wdd_import_info": {

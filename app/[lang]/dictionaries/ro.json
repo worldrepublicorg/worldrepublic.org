@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICARE",
         "account": "CONT",
         "danger_zone": "ZONĂ DE PERICOL",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
-        "status_completed": "Verificat",
-        "status_not_completed": "Neverificat",
         "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a finaliza verificarea.",
         "supported_countries": "Țări acceptate",
         "support_telegram": "Suport Self"
       },
       "verification_warning": {
         "title": "Obțineți verificarea"
-      },
-      "verification_explainer": {
-        "title": "Verificare necesară",
-        "description": "Vă rugăm să finalizați verificarea pentru a retrage token-uri."
-      },
-      "re_verification_explainer": {
-        "title": "Re-verificare necesară",
-        "description": "Pentru securitatea dvs., solicităm o verificare recentă înainte de acțiuni sensibile precum retragerile. Acest lucru ajută la protejarea contului dvs. împotriva accesului neautorizat."
       }
     },
     "wdd_import_info": {

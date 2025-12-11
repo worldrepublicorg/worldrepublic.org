@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "အထောက်အထား",
         "account": "အကောင့်",
         "danger_zone": "အန္တရာယ်ဇုံ",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self ဖြင့် အတည်ပြုရန် ဤ QR ကုဒ်ကို စကင်န်လုပ်ပါ။",
-        "status_completed": "အတည်ပြုပြီး",
-        "status_not_completed": "အတည်မပြုရသေး",
         "mobile_dialog_description": "အတည်ပြုမှုကို ပြီးစီးရန် Self အက်ပ်သို့ လွှဲပြောင်းပေးပါမည်။",
         "supported_countries": "ပံ့ပိုးထားသည့်နိုင်ငံများ",
         "support_telegram": "Self ပံ့ပိုးမှု"
       },
       "verification_warning": {
         "title": "အတည်ပြုချက်ရယူပါ"
-      },
-      "verification_explainer": {
-        "title": "အတည်ပြုချက် လိုအပ်သည်",
-        "description": "ကျေးဇူးပြု၍ token များ ထုတ်ယူရန် အတည်ပြုချက်ကို ပြီးမြောက်စေပါ။"
-      },
-      "re_verification_explainer": {
-        "title": "ပြန်လည် အတည်ပြုချက် လိုအပ်သည်",
-        "description": "သင့်လုံခြုံရေးအတွက်၊ ထုတ်ယူမှုကဲ့သို့သော ထိခိုက်လွယ်သော လုပ်ဆောင်ချက်များမတိုင်မီ လတ်တလော အတည်ပြုချက် လိုအပ်ပါသည်။ ၎င်းသည် သင့်အကောင့်ကို ခွင့်ပြုချက်မရှိသော ဝင်ရောက်မှုမှ ကာကွယ်ရန် အကူအညီပေးသည်။"
       }
     },
     "wdd_import_info": {

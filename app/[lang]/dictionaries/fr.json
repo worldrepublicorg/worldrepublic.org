@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICATION",
         "account": "COMPTE",
         "danger_zone": "ZONE DE DANGER",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scannez ce QR code pour vérifier avec Self.",
-        "status_completed": "Vérifié",
-        "status_not_completed": "Non vérifié",
-        "mobile_dialog_description": "Vous serez redirigé vers l’app Self pour terminer la vérification.",
+        "mobile_dialog_description": "Vous serez redirigé vers l'app Self pour terminer la vérification.",
         "supported_countries": "Pays pris en charge",
         "support_telegram": "Support Self"
       },
       "verification_warning": {
         "title": "Se faire vérifier"
-      },
-      "verification_explainer": {
-        "title": "Vérification requise",
-        "description": "Veuillez compléter la vérification pour retirer des jetons."
-      },
-      "re_verification_explainer": {
-        "title": "Re-vérification requise",
-        "description": "Pour votre sécurité, nous exigeons une vérification récente avant les actions sensibles comme les retraits. Cela aide à protéger votre compte contre les accès non autorisés."
       }
     },
     "wdd_import_info": {

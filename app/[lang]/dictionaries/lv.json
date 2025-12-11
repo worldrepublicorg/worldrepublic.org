@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKĀCIJA",
         "account": "KONTS",
         "danger_zone": "BĪSTAMĀ ZONA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Skenējiet šo QR kodu, lai verificētos ar Self.",
-        "status_completed": "Pārbaudīts",
-        "status_not_completed": "Nav pārbaudīts",
         "mobile_dialog_description": "Jūs tiksiet novirzīts uz Self lietotni, lai pabeigtu verifikāciju.",
         "supported_countries": "Atbalstītās valstis",
         "support_telegram": "Self atbalsts"
       },
       "verification_warning": {
         "title": "Iegūstiet apstiprinājumu"
-      },
-      "verification_explainer": {
-        "title": "Nepieciešama pārbaude",
-        "description": "Lūdzu, pabeidziet pārbaudi, lai izņemtu tokenus."
-      },
-      "re_verification_explainer": {
-        "title": "Nepieciešama atkārtota pārbaude",
-        "description": "Jūsu drošībai mums nepieciešama svaiga pārbaude pirms jutīgām darbībām, piemēram, izņemšanām. Tas palīdz aizsargāt jūsu kontu no neautorizētas piekļuves."
       }
     },
     "wdd_import_info": {

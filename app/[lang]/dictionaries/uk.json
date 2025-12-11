@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ІДЕНТИФІКАЦІЯ",
         "account": "ОБЛІКОВИЙ ЗАПИС",
         "danger_zone": "НЕБЕЗПЕЧНА ЗОНА",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Скануйте цей QR‑код, щоб пройти верифікацію через Self.",
-        "status_completed": "Підтверджено",
-        "status_not_completed": "Не підтверджено",
         "mobile_dialog_description": "Вас буде перенаправлено до застосунку Self, щоб завершити верифікацію.",
         "supported_countries": "Підтримувані країни",
         "support_telegram": "Підтримка Self"
       },
       "verification_warning": {
         "title": "Отримайте верифікацію"
-      },
-      "verification_explainer": {
-        "title": "Потрібна верифікація",
-        "description": "Будь ласка, завершіть верифікацію, щоб вивести токени."
-      },
-      "re_verification_explainer": {
-        "title": "Потрібна повторна верифікація",
-        "description": "Для вашої безпеки ми вимагаємо свіжу верифікацію перед чутливими діями, такими як виведення коштів. Це допомагає захистити ваш обліковий запис від несанкціонованого доступу."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ΤΑΥΤΟΠΟΙΗΣΗ",
         "account": "ΛΟΓΑΡΙΑΣΜΟΣ",
         "danger_zone": "ΖΩΝΗ ΚΙΝΔΥΝΟΥ",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Σαρώστε αυτό το QR για να επαληθευτείτε με το Self.",
-        "status_completed": "Επαληθευμένο",
-        "status_not_completed": "Δεν επαληθεύτηκε",
         "mobile_dialog_description": "Θα μεταφερθείτε στην εφαρμογή Self για να ολοκληρώσετε την επαλήθευση.",
         "supported_countries": "Υποστηριζόμενες χώρες",
         "support_telegram": "Υποστήριξη Self"
       },
       "verification_warning": {
         "title": "Λάβετε επιβεβαίωση"
-      },
-      "verification_explainer": {
-        "title": "Απαιτείται επαλήθευση",
-        "description": "Παρακαλώ ολοκληρώστε την επαλήθευση για να κάνετε ανάληψη token."
-      },
-      "re_verification_explainer": {
-        "title": "Απαιτείται επανεπαλήθευση",
-        "description": "Για την ασφάλειά σας, απαιτούμε πρόσφατη επαλήθευση πριν από ευαίσθητες ενέργειες όπως οι αναλήψεις. Αυτό βοηθά να προστατεύεται ο λογαριασμός σας από μη εξουσιοδοτημένη πρόσβαση."
       }
     },
     "wdd_import_info": {

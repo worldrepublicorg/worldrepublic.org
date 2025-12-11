@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKATSIYA",
         "account": "HISOB",
         "danger_zone": "XAVF HUDUDI",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self bilan tasdiqlash uchun ushbu QR kodni skaner qiling.",
-        "status_completed": "Tasdiqlangan",
-        "status_not_completed": "Tasdiqlanmagan",
         "mobile_dialog_description": "Tasdiqlashni yakunlash uchun Self ilovasiga yo‘naltirilasiz.",
         "supported_countries": "Qo‘llab-quvvatlanadigan mamlakatlar",
         "support_telegram": "Self yordami"
       },
       "verification_warning": {
         "title": "Tasdiqlash"
-      },
-      "verification_explainer": {
-        "title": "Tasdiqlash talab qilinadi",
-        "description": "Tokenlarni yechib olish uchun iltimos tasdiqlashni yakunlang."
-      },
-      "re_verification_explainer": {
-        "title": "Qayta tasdiqlash talab qilinadi",
-        "description": "Xavfsizligingiz uchun, yechib olish kabi sezgir harakatlardan oldin yangi tasdiqlash talab qilamiz. Bu sizning hisobingizni ruxsatsiz kirishdan himoya qilishga yordam beradi."
       }
     },
     "wdd_import_info": {

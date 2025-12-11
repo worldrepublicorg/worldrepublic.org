@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "PENGENALAN",
         "account": "AKAUN",
         "danger_zone": "ZON BERBAHAYA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Imbas kod QR ini untuk mengesahkan dengan Self.",
-        "status_completed": "Disahkan",
-        "status_not_completed": "Belum disahkan",
         "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melengkapkan pengesahan.",
         "supported_countries": "Negara yang disokong",
         "support_telegram": "Sokongan Self"
       },
       "verification_warning": {
         "title": "Dapatkan pengesahan"
-      },
-      "verification_explainer": {
-        "title": "Pengesahan diperlukan",
-        "description": "Sila lengkapkan pengesahan untuk mengeluarkan token."
-      },
-      "re_verification_explainer": {
-        "title": "Pengesahan semula diperlukan",
-        "description": "Untuk keselamatan anda, kami memerlukan pengesahan terkini sebelum tindakan sensitif seperti pengeluaran. Ini membantu melindungi akaun anda daripada akses tanpa kebenaran."
       }
     },
     "wdd_import_info": {

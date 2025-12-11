@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ИДЕНТИФИКАЦИЯ",
         "account": "АККАУНТ",
         "danger_zone": "ОПАСНАЯ ЗОНА",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Отсканируйте этот QR‑код, чтобы пройти проверку через Self.",
-        "status_completed": "Подтверждено",
-        "status_not_completed": "Не подтверждено",
         "mobile_dialog_description": "Вы будете перенаправлены в приложение Self, чтобы завершить проверку.",
         "supported_countries": "Поддерживаемые страны",
         "support_telegram": "Поддержка Self"
       },
       "verification_warning": {
         "title": "Получить верификацию"
-      },
-      "verification_explainer": {
-        "title": "Требуется верификация",
-        "description": "Пожалуйста, завершите верификацию, чтобы вывести токены."
-      },
-      "re_verification_explainer": {
-        "title": "Требуется повторная верификация",
-        "description": "Для вашей безопасности мы требуем свежую верификацию перед чувствительными действиями, такими как вывод средств. Это помогает защитить ваш аккаунт от несанкционированного доступа."
       }
     },
     "wdd_import_info": {

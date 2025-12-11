@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "KİMLİK",
         "account": "HESAP",
         "danger_zone": "TEHLİKE BÖLGESİ",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self ile doğrulamak için bu QR kodunu tarayın.",
-        "status_completed": "Doğrulandı",
-        "status_not_completed": "Doğrulanmadı",
         "mobile_dialog_description": "Doğrulamayı tamamlamak için Self uygulamasına yönlendirileceksiniz.",
         "supported_countries": "Desteklenen ülkeler",
         "support_telegram": "Self Desteği"
       },
       "verification_warning": {
         "title": "Doğrulama al"
-      },
-      "verification_explainer": {
-        "title": "Doğrulama gerekli",
-        "description": "Lütfen token çekmek için doğrulamayı tamamlayın."
-      },
-      "re_verification_explainer": {
-        "title": "Yeniden doğrulama gerekli",
-        "description": "Güvenliğiniz için, para çekme gibi hassas işlemlerden önce güncel doğrulama gerektiriyoruz. Bu, hesabınızı yetkisiz erişimden korumaya yardımcı olur."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICAZIONE",
         "account": "ACCOUNT",
         "danger_zone": "ZONA PERICOLO",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scansiona questo codice QR per verificarti con Self.",
-        "status_completed": "Verificato",
-        "status_not_completed": "Non verificato",
-        "mobile_dialog_description": "Verrai reindirizzato all’app Self per completare la verifica.",
+        "mobile_dialog_description": "Verrai reindirizzato all'app Self per completare la verifica.",
         "supported_countries": "Paesi supportati",
         "support_telegram": "Supporto Self"
       },
       "verification_warning": {
         "title": "Ottieni verifica"
-      },
-      "verification_explainer": {
-        "title": "Verifica richiesta",
-        "description": "Si prega di completare la verifica per prelevare token."
-      },
-      "re_verification_explainer": {
-        "title": "Ri-verifica richiesta",
-        "description": "Per la tua sicurezza, richiediamo una verifica recente prima di azioni sensibili come i prelievi. Questo aiuta a proteggere il tuo account da accessi non autorizzati."
       }
     },
     "wdd_import_info": {

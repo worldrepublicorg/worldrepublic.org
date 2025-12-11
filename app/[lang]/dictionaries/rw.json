@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "KWEMEZA",
         "account": "KONTI",
         "danger_zone": "AHANTU H'INGOZA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scan uyu kode ya QR kugira ngo wemezwe ukoresheje Self.",
-        "status_completed": "Byemejwe",
-        "status_not_completed": "Ntibyemejwe",
         "mobile_dialog_description": "Uzasubizwa kuri porogaramu ya Self kugira ngo urangize kwemezwa.",
         "supported_countries": "Ibihugu bishyigikiwe",
         "support_telegram": "Ubafasha bwa Self"
       },
       "verification_warning": {
         "title": "Bona kwemeza"
-      },
-      "verification_explainer": {
-        "title": "Kwemeza byakenewe",
-        "description": "Nyamuneka wuzuze kwemeza kugira ngo ukure tokens."
-      },
-      "re_verification_explainer": {
-        "title": "Kwongera kwemeza byakenewe",
-        "description": "Kubera umutekano wawe, dukeneye kwemeza gushya mbere y'ibikorwa byangiza nk'ukure. Ibi bifasha kurinda konti yawe kuri kwinjira bitemewe."
       }
     },
     "wdd_import_info": {

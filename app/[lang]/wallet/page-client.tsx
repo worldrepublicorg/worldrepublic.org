@@ -44,7 +44,6 @@ const SignInDialog = dynamic(
 
 import { CustomListItem } from "@/components/custom-list-item";
 import { CustomSelect } from "@/components/custom-select";
-import SelfVerificationButton from "@/components/identity/self-verification-button";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
@@ -99,7 +98,6 @@ export default function WalletPageClient({
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
   const walletBalance = profileData?.walletBalance ?? null;
-  const selfVerifiedAt = profileData?.selfVerifiedAt ?? null;
   const username = profileData?.username ?? null;
 
   // Copy username to clipboard
@@ -778,39 +776,6 @@ export default function WalletPageClient({
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-          </div>
-        </div>
-
-        <div>
-          <div className="mb-4 flex">
-            <Typography variant="subtitle" level={3} className="text-gray-400">
-              {dictionary.pages.wallet.sections.identification}
-            </Typography>
-          </div>
-          <div className="flex flex-col gap-2">
-            {authenticated ? (
-              <SelfVerificationButton
-                userId={user?.id || null}
-                selfVerifiedAt={selfVerifiedAt}
-                verifiedStatus={
-                  dictionary.components.identity.self.status_completed
-                }
-                notVerifiedStatus={
-                  dictionary.components.identity.self.status_not_completed
-                }
-                dictionary={dictionary}
-              />
-            ) : (
-              <div onClick={() => setIsSignInDialogOpen(true)}>
-                <CustomListItem
-                  label="Self"
-                  description={
-                    dictionary.components.identity.self.status_not_completed
-                  }
-                  noPointer={false}
-                />
-              </div>
-            )}
           </div>
         </div>
 

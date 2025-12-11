@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "পরিচয়",
         "account": "অ্যাকাউন্ট",
         "danger_zone": "বিপজ্জনক অঞ্চল",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self দিয়ে যাচাই করতে এই কিউআর কোডটি স্ক্যান করুন।",
-        "status_completed": "যাচাইকৃত",
-        "status_not_completed": "যাচাইকৃত নয়",
         "mobile_dialog_description": "যাচাইকরণ সম্পূর্ণ করতে আপনাকে Self অ্যাপে পাঠানো হবে।",
         "supported_countries": "সমর্থিত দেশসমূহ",
         "support_telegram": "Self সাপোর্ট"
       },
       "verification_warning": {
         "title": "যাচাইকরণ পান"
-      },
-      "verification_explainer": {
-        "title": "যাচাইকরণ প্রয়োজন",
-        "description": "টোকেন উত্তোলনের জন্য অনুগ্রহ করে যাচাইকরণ সম্পন্ন করুন।"
-      },
-      "re_verification_explainer": {
-        "title": "পুনরায় যাচাইকরণ প্রয়োজন",
-        "description": "আপনার নিরাপত্তার জন্য, উত্তোলনের মতো সংবেদনশীল ক্রিয়াকলাপের আগে আমাদের নতুন যাচাইকরণ প্রয়োজন। এটি আপনার অ্যাকাউন্টকে অননুমোদিত অ্যাক্সেস থেকে রক্ষা করতে সহায়তা করে।"
       }
     },
     "wdd_import_info": {

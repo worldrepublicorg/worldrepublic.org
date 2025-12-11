@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "TUNNISTUS",
         "account": "TILI",
         "danger_zone": "VAARALLINEN ALUE",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Skannaa tämä QR-koodi vahvistaaksesi Selfillä.",
-        "status_completed": "Vahvistettu",
-        "status_not_completed": "Ei vahvistettu",
         "mobile_dialog_description": "Sinut ohjataan Self-sovellukseen viimeistelemään vahvistus.",
         "supported_countries": "Tuetut maat",
         "support_telegram": "Self-tuki"
       },
       "verification_warning": {
         "title": "Hanki vahvistus"
-      },
-      "verification_explainer": {
-        "title": "Vahvistus vaaditaan",
-        "description": "Ole hyvä ja suorita vahvistus tokenien nostamiseksi."
-      },
-      "re_verification_explainer": {
-        "title": "Uudelleenvahvistus vaaditaan",
-        "description": "Turvallisuutesi vuoksi vaadimme tuoreen vahvistuksen ennen herkkiä toimia, kuten nostoja. Tämä auttaa suojaamaan tiliäsi luvattomalta pääsyltä."
       }
     },
     "wdd_import_info": {

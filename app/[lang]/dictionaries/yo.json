@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "AMỌRAN",
         "account": "IROYIN",
         "danger_zone": "AGBAYE ELEWU",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Ṣàyẹ̀wò kóòdù QR yìí láti fọwọsi pẹ̀lú Self.",
-        "status_completed": "Ti a jẹrisi",
-        "status_not_completed": "Ko jẹrisi",
         "mobile_dialog_description": "A ó yí ọ lọ sí app Self láti parí ìfọwọsi.",
         "supported_countries": "Àwọn orílẹ̀-èdè tí a ń ṣe àtìlẹ́yìn",
         "support_telegram": "Ìtìlẹ́yìn Self"
       },
       "verification_warning": {
         "title": "Gba ijẹrisi"
-      },
-      "verification_explainer": {
-        "title": "Ijẹrisi nilo",
-        "description": "Jọwọ pari ijẹrisi lati yọ tokens jade."
-      },
-      "re_verification_explainer": {
-        "title": "Ijẹrisi tuntun nilo",
-        "description": "Fun aabo rẹ, a nilo ijẹrisi tuntun ṣaaju awọn iṣẹ wiwu bi yiyọ jade. Eyi ṣe iranlọwọ lati dènà akọọnti rẹ lati wiwọle laisi aṣẹ."
       }
     },
     "wdd_import_info": {

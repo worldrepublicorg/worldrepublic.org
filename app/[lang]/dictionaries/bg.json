@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ИДЕНТИФИКАЦИЯ",
         "account": "АКАУНТ",
         "danger_zone": "ЗОНА НА ОПАСНОСТ",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Сканирайте този QR код, за да се верифицирате чрез Self.",
-        "status_completed": "Проверено",
-        "status_not_completed": "Не е проверено",
         "mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да завършите верификацията.",
         "supported_countries": "Поддържани държави",
         "support_telegram": "Поддръжка на Self"
       },
       "verification_warning": {
         "title": "Получете потвърждение"
-      },
-      "verification_explainer": {
-        "title": "Изисква се проверка",
-        "description": "Моля, завършете проверката, за да изтеглите токени."
-      },
-      "re_verification_explainer": {
-        "title": "Изисква се повторна проверка",
-        "description": "За вашата сигурност изискваме свежа проверка преди чувствителни действия като тегления. Това помага да защитите акаунта си от неоторизиран достъп."
       }
     },
     "wdd_import_info": {

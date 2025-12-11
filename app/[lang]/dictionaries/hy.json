@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ՆԵՐՔԻՆԱՅԻՆ",
         "account": "ՀԱՇԻՎ",
         "danger_zone": "ՎՏԱՆԳԱՅԻՆ ԳՈՏԻ",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Սկանավորեք այս QR կոդը՝ ինքնությունը Self-ով հաստատելու համար։",
-        "status_completed": "Ստուգված",
-        "status_not_completed": "Չստուգված",
         "mobile_dialog_description": "Կվերահղվեք Self հավելված՝ հաստատումը ավարտելու համար։",
         "supported_countries": "Աջակցվող երկրներ",
         "support_telegram": "Self աջակցություն"
       },
       "verification_warning": {
         "title": "Ստացեք հաստատում"
-      },
-      "verification_explainer": {
-        "title": "Պահանջվում է հաստատում",
-        "description": "Խնդրում ենք ավարտել հաստատումը թոքեններ հանելու համար:"
-      },
-      "re_verification_explainer": {
-        "title": "Պահանջվում է վերահաստատում",
-        "description": "Ձեր անվտանգության համար մենք պահանջում ենք թարմ հաստատում զգայուն գործողություններից առաջ, ինչպիսիք են հանումները: Սա օգնում է պաշտպանել ձեր հաշիվը չարտոնված մուտքից:"
       }
     },
     "wdd_import_info": {

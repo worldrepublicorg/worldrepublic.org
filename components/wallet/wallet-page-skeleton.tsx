@@ -78,29 +78,6 @@ export function WalletPageSkeleton({ dictionary }: WalletPageSkeletonProps) {
           </div>
         </div>
 
-        {/* Identification Section */}
-        <div>
-          <div className="mb-4 flex">
-            <Typography variant="subtitle" level={3} className="text-gray-400">
-              {dictionary.pages.wallet.sections.identification}
-            </Typography>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="min-h-14 bg-gray-50 p-4 rounded-2xl flex items-center">
-              <div className="flex min-w-0 grow flex-col items-start gap-0.5">
-                <Typography
-                  variant="subtitle"
-                  level={3}
-                  className="w-full grow truncate text-left"
-                >
-                  Self
-                </Typography>
-                <Skeleton height={17} width={64} />
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* History Section */}
         <div>
           <div className="mb-4 flex">

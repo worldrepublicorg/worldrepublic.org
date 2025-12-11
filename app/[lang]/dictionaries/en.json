@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICATION",
         "account": "ACCOUNT",
         "danger_zone": "DANGER ZONE",
         "delete_account": {
@@ -215,20 +214,10 @@
         "dialog_description": "Scan this QR code to verify with Self.",
         "mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
         "supported_countries": "Supported countries",
-        "support_telegram": "Self Support",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "support_telegram": "Self Support"
       },
       "verification_warning": {
         "title": "Get verified"
-      },
-      "verification_explainer": {
-        "title": "Verification required",
-        "description": "Please complete verification to withdraw tokens."
-      },
-      "re_verification_explainer": {
-        "title": "Re-verification required",
-        "description": "For your security, we require fresh verification before sensitive actions like withdrawals. This helps protect your account from unauthorized access."
       }
     },
     "wdd_import_info": {

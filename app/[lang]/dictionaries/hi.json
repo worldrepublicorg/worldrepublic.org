@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "पहचान",
         "account": "खाता",
         "danger_zone": "खतरनाक क्षेत्र",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "इस क्यूआर कोड को स्कैन करके Self पर वेरिफाई करें।",
-        "status_completed": "सत्यापित",
-        "status_not_completed": "सत्यापित नहीं",
         "mobile_dialog_description": "सत्यापन पूरा करने के लिए आपको Self ऐप पर भेजा जाएगा।",
         "supported_countries": "समर्थित देश",
         "support_telegram": "Self सहायता"
       },
       "verification_warning": {
         "title": "सत्यापन प्राप्त करें"
-      },
-      "verification_explainer": {
-        "title": "सत्यापन आवश्यक",
-        "description": "कृपया टोकन निकालने के लिए सत्यापन पूरा करें।"
-      },
-      "re_verification_explainer": {
-        "title": "पुनः सत्यापन आवश्यक",
-        "description": "आपकी सुरक्षा के लिए, हम निकासी जैसी संवेदनशील कार्रवाइयों से पहले ताजा सत्यापन की आवश्यकता है। यह आपके खाते को अनधिकृत पहुंच से बचाने में मदद करता है।"
       }
     },
     "wdd_import_info": {

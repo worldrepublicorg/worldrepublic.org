@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "身份验证",
         "account": "账户",
         "danger_zone": "危险区域",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "扫描此二维码以在 Self 完成验证。",
-        "status_completed": "已验证",
-        "status_not_completed": "未验证",
         "mobile_dialog_description": "您将被重定向到 Self 应用以完成验证。",
         "supported_countries": "支持的国家/地区",
         "support_telegram": "Self 支持"
       },
       "verification_warning": {
         "title": "获取验证"
-      },
-      "verification_explainer": {
-        "title": "需要验证",
-        "description": "请完成验证以提取代币。"
-      },
-      "re_verification_explainer": {
-        "title": "需要重新验证",
-        "description": "为了您的安全，我们在敏感操作（如提款）之前需要最新的验证。这有助于保护您的账户免受未经授权的访问。"
       }
     },
     "wdd_import_info": {

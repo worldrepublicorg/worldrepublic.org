@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ការកំណត់អត្តសញ្ញាណ៍",
         "account": "គណនី",
         "danger_zone": "តំបន់គ្រោះថ្នាក់",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "ស្កេនកូដ QR នេះ ដើម្បីផ្ទៀងផ្ទាត់ដោយ Self។",
-        "status_completed": "បានផ្ទៀងផ្ទាត់",
-        "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់",
         "mobile_dialog_description": "អ្នកនឹងត្រូវប្តូរទិសទៅកាន់កម្មវិធី Self ដើម្បីបញ្ចប់ការផ្ទៀងផ្ទាត់។",
         "supported_countries": "ប្រទេសដែលគាំទ្រ",
         "support_telegram": "ការគាំទ្រ Self"
       },
       "verification_warning": {
         "title": "ទទួលបានការផ្ទៀងផ្ទាត់"
-      },
-      "verification_explainer": {
-        "title": "ការផ្ទៀងផ្ទាត់ត្រូវបានទាមទារ",
-        "description": "សូមបញ្ចប់ការផ្ទៀងផ្ទាត់ដើម្បីដកយក tokens។"
-      },
-      "re_verification_explainer": {
-        "title": "ការផ្ទៀងផ្ទាត់ម្តងទៀតត្រូវបានទាមទារ",
-        "description": "សម្រាប់សុវត្ថិភាពរបស់អ្នក យើងត្រូវការការផ្ទៀងផ្ទាត់ថ្មីមុនពេលធ្វើសកម្មភាពដែលរសើបដូចជាការដកយក។ នេះជួយការពារគណនីរបស់អ្នកពីការចូលប្រើប្រាស់ដែលមិនមានការអនុញ្ញាត។"
       }
     },
     "wdd_import_info": {

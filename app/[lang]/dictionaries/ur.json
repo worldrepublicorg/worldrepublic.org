@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "شناخت",
         "account": "اکاؤنٹ",
         "danger_zone": "خطرناک زون",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self کے ذریعے تصدیق کے لیے یہ کیو آر کوڈ اسکین کریں۔",
-        "status_completed": "تصدیق شدہ",
-        "status_not_completed": "تصدیق نہیں ہوئی",
         "mobile_dialog_description": "توثیق مکمل کرنے کے لیے آپ کو Self ایپ پر بھیجا جائے گا۔",
         "supported_countries": "معاونت یافتہ ممالک",
         "support_telegram": "Self سپورٹ"
       },
       "verification_warning": {
         "title": "تصدیق حاصل کریں"
-      },
-      "verification_explainer": {
-        "title": "تصدیق درکار ہے",
-        "description": "براہ کرم ٹوکن نکالنے کے لیے تصدیق مکمل کریں۔"
-      },
-      "re_verification_explainer": {
-        "title": "دوبارہ تصدیق درکار ہے",
-        "description": "آپ کی حفاظت کے لیے، ہمیں حساس کارروائیوں جیسے نکالنے سے پہلے تازہ تصدیق کی ضرورت ہے۔ یہ آپ کے اکاؤنٹ کو غیر مجاز رسائی سے بچانے میں مدد کرتا ہے۔"
       }
     },
     "wdd_import_info": {

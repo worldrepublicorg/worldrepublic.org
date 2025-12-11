@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "การยืนยันตัวตน",
         "account": "บัญชี",
         "danger_zone": "เขตอันตราย",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "สแกนคิวอาร์โค้ดนี้เพื่อยืนยันตัวตนกับ Self",
-        "status_completed": "ยืนยันแล้ว",
-        "status_not_completed": "ยังไม่ยืนยัน",
         "mobile_dialog_description": "คุณจะถูกเปลี่ยนเส้นทางไปยังแอป Self เพื่อทำการยืนยันให้เสร็จสิ้น",
         "supported_countries": "ประเทศที่รองรับ",
         "support_telegram": "ฝ่ายสนับสนุน Self"
       },
       "verification_warning": {
         "title": "รับการยืนยันตัวตน"
-      },
-      "verification_explainer": {
-        "title": "ต้องยืนยันตัวตน",
-        "description": "กรุณายืนยันตัวตนให้เสร็จสิ้นเพื่อถอนโทเคน"
-      },
-      "re_verification_explainer": {
-        "title": "ต้องยืนยันตัวตนอีกครั้ง",
-        "description": "เพื่อความปลอดภัยของท่าน เราต้องการการยืนยันตัวตนล่าสุดก่อนการดำเนินการที่ละเอียดอ่อน เช่น การถอนเงิน ซึ่งจะช่วยปกป้องบัญชีของท่านจากการเข้าถึงโดยไม่ได้รับอนุญาต"
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ማንነት ማረጋገጥ",
         "account": "መለያ",
         "danger_zone": "አደጋ ዞን",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "ይህን ኪዩአር ኮድ ይስካኑ በ Self ለማረጋገጥ።",
-        "status_completed": "ተረጋግጧል",
-        "status_not_completed": "አልተረጋገጠም",
         "mobile_dialog_description": "በራስ መተግበሪያ ማረጋገጫን ለማጠናቀቅ ተዘልቆ ይሄዳል።",
         "supported_countries": "የሚደገፉ አገሮች",
         "support_telegram": "Self ድጋፍ"
       },
       "verification_warning": {
         "title": "ማረጋገጫ ያግኙ"
-      },
-      "verification_explainer": {
-        "title": "ማረጋገጫ ያስፈልጋል",
-        "description": "እባክዎ ቶከኖችን ለመሳል ማረጋገጫውን ያጠናቅቁ።"
-      },
-      "re_verification_explainer": {
-        "title": "እንደገና ማረጋገጫ ያስፈልጋል",
-        "description": "ለደህንነትዎ፣ እንደ ማውጣት ያሉ ሚሳዮች እርምጃዎች ከመውሰድዎ በፊት አዲስ ማረጋገጫ እንፈልጋለን። ይህ ሂሳብዎን ከመግባት ማግኘት ለመከላከል ይረዳል።"
       }
     },
     "wdd_import_info": {

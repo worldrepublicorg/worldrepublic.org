@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "신원확인",
         "account": "계정",
         "danger_zone": "위험 구역",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "이 QR 코드를 스캔하여 Self에서 인증하세요.",
-        "status_completed": "인증됨",
-        "status_not_completed": "미인증",
         "mobile_dialog_description": "본인 인증을 완료하려면 Self 앱으로 이동합니다.",
         "supported_countries": "지원되는 국가",
         "support_telegram": "Self 지원"
       },
       "verification_warning": {
         "title": "인증 받기"
-      },
-      "verification_explainer": {
-        "title": "인증 필요",
-        "description": "토큰을 인출하려면 인증을 완료해 주세요."
-      },
-      "re_verification_explainer": {
-        "title": "재인증 필요",
-        "description": "보안을 위해 인출과 같은 민감한 작업 전에 최신 인증이 필요합니다. 이는 계정을 무단 액세스로부터 보호하는 데 도움이 됩니다."
       }
     },
     "wdd_import_info": {

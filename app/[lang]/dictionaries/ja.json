@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "本人確認",
         "account": "アカウント",
         "danger_zone": "危険区域",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "このQRコードをスキャンしてSelfで本人確認を行ってください。",
-        "status_completed": "認証済み",
-        "status_not_completed": "未認証",
         "mobile_dialog_description": "確認を完了するためにSelfアプリへリダイレクトされます。",
         "supported_countries": "対応国",
         "support_telegram": "Selfサポート"
       },
       "verification_warning": {
         "title": "認証を取得"
-      },
-      "verification_explainer": {
-        "title": "認証が必要です",
-        "description": "トークンを引き出すには、認証を完了してください。"
-      },
-      "re_verification_explainer": {
-        "title": "再認証が必要です",
-        "description": "セキュリティのため、引き出しなどの機密性の高い操作の前に最新の認証が必要です。これにより、不正アクセスからアカウントを保護できます。"
       }
     },
     "wdd_import_info": {

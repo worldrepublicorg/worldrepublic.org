@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "الهوية",
         "account": "الحساب",
         "danger_zone": "منطقة الخطر",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "امسح رمز الاستجابة السريعة هذا للتحقق عبر Self.",
-        "status_completed": "متحقق",
-        "status_not_completed": "غير متحقق",
         "mobile_dialog_description": "سيتم إعادة توجيهك إلى تطبيق Self لإكمال التحقق.",
         "supported_countries": "الدول المدعومة",
         "support_telegram": "دعم Self"
       },
       "verification_warning": {
         "title": "احصل على التحقق"
-      },
-      "verification_explainer": {
-        "title": "التحقق مطلوب",
-        "description": "يرجى إكمال التحقق لسحب الرموز المميزة."
-      },
-      "re_verification_explainer": {
-        "title": "إعادة التحقق مطلوبة",
-        "description": "لأمانك، نطلب التحقق الحديث قبل الإجراءات الحساسة مثل عمليات السحب. يساعد هذا في حماية حسابك من الوصول غير المصرح به."
       }
     },
     "wdd_import_info": {

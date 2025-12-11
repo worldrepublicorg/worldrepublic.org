@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKACIJA",
         "account": "PASKYRA",
         "danger_zone": "PAVOJINGA ZONA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Nuskenuokite šį QR kodą, kad patvirtintumėte su Self.",
-        "status_completed": "Patvirtinta",
-        "status_not_completed": "Nepatvirtinta",
         "mobile_dialog_description": "Būsite nukreipti į Self programėlę, kad užbaigtumėte patvirtinimą.",
         "supported_countries": "Palaikomos šalys",
         "support_telegram": "Self palaikymas"
       },
       "verification_warning": {
         "title": "Gaukite patvirtinimą"
-      },
-      "verification_explainer": {
-        "title": "Reikalingas patvirtinimas",
-        "description": "Prašome užbaigti patvirtinimą, norint išsiimti tokenus."
-      },
-      "re_verification_explainer": {
-        "title": "Reikalingas pakartotinis patvirtinimas",
-        "description": "Jūsų saugumui reikalaujame šviežio patvirtinimo prieš jautrias operacijas, tokias kaip išėmimai. Tai padeda apsaugoti jūsų sąskaitą nuo neleistinos prieigos."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKACIJA",
         "account": "RAČUN",
         "danger_zone": "OPASNA ZONA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Skenirajte ovaj QR kod da se verifikujete putem Self.",
-        "status_completed": "Verificiran",
-        "status_not_completed": "Nije verificiran",
         "mobile_dialog_description": "Bićete preusmjereni u aplikaciju Self da dovršite verifikaciju.",
         "supported_countries": "Podržane zemlje",
         "support_telegram": "Self podrška"
       },
       "verification_warning": {
         "title": "Dobijte verifikaciju"
-      },
-      "verification_explainer": {
-        "title": "Potrebna je verifikacija",
-        "description": "Molimo završite verifikaciju za povlačenje tokena."
-      },
-      "re_verification_explainer": {
-        "title": "Ponovna verifikacija je potrebna",
-        "description": "Za vašu sigurnost, tražimo svježu verifikaciju prije osjetljivih radnji kao što su povlačenja. Ovo pomaže zaštititi vaš račun od neovlaštenog pristupa."
       }
     },
     "wdd_import_info": {

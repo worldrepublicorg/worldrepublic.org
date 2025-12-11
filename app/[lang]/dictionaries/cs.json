@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKACE",
         "account": "ÚČET",
         "danger_zone": "NEBEZPEČNÁ ZÓNA",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Naskenujte tento QR kód pro ověření přes Self.",
-        "status_completed": "Ověřeno",
-        "status_not_completed": "Neověřeno",
         "mobile_dialog_description": "Budete přesměrováni do aplikace Self k dokončení ověření.",
         "supported_countries": "Podporované země",
         "support_telegram": "Podpora Self"
       },
       "verification_warning": {
         "title": "Získejte ověření"
-      },
-      "verification_explainer": {
-        "title": "Ověření vyžadováno",
-        "description": "Pro výběr tokenů prosím dokončete ověření."
-      },
-      "re_verification_explainer": {
-        "title": "Opětovné ověření vyžadováno",
-        "description": "Pro vaši bezpečnost vyžadujeme aktuální ověření před citlivými akcemi, jako jsou výběry. To pomáhá chránit váš účet před neoprávněným přístupem."
       }
     },
     "wdd_import_info": {

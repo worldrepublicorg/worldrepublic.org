@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ઓળખાણ",
         "account": "ખાતું",
         "danger_zone": "જોખમ ક્ષેત્ર",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Self સાથે ચકાસવા માટે આ QR કોડ સ્કેન કરો.",
-        "status_completed": "ચકાસાયેલ",
-        "status_not_completed": "ચકાસેલ નથી",
         "mobile_dialog_description": "ચકાસણી પૂર્ણ કરવા તમને Self એપ પર મોકલવામાં આવશે.",
         "supported_countries": "સમર્થિત દેશો",
         "support_telegram": "Self સપોર્ટ"
       },
       "verification_warning": {
         "title": "ચકાસો"
-      },
-      "verification_explainer": {
-        "title": "ચકાસણી જરૂરી છે",
-        "description": "કૃપા કરીને ટોકન કાઢવા માટે ચકાસણી પૂર્ણ કરો."
-      },
-      "re_verification_explainer": {
-        "title": "પુનઃ ચકાસણી જરૂરી છે",
-        "description": "તમારી સુરક્ષા માટે, અમને નિકાસ જેવી સંવેદનશીલ ક્રિયાઓ પહેલાં તાજી ચકાસણીની જરૂર છે. આ તમારા એકાઉન્ટને અનધિકૃત ઍક્સેસથી રક્ષણ આપવામાં મદદ કરે છે."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFIKACIJA",
         "account": "RAČUN",
         "danger_zone": "NEBEZPEČNO OBMOČJE",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Skenirajte to kodo QR za preverjanje s Self.",
-        "status_completed": "Preverjeno",
-        "status_not_completed": "Ni preverjeno",
         "mobile_dialog_description": "Preusmerjeni boste v aplikacijo Self, da dokončate preverjanje.",
         "supported_countries": "Podprte države",
         "support_telegram": "Podpora Self"
       },
       "verification_warning": {
         "title": "Pridobite preverjanje"
-      },
-      "verification_explainer": {
-        "title": "Preverjanje je potrebno",
-        "description": "Prosimo, dokončajte preverjanje za dvig žetonov."
-      },
-      "re_verification_explainer": {
-        "title": "Ponovno preverjanje je potrebno",
-        "description": "Za vašo varnost zahtevamo sveže preverjanje pred občutljivimi dejanji, kot so dvigi. To pomaga zaščititi vaš račun pred nepooblaščenim dostopom."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "شناسایی",
         "account": "حساب کاربری",
         "danger_zone": "منطقه خطر",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "برای تأیید با Self این کد QR را اسکن کنید.",
-        "status_completed": "تأیید شده",
-        "status_not_completed": "تأیید نشده",
         "mobile_dialog_description": "برای تکمیل تأیید، به اپلیکیشن Self هدایت می‌شوید.",
         "supported_countries": "کشورهای پشتیبانی‌شده",
         "support_telegram": "پشتیبانی Self"
       },
       "verification_warning": {
         "title": "دریافت تأیید"
-      },
-      "verification_explainer": {
-        "title": "تأیید مورد نیاز است",
-        "description": "لطفاً برای برداشت توکن‌ها تأیید را تکمیل کنید."
-      },
-      "re_verification_explainer": {
-        "title": "تأیید مجدد مورد نیاز است",
-        "description": "برای امنیت شما، ما قبل از اقدامات حساس مانند برداشت، تأیید جدید را الزامی می‌کنیم. این به محافظت از حساب شما در برابر دسترسی غیرمجاز کمک می‌کند."
       }
     },
     "wdd_import_info": {

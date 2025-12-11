@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "SHAIDA",
         "account": "ASUSU",
         "danger_zone": "YANKIN HADARI",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Duba wannan lambar QR don tabbatarwa ta Self.",
-        "status_completed": "An tabbatar",
-        "status_not_completed": "Ba a tabbatar ba",
         "mobile_dialog_description": "Za a mayar da kai zuwa manhajar Self don kammala tantancewa.",
         "supported_countries": "Kasashen da ake tallafawa",
         "support_telegram": "Tallafin Self"
       },
       "verification_warning": {
         "title": "Samu tabbatarwa"
-      },
-      "verification_explainer": {
-        "title": "Tabbatarwa yana buƙata",
-        "description": "Don Allah kammala tabbatarwa don cire tokens."
-      },
-      "re_verification_explainer": {
-        "title": "Sake tabbatarwa yana buƙata",
-        "description": "Don amincin ku, muna buƙatar sabuwar tabbatarwa kafin ayyuka masu mahimmanci kamar cirewa. Wannan yana taimakawa kare asusunku daga shiga mara izini."
       }
     },
     "wdd_import_info": {

@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "IDENTIFICAZIONE",
         "account": "CUNTU",
         "danger_zone": "ZONA DI PERICULU",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Scansate stu codice QR per verificà cù Self.",
-        "status_completed": "Verificatu",
-        "status_not_completed": "Micca verificatu",
         "mobile_dialog_description": "Sarete reindirizzatu à l’app Self per compie a verificazione.",
         "supported_countries": "Paesi supportati",
         "support_telegram": "Supportu Self"
       },
       "verification_warning": {
         "title": "Obtener verificación"
-      },
-      "verification_explainer": {
-        "title": "Verificazione necessaria",
-        "description": "Per piacè cumpletate a verificazione per ritirà i token."
-      },
-      "re_verification_explainer": {
-        "title": "Ri-verificazione necessaria",
-        "description": "Per a vostra sicurezza, richiedemu una verificazione fresca prima di azzioni sensibili cum'è i ritiri. Questu aiuta à pruteghje u vostru contu da l'accessu non autorizatu."
       }
     },
     "wdd_import_info": {

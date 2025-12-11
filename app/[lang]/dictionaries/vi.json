@@ -175,7 +175,6 @@
         }
       },
       "sections": {
-        "identification": "ĐỊNH DANH",
         "account": "TÀI KHOẢN",
         "danger_zone": "KHU VỰC NGUY HIỂM",
         "delete_account": {
@@ -213,22 +212,12 @@
     "identity": {
       "self": {
         "dialog_description": "Quét mã QR này để xác minh với Self.",
-        "status_completed": "Đã xác minh",
-        "status_not_completed": "Chưa xác minh",
         "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để hoàn tất xác minh.",
         "supported_countries": "Các quốc gia được hỗ trợ",
         "support_telegram": "Hỗ trợ Self"
       },
       "verification_warning": {
         "title": "Nhận xác minh"
-      },
-      "verification_explainer": {
-        "title": "Yêu cầu xác minh",
-        "description": "Vui lòng hoàn tất xác minh để rút token."
-      },
-      "re_verification_explainer": {
-        "title": "Yêu cầu xác minh lại",
-        "description": "Để bảo mật tài khoản của bạn, chúng tôi yêu cầu xác minh mới trước các hành động nhạy cảm như rút tiền. Điều này giúp bảo vệ tài khoản của bạn khỏi truy cập trái phép."
       }
     },
     "wdd_import_info": {
