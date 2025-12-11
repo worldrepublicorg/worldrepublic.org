@@ -72,9 +72,6 @@
           "description": "Test seçkiləri tezliklə gəlir. Səsvermə açılanda hazır olmaq üçün indi kimliyinizi təsdiqləyin.",
           "verify_button": "Əvvəlcədən təsdiqlə"
         },
-        "coming_soon": {
-          "description": "Sınaq seçkiləri tezliklə başlayacaq. Artıq təsdiqlənmisiniz və seçki başlayanda səs verməyə hazırsınız."
-        },
         "no_active_election": "Aktiv seçki yoxdur"
       }
     },

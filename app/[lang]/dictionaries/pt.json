@@ -72,9 +72,6 @@
           "description": "As eleições de teste começarão em breve. Verifique sua identidade agora para estar pronto quando a votação abrir.",
           "verify_button": "Pré-verificar"
         },
-        "coming_soon": {
-          "description": "As eleições de teste começarão em breve. Você já está verificado e pronto para votar assim que a eleição começar."
-        },
         "no_active_election": "Nenhuma eleição ativa"
       }
     },

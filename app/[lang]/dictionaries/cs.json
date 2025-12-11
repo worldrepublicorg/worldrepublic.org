@@ -72,9 +72,6 @@
           "description": "Testovací volby přicházejí brzy. Ověřte si svou identitu nyní, abyste byli připraveni, až se hlasování otevře.",
           "verify_button": "Předběžné ověření"
         },
-        "coming_soon": {
-          "description": "Zkušební volby brzy začnou. Už jste ověřeni a připraveni hlasovat, jakmile volby začnou."
-        },
         "no_active_election": "Žádné aktivní volby"
       }
     },

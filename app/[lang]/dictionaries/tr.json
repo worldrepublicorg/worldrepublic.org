@@ -72,9 +72,6 @@
           "description": "Test seçimleri yakında geliyor. Oylama açıldığında hazır olmak için şimdi kimliğinizi doğrulayın.",
           "verify_button": "Önceden doğrula"
         },
-        "coming_soon": {
-          "description": "Deneme seçimleri yakında başlayacak. Zaten doğrulandın ve seçim başlar başlamaz oy kullanmaya hazırsın."
-        },
         "no_active_election": "Aktif seçim yok"
       }
     },

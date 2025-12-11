@@ -72,9 +72,6 @@
           "description": "Pemilihan uji coba akan segera dimulai. Verifikasi identitas Anda sekarang untuk siap saat pemungutan suara dibuka.",
           "verify_button": "Pra-verifikasi"
         },
-        "coming_soon": {
-          "description": "Pemilu uji coba akan segera dimulai. Anda sudah terverifikasi dan siap memilih begitu pemilihan dimulai."
-        },
         "no_active_election": "Tidak ada pemilihan aktif"
       }
     },

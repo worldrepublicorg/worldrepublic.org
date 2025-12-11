@@ -72,9 +72,6 @@
           "description": "A tesztválasztások hamarosan érkeznek. Igazolja az identitását most, hogy készen álljon, amikor a szavazás megnyílik.",
           "verify_button": "Előzetes igazolás"
         },
-        "coming_soon": {
-          "description": "A tesztválasztások hamarosan kezdődnek. Már ellenőrzött vagy, és készen állsz szavazni, amint a választás elindul."
-        },
         "no_active_election": "Nincs aktív választás"
       }
     },

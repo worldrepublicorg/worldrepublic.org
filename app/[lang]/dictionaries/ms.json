@@ -72,9 +72,6 @@
           "description": "Pilihan raya ujian akan tiba tidak lama lagi. Sahkan identiti anda sekarang untuk bersedia apabila undian dibuka.",
           "verify_button": "Pra-sahkan"
         },
-        "coming_soon": {
-          "description": "Pilihan raya percubaan akan bermula tidak lama lagi. Anda sudah disahkan dan sedia mengundi sebaik sahaja pilihan raya bermula."
-        },
         "no_active_election": "Tiada pilihan raya aktif"
       }
     },

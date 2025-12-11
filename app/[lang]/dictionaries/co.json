@@ -72,9 +72,6 @@
           "description": "E elezzioni di testu arrivanu prestu. Verificate a vostra identità avà per esse prontu quandu u votu si apre.",
           "verify_button": "Verificà in anticipu"
         },
-        "coming_soon": {
-          "description": "L’elezzione di prova principieranu prestu. Site dighjà verificatu è prontu à vutà appena principia l’elezzione."
-        },
         "no_active_election": "Nisuna elezzione attiva"
       }
     },

@@ -72,9 +72,6 @@
           "description": "Le elezioni di prova inizieranno presto. Verifica la tua identità ora per essere pronto quando si apre il voto.",
           "verify_button": "Pre-verifica"
         },
-        "coming_soon": {
-          "description": "Le elezioni di prova inizieranno presto. Sei già verificato e pronto a votare non appena inizieranno le elezioni."
-        },
         "no_active_election": "Nessuna elezione attiva"
       }
     },

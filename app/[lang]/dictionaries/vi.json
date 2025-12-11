@@ -72,9 +72,6 @@
           "description": "Cuộc bầu cử thử nghiệm sắp diễn ra. Xác minh danh tính của bạn ngay bây giờ để sẵn sàng khi bỏ phiếu mở.",
           "verify_button": "Xác minh trước"
         },
-        "coming_soon": {
-          "description": "Các cuộc bầu cử thử nghiệm sẽ sớm bắt đầu. Bạn đã được xác minh và sẵn sàng bỏ phiếu ngay khi cuộc bầu cử bắt đầu."
-        },
         "no_active_election": "Không có cuộc bầu cử đang diễn ra"
       }
     },

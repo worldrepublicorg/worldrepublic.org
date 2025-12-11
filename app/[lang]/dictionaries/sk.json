@@ -72,9 +72,6 @@
           "description": "Testovacie voľby prichádzajú čoskoro. Overte si svoju identitu teraz, aby ste boli pripravení, keď sa hlasovanie otvorí.",
           "verify_button": "Predbežné overenie"
         },
-        "coming_soon": {
-          "description": "Skúšobné voľby sa čoskoro začnú. Už ste overený a pripravený hlasovať hneď, ako sa voľby začnú."
-        },
         "no_active_election": "Žiadne prebiehajúce voľby"
       }
     },

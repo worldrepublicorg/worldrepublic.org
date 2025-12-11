@@ -72,9 +72,6 @@
           "description": "Testa vēlēšanas drīz sāksies. Apstipriniet savu identitāti tagad, lai būtu gatavs, kad sāksies balsošana.",
           "verify_button": "Iepriekšēja verificēšana"
         },
-        "coming_soon": {
-          "description": "Pārbaudes vēlēšanas drīz sāksies. Jūs jau esat verificēts un gatavs balsot, tiklīdz vēlēšanas sāksies."
-        },
         "no_active_election": "Nav aktīvu vēlēšanu"
       }
     },

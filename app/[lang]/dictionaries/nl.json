@@ -72,9 +72,6 @@
           "description": "Testverkiezingen komen binnenkort. Verifieer nu je identiteit om klaar te zijn wanneer het stemmen begint.",
           "verify_button": "Vooraf verifiëren"
         },
-        "coming_soon": {
-          "description": "Testverkiezingen beginnen binnenkort. Je bent al geverifieerd en klaar om te stemmen zodra de verkiezing begint."
-        },
         "no_active_election": "Geen actieve verkiezing"
       }
     },

@@ -72,9 +72,6 @@
           "description": "Ang mga test na halalan ay malapit nang dumating. I-verify ang iyong pagkakakilanlan ngayon upang maging handa kapag binuksan ang pagboto.",
           "verify_button": "Pre-verify"
         },
-        "coming_soon": {
-          "description": "Malapit nang magsimula ang mga test election. Nakaverify ka na at handang bumoto pagkapasimula ng eleksyon."
-        },
         "no_active_election": "Walang aktibong halalan"
       }
     },

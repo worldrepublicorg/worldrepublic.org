@@ -72,9 +72,6 @@
           "description": "Alegerile de test vor veni în curând. Verifică-ți identitatea acum pentru a fi gata când se deschide votul.",
           "verify_button": "Pre-verificare"
         },
-        "coming_soon": {
-          "description": "Alegerile de test vor începe în curând. Ești deja verificat și gata să votezi de îndată ce încep alegerile."
-        },
         "no_active_election": "Nicio alegere activă"
       }
     },

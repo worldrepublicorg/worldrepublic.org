@@ -72,9 +72,6 @@
           "description": "Bandomieji rinkimai greitai prasidės. Patvirtinkite savo tapatybę dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
           "verify_button": "Išankstinis patvirtinimas"
         },
-        "coming_soon": {
-          "description": "Bandomieji rinkimai netrukus prasidės. Jau esate patvirtintas ir pasirengęs balsuoti vos prasidėjus rinkimams."
-        },
         "no_active_election": "Nėra vykstančių rinkimų"
       }
     },

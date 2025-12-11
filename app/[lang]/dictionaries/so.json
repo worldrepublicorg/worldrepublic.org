@@ -72,9 +72,6 @@
           "description": "Doorashada tijaanada ayaa dhawaan imaanaysa. Xaqiiji aqoonsigaaga hadda si aad u diyaar u noqoto marka codbixinta la furo.",
           "verify_button": "Hore u xaqiiji"
         },
-        "coming_soon": {
-          "description": "Doorashooyinka tijaabada ah waxay bilaaban doonaan dhawaan. Waxaa horey loo xaqiijiyay, waxaadna diyaar u tahay inaad cod bixiso marka doorashadu bilaabato."
-        },
         "no_active_election": "Doorasho firfircoon ma jirto"
       }
     },

@@ -72,9 +72,6 @@
           "description": "Testowe wybory nadchodzą wkrótce. Zweryfikuj teraz swoją tożsamość, aby być gotowym, gdy głosowanie się rozpocznie.",
           "verify_button": "Weryfikuj wcześniej"
         },
-        "coming_soon": {
-          "description": "Wybory testowe wkrótce się rozpoczną. Jesteś już zweryfikowany i gotowy do głosowania, gdy tylko wybory się zaczną."
-        },
         "no_active_election": "Brak aktywnych wyborów"
       }
     },

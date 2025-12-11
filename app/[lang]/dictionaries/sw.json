@@ -72,9 +72,6 @@
           "description": "Uchaguzi wa majaribio unakuja hivi karibuni. Thibitisha utambulisho wako sasa ili uwe tayari wakati kura zinafunguliwa.",
           "verify_button": "Thibitisha mapema"
         },
-        "coming_soon": {
-          "description": "Uchaguzi wa majaribio utaanza hivi karibuni. Tayari umethibitishwa na uko tayari kupiga kura pindi uchaguzi utakapoanza."
-        },
         "no_active_election": "Hakuna uchaguzi unaoendelea"
       }
     },

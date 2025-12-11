@@ -72,9 +72,6 @@
           "description": "Test saylovlar tez orada bo'ladi. Ovoz berish ochilganda tayyor bo'lish uchun hozir o'z identifikatsiyangizni tasdiqlang.",
           "verify_button": "Oldindan tasdiqlash"
         },
-        "coming_soon": {
-          "description": "Sinov saylovlari yaqinda boshlanadi. Siz allaqachon tasdiqlangansiz va saylov boshlanganda ovoz berishga tayyorsiz."
-        },
         "no_active_election": "Faol saylov yo'q"
       }
     },

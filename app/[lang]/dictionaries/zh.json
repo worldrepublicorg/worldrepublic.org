@@ -72,9 +72,6 @@
           "description": "测试选举即将开始。现在验证您的身份，以便在投票开放时做好准备。",
           "verify_button": "预先验证"
         },
-        "coming_soon": {
-          "description": "测试选举即将开始。你已完成验证，选举一开始就可以投票。"
-        },
         "no_active_election": "当前没有正在进行的选举"
       }
     },

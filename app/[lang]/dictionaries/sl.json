@@ -72,9 +72,6 @@
           "description": "Testne volitve bodo kmalu. Preverite svojo identiteto zdaj, da boste pripravljeni, ko se glasovanje odpre.",
           "verify_button": "Vnaprej preveri"
         },
-        "coming_soon": {
-          "description": "Poskusne volitve se bodo kmalu začele. Že ste verificirani in pripravljeni glasovati takoj, ko se volitve začnejo."
-        },
         "no_active_election": "Ni aktivnih volitev"
       }
     },

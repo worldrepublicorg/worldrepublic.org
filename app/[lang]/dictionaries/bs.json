@@ -72,9 +72,6 @@
           "description": "Test izbori dolaze uskoro. Verifikujte svoj identitet sada da budete spremni kada se glasanje otvori.",
           "verify_button": "Prethodno verifikuj"
         },
-        "coming_soon": {
-          "description": "Probni izbori uskoro počinju. Već ste verifikovani i spremni da glasate čim izbori počnu."
-        },
         "no_active_election": "Nema aktivnih izbora"
       }
     },

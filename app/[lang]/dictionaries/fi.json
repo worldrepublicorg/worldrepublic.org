@@ -72,9 +72,6 @@
           "description": "Testivaalit tulevat pian. Vahvista henkilöllisyytesi nyt, jotta olet valmis, kun äänestys avautuu.",
           "verify_button": "Ennakkovahvista"
         },
-        "coming_soon": {
-          "description": "Testivaalit alkavat pian. Olet jo varmennettu ja valmis äänestämään heti vaalien alkaessa."
-        },
         "no_active_election": "Ei käynnissä olevaa vaalia"
       }
     },

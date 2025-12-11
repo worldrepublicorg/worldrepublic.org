@@ -72,9 +72,6 @@
           "description": "Zaɓe na gwaji suna zuwa nan ba da jimawa ba. Tabbatar da ainihin ku yanzu don kasancewa shirye lokacin da zaɓe ya buɗe.",
           "verify_button": "Tabbatar da farko"
         },
-        "coming_soon": {
-          "description": "Zaɓen gwaji zai fara ba da daɗewa ba. An riga an tabbatar da kai, kuma kana shirye ka ƙaɗa kuri’a da zaran zaɓen ya fara."
-        },
         "no_active_election": "Babu zaɓen da ke gudana"
       }
     },

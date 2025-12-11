@@ -72,9 +72,6 @@
           "description": "Testwahlen kommen bald. Verifizieren Sie jetzt Ihre Identität, um bereit zu sein, wenn die Abstimmung beginnt.",
           "verify_button": "Vorab verifizieren"
         },
-        "coming_soon": {
-          "description": "Die Testwahlen beginnen bald. Du bist bereits verifiziert und bereit zu wählen, sobald die Wahl startet."
-        },
         "no_active_election": "Keine aktive Wahl"
       }
     },

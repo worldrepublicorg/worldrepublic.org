@@ -72,9 +72,6 @@
           "description": "Toetselections kom binnekort. Verifieer jou identiteit nou om gereed te wees wanneer stemme oopmaak.",
           "verify_button": "Vooraf verifieer"
         },
-        "coming_soon": {
-          "description": "Toetsverkiesings begin binnekort. Jy is reeds geverifieer en gereed om te stem sodra die verkiesing begin."
-        },
         "no_active_election": "Geen aktiewe verkiesing nie"
       }
     },

@@ -28,9 +28,6 @@
           "description": "Test elections are coming soon. Verify your identity now to be ready when voting opens.",
           "verify_button": "Pre-verify"
         },
-        "coming_soon": {
-          "description": "Test elections are coming soon. You're already verified and ready to vote when the election begins."
-        },
         "no_active_election": "No active election"
       },
       "parties": {
