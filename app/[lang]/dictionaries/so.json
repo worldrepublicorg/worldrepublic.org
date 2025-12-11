@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Tani waxay tirtiri doontaa akoonkaaga si joogto ah waxayna ka saari doontaa dhammaan xogtaaga serverkeena. Tallaaboobadan ma la soo celin karo — fadlan sii wad si taxadar leh.",
           "deleting": "Tirtiraya..."
-        },
-        "receive": {
-          "button": "Heli",
-          "title": "Heli WDD",
-          "description": "Wadaag magacaaga isticmaalka si aad u hesho WDD asxaabtaada ka."
         }
       },
       "sections": {

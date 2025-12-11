@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Ibi bizasiba konti yawe byuzuye kandi bizakuramo amakuru yawe yose ku maseriveri yacu. Iki gikorwa ntikishobora guhindurwa — komeza ufatanya.",
           "deleting": "Gusiba..."
-        },
-        "receive": {
-          "button": "Kwemera",
-          "title": "Kwemera WDD",
-          "description": "Ganira izina ryawe ry'ukoresha kugira ngo wakire WDD kuvuye kuri inshuti zawe."
         }
       },
       "sections": {

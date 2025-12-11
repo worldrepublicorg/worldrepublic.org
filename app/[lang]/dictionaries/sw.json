@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",
           "deleting": "Inafutwa..."
-        },
-        "receive": {
-          "button": "Pokewa",
-          "title": "Pokewa WDD",
-          "description": "Shiriki jina lako la mtumiaji ili kupokea WDD kutoka kwa marafiki zako."
         }
       },
       "sections": {

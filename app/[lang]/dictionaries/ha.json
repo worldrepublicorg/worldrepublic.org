@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",
           "deleting": "Ana share..."
-        },
-        "receive": {
-          "button": "Karɓa",
-          "title": "Karɓa WDD",
-          "description": "Raba sunan mai amfani don karɓar WDD daga abokanka."
         }
       },
       "sections": {

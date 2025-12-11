@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Tämä poistaa pysyvästi tilisi ja poistaa kaikki tietosi palvelimiltamme. Tätä toimintoa ei voi perua — jatka varovasti.",
           "deleting": "Poistetaan..."
-        },
-        "receive": {
-          "button": "Vastaanota",
-          "title": "Vastaanota WDD",
-          "description": "Jaa käyttäjänimesi vastaanottaaksesi WDD ystäviltäsi."
         }
       },
       "sections": {

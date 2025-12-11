@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Bu hisobingizni butunlay o'chiradi va barcha ma'lumotlaringizni serverlarimizdan olib tashlaydi. Bu amalni qaytarib bo'lmaydi — iltimos ehtiyotkorlik bilan davom eting.",
           "deleting": "O'chirilmoqda..."
-        },
-        "receive": {
-          "button": "Qabul qilish",
-          "title": "WDD qabul qilish",
-          "description": "Do'stlaringizdan WDD olish uchun foydalanuvchi nomingizni ulashing."
         }
       },
       "sections": {

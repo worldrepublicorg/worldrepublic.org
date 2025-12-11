@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Dit zal je account permanent verwijderen en alle gegevens van onze servers verwijderen. Deze actie kan niet ongedaan worden gemaakt — ga voorzichtig te werk.",
           "deleting": "Verwijderen..."
-        },
-        "receive": {
-          "button": "Ontvangen",
-          "title": "WDD ontvangen",
-          "description": "Deel uw gebruikersnaam om WDD van uw vrienden te ontvangen."
         }
       },
       "sections": {

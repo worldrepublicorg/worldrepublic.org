@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",
           "deleting": "删除中..."
-        },
-        "receive": {
-          "button": "接收",
-          "title": "接收 WDD",
-          "description": "分享您的用户名，以便从朋友那里接收 WDD。"
         }
       },
       "sections": {

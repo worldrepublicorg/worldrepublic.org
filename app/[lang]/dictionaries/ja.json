@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "これにより、アカウントが永続的に削除され、すべてのデータがサーバーから削除されます。この操作は元に戻せません — 慎重に続行してください。",
           "deleting": "削除中..."
-        },
-        "receive": {
-          "button": "受信",
-          "title": "WDD を受信",
-          "description": "ユーザー名を共有して、友達から WDD を受け取ります。"
         }
       },
       "sections": {

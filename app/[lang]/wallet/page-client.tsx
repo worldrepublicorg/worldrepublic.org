@@ -20,14 +20,11 @@ import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import {
-  PiArrowCircleDownFill,
   PiArrowCircleUpFill,
-  PiArrowDown,
   PiArrowSquareOut,
   PiArrowsClockwise,
   PiArrowsClockwiseFill,
   PiArrowUp,
-  PiCopy,
   PiList,
   PiUser,
   PiUserFill,
@@ -51,7 +48,6 @@ import { useAuth } from "@/hooks/use-auth";
 import { withdrawTokens } from "@/lib/actions/member";
 import {
   cn,
-  copyToClipboard,
   formatFullAmount,
   getBalancePrecision,
   truncateToPrecision,
@@ -98,13 +94,6 @@ export default function WalletPageClient({
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
   const walletBalance = profileData?.walletBalance ?? null;
-  const username = profileData?.username ?? null;
-
-  // Copy username to clipboard
-  const handleCopyUsername = async () => {
-    if (!username) return;
-    await copyToClipboard(username, toast);
-  };
 
   // Dialog state management
   const [isSendChoiceDialogOpen, setIsSendChoiceDialogOpen] = useState(false);
@@ -295,7 +284,7 @@ export default function WalletPageClient({
             {displayBalance} WDD
           </Typography>
 
-          <div className="flex flex-row w-full justify-around mt-6">
+          <div className="flex flex-row w-full justify-around mt-6 px-6">
             {/* Send */}
             <AlertDialog
               open={isSendChoiceDialogOpen}
@@ -606,73 +595,6 @@ export default function WalletPageClient({
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-
-            {/* Receive */}
-            {authenticated ? (
-              <AlertDialog>
-                <AlertDialogTrigger asChild>
-                  <div className="flex flex-1 flex-col items-center gap-2 cursor-pointer">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
-                      <PiArrowDown className="h-5 w-5 text-gray-900" />
-                    </div>
-                    <Typography
-                      variant="body"
-                      level={4}
-                      className="text-gray-900 font-medium"
-                    >
-                      {dictionary.pages.wallet.modals.receive.button}
-                    </Typography>
-                  </div>
-                </AlertDialogTrigger>
-
-                <AlertDialogContent>
-                  <AlertDialogHeader
-                    icon={
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                        <PiArrowCircleDownFill className="h-[30px] w-[30px] text-gray-400" />
-                      </div>
-                    }
-                  >
-                    <Typography variant="heading" level={3}>
-                      {dictionary.pages.wallet.modals.receive.title}
-                    </Typography>
-                  </AlertDialogHeader>
-
-                  <AlertDialogDescription className="mb-6!">
-                    {dictionary.pages.wallet.modals.receive.description}
-                  </AlertDialogDescription>
-
-                  <AlertDialogFooter>
-                    {username && (
-                      <div onClick={handleCopyUsername} className="w-full">
-                        <CustomListItem
-                          label={username}
-                          endAdornment={
-                            <PiCopy className="size-4 text-gray-400" />
-                          }
-                        />
-                      </div>
-                    )}
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            ) : (
-              <div
-                className="flex flex-1 flex-col items-center gap-2 cursor-pointer"
-                onClick={() => setIsSignInDialogOpen(true)}
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
-                  <PiArrowDown className="h-5 w-5 text-gray-900" />
-                </div>
-                <Typography
-                  variant="body"
-                  level={4}
-                  className="text-gray-900 font-medium"
-                >
-                  {dictionary.pages.wallet.modals.receive.button}
-                </Typography>
-              </div>
-            )}
 
             {/* Trade */}
             <AlertDialog>

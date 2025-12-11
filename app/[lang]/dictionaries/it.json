@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Questo eliminerà definitivamente il tuo account e rimuoverà tutti i tuoi dati dai nostri server. Questa azione non può essere annullata — procedi con cautela.",
           "deleting": "Eliminazione in corso..."
-        },
-        "receive": {
-          "button": "Ricevere",
-          "title": "Ricevere WDD",
-          "description": "Condividi il tuo nome utente per ricevere WDD dai tuoi amici."
         }
       },
       "sections": {

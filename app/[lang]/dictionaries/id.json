@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Ini akan menghapus akun Anda secara permanen dan menghapus semua data Anda dari server kami. Tindakan ini tidak dapat dibatalkan — silakan lanjutkan dengan hati-hati.",
           "deleting": "Menghapus..."
-        },
-        "receive": {
-          "button": "Terima",
-          "title": "Terima WDD",
-          "description": "Bagikan nama pengguna Anda untuk menerima WDD dari teman-teman Anda."
         }
       },
       "sections": {

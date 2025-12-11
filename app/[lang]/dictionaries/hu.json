@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Ez véglegesen törölni fogja a fiókját és eltávolítja az összes adatát szervereinkről. Ez a művelet nem vonható vissza — kérjük, óvatosan járjon el.",
           "deleting": "Törlés..."
-        },
-        "receive": {
-          "button": "Fogadás",
-          "title": "WDD fogadása",
-          "description": "Ossza meg felhasználónevét, hogy barátaitól kapjon WDD-t."
         }
       },
       "sections": {

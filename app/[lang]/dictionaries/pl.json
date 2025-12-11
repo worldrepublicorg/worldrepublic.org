@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "To na zawsze usunie Twoje konto i wszystkie dane z naszych serwerów. Tej akcji nie można cofnąć — kontynuuj ostrożnie.",
           "deleting": "Usuwanie..."
-        },
-        "receive": {
-          "button": "Odbierz",
-          "title": "Odbierz WDD",
-          "description": "Udostępnij swoją nazwę użytkownika, aby otrzymywać WDD od przyjaciół."
         }
       },
       "sections": {

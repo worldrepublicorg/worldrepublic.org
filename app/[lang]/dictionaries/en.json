@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "This will permanently delete your account and remove all your data from our servers. This action cannot be undone — please continue with caution.",
           "deleting": "Deleting..."
-        },
-        "receive": {
-          "button": "Receive",
-          "title": "Receive WDD",
-          "description": "Share your username to receive WDD from your friends."
         }
       },
       "sections": {

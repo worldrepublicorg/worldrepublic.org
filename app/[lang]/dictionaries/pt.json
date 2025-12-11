@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Isso excluirá permanentemente sua conta e removerá todos os seus dados de nossos servidores. Esta ação não pode ser desfeita — por favor, continue com cuidado.",
           "deleting": "Excluindo..."
-        },
-        "receive": {
-          "button": "Receber",
-          "title": "Receber WDD",
-          "description": "Compartilhe seu nome de usuário para receber WDD dos seus amigos."
         }
       },
       "sections": {

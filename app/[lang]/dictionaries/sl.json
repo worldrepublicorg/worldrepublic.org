@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "To bo trajno izbrisalo vaš račun in odstranilo vse vaše podatke z naših strežnikov. Tega dejanja ni mogoče razveljaviti — nadaljujte previdno.",
           "deleting": "Brisanje..."
-        },
-        "receive": {
-          "button": "Prejmi",
-          "title": "Prejmi WDD",
-          "description": "Delite svoje uporabniško ime, da boste prejemali WDD od prijateljev."
         }
       },
       "sections": {

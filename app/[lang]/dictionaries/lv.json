@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Tas neatgriezeniski dzēsīs jūsu kontu un noņems visus jūsu datus no mūsu serveriem. Šo darbību nevar atsaukt — lūdzu, turpiniet uzmanīgi.",
           "deleting": "Dzēš..."
-        },
-        "receive": {
-          "button": "Saņemt",
-          "title": "Saņemt WDD",
-          "description": "Dalieties ar savu lietotājvārdu, lai saņemtu WDD no draugiem."
         }
       },
       "sections": {

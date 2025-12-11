@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",
           "deleting": "Silinir..."
-        },
-        "receive": {
-          "button": "Qəbul et",
-          "title": "WDD qəbul et",
-          "description": "Dostlarınızdan WDD almaq üçün istifadəçi adınızı paylaşın."
         }
       },
       "sections": {

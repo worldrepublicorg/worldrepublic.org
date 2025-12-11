@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių. Šio veiksmo negalima atšaukti — tęskite atsargiai.",
           "deleting": "Ištrinama..."
-        },
-        "receive": {
-          "button": "Gauti",
-          "title": "Gauti WDD",
-          "description": "Pasidalinkite savo vartotojo vardu, kad gautumėte WDD iš draugų."
         }
       },
       "sections": {

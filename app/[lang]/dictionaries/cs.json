@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Toto permanentně smaže váš účet a odstraní všechna vaše data z našich serverů. Tuto akci nelze vrátit zpět — pokračujte opatrně.",
           "deleting": "Mažu..."
-        },
-        "receive": {
-          "button": "Přijmout",
-          "title": "Přijmout WDD",
-          "description": "Sdílejte své uživatelské jméno, abyste mohli přijímat WDD od přátel."
         }
       },
       "sections": {

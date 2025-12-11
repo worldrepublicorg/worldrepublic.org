@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Dit sal jou rekening permanent skrap en al jou data van ons bedieners verwyder. Hierdie aksie kan nie ongedaan gemaak word nie — gaan voort met omsigtigheid.",
           "deleting": "Skrap..."
-        },
-        "receive": {
-          "button": "Ontvang",
-          "title": "Ontvang WDD",
-          "description": "Deel jou gebruikersnaam om WDD van jou vriende te ontvang."
         }
       },
       "sections": {

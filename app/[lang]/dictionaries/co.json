@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Questu sguasserà permanentemente u to cuntu è rimuverà tutti i to dati da i nostri serveri. Questa azione ùn pò esse annullata — per piacè cuntinue cù cura.",
           "deleting": "Sguassendu..."
-        },
-        "receive": {
-          "button": "Ricevi",
-          "title": "Ricevi WDD",
-          "description": "Cundividite u vostru nome d'utilizatore per riceve WDD da i vostri amichi."
         }
       },
       "sections": {

@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Eyi yoo pa iroyin rẹ lailai ati yọ awọn data rẹ kuro ni awọn server wa. Iṣẹ yii ko le yipada — tẹsiwaju pẹlu iṣọra.",
           "deleting": "Npa..."
-        },
-        "receive": {
-          "button": "Gba",
-          "title": "Gba WDD",
-          "description": "Pin orukọ olumulo rẹ lati gba WDD lati awọn ọrẹ rẹ."
         }
       },
       "sections": {

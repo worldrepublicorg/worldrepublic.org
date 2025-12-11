@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "이것은 귀하의 계정을 영구적으로 삭제하고 모든 데이터를 서버에서 제거합니다. 이 작업은 되돌릴 수 없습니다 — 신중하게 진행하세요.",
           "deleting": "삭제 중..."
-        },
-        "receive": {
-          "button": "수신",
-          "title": "WDD 수신",
-          "description": "친구들로부터 WDD를 받으려면 사용자 이름을 공유하세요."
         }
       },
       "sections": {

@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Ini akan memadamkan akaun anda secara kekal dan mengalihkan semua data anda dari pelayan kami. Tindakan ini tidak dapat dibatalkan — sila teruskan dengan berhati-hati.",
           "deleting": "Memadamkan..."
-        },
-        "receive": {
-          "button": "Terima",
-          "title": "Terima WDD",
-          "description": "Kongsi nama pengguna anda untuk menerima WDD daripada rakan anda."
         }
       },
       "sections": {

@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Cela supprimera définitivement votre compte et supprimera toutes vos données de nos serveurs. Cette action ne peut pas être annulée — veuillez continuer avec précaution.",
           "deleting": "Suppression..."
-        },
-        "receive": {
-          "button": "Recevoir",
-          "title": "Recevoir WDD",
-          "description": "Partagez votre nom d'utilisateur pour recevoir WDD de vos amis."
         }
       },
       "sections": {

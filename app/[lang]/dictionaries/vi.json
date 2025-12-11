@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Điều này sẽ xóa vĩnh viễn tài khoản của bạn và xóa tất cả dữ liệu khỏi máy chủ của chúng tôi. Hành động này không thể hoàn tác — vui lòng tiếp tục một cách thận trọng.",
           "deleting": "Đang xóa..."
-        },
-        "receive": {
-          "button": "Nhận",
-          "title": "Nhận WDD",
-          "description": "Chia sẻ tên người dùng của bạn để nhận WDD từ bạn bè."
         }
       },
       "sections": {

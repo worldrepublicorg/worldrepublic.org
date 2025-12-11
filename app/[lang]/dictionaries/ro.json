@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Aceasta va șterge definitiv contul tău și va elimina toate datele tale de pe serverele noastre. Această acțiune nu poate fi anulată — te rugăm să continui cu precauție.",
           "deleting": "Se șterge..."
-        },
-        "receive": {
-          "button": "Primește",
-          "title": "Primește WDD",
-          "description": "Distribuie numele tău de utilizator pentru a primi WDD de la prietenii tăi."
         }
       },
       "sections": {

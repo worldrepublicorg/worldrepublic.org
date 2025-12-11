@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Dies wird Ihr Konto dauerhaft löschen und alle Ihre Daten von unseren Servern entfernen. Diese Aktion kann nicht rückgängig gemacht werden — bitte fahren Sie vorsichtig fort.",
           "deleting": "Wird gelöscht..."
-        },
-        "receive": {
-          "button": "Empfangen",
-          "title": "WDD empfangen",
-          "description": "Teilen Sie Ihren Benutzernamen, um WDD von Ihren Freunden zu erhalten."
         }
       },
       "sections": {

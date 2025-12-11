@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Ovo će trajno obrisati vaš račun i ukloniti sve vaše podatke sa naših servera. Ova akcija se ne može poništiti — molimo budite oprezni.",
           "deleting": "Brisanje..."
-        },
-        "receive": {
-          "button": "Primi",
-          "title": "Primi WDD",
-          "description": "Podijelite svoje korisničko ime da biste primali WDD od prijatelja."
         }
       },
       "sections": {

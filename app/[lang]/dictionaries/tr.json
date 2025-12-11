@@ -167,11 +167,6 @@
         "delete_account": {
           "description": "Bu, hesabınızı kalıcı olarak silecek ve tüm verilerinizi sunucularımızdan kaldıracaktır. Bu işlem geri alınamaz — lütfen dikkatli devam edin.",
           "deleting": "Siliniyor..."
-        },
-        "receive": {
-          "button": "Al",
-          "title": "WDD Al",
-          "description": "Arkadaşlarınızdan WDD almak için kullanıcı adınızı paylaşın."
         }
       },
       "sections": {
