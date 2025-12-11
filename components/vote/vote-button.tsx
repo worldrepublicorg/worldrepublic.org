@@ -7,7 +7,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   Button,
-  Skeleton,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
@@ -15,15 +14,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { useAuth } from "@/hooks/use-auth";
-import { getUserProfile } from "@/lib/actions/member";
-
-// Lazy load heavy dialog components - they're only needed when user interacts
-const SignInDialog = dynamic(
-  () =>
-    import("@/components/auth/sign-in-dialog").then((mod) => mod.SignInDialog),
-  { ssr: false },
-);
 
 const SelfVerificationDialog = dynamic(
   () =>
@@ -36,7 +26,7 @@ const SelfVerificationDialog = dynamic(
 interface VoteButtonProps {
   fullWidth?: boolean;
   className?: string;
-  label?: string; // Optional pre-translated label from server
+  label?: string;
   dictionary: Dictionary;
 }
 
@@ -47,51 +37,22 @@ export function VoteButton({
   dictionary,
 }: VoteButtonProps) {
   const router = useRouter();
-  const { user, isAuthenticated, isLoading: authLoading } = useAuth();
-
-  // Use provided label or fall back to dictionary
   const buttonLabel = label || dictionary.common.vote;
 
-  const [selfVerifiedAt, setSelfVerifiedAt] = useState<number | null>(null);
-  const [profileLoading, setProfileLoading] = useState(true);
   const [preVerificationDialogOpen, setPreVerificationDialogOpen] =
     useState(false);
   const [selfVerificationDialogOpen, setSelfVerificationDialogOpen] =
     useState(false);
-  const [signInDialogOpen, setSignInDialogOpen] = useState(false);
+  // Generate a random UUID for self-verification
+  const [randomUserId, setRandomUserId] = useState<string | null>(null);
 
-  // Fetch user profile for verification status
+  // Generate random UUID on mount
   useEffect(() => {
-    let isMounted = true;
-    const fetchUserProfile = async () => {
-      if (isAuthenticated && !authLoading) {
-        setProfileLoading(true);
-        try {
-          const profileResult = await getUserProfile();
-          if (isMounted && profileResult.success && profileResult.profile) {
-            setSelfVerifiedAt(profileResult.profile.selfVerifiedAt || null);
-          }
-        } catch (error) {
-          console.error("[VoteButton] Error fetching user profile:", error);
-        } finally {
-          if (isMounted) {
-            setProfileLoading(false);
-          }
-        }
-      } else if (!isAuthenticated && !authLoading) {
-        if (isMounted) {
-          setSelfVerifiedAt(null);
-          setProfileLoading(false);
-        }
-      }
-    };
-
-    fetchUserProfile();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [isAuthenticated, authLoading]);
+    if (typeof window !== "undefined" && !randomUserId) {
+      const uuid = crypto.randomUUID();
+      setRandomUserId(uuid);
+    }
+  }, [randomUserId]);
 
   const handlePreVerifyClick = () => {
     setPreVerificationDialogOpen(false);
@@ -99,23 +60,13 @@ export function VoteButton({
   };
 
   const handleVoteClick = () => {
-    if (!isAuthenticated && !authLoading) {
-      setSignInDialogOpen(true);
-    } else {
-      setPreVerificationDialogOpen(true);
-    }
+    // Always go directly to pre-verification dialog, no auth check
+    setPreVerificationDialogOpen(true);
   };
 
   const handleVerificationSuccess = async () => {
     router.refresh();
-    // Refresh user profile after verification
-    const profileResult = await getUserProfile();
-    if (profileResult.success && profileResult.profile) {
-      setSelfVerifiedAt(profileResult.profile.selfVerifiedAt || null);
-    }
   };
-
-  const isVerified = Boolean(selfVerifiedAt);
 
   return (
     <>
@@ -127,7 +78,7 @@ export function VoteButton({
         {buttonLabel}
       </Button>
 
-      {/* Pre-verification or coming soon dialog */}
+      {/* Pre-verification dialog */}
       <AlertDialog
         open={preVerificationDialogOpen}
         onOpenChange={setPreVerificationDialogOpen}
@@ -146,32 +97,12 @@ export function VoteButton({
           </AlertDialogHeader>
           <AlertDialogDescription>
             <Typography>
-              {profileLoading
-                ? null
-                : isVerified
-                  ? dictionary.pages.govern.vote.coming_soon.description
-                  : dictionary.pages.govern.vote.pre_verification.description}
+              {dictionary.pages.govern.vote.pre_verification.description}
             </Typography>
-            {profileLoading ? (
-              <div>
-                <Skeleton height={22} width="100%" />
-                <Skeleton height={22} width="80%" />
-              </div>
-            ) : null}
           </AlertDialogDescription>
           <AlertDialogFooter>
-            <Button
-              disabled={profileLoading}
-              onClick={
-                isVerified
-                  ? () => setPreVerificationDialogOpen(false)
-                  : handlePreVerifyClick
-              }
-              className="w-full"
-            >
-              {isVerified
-                ? dictionary.common.close
-                : dictionary.pages.govern.vote.pre_verification.verify_button}
+            <Button onClick={handlePreVerifyClick} className="w-full">
+              {dictionary.pages.govern.vote.pre_verification.verify_button}
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -182,14 +113,7 @@ export function VoteButton({
         open={selfVerificationDialogOpen}
         onOpenChange={setSelfVerificationDialogOpen}
         onSuccess={handleVerificationSuccess}
-        userId={user?.id || null}
-        dictionary={dictionary}
-      />
-
-      {/* Sign-in dialog */}
-      <SignInDialog
-        open={signInDialogOpen}
-        onOpenChange={setSignInDialogOpen}
+        userId={randomUserId}
         dictionary={dictionary}
       />
     </>

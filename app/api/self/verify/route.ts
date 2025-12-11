@@ -1,8 +1,5 @@
 import { AllIds, DefaultConfigStore, SelfBackendVerifier } from "@selfxyz/core";
-import { and, eq, sql } from "drizzle-orm";
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db/connection";
-import { userProfiles, users } from "@/lib/db/schema";
 
 function createVerifier(origin: string) {
   const scope = "world-republic";
@@ -65,73 +62,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const nullifier = result.discloseOutput?.nullifier;
-    const userUUID = result.userData?.userIdentifier;
-
-    if (!nullifier || !userUUID) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Missing nullifier or user identifier",
-        },
-        { status: 200 },
-      );
-    }
-
-    // Look up user from UUID in users table
-    const [user] = await db
-      .select({ id: users.id, uuid: users.uuid })
-      .from(users)
-      .where(eq(users.uuid, userUUID))
-      .limit(1);
-
-    if (!user) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "User not found for UUID",
-        },
-        { status: 200 },
-      );
-    }
-
-    // Check if nullifier is already bound to a different UUID in PostgreSQL
-    const [existingProfile] = await db
-      .select({ id: userProfiles.id })
-      .from(userProfiles)
-      .where(
-        and(
-          eq(userProfiles.selfNullifier, nullifier),
-          sql`${userProfiles.id} != ${userUUID}`,
-        ),
-      )
-      .limit(1);
-
-    if (existingProfile) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Self ID already linked to another account",
-        },
-        { status: 200 },
-      );
-    }
-
-    const now = new Date();
-
-    // Update user profile in PostgreSQL with nullifier
-    await db
-      .update(userProfiles)
-      .set({
-        selfVerifiedAt: now,
-        selfNullifier: nullifier,
-        updatedAt: now,
-      })
-      .where(eq(userProfiles.id, userUUID));
-
+    // For testing: only verify the proof, don't store anything
     return NextResponse.json(
       {
         status: "success",

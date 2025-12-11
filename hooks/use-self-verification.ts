@@ -1,6 +1,5 @@
 import type { SelfApp } from "@selfxyz/qrcode";
 import { useEffect, useState } from "react";
-import { getSelfUserUuid } from "@/lib/actions/self";
 
 type SelfAppBuilderType = {
   withVersion: (v: number) => SelfAppBuilderType;
@@ -75,34 +74,6 @@ export function useSelfVerification(
       setCallbackReachable(true);
 
       try {
-        // Initialize Self verification - get UUID from users table
-        let userUUID: string | null = null;
-        try {
-          const userIdNum = parseInt(userId, 10);
-          if (isNaN(userIdNum)) {
-            console.error("Invalid user ID:", userId);
-            setIsLoading(false);
-            return;
-          }
-          const result = await getSelfUserUuid(userIdNum);
-          if (result.error) {
-            console.error("Failed to get user UUID:", result.error);
-            setIsLoading(false);
-            return;
-          }
-          userUUID = result.uuid || null;
-        } catch (err) {
-          console.error("Failed to initialize Self mapping:", err);
-          setIsLoading(false);
-          return;
-        }
-
-        if (!userUUID) {
-          console.error("Failed to get user UUID");
-          setIsLoading(false);
-          return;
-        }
-
         const coreMod = (await import("@selfxyz/core")) as unknown as {
           getUniversalLink: (app: unknown) => string;
         };
@@ -131,7 +102,7 @@ export function useSelfVerification(
           endpoint,
           endpointType: "staging_https",
           deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
-          userId: userUUID,
+          userId: userId,
           userIdType: "uuid",
           disclosures: {
             ofac: true,
