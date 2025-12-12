@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Ko si ìdìbọ tó ń lọ lọwọ",
+        "no_active_election": "Awọn idibo bẹrẹ laipẹ",
         "test_verification": {
-          "description": "Awọn idibo bẹrẹ laipẹ. Ṣe idanwo ijẹrisi idanimọ ni bayi lati ṣetan nigbati ibo ba ṣii.",
+          "description": "Ṣe idanwo ijẹrisi idanimọ ni bayi lati ṣetan nigbati ibo ba ṣii.",
           "button": "Daju"
         }
       }

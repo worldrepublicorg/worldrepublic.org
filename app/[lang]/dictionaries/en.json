@@ -25,10 +25,10 @@
       },
       "vote": {
         "test_verification": {
-          "description": "Elections are starting soon. Test identity verification now to be ready when voting opens.",
+          "description": "Test identity verification now to be ready when voting opens.",
           "button": "Verify"
         },
-        "no_active_election": "No active election"
+        "no_active_election": "Elections are starting soon"
       },
       "parties": {
         "discover": "Discover",

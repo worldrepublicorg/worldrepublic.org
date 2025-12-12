@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Brak aktywnych wyborów",
+        "no_active_election": "Wybory wkrótce",
         "test_verification": {
-          "description": "Wybory rozpoczynają się wkrótce. Przetestuj weryfikację tożsamości teraz, aby być gotowym, gdy rozpocznie się głosowanie.",
+          "description": "Przetestuj weryfikację tożsamości teraz, aby być gotowym, gdy rozpocznie się głosowanie.",
           "button": "Zweryfikuj"
         }
       }

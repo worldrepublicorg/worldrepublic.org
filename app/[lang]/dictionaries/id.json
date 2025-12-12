@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Tidak ada pemilihan aktif",
+        "no_active_election": "Pemilu segera dimulai",
         "test_verification": {
-          "description": "Pemilihan akan segera dimulai. Uji verifikasi identitas sekarang agar siap saat pemungutan suara dibuka.",
+          "description": "Uji verifikasi identitas sekarang agar siap saat pemungutan suara dibuka.",
           "button": "Verifikasi"
         }
       }

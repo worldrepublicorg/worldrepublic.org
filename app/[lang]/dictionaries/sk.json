@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Žiadne prebiehajúce voľby",
+        "no_active_election": "Voľby sa začínajú čoskoro",
         "test_verification": {
-          "description": "Voľby sa začínajú čoskoro. Otestujte overenie totožnosti teraz, aby ste boli pripravení, keď sa otvorí hlasovanie.",
+          "description": "Otestujte overenie totožnosti teraz, aby ste boli pripravení, keď sa otvorí hlasovanie.",
           "button": "Overiť"
         }
       }

@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Aktiv seçki yoxdur",
+        "no_active_election": "Seçkilər tezliklə başlayır",
         "test_verification": {
-          "description": "Seçkilər tezliklə başlayır. Səsvermə başlayanda hazır olmaq üçün indi şəxsiyyətin təsdiqini sınayın.",
+          "description": "Səsvermə başlayanda hazır olmaq üçün indi şəxsiyyətin təsdiqini sınayın.",
           "button": "Təsdiqlə"
         }
       }

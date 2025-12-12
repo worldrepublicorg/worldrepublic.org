@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Ni aktivnih volitev",
+        "no_active_election": "Volitve se začnejo kmalu",
         "test_verification": {
-          "description": "Volitve se začnejo kmalu. Testirajte preverjanje identitete zdaj, da boste pripravljeni, ko se odpre glasovanje.",
+          "description": "Testirajte preverjanje identitete zdaj, da boste pripravljeni, ko se odpre glasovanje.",
           "button": "Preveri"
         }
       }

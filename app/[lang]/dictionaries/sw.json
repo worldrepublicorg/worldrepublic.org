@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Hakuna uchaguzi unaoendelea",
+        "no_active_election": "Uchaguzi unaanza hivi karibuni",
         "test_verification": {
-          "description": "Uchaguzi unaanza hivi karibuni. Jaribu uthibitishaji wa kitambulisho sasa ili uwe tayari wakati upigaji kura utakapofunguliwa.",
+          "description": "Jaribu uthibitishaji wa kitambulisho sasa ili uwe tayari wakati upigaji kura utakapofunguliwa.",
           "button": "Thibitisha"
         }
       }

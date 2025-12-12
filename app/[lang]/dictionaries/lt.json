@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nėra vykstančių rinkimų",
+        "no_active_election": "Rinkimai prasideda netrukus",
         "test_verification": {
-          "description": "Rinkimai prasideda netrukus. Išbandykite tapatybės patvirtinimą dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
+          "description": "Išbandykite tapatybės patvirtinimą dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
           "button": "Patvirtinti"
         }
       }

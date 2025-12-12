@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nta matora ari kuba",
+        "no_active_election": "Amatora aratangira vuba",
         "test_verification": {
-          "description": "Amatora aratangira vuba. Gerageza igenzura ry'umwirondoro ubu kugira ngo ube witeguye igihe amatora azatangira.",
+          "description": "Gerageza igenzura ry'umwirondoro ubu kugira ngo ube witeguye igihe amatora azatangira.",
           "button": "Genzeura"
         }
       }

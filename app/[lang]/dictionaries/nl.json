@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Geen actieve verkiezing",
+        "no_active_election": "Verkiezingen beginnen binnenkort",
         "test_verification": {
-          "description": "Verkiezingen beginnen binnenkort. Test identiteitsverificatie nu om klaar te zijn wanneer het stemmen begint.",
+          "description": "Test identiteitsverificatie nu om klaar te zijn wanneer het stemmen begint.",
           "button": "Verifiëren"
         }
       }

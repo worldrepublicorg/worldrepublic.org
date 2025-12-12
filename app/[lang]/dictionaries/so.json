@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Doorasho firfircoon ma jirto",
+        "no_active_election": "Doorashooyinku waxay bilaabanayaan dhowaan",
         "test_verification": {
-          "description": "Doorashooyinku waxay bilaabanayaan dhowaan. Tijaabi xaqiijinta aqoonsiga hadda si aad diya u noqoto marka codeyntu furmo.",
+          "description": "Tijaabi xaqiijinta aqoonsiga hadda si aad diya u noqoto marka codeyntu furmo.",
           "button": "Xaqiiji"
         }
       }

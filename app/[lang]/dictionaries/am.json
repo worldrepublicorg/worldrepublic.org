@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "ምንም ንቁ ምርጫ የለም",
+        "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",
         "test_verification": {
-          "description": "ምርጫዎች በቅርቡ ይጀምራሉ። ድምጽ መስጠት ሲጀምር ዝግጁ ለመሆን የማንነት ማረጋገጫን አሁን ይሞክሩ።",
+          "description": "ድምጽ መስጠት ሲጀምር ዝግጁ ለመሆን የማንነት ማረጋገጫን አሁን ይሞክሩ።",
           "button": "አረጋግጥ"
         }
       }

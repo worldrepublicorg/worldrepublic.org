@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Geen aktiewe verkiesing nie",
+        "no_active_election": "Verkiesings begin binnekort",
         "test_verification": {
-          "description": "Verkiesings begin binnekort. Toets identiteitsverifikasie nou om gereed te wees wanneer stemming oopmaak.",
+          "description": "Toets identiteitsverifikasie nou om gereed te wees wanneer stemming oopmaak.",
           "button": "Verifieer"
         }
       }

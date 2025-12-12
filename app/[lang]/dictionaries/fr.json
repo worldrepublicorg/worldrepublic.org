@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Aucune élection en cours",
+        "no_active_election": "Les élections approchent",
         "test_verification": {
-          "description": "Les élections commencent bientôt. Testez la vérification d'identité maintenant pour être prêt lors de l'ouverture du vote.",
+          "description": "Testez la vérification d'identité maintenant pour être prêt lors de l'ouverture du vote.",
           "button": "Vérifier"
         }
       }

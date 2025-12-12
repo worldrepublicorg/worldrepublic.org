@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "当前没有正在进行的选举",
+        "no_active_election": "选举即将开始",
         "test_verification": {
-          "description": "选举即将开始。立即测试身份验证，以便在投票开始时做好准备。",
+          "description": "立即测试身份验证，以便在投票开始时做好准备。",
           "button": "验证"
         }
       }

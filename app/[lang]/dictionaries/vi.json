@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Không có cuộc bầu cử đang diễn ra",
+        "no_active_election": "Bầu cử sắp bắt đầu",
         "test_verification": {
-          "description": "Cuộc bầu cử sắp bắt đầu. Hãy thử nghiệm xác minh danh tính ngay bây giờ để sẵn sàng khi cuộc bỏ phiếu mở ra.",
+          "description": "Hãy thử nghiệm xác minh danh tính ngay bây giờ để sẵn sàng khi cuộc bỏ phiếu mở ra.",
           "button": "Xác minh"
         }
       }

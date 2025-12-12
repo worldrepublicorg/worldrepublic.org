@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Aktif seçim yok",
+        "no_active_election": "Seçimler yakında başlıyor",
         "test_verification": {
-          "description": "Seçimler yakında başlıyor. Oylama başladığında hazır olmak için kimlik doğrulamasını şimdi test edin.",
+          "description": "Oylama başladığında hazır olmak için kimlik doğrulamasını şimdi test edin.",
           "button": "Doğrula"
         }
       }

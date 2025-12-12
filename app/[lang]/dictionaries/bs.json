@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nema aktivnih izbora",
+        "no_active_election": "Izbori počinju uskoro",
         "test_verification": {
-          "description": "Izbori počinju uskoro. Testirajte verifikaciju identiteta sada da budete spremni kada glasanje počne.",
+          "description": "Testirajte verifikaciju identiteta sada da budete spremni kada glasanje počne.",
           "button": "Potvrdi"
         }
       }

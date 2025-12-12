@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nav aktīvu vēlēšanu",
+        "no_active_election": "Vēlēšanas drīz sāksies",
         "test_verification": {
-          "description": "Vēlēšanas drīz sāksies. Testējiet identitātes pārbaudi tagad, lai būtu gatavi, kad sāksies balsošana.",
+          "description": "Testējiet identitātes pārbaudi tagad, lai būtu gatavi, kad sāksies balsošana.",
           "button": "Pārbaudīt"
         }
       }

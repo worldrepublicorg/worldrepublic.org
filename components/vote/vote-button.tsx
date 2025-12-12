@@ -12,7 +12,7 @@ import {
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { PiInfoFill } from "react-icons/pi";
+import { PiClockCountdownFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const SelfVerificationDialog = dynamic(
@@ -87,7 +87,7 @@ export function VoteButton({
           <AlertDialogHeader
             icon={
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                <PiInfoFill className="h-[30px] w-[30px] text-gray-400" />
+                <PiClockCountdownFill className="h-[30px] w-[30px] text-gray-400" />
               </div>
             }
           >

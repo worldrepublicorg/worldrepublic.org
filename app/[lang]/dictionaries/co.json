@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nisuna elezzione attiva",
+        "no_active_election": "L'elezzioni principianu prestu",
         "test_verification": {
-          "description": "L'elezzioni principianu prestu. Pruvate a verificazione di l'identità avà per esse pronti quandu u votu apre.",
+          "description": "Pruvate a verificazione di l'identità avà per esse pronti quandu u votu apre.",
           "button": "Verificate"
         }
       }

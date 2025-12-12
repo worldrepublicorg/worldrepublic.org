@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "実施中の選挙はありません",
+        "no_active_election": "選挙がまもなく始まります",
         "test_verification": {
-          "description": "選挙がまもなく始まります。投票開始時に準備ができるよう、今すぐ本人確認をテストしてください。",
+          "description": "投票開始時に準備ができるよう、今すぐ本人確認をテストしてください。",
           "button": "確認"
         }
       }

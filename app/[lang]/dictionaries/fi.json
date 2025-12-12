@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Ei käynnissä olevaa vaalia",
+        "no_active_election": "Vaalit alkavat pian",
         "test_verification": {
-          "description": "Vaalit alkavat pian. Testaa henkilöllisyyden varmennus nyt ollaksesi valmis, kun äänestys alkaa.",
+          "description": "Testaa henkilöllisyyden varmennus nyt ollaksesi valmis, kun äänestys alkaa.",
           "button": "Vahvista"
         }
       }

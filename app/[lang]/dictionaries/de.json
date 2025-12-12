@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Keine aktive Wahl",
+        "no_active_election": "Wahlen beginnen bald",
         "test_verification": {
-          "description": "Wahlen beginnen bald. Testen Sie jetzt die Identitätsprüfung, um bereit zu sein, wenn die Abstimmung beginnt.",
+          "description": "Testen Sie jetzt die Identitätsprüfung, um bereit zu sein, wenn die Abstimmung beginnt.",
           "button": "Verifizieren"
         }
       }

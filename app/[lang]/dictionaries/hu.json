@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nincs aktív választás",
+        "no_active_election": "Választások hamarosan",
         "test_verification": {
-          "description": "A választások hamarosan kezdődnek. Tesztelje a személyazonosság-ellenőrzést most, hogy készen álljon a szavazás kezdetekor.",
+          "description": "Tesztelje a személyazonosság-ellenőrzést most, hogy készen álljon a szavazás kezdetekor.",
           "button": "Ellenőrzés"
         }
       }

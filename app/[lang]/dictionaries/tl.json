@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Walang aktibong halalan",
+        "no_active_election": "Malapit na ang halalan",
         "test_verification": {
-          "description": "Magsisimula na ang halalan sa lalong madaling panahon. Subukan ang pagpapatunay ng pagkakakilanlan ngayon upang maging handa kapag nagbukas ang botohan.",
+          "description": "Subukan ang pagpapatunay ng pagkakakilanlan ngayon upang maging handa kapag nagbukas ang botohan.",
           "button": "Patunayan"
         }
       }

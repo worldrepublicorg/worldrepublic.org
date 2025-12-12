@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Faol saylov yo'q",
+        "no_active_election": "Saylovlar tez orada boshlanadi",
         "test_verification": {
-          "description": "Saylovlar tez orada boshlanadi. Ovoz berish boshlanganda tayyor bo'lish uchun shaxsni tasdiqlashni hozir sinab ko'ring.",
+          "description": "Ovoz berish boshlanganda tayyor bo'lish uchun shaxsni tasdiqlashni hozir sinab ko'ring.",
           "button": "Tasdiqlash"
         }
       }

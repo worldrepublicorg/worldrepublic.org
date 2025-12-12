@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nicio alegere activă",
+        "no_active_election": "Alegerile se apropie",
         "test_verification": {
-          "description": "Alegerile încep în curând. Testați verificarea identității acum pentru a fi pregătiți când se deschide votul.",
+          "description": "Testați verificarea identității acum pentru a fi pregătiți când se deschide votul.",
           "button": "Verifică"
         }
       }

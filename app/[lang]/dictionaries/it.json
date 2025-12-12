@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Nessuna elezione attiva",
+        "no_active_election": "Elezioni in arrivo",
         "test_verification": {
-          "description": "Le elezioni iniziano presto. Testa la verifica dell'identità ora per essere pronto all'apertura del voto.",
+          "description": "Testa la verifica dell'identità ora per essere pronto all'apertura del voto.",
           "button": "Verifica"
         }
       }

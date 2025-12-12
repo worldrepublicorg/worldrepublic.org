@@ -68,9 +68,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Tiada pilihan raya aktif",
+        "no_active_election": "Pilihan raya hampir tiba",
         "test_verification": {
-          "description": "Pilihan raya akan bermula tidak lama lagi. Uji pengesahan identiti sekarang untuk bersedia apabila pengundian dibuka.",
+          "description": "Uji pengesahan identiti sekarang untuk bersedia apabila pengundian dibuka.",
           "button": "Sahkan"
         }
       }
