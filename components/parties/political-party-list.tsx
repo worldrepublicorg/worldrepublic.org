@@ -12,7 +12,7 @@ import {
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import type { FocusEvent as ReactFocusEvent } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
@@ -53,6 +53,7 @@ export function PoliticalPartyList({
   lang,
 }: PoliticalPartyListProps) {
   const router = useRouter();
+  const [isRefreshing, startTransition] = useTransition();
 
   const {
     user,
@@ -567,6 +568,12 @@ export function PoliticalPartyList({
     }
   };
 
+  const handleRefresh = () => {
+    startTransition(() => {
+      router.refresh();
+    });
+  };
+
   // Filter parties based on search term
   const filteredParties =
     searchTerm.trim() === ""
@@ -661,9 +668,12 @@ export function PoliticalPartyList({
             <Button
               variant="tertiary"
               size="sm"
-              onClick={() => router.refresh()}
+              onClick={handleRefresh}
+              disabled={isRefreshing}
             >
-              {dictionary.pages.govern.parties.refresh}
+              {isRefreshing
+                ? dictionary.common.loading
+                : dictionary.pages.govern.parties.refresh}
             </Button>
           </div>
         ) : filteredParties.length === 0 ? (
