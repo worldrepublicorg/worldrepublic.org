@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "测试选举即将开始。现在验证您的身份，以便在投票开放时做好准备。",
-          "verify_button": "预先验证"
-        },
-        "no_active_election": "当前没有正在进行的选举"
+        "no_active_election": "当前没有正在进行的选举",
+        "test_verification": {
+          "description": "选举即将开始。立即测试身份验证，以便在投票开始时做好准备。",
+          "button": "验证"
+        }
       }
     },
     "menu": {

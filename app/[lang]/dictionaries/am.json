@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "የፈተና ምርጫዎች በቅርብ ጊዜ ይመጣሉ። የማስመዝገቢያ ሂደቱ ሲከፈት ዝግጁ ለመሆን አሁን ማንነትዎን ያረጋግጡ።",
-          "verify_button": "ቀደም ሲል ያረጋግጡ"
-        },
-        "no_active_election": "ምንም ንቁ ምርጫ የለም"
+        "no_active_election": "ምንም ንቁ ምርጫ የለም",
+        "test_verification": {
+          "description": "ምርጫዎች በቅርቡ ይጀምራሉ። ድምጽ መስጠት ሲጀምር ዝግጁ ለመሆን የማንነት ማረጋገጫን አሁን ይሞክሩ።",
+          "button": "አረጋግጥ"
+        }
       }
     },
     "menu": {

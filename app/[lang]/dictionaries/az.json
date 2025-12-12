@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Test seçkiləri tezliklə gəlir. Səsvermə açılanda hazır olmaq üçün indi kimliyinizi təsdiqləyin.",
-          "verify_button": "Əvvəlcədən təsdiqlə"
-        },
-        "no_active_election": "Aktiv seçki yoxdur"
+        "no_active_election": "Aktiv seçki yoxdur",
+        "test_verification": {
+          "description": "Seçkilər tezliklə başlayır. Səsvermə başlayanda hazır olmaq üçün indi şəxsiyyətin təsdiqini sınayın.",
+          "button": "Təsdiqlə"
+        }
       }
     },
     "menu": {

@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Toetselections kom binnekort. Verifieer jou identiteit nou om gereed te wees wanneer stemme oopmaak.",
-          "verify_button": "Vooraf verifieer"
-        },
-        "no_active_election": "Geen aktiewe verkiesing nie"
+        "no_active_election": "Geen aktiewe verkiesing nie",
+        "test_verification": {
+          "description": "Verkiesings begin binnekort. Toets identiteitsverifikasie nou om gereed te wees wanneer stemming oopmaak.",
+          "button": "Verifieer"
+        }
       }
     },
     "menu": {

@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Pemilihan uji coba akan segera dimulai. Verifikasi identitas Anda sekarang untuk siap saat pemungutan suara dibuka.",
-          "verify_button": "Pra-verifikasi"
-        },
-        "no_active_election": "Tidak ada pemilihan aktif"
+        "no_active_election": "Tidak ada pemilihan aktif",
+        "test_verification": {
+          "description": "Pemilihan akan segera dimulai. Uji verifikasi identitas sekarang agar siap saat pemungutan suara dibuka.",
+          "button": "Verifikasi"
+        }
       }
     },
     "menu": {

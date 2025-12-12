@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "A tesztválasztások hamarosan érkeznek. Igazolja az identitását most, hogy készen álljon, amikor a szavazás megnyílik.",
-          "verify_button": "Előzetes igazolás"
-        },
-        "no_active_election": "Nincs aktív választás"
+        "no_active_election": "Nincs aktív választás",
+        "test_verification": {
+          "description": "A választások hamarosan kezdődnek. Tesztelje a személyazonosság-ellenőrzést most, hogy készen álljon a szavazás kezdetekor.",
+          "button": "Ellenőrzés"
+        }
       }
     },
     "menu": {

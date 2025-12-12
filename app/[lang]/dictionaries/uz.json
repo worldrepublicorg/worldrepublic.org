@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Test saylovlar tez orada bo'ladi. Ovoz berish ochilganda tayyor bo'lish uchun hozir o'z identifikatsiyangizni tasdiqlang.",
-          "verify_button": "Oldindan tasdiqlash"
-        },
-        "no_active_election": "Faol saylov yo'q"
+        "no_active_election": "Faol saylov yo'q",
+        "test_verification": {
+          "description": "Saylovlar tez orada boshlanadi. Ovoz berish boshlanganda tayyor bo'lish uchun shaxsni tasdiqlashni hozir sinab ko'ring.",
+          "button": "Tasdiqlash"
+        }
       }
     },
     "menu": {

@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Test izbori dolaze uskoro. Verifikujte svoj identitet sada da budete spremni kada se glasanje otvori.",
-          "verify_button": "Prethodno verifikuj"
-        },
-        "no_active_election": "Nema aktivnih izbora"
+        "no_active_election": "Nema aktivnih izbora",
+        "test_verification": {
+          "description": "Izbori počinju uskoro. Testirajte verifikaciju identiteta sada da budete spremni kada glasanje počne.",
+          "button": "Potvrdi"
+        }
       }
     },
     "menu": {

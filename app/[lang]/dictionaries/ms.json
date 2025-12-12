@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Pilihan raya ujian akan tiba tidak lama lagi. Sahkan identiti anda sekarang untuk bersedia apabila undian dibuka.",
-          "verify_button": "Pra-sahkan"
-        },
-        "no_active_election": "Tiada pilihan raya aktif"
+        "no_active_election": "Tiada pilihan raya aktif",
+        "test_verification": {
+          "description": "Pilihan raya akan bermula tidak lama lagi. Uji pengesahan identiti sekarang untuk bersedia apabila pengundian dibuka.",
+          "button": "Sahkan"
+        }
       }
     },
     "menu": {

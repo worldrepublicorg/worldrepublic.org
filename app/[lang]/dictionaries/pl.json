@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Testowe wybory nadchodzą wkrótce. Zweryfikuj teraz swoją tożsamość, aby być gotowym, gdy głosowanie się rozpocznie.",
-          "verify_button": "Weryfikuj wcześniej"
-        },
-        "no_active_election": "Brak aktywnych wyborów"
+        "no_active_election": "Brak aktywnych wyborów",
+        "test_verification": {
+          "description": "Wybory rozpoczynają się wkrótce. Przetestuj weryfikację tożsamości teraz, aby być gotowym, gdy rozpocznie się głosowanie.",
+          "button": "Zweryfikuj"
+        }
       }
     },
     "menu": {

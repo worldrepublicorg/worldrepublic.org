@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Ang mga test na halalan ay malapit nang dumating. I-verify ang iyong pagkakakilanlan ngayon upang maging handa kapag binuksan ang pagboto.",
-          "verify_button": "Pre-verify"
-        },
-        "no_active_election": "Walang aktibong halalan"
+        "no_active_election": "Walang aktibong halalan",
+        "test_verification": {
+          "description": "Magsisimula na ang halalan sa lalong madaling panahon. Subukan ang pagpapatunay ng pagkakakilanlan ngayon upang maging handa kapag nagbukas ang botohan.",
+          "button": "Patunayan"
+        }
       }
     },
     "menu": {

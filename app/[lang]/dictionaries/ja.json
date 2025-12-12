@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "テスト選挙が間もなく始まります。投票が開始されたときに準備ができるよう、今すぐ身元を確認してください。",
-          "verify_button": "事前確認"
-        },
-        "no_active_election": "実施中の選挙はありません"
+        "no_active_election": "実施中の選挙はありません",
+        "test_verification": {
+          "description": "選挙がまもなく始まります。投票開始時に準備ができるよう、今すぐ本人確認をテストしてください。",
+          "button": "確認"
+        }
       }
     },
     "menu": {

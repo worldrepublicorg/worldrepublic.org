@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Testa vēlēšanas drīz sāksies. Apstipriniet savu identitāti tagad, lai būtu gatavs, kad sāksies balsošana.",
-          "verify_button": "Iepriekšēja verificēšana"
-        },
-        "no_active_election": "Nav aktīvu vēlēšanu"
+        "no_active_election": "Nav aktīvu vēlēšanu",
+        "test_verification": {
+          "description": "Vēlēšanas drīz sāksies. Testējiet identitātes pārbaudi tagad, lai būtu gatavi, kad sāksies balsošana.",
+          "button": "Pārbaudīt"
+        }
       }
     },
     "menu": {

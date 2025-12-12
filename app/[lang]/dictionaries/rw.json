@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Amatora y'igerageza azaza vuba. Emeza ubwoba bwawe ubu kugira ngo witegure igihe amatora azafungurwa.",
-          "verify_button": "Menya mbere"
-        },
-        "no_active_election": "Nta matora ari kuba"
+        "no_active_election": "Nta matora ari kuba",
+        "test_verification": {
+          "description": "Amatora aratangira vuba. Gerageza igenzura ry'umwirondoro ubu kugira ngo ube witeguye igihe amatora azatangira.",
+          "button": "Genzeura"
+        }
       }
     },
     "menu": {

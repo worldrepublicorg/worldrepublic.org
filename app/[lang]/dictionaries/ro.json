@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Alegerile de test vor veni în curând. Verifică-ți identitatea acum pentru a fi gata când se deschide votul.",
-          "verify_button": "Pre-verificare"
-        },
-        "no_active_election": "Nicio alegere activă"
+        "no_active_election": "Nicio alegere activă",
+        "test_verification": {
+          "description": "Alegerile încep în curând. Testați verificarea identității acum pentru a fi pregătiți când se deschide votul.",
+          "button": "Verifică"
+        }
       }
     },
     "menu": {

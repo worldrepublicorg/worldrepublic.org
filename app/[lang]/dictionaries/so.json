@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Doorashada tijaanada ayaa dhawaan imaanaysa. Xaqiiji aqoonsigaaga hadda si aad u diyaar u noqoto marka codbixinta la furo.",
-          "verify_button": "Hore u xaqiiji"
-        },
-        "no_active_election": "Doorasho firfircoon ma jirto"
+        "no_active_election": "Doorasho firfircoon ma jirto",
+        "test_verification": {
+          "description": "Doorashooyinku waxay bilaabanayaan dhowaan. Tijaabi xaqiijinta aqoonsiga hadda si aad diya u noqoto marka codeyntu furmo.",
+          "button": "Xaqiiji"
+        }
       }
     },
     "menu": {

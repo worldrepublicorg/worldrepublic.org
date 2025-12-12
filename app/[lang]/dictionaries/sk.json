@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Testovacie voľby prichádzajú čoskoro. Overte si svoju identitu teraz, aby ste boli pripravení, keď sa hlasovanie otvorí.",
-          "verify_button": "Predbežné overenie"
-        },
-        "no_active_election": "Žiadne prebiehajúce voľby"
+        "no_active_election": "Žiadne prebiehajúce voľby",
+        "test_verification": {
+          "description": "Voľby sa začínajú čoskoro. Otestujte overenie totožnosti teraz, aby ste boli pripravení, keď sa otvorí hlasovanie.",
+          "button": "Overiť"
+        }
       }
     },
     "menu": {

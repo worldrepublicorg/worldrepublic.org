@@ -24,9 +24,9 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Test elections are coming soon. Verify your identity now to be ready when voting opens.",
-          "verify_button": "Pre-verify"
+        "test_verification": {
+          "description": "Elections are starting soon. Test identity verification now to be ready when voting opens.",
+          "button": "Verify"
         },
         "no_active_election": "No active election"
       },

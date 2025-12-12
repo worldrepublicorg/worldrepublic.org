@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Zaɓe na gwaji suna zuwa nan ba da jimawa ba. Tabbatar da ainihin ku yanzu don kasancewa shirye lokacin da zaɓe ya buɗe.",
-          "verify_button": "Tabbatar da farko"
-        },
-        "no_active_election": "Babu zaɓen da ke gudana"
+        "no_active_election": "Babu zaɓen da ke gudana",
+        "test_verification": {
+          "description": "Zabe yana farawa nan ba da jimawa ba. Gwada tabbatar da asali yanzu don kasancewa cikin shiri lokacin da aka bude kada kuri'a.",
+          "button": "Tabbatar"
+        }
       }
     },
     "menu": {

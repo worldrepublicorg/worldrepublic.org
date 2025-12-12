@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Awọn idibo idanwo n bọ laipẹ. Jẹrisi idanimọ rẹ ni bayi lati ṣe mura nigba ti idibo ba ṣii.",
-          "verify_button": "Jẹrisi tẹlẹ"
-        },
-        "no_active_election": "Ko si ìdìbọ tó ń lọ lọwọ"
+        "no_active_election": "Ko si ìdìbọ tó ń lọ lọwọ",
+        "test_verification": {
+          "description": "Awọn idibo bẹrẹ laipẹ. Ṣe idanwo ijẹrisi idanimọ ni bayi lati ṣetan nigbati ibo ba ṣii.",
+          "button": "Daju"
+        }
       }
     },
     "menu": {

@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Testovací volby přicházejí brzy. Ověřte si svou identitu nyní, abyste byli připraveni, až se hlasování otevře.",
-          "verify_button": "Předběžné ověření"
-        },
-        "no_active_election": "Žádné aktivní volby"
+        "no_active_election": "Žádné aktivní volby",
+        "test_verification": {
+          "description": "Volby začínají brzy. Otestujte ověření totožnosti nyní, abyste byli připraveni, až se otevře hlasování.",
+          "button": "Ověřit"
+        }
       }
     },
     "menu": {

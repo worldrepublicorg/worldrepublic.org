@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Cuộc bầu cử thử nghiệm sắp diễn ra. Xác minh danh tính của bạn ngay bây giờ để sẵn sàng khi bỏ phiếu mở.",
-          "verify_button": "Xác minh trước"
-        },
-        "no_active_election": "Không có cuộc bầu cử đang diễn ra"
+        "no_active_election": "Không có cuộc bầu cử đang diễn ra",
+        "test_verification": {
+          "description": "Cuộc bầu cử sắp bắt đầu. Hãy thử nghiệm xác minh danh tính ngay bây giờ để sẵn sàng khi cuộc bỏ phiếu mở ra.",
+          "button": "Xác minh"
+        }
       }
     },
     "menu": {

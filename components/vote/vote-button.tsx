@@ -97,12 +97,12 @@ export function VoteButton({
           </AlertDialogHeader>
           <AlertDialogDescription>
             <Typography>
-              {dictionary.pages.govern.vote.pre_verification.description}
+              {dictionary.pages.govern.vote.test_verification.description}
             </Typography>
           </AlertDialogDescription>
           <AlertDialogFooter>
             <Button onClick={handlePreVerifyClick} className="w-full">
-              {dictionary.pages.govern.vote.pre_verification.verify_button}
+              {dictionary.pages.govern.vote.test_verification.button}
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

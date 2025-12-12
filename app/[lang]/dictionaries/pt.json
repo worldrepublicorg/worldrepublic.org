@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "As eleições de teste começarão em breve. Verifique sua identidade agora para estar pronto quando a votação abrir.",
-          "verify_button": "Pré-verificar"
-        },
-        "no_active_election": "Nenhuma eleição ativa"
+        "no_active_election": "Nenhuma eleição ativa",
+        "test_verification": {
+          "description": "As eleições começam em breve. Teste a verificação de identidade agora para estar pronto quando a votação abrir.",
+          "button": "Verificar"
+        }
       }
     },
     "menu": {

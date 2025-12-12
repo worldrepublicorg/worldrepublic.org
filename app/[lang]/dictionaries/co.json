@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "E elezzioni di testu arrivanu prestu. Verificate a vostra identità avà per esse prontu quandu u votu si apre.",
-          "verify_button": "Verificà in anticipu"
-        },
-        "no_active_election": "Nisuna elezzione attiva"
+        "no_active_election": "Nisuna elezzione attiva",
+        "test_verification": {
+          "description": "L'elezzioni principianu prestu. Pruvate a verificazione di l'identità avà per esse pronti quandu u votu apre.",
+          "button": "Verificate"
+        }
       }
     },
     "menu": {

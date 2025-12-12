@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Bandomieji rinkimai greitai prasidės. Patvirtinkite savo tapatybę dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
-          "verify_button": "Išankstinis patvirtinimas"
-        },
-        "no_active_election": "Nėra vykstančių rinkimų"
+        "no_active_election": "Nėra vykstančių rinkimų",
+        "test_verification": {
+          "description": "Rinkimai prasideda netrukus. Išbandykite tapatybės patvirtinimą dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
+          "button": "Patvirtinti"
+        }
       }
     },
     "menu": {

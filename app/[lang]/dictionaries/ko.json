@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "테스트 선거가 곧 시작됩니다. 투표가 시작될 때 준비되도록 지금 신원을 확인하세요.",
-          "verify_button": "사전 확인"
-        },
-        "no_active_election": "진행 중인 선거가 없습니다"
+        "no_active_election": "진행 중인 선거가 없습니다",
+        "test_verification": {
+          "description": "선거가 곧 시작됩니다. 투표가 시작될 때 준비될 수 있도록 지금 본인 확인을 테스트하세요.",
+          "button": "확인"
+        }
       }
     },
     "menu": {

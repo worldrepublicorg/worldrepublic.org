@@ -68,11 +68,11 @@
         }
       },
       "vote": {
-        "pre_verification": {
-          "description": "Testivaalit tulevat pian. Vahvista henkilöllisyytesi nyt, jotta olet valmis, kun äänestys avautuu.",
-          "verify_button": "Ennakkovahvista"
-        },
-        "no_active_election": "Ei käynnissä olevaa vaalia"
+        "no_active_election": "Ei käynnissä olevaa vaalia",
+        "test_verification": {
+          "description": "Vaalit alkavat pian. Testaa henkilöllisyyden varmennus nyt ollaksesi valmis, kun äänestys alkaa.",
+          "button": "Vahvista"
+        }
       }
     },
     "menu": {
