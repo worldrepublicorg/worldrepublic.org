@@ -43,12 +43,6 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
                   <div className="h-5 w-32 animate-pulse rounded bg-gray-200"></div>
                 </div>
               </div>
-              <div className="min-h-14 bg-gray-50 rounded-2xl flex items-center p-4">
-                <div className="mr-3 shrink-0 size-5 animate-pulse rounded-full bg-gray-200"></div>
-                <div className="flex min-w-0 grow flex-col items-start gap-0.5">
-                  <div className="h-5 w-24 animate-pulse rounded bg-gray-200"></div>
-                </div>
-              </div>
             </div>
           </div>
 
