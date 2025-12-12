@@ -648,7 +648,7 @@ export function PoliticalPartyList({
       {/* Parties list */}
       <div className="px-6 pb-6">
         {filteredParties.length === 0 ? (
-          <div className="my-8 text-center text-sm text-gray-500">
+          <div className="mt-16 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
         ) : (
