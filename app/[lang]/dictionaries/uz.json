@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Yuborish",
-          "title": "WDD yuborish",
-          "choice_description": "Draxmaningizni qanday yubormoqchi ekanligingizni tanlang.",
-          "transfer_to_citizen": {
-            "title": "O'tkazish",
-            "description": "WDD ni boshqa fuqaroga o'tkazish",
-            "username_label": "Qabul qiluvchi foydalanuvchi nomi"
-          },
           "withdraw_to_crypto": {
-            "title": "Yechib olish",
             "description": "WDD ni kripto hisobga yechib olish",
             "amount_label": "Miqdor",
             "address_label": "Hamyon manzili",

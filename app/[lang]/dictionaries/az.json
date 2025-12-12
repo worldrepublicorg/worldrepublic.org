@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Göndər",
-          "title": "WDD göndər",
-          "choice_description": "Draxmanızı necə göndərmək istədiyinizi seçin.",
-          "transfer_to_citizen": {
-            "title": "Köçür",
-            "description": "WDD-ni başqa vətəndaşa köçür",
-            "username_label": "Qəbul edənin istifadəçi adı"
-          },
           "withdraw_to_crypto": {
-            "title": "Çıxar",
             "description": "WDD-ni kripto hesabına çıxar",
             "amount_label": "Məbləğ",
             "address_label": "Cüzdan ünvanı",

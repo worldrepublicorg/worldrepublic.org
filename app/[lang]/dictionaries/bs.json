@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Pošaljite",
-          "title": "Pošaljite WDD",
-          "choice_description": "Odaberite kako želite poslati svoju drahmu.",
-          "transfer_to_citizen": {
-            "title": "Prenesite",
-            "description": "Prenesite WDD drugom građaninu",
-            "username_label": "Korisničko ime primaoca"
-          },
           "withdraw_to_crypto": {
-            "title": "Povucite",
             "description": "Povucite WDD na kripto račun",
             "amount_label": "Iznos",
             "address_label": "Adresa novčanika",

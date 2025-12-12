@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "পাঠান",
-          "title": "WDD পাঠান",
-          "choice_description": "আপনি কীভাবে আপনার ড্রাকমা পাঠাতে চান তা নির্বাচন করুন।",
-          "transfer_to_citizen": {
-            "title": "স্থানান্তর",
-            "description": "WDD অন্য নাগরিকের কাছে স্থানান্তর করুন",
-            "username_label": "প্রাপকের ব্যবহারকারীর নাম"
-          },
           "withdraw_to_crypto": {
-            "title": "প্রত্যাহার",
             "description": "WDD একটি crypto অ্যাকাউন্টে প্রত্যাহার করুন",
             "amount_label": "পরিমাণ",
             "address_label": "ওয়ালেট ঠিকানা",

@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Lähetä",
-          "title": "Lähetä WDD",
-          "choice_description": "Valitse, miten haluat lähettää drachmasi.",
-          "transfer_to_citizen": {
-            "title": "Siirrä",
-            "description": "Siirrä WDD toiselle kansalaiselle",
-            "username_label": "Vastaanottajan käyttäjänimi"
-          },
           "withdraw_to_crypto": {
-            "title": "Nosta",
             "description": "Nosta WDD crypto-tilille",
             "amount_label": "Määrä",
             "address_label": "Lompakko-osoite",

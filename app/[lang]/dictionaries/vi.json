@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Gửi",
-          "title": "Gửi WDD",
-          "choice_description": "Chọn cách bạn muốn gửi drachma của mình.",
-          "transfer_to_citizen": {
-            "title": "Chuyển",
-            "description": "Chuyển WDD cho công dân khác",
-            "username_label": "Tên người dùng người nhận"
-          },
           "withdraw_to_crypto": {
-            "title": "Rút",
             "description": "Rút WDD vào tài khoản crypto",
             "amount_label": "Số tiền",
             "address_label": "Địa chỉ ví",

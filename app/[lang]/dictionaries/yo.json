@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Fi",
-          "title": "Fi WDD",
-          "choice_description": "Yan bi o fẹ fi drachma rẹ ranṣẹ.",
-          "transfer_to_citizen": {
-            "title": "Gbe",
-            "description": "Gbe WDD si ara ilu miiran",
-            "username_label": "Orukọ olumulo olugba"
-          },
           "withdraw_to_crypto": {
-            "title": "Yọ",
             "description": "Yọ WDD soke si iroye crypto",
             "amount_label": "Iye",
             "address_label": "Adirẹsi apamọwọ",

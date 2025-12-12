@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Invia",
-          "title": "Invia WDD",
-          "choice_description": "Scegli come vuoi inviare la tua dracma.",
-          "transfer_to_citizen": {
-            "title": "Trasferisci",
-            "description": "Trasferisci WDD a un altro cittadino",
-            "username_label": "Nome utente del destinatario"
-          },
           "withdraw_to_crypto": {
-            "title": "Preleva",
             "description": "Preleva WDD su un account crypto",
             "amount_label": "Importo",
             "address_label": "Indirizzo portafoglio",

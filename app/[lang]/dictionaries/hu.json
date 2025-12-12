@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Küldés",
-          "title": "WDD küldése",
-          "choice_description": "Válassza ki, hogyan szeretné elküldeni a drachmáját.",
-          "transfer_to_citizen": {
-            "title": "Átutalás",
-            "description": "WDD átutalása másik állampolgárnak",
-            "username_label": "Címzett felhasználóneve"
-          },
           "withdraw_to_crypto": {
-            "title": "Kivétel",
             "description": "WDD kivétele kripto számlára",
             "amount_label": "Összeg",
             "address_label": "Számlacím",

@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Изпратете",
-          "title": "Изпратете WDD",
-          "choice_description": "Изберете как искате да изпратите драхмата си.",
-          "transfer_to_citizen": {
-            "title": "Прехвърляне",
-            "description": "Прехвърлете WDD на друг гражданин",
-            "username_label": "Потребителско име на получателя"
-          },
           "withdraw_to_crypto": {
-            "title": "Теглене",
             "description": "Теглете WDD към криптосметка",
             "amount_label": "Сума",
             "address_label": "Адрес на портфейл",

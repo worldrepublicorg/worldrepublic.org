@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "لېږل",
-          "title": "WDD ولېږئ",
-          "choice_description": "غوره کړئ چې تاسو غواړئ خپل دراخما څنګه واستوئ.",
-          "transfer_to_citizen": {
-            "title": "لېږد",
-            "description": "WDD بل وګړي ته لېږد",
-            "username_label": "د ترلاسه کوونکي کارن نوم"
-          },
           "withdraw_to_crypto": {
-            "title": "ووتل",
             "description": "WDD کریپټو حساب ته ووتل",
             "amount_label": "اندازه",
             "address_label": "د والیټ پته",

@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "ပို့ပါ",
-          "title": "WDD ပို့ပါ",
-          "choice_description": "သင့် drachma ကို မည်သို့ ပို့လိုသည်ကို ရွေးချယ်ပါ။",
-          "transfer_to_citizen": {
-            "title": "လွှဲပြောင်းပါ",
-            "description": "WDD ကို အခြားနိုင်ငံသားတစ်ဦးထံ လွှဲပြောင်းပါ",
-            "username_label": "လက်ခံသူ၏ username"
-          },
           "withdraw_to_crypto": {
-            "title": "ထုတ်ယူပါ",
             "description": "WDD ကို crypto အကောင့်သို့ ထုတ်ယူပါ",
             "amount_label": "ပမာဏ",
             "address_label": "ပိုက်ဆံအိတ်လိပ်စာ",

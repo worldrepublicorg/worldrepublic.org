@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Siųsti",
-          "title": "Siųsti WDD",
-          "choice_description": "Pasirinkite, kaip norite siųsti savo drachmą.",
-          "transfer_to_citizen": {
-            "title": "Perkelti",
-            "description": "Perkelti WDD kitam piliečiui",
-            "username_label": "Gavėjo vartotojo vardas"
-          },
           "withdraw_to_crypto": {
-            "title": "Išimti",
             "description": "Išimti WDD į kripto sąskaitą",
             "amount_label": "Suma",
             "address_label": "Piniginės adresas",

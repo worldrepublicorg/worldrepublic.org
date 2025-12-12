@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Ohereza",
-          "title": "Ohereza WDD",
-          "choice_description": "Hitamo uko ushaka kohereza drachma yawe.",
-          "transfer_to_citizen": {
-            "title": "Kwimura",
-            "description": "Kwimura WDD kuri umuturage wundi",
-            "username_label": "Izina ry'ukoresha rw'uwakira"
-          },
           "withdraw_to_crypto": {
-            "title": "Kuramo",
             "description": "Kuramo WDD kuri konte ya crypto",
             "amount_label": "Umubare",
             "address_label": "Aderesi y'ifunguro",

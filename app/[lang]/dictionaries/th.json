@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "ส่ง",
-          "title": "ส่ง WDD",
-          "choice_description": "เลือกวิธีที่คุณต้องการส่งดรักมา",
-          "transfer_to_citizen": {
-            "title": "โอน",
-            "description": "โอน WDD ไปยังพลเมืองอีกคน",
-            "username_label": "ชื่อผู้ใช้ของผู้รับ"
-          },
           "withdraw_to_crypto": {
-            "title": "ถอน",
             "description": "ถอน WDD ไปยังบัญชี crypto",
             "amount_label": "จำนวน",
             "address_label": "ที่อยู่กระเป๋าเงิน",

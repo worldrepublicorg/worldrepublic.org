@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Envoyer",
-          "title": "Envoyer WDD",
-          "choice_description": "Choisissez comment vous souhaitez envoyer votre drachme.",
-          "transfer_to_citizen": {
-            "title": "Transférer",
-            "description": "Transférer WDD à un autre citoyen",
-            "username_label": "Nom d'utilisateur du destinataire"
-          },
           "withdraw_to_crypto": {
-            "title": "Retirer",
             "description": "Retirer WDD vers un compte crypto",
             "amount_label": "Montant",
             "address_label": "Adresse du portefeuille",

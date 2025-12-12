@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Надіслати",
-          "title": "Надіслати WDD",
-          "choice_description": "Виберіть, як ви хочете надіслати свою драхму.",
-          "transfer_to_citizen": {
-            "title": "Переказати",
-            "description": "Переказати WDD іншому громадянину",
-            "username_label": "Ім'я користувача отримувача"
-          },
           "withdraw_to_crypto": {
-            "title": "Вивести",
             "description": "Вивести WDD на крипторахунок",
             "amount_label": "Сума",
             "address_label": "Адреса гаманця",

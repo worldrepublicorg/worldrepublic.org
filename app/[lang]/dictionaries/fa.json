@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "ارسال",
-          "title": "ارسال WDD",
-          "choice_description": "انتخاب کنید که چگونه می‌خواهید دراخم خود را ارسال کنید.",
-          "transfer_to_citizen": {
-            "title": "انتقال",
-            "description": "انتقال WDD به شهروند دیگر",
-            "username_label": "نام کاربری دریافت‌کننده"
-          },
           "withdraw_to_crypto": {
-            "title": "برداشت",
             "description": "برداشت WDD به یک حساب کریپتو",
             "amount_label": "مبلغ",
             "address_label": "آدرس کیف پول",

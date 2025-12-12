@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Пошаљи",
-          "title": "Пошаљи WDD",
-          "choice_description": "Изаберите како желите да пошаљете своју драхму.",
-          "transfer_to_citizen": {
-            "title": "Пренети",
-            "description": "Пренети WDD другом грађанину",
-            "username_label": "Корисничко име примаоца"
-          },
           "withdraw_to_crypto": {
-            "title": "Повуци",
             "description": "Повуците WDD на крипто налог",
             "amount_label": "Износ",
             "address_label": "Адреса новчаника",

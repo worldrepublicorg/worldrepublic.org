@@ -26,9 +26,6 @@ import {
   PiArrowsClockwiseFill,
   PiArrowUp,
   PiList,
-  PiUser,
-  PiUserFill,
-  PiWallet,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
@@ -96,13 +93,7 @@ export default function WalletPageClient({
   const walletBalance = profileData?.walletBalance ?? null;
 
   // Dialog state management
-  const [isSendChoiceDialogOpen, setIsSendChoiceDialogOpen] = useState(false);
-  const [isTransferDialogOpen, setIsTransferDialogOpen] = useState(false);
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
-
-  // Transfer to citizen state
-  const [recipientUsername, setRecipientUsername] = useState("");
-  const [transferAmount, setTransferAmount] = useState("");
 
   // Helper function to get address validation error message
   const getAddressValidationError = (address: string): string | null => {
@@ -286,9 +277,18 @@ export default function WalletPageClient({
 
           <div className="flex flex-row w-full justify-around mt-6 px-6">
             {/* Send */}
+            {/* Withdraw to Crypto Dialog */}
             <AlertDialog
-              open={isSendChoiceDialogOpen}
-              onOpenChange={setIsSendChoiceDialogOpen}
+              open={isWithdrawDialogOpen}
+              onOpenChange={(open) => {
+                setIsWithdrawDialogOpen(open);
+                if (!open) {
+                  // Reset form when dialog closes
+                  setWalletAddress("");
+                  setSelectedChain("");
+                  setAmount("");
+                }
+              }}
             >
               <AlertDialogTrigger asChild>
                 <div className="flex flex-1 flex-col items-center gap-2 cursor-pointer">
@@ -305,7 +305,6 @@ export default function WalletPageClient({
                 </div>
               </AlertDialogTrigger>
 
-              {/* Choice Dialog */}
               <AlertDialogContent>
                 <AlertDialogHeader
                   icon={
@@ -315,175 +314,7 @@ export default function WalletPageClient({
                   }
                 >
                   <Typography variant="heading" level={3}>
-                    {dictionary.pages.wallet.modals.send.title}
-                  </Typography>
-                </AlertDialogHeader>
-
-                <AlertDialogDescription className="mb-4">
-                  {dictionary.pages.wallet.modals.send.choice_description}
-                </AlertDialogDescription>
-
-                <div className="flex flex-col gap-2">
-                  {/* Option 1: Transfer to Citizen */}
-                  <CustomListItem
-                    label={
-                      dictionary.pages.wallet.modals.send.transfer_to_citizen
-                        .title
-                    }
-                    description={
-                      dictionary.pages.wallet.modals.send.transfer_to_citizen
-                        .description
-                    }
-                    startAdornment={<PiUser className="size-5 text-gray-400" />}
-                    onClick={() => {
-                      setIsSendChoiceDialogOpen(false);
-                      setIsTransferDialogOpen(true);
-                    }}
-                  />
-
-                  {/* Option 2: Withdraw to Crypto */}
-                  <CustomListItem
-                    label={
-                      dictionary.pages.wallet.modals.send.withdraw_to_crypto
-                        .title
-                    }
-                    description={
-                      dictionary.pages.wallet.modals.send.withdraw_to_crypto
-                        .description
-                    }
-                    startAdornment={
-                      <PiWallet className="size-5 text-gray-400" />
-                    }
-                    onClick={() => {
-                      setIsSendChoiceDialogOpen(false);
-                      setIsWithdrawDialogOpen(true);
-                    }}
-                  />
-                </div>
-              </AlertDialogContent>
-            </AlertDialog>
-
-            {/* Transfer to Citizen Dialog */}
-            <AlertDialog
-              open={isTransferDialogOpen}
-              onOpenChange={(open) => {
-                setIsTransferDialogOpen(open);
-                if (!open) {
-                  // Reset form when dialog closes
-                  setRecipientUsername("");
-                  setTransferAmount("");
-                }
-              }}
-            >
-              <AlertDialogContent>
-                <AlertDialogHeader
-                  icon={
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                      <PiUserFill className="h-[30px] w-[30px] text-gray-400" />
-                    </div>
-                  }
-                >
-                  <Typography variant="heading" level={3}>
-                    {
-                      dictionary.pages.wallet.modals.send.transfer_to_citizen
-                        .title
-                    }
-                  </Typography>
-                </AlertDialogHeader>
-
-                <AlertDialogDescription>
-                  {
-                    dictionary.pages.wallet.modals.send.transfer_to_citizen
-                      .description
-                  }
-                  .
-                  <div className="flex flex-col gap-2 mt-4">
-                    <Input
-                      value={recipientUsername}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setRecipientUsername(e.target.value)
-                      }
-                      label={
-                        dictionary.pages.wallet.modals.send.transfer_to_citizen
-                          .username_label
-                      }
-                    />
-
-                    <Input
-                      value={transferAmount}
-                      type="number"
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                        const value = e.target.value;
-                        setTransferAmount(value);
-                      }}
-                      endAdornment={
-                        <button
-                          type="button"
-                          onClick={() => setTransferAmount(totalBalance)}
-                          className={cn(
-                            "leading-narrow flex h-9 items-center justify-center rounded-full font-sans text-sm font-medium tracking-normal whitespace-nowrap",
-                            transferAmount === totalBalance
-                              ? "text-gray-500"
-                              : "text-gray-900",
-                          )}
-                        >
-                          {dictionary.common.max}
-                        </button>
-                      }
-                      label={
-                        dictionary.pages.wallet.modals.send.withdraw_to_crypto
-                          .amount_label
-                      }
-                    />
-                  </div>
-                </AlertDialogDescription>
-
-                <AlertDialogFooter>
-                  <Button
-                    onClick={() => {
-                      // TODO: Implement transfer logic
-                      toast.success({
-                        title: dictionary.common.coming_soon,
-                      });
-                      setIsTransferDialogOpen(false);
-                      setRecipientUsername("");
-                      setTransferAmount("");
-                    }}
-                    className="w-full"
-                    disabled={!recipientUsername.trim() || !transferAmount}
-                  >
-                    {dictionary.common.confirm}
-                  </Button>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
-
-            {/* Withdraw to Crypto Dialog */}
-            <AlertDialog
-              open={isWithdrawDialogOpen}
-              onOpenChange={(open) => {
-                setIsWithdrawDialogOpen(open);
-                if (!open) {
-                  // Reset form when dialog closes
-                  setWalletAddress("");
-                  setSelectedChain("");
-                  setAmount("");
-                }
-              }}
-            >
-              <AlertDialogContent>
-                <AlertDialogHeader
-                  icon={
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                      <PiArrowCircleUpFill className="h-[30px] w-[30px] text-gray-400" />
-                    </div>
-                  }
-                >
-                  <Typography variant="heading" level={3}>
-                    {
-                      dictionary.pages.wallet.modals.send.withdraw_to_crypto
-                        .title
-                    }
+                    {dictionary.pages.wallet.modals.send.button}
                   </Typography>
                 </AlertDialogHeader>
 

@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "भेजें",
-          "title": "WDD भेजें",
-          "choice_description": "चुनें कि आप अपना ड्रैकमा कैसे भेजना चाहते हैं।",
-          "transfer_to_citizen": {
-            "title": "स्थानांतरित करें",
-            "description": "WDD को किसी अन्य नागरिक को स्थानांतरित करें",
-            "username_label": "प्राप्तकर्ता उपयोगकर्ता नाम"
-          },
           "withdraw_to_crypto": {
-            "title": "निकालें",
             "description": "WDD को क्रिप्टो खाते में निकालें",
             "amount_label": "राशि",
             "address_label": "वॉलेट पता",

@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Stuur",
-          "title": "Stuur WDD",
-          "choice_description": "Kies hoe u u drachme wil stuur.",
-          "transfer_to_citizen": {
-            "title": "Oordra",
-            "description": "Dra WDD oor na 'n ander burger",
-            "username_label": "Ontvanger gebruikersnaam"
-          },
           "withdraw_to_crypto": {
-            "title": "Onttrek",
             "description": "Trek WDD na 'n kripto-rekening",
             "amount_label": "Bedrag",
             "address_label": "Beursieadres",

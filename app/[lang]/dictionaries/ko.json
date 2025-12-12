@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "보내기",
-          "title": "WDD 보내기",
-          "choice_description": "드라크마를 보내는 방법을 선택하세요.",
-          "transfer_to_citizen": {
-            "title": "이체",
-            "description": "WDD를 다른 시민에게 이체",
-            "username_label": "수신자 사용자 이름"
-          },
           "withdraw_to_crypto": {
-            "title": "출금",
             "description": "WDD를 암호화폐 계정으로 출금",
             "amount_label": "금액",
             "address_label": "지갑 주소",

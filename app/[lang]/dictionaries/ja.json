@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "送信",
-          "title": "WDD を送る",
-          "choice_description": "ドラクマの送信方法を選択してください。",
-          "transfer_to_citizen": {
-            "title": "転送",
-            "description": "WDD を別の市民に転送",
-            "username_label": "受信者のユーザー名"
-          },
           "withdraw_to_crypto": {
-            "title": "出金",
             "description": "WDD を暗号アカウントに出金",
             "amount_label": "金額",
             "address_label": "ウォレットアドレス",

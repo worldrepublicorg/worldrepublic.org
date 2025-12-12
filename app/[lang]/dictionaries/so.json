@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Dir",
-          "title": "Dir WDD",
-          "choice_description": "Dooro sida aad u doonayso inaad u dirto drachma-gaaga.",
-          "transfer_to_citizen": {
-            "title": "Wareeji",
-            "description": "Wareeji WDD muwaadin kale",
-            "username_label": "Magaca isticmaalka qaataha"
-          },
           "withdraw_to_crypto": {
-            "title": "Bixi",
             "description": "Bixi WDD koonto crypto ah",
             "amount_label": "Lacagta",
             "address_label": "Cinwaanka kisaska",

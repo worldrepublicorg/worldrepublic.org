@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "发送",
-          "title": "发送 WDD",
-          "choice_description": "选择您想要发送德拉克马的方式。",
-          "transfer_to_citizen": {
-            "title": "转账",
-            "description": "将 WDD 转账给另一位公民",
-            "username_label": "收件人用户名"
-          },
           "withdraw_to_crypto": {
-            "title": "提取",
             "description": "将 WDD 提取到加密账户",
             "amount_label": "金额",
             "address_label": "钱包地址",

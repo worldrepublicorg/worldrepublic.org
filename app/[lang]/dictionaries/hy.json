@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Ուղարկել",
-          "title": "Ուղարկել WDD",
-          "choice_description": "Ընտրեք, թե ինչպես եք ցանկանում ուղարկել ձեր դրախման:",
-          "transfer_to_citizen": {
-            "title": "Փոխանցել",
-            "description": "WDD փոխանցել մեկ այլ քաղաքացու",
-            "username_label": "Ստացողի օգտագործողի անուն"
-          },
           "withdraw_to_crypto": {
-            "title": "Հանել",
             "description": "WDD հանել crypto հաշվին",
             "amount_label": "Գումար",
             "address_label": "Դրամապանակի հասցե",

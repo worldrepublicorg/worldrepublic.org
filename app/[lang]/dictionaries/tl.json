@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Ipadala",
-          "title": "Mag-send ng WDD",
-          "choice_description": "Piliin kung paano mo nais ipadala ang iyong drachma.",
-          "transfer_to_citizen": {
-            "title": "Ilipat",
-            "description": "Ilipat ang WDD sa ibang mamamayan",
-            "username_label": "Username ng tatanggap"
-          },
           "withdraw_to_crypto": {
-            "title": "Bawasan",
             "description": "Bawasan ang WDD sa isang crypto account",
             "amount_label": "Halaga",
             "address_label": "Wallet address",

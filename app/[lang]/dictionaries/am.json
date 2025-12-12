@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "ላክ",
-          "title": "WDD ላክ",
-          "choice_description": "የእርስዎን drachma እንዴት ማስተላለፍ እንደሚፈልጉ ይምረጡ።",
-          "transfer_to_citizen": {
-            "title": "ማስተላለፍ",
-            "description": "WDDን ለሌላ ዜጋ ማስተላለፍ",
-            "username_label": "የተቀባዩ የተጠቃሚ ስም"
-          },
           "withdraw_to_crypto": {
-            "title": "ውጣ",
             "description": "WDDን ወደ ክሪፕቶ ሂሳብ ውጣ",
             "amount_label": "መጠን",
             "address_label": "የባህር ዳር አድራሻ",

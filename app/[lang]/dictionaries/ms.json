@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Hantar",
-          "title": "Hantar WDD",
-          "choice_description": "Pilih cara anda mahu menghantar drachma anda.",
-          "transfer_to_citizen": {
-            "title": "Pindah",
-            "description": "Pindah WDD kepada warganegara lain",
-            "username_label": "Nama pengguna penerima"
-          },
           "withdraw_to_crypto": {
-            "title": "Keluarkan",
             "description": "Keluarkan WDD ke akaun crypto",
             "amount_label": "Amaun",
             "address_label": "Alamat dompet",

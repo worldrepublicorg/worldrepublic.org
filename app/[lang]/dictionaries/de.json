@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Senden",
-          "title": "WDD senden",
-          "choice_description": "Wählen Sie, wie Sie Ihre Drachme senden möchten.",
-          "transfer_to_citizen": {
-            "title": "Übertragen",
-            "description": "WDD an einen anderen Bürger übertragen",
-            "username_label": "Benutzername des Empfängers"
-          },
           "withdraw_to_crypto": {
-            "title": "Abheben",
             "description": "WDD auf ein Krypto-Konto abheben",
             "amount_label": "Betrag",
             "address_label": "Geldbörse-Adresse",

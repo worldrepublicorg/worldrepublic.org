@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Στείλτε",
-          "title": "Στείλτε WDD",
-          "choice_description": "Επιλέξτε πώς θέλετε να στείλετε τη δραχμή σας.",
-          "transfer_to_citizen": {
-            "title": "Μεταφορά",
-            "description": "Μεταφορά WDD σε άλλον πολίτη",
-            "username_label": "Όνομα χρήστη παραλήπτη"
-          },
           "withdraw_to_crypto": {
-            "title": "Ανάληψη",
             "description": "Ανάληψη WDD σε λογαριασμό crypto",
             "amount_label": "Ποσό",
             "address_label": "Διεύθυνση πορτοφολιού",

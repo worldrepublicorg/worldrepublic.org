@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Wyślij",
-          "title": "Wyślij WDD",
-          "choice_description": "Wybierz, jak chcesz wysłać swoją drachmę.",
-          "transfer_to_citizen": {
-            "title": "Przelej",
-            "description": "Przelej WDD do innego obywatela",
-            "username_label": "Nazwa użytkownika odbiorcy"
-          },
           "withdraw_to_crypto": {
-            "title": "Wypłać",
             "description": "Wypłać WDD na konto krypto",
             "amount_label": "Kwota",
             "address_label": "Adres portfela",

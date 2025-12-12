@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Versturen",
-          "title": "WDD verzenden",
-          "choice_description": "Kies hoe u uw drachme wilt verzenden.",
-          "transfer_to_citizen": {
-            "title": "Overdragen",
-            "description": "WDD overbrengen naar een andere burger",
-            "username_label": "Gebruikersnaam van de ontvanger"
-          },
           "withdraw_to_crypto": {
-            "title": "Opnemen",
             "description": "WDD opnemen naar een cryptorekening",
             "amount_label": "Bedrag",
             "address_label": "Portemonnee adres",

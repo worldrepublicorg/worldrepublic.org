@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Poslat",
-          "title": "Poslat WDD",
-          "choice_description": "Vyberte, jak chcete poslat svou drachmu.",
-          "transfer_to_citizen": {
-            "title": "Převést",
-            "description": "Převést WDD jinému občanovi",
-            "username_label": "Uživatelské jméno příjemce"
-          },
           "withdraw_to_crypto": {
-            "title": "Vybrat",
             "description": "Vybrat WDD na krypto účet",
             "amount_label": "Částka",
             "address_label": "Adresa peněženky",

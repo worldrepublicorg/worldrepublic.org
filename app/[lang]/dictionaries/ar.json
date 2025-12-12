@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "إرسال",
-          "title": "إرسال WDD",
-          "choice_description": "اختر كيف تريد إرسال دراخمك.",
-          "transfer_to_citizen": {
-            "title": "تحويل",
-            "description": "تحويل WDD إلى مواطن آخر",
-            "username_label": "اسم المستخدم للمستلم"
-          },
           "withdraw_to_crypto": {
-            "title": "سحب",
             "description": "سحب WDD إلى حساب عملة مشفرة",
             "amount_label": "المبلغ",
             "address_label": "عنوان المحفظة",

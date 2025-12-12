@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "મોકલો",
-          "title": "WDD મોકલો",
-          "choice_description": "પસંદ કરો કે તમે તમારી ડ્રાચમા કેવી રીતે મોકલવા માંગો છો.",
-          "transfer_to_citizen": {
-            "title": "ટ્રાન્સફર",
-            "description": "WDD બીજા નાગરિકને ટ્રાન્સફર કરો",
-            "username_label": "પ્રાપ્તકર્તાનું વપરાશકર્તા નામ"
-          },
           "withdraw_to_crypto": {
-            "title": "ઉપાડો",
             "description": "WDD ક્રિપ્ટો એકાઉન્ટમાં ઉપાડો",
             "amount_label": "રકમ",
             "address_label": "વૉલેટ સરનામું",

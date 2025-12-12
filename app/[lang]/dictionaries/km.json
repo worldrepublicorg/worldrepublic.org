@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "ផ្ញើ",
-          "title": "ផ្ញើ WDD",
-          "choice_description": "ជ្រើសរើសរបៀបដែលអ្នកចង់ផ្ញើ drachma របស់អ្នក។",
-          "transfer_to_citizen": {
-            "title": "ផ្ទេរ",
-            "description": "ផ្ទេរ WDD ទៅឱ្យប្រជាពលរដ្ឋម្នាក់ទៀត",
-            "username_label": "ឈ្មោះអ្នកប្រើប្រាស់អ្នកទទួល"
-          },
           "withdraw_to_crypto": {
-            "title": "ដក",
             "description": "ដក WDD ទៅកាន់គណនី crypto",
             "amount_label": "ចំនួនទឹកប្រាក់",
             "address_label": "អាសយដ្ឋាន កាបូប",

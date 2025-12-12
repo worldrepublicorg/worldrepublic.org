@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Manda",
-          "title": "Manda WDD",
-          "choice_description": "Scegliete cumu vulete mandà a vostra drachma.",
-          "transfer_to_citizen": {
-            "title": "Trasferisce",
-            "description": "Trasferisce WDD à un altru citadinu",
-            "username_label": "Nome d'utilizatore di u destinatariu"
-          },
           "withdraw_to_crypto": {
-            "title": "Ritira",
             "description": "Ritira WDD à un contu crypto",
             "amount_label": "Ammontu",
             "address_label": "Indirizzu portafogliu",

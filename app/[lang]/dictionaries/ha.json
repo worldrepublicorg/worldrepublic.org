@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Aika",
-          "title": "Aika WDD",
-          "choice_description": "Zaɓi yadda kake son aika drachma naka.",
-          "transfer_to_citizen": {
-            "title": "Canja",
-            "description": "Canja WDD zuwa wani ɗan ƙasa",
-            "username_label": "Sunan mai karɓa"
-          },
           "withdraw_to_crypto": {
-            "title": "Cire",
             "description": "Cire WDD zuwa asusun crypto",
             "amount_label": "Adadi",
             "address_label": "Adireshin jakar kuɗi",

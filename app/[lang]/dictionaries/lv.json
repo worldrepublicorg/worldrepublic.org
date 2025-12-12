@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Nosūtīt",
-          "title": "Nosūtīt WDD",
-          "choice_description": "Izvēlieties, kā vēlaties nosūtīt savu drahmu.",
-          "transfer_to_citizen": {
-            "title": "Pārsūtīt",
-            "description": "Pārsūtīt WDD citam pilsonim",
-            "username_label": "Saņēmēja lietotājvārds"
-          },
           "withdraw_to_crypto": {
-            "title": "Izņemt",
             "description": "Izņemt WDD uz kripto kontu",
             "amount_label": "Summa",
             "address_label": "Maka adrese",

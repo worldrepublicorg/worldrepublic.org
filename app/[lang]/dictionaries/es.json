@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Enviar",
-          "title": "Enviar WDD",
-          "choice_description": "Elige cómo quieres enviar tu dracma.",
-          "transfer_to_citizen": {
-            "title": "Transferir",
-            "description": "Transferir WDD a otro ciudadano",
-            "username_label": "Nombre de usuario del destinatario"
-          },
           "withdraw_to_crypto": {
-            "title": "Retirar",
             "description": "Retirar WDD a una cuenta cripto",
             "amount_label": "Cantidad",
             "address_label": "Dirección de billetera",

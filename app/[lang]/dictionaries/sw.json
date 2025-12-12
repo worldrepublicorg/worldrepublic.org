@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "Tuma",
-          "title": "Tuma WDD",
-          "choice_description": "Chagua jinsi unavyotaka kutuma drachma yako.",
-          "transfer_to_citizen": {
-            "title": "Hamisha",
-            "description": "Hamisha WDD kwa raia mwingine",
-            "username_label": "Jina la mtumiaji wa mpokeaji"
-          },
           "withdraw_to_crypto": {
-            "title": "Toa",
             "description": "Toa WDD kwenye akaunti ya crypto",
             "amount_label": "Kiasi",
             "address_label": "Anwani ya mkoba",

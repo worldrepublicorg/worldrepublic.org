@@ -141,15 +141,7 @@
         },
         "send": {
           "button": "بھیجیں",
-          "title": "WDD بھیجیں",
-          "choice_description": "منتخب کریں کہ آپ اپنا ڈریکما کیسے بھیجنا چاہتے ہیں۔",
-          "transfer_to_citizen": {
-            "title": "منتقل کریں",
-            "description": "WDD کو کسی دوسرے شہری کو منتقل کریں",
-            "username_label": "وصول کنندہ کا صارف نام"
-          },
           "withdraw_to_crypto": {
-            "title": "نکالیں",
             "description": "WDD کو کریپٹو اکاؤنٹ میں نکالیں",
             "amount_label": "رقم",
             "address_label": "والیٹ ایڈریس",
