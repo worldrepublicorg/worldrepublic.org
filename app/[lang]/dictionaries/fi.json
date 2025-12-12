@@ -114,13 +114,13 @@
           "question": "Mistä drakma saa arvonsa?",
           "answer": "Drakma saa arvonsa siitä, että se on Maailman tasavallan virallinen valuutta. Kun globaalin hallintoplattformamme legitimiteetti kasvaa, WDD voi tulla globaalin uudelleenjakelun välineeksi ja maailmantalouden tärkeimmäksi vaihtovälineeksi."
         },
-        "identity-verification": {
-          "question": "Miten henkilöllisyyden vahvistus toimii?",
-          "answer": "Maailman tasavalta käyttää Selfiä henkilöllisyytesi vahvistamiseen passin tai henkilötodistuksen kautta. Yksityisyytesi on suojattu—Self vahvistaa vain, että olet oikea henkilö paljastamatta henkilötietojasi."
-        },
         "test-elections": {
           "question": "Mitä ovat testivaalit?",
           "answer": "Koe-vaalit ovat kokeiluja, joissa Maailman tasavalta -kansalaiset äänestävät poliittisia puolueita. Jokainen puolue sisällytetään automaattisesti äänestyslippuun, mikä takaa yhtäläiset mahdollisuudet kaikille pyrkiville johtajille."
+        },
+        "identity-verification": {
+          "question": "Miten henkilöllisyyden vahvistus toimii?",
+          "answer": "Maailman tasavalta käyttää Selfiä henkilöllisyytesi vahvistamiseen passin tai henkilötodistuksen kautta. Yksityisyytesi on suojattu—Self vahvistaa vain, että olet oikea henkilö paljastamatta henkilötietojasi."
         },
         "party-subsidies": {
           "question": "Miten puoluetukijärjestelmä toimii?",

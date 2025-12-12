@@ -114,13 +114,13 @@
           "question": "Ina drachma ke samun ƙimarsa?",
           "answer": "Drachma yana samun darajarsa daga kasancewa kudin hukuma na Jamhuriyar Duniya. Yayin da halaccin dandalin mulkin duniya yake girma, WDD na iya zama abin rarraba duniya da kuma babban hanyar musayar tattalin arzikin duniya."
         },
-        "identity-verification": {
-          "question": "Yaya tabbatar da asali ke aiki?",
-          "answer": "Jamhuriyar Duniya tana amfani da Self don tabbatar da asalin ku ta hanyar fasfo ko katin shaidar ƙasa. Sirrinku yana kariya—Self kawai yana tabbatar da cewa kai mutum ne na gaske ba tare da bayyana bayanan ku na sirri ba."
-        },
         "test-elections": {
           "question": "Menene zaɓen gwaji?",
           "answer": "Zaɓen gwaji gwaje-gwaje ne inda 'yan ƙasa na Jamhuriyar Duniya ke jefa ƙuri'a ga jam'iyyun siyasa. Ana saka kowace jam'iyya ta atomatik a kan takardar jefa ƙuri'a, tare da tabbatar da dama daidai ga duk masu son zama shugabanni."
+        },
+        "identity-verification": {
+          "question": "Yaya tabbatar da asali ke aiki?",
+          "answer": "Jamhuriyar Duniya tana amfani da Self don tabbatar da asalin ku ta hanyar fasfo ko katin shaidar ƙasa. Sirrinku yana kariya—Self kawai yana tabbatar da cewa kai mutum ne na gaske ba tare da bayyana bayanan ku na sirri ba."
         },
         "party-subsidies": {
           "question": "Yaya tallafin jam'iyya ke aiki?",

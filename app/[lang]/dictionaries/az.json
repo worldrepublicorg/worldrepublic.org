@@ -114,13 +114,13 @@
           "question": "Drahmanın dəyəri nədən yaranır?",
           "answer": "Draxma dəyərini Dünya Respublikasının rəsmi valyutası olmaqdan əldə edir. Qlobal idarəetmə platformamızın etibarlılığı artdıqca, WDD qlobal yenidən bölüşdürmənin vasitəsi və dünya iqtisadiyyatında əsas mübadilə vasitəsi ola bilər."
         },
-        "identity-verification": {
-          "question": "Şəxsiyyət yoxlaması necə işləyir?",
-          "answer": "Dünya Respublikası pasportunuz və ya milli şəxsiyyətiniz vasitəsilə şəxsiyyətinizi təsdiqləmək üçün Self istifadə edir. Məxfilik qorunur—Self yalnız şəxsi məlumatlarınızı açıqlamadan gerçək bir şəxs olduğunuzu təsdiqləyir."
-        },
         "test-elections": {
           "question": "Test seçkiləri nədir?",
           "answer": "Sınaq seçkiləri Dünya Respublikası vətəndaşlarının siyasi partiyalara səs verdiyi eksperimentlərdir. Hər bir partiya avtomatik olaraq bülletenə daxil edilir və bütün iddialı liderlər üçün bərabər imkanlar təmin edilir."
+        },
+        "identity-verification": {
+          "question": "Şəxsiyyət yoxlaması necə işləyir?",
+          "answer": "Dünya Respublikası pasportunuz və ya milli şəxsiyyətiniz vasitəsilə şəxsiyyətinizi təsdiqləmək üçün Self istifadə edir. Məxfilik qorunur—Self yalnız şəxsi məlumatlarınızı açıqlamadan gerçək bir şəxs olduğunuzu təsdiqləyir."
         },
         "party-subsidies": {
           "question": "Partiya subsidiyaları necə işləyir?",

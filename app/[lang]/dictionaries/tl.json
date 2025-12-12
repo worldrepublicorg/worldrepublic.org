@@ -114,13 +114,13 @@
           "question": "Saan nakukuha ng drachma ang halaga nito?",
           "answer": "Ang drachma ay nakakakuha ng halaga nito mula sa pagiging opisyal na pera ng World Republic. Habang lumalaki ang lehitimasyon ng aming pandaigdigang platform ng pamamahala, ang WDD ay maaaring maging sasakyan ng pandaigdigang muling pamamahagi at ang pangunahing daluyan ng palitan sa pandaigdigang ekonomiya."
         },
-        "identity-verification": {
-          "question": "Paano gumagana ang pagpapatunay ng pagkakakilanlan?",
-          "answer": "Ginagamit ng World Republic ang Self upang patunayan ang iyong pagkakakilanlan sa pamamagitan ng iyong pasaporte o pambansang ID. Ang iyong privacy ay protektado—Self ay kumpirmahin lamang na ikaw ay isang tunay na tao nang hindi inilalantad ang anumang iyong personal na data."
-        },
         "test-elections": {
           "question": "Ano ang mga test election?",
           "answer": "Ang mga pagsubok na halalan ay mga eksperimento kung saan ang mga mamamayan ng Republika ng Daigdig ay bumoboto para sa mga partidong pampulitika. Ang bawat partido ay awtomatikong kasama sa balota, na tinitiyak ang pantay na pagkakataon para sa lahat ng naghahangad na pinuno."
+        },
+        "identity-verification": {
+          "question": "Paano gumagana ang pagpapatunay ng pagkakakilanlan?",
+          "answer": "Ginagamit ng World Republic ang Self upang patunayan ang iyong pagkakakilanlan sa pamamagitan ng iyong pasaporte o pambansang ID. Ang iyong privacy ay protektado—Self ay kumpirmahin lamang na ikaw ay isang tunay na tao nang hindi inilalantad ang anumang iyong personal na data."
         },
         "party-subsidies": {
           "question": "Paano gumagana ang subsidiya sa partido?",

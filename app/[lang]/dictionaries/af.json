@@ -114,13 +114,13 @@
           "question": "Waar kry die drachma sy waarde vandaan?",
           "answer": "Die drachma verkry sy waarde deur die amptelike geldeenheid van die Wêreld Republiek te wees. Soos die legitimiteit van ons globale bestuursplatform groei, kan WDD die voertuig van globale herverdeling en die hoof ruilmiddel in die wêreldekonomie word."
         },
-        "identity-verification": {
-          "question": "Hoe werk identiteitsverifikasie?",
-          "answer": "Die Wêreld Republiek gebruik Self om jou identiteit deur jou paspoort of nasionale ID te verifieer. Jou privaatheid word beskerm—Self bevestig net dat jy 'n regte persoon is sonder om enige van jou persoonlike data bloot te stel."
-        },
         "test-elections": {
           "question": "Wat is toetsverkiesings?",
           "answer": "Toetsverkiesings is eksperimente waar burgers van die Wêreldrepubliek vir politieke partye stem. Elke party word outomaties op die stembrief ingesluit, wat gelyke geleenthede vir alle aspirant-leiers verseker."
+        },
+        "identity-verification": {
+          "question": "Hoe werk identiteitsverifikasie?",
+          "answer": "Die Wêreld Republiek gebruik Self om jou identiteit deur jou paspoort of nasionale ID te verifieer. Jou privaatheid word beskerm—Self bevestig net dat jy 'n regte persoon is sonder om enige van jou persoonlike data bloot te stel."
         },
         "party-subsidies": {
           "question": "Hoe werk partysubsidies?",

@@ -114,13 +114,13 @@
           "question": "Draxmaning qiymati qayerdan keladi?",
           "answer": "Draxma o'z qiymatini Jahon Respublikasining rasmiy valyutasi bo'lishidan oladi. Bizning global boshqaruv platformamizning qonuniyligi o'sishi bilan, WDD global qayta taqsimlash vositasi va jahon iqtisodiyotidagi asosiy almashish vositasi bo'lishi mumkin."
         },
-        "identity-verification": {
-          "question": "Shaxsni tekshirish qanday ishlaydi?",
-          "answer": "Jahon Respublikasi pasportingiz yoki milliy ID kartaingiz orqali identifikatsiyangizni tasdiqlash uchun Self-dan foydalanadi. Maxfiyligingiz himoyalangan—Self shaxsiy ma'lumotlaringizni oshkor qilmasdan siz haqiqiy shaxs ekanligingizni tasdiqlaydi."
-        },
         "test-elections": {
           "question": "Test saylovlar nima?",
           "answer": "Sinov saylovlari Jahon Respublikasi fuqarolari siyosiy partiyalar uchun ovoz beradigan tajribalardir. Har bir partiya avtomatik ravishda byulletenga kiritiladi va barcha intiluvchan liderlar uchun teng imkoniyatlarni ta'minlaydi."
+        },
+        "identity-verification": {
+          "question": "Shaxsni tekshirish qanday ishlaydi?",
+          "answer": "Jahon Respublikasi pasportingiz yoki milliy ID kartaingiz orqali identifikatsiyangizni tasdiqlash uchun Self-dan foydalanadi. Maxfiyligingiz himoyalangan—Self shaxsiy ma'lumotlaringizni oshkor qilmasdan siz haqiqiy shaxs ekanligingizni tasdiqlaydi."
         },
         "party-subsidies": {
           "question": "Partiya subsidiyalari qanday ishlaydi?",

@@ -114,13 +114,13 @@
           "question": "Drachma lấy giá trị từ đâu?",
           "answer": "Drachma có được giá trị của nó từ việc là đồng tiền chính thức của Cộng hòa Thế giới. Khi tính hợp pháp của nền tảng quản trị toàn cầu của chúng tôi phát triển, WDD có thể trở thành phương tiện phân phối lại toàn cầu và phương tiện trao đổi chính trong nền kinh tế thế giới."
         },
-        "identity-verification": {
-          "question": "Xác minh danh tính hoạt động như thế nào?",
-          "answer": "Cộng hòa Thế giới sử dụng Self để xác minh danh tính của bạn thông qua hộ chiếu hoặc chứng minh nhân dân của bạn. Quyền riêng tư của bạn được bảo vệ—Self chỉ xác nhận rằng bạn là người thật mà không tiết lộ bất kỳ dữ liệu cá nhân nào của bạn."
-        },
         "test-elections": {
           "question": "Bầu cử thử nghiệm là gì?",
           "answer": "Bầu cử thử nghiệm là những cuộc thử nghiệm nơi công dân Cộng hòa Thế giới bỏ phiếu cho các đảng chính trị. Mọi đảng phái đều tự động được đưa vào lá phiếu, đảm bảo cơ hội bình đẳng cho tất cả các nhà lãnh đạo đầy tham vọng."
+        },
+        "identity-verification": {
+          "question": "Xác minh danh tính hoạt động như thế nào?",
+          "answer": "Cộng hòa Thế giới sử dụng Self để xác minh danh tính của bạn thông qua hộ chiếu hoặc chứng minh nhân dân của bạn. Quyền riêng tư của bạn được bảo vệ—Self chỉ xác nhận rằng bạn là người thật mà không tiết lộ bất kỳ dữ liệu cá nhân nào của bạn."
         },
         "party-subsidies": {
           "question": "Trợ cấp cho đảng hoạt động như thế nào?",

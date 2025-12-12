@@ -114,13 +114,13 @@
           "question": "Da induve a drachma ottene u so valore?",
           "answer": "A drachma riceve u so valore da u fattu chì hè a muneta ufficiale di a Republica Mundiale. Mentre a legitimità di a nostra piattaforma di guvernu globale cresce, WDD pò diventà u veiculu di ridistribuzione globale è u mezu principale di scambiu in l'economia mondiale."
         },
-        "identity-verification": {
-          "question": "Cumu funziona a verificazione di identità?",
-          "answer": "A Republica Mundiale usa Self per verificà a vostra identità attraversu u vostru passaportu o carta d'identità naziunale. A vostra privacy hè prutetta—Self cunfirma solu chì site una persona vera senza espone i vostri dati persunali."
-        },
         "test-elections": {
           "question": "Cosa sò e elezzioni di prova?",
           "answer": "L'elezzioni di prova sò esperimenti induve i citadini di a Ripùblica Mundiale votanu per i partiti pulitichi. Ogni partitu hè automaticamente inclusu in u scrutiniu, assicurendu opportunità uguali per tutti i capi aspiranti."
+        },
+        "identity-verification": {
+          "question": "Cumu funziona a verificazione di identità?",
+          "answer": "A Republica Mundiale usa Self per verificà a vostra identità attraversu u vostru passaportu o carta d'identità naziunale. A vostra privacy hè prutetta—Self cunfirma solu chì site una persona vera senza espone i vostri dati persunali."
         },
         "party-subsidies": {
           "question": "Cumu funzionanu e suvvenzioni à i partiti?",

@@ -114,13 +114,13 @@
           "question": "No kurienes drahma iegūst savu vērtību?",
           "answer": "Drahma iegūst savu vērtību, būdama Pasaules Republikas oficiālā valūta. Pieaugot mūsu globālās pārvaldes platformas leģitimitātei, WDD var kļūt par globālās pārdales līdzekli un galveno apmaiņas līdzekli pasaules ekonomikā."
         },
-        "identity-verification": {
-          "question": "Kā darbojas identitātes pārbaude?",
-          "answer": "Pasaules Republika izmanto Self, lai apstiprinātu jūsu identitāti, izmantojot jūsu pasi vai valsts ID. Jūsu privātums ir aizsargāts—Self tikai apstiprina, ka esat īsta persona, neizpaužot jūsu personīgos datus."
-        },
         "test-elections": {
           "question": "Kas ir testa vēlēšanas?",
           "answer": "Testa vēlēšanas ir eksperimenti, kuros Pasaules Republika pilsoņi balso par politiskajām partijām. Katra partija tiek automātiski iekļauta vēlēšanu sarakstā, nodrošinot vienlīdzīgas iespējas visiem topošajiem līderiem."
+        },
+        "identity-verification": {
+          "question": "Kā darbojas identitātes pārbaude?",
+          "answer": "Pasaules Republika izmanto Self, lai apstiprinātu jūsu identitāti, izmantojot jūsu pasi vai valsts ID. Jūsu privātums ir aizsargāts—Self tikai apstiprina, ka esat īsta persona, neizpaužot jūsu personīgos datus."
         },
         "party-subsidies": {
           "question": "Kā darbojas partiju subsīdijas?",

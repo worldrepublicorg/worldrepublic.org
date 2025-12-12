@@ -114,13 +114,13 @@
           "question": "De unde își obține drahma valoarea?",
           "answer": "Drachma își obține valoarea din faptul că este moneda oficială a Republicii Mondiale. Pe măsură ce legitimitatea platformei noastre globale de guvernare crește, WDD poate deveni vehiculul redistribuției globale și principalul mijloc de schimb în economia mondială."
         },
-        "identity-verification": {
-          "question": "Cum funcționează verificarea identității?",
-          "answer": "Republica Mondială folosește Self pentru a verifica identitatea ta prin pașaportul sau buletinul tău. Confidențialitatea ta este protejată—Self confirmă doar că ești o persoană reală fără să-ți expună datele personale."
-        },
         "test-elections": {
           "question": "Ce sunt alegerile de test?",
           "answer": "Alegerile de testare sunt experimente în care cetățenii Republica Mondială votează pentru partide politice. Fiecare partid este inclus automat pe buletinul de vot, asigurând șanse egale pentru toți liderii aspiranți."
+        },
+        "identity-verification": {
+          "question": "Cum funcționează verificarea identității?",
+          "answer": "Republica Mondială folosește Self pentru a verifica identitatea ta prin pașaportul sau buletinul tău. Confidențialitatea ta este protejată—Self confirmă doar că ești o persoană reală fără să-ți expună datele personale."
         },
         "party-subsidies": {
           "question": "Cum funcționează subvențiile pentru partide?",

@@ -114,13 +114,13 @@
           "question": "Woher bezieht die Drachme ihren Wert?",
           "answer": "Die Drachme erhält ihren Wert dadurch, dass sie die offizielle Währung der Weltrepublik ist. Mit wachsender Legitimität unserer globalen Governance-Plattform kann WDD zum Vehikel der globalen Umverteilung und zum Haupttauschmittel in der Weltwirtschaft werden."
         },
-        "identity-verification": {
-          "question": "Wie funktioniert die Identitätsprüfung?",
-          "answer": "Die Weltrepublik nutzt Self zur Überprüfung Ihrer Identität über Ihren Reisepass oder Personalausweis. Ihre Privatsphäre ist geschützt—Self bestätigt nur, dass Sie eine echte Person sind, ohne Ihre persönlichen Daten preiszugeben."
-        },
         "test-elections": {
           "question": "Was sind Testwahlen?",
           "answer": "Testwahlen sind Experimente, bei denen Bürger der Weltrepublik für politische Parteien stimmen. Jede Partei wird automatisch auf den Wahlzettel gesetzt, was gleiche Chancen für alle angehenden Führungskräfte gewährleistet."
+        },
+        "identity-verification": {
+          "question": "Wie funktioniert die Identitätsprüfung?",
+          "answer": "Die Weltrepublik nutzt Self zur Überprüfung Ihrer Identität über Ihren Reisepass oder Personalausweis. Ihre Privatsphäre ist geschützt—Self bestätigt nur, dass Sie eine echte Person sind, ohne Ihre persönlichen Daten preiszugeben."
         },
         "party-subsidies": {
           "question": "Wie funktionieren Parteisubventionen?",

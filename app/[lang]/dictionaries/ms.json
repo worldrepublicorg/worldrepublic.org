@@ -114,13 +114,13 @@
           "question": "Dari manakah nilai drachma diperoleh?",
           "answer": "Drachma memperoleh nilainya daripada menjadi mata wang rasmi Republik Dunia. Apabila legitimasi platform tadbir urus global kita berkembang, WDD boleh menjadi kenderaan pengagihan semula global dan media pertukaran utama dalam ekonomi dunia."
         },
-        "identity-verification": {
-          "question": "Bagaimanakah pengesahan identiti berfungsi?",
-          "answer": "Republik Dunia menggunakan Self untuk mengesahkan identiti anda melalui pasport atau kad pengenalan negara anda. Privasi anda dilindungi—Self hanya mengesahkan bahawa anda adalah orang sebenar tanpa mendedahkan sebarang data peribadi anda."
-        },
         "test-elections": {
           "question": "Apakah pilihan raya ujian?",
           "answer": "Pilihan raya ujian adalah eksperimen di mana warganegara Republik Dunia mengundi parti politik. Setiap parti disertakan secara automatik dalam kertas undi, memastikan peluang saksama untuk semua pemimpin yang bercita-cita tinggi."
+        },
+        "identity-verification": {
+          "question": "Bagaimanakah pengesahan identiti berfungsi?",
+          "answer": "Republik Dunia menggunakan Self untuk mengesahkan identiti anda melalui pasport atau kad pengenalan negara anda. Privasi anda dilindungi—Self hanya mengesahkan bahawa anda adalah orang sebenar tanpa mendedahkan sebarang data peribadi anda."
         },
         "party-subsidies": {
           "question": "Bagaimanakah subsidi parti berfungsi?",

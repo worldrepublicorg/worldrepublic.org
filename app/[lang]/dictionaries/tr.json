@@ -114,13 +114,13 @@
           "question": "Drahma değerini nereden alır?",
           "answer": "Drahma, Dünya Cumhuriyeti'nin resmi para birimi olmasından değerini alır. Küresel yönetişim platformumuzun meşruiyeti arttıkça, WDD küresel yeniden dağıtımın aracı ve dünya ekonomisindeki ana değişim aracı haline gelebilir."
         },
-        "identity-verification": {
-          "question": "Kimlik doğrulama nasıl çalışır?",
-          "answer": "Dünya Cumhuriyeti pasaportunuz veya ulusal kimliğiniz aracılığıyla kimliğinizi doğrulamak için Self kullanır. Gizliliğiniz korunur—Self yalnızca kişisel verilerinizi açığa çıkarmadan gerçek bir kişi olduğunuzu doğrular."
-        },
         "test-elections": {
           "question": "Test seçimleri nedir?",
           "answer": "Test seçimleri, Dünya Cumhuriyeti vatandaşlarının siyasi partiler için oy kullandığı deneylerdir. Her parti otomatik olarak oy pusulasına dahil edilir ve tüm gelecek vadeden liderler için eşit fırsat sağlanır."
+        },
+        "identity-verification": {
+          "question": "Kimlik doğrulama nasıl çalışır?",
+          "answer": "Dünya Cumhuriyeti pasaportunuz veya ulusal kimliğiniz aracılığıyla kimliğinizi doğrulamak için Self kullanır. Gizliliğiniz korunur—Self yalnızca kişisel verilerinizi açığa çıkarmadan gerçek bir kişi olduğunuzu doğrular."
         },
         "party-subsidies": {
           "question": "Parti sübvansiyonları nasıl işler?",

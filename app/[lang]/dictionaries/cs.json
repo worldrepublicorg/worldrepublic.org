@@ -114,13 +114,13 @@
           "question": "Odkud získává drachma svou hodnotu?",
           "answer": "Drachma získává svou hodnotu tím, že je oficiální měnou Světové republiky. Jak legitimita naší globální správní platformy roste, WDD se může stát nástrojem globálního přerozdělování a hlavním prostředkem směny ve světové ekonomice."
         },
-        "identity-verification": {
-          "question": "Jak funguje ověření identity?",
-          "answer": "Světová republika používá Self k ověření vaší identity prostřednictvím vašeho pasu nebo občanského průkazu. Vaše soukromí je chráněno—Self pouze potvrzuje, že jste skutečná osoba, aniž by odhalil vaše osobní údaje."
-        },
         "test-elections": {
           "question": "Co jsou testovací volby?",
           "answer": "Zkušební volby jsou experimenty, kde občané Světová republika volí politické strany. Každá strana je automaticky zařazena na volební lístek, což zajišťuje rovné příležitosti pro všechny aspirující lídry."
+        },
+        "identity-verification": {
+          "question": "Jak funguje ověření identity?",
+          "answer": "Světová republika používá Self k ověření vaší identity prostřednictvím vašeho pasu nebo občanského průkazu. Vaše soukromí je chráněno—Self pouze potvrzuje, že jste skutečná osoba, aniž by odhalil vaše osobní údaje."
         },
         "party-subsidies": {
           "question": "Jak fungují dotace pro strany?",

@@ -114,13 +114,13 @@
           "question": "Od kod drahma dobi svojo vrednost?",
           "answer": "Drahma pridobi svojo vrednost iz tega, da je uradna valuta Svetovne republike. Ko legitimnost naše globalne upravne platforme raste, lahko WDD postane sredstvo globalne prerazporeditve in glavno sredstvo izmenjave v svetovnem gospodarstvu."
         },
-        "identity-verification": {
-          "question": "Kako deluje preverjanje identitete?",
-          "answer": "Svetovna republika uporablja Self za preverjanje vaše identitete preko vašega potnega lista ali nacionalne osebne izkaznice. Vaša zasebnost je zaščitena—Self samo potrdi, da ste resnična oseba, ne da bi razkrila vaše osebne podatke."
-        },
         "test-elections": {
           "question": "Kaj so testne volitve?",
           "answer": "Testne volitve so poskusi, kjer državljani Svetovna republika glasujejo za politične stranke. Vsaka stranka je samodejno vključena na glasovnico, kar zagotavlja enake možnosti za vse nadobudne voditelje."
+        },
+        "identity-verification": {
+          "question": "Kako deluje preverjanje identitete?",
+          "answer": "Svetovna republika uporablja Self za preverjanje vaše identitete preko vašega potnega lista ali nacionalne osebne izkaznice. Vaša zasebnost je zaščitena—Self samo potrdi, da ste resnična oseba, ne da bi razkrila vaše osebne podatke."
         },
         "party-subsidies": {
           "question": "Kako delujejo strankarske subvencije?",

@@ -114,13 +114,13 @@
           "question": "Nibo ni drachma gba iye rẹ?",
           "answer": "Drachma gba iye-owo rẹ lati jẹ owo osise ti Orilẹ-ede Agbaye. Bi oju-ọna ijọba agbaye wa ba n dagba, WDD le di ọkọ ayika ti pinpin agbaye ati oju-ọna pataki ti iyipada ni ọrọ-aje agbaye."
         },
-        "identity-verification": {
-          "question": "Bawo ni iwadi aami ṣe n ṣiṣẹ?",
-          "answer": "Orilẹ-ede Agbaye nlo Self lati jẹrisi idanimọ rẹ nipasẹ pasipọọti rẹ tabi ID orilẹ-ede rẹ. Ikọkọ rẹ ni aabo—Self kan jẹrisi pe o jẹ eniyan otitọ laisi fifihan eyikeyi data ti ara ẹni rẹ."
-        },
         "test-elections": {
           "question": "Kini awọn idibo idanwo?",
           "answer": "Awọn idibo idanwo jẹ awọn idanwo nibiti awọn ara ilu Ìjọba Àpapọ̀ Ayé dibo fun awọn ẹgbẹ oselu. Gbogbo ẹgbẹ ni a fi kun laifọwọyi lori iwe idibo, aridaju anfani dogba fun gbogbo awọn oludari ti o nireti."
+        },
+        "identity-verification": {
+          "question": "Bawo ni iwadi aami ṣe n ṣiṣẹ?",
+          "answer": "Orilẹ-ede Agbaye nlo Self lati jẹrisi idanimọ rẹ nipasẹ pasipọọti rẹ tabi ID orilẹ-ede rẹ. Ikọkọ rẹ ni aabo—Self kan jẹrisi pe o jẹ eniyan otitọ laisi fifihan eyikeyi data ti ara ẹni rẹ."
         },
         "party-subsidies": {
           "question": "Bawo ni awọn ifunni ẹgbẹ ṣe n ṣiṣẹ?",

@@ -114,13 +114,13 @@
           "question": "Dari mana nilai drachma berasal?",
           "answer": "Drachma memperoleh nilainya dari menjadi mata uang resmi Republik Dunia. Seiring legitimasi platform tata kelola global kita tumbuh, WDD dapat menjadi kendaraan redistribusi global dan media pertukaran utama dalam perekonomian dunia."
         },
-        "identity-verification": {
-          "question": "Bagaimana cara kerja verifikasi identitas?",
-          "answer": "Republik Dunia menggunakan Self untuk memverifikasi identitas Anda melalui paspor atau KTP Anda. Privasi Anda dilindungi—Self hanya mengonfirmasi bahwa Anda adalah orang yang nyata tanpa mengekspos data pribadi Anda."
-        },
         "test-elections": {
           "question": "Apa itu pemilihan uji?",
           "answer": "Pemilu uji coba adalah eksperimen di mana warga Republik Dunia memilih partai politik. Setiap partai secara otomatis dimasukkan dalam surat suara, memastikan kesempatan yang sama bagi semua calon pemimpin."
+        },
+        "identity-verification": {
+          "question": "Bagaimana cara kerja verifikasi identitas?",
+          "answer": "Republik Dunia menggunakan Self untuk memverifikasi identitas Anda melalui paspor atau KTP Anda. Privasi Anda dilindungi—Self hanya mengonfirmasi bahwa Anda adalah orang yang nyata tanpa mengekspos data pribadi Anda."
         },
         "party-subsidies": {
           "question": "Bagaimana cara kerja subsidi partai?",

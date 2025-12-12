@@ -13,10 +13,7 @@ interface FaqPageClientProps {
   dictionary: Dictionary;
 }
 
-export default function FaqPageClient({
-  lang,
-  dictionary,
-}: FaqPageClientProps) {
+export default function FaqPageClient({ dictionary }: FaqPageClientProps) {
   const router = useRouter();
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const searchParams = useSearchParams();

@@ -114,13 +114,13 @@
           "question": "Waar krijgt de drachme zijn waarde vandaan?",
           "answer": "De drachme ontleent zijn waarde aan het feit dat het de officiële munteenheid van de Wereldrepubliek is. Naarmate de legitimiteit van ons wereldwijde bestuursplatform groeit, kan WDD het voertuig worden van wereldwijde herverdeling en het belangrijkste ruilmiddel in de wereldeconomie."
         },
-        "identity-verification": {
-          "question": "Hoe werkt identiteitsverificatie?",
-          "answer": "De Wereldrepubliek gebruikt Self om uw identiteit te verifiëren via uw paspoort of nationale ID. Uw privacy is beschermd—Self bevestigt alleen dat u een echt persoon bent zonder uw persoonlijke gegevens bloot te stellen."
-        },
         "test-elections": {
           "question": "Wat zijn testverkiezingen?",
           "answer": "Testverkiezingen zijn experimenten waarbij burgers van de Wereldrepubliek stemmen op politieke partijen. Elke partij wordt automatisch op het stembiljet geplaatst, wat gelijke kansen garandeert voor alle aspirant-leiders."
+        },
+        "identity-verification": {
+          "question": "Hoe werkt identiteitsverificatie?",
+          "answer": "De Wereldrepubliek gebruikt Self om uw identiteit te verifiëren via uw paspoort of nationale ID. Uw privacy is beschermd—Self bevestigt alleen dat u een echt persoon bent zonder uw persoonlijke gegevens bloot te stellen."
         },
         "party-subsidies": {
           "question": "Hoe werken partijsubsidies?",

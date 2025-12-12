@@ -114,13 +114,13 @@
           "question": "Iš kur drakma gauna savo vertę?",
           "answer": "Drachma gauna savo vertę būdama Pasaulio Respublikos oficialia valiuta. Didėjant mūsų pasaulio valdymo platformos legitimumui, WDD gali tapti pasaulio perskirstymo priemone ir pagrindiniu mainų priemone pasaulio ekonomikoje."
         },
-        "identity-verification": {
-          "question": "Kaip veikia tapatybės patvirtinimas?",
-          "answer": "Pasaulio Respublika naudoja Self jūsų tapatybės patvirtinimui per jūsų pasą arba nacionalinį ID. Jūsų privatumas yra apsaugotas—Self tik patvirtina, kad esate tikras asmuo neatskleisdamas jūsų asmeninių duomenų."
-        },
         "test-elections": {
           "question": "Kas yra bandomieji rinkimai?",
           "answer": "Bandomieji rinkimai yra eksperimentai, kuriuose Pasaulio Respublika piliečiai balsuoja už politines partijas. Kiekviena partija automatiškai įtraukiama į balsavimo biuletenį, užtikrinant lygias galimybes visiems siekiantiems lyderių."
+        },
+        "identity-verification": {
+          "question": "Kaip veikia tapatybės patvirtinimas?",
+          "answer": "Pasaulio Respublika naudoja Self jūsų tapatybės patvirtinimui per jūsų pasą arba nacionalinį ID. Jūsų privatumas yra apsaugotas—Self tik patvirtina, kad esate tikras asmuo neatskleisdamas jūsų asmeninių duomenų."
         },
         "party-subsidies": {
           "question": "Kaip veikia partijų subsidijos?",

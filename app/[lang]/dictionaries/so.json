@@ -114,13 +114,13 @@
           "question": "Xaggee ka timaadaa qiimaha drachma?",
           "answer": "Drachma waxay helaysaa qiimaha ay ka soo baxday inay tahay lacagta rasmiga ah ee Jamhuuriyadda Adduunka. Marka shuruudaha platform-ka maamulka adduunka ee aanu leenahay ay koraan, WDD waa noqon karaa gaadhiyaha qaybinta adduunka iyo wakhtiga ugu muhiimsan ee wadaagga dhaqaalaha adduunka."
         },
-        "identity-verification": {
-          "question": "Sidee xaqiijinta aqoonsiga ay u shaqeysaa?",
-          "answer": "Jamhuuriyadda Adduunka waxay isticmaashaa Self si loo xaqiijiyo aqoonsigaaga adigoo adeegsanaya baasabooradaaga ama aqoonsiga qaranka. Sirtaada waa la ilaaliyay—Self kaliya wuxuu xaqiijiyaa inaad qof run ah tahay iyadoo aan waxba ka muujin macluumaadkaaga shaqsiyeed."
-        },
         "test-elections": {
           "question": "Maxa ay tahay doorashada tijaabada?",
           "answer": "Doorashooyinka tijaabada ah waa tijaabooyin ay muwaadiniinta Jamhuuriyadda Adduunka u codeeyaan xisbiyada siyaasadeed. Xisbi kastaa si toos ah ayaa loogu daraa warqadda codbixinta, iyadoo la hubinayo fursad loo siman yahay dhammaan hoggaamiyeyaasha hamiga leh."
+        },
+        "identity-verification": {
+          "question": "Sidee xaqiijinta aqoonsiga ay u shaqeysaa?",
+          "answer": "Jamhuuriyadda Adduunka waxay isticmaashaa Self si loo xaqiijiyo aqoonsigaaga adigoo adeegsanaya baasabooradaaga ama aqoonsiga qaranka. Sirtaada waa la ilaaliyay—Self kaliya wuxuu xaqiijiyaa inaad qof run ah tahay iyadoo aan waxba ka muujin macluumaadkaaga shaqsiyeed."
         },
         "party-subsidies": {
           "question": "Sidee u shaqeeyaan kaalmooyinka xisbiyadu?",

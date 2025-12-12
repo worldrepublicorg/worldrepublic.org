@@ -114,13 +114,13 @@
           "question": "What gives WDD its value?",
           "answer": "The drachma derives its value from being the official currency of the World Republic. As the legitimacy of our global governance platform grows, WDD can become the vehicle of global redistribution and the main medium of exchange in the world economy."
         },
-        "identity-verification": {
-          "question": "How does identity verification work?",
-          "answer": "The World Republic uses Self to verify your identity through your passport or national ID. Your privacy is protected—Self only confirms you're a real person without exposing any of your personal data."
-        },
         "test-elections": {
           "question": "What are test elections?",
           "answer": "Test elections are experiments where World Republic citizens vote for political parties. Every party is automatically included on the ballot, ensuring equal opportunity for all aspiring leaders."
+        },
+        "identity-verification": {
+          "question": "How does identity verification work?",
+          "answer": "The World Republic uses Self to verify your identity through your passport or national ID. Your privacy is protected—Self only confirms you're a real person without exposing any of your personal data."
         },
         "party-subsidies": {
           "question": "How do party subsidies work?",

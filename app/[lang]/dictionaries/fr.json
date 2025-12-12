@@ -114,13 +114,13 @@
           "question": "D'où vient la valeur du drachme ?",
           "answer": "La drachme tire sa valeur du fait qu'elle est la monnaie officielle de la République mondiale. À mesure que la légitimité de notre plateforme de gouvernance mondiale grandit, WDD peut devenir le véhicule de redistribution mondiale et le principal moyen d'échange dans l'économie mondiale."
         },
-        "identity-verification": {
-          "question": "Comment fonctionne la vérification d'identité ?",
-          "answer": "La République mondiale utilise Self pour vérifier votre identité via votre passeport ou votre carte d'identité nationale. Votre vie privée est protégée—Self confirme uniquement que vous êtes une vraie personne sans exposer vos données personnelles."
-        },
         "test-elections": {
           "question": "Que sont les élections de test?",
           "answer": "Les élections tests sont des expériences où les citoyens de la République mondiale votent pour des partis politiques. Chaque parti est automatiquement inclus sur le bulletin de vote, garantissant l'égalité des chances pour tous les aspirants dirigeants."
+        },
+        "identity-verification": {
+          "question": "Comment fonctionne la vérification d'identité ?",
+          "answer": "La République mondiale utilise Self pour vérifier votre identité via votre passeport ou votre carte d'identité nationale. Votre vie privée est protégée—Self confirme uniquement que vous êtes une vraie personne sans exposer vos données personnelles."
         },
         "party-subsidies": {
           "question": "Comment fonctionnent les subventions aux partis ?",

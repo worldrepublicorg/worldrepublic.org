@@ -114,13 +114,13 @@
           "question": "Drachma inapata thamani yake wapi?",
           "answer": "Drachma hupata thamani yake kutokana na kuwa ni sarafu rasmi ya Jamhuri ya Dunia. Kadiri uhalali wa jukwaa letu la utawala la kimataifa linavyoongezeka, WDD inaweza kuwa chombo cha ugawaji upya wa kimataifa na chombo kuu cha kubadilishana katika uchumi wa dunia."
         },
-        "identity-verification": {
-          "question": "Uthibitishaji wa utambulisho unafanyaje kazi?",
-          "answer": "Jamhuri ya Dunia hutumia Self kwa uthibitishaji wa utambulisho wako kupitia paspoti yako au kitambulisho cha kitaifa. Faragha yako imelindwa—Self inathibitisha tu kuwa wewe ni mtu halisi bila kufichua data yako ya kibinafsi."
-        },
         "test-elections": {
           "question": "Ni nini uchaguzi wa majaribio?",
           "answer": "Uchaguzi wa majaribio ni majaribio ambapo raia wa Jamhuri ya Dunia hupigia kura vyama vya siasa. Kila chama kinajumuishwa kiotomatiki kwenye karatasi ya kura, kuhakikisha fursa sawa kwa viongozi wote wanaotarajia."
+        },
+        "identity-verification": {
+          "question": "Uthibitishaji wa utambulisho unafanyaje kazi?",
+          "answer": "Jamhuri ya Dunia hutumia Self kwa uthibitishaji wa utambulisho wako kupitia paspoti yako au kitambulisho cha kitaifa. Faragha yako imelindwa—Self inathibitisha tu kuwa wewe ni mtu halisi bila kufichua data yako ya kibinafsi."
         },
         "party-subsidies": {
           "question": "Ruzuku za vyama hufanya kazi vipi?",

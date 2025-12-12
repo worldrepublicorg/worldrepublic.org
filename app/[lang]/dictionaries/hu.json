@@ -114,13 +114,13 @@
           "question": "Honnan származik a drachma értéke?",
           "answer": "A drachma értékét abból nyeri, hogy a Világköztársaság hivatalos fizetőeszköze. Ahogy globális kormányzási platformunk legitimitása növekszik, a WDD válhat a globális újraelosztás eszközévé és a világgazdaság fő csereeszközévé."
         },
-        "identity-verification": {
-          "question": "Hogyan működik a személyazonosság-ellenőrzés?",
-          "answer": "A Világköztársaság a Self rendszert használja a személyazonosság igazolására az útlevél vagy személyi igazolvány segítségével. Az Ön személyes adatai védve vannak – a Self csupán azt igazolja, hogy Ön valós személy, anélkül, hogy adatait felfedné."
-        },
         "test-elections": {
           "question": "Mik a tesztválasztások?",
           "answer": "A tesztválasztások olyan kísérletek, ahol a Világköztársaság polgárai politikai pártokra szavaznak. Minden párt automatikusan felkerül a szavazólapra, egyenlő esélyeket biztosítva minden törekvő vezető számára."
+        },
+        "identity-verification": {
+          "question": "Hogyan működik a személyazonosság-ellenőrzés?",
+          "answer": "A Világköztársaság a Self rendszert használja a személyazonosság igazolására az útlevél vagy személyi igazolvány segítségével. Az Ön személyes adatai védve vannak – a Self csupán azt igazolja, hogy Ön valós személy, anélkül, hogy adatait felfedné."
         },
         "party-subsidies": {
           "question": "Hogyan működnek a párttámogatások?",

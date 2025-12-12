@@ -114,13 +114,13 @@
           "question": "Drachma ibona agaciro ki?",
           "answer": "Drachma ikura amafaranga yayo kubera ko ari ifaranga ryemewe rya Repubulika y'Isi. Nk'uko uburenganzira bw'urubuga rwacu rw'ubuyobozi bw'isi rukagira, WDD irashobora kuba ikinyabiziga cyo gusubiramo mu isi yose no gucunga ibintu by'ibanze mu bukungu bw'isi."
         },
-        "identity-verification": {
-          "question": "Uko kwemeza aho wavuka gukora gute?",
-          "answer": "Repubulika y'Isi ikoresha Self kugira ngo yemeze ubwoba bwawe ukoresheje pasiporo cyangwa indangamuntu y'igihugu. Ubwigenge bwawe bukabuzwa—Self gusa ikemeza ko uri umuntu w'ukuri nta makuru y'ubwoba wayerekana."
-        },
         "test-elections": {
           "question": "Ni iki amatora y'igerageza?",
           "answer": "Amatora y'igerageza ni ubushakashatsi aho abaturage ba Repubulika y'Isi batora amashyaka ya politiki. Buri shyaka rishyirwa ku rupapuro rw'itora mu buryo bwikora, bigaha amahirwe angana abayobozi bose babyifuza."
+        },
+        "identity-verification": {
+          "question": "Uko kwemeza aho wavuka gukora gute?",
+          "answer": "Repubulika y'Isi ikoresha Self kugira ngo yemeze ubwoba bwawe ukoresheje pasiporo cyangwa indangamuntu y'igihugu. Ubwigenge bwawe bukabuzwa—Self gusa ikemeza ko uri umuntu w'ukuri nta makuru y'ubwoba wayerekana."
         },
         "party-subsidies": {
           "question": "Inkunga z'amashyaka zikora gute?",

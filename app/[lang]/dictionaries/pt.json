@@ -114,13 +114,13 @@
           "question": "De onde vem o valor do dracma?",
           "answer": "A dracma obtém seu valor por ser a moeda oficial da República Mundial. À medida que a legitimidade de nossa plataforma de governança global cresce, WDD pode se tornar o veículo de redistribuição global e o principal meio de troca na economia mundial."
         },
-        "identity-verification": {
-          "question": "Como funciona a verificação de identidade?",
-          "answer": "A República Mundial usa Self para verificar sua identidade através do seu passaporte ou documento de identidade nacional. Sua privacidade está protegida—Self apenas confirma que você é uma pessoa real sem expor seus dados pessoais."
-        },
         "test-elections": {
           "question": "O que são eleições de teste?",
           "answer": "Eleições de teste são experimentos onde cidadãos da República Mundial votam em partidos políticos. Cada partido é incluído automaticamente na cédula, garantindo igualdade de oportunidades para todos os aspirantes a líderes."
+        },
+        "identity-verification": {
+          "question": "Como funciona a verificação de identidade?",
+          "answer": "A República Mundial usa Self para verificar sua identidade através do seu passaporte ou documento de identidade nacional. Sua privacidade está protegida—Self apenas confirma que você é uma pessoa real sem expor seus dados pessoais."
         },
         "party-subsidies": {
           "question": "Como funcionam os subsídios aos partidos?",
