@@ -474,6 +474,7 @@ export default function WalletPageClient({
                             width={24}
                             height={24}
                             className="size-6 rounded-full"
+                            priority
                           />
                         }
                         endAdornment={
@@ -496,6 +497,7 @@ export default function WalletPageClient({
                             width={24}
                             height={24}
                             className="size-6 rounded-full"
+                            priority
                           />
                         }
                         endAdornment={
@@ -518,6 +520,7 @@ export default function WalletPageClient({
                             width={24}
                             height={24}
                             className="size-6 rounded-full"
+                            priority
                           />
                         }
                         endAdornment={
