@@ -65,7 +65,9 @@
           "leader": "Līderis",
           "website": "Tīmekļa vietne",
           "not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
-        }
+        },
+        "error_loading": "Neizdevās ielādēt partijas",
+        "refresh": "Atsvaidzināt"
       },
       "vote": {
         "no_active_election": "Vēlēšanas drīz sāksies",

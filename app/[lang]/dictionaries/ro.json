@@ -65,7 +65,9 @@
           "leader": "Lider",
           "website": "Site web",
           "not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
-        }
+        },
+        "error_loading": "Nu s-a reușit încărcarea partidelor",
+        "refresh": "Actualizează"
       },
       "vote": {
         "no_active_election": "Alegerile se apropie",

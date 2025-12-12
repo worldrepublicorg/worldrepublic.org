@@ -65,7 +65,9 @@
           "leader": "Pemimpin",
           "website": "Laman web",
           "not_found_description": "Parti yang anda cari tidak wujud atau telah dibubarkan."
-        }
+        },
+        "error_loading": "Gagal memuatkan parti",
+        "refresh": "Muat semula"
       },
       "vote": {
         "no_active_election": "Pilihan raya hampir tiba",

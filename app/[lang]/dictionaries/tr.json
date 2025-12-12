@@ -65,7 +65,9 @@
           "leader": "Lider",
           "website": "Web sitesi",
           "not_found_description": "Aradığınız parti mevcut değil veya feshedilmiş."
-        }
+        },
+        "error_loading": "Partiler yüklenemedi",
+        "refresh": "Yenile"
       },
       "vote": {
         "no_active_election": "Seçimler yakında başlıyor",

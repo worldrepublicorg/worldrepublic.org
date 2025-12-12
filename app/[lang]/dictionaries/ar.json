@@ -65,7 +65,9 @@
           "leader": "القائد",
           "website": "الموقع الإلكتروني",
           "not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
-        }
+        },
+        "error_loading": "فشل تحميل الأحزاب",
+        "refresh": "تحديث"
       },
       "vote": {
         "no_active_election": "الانتخابات ستبدأ قريباً",

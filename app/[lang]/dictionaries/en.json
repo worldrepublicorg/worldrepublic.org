@@ -39,6 +39,8 @@
           "top": "Top"
         },
         "no_parties_found": "No parties found",
+        "error_loading": "Failed to load parties",
+        "refresh": "Refresh",
         "loading_more": "Loading more parties...",
         "party_details": "Party details",
         "share_party": "Share party",

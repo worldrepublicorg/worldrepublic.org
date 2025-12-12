@@ -65,7 +65,9 @@
           "leader": "Líder",
           "website": "Sitio web",
           "not_found_description": "El partido que buscas no existe o ha sido disuelto."
-        }
+        },
+        "error_loading": "Error al cargar los partidos",
+        "refresh": "Actualizar"
       },
       "vote": {
         "no_active_election": "Elecciones comienzan pronto",

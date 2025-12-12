@@ -65,7 +65,9 @@
           "leader": "Leider",
           "website": "Website",
           "not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
-        }
+        },
+        "error_loading": "Kon partijen niet laden",
+        "refresh": "Verversen"
       },
       "vote": {
         "no_active_election": "Verkiezingen beginnen binnenkort",

@@ -65,7 +65,9 @@
           "leader": "Przywódca",
           "website": "Strona internetowa",
           "not_found_description": "Partia, której szukasz, nie istnieje lub została rozwiązana."
-        }
+        },
+        "error_loading": "Nie udało się załadować partii",
+        "refresh": "Odśwież"
       },
       "vote": {
         "no_active_election": "Wybory wkrótce",

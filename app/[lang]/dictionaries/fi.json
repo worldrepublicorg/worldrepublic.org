@@ -65,7 +65,9 @@
           "leader": "Johtaja",
           "website": "Verkkosivusto",
           "not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
-        }
+        },
+        "error_loading": "Puolueiden lataaminen epäonnistui",
+        "refresh": "Päivitä"
       },
       "vote": {
         "no_active_election": "Vaalit alkavat pian",

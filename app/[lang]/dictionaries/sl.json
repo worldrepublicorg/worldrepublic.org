@@ -65,7 +65,9 @@
           "leader": "Vodja",
           "website": "Spletna stran",
           "not_found_description": "Stranka, ki jo iščete, ne obstaja ali je bila razpuščena."
-        }
+        },
+        "error_loading": "Ni bilo mogoče naložiti strank",
+        "refresh": "Osveži"
       },
       "vote": {
         "no_active_election": "Volitve se začnejo kmalu",

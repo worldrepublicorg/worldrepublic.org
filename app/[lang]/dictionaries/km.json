@@ -65,7 +65,9 @@
           "leader": "អ្នកដឹកនាំ",
           "website": "គេហទំព័រ",
           "not_found_description": "គណបក្សដែលអ្នកកំពុងរកមិនមាន ឬត្រូវបានបំបែក។"
-        }
+        },
+        "error_loading": "បរាជ័យក្នុងការផ្ទុកគណបក្ស",
+        "refresh": "Refresh"
       },
       "vote": {
         "no_active_election": "ការបោះឆ្នោតជិតមកដល់ហើយ",

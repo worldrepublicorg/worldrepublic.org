@@ -65,7 +65,9 @@
           "leader": "Leader",
           "website": "Site web",
           "not_found_description": "Le parti que vous recherchez n'existe pas ou a été dissous."
-        }
+        },
+        "error_loading": "Échec du chargement des partis",
+        "refresh": "Actualiser"
       },
       "vote": {
         "no_active_election": "Les élections approchent",

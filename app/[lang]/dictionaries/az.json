@@ -65,7 +65,9 @@
           "leader": "Rəhbər",
           "website": "Veb sayt",
           "not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
-        }
+        },
+        "error_loading": "Partiyaları yükləmək mümkün olmadı",
+        "refresh": "Yenilə"
       },
       "vote": {
         "no_active_election": "Seçkilər tezliklə başlayır",

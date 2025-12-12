@@ -65,7 +65,9 @@
           "leader": "Vorsitzender",
           "website": "Website",
           "not_found_description": "Die gesuchte Partei existiert nicht oder wurde aufgelöst."
-        }
+        },
+        "error_loading": "Parteien konnten nicht geladen werden",
+        "refresh": "Aktualisieren"
       },
       "vote": {
         "no_active_election": "Wahlen beginnen bald",

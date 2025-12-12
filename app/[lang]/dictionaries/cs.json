@@ -65,7 +65,9 @@
           "leader": "Vůdce",
           "website": "Webová stránka",
           "not_found_description": "Strana, kterou hledáte, neexistuje nebo byla rozpuštěna."
-        }
+        },
+        "error_loading": "Nepodařilo se načíst strany",
+        "refresh": "Obnovit"
       },
       "vote": {
         "no_active_election": "Volby začínají brzy",

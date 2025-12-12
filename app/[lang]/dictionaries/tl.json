@@ -65,7 +65,9 @@
           "leader": "Pinuno",
           "website": "Website",
           "not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
-        }
+        },
+        "error_loading": "Nabigong i-load ang mga partido",
+        "refresh": "I-refresh"
       },
       "vote": {
         "no_active_election": "Malapit na ang halalan",

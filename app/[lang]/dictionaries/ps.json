@@ -65,7 +65,9 @@
           "leader": "رهبر",
           "website": "وېب پاڼه",
           "not_found_description": "ګوند چې تاسو یې لټون کوئ شتون نلري یا منحل شوی دی."
-        }
+        },
+        "error_loading": "ګوندونه بارولو کې پاتې راغلي",
+        "refresh": "تازہ کول"
       },
       "vote": {
         "no_active_election": "ټاکنې ژر پیلیږي",

@@ -65,7 +65,9 @@
           "leader": "リーダー",
           "website": "ウェブサイト",
           "not_found_description": "お探しの政党は存在しないか、解散されました。"
-        }
+        },
+        "error_loading": "政党を読み込めませんでした",
+        "refresh": "更新"
       },
       "vote": {
         "no_active_election": "選挙がまもなく始まります",

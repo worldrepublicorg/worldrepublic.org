@@ -65,7 +65,9 @@
           "leader": "Kiongozi",
           "website": "Tovuti",
           "not_found_description": "Chama unachokitafuta hakipo au kimefutwa."
-        }
+        },
+        "error_loading": "Imeshindwa kupakia vyama",
+        "refresh": "Ona upya"
       },
       "vote": {
         "no_active_election": "Uchaguzi unaanza hivi karibuni",

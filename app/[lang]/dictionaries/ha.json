@@ -65,7 +65,9 @@
           "leader": "Shugaba",
           "website": "Gidan yanar gizo",
           "not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
-        }
+        },
+        "error_loading": "An kasa loda jam'iyyu",
+        "refresh": "Sabunta"
       },
       "vote": {
         "no_active_election": "Zabe yana zuwa",

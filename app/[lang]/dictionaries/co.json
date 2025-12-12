@@ -65,7 +65,9 @@
           "leader": "Capu",
           "website": "Situ web",
           "not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
-        }
+        },
+        "error_loading": "Fiascu in u caricamentu di i partiti",
+        "refresh": "Agghjurnà"
       },
       "vote": {
         "no_active_election": "L'elezzioni principianu prestu",

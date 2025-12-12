@@ -65,7 +65,9 @@
           "leader": "Lãnh đạo",
           "website": "Trang web",
           "not_found_description": "Đảng phái bạn đang tìm không tồn tại hoặc đã bị giải tán."
-        }
+        },
+        "error_loading": "Không thể tải danh sách đảng",
+        "refresh": "Làm mới"
       },
       "vote": {
         "no_active_election": "Bầu cử sắp bắt đầu",

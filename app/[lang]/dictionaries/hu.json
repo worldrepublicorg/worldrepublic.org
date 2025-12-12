@@ -65,7 +65,9 @@
           "leader": "Vezető",
           "website": "Weboldal",
           "not_found_description": "A keresett párt nem létezik vagy feloszlott."
-        }
+        },
+        "error_loading": "Hiba történt a pártok betöltésekor",
+        "refresh": "Frissítés"
       },
       "vote": {
         "no_active_election": "Választások hamarosan",

@@ -65,7 +65,9 @@
           "leader": "领导人",
           "website": "网站",
           "not_found_description": "您要查找的政党不存在或已被解散。"
-        }
+        },
+        "error_loading": "无法加载政党",
+        "refresh": "刷新"
       },
       "vote": {
         "no_active_election": "选举即将开始",

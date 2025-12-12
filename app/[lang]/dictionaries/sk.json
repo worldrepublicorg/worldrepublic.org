@@ -65,7 +65,9 @@
           "leader": "Vodca",
           "website": "Webová stránka",
           "not_found_description": "Strana, ktorú hľadáte, neexistuje alebo bola rozpustená."
-        }
+        },
+        "error_loading": "Nepodarilo sa načítať strany",
+        "refresh": "Obnoviť"
       },
       "vote": {
         "no_active_election": "Voľby sa začínajú čoskoro",

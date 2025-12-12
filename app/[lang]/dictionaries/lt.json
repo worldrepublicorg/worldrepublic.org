@@ -65,7 +65,9 @@
           "leader": "Lyderis",
           "website": "Svetainė",
           "not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
-        }
+        },
+        "error_loading": "Nepavyko įkelti partijų",
+        "refresh": "Atnaujinti"
       },
       "vote": {
         "no_active_election": "Rinkimai prasideda netrukus",

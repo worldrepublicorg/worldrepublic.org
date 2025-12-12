@@ -65,7 +65,9 @@
           "leader": "Oludari",
           "website": "Oju opo wẹẹbu",
           "not_found_description": "Ẹgbẹ ti o n wa ko wa tabi ti yọ kuro."
-        }
+        },
+        "error_loading": "Ikuna lati gbe awọn ẹgbẹ",
+        "refresh": "Sọ dọtun"
       },
       "vote": {
         "no_active_election": "Awọn idibo bẹrẹ laipẹ",

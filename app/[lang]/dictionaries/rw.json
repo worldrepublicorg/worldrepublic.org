@@ -65,7 +65,9 @@
           "leader": "Umuobozi",
           "website": "Urubuga",
           "not_found_description": "Amashyirahamwe ushakisha ntayabaho cyangwa yarimbuwe."
-        }
+        },
+        "error_loading": "Kunanirwa gushyira amashyaka",
+        "refresh": "Kuvugurura"
       },
       "vote": {
         "no_active_election": "Amatora aratangira vuba",

@@ -65,7 +65,9 @@
           "leader": "Rahbar",
           "website": "Veb-sayt",
           "not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
-        }
+        },
+        "error_loading": "Partiyalarni yuklab bo‘lmadi",
+        "refresh": "Yangilash"
       },
       "vote": {
         "no_active_election": "Saylovlar tez orada boshlanadi",

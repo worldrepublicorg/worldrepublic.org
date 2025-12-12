@@ -65,7 +65,9 @@
           "leader": "지도자",
           "website": "웹사이트",
           "not_found_description": "찾고 있는 정당이 존재하지 않거나 해산되었습니다."
-        }
+        },
+        "error_loading": "정당을 불러오는데 실패했습니다",
+        "refresh": "새로고침"
       },
       "vote": {
         "no_active_election": "선거가 곧 시작됩니다",

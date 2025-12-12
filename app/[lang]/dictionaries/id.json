@@ -65,7 +65,9 @@
           "leader": "Pemimpin",
           "website": "Situs web",
           "not_found_description": "Partai yang Anda cari tidak ada atau telah dibubarkan."
-        }
+        },
+        "error_loading": "Gagal memuat partai",
+        "refresh": "Segarkan"
       },
       "vote": {
         "no_active_election": "Pemilu segera dimulai",

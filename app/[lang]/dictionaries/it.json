@@ -65,7 +65,9 @@
           "leader": "Leader",
           "website": "Sito web",
           "not_found_description": "Il partito che stai cercando non esiste o è stato sciolto."
-        }
+        },
+        "error_loading": "Impossibile caricare i partiti",
+        "refresh": "Aggiorna"
       },
       "vote": {
         "no_active_election": "Elezioni in arrivo",

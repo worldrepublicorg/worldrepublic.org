@@ -65,7 +65,9 @@
           "leader": "አመራር",
           "website": "ድህረ ገጽ",
           "not_found_description": "የሚፈልጉት ፓርቲ የለም ወይም ተፈትቷል።"
-        }
+        },
+        "error_loading": "ፓርቲዎችን መጫን አልተቻለም",
+        "refresh": "አድስ"
       },
       "vote": {
         "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",

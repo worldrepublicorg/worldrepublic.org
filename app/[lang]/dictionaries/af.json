@@ -65,7 +65,9 @@
           "leader": "Leier",
           "website": "Webwerf",
           "not_found_description": "Die party wat jy soek bestaan nie of is ontbind."
-        }
+        },
+        "error_loading": "Kon nie partye laai nie",
+        "refresh": "Verfris"
       },
       "vote": {
         "no_active_election": "Verkiesings begin binnekort",

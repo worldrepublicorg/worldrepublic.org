@@ -65,7 +65,9 @@
           "leader": "Hogaanka",
           "website": "Website",
           "not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
-        }
+        },
+        "error_loading": "Ku guuldareystay in la soo raro xisbiyada",
+        "refresh": "Cusbooneysii"
       },
       "vote": {
         "no_active_election": "Doorashooyinku waxay bilaabanayaan dhowaan",

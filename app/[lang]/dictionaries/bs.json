@@ -65,7 +65,9 @@
           "leader": "Vođa",
           "website": "Web stranica",
           "not_found_description": "Stranka koju tražite ne postoji ili je raspuštena."
-        }
+        },
+        "error_loading": "Nije uspjelo učitavanje stranaka",
+        "refresh": "Osvježi"
       },
       "vote": {
         "no_active_election": "Izbori počinju uskoro",
