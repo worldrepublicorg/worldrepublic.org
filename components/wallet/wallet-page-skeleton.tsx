@@ -23,7 +23,7 @@ export function WalletPageSkeleton({ dictionary }: WalletPageSkeletonProps) {
           </div>
         }
       />
-      <div className="flex flex-col gap-10 p-6">
+      <div className="flex flex-col gap-9 p-6">
         {/* Balance Display Skeleton */}
         <div className="flex flex-col items-center justify-center">
           <Typography variant="subtitle" level={3} className="text-gray-500">
