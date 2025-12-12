@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Skenirajte to kodo QR za preverjanje s Self.",
-        "mobile_dialog_description": "Preusmerjeni boste v aplikacijo Self, da dokončate preverjanje.",
+        "mobile_dialog_description": "Preusmerjeni boste v aplikacijo Self, da opravite preverjanje.",
         "supported_countries": "Podprte države",
         "support_telegram": "Podpora Self"
       },

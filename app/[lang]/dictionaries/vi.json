@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Quét mã QR này để xác minh với Self.",
-        "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để hoàn tất xác minh.",
+        "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để thực hiện xác minh.",
         "supported_countries": "Các quốc gia được hỗ trợ",
         "support_telegram": "Hỗ trợ Self"
       },

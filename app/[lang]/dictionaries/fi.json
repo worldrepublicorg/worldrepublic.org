@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Skannaa tämä QR-koodi vahvistaaksesi Selfillä.",
-        "mobile_dialog_description": "Sinut ohjataan Self-sovellukseen viimeistelemään vahvistus.",
+        "mobile_dialog_description": "Sinut ohjataan Self-sovellukseen suorittamaan vahvistus.",
         "supported_countries": "Tuetut maat",
         "support_telegram": "Self-tuki"
       },

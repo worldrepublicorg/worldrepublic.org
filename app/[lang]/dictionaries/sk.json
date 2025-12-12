@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
-        "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na dokončenie overenia.",
+        "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na vykonanie overenia.",
         "supported_countries": "Podporované krajiny",
         "support_telegram": "Podpora Self"
       },

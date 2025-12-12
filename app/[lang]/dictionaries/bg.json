@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Сканирайте този QR код, за да се верифицирате чрез Self.",
-        "mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да завършите верификацията.",
+        "mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да извършите верификацията.",
         "supported_countries": "Поддържани държави",
         "support_telegram": "Поддръжка на Self"
       },

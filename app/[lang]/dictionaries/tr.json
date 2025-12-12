@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Self ile doğrulamak için bu QR kodunu tarayın.",
-        "mobile_dialog_description": "Doğrulamayı tamamlamak için Self uygulamasına yönlendirileceksiniz.",
+        "mobile_dialog_description": "Doğrulamayı gerçekleştirmek için Self uygulamasına yönlendirileceksiniz.",
         "supported_countries": "Desteklenen ülkeler",
         "support_telegram": "Self Desteği"
       },

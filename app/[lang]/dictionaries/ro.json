@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
-        "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a finaliza verificarea.",
+        "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a efectua verificarea.",
         "supported_countries": "Țări acceptate",
         "support_telegram": "Suport Self"
       },

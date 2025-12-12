@@ -201,7 +201,7 @@
     "identity": {
       "self": {
         "dialog_description": "Pindai kode QR ini untuk verifikasi dengan Self.",
-        "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk menyelesaikan verifikasi.",
+        "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melakukan verifikasi.",
         "supported_countries": "Negara yang didukung",
         "support_telegram": "Dukungan Self"
       },
