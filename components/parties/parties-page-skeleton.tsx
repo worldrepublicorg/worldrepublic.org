@@ -49,7 +49,6 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
             </div>
             {/* Party description */}
             <div className="mt-3">
-              <Skeleton height={16} width="100%" className="mb-1" />
               <Skeleton height={16} width="80%" />
             </div>
             {/* Party website */}

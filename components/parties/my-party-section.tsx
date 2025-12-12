@@ -64,7 +64,6 @@ export function MyPartySection({
             <Skeleton height={32} width={32} className="rounded-full" />
           </div>
           <div className="mt-3">
-            <Skeleton height={16} width="100%" className="mb-1" />
             <Skeleton height={16} width="80%" />
           </div>
           <div className="flex items-center justify-between mt-3">
