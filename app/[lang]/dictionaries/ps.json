@@ -71,7 +71,7 @@
         "no_active_election": "ټاکنې ژر پیلیږي",
         "test_verification": {
           "description": "د هویت تایید اوس و ازموئ ترڅو د رایې ورکولو پرمهال چمتو اوسئ.",
-          "button": "تایید"
+          "button": "ازموینه"
         }
       }
     },

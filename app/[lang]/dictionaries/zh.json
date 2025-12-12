@@ -71,7 +71,7 @@
         "no_active_election": "选举即将开始",
         "test_verification": {
           "description": "立即测试身份验证，以便在投票开始时做好准备。",
-          "button": "验证"
+          "button": "测试"
         }
       }
     },

@@ -71,7 +71,7 @@
         "no_active_election": "Alegerile se apropie",
         "test_verification": {
           "description": "Testați verificarea identității acum pentru a fi pregătiți când se deschide votul.",
-          "button": "Verifică"
+          "button": "Test"
         }
       }
     },

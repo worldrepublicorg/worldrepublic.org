@@ -71,7 +71,7 @@
         "no_active_election": "Seçkilər tezliklə başlayır",
         "test_verification": {
           "description": "Səsvermə başlayanda hazır olmaq üçün indi şəxsiyyətin təsdiqini sınayın.",
-          "button": "Təsdiqlə"
+          "button": "Sınaq"
         }
       }
     },

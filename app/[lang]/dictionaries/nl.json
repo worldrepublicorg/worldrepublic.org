@@ -71,7 +71,7 @@
         "no_active_election": "Verkiezingen beginnen binnenkort",
         "test_verification": {
           "description": "Test identiteitsverificatie nu om klaar te zijn wanneer het stemmen begint.",
-          "button": "Verifiëren"
+          "button": "Test"
         }
       }
     },

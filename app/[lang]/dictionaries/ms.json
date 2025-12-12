@@ -71,7 +71,7 @@
         "no_active_election": "Pilihan raya hampir tiba",
         "test_verification": {
           "description": "Uji pengesahan identiti sekarang untuk bersedia apabila pengundian dibuka.",
-          "button": "Sahkan"
+          "button": "Uji"
         }
       }
     },

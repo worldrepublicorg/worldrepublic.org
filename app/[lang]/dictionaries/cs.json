@@ -71,7 +71,7 @@
         "no_active_election": "Volby začínají brzy",
         "test_verification": {
           "description": "Otestujte ověření totožnosti nyní, abyste byli připraveni, až se otevře hlasování.",
-          "button": "Ověřit"
+          "button": "Test"
         }
       }
     },

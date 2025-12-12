@@ -71,7 +71,7 @@
         "no_active_election": "Saylovlar tez orada boshlanadi",
         "test_verification": {
           "description": "Ovoz berish boshlanganda tayyor bo'lish uchun shaxsni tasdiqlashni hozir sinab ko'ring.",
-          "button": "Tasdiqlash"
+          "button": "Sinov"
         }
       }
     },

@@ -71,7 +71,7 @@
         "no_active_election": "Seçimler yakında başlıyor",
         "test_verification": {
           "description": "Oylama başladığında hazır olmak için kimlik doğrulamasını şimdi test edin.",
-          "button": "Doğrula"
+          "button": "Test"
         }
       }
     },
