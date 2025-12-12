@@ -373,7 +373,7 @@ export function TransactionHistoryContent({
         </div>
       ) : error ? (
         // Error state
-        <div className="my-8 text-center text-sm text-gray-500">
+        <div className="mt-4 mb-8 text-center text-sm text-gray-500">
           {dictionary.pages.wallet.transactions.failed_to_load}
         </div>
       ) : transactions.length === 0 ? (
@@ -394,7 +394,7 @@ export function TransactionHistoryContent({
             <PiCaretDown className="size-4 text-gray-500" />
           </button>
 
-          <div className="my-8 text-center text-sm text-gray-500">
+          <div className="mt-4 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.wallet.transactions.no_transactions}
           </div>
         </div>

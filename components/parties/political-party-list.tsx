@@ -650,7 +650,7 @@ export function PoliticalPartyList({
       <div className="px-6 pb-6">
         {parties.length === 0 ? (
           // Error state
-          <div className="mt-16 mb-8 flex flex-col items-center gap-3 p-4 text-center">
+          <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
             <Typography
               variant="body"
               level={3}
@@ -668,7 +668,7 @@ export function PoliticalPartyList({
           </div>
         ) : filteredParties.length === 0 ? (
           // Search filter - no results match
-          <div className="mt-16 mb-8 text-center text-sm text-gray-500">
+          <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
         ) : (
