@@ -26,7 +26,11 @@ export function WalletPageSkeleton({ dictionary }: WalletPageSkeletonProps) {
       <div className="flex flex-col gap-9 p-6">
         {/* Balance Display Skeleton */}
         <div className="flex flex-col items-center justify-center">
-          <Typography variant="subtitle" level={3} className="text-gray-500">
+          <Typography
+            variant="subtitle"
+            level={3}
+            className="text-gray-500 mt-1!"
+          >
             {dictionary.pages.wallet.balance}
           </Typography>
           <div className="flex items-center justify-center mt-3">
