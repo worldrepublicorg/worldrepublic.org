@@ -275,7 +275,7 @@ export default function WalletPageClient({
             {displayBalance} WDD
           </Typography>
 
-          <div className="flex flex-row w-full justify-around mt-6 px-6">
+          <div className="flex flex-row w-full justify-around mt-5 px-6">
             {/* Send */}
             {/* Withdraw to Crypto Dialog */}
             <AlertDialog
