@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Izbori počinju uskoro",
         "test_verification": {
-          "description": "Testirajte verifikaciju identiteta sada da budete spremni kada glasanje počne.",
+          "description": "Isprobajte naš sistem za verifikaciju identiteta sada za besprijekorno glasanje.",
           "button": "Test"
         }
       }

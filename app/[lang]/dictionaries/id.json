@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Pemilu segera dimulai",
         "test_verification": {
-          "description": "Uji verifikasi identitas sekarang agar siap saat pemungutan suara dibuka.",
+          "description": "Coba sistem verifikasi identitas kami sekarang untuk pengalaman pemungutan suara yang lancar.",
           "button": "Uji"
         }
       }

@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Rinkimai prasideda netrukus",
         "test_verification": {
-          "description": "Išbandykite tapatybės patvirtinimą dabar, kad būtumėte pasiruošę, kai prasidės balsavimas.",
+          "description": "Išbandykite mūsų tapatybės patvirtinimo sistemą dabar, kad balsavimas vyktų sklandžiai.",
           "button": "Testas"
         }
       }

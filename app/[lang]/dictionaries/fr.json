@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Les élections approchent",
         "test_verification": {
-          "description": "Testez la vérification d'identité maintenant pour être prêt lors de l'ouverture du vote.",
+          "description": "Essayez notre système de vérification d'identité dès maintenant pour une expérience de vote fluide.",
           "button": "Test"
         }
       }

@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Uchaguzi unaanza hivi karibuni",
         "test_verification": {
-          "description": "Jaribu uthibitishaji wa kitambulisho sasa ili uwe tayari wakati upigaji kura utakapofunguliwa.",
+          "description": "Jaribu mfumo wetu wa uthibitishaji wa utambulisho sasa kwa uzoefu wa kupiga kura bila shida.",
           "button": "Jaribu"
         }
       }

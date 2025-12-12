@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Választások hamarosan",
         "test_verification": {
-          "description": "Tesztelje a személyazonosság-ellenőrzést most, hogy készen álljon a szavazás kezdetekor.",
+          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most a zökkenőmentes szavazási élményért.",
           "button": "Teszt"
         }
       }

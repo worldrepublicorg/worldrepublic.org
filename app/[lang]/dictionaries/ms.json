@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Pilihan raya hampir tiba",
         "test_verification": {
-          "description": "Uji pengesahan identiti sekarang untuk bersedia apabila pengundian dibuka.",
+          "description": "Cuba sistem pengesahan identiti kami sekarang untuk pengalaman mengundi yang lancar.",
           "button": "Uji"
         }
       }

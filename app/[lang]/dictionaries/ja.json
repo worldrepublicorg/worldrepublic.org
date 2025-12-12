@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "選挙がまもなく始まります",
         "test_verification": {
-          "description": "投票開始時に準備ができるよう、今すぐ本人確認をテストしてください。",
+          "description": "スムーズな投票体験のために、今すぐ本人確認システムをお試しください。",
           "button": "テスト"
         }
       }

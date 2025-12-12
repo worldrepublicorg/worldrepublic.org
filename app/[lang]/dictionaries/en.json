@@ -24,11 +24,11 @@
         }
       },
       "vote": {
+        "no_active_election": "Elections are starting soon",
         "test_verification": {
-          "description": "Test identity verification now to be ready when voting opens.",
+          "description": "Try our identity verification system now for a seamless voting experience.",
           "button": "Test"
-        },
-        "no_active_election": "Elections are starting soon"
+        }
       },
       "parties": {
         "discover": "Discover",

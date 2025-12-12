@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Verkiesings begin binnekort",
         "test_verification": {
-          "description": "Toets identiteitsverifikasie nou om gereed te wees wanneer stemming oopmaak.",
+          "description": "Probeer ons identiteitsverifikasiestelsel nou vir 'n naatlose stemervaring.",
           "button": "Toets"
         }
       }

@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Vaalit alkavat pian",
         "test_verification": {
-          "description": "Testaa henkilöllisyyden varmennus nyt ollaksesi valmis, kun äänestys alkaa.",
+          "description": "Kokeile henkilöllisyyden varmennusjärjestelmäämme nyt sujuvaa äänestyskokemusta varten.",
           "button": "Testaa"
         }
       }

@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "선거가 곧 시작됩니다",
         "test_verification": {
-          "description": "투표가 시작될 때 준비될 수 있도록 지금 본인 확인을 테스트하세요.",
+          "description": "원활한 투표 경험을 위해 지금 신원 확인 시스템을 사용해 보세요.",
           "button": "테스트"
         }
       }

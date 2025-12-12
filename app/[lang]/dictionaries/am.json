@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",
         "test_verification": {
-          "description": "ድምጽ መስጠት ሲጀምር ዝግጁ ለመሆን የማንነት ማረጋገጫን አሁን ይሞክሩ።",
+          "description": "ለተሳለጠ የምርጫ ልምድ የማንነት ማረጋገጫ ስርዓታችንን አሁኑኑ ይሞክሩ።",
           "button": "ሙከራ"
         }
       }

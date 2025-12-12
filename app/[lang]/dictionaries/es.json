@@ -72,7 +72,7 @@
       "vote": {
         "no_active_election": "Elecciones comienzan pronto",
         "test_verification": {
-          "description": "Pruebe la verificación de identidad ahora para estar listo cuando se abra la votación.",
+          "description": "Prueba nuestro sistema de verificación de identidad ahora para una experiencia de votación fluida.",
           "button": "Prueba"
         }
       }
