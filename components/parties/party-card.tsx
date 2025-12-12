@@ -193,15 +193,6 @@ export function PartyCard({
             as="span"
             variant="label"
             level={1}
-            className="text-[15px] text-gray-500 font-normal"
-          >
-            {dictionary.pages.govern.parties.detail.leader}
-            {": "}
-          </Typography>
-          <Typography
-            as="span"
-            variant="label"
-            level={1}
             className="text-[15px] font-semibold"
           >
             {party.leaderUsername}
