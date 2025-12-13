@@ -16,8 +16,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   PiArrowCircleUpFill,
@@ -25,7 +24,6 @@ import {
   PiArrowsClockwise,
   PiArrowsClockwiseFill,
   PiArrowUp,
-  PiList,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
@@ -38,6 +36,7 @@ const SignInDialog = dynamic(
 
 import { CustomListItem } from "@/components/custom-list-item";
 import { CustomSelect } from "@/components/custom-select";
+import { MenuLink } from "@/components/menu-link";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
@@ -83,7 +82,6 @@ export default function WalletPageClient({
   transactions,
 }: WalletPageClientProps) {
   const params = useParams<{ lang: string }>();
-  const pathname = usePathname();
   const [isSignInDialogOpen, setIsSignInDialogOpen] = useState(false);
   const { user } = useAuth();
   const router = useRouter();
@@ -250,19 +248,7 @@ export default function WalletPageClient({
     <div className="pb-safe flex flex-col">
       <TopBar
         title={dictionary.pages.wallet.topbar.title}
-        endAdornment={
-          <Link
-            href={`/${params.lang}/menu`}
-            onClick={() => {
-              // Store the current page as the return URL
-              localStorage.setItem("menuReturnUrl", pathname);
-            }}
-          >
-            <Button variant="tertiary" size="icon" className="bg-gray-100">
-              <PiList className="size-4 text-gray-900" />
-            </Button>
-          </Link>
-        }
+        endAdornment={<MenuLink lang={params.lang} />}
       />
 
       <div className="flex flex-col gap-9 p-6">
