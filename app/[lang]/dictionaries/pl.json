@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Republika Światowa"
+    "world_republic": "Republika Światowa",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partie polityczne",
-          "subtitle": "Łącz się globalnie wokół wspólnych wartości"
+          "title": "Partie polityczne"
         },
         "elections": {
           "title": "Wybory testowe",
@@ -23,15 +22,19 @@
           "subtitle": "Głosuj nad naszymi podstawowymi zasadami"
         }
       },
+      "vote": {
+        "no_active_election": "Wybory wkrótce",
+        "test_verification": {
+          "description": "Wypróbuj nasz system weryfikacji tożsamości już teraz, aby zapewnić sobie bezproblemowe głosowanie.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Odkryj",
         "search_placeholder": "Szukaj partii...",
-        "tabs": {
-          "new": "Nowe",
-          "trending": "Popularne",
-          "top": "Najlepsze"
-        },
         "no_parties_found": "Nie znaleziono partii",
+        "error_loading": "Nie udało się załadować partii",
+        "refresh": "Odśwież",
         "loading_more": "Ładowanie więcej partii...",
         "party_details": "Szczegóły partii",
         "share_party": "Udostępnij partię",
@@ -65,15 +68,6 @@
           "leader": "Przywódca",
           "website": "Strona internetowa",
           "not_found_description": "Partia, której szukasz, nie istnieje lub została rozwiązana."
-        },
-        "error_loading": "Nie udało się załadować partii",
-        "refresh": "Odśwież"
-      },
-      "vote": {
-        "no_active_election": "Wybory wkrótce",
-        "test_verification": {
-          "description": "Wypróbuj nasz system weryfikacji tożsamości już teraz, aby zapewnić sobie bezproblemowe głosowanie.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "Wsparcie"
         },
+        "source_code": {
+          "title": "KOD ŹRÓDŁOWY"
+        },
         "legal": {
           "title": "PRAWNE",
           "terms": "Regulamin",
           "privacy": "Polityka prywatności"
-        },
-        "source_code": {
-          "title": "KOD ŹRÓDŁOWY"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Wyślij",
           "withdraw_to_crypto": {
-            "description": "Wypłać WDD na konto krypto",
+            "description": "Wypłać WDD na konto krypto.",
             "amount_label": "Kwota",
             "address_label": "Adres portfela",
             "network_label": "Sieć"
@@ -221,7 +215,6 @@
       "no_wallet": "Brak adresu portfela",
       "min_amount": "Minimum 10 WDD",
       "sent": "Wysłano",
-      "failed": "Sumsub ID wymagane",
       "account_deleted": "Konto usunięte",
       "delete_failed": "Nie udało się usunąć konta",
       "contract_address_error": "Nie można wypłacić na adres kontraktu",
@@ -234,9 +227,6 @@
       "updated": "Zaktualizowano",
       "update_failed": "Nie udało się zaktualizować",
       "update_error": "Błąd podczas aktualizacji partii",
-      "transferred": "Przeniesiono",
-      "transfer_failed": "Nie udało się przenieść przywództwa",
-      "transfer_error": "Błąd podczas przenoszenia przywództwa",
       "dissolved": "Rozwiązana",
       "dissolve_failed": "Nie udało się rozwiązać",
       "dissolve_error": "Błąd podczas rozwiązywania partii"
@@ -256,10 +246,10 @@
     "withdraw": "Wypłać",
     "trade": "Handluj",
     "continue": "Kontynuuj",
+    "close": "Zamknij",
     "updating": "Aktualizowanie...",
     "save": "Zapisz",
-    "vote": "Głosuj",
-    "close": "Zamknij"
+    "vote": "Głosuj"
   },
   "auth": {
     "choose_method": "Wybierz preferowaną metodę.",

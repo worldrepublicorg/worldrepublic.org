@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "菜单",
-    "world_republic": "世界共和国"
+    "world_republic": "世界共和国",
+    "menu": "菜单"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "政党",
-          "subtitle": "围绕共同价值在全球范围内联合"
+          "title": "政党"
         },
         "elections": {
           "title": "测试选举",
@@ -23,15 +22,19 @@
           "subtitle": "就我们的基础原则进行投票"
         }
       },
+      "vote": {
+        "no_active_election": "选举即将开始",
+        "test_verification": {
+          "description": "立即尝试我们的身份验证系统，以获得无缝的投票体验。",
+          "button": "测试"
+        }
+      },
       "parties": {
         "discover": "发现",
         "search_placeholder": "搜索政党...",
-        "tabs": {
-          "new": "新",
-          "trending": "热门",
-          "top": "顶级"
-        },
         "no_parties_found": "未找到政党",
+        "error_loading": "无法加载政党",
+        "refresh": "刷新",
         "loading_more": "加载更多政党...",
         "party_details": "政党详情",
         "share_party": "分享政党",
@@ -65,15 +68,6 @@
           "leader": "领导人",
           "website": "网站",
           "not_found_description": "您要查找的政党不存在或已被解散。"
-        },
-        "error_loading": "无法加载政党",
-        "refresh": "刷新"
-      },
-      "vote": {
-        "no_active_election": "选举即将开始",
-        "test_verification": {
-          "description": "立即尝试我们的身份验证系统，以获得无缝的投票体验。",
-          "button": "测试"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "发送",
           "withdraw_to_crypto": {
-            "description": "将 WDD 提取到加密账户",
+            "description": "将 WDD 提取到加密账户。",
             "amount_label": "金额",
             "address_label": "钱包地址",
             "network_label": "网络"
@@ -221,7 +215,6 @@
       "no_wallet": "无钱包地址",
       "min_amount": "最少 10 WDD",
       "sent": "已发送",
-      "failed": "需要 Sumsub ID",
       "account_deleted": "账户已删除",
       "delete_failed": "删除账户失败",
       "contract_address_error": "无法提取到合约地址",
@@ -234,9 +227,6 @@
       "updated": "已更新",
       "update_failed": "更新失败",
       "update_error": "更新政党时出错",
-      "transferred": "已转移",
-      "transfer_failed": "转移领导权失败",
-      "transfer_error": "转移领导权时出错",
       "dissolved": "已解散",
       "dissolve_failed": "解散失败",
       "dissolve_error": "解散政党时出错"
@@ -256,13 +246,13 @@
     "withdraw": "提取",
     "trade": "交易",
     "continue": "继续",
+    "close": "关闭",
     "updating": "更新中...",
     "save": "保存",
-    "vote": "投票",
-    "close": "关闭"
+    "vote": "投票"
   },
   "auth": {
-    "choose_method": "选择您喜欢的方法.",
+    "choose_method": "选择您喜欢的方法。",
     "sign_in_with_google": "使用 Google 继续",
     "sign_in_with_passkey": "使用生物识别",
     "sign_in_or_create": "使用密码密钥访问您的帐户，使用您的指纹、面部扫描或屏幕锁定。",

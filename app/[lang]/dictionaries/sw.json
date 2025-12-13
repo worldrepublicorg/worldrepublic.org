@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menyu",
-    "world_republic": "Jamhuri ya Dunia"
+    "world_republic": "Jamhuri ya Dunia",
+    "menu": "Menyu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Vyakula vya kisiasa",
-          "subtitle": "Ungana kimataifa kuzunguka maadili ya pamoja"
+          "title": "Vyakula vya kisiasa"
         },
         "elections": {
           "title": "Uchaguzi wa majaribio",
@@ -23,15 +22,19 @@
           "subtitle": "Piga kura kuhusu kanuni zetu za msingi"
         }
       },
+      "vote": {
+        "no_active_election": "Uchaguzi unaanza hivi karibuni",
+        "test_verification": {
+          "description": "Jaribu mfumo wetu wa uthibitishaji wa utambulisho sasa kwa uzoefu wa kupiga kura bila shida.",
+          "button": "Jaribu"
+        }
+      },
       "parties": {
         "discover": "Gundua",
         "search_placeholder": "Tafuta vyama...",
-        "tabs": {
-          "new": "Mpya",
-          "trending": "Maarufu",
-          "top": "Juu"
-        },
         "no_parties_found": "Hakuna vyama vilivyopatikana",
+        "error_loading": "Imeshindwa kupakia vyama",
+        "refresh": "Ona upya",
         "loading_more": "Inapakia vyama zaidi...",
         "party_details": "Maelezo ya chama",
         "share_party": "Shiriki chama",
@@ -65,15 +68,6 @@
           "leader": "Kiongozi",
           "website": "Tovuti",
           "not_found_description": "Chama unachokitafuta hakipo au kimefutwa."
-        },
-        "error_loading": "Imeshindwa kupakia vyama",
-        "refresh": "Ona upya"
-      },
-      "vote": {
-        "no_active_election": "Uchaguzi unaanza hivi karibuni",
-        "test_verification": {
-          "description": "Jaribu mfumo wetu wa uthibitishaji wa utambulisho sasa kwa uzoefu wa kupiga kura bila shida.",
-          "button": "Jaribu"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Tuma",
           "withdraw_to_crypto": {
-            "description": "Toa WDD kwenye akaunti ya crypto",
+            "description": "Toa WDD kwenye akaunti ya crypto.",
             "amount_label": "Kiasi",
             "address_label": "Anwani ya mkoba",
             "network_label": "Mtandao"
@@ -221,7 +215,6 @@
       "no_wallet": "Hakuna anwani ya mkoba",
       "min_amount": "Kiwango cha chini cha 10 WDD",
       "sent": "Imetumwa",
-      "failed": "Sumsub ID inahitajika",
       "account_deleted": "Akaunti imefutwa",
       "delete_failed": "Kufuta akaunti hakukufaulu",
       "contract_address_error": "Haiwezi kutolewa kwenye anwani ya mkataba",
@@ -234,9 +227,6 @@
       "updated": "Imehakikiwa",
       "update_failed": "Kuhakiki kumeshindwa",
       "update_error": "Hitilafu wakati wa kuhakiki chama",
-      "transferred": "Imehamishwa",
-      "transfer_failed": "Kuhamisha uongozi kumeshindwa",
-      "transfer_error": "Hitilafu wakati wa kuhamisha uongozi",
       "dissolved": "Imevunjwa",
       "dissolve_failed": "Kuvunja kumeshindwa",
       "dissolve_error": "Hitilafu wakati wa kuvunja chama"
@@ -256,10 +246,10 @@
     "withdraw": "Toa",
     "trade": "Biashara",
     "continue": "Endelea",
+    "close": "Funga",
     "updating": "Inasasisha...",
     "save": "Hifadhi",
-    "vote": "Piga kura",
-    "close": "Funga"
+    "vote": "Piga kura"
   },
   "auth": {
     "choose_method": "Chagua njia unayopenda.",

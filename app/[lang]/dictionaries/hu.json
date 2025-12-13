@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menü",
-    "world_republic": "Világköztársaság"
+    "world_republic": "Világköztársaság",
+    "menu": "Menü"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politikai pártok",
-          "subtitle": "Egyesüljön globálisan közös értékek körül"
+          "title": "Politikai pártok"
         },
         "elections": {
           "title": "Tesztválasztások",
@@ -23,15 +22,19 @@
           "subtitle": "Szavazzon alapelveinkről"
         }
       },
+      "vote": {
+        "no_active_election": "Választások hamarosan",
+        "test_verification": {
+          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most a zökkenőmentes szavazási élményért.",
+          "button": "Teszt"
+        }
+      },
       "parties": {
         "discover": "Felfedezés",
         "search_placeholder": "Pártok keresése...",
-        "tabs": {
-          "new": "Új",
-          "trending": "Népszerű",
-          "top": "Legjobb"
-        },
         "no_parties_found": "Nem található párt",
+        "error_loading": "Hiba történt a pártok betöltésekor",
+        "refresh": "Frissítés",
         "loading_more": "Több párt betöltése...",
         "party_details": "Párt részletei",
         "share_party": "Párt megosztása",
@@ -65,15 +68,6 @@
           "leader": "Vezető",
           "website": "Weboldal",
           "not_found_description": "A keresett párt nem létezik vagy feloszlott."
-        },
-        "error_loading": "Hiba történt a pártok betöltésekor",
-        "refresh": "Frissítés"
-      },
-      "vote": {
-        "no_active_election": "Választások hamarosan",
-        "test_verification": {
-          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most a zökkenőmentes szavazási élményért.",
-          "button": "Teszt"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "GYIK",
           "support": "Ügyfélszolgálat"
         },
+        "source_code": {
+          "title": "FORRÁSKÓD"
+        },
         "legal": {
           "title": "JOGI",
           "terms": "Használati feltételek",
           "privacy": "Adatvédelmi irányelvek"
-        },
-        "source_code": {
-          "title": "FORRÁSKÓD"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Küldés",
           "withdraw_to_crypto": {
-            "description": "WDD kivétele kripto számlára",
+            "description": "WDD kivétele kripto számlára.",
             "amount_label": "Összeg",
             "address_label": "Számlacím",
             "network_label": "Hálózat"
@@ -221,7 +215,6 @@
       "no_wallet": "Nincs számlacím",
       "min_amount": "Minimum 10 WDD",
       "sent": "Elküldve",
-      "failed": "Sumsub ID szükséges",
       "account_deleted": "Fiók törölve",
       "delete_failed": "Fiók törlése sikertelen",
       "contract_address_error": "Nem vonható ki szerződés címre",
@@ -234,9 +227,6 @@
       "updated": "Frissítve",
       "update_failed": "Frissítés sikertelen",
       "update_error": "Hiba a párt frissítésekor",
-      "transferred": "Átadva",
-      "transfer_failed": "Vezetés átadása sikertelen",
-      "transfer_error": "Hiba a vezetés átadásakor",
       "dissolved": "Feloszlatva",
       "dissolve_failed": "Feloszlatás sikertelen",
       "dissolve_error": "Hiba a párt feloszlatásakor"
@@ -256,10 +246,10 @@
     "withdraw": "Kivonás",
     "trade": "Kereskedés",
     "continue": "Folytatás",
+    "close": "Bezárás",
     "updating": "Frissítés...",
     "save": "Mentés",
-    "vote": "Szavazás",
-    "close": "Bezárás"
+    "vote": "Szavazás"
   },
   "auth": {
     "choose_method": "Válassza ki az előnyben részesített módszert.",

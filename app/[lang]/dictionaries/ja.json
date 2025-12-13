@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "メニュー",
-    "world_republic": "世界共和国"
+    "world_republic": "世界共和国",
+    "menu": "メニュー"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "政治政党",
-          "subtitle": "共有する価値観で世界的に団結"
+          "title": "政治政党"
         },
         "elections": {
           "title": "テスト選挙",
@@ -23,15 +22,19 @@
           "subtitle": "私たちの基本原則に投票"
         }
       },
+      "vote": {
+        "no_active_election": "選挙がまもなく始まります",
+        "test_verification": {
+          "description": "スムーズな投票体験のために、今すぐ本人確認システムをお試しください。",
+          "button": "テスト"
+        }
+      },
       "parties": {
         "discover": "発見",
         "search_placeholder": "政党を検索...",
-        "tabs": {
-          "new": "新規",
-          "trending": "トレンド",
-          "top": "トップ"
-        },
         "no_parties_found": "政党が見つかりません",
+        "error_loading": "政党を読み込めませんでした",
+        "refresh": "更新",
         "loading_more": "さらに政党を読み込み中...",
         "party_details": "政党の詳細",
         "share_party": "政党を共有",
@@ -65,15 +68,6 @@
           "leader": "リーダー",
           "website": "ウェブサイト",
           "not_found_description": "お探しの政党は存在しないか、解散されました。"
-        },
-        "error_loading": "政党を読み込めませんでした",
-        "refresh": "更新"
-      },
-      "vote": {
-        "no_active_election": "選挙がまもなく始まります",
-        "test_verification": {
-          "description": "スムーズな投票体験のために、今すぐ本人確認システムをお試しください。",
-          "button": "テスト"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "よくある質問",
           "support": "サポート"
         },
+        "source_code": {
+          "title": "ソースコード"
+        },
         "legal": {
           "title": "リーガル",
           "terms": "利用規約",
           "privacy": "プライバシーポリシー"
-        },
-        "source_code": {
-          "title": "ソースコード"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "送信",
           "withdraw_to_crypto": {
-            "description": "WDD を暗号アカウントに出金",
+            "description": "WDD を暗号アカウントに出金。",
             "amount_label": "金額",
             "address_label": "ウォレットアドレス",
             "network_label": "ネットワーク"
@@ -221,7 +215,6 @@
       "no_wallet": "ウォレットアドレスがありません",
       "min_amount": "最低 10 WDD",
       "sent": "送信しました",
-      "failed": "Sumsub IDが必要です",
       "account_deleted": "アカウントを削除しました",
       "delete_failed": "アカウントの削除に失敗しました",
       "contract_address_error": "コントラクトアドレスへの出金はできません",
@@ -234,9 +227,6 @@
       "updated": "更新しました",
       "update_failed": "更新に失敗しました",
       "update_error": "政党の更新中にエラーが発生しました",
-      "transferred": "移譲しました",
-      "transfer_failed": "リーダーシップの移譲に失敗しました",
-      "transfer_error": "リーダーシップの移譲中にエラーが発生しました",
       "dissolved": "解散しました",
       "dissolve_failed": "解散に失敗しました",
       "dissolve_error": "政党の解散中にエラーが発生しました"
@@ -256,13 +246,13 @@
     "withdraw": "引き出す",
     "trade": "取引",
     "continue": "続ける",
+    "close": "閉じる",
     "updating": "更新中...",
     "save": "保存",
-    "vote": "投票",
-    "close": "閉じる"
+    "vote": "投票"
   },
   "auth": {
-    "choose_method": "希望する方法を選択してください.",
+    "choose_method": "希望する方法を選択してください。",
     "sign_in_with_google": "Googleで続ける",
     "sign_in_with_passkey": "生体認証を使用",
     "sign_in_or_create": "パスキーを使用してアカウントにアクセスします。指紋、顔スキャン、または画面ロックを使用します。",

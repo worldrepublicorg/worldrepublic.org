@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menyu",
-    "world_republic": "Dünya Respublikası"
+    "world_republic": "Dünya Respublikası",
+    "menu": "Menyu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Siyasi partiyalar",
-          "subtitle": "Ortaq dəyərlər ətrafında qlobal birləşmə"
+          "title": "Siyasi partiyalar"
         },
         "elections": {
           "title": "Sınaq seçkiləri",
@@ -23,15 +22,19 @@
           "subtitle": "Təməl prinsiplərimiz üçün səs ver"
         }
       },
+      "vote": {
+        "no_active_election": "Seçkilər tezliklə başlayır",
+        "test_verification": {
+          "description": "Sorunsuz səsvermə təcrübəsi üçün indi şəxsiyyət təsdiqləmə sistemimizi sınayın.",
+          "button": "Sınaq"
+        }
+      },
       "parties": {
         "discover": "Kəşf edin",
         "search_placeholder": "Partiyaları axtarın...",
-        "tabs": {
-          "new": "Yeni",
-          "trending": "Trend",
-          "top": "Ən yaxşı"
-        },
         "no_parties_found": "Partiya tapılmadı",
+        "error_loading": "Partiyaları yükləmək mümkün olmadı",
+        "refresh": "Yenilə",
         "loading_more": "Daha çox partiya yüklənir...",
         "party_details": "Partiya detalları",
         "share_party": "Partiyanı paylaş",
@@ -65,15 +68,6 @@
           "leader": "Rəhbər",
           "website": "Veb sayt",
           "not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
-        },
-        "error_loading": "Partiyaları yükləmək mümkün olmadı",
-        "refresh": "Yenilə"
-      },
-      "vote": {
-        "no_active_election": "Seçkilər tezliklə başlayır",
-        "test_verification": {
-          "description": "Sorunsuz səsvermə təcrübəsi üçün indi şəxsiyyət təsdiqləmə sistemimizi sınayın.",
-          "button": "Sınaq"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "Dəstək"
         },
+        "source_code": {
+          "title": "MƏNBƏ KODU"
+        },
         "legal": {
           "title": "HÜQUQİ",
           "terms": "İstifadə Şərtləri",
           "privacy": "Məxfilik Siyasəti"
-        },
-        "source_code": {
-          "title": "MƏNBƏ KODU"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Göndər",
           "withdraw_to_crypto": {
-            "description": "WDD-ni kripto hesabına çıxar",
+            "description": "WDD-ni kripto hesabına çıxar.",
             "amount_label": "Məbləğ",
             "address_label": "Cüzdan ünvanı",
             "network_label": "Şəbəkə"
@@ -191,7 +185,7 @@
         },
         "types": {
           "withdrawal": "Çıxarış",
-          "received": "Alındı",
+          "received": "Qəbul edildi",
           "sent": "Göndərildi"
         }
       }
@@ -221,7 +215,6 @@
       "no_wallet": "Cüzdan ünvanı yoxdur",
       "min_amount": "Minimum 10 WDD",
       "sent": "Göndərildi",
-      "failed": "Sumsub ID tələb olunur",
       "account_deleted": "Hesab silindi",
       "delete_failed": "Hesabı silmək alınmadı",
       "contract_address_error": "Müqavilə ünvanına çıxarmaq olmaz",
@@ -234,9 +227,6 @@
       "updated": "Yeniləndi",
       "update_failed": "Yeniləmə uğursuz oldu",
       "update_error": "Partiyanı yeniləyərkən xəta",
-      "transferred": "Köçürüldü",
-      "transfer_failed": "Rəhbərliyin köçürülməsi uğursuz oldu",
-      "transfer_error": "Rəhbərliyi köçürərkən xəta",
       "dissolved": "Ləğv edildi",
       "dissolve_failed": "Ləğv etmə uğursuz oldu",
       "dissolve_error": "Partiyanı ləğv edərkən xəta"
@@ -256,10 +246,10 @@
     "withdraw": "Çıxar",
     "trade": "Ticarət",
     "continue": "Davam et",
+    "close": "Bağla",
     "updating": "Yenilənir...",
     "save": "Saxla",
-    "vote": "Səs ver",
-    "close": "Bağla"
+    "vote": "Səs ver"
   },
   "auth": {
     "choose_method": "Üstünlük verdiyiniz metodu seçin.",

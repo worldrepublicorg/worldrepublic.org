@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Liiska",
-    "world_republic": "Jamhuuriyadda Adduunka"
+    "world_republic": "Jamhuuriyadda Adduunka",
+    "menu": "Liiska"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Xisbiyada siyaasadda",
-          "subtitle": "Isku xidha adduunka oo dhan qiyamka la wadaago"
+          "title": "Xisbiyada siyaasadda"
         },
         "elections": {
           "title": "Doorashooyin tijaabo",
@@ -23,15 +22,19 @@
           "subtitle": "Codee qaabihii aasaasiga ah"
         }
       },
+      "vote": {
+        "no_active_election": "Doorashooyinku waxay bilaabanayaan dhowaan",
+        "test_verification": {
+          "description": "Isku day nidaamkayaga xaqiijinta aqoonsiga hadda si aad u hesho khibrad codayn oo aan kala go 'lahayn.",
+          "button": "Tijaabi"
+        }
+      },
       "parties": {
         "discover": "Hel",
         "search_placeholder": "Raadi xisbiyada...",
-        "tabs": {
-          "new": "Cusub",
-          "trending": "Caanka ah",
-          "top": "Sare"
-        },
         "no_parties_found": "Ma laha xisbiyo",
+        "error_loading": "Ku guuldareystay in la soo raro xisbiyada",
+        "refresh": "Cusbooneysii",
         "loading_more": "Soo dejinaya xisbiyo dheeraad ah...",
         "party_details": "Faahfaahinta xisbiga",
         "share_party": "Wadaag xisbiga",
@@ -65,15 +68,6 @@
           "leader": "Hogaanka",
           "website": "Website",
           "not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
-        },
-        "error_loading": "Ku guuldareystay in la soo raro xisbiyada",
-        "refresh": "Cusbooneysii"
-      },
-      "vote": {
-        "no_active_election": "Doorashooyinku waxay bilaabanayaan dhowaan",
-        "test_verification": {
-          "description": "Isku day nidaamkayaga xaqiijinta aqoonsiga hadda si aad u hesho khibrad codayn oo aan kala go 'lahayn.",
-          "button": "Tijaabi"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Dir",
           "withdraw_to_crypto": {
-            "description": "Bixi WDD koonto crypto ah",
+            "description": "Bixi WDD koonto crypto ah.",
             "amount_label": "Lacagta",
             "address_label": "Cinwaanka kisaska",
             "network_label": "Shabakada"
@@ -221,7 +215,6 @@
       "no_wallet": "Cinwaanka kisaska ma jiro",
       "min_amount": "Ugu yaraan 10 WDD",
       "sent": "La diriyay",
-      "failed": "Sumsub ID ayaa loo baahan yahay",
       "account_deleted": "Akoonka waa la tirtiray",
       "delete_failed": "Tirtirida akoonka way fashilantay",
       "contract_address_error": "Lama soo qaadi karo cinwaanka heshiiska",
@@ -234,9 +227,6 @@
       "updated": "Waa la cusbooneysiiyay",
       "update_failed": "Cusbooneysiinta way fashilantay",
       "update_error": "Qalad cusbooneysiinta xisbiga",
-      "transferred": "Waa la wareejiyay",
-      "transfer_failed": "Wareejinta hogaanka way fashilantay",
-      "transfer_error": "Qalad wareejinta hogaanka",
       "dissolved": "Waa la burburiyey",
       "dissolve_failed": "Burburinta way fashilantay",
       "dissolve_error": "Qalad burburinta xisbiga"
@@ -256,10 +246,10 @@
     "withdraw": "Ka soo bixi",
     "trade": "Ganacsiga",
     "continue": "Sii wad",
+    "close": "Xidh",
     "updating": "Cusbooneysiinta...",
     "save": "Keydin",
-    "vote": "Codsi",
-    "close": "Xidh"
+    "vote": "Codsi"
   },
   "auth": {
     "choose_method": "Dooro habka aad doorbidayso.",

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "મેનુ",
-    "world_republic": "વિશ્વ ગણરાજ્ય"
+    "world_republic": "વિશ્વ ગણરાજ્ય",
+    "menu": "મેનુ"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "રાજકીય પાર્ટીઓ",
-          "subtitle": "સાંઝા મૂલ્યોની આસપાસ વૈશ્વિક એકતા"
+          "title": "રાજકીય પાર્ટીઓ"
         },
         "elections": {
           "title": "પરિક્ષણ ચૂંટણી",
@@ -23,15 +22,19 @@
           "subtitle": "અમારા મૂળભૂત સિદ્ધાંતો પર મત આપો"
         }
       },
+      "vote": {
+        "no_active_election": "ચૂંટણીઓ ટૂંક સમયમાં છે",
+        "test_verification": {
+          "description": "એકીકૃત મતદાન અનુભવ માટે અત્યારે જ અમારી ઓળખ ચકાસણી સિસ્ટમનો પ્રયાસ કરો.",
+          "button": "પરીક્ષણ"
+        }
+      },
       "parties": {
         "discover": "શોધો",
         "search_placeholder": "પક્ષો શોધો...",
-        "tabs": {
-          "new": "નવું",
-          "trending": "ટ્રેન્ડિંગ",
-          "top": "ટોચ"
-        },
         "no_parties_found": "કોઈ પક્ષ મળ્યા નથી",
+        "error_loading": "પક્ષો લોડ કરવામાં નિષ્ફળ",
+        "refresh": "રીફ્રેશ",
         "loading_more": "વધુ પક્ષો લોડ થઈ રહ્યા છે...",
         "party_details": "પક્ષ વિગતો",
         "share_party": "પક્ષ શેર કરો",
@@ -65,15 +68,6 @@
           "leader": "નેતા",
           "website": "વેબસાઇટ",
           "not_found_description": "તમે જે પક્ષ શોધી રહ્યા છો તે અસ્તિત્વમાં નથી અથવા વિસર્જન થયો છે."
-        },
-        "error_loading": "પક્ષો લોડ કરવામાં નિષ્ફળ",
-        "refresh": "રીફ્રેશ"
-      },
-      "vote": {
-        "no_active_election": "ચૂંટણીઓ ટૂંક સમયમાં છે",
-        "test_verification": {
-          "description": "એકીકૃત મતદાન અનુભવ માટે અત્યારે જ અમારી ઓળખ ચકાસણી સિસ્ટમનો પ્રયાસ કરો.",
-          "button": "પરીક્ષણ"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "સહાય"
         },
+        "source_code": {
+          "title": "સોર્સ કોડ"
+        },
         "legal": {
           "title": "કાનૂની",
           "terms": "વપરાશની શરતો",
           "privacy": "ગોપનીયતા નીતિ"
-        },
-        "source_code": {
-          "title": "સોર્સ કોડ"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "મોકલો",
           "withdraw_to_crypto": {
-            "description": "WDD ક્રિપ્ટો એકાઉન્ટમાં ઉપાડો",
+            "description": "WDD ક્રિપ્ટો એકાઉન્ટમાં ઉપાડો।",
             "amount_label": "રકમ",
             "address_label": "વૉલેટ સરનામું",
             "network_label": "નેટવર્ક"
@@ -221,7 +215,6 @@
       "no_wallet": "વૉલેટ સરનામું નથી",
       "min_amount": "ન્યૂનતમ 10 WDD",
       "sent": "મોકલ્યું",
-      "failed": "Sumsub ID જરૂરી",
       "account_deleted": "ખાતું કાઢી નાંખ્યું",
       "delete_failed": "ખાતું કાઢવામાં નિષ્ફળ",
       "contract_address_error": "કોન્ટ્રાક્ટ સરનામે ઉપાડ કરી શકાતું નથી",
@@ -234,9 +227,6 @@
       "updated": "અપડેટ થયું",
       "update_failed": "અપડેટ કરવામાં નિષ્ફળ",
       "update_error": "પક્ષ અપડેટ કરવામાં ભૂલ",
-      "transferred": "સ્થાનાંતરિત",
-      "transfer_failed": "નેતૃત્વ સ્થાનાંતરિત કરવામાં નિષ્ફળ",
-      "transfer_error": "નેતૃત્વ સ્થાનાંતરિત કરવામાં ભૂલ",
       "dissolved": "ભંગ",
       "dissolve_failed": "ભંગ કરવામાં નિષ્ફળ",
       "dissolve_error": "પક્ષ ભંગ કરવામાં ભૂલ"
@@ -256,13 +246,13 @@
     "withdraw": "નિકાલ",
     "trade": "વેપાર",
     "continue": "ચાલુ રાખો",
+    "close": "બંધ કરો",
     "updating": "અપડેટ કરી રહ્યા છીએ...",
     "save": "સાચવો",
-    "vote": "મત આપો",
-    "close": "બંધ કરો"
+    "vote": "મત આપો"
   },
   "auth": {
-    "choose_method": "તમારી પસંદગીની પદ્ધતિ પસંદ કરો.",
+    "choose_method": "તમારી પસંદગીની પદ્ધતિ પસંદ કરો।",
     "sign_in_with_google": "Google સાથે ચાલુ રાખો",
     "sign_in_with_passkey": "બાયોમેટ્રિક્સનો ઉપયોગ કરો",
     "sign_in_or_create": "તમારા પાસકીનો ઉપયોગ કરીને તમારા એકાઉન્ટમાં પ્રવેશ કરો, તમારી આંગળીની છાપ, ચહેરાની સ્કેન અથવા સ્ક્રીન લૉકનો ઉપયોગ કરીને.",

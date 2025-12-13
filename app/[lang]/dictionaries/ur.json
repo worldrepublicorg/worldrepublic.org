@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "مینو",
-    "world_republic": "عالمی جمہوریہ"
+    "world_republic": "عالمی جمہوریہ",
+    "menu": "مینو"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "سیاسی جماعتیں",
-          "subtitle": "مشترکہ اقدار کے ارد گرد عالمی سطح پر متحد ہوں"
+          "title": "سیاسی جماعتیں"
         },
         "elections": {
           "title": "ٹیسٹ انتخابات",
@@ -23,15 +22,19 @@
           "subtitle": "ہمارے بنیادی اصولوں پر ووٹ دیں"
         }
       },
+      "vote": {
+        "no_active_election": "انتخابات قریب ہیں",
+        "test_verification": {
+          "description": "ہموار ووٹنگ کے تجربے کے لیے ابھی ہمارا شناختی تصدیقی نظام آزمائیں۔",
+          "button": "ٹیسٹ"
+        }
+      },
       "parties": {
         "discover": "دریافت کریں",
         "search_placeholder": "جماعتیں تلاش کریں...",
-        "tabs": {
-          "new": "نیا",
-          "trending": "مقبول",
-          "top": "اوپر"
-        },
         "no_parties_found": "کوئی جماعت نہیں ملی",
+        "error_loading": "پارٹیاں لوڈ کرنے میں ناکام",
+        "refresh": "تازہ کریں",
         "loading_more": "مزید جماعتیں لوڈ ہو رہی ہیں...",
         "party_details": "جماعت کی تفصیلات",
         "share_party": "جماعت شیئر کریں",
@@ -65,15 +68,6 @@
           "leader": "رہنما",
           "website": "ویب سائٹ",
           "not_found_description": "جماعت جسے آپ ڈھونڈ رہے ہیں وہ موجود نہیں ہے یا تحلیل ہو گئی ہے۔"
-        },
-        "error_loading": "پارٹیاں لوڈ کرنے میں ناکام",
-        "refresh": "تازہ کریں"
-      },
-      "vote": {
-        "no_active_election": "انتخابات قریب ہیں",
-        "test_verification": {
-          "description": "ہموار ووٹنگ کے تجربے کے لیے ابھی ہمارا شناختی تصدیقی نظام آزمائیں۔",
-          "button": "ٹیسٹ"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "اکثر پوچھے گئے سوالات",
           "support": "سپورٹ"
         },
+        "source_code": {
+          "title": "سورس کوڈ"
+        },
         "legal": {
           "title": "قانونی",
           "terms": "استعمال کی شرائط",
           "privacy": "رازداری کی پالیسی"
-        },
-        "source_code": {
-          "title": "سورس کوڈ"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "بھیجیں",
           "withdraw_to_crypto": {
-            "description": "WDD کو کریپٹو اکاؤنٹ میں نکالیں",
+            "description": "WDD کو کریپٹو اکاؤنٹ میں نکالیں.",
             "amount_label": "رقم",
             "address_label": "والیٹ ایڈریس",
             "network_label": "نیٹ ورک"
@@ -221,7 +215,6 @@
       "no_wallet": "کوئی والیٹ ایڈریس نہیں",
       "min_amount": "کم از کم 10 WDD",
       "sent": "بھیج دیا گیا",
-      "failed": "Sumsub ID درکار",
       "account_deleted": "اکاؤنٹ حذف ہو گیا",
       "delete_failed": "اکاؤنٹ حذف کرنے میں ناکام",
       "contract_address_error": "معاہدے کے پتے پر نکلوانا ممکن نہیں",
@@ -234,9 +227,6 @@
       "updated": "اپ ڈیٹ ہو گیا",
       "update_failed": "اپ ڈیٹ کرنے میں ناکام",
       "update_error": "جماعت کو اپ ڈیٹ کرنے میں خرابی",
-      "transferred": "منتقل ہو گیا",
-      "transfer_failed": "قیادت منتقل کرنے میں ناکام",
-      "transfer_error": "قیادت منتقل کرنے میں خرابی",
       "dissolved": "منحل ہو گئی",
       "dissolve_failed": "منحل کرنے میں ناکام",
       "dissolve_error": "جماعت منحل کرنے میں خرابی"
@@ -256,10 +246,10 @@
     "withdraw": "نکالیں",
     "trade": "ٹریڈ",
     "continue": "جاری رکھیں",
+    "close": "بند کریں",
     "updating": "اپڈیٹ ہو رہا ہے...",
     "save": "محفوظ کریں",
-    "vote": "ووٹ دیں",
-    "close": "بند کریں"
+    "vote": "ووٹ دیں"
   },
   "auth": {
     "choose_method": "اپنی پسندیدہ طریقہ منتخب کریں.",

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "القائمة",
-    "world_republic": "الجمهورية العالمية"
+    "world_republic": "الجمهورية العالمية",
+    "menu": "القائمة"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "الأحزاب السياسية",
-          "subtitle": "اتحد عالمياً حول القيم المشتركة"
+          "title": "الأحزاب السياسية"
         },
         "elections": {
           "title": "انتخابات تجريبية",
@@ -23,15 +22,19 @@
           "subtitle": "صوت على مبادئنا الأساسية"
         }
       },
+      "vote": {
+        "no_active_election": "الانتخابات ستبدأ قريباً",
+        "test_verification": {
+          "description": "جرب نظام التحقق من الهوية الآن لتجربة تصويت سلسة.",
+          "button": "اختبار"
+        }
+      },
       "parties": {
         "discover": "اكتشف",
         "search_placeholder": "البحث عن الأحزاب...",
-        "tabs": {
-          "new": "جديد",
-          "trending": "رائج",
-          "top": "الأعلى"
-        },
         "no_parties_found": "لم يتم العثور على أحزاب",
+        "error_loading": "فشل تحميل الأحزاب",
+        "refresh": "تحديث",
         "loading_more": "جاري تحميل المزيد من الأحزاب...",
         "party_details": "تفاصيل الحزب",
         "share_party": "مشاركة الحزب",
@@ -65,15 +68,6 @@
           "leader": "القائد",
           "website": "الموقع الإلكتروني",
           "not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
-        },
-        "error_loading": "فشل تحميل الأحزاب",
-        "refresh": "تحديث"
-      },
-      "vote": {
-        "no_active_election": "الانتخابات ستبدأ قريباً",
-        "test_verification": {
-          "description": "جرب نظام التحقق من الهوية الآن لتجربة تصويت سلسة.",
-          "button": "اختبار"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "الأسئلة الشائعة",
           "support": "الدعم"
         },
+        "source_code": {
+          "title": "الكود المصدري"
+        },
         "legal": {
           "title": "القانونية",
           "terms": "شروط الاستخدام",
           "privacy": "سياسة الخصوصية"
-        },
-        "source_code": {
-          "title": "الكود المصدري"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "إرسال",
           "withdraw_to_crypto": {
-            "description": "سحب WDD إلى حساب عملة مشفرة",
+            "description": "سحب WDD إلى حساب عملة مشفرة.",
             "amount_label": "المبلغ",
             "address_label": "عنوان المحفظة",
             "network_label": "الشبكة"
@@ -191,8 +185,8 @@
         },
         "types": {
           "withdrawal": "سحب",
-          "received": "مستلم",
-          "sent": "مرسل"
+          "received": "تم الاستلام",
+          "sent": "تم الإرسال"
         }
       }
     }
@@ -221,7 +215,6 @@
       "no_wallet": "لا يوجد عنوان محفظة",
       "min_amount": "الحد الأدنى 10 WDD",
       "sent": "تم الإرسال",
-      "failed": "Sumsub ID مطلوب",
       "account_deleted": "تم حذف الحساب",
       "delete_failed": "فشل في حذف الحساب",
       "contract_address_error": "لا يمكن السحب إلى عنوان العقد",
@@ -234,9 +227,6 @@
       "updated": "تم التحديث",
       "update_failed": "فشل التحديث",
       "update_error": "خطأ في تحديث الحزب",
-      "transferred": "تم النقل",
-      "transfer_failed": "فشل نقل القيادة",
-      "transfer_error": "خطأ في نقل القيادة",
       "dissolved": "تم الحل",
       "dissolve_failed": "فشل الحل",
       "dissolve_error": "خطأ في حل الحزب"
@@ -256,10 +246,10 @@
     "withdraw": "سحب",
     "trade": "تداول",
     "continue": "متابعة",
+    "close": "إغلاق",
     "updating": "جاري التحديث...",
     "save": "حفظ",
-    "vote": "صوت",
-    "close": "إغلاق"
+    "vote": "صوت"
   },
   "auth": {
     "choose_method": "اختر الطريقة المفضلة لديك.",

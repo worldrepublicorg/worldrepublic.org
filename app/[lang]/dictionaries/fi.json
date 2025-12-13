@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Valikko",
-    "world_republic": "Maailman tasavalta"
+    "world_republic": "Maailman tasavalta",
+    "menu": "Valikko"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Poliittiset puolueet",
-          "subtitle": "Yhdisty ympäri maailman yhteisten arvojen ympärille"
+          "title": "Poliittiset puolueet"
         },
         "elections": {
           "title": "Testivaalit",
@@ -23,15 +22,19 @@
           "subtitle": "Äänestä perustavista periaatteistamme"
         }
       },
+      "vote": {
+        "no_active_election": "Vaalit alkavat pian",
+        "test_verification": {
+          "description": "Kokeile henkilöllisyyden varmennusjärjestelmäämme nyt sujuvaa äänestyskokemusta varten.",
+          "button": "Testaa"
+        }
+      },
       "parties": {
         "discover": "Löydä",
         "search_placeholder": "Etsi puolueita...",
-        "tabs": {
-          "new": "Uudet",
-          "trending": "Suosituimmat",
-          "top": "Parhaat"
-        },
         "no_parties_found": "Puolueita ei löytynyt",
+        "error_loading": "Puolueiden lataaminen epäonnistui",
+        "refresh": "Päivitä",
         "loading_more": "Ladataan lisää puolueita...",
         "party_details": "Puolueen tiedot",
         "share_party": "Jaa puolue",
@@ -65,15 +68,6 @@
           "leader": "Johtaja",
           "website": "Verkkosivusto",
           "not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
-        },
-        "error_loading": "Puolueiden lataaminen epäonnistui",
-        "refresh": "Päivitä"
-      },
-      "vote": {
-        "no_active_election": "Vaalit alkavat pian",
-        "test_verification": {
-          "description": "Kokeile henkilöllisyyden varmennusjärjestelmäämme nyt sujuvaa äänestyskokemusta varten.",
-          "button": "Testaa"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "UKK",
           "support": "Tuki"
         },
+        "source_code": {
+          "title": "LÄHDEKOODI"
+        },
         "legal": {
           "title": "LAILLINEN",
           "terms": "Käyttöehdot",
           "privacy": "Tietosuojakäytäntö"
-        },
-        "source_code": {
-          "title": "LÄHDEKOODI"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Lähetä",
           "withdraw_to_crypto": {
-            "description": "Nosta WDD crypto-tilille",
+            "description": "Nosta WDD crypto-tilille.",
             "amount_label": "Määrä",
             "address_label": "Lompakko-osoite",
             "network_label": "Verkko"
@@ -221,7 +215,6 @@
       "no_wallet": "Ei lompakko-osoitetta",
       "min_amount": "Vähintään 10 WDD",
       "sent": "Lähetetty",
-      "failed": "Sumsub ID vaaditaan",
       "account_deleted": "Tili poistettu",
       "delete_failed": "Tilin poisto epäonnistui",
       "contract_address_error": "Ei voi nostaa sopimusosoitteeseen",
@@ -234,9 +227,6 @@
       "updated": "Päivitetty",
       "update_failed": "Päivitys epäonnistui",
       "update_error": "Virhe päivittäessä puoluetta",
-      "transferred": "Siirretty",
-      "transfer_failed": "Johtajuuden siirto epäonnistui",
-      "transfer_error": "Virhe siirrettäessä johtajuutta",
       "dissolved": "Lakannut",
       "dissolve_failed": "Lakkauttaminen epäonnistui",
       "dissolve_error": "Virhe lakkauttaessa puoluetta"
@@ -256,10 +246,10 @@
     "withdraw": "Nosta",
     "trade": "Kauppa",
     "continue": "Jatka",
+    "close": "Sulje",
     "updating": "Päivitetään...",
     "save": "Tallenna",
-    "vote": "Äänestä",
-    "close": "Sulje"
+    "vote": "Äänestä"
   },
   "auth": {
     "choose_method": "Valitse haluamasi menetelmä.",

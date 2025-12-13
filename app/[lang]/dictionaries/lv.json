@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Izvēlne",
-    "world_republic": "Pasaules Republika"
+    "world_republic": "Pasaules Republika",
+    "menu": "Izvēlne"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politiskās partijas",
-          "subtitle": "Apvienojieties globāli ap kopīgām vērtībām"
+          "title": "Politiskās partijas"
         },
         "elections": {
           "title": "Testa vēlēšanas",
@@ -23,15 +22,19 @@
           "subtitle": "Balsojiet par mūsu pamatprincipiem"
         }
       },
+      "vote": {
+        "no_active_election": "Vēlēšanas drīz sāksies",
+        "test_verification": {
+          "description": "Izmēģiniet mūsu identitātes verifikācijas sistēmu tagad, lai balsošana noritētu nevainojami.",
+          "button": "Tests"
+        }
+      },
       "parties": {
         "discover": "Atklāt",
         "search_placeholder": "Meklēt partijas...",
-        "tabs": {
-          "new": "Jaunas",
-          "trending": "Populāras",
-          "top": "Top"
-        },
         "no_parties_found": "Partijas nav atrastas",
+        "error_loading": "Neizdevās ielādēt partijas",
+        "refresh": "Atsvaidzināt",
         "loading_more": "Ielādē vairāk partiju...",
         "party_details": "Partijas detaļas",
         "share_party": "Dalīties ar partiju",
@@ -65,15 +68,6 @@
           "leader": "Līderis",
           "website": "Tīmekļa vietne",
           "not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
-        },
-        "error_loading": "Neizdevās ielādēt partijas",
-        "refresh": "Atsvaidzināt"
-      },
-      "vote": {
-        "no_active_election": "Vēlēšanas drīz sāksies",
-        "test_verification": {
-          "description": "Izmēģiniet mūsu identitātes verifikācijas sistēmu tagad, lai balsošana noritētu nevainojami.",
-          "button": "Tests"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "BUJ",
           "support": "Atbalsts"
         },
+        "source_code": {
+          "title": "AVOTA KODS"
+        },
         "legal": {
           "title": "JURIDISKAIS",
           "terms": "Lietošanas noteikumi",
           "privacy": "Privātuma politika"
-        },
-        "source_code": {
-          "title": "AVOTA KODS"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Nosūtīt",
           "withdraw_to_crypto": {
-            "description": "Izņemt WDD uz kripto kontu",
+            "description": "Izņemt WDD uz kripto kontu.",
             "amount_label": "Summa",
             "address_label": "Maka adrese",
             "network_label": "Tīkls"
@@ -221,7 +215,6 @@
       "no_wallet": "Nav maka adreses",
       "min_amount": "Minimums 10 WDD",
       "sent": "Nosūtīts",
-      "failed": "Nepieciešams Sumsub ID",
       "account_deleted": "Konts dzēsts",
       "delete_failed": "Konta dzēšana neizdevās",
       "contract_address_error": "Nevar izņemt uz līguma adresi",
@@ -234,9 +227,6 @@
       "updated": "Atjaunināts",
       "update_failed": "Atjaunināšana neizdevās",
       "update_error": "Kļūda atjauninot partiju",
-      "transferred": "Pārcelts",
-      "transfer_failed": "Vadības nodošana neizdevās",
-      "transfer_error": "Kļūda nododot vadību",
       "dissolved": "Izformēta",
       "dissolve_failed": "Izformēšana neizdevās",
       "dissolve_error": "Kļūda izformējot partiju"
@@ -256,10 +246,10 @@
     "withdraw": "Izņemt",
     "trade": "Tirdzniecība",
     "continue": "Turpināt",
+    "close": "Aizvērt",
     "updating": "Atjaunina...",
     "save": "Saglabāt",
-    "vote": "Balsot",
-    "close": "Aizvērt"
+    "vote": "Balsot"
   },
   "auth": {
     "choose_method": "Izvēlieties vēlamo metodi.",

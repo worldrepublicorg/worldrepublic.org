@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Wereldrepubliek"
+    "world_republic": "Wereldrepubliek",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politieke partijen",
-          "subtitle": "Verenig je wereldwijd rond gedeelde waarden"
+          "title": "Politieke partijen"
         },
         "elections": {
           "title": "Testverkiezingen",
@@ -23,15 +22,19 @@
           "subtitle": "Stem over onze fundamentele principes"
         }
       },
+      "vote": {
+        "no_active_election": "Verkiezingen beginnen binnenkort",
+        "test_verification": {
+          "description": "Probeer ons identiteitsverificatiesysteem nu voor een naadloze stemervaring.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Ontdekken",
         "search_placeholder": "Zoek partijen...",
-        "tabs": {
-          "new": "Nieuw",
-          "trending": "Trending",
-          "top": "Top"
-        },
         "no_parties_found": "Geen partijen gevonden",
+        "error_loading": "Kon partijen niet laden",
+        "refresh": "Verversen",
         "loading_more": "Meer partijen laden...",
         "party_details": "Partijdetails",
         "share_party": "Partij delen",
@@ -65,15 +68,6 @@
           "leader": "Leider",
           "website": "Website",
           "not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
-        },
-        "error_loading": "Kon partijen niet laden",
-        "refresh": "Verversen"
-      },
-      "vote": {
-        "no_active_election": "Verkiezingen beginnen binnenkort",
-        "test_verification": {
-          "description": "Probeer ons identiteitsverificatiesysteem nu voor een naadloze stemervaring.",
-          "button": "Test"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Versturen",
           "withdraw_to_crypto": {
-            "description": "WDD opnemen naar een cryptorekening",
+            "description": "WDD opnemen naar een cryptorekening.",
             "amount_label": "Bedrag",
             "address_label": "Portemonnee adres",
             "network_label": "Netwerk"
@@ -221,7 +215,6 @@
       "no_wallet": "Geen portemonnee adres",
       "min_amount": "Minimum 10 WDD",
       "sent": "Verzonden",
-      "failed": "Sumsub ID vereist",
       "account_deleted": "Account verwijderd",
       "delete_failed": "Account verwijderen mislukt",
       "contract_address_error": "Kan niet opnemen naar contract adres",
@@ -234,9 +227,6 @@
       "updated": "Bijgewerkt",
       "update_failed": "Bijwerken mislukt",
       "update_error": "Fout bij bijwerken van partij",
-      "transferred": "Overgedragen",
-      "transfer_failed": "Leiderschapsoverdracht mislukt",
-      "transfer_error": "Fout bij leiderschapsoverdracht",
       "dissolved": "Ontbonden",
       "dissolve_failed": "Ontbinding mislukt",
       "dissolve_error": "Fout bij ontbinden van partij"
@@ -256,10 +246,10 @@
     "withdraw": "Opnemen",
     "trade": "Handelen",
     "continue": "Doorgaan",
+    "close": "Sluiten",
     "updating": "Bijwerken...",
     "save": "Opslaan",
-    "vote": "Stemmen",
-    "close": "Sluiten"
+    "vote": "Stemmen"
   },
   "auth": {
     "choose_method": "Kies uw voorkeursmethode.",

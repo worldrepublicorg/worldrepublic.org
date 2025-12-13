@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "منو",
-    "world_republic": "جمهوری جهانی"
+    "world_republic": "جمهوری جهانی",
+    "menu": "منو"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "احزاب سیاسی",
-          "subtitle": "به طور جهانی حول ارزش‌های مشترک متحد شوید"
+          "title": "احزاب سیاسی"
         },
         "elections": {
           "title": "انتخابات آزمایشی",
@@ -23,15 +22,19 @@
           "subtitle": "بر اصول بنیادین ما رأی دهید"
         }
       },
+      "vote": {
+        "no_active_election": "انتخابات به زودی شروع می‌شود",
+        "test_verification": {
+          "description": "همین حالا سیستم تأیید هویت ما را امتحان کنید تا تجربه رأی‌گیری روانی داشته باشید.",
+          "button": "آزمایش"
+        }
+      },
       "parties": {
         "discover": "کشف کنید",
         "search_placeholder": "جستجوی احزاب...",
-        "tabs": {
-          "new": "جدید",
-          "trending": "محبوب",
-          "top": "برتر"
-        },
         "no_parties_found": "حزبی یافت نشد",
+        "error_loading": "بارگذاری احزاب ناموفق بود",
+        "refresh": "تازه کردن",
         "loading_more": "در حال بارگذاری احزاب بیشتر...",
         "party_details": "جزئیات حزب",
         "share_party": "اشتراک‌گذاری حزب",
@@ -65,15 +68,6 @@
           "leader": "رهبر",
           "website": "وب‌سایت",
           "not_found_description": "حزبی که به دنبال آن هستید وجود ندارد یا منحل شده است."
-        },
-        "error_loading": "بارگذاری احزاب ناموفق بود",
-        "refresh": "تازه کردن"
-      },
-      "vote": {
-        "no_active_election": "انتخابات به زودی شروع می‌شود",
-        "test_verification": {
-          "description": "همین حالا سیستم تأیید هویت ما را امتحان کنید تا تجربه رأی‌گیری روانی داشته باشید.",
-          "button": "آزمایش"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "سوالات متداول",
           "support": "پشتیبانی"
         },
+        "source_code": {
+          "title": "کد منبع"
+        },
         "legal": {
           "title": "قانونی",
           "terms": "شرایط استفاده",
           "privacy": "حریم خصوصی"
-        },
-        "source_code": {
-          "title": "کد منبع"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "ارسال",
           "withdraw_to_crypto": {
-            "description": "برداشت WDD به یک حساب کریپتو",
+            "description": "برداشت WDD به یک حساب کریپتو.",
             "amount_label": "مبلغ",
             "address_label": "آدرس کیف پول",
             "network_label": "شبکه"
@@ -221,7 +215,6 @@
       "no_wallet": "آدرس کیف پول موجود نیست",
       "min_amount": "حداقل ۱۰ WDD",
       "sent": "ارسال شد",
-      "failed": "Sumsub ID مورد نیاز است",
       "account_deleted": "حساب کاربری حذف شد",
       "delete_failed": "حذف حساب کاربری ناموفق بود",
       "contract_address_error": "نمی‌توان به آدرس قرارداد برداشت کرد",
@@ -234,9 +227,6 @@
       "updated": "به‌روزرسانی شد",
       "update_failed": "به‌روزرسانی ناموفق بود",
       "update_error": "خطا در به‌روزرسانی حزب",
-      "transferred": "انتقال یافت",
-      "transfer_failed": "انتقال رهبری ناموفق بود",
-      "transfer_error": "خطا در انتقال رهبری",
       "dissolved": "منحل شد",
       "dissolve_failed": "انحلال ناموفق بود",
       "dissolve_error": "خطا در انحلال حزب"
@@ -256,10 +246,10 @@
     "withdraw": "برداشت",
     "trade": "معامله",
     "continue": "ادامه",
+    "close": "بستن",
     "updating": "در حال به‌روزرسانی...",
     "save": "ذخیره",
-    "vote": "رای دهید",
-    "close": "بستن"
+    "vote": "رای دهید"
   },
   "auth": {
     "choose_method": "روش مورد نظر خود را انتخاب کنید.",

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Jamhuriyar Duniya"
+    "world_republic": "Jamhuriyar Duniya",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Jam'iyyun siyasa",
-          "subtitle": "Haɗa duniya baki ɗaya a kan dabi'u masu raba"
+          "title": "Jam'iyyun siyasa"
         },
         "elections": {
           "title": "Zaɓen gwaji",
@@ -23,15 +22,19 @@
           "subtitle": "Yi zaɓe a kan ƙa'idodin mu na asali"
         }
       },
+      "vote": {
+        "no_active_election": "Zabe yana zuwa",
+        "test_verification": {
+          "description": "Gwada tsarin tabbatar da asalinmu yanzu don ƙwarewar jefa ƙuri'a maras kyau.",
+          "button": "Gwaji"
+        }
+      },
       "parties": {
         "discover": "Gano",
         "search_placeholder": "Nemo jam'iyyu...",
-        "tabs": {
-          "new": "Sabuwa",
-          "trending": "Mashahuri",
-          "top": "Mafi girma"
-        },
         "no_parties_found": "Ba a sami jam'iyyu ba",
+        "error_loading": "An kasa loda jam'iyyu",
+        "refresh": "Sabunta",
         "loading_more": "Ana lodawa ƙarin jam'iyyu...",
         "party_details": "Cikakkun bayanai na jam'iyya",
         "share_party": "Raba jam'iyya",
@@ -65,15 +68,6 @@
           "leader": "Shugaba",
           "website": "Gidan yanar gizo",
           "not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
-        },
-        "error_loading": "An kasa loda jam'iyyu",
-        "refresh": "Sabunta"
-      },
-      "vote": {
-        "no_active_election": "Zabe yana zuwa",
-        "test_verification": {
-          "description": "Gwada tsarin tabbatar da asalinmu yanzu don ƙwarewar jefa ƙuri'a maras kyau.",
-          "button": "Gwaji"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Tambayoyin da ake yawan yi",
           "support": "Taimako"
         },
+        "source_code": {
+          "title": "LAMBAN TUSHE"
+        },
         "legal": {
           "title": "DOKA",
           "terms": "Sharuɗɗan Amfani",
           "privacy": "Manufar Keɓancewa"
-        },
-        "source_code": {
-          "title": "LAMBAN TUSHE"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Aika",
           "withdraw_to_crypto": {
-            "description": "Cire WDD zuwa asusun crypto",
+            "description": "Cire WDD zuwa asusun crypto.",
             "amount_label": "Adadi",
             "address_label": "Adireshin jakar kuɗi",
             "network_label": "Cibiyar sadarwa"
@@ -221,7 +215,6 @@
       "no_wallet": "Babu adireshin jakar kuɗi",
       "min_amount": "Mafi ƙanƙani 10 WDD",
       "sent": "An aika",
-      "failed": "Ana buƙatar Sumsub ID",
       "account_deleted": "An share asusu",
       "delete_failed": "Ya gaza share asusu",
       "contract_address_error": "Ba za a iya cire zuwa adireshin kwangilar ba",
@@ -234,9 +227,6 @@
       "updated": "An sabunta",
       "update_failed": "Sabuntawa ta gaza",
       "update_error": "Kuskure yayin sabunta jam'iyya",
-      "transferred": "An canja",
-      "transfer_failed": "Canja shugabanci ya gaza",
-      "transfer_error": "Kuskure yayin canja shugabanci",
       "dissolved": "An rusa",
       "dissolve_failed": "Rusa ya gaza",
       "dissolve_error": "Kuskure yayin rusa jam'iyya"
@@ -256,10 +246,10 @@
     "withdraw": "Cire",
     "trade": "Kasuwanci",
     "continue": "Ci gaba",
+    "close": "Rufe",
     "updating": "Ana sabuntawa...",
     "save": "Ajiye",
-    "vote": "Ka zabe",
-    "close": "Rufe"
+    "vote": "Ka zabe"
   },
   "auth": {
     "choose_method": "Zaɓi hanyar da kuka fi so.",

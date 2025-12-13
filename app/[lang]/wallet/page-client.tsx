@@ -149,13 +149,13 @@ export default function WalletPageClient({
         router.refresh();
       } else {
         toast.error({
-          title: result.error || dictionary.toasts.wallet.failed,
+          title: result.error || dictionary.toasts.generic_error,
         });
       }
     } catch (error) {
       console.error("Error during withdrawal:", error);
       toast.error({
-        title: dictionary.toasts.wallet.failed,
+        title: dictionary.toasts.generic_error,
       });
     }
   };
@@ -327,7 +327,6 @@ export default function WalletPageClient({
                     dictionary.pages.wallet.modals.send.withdraw_to_crypto
                       .description
                   }
-                  .
                 </AlertDialogDescription>
 
                 <div className="flex flex-col gap-2">

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Meniu",
-    "world_republic": "Pasaulio Respublika"
+    "world_republic": "Pasaulio Respublika",
+    "menu": "Meniu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politinės partijos",
-          "subtitle": "Vienykitės visame pasaulyje aplink bendras vertybes"
+          "title": "Politinės partijos"
         },
         "elections": {
           "title": "Testiniai rinkimai",
@@ -23,15 +22,19 @@
           "subtitle": "Balsuokite už mūsų pagrindinius principus"
         }
       },
+      "vote": {
+        "no_active_election": "Rinkimai prasideda netrukus",
+        "test_verification": {
+          "description": "Išbandykite mūsų tapatybės patvirtinimo sistemą dabar, kad balsavimas vyktų sklandžiai.",
+          "button": "Testas"
+        }
+      },
       "parties": {
         "discover": "Atrasti",
         "search_placeholder": "Ieškoti partijų...",
-        "tabs": {
-          "new": "Naujos",
-          "trending": "Populiarios",
-          "top": "Geriausios"
-        },
         "no_parties_found": "Partijų nerasta",
+        "error_loading": "Nepavyko įkelti partijų",
+        "refresh": "Atnaujinti",
         "loading_more": "Įkeliama daugiau partijų...",
         "party_details": "Partijos detalės",
         "share_party": "Dalintis partija",
@@ -65,15 +68,6 @@
           "leader": "Lyderis",
           "website": "Svetainė",
           "not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
-        },
-        "error_loading": "Nepavyko įkelti partijų",
-        "refresh": "Atnaujinti"
-      },
-      "vote": {
-        "no_active_election": "Rinkimai prasideda netrukus",
-        "test_verification": {
-          "description": "Išbandykite mūsų tapatybės patvirtinimo sistemą dabar, kad balsavimas vyktų sklandžiai.",
-          "button": "Testas"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "DUK",
           "support": "Palaikymas"
         },
+        "source_code": {
+          "title": "IŠANKINIS KODAS"
+        },
         "legal": {
           "title": "TEISINIS",
           "terms": "Naudojimo sąlygos",
           "privacy": "Privatumo politika"
-        },
-        "source_code": {
-          "title": "IŠANKINIS KODAS"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Siųsti",
           "withdraw_to_crypto": {
-            "description": "Išimti WDD į kripto sąskaitą",
+            "description": "Išimti WDD į kripto sąskaitą.",
             "amount_label": "Suma",
             "address_label": "Piniginės adresas",
             "network_label": "Tinklas"
@@ -221,7 +215,6 @@
       "no_wallet": "Nėra piniginės adreso",
       "min_amount": "Minimaliai 10 WDD",
       "sent": "Išsiųsta",
-      "failed": "Reikia Sumsub ID",
       "account_deleted": "Paskyra ištrinta",
       "delete_failed": "Nepavyko ištrinti paskyros",
       "contract_address_error": "Negalima išimti į sutarties adresą",
@@ -234,9 +227,6 @@
       "updated": "Atnaujinta",
       "update_failed": "Atnaujinimas nepavyko",
       "update_error": "Klaida atnaujinant partiją",
-      "transferred": "Perkelta",
-      "transfer_failed": "Vadovavimo perdavimas nepavyko",
-      "transfer_error": "Klaida perduodant vadovavimą",
       "dissolved": "Išformuota",
       "dissolve_failed": "Išformavimas nepavyko",
       "dissolve_error": "Klaida išformuojant partiją"
@@ -256,10 +246,10 @@
     "withdraw": "Išsiimti",
     "trade": "Prekiauti",
     "continue": "Tęsti",
+    "close": "Uždaryti",
     "updating": "Atnaujinama...",
     "save": "Išsaugoti",
-    "vote": "Balsuoti",
-    "close": "Uždaryti"
+    "vote": "Balsuoti"
   },
   "auth": {
     "choose_method": "Pasirinkite pageidaujamą metodą.",

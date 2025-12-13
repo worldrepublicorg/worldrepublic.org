@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "World Republic"
+    "world_republic": "World Republic",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Political parties",
-          "subtitle": "Unite globally around shared values"
+          "title": "Political parties"
         },
         "elections": {
           "title": "Test elections",
@@ -33,11 +32,6 @@
       "parties": {
         "discover": "Discover",
         "search_placeholder": "Search parties...",
-        "tabs": {
-          "new": "New",
-          "trending": "Trending",
-          "top": "Top"
-        },
         "no_parties_found": "No parties found",
         "error_loading": "Failed to load parties",
         "refresh": "Refresh",
@@ -144,7 +138,7 @@
         "send": {
           "button": "Send",
           "withdraw_to_crypto": {
-            "description": "Withdraw WDD to a crypto account",
+            "description": "Withdraw WDD to a crypto account.",
             "amount_label": "Amount",
             "address_label": "Wallet address",
             "network_label": "Network"
@@ -221,7 +215,6 @@
       "no_wallet": "No wallet address",
       "min_amount": "Minimum 10 WDD",
       "sent": "Sent",
-      "failed": "Sumsub ID required",
       "account_deleted": "Account deleted",
       "delete_failed": "Failed to delete account",
       "contract_address_error": "Cannot withdraw to contract address",
@@ -234,9 +227,6 @@
       "updated": "Updated",
       "update_failed": "Failed to update",
       "update_error": "Error updating party",
-      "transferred": "Transferred",
-      "transfer_failed": "Failed to transfer leadership",
-      "transfer_error": "Error transferring leadership",
       "dissolved": "Dissolved",
       "dissolve_failed": "Failed to dissolve",
       "dissolve_error": "Error dissolving party"

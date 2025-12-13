@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "मेनू",
-    "world_republic": "विश्व गणराज्य"
+    "world_republic": "विश्व गणराज्य",
+    "menu": "मेनू"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "राजनीतिक दल",
-          "subtitle": "साझा मूल्यों के आसपास वैश्विक स्तर पर एकजुट हों"
+          "title": "राजनीतिक दल"
         },
         "elections": {
           "title": "परीक्षण चुनाव",
@@ -23,15 +22,19 @@
           "subtitle": "हमारे मौलिक सिद्धांतों पर मतदान करें"
         }
       },
+      "vote": {
+        "no_active_election": "चुनाव जल्द शुरू होंगे",
+        "test_verification": {
+          "description": "सहज मतदान अनुभव के लिए अभी हमारी पहचान सत्यापन प्रणाली आज़माएं।",
+          "button": "परीक्षण"
+        }
+      },
       "parties": {
         "discover": "खोजें",
         "search_placeholder": "दल खोजें...",
-        "tabs": {
-          "new": "नया",
-          "trending": "ट्रेंडिंग",
-          "top": "शीर्ष"
-        },
         "no_parties_found": "कोई दल नहीं मिला",
+        "error_loading": "पार्टियां लोड करने में विफल",
+        "refresh": "ताज़ा करें",
         "loading_more": "अधिक दल लोड हो रहे हैं...",
         "party_details": "दल विवरण",
         "share_party": "दल साझा करें",
@@ -65,15 +68,6 @@
           "leader": "नेता",
           "website": "वेबसाइट",
           "not_found_description": "आप जिस दल की तलाश कर रहे हैं वह मौजूद नहीं है या भंग हो गया है।"
-        },
-        "error_loading": "पार्टियां लोड करने में विफल",
-        "refresh": "ताज़ा करें"
-      },
-      "vote": {
-        "no_active_election": "चुनाव जल्द शुरू होंगे",
-        "test_verification": {
-          "description": "सहज मतदान अनुभव के लिए अभी हमारी पहचान सत्यापन प्रणाली आज़माएं।",
-          "button": "परीक्षण"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "सामान्य प्रश्न",
           "support": "समर्थन"
         },
+        "source_code": {
+          "title": "सोर्स कोड"
+        },
         "legal": {
           "title": "कानूनी",
           "terms": "उपयोग की शर्तें",
           "privacy": "गोपनीयता नीति"
-        },
-        "source_code": {
-          "title": "सोर्स कोड"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "भेजें",
           "withdraw_to_crypto": {
-            "description": "WDD को क्रिप्टो खाते में निकालें",
+            "description": "WDD को क्रिप्टो खाते में निकालें।",
             "amount_label": "राशि",
             "address_label": "वॉलेट पता",
             "network_label": "नेटवर्क"
@@ -221,7 +215,6 @@
       "no_wallet": "कोई वॉलेट पता नहीं",
       "min_amount": "न्यूनतम 10 WDD",
       "sent": "भेजा गया",
-      "failed": "Sumsub ID आवश्यक",
       "account_deleted": "खाता हटा दिया गया",
       "delete_failed": "खाता हटाने में विफल",
       "contract_address_error": "अनुबंध पते पर निकासी नहीं कर सकते",
@@ -234,9 +227,6 @@
       "updated": "अपडेट किया गया",
       "update_failed": "अपडेट करने में विफल",
       "update_error": "दल अपडेट करने में त्रुटि",
-      "transferred": "स्थानांतरित",
-      "transfer_failed": "नेतृत्व स्थानांतरित करने में विफल",
-      "transfer_error": "नेतृत्व स्थानांतरित करने में त्रुटि",
       "dissolved": "भंग",
       "dissolve_failed": "भंग करने में विफल",
       "dissolve_error": "दल भंग करने में त्रुटि"
@@ -256,13 +246,13 @@
     "withdraw": "निकालना",
     "trade": "व्यापार",
     "continue": "जारी रखें",
+    "close": "बंद करें",
     "updating": "अपडेट कर रहे हैं...",
     "save": "सहेजें",
-    "vote": "मतदान करें",
-    "close": "बंद करें"
+    "vote": "मतदान करें"
   },
   "auth": {
-    "choose_method": "अपनी पसंदीदा विधि चुनें.",
+    "choose_method": "अपनी पसंदीदा विधि चुनें।",
     "sign_in_with_google": "Google के साथ जारी रखें",
     "sign_in_with_passkey": "बायोमेट्रिक्स का उपयोग करें",
     "sign_in_or_create": "अपने पासकी का उपयोग करके अपने खाते तक पहुंचें, अपनी उंगली की छाप, चेहरे की स्कैन या स्क्रीन लॉक का उपयोग करके।",

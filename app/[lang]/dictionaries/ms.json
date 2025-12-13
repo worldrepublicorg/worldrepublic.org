@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Republik Dunia"
+    "world_republic": "Republik Dunia",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Parti politik",
-          "subtitle": "Bersatu secara global di sekeliling nilai bersama"
+          "title": "Parti politik"
         },
         "elections": {
           "title": "Pilihan raya ujian",
@@ -23,15 +22,19 @@
           "subtitle": "Mengundi prinsip asas kami"
         }
       },
+      "vote": {
+        "no_active_election": "Pilihan raya hampir tiba",
+        "test_verification": {
+          "description": "Cuba sistem pengesahan identiti kami sekarang untuk pengalaman mengundi yang lancar.",
+          "button": "Uji"
+        }
+      },
       "parties": {
         "discover": "Temui",
         "search_placeholder": "Cari parti...",
-        "tabs": {
-          "new": "Baru",
-          "trending": "Trending",
-          "top": "Teratas"
-        },
         "no_parties_found": "Tiada parti ditemui",
+        "error_loading": "Gagal memuatkan parti",
+        "refresh": "Muat semula",
         "loading_more": "Memuatkan lebih banyak parti...",
         "party_details": "Butiran parti",
         "share_party": "Kongsi parti",
@@ -65,15 +68,6 @@
           "leader": "Pemimpin",
           "website": "Laman web",
           "not_found_description": "Parti yang anda cari tidak wujud atau telah dibubarkan."
-        },
-        "error_loading": "Gagal memuatkan parti",
-        "refresh": "Muat semula"
-      },
-      "vote": {
-        "no_active_election": "Pilihan raya hampir tiba",
-        "test_verification": {
-          "description": "Cuba sistem pengesahan identiti kami sekarang untuk pengalaman mengundi yang lancar.",
-          "button": "Uji"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Soalan lazim",
           "support": "Sokongan"
         },
+        "source_code": {
+          "title": "KOD SUMBER"
+        },
         "legal": {
           "title": "UNDANG-UNDANG",
           "terms": "Terma penggunaan",
           "privacy": "Dasar privasi"
-        },
-        "source_code": {
-          "title": "KOD SUMBER"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Hantar",
           "withdraw_to_crypto": {
-            "description": "Keluarkan WDD ke akaun crypto",
+            "description": "Keluarkan WDD ke akaun crypto.",
             "amount_label": "Amaun",
             "address_label": "Alamat dompet",
             "network_label": "Rangkaian"
@@ -221,7 +215,6 @@
       "no_wallet": "Tiada alamat dompet",
       "min_amount": "Minimum 10 WDD",
       "sent": "Dihantar",
-      "failed": "Sumsub ID diperlukan",
       "account_deleted": "Akaun dipadamkan",
       "delete_failed": "Gagal memadamkan akaun",
       "contract_address_error": "Tidak dapat mengeluarkan ke alamat kontrak",
@@ -234,9 +227,6 @@
       "updated": "Dikemaskini",
       "update_failed": "Mengemaskini gagal",
       "update_error": "Ralat semasa mengemaskini parti",
-      "transferred": "Dipindahkan",
-      "transfer_failed": "Memindahkan kepimpinan gagal",
-      "transfer_error": "Ralat semasa memindahkan kepimpinan",
       "dissolved": "Dibubarkan",
       "dissolve_failed": "Membubarkan gagal",
       "dissolve_error": "Ralat semasa membubarkan parti"
@@ -256,10 +246,10 @@
     "withdraw": "Keluarkan",
     "trade": "Perdagangan",
     "continue": "Teruskan",
+    "close": "Tutup",
     "updating": "Mengemas kini...",
     "save": "Simpan",
-    "vote": "Undi",
-    "close": "Tutup"
+    "vote": "Undi"
   },
   "auth": {
     "choose_method": "Pilih kaedah pilihan anda.",

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Meni",
-    "world_republic": "Svjetska republika"
+    "world_republic": "Svjetska republika",
+    "menu": "Meni"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Političke stranke",
-          "subtitle": "Ujedinite se globalno oko zajedničkih vrijednosti"
+          "title": "Političke stranke"
         },
         "elections": {
           "title": "Test izbori",
@@ -23,15 +22,19 @@
           "subtitle": "Glasajte o našim temeljnim principima"
         }
       },
+      "vote": {
+        "no_active_election": "Izbori počinju uskoro",
+        "test_verification": {
+          "description": "Isprobajte naš sistem za verifikaciju identiteta sada za besprijekorno glasanje.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Otkrijte",
         "search_placeholder": "Pretraga stranaka...",
-        "tabs": {
-          "new": "Nove",
-          "trending": "Trendovi",
-          "top": "Top"
-        },
         "no_parties_found": "Stranke nisu pronađene",
+        "error_loading": "Nije uspjelo učitavanje stranaka",
+        "refresh": "Osvježi",
         "loading_more": "Učitavanje više stranaka...",
         "party_details": "Detalji stranke",
         "share_party": "Podijelite stranku",
@@ -65,15 +68,6 @@
           "leader": "Vođa",
           "website": "Web stranica",
           "not_found_description": "Stranka koju tražite ne postoji ili je raspuštena."
-        },
-        "error_loading": "Nije uspjelo učitavanje stranaka",
-        "refresh": "Osvježi"
-      },
-      "vote": {
-        "no_active_election": "Izbori počinju uskoro",
-        "test_verification": {
-          "description": "Isprobajte naš sistem za verifikaciju identiteta sada za besprijekorno glasanje.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "ČPP",
           "support": "Podrška"
         },
+        "source_code": {
+          "title": "IZVORNI KOD"
+        },
         "legal": {
           "title": "PRAVNI",
           "terms": "Uslovi korištenja",
           "privacy": "Politika privatnosti"
-        },
-        "source_code": {
-          "title": "IZVORNI KOD"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Pošaljite",
           "withdraw_to_crypto": {
-            "description": "Povucite WDD na kripto račun",
+            "description": "Povucite WDD na kripto račun.",
             "amount_label": "Iznos",
             "address_label": "Adresa novčanika",
             "network_label": "Mreža"
@@ -221,7 +215,6 @@
       "no_wallet": "Nema adrese novčanika",
       "min_amount": "Minimum 10 WDD",
       "sent": "Poslano",
-      "failed": "Sumsub ID potreban",
       "account_deleted": "Račun obrisan",
       "delete_failed": "Brisanje računa neuspješno",
       "contract_address_error": "Ne može se povući na adresu ugovora",
@@ -234,9 +227,6 @@
       "updated": "Ažurirano",
       "update_failed": "Ažuriranje nije uspjelo",
       "update_error": "Greška prilikom ažuriranja stranke",
-      "transferred": "Preneseno",
-      "transfer_failed": "Prijenos vođstva nije uspio",
-      "transfer_error": "Greška prilikom prijenosa vođstva",
       "dissolved": "Raspuštena",
       "dissolve_failed": "Raspuštanje nije uspjelo",
       "dissolve_error": "Greška prilikom raspuštanja stranke"
@@ -256,10 +246,10 @@
     "withdraw": "Povuci",
     "trade": "Trgovina",
     "continue": "Nastavi",
+    "close": "Zatvori",
     "updating": "Ažuriranje...",
     "save": "Sačuvaj",
-    "vote": "Glasaj",
-    "close": "Zatvori"
+    "vote": "Glasaj"
   },
   "auth": {
     "choose_method": "Odaberite željeni način.",

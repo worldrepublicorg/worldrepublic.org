@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Republika ng Daigdig"
+    "world_republic": "Republika ng Daigdig",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Mga political party",
-          "subtitle": "Magkaisa sa buong mundo sa paligid ng mga shared values"
+          "title": "Mga political party"
         },
         "elections": {
           "title": "Test elections",
@@ -23,15 +22,19 @@
           "subtitle": "Bumoto sa aming foundational principles"
         }
       },
+      "vote": {
+        "no_active_election": "Malapit na ang halalan",
+        "test_verification": {
+          "description": "Subukan ang aming sistema ng pagpapatunay ng pagkakakilanlan ngayon para sa isang maayos na karanasan sa pagboto.",
+          "button": "Subukan"
+        }
+      },
       "parties": {
         "discover": "Tuklasin",
         "search_placeholder": "Maghanap ng partido...",
-        "tabs": {
-          "new": "Bago",
-          "trending": "Trending",
-          "top": "Nangunguna"
-        },
         "no_parties_found": "Walang nahanap na partido",
+        "error_loading": "Nabigong i-load ang mga partido",
+        "refresh": "I-refresh",
         "loading_more": "Naglo-load ng mas maraming partido...",
         "party_details": "Mga detalye ng partido",
         "share_party": "Ibahagi ang partido",
@@ -65,15 +68,6 @@
           "leader": "Pinuno",
           "website": "Website",
           "not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
-        },
-        "error_loading": "Nabigong i-load ang mga partido",
-        "refresh": "I-refresh"
-      },
-      "vote": {
-        "no_active_election": "Malapit na ang halalan",
-        "test_verification": {
-          "description": "Subukan ang aming sistema ng pagpapatunay ng pagkakakilanlan ngayon para sa isang maayos na karanasan sa pagboto.",
-          "button": "Subukan"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Ipadala",
           "withdraw_to_crypto": {
-            "description": "Bawasan ang WDD sa isang crypto account",
+            "description": "Bawasan ang WDD sa isang crypto account.",
             "amount_label": "Halaga",
             "address_label": "Wallet address",
             "network_label": "Network"
@@ -221,7 +215,6 @@
       "no_wallet": "Walang wallet address",
       "min_amount": "Minimum 10 WDD",
       "sent": "Na-send",
-      "failed": "Kailangan ang Sumsub ID",
       "account_deleted": "Na-delete ang account",
       "delete_failed": "Nabigo ang pag-delete ng account",
       "contract_address_error": "Hindi maaaring mag-withdraw sa contract address",
@@ -234,9 +227,6 @@
       "updated": "Na-update",
       "update_failed": "Nabigo ang pag-update",
       "update_error": "Error sa pag-update ng partido",
-      "transferred": "Inilipat",
-      "transfer_failed": "Nabigo ang paglilipat ng pamumuno",
-      "transfer_error": "Error sa paglilipat ng pamumuno",
       "dissolved": "Binuwag",
       "dissolve_failed": "Nabigo ang pagbuwag",
       "dissolve_error": "Error sa pagbuwag ng partido"
@@ -256,10 +246,10 @@
     "withdraw": "Mag-withdraw",
     "trade": "Mag-trade",
     "continue": "Magpatuloy",
+    "close": "Isara",
     "updating": "Nag-a-update...",
     "save": "I-save",
-    "vote": "Bumoto",
-    "close": "Isara"
+    "vote": "Bumoto"
   },
   "auth": {
     "choose_method": "Pumili ng iyong ginustong paraan.",

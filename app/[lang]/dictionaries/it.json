@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Repubblica Mondiale"
+    "world_republic": "Repubblica Mondiale",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partiti politici",
-          "subtitle": "Unisciti globalmente intorno a valori condivisi"
+          "title": "Partiti politici"
         },
         "elections": {
           "title": "Elezioni di prova",
@@ -23,15 +22,19 @@
           "subtitle": "Vota sui nostri principi fondamentali"
         }
       },
+      "vote": {
+        "no_active_election": "Elezioni in arrivo",
+        "test_verification": {
+          "description": "Prova subito il nostro sistema di verifica dell'identità per un'esperienza di voto fluida.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Scopri",
         "search_placeholder": "Cerca partiti...",
-        "tabs": {
-          "new": "Nuovi",
-          "trending": "Tendenze",
-          "top": "Principali"
-        },
         "no_parties_found": "Nessun partito trovato",
+        "error_loading": "Impossibile caricare i partiti",
+        "refresh": "Aggiorna",
         "loading_more": "Caricamento di altri partiti...",
         "party_details": "Dettagli del partito",
         "share_party": "Condividi partito",
@@ -65,15 +68,6 @@
           "leader": "Leader",
           "website": "Sito web",
           "not_found_description": "Il partito che stai cercando non esiste o è stato sciolto."
-        },
-        "error_loading": "Impossibile caricare i partiti",
-        "refresh": "Aggiorna"
-      },
-      "vote": {
-        "no_active_election": "Elezioni in arrivo",
-        "test_verification": {
-          "description": "Prova subito il nostro sistema di verifica dell'identità per un'esperienza di voto fluida.",
-          "button": "Test"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Invia",
           "withdraw_to_crypto": {
-            "description": "Preleva WDD su un account crypto",
+            "description": "Preleva WDD su un account crypto.",
             "amount_label": "Importo",
             "address_label": "Indirizzo portafoglio",
             "network_label": "Rete"
@@ -221,7 +215,6 @@
       "no_wallet": "Nessun indirizzo portafoglio",
       "min_amount": "Minimo 10 WDD",
       "sent": "Inviato",
-      "failed": "Sumsub ID richiesto",
       "account_deleted": "Account eliminato",
       "delete_failed": "Eliminazione account fallita",
       "contract_address_error": "Impossibile prelevare all'indirizzo contratto",
@@ -234,9 +227,6 @@
       "updated": "Aggiornato",
       "update_failed": "Aggiornamento fallito",
       "update_error": "Errore nell'aggiornamento del partito",
-      "transferred": "Trasferito",
-      "transfer_failed": "Trasferimento leadership fallito",
-      "transfer_error": "Errore nel trasferimento della leadership",
       "dissolved": "Sciolto",
       "dissolve_failed": "Scioglimento fallito",
       "dissolve_error": "Errore nello scioglimento del partito"
@@ -256,10 +246,10 @@
     "withdraw": "Preleva",
     "trade": "Scambiare",
     "continue": "Continua",
+    "close": "Chiudi",
     "updating": "Aggiornamento...",
     "save": "Salva",
-    "vote": "Vota",
-    "close": "Chiudi"
+    "vote": "Vota"
   },
   "auth": {
     "choose_method": "Scegli il metodo preferito.",

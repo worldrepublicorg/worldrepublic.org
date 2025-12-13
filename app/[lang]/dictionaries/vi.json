@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Cộng hòa Thế giới"
+    "world_republic": "Cộng hòa Thế giới",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Đảng phái chính trị",
-          "subtitle": "Đoàn kết toàn cầu xung quanh các giá trị chung"
+          "title": "Đảng phái chính trị"
         },
         "elections": {
           "title": "Bầu cử thử nghiệm",
@@ -23,15 +22,19 @@
           "subtitle": "Bỏ phiếu về các nguyên tắc nền tảng"
         }
       },
+      "vote": {
+        "no_active_election": "Bầu cử sắp bắt đầu",
+        "test_verification": {
+          "description": "Thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để có trải nghiệm bỏ phiếu suôn sẻ.",
+          "button": "Kiểm tra"
+        }
+      },
       "parties": {
         "discover": "Khám phá",
         "search_placeholder": "Tìm kiếm đảng phái...",
-        "tabs": {
-          "new": "Mới",
-          "trending": "Xu hướng",
-          "top": "Hàng đầu"
-        },
         "no_parties_found": "Không tìm thấy đảng phái",
+        "error_loading": "Không thể tải danh sách đảng",
+        "refresh": "Làm mới",
         "loading_more": "Đang tải thêm đảng phái...",
         "party_details": "Chi tiết đảng phái",
         "share_party": "Chia sẻ đảng phái",
@@ -65,15 +68,6 @@
           "leader": "Lãnh đạo",
           "website": "Trang web",
           "not_found_description": "Đảng phái bạn đang tìm không tồn tại hoặc đã bị giải tán."
-        },
-        "error_loading": "Không thể tải danh sách đảng",
-        "refresh": "Làm mới"
-      },
-      "vote": {
-        "no_active_election": "Bầu cử sắp bắt đầu",
-        "test_verification": {
-          "description": "Thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để có trải nghiệm bỏ phiếu suôn sẻ.",
-          "button": "Kiểm tra"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Câu hỏi thường gặp",
           "support": "Hỗ trợ"
         },
+        "source_code": {
+          "title": "MÃ NGUỒN"
+        },
         "legal": {
           "title": "PHÁP LÝ",
           "terms": "Điều khoản sử dụng",
           "privacy": "Chính sách bảo mật"
-        },
-        "source_code": {
-          "title": "MÃ NGUỒN"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Gửi",
           "withdraw_to_crypto": {
-            "description": "Rút WDD vào tài khoản crypto",
+            "description": "Rút WDD vào tài khoản crypto.",
             "amount_label": "Số tiền",
             "address_label": "Địa chỉ ví",
             "network_label": "Mạng"
@@ -221,7 +215,6 @@
       "no_wallet": "Không có địa chỉ ví",
       "min_amount": "Tối thiểu 10 WDD",
       "sent": "Đã gửi",
-      "failed": "Yêu cầu Sumsub ID",
       "account_deleted": "Tài khoản đã được xóa",
       "delete_failed": "Xóa tài khoản thất bại",
       "contract_address_error": "Không thể rút tiền đến địa chỉ hợp đồng",
@@ -234,9 +227,6 @@
       "updated": "Đã cập nhật",
       "update_failed": "Cập nhật thất bại",
       "update_error": "Lỗi khi cập nhật đảng phái",
-      "transferred": "Đã chuyển giao",
-      "transfer_failed": "Chuyển giao lãnh đạo thất bại",
-      "transfer_error": "Lỗi khi chuyển giao lãnh đạo",
       "dissolved": "Đã giải tán",
       "dissolve_failed": "Giải tán thất bại",
       "dissolve_error": "Lỗi khi giải tán đảng phái"
@@ -256,10 +246,10 @@
     "withdraw": "Rút tiền",
     "trade": "Giao dịch",
     "continue": "Tiếp tục",
+    "close": "Đóng",
     "updating": "Đang cập nhật...",
     "save": "Lưu",
-    "vote": "Bỏ phiếu",
-    "close": "Đóng"
+    "vote": "Bỏ phiếu"
   },
   "auth": {
     "choose_method": "Chọn phương thức ưa thích của bạn.",

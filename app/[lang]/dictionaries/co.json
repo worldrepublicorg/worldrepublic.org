@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Ripùblica Mundiale"
+    "world_republic": "Ripùblica Mundiale",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partiti pulitichi",
-          "subtitle": "Unisciti globalmente intornu à valori cundivisi"
+          "title": "Partiti pulitichi"
         },
         "elections": {
           "title": "Elezioni di prova",
@@ -23,15 +22,19 @@
           "subtitle": "Vota nantu à i nostri principii fundamentali"
         }
       },
+      "vote": {
+        "no_active_election": "L'elezzioni principianu prestu",
+        "test_verification": {
+          "description": "Pruvate u nostru sistema di verificazione di l'identità avà per una sperienza di votu senza saldatura.",
+          "button": "Prouva"
+        }
+      },
       "parties": {
         "discover": "Scopre",
         "search_placeholder": "Ricerca partiti...",
-        "tabs": {
-          "new": "Nuvelli",
-          "trending": "Tendenze",
-          "top": "Top"
-        },
         "no_parties_found": "Nisun partitu truvatu",
+        "error_loading": "Fiascu in u caricamentu di i partiti",
+        "refresh": "Agghjurnà",
         "loading_more": "Caricamentu di più partiti...",
         "party_details": "Dettagli di u partitu",
         "share_party": "Cundivide u partitu",
@@ -65,15 +68,6 @@
           "leader": "Capu",
           "website": "Situ web",
           "not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
-        },
-        "error_loading": "Fiascu in u caricamentu di i partiti",
-        "refresh": "Agghjurnà"
-      },
-      "vote": {
-        "no_active_election": "L'elezzioni principianu prestu",
-        "test_verification": {
-          "description": "Pruvate u nostru sistema di verificazione di l'identità avà per una sperienza di votu senza saldatura.",
-          "button": "Prouva"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "Supportu"
         },
+        "source_code": {
+          "title": "CODICE SORGENTE"
+        },
         "legal": {
           "title": "LEGALE",
           "terms": "Termini d'usu",
           "privacy": "Pulitica di privacy"
-        },
-        "source_code": {
-          "title": "CODICE SORGENTE"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Manda",
           "withdraw_to_crypto": {
-            "description": "Ritira WDD à un contu crypto",
+            "description": "Ritira WDD à un contu crypto.",
             "amount_label": "Ammontu",
             "address_label": "Indirizzu portafogliu",
             "network_label": "Rete"
@@ -192,7 +186,7 @@
         "types": {
           "withdrawal": "Ritira",
           "received": "Ricevutu",
-          "sent": "Mandatu"
+          "sent": "Inviatu"
         }
       }
     }
@@ -221,7 +215,6 @@
       "no_wallet": "Nisun indirizzu portafogliu",
       "min_amount": "Minimu 10 WDD",
       "sent": "Mandatu",
-      "failed": "Sumsub ID richiestu",
       "account_deleted": "Cuntu sguassatu",
       "delete_failed": "A sguassatura di u cuntu hà fallitu",
       "contract_address_error": "Ùn si pò micca ritirà à un indirizzu di cuntrattu",
@@ -234,9 +227,6 @@
       "updated": "Aghjurnatu",
       "update_failed": "Aghjurnamentu hà fallitu",
       "update_error": "Errore in l'aghjurnamentu di u partitu",
-      "transferred": "Trasferitu",
-      "transfer_failed": "Trasferimentu di a direzzione hà fallitu",
-      "transfer_error": "Errore in u trasferimentu di a direzzione",
       "dissolved": "Scioltu",
       "dissolve_failed": "Scioglimentu hà fallitu",
       "dissolve_error": "Errore in u scioglimentu di u partitu"
@@ -256,10 +246,10 @@
     "withdraw": "Ritira",
     "trade": "Scambià",
     "continue": "Continua",
+    "close": "Chjude",
     "updating": "Aghjurnamentu...",
     "save": "Salvà",
-    "vote": "Votà",
-    "close": "Chjude"
+    "vote": "Votà"
   },
   "auth": {
     "choose_method": "Scegli u metudu preferitu.",

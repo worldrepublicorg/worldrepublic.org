@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "مینو",
-    "world_republic": "نړۍ جمهوریت"
+    "world_republic": "نړۍ جمهوریت",
+    "menu": "مینو"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "سیاسي ګوندونه",
-          "subtitle": "د شریکو ارزښتونو شاوخوا نړیواله متحدول"
+          "title": "سیاسي ګوندونه"
         },
         "elections": {
           "title": "ازمایښتي ټاکنې",
@@ -23,15 +22,19 @@
           "subtitle": "زموږ د بنسټیزو اصولو پر سر رايه ورکړئ"
         }
       },
+      "vote": {
+        "no_active_election": "ټاکنې ژر پیلیږي",
+        "test_verification": {
+          "description": "د بې ساري رایې ورکولو تجربې لپاره همدا اوس زموږ د هویت تصدیق کولو سیسټم هڅه وکړئ.",
+          "button": "ازموینه"
+        }
+      },
       "parties": {
         "discover": "موندل",
         "search_placeholder": "ګوندونه لټون...",
-        "tabs": {
-          "new": "نوی",
-          "trending": "مشهور",
-          "top": "سر"
-        },
         "no_parties_found": "هیڅ ګوند ونه موندل شو",
+        "error_loading": "ګوندونه بارولو کې پاتې راغلي",
+        "refresh": "تازہ کول",
         "loading_more": "نور ګوندونه پورته کېږي...",
         "party_details": "د ګوند جزئیات",
         "share_party": "ګوند شریک کړئ",
@@ -65,15 +68,6 @@
           "leader": "رهبر",
           "website": "وېب پاڼه",
           "not_found_description": "ګوند چې تاسو یې لټون کوئ شتون نلري یا منحل شوی دی."
-        },
-        "error_loading": "ګوندونه بارولو کې پاتې راغلي",
-        "refresh": "تازہ کول"
-      },
-      "vote": {
-        "no_active_election": "ټاکنې ژر پیلیږي",
-        "test_verification": {
-          "description": "د بې ساري رایې ورکولو تجربې لپاره همدا اوس زموږ د هویت تصدیق کولو سیسټم هڅه وکړئ.",
-          "button": "ازموینه"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "ملاتړ"
         },
+        "source_code": {
+          "title": "سرچينه کوډ"
+        },
         "legal": {
           "title": "قانوني",
           "terms": "د کارولو شرایط",
           "privacy": "د محرمیت پالیسي"
-        },
-        "source_code": {
-          "title": "سرچينه کوډ"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "لېږل",
           "withdraw_to_crypto": {
-            "description": "WDD کریپټو حساب ته ووتل",
+            "description": "WDD کریپټو حساب ته ووتل.",
             "amount_label": "اندازه",
             "address_label": "د والیټ پته",
             "network_label": "شبکه"
@@ -191,8 +185,8 @@
         },
         "types": {
           "withdrawal": "وتل",
-          "received": "ترلاسه شو",
-          "sent": "لیږل شو"
+          "received": "ترلېدل",
+          "sent": "لیږل شوي"
         }
       }
     }
@@ -221,7 +215,6 @@
       "no_wallet": "د والیټ پته نشته",
       "min_amount": "لږترلږه 10 WDD",
       "sent": "لیږل شو",
-      "failed": "د Sumsub ID اړین دی",
       "account_deleted": "حساب ړنګ شو",
       "delete_failed": "د حساب ړنګول ناکام شو",
       "contract_address_error": "د تړون پتې ته نشي ووتل کیدی",
@@ -234,9 +227,6 @@
       "updated": "تازه شو",
       "update_failed": "تازه کول ناکام شول",
       "update_error": "د ګوند تازه کولو کې تېروتنه",
-      "transferred": "لیږدول شول",
-      "transfer_failed": "د رهبري لیږدول ناکام شول",
-      "transfer_error": "د رهبري لیږدولو کې تېروتنه",
       "dissolved": "منحل شو",
       "dissolve_failed": "منحل کول ناکام شول",
       "dissolve_error": "د ګوند منحل کولو کې تېروتنه"
@@ -256,10 +246,10 @@
     "withdraw": "واخیستل",
     "trade": "سوداګري",
     "continue": "دوام ورکړئ",
+    "close": "تړل",
     "updating": "تازه کول...",
     "save": "خوندي کړئ",
-    "vote": "رايه ورکړه",
-    "close": "تړل"
+    "vote": "رايه ورکړه"
   },
   "auth": {
     "choose_method": "خپل غوره میتود غوره کړئ.",

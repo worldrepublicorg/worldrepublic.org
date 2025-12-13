@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Spyskaart",
-    "world_republic": "Wêreldrepubliek"
+    "world_republic": "Wêreldrepubliek",
+    "menu": "Spyskaart"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politieke partye",
-          "subtitle": "Verenig wêreldwyd rondom gedeelde waardes"
+          "title": "Politieke partye"
         },
         "elections": {
           "title": "Toetsverkiesings",
@@ -23,15 +22,19 @@
           "subtitle": "Stem oor ons grondliggende beginsels"
         }
       },
+      "vote": {
+        "no_active_election": "Verkiesings begin binnekort",
+        "test_verification": {
+          "description": "Probeer ons identiteitsverifikasiestelsel nou vir 'n naatlose stemervaring.",
+          "button": "Toets"
+        }
+      },
       "parties": {
         "discover": "Ontdek",
         "search_placeholder": "Soek partye...",
-        "tabs": {
-          "new": "Nuut",
-          "trending": "Tending",
-          "top": "Top"
-        },
         "no_parties_found": "Geen partye gevind nie",
+        "error_loading": "Kon nie partye laai nie",
+        "refresh": "Verfris",
         "loading_more": "Laai meer partye...",
         "party_details": "Party besonderhede",
         "share_party": "Deel party",
@@ -65,15 +68,6 @@
           "leader": "Leier",
           "website": "Webwerf",
           "not_found_description": "Die party wat jy soek bestaan nie of is ontbind."
-        },
-        "error_loading": "Kon nie partye laai nie",
-        "refresh": "Verfris"
-      },
-      "vote": {
-        "no_active_election": "Verkiesings begin binnekort",
-        "test_verification": {
-          "description": "Probeer ons identiteitsverifikasiestelsel nou vir 'n naatlose stemervaring.",
-          "button": "Toets"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Stuur",
           "withdraw_to_crypto": {
-            "description": "Trek WDD na 'n kripto-rekening",
+            "description": "Trek WDD na 'n kripto-rekening.",
             "amount_label": "Bedrag",
             "address_label": "Beursieadres",
             "network_label": "Netwerk"
@@ -221,7 +215,6 @@
       "no_wallet": "Geen beursieadres nie",
       "min_amount": "Minimum 10 WDD",
       "sent": "Gestuur",
-      "failed": "Sumsub ID benodig",
       "account_deleted": "Rekening geskrap",
       "delete_failed": "Kon nie rekening skrap nie",
       "contract_address_error": "Kan nie onttrek na kontrakadres nie",
@@ -234,9 +227,6 @@
       "updated": "Opgedateer",
       "update_failed": "Opdatering het misluk",
       "update_error": "Fout by opdatering van party",
-      "transferred": "Oorgedra",
-      "transfer_failed": "Oordrag van leierskap het misluk",
-      "transfer_error": "Fout by oordrag van leierskap",
       "dissolved": "Ontbind",
       "dissolve_failed": "Ontbinding het misluk",
       "dissolve_error": "Fout by ontbinding van party"
@@ -256,10 +246,10 @@
     "withdraw": "Onttrek",
     "trade": "Handel",
     "continue": "Gaan voort",
+    "close": "Sluit",
     "updating": "Besig om op te dateer...",
     "save": "Stoor",
-    "vote": "Stem",
-    "close": "Sluit"
+    "vote": "Stem"
   },
   "auth": {
     "choose_method": "Kies jou voorkeurmetode.",

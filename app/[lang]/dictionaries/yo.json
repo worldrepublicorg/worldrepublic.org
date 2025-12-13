@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Akojọ",
-    "world_republic": "Ìjọba Àpapọ̀ Ayé"
+    "world_republic": "Ìjọba Àpapọ̀ Ayé",
+    "menu": "Akojọ"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Awọn ẹgbẹ oselu",
-          "subtitle": "Dapọ ni agbaye ni ayika awọn iye ti a pin"
+          "title": "Awọn ẹgbẹ oselu"
         },
         "elections": {
           "title": "Awọn idibo idanwo",
@@ -23,15 +22,19 @@
           "subtitle": "Dibo lori awọn ipilẹṣẹ wa"
         }
       },
+      "vote": {
+        "no_active_election": "Awọn idibo bẹrẹ laipẹ",
+        "test_verification": {
+          "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi fun iriri ibo ti ko ni ailopin.",
+          "button": "Idanwo"
+        }
+      },
       "parties": {
         "discover": "Ṣawari",
         "search_placeholder": "Wa awọn ẹgbẹ...",
-        "tabs": {
-          "new": "Tuntun",
-          "trending": "Trending",
-          "top": "Oke"
-        },
         "no_parties_found": "Ko ri awọn ẹgbẹ",
+        "error_loading": "Ikuna lati gbe awọn ẹgbẹ",
+        "refresh": "Sọ dọtun",
         "loading_more": "N gbe awọn ẹgbẹ siwaju sii...",
         "party_details": "Awọn alaye ẹgbẹ",
         "share_party": "Pin ẹgbẹ",
@@ -65,15 +68,6 @@
           "leader": "Oludari",
           "website": "Oju opo wẹẹbu",
           "not_found_description": "Ẹgbẹ ti o n wa ko wa tabi ti yọ kuro."
-        },
-        "error_loading": "Ikuna lati gbe awọn ẹgbẹ",
-        "refresh": "Sọ dọtun"
-      },
-      "vote": {
-        "no_active_election": "Awọn idibo bẹrẹ laipẹ",
-        "test_verification": {
-          "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi fun iriri ibo ti ko ni ailopin.",
-          "button": "Idanwo"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Awọn ibeere ti o wọpọ",
           "support": "Atilẹyin"
         },
+        "source_code": {
+          "title": "KÓÒDÙ ORÍSÙN"
+        },
         "legal": {
           "title": "OFIN",
           "terms": "Awọn ofin lilo",
           "privacy": "Eto Ikọkọ"
-        },
-        "source_code": {
-          "title": "KÓÒDÙ ORÍSÙN"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Fi",
           "withdraw_to_crypto": {
-            "description": "Yọ WDD soke si iroye crypto",
+            "description": "Yọ WDD soke si iroye crypto.",
             "amount_label": "Iye",
             "address_label": "Adirẹsi apamọwọ",
             "network_label": "Nẹtiwọọki"
@@ -221,7 +215,6 @@
       "no_wallet": "Ko si adirẹsi apamọwọ",
       "min_amount": "Kere ju 10 WDD",
       "sent": "Ti a ran",
-      "failed": "Sumsub ID nilo",
       "account_deleted": "Iroyin ti a pa",
       "delete_failed": "Pipa iroyin kuna",
       "contract_address_error": "Ko le ya jade si adirẹsi adehun",
@@ -234,9 +227,6 @@
       "updated": "Titunṣe",
       "update_failed": "Itunṣe kuna",
       "update_error": "Aṣiṣe nigba titunṣe ẹgbẹ",
-      "transferred": "Yipada",
-      "transfer_failed": "Iyipada iṣakoso kuna",
-      "transfer_error": "Aṣiṣe nigba iyipada iṣakoso",
       "dissolved": "Fo",
       "dissolve_failed": "Fifo ẹgbẹ kuna",
       "dissolve_error": "Aṣiṣe nigba fifo ẹgbẹ"
@@ -256,10 +246,10 @@
     "withdraw": "Yọ",
     "trade": "Iṣowo",
     "continue": "Tẹsiwaju",
+    "close": "Pa",
     "updating": "N ṣe imudojuiwọn...",
     "save": "Fi pamọ",
-    "vote": "Dibò",
-    "close": "Pa"
+    "vote": "Dibò"
   },
   "auth": {
     "choose_method": "Yan ọna ti o fẹ.",

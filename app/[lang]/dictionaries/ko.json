@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "메뉴",
-    "world_republic": "세계 공화국"
+    "world_republic": "세계 공화국",
+    "menu": "메뉴"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "정당",
-          "subtitle": "공유된 가치로 전 세계가 결집"
+          "title": "정당"
         },
         "elections": {
           "title": "테스트 선거",
@@ -23,15 +22,19 @@
           "subtitle": "우리의 근본 원칙에 투표하세요"
         }
       },
+      "vote": {
+        "no_active_election": "선거가 곧 시작됩니다",
+        "test_verification": {
+          "description": "원활한 투표 경험을 위해 지금 신원 확인 시스템을 사용해 보세요.",
+          "button": "테스트"
+        }
+      },
       "parties": {
         "discover": "발견",
         "search_placeholder": "정당 검색...",
-        "tabs": {
-          "new": "신규",
-          "trending": "트렌딩",
-          "top": "상위"
-        },
         "no_parties_found": "정당을 찾을 수 없습니다",
+        "error_loading": "정당을 불러오는데 실패했습니다",
+        "refresh": "새로고침",
         "loading_more": "더 많은 정당 로딩 중...",
         "party_details": "정당 세부정보",
         "share_party": "정당 공유",
@@ -65,15 +68,6 @@
           "leader": "지도자",
           "website": "웹사이트",
           "not_found_description": "찾고 있는 정당이 존재하지 않거나 해산되었습니다."
-        },
-        "error_loading": "정당을 불러오는데 실패했습니다",
-        "refresh": "새로고침"
-      },
-      "vote": {
-        "no_active_election": "선거가 곧 시작됩니다",
-        "test_verification": {
-          "description": "원활한 투표 경험을 위해 지금 신원 확인 시스템을 사용해 보세요.",
-          "button": "테스트"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "지원"
         },
+        "source_code": {
+          "title": "소스 코드"
+        },
         "legal": {
           "title": "법률",
           "terms": "이용 약관",
           "privacy": "개인정보 처리방침"
-        },
-        "source_code": {
-          "title": "소스 코드"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "보내기",
           "withdraw_to_crypto": {
-            "description": "WDD를 암호화폐 계정으로 출금",
+            "description": "WDD를 암호화폐 계정으로 출금.",
             "amount_label": "금액",
             "address_label": "지갑 주소",
             "network_label": "네트워크"
@@ -221,7 +215,6 @@
       "no_wallet": "지갑 주소가 없습니다",
       "min_amount": "최소 10 WDD",
       "sent": "전송됨",
-      "failed": "Sumsub ID 필요",
       "account_deleted": "계정 삭제됨",
       "delete_failed": "계정 삭제 실패",
       "contract_address_error": "계약 주소로 출금할 수 없습니다",
@@ -234,9 +227,6 @@
       "updated": "업데이트됨",
       "update_failed": "업데이트 실패",
       "update_error": "정당 업데이트 중 오류 발생",
-      "transferred": "이전됨",
-      "transfer_failed": "리더십 이전 실패",
-      "transfer_error": "리더십 이전 중 오류 발생",
       "dissolved": "해산됨",
       "dissolve_failed": "해산 실패",
       "dissolve_error": "정당 해산 중 오류 발생"
@@ -256,10 +246,10 @@
     "withdraw": "인출",
     "trade": "거래",
     "continue": "계속",
+    "close": "닫기",
     "updating": "업데이트 중...",
     "save": "저장",
-    "vote": "투표",
-    "close": "닫기"
+    "vote": "투표"
   },
   "auth": {
     "choose_method": "선호하는 방법을 선택하세요.",

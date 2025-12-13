@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "เมนู",
-    "world_republic": "สาธารณรัฐโลก"
+    "world_republic": "สาธารณรัฐโลก",
+    "menu": "เมนู"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "พรรคการเมือง",
-          "subtitle": "รวมพลังระดับโลกบนค่านิยมร่วมกัน"
+          "title": "พรรคการเมือง"
         },
         "elections": {
           "title": "การเลือกตั้งทดสอบ",
@@ -23,15 +22,19 @@
           "subtitle": "โหวตตามหลักการพื้นฐานของเรา"
         }
       },
+      "vote": {
+        "no_active_election": "การเลือกตั้งใกล้เข้ามาแล้ว",
+        "test_verification": {
+          "description": "ลองใช้ระบบยืนยันตัวตนของเราตอนนี้เพื่อประสบการณ์การลงคะแนนที่ราบรื่น",
+          "button": "ทดสอบ"
+        }
+      },
       "parties": {
         "discover": "ค้นพบ",
         "search_placeholder": "ค้นหาพรรค...",
-        "tabs": {
-          "new": "ใหม่",
-          "trending": "กำลังนิยม",
-          "top": "ยอดนิยม"
-        },
         "no_parties_found": "ไม่พบพรรค",
+        "error_loading": "ไม่สามารถโหลดพรรคได้",
+        "refresh": "รีเฟรช",
         "loading_more": "กำลังโหลดพรรคเพิ่มเติม...",
         "party_details": "รายละเอียดพรรค",
         "share_party": "แชร์พรรค",
@@ -65,15 +68,6 @@
           "leader": "ผู้นำ",
           "website": "เว็บไซต์",
           "not_found_description": "พรรคที่คุณกำลังมองหาไม่มีอยู่หรือถูกยุบแล้ว"
-        },
-        "error_loading": "ไม่สามารถโหลดพรรคได้",
-        "refresh": "รีเฟรช"
-      },
-      "vote": {
-        "no_active_election": "การเลือกตั้งใกล้เข้ามาแล้ว",
-        "test_verification": {
-          "description": "ลองใช้ระบบยืนยันตัวตนของเราตอนนี้เพื่อประสบการณ์การลงคะแนนที่ราบรื่น",
-          "button": "ทดสอบ"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "คำถามที่พบบ่อย",
           "support": "ฝ่ายสนับสนุน"
         },
+        "source_code": {
+          "title": "ซอร์สโค้ด"
+        },
         "legal": {
           "title": "กฎหมาย",
           "terms": "เงื่อนไขการใช้งาน",
           "privacy": "นโยบายความเป็นส่วนตัว"
-        },
-        "source_code": {
-          "title": "ซอร์สโค้ด"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "ส่ง",
           "withdraw_to_crypto": {
-            "description": "ถอน WDD ไปยังบัญชี crypto",
+            "description": "ถอน WDD ไปยังบัญชี crypto.",
             "amount_label": "จำนวน",
             "address_label": "ที่อยู่กระเป๋าเงิน",
             "network_label": "เครือข่าย"
@@ -191,7 +185,7 @@
         },
         "types": {
           "withdrawal": "ถอน",
-          "received": "ได้รับ",
+          "received": "รับแล้ว",
           "sent": "ส่งแล้ว"
         }
       }
@@ -221,7 +215,6 @@
       "no_wallet": "ไม่มีที่อยู่กระเป๋าเงิน",
       "min_amount": "อย่างน้อย 10 WDD",
       "sent": "ส่งแล้ว",
-      "failed": "ต้องมี Sumsub ID",
       "account_deleted": "ลบบัญชีแล้ว",
       "delete_failed": "ลบบัญชีไม่สำเร็จ",
       "contract_address_error": "ไม่สามารถถอนไปยังที่อยู่สัญญาได้",
@@ -234,9 +227,6 @@
       "updated": "อัปเดตแล้ว",
       "update_failed": "อัปเดตล้มเหลว",
       "update_error": "เกิดข้อผิดพลาดในการอัปเดตพรรค",
-      "transferred": "โอนแล้ว",
-      "transfer_failed": "โอนความเป็นผู้นำล้มเหลว",
-      "transfer_error": "เกิดข้อผิดพลาดในการโอนความเป็นผู้นำ",
       "dissolved": "ยุบแล้ว",
       "dissolve_failed": "ยุบพรรคล้มเหลว",
       "dissolve_error": "เกิดข้อผิดพลาดในการยุบพรรค"
@@ -256,10 +246,10 @@
     "withdraw": "ถอน",
     "trade": "ซื้อขาย",
     "continue": "ดำเนินการต่อ",
+    "close": "ปิด",
     "updating": "กำลังอัปเดต...",
     "save": "บันทึก",
-    "vote": "ลงคะแนน",
-    "close": "ปิด"
+    "vote": "ลงคะแนน"
   },
   "auth": {
     "choose_method": "เลือกวิธีการที่คุณต้องการ.",

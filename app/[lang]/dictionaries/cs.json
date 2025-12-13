@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Světová republika"
+    "world_republic": "Světová republika",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politické strany",
-          "subtitle": "Sjednoťte se globálně kolem sdílených hodnot"
+          "title": "Politické strany"
         },
         "elections": {
           "title": "Testovací volby",
@@ -23,15 +22,19 @@
           "subtitle": "Hlasujte o našich základních principech"
         }
       },
+      "vote": {
+        "no_active_election": "Volby začínají brzy",
+        "test_verification": {
+          "description": "Vyzkoušejte náš systém ověření totožnosti nyní pro bezproblémové hlasování.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Objevit",
         "search_placeholder": "Hledat strany...",
-        "tabs": {
-          "new": "Nové",
-          "trending": "Trendy",
-          "top": "Nejlepší"
-        },
         "no_parties_found": "Nebyly nalezeny žádné strany",
+        "error_loading": "Nepodařilo se načíst strany",
+        "refresh": "Obnovit",
         "loading_more": "Načítání dalších stran...",
         "party_details": "Detaily strany",
         "share_party": "Sdílet stranu",
@@ -65,15 +68,6 @@
           "leader": "Vůdce",
           "website": "Webová stránka",
           "not_found_description": "Strana, kterou hledáte, neexistuje nebo byla rozpuštěna."
-        },
-        "error_loading": "Nepodařilo se načíst strany",
-        "refresh": "Obnovit"
-      },
-      "vote": {
-        "no_active_election": "Volby začínají brzy",
-        "test_verification": {
-          "description": "Vyzkoušejte náš systém ověření totožnosti nyní pro bezproblémové hlasování.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "Podpora"
         },
+        "source_code": {
+          "title": "ZDROJOVÝ KÓD"
+        },
         "legal": {
           "title": "PRÁVNÍ",
           "terms": "Podmínky použití",
           "privacy": "Zásady ochrany osobních údajů"
-        },
-        "source_code": {
-          "title": "ZDROJOVÝ KÓD"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Poslat",
           "withdraw_to_crypto": {
-            "description": "Vybrat WDD na krypto účet",
+            "description": "Vybrat WDD na krypto účet.",
             "amount_label": "Částka",
             "address_label": "Adresa peněženky",
             "network_label": "Síť"
@@ -221,7 +215,6 @@
       "no_wallet": "Žádná adresa peněženky",
       "min_amount": "Minimum 10 WDD",
       "sent": "Odesláno",
-      "failed": "Sumsub ID je potřeba",
       "account_deleted": "Účet smazán",
       "delete_failed": "Mazání účtu selhalo",
       "contract_address_error": "Nelze vybrat na kontraktovou adresu",
@@ -234,9 +227,6 @@
       "updated": "Aktualizováno",
       "update_failed": "Aktualizace selhala",
       "update_error": "Chyba při aktualizaci strany",
-      "transferred": "Přeneseno",
-      "transfer_failed": "Předání vedení selhalo",
-      "transfer_error": "Chyba při předávání vedení",
       "dissolved": "Rozpuštěna",
       "dissolve_failed": "Rozpuštění selhalo",
       "dissolve_error": "Chyba při rozpouštění strany"
@@ -256,10 +246,10 @@
     "withdraw": "Vybrat",
     "trade": "Obchodovat",
     "continue": "Pokračovat",
+    "close": "Zavřít",
     "updating": "Aktualizace...",
     "save": "Uložit",
-    "vote": "Hlasovat",
-    "close": "Zavřít"
+    "vote": "Hlasovat"
   },
   "auth": {
     "choose_method": "Vyberte preferovanou metodu.",

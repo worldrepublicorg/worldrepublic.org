@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menü",
-    "world_republic": "Dünya Cumhuriyeti"
+    "world_republic": "Dünya Cumhuriyeti",
+    "menu": "Menü"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Siyasi partiler",
-          "subtitle": "Ortak değerler etrafında küresel olarak birleş"
+          "title": "Siyasi partiler"
         },
         "elections": {
           "title": "Test seçimleri",
@@ -23,15 +22,19 @@
           "subtitle": "Temel ilkelerimiz üzerinde oy ver"
         }
       },
+      "vote": {
+        "no_active_election": "Seçimler yakında başlıyor",
+        "test_verification": {
+          "description": "Sorunsuz bir oylama deneyimi için kimlik doğrulama sistemimizi şimdi deneyin.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Keşfet",
         "search_placeholder": "Parti ara...",
-        "tabs": {
-          "new": "Yeni",
-          "trending": "Trend",
-          "top": "En İyi"
-        },
         "no_parties_found": "Parti bulunamadı",
+        "error_loading": "Partiler yüklenemedi",
+        "refresh": "Yenile",
         "loading_more": "Daha fazla parti yükleniyor...",
         "party_details": "Parti detayları",
         "share_party": "Partiyi paylaş",
@@ -65,15 +68,6 @@
           "leader": "Lider",
           "website": "Web sitesi",
           "not_found_description": "Aradığınız parti mevcut değil veya feshedilmiş."
-        },
-        "error_loading": "Partiler yüklenemedi",
-        "refresh": "Yenile"
-      },
-      "vote": {
-        "no_active_election": "Seçimler yakında başlıyor",
-        "test_verification": {
-          "description": "Sorunsuz bir oylama deneyimi için kimlik doğrulama sistemimizi şimdi deneyin.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "SSS",
           "support": "Destek"
         },
+        "source_code": {
+          "title": "KAYNAK KODU"
+        },
         "legal": {
           "title": "YASAL",
           "terms": "Kullanım Şartları",
           "privacy": "Gizlilik Politikası"
-        },
-        "source_code": {
-          "title": "KAYNAK KODU"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Gönder",
           "withdraw_to_crypto": {
-            "description": "WDD'yi bir kripto hesabına çek",
+            "description": "WDD'yi bir kripto hesabına çek.",
             "amount_label": "Miktar",
             "address_label": "Cüzdan adresi",
             "network_label": "Ağ"
@@ -221,7 +215,6 @@
       "no_wallet": "Cüzdan adresi yok",
       "min_amount": "Minimum 10 WDD",
       "sent": "Gönderildi",
-      "failed": "Sumsub ID gerekli",
       "account_deleted": "Hesap silindi",
       "delete_failed": "Hesap silme başarısız",
       "contract_address_error": "Sözleşme adresine çekim yapılamaz",
@@ -234,9 +227,6 @@
       "updated": "Güncellendi",
       "update_failed": "Güncelleme başarısız",
       "update_error": "Partiyi güncellerken hata",
-      "transferred": "Devredildi",
-      "transfer_failed": "Liderlik devri başarısız",
-      "transfer_error": "Liderlik devrederken hata",
       "dissolved": "Dağıtıldı",
       "dissolve_failed": "Dağıtma başarısız",
       "dissolve_error": "Partiyi dağıtırken hata"
@@ -256,10 +246,10 @@
     "withdraw": "Çek",
     "trade": "Ticaret",
     "continue": "Devam et",
+    "close": "Kapat",
     "updating": "Güncelleniyor...",
     "save": "Kaydet",
-    "vote": "Oy ver",
-    "close": "Kapat"
+    "vote": "Oy ver"
   },
   "auth": {
     "choose_method": "Tercih ettiğiniz yöntemi seçin.",

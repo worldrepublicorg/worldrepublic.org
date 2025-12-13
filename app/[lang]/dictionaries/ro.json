@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Meniu",
-    "world_republic": "Republica Mondială"
+    "world_republic": "Republica Mondială",
+    "menu": "Meniu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partide politice",
-          "subtitle": "Unește-te global în jurul valorilor comune"
+          "title": "Partide politice"
         },
         "elections": {
           "title": "Alegeri de test",
@@ -23,15 +22,19 @@
           "subtitle": "Votează pentru principiile noastre fundamentale"
         }
       },
+      "vote": {
+        "no_active_election": "Alegerile se apropie",
+        "test_verification": {
+          "description": "Încercați acum sistemul nostru de verificare a identității pentru o experiență de votare fără probleme.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Descoperă",
         "search_placeholder": "Caută partide...",
-        "tabs": {
-          "new": "Noi",
-          "trending": "Tendințe",
-          "top": "Top"
-        },
         "no_parties_found": "Nu s-au găsit partide",
+        "error_loading": "Nu s-a reușit încărcarea partidelor",
+        "refresh": "Actualizează",
         "loading_more": "Se încarcă mai multe partide...",
         "party_details": "Detalii partid",
         "share_party": "Distribuie partidul",
@@ -65,15 +68,6 @@
           "leader": "Lider",
           "website": "Site web",
           "not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
-        },
-        "error_loading": "Nu s-a reușit încărcarea partidelor",
-        "refresh": "Actualizează"
-      },
-      "vote": {
-        "no_active_election": "Alegerile se apropie",
-        "test_verification": {
-          "description": "Încercați acum sistemul nostru de verificare a identității pentru o experiență de votare fără probleme.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Întrebări frecvente",
           "support": "Suport"
         },
+        "source_code": {
+          "title": "COD SURSĂ"
+        },
         "legal": {
           "title": "LEGAL",
           "terms": "Termeni și condiții",
           "privacy": "Politica de confidențialitate"
-        },
-        "source_code": {
-          "title": "COD SURSĂ"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Trimite",
           "withdraw_to_crypto": {
-            "description": "Retrageți WDD pe un cont crypto",
+            "description": "Retrageți WDD pe un cont crypto.",
             "amount_label": "Suma",
             "address_label": "Adresa portofel",
             "network_label": "Rețea"
@@ -221,7 +215,6 @@
       "no_wallet": "Fără adresă de portofel",
       "min_amount": "Minimum 10 WDD",
       "sent": "Trimis",
-      "failed": "Sumsub ID necesar",
       "account_deleted": "Cont șters",
       "delete_failed": "Ștergerea contului a eșuat",
       "contract_address_error": "Nu se poate retrage către adresa de contract",
@@ -234,9 +227,6 @@
       "updated": "Actualizat",
       "update_failed": "Actualizarea a eșuat",
       "update_error": "Eroare la actualizarea partidului",
-      "transferred": "Transferat",
-      "transfer_failed": "Transferul conducerii a eșuat",
-      "transfer_error": "Eroare la transferul conducerii",
       "dissolved": "Desființat",
       "dissolve_failed": "Desființarea a eșuat",
       "dissolve_error": "Eroare la desființarea partidului"
@@ -256,10 +246,10 @@
     "withdraw": "Retragere",
     "trade": "Tranzacționare",
     "continue": "Continuă",
+    "close": "Închide",
     "updating": "Actualizare...",
     "save": "Salvează",
-    "vote": "Votează",
-    "close": "Închide"
+    "vote": "Votează"
   },
   "auth": {
     "choose_method": "Alegeți metoda preferată.",

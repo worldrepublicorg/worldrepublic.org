@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menü",
-    "world_republic": "Weltrepublik"
+    "world_republic": "Weltrepublik",
+    "menu": "Menü"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politische Parteien",
-          "subtitle": "Weltweit um gemeinsame Werte vereinen"
+          "title": "Politische Parteien"
         },
         "elections": {
           "title": "Testwahlen",
@@ -23,15 +22,19 @@
           "subtitle": "Über unsere Grundprinzipien abstimmen"
         }
       },
+      "vote": {
+        "no_active_election": "Wahlen beginnen bald",
+        "test_verification": {
+          "description": "Testen Sie jetzt unser Identitätsprüfungssystem für ein reibungsloses Wahlerlebnis.",
+          "button": "Testen"
+        }
+      },
       "parties": {
         "discover": "Entdecken",
         "search_placeholder": "Parteien suchen...",
-        "tabs": {
-          "new": "Neu",
-          "trending": "Trending",
-          "top": "Top"
-        },
         "no_parties_found": "Keine Parteien gefunden",
+        "error_loading": "Parteien konnten nicht geladen werden",
+        "refresh": "Aktualisieren",
         "loading_more": "Lade weitere Parteien...",
         "party_details": "Parteidetails",
         "share_party": "Partei teilen",
@@ -65,15 +68,6 @@
           "leader": "Vorsitzender",
           "website": "Website",
           "not_found_description": "Die gesuchte Partei existiert nicht oder wurde aufgelöst."
-        },
-        "error_loading": "Parteien konnten nicht geladen werden",
-        "refresh": "Aktualisieren"
-      },
-      "vote": {
-        "no_active_election": "Wahlen beginnen bald",
-        "test_verification": {
-          "description": "Testen Sie jetzt unser Identitätsprüfungssystem für ein reibungsloses Wahlerlebnis.",
-          "button": "Testen"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Senden",
           "withdraw_to_crypto": {
-            "description": "WDD auf ein Krypto-Konto abheben",
+            "description": "WDD auf ein Krypto-Konto abheben.",
             "amount_label": "Betrag",
             "address_label": "Geldbörse-Adresse",
             "network_label": "Netzwerk"
@@ -221,7 +215,6 @@
       "no_wallet": "Keine Geldbörse-Adresse",
       "min_amount": "Mindestens 10 WDD",
       "sent": "Gesendet",
-      "failed": "Sumsub ID erforderlich",
       "account_deleted": "Konto gelöscht",
       "delete_failed": "Löschen des Kontos fehlgeschlagen",
       "contract_address_error": "Auszahlung an Vertragsadresse nicht möglich",
@@ -234,9 +227,6 @@
       "updated": "Aktualisiert",
       "update_failed": "Aktualisierung fehlgeschlagen",
       "update_error": "Fehler beim Aktualisieren der Partei",
-      "transferred": "Übertragen",
-      "transfer_failed": "Führungsübertragung fehlgeschlagen",
-      "transfer_error": "Fehler bei der Führungsübertragung",
       "dissolved": "Aufgelöst",
       "dissolve_failed": "Auflösung fehlgeschlagen",
       "dissolve_error": "Fehler beim Auflösen der Partei"
@@ -256,10 +246,10 @@
     "withdraw": "Abheben",
     "trade": "Handeln",
     "continue": "Weiter",
+    "close": "Schließen",
     "updating": "Aktualisiere...",
     "save": "Speichern",
-    "vote": "Abstimmen",
-    "close": "Schließen"
+    "vote": "Abstimmen"
   },
   "auth": {
     "choose_method": "Wählen Sie Ihre bevorzugte Methode.",

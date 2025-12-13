@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "ሜኑ",
-    "world_republic": "የዓለም ሪፓብሊክ"
+    "world_republic": "የዓለም ሪፓብሊክ",
+    "menu": "ሜኑ"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "የፖለቲካ ፓርቲዎች",
-          "subtitle": "በጋራ እሴቶች ዙሪያ በዓለም አቀፍ ደረጃ ይተባበሩ"
+          "title": "የፖለቲካ ፓርቲዎች"
         },
         "elections": {
           "title": "የሙከራ ምርጫዎች",
@@ -23,15 +22,19 @@
           "subtitle": "በመሰረታዊ መርሆቻችን ድምጽ ይስጡ"
         }
       },
+      "vote": {
+        "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",
+        "test_verification": {
+          "description": "ለተሳለጠ የምርጫ ልምድ የማንነት ማረጋገጫ ስርዓታችንን አሁኑኑ ይሞክሩ።",
+          "button": "ሙከራ"
+        }
+      },
       "parties": {
         "discover": "አግኝ",
         "search_placeholder": "ፓርቲዎችን ፈልግ...",
-        "tabs": {
-          "new": "አዲስ",
-          "trending": "ታዋቂ",
-          "top": "ከፍተኛ"
-        },
         "no_parties_found": "ፓርቲ አልተገኘም",
+        "error_loading": "ፓርቲዎችን መጫን አልተቻለም",
+        "refresh": "አድስ",
         "loading_more": "ተጨማሪ ፓርቲዎች በመጫን ላይ...",
         "party_details": "የፓርቲ ዝርዝሮች",
         "share_party": "ፓርቲ ያጋሩ",
@@ -65,15 +68,6 @@
           "leader": "አመራር",
           "website": "ድህረ ገጽ",
           "not_found_description": "የሚፈልጉት ፓርቲ የለም ወይም ተፈትቷል።"
-        },
-        "error_loading": "ፓርቲዎችን መጫን አልተቻለም",
-        "refresh": "አድስ"
-      },
-      "vote": {
-        "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",
-        "test_verification": {
-          "description": "ለተሳለጠ የምርጫ ልምድ የማንነት ማረጋገጫ ስርዓታችንን አሁኑኑ ይሞክሩ።",
-          "button": "ሙከራ"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "ተደጋጋሚ ጥያቄዎች",
           "support": "ድጋፍ"
         },
+        "source_code": {
+          "title": "ሶርስ ኮድ"
+        },
         "legal": {
           "title": "ሕጋዊ",
           "terms": "የአጠቃቀም ውሎች",
           "privacy": "የግላዊነት መመሪያዎች"
-        },
-        "source_code": {
-          "title": "ሶርስ ኮድ"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "ላክ",
           "withdraw_to_crypto": {
-            "description": "WDDን ወደ ክሪፕቶ ሂሳብ ውጣ",
+            "description": "WDDን ወደ ክሪፕቶ ሂሳብ ውጣ.",
             "amount_label": "መጠን",
             "address_label": "የባህር ዳር አድራሻ",
             "network_label": "አውታረ መረብ"
@@ -221,7 +215,6 @@
       "no_wallet": "የባህር ዳር አድራሻ የለም",
       "min_amount": "ዝቅተኛ 10 WDD",
       "sent": "ተላከ",
-      "failed": "Sumsub ID ያስፈልጋል",
       "account_deleted": "መለያ ተጠፍቷል",
       "delete_failed": "መለያ ማጥፋት አልተሳካም",
       "contract_address_error": "ወደ የስምምነት አድራሻ ማውጣት አይቻልም",
@@ -234,9 +227,6 @@
       "updated": "ተዘምኗል",
       "update_failed": "ማዘመን አልተሳካም",
       "update_error": "ፓርቲ ሲዘምን ስህተት",
-      "transferred": "ተላልፏል",
-      "transfer_failed": "አመራር ማስተላለፍ አልተሳካም",
-      "transfer_error": "አመራር ሲተላለፍ ስህተት",
       "dissolved": "ተፈትቷል",
       "dissolve_failed": "መፍታት አልተሳካም",
       "dissolve_error": "ፓርቲ ሲፈታ ስህተት"
@@ -256,10 +246,10 @@
     "withdraw": "ማውጣት",
     "trade": "ንግድ",
     "continue": "ቀጥል",
+    "close": "ዝጋ",
     "updating": "በመቅረጽ ላይ...",
     "save": "አስቀምጥ",
-    "vote": "መጥየት",
-    "close": "ዝጋ"
+    "vote": "መጥየት"
   },
   "auth": {
     "choose_method": "የሚመርጡትን ዘዴ ይምረጡ.",

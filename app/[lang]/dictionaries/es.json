@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menú",
-    "world_republic": "República Mundial"
+    "world_republic": "República Mundial",
+    "menu": "Menú"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partidos políticos",
-          "subtitle": "Únete globalmente alrededor de valores compartidos"
+          "title": "Partidos políticos"
         },
         "elections": {
           "title": "Elecciones de prueba",
@@ -23,15 +22,19 @@
           "subtitle": "Vota sobre nuestros principios fundamentales"
         }
       },
+      "vote": {
+        "no_active_election": "Elecciones comienzan pronto",
+        "test_verification": {
+          "description": "Prueba nuestro sistema de verificación de identidad ahora para una experiencia de votación fluida.",
+          "button": "Prueba"
+        }
+      },
       "parties": {
         "discover": "Descubrir",
         "search_placeholder": "Buscar partidos...",
-        "tabs": {
-          "new": "Nuevos",
-          "trending": "Tendencias",
-          "top": "Principales"
-        },
         "no_parties_found": "No se encontraron partidos",
+        "error_loading": "Error al cargar los partidos",
+        "refresh": "Actualizar",
         "loading_more": "Cargando más partidos...",
         "party_details": "Detalles del partido",
         "share_party": "Compartir partido",
@@ -65,15 +68,6 @@
           "leader": "Líder",
           "website": "Sitio web",
           "not_found_description": "El partido que buscas no existe o ha sido disuelto."
-        },
-        "error_loading": "Error al cargar los partidos",
-        "refresh": "Actualizar"
-      },
-      "vote": {
-        "no_active_election": "Elecciones comienzan pronto",
-        "test_verification": {
-          "description": "Prueba nuestro sistema de verificación de identidad ahora para una experiencia de votación fluida.",
-          "button": "Prueba"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Enviar",
           "withdraw_to_crypto": {
-            "description": "Retirar WDD a una cuenta cripto",
+            "description": "Retirar WDD a una cuenta cripto.",
             "amount_label": "Cantidad",
             "address_label": "Dirección de billetera",
             "network_label": "Red"
@@ -221,7 +215,6 @@
       "no_wallet": "No hay dirección de billetera",
       "min_amount": "Mínimo 10 WDD",
       "sent": "Enviado",
-      "failed": "Sumsub ID requerido",
       "account_deleted": "Cuenta eliminada",
       "delete_failed": "Error al eliminar cuenta",
       "contract_address_error": "No se puede retirar a dirección de contrato",
@@ -234,9 +227,6 @@
       "updated": "Actualizado",
       "update_failed": "Error al actualizar",
       "update_error": "Error al actualizar el partido",
-      "transferred": "Transferido",
-      "transfer_failed": "Error al transferir liderazgo",
-      "transfer_error": "Error al transferir el liderazgo",
       "dissolved": "Disuelto",
       "dissolve_failed": "Error al disolver",
       "dissolve_error": "Error al disolver el partido"
@@ -256,10 +246,10 @@
     "withdraw": "Retirar",
     "trade": "Comerciar",
     "continue": "Continuar",
+    "close": "Cerrar",
     "updating": "Actualizando...",
     "save": "Guardar",
-    "vote": "Votar",
-    "close": "Cerrar"
+    "vote": "Votar"
   },
   "auth": {
     "choose_method": "Elige tu método preferido.",

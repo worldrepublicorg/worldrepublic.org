@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Meni",
-    "world_republic": "Svetovna republika"
+    "world_republic": "Svetovna republika",
+    "menu": "Meni"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Politične stranke",
-          "subtitle": "Združite se globalno okoli skupnih vrednot"
+          "title": "Politične stranke"
         },
         "elections": {
           "title": "Testne volitve",
@@ -23,15 +22,19 @@
           "subtitle": "Glasujte o naših temeljnih načelih"
         }
       },
+      "vote": {
+        "no_active_election": "Volitve se začnejo kmalu",
+        "test_verification": {
+          "description": "Preizkusite naš sistem preverjanja identitete zdaj za brezhibno izkušnjo glasovanja.",
+          "button": "Test"
+        }
+      },
       "parties": {
         "discover": "Odkrij",
         "search_placeholder": "Iskanje strank...",
-        "tabs": {
-          "new": "Nove",
-          "trending": "Trendi",
-          "top": "Vrh"
-        },
         "no_parties_found": "Stranke niso najdene",
+        "error_loading": "Ni bilo mogoče naložiti strank",
+        "refresh": "Osveži",
         "loading_more": "Nalaganje več strank...",
         "party_details": "Podrobnosti stranke",
         "share_party": "Deli stranko",
@@ -65,15 +68,6 @@
           "leader": "Vodja",
           "website": "Spletna stran",
           "not_found_description": "Stranka, ki jo iščete, ne obstaja ali je bila razpuščena."
-        },
-        "error_loading": "Ni bilo mogoče naložiti strank",
-        "refresh": "Osveži"
-      },
-      "vote": {
-        "no_active_election": "Volitve se začnejo kmalu",
-        "test_verification": {
-          "description": "Preizkusite naš sistem preverjanja identitete zdaj za brezhibno izkušnjo glasovanja.",
-          "button": "Test"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Pogosta vprašanja",
           "support": "Podpora"
         },
+        "source_code": {
+          "title": "IZVORNA KODA"
+        },
         "legal": {
           "title": "PRAVNO",
           "terms": "Pogoji uporabe",
           "privacy": "Pravilnik o zasebnosti"
-        },
-        "source_code": {
-          "title": "IZVORNA KODA"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Pošlji",
           "withdraw_to_crypto": {
-            "description": "Dvigni WDD na kripto račun",
+            "description": "Dvigni WDD na kripto račun.",
             "amount_label": "Znesek",
             "address_label": "Naslov denarnice",
             "network_label": "Omrežje"
@@ -221,7 +215,6 @@
       "no_wallet": "Ni naslova denarnice",
       "min_amount": "Najmanj 10 WDD",
       "sent": "Poslano",
-      "failed": "Sumsub ID je potreben",
       "account_deleted": "Račun izbrisan",
       "delete_failed": "Brisanje računa neuspešno",
       "contract_address_error": "Ni mogoče dvigniti na naslov pogodbe",
@@ -234,9 +227,6 @@
       "updated": "Posodobljeno",
       "update_failed": "Posodobitev ni uspela",
       "update_error": "Napaka pri posodabljanju stranke",
-      "transferred": "Preneseno",
-      "transfer_failed": "Prenos vodstva ni uspel",
-      "transfer_error": "Napaka pri prenosu vodstva",
       "dissolved": "Razpuščena",
       "dissolve_failed": "Razpustitev ni uspela",
       "dissolve_error": "Napaka pri razpuščanju stranke"
@@ -256,10 +246,10 @@
     "withdraw": "Dvigni",
     "trade": "Trgovanje",
     "continue": "Nadaljuj",
+    "close": "Zapri",
     "updating": "Posodabljanje...",
     "save": "Shrani",
-    "vote": "Glasuj",
-    "close": "Zapri"
+    "vote": "Glasuj"
   },
   "auth": {
     "choose_method": "Izberite želeno metodo.",

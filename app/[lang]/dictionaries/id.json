@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menu",
-    "world_republic": "Republik Dunia"
+    "world_republic": "Republik Dunia",
+    "menu": "Menu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Partai politik",
-          "subtitle": "Bersatu secara global di sekitar nilai-nilai bersama"
+          "title": "Partai politik"
         },
         "elections": {
           "title": "Pemilu uji coba",
@@ -23,15 +22,19 @@
           "subtitle": "Beri suara atas prinsip-prinsip dasar kita"
         }
       },
+      "vote": {
+        "no_active_election": "Pemilu segera dimulai",
+        "test_verification": {
+          "description": "Coba sistem verifikasi identitas kami sekarang untuk pengalaman pemungutan suara yang lancar.",
+          "button": "Uji"
+        }
+      },
       "parties": {
         "discover": "Temukan",
         "search_placeholder": "Cari partai...",
-        "tabs": {
-          "new": "Baru",
-          "trending": "Trending",
-          "top": "Teratas"
-        },
         "no_parties_found": "Tidak ada partai ditemukan",
+        "error_loading": "Gagal memuat partai",
+        "refresh": "Segarkan",
         "loading_more": "Memuat lebih banyak partai...",
         "party_details": "Detail partai",
         "share_party": "Bagikan partai",
@@ -65,15 +68,6 @@
           "leader": "Pemimpin",
           "website": "Situs web",
           "not_found_description": "Partai yang Anda cari tidak ada atau telah dibubarkan."
-        },
-        "error_loading": "Gagal memuat partai",
-        "refresh": "Segarkan"
-      },
-      "vote": {
-        "no_active_election": "Pemilu segera dimulai",
-        "test_verification": {
-          "description": "Coba sistem verifikasi identitas kami sekarang untuk pengalaman pemungutan suara yang lancar.",
-          "button": "Uji"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "FAQ",
           "support": "Dukungan"
         },
+        "source_code": {
+          "title": "KODE SUMBER"
+        },
         "legal": {
           "title": "LEGAL",
           "terms": "Ketentuan Penggunaan",
           "privacy": "Kebijakan Privasi"
-        },
-        "source_code": {
-          "title": "KODE SUMBER"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Kirim",
           "withdraw_to_crypto": {
-            "description": "Tarik WDD ke akun crypto",
+            "description": "Tarik WDD ke akun crypto.",
             "amount_label": "Jumlah",
             "address_label": "Alamat dompet",
             "network_label": "Jaringan"
@@ -221,7 +215,6 @@
       "no_wallet": "Tidak ada alamat dompet",
       "min_amount": "Minimal 10 WDD",
       "sent": "Terkirim",
-      "failed": "Sumsub ID diperlukan",
       "account_deleted": "Akun dihapus",
       "delete_failed": "Gagal menghapus akun",
       "contract_address_error": "Tidak dapat menarik ke alamat kontrak",
@@ -234,9 +227,6 @@
       "updated": "Diperbarui",
       "update_failed": "Gagal memperbarui",
       "update_error": "Kesalahan saat memperbarui partai",
-      "transferred": "Ditransfer",
-      "transfer_failed": "Gagal mentransfer kepemimpinan",
-      "transfer_error": "Kesalahan saat mentransfer kepemimpinan",
       "dissolved": "Dibubarkan",
       "dissolve_failed": "Gagal membubarkan",
       "dissolve_error": "Kesalahan saat membubarkan partai"
@@ -256,10 +246,10 @@
     "withdraw": "Tarik",
     "trade": "Perdagangan",
     "continue": "Lanjutkan",
+    "close": "Tutup",
     "updating": "Memperbarui...",
     "save": "Simpan",
-    "vote": "Pilih",
-    "close": "Tutup"
+    "vote": "Pilih"
   },
   "auth": {
     "choose_method": "Pilih metode pilihan Anda.",

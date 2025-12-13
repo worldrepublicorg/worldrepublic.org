@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Menyu",
-    "world_republic": "Jahon Respublikasi"
+    "world_republic": "Jahon Respublikasi",
+    "menu": "Menyu"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Siyosiy partiyalar",
-          "subtitle": "Umumiy qadriyatlar atrofida global birlashuv"
+          "title": "Siyosiy partiyalar"
         },
         "elections": {
           "title": "Sinov saylovlari",
@@ -23,15 +22,19 @@
           "subtitle": "Asosiy tamoyillarimiz bo'yicha ovoz bering"
         }
       },
+      "vote": {
+        "no_active_election": "Saylovlar tez orada boshlanadi",
+        "test_verification": {
+          "description": "Ovoz berish jarayonini uzluksiz o‘tkazish uchun shaxsni tasdiqlash tizimimizni hoziroq sinab ko‘ring.",
+          "button": "Sinov"
+        }
+      },
       "parties": {
         "discover": "Topish",
         "search_placeholder": "Partiyalarni qidirish...",
-        "tabs": {
-          "new": "Yangi",
-          "trending": "Trend",
-          "top": "Eng yaxshi"
-        },
         "no_parties_found": "Partiyalar topilmadi",
+        "error_loading": "Partiyalarni yuklab bo‘lmadi",
+        "refresh": "Yangilash",
         "loading_more": "Ko'proq partiyalar yuklanmoqda...",
         "party_details": "Partiya tafsilotlari",
         "share_party": "Partiyani ulashish",
@@ -65,15 +68,6 @@
           "leader": "Rahbar",
           "website": "Veb-sayt",
           "not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
-        },
-        "error_loading": "Partiyalarni yuklab bo‘lmadi",
-        "refresh": "Yangilash"
-      },
-      "vote": {
-        "no_active_election": "Saylovlar tez orada boshlanadi",
-        "test_verification": {
-          "description": "Ovoz berish jarayonini uzluksiz o‘tkazish uchun shaxsni tasdiqlash tizimimizni hoziroq sinab ko‘ring.",
-          "button": "Sinov"
         }
       }
     },
@@ -89,13 +83,13 @@
           "faq": "Savol-javob",
           "support": "Qo'llab-quvvatlash"
         },
+        "source_code": {
+          "title": "MANBA KODI"
+        },
         "legal": {
           "title": "HUQUQIY",
           "terms": "Foydalanish shartlari",
           "privacy": "Maxfiylik siyosati"
-        },
-        "source_code": {
-          "title": "MANBA KODI"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Yuborish",
           "withdraw_to_crypto": {
-            "description": "WDD ni kripto hisobga yechib olish",
+            "description": "WDD ni kripto hisobga yechib olish.",
             "amount_label": "Miqdor",
             "address_label": "Hamyon manzili",
             "network_label": "Tarmoq"
@@ -221,7 +215,6 @@
       "no_wallet": "Hamyon manzili yo'q",
       "min_amount": "Minimal 10 WDD",
       "sent": "Yuborildi",
-      "failed": "Sumsub ID talab qilinadi",
       "account_deleted": "Hisob o'chirildi",
       "delete_failed": "Hisobni o'chirish muvaffaqiyatsiz",
       "contract_address_error": "Shartnoma manziliga yechib bo'lmaydi",
@@ -234,9 +227,6 @@
       "updated": "Yangilandi",
       "update_failed": "Yangilash muvaffaqiyatsiz",
       "update_error": "Partiyani yangilashda xato",
-      "transferred": "O'tkazildi",
-      "transfer_failed": "Rahbarlikni o'tkazish muvaffaqiyatsiz",
-      "transfer_error": "Rahbarlikni o'tkazishda xato",
       "dissolved": "Tarqatildi",
       "dissolve_failed": "Tarqatish muvaffaqiyatsiz",
       "dissolve_error": "Partiyani tarqatishda xato"
@@ -256,10 +246,10 @@
     "withdraw": "Yechib olish",
     "trade": "Savdo",
     "continue": "Davom etish",
+    "close": "Yopish",
     "updating": "Yangilanmoqda...",
     "save": "Saqlash",
-    "vote": "Ovoz bering",
-    "close": "Yopish"
+    "vote": "Ovoz bering"
   },
   "auth": {
     "choose_method": "Afzal ko'rgan usulni tanlang.",

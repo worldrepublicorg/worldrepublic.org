@@ -1,7 +1,7 @@
 {
   "nav": {
-    "menu": "Ibikubiye",
-    "world_republic": "Repubulika y'Isi"
+    "world_republic": "Repubulika y'Isi",
+    "menu": "Ibikubiye"
   },
   "pages": {
     "govern": {
@@ -11,8 +11,7 @@
       },
       "sections": {
         "parties": {
-          "title": "Amashyirahamwe y'amategeko",
-          "subtitle": "Mugire hamwe ku isi hose mu byerekeye imigambi yumvikanye"
+          "title": "Amashyirahamwe y'amategeko"
         },
         "elections": {
           "title": "Amatora y'igerageza",
@@ -23,15 +22,19 @@
           "subtitle": "Vota ku migambi yacu y'ibanze"
         }
       },
+      "vote": {
+        "no_active_election": "Amatora aratangira vuba",
+        "test_verification": {
+          "description": "Gerageza uburyo bwacu bwo kugenzura umwirondoro nonaha kugira ngo uzatore neza.",
+          "button": "Gerageza"
+        }
+      },
       "parties": {
         "discover": "Gushakisha",
         "search_placeholder": "Shakisha amashyirahamwe...",
-        "tabs": {
-          "new": "Gushya",
-          "trending": "Bikomeye",
-          "top": "Hejuru"
-        },
         "no_parties_found": "Ntacyo amashyirahamwe babonewe",
+        "error_loading": "Kunanirwa gushyira amashyaka",
+        "refresh": "Kuvugurura",
         "loading_more": "Kuzana amashyirahamwe menshi...",
         "party_details": "Incamake y'amashyirahamwe",
         "share_party": "Gusangira amashyirahamwe",
@@ -65,15 +68,6 @@
           "leader": "Umuobozi",
           "website": "Urubuga",
           "not_found_description": "Amashyirahamwe ushakisha ntayabaho cyangwa yarimbuwe."
-        },
-        "error_loading": "Kunanirwa gushyira amashyaka",
-        "refresh": "Kuvugurura"
-      },
-      "vote": {
-        "no_active_election": "Amatora aratangira vuba",
-        "test_verification": {
-          "description": "Gerageza uburyo bwacu bwo kugenzura umwirondoro nonaha kugira ngo uzatore neza.",
-          "button": "Gerageza"
         }
       }
     },
@@ -144,7 +138,7 @@
         "send": {
           "button": "Ohereza",
           "withdraw_to_crypto": {
-            "description": "Kuramo WDD kuri konte ya crypto",
+            "description": "Kuramo WDD kuri konte ya crypto.",
             "amount_label": "Umubare",
             "address_label": "Aderesi y'ifunguro",
             "network_label": "Urubugu"
@@ -191,8 +185,8 @@
         },
         "types": {
           "withdrawal": "Gukuramo",
-          "received": "Byakiriwe",
-          "sent": "Byoherejwe"
+          "received": "Wakiriwe",
+          "sent": "Watumwe"
         }
       }
     }
@@ -221,7 +215,6 @@
       "no_wallet": "Nta deresi y'ifunguro",
       "min_amount": "Buke 10 WDD",
       "sent": "Byoherejwe",
-      "failed": "Sumsub ID iba ngombwa",
       "account_deleted": "Konti yasibwe",
       "delete_failed": "Gusiba konti byanze",
       "contract_address_error": "Ntishobora gukuramo ku deresi y'umukono",
@@ -234,9 +227,6 @@
       "updated": "Yasubiramo",
       "update_failed": "Gusubiramo byanze",
       "update_error": "Ikosa mu gusubiramo amashyirahamwe",
-      "transferred": "Yimuriwe",
-      "transfer_failed": "Kwimura ubuyobozi byanze",
-      "transfer_error": "Ikosa mu kwimura ubuyobozi",
       "dissolved": "Yarimbuwe",
       "dissolve_failed": "Kurimbura byanze",
       "dissolve_error": "Ikosa mu kurimbura amashyirahamwe"
@@ -256,10 +246,10 @@
     "withdraw": "Kuramo",
     "trade": "Gucuruzana",
     "continue": "Komeza",
+    "close": "Funga",
     "updating": "Gusubiramo...",
     "save": "Bika",
-    "vote": "Vota",
-    "close": "Funga"
+    "vote": "Vota"
   },
   "auth": {
     "choose_method": "Hitamo uburyo wifuza.",
