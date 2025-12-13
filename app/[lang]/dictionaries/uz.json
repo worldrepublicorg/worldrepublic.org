@@ -106,7 +106,7 @@
         },
         "drachma-value": {
           "question": "Draxmaning qiymati qayerdan keladi?",
-          "answer": "Draxma o'z qiymatini Jahon Respublikasining rasmiy valyutasi bo'lishidan oladi. Bizning global boshqaruv platformamizning qonuniyligi o'sishi bilan, WDD global qayta taqsimlash vositasi va jahon iqtisodiyotidagi asosiy almashish vositasi bo'lishi mumkin."
+          "answer": "Draxma o'z qiymatini Jahon Respublikasining rasmiy valyutasi bo'lishidan oladi. Platformamizning qonuniyligi oshgani sayin, WDD global qayta taqsimlash vositasi va jahon iqtisodiyotida asosiy almashinuv vositasiga aylanishi mumkin."
         },
         "test-elections": {
           "question": "Test saylovlar nima?",

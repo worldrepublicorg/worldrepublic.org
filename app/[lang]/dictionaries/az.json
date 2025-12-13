@@ -106,7 +106,7 @@
         },
         "drachma-value": {
           "question": "Drahmanın dəyəri nədən yaranır?",
-          "answer": "Draxma dəyərini Dünya Respublikasının rəsmi valyutası olmaqdan əldə edir. Qlobal idarəetmə platformamızın etibarlılığı artdıqca, WDD qlobal yenidən bölüşdürmənin vasitəsi və dünya iqtisadiyyatında əsas mübadilə vasitəsi ola bilər."
+          "answer": "Draxma öz dəyərini Dünya Respublikasının rəsmi valyutası olmaqdan alır. Platformamızın legitimliyi artdıqca, WDD qlobal yenidən bölüşdürmə vasitəsi və dünya iqtisadiyyatında əsas mübadilə vasitəsi ola bilər."
         },
         "test-elections": {
           "question": "Test seçkiləri nədir?",
