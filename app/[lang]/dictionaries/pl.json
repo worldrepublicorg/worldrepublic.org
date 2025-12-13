@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Wybory wkrótce",
         "test_verification": {
-          "description": "Wypróbuj nasz system weryfikacji tożsamości już teraz, aby być gotowym na otwarcie głosowania.",
+          "description": "Wypróbuj nasz system weryfikacji tożsamości już teraz, aby być gotowym do głosowania.",
           "button": "Test"
         }
       },

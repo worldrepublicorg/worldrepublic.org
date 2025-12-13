@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Awọn idibo bẹrẹ laipẹ",
         "test_verification": {
-          "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi lati ṣetan nigbati ibo ba ṣii.",
+          "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi lati ṣetan fun ibo.",
           "button": "Idanwo"
         }
       },

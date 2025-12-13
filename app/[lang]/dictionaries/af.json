@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Verkiesings begin binnekort",
         "test_verification": {
-          "description": "Probeer ons identiteitsverifikasiestelsel nou om gereed te wees wanneer stemming open.",
+          "description": "Probeer ons identiteitsverifikasiestelsel nou om gereed te wees vir stemming.",
           "button": "Toets"
         }
       },

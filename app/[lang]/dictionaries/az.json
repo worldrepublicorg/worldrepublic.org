@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Seçkilər tezliklə başlayır",
         "test_verification": {
-          "description": "Səsvermə başlayanda hazır olmaq üçün indi şəxsiyyəti təsdiqləmə sistemimizi sınayın.",
+          "description": "Səsverməyə hazır olmaq üçün indi şəxsiyyəti təsdiqləmə sistemimizi sınayın.",
           "button": "Sınaq"
         }
       },

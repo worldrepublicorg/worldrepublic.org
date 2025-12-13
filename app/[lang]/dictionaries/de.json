@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Wahlen beginnen bald",
         "test_verification": {
-          "description": "Testen Sie jetzt unser Identitätsverifizierungssystem, um bereit zu sein, wenn die Abstimmung beginnt.",
+          "description": "Testen Sie jetzt unser Identitätsverifizierungssystem, um für die Abstimmung bereit zu sein.",
           "button": "Testen"
         }
       },

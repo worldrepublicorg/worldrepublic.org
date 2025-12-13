@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Választások hamarosan",
         "test_verification": {
-          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most, hogy készen álljon a szavazás kezdetére.",
+          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most, hogy készen álljon a szavazásra.",
           "button": "Teszt"
         }
       },
