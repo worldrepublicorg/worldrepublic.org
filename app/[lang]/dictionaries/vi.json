@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Bầu cử sắp bắt đầu",
         "test_verification": {
-          "description": "Thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để có trải nghiệm bỏ phiếu suôn sẻ.",
+          "description": "Hãy thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để sẵn sàng khi cuộc bỏ phiếu mở ra.",
           "button": "Kiểm tra"
         }
       },

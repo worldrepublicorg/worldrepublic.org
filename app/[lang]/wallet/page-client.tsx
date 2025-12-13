@@ -358,10 +358,6 @@ export default function WalletPageClient({
                     }
                     options={[
                       {
-                        label: "Base",
-                        value: "8453",
-                      },
-                      {
                         label: "Monad",
                         value: "143",
                       },
@@ -462,29 +458,6 @@ export default function WalletPageClient({
 
                 <AlertDialogFooter>
                   <div className="flex flex-col gap-2 w-full">
-                    <a
-                      href="https://app.uniswap.org/explore/tokens/base/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full"
-                    >
-                      <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.base}
-                        startAdornment={
-                          <Image
-                            src="/icons/chains/base.png"
-                            alt={dictionary.pages.wallet.modals.trade.base_alt}
-                            width={24}
-                            height={24}
-                            className="size-6 rounded-full"
-                            priority
-                          />
-                        }
-                        endAdornment={
-                          <PiArrowSquareOut className="size-4 text-gray-400" />
-                        }
-                      />
-                    </a>
                     <a
                       href="https://app.uniswap.org/explore/tokens/monad/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
