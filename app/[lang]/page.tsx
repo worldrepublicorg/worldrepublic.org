@@ -37,8 +37,6 @@ export default async function VotePage({
     ? (tab as TabKey)
     : TABS[0];
 
-  const currentIndex = TABS.indexOf(activeTab);
-
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
@@ -61,15 +59,9 @@ export default async function VotePage({
         ]}
       />
 
-      <div className="relative flex grow items-center justify-center overflow-hidden">
-        <div
-          className="flex w-full items-center transition-transform duration-300 ease-out"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-          }}
-        >
-          {/* Elections tab */}
-          <div className="flex min-w-full flex-col items-center justify-center p-6 text-center">
+      <div className="flex grow items-center justify-center">
+        {activeTab === "elections" ? (
+          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
             <div className="flex w-full flex-col items-center gap-4">
               <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
                 <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
@@ -92,9 +84,8 @@ export default async function VotePage({
               />
             </div>
           </div>
-
-          {/* Referendums tab */}
-          <div className="flex min-w-full flex-col items-center justify-center p-6 text-center">
+        ) : (
+          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
             <div className="flex w-full flex-col items-center gap-4">
               <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
                 <PiScrollFill className="h-10 w-10 text-gray-400" />
@@ -114,7 +105,7 @@ export default async function VotePage({
               </Button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
