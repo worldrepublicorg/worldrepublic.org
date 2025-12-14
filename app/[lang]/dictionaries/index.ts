@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import en from "./en.json";
 
 export type Dictionary = typeof en;
@@ -57,5 +58,13 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: string) => {
-  return dictionaries[locale as keyof typeof dictionaries]();
+  const loader = dictionaries[locale as keyof typeof dictionaries];
+  if (!loader) {
+    throw new Error(`Dictionary not found for locale: ${locale}`);
+  }
+  return unstable_cache(
+    async () => loader(),
+    [`dictionary-${locale}`],
+    { revalidate: 3600 }, // Cache for 1 hour
+  )();
 };

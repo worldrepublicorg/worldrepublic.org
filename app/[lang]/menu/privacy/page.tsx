@@ -169,7 +169,7 @@ export default function PrivacyPage() {
               <li className="text-[14px] leading-normal text-gray-900">
                 <strong className="font-semibold">Analytics Cookies:</strong>{" "}
                 Help us understand how visitors interact with our Service
-                through anonymized analytics (via Vercel Analytics)
+                through anonymized performance monitoring
               </li>
             </ul>
             <Typography
@@ -353,9 +353,12 @@ export default function PrivacyPage() {
                 transmitted
               </li>
               <li className="text-[14px] leading-normal text-gray-900">
-                <strong className="font-semibold">Vercel Analytics:</strong> For
-                performance monitoring. Vercel Analytics collects anonymized
-                performance metrics only and does not store personal information
+                <strong className="font-semibold">
+                  Vercel Speed Insights:
+                </strong>{" "}
+                For performance monitoring. Vercel Speed Insights collects
+                anonymized performance metrics only and does not store personal
+                information
               </li>
               <li className="text-[14px] leading-normal text-gray-900">
                 <strong className="font-semibold">Thirdweb:</strong> For

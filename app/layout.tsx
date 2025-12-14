@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
-import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
 import { SessionProvider } from "next-auth/react";
@@ -116,7 +115,6 @@ export default async function RootLayout({
           </div>
           <BottomNav />
         </SessionProvider>
-        <Analytics />
         <SpeedInsights />
       </body>
     </html>
