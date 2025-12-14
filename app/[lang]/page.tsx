@@ -25,11 +25,9 @@ export default async function VotePage({
     () => import("@/components/vote/vote-button").then((mod) => mod.VoteButton),
     {
       loading: () => (
-        <div className="flex items-center justify-center h-14 w-full mt-6! rounded-full bg-gray-100 text-gray-300">
-          <Typography variant="label" level={1}>
-            {dictionary.common.vote}
-          </Typography>
-        </div>
+        <Button disabled fullWidth className="mt-6!">
+          {dictionary.common.vote}
+        </Button>
       ),
     },
   );
