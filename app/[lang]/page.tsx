@@ -1,24 +1,10 @@
-import {
-  Button,
-  Skeleton,
-  Typography,
-} from "@worldcoin/mini-apps-ui-kit-react";
+import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
-
-// Lazy load VoteButton with skeleton fallback
-const VoteButton = dynamic(
-  () => import("@/components/vote/vote-button").then((mod) => mod.VoteButton),
-  {
-    loading: () => (
-      <Skeleton height={44} width="100%" className="mt-6! rounded-lg" />
-    ),
-  },
-);
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
@@ -33,6 +19,20 @@ export default async function VotePage({
   const { lang } = await params;
   const { tab } = await searchParams;
   const dictionary = await getDictionary(lang);
+
+  // Lazy load VoteButton with skeleton fallback
+  const VoteButton = dynamic(
+    () => import("@/components/vote/vote-button").then((mod) => mod.VoteButton),
+    {
+      loading: () => (
+        <div className="flex items-center justify-center h-14 w-full mt-6! rounded-full bg-gray-100 text-gray-300">
+          <Typography variant="label" level={1}>
+            {dictionary.common.vote}
+          </Typography>
+        </div>
+      ),
+    },
+  );
 
   // Validate tab from URL or default to first
   const activeTab: TabKey = TABS.includes(tab as TabKey)
