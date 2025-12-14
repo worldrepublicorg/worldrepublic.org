@@ -76,14 +76,23 @@ export default async function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
         <link
-          rel="preconnect"
-          href="https://mini-apps-ui-kit.world.org"
+          rel="preload"
+          as="font"
+          href="/fonts/TWKLausanne-350.woff2"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
           as="font"
-          href="https://mini-apps-ui-kit.world.org/fonts/TWKLausanne-600.woff2"
+          href="/fonts/TWKLausanne-500.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/TWKLausanne-600.woff2"
           type="font/woff2"
           crossOrigin="anonymous"
         />
@@ -92,20 +101,6 @@ export default async function RootLayout({
           as="font"
           href="/fonts/Rubik.ttf"
           type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="https://mini-apps-ui-kit.world.org/fonts/TWKLausanne-350.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="https://mini-apps-ui-kit.world.org/fonts/TWKLausanne-500.woff2"
-          type="font/woff2"
           crossOrigin="anonymous"
         />
       </head>
