@@ -147,34 +147,23 @@ export async function createParty(data: CreatePartyData) {
 export async function getParty(partyId: string): Promise<Party | null> {
   const startTime = performance.now();
   const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+  const QUERY_TIMEOUT_MS = 5000; // Reduced from 10s to 5s for faster failure detection
 
   try {
-    // Use read-only DB (HTTP driver) for better performance
-    const readDb = getDbReadOnly();
-
-    const partyRow = await Promise.race([
-      withRetry(
-        async () => {
-          const [row] = await readDb
-            .select(getTableColumns(parties))
-            .from(parties)
-            .where(eq(parties.id, partyId))
-            .limit(1);
-          return row;
-        },
-        {
-          maxRetries: 2,
-          initialDelay: 200,
-          maxDelay: 2000,
-        },
-      ),
-      new Promise<never>((_, reject) => {
-        setTimeout(
-          () => reject(new Error("Query timeout after 10 seconds")),
-          10000,
-        );
-      }),
-    ]);
+    // Execute query with timeout and retry logic
+    const partyRow = await executeQueryWithTimeout(
+      async (db) => {
+        const [row] = await db
+          .select(getTableColumns(parties))
+          .from(parties)
+          .where(eq(parties.id, partyId))
+          .limit(1);
+        return row;
+      },
+      requestId,
+      QUERY_TIMEOUT_MS,
+      "getParty",
+    );
 
     if (!partyRow) {
       return null;
@@ -192,6 +181,42 @@ export async function getParty(partyId: string): Promise<Party | null> {
     return party;
   } catch (error) {
     const duration = performance.now() - startTime;
+    const { getConnectionInfo, checkConnectionHealth } = await import(
+      "@/lib/db/connection"
+    );
+    const connInfo = getConnectionInfo();
+
+    // Check connection health when we get a timeout
+    let healthCheck: {
+      healthy: boolean;
+      latency?: number;
+      error?: string;
+    } | null = null;
+    if (
+      error instanceof Error &&
+      (error.message.includes("timeout") || error.message.includes("hanging"))
+    ) {
+      try {
+        healthCheck = await Promise.race([
+          checkConnectionHealth(),
+          new Promise<{ healthy: boolean; error: string }>((resolve) =>
+            setTimeout(
+              () => resolve({ healthy: false, error: "Health check timeout" }),
+              2000,
+            ),
+          ),
+        ]);
+      } catch (healthError) {
+        healthCheck = {
+          healthy: false,
+          error:
+            healthError instanceof Error
+              ? healthError.message
+              : String(healthError),
+        };
+      }
+    }
+
     const errorDetails = {
       requestId,
       partyId,
@@ -199,7 +224,8 @@ export async function getParty(partyId: string): Promise<Party | null> {
       errorType: error instanceof Error ? error.constructor.name : typeof error,
       errorMessage: error instanceof Error ? error.message : String(error),
       errorStack: error instanceof Error ? error.stack : undefined,
-      connectionType: process.env.LOCAL_DATABASE_URL ? "localhost" : "remote",
+      connectionInfo: connInfo,
+      healthCheck,
       timestamp: new Date().toISOString(),
     };
 
@@ -324,6 +350,7 @@ async function withRetry<T>(
     initialDelay?: number;
     maxDelay?: number;
     retryableErrors?: string[];
+    context?: string;
   } = {},
 ): Promise<T> {
   const {
@@ -340,6 +367,7 @@ async function withRetry<T>(
       "network",
       "connection",
     ],
+    context = "query",
   } = options;
 
   let lastError: unknown;
@@ -347,7 +375,15 @@ async function withRetry<T>(
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
-      return await fn();
+      const attemptStart = performance.now();
+      const result = await fn();
+      const attemptDuration = performance.now() - attemptStart;
+      if (attemptDuration > 1000) {
+        console.warn(
+          `[${context}] Slow attempt: ${attemptDuration.toFixed(2)}ms (attempt ${attempt + 1})`,
+        );
+      }
+      return result;
     } catch (error) {
       lastError = error;
       const errorMessage =
@@ -366,7 +402,7 @@ async function withRetry<T>(
 
       // Log retry attempt
       console.warn(
-        `[getParties] Retry attempt ${attempt + 1}/${maxRetries} after ${delay}ms. Error: ${errorMessage.substring(0, 100)}`,
+        `[${context}] Retry attempt ${attempt + 1}/${maxRetries} after ${delay}ms. Error: ${errorMessage.substring(0, 100)}`,
       );
 
       // Wait before retrying (exponential backoff with jitter)
@@ -380,11 +416,59 @@ async function withRetry<T>(
   throw lastError;
 }
 
+// Execute query with timeout and retry logic
+async function executeQueryWithTimeout<T>(
+  queryFn: (db: ReturnType<typeof getDbReadOnly>) => Promise<T>,
+  requestId: string,
+  timeoutMs: number = 5000,
+  context: string = "getParties",
+): Promise<T> {
+  const { getDbReadOnly, getConnectionInfo } = await import(
+    "@/lib/db/connection"
+  );
+  const connInfo = getConnectionInfo();
+  const readDb = getDbReadOnly();
+
+  // Log connection info for debugging
+  console.log(
+    `[${context}] Starting query (requestId: ${requestId}, connection: ${connInfo.connectionType}, timeout: ${timeoutMs}ms)`,
+  );
+
+  const startTime = performance.now();
+  const result = await Promise.race([
+    withRetry(async () => queryFn(readDb), {
+      maxRetries: 2, // Reduced retries since we have shorter timeout
+      initialDelay: 300,
+      maxDelay: 1500,
+      context: `${context}-${requestId}`,
+    }),
+    new Promise<never>((_, reject) => {
+      setTimeout(
+        () =>
+          reject(
+            new Error(
+              `Query timeout after ${timeoutMs}ms - Neon HTTP driver may be hanging`,
+            ),
+          ),
+        timeoutMs,
+      );
+    }),
+  ]);
+  const duration = performance.now() - startTime;
+  if (duration > 2000) {
+    console.warn(
+      `[${context}] Slow query: ${duration.toFixed(2)}ms (requestId: ${requestId})`,
+    );
+  }
+  return result;
+}
+
 // Party Discovery
 
 export async function getParties(filters?: PartyFilters): Promise<Party[]> {
   const startTime = performance.now();
   const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+  const QUERY_TIMEOUT_MS = 5000; // Reduced from 10s to 5s for faster failure detection
 
   try {
     const limit = filters?.limit || 1000;
@@ -405,44 +489,32 @@ export async function getParties(filters?: PartyFilters): Promise<Party[]> {
       )!;
     }
 
-    // Query PostgreSQL: active parties, ordered by createdAt DESC (newest first)
-    // Use read-only DB (HTTP driver) for better performance on read queries
-    const readDb = getDbReadOnly();
-
-    // Wrap query with retry logic and timeout
+    // Execute query with timeout and retry logic
     const queryStartTime = performance.now();
-    const partyRows = await Promise.race([
-      withRetry(
-        async () => {
-          return await readDb
-            .select(getTableColumns(parties))
-            .from(parties)
-            .where(whereCondition)
-            .orderBy(desc(parties.createdAt))
-            .limit(limit)
-            .offset(offset);
-        },
-        {
-          maxRetries: 3,
-          initialDelay: 200,
-          maxDelay: 2000,
-        },
-      ),
-      new Promise<never>((_, reject) => {
-        setTimeout(
-          () => reject(new Error("Query timeout after 10 seconds")),
-          10000,
-        );
-      }),
-    ]);
+    const partyRows = await executeQueryWithTimeout(
+      async (db) => {
+        return await db
+          .select(getTableColumns(parties))
+          .from(parties)
+          .where(whereCondition)
+          .orderBy(desc(parties.createdAt))
+          .limit(limit)
+          .offset(offset);
+      },
+      requestId,
+      QUERY_TIMEOUT_MS,
+      "getParties",
+    );
 
     const queryDuration = performance.now() - queryStartTime;
     const totalDuration = performance.now() - startTime;
 
     // Log successful query with timing
     if (queryDuration > 1000) {
+      const { getConnectionInfo } = await import("@/lib/db/connection");
+      const connInfo = getConnectionInfo();
       console.warn(
-        `[getParties] Slow query detected: ${queryDuration.toFixed(2)}ms (requestId: ${requestId}, limit: ${limit}, offset: ${offset})`,
+        `[getParties] Slow query detected: ${queryDuration.toFixed(2)}ms (requestId: ${requestId}, limit: ${limit}, offset: ${offset}, connection: ${connInfo.connectionType})`,
       );
     }
 
@@ -456,6 +528,42 @@ export async function getParties(filters?: PartyFilters): Promise<Party[]> {
     return result;
   } catch (error) {
     const totalDuration = performance.now() - startTime;
+    const { getConnectionInfo, checkConnectionHealth } = await import(
+      "@/lib/db/connection"
+    );
+    const connInfo = getConnectionInfo();
+
+    // Check connection health when we get a timeout
+    let healthCheck: {
+      healthy: boolean;
+      latency?: number;
+      error?: string;
+    } | null = null;
+    if (
+      error instanceof Error &&
+      (error.message.includes("timeout") || error.message.includes("hanging"))
+    ) {
+      try {
+        healthCheck = await Promise.race([
+          checkConnectionHealth(),
+          new Promise<{ healthy: boolean; error: string }>((resolve) =>
+            setTimeout(
+              () => resolve({ healthy: false, error: "Health check timeout" }),
+              2000,
+            ),
+          ),
+        ]);
+      } catch (healthError) {
+        healthCheck = {
+          healthy: false,
+          error:
+            healthError instanceof Error
+              ? healthError.message
+              : String(healthError),
+        };
+      }
+    }
+
     const errorDetails = {
       requestId,
       duration: `${totalDuration.toFixed(2)}ms`,
@@ -467,7 +575,8 @@ export async function getParties(filters?: PartyFilters): Promise<Party[]> {
         offset: filters?.offset,
         hasSearch: !!filters?.search,
       },
-      connectionType: process.env.LOCAL_DATABASE_URL ? "localhost" : "remote",
+      connectionInfo: connInfo,
+      healthCheck,
       timestamp: new Date().toISOString(),
     };
 
