@@ -23,7 +23,19 @@ async function PartiesData({
 }) {
   // Fetch parties (public data, cached) - no auth needed
   const parties = await getCachedParties().catch((error) => {
-    console.error("[PartiesPage] Error fetching parties:", error);
+    const errorDetails = {
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      timestamp: new Date().toISOString(),
+      lang,
+    };
+
+    console.error(
+      "[PartiesPage] Error fetching parties:",
+      JSON.stringify(errorDetails, null, 2),
+    );
+    console.error("[PartiesPage] Raw error:", error);
+
     return [] as Party[];
   });
 

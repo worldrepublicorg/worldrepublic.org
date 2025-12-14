@@ -1,6 +1,7 @@
 import "server-only";
 import "dotenv/config";
 import { neon, Pool } from "@neondatabase/serverless";
+import { sql } from "drizzle-orm";
 import { drizzle as drizzleHttp } from "drizzle-orm/neon-http";
 import { drizzle } from "drizzle-orm/neon-serverless";
 import { drizzle as drizzlePostgres } from "drizzle-orm/postgres-js";
@@ -90,6 +91,41 @@ if (isLocalhost) {
 
 // Export read-only DB for queries that don't need transactions (faster)
 export const getDbReadOnly = () => dbReadOnly || db;
+
+// Export connection info for debugging
+export function getConnectionInfo() {
+  return {
+    isLocalhost,
+    hasLocalDb: !!process.env.LOCAL_DATABASE_URL,
+    hasRemoteDb: !!process.env.DATABASE_URL,
+    connectionType: isLocalhost ? "postgres.js" : "neon-http",
+    poolCached: !!global.__neonPool || !!global.__postgresClient,
+  };
+}
+
+// Add connection health check function
+export async function checkConnectionHealth(): Promise<{
+  healthy: boolean;
+  latency?: number;
+  error?: string;
+}> {
+  const startTime = performance.now();
+  try {
+    const readDb = getDbReadOnly();
+    // Simple query to check connection
+    await readDb.execute(sql`SELECT 1`);
+    const latency = performance.now() - startTime;
+    return { healthy: true, latency };
+  } catch (error) {
+    const latency = performance.now() - startTime;
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    return {
+      healthy: false,
+      latency,
+      error: errorMessage,
+    };
+  }
+}
 
 export { db, pool };
 export const getIsLocalhost = () => isLocalhost;

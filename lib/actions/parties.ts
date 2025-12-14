@@ -145,23 +145,70 @@ export async function createParty(data: CreatePartyData) {
 }
 
 export async function getParty(partyId: string): Promise<Party | null> {
+  const startTime = performance.now();
+  const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+
   try {
     // Use read-only DB (HTTP driver) for better performance
     const readDb = getDbReadOnly();
-    const [partyRow] = await readDb
-      .select(getTableColumns(parties))
-      .from(parties)
-      .where(eq(parties.id, partyId))
-      .limit(1);
+
+    const partyRow = await Promise.race([
+      withRetry(
+        async () => {
+          const [row] = await readDb
+            .select(getTableColumns(parties))
+            .from(parties)
+            .where(eq(parties.id, partyId))
+            .limit(1);
+          return row;
+        },
+        {
+          maxRetries: 2,
+          initialDelay: 200,
+          maxDelay: 2000,
+        },
+      ),
+      new Promise<never>((_, reject) => {
+        setTimeout(
+          () => reject(new Error("Query timeout after 10 seconds")),
+          10000,
+        );
+      }),
+    ]);
 
     if (!partyRow) {
       return null;
     }
 
     const party = pgRowToParty(partyRow);
+    const duration = performance.now() - startTime;
+
+    if (duration > 1000) {
+      console.warn(
+        `[getParty] Slow query detected: ${duration.toFixed(2)}ms (requestId: ${requestId}, partyId: ${partyId})`,
+      );
+    }
+
     return party;
   } catch (error) {
-    console.error(`[getParty] Error getting party ${partyId}:`, error);
+    const duration = performance.now() - startTime;
+    const errorDetails = {
+      requestId,
+      partyId,
+      duration: `${duration.toFixed(2)}ms`,
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      errorStack: error instanceof Error ? error.stack : undefined,
+      connectionType: process.env.LOCAL_DATABASE_URL ? "localhost" : "remote",
+      timestamp: new Date().toISOString(),
+    };
+
+    console.error(
+      `[getParty] Error getting party ${partyId} after ${duration.toFixed(2)}ms (requestId: ${requestId}):`,
+      JSON.stringify(errorDetails, null, 2),
+    );
+    console.error("[getParty] Raw error:", error);
+
     return null;
   }
 }
@@ -269,10 +316,76 @@ export async function deleteParty(
   }
 }
 
+// Retry utility for transient network errors
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  options: {
+    maxRetries?: number;
+    initialDelay?: number;
+    maxDelay?: number;
+    retryableErrors?: string[];
+  } = {},
+): Promise<T> {
+  const {
+    maxRetries = 3,
+    initialDelay = 100,
+    maxDelay = 5000,
+    retryableErrors = [
+      "ECONNRESET",
+      "ETIMEDOUT",
+      "ENOTFOUND",
+      "ECONNREFUSED",
+      "timeout",
+      "fetch failed",
+      "network",
+      "connection",
+    ],
+  } = options;
+
+  let lastError: unknown;
+  let delay = initialDelay;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      lastError = error;
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+      const errorString = errorMessage.toLowerCase();
+
+      // Check if error is retryable
+      const isRetryable = retryableErrors.some((pattern) =>
+        errorString.includes(pattern.toLowerCase()),
+      );
+
+      // Don't retry on last attempt or if error is not retryable
+      if (attempt === maxRetries || !isRetryable) {
+        throw error;
+      }
+
+      // Log retry attempt
+      console.warn(
+        `[getParties] Retry attempt ${attempt + 1}/${maxRetries} after ${delay}ms. Error: ${errorMessage.substring(0, 100)}`,
+      );
+
+      // Wait before retrying (exponential backoff with jitter)
+      await new Promise((resolve) =>
+        setTimeout(resolve, delay + Math.random() * 100),
+      );
+      delay = Math.min(delay * 2, maxDelay);
+    }
+  }
+
+  throw lastError;
+}
+
 // Party Discovery
 
 export async function getParties(filters?: PartyFilters): Promise<Party[]> {
   const startTime = performance.now();
+  const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+
   try {
     const limit = filters?.limit || 1000;
     const offset = filters?.offset || 0;
@@ -295,21 +408,78 @@ export async function getParties(filters?: PartyFilters): Promise<Party[]> {
     // Query PostgreSQL: active parties, ordered by createdAt DESC (newest first)
     // Use read-only DB (HTTP driver) for better performance on read queries
     const readDb = getDbReadOnly();
-    const partyRows = await readDb
-      .select(getTableColumns(parties))
-      .from(parties)
-      .where(whereCondition)
-      .orderBy(desc(parties.createdAt))
-      .limit(limit)
-      .offset(offset);
+
+    // Wrap query with retry logic and timeout
+    const queryStartTime = performance.now();
+    const partyRows = await Promise.race([
+      withRetry(
+        async () => {
+          return await readDb
+            .select(getTableColumns(parties))
+            .from(parties)
+            .where(whereCondition)
+            .orderBy(desc(parties.createdAt))
+            .limit(limit)
+            .offset(offset);
+        },
+        {
+          maxRetries: 3,
+          initialDelay: 200,
+          maxDelay: 2000,
+        },
+      ),
+      new Promise<never>((_, reject) => {
+        setTimeout(
+          () => reject(new Error("Query timeout after 10 seconds")),
+          10000,
+        );
+      }),
+    ]);
+
+    const queryDuration = performance.now() - queryStartTime;
+    const totalDuration = performance.now() - startTime;
+
+    // Log successful query with timing
+    if (queryDuration > 1000) {
+      console.warn(
+        `[getParties] Slow query detected: ${queryDuration.toFixed(2)}ms (requestId: ${requestId}, limit: ${limit}, offset: ${offset})`,
+      );
+    }
 
     // Convert PostgreSQL rows to Party objects
-    return partyRows.map(pgRowToParty);
-  } catch (error) {
-    console.error(
-      `[getParties] Error after ${(performance.now() - startTime).toFixed(2)}ms:`,
-      error,
+    const result = partyRows.map(pgRowToParty);
+
+    console.log(
+      `[getParties] Success: ${result.length} parties in ${totalDuration.toFixed(2)}ms (requestId: ${requestId})`,
     );
+
+    return result;
+  } catch (error) {
+    const totalDuration = performance.now() - startTime;
+    const errorDetails = {
+      requestId,
+      duration: `${totalDuration.toFixed(2)}ms`,
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      errorStack: error instanceof Error ? error.stack : undefined,
+      filters: {
+        limit: filters?.limit,
+        offset: filters?.offset,
+        hasSearch: !!filters?.search,
+      },
+      connectionType: process.env.LOCAL_DATABASE_URL ? "localhost" : "remote",
+      timestamp: new Date().toISOString(),
+    };
+
+    // Enhanced error logging with structured data
+    console.error(
+      `[getParties] Error after ${totalDuration.toFixed(2)}ms (requestId: ${requestId}):`,
+      JSON.stringify(errorDetails, null, 2),
+    );
+
+    // Also log the raw error for stack traces
+    console.error("[getParties] Raw error:", error);
+
     return [];
   }
 }
