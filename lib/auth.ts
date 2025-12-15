@@ -4,7 +4,6 @@ import GoogleProvider from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
 import { cache } from "react";
 import { createNeonAdapterWithWebAuthn } from "./auth/adapter";
-import { pool } from "./db/connection";
 
 const authSecret = process.env.NEXTAUTH_SECRET;
 if (!authSecret) {
@@ -41,7 +40,7 @@ if (!googleClientId || !googleClientSecret) {
 // This is safe because:
 // - For localhost: postgres.js doesn't connect until a query is made
 // - For remote: Pool connections are also lazy
-const adapter = createNeonAdapterWithWebAuthn(pool);
+const adapter = createNeonAdapterWithWebAuthn();
 
 const { handlers, auth: uncachedAuth } = NextAuth({
   adapter,
