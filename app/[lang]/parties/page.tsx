@@ -9,7 +9,15 @@ import PartiesPageClient from "./page-client";
 // Cache parties list for 60 seconds - same for all users
 // Invalidated via revalidateTag("parties-list") when parties change
 const getCachedParties = unstable_cache(
-  async () => getParties({ limit: 100 }),
+  async () => {
+    const parties = await getParties({ limit: 100 });
+    // If parties is null (error), return empty array but log it
+    // ideally we would want to not cache this, but unstable_cache doesn't support conditional caching
+    if (parties === null) {
+      throw new Error("Failed to fetch parties");
+    }
+    return parties;
+  },
   ["parties-list"],
   { revalidate: 60, tags: ["parties-list"] },
 );
@@ -22,7 +30,11 @@ async function PartiesData({
   dictionary: Dictionary;
 }) {
   // Fetch parties (public data, cached) - no auth needed
-  const parties = await getCachedParties().catch((error) => {
+  let parties: Party[] | null = [];
+
+  try {
+    parties = await getCachedParties();
+  } catch (error) {
     const errorDetails = {
       errorType: error instanceof Error ? error.constructor.name : typeof error,
       errorMessage: error instanceof Error ? error.message : String(error),
@@ -34,10 +46,9 @@ async function PartiesData({
       "[PartiesPage] Error fetching parties:",
       JSON.stringify(errorDetails, null, 2),
     );
-    console.error("[PartiesPage] Raw error:", error);
-
-    return [] as Party[];
-  });
+    // Explicitly set to null to signal error state to client
+    parties = null;
+  }
 
   return (
     <PartiesPageClient parties={parties} dictionary={dictionary} lang={lang} />

@@ -7,7 +7,7 @@ import { TopBar } from "@/components/topbar";
 import type { Party } from "@/lib/types/parties";
 
 interface PartiesPageClientProps {
-  parties: Party[];
+  parties: Party[] | null;
   dictionary: Dictionary;
   lang: string;
 }

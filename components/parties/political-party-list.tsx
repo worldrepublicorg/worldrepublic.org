@@ -42,7 +42,7 @@ import {
 import type { CreatePartyData, Party } from "@/lib/types/parties";
 
 interface PoliticalPartyListProps {
-  initialParties: Party[]; // Parties fetched at page level
+  initialParties: Party[] | null; // Parties fetched at page level (null = error)
   dictionary: Dictionary; // All translations passed from server
   lang: string; // Language code from URL
 }
@@ -147,7 +147,7 @@ export function PoliticalPartyList({
 
   // Sync parties from props when they change
   useEffect(() => {
-    if (initialParties !== undefined) {
+    if (initialParties !== undefined && initialParties !== null) {
       setParties(initialParties);
     }
   }, [initialParties]);
@@ -254,6 +254,11 @@ export function PoliticalPartyList({
           limit,
           offset: partiesOffset,
         });
+        if (moreParties === null) {
+          // If fetch failed, we can't do much in infinite scroll except stop loading
+          setIsLoadingMore(false);
+          return;
+        }
         if (moreParties.length === 0) {
           setHasMoreParties(false);
         } else {
@@ -396,9 +401,11 @@ export function PoliticalPartyList({
         setShouldOpenFoundDialogAfterAuth(false);
         // Refresh data
         const allParties = await getParties({ limit: 100 });
-        setParties(allParties);
-        setPartiesOffset(allParties.length);
-        setHasMoreParties(allParties.length >= 100);
+        if (allParties !== null) {
+          setParties(allParties);
+          setPartiesOffset(allParties.length);
+          setHasMoreParties(allParties.length >= 100);
+        }
         if (user?.id) {
           const party = await getUserParty();
           setUserParty(party);
@@ -489,9 +496,11 @@ export function PoliticalPartyList({
         setIsUpdateDialogOpen(false);
         // Refresh data
         const allParties = await getParties({ limit: 100 });
-        setParties(allParties);
-        setPartiesOffset(allParties.length);
-        setHasMoreParties(allParties.length >= 100);
+        if (allParties !== null) {
+          setParties(allParties);
+          setPartiesOffset(allParties.length);
+          setHasMoreParties(allParties.length >= 100);
+        }
         if (user?.id) {
           const party = await getUserParty();
           setUserParty(party);
@@ -525,9 +534,11 @@ export function PoliticalPartyList({
         setUserParty(null);
         // Refresh data
         const allParties = await getParties({ limit: 100 });
-        setParties(allParties);
-        setPartiesOffset(allParties.length);
-        setHasMoreParties(allParties.length >= 100);
+        if (allParties !== null) {
+          setParties(allParties);
+          setPartiesOffset(allParties.length);
+          setHasMoreParties(allParties.length >= 100);
+        }
       } else {
         toast.error({
           title: result.error || dictionary.toasts.parties.dissolve_failed,
@@ -655,8 +666,8 @@ export function PoliticalPartyList({
 
       {/* Parties list */}
       <div className="px-6 pb-6">
-        {parties.length === 0 ? (
-          // Error state
+        {initialParties === null ? (
+          // Error state (only when initial load failed)
           <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
             <Typography
               variant="body"

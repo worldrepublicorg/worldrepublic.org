@@ -465,7 +465,9 @@ async function executeQueryWithTimeout<T>(
 
 // Party Discovery
 
-export async function getParties(filters?: PartyFilters): Promise<Party[]> {
+export async function getParties(
+  filters?: PartyFilters,
+): Promise<Party[] | null> {
   const startTime = performance.now();
   const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
   const QUERY_TIMEOUT_MS = 15000;
@@ -589,7 +591,7 @@ export async function getParties(filters?: PartyFilters): Promise<Party[]> {
     // Also log the raw error for stack traces
     console.error("[getParties] Raw error:", error);
 
-    return [];
+    return null;
   }
 }
 
