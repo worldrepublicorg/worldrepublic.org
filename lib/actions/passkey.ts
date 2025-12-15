@@ -11,7 +11,7 @@ import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { createUserProfile } from "@/lib/actions/member";
 import { createNeonAdapterWithWebAuthn } from "@/lib/auth/adapter";
-import { db, pool } from "@/lib/db/connection";
+import { getDbReadOnly, pool } from "@/lib/db/connection";
 import { accounts, authenticators, users } from "@/lib/db/schema";
 
 function getRpId(): string {
@@ -27,6 +27,7 @@ function getRpId(): string {
 export async function getPasskeyOptions() {
   try {
     const rpId = getRpId();
+    const db = getDbReadOnly();
 
     const allAuthenticators = await db
       .select({
@@ -96,6 +97,7 @@ export async function verifyPasskeyAuthentication(
 
     const rpId = getRpId();
     const origin = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const db = getDbReadOnly();
     const credentialIdString = (credential as { id: string }).id;
 
     const [authenticator] = await db
@@ -151,7 +153,7 @@ export async function verifyPasskeyAuthentication(
       return { error: "User not found" };
     }
 
-    const adapter = createNeonAdapterWithWebAuthn();
+    const adapter = createNeonAdapterWithWebAuthn(pool);
     const expires = new Date();
     expires.setDate(expires.getDate() + 30);
 
@@ -160,7 +162,7 @@ export async function verifyPasskeyAuthentication(
     }
 
     const sessionToken = crypto.randomUUID();
-    const session = await adapter.createSession({ 
+    const session = await adapter.createSession({
       sessionToken,
       userId: String(user.id),
       expires,
@@ -290,6 +292,8 @@ export async function verifyPasskeyRegistration(
         ).response.getTransports()
       : null;
 
+    const db = getDbReadOnly();
+
     // Always create a new user account for registration
     // This allows users to manage multiple passwordless accounts from the same device
     const [newUser] = await db
@@ -340,7 +344,7 @@ export async function verifyPasskeyRegistration(
       });
     }
 
-    const adapter = createNeonAdapterWithWebAuthn();
+    const adapter = createNeonAdapterWithWebAuthn(pool);
     const expires = new Date();
     expires.setDate(expires.getDate() + 30);
 

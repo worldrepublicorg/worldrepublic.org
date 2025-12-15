@@ -2,7 +2,7 @@
 
 import { and, desc, eq, isNull, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
-import { db } from "@/lib/db/connection";
+import { db, getDbReadOnly } from "@/lib/db/connection";
 import { parties, transactions, userProfiles, users } from "@/lib/db/schema";
 import { validateUsername } from "@/lib/utils";
 
@@ -73,8 +73,10 @@ export async function createUserProfile(
   userUuid: string,
   authUserId: number,
 ): Promise<typeof userProfiles.$inferSelect | null> {
+  const dbReadOnly = getDbReadOnly();
+
   // Check if profile already exists
-  const [existing] = await db
+  const [existing] = await dbReadOnly
     .select()
     .from(userProfiles)
     .where(eq(userProfiles.id, userUuid))
@@ -95,7 +97,7 @@ export async function createUserProfile(
   while (!isUnique && attempts < maxAttempts) {
     username = generateUniqueUsername();
 
-    const [existingUsername] = await db
+    const [existingUsername] = await dbReadOnly
       .select({ id: userProfiles.id })
       .from(userProfiles)
       .where(sql`LOWER(${userProfiles.username}) = ${username.toLowerCase()}`)
@@ -123,7 +125,7 @@ export async function createUserProfile(
   });
 
   // Re-fetch the newly created profile using the read replica
-  const [profile] = await db
+  const [profile] = await dbReadOnly
     .select()
     .from(userProfiles)
     .where(eq(userProfiles.id, userUuid))
@@ -138,7 +140,8 @@ export async function getUserProfile() {
     const userUuid = await getUserUuidFromSession();
 
     // Query PostgreSQL by UUID
-    let [profile] = await db
+    const dbReadOnly = getDbReadOnly();
+    let [profile] = await dbReadOnly
       .select()
       .from(userProfiles)
       .where(eq(userProfiles.id, userUuid))
@@ -419,8 +422,9 @@ export async function getTransactions(limit: number = 50) {
   try {
     const userUuid = await getUserUuidFromSession();
 
+    const readDb = getDbReadOnly();
     // Get all transactions where user is sender OR recipient
-    const transactionRows = await db
+    const transactionRows = await readDb
       .select()
       .from(transactions)
       .where(
