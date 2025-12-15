@@ -75,10 +75,9 @@ if (isLocalhost) {
     pool = global.__neonPool;
   } else {
     pool = new Pool({ connectionString });
-    if (process.env.LOCAL_DATABASE_URL) {
-      // Only cache in local dev (not in Vercel)
-      global.__neonPool = pool;
-    }
+    // Cache the pool in global scope to reuse connections in warm lambda instances
+    // This is crucial for performance in serverless environments
+    global.__neonPool = pool;
   }
 
   // Use Pool for writes when deployed (no LOCAL_DATABASE_URL), HTTP for local dev

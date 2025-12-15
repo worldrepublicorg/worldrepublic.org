@@ -147,7 +147,7 @@ export async function createParty(data: CreatePartyData) {
 export async function getParty(partyId: string): Promise<Party | null> {
   const startTime = performance.now();
   const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
-  const QUERY_TIMEOUT_MS = 5000; // Reduced from 10s to 5s for faster failure detection
+  const QUERY_TIMEOUT_MS = 15000;
 
   try {
     // Execute query with timeout and retry logic
@@ -354,9 +354,9 @@ async function withRetry<T>(
   } = {},
 ): Promise<T> {
   const {
-    maxRetries = 3,
-    initialDelay = 100,
-    maxDelay = 5000,
+    maxRetries = 5,
+    initialDelay = 500,
+    maxDelay = 8000,
     retryableErrors = [
       "ECONNRESET",
       "ETIMEDOUT",
@@ -420,7 +420,7 @@ async function withRetry<T>(
 async function executeQueryWithTimeout<T>(
   queryFn: (db: ReturnType<typeof getDbReadOnly>) => Promise<T>,
   requestId: string,
-  timeoutMs: number = 5000,
+  timeoutMs: number = 15000,
   context: string = "getParties",
 ): Promise<T> {
   const { getDbReadOnly, getConnectionInfo } = await import(
@@ -468,7 +468,7 @@ async function executeQueryWithTimeout<T>(
 export async function getParties(filters?: PartyFilters): Promise<Party[]> {
   const startTime = performance.now();
   const requestId = `req-${Date.now()}-${Math.random().toString(36).substring(7)}`;
-  const QUERY_TIMEOUT_MS = 5000; // Reduced from 10s to 5s for faster failure detection
+  const QUERY_TIMEOUT_MS = 15000;
 
   try {
     const limit = filters?.limit || 1000;
