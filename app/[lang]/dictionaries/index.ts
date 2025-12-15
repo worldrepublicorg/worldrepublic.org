@@ -55,16 +55,20 @@ const dictionaries = {
   lt: () => import("./lt.json").then((module) => module.default),
   lv: () => import("./lv.json").then((module) => module.default),
   uk: () => import("./uk.json").then((module) => module.default),
-};
+} as const;
+
+const DEFAULT_LOCALE: keyof typeof dictionaries = "en";
 
 export const getDictionary = async (locale: string) => {
-  const loader = dictionaries[locale as keyof typeof dictionaries];
-  if (!loader) {
-    throw new Error(`Dictionary not found for locale: ${locale}`);
-  }
+  const hasLocale = locale in dictionaries;
+  const actualLocale = (
+    hasLocale ? locale : DEFAULT_LOCALE
+  ) as keyof typeof dictionaries;
+  const loader = dictionaries[actualLocale];
+
   return unstable_cache(
     async () => loader(),
-    [`dictionary-${locale}`],
+    [`dictionary-${actualLocale}`],
     { revalidate: 3600 }, // Cache for 1 hour
   )();
 };
