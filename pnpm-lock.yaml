@@ -14,7 +14,7 @@ importers:
     dependencies:
       '@auth/neon-adapter':
         specifier: ^1.11.1
-        version: 1.11.1(@neondatabase/serverless@1.0.2)(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)
+        version: 1.11.1(@neondatabase/serverless@1.0.2)(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))
       '@formatjs/intl-localematcher':
         specifier: ^0.6.2
         version: 0.6.2
@@ -32,7 +32,7 @@ importers:
         version: 9.0.1
       '@simplewebauthn/server':
         specifier: ^9.0.3
-        version: 9.0.3
+        version: 9.0.3(encoding@0.1.13)
       '@vercel/speed-insights':
         specifier: ^1.2.0
         version: 1.2.0(next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)
@@ -53,7 +53,7 @@ importers:
         version: 16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-auth:
         specifier: ^5.0.0-beta.30
-        version: 5.0.0-beta.30(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)(next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)
+        version: 5.0.0-beta.30(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))(next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)
       postgres:
         specifier: ^3.4.7
         version: 3.4.7
@@ -2033,6 +2033,9 @@ packages:
     resolution: {integrity: sha512-EuJWwlHPZ1LbADuKTClvHtwbaFn4rOD+dRAbWysqEOXRc2Uui0hJInNJrsdH0c+OhJA4nrCBdSkW4DD5YxAo6A==}
     engines: {node: '>=8.10.0'}
 
+  encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+
   engine.io-client@6.6.3:
     resolution: {integrity: sha512-T0iLjnyNWahNyv/lcjS2y4oE358tVS/SYQNxYXGAJ9/GLgH4VCvOQ/mhTjqU88mLZCQgiG8RIegFHYCdVC+j5w==}
 
@@ -3329,7 +3332,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@auth/core@0.41.0(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)':
+  '@auth/core@0.41.0(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))':
     dependencies:
       '@panva/hkdf': 1.2.1
       jose: 6.1.2
@@ -3338,9 +3341,9 @@ snapshots:
       preact-render-to-string: 6.5.11(preact@10.24.3)
     optionalDependencies:
       '@simplewebauthn/browser': 9.0.1
-      '@simplewebauthn/server': 9.0.3
+      '@simplewebauthn/server': 9.0.3(encoding@0.1.13)
 
-  '@auth/core@0.41.1(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)':
+  '@auth/core@0.41.1(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))':
     dependencies:
       '@panva/hkdf': 1.2.1
       jose: 6.1.2
@@ -3349,11 +3352,11 @@ snapshots:
       preact-render-to-string: 6.5.11(preact@10.24.3)
     optionalDependencies:
       '@simplewebauthn/browser': 9.0.1
-      '@simplewebauthn/server': 9.0.3
+      '@simplewebauthn/server': 9.0.3(encoding@0.1.13)
 
-  '@auth/neon-adapter@1.11.1(@neondatabase/serverless@1.0.2)(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)':
+  '@auth/neon-adapter@1.11.1(@neondatabase/serverless@1.0.2)(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))':
     dependencies:
-      '@auth/core': 0.41.1(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)
+      '@auth/core': 0.41.1(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))
       '@neondatabase/serverless': 1.0.2
     transitivePeerDependencies:
       - '@simplewebauthn/browser'
@@ -4708,7 +4711,7 @@ snapshots:
     dependencies:
       '@simplewebauthn/types': 9.0.1
 
-  '@simplewebauthn/server@9.0.3':
+  '@simplewebauthn/server@9.0.3(encoding@0.1.13)':
     dependencies:
       '@hexagon/base64': 1.1.28
       '@levischuck/tiny-cbor': 0.2.11
@@ -4718,7 +4721,7 @@ snapshots:
       '@peculiar/asn1-schema': 2.6.0
       '@peculiar/asn1-x509': 2.5.0
       '@simplewebauthn/types': 9.0.1
-      cross-fetch: 4.1.0
+      cross-fetch: 4.1.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
 
@@ -5139,9 +5142,9 @@ snapshots:
 
   country-iso-3-to-2@1.1.1: {}
 
-  cross-fetch@4.1.0:
+  cross-fetch@4.1.0(encoding@0.1.13):
     dependencies:
-      node-fetch: 2.7.0
+      node-fetch: 2.7.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
 
@@ -5244,6 +5247,11 @@ snapshots:
       minimalistic-crypto-utils: 1.0.1
 
   encoding-japanese@2.2.0: {}
+
+  encoding@0.1.13:
+    dependencies:
+      iconv-lite: 0.6.3
+    optional: true
 
   engine.io-client@6.6.3(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
@@ -5971,14 +5979,14 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  next-auth@5.0.0-beta.30(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)(next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1):
+  next-auth@5.0.0-beta.30(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))(next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1):
     dependencies:
-      '@auth/core': 0.41.0(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3)
+      '@auth/core': 0.41.0(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))
       next: 16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react: 19.2.1
     optionalDependencies:
       '@simplewebauthn/browser': 9.0.1
-      '@simplewebauthn/server': 9.0.3
+      '@simplewebauthn/server': 9.0.3(encoding@0.1.13)
 
   next@16.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
@@ -6005,9 +6013,11 @@ snapshots:
 
   node-addon-api@3.2.1: {}
 
-  node-fetch@2.7.0:
+  node-fetch@2.7.0(encoding@0.1.13):
     dependencies:
       whatwg-url: 5.0.0
+    optionalDependencies:
+      encoding: 0.1.13
 
   node-forge@1.3.1: {}
 

@@ -9,8 +9,27 @@ import BottomNav from "@/components/bottom-nav";
 import { cn } from "@/lib/utils";
 
 const rubik = localFont({
-  src: "../public/fonts/Rubik.ttf",
+  src: "../public/fonts/Rubik.woff2",
   variable: "--font-rubik",
+});
+
+const twkLausanne = localFont({
+  src: [
+    {
+      path: "../public/fonts/TWKLausanne-350.woff2",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/TWKLausanne-500.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/TWKLausanne-600.woff2",
+      weight: "600",
+    },
+  ],
+  variable: "--font-sans",
+  display: "swap",
 });
 
 const APP_NAME = "World Republic";
@@ -74,36 +93,14 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/TWKLausanne-350.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/TWKLausanne-500.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/TWKLausanne-600.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="font"
-          href="/fonts/Rubik.ttf"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
       </head>
-      <body className={cn(rubik.variable, "relative min-h-screen antialiased")}>
+      <body
+        className={cn(
+          rubik.variable,
+          twkLausanne.variable,
+          "relative min-h-screen antialiased",
+        )}
+      >
         <div
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(0,85,99,0.08),transparent)]"
