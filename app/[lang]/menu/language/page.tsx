@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Dictionary, getDictionary } from "@/app/[lang]/dictionaries";
+import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
 import { LanguagePageSkeleton } from "@/components/menu/language-page-skeleton";
 import LanguagePageClient from "./page-client";
 
@@ -62,6 +62,11 @@ const languages = [
 ].sort((a, b) => {
   return a.label.localeCompare(b.label);
 });
+
+// This enables Static Site Generation (SSG) for all languages
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 
 async function LanguagePageData({
   lang,

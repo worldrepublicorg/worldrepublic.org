@@ -1,10 +1,15 @@
 import { Suspense } from "react";
-import { Dictionary, getDictionary } from "@/app/[lang]/dictionaries";
+import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
 import { FaqPageSkeleton } from "@/components/menu/faq-page-skeleton";
 import FaqPageClient from "./page-client";
 
 interface FaqPageProps {
   params: Promise<{ lang: string }>;
+}
+
+// This enables Static Site Generation (SSG) for all languages
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
 }
 
 async function FaqPageData({
