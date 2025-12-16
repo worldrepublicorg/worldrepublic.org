@@ -72,3 +72,6 @@ export const getDictionary = async (locale: string) => {
     { revalidate: 3600 }, // Cache for 1 hour
   )();
 };
+
+// Export locales for static generation
+export const locales = Object.keys(dictionaries);

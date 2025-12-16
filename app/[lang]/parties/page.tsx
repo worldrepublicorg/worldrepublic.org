@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
 import { Suspense } from "react";
-import { Dictionary, getDictionary } from "@/app/[lang]/dictionaries";
+import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
 import { PartiesPageSkeleton } from "@/components/parties/parties-page-skeleton";
 import { getParties } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
@@ -21,6 +21,11 @@ const getCachedParties = unstable_cache(
   ["parties-list"],
   { revalidate: 60, tags: ["parties-list"] },
 );
+
+// This enables Static Site Generation (SSG) for all languages
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 
 async function PartiesData({
   lang,
