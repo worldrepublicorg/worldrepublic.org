@@ -3,10 +3,13 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
+import { SessionProvider } from "next-auth/react";
+import BottomNav from "@/components/bottom-nav";
 import { cn } from "@/lib/utils";
 
 const rubik = localFont({
-  src: "../public/fonts/Rubik.woff2",
+  src: "../public/fonts/Rubik.ttf",
   variable: "--font-rubik",
 });
 
@@ -95,8 +98,8 @@ export default async function RootLayout({
         <link
           rel="preload"
           as="font"
-          href="/fonts/Rubik.woff2"
-          type="font/woff2"
+          href="/fonts/Rubik.ttf"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
       </head>
@@ -105,7 +108,13 @@ export default async function RootLayout({
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(0,85,99,0.08),transparent)]"
         />
-        {children}
+        <SessionProvider refetchOnWindowFocus={true}>
+          <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col bg-white shadow-sm ring-1 ring-gray-100">
+            {children}
+            <Toaster />
+          </div>
+          <BottomNav />
+        </SessionProvider>
         <SpeedInsights />
       </body>
     </html>
