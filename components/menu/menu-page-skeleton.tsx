@@ -3,6 +3,7 @@ import {
   PiArrowSquareOut,
   PiFileText,
   PiGithubLogo,
+  PiGlobe,
   PiHeadset,
   PiQuestion,
   PiShieldCheck,
@@ -31,18 +32,31 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
 
       <div className="flex-1 overflow-y-auto px-6 pb-6 pt-4">
         <div className="flex flex-col gap-8">
-          {/* First Section Skeleton - could be Account or Language section */}
+          {/* Account Section */}
           <div>
             <div className="mb-4 flex">
-              <div className="h-4.5 w-24 animate-pulse rounded bg-gray-100"></div>
+              <Typography
+                variant="subtitle"
+                level={3}
+                className="text-gray-400"
+              >
+                {dictionary.pages.menu.sections.account.title}
+              </Typography>
             </div>
             <div className="flex flex-col gap-2">
+              {/* Sign in / Account info skeleton */}
               <div className="min-h-14 bg-gray-50 rounded-2xl flex items-center p-4">
-                <div className="mr-3 shrink-0 size-5 animate-pulse rounded-full bg-gray-200"></div>
+                <div className="mr-3 shrink-0 size-5 animate-pulse rounded-full bg-gray-200" />
                 <div className="flex min-w-0 grow flex-col items-start gap-0.5">
-                  <div className="h-5 w-32 animate-pulse rounded bg-gray-200"></div>
+                  <div className="h-5 w-20 animate-pulse rounded bg-gray-200"></div>
                 </div>
               </div>
+              {/* Language item */}
+              <CustomListItem
+                label={dictionary.pages.menu.sections.account.language}
+                startAdornment={<PiGlobe className="size-5 text-gray-400" />}
+                noPointer
+              />
             </div>
           </div>
 
@@ -123,21 +137,6 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
                 }
                 noPointer
               />
-            </div>
-          </div>
-
-          {/* Sign Out Section Skeleton - only shown for authenticated users */}
-          <div>
-            <div className="mb-4 flex">
-              <div className="h-4.5 w-20 animate-pulse rounded bg-gray-100"></div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="min-h-14 bg-gray-50 rounded-2xl flex items-center p-4">
-                <div className="mr-3 shrink-0 size-5 animate-pulse rounded-full bg-gray-200"></div>
-                <div className="flex min-w-0 grow flex-col items-start gap-0.5">
-                  <div className="h-5 w-28 animate-pulse rounded bg-gray-200"></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

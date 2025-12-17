@@ -14,6 +14,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { signOut as nextAuthSignOut } from "next-auth/react";
+import { useState } from "react";
 import {
   PiArrowSquareOut,
   PiFileText,
@@ -22,12 +23,14 @@ import {
   PiHeadset,
   PiQuestion,
   PiShieldCheck,
+  PiSignIn,
   PiSignOut,
   PiSignOutFill,
   PiUserCircle,
   PiX,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { SignInDialog } from "@/components/auth/sign-in-dialog";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 
@@ -44,6 +47,7 @@ export default function MenuPageClient({
 }: MenuPageClientProps) {
   const router = useRouter();
   const { toast } = useToast();
+  const [showSignInDialog, setShowSignInDialog] = useState(false);
 
   const handleClose = () => {
     // Check if there's a stored return URL
@@ -75,11 +79,11 @@ export default function MenuPageClient({
   };
 
   const menuSections = [
-    ...(isAuthenticated
-      ? [
-          {
-            title: dictionary.pages.menu.sections.account.title,
-            links: [
+    {
+      title: dictionary.pages.menu.sections.account.title,
+      links: [
+        ...(isAuthenticated
+          ? [
               {
                 label: dictionary.pages.menu.sections.account.account_info,
                 url: "/menu/account",
@@ -88,32 +92,24 @@ export default function MenuPageClient({
                   <PiUserCircle className="size-5 text-gray-400" />
                 ),
               },
+            ]
+          : [
               {
-                label: dictionary.pages.menu.sections.account.language,
-                url: "/menu/language",
+                label: dictionary.common.sign_in,
+                url: "#",
                 isExternal: false,
-                startAdornment: <PiGlobe className="size-5 text-gray-400" />,
+                startAdornment: <PiSignIn className="size-5 text-gray-400" />,
+                onClick: () => setShowSignInDialog(true),
               },
-            ],
-          },
-        ]
-      : []),
-    ...(!isAuthenticated
-      ? [
-          {
-            title:
-              dictionary.pages.menu.sections.account.language.toUpperCase(),
-            links: [
-              {
-                label: dictionary.pages.menu.sections.account.language,
-                url: "/menu/language",
-                isExternal: false,
-                startAdornment: <PiGlobe className="size-5 text-gray-400" />,
-              },
-            ],
-          },
-        ]
-      : []),
+            ]),
+        {
+          label: dictionary.pages.menu.sections.account.language,
+          url: "/menu/language",
+          isExternal: false,
+          startAdornment: <PiGlobe className="size-5 text-gray-400" />,
+        },
+      ],
+    },
     {
       title: dictionary.pages.menu.sections.help.title,
       links: [
@@ -159,7 +155,7 @@ export default function MenuPageClient({
         },
       ],
     },
-  ] as const;
+  ];
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
@@ -193,7 +189,17 @@ export default function MenuPageClient({
               <div className="flex flex-col gap-2">
                 {section.links.map((link) => (
                   <div key={link.url} className="flex">
-                    {link.isExternal ? (
+                    {"onClick" in link && link.onClick ? (
+                      <div
+                        onClick={link.onClick}
+                        className="block w-full cursor-pointer"
+                      >
+                        <CustomListItem
+                          startAdornment={link.startAdornment}
+                          label={link.label}
+                        />
+                      </div>
+                    ) : link.isExternal ? (
                       <a
                         href={link.url}
                         target="_blank"
@@ -278,6 +284,13 @@ export default function MenuPageClient({
           )}
         </div>
       </div>
+
+      {/* Sign-in dialog */}
+      <SignInDialog
+        open={showSignInDialog}
+        onOpenChange={setShowSignInDialog}
+        dictionary={dictionary}
+      />
     </div>
   );
 }
