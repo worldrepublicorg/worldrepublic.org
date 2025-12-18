@@ -92,6 +92,20 @@ export const copyToClipboard = async (
 };
 
 /**
+ * Creates a synthetic change event for an input element
+ * @param input - The input element to create an event for
+ * @returns A synthetic React.ChangeEvent<HTMLInputElement>
+ */
+export function createChangeEvent(
+  input: HTMLInputElement,
+): React.ChangeEvent<HTMLInputElement> {
+  return {
+    target: { value: input.value },
+    currentTarget: { value: input.value },
+  } as React.ChangeEvent<HTMLInputElement>;
+}
+
+/**
  * Reserved usernames that cannot be used
  */
 const RESERVED_USERNAMES = new Set([

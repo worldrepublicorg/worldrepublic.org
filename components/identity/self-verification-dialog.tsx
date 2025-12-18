@@ -1,14 +1,5 @@
 "use client";
 
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  Button,
-  Typography,
-} from "@worldcoin/mini-apps-ui-kit-react";
 import { useParams } from "next/navigation";
 import {
   PiArrowSquareOut,
@@ -18,6 +9,15 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  Button,
+  Typography,
+} from "@/components/ui";
 import { useSelfVerification } from "@/hooks/use-self-verification";
 
 interface SelfVerificationDialogProps {

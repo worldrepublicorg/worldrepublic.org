@@ -1,18 +1,5 @@
 "use client";
 
-import {
-  AlertDialog,
-  AlertDialogClose,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTrigger,
-  Button,
-  Input,
-  Typography,
-  useToast,
-} from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
@@ -25,6 +12,19 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
+import {
+  AlertDialog,
+  AlertDialogClose,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTrigger,
+  Button,
+  Input,
+  Typography,
+  useToast,
+} from "@/components/ui";
 import { useAuth } from "@/hooks/use-auth";
 import { deleteUserAccount, setUsername } from "@/lib/actions/member";
 
@@ -122,12 +122,13 @@ export default function AccountPageClient({
         <TopBar
           title={dictionary.pages.menu.sections.account.account_info}
           startAdornment={
-            <button
+            <Button
               onClick={() => router.back()}
-              className="flex size-10 items-center justify-center rounded-full bg-gray-100"
+              variant="tertiary"
+              size="icon"
             >
               <PiCaretLeft className="size-4 text-gray-900" />
-            </button>
+            </Button>
           }
         />
       ) : (
@@ -135,12 +136,13 @@ export default function AccountPageClient({
           <TopBar
             title={dictionary.pages.menu.sections.account.account_info}
             startAdornment={
-              <button
+              <Button
                 onClick={() => router.back()}
-                className="flex size-10 items-center justify-center rounded-full bg-gray-100"
+                variant="tertiary"
+                size="icon"
               >
                 <PiCaretLeft className="size-4 text-gray-900" />
-              </button>
+              </Button>
             }
           />
 

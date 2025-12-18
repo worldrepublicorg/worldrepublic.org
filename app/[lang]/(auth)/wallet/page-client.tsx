@@ -1,5 +1,17 @@
 "use client";
 
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
+import { useState } from "react";
+import {
+  PiArrowCircleUpFill,
+  PiArrowSquareOut,
+  PiArrowsClockwise,
+  PiArrowsClockwiseFill,
+  PiArrowUp,
+} from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -13,19 +25,7 @@ import {
   Typography,
   useToast,
   WalletAddressField,
-} from "@worldcoin/mini-apps-ui-kit-react";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
-import {
-  PiArrowCircleUpFill,
-  PiArrowSquareOut,
-  PiArrowsClockwise,
-  PiArrowsClockwiseFill,
-  PiArrowUp,
-} from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
+} from "@/components/ui";
 
 // Lazy load heavy dialog component
 const SignInDialog = dynamic(
@@ -93,29 +93,11 @@ export default function WalletPageClient({
   // Dialog state management
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
 
-  // Helper function to get address validation error message
-  const getAddressValidationError = (address: string): string | null => {
-    if (!address) return null;
-
-    // Check if address is a valid EVM address (0x followed by 40 hex characters)
-    const evmAddressRegex = /^0x[a-fA-F0-9]{40}$/;
-    if (!evmAddressRegex.test(address)) {
-      return dictionary.common.invalid_address;
-    }
-
-    // Check if the address is the token's contract address
-    const tokenContractAddress = "0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b";
-    if (address.toLowerCase() === tokenContractAddress.toLowerCase()) {
-      return dictionary.toasts.wallet.contract_address_error;
-    }
-
-    return null;
-  };
-
   // State for form validation
   const [walletAddress, setWalletAddress] = useState("");
   const [selectedChain, setSelectedChain] = useState("");
   const [amount, setAmount] = useState("");
+  const [addressError, setAddressError] = useState<string | null>(null);
 
   // Handle withdraw action
   const handleWithdraw = async () => {
@@ -194,8 +176,7 @@ export default function WalletPageClient({
       };
     }
 
-    // Check for address validation errors
-    const addressError = getAddressValidationError(walletAddress);
+    // Check for address validation errors (from WalletAddressField)
     if (addressError) {
       return {
         disabled: true,
@@ -325,6 +306,15 @@ export default function WalletPageClient({
                       dictionary.pages.wallet.modals.send.withdraw_to_crypto
                         .address_label
                     }
+                    validateContractAddress={true}
+                    contractAddress="0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                    invalidAddressMessage={dictionary.common.invalid_address}
+                    contractAddressMessage={
+                      dictionary.toasts.wallet.contract_address_error
+                    }
+                    onValidationChange={(isValid, error) => {
+                      setAddressError(error);
+                    }}
                   />
 
                   <CustomSelect
@@ -362,18 +352,20 @@ export default function WalletPageClient({
                       setAmount(value);
                     }}
                     endAdornment={
-                      <button
+                      <Button
                         type="button"
                         onClick={() => setAmount(totalBalance)}
+                        variant="tertiary"
+                        size="sm"
                         className={cn(
-                          "leading-narrow flex h-9 items-center justify-center rounded-full font-sans text-sm font-medium tracking-normal whitespace-nowrap",
+                          "leading-narrow h-9 min-w-0 px-2 whitespace-nowrap bg-transparent hover:bg-transparent",
                           amount === totalBalance
                             ? "text-gray-500"
                             : "text-gray-900",
                         )}
                       >
                         {dictionary.common.max}
-                      </button>
+                      </Button>
                     }
                     label={
                       dictionary.pages.wallet.modals.send.withdraw_to_crypto

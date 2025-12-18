@@ -1,4 +1,3 @@
-import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiArrowSquareOut,
   PiFileText,
@@ -12,6 +11,7 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
+import { Typography } from "@/components/ui";
 
 interface MenuPageSkeletonProps {
   dictionary: Dictionary;

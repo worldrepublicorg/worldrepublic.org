@@ -1,12 +1,12 @@
 "use client";
 
-import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretLeft, PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
 import { TopBar } from "@/components/topbar";
+import { Button, useToast } from "@/components/ui";
 import { getParty } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
@@ -52,16 +52,13 @@ export default function PartyDetailPageClient({
       <TopBar
         title={dictionary.pages.govern.parties.party_details}
         startAdornment={
-          <button
-            onClick={() => router.back()}
-            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
-          >
+          <Button onClick={() => router.back()} variant="tertiary" size="icon">
             <PiCaretLeft className="size-4 text-gray-900" />
-          </button>
+          </Button>
         }
         endAdornment={
           party && (
-            <button
+            <Button
               onClick={async () => {
                 const shareUrl = getShareUrl();
                 const shareTitle = party.name;
@@ -90,11 +87,12 @@ export default function PartyDetailPageClient({
                   });
                 }
               }}
-              className="flex size-10 items-center justify-center rounded-full bg-gray-100"
+              variant="tertiary"
+              size="icon"
               aria-label={dictionary.pages.govern.parties.share_party}
             >
               <PiShareNetwork className="size-4 text-gray-900" />
-            </button>
+            </Button>
           )
         }
       />

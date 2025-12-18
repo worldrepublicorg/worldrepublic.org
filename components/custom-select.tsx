@@ -1,4 +1,4 @@
-import { Select } from "@worldcoin/mini-apps-ui-kit-react";
+import { Select } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 interface CustomSelectProps {

@@ -1,12 +1,5 @@
 "use client";
 
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTrigger,
-  Typography,
-} from "@worldcoin/mini-apps-ui-kit-react";
 import { useRef, useState } from "react";
 import {
   PiGear,
@@ -18,6 +11,13 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTrigger,
+  Typography,
+} from "@/components/ui";
 import type { Party } from "@/lib/types/parties";
 import { cn } from "@/lib/utils";
 
