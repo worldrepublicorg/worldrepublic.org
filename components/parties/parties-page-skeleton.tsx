@@ -1,7 +1,7 @@
+import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiList, PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
-import { Skeleton, Typography } from "@/components/ui";
 
 interface PartiesPageSkeletonProps {
   dictionary: Dictionary;

@@ -1,11 +1,15 @@
 "use client";
 
+import {
+  Button,
+  Typography,
+  useToast,
+} from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCopy, PiInfoFill, PiLinkSimple, PiUserFocus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { Button, Typography, useToast } from "@/components/ui";
 import { VoteButton } from "@/components/vote/vote-button";
 import { getParty } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";

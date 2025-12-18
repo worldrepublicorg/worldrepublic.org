@@ -1,10 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { PiClockCountdownFill } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -13,7 +8,12 @@ import {
   AlertDialogHeader,
   Button,
   Typography,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { PiClockCountdownFill } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const SelfVerificationDialog = dynamic(
   () =>

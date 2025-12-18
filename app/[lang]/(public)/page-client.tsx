@@ -1,9 +1,9 @@
 "use client";
 
+import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import ScrollablePills from "@/components/scrollable-pills";
-import { Button, Typography } from "@/components/ui";
 import { VoteButton } from "@/components/vote/vote-button";
 import { useTabNavigation } from "@/hooks/use-tab-navigation";
 

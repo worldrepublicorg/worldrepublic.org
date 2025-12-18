@@ -4,11 +4,6 @@ import {
   startAuthentication,
   startRegistration,
 } from "@simplewebauthn/browser";
-import { useRouter } from "next/navigation";
-import { signIn, useSession } from "next-auth/react";
-import { useState } from "react";
-import { PiFingerprint, PiSignIn } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -18,7 +13,12 @@ import {
   Button,
   Input,
   Typography,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import { useRouter } from "next/navigation";
+import { signIn, useSession } from "next-auth/react";
+import { useState } from "react";
+import { PiFingerprint, PiSignIn } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   getPasskeyOptions,
   getPasskeyRegistrationOptions,

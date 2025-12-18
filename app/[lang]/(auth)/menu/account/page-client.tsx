@@ -1,17 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import {
-  PiCaretLeft,
-  PiPencilSimple,
-  PiPencilSimpleFill,
-  PiTrash,
-  PiTrashFill,
-} from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { CustomListItem } from "@/components/custom-list-item";
-import { TopBar } from "@/components/topbar";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -24,7 +12,19 @@ import {
   Input,
   Typography,
   useToast,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import {
+  PiCaretLeft,
+  PiPencilSimple,
+  PiPencilSimpleFill,
+  PiTrash,
+  PiTrashFill,
+} from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { CustomListItem } from "@/components/custom-list-item";
+import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
 import { deleteUserAccount, setUsername } from "@/lib/actions/member";
 
@@ -122,13 +122,12 @@ export default function AccountPageClient({
         <TopBar
           title={dictionary.pages.menu.sections.account.account_info}
           startAdornment={
-            <Button
+            <button
               onClick={() => router.back()}
-              variant="tertiary"
-              size="icon"
+              className="flex size-10 items-center justify-center rounded-full bg-gray-100"
             >
               <PiCaretLeft className="size-4 text-gray-900" />
-            </Button>
+            </button>
           }
         />
       ) : (
@@ -136,13 +135,12 @@ export default function AccountPageClient({
           <TopBar
             title={dictionary.pages.menu.sections.account.account_info}
             startAdornment={
-              <Button
+              <button
                 onClick={() => router.back()}
-                variant="tertiary"
-                size="icon"
+                className="flex size-10 items-center justify-center rounded-full bg-gray-100"
               >
                 <PiCaretLeft className="size-4 text-gray-900" />
-              </Button>
+              </button>
             }
           />
 

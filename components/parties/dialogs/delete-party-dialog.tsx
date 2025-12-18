@@ -1,7 +1,5 @@
 "use client";
 
-import { PiTrashFill } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -11,7 +9,9 @@ import {
   AlertDialogHeader,
   Button,
   Typography,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import { PiTrashFill } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Party } from "@/lib/types/parties";
 
 interface DeletePartyDialogProps {

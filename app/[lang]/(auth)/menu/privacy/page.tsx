@@ -1,7 +1,7 @@
+import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiCaretLeft } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
-import { Typography } from "@/components/ui";
 
 export default function PrivacyPage() {
   return (
@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         startAdornment={
           <Link
             href="../menu"
-            className="flex size-10 items-center justify-center rounded-full bg-gray-100 cursor-pointer"
+            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >
             <PiCaretLeft className="size-4 text-gray-900" />
           </Link>

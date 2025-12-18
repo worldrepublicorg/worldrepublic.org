@@ -1,11 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useRouter } from "next/navigation";
-import type { FocusEvent as ReactFocusEvent } from "react";
-import { useEffect, useRef, useState, useTransition } from "react";
-import { PiShareNetwork } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   Button,
   Drawer,
@@ -14,7 +8,13 @@ import {
   Input,
   Typography,
   useToast,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import type { FocusEvent as ReactFocusEvent } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
+import { PiShareNetwork } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 // Lazy load heavy dialog component
 const SignInDialog = dynamic(

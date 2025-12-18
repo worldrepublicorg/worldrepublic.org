@@ -1,6 +1,6 @@
+import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { forwardRef } from "react";
-import { Typography } from "@/components/ui";
 import { CustomListItemProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
