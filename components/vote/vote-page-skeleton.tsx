@@ -1,6 +1,6 @@
+import { Button, Pill, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiChartBarHorizontalFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { Button, Pill, Typography } from "@/components/ui";
 
 interface VotePageSkeletonProps {
   dictionary: Dictionary;

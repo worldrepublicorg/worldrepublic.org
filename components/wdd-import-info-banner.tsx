@@ -1,8 +1,8 @@
 "use client";
 
+import { Typography, useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiInfo } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { Typography, useToast } from "@/components/ui";
 import { copyToClipboard } from "@/lib/utils";
 
 interface WddImportInfoBannerProps {

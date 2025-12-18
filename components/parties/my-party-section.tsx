@@ -1,10 +1,14 @@
 "use client";
 
+import {
+  Button,
+  Skeleton,
+  Typography,
+} from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyCard } from "@/components/parties/party-card";
-import { Button, Skeleton, Typography } from "@/components/ui";
 import type { Party } from "@/lib/types/parties";
 
 interface MyPartySectionProps {
@@ -43,7 +47,7 @@ export function MyPartySection({
           {dictionary.pages.govern.parties.my_party}
         </Typography>
         <button
-          className="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-900 cursor-pointer disabled:cursor-default"
+          className="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-900"
           onClick={onCreateParty}
           disabled={isLoading}
         >

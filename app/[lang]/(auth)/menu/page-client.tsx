@@ -1,5 +1,17 @@
 "use client";
 
+import {
+  AlertDialog,
+  AlertDialogClose,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTrigger,
+  Button,
+  Typography,
+  useToast,
+} from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { signOut as nextAuthSignOut } from "next-auth/react";
 import { useState } from "react";
@@ -21,18 +33,6 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { SignInDialog } from "@/components/auth/sign-in-dialog";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
-import {
-  AlertDialog,
-  AlertDialogClose,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTrigger,
-  Button,
-  Typography,
-  useToast,
-} from "@/components/ui";
 
 interface MenuPageClientProps {
   lang: string;
@@ -163,9 +163,12 @@ export default function MenuPageClient({
         title={dictionary.nav.menu}
         startAdornment={<div className="size-10" />}
         endAdornment={
-          <Button onClick={handleClose} variant="tertiary" size="icon">
+          <button
+            onClick={handleClose}
+            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
+          >
             <PiX className="size-4 text-gray-900" />
-          </Button>
+          </button>
         }
       />
 

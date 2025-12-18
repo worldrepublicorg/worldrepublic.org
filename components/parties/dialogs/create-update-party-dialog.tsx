@@ -1,9 +1,5 @@
 "use client";
 
-import * as Form from "@radix-ui/react-form";
-import type { FocusEvent as ReactFocusEvent } from "react";
-import { PiPencilSimpleFill, PiPlusCircleFill } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -11,10 +7,14 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   Button,
+  Form,
   Input,
   TextArea,
   Typography,
-} from "@/components/ui";
+} from "@worldcoin/mini-apps-ui-kit-react";
+import type { FocusEvent as ReactFocusEvent } from "react";
+import { PiPencilSimpleFill, PiPlusCircleFill } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { CreatePartyData } from "@/lib/types/parties";
 
 const MAX_STRING_LENGTH = 256;

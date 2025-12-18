@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, DrawerClose } from "@/components/ui";
+import { Button, DrawerClose } from "@worldcoin/mini-apps-ui-kit-react";
 import { cn } from "@/lib/utils";
 
 type CustomDrawerHeaderProps = {

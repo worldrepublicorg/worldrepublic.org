@@ -1,7 +1,7 @@
 "use client";
 
+import { Pill } from "@worldcoin/mini-apps-ui-kit-react";
 import { useEffect, useRef } from "react";
-import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 interface PillItem {

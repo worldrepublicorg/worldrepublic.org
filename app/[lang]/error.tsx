@@ -1,8 +1,8 @@
 "use client";
 
+import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { useEffect } from "react";
 import { PiWarningCircle } from "react-icons/pi";
-import { Button, Typography } from "@/components/ui";
 
 export default function ErrorPage({
   error,

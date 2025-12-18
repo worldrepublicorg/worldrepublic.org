@@ -1,5 +1,13 @@
 "use client";
 
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  Typography,
+  useToast,
+} from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
@@ -11,14 +19,6 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  Typography,
-  useToast,
-} from "@/components/ui";
 import { getTransactions } from "@/lib/actions/member";
 import { cn, copyToClipboard } from "@/lib/utils";
 

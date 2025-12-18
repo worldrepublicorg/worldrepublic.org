@@ -1,7 +1,7 @@
+import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiCaretDown, PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
-import { Typography } from "@/components/ui";
 
 interface FaqPageSkeletonProps {
   dictionary: Dictionary;
