@@ -1,11 +1,11 @@
 "use client";
 
-import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { PiCaretLeft, PiCheckCircleFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
+import { Button, Typography } from "@/components/ui";
 
 interface Language {
   code: string;
@@ -30,18 +30,15 @@ export default function LanguagePageClient({
       <TopBar
         title={dictionary.pages.menu.sections.account.language}
         startAdornment={
-          <button
-            onClick={() => router.back()}
-            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
-          >
+          <Button onClick={() => router.back()} variant="tertiary" size="icon">
             <PiCaretLeft className="size-4 text-gray-900" />
-          </button>
+          </Button>
         }
       />
 
       <div className="flex flex-col gap-2 p-6">
         {languages.map((language) => (
-          <button
+          <Button
             key={language.code}
             onClick={() => {
               // Get the return URL (where user was before opening menu)
@@ -76,7 +73,9 @@ export default function LanguagePageClient({
               // Navigate directly to the original page with new language
               router.push(targetPath);
             }}
-            className="w-full"
+            className="w-full bg-transparent hover:bg-transparent justify-start h-auto p-0"
+            variant="tertiary"
+            fullWidth
           >
             <CustomListItem>
               <div className="flex h-8 w-full items-center justify-between">
@@ -88,7 +87,7 @@ export default function LanguagePageClient({
                 )}
               </div>
             </CustomListItem>
-          </button>
+          </Button>
         ))}
       </div>
     </div>

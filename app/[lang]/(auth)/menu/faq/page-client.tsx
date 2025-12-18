@@ -1,11 +1,11 @@
 "use client";
 
-import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretDown, PiCaretLeft, PiCaretUp } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
+import { Button, Typography } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 interface FaqPageClientProps {
@@ -40,21 +40,20 @@ export default function FaqPageClient({ dictionary }: FaqPageClientProps) {
       <TopBar
         title={dictionary.pages.faq.title}
         startAdornment={
-          <button
-            onClick={() => router.back()}
-            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
-          >
+          <Button onClick={() => router.back()} variant="tertiary" size="icon">
             <PiCaretLeft className="size-4 text-gray-900" />
-          </button>
+          </Button>
         }
       />
 
       <div className="flex flex-col gap-2 p-6">
         {faqs.map((faq, index) => (
           <div key={faq.id}>
-            <button
-              className="flex w-full items-center justify-between gap-4 py-5! text-left focus:outline-none"
+            <Button
+              className="w-full justify-between gap-4 py-5! text-left focus:outline-none bg-transparent hover:bg-transparent"
               onClick={() => toggleAccordion(faq.id)}
+              variant="tertiary"
+              fullWidth
             >
               <Typography
                 as="span"
@@ -71,7 +70,7 @@ export default function FaqPageClient({ dictionary }: FaqPageClientProps) {
                   <PiCaretDown className="size-4 text-gray-900 transition-transform duration-200" />
                 )}
               </div>
-            </button>
+            </Button>
 
             <div
               className={cn(

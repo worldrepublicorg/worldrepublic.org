@@ -1,4 +1,3 @@
-import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiArrowsClockwise,
   PiArrowUp,
@@ -7,6 +6,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
+import { Skeleton, Typography } from "@/components/ui";
 
 interface WalletPageSkeletonProps {
   dictionary: Dictionary;
