@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 const rubik = localFont({
   src: "../public/fonts/Rubik.woff2",
   variable: "--font-rubik",
+  display: "swap",
 });
 
 const twkLausanne = localFont({
