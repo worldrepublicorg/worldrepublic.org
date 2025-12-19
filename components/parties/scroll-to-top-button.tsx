@@ -13,9 +13,14 @@ export function ScrollToTopButton({ show, onClick }: ScrollToTopButtonProps) {
       <button
         onClick={onClick}
         onTouchStart={(e) => {
-          // Prevent scroll interference and trigger action immediately
+          // Prevent scroll interference and stop propagation to prevent BottomNav from capturing this touch
           e.preventDefault();
+          e.stopPropagation();
           onClick();
+        }}
+        onTouchEnd={(e) => {
+          // Stop propagation to ensure BottomNav doesn't capture this touch
+          e.stopPropagation();
         }}
         className="flex h-full w-full items-center justify-center rounded-full bg-gray-100 shadow-lg! touch-manipulation"
         aria-label="Scroll to top"
