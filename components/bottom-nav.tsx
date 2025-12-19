@@ -1,15 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useRef, useState } from "react";
 import { FaLandmark, FaUsers, FaWallet } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const lang = pathname.split("/")[1]; // Get language from URL
   const [pressedItem, setPressedItem] = useState<string | null>(null);
+  const touchStartRef = useRef<{
+    x: number;
+    y: number;
+    time: number;
+    path: string;
+  } | null>(null);
 
   const navItems = [
     { path: "/", label: "vote", icon: FaLandmark },
@@ -45,7 +52,16 @@ const BottomNav = () => {
               onTouchStart={(e) => {
                 // Stop propagation to prevent scroll handlers from capturing this touch
                 e.stopPropagation();
-                // Visual feedback only - let Link handle navigation
+
+                const touch = e.touches[0];
+                touchStartRef.current = {
+                  x: touch.clientX,
+                  y: touch.clientY,
+                  time: Date.now(),
+                  path,
+                };
+
+                // Visual feedback
                 if (!isPressed) {
                   setPressedItem(path);
                   setTimeout(() => setPressedItem(null), 400);
@@ -54,6 +70,39 @@ const BottomNav = () => {
               onTouchEnd={(e) => {
                 // Stop propagation to ensure navigation works even during scrolling
                 e.stopPropagation();
+
+                if (
+                  !touchStartRef.current ||
+                  touchStartRef.current.path !== path
+                ) {
+                  return;
+                }
+
+                const touch = e.changedTouches[0];
+                const start = touchStartRef.current;
+                const deltaX = Math.abs(touch.clientX - start.x);
+                const deltaY = Math.abs(touch.clientY - start.y);
+                const deltaTime = Date.now() - start.time;
+
+                // Check if it's a tap (minimal movement, short duration)
+                const isTap = deltaX < 10 && deltaY < 10 && deltaTime < 300;
+
+                if (isTap) {
+                  // Manually trigger navigation to ensure it works even during scrolling
+                  e.preventDefault();
+                  router.push(href);
+                }
+
+                touchStartRef.current = null;
+              }}
+              onClick={(e) => {
+                // Fallback for desktop/mouse clicks
+                // This ensures navigation works even if touch events were intercepted
+                if (touchStartRef.current?.path === path) {
+                  // Touch event already handled navigation
+                  touchStartRef.current = null;
+                  return;
+                }
               }}
             >
               {/* Ripple effect */}
