@@ -42,12 +42,18 @@ const BottomNav = () => {
                 isActive(path) ? "text-foreground" : "text-gray-400",
               )}
               tabIndex={0}
-              onTouchStart={() => {
+              onTouchStart={(e) => {
+                // Stop propagation to prevent scroll handlers from capturing this touch
+                e.stopPropagation();
                 // Visual feedback only - let Link handle navigation
                 if (!isPressed) {
                   setPressedItem(path);
                   setTimeout(() => setPressedItem(null), 400);
                 }
+              }}
+              onTouchEnd={(e) => {
+                // Stop propagation to ensure navigation works even during scrolling
+                e.stopPropagation();
               }}
             >
               {/* Ripple effect */}
