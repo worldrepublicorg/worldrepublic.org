@@ -1,6 +1,7 @@
-import { Button, Pill, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiChartBarHorizontalFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { TabPills } from "@/components/tab-pills";
 
 interface VotePageSkeletonProps {
   dictionary: Dictionary;
@@ -10,16 +11,20 @@ interface VotePageSkeletonProps {
 export function VotePageSkeleton({ dictionary, lang }: VotePageSkeletonProps) {
   return (
     <>
-      <div className="flex gap-1 px-6">
-        <div className="shrink-0 whitespace-nowrap">
-          <Pill checked={true}>{dictionary.pages.govern.tabs.elections}</Pill>
-        </div>
-        <div className="shrink-0 whitespace-nowrap">
-          <Pill checked={false}>
-            {dictionary.pages.govern.tabs.referendums}
-          </Pill>
-        </div>
-      </div>
+      <TabPills
+        activeTab="elections"
+        lang={lang}
+        tabs={[
+          {
+            key: "elections",
+            label: dictionary.pages.govern.tabs.elections,
+          },
+          {
+            key: "referendums",
+            label: dictionary.pages.govern.tabs.referendums,
+          },
+        ]}
+      />
       <div className="flex grow items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center p-6 text-center">
           <div className="flex w-full flex-col items-center gap-4">

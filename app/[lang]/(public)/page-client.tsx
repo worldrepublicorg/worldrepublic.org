@@ -1,14 +1,13 @@
 "use client";
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import { useSearchParams } from "next/navigation";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import ScrollablePills from "@/components/scrollable-pills";
+import { TabPills } from "@/components/tab-pills";
 import { VoteButton } from "@/components/vote/vote-button";
-import { useTabNavigation } from "@/hooks/use-tab-navigation";
 
 const TABS = ["elections", "referendums"] as const;
-
 type TabKey = (typeof TABS)[number];
 
 export function VotePageClient({
@@ -18,53 +17,33 @@ export function VotePageClient({
   lang: string;
   dictionary: Dictionary;
 }) {
-  const { activeTab, updateTab, handlers, swipeOffset } =
-    useTabNavigation<TabKey>(TABS);
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("tab");
 
-  const getCarouselTransform = () => {
-    const currentIndex = TABS.indexOf(activeTab);
-    let translate = -currentIndex * 100;
-
-    if (swipeOffset !== 0) {
-      translate += swipeOffset * 100;
-    }
-
-    return `translateX(${translate}%)`;
-  };
+  // Client-side logic for tabs
+  const activeTab: TabKey = TABS.includes(tab as TabKey)
+    ? (tab as TabKey)
+    : TABS[0];
 
   return (
     <>
-      <ScrollablePills
-        activeKey={activeTab}
-        items={[
+      <TabPills
+        activeTab={activeTab}
+        lang={lang}
+        tabs={[
           {
             key: "elections",
             label: dictionary.pages.govern.tabs.elections,
-            checked: activeTab === "elections",
-            onClick: () => updateTab("elections"),
           },
           {
             key: "referendums",
             label: dictionary.pages.govern.tabs.referendums,
-            checked: activeTab === "referendums",
-            onClick: () => updateTab("referendums"),
           },
         ]}
       />
-
-      <div
-        {...handlers}
-        className="relative flex grow items-center justify-center overflow-hidden"
-      >
-        <div
-          className="flex w-full items-center"
-          style={{
-            transform: getCarouselTransform(),
-            transition: swipeOffset === 0 ? "transform 0.3s ease-out" : "none",
-          }}
-        >
-          {/* Elections tab */}
-          <div className="flex min-w-full flex-col items-center justify-center p-6 text-center">
+      <div className="flex grow items-center justify-center">
+        {activeTab === "elections" ? (
+          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
             <div className="flex w-full flex-col items-center gap-4">
               <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
                 <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
@@ -87,9 +66,8 @@ export function VotePageClient({
               />
             </div>
           </div>
-
-          {/* Referendums tab */}
-          <div className="flex min-w-full flex-col items-center justify-center p-6 text-center">
+        ) : (
+          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
             <div className="flex w-full flex-col items-center gap-4">
               <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
                 <PiScrollFill className="h-10 w-10 text-gray-400" />
@@ -109,7 +87,7 @@ export function VotePageClient({
               </Button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
