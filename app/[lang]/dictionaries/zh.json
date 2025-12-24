@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "名册",
+          "subsidies": "补贴"
+        },
         "discover": "发现",
         "search_placeholder": "搜索政党...",
         "no_parties_found": "未找到政党",
@@ -39,24 +43,22 @@
         "party_details": "政党详情",
         "share_party": "分享政党",
         "my_party": "我的政党",
-        "found_party_and_earn": "创立政党并获得补贴",
         "learn_more": "了解更多",
         "party_management": "政党管理",
         "edit_party_info": "编辑政党信息",
-        "dissolve_party": "解散政党",
         "dialogs": {
-          "found_party": "创建政党",
           "party_name": "政党名称",
           "description_optional": "描述（可选）",
           "official_link_optional": "官方链接（可选）",
-          "founding": "创建中...",
           "updating": "更新中...",
-          "found": "创建",
           "save": "保存",
-          "dissolving": "解散中...",
-          "about_to_found": "您即将创建一个新政党。",
-          "about_to_dissolve": "您即将解散 {partyName}。此操作无法撤销。",
-          "leader_warning_found": "您目前是 {partyName} 的领导人。创建新政党将解散您当前的政党。"
+          "register_party": "注册政党",
+          "register": "注册",
+          "registering": "注册中...",
+          "leader_warning_register": "您目前是 {partyName} 的领导人。注册新政党将删除您当前的政党。",
+          "deleting": "删除中...",
+          "about_to_delete": "您即将删除 {partyName}。此操作无法撤销。",
+          "about_to_register": "您即将创建一个新政党。"
         },
         "detail": {
           "failed_to_load": "加载政党数据失败",
@@ -68,7 +70,9 @@
           "leader": "领导人",
           "website": "网站",
           "not_found_description": "您要查找的政党不存在或已被解散。"
-        }
+        },
+        "delete_party": "删除政党",
+        "run_on_elections_and_earn": "参加选举并获得补贴"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "什么是世界共和国？",
-          "answer": "世界共和国是一个拥有自己数字货币的开源全球治理平台。"
+          "answer": "世界共和国是一个拥有自己数字货币的开源全球民主平台。"
         },
         "what-is-wdd": {
           "question": "什么是 WDD？",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "我需要验证身份才能参与吗？",
-          "answer": "只有投票才需要身份验证。您可以在未验证的情况下创建政党并转移从政党补贴中获得的 WDD。"
+          "answer": "只有投票才需要身份验证。您可以在未验证的情况下注册政党并转移从政党补贴中获得的 WDD。"
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "登出失败"
     },
     "parties": {
-      "founded": "政党已成立",
-      "found_failed": "成立政党失败",
-      "found_error": "成立政党时出错",
       "updated": "已更新",
       "update_failed": "更新失败",
       "update_error": "更新政党时出错",
-      "dissolved": "已解散",
-      "dissolve_failed": "解散失败",
-      "dissolve_error": "解散政党时出错"
+      "registered": "政党已注册",
+      "register_failed": "注册政党失败",
+      "register_error": "注册政党时出错",
+      "deleted": "已删除",
+      "delete_failed": "删除失败",
+      "delete_error": "删除出错"
     }
   },
   "common": {

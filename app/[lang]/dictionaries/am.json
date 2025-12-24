@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "መዝገብ",
+          "subsidies": "ድጎማዎች"
+        },
         "discover": "አግኝ",
         "search_placeholder": "ፓርቲዎችን ፈልግ...",
         "no_parties_found": "ፓርቲ አልተገኘም",
@@ -39,24 +43,22 @@
         "party_details": "የፓርቲ ዝርዝሮች",
         "share_party": "ፓርቲ ያጋሩ",
         "my_party": "የእኔ ፓርቲ",
-        "found_party_and_earn": "ፓርቲ ይፈጥሩ እና ድጎማዎች ያግኙ",
         "learn_more": "ተጨማሪ ይማሩ",
         "party_management": "የፓርቲ አስተዳደር",
         "edit_party_info": "የፓርቲ መረጃ ያርትዑ",
-        "dissolve_party": "ፓርቲ ፍታ",
         "dialogs": {
-          "found_party": "ፓርቲ ይፍጠሩ",
           "party_name": "የፓርቲ ስም",
           "description_optional": "መግለጫ (አማራጭ)",
           "official_link_optional": "ይፋዊ አገናኝ (አማራጭ)",
-          "founding": "በመፍጠር ላይ...",
           "updating": "በማዘመን ላይ...",
-          "found": "ፍጠር",
           "save": "አስቀምጥ",
-          "dissolving": "በመፍታት ላይ...",
-          "about_to_found": "አዲስ ፓርቲ ለመፍጠር ነዎታል።",
-          "about_to_dissolve": "እርስዎ {partyName}ን ለመፍረስ ነዎት። ይህ ተግባር ሊመለስ አይችልም።",
-          "leader_warning_found": "አሁን {partyName} አመራር ነዎት። አዲስ ፓርቲ መመስረት የአሁኑን ፓርቲዎን ያበቃል።"
+          "register_party": "ፓርቲ ይመዝገቡ",
+          "register": "ይመዝገቡ",
+          "registering": "በመመዝገብ ላይ...",
+          "leader_warning_register": "አሁን የ{partyName} መሪ ነዎት። አዲስ ፓርቲ መመዝገብ የአሁኑን ፓርቲዎን ያሰርዳል።",
+          "deleting": "በመሰረዝ ላይ...",
+          "about_to_delete": "እርስዎ {partyName}ን ለመሰረዝ ነዎት። ይህ ተግባር ሊመለስ አይችልም።",
+          "about_to_register": "አዲስ ፓርቲ ለመፍጠር ነዎታል።"
         },
         "detail": {
           "failed_to_load": "የፓርቲ ውሂብ መጫን አልተሳካም",
@@ -68,7 +70,9 @@
           "leader": "አመራር",
           "website": "ድህረ ገጽ",
           "not_found_description": "የሚፈልጉት ፓርቲ የለም ወይም ተፈትቷል።"
-        }
+        },
+        "delete_party": "ፓርቲ ሰርዝ",
+        "run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "የዓለም ሪፐብሊክ ምንድን ነው?",
-          "answer": "የዓለም ሪፐብሊክ የራሱ ዲጂታል መገበያያ ገንዘብ ያለው ክፍት ምንጭ ዓለም አቀፍ የአስተዳደር መድረክ ነው።"
+          "answer": "የዓለም ሪፐብሊክ የራሱ ዲጂታል መገበያያ ገንዘብ ያለው ክፍት ምንጭ ዓለም አቀፍ ዴሞክራሲ መድረክ ነው።"
         },
         "what-is-wdd": {
           "question": "WDD ምንድን ነው?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "ለመሳተፍ ማረጋገጫ ያስፈልገኛል?",
-          "answer": "የማንነት ማረጋገጫ ለምርጫ ብቻ ያስፈልጋል። ማረጋገጫ ሳያስፈልግ ፓርቲዎችን መመስረት እና ከፓርቲ ድጋፍ የተገኘውን WDD ማስተላለፍ ይችላሉ።"
+          "answer": "የማንነት ማረጋገጫ ለምርጫ ብቻ ያስፈልጋል። ማረጋገጫ ሳያስፈልግ ፓርቲዎችን መመዝገብ እና ከፓርቲ ድጋፍ የተገኘውን WDD ማስተላለፍ ይችላሉ።"
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "ውጣ አልተሳካም"
     },
     "parties": {
-      "founded": "ፓርቲ ተመሠረተ",
-      "found_failed": "ፓርቲ መመሠረት አልተሳካም",
-      "found_error": "ፓርቲ ሲመሠረት ስህተት",
       "updated": "ተዘምኗል",
       "update_failed": "ማዘመን አልተሳካም",
       "update_error": "ፓርቲ ሲዘምን ስህተት",
-      "dissolved": "ተፈትቷል",
-      "dissolve_failed": "መፍታት አልተሳካም",
-      "dissolve_error": "ፓርቲ ሲፈታ ስህተት"
+      "registered": "ፓርቲ ተመዝግቧል",
+      "register_failed": "ፓርቲ መመዝገብ አልተቻለም",
+      "register_error": "ፓርቲ በመመዝገብ ላይ ስህተት",
+      "deleted": "ተሰርዟል",
+      "delete_failed": "መሰረዝ አልተቻለም",
+      "delete_error": "በመሰረዝ ላይ ስህተት"
     }
   },
   "common": {

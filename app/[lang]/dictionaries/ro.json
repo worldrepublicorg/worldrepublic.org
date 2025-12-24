@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Registru",
+          "subsidies": "Subvenții"
+        },
         "discover": "Descoperă",
         "search_placeholder": "Caută partide...",
         "no_parties_found": "Nu s-au găsit partide",
@@ -39,24 +43,22 @@
         "party_details": "Detalii partid",
         "share_party": "Distribuie partidul",
         "my_party": "Partidul meu",
-        "found_party_and_earn": "Înființează un partid și primește subvenții",
         "learn_more": "Află mai multe",
         "party_management": "Gestionarea partidului",
         "edit_party_info": "Editează informațiile partidului",
-        "dissolve_party": "Desființează partidul",
         "dialogs": {
-          "found_party": "Fondează un partid",
           "party_name": "Numele partidului",
           "description_optional": "Descriere (opțional)",
           "official_link_optional": "Link oficial (opțional)",
-          "founding": "Fondare...",
           "updating": "Actualizare...",
-          "found": "Fondează",
           "save": "Salvează",
-          "dissolving": "Desființare...",
-          "about_to_found": "Ești pe punctul de a fonda un partid nou.",
-          "about_to_dissolve": "Ești pe cale să dizolvi {partyName}. Această acțiune nu poate fi anulată.",
-          "leader_warning_found": "Ești în prezent liderul {partyName}. Înființarea unui partid nou va dizolva partidul tău actual."
+          "register_party": "Înregistrați un partid",
+          "register": "Înregistrare",
+          "registering": "Se înregistrează...",
+          "leader_warning_register": "Sunteți momentan liderul {partyName}. Înregistrarea unui partid nou va șterge partidul dvs. actual.",
+          "deleting": "Se șterge...",
+          "about_to_delete": "Ești pe cale să ștergi {partyName}. Această acțiune nu poate fi anulată.",
+          "about_to_register": "Ești pe punctul de a fonda un partid nou."
         },
         "detail": {
           "failed_to_load": "Eșec la încărcarea datelor partidului",
@@ -68,7 +70,9 @@
           "leader": "Lider",
           "website": "Site web",
           "not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
-        }
+        },
+        "delete_party": "Șterge partidul",
+        "run_on_elections_and_earn": "Candidează la alegeri și primește subvenții"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Ce este Republica Mondială?",
-          "answer": "Republica Mondială este o platformă de guvernanță globală open source cu propria monedă digitală."
+          "answer": "Republica Mondială este o platformă de democrație globală open source cu propria monedă digitală."
         },
         "what-is-wdd": {
           "question": "Ce este WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Este necesară verificarea pentru a participa?",
-          "answer": "Verificarea identității este necesară doar pentru vot. Puteți înființa partide și transfera WDD obținuți din subvențiile pentru partide fără verificare."
+          "answer": "Verificarea identității este necesară doar pentru vot. Puteți înregistra partide și transfera WDD obținuți din subvențiile pentru partide fără verificare."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Deconectarea a eșuat"
     },
     "parties": {
-      "founded": "Partid fondat",
-      "found_failed": "Fondarea partidului a eșuat",
-      "found_error": "Eroare la fondarea partidului",
       "updated": "Actualizat",
       "update_failed": "Actualizarea a eșuat",
       "update_error": "Eroare la actualizarea partidului",
-      "dissolved": "Desființat",
-      "dissolve_failed": "Desființarea a eșuat",
-      "dissolve_error": "Eroare la desființarea partidului"
+      "registered": "Partid înregistrat",
+      "register_failed": "Nu s-a putut înregistra partidul",
+      "register_error": "Eroare la înregistrarea partidului",
+      "deleted": "Șters",
+      "delete_failed": "Nu s-a putut șterge",
+      "delete_error": "Eroare la ștergere"
     }
   },
   "common": {

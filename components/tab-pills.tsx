@@ -6,9 +6,11 @@ interface TabPillsProps {
   activeTab: string;
   lang: string;
   tabs: Array<{ key: string; label: string }>;
+  basePath?: string;
 }
 
-export function TabPills({ activeTab, lang, tabs }: TabPillsProps) {
+export function TabPills({ activeTab, lang, tabs, basePath }: TabPillsProps) {
+  const path = basePath ?? `/${lang}`;
   return (
     <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {tabs.map((tab, index) => (
@@ -20,7 +22,7 @@ export function TabPills({ activeTab, lang, tabs }: TabPillsProps) {
             index === tabs.length - 1 && "pr-0",
           )}
         >
-          <Link href={`/${lang}?tab=${tab.key}`} className="block">
+          <Link href={`${path}?tab=${tab.key}`} className="block">
             <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
           </Link>
         </div>

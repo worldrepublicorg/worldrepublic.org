@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Register",
+          "subsidies": "Dotácie"
+        },
         "discover": "Objaviť",
         "search_placeholder": "Hľadať strany...",
         "no_parties_found": "Nenašli sa žiadne strany",
@@ -39,24 +43,22 @@
         "party_details": "Detaily strany",
         "share_party": "Zdieľať stranu",
         "my_party": "Moja strana",
-        "found_party_and_earn": "Založte stranu a získajte dotácie",
         "learn_more": "Zistiť viac",
         "party_management": "Správa strany",
         "edit_party_info": "Upraviť informácie o strane",
-        "dissolve_party": "Rozpustiť stranu",
         "dialogs": {
-          "found_party": "Založiť stranu",
           "party_name": "Názov strany",
           "description_optional": "Popis (voliteľné)",
           "official_link_optional": "Oficiálny odkaz (voliteľné)",
-          "founding": "Zakladanie...",
           "updating": "Aktualizácia...",
-          "found": "Založiť",
           "save": "Uložiť",
-          "dissolving": "Rozpúšťanie...",
-          "about_to_found": "Chystáte sa založiť novú stranu.",
-          "about_to_dissolve": "Chystáte sa rozpustiť {partyName}. Túto akciu nemožno vrátiť späť.",
-          "leader_warning_found": "Momentálne ste vodca {partyName}. Založenie novej strany rozpustí vašu súčasnú stranu."
+          "register_party": "Registrovať stranu",
+          "register": "Registrovať",
+          "registering": "Registrácia...",
+          "leader_warning_register": "Momentálne ste lídrom {partyName}. Registrácia novej strany vymaže vašu súčasnú stranu.",
+          "deleting": "Mazanie...",
+          "about_to_delete": "Chystáte sa vymazať {partyName}. Túto akciu nemožno vrátiť späť.",
+          "about_to_register": "Chystáte sa založiť novú stranu."
         },
         "detail": {
           "failed_to_load": "Nepodarilo sa načítať dáta strany",
@@ -68,7 +70,9 @@
           "leader": "Vodca",
           "website": "Webová stránka",
           "not_found_description": "Strana, ktorú hľadáte, neexistuje alebo bola rozpustená."
-        }
+        },
+        "delete_party": "Vymazať stranu",
+        "run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Čo je Svetová Republika?",
-          "answer": "Svetová republika je open source platforma pre globálne vládnutie s vlastnou digitálnou menou."
+          "answer": "Svetová republika je open source platforma pre globálnu demokraciu s vlastnou digitálnou menou."
         },
         "what-is-wdd": {
           "question": "Čo je WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Je na účasť potrebné overenie?",
-          "answer": "Overenie totožnosti je potrebné len na hlasovanie. Bez overenia môžete zakladať strany a prevádzať WDD získané zo straníckych dotácií."
+          "answer": "Overenie totožnosti je potrebné len na hlasovanie. Bez overenia môžete registrovať strany a prevádzať WDD získané zo straníckych dotácií."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Odhlásenie sa nepodarilo"
     },
     "parties": {
-      "founded": "Strana založená",
-      "found_failed": "Založenie strany zlyhalo",
-      "found_error": "Chyba pri zakladaní strany",
       "updated": "Aktualizované",
       "update_failed": "Aktualizácia zlyhala",
       "update_error": "Chyba pri aktualizácii strany",
-      "dissolved": "Rozpustená",
-      "dissolve_failed": "Rozpustenie zlyhalo",
-      "dissolve_error": "Chyba pri rozpúšťaní strany"
+      "registered": "Strana registrovaná",
+      "register_failed": "Nepodarilo sa registrovať stranu",
+      "register_error": "Chyba pri registrácii strany",
+      "deleted": "Vymazané",
+      "delete_failed": "Nepodarilo sa vymazať",
+      "delete_error": "Chyba pri mazaní"
     }
   },
   "common": {

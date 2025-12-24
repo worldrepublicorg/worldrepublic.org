@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Registry",
+          "subsidies": "Subsidies"
+        },
         "discover": "Discover",
         "search_placeholder": "Search parties...",
         "no_parties_found": "No parties found",
@@ -39,24 +43,22 @@
         "party_details": "Party details",
         "share_party": "Share party",
         "my_party": "My party",
-        "found_party_and_earn": "Found a party and get subsidies",
         "learn_more": "Learn more",
         "party_management": "Party management",
         "edit_party_info": "Edit party info",
-        "dissolve_party": "Dissolve party",
         "dialogs": {
-          "found_party": "Found a party",
           "party_name": "Party name",
           "description_optional": "Description (optional)",
           "official_link_optional": "Official link (optional)",
-          "founding": "Founding...",
           "updating": "Updating...",
-          "found": "Found",
           "save": "Save",
-          "dissolving": "Dissolving...",
-          "about_to_found": "You are about to found a new party.",
-          "about_to_dissolve": "You are about to dissolve {partyName}. This action cannot be undone.",
-          "leader_warning_found": "You're currently the leader of {partyName}. Founding a new party will dissolve your current party."
+          "register_party": "Register a party",
+          "register": "Register",
+          "registering": "Registering...",
+          "leader_warning_register": "You're currently the leader of {partyName}. Registering a new party will delete your current party.",
+          "deleting": "Deleting...",
+          "about_to_delete": "You are about to delete {partyName}. This action cannot be undone.",
+          "about_to_register": "You are about to register a new party."
         },
         "detail": {
           "failed_to_load": "Failed to load party data",
@@ -68,7 +70,9 @@
           "leader": "Leader",
           "website": "Website",
           "not_found_description": "The party you're looking for doesn't exist or has been dissolved."
-        }
+        },
+        "delete_party": "Delete party",
+        "run_on_elections_and_earn": "Run on elections and get subsidies"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "What is the World Republic?",
-          "answer": "The World Republic is an open source global governance platform with its own digital currency."
+          "answer": "The World Republic is an open source global democracy platform with its own digital currency."
         },
         "what-is-wdd": {
           "question": "What is WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Do I need verification to participate?",
-          "answer": "Identity verification is required only for voting. You can found parties and transfer WDD earned from party subsidies without verification."
+          "answer": "Identity verification is required only for voting. You can register parties and transfer WDD earned from party subsidies without verification."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Failed to sign out"
     },
     "parties": {
-      "founded": "Party founded",
-      "found_failed": "Failed to found party",
-      "found_error": "Error founding party",
       "updated": "Updated",
       "update_failed": "Failed to update",
       "update_error": "Error updating party",
-      "dissolved": "Dissolved",
-      "dissolve_failed": "Failed to dissolve",
-      "dissolve_error": "Error dissolving party"
+      "registered": "Party registered",
+      "register_failed": "Failed to register party",
+      "register_error": "Error registering party",
+      "deleted": "Deleted",
+      "delete_failed": "Failed to delete",
+      "delete_error": "Error deleting party"
     }
   },
   "common": {

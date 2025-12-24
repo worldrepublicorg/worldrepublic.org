@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Rekisteri",
+          "subsidies": "Tukiaiset"
+        },
         "discover": "Löydä",
         "search_placeholder": "Etsi puolueita...",
         "no_parties_found": "Puolueita ei löytynyt",
@@ -39,24 +43,22 @@
         "party_details": "Puolueen tiedot",
         "share_party": "Jaa puolue",
         "my_party": "Oma puolueeni",
-        "found_party_and_earn": "Perusta puolue ja saa tukea",
         "learn_more": "Lue lisää",
         "party_management": "Puolueen hallinta",
         "edit_party_info": "Muokkaa puolueen tietoja",
-        "dissolve_party": "Hajota puolue",
         "dialogs": {
-          "found_party": "Perusta puolue",
           "party_name": "Puolueen nimi",
           "description_optional": "Kuvaus (valinnainen)",
           "official_link_optional": "Virallinen linkki (valinnainen)",
-          "founding": "Perustetaan...",
           "updating": "Päivitetään...",
-          "found": "Perusta",
           "save": "Tallenna",
-          "dissolving": "Hajotetaan...",
-          "about_to_found": "Olet perustamassa uutta puoluetta.",
-          "about_to_dissolve": "Olet hajottamassa {partyName}:tä. Tätä toimintaa ei voi perua.",
-          "leader_warning_found": "Olet tällä hetkellä {partyName}:n johtaja. Uuden puolueen perustaminen hajottaa nykyisen puolueesi."
+          "register_party": "Rekisteröi puolue",
+          "register": "Rekisteröidy",
+          "registering": "Rekisteröidään...",
+          "leader_warning_register": "Olet tällä hetkellä puolueen {partyName} johtaja. Uuden puolueen rekisteröinti poistaa nykyisen puolueesi.",
+          "deleting": "Poistetaan...",
+          "about_to_delete": "Olet poistamassa {partyName}:tä. Tätä toimintaa ei voi perua.",
+          "about_to_register": "Olet perustamassa uutta puoluetta."
         },
         "detail": {
           "failed_to_load": "Puolueen tietojen lataaminen epäonnistui",
@@ -68,7 +70,9 @@
           "leader": "Johtaja",
           "website": "Verkkosivusto",
           "not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
-        }
+        },
+        "delete_party": "Poista puolue",
+        "run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Mikä on Maailman tasavalta?",
-          "answer": "Maailman tasavalta on avoimen lähdekoodin maailmanlaajuinen hallintoalusta, jolla on oma digitaalinen valuutta."
+          "answer": "Maailman tasavalta on avoimen lähdekoodin maailmanlaajuinen demokratiaalusta, jolla on oma digitaalinen valuutta."
         },
         "what-is-wdd": {
           "question": "Mikä on WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Tarvitaanko osallistumiseen vahvistus?",
-          "answer": "Henkilöllisyyden vahvistaminen vaaditaan vain äänestämiseen. Voit perustaa puolueita ja siirtää puoluetuista saatuja WDD-varajo ilman vahvistusta."
+          "answer": "Henkilöllisyyden vahvistaminen vaaditaan vain äänestämiseen. Voit rekisteröidä puolueita ja siirtää puoluetuista saatuja WDD-varajo ilman vahvistusta."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Kirjautuminen ulos epäonnistui"
     },
     "parties": {
-      "founded": "Puolue perustettu",
-      "found_failed": "Puolueen perustaminen epäonnistui",
-      "found_error": "Virhe perustettaessa puoluetta",
       "updated": "Päivitetty",
       "update_failed": "Päivitys epäonnistui",
       "update_error": "Virhe päivittäessä puoluetta",
-      "dissolved": "Lakannut",
-      "dissolve_failed": "Lakkauttaminen epäonnistui",
-      "dissolve_error": "Virhe lakkauttaessa puoluetta"
+      "registered": "Puolue rekisteröity",
+      "register_failed": "Puolueen rekisteröinti epäonnistui",
+      "register_error": "Virhe puolueen rekisteröinnissä",
+      "deleted": "Poistettu",
+      "delete_failed": "Poistaminen epäonnistui",
+      "delete_error": "Virhe poistettaessa"
     }
   },
   "common": {

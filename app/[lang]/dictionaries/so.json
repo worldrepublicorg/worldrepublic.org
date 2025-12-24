@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Diiwaanka",
+          "subsidies": "Kaalmada"
+        },
         "discover": "Hel",
         "search_placeholder": "Raadi xisbiyada...",
         "no_parties_found": "Ma laha xisbiyo",
@@ -39,24 +43,22 @@
         "party_details": "Faahfaahinta xisbiga",
         "share_party": "Wadaag xisbiga",
         "my_party": "Xisbigayga",
-        "found_party_and_earn": "Aasaad xisbi oo hel maalgelin",
         "learn_more": "Wax badan baro",
         "party_management": "Maamulka xisbiga",
         "edit_party_info": "Wax ka beddel macluumaadka xisbiga",
-        "dissolve_party": "Burbur xisbiga",
         "dialogs": {
-          "found_party": "Aasaas xisbi",
           "party_name": "Magaca xisbiga",
           "description_optional": "Sharaxaad (ikhtiyaari ah)",
           "official_link_optional": "Xiriirka rasmiga ah (ikhtiyaari ah)",
-          "founding": "Aasaasaya...",
           "updating": "Cusbooneysiina...",
-          "found": "Aasaas",
           "save": "Keydso",
-          "dissolving": "Burburaya...",
-          "about_to_found": "Waxaad aasaasaysaa xisbi cusub.",
-          "about_to_dissolve": "Waxaad doonaysaa inaad buriso {partyName}. Tani ma noqon karto.",
-          "leader_warning_found": "Hadda waxaad tahay hogaamiyaha {partyName}. Abuurida xisbi cusub ayaa burin doonta xisbigaaga hadda."
+          "register_party": "Diiwaangeli xisbi",
+          "register": "Diiwaangeli",
+          "registering": "Diiwaangelinta...",
+          "leader_warning_register": "Hadda waxaad tahay hogaamiyaha {partyName}. Diiwaangelinta xisbi cusub waxay tirtiri doontaa xisbigaaga hadda.",
+          "deleting": "Tirtirayaa...",
+          "about_to_delete": "Waxaad doonaysaa inaad tirtirto {partyName}. Tani ma noqon karto.",
+          "about_to_register": "Waxaad aasaasaysaa xisbi cusub."
         },
         "detail": {
           "failed_to_load": "Waxaa la guuldareystay in la soo dejiyo xogta xisbiga",
@@ -68,7 +70,9 @@
           "leader": "Hogaanka",
           "website": "Website",
           "not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
-        }
+        },
+        "delete_party": "Tirtir xisbiga",
+        "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Maxay tahay Jamhuuriyadda Adduunka?",
-          "answer": "Jamhuuriyadda Adduunka waa madal maamul caalami ah oo il furan oo leh lacagteeda dhijitaalka ah."
+          "answer": "Jamhuuriyadda Adduunka waa madal dimuqraadiyad caalami ah oo il furan oo leh lacagteeda dhijitaalka ah."
         },
         "what-is-wdd": {
           "question": "WDD waa maxay?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Ma loo baahan yahay xaqiijin si looga qayb qaato?",
-          "answer": "Xaqiijinta aqoonsiga waxaa loo baahan yahay oo kaliya codaynta. Waad asaasikartaa xisbiyo waana wareejin kartaa WDD-ga laga helo kaalmada xisbiyada adoon lahayn xaqiijin."
+          "answer": "Xaqiijinta aqoonsiga waxaa loo baahan yahay oo kaliya codaynta. Waad diiwaangelin kartaa xisbiyo waana wareejin kartaa WDD-ga laga helo kaalmada xisbiyada adoon lahayn xaqiijin."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Ka baxid ku guuldareystay"
     },
     "parties": {
-      "founded": "Xisbiga waa la aasaasay",
-      "found_failed": "Aasaasida xisbiga way fashilantay",
-      "found_error": "Qalad aasaasida xisbiga",
       "updated": "Waa la cusbooneysiiyay",
       "update_failed": "Cusbooneysiinta way fashilantay",
       "update_error": "Qalad cusbooneysiinta xisbiga",
-      "dissolved": "Waa la burburiyey",
-      "dissolve_failed": "Burburinta way fashilantay",
-      "dissolve_error": "Qalad burburinta xisbiga"
+      "registered": "Xisbiga waa la diiwaangeliyay",
+      "register_failed": "Waa lagu guuldareystay in la diiwaangeliyo xisbiga",
+      "register_error": "Khalad dhacay diiwaangelinta xisbiga",
+      "deleted": "La tirtiray",
+      "delete_failed": "Waa lagu guuldareystay in la tirtiro",
+      "delete_error": "Khalad tirtirida"
     }
   },
   "common": {

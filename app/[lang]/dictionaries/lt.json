@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Registras",
+          "subsidies": "Subsidijos"
+        },
         "discover": "Atrasti",
         "search_placeholder": "Ieškoti partijų...",
         "no_parties_found": "Partijų nerasta",
@@ -39,24 +43,22 @@
         "party_details": "Partijos detalės",
         "share_party": "Dalintis partija",
         "my_party": "Mano partija",
-        "found_party_and_earn": "Įkurkite partiją ir gaukite subsidijas",
         "learn_more": "Sužinokite daugiau",
         "party_management": "Partijos valdymas",
         "edit_party_info": "Redaguoti partijos informaciją",
-        "dissolve_party": "Išardyti partiją",
         "dialogs": {
-          "found_party": "Įkurti partiją",
           "party_name": "Partijos pavadinimas",
           "description_optional": "Aprašymas (neprivalomas)",
           "official_link_optional": "Oficialus nuoroda (neprivalomas)",
-          "founding": "Įkuriama...",
           "updating": "Atnaujinama...",
-          "found": "Įkurti",
           "save": "Išsaugoti",
-          "dissolving": "Išardoma...",
-          "about_to_found": "Jūs ketinate įkurti naują partiją.",
-          "about_to_dissolve": "Ketinate išformuoti {partyName}. Šio veiksmo negalima atšaukti.",
-          "leader_warning_found": "Šiuo metu esate {partyName} lyderis. Įkūrus naują partiją jūsų dabartinė partija bus išformuota."
+          "register_party": "Registruoti partiją",
+          "register": "Registruotis",
+          "registering": "Registruojama...",
+          "leader_warning_register": "Šiuo metu esate {partyName} lyderis. Naujos partijos registravimas ištrins jūsų dabartinę partiją.",
+          "deleting": "Trinama...",
+          "about_to_delete": "Ketinate ištrinti {partyName}. Šio veiksmo negalima atšaukti.",
+          "about_to_register": "Jūs ketinate įkurti naują partiją."
         },
         "detail": {
           "failed_to_load": "Nepavyko įkelti partijos duomenų",
@@ -68,7 +70,9 @@
           "leader": "Lyderis",
           "website": "Svetainė",
           "not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
-        }
+        },
+        "delete_party": "Ištrinti partiją",
+        "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Kas yra Pasaulio respublika?",
-          "answer": "Pasaulio Respublika yra atvirojo kodo pasaulinio valdymo platforma, turinti savo skaitmeninę valiutą."
+          "answer": "Pasaulio Respublika yra atvirojo kodo pasaulinės demokratijos platforma, turinti savo skaitmeninę valiutą."
         },
         "what-is-wdd": {
           "question": "Kas yra WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Ar norint dalyvauti reikia patvirtinimo?",
-          "answer": "Tapatybės patvirtinimas reikalingas tik balsuojant. Be patvirtinimo galite kurti partijas ir pervesti WDD, gautus iš partijų subsidijų."
+          "answer": "Tapatybės patvirtinimas reikalingas tik balsuojant. Be patvirtinimo galite registruoti partijas ir pervesti WDD, gautus iš partijų subsidijų."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Atsijungimas nepavyko"
     },
     "parties": {
-      "founded": "Partija įkurta",
-      "found_failed": "Partijos įkūrimas nepavyko",
-      "found_error": "Klaida kuriant partiją",
       "updated": "Atnaujinta",
       "update_failed": "Atnaujinimas nepavyko",
       "update_error": "Klaida atnaujinant partiją",
-      "dissolved": "Išformuota",
-      "dissolve_failed": "Išformavimas nepavyko",
-      "dissolve_error": "Klaida išformuojant partiją"
+      "registered": "Partija užregistruota",
+      "register_failed": "Nepavyko užregistruoti partijos",
+      "register_error": "Klaida registruojant partiją",
+      "deleted": "Ištrinta",
+      "delete_failed": "Nepavyko ištrinti",
+      "delete_error": "Klaida trinant"
     }
   },
   "common": {

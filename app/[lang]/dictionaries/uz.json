@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Reyestr",
+          "subsidies": "Subsidiyalar"
+        },
         "discover": "Topish",
         "search_placeholder": "Partiyalarni qidirish...",
         "no_parties_found": "Partiyalar topilmadi",
@@ -39,24 +43,22 @@
         "party_details": "Partiya tafsilotlari",
         "share_party": "Partiyani ulashish",
         "my_party": "Mening partiyam",
-        "found_party_and_earn": "Partiya tashkil qiling va subsidiyalar oling",
         "learn_more": "Ko'proq biling",
         "party_management": "Partiya boshqaruvi",
         "edit_party_info": "Partiya ma'lumotlarini tahrirlash",
-        "dissolve_party": "Partiyani tarqatib yuborish",
         "dialogs": {
-          "found_party": "Partiya tuzish",
           "party_name": "Partiya nomi",
           "description_optional": "Tavsif (ixtiyoriy)",
           "official_link_optional": "Rasmiy havola (ixtiyoriy)",
-          "founding": "Tuzilmoqda...",
           "updating": "Yangilanmoqda...",
-          "found": "Tuzish",
           "save": "Saqlash",
-          "dissolving": "Tarqatilmoqda...",
-          "about_to_found": "Siz yangi partiya tuzmoqchisiz.",
-          "about_to_dissolve": "Siz {partyName} partiyasini tarqatib yubormoqchisiz. Bu harakatni bekor qilib bo'lmaydi.",
-          "leader_warning_found": "Siz hozirda {partyName} partiyasining rahbari ekansiz. Yangi partiya tashkil qilish joriy partiyangizni tarqatib yuboradi."
+          "register_party": "Partiyani ro'yxatdan o'tkazish",
+          "register": "Ro'yxatdan o'tish",
+          "registering": "Ro'yxatdan o'tkazilmoqda...",
+          "leader_warning_register": "Siz hozirda {partyName} liderisiz. Yangi partiyani ro'yxatdan o'tkazish joriy partiyangizni o'chiradi.",
+          "deleting": "O'chirilmoqda...",
+          "about_to_delete": "Siz {partyName} partiyasini o'chirmoqchisiz. Bu harakatni bekor qilib bo'lmaydi.",
+          "about_to_register": "Siz yangi partiya tuzmoqchisiz."
         },
         "detail": {
           "failed_to_load": "Partiya ma'lumotlarini yuklashda xatolik",
@@ -68,7 +70,9 @@
           "leader": "Rahbar",
           "website": "Veb-sayt",
           "not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
-        }
+        },
+        "delete_party": "Partiyani o'chirish",
+        "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Jahon Respublikasi nima?",
-          "answer": "Dunyo Respublikasi — o‘z raqamli valyutasiga ega ochiq manbali global boshqaruv platformasi."
+          "answer": "Dunyo Respublikasi — o‘z raqamli valyutasiga ega ochiq manbali global demokratiya platformasi."
         },
         "what-is-wdd": {
           "question": "WDD nima?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Qatnashish uchun tasdiqlash shartmi?",
-          "answer": "Shaxsni tasdiqlash faqat ovoz berish uchun talab qilinadi. Siz tasdiqlashsiz partiya tuzishingiz va partiya subsidiyalaridan olingan WDD mablag'larini o'tkazishingiz mumkin."
+          "answer": "Shaxsni tasdiqlash faqat ovoz berish uchun talab qilinadi. Siz tasdiqlashsiz partiya ro'yxatdan o'tkazishingiz va partiya subsidiyalaridan olingan WDD mablag'larini o'tkazishingiz mumkin."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Chiqish muvaffaqiyatsiz"
     },
     "parties": {
-      "founded": "Partiya tashkil etildi",
-      "found_failed": "Partiya tashkil etish muvaffaqiyatsiz",
-      "found_error": "Partiya tashkil etishda xato",
       "updated": "Yangilandi",
       "update_failed": "Yangilash muvaffaqiyatsiz",
       "update_error": "Partiyani yangilashda xato",
-      "dissolved": "Tarqatildi",
-      "dissolve_failed": "Tarqatish muvaffaqiyatsiz",
-      "dissolve_error": "Partiyani tarqatishda xato"
+      "registered": "Partiya ro'yxatga olindi",
+      "register_failed": "Partiyani ro'yxatdan o'tkazib bo'lmadi",
+      "register_error": "Partiyani ro'yxatdan o'tkazishda xatolik",
+      "deleted": "O'chirildi",
+      "delete_failed": "O'chirib bo'lmadi",
+      "delete_error": "O'chirishda xatolik"
     }
   },
   "common": {
