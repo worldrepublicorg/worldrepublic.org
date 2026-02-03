@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Reyestr",
+          "subsidies": "Subsidiyalar"
+        },
         "discover": "Kəşf edin",
         "search_placeholder": "Partiyaları axtarın...",
         "no_parties_found": "Partiya tapılmadı",
@@ -39,24 +43,22 @@
         "party_details": "Partiya detalları",
         "share_party": "Partiyanı paylaş",
         "my_party": "Partiyam",
-        "found_party_and_earn": "Partiya yaradın və subsidiyalar əldə edin",
         "learn_more": "Ətraflı öyrənin",
         "party_management": "Partiya idarəetməsi",
         "edit_party_info": "Partiya məlumatlarını redaktə et",
-        "dissolve_party": "Partiyanı ləğv et",
         "dialogs": {
-          "found_party": "Partiya yarat",
           "party_name": "Partiya adı",
           "description_optional": "Təsvir (istəyə bağlı)",
           "official_link_optional": "Rəsmi keçid (istəyə bağlı)",
-          "founding": "Yaradılır...",
           "updating": "Yenilənir...",
-          "found": "Yarat",
           "save": "Saxla",
-          "dissolving": "Ləğv edilir...",
-          "about_to_found": "Yeni partiya yaratmaq üzrəsiniz.",
-          "about_to_dissolve": "Siz {partyName} partiyasını ləğv etmək üzrəsiniz. Bu hərəkət geri alına bilməz.",
-          "leader_warning_found": "Hal-hazırda {partyName} partiyasının liderisiniz. Yeni partiya yaratmaq cari partiyanızı ləğv edəcək."
+          "register_party": "Partiya qeydiyyatdan keçir",
+          "register": "Qeydiyyat",
+          "registering": "Qeydiyyatdan keçirilir...",
+          "leader_warning_register": "Siz hazırda {partyName} liderisiniz. Yeni partiya qeydiyyatdan keçirmək cari partiyanızı siləcək.",
+          "deleting": "Silinir...",
+          "about_to_delete": "Siz {partyName} partiyasını silmək üzrəsiniz. Bu hərəkət geri alına bilməz.",
+          "about_to_register": "Yeni partiya yaratmaq üzrəsiniz."
         },
         "detail": {
           "failed_to_load": "Partiya məlumatlarını yükləmək mümkün olmadı",
@@ -68,7 +70,9 @@
           "leader": "Rəhbər",
           "website": "Veb sayt",
           "not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
-        }
+        },
+        "delete_party": "Partiyanı sil",
+        "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Dünya Respublikası nədir?",
-          "answer": "Dünya Respublikası öz rəqəmsal valyutası olan açıq mənbəli qlobal idarəetmə platformasıdır."
+          "answer": "Dünya Respublikası öz rəqəmsal valyutası olan açıq mənbəli qlobal demokratiya platformasıdır."
         },
         "what-is-wdd": {
           "question": "WDD nədir?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "İştirak etmək üçün təsdiqləmə lazımdır?",
-          "answer": "Şəxsiyyətin təsdiqlənməsi yalnız səsvermə üçün tələb olunur. Təsdiqləmə olmadan da partiya yarada və partiya subsidiyalarından qazanılan WDD-ni köçürə bilərsiniz."
+          "answer": "Şəxsiyyətin təsdiqlənməsi yalnız səsvermə üçün tələb olunur. Təsdiqləmə olmadan da partiya qeydiyyatdan keçirə və partiya subsidiyalarından qazanılan WDD-ni köçürə bilərsiniz."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Hesabdan çıxmaq alınmadı"
     },
     "parties": {
-      "founded": "Partiya yaradıldı",
-      "found_failed": "Partiya yaratma uğursuz oldu",
-      "found_error": "Partiya yaradarkən xəta",
       "updated": "Yeniləndi",
       "update_failed": "Yeniləmə uğursuz oldu",
       "update_error": "Partiyanı yeniləyərkən xəta",
-      "dissolved": "Ləğv edildi",
-      "dissolve_failed": "Ləğv etmə uğursuz oldu",
-      "dissolve_error": "Partiyanı ləğv edərkən xəta"
+      "registered": "Partiya qeydiyyatdan keçdi",
+      "register_failed": "Partiyanı qeydiyyatdan keçirmək mümkün olmadı",
+      "register_error": "Partiya qeydiyyatında xəta",
+      "deleted": "Silindi",
+      "delete_failed": "Silmək mümkün olmadı",
+      "delete_error": "Silinmə xətası"
     }
   },
   "common": {

@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Igitabo",
+          "subsidies": "Inkunga"
+        },
         "discover": "Gushakisha",
         "search_placeholder": "Shakisha amashyirahamwe...",
         "no_parties_found": "Ntacyo amashyirahamwe babonewe",
@@ -39,24 +43,22 @@
         "party_details": "Incamake y'amashyirahamwe",
         "share_party": "Gusangira amashyirahamwe",
         "my_party": "Amashyirahamwe yanjye",
-        "found_party_and_earn": "Tubaka ishyirahamwe no guhabwa imisanzure",
         "learn_more": "Menya byinshi",
         "party_management": "Gucunga amashyirahamwe",
         "edit_party_info": "Guhindura amakuru y'amashyirahamwe",
-        "dissolve_party": "Kurimbura amashyirahamwe",
         "dialogs": {
-          "found_party": "Kubaka amashyirahamwe",
           "party_name": "Izina ry'amashyirahamwe",
           "description_optional": "Insobanuro (bihari)",
           "official_link_optional": "Ihuza rya leta (bihari)",
-          "founding": "Kubaka...",
           "updating": "Gusubiramo...",
-          "found": "Kubaka",
           "save": "Bika",
-          "dissolving": "Kurimbura...",
-          "about_to_found": "Ugiye kubaka amashyirahamwe mashya.",
-          "about_to_dissolve": "Uri gutangira gusesa {partyName}. Iki gikorwa ntacyo gisubizwa.",
-          "leader_warning_found": "Ubu uri umuyobozi wa {partyName}. Gukomeza ishyirahamwe gushya kuzongera ishyirahamwe wawe ubu."
+          "register_party": "Kwandikisha ishyaka",
+          "register": "Iyandikishe",
+          "registering": "Kwandikisha...",
+          "leader_warning_register": "Kuri ubu uri umuyobozi wa {partyName}. Kwiyandikisha ishyaka rishya bizasesa ishyaka ryawe ry'ubu.",
+          "deleting": "Gusiba...",
+          "about_to_delete": "Uri gutangira gusesa {partyName}. Iki gikorwa ntacyo gisubizwa.",
+          "about_to_register": "Ugiye kubaka amashyirahamwe mashya."
         },
         "detail": {
           "failed_to_load": "Kuzana amakuru y'amashyirahamwe byanze",
@@ -68,7 +70,9 @@
           "leader": "Umuobozi",
           "website": "Urubuga",
           "not_found_description": "Amashyirahamwe ushakisha ntayabaho cyangwa yarimbuwe."
-        }
+        },
+        "delete_party": "Siba ishyirahamwe",
+        "run_on_elections_and_earn": "Injira mu ntoranyamihigo no guhabwa imisanzure"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Repubulika y'isi ni iki?",
-          "answer": "Repubulika y'Isi ni urubuga ruyobora isi rufite isoko ifunguye hamwe nifaranga ryarwo."
+          "answer": "Repubulika y'Isi ni urubuga rwa demokarasi isi rufite isoko ifunguye hamwe nifaranga ryarwo."
         },
         "what-is-wdd": {
           "question": "WDD ni iki?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Ese birakenewe kwemeza umwirondoro kugira ngo witabire?",
-          "answer": "Kwemeza umwirondoro bisabwa gusa mu gutora. Ushobora gushinga amashyaka no koherereza WDD wavanye mu nkunga z'amashyaka utabanje kwemeza umwirondoro."
+          "answer": "Kwemeza umwirondoro bisabwa gusa mu gutora. Ushobora kwandikisha amashyaka no koherereza WDD wavanye mu nkunga z'amashyaka utabanje kwemeza umwirondoro."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Gusohoka byanze"
     },
     "parties": {
-      "founded": "Amashyirahamwe yubatswe",
-      "found_failed": "Kubaka amashyirahamwe byanze",
-      "found_error": "Ikosa mu kubaka amashyirahamwe",
       "updated": "Yasubiramo",
       "update_failed": "Gusubiramo byanze",
       "update_error": "Ikosa mu gusubiramo amashyirahamwe",
-      "dissolved": "Yarimbuwe",
-      "dissolve_failed": "Kurimbura byanze",
-      "dissolve_error": "Ikosa mu kurimbura amashyirahamwe"
+      "registered": "Ishyaka ryandikishijwe",
+      "register_failed": "Byaniranye kwandikisha ishyaka",
+      "register_error": "Ikosa mu kwandikisha ishyaka",
+      "deleted": "Byasibwe",
+      "delete_failed": "Byaniranye gusiba",
+      "delete_error": "Ikosa mu gusiba"
     }
   },
   "common": {

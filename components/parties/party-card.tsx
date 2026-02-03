@@ -127,7 +127,7 @@ export function PartyCard({
                   />
 
                   <CustomListItem
-                    label={dictionary.pages.govern.parties.dissolve_party}
+                    label={dictionary.pages.govern.parties.delete_party}
                     startAdornment={
                       <PiTrash className="size-5 text-gray-400" />
                     }

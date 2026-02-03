@@ -74,7 +74,7 @@ export function CreateUpdatePartyDialog({
         >
           <Typography variant="heading" level={3}>
             {isCreate
-              ? dictionary.pages.govern.parties.dialogs.found_party
+              ? dictionary.pages.govern.parties.dialogs.register_party
               : dictionary.pages.govern.parties.edit_party_info}
           </Typography>
         </AlertDialogHeader>
@@ -149,10 +149,10 @@ export function CreateUpdatePartyDialog({
               <Button variant="primary" fullWidth disabled={isProcessing}>
                 {isProcessing
                   ? isCreate
-                    ? dictionary.pages.govern.parties.dialogs.founding
+                    ? dictionary.pages.govern.parties.dialogs.registering
                     : dictionary.pages.govern.parties.dialogs.updating
                   : isCreate
-                    ? dictionary.pages.govern.parties.dialogs.found
+                    ? dictionary.pages.govern.parties.dialogs.register
                     : dictionary.pages.govern.parties.dialogs.save}
               </Button>
             </Form.Submit>

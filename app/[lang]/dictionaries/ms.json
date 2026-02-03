@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Daftar",
+          "subsidies": "Subsidi"
+        },
         "discover": "Temui",
         "search_placeholder": "Cari parti...",
         "no_parties_found": "Tiada parti ditemui",
@@ -39,24 +43,22 @@
         "party_details": "Butiran parti",
         "share_party": "Kongsi parti",
         "my_party": "Parti saya",
-        "found_party_and_earn": "Tubuhkan parti dan dapatkan subsidi",
         "learn_more": "Ketahui lebih lanjut",
         "party_management": "Pengurusan parti",
         "edit_party_info": "Edit maklumat parti",
-        "dissolve_party": "Bubarkan parti",
         "dialogs": {
-          "found_party": "Tubuhkan parti",
           "party_name": "Nama parti",
           "description_optional": "Penerangan (pilihan)",
           "official_link_optional": "Pautan rasmi (pilihan)",
-          "founding": "Menubuhkan...",
           "updating": "Mengemas kini...",
-          "found": "Tubuhkan",
           "save": "Simpan",
-          "dissolving": "Membubarkan...",
-          "about_to_found": "Anda akan menubuhkan parti baru.",
-          "about_to_dissolve": "Anda akan membubarkan {partyName}. Tindakan ini tidak boleh dibatalkan.",
-          "leader_warning_found": "Anda kini adalah pemimpin {partyName}. Menubuhkan parti baharu akan membubarkan parti semasa anda."
+          "register_party": "Daftar parti",
+          "register": "Daftar",
+          "registering": "Mendaftar...",
+          "leader_warning_register": "Anda kini adalah pemimpin {partyName}. Mendaftar parti baru akan memadam parti semasa anda.",
+          "deleting": "Memadam...",
+          "about_to_delete": "Anda akan memadam {partyName}. Tindakan ini tidak boleh dibatalkan.",
+          "about_to_register": "Anda akan menubuhkan parti baru."
         },
         "detail": {
           "failed_to_load": "Gagal memuatkan data parti",
@@ -68,7 +70,9 @@
           "leader": "Pemimpin",
           "website": "Laman web",
           "not_found_description": "Parti yang anda cari tidak wujud atau telah dibubarkan."
-        }
+        },
+        "delete_party": "Padam parti",
+        "run_on_elections_and_earn": "Bertanding dalam pilihan raya dan dapatkan subsidi"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Apakah itu Republik Dunia?",
-          "answer": "Republik Dunia ialah platform tadbir urus global sumber terbuka dengan mata wang digitalnya sendiri."
+          "answer": "Republik Dunia ialah platform demokrasi global sumber terbuka dengan mata wang digitalnya sendiri."
         },
         "what-is-wdd": {
           "question": "Apakah WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Adakah pengesahan diperlukan untuk menyertai?",
-          "answer": "Pengesahan identiti hanya diperlukan untuk mengundi. Anda boleh menubuhkan parti dan memindahkan WDD yang diperolehi daripada subsidi parti tanpa pengesahan."
+          "answer": "Pengesahan identiti hanya diperlukan untuk mengundi. Anda boleh mendaftar parti dan memindahkan WDD yang diperolehi daripada subsidi parti tanpa pengesahan."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Log keluar gagal"
     },
     "parties": {
-      "founded": "Parti ditubuhkan",
-      "found_failed": "Menubuhkan parti gagal",
-      "found_error": "Ralat semasa menubuhkan parti",
       "updated": "Dikemaskini",
       "update_failed": "Mengemaskini gagal",
       "update_error": "Ralat semasa mengemaskini parti",
-      "dissolved": "Dibubarkan",
-      "dissolve_failed": "Membubarkan gagal",
-      "dissolve_error": "Ralat semasa membubarkan parti"
+      "registered": "Parti didaftarkan",
+      "register_failed": "Gagal mendaftar parti",
+      "register_error": "Ralat mendaftar parti",
+      "deleted": "Dipadam",
+      "delete_failed": "Gagal memadam",
+      "delete_error": "Ralat memadam"
     }
   },
   "common": {

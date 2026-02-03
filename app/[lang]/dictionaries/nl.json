@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Register",
+          "subsidies": "Subsidies"
+        },
         "discover": "Ontdekken",
         "search_placeholder": "Zoek partijen...",
         "no_parties_found": "Geen partijen gevonden",
@@ -39,24 +43,22 @@
         "party_details": "Partijdetails",
         "share_party": "Partij delen",
         "my_party": "Mijn partij",
-        "found_party_and_earn": "Richt een partij op en krijg subsidies",
         "learn_more": "Meer informatie",
         "party_management": "Partijbeheer",
         "edit_party_info": "Partijinformatie bewerken",
-        "dissolve_party": "Partij ontbinden",
         "dialogs": {
-          "found_party": "Partij oprichten",
           "party_name": "Partijnaam",
           "description_optional": "Beschrijving (optioneel)",
           "official_link_optional": "Officiële link (optioneel)",
-          "founding": "Oprichten...",
           "updating": "Bijwerken...",
-          "found": "Oprichten",
           "save": "Opslaan",
-          "dissolving": "Ontbinden...",
-          "about_to_found": "U staat op het punt een nieuwe partij op te richten.",
-          "about_to_dissolve": "Je staat op het punt {partyName} te ontbinden. Deze actie kan niet ongedaan worden gemaakt.",
-          "leader_warning_found": "Je bent momenteel de leider van {partyName}. Het oprichten van een nieuwe partij zal je huidige partij ontbinden."
+          "register_party": "Registreer een partij",
+          "register": "Registreren",
+          "registering": "Registreren...",
+          "leader_warning_register": "U bent momenteel de leider van {partyName}. Het registreren van een nieuwe partij zal uw huidige partij verwijderen.",
+          "deleting": "Verwijderen...",
+          "about_to_delete": "Je staat op het punt {partyName} te verwijderen. Deze actie kan niet ongedaan worden gemaakt.",
+          "about_to_register": "U staat op het punt een nieuwe partij op te richten."
         },
         "detail": {
           "failed_to_load": "Fout bij het laden van partijgegevens",
@@ -68,7 +70,9 @@
           "leader": "Leider",
           "website": "Website",
           "not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
-        }
+        },
+        "delete_party": "Partij verwijderen",
+        "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Wat is de Wereldrepubliek?",
-          "answer": "De Wereldrepubliek is een open source wereldwijd bestuursplatform met zijn eigen digitale valuta."
+          "answer": "De Wereldrepubliek is een open source wereldwijd democratieplatform met zijn eigen digitale valuta."
         },
         "what-is-wdd": {
           "question": "Wat is WDD?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Is verificatie nodig om deel te nemen?",
-          "answer": "Identiteitsverificatie is alleen vereist om te stemmen. Je kunt zonder verificatie partijen oprichten en WDD overmaken die verkregen is uit partijsubsidies."
+          "answer": "Identiteitsverificatie is alleen vereist om te stemmen. Je kunt zonder verificatie partijen registreren en WDD overmaken die verkregen is uit partijsubsidies."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Uitloggen mislukt"
     },
     "parties": {
-      "founded": "Partij opgericht",
-      "found_failed": "Oprichten partij mislukt",
-      "found_error": "Fout bij oprichten van partij",
       "updated": "Bijgewerkt",
       "update_failed": "Bijwerken mislukt",
       "update_error": "Fout bij bijwerken van partij",
-      "dissolved": "Ontbonden",
-      "dissolve_failed": "Ontbinding mislukt",
-      "dissolve_error": "Fout bij ontbinden van partij"
+      "registered": "Partij geregistreerd",
+      "register_failed": "Kon partij niet registreren",
+      "register_error": "Fout bij registreren partij",
+      "deleted": "Verwijderd",
+      "delete_failed": "Kon niet verwijderen",
+      "delete_error": "Fout bij verwijderen"
     }
   },
   "common": {

@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "登録簿",
+          "subsidies": "助成金"
+        },
         "discover": "発見",
         "search_placeholder": "政党を検索...",
         "no_parties_found": "政党が見つかりません",
@@ -39,24 +43,22 @@
         "party_details": "政党の詳細",
         "share_party": "政党を共有",
         "my_party": "私の政党",
-        "found_party_and_earn": "政党を設立して補助金を受け取る",
         "learn_more": "詳細を見る",
         "party_management": "政党管理",
         "edit_party_info": "政党情報を編集",
-        "dissolve_party": "政党を解散",
         "dialogs": {
-          "found_party": "政党を設立",
           "party_name": "政党名",
           "description_optional": "説明（オプション）",
           "official_link_optional": "公式リンク（オプション）",
-          "founding": "設立中...",
           "updating": "更新中...",
-          "found": "設立",
           "save": "保存",
-          "dissolving": "解散中...",
-          "about_to_found": "新しい政党を設立しようとしています。",
-          "about_to_dissolve": "あなたは {partyName} を解散しようとしています。この操作は元に戻せません。",
-          "leader_warning_found": "あなたは現在 {partyName} のリーダーです。新しい政党を設立すると、現在の政党が解散されます。"
+          "register_party": "政党を登録",
+          "register": "登録",
+          "registering": "登録中...",
+          "leader_warning_register": "あなたは現在 {partyName} のリーダーです。新しい政党を登録すると、現在の政党は削除されます。",
+          "deleting": "削除中...",
+          "about_to_delete": "あなたは {partyName} を削除しようとしています。この操作は元に戻せません。",
+          "about_to_register": "新しい政党を設立しようとしています。"
         },
         "detail": {
           "failed_to_load": "政党データの読み込みに失敗しました",
@@ -68,7 +70,9 @@
           "leader": "リーダー",
           "website": "ウェブサイト",
           "not_found_description": "お探しの政党は存在しないか、解散されました。"
-        }
+        },
+        "delete_party": "政党を削除",
+        "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "ワールド・リパブリック（世界共和国）とは？",
-          "answer": "世界共和国は、独自のデジタル通貨を持つオープンソースのグローバルガバナンスプラットフォームです。"
+          "answer": "世界共和国は、独自のデジタル通貨を持つオープンソースのグローバル民主主義プラットフォームです。"
         },
         "what-is-wdd": {
           "question": "WDDとは何ですか？",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "参加するには本人確認が必要ですか？",
-          "answer": "本人確認は投票する場合にのみ必要です。本人確認なしでも、政党を設立したり、政党助成金として得たWDDを送金することは可能です。"
+          "answer": "本人確認は投票する場合にのみ必要です。本人確認なしでも、政党を登録したり、政党助成金として得たWDDを送金することは可能です。"
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "サインアウトに失敗しました"
     },
     "parties": {
-      "founded": "政党を設立しました",
-      "found_failed": "政党の設立に失敗しました",
-      "found_error": "政党の設立中にエラーが発生しました",
       "updated": "更新しました",
       "update_failed": "更新に失敗しました",
       "update_error": "政党の更新中にエラーが発生しました",
-      "dissolved": "解散しました",
-      "dissolve_failed": "解散に失敗しました",
-      "dissolve_error": "政党の解散中にエラーが発生しました"
+      "registered": "政党が登録されました",
+      "register_failed": "政党の登録に失敗しました",
+      "register_error": "政党の登録中にエラーが発生しました",
+      "deleted": "削除しました",
+      "delete_failed": "削除に失敗しました",
+      "delete_error": "削除エラー"
     }
   },
   "common": {

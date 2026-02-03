@@ -30,6 +30,10 @@
         }
       },
       "parties": {
+        "tabs": {
+          "registry": "Sổ đăng ký",
+          "subsidies": "Trợ cấp"
+        },
         "discover": "Khám phá",
         "search_placeholder": "Tìm kiếm đảng phái...",
         "no_parties_found": "Không tìm thấy đảng phái",
@@ -39,24 +43,22 @@
         "party_details": "Chi tiết đảng phái",
         "share_party": "Chia sẻ đảng phái",
         "my_party": "Đảng phái của tôi",
-        "found_party_and_earn": "Thành lập đảng và nhận trợ cấp",
         "learn_more": "Tìm hiểu thêm",
         "party_management": "Quản lý đảng phái",
         "edit_party_info": "Chỉnh sửa thông tin đảng phái",
-        "dissolve_party": "Giải tán đảng phái",
         "dialogs": {
-          "found_party": "Thành lập đảng phái",
           "party_name": "Tên đảng phái",
           "description_optional": "Mô tả (tùy chọn)",
           "official_link_optional": "Liên kết chính thức (tùy chọn)",
-          "founding": "Đang thành lập...",
           "updating": "Đang cập nhật...",
-          "found": "Thành lập",
           "save": "Lưu",
-          "dissolving": "Đang giải tán...",
-          "about_to_found": "Bạn sắp thành lập một đảng phái mới.",
-          "about_to_dissolve": "Bạn sắp giải thể {partyName}. Hành động này không thể hoàn tác.",
-          "leader_warning_found": "Bạn hiện là lãnh đạo của {partyName}. Thành lập đảng mới sẽ giải thể đảng hiện tại của bạn."
+          "register_party": "Đăng ký đảng",
+          "register": "Đăng ký",
+          "registering": "Đang đăng ký...",
+          "leader_warning_register": "Bạn hiện là lãnh đạo của {partyName}. Đăng ký đảng mới sẽ xóa đảng hiện tại của bạn.",
+          "deleting": "Đang xóa...",
+          "about_to_delete": "Bạn sắp xóa {partyName}. Hành động này không thể hoàn tác.",
+          "about_to_register": "Bạn sắp thành lập một đảng phái mới."
         },
         "detail": {
           "failed_to_load": "Không thể tải dữ liệu đảng phái",
@@ -68,7 +70,9 @@
           "leader": "Lãnh đạo",
           "website": "Trang web",
           "not_found_description": "Đảng phái bạn đang tìm không tồn tại hoặc đã bị giải tán."
-        }
+        },
+        "delete_party": "Xóa đảng",
+        "run_on_elections_and_earn": "Tham gia bầu cử và nhận trợ cấp"
       }
     },
     "menu": {
@@ -98,7 +102,7 @@
       "items": {
         "app-purpose": {
           "question": "Cộng hòa Thế giới là gì?",
-          "answer": "Cộng hòa Thế giới là một nền tảng quản trị toàn cầu mã nguồn mở với tiền kỹ thuật số riêng."
+          "answer": "Cộng hòa Thế giới là một nền tảng dân chủ toàn cầu mã nguồn mở với tiền kỹ thuật số riêng."
         },
         "what-is-wdd": {
           "question": "WDD là gì?",
@@ -122,7 +126,7 @@
         },
         "verification-required": {
           "question": "Có cần xác minh để tham gia không?",
-          "answer": "Xác minh danh tính chỉ bắt buộc khi bỏ phiếu. Bạn có thể thành lập đảng và chuyển WDD nhận được từ trợ cấp đảng mà không cần xác minh."
+          "answer": "Xác minh danh tính chỉ bắt buộc khi bỏ phiếu. Bạn có thể đăng ký đảng và chuyển WDD nhận được từ trợ cấp đảng mà không cần xác minh."
         }
       }
     },
@@ -221,15 +225,15 @@
       "sign_out_failed": "Đăng xuất thất bại"
     },
     "parties": {
-      "founded": "Đảng phái đã được thành lập",
-      "found_failed": "Thành lập đảng phái thất bại",
-      "found_error": "Lỗi khi thành lập đảng phái",
       "updated": "Đã cập nhật",
       "update_failed": "Cập nhật thất bại",
       "update_error": "Lỗi khi cập nhật đảng phái",
-      "dissolved": "Đã giải tán",
-      "dissolve_failed": "Giải tán thất bại",
-      "dissolve_error": "Lỗi khi giải tán đảng phái"
+      "registered": "Đảng đã được đăng ký",
+      "register_failed": "Không thể đăng ký đảng",
+      "register_error": "Lỗi đăng ký đảng",
+      "deleted": "Đã xóa",
+      "delete_failed": "Xóa thất bại",
+      "delete_error": "Lỗi khi xóa"
     }
   },
   "common": {
