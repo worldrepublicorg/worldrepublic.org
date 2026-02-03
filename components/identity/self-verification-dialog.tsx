@@ -73,7 +73,7 @@ export function SelfVerificationDialog({
       </a>
 
       <a
-        href="https://t.me/selfxyz"
+        href="https://discord.gg/selfxyz"
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full"
