@@ -1,4 +1,3 @@
-import { unstable_cache } from "next/cache";
 import en from "./en.json";
 
 export type Dictionary = typeof en;
@@ -65,12 +64,7 @@ export const getDictionary = async (locale: string) => {
     hasLocale ? locale : DEFAULT_LOCALE
   ) as keyof typeof dictionaries;
   const loader = dictionaries[actualLocale];
-
-  return unstable_cache(
-    async () => loader(),
-    [`dictionary-${actualLocale}`],
-    { revalidate: 3600 }, // Cache for 1 hour
-  )();
+  return loader();
 };
 
 // Export locales for static generation
