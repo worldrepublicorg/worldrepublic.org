@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registri",
-          "subsidies": "Subsidi"
-        },
         "discover": "Temukan",
         "search_placeholder": "Cari partai...",
         "no_parties_found": "Tidak ada partai ditemukan",
@@ -43,22 +39,24 @@
         "party_details": "Detail partai",
         "share_party": "Bagikan partai",
         "my_party": "Partai saya",
+        "found_party_and_earn": "Dirikan partai dan dapatkan subsidi",
         "learn_more": "Pelajari lebih lanjut",
         "party_management": "Manajemen partai",
         "edit_party_info": "Edit informasi partai",
+        "dissolve_party": "Bubarkan partai",
         "dialogs": {
+          "found_party": "Dirikan partai",
           "party_name": "Nama partai",
           "description_optional": "Deskripsi (opsional)",
           "official_link_optional": "Tautan resmi (opsional)",
+          "founding": "Mendirikan...",
           "updating": "Memperbarui...",
+          "found": "Dirikan",
           "save": "Simpan",
-          "register_party": "Daftarkan partai",
-          "register": "Daftar",
-          "registering": "Mendaftar...",
-          "leader_warning_register": "Anda saat ini adalah pemimpin {partyName}. Mendaftarkan partai baru akan menghapus partai Anda saat ini.",
-          "deleting": "Menghapus...",
-          "about_to_delete": "Anda akan menghapus {partyName}. Tindakan ini tidak dapat dibatalkan.",
-          "about_to_register": "Anda akan mendirikan partai baru."
+          "dissolving": "Membubarkan...",
+          "about_to_found": "Anda akan mendirikan partai baru.",
+          "about_to_dissolve": "Anda akan membubarkan {partyName}. Tindakan ini tidak dapat dibatalkan.",
+          "leader_warning_found": "Anda saat ini adalah pemimpin {partyName}. Mendirikan partai baru akan membubarkan partai Anda saat ini."
         },
         "detail": {
           "failed_to_load": "Gagal memuat data partai",
@@ -70,9 +68,7 @@
           "leader": "Pemimpin",
           "website": "Situs web",
           "not_found_description": "Partai yang Anda cari tidak ada atau telah dibubarkan."
-        },
-        "delete_party": "Hapus partai",
-        "run_on_elections_and_earn": "Ikut pemilu dan dapatkan subsidi"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Apa itu Republik Dunia?",
-          "answer": "Republik Dunia adalah platform demokrasi global sumber terbuka dengan mata uang digitalnya sendiri."
+          "answer": "Republik Dunia adalah platform tata kelola global sumber terbuka dengan mata uang digitalnya sendiri."
         },
         "what-is-wdd": {
           "question": "Apa itu WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Apakah perlu verifikasi untuk berpartisipasi?",
-          "answer": "Verifikasi identitas hanya diperlukan untuk memilih. Anda dapat mendaftarkan partai dan mentransfer WDD yang diperoleh dari subsidi partai tanpa verifikasi."
+          "answer": "Verifikasi identitas hanya diperlukan untuk memilih. Anda dapat mendirikan partai dan mentransfer WDD yang diperoleh dari subsidi partai tanpa verifikasi."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Keluar gagal"
     },
     "parties": {
+      "founded": "Partai didirikan",
+      "found_failed": "Gagal mendirikan partai",
+      "found_error": "Kesalahan saat mendirikan partai",
       "updated": "Diperbarui",
       "update_failed": "Gagal memperbarui",
       "update_error": "Kesalahan saat memperbarui partai",
-      "registered": "Partai terdaftar",
-      "register_failed": "Gagal mendaftarkan partai",
-      "register_error": "Kesalahan mendaftarkan partai",
-      "deleted": "Dihapus",
-      "delete_failed": "Gagal menghapus",
-      "delete_error": "Kesalahan menghapus"
+      "dissolved": "Dibubarkan",
+      "dissolve_failed": "Gagal membubarkan",
+      "dissolve_error": "Kesalahan saat membubarkan partai"
     }
   },
   "common": {

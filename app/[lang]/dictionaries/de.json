@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Register",
-          "subsidies": "Subventionen"
-        },
         "discover": "Entdecken",
         "search_placeholder": "Parteien suchen...",
         "no_parties_found": "Keine Parteien gefunden",
@@ -43,22 +39,24 @@
         "party_details": "Parteidetails",
         "share_party": "Partei teilen",
         "my_party": "Meine Partei",
+        "found_party_and_earn": "Gründen Sie eine Partei und erhalten Sie Subventionen",
         "learn_more": "Mehr erfahren",
         "party_management": "Parteiverwaltung",
         "edit_party_info": "Parteiinformationen bearbeiten",
+        "dissolve_party": "Partei auflösen",
         "dialogs": {
+          "found_party": "Partei gründen",
           "party_name": "Parteiname",
           "description_optional": "Beschreibung (optional)",
           "official_link_optional": "Offizieller Link (optional)",
+          "founding": "Gründe...",
           "updating": "Aktualisiere...",
+          "found": "Gründen",
           "save": "Speichern",
-          "register_party": "Partei registrieren",
-          "register": "Registrieren",
-          "registering": "Registrierung...",
-          "leader_warning_register": "Sie sind derzeit der Vorsitzende von {partyName}. Die Registrierung einer neuen Partei löscht Ihre aktuelle Partei.",
-          "deleting": "Löschen...",
-          "about_to_delete": "Sie sind dabei, {partyName} zu löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
-          "about_to_register": "Sie sind dabei, eine neue Partei zu gründen."
+          "dissolving": "Löse auf...",
+          "about_to_found": "Sie sind dabei, eine neue Partei zu gründen.",
+          "about_to_dissolve": "Sie sind dabei, {partyName} aufzulösen. Diese Aktion kann nicht rückgängig gemacht werden.",
+          "leader_warning_found": "Sie sind derzeit der Führer von {partyName}. Die Gründung einer neuen Partei wird Ihre aktuelle Partei auflösen."
         },
         "detail": {
           "failed_to_load": "Fehler beim Laden der Parteidaten",
@@ -70,9 +68,7 @@
           "leader": "Vorsitzender",
           "website": "Website",
           "not_found_description": "Die gesuchte Partei existiert nicht oder wurde aufgelöst."
-        },
-        "delete_party": "Partei löschen",
-        "run_on_elections_and_earn": "Bei Wahlen antreten und Subventionen erhalten"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Was ist die Weltrepublik?",
-          "answer": "Die Weltrepublik ist eine Open-Source-Plattform für globale Demokratie mit eigener digitaler Währung."
+          "answer": "Die Weltrepublik ist eine Open-Source-Plattform für globale Governance mit eigener digitaler Währung."
         },
         "what-is-wdd": {
           "question": "Was ist WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Brauche ich eine Verifizierung, um teilzunehmen?",
-          "answer": "Die Identitätsprüfung ist nur für das Wählen erforderlich. Sie können Parteien registrieren und WDD aus Parteisubventionen auch ohne Verifizierung transferieren."
+          "answer": "Die Identitätsprüfung ist nur für das Wählen erforderlich. Sie können Parteien gründen und WDD aus Parteisubventionen auch ohne Verifizierung transferieren."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Abmeldung fehlgeschlagen"
     },
     "parties": {
+      "founded": "Partei gegründet",
+      "found_failed": "Gründung fehlgeschlagen",
+      "found_error": "Fehler beim Gründen der Partei",
       "updated": "Aktualisiert",
       "update_failed": "Aktualisierung fehlgeschlagen",
       "update_error": "Fehler beim Aktualisieren der Partei",
-      "registered": "Partei registriert",
-      "register_failed": "Partei konnte nicht registriert werden",
-      "register_error": "Fehler bei der Parteiregistrierung",
-      "deleted": "Gelöscht",
-      "delete_failed": "Löschen fehlgeschlagen",
-      "delete_error": "Fehler beim Löschen"
+      "dissolved": "Aufgelöst",
+      "dissolve_failed": "Auflösung fehlgeschlagen",
+      "dissolve_error": "Fehler beim Auflösen der Partei"
     }
   },
   "common": {

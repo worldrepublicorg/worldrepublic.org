@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Reģistrs",
-          "subsidies": "Subsīdijas"
-        },
         "discover": "Atklāt",
         "search_placeholder": "Meklēt partijas...",
         "no_parties_found": "Partijas nav atrastas",
@@ -43,22 +39,24 @@
         "party_details": "Partijas detaļas",
         "share_party": "Dalīties ar partiju",
         "my_party": "Mana partija",
+        "found_party_and_earn": "Izveidojiet partiju un saņemiet subsīdijas",
         "learn_more": "Uzzināt vairāk",
         "party_management": "Partijas pārvalde",
         "edit_party_info": "Rediģēt partijas informāciju",
+        "dissolve_party": "Izformēt partiju",
         "dialogs": {
+          "found_party": "Izveidot partiju",
           "party_name": "Partijas nosaukums",
           "description_optional": "Apraksts (nav obligāts)",
           "official_link_optional": "Oficiālā saite (nav obligāta)",
+          "founding": "Izveido...",
           "updating": "Atjaunina...",
+          "found": "Izveidot",
           "save": "Saglabāt",
-          "register_party": "Reģistrēt partiju",
-          "register": "Reģistrēties",
-          "registering": "Reģistrēšana...",
-          "leader_warning_register": "Jūs pašlaik esat {partyName} līderis. Jaunas partijas reģistrēšana dzēsīs jūsu pašreizējo partiju.",
-          "deleting": "Dzēšana...",
-          "about_to_delete": "Jūs gatavojaties dzēst {partyName}. Šo darbību nevar atsaukt.",
-          "about_to_register": "Jūs gatavojaties izveidot jaunu partiju."
+          "dissolving": "Izformē...",
+          "about_to_found": "Jūs gatavojaties izveidot jaunu partiju.",
+          "about_to_dissolve": "Jūs gatavojaties izformēt {partyName}. Šo darbību nevar atsaukt.",
+          "leader_warning_found": "Pašlaik esat {partyName} vadītājs. Dibinot jaunu partiju, jūsu pašreizējā partija tiks izformēta."
         },
         "detail": {
           "failed_to_load": "Neizdevās ielādēt partijas datus",
@@ -70,9 +68,7 @@
           "leader": "Līderis",
           "website": "Tīmekļa vietne",
           "not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
-        },
-        "delete_party": "Dzēst partiju",
-        "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Kas ir Pasaules Republika?",
-          "answer": "Pasaules Republika ir atvērtā koda globālās demokrātijas platforma ar savu digitālo valūtu."
+          "answer": "Pasaules Republika ir atvērtā koda globālās pārvaldības platforma ar savu digitālo valūtu."
         },
         "what-is-wdd": {
           "question": "Kas ir WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Vai dalībai ir nepieciešama verifikācija?",
-          "answer": "Identitātes pārbaude ir nepieciešama tikai balsošanai. Jūs varat reģistrēt partijas un pārskaitīt no partiju subsīdijām iegūto WDD bez verifikācijas."
+          "answer": "Identitātes pārbaude ir nepieciešama tikai balsošanai. Jūs varat dibināt partijas un pārskaitīt no partiju subsīdijām iegūto WDD bez verifikācijas."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Izrakstīšanās neizdevās"
     },
     "parties": {
+      "founded": "Partija izveidota",
+      "found_failed": "Partijas izveide neizdevās",
+      "found_error": "Kļūda izveidojot partiju",
       "updated": "Atjaunināts",
       "update_failed": "Atjaunināšana neizdevās",
       "update_error": "Kļūda atjauninot partiju",
-      "registered": "Partija reģistrēta",
-      "register_failed": "Neizdevās reģistrēt partiju",
-      "register_error": "Kļūda partijas reģistrācijā",
-      "deleted": "Dzēsts",
-      "delete_failed": "Neizdevās dzēst",
-      "delete_error": "Kļūda dzēšot"
+      "dissolved": "Izformēta",
+      "dissolve_failed": "Izformēšana neizdevās",
+      "dissolve_error": "Kļūda izformējot partiju"
     }
   },
   "common": {

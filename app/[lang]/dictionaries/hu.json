@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Nyilvántartás",
-          "subsidies": "Támogatások"
-        },
         "discover": "Felfedezés",
         "search_placeholder": "Pártok keresése...",
         "no_parties_found": "Nem található párt",
@@ -43,22 +39,24 @@
         "party_details": "Párt részletei",
         "share_party": "Párt megosztása",
         "my_party": "Pártom",
+        "found_party_and_earn": "Alapíts pártot és kapj támogatásokat",
         "learn_more": "További információ",
         "party_management": "Pártkezelés",
         "edit_party_info": "Párt információk szerkesztése",
+        "dissolve_party": "Párt feloszlatása",
         "dialogs": {
+          "found_party": "Párt alapítása",
           "party_name": "Párt neve",
           "description_optional": "Leírás (opcionális)",
           "official_link_optional": "Hivatalos link (opcionális)",
+          "founding": "Alapítás...",
           "updating": "Frissítés...",
+          "found": "Alapít",
           "save": "Mentés",
-          "register_party": "Párt regisztrálása",
-          "register": "Regisztráció",
-          "registering": "Regisztráció...",
-          "leader_warning_register": "Jelenleg te vagy a(z) {partyName} vezetője. Új párt regisztrálása törli a jelenlegi pártodat.",
-          "deleting": "Törlés...",
-          "about_to_delete": "Éppen törölni készülsz a {partyName}-t. Ez a művelet nem vonható vissza.",
-          "about_to_register": "Új pártot fogsz alapítani."
+          "dissolving": "Feloszlatás...",
+          "about_to_found": "Új pártot fogsz alapítani.",
+          "about_to_dissolve": "Éppen feloszlatni készülsz a {partyName}-t. Ez a művelet nem vonható vissza.",
+          "leader_warning_found": "Jelenleg a {partyName} vezetője vagy. Új párt alapítása feloszlatja a jelenlegi pártodat."
         },
         "detail": {
           "failed_to_load": "A párt adatok betöltése sikertelen",
@@ -70,9 +68,7 @@
           "leader": "Vezető",
           "website": "Weboldal",
           "not_found_description": "A keresett párt nem létezik vagy feloszlott."
-        },
-        "delete_party": "Párt törlése",
-        "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Mi a Világköztársaság?",
-          "answer": "A Világköztársaság egy nyílt forráskódú globális demokrácia platform saját digitális valutával."
+          "answer": "A Világköztársaság egy nyílt forráskódú globális kormányzási platform saját digitális valutával."
         },
         "what-is-wdd": {
           "question": "Mi a WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Szükséges a hitelesítés a részvételhez?",
-          "answer": "Személyazonosság-ellenőrzés csak a szavazáshoz szükséges. Pártot regisztrálni és a párttámogatásokból szerzett WDD-t mozgatni hitelesítés nélkül is lehet."
+          "answer": "Személyazonosság-ellenőrzés csak a szavazáshoz szükséges. Pártot alapítani és a párttámogatásokból szerzett WDD-t mozgatni hitelesítés nélkül is lehet."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "A kijelentkezés sikertelen"
     },
     "parties": {
+      "founded": "Párt alapítva",
+      "found_failed": "Párt alapítása sikertelen",
+      "found_error": "Hiba a párt alapításakor",
       "updated": "Frissítve",
       "update_failed": "Frissítés sikertelen",
       "update_error": "Hiba a párt frissítésekor",
-      "registered": "Párt regisztrálva",
-      "register_failed": "Nem sikerült a párt regisztrációja",
-      "register_error": "Hiba a párt regisztrációjakor",
-      "deleted": "Törölve",
-      "delete_failed": "Sikertelen törlés",
-      "delete_error": "Hiba a törléskor"
+      "dissolved": "Feloszlatva",
+      "dissolve_failed": "Feloszlatás sikertelen",
+      "dissolve_error": "Hiba a párt feloszlatásakor"
     }
   },
   "common": {

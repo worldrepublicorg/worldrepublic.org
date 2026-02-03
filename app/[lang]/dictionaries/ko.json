@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "등록부",
-          "subsidies": "보조금"
-        },
         "discover": "발견",
         "search_placeholder": "정당 검색...",
         "no_parties_found": "정당을 찾을 수 없습니다",
@@ -43,22 +39,24 @@
         "party_details": "정당 세부정보",
         "share_party": "정당 공유",
         "my_party": "내 정당",
+        "found_party_and_earn": "정당을 설립하고 보조금을 받으세요",
         "learn_more": "자세히 알아보기",
         "party_management": "정당 관리",
         "edit_party_info": "정당 정보 편집",
+        "dissolve_party": "정당 해산",
         "dialogs": {
+          "found_party": "정당 창당",
           "party_name": "정당명",
           "description_optional": "설명 (선택사항)",
           "official_link_optional": "공식 링크 (선택사항)",
+          "founding": "창당 중...",
           "updating": "업데이트 중...",
+          "found": "창당",
           "save": "저장",
-          "register_party": "정당 등록",
-          "register": "등록",
-          "registering": "등록 중...",
-          "leader_warning_register": "현재 {partyName}의 대표입니다. 새 정당을 등록하면 현재 정당이 삭제됩니다.",
-          "deleting": "삭제 중...",
-          "about_to_delete": "{partyName}을(를) 삭제하려고 합니다. 이 작업은 취소할 수 없습니다.",
-          "about_to_register": "새 정당을 창당하려고 합니다."
+          "dissolving": "해산 중...",
+          "about_to_found": "새 정당을 창당하려고 합니다.",
+          "about_to_dissolve": "{partyName}을(를) 해산하려고 합니다. 이 작업은 취소할 수 없습니다.",
+          "leader_warning_found": "현재 {partyName}의 지도자입니다. 새로운 정당을 설립하면 현재 정당이 해산됩니다."
         },
         "detail": {
           "failed_to_load": "정당 데이터 로드 실패",
@@ -70,9 +68,7 @@
           "leader": "지도자",
           "website": "웹사이트",
           "not_found_description": "찾고 있는 정당이 존재하지 않거나 해산되었습니다."
-        },
-        "delete_party": "정당 삭제",
-        "run_on_elections_and_earn": "선거에 출마하고 보조금을 받으세요"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "세계 공화국은 무엇인가요?",
-          "answer": "세계 공화국은 자체 디지털 통화를 보유한 오픈 소스 글로벌 민주주의 플랫폼입니다."
+          "answer": "세계 공화국은 자체 디지털 통화를 보유한 오픈 소스 글로벌 거버넌스 플랫폼입니다."
         },
         "what-is-wdd": {
           "question": "WDD란 무엇인가요?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "참여하려면 인증이 필요한가요?",
-          "answer": "신원 확인은 투표할 때만 필요합니다. 인증 없이도 정당을 등록하고 정당 보조금으로 받은 WDD를 이체할 수 있습니다."
+          "answer": "신원 확인은 투표할 때만 필요합니다. 인증 없이도 정당을 창당하고 정당 보조금으로 받은 WDD를 이체할 수 있습니다."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "로그아웃 실패"
     },
     "parties": {
+      "founded": "정당 창당됨",
+      "found_failed": "정당 창당 실패",
+      "found_error": "정당 창당 중 오류 발생",
       "updated": "업데이트됨",
       "update_failed": "업데이트 실패",
       "update_error": "정당 업데이트 중 오류 발생",
-      "registered": "정당 등록됨",
-      "register_failed": "정당 등록 실패",
-      "register_error": "정당 등록 중 오류",
-      "deleted": "삭제됨",
-      "delete_failed": "삭제 실패",
-      "delete_error": "삭제 오류"
+      "dissolved": "해산됨",
+      "dissolve_failed": "해산 실패",
+      "dissolve_error": "정당 해산 중 오류 발생"
     }
   },
   "common": {

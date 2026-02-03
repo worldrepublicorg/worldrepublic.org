@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Register",
-          "subsidies": "Subvencije"
-        },
         "discover": "Odkrij",
         "search_placeholder": "Iskanje strank...",
         "no_parties_found": "Stranke niso najdene",
@@ -43,22 +39,24 @@
         "party_details": "Podrobnosti stranke",
         "share_party": "Deli stranko",
         "my_party": "Moja stranka",
+        "found_party_and_earn": "Ustanovite stranko in prejmite subvencije",
         "learn_more": "Izvedite več",
         "party_management": "Upravljanje stranke",
         "edit_party_info": "Uredi informacije o stranki",
+        "dissolve_party": "Razpusti stranko",
         "dialogs": {
+          "found_party": "Ustanovi stranko",
           "party_name": "Ime stranke",
           "description_optional": "Opis (neobvezno)",
           "official_link_optional": "Uradna povezava (neobvezno)",
+          "founding": "Ustanavljanje...",
           "updating": "Posodabljanje...",
+          "found": "Ustanovi",
           "save": "Shrani",
-          "register_party": "Registrirajte stranko",
-          "register": "Registracija",
-          "registering": "Registracija...",
-          "leader_warning_register": "Trenutno ste vodja {partyName}. Registracija nove stranke bo izbrisala vašo trenutno stranko.",
-          "deleting": "Brisanje...",
-          "about_to_delete": "Izbrisali boste {partyName}. Tega dejanja ni mogoče razveljaviti.",
-          "about_to_register": "Kmalu boste ustanovili novo stranko."
+          "dissolving": "Razpuščanje...",
+          "about_to_found": "Kmalu boste ustanovili novo stranko.",
+          "about_to_dissolve": "Razpustili boste {partyName}. Tega dejanja ni mogoče razveljaviti.",
+          "leader_warning_found": "Trenutno ste vodja {partyName}. Ustanovitev nove stranke bo razpustila vašo trenutno stranko."
         },
         "detail": {
           "failed_to_load": "Nalaganje podatkov stranke ni uspelo",
@@ -70,9 +68,7 @@
           "leader": "Vodja",
           "website": "Spletna stran",
           "not_found_description": "Stranka, ki jo iščete, ne obstaja ali je bila razpuščena."
-        },
-        "delete_party": "Izbriši stranko",
-        "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Kaj je Svetovna republika?",
-          "answer": "Svetovna republika je odprtokodna platforma za globalno demokracijo z lastno digitalno valuto."
+          "answer": "Svetovna republika je odprtokodna platforma za globalno upravljanje z lastno digitalno valuto."
         },
         "what-is-wdd": {
           "question": "Kaj je WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Je za sodelovanje potrebno preverjanje?",
-          "answer": "Preverjanje istovetnosti je potrebno le za glasovanje. Brez preverjanja lahko registrirate stranke in prenašate WDD, pridobljen iz strankarskih subvencij."
+          "answer": "Preverjanje istovetnosti je potrebno le za glasovanje. Brez preverjanja lahko ustanavljate stranke in prenašate WDD, pridobljen iz strankarskih subvencij."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Odjava ni uspela"
     },
     "parties": {
+      "founded": "Stranka ustanovljena",
+      "found_failed": "Ustanovitev stranke ni uspela",
+      "found_error": "Napaka pri ustanavljanju stranke",
       "updated": "Posodobljeno",
       "update_failed": "Posodobitev ni uspela",
       "update_error": "Napaka pri posodabljanju stranke",
-      "registered": "Stranka registrirana",
-      "register_failed": "Ni uspelo registrirati stranke",
-      "register_error": "Napaka pri registraciji stranke",
-      "deleted": "Izbrisano",
-      "delete_failed": "Ni uspelo izbrisati",
-      "delete_error": "Napaka pri brisanju"
+      "dissolved": "Razpuščena",
+      "dissolve_failed": "Razpustitev ni uspela",
+      "dissolve_error": "Napaka pri razpuščanju stranke"
     }
   },
   "common": {

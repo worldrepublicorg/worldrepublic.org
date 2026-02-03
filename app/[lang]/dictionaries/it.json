@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registro",
-          "subsidies": "Sussidi"
-        },
         "discover": "Scopri",
         "search_placeholder": "Cerca partiti...",
         "no_parties_found": "Nessun partito trovato",
@@ -43,22 +39,24 @@
         "party_details": "Dettagli del partito",
         "share_party": "Condividi partito",
         "my_party": "Il mio partito",
+        "found_party_and_earn": "Fonda un partito e ottieni sussidi",
         "learn_more": "Scopri di più",
         "party_management": "Gestione del partito",
         "edit_party_info": "Modifica informazioni del partito",
+        "dissolve_party": "Sciogli partito",
         "dialogs": {
+          "found_party": "Fonda un partito",
           "party_name": "Nome del partito",
           "description_optional": "Descrizione (opzionale)",
           "official_link_optional": "Link ufficiale (opzionale)",
+          "founding": "Fondazione...",
           "updating": "Aggiornamento...",
+          "found": "Fonda",
           "save": "Salva",
-          "register_party": "Registra un partito",
-          "register": "Registrati",
-          "registering": "Registrazione...",
-          "leader_warning_register": "Sei attualmente il leader di {partyName}. La registrazione di un nuovo partito eliminerà il tuo partito attuale.",
-          "deleting": "Eliminazione...",
-          "about_to_delete": "Stai per eliminare {partyName}. Questa azione non può essere annullata.",
-          "about_to_register": "Stai per fondare un nuovo partito."
+          "dissolving": "Scioglimento...",
+          "about_to_found": "Stai per fondare un nuovo partito.",
+          "about_to_dissolve": "Stai per sciogliere {partyName}. Questa azione non può essere annullata.",
+          "leader_warning_found": "Sei attualmente il leader di {partyName}. Fondare un nuovo partito scioglierà il tuo partito attuale."
         },
         "detail": {
           "failed_to_load": "Errore nel caricamento dei dati del partito",
@@ -70,9 +68,7 @@
           "leader": "Leader",
           "website": "Sito web",
           "not_found_description": "Il partito che stai cercando non esiste o è stato sciolto."
-        },
-        "delete_party": "Elimina partito",
-        "run_on_elections_and_earn": "Candidati alle elezioni e ottieni sussidi"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Cos'è la Repubblica Mondiale?",
-          "answer": "La Repubblica Mondiale è una piattaforma di democrazia globale open source con la propria valuta digitale."
+          "answer": "La Repubblica Mondiale è una piattaforma di governance globale open source con la propria valuta digitale."
         },
         "what-is-wdd": {
           "question": "Cos'è WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Serve la verifica per partecipare?",
-          "answer": "La verifica dell'identità è richiesta solo per votare. Puoi registrare partiti e trasferire i WDD ottenuti dai sussidi ai partiti senza verifica."
+          "answer": "La verifica dell'identità è richiesta solo per votare. Puoi fondare partiti e trasferire i WDD ottenuti dai sussidi ai partiti senza verifica."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Disconnessione fallita"
     },
     "parties": {
+      "founded": "Partito fondato",
+      "found_failed": "Fondazione fallita",
+      "found_error": "Errore nella fondazione del partito",
       "updated": "Aggiornato",
       "update_failed": "Aggiornamento fallito",
       "update_error": "Errore nell'aggiornamento del partito",
-      "registered": "Partito registrato",
-      "register_failed": "Impossibile registrare il partito",
-      "register_error": "Errore durante la registrazione del partito",
-      "deleted": "Eliminato",
-      "delete_failed": "Impossibile eliminare",
-      "delete_error": "Errore durante l'eliminazione"
+      "dissolved": "Sciolto",
+      "dissolve_failed": "Scioglimento fallito",
+      "dissolve_error": "Errore nello scioglimento del partito"
     }
   },
   "common": {

@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Rejstřík",
-          "subsidies": "Dotace"
-        },
         "discover": "Objevit",
         "search_placeholder": "Hledat strany...",
         "no_parties_found": "Nebyly nalezeny žádné strany",
@@ -43,22 +39,24 @@
         "party_details": "Detaily strany",
         "share_party": "Sdílet stranu",
         "my_party": "Moje strana",
+        "found_party_and_earn": "Založte stranu a získejte dotace",
         "learn_more": "Zjistit více",
         "party_management": "Správa strany",
         "edit_party_info": "Upravit informace o straně",
+        "dissolve_party": "Rozpustit stranu",
         "dialogs": {
+          "found_party": "Založit stranu",
           "party_name": "Název strany",
           "description_optional": "Popis (volitelné)",
           "official_link_optional": "Oficiální odkaz (volitelné)",
+          "founding": "Zakládání...",
           "updating": "Aktualizace...",
+          "found": "Založit",
           "save": "Uložit",
-          "register_party": "Registrovat stranu",
-          "register": "Registrovat",
-          "registering": "Registrace...",
-          "leader_warning_register": "Momentálně jste vůdcem {partyName}. Registrace nové strany smaže vaši současnou stranu.",
-          "deleting": "Mazání...",
-          "about_to_delete": "Chystáte se smazat {partyName}. Tuto akci nelze vrátit zpět.",
-          "about_to_register": "Chystáte se založit novou stranu."
+          "dissolving": "Rozpouštění...",
+          "about_to_found": "Chystáte se založit novou stranu.",
+          "about_to_dissolve": "Chystáte se rozpustit {partyName}. Tuto akci nelze vrátit zpět.",
+          "leader_warning_found": "Jste momentálně vůdce {partyName}. Založení nové strany rozpustí vaši současnou stranu."
         },
         "detail": {
           "failed_to_load": "Nepodařilo se načíst data strany",
@@ -70,9 +68,7 @@
           "leader": "Vůdce",
           "website": "Webová stránka",
           "not_found_description": "Strana, kterou hledáte, neexistuje nebo byla rozpuštěna."
-        },
-        "delete_party": "Smazat stranu",
-        "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Co je Světová Republika?",
-          "answer": "Světová republika je open source platforma pro globální demokracii s vlastní digitální měnou."
+          "answer": "Světová republika je open source platforma pro globální vládnutí s vlastní digitální měnou."
         },
         "what-is-wdd": {
           "question": "Co je WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Je k účasti potřeba ověření?",
-          "answer": "Ověření totožnosti je vyžadováno pouze pro hlasování. Bez ověření můžete registrovat strany a převádět WDD získané ze stranických dotací."
+          "answer": "Ověření totožnosti je vyžadováno pouze pro hlasování. Bez ověření můžete zakládat strany a převádět WDD získané ze stranických dotací."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Odhlášení se nezdařilo"
     },
     "parties": {
+      "founded": "Strana založena",
+      "found_failed": "Založení strany selhalo",
+      "found_error": "Chyba při zakládání strany",
       "updated": "Aktualizováno",
       "update_failed": "Aktualizace selhala",
       "update_error": "Chyba při aktualizaci strany",
-      "registered": "Strana registrována",
-      "register_failed": "Nepodařilo se registrovat stranu",
-      "register_error": "Chyba při registraci strany",
-      "deleted": "Smazáno",
-      "delete_failed": "Nepodařilo se smazat",
-      "delete_error": "Chyba při mazání"
+      "dissolved": "Rozpuštěna",
+      "dissolve_failed": "Rozpuštění selhalo",
+      "dissolve_error": "Chyba při rozpouštění strany"
     }
   },
   "common": {

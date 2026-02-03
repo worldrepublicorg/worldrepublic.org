@@ -42,13 +42,13 @@ export function DeletePartyDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            {dictionary.pages.govern.parties.delete_party}
+            {dictionary.pages.govern.parties.dissolve_party}
           </Typography>
         </AlertDialogHeader>
         <AlertDialogDescription>
           {party && (
             <p>
-              {dictionary.pages.govern.parties.dialogs.about_to_delete.replace(
+              {dictionary.pages.govern.parties.dialogs.about_to_dissolve.replace(
                 "{partyName}",
                 party.name,
               )}
@@ -65,7 +65,7 @@ export function DeletePartyDialog({
               className="bg-error-600"
             >
               {isProcessing
-                ? dictionary.pages.govern.parties.dialogs.deleting
+                ? dictionary.pages.govern.parties.dialogs.dissolving
                 : dictionary.common.confirm}
             </Button>
           </AlertDialogClose>

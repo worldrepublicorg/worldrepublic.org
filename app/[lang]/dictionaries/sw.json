@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Rejista",
-          "subsidies": "Ruzuku"
-        },
         "discover": "Gundua",
         "search_placeholder": "Tafuta vyama...",
         "no_parties_found": "Hakuna vyama vilivyopatikana",
@@ -43,22 +39,24 @@
         "party_details": "Maelezo ya chama",
         "share_party": "Shiriki chama",
         "my_party": "Chama changu",
+        "found_party_and_earn": "Anzisha chama na upate ruzuku",
         "learn_more": "Jifunze zaidi",
         "party_management": "Usimamizi wa chama",
         "edit_party_info": "Hariri taarifa za chama",
+        "dissolve_party": "Futa chama",
         "dialogs": {
+          "found_party": "Anzisha chama",
           "party_name": "Jina la chama",
           "description_optional": "Maelezo (si lazima)",
           "official_link_optional": "Kiungo rasmi (si lazima)",
+          "founding": "Inaanzisha...",
           "updating": "Inasasisha...",
+          "found": "Anzisha",
           "save": "Hifadhi",
-          "register_party": "Sajili chama",
-          "register": "Sajili",
-          "registering": "Inasajili...",
-          "leader_warning_register": "Wewe ni kiongozi wa {partyName} sasa. Kusajili chama kipya kutafuta chama chako cha sasa.",
-          "deleting": "inafuta...",
-          "about_to_delete": "Uko karibu kufuta {partyName}. Kitendo hiki hakiwezi kufutwa.",
-          "about_to_register": "Uko karibu kuanzisha chama kipya."
+          "dissolving": "Inafuta...",
+          "about_to_found": "Uko karibu kuanzisha chama kipya.",
+          "about_to_dissolve": "Uko karibu kufuta {partyName}. Kitendo hiki hakiwezi kufutwa.",
+          "leader_warning_found": "Kwa sasa wewe ni kiongozi wa {partyName}. Kuanzisha chama kipya kutafuta chama chako cha sasa."
         },
         "detail": {
           "failed_to_load": "Imeshindwa kupakia data ya chama",
@@ -70,9 +68,7 @@
           "leader": "Kiongozi",
           "website": "Tovuti",
           "not_found_description": "Chama unachokitafuta hakipo au kimefutwa."
-        },
-        "delete_party": "Futa chama",
-        "run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Jamhuri ya Ulimwengu ni nini?",
-          "answer": "Jamhuri ya Dunia ni jukwaa la kidemokrasia kimataifa la chanzo huria lenye sarafu yake ya kidijitali."
+          "answer": "Jamhuri ya Dunia ni jukwaa la utawala wa kimataifa la chanzo huria lenye sarafu yake ya kidijitali."
         },
         "what-is-wdd": {
           "question": "WDD ni nini?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Je, uthibitishaji unahitajika ili kushiriki?",
-          "answer": "Uthibitishaji wa utambulisho unahitajika tu kwa kupiga kura. Unaweza kusajili vyama na kuhamisha WDD iliyopatikana kutoka kwa ruzuku za vyama bila uthibitishaji."
+          "answer": "Uthibitishaji wa utambulisho unahitajika tu kwa kupiga kura. Unaweza kuanzisha vyama na kuhamisha WDD iliyopatikana kutoka kwa ruzuku za vyama bila uthibitishaji."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Kuondoka hakukufaulu"
     },
     "parties": {
+      "founded": "Chama kimeanzishwa",
+      "found_failed": "Kuanzisha chama kumeshindwa",
+      "found_error": "Hitilafu wakati wa kuanzisha chama",
       "updated": "Imehakikiwa",
       "update_failed": "Kuhakiki kumeshindwa",
       "update_error": "Hitilafu wakati wa kuhakiki chama",
-      "registered": "Chama kimesajiliwa",
-      "register_failed": "Imeshindwa kusajili chama",
-      "register_error": "Hitilafu kusajili chama",
-      "deleted": "Imefutwa",
-      "delete_failed": "Imeshindwa kufuta",
-      "delete_error": "Hitilafu kufuta"
+      "dissolved": "Imevunjwa",
+      "dissolve_failed": "Kuvunja kumeshindwa",
+      "dissolve_error": "Hitilafu wakati wa kuvunja chama"
     }
   },
   "common": {

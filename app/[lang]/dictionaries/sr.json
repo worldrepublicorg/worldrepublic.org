@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Регистар",
-          "subsidies": "Субвенције"
-        },
         "discover": "Откријте",
         "search_placeholder": "Претрага странака...",
         "no_parties_found": "Странке нису пронађене",
@@ -43,22 +39,24 @@
         "party_details": "Детаљи странке",
         "share_party": "Подели странку",
         "my_party": "Моја странка",
+        "found_party_and_earn": "Оснујте странку и добијте субвенције",
         "learn_more": "Сазнајте више",
         "party_management": "Управљање странком",
         "edit_party_info": "Уреди информације о странци",
+        "dissolve_party": "Распусти странку",
         "dialogs": {
+          "found_party": "Оснуј странку",
           "party_name": "Име странке",
           "description_optional": "Опис (опционално)",
           "official_link_optional": "Званична веза (опционално)",
+          "founding": "Оснивање...",
           "updating": "Ажурирање...",
+          "found": "Оснуј",
           "save": "Сачувај",
-          "register_party": "Региструј странку",
-          "register": "Региструј се",
-          "registering": "Регистрација...",
-          "leader_warning_register": "Тренутно сте вођа {partyName}. Регистрација нове странке ће обрисати вашу тренутну странку.",
-          "deleting": "Брисање...",
-          "about_to_delete": "Управо ћете обрисати {partyName}. Ова радња се не може поништити.",
-          "about_to_register": "Ускоро ћете основати нову странку."
+          "dissolving": "Распуштање...",
+          "about_to_found": "Ускоро ћете основати нову странку.",
+          "about_to_dissolve": "Управо ћете распустити {partyName}. Ова радња се не може поништити.",
+          "leader_warning_found": "Тренутно сте вођа {partyName}. Оснивање нове странке ће распустити вашу тренутну странку."
         },
         "detail": {
           "failed_to_load": "Неуспешно учитавање података странке",
@@ -70,9 +68,7 @@
           "leader": "Вођа",
           "website": "Веб сајт",
           "not_found_description": "Странка коју тражите не постоји или је распуштена."
-        },
-        "delete_party": "Обриши странку",
-        "run_on_elections_and_earn": "Кандидујте се на изборима и добијте субвенције"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Шта је Светска Република?",
-          "answer": "Светска република је платформа за глобалну демократију отвореног кода са сопствениом дигиталном валутом."
+          "answer": "Светска република је платформа за глобално управљање отвореног кода са сопствениом дигиталном валутом."
         },
         "what-is-wdd": {
           "question": "Шта је WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Da li je potrebna verifikacija za učešće?",
-          "answer": "Verifikacija identiteta je potrebna samo za glasanje. Možete registrovati stranke i prenositi WDD stečen od stranačkih subvencija bez verifikacije."
+          "answer": "Verifikacija identiteta je potrebna samo za glasanje. Možete osnivati stranke i prenositi WDD stečen od stranačkih subvencija bez verifikacije."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Одјава није успела"
     },
     "parties": {
+      "founded": "Странка основана",
+      "found_failed": "Оснивање странке није успело",
+      "found_error": "Грешка приликом оснивања странке",
       "updated": "Ажурирано",
       "update_failed": "Ажурирање није успело",
       "update_error": "Грешка приликом ажурирања странке",
-      "registered": "Странка регистрована",
-      "register_failed": "Није успела регистрација странке",
-      "register_error": "Грешка при регистрацији странке",
-      "deleted": "Обрисано",
-      "delete_failed": "Брисање није успело",
-      "delete_error": "Грешка при брисању"
+      "dissolved": "Распуштена",
+      "dissolve_failed": "Распуштање није успело",
+      "dissolve_error": "Грешка приликом распуштања странке"
     }
   },
   "common": {

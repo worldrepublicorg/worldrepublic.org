@@ -14,7 +14,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Party } from "@/lib/types/parties";
 import { cn } from "@/lib/utils";
 
-interface ConfirmRegisterPartyDialogProps {
+interface ConfirmFoundPartyDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   userParty: Party | null;
@@ -23,14 +23,14 @@ interface ConfirmRegisterPartyDialogProps {
   dictionary: Dictionary;
 }
 
-export function ConfirmRegisterPartyDialog({
+export function ConfirmFoundPartyDialog({
   open,
   onOpenChange,
   userParty,
   onConfirm,
   isProcessing = false,
   dictionary,
-}: ConfirmRegisterPartyDialogProps) {
+}: ConfirmFoundPartyDialogProps) {
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent>
@@ -42,12 +42,12 @@ export function ConfirmRegisterPartyDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            {dictionary.pages.govern.parties.dialogs.register_party}
+            {dictionary.pages.govern.parties.dialogs.found_party}
           </Typography>
         </AlertDialogHeader>
         <AlertDialogDescription>
           <div>
-            <p>{dictionary.pages.govern.parties.dialogs.about_to_register}</p>
+            <p>{dictionary.pages.govern.parties.dialogs.about_to_found}</p>
             {userParty && (
               <div className="mt-4 flex h-full w-full items-center justify-center rounded-2xl bg-red-50 p-4 text-center">
                 <div className="flex items-start gap-3">
@@ -57,7 +57,7 @@ export function ConfirmRegisterPartyDialog({
                     level={4}
                     className="text-left text-[14px] font-medium text-red-500"
                   >
-                    {dictionary.pages.govern.parties.dialogs.leader_warning_register.replace(
+                    {dictionary.pages.govern.parties.dialogs.leader_warning_found.replace(
                       "{partyName}",
                       userParty.name,
                     )}
@@ -79,7 +79,7 @@ export function ConfirmRegisterPartyDialog({
             className={cn(userParty && "bg-error-600")}
           >
             {isProcessing
-              ? dictionary.pages.govern.parties.dialogs.registering
+              ? dictionary.pages.govern.parties.dialogs.founding
               : dictionary.common.confirm}
           </Button>
         </AlertDialogFooter>

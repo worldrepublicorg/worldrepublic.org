@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Sicil",
-          "subsidies": "Ödenekler"
-        },
         "discover": "Keşfet",
         "search_placeholder": "Parti ara...",
         "no_parties_found": "Parti bulunamadı",
@@ -43,22 +39,24 @@
         "party_details": "Parti detayları",
         "share_party": "Partiyi paylaş",
         "my_party": "Partim",
+        "found_party_and_earn": "Bir parti kurun ve sübvansiyon alın",
         "learn_more": "Daha fazla bilgi",
         "party_management": "Parti yönetimi",
         "edit_party_info": "Parti bilgilerini düzenle",
+        "dissolve_party": "Partiyi feshet",
         "dialogs": {
+          "found_party": "Parti kur",
           "party_name": "Parti adı",
           "description_optional": "Açıklama (isteğe bağlı)",
           "official_link_optional": "Resmi bağlantı (isteğe bağlı)",
+          "founding": "Kuruluyor...",
           "updating": "Güncelleniyor...",
+          "found": "Kur",
           "save": "Kaydet",
-          "register_party": "Parti kaydet",
-          "register": "Kaydol",
-          "registering": "Kaydediliyor...",
-          "leader_warning_register": "Şu anda {partyName} partisinin liderisiniz. Yeni bir parti kaydetmek mevcut partinizi silecektir.",
-          "deleting": "Siliniyor...",
-          "about_to_delete": "{partyName} partisini silmek üzeresiniz. Bu işlem geri alınamaz.",
-          "about_to_register": "Yeni bir parti kurmak üzeresiniz."
+          "dissolving": "Feshediliyor...",
+          "about_to_found": "Yeni bir parti kurmak üzeresiniz.",
+          "about_to_dissolve": "{partyName} partisini feshetmek üzeresiniz. Bu işlem geri alınamaz.",
+          "leader_warning_found": "Şu anda {partyName} partisinin liderisiniz. Yeni bir parti kurmak mevcut partinizi feshedecektir."
         },
         "detail": {
           "failed_to_load": "Parti verileri yüklenemedi",
@@ -70,9 +68,7 @@
           "leader": "Lider",
           "website": "Web sitesi",
           "not_found_description": "Aradığınız parti mevcut değil veya feshedilmiş."
-        },
-        "delete_party": "Partiyi sil",
-        "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Dünya Cumhuriyeti nedir?",
-          "answer": "Dünya Cumhuriyeti, kendi dijital para birimine sahip, açık kaynaklı bir küresel demokrasi platformudur."
+          "answer": "Dünya Cumhuriyeti, kendi dijital para birimine sahip, açık kaynaklı bir küresel yönetim platformudur."
         },
         "what-is-wdd": {
           "question": "WDD nedir?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Katılmak için doğrulama gerekiyor mu?",
-          "answer": "Kimlik doğrulaması sadece oy kullanmak için gereklidir. Doğrulama olmadan parti kaydedebilir ve parti ödeneklerinden kazanılan WDD'yi transfer edebilirsiniz."
+          "answer": "Kimlik doğrulaması sadece oy kullanmak için gereklidir. Doğrulama olmadan parti kurabilir ve parti ödeneklerinden kazanılan WDD'yi transfer edebilirsiniz."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Çıkış başarısız"
     },
     "parties": {
+      "founded": "Parti kuruldu",
+      "found_failed": "Parti kurma başarısız",
+      "found_error": "Parti kurarken hata",
       "updated": "Güncellendi",
       "update_failed": "Güncelleme başarısız",
       "update_error": "Partiyi güncellerken hata",
-      "registered": "Parti kaydedildi",
-      "register_failed": "Parti kaydedilemedi",
-      "register_error": "Parti kaydedilirken hata",
-      "deleted": "Silindi",
-      "delete_failed": "Silinemedi",
-      "delete_error": "Silme hatası"
+      "dissolved": "Dağıtıldı",
+      "dissolve_failed": "Dağıtma başarısız",
+      "dissolve_error": "Partiyi dağıtırken hata"
     }
   },
   "common": {

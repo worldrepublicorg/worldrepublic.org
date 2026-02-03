@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Rijista",
-          "subsidies": "Tallafi"
-        },
         "discover": "Gano",
         "search_placeholder": "Nemo jam'iyyu...",
         "no_parties_found": "Ba a sami jam'iyyu ba",
@@ -43,22 +39,24 @@
         "party_details": "Cikakkun bayanai na jam'iyya",
         "share_party": "Raba jam'iyya",
         "my_party": "Jam'iyyata",
+        "found_party_and_earn": "Kafa jam'iyya kuma ku sami tallafi",
         "learn_more": "Ƙari koyo",
         "party_management": "Gudanar da jam'iyya",
         "edit_party_info": "Gyara bayanan jam'iyya",
+        "dissolve_party": "Rusa jam'iyya",
         "dialogs": {
+          "found_party": "Ƙirƙiri jam'iyya",
           "party_name": "Sunan jam'iyya",
           "description_optional": "Bayani (na zaɓi)",
           "official_link_optional": "Hanyar haɗi ta hukuma (na zaɓi)",
+          "founding": "Ana ƙirƙirwa...",
           "updating": "Ana sabuntawa...",
+          "found": "Ƙirƙiri",
           "save": "Ajiye",
-          "register_party": "Yi rijistar jam'iyya",
-          "register": "Yi rijista",
-          "registering": "Ana rijista...",
-          "leader_warning_register": "A halin yanzu kai ne shugaban {partyName}. Yin rijistar sabuwar jam'iyya zai share jam'iyyarka ta yanzu.",
-          "deleting": "Ana sharewa...",
-          "about_to_delete": "Kana shirin share {partyName}. Wannan aikin ba za a iya juyar da shi ba.",
-          "about_to_register": "Kana shirin ƙirƙirar sabuwar jam'iyya."
+          "dissolving": "Ana rusa...",
+          "about_to_found": "Kana shirin ƙirƙirar sabuwar jam'iyya.",
+          "about_to_dissolve": "Kana shirin rusa {partyName}. Wannan aikin ba za a iya juyar da shi ba.",
+          "leader_warning_found": "Kai ne shugaban {partyName} a yanzu. Kafa sabuwar jam'iyya zai rusa jam'iyyarka ta yanzu."
         },
         "detail": {
           "failed_to_load": "An kasa lodawa bayanan jam'iyya",
@@ -70,9 +68,7 @@
           "leader": "Shugaba",
           "website": "Gidan yanar gizo",
           "not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
-        },
-        "delete_party": "Share jam'iyya",
-        "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Menene Jamhuriyar Duniya?",
-          "answer": "Jamhuriyar Duniya dandamali ne na dimokuradiyya na duniya mai buɗe ido tare da nasa kuɗin dijital."
+          "answer": "Jamhuriyar Duniya dandamali ne na shugabanci na duniya mai buɗe ido tare da nasa kuɗin dijital."
         },
         "what-is-wdd": {
           "question": "Menene WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Ana buƙatar tabbatarwa don shiga?",
-          "answer": "Ana buƙatar tabbatar da ainihi kawai don yin zaɓe. Kuna iya yin rijista jam'iyyu kuma ku canza WDD da aka samu daga tallafin jam'iyyu ba tare da tabbatarwa ba."
+          "answer": "Ana buƙatar tabbatar da ainihi kawai don yin zaɓe. Kuna iya kafa jam'iyyu kuma ku canza WDD da aka samu daga tallafin jam'iyyu ba tare da tabbatarwa ba."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Fita bai yi nasara ba"
     },
     "parties": {
+      "founded": "Jam'iyya ta kasance",
+      "found_failed": "Ƙirƙirar jam'iyya ta gaza",
+      "found_error": "Kuskure yayin ƙirƙirar jam'iyya",
       "updated": "An sabunta",
       "update_failed": "Sabuntawa ta gaza",
       "update_error": "Kuskure yayin sabunta jam'iyya",
-      "registered": "An yi rijistar jam'iyya",
-      "register_failed": "Gaza yin rijistar jam'iyya",
-      "register_error": "Kuskure wajen yin rijistar jam'iyya",
-      "deleted": "An share",
-      "delete_failed": "Gaza sharewa",
-      "delete_error": "Kuskure wajen sharewa"
+      "dissolved": "An rusa",
+      "dissolve_failed": "Rusa ya gaza",
+      "dissolve_error": "Kuskure yayin rusa jam'iyya"
     }
   },
   "common": {

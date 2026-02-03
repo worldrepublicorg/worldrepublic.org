@@ -1,4 +1,4 @@
-import { Pill, Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiList, PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
@@ -19,20 +19,9 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
         }
       />
 
-      <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="shrink-0 scroll-snap-align-start whitespace-nowrap pl-0">
-          <Pill checked>{dictionary.pages.govern.parties.tabs.registry}</Pill>
-        </div>
-        <div className="shrink-0 scroll-snap-align-start whitespace-nowrap pr-0">
-          <Pill checked={false}>
-            {dictionary.pages.govern.parties.tabs.subsidies}
-          </Pill>
-        </div>
-      </div>
-
       <main className="flex grow flex-col items-start">
         {/* My Party Section */}
-        <div className="mt-2 mb-6 w-full px-6">
+        <div className="mt-4 mb-6 w-full px-6">
           <div className="mb-3 flex items-center justify-between">
             <Typography
               variant="subtitle"
@@ -57,6 +46,10 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
                 <Skeleton height={24} width="60%" className="mb-1" />
               </div>
               <Skeleton height={32} width={32} className="rounded-full" />
+            </div>
+            {/* Party description */}
+            <div className="mt-3">
+              <Skeleton height={16} width="80%" />
             </div>
             {/* Party website */}
             <div className="flex items-center justify-between mt-3">

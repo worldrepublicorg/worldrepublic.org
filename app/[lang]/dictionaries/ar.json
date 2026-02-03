@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "السجل",
-          "subsidies": "الإعانات"
-        },
         "discover": "اكتشف",
         "search_placeholder": "البحث عن الأحزاب...",
         "no_parties_found": "لم يتم العثور على أحزاب",
@@ -43,22 +39,24 @@
         "party_details": "تفاصيل الحزب",
         "share_party": "مشاركة الحزب",
         "my_party": "حزبي",
+        "found_party_and_earn": "أنشئ حزبًا واحصل على إعانات",
         "learn_more": "اعرف المزيد",
         "party_management": "إدارة الحزب",
         "edit_party_info": "تعديل معلومات الحزب",
+        "dissolve_party": "حل الحزب",
         "dialogs": {
+          "found_party": "تأسيس حزب",
           "party_name": "اسم الحزب",
           "description_optional": "الوصف (اختياري)",
           "official_link_optional": "الرابط الرسمي (اختياري)",
+          "founding": "جاري التأسيس...",
           "updating": "جاري التحديث...",
+          "found": "تأسيس",
           "save": "حفظ",
-          "register_party": "سجل حزبا",
-          "register": "تسجيل",
-          "registering": "جاري التسجيل...",
-          "leader_warning_register": "أنت حاليًا زعيم {partyName}. تسجيل حزب جديد سيؤدي إلى حذف حزبك الحالي.",
-          "deleting": "جارٍ الحذف...",
-          "about_to_delete": "أنت على وشك حذف {partyName}. لا يمكن التراجع عن هذا الإجراء.",
-          "about_to_register": "أنت على وشك تأسيس حزب جديد."
+          "dissolving": "جاري الحل...",
+          "about_to_found": "أنت على وشك تأسيس حزب جديد.",
+          "about_to_dissolve": "أنت على وشك حل {partyName}. لا يمكن التراجع عن هذا الإجراء.",
+          "leader_warning_found": "أنت حاليًا قائد {partyName}. تأسيس حزب جديد سيحل حزبك الحالي."
         },
         "detail": {
           "failed_to_load": "فشل تحميل بيانات الحزب",
@@ -70,9 +68,7 @@
           "leader": "القائد",
           "website": "الموقع الإلكتروني",
           "not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
-        },
-        "delete_party": "حذف الحزب",
-        "run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "ما هي الجمهورية العالمية؟",
-          "answer": "الجمهورية العالمية هي منصة ديمقراطية عالمية مفتوحة المصدر ولها عملة رقمية خاصة بها."
+          "answer": "الجمهورية العالمية هي منصة حوكمة عالمية مفتوحة المصدر ولها عملة رقمية خاصة بها."
         },
         "what-is-wdd": {
           "question": "ما هو WDD؟",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "هل التحقق ضروري للمشاركة؟",
-          "answer": "التحقق من الهوية مطلوب فقط للتصويت. يمكنك تسجيل أحزاب وتحويل عملات WDD المكتسبة من إعانات الأحزاب دون الحاجة إلى التحقق."
+          "answer": "التحقق من الهوية مطلوب فقط للتصويت. يمكنك تأسيس أحزاب وتحويل عملات WDD المكتسبة من إعانات الأحزاب دون الحاجة إلى التحقق."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "فشل في تسجيل الخروج"
     },
     "parties": {
+      "founded": "تم تأسيس الحزب",
+      "found_failed": "فشل تأسيس الحزب",
+      "found_error": "خطأ في تأسيس الحزب",
       "updated": "تم التحديث",
       "update_failed": "فشل التحديث",
       "update_error": "خطأ في تحديث الحزب",
-      "registered": "تم تسجيل الحزب",
-      "register_failed": "فشل تسجيل الحزب",
-      "register_error": "خطأ في تسجيل الحزب",
-      "deleted": "تم الحذف",
-      "delete_failed": "فشل الحذف",
-      "delete_error": "خطأ في الحذف"
+      "dissolved": "تم الحل",
+      "dissolve_failed": "فشل الحل",
+      "dissolve_error": "خطأ في حل الحزب"
     }
   },
   "common": {

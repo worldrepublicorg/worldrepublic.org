@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "دفتر ثبت",
-          "subsidies": "یارانه‌ها"
-        },
         "discover": "کشف کنید",
         "search_placeholder": "جستجوی احزاب...",
         "no_parties_found": "حزبی یافت نشد",
@@ -43,22 +39,24 @@
         "party_details": "جزئیات حزب",
         "share_party": "اشتراک‌گذاری حزب",
         "my_party": "حزب من",
+        "found_party_and_earn": "حزب تأسیس کنید و یارانه دریافت کنید",
         "learn_more": "بیشتر بدانید",
         "party_management": "مدیریت حزب",
         "edit_party_info": "ویرایش اطلاعات حزب",
+        "dissolve_party": "انحلال حزب",
         "dialogs": {
+          "found_party": "تأسیس حزب",
           "party_name": "نام حزب",
           "description_optional": "توضیحات (اختیاری)",
           "official_link_optional": "لینک رسمی (اختیاری)",
+          "founding": "در حال تأسیس...",
           "updating": "در حال به‌روزرسانی...",
+          "found": "تأسیس",
           "save": "ذخیره",
-          "register_party": "ثبت حزب",
-          "register": "ثبت",
-          "registering": "در حال ثبت...",
-          "leader_warning_register": "شما در حال حاضر رهبر {partyName} هستید. ثبت حزب جدید باعث حذف حزب فعلی شما خواهد شد.",
-          "deleting": "در حال حذف...",
-          "about_to_delete": "شما در حال حذف {partyName} هستید. این عمل قابل بازگشت نیست.",
-          "about_to_register": "شما در حال تأسیس یک حزب جدید هستید."
+          "dissolving": "در حال انحلال...",
+          "about_to_found": "شما در حال تأسیس یک حزب جدید هستید.",
+          "about_to_dissolve": "شما در حال انحلال {partyName} هستید. این عمل قابل بازگشت نیست.",
+          "leader_warning_found": "شما در حال حاضر رهبر {partyName} هستید. تأسیس حزب جدید حزب فعلی شما را منحل خواهد کرد."
         },
         "detail": {
           "failed_to_load": "بارگذاری اطلاعات حزب ناموفق بود",
@@ -70,9 +68,7 @@
           "leader": "رهبر",
           "website": "وب‌سایت",
           "not_found_description": "حزبی که به دنبال آن هستید وجود ندارد یا منحل شده است."
-        },
-        "delete_party": "حذف حزب",
-        "run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "جمهوری جهان چیست؟",
-          "answer": "جمهوری جهانی یک پلتفرم دموکراسی جهانی متن‌باز با ارز دیجیتال اختصاصی خود است."
+          "answer": "جمهوری جهانی یک پلتفرم حکمرانی جهانی متن‌باز با ارز دیجیتال اختصاصی خود است."
         },
         "what-is-wdd": {
           "question": "WDD چیست؟",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "آیا برای مشارکت نیاز به احراز هویت دارم؟",
-          "answer": "احراز هویت فقط برای رأی دادن الزامی است. شما می‌توانید بدون احراز هویت، حزب ثبت کنید و WDD حاصل از یارانه‌های حزبی را انتقال دهید."
+          "answer": "احراز هویت فقط برای رأی دادن الزامی است. شما می‌توانید بدون احراز هویت، حزب تأسیس کنید و WDD حاصل از یارانه‌های حزبی را انتقال دهید."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "خروج ناموفق"
     },
     "parties": {
+      "founded": "حزب تأسیس شد",
+      "found_failed": "تأسیس حزب ناموفق بود",
+      "found_error": "خطا در تأسیس حزب",
       "updated": "به‌روزرسانی شد",
       "update_failed": "به‌روزرسانی ناموفق بود",
       "update_error": "خطا در به‌روزرسانی حزب",
-      "registered": "حزب ثبت شد",
-      "register_failed": "ثبت حزب ناموفق بود",
-      "register_error": "خطا در ثبت حزب",
-      "deleted": "حذف شد",
-      "delete_failed": "حذف ناموفق بود",
-      "delete_error": "خطا در حذف"
+      "dissolved": "منحل شد",
+      "dissolve_failed": "انحلال ناموفق بود",
+      "dissolve_error": "خطا در انحلال حزب"
     }
   },
   "common": {

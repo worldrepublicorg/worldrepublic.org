@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Rehistro",
-          "subsidies": "Subsidiya"
-        },
         "discover": "Tuklasin",
         "search_placeholder": "Maghanap ng partido...",
         "no_parties_found": "Walang nahanap na partido",
@@ -43,22 +39,24 @@
         "party_details": "Mga detalye ng partido",
         "share_party": "Ibahagi ang partido",
         "my_party": "Aking partido",
+        "found_party_and_earn": "Magtatag ng partido at makakuha ng subsidy",
         "learn_more": "Matuto pa",
         "party_management": "Pamamahala ng partido",
         "edit_party_info": "I-edit ang impormasyon ng partido",
+        "dissolve_party": "Tunawin ang partido",
         "dialogs": {
+          "found_party": "Magtatag ng partido",
           "party_name": "Pangalan ng partido",
           "description_optional": "Paglalarawan (opsyonal)",
           "official_link_optional": "Opisyal na link (opsyonal)",
+          "founding": "Nagtatatag...",
           "updating": "Nag-u-update...",
+          "found": "Magtatag",
           "save": "I-save",
-          "register_party": "Magparehistro ng partido",
-          "register": "Magparehistro",
-          "registering": "Nagrerehistro...",
-          "leader_warning_register": "Kasalukuyan kang pinuno ng {partyName}. Ang pagpaparehistro ng bagong partido ay tatanggalin ang iyong kasalukuyang partido.",
-          "deleting": "Tinatanggal...",
-          "about_to_delete": "Malapit mo nang tanggalin ang {partyName}. Ang aksyon na ito ay hindi na mababawi.",
-          "about_to_register": "Malapit ka nang magtatag ng bagong partido."
+          "dissolving": "Natutunaw...",
+          "about_to_found": "Malapit ka nang magtatag ng bagong partido.",
+          "about_to_dissolve": "Malapit mo nang buwagin ang {partyName}. Ang aksyon na ito ay hindi na mababawi.",
+          "leader_warning_found": "Ikaw ay kasalukuyang pinuno ng {partyName}. Ang pagtatatag ng bagong partido ay magbubuwag sa iyong kasalukuyang partido."
         },
         "detail": {
           "failed_to_load": "Nabigo sa pag-load ng data ng partido",
@@ -70,9 +68,7 @@
           "leader": "Pinuno",
           "website": "Website",
           "not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
-        },
-        "delete_party": "Tanggalin ang partido",
-        "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Ano ang Republikang Pandaigdig?",
-          "answer": "Ang Republika ng Mundo ay isang open source na platform ng demokrasyang pandaigdig na may sariling digital currency."
+          "answer": "Ang Republika ng Mundo ay isang open source na platform ng pamamahalang pandaigdig na may sariling digital currency."
         },
         "what-is-wdd": {
           "question": "Ano ang WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Kailangan ba ng beripikasyon para makasali?",
-          "answer": "Ang pagpapatunay ng pagkakakilanlan ay kailangan lamang sa pagboto. Maaari kang magrehistro ng mga partido at maglipat ng WDD na nakuha mula sa subsidiya ng partido nang walang beripikasyon."
+          "answer": "Ang pagpapatunay ng pagkakakilanlan ay kailangan lamang sa pagboto. Maaari kang magtatag ng mga partido at maglipat ng WDD na nakuha mula sa subsidiya ng partido nang walang beripikasyon."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Nabigo ang pag-sign out"
     },
     "parties": {
+      "founded": "Itinatag ang partido",
+      "found_failed": "Nabigo ang pagtatatag ng partido",
+      "found_error": "Error sa pagtatatag ng partido",
       "updated": "Na-update",
       "update_failed": "Nabigo ang pag-update",
       "update_error": "Error sa pag-update ng partido",
-      "registered": "Nakarehistro na ang partido",
-      "register_failed": "Nabigong irehistro ang partido",
-      "register_error": "Error sa pagpaparehistro ng partido",
-      "deleted": "Tinanggal",
-      "delete_failed": "Nabigong tanggalin",
-      "delete_error": "Error sa pagtanggal"
+      "dissolved": "Binuwag",
+      "dissolve_failed": "Nabigo ang pagbuwag",
+      "dissolve_error": "Error sa pagbuwag ng partido"
     }
   },
   "common": {

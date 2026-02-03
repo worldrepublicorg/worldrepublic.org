@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Iwe Iforukosile",
-          "subsidies": "Owo Iranlowo"
-        },
         "discover": "Ṣawari",
         "search_placeholder": "Wa awọn ẹgbẹ...",
         "no_parties_found": "Ko ri awọn ẹgbẹ",
@@ -43,22 +39,24 @@
         "party_details": "Awọn alaye ẹgbẹ",
         "share_party": "Pin ẹgbẹ",
         "my_party": "Ẹgbẹ mi",
+        "found_party_and_earn": "Da egbe kan sile ki o si gba awọn iranlọwọ",
         "learn_more": "Kọ ẹkọ diẹ sii",
         "party_management": "Iṣakoso ẹgbẹ",
         "edit_party_info": "Ṣatunkọ alaye ẹgbẹ",
+        "dissolve_party": "Yọ ẹgbẹ kuro",
         "dialogs": {
+          "found_party": "Ṣẹda ẹgbẹ",
           "party_name": "Orukọ ẹgbẹ",
           "description_optional": "Apejuwe (aṣayan)",
           "official_link_optional": "Ọna asopọ ti ofesi (aṣayan)",
+          "founding": "N ṣẹda...",
           "updating": "N ṣe imudojuiwọn...",
+          "found": "Ṣẹda",
           "save": "Fi pamọ",
-          "register_party": "Forukọsilẹ ẹgbẹ kan",
-          "register": "Forukọsilẹ",
-          "registering": "N forukọsilẹ...",
-          "leader_warning_register": "O jẹ oludari {partyName} lọwọlọwọ. Iforukọsilẹ ẹgbẹ tuntun yoo pa ẹgbẹ rẹ lọwọlọwọ.",
-          "deleting": "Npa...",
-          "about_to_delete": "O n fẹ pa {partyName} rẹ. Iṣẹ yii ko le pada sẹhin.",
-          "about_to_register": "O n fẹ ṣẹda ẹgbẹ tuntun kan."
+          "dissolving": "N yọ kuro...",
+          "about_to_found": "O n fẹ ṣẹda ẹgbẹ tuntun kan.",
+          "about_to_dissolve": "O n fẹ yọ {partyName} kuro. Iṣẹ yii ko le pada sẹhin.",
+          "leader_warning_found": "O jẹ oludari {partyName} lọwọlọwọ. Didasilẹ egbe tuntun yoo yọ egbe rẹ lọwọlọwọ kuro."
         },
         "detail": {
           "failed_to_load": "Kuna lati gbe data ẹgbẹ",
@@ -70,9 +68,7 @@
           "leader": "Oludari",
           "website": "Oju opo wẹẹbu",
           "not_found_description": "Ẹgbẹ ti o n wa ko wa tabi ti yọ kuro."
-        },
-        "delete_party": "Pa ẹgbẹ rẹ",
-        "run_on_elections_and_earn": "Dara pẹlu awọn idibo ki o si gba awọn iranlọwọ"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Kini Orilẹ-ede Agbaye?",
-          "answer": "Orilẹ-ede Olominira Agbaye jẹ pẹpẹ ijọba onilawada agbaye orisun ṣiṣi pẹlu owo oni-nọmba tirẹ."
+          "answer": "Orilẹ-ede Olominira Agbaye jẹ pẹpẹ iṣakoso agbaye orisun ṣiṣi pẹlu owo oni-nọmba tirẹ."
         },
         "what-is-wdd": {
           "question": "Kini WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Ṣé ìjẹ́rìí pọn dandan láti kópa?",
-          "answer": "Ìjẹ́rìí idánimọ̀ wúlò fún ìbò dídì nìkan. O lè forukọsilẹ ẹgbẹ́ kí o sì gbé WDD tí o rí láti inú owó ìrànwọ́ ẹgbẹ́ lọ láìsí ìjẹ́rìí."
+          "answer": "Ìjẹ́rìí idánimọ̀ wúlò fún ìbò dídì nìkan. O lè dá ẹgbẹ́ sílẹ̀ kí o sì gbé WDD tí o rí láti inú owó ìrànwọ́ ẹgbẹ́ lọ láìsí ìjẹ́rìí."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Sign out kuna"
     },
     "parties": {
+      "founded": "Ẹgbẹ ti da silẹ",
+      "found_failed": "Dida ẹgbẹ silẹ kuna",
+      "found_error": "Aṣiṣe nigba dida ẹgbẹ silẹ",
       "updated": "Titunṣe",
       "update_failed": "Itunṣe kuna",
       "update_error": "Aṣiṣe nigba titunṣe ẹgbẹ",
-      "registered": "Aami ẹgbẹ ti forukọsilẹ",
-      "register_failed": "Kuna lati forukọsilẹ ẹgbẹ",
-      "register_error": "Aṣiṣe forukọsilẹ ẹgbẹ",
-      "deleted": "Paare",
-      "delete_failed": "Kuna lati paarẹ",
-      "delete_error": "Aṣiṣe piparẹ"
+      "dissolved": "Fo",
+      "dissolve_failed": "Fifo ẹgbẹ kuna",
+      "dissolve_error": "Aṣiṣe nigba fifo ẹgbẹ"
     }
   },
   "common": {

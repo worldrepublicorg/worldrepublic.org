@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registru",
-          "subsidies": "Sannzi"
-        },
         "discover": "Scopre",
         "search_placeholder": "Ricerca partiti...",
         "no_parties_found": "Nisun partitu truvatu",
@@ -43,22 +39,24 @@
         "party_details": "Dettagli di u partitu",
         "share_party": "Cundivide u partitu",
         "my_party": "U mo partitu",
+        "found_party_and_earn": "Fundate un partitu è ottene sovvenzioni",
         "learn_more": "Imparate di più",
         "party_management": "Gestione di u partitu",
         "edit_party_info": "Modificà l'infurmazioni di u partitu",
+        "dissolve_party": "Scioglie u partitu",
         "dialogs": {
+          "found_party": "Fonda u partitu",
           "party_name": "Nome di u partitu",
           "description_optional": "Descrizzione (opzionale)",
           "official_link_optional": "Link ufficiale (opzionale)",
+          "founding": "Fundazione...",
           "updating": "Aghjurnamentu...",
+          "found": "Fonda",
           "save": "Salvà",
-          "register_party": "Registrà un partitu",
-          "register": "Registrà",
-          "registering": "Registrazione...",
-          "leader_warning_register": "Sì attualmente u capu di {partyName}. A registrazione di un novu partitu sguasserà u vostru partitu attuale.",
-          "deleting": "Sguassà...",
-          "about_to_delete": "Sì à puntu di sguassà {partyName}. St'azzione ùn pò micca esse annullata.",
-          "about_to_register": "Sete per fundà un partitu novu."
+          "dissolving": "Scioglimentu...",
+          "about_to_found": "Sete per fundà un partitu novu.",
+          "about_to_dissolve": "Sì à puntu di dissolvè {partyName}. St'azzione ùn pò micca esse annullata.",
+          "leader_warning_found": "Sì attualmente u capu di {partyName}. Fundà un partitu novu dissolverà u vostru partitu attuale."
         },
         "detail": {
           "failed_to_load": "Impossibile à carricà i dati di u partitu",
@@ -70,9 +68,7 @@
           "leader": "Capu",
           "website": "Situ web",
           "not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
-        },
-        "delete_party": "Sguassà u partitu",
-        "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Chì hè a Ripubblica Mundiale?",
-          "answer": "A Republica Mundiale hè una piattaforma di democrazia glubale open source cù a so propria muneta digitale."
+          "answer": "A Republica Mundiale hè una piattaforma di guvernanza glubale open source cù a so propria muneta digitale."
         },
         "what-is-wdd": {
           "question": "Chì hè WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Hè necessaria a verificazione per participà?",
-          "answer": "A verificazione di l'identità hè necessaria solu per vutà. Pudete registrà partiti è trasferisce WDD ottenuti da i sussidi di partitu senza verificazione."
+          "answer": "A verificazione di l'identità hè necessaria solu per vutà. Pudete creà partiti è trasferisce WDD ottenuti da i sussidi di partitu senza verificazione."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "A disconnessione hà fallitu"
     },
     "parties": {
+      "founded": "Partitu fundatu",
+      "found_failed": "Fundazione hà fallitu",
+      "found_error": "Errore in a fundazione di u partitu",
       "updated": "Aghjurnatu",
       "update_failed": "Aghjurnamentu hà fallitu",
       "update_error": "Errore in l'aghjurnamentu di u partitu",
-      "registered": "Partitu registratu",
-      "register_failed": "Fiascu di a registrazione di u partitu",
-      "register_error": "Errore in a registrazione di u partitu",
-      "deleted": "Sguassatu",
-      "delete_failed": "Fiascu di a sguassà",
-      "delete_error": "Errore di sguassà"
+      "dissolved": "Scioltu",
+      "dissolve_failed": "Scioglimentu hà fallitu",
+      "dissolve_error": "Errore in u scioglimentu di u partitu"
     }
   },
   "common": {

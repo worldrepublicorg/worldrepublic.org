@@ -24,7 +24,7 @@ const SignInDialog = dynamic(
 );
 
 import { CustomDrawerHeader } from "@/components/parties/custom-drawer-header";
-import { ConfirmRegisterPartyDialog } from "@/components/parties/dialogs/confirm-register-party-dialog";
+import { ConfirmFoundPartyDialog } from "@/components/parties/dialogs/confirm-found-party-dialog";
 import { CreateUpdatePartyDialog } from "@/components/parties/dialogs/create-update-party-dialog";
 import { DeletePartyDialog } from "@/components/parties/dialogs/delete-party-dialog";
 import { MyPartySection } from "@/components/parties/my-party-section";
@@ -119,8 +119,7 @@ export function PoliticalPartyList({
   const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
   const [isUpdateDialogOpen, setIsUpdateDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [isRegisterPartyDialogOpen, setIsRegisterPartyDialogOpen] =
-    useState(false);
+  const [isFoundPartyDialogOpen, setIsFoundPartyDialogOpen] = useState(false);
   const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
     useState<Party | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -143,10 +142,8 @@ export function PoliticalPartyList({
   // State preservation for authentication flow
   const [pendingPartyForm, setPendingPartyForm] =
     useState<CreatePartyData | null>(null);
-  const [
-    shouldOpenRegisterDialogAfterAuth,
-    setShouldOpenRegisterDialogAfterAuth,
-  ] = useState(false);
+  const [shouldOpenFoundDialogAfterAuth, setShouldOpenFoundDialogAfterAuth] =
+    useState(false);
 
   // Sync parties from props when they change
   useEffect(() => {
@@ -363,7 +360,7 @@ export function PoliticalPartyList({
     if (!isAuthenticated || !user?.id) {
       // Save the current form state and dialog state
       setPendingPartyForm(createPartyForm);
-      setShouldOpenRegisterDialogAfterAuth(false);
+      setShouldOpenFoundDialogAfterAuth(false); // We'll open create dialog after auth, not found dialog
       // Close the create dialog
       setIsCreateDialogOpen(false);
       // Open sign-in dialog
@@ -371,9 +368,10 @@ export function PoliticalPartyList({
       return;
     }
 
+    // Only check userParty (not userPartyId) - if userParty is null, party was dissolved
     if (userParty) {
       setIsCreateDialogOpen(false);
-      setIsRegisterPartyDialogOpen(true);
+      setIsFoundPartyDialogOpen(true);
       return;
     }
 
@@ -389,10 +387,10 @@ export function PoliticalPartyList({
       const result = await createPartyAction(formData);
       if (result.success) {
         toast.success({
-          title: dictionary.toasts.parties.registered,
+          title: dictionary.toasts.parties.founded,
         });
         setIsCreateDialogOpen(false);
-        setIsRegisterPartyDialogOpen(false);
+        setIsFoundPartyDialogOpen(false);
         setCreatePartyForm({
           name: "",
           description: "",
@@ -400,7 +398,7 @@ export function PoliticalPartyList({
         });
         // Clear pending state
         setPendingPartyForm(null);
-        setShouldOpenRegisterDialogAfterAuth(false);
+        setShouldOpenFoundDialogAfterAuth(false);
         // Refresh data
         const allParties = await getParties({ limit: 100 });
         if (allParties !== null) {
@@ -416,13 +414,13 @@ export function PoliticalPartyList({
         router.refresh();
       } else {
         toast.error({
-          title: result.error || dictionary.toasts.parties.register_failed,
+          title: result.error || dictionary.toasts.parties.found_failed,
         });
       }
     } catch (error) {
       console.error("Error creating party:", error);
       toast.error({
-        title: dictionary.toasts.parties.register_error,
+        title: dictionary.toasts.parties.found_error,
       });
     } finally {
       setIsCreating(false);
@@ -434,9 +432,9 @@ export function PoliticalPartyList({
     if (!isAuthenticated || !user?.id) {
       // Save the current form state and dialog state
       setPendingPartyForm(createPartyForm);
-      setShouldOpenRegisterDialogAfterAuth(true);
+      setShouldOpenFoundDialogAfterAuth(true);
       // Close the found party dialog
-      setIsRegisterPartyDialogOpen(false);
+      setIsFoundPartyDialogOpen(false);
       // Open sign-in dialog
       setShowSignInDialog(true);
       return;
@@ -453,20 +451,20 @@ export function PoliticalPartyList({
       // Restore the form data
       setCreatePartyForm(pendingPartyForm);
 
-      if (shouldOpenRegisterDialogAfterAuth) {
+      if (shouldOpenFoundDialogAfterAuth) {
         // User was in the found party dialog flow
         // Check if user has a party - if so, open found dialog, otherwise proceed directly
         getUserParty().then((party) => {
           if (party) {
             setUserParty(party);
-            setIsRegisterPartyDialogOpen(true);
+            setIsFoundPartyDialogOpen(true);
           } else {
             // No existing party, proceed directly to create
             performCreateParty(pendingPartyForm);
           }
           // Clear pending state
           setPendingPartyForm(null);
-          setShouldOpenRegisterDialogAfterAuth(false);
+          setShouldOpenFoundDialogAfterAuth(false);
         });
       } else {
         // User was in the create party dialog flow
@@ -474,13 +472,13 @@ export function PoliticalPartyList({
         setIsCreateDialogOpen(true);
         // Clear pending state
         setPendingPartyForm(null);
-        setShouldOpenRegisterDialogAfterAuth(false);
+        setShouldOpenFoundDialogAfterAuth(false);
       }
     }
   }, [
     isAuthenticated,
     pendingPartyForm,
-    shouldOpenRegisterDialogAfterAuth,
+    shouldOpenFoundDialogAfterAuth,
     user?.id,
     performCreateParty,
   ]);
@@ -530,7 +528,7 @@ export function PoliticalPartyList({
       const result = await deletePartyAction(selectedParty.id);
       if (result.success) {
         toast.success({
-          title: dictionary.toasts.parties.deleted,
+          title: dictionary.toasts.parties.dissolved,
         });
         setIsDeleteDialogOpen(false);
         setUserParty(null);
@@ -543,13 +541,13 @@ export function PoliticalPartyList({
         }
       } else {
         toast.error({
-          title: result.error || dictionary.toasts.parties.delete_failed,
+          title: result.error || dictionary.toasts.parties.dissolve_failed,
         });
       }
     } catch (error) {
       console.error("Error deleting party:", error);
       toast.error({
-        title: dictionary.toasts.parties.delete_error,
+        title: dictionary.toasts.parties.dissolve_error,
       });
     } finally {
       setIsProcessing(false);
@@ -737,7 +735,7 @@ export function PoliticalPartyList({
         onSignInRequired={() => {
           // Save the current form state
           setPendingPartyForm(createPartyForm);
-          setShouldOpenRegisterDialogAfterAuth(false);
+          setShouldOpenFoundDialogAfterAuth(false);
           // Close the create dialog
           setIsCreateDialogOpen(false);
           // Open sign-in dialog
@@ -759,10 +757,10 @@ export function PoliticalPartyList({
         dictionary={dictionary}
       />
 
-      {/* Confirm Register Party Dialog */}
-      <ConfirmRegisterPartyDialog
-        open={isRegisterPartyDialogOpen}
-        onOpenChange={setIsRegisterPartyDialogOpen}
+      {/* Confirm Found Party Dialog */}
+      <ConfirmFoundPartyDialog
+        open={isFoundPartyDialogOpen}
+        onOpenChange={setIsFoundPartyDialogOpen}
         userParty={userParty}
         onConfirm={executeCreateParty}
         isProcessing={isCreating}

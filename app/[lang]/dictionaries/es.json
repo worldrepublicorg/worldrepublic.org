@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registro",
-          "subsidies": "Subsidios"
-        },
         "discover": "Descubrir",
         "search_placeholder": "Buscar partidos...",
         "no_parties_found": "No se encontraron partidos",
@@ -43,22 +39,24 @@
         "party_details": "Detalles del partido",
         "share_party": "Compartir partido",
         "my_party": "Mi partido",
+        "found_party_and_earn": "Funda un partido y obtén subvenciones",
         "learn_more": "Saber más",
         "party_management": "Gestión del partido",
         "edit_party_info": "Editar información del partido",
+        "dissolve_party": "Disolver partido",
         "dialogs": {
+          "found_party": "Fundar un partido",
           "party_name": "Nombre del partido",
           "description_optional": "Descripción (opcional)",
           "official_link_optional": "Enlace oficial (opcional)",
+          "founding": "Fundando...",
           "updating": "Actualizando...",
+          "found": "Fundar",
           "save": "Guardar",
-          "register_party": "Registrar un partido",
-          "register": "Registrar",
-          "registering": "Registrando...",
-          "leader_warning_register": "Actualmente eres el líder de {partyName}. Registrar un nuevo partido eliminará tu partido actual.",
-          "deleting": "Eliminando...",
-          "about_to_delete": "Estás a punto de eliminar {partyName}. Esta acción no se puede deshacer.",
-          "about_to_register": "Estás a punto de fundar un nuevo partido."
+          "dissolving": "Disolviendo...",
+          "about_to_found": "Estás a punto de fundar un nuevo partido.",
+          "about_to_dissolve": "Estás a punto de disolver {partyName}. Esta acción no se puede deshacer.",
+          "leader_warning_found": "Actualmente eres el líder de {partyName}. Fundar un nuevo partido disolverá tu partido actual."
         },
         "detail": {
           "failed_to_load": "Error al cargar los datos del partido",
@@ -70,9 +68,7 @@
           "leader": "Líder",
           "website": "Sitio web",
           "not_found_description": "El partido que buscas no existe o ha sido disuelto."
-        },
-        "delete_party": "Eliminar partido",
-        "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "¿Qué es la República Mundial?",
-          "answer": "La República Mundial es una plataforma de democracia global de código abierto con su propia moneda digital."
+          "answer": "La República Mundial es una plataforma de gobernanza global de código abierto con su propia moneda digital."
         },
         "what-is-wdd": {
           "question": "¿Qué es WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "¿Es necesaria la verificación para participar?",
-          "answer": "La verificación de identidad solo es necesaria para votar. Puedes registrar partidos y transferir los WDD obtenidos de los subsidios del partido sin necesidad de verificación."
+          "answer": "La verificación de identidad solo es necesaria para votar. Puedes fundar partidos y transferir los WDD obtenidos de los subsidios del partido sin necesidad de verificación."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Cerrar sesión falló"
     },
     "parties": {
+      "founded": "Partido fundado",
+      "found_failed": "Error al fundar partido",
+      "found_error": "Error al fundar el partido",
       "updated": "Actualizado",
       "update_failed": "Error al actualizar",
       "update_error": "Error al actualizar el partido",
-      "registered": "Partido registrado",
-      "register_failed": "Error al registrar el partido",
-      "register_error": "Error registrando el partido",
-      "deleted": "Eliminado",
-      "delete_failed": "Error al eliminar",
-      "delete_error": "Error al eliminar"
+      "dissolved": "Disuelto",
+      "dissolve_failed": "Error al disolver",
+      "dissolve_error": "Error al disolver el partido"
     }
   },
   "common": {

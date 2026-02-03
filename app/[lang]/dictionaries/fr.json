@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registre",
-          "subsidies": "Subventions"
-        },
         "discover": "Découvrir",
         "search_placeholder": "Rechercher des partis...",
         "no_parties_found": "Aucun parti trouvé",
@@ -43,22 +39,24 @@
         "party_details": "Détails du parti",
         "share_party": "Partager le parti",
         "my_party": "Mon parti",
+        "found_party_and_earn": "Fondez un parti et obtenez des subventions",
         "learn_more": "En savoir plus",
         "party_management": "Gestion du parti",
         "edit_party_info": "Modifier les informations du parti",
+        "dissolve_party": "Dissoudre le parti",
         "dialogs": {
+          "found_party": "Fonder un parti",
           "party_name": "Nom du parti",
           "description_optional": "Description (optionnel)",
           "official_link_optional": "Lien officiel (optionnel)",
+          "founding": "Fondation...",
           "updating": "Mise à jour...",
+          "found": "Fonder",
           "save": "Enregistrer",
-          "register_party": "Enregistrer un parti",
-          "register": "Enregistrer",
-          "registering": "Enregistrement...",
-          "leader_warning_register": "Vous êtes actuellement le leader de {partyName}. L'enregistrement d'un nouveau parti supprimera votre parti actuel.",
-          "deleting": "Suppression...",
-          "about_to_delete": "Vous êtes sur le point de supprimer {partyName}. Cette action ne peut pas être annulée.",
-          "about_to_register": "Vous êtes sur le point de fonder un nouveau parti."
+          "dissolving": "Dissolution...",
+          "about_to_found": "Vous êtes sur le point de fonder un nouveau parti.",
+          "about_to_dissolve": "Vous êtes sur le point de dissoudre {partyName}. Cette action ne peut pas être annulée.",
+          "leader_warning_found": "Vous êtes actuellement le leader de {partyName}. Fonder un nouveau parti dissoudra votre parti actuel."
         },
         "detail": {
           "failed_to_load": "Échec du chargement des données du parti",
@@ -70,9 +68,7 @@
           "leader": "Leader",
           "website": "Site web",
           "not_found_description": "Le parti que vous recherchez n'existe pas ou a été dissous."
-        },
-        "delete_party": "Supprimer le parti",
-        "run_on_elections_and_earn": "Se présenter aux élections et obtenir des subventions"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Qu'est-ce que la République mondiale ?",
-          "answer": "La République mondiale est une plateforme de démocratie mondiale open source avec sa propre monnaie numérique."
+          "answer": "La République mondiale est une plateforme de gouvernance mondiale open source avec sa propre monnaie numérique."
         },
         "what-is-wdd": {
           "question": "Qu'est-ce que WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Faut-il être vérifié pour participer ?",
-          "answer": "La vérification d'identité n'est requise que pour voter. Vous pouvez enregistrer un parti et transférer les WDD issus des subventions aux partis sans vérification."
+          "answer": "La vérification d'identité n'est requise que pour voter. Vous pouvez fonder un parti et transférer les WDD issus des subventions aux partis sans vérification."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Déconnexion échouée"
     },
     "parties": {
+      "founded": "Parti fondé",
+      "found_failed": "Échec de la fondation du parti",
+      "found_error": "Erreur lors de la fondation du parti",
       "updated": "Mis à jour",
       "update_failed": "Échec de la mise à jour",
       "update_error": "Erreur lors de la mise à jour du parti",
-      "registered": "Parti enregistré",
-      "register_failed": "Échec de l'enregistrement du parti",
-      "register_error": "Erreur lors de l'enregistrement du parti",
-      "deleted": "Supprimé",
-      "delete_failed": "Échec de la suppression",
-      "delete_error": "Erreur lors de la suppression"
+      "dissolved": "Dissous",
+      "dissolve_failed": "Échec de la dissolution",
+      "dissolve_error": "Erreur lors de la dissolution du parti"
     }
   },
   "common": {

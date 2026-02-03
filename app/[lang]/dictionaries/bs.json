@@ -30,10 +30,6 @@
         }
       },
       "parties": {
-        "tabs": {
-          "registry": "Registar",
-          "subsidies": "Subvencije"
-        },
         "discover": "Otkrijte",
         "search_placeholder": "Pretraga stranaka...",
         "no_parties_found": "Stranke nisu pronađene",
@@ -43,22 +39,24 @@
         "party_details": "Detalji stranke",
         "share_party": "Podijelite stranku",
         "my_party": "Moja stranka",
+        "found_party_and_earn": "Osnujte stranku i dobijte subvencije",
         "learn_more": "Saznajte više",
         "party_management": "Upravljanje strankom",
         "edit_party_info": "Uredi informacije o stranci",
+        "dissolve_party": "Raspusti stranku",
         "dialogs": {
+          "found_party": "Osnuj stranku",
           "party_name": "Ime stranke",
           "description_optional": "Opis (opciono)",
           "official_link_optional": "Zvanična veza (opciono)",
+          "founding": "Osnivanje...",
           "updating": "Ažuriranje...",
+          "found": "Osnuj",
           "save": "Sačuvaj",
-          "register_party": "Registrujte stranku",
-          "register": "Registruj se",
-          "registering": "Registracija...",
-          "leader_warning_register": "Trenutno ste vođa {partyName}. Registracija nove stranke će obrisati vašu trenutnu stranku.",
-          "deleting": "Brisanje...",
-          "about_to_delete": "Upravo ćete obrisati {partyName}. Ova radnja se ne može poništiti.",
-          "about_to_register": "Uskoro ćete osnovati novu stranku."
+          "dissolving": "Raspuštanje...",
+          "about_to_found": "Uskoro ćete osnovati novu stranku.",
+          "about_to_dissolve": "Upravo ćete raspustiti {partyName}. Ova radnja se ne može poništiti.",
+          "leader_warning_found": "Trenutno ste vođa {partyName}. Osnivanje nove stranke će raspustiti vašu trenutnu stranku."
         },
         "detail": {
           "failed_to_load": "Neuspješno učitavanje podataka stranke",
@@ -70,9 +68,7 @@
           "leader": "Vođa",
           "website": "Web stranica",
           "not_found_description": "Stranka koju tražite ne postoji ili je raspuštena."
-        },
-        "delete_party": "Obriši stranku",
-        "run_on_elections_and_earn": "Kandidujte se na izborima i dobijte subvencije"
+        }
       }
     },
     "menu": {
@@ -102,7 +98,7 @@
       "items": {
         "app-purpose": {
           "question": "Šta je Svjetska Republika?",
-          "answer": "Svjetska republika je platforma za globalnu demokratiju otvorenog koda sa vlastitom digitalnom valutom."
+          "answer": "Svjetska republika je platforma za globalno upravljanje otvorenog koda sa vlastitom digitalnom valutom."
         },
         "what-is-wdd": {
           "question": "Šta je WDD?",
@@ -126,7 +122,7 @@
         },
         "verification-required": {
           "question": "Je li potrebna verifikacija za učešće?",
-          "answer": "Verifikacija identiteta je potrebna samo za glasanje. Možete registrovati stranke i prenositi WDD zarađen od stranačkih subvencija bez verifikacije."
+          "answer": "Verifikacija identiteta je potrebna samo za glasanje. Možete osnovati stranke i prenositi WDD zarađen od stranačkih subvencija bez verifikacije."
         }
       }
     },
@@ -225,15 +221,15 @@
       "sign_out_failed": "Odjava nije uspjela"
     },
     "parties": {
+      "founded": "Stranka osnovana",
+      "found_failed": "Osnivanje stranke nije uspjelo",
+      "found_error": "Greška prilikom osnivanja stranke",
       "updated": "Ažurirano",
       "update_failed": "Ažuriranje nije uspjelo",
       "update_error": "Greška prilikom ažuriranja stranke",
-      "registered": "Stranka registrovana",
-      "register_failed": "Registracija stranke nije uspjela",
-      "register_error": "Greška pri registraciji stranke",
-      "deleted": "Obrisano",
-      "delete_failed": "Brisanje nije uspjelo",
-      "delete_error": "Greška pri brisanju"
+      "dissolved": "Raspuštena",
+      "dissolve_failed": "Raspuštanje nije uspjelo",
+      "dissolve_error": "Greška prilikom raspuštanja stranke"
     }
   },
   "common": {

@@ -37,7 +37,7 @@ export function MyPartySection({
   onDeleteParty,
 }: MyPartySectionProps) {
   return (
-    <div className="mb-6 px-6 mt-2">
+    <div className="mb-6 px-6 mt-4">
       <div className="mb-3 flex items-center justify-between">
         <Typography
           variant="subtitle"
@@ -89,7 +89,7 @@ export function MyPartySection({
             level={3}
             className="text-sm text-gray-500"
           >
-            {dictionary.pages.govern.parties.run_on_elections_and_earn}
+            {dictionary.pages.govern.parties.found_party_and_earn}
           </Typography>
           <Link href={`/${lang}/menu/faq?q=party-subsidies`}>
             <Button variant="tertiary" size="sm">
