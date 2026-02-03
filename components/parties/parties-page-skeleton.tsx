@@ -32,7 +32,7 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
 
       <main className="flex grow flex-col items-start">
         {/* My Party Section */}
-        <div className="mt-2 mb-6 w-full px-6">
+        <div className="mt-4 mb-6 w-full px-6">
           <div className="mb-3 flex items-center justify-between">
             <Typography
               variant="subtitle"
