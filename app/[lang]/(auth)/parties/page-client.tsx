@@ -37,7 +37,7 @@ export default function PartiesPageClient({
         endAdornment={<MenuLink lang={lang} />}
       />
 
-      <TabPills
+      {/* <TabPills
         activeTab={activeTab}
         lang={lang}
         basePath={`/${lang}/parties`}
@@ -51,7 +51,7 @@ export default function PartiesPageClient({
             label: dictionary.pages.govern.parties.tabs.subsidies,
           },
         ]}
-      />
+      /> */}
 
       <main className="flex grow flex-col items-start">
         {activeTab === "registry" ? (

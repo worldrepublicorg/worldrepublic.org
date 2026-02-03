@@ -19,7 +19,7 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
         }
       />
 
-      <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {/* <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div className="shrink-0 scroll-snap-align-start whitespace-nowrap pl-0">
           <Pill checked>{dictionary.pages.govern.parties.tabs.registry}</Pill>
         </div>
@@ -28,7 +28,7 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
             {dictionary.pages.govern.parties.tabs.subsidies}
           </Pill>
         </div>
-      </div>
+      </div> */}
 
       <main className="flex grow flex-col items-start">
         {/* My Party Section */}
