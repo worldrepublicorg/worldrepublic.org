@@ -1,45 +1,49 @@
-import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { TopBar } from "@/components/topbar";
+import { TabPills } from "@/components/tab-pills";
 
 interface VotePageSkeletonProps {
   dictionary?: Dictionary;
   lang?: string;
-  showTopBar?: boolean;
 }
 
 export function VotePageSkeleton({
   dictionary,
-  lang,
-  showTopBar = false,
+  lang = "en",
 }: VotePageSkeletonProps = {}) {
   return (
-    <div className="flex h-full flex-col">
-      {showTopBar && (
-        <TopBar
-          title={dictionary?.common?.vote || "Vote"}
-          startAdornment={
-            <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
-              <PiCaretLeft className="size-4 text-gray-900" />
-            </div>
-          }
-        />
-      )}
+    <>
+      <TabPills
+        activeTab="elections"
+        lang={lang}
+        basePath={`/${lang}/vote`}
+        tabs={[
+          {
+            key: "elections",
+            label: dictionary?.pages?.govern?.tabs?.elections || "Elections",
+          },
+          {
+            key: "referendums",
+            label:
+              dictionary?.pages?.govern?.tabs?.referendums || "Referendums",
+          },
+        ]}
+      />
+      <div className="flex grow flex-col overflow-y-auto">
+        <div className="flex-1 overflow-y-auto p-6">
+          <div className="mb-6">
+            <div className="h-12 w-full animate-pulse rounded-lg bg-gray-100" />
+          </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-4">
-        <div className="mb-6">
-          <div className="h-12 w-full animate-pulse rounded-lg bg-gray-100" />
-        </div>
-
-        <div className="flex flex-col gap-4">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="h-32 w-full animate-pulse rounded-xl border border-gray-200 bg-gray-50"
-            />
-          ))}
+          <div className="flex flex-col gap-4">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-32 w-full animate-pulse rounded-xl border border-gray-200 bg-gray-50"
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

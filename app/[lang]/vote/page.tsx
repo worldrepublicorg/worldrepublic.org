@@ -1,6 +1,8 @@
 import { unstable_cache } from "next/cache";
 import { Suspense } from "react";
 import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
+import { MenuLink } from "@/components/menu-link";
+import { TopBar } from "@/components/topbar";
 import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
 import { getElections } from "@/lib/actions/elections";
 import type { Election } from "@/lib/types/elections";
@@ -42,8 +44,16 @@ export default async function VotePage({
   const dictionary = await getDictionary(lang);
 
   return (
-    <Suspense fallback={<VotePageSkeleton />}>
-      <VoteData lang={lang} dictionary={dictionary} />
-    </Suspense>
+    <div className="pb-safe flex min-h-dvh flex-col">
+      <TopBar
+        title={dictionary.nav.world_republic}
+        endAdornment={<MenuLink lang={lang} />}
+      />
+      <Suspense
+        fallback={<VotePageSkeleton dictionary={dictionary} lang={lang} />}
+      >
+        <VoteData lang={lang} dictionary={dictionary} />
+      </Suspense>
+    </div>
   );
 }

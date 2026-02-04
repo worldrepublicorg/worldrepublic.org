@@ -13,10 +13,8 @@ interface ElectionsListProps {
 export function ElectionsList({ elections, dictionary }: ElectionsListProps) {
   if (elections.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-12 text-center">
-        <Typography variant="body" level={1} className="text-gray-500">
-          No elections found
-        </Typography>
+      <div className="mt-4 mb-8 text-center text-sm text-gray-500">
+        No elections found
       </div>
     );
   }
