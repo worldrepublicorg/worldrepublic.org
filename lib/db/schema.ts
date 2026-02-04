@@ -272,6 +272,9 @@ export const elections = pgTable(
     name: text("name").notNull(),
     startsAt: timestamp("starts_at", { mode: "date" }).notNull(),
     endsAt: timestamp("ends_at", { mode: "date" }).notNull(),
+    rewardPool: decimal("reward_pool", { precision: 36, scale: 18 })
+      .notNull()
+      .default("0"),
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
   },
   (table) => [

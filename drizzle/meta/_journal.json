@@ -8,6 +8,20 @@
       "when": 1764388964113,
       "tag": "0000_thankful_madrox",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1764388964114,
+      "tag": "0001_add_elections_votes",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1764388964115,
+      "tag": "0002_add_reward_pool",
+      "breakpoints": true
     }
   ]
 }
