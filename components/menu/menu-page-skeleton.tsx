@@ -1,11 +1,12 @@
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiArrowSquareOut,
+  PiBookOpenText,
   PiFileText,
   PiGithubLogo,
   PiGlobe,
-  PiHeadset,
-  PiQuestion,
+  PiLifebuoy,
+  PiRocketLaunch,
   PiShieldCheck,
   PiX,
 } from "react-icons/pi";
@@ -73,13 +74,24 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
             </div>
             <div className="flex flex-col gap-2">
               <CustomListItem
-                label={dictionary.pages.menu.sections.help.faq}
-                startAdornment={<PiQuestion className="size-5 text-gray-400" />}
+                label={dictionary.pages.menu.sections.help.quickstart}
+                startAdornment={<PiRocketLaunch className="size-5 text-gray-400" />}
+                endAdornment={
+                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                }
                 noPointer
               />
               <CustomListItem
-                label={dictionary.pages.menu.sections.help.support}
-                startAdornment={<PiHeadset className="size-5 text-gray-400" />}
+                label={dictionary.pages.menu.sections.help.docs}
+                startAdornment={<PiBookOpenText className="size-5 text-gray-400" />}
+                endAdornment={
+                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                }
+                noPointer
+              />
+              <CustomListItem
+                label={dictionary.pages.menu.sections.help.help_center}
+                startAdornment={<PiLifebuoy className="size-5 text-gray-400" />}
                 endAdornment={
                   <PiArrowSquareOut className="size-4 text-gray-400" />
                 }

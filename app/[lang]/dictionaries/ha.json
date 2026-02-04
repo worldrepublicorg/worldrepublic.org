@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "Taimako",
-          "faq": "Tambayoyin da ake yawan yi",
-          "support": "Taimako"
+          "quickstart": "Farawa Mai Sauri",
+          "docs": "Takardu",
+          "help_center": "Cibiyar Taimako"
         },
         "source_code": {
           "title": "LAMBAN TUSHE"
@@ -94,39 +95,6 @@
           "title": "DOKA",
           "terms": "Sharuɗɗan Amfani",
           "privacy": "Manufar Keɓancewa"
-        }
-      }
-    },
-    "faq": {
-      "title": "Tambayoyin da ake yawan yi",
-      "items": {
-        "app-purpose": {
-          "question": "Menene Jamhuriyar Duniya?",
-          "answer": "Jamhuriyar Duniya dandamali ne na dimokuradiyya na duniya mai buɗe ido tare da nasa kuɗin dijital."
-        },
-        "what-is-wdd": {
-          "question": "Menene WDD?",
-          "answer": "WDD (drachma duniya) kudin hukuma ne na blockchain-native na Jamhuriyar Duniya, wanda aka fitar da shi azaman token ERC-20 na yau da kullun a cikin hanyoyin sadarwa da yawa."
-        },
-        "drachma-value": {
-          "question": "Ina drachma ke samun ƙimarsa?",
-          "answer": "Drachma ta samo darajarta ne daga kasancewarta kudin hukuma na Jamhuriyar Duniya. Yayin da halaccin dandamalinmu ke ƙaruwa, WDD na iya zama abin hawa na sake rarrabawa a duniya da kuma babban hanyar musayar a cikin tattalin arzikin duniya."
-        },
-        "test-elections": {
-          "question": "Menene zaɓen gwaji?",
-          "answer": "Zaɓen gwaji gwaje-gwaje ne inda 'yan ƙasa na Jamhuriyar Duniya ke jefa ƙuri'a ga jam'iyyun siyasa. Ana saka kowace jam'iyya ta atomatik a kan takardar jefa ƙuri'a, tare da tabbatar da dama daidai ga duk masu son zama shugabanni."
-        },
-        "identity-verification": {
-          "question": "Yaya tabbatar da asali ke aiki?",
-          "answer": "Jamhuriyar Duniya tana amfani da Self don tabbatar da asalin ku ta hanyar fasfo ko katin shaidar ƙasa. Sirrinku yana kariya—Self kawai yana tabbatar da cewa kai mutum ne na gaske ba tare da bayyana bayanan ku na sirri ba."
-        },
-        "party-subsidies": {
-          "question": "Yaya tallafin jam'iyya ke aiki?",
-          "answer": "Jamhuriyar Duniya tana tallafawa jam'iyyun siyasa dangane da goyon bayan dimokuradiyya. Muna rarraba tallafin WDD daidai da sakamakon zaɓe, tare da tabbatar da cewa kowace ƙuri'a tana haɓaka albarkatun kuɗi na jam'iyya kai tsaye."
-        },
-        "verification-required": {
-          "question": "Ana buƙatar tabbatarwa don shiga?",
-          "answer": "Ana buƙatar tabbatar da ainihi kawai don yin zaɓe. Kuna iya yin rijista jam'iyyu kuma ku canza WDD da aka samu daga tallafin jam'iyyu ba tare da tabbatarwa ba."
         }
       }
     },

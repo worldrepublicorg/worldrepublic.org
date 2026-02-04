@@ -91,7 +91,7 @@ export function MyPartySection({
           >
             {dictionary.pages.govern.parties.run_on_elections_and_earn}
           </Typography>
-          <Link href={`/${lang}/menu/faq?q=party-subsidies`}>
+          <Link href="https://docs.worldrepublic.org/building-blocks/party-subsidies">
             <Button variant="tertiary" size="sm">
               {dictionary.pages.govern.parties.learn_more}
             </Button>

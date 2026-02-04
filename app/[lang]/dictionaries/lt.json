@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "PAGALBA",
-          "faq": "DUK",
-          "support": "Palaikymas"
+          "quickstart": "Greita pradžia",
+          "docs": "Dokumentai",
+          "help_center": "Pagalbos centras"
         },
         "source_code": {
           "title": "IŠANKINIS KODAS"
@@ -94,39 +95,6 @@
           "title": "TEISINIS",
           "terms": "Naudojimo sąlygos",
           "privacy": "Privatumo politika"
-        }
-      }
-    },
-    "faq": {
-      "title": "DUK",
-      "items": {
-        "app-purpose": {
-          "question": "Kas yra Pasaulio respublika?",
-          "answer": "Pasaulio Respublika yra atvirojo kodo pasaulinės demokratijos platforma, turinti savo skaitmeninę valiutą."
-        },
-        "what-is-wdd": {
-          "question": "Kas yra WDD?",
-          "answer": "WDD (pasaulio drachma) yra Pasaulio Respublikos oficiali valiuta, kuri yra blockchain-native, išleista kaip standartinis ERC-20 tokenas keliose tinkluose."
-        },
-        "drachma-value": {
-          "question": "Iš kur drakma gauna savo vertę?",
-          "answer": "Drachma savo vertę gauna iš to, kad yra oficiali Pasaulio Respublikos valiuta. Augant mūsų platformos teisėtumui, WDD gali tapti pasaulinio perskirstymo priemone ir pagrindine mainų priemone pasaulio ekonomikoje."
-        },
-        "test-elections": {
-          "question": "Kas yra bandomieji rinkimai?",
-          "answer": "Bandomieji rinkimai yra eksperimentai, kuriuose Pasaulio Respublika piliečiai balsuoja už politines partijas. Kiekviena partija automatiškai įtraukiama į balsavimo biuletenį, užtikrinant lygias galimybes visiems siekiantiems lyderių."
-        },
-        "identity-verification": {
-          "question": "Kaip veikia tapatybės patvirtinimas?",
-          "answer": "Pasaulio Respublika naudoja Self jūsų tapatybės patvirtinimui per jūsų pasą arba nacionalinį ID. Jūsų privatumas yra apsaugotas—Self tik patvirtina, kad esate tikras asmuo neatskleisdamas jūsų asmeninių duomenų."
-        },
-        "party-subsidies": {
-          "question": "Kaip veikia partijų subsidijos?",
-          "answer": "Pasaulio Respublika finansuoja politines partijas remdamasi demokratine parama. Paskirstome WDD dotacijas proporcingai rinkimų rezultatams, užtikrindami, kad kiekvienas balsas tiesiogiai padidintų partijos finansinius išteklius."
-        },
-        "verification-required": {
-          "question": "Ar norint dalyvauti reikia patvirtinimo?",
-          "answer": "Tapatybės patvirtinimas reikalingas tik balsuojant. Be patvirtinimo galite registruoti partijas ir pervesti WDD, gautus iš partijų subsidijų."
         }
       }
     },

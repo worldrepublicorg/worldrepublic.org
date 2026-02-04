@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "AIUTU",
-          "faq": "FAQ",
-          "support": "Supportu"
+          "quickstart": "Principià Prestu",
+          "docs": "Documentazione",
+          "help_center": "Centru di Aiutu"
         },
         "source_code": {
           "title": "CODICE SORGENTE"
@@ -94,39 +95,6 @@
           "title": "LEGALE",
           "terms": "Termini d'usu",
           "privacy": "Pulitica di privacy"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Chì hè a Ripubblica Mundiale?",
-          "answer": "A Republica Mundiale hè una piattaforma di democrazia glubale open source cù a so propria muneta digitale."
-        },
-        "what-is-wdd": {
-          "question": "Chì hè WDD?",
-          "answer": "U WDD (dracma mundiale) hè a muneta ufficiale blockchain-native di a Republica Mundiale, emessa cum'è un token ERC-20 standardu attraversu parechje reti."
-        },
-        "drachma-value": {
-          "question": "Da induve a drachma ottene u so valore?",
-          "answer": "A drachma deriva u so valore da esse a muneta ufficiale di a Republica Mundiale. Cum'è a legittimità di a nostra piattaforma cresce, WDD pò diventà u veiculu di redistribuzione glubale è u principale mezzu di scambiu in l'ecunumia mundiale."
-        },
-        "test-elections": {
-          "question": "Cosa sò e elezzioni di prova?",
-          "answer": "L'elezzioni di prova sò esperimenti induve i citadini di a Ripùblica Mundiale votanu per i partiti pulitichi. Ogni partitu hè automaticamente inclusu in u scrutiniu, assicurendu opportunità uguali per tutti i capi aspiranti."
-        },
-        "identity-verification": {
-          "question": "Cumu funziona a verificazione di identità?",
-          "answer": "A Republica Mundiale usa Self per verificà a vostra identità attraversu u vostru passaportu o carta d'identità naziunale. A vostra privacy hè prutetta—Self cunfirma solu chì site una persona vera senza espone i vostri dati persunali."
-        },
-        "party-subsidies": {
-          "question": "Cumu funzionanu e suvvenzioni à i partiti?",
-          "answer": "A Ripùblica Mundiale finanzieghja i partiti pulitichi basatu annantu à u sustegnu demucraticu. Distribuemu cuncessioni WDD proporzionale à i risultati di l'elezzioni, assicurendu chì ogni votu aumenta direttamente e risorse finanziarie di un partitu."
-        },
-        "verification-required": {
-          "question": "Hè necessaria a verificazione per participà?",
-          "answer": "A verificazione di l'identità hè necessaria solu per vutà. Pudete registrà partiti è trasferisce WDD ottenuti da i sussidi di partitu senza verificazione."
         }
       }
     },

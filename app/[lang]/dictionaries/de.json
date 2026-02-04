@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "HILFE",
-          "faq": "FAQ",
-          "support": "Support"
+          "quickstart": "Schnellstart",
+          "docs": "Doku",
+          "help_center": "Hilfe-Center"
         },
         "source_code": {
           "title": "QUELLCODE"
@@ -94,39 +95,6 @@
           "title": "RECHT",
           "terms": "Nutzungsbedingungen",
           "privacy": "Datenschutz"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Was ist die Weltrepublik?",
-          "answer": "Die Weltrepublik ist eine Open-Source-Plattform für globale Demokratie mit eigener digitaler Währung."
-        },
-        "what-is-wdd": {
-          "question": "Was ist WDD?",
-          "answer": "WDD (Weltdrachme) ist die blockchain-native offizielle Währung der Weltrepublik, die als Standard-ERC-20-Token über mehrere Netzwerke ausgegeben wird."
-        },
-        "drachma-value": {
-          "question": "Woher bezieht die Drachme ihren Wert?",
-          "answer": "Die Drachme bezieht ihren Wert daraus, dass sie die offizielle Währung der Weltrepublik ist. Da die Legitimität unserer Plattform wächst, kann WDD das Vehikel der globalen Umverteilung und das wichtigste Tauschmittel in der Weltwirtschaft werden."
-        },
-        "test-elections": {
-          "question": "Was sind Testwahlen?",
-          "answer": "Testwahlen sind Experimente, bei denen Bürger der Weltrepublik für politische Parteien stimmen. Jede Partei wird automatisch auf den Wahlzettel gesetzt, was gleiche Chancen für alle angehenden Führungskräfte gewährleistet."
-        },
-        "identity-verification": {
-          "question": "Wie funktioniert die Identitätsprüfung?",
-          "answer": "Die Weltrepublik nutzt Self zur Überprüfung Ihrer Identität über Ihren Reisepass oder Personalausweis. Ihre Privatsphäre ist geschützt—Self bestätigt nur, dass Sie eine echte Person sind, ohne Ihre persönlichen Daten preiszugeben."
-        },
-        "party-subsidies": {
-          "question": "Wie funktionieren Parteisubventionen?",
-          "answer": "Die Weltrepublik finanziert politische Parteien auf der Basis demokratischer Unterstützung. Wir verteilen WDD-Zuschüsse proportional zu den Wahlergebnissen und stellen sicher, dass jede Stimme die finanziellen Ressourcen einer Partei direkt erhöht."
-        },
-        "verification-required": {
-          "question": "Brauche ich eine Verifizierung, um teilzunehmen?",
-          "answer": "Die Identitätsprüfung ist nur für das Wählen erforderlich. Sie können Parteien registrieren und WDD aus Parteisubventionen auch ohne Verifizierung transferieren."
         }
       }
     },

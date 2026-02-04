@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "POMOC",
-          "faq": "FAQ",
-          "support": "Podpora"
+          "quickstart": "Rýchly štart",
+          "docs": "Dokumentácia",
+          "help_center": "Centrum pomoci"
         },
         "source_code": {
           "title": "ZDROJOVÝ KÓD"
@@ -94,39 +95,6 @@
           "title": "PRÁVNE",
           "terms": "Podmienky používania",
           "privacy": "Zásady ochrany osobných údajov"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Čo je Svetová Republika?",
-          "answer": "Svetová republika je open source platforma pre globálnu demokraciu s vlastnou digitálnou menou."
-        },
-        "what-is-wdd": {
-          "question": "Čo je WDD?",
-          "answer": "WDD (svetová drachma) je oficiálna mena Svetovej republiky natívna pre blockchain, vydávaná ako štandardný token ERC-20 naprieč viacerými sieťami."
-        },
-        "drachma-value": {
-          "question": "Odkiaľ získava drachma svoju hodnotu?",
-          "answer": "Drachma odvodzuje svoju hodnotu od toho, že je oficiálnou menou Svetovej republiky. Ako rastie legitimita našej platformy, WDD sa môže stať nástrojom globálneho prerozdeľovania a hlavným prostriedkom výmeny vo svetovej ekonomike."
-        },
-        "test-elections": {
-          "question": "Čo sú testovacie voľby?",
-          "answer": "Testovacie voľby sú experimenty, kde občania Svetová republika volia politické strany. Každá strana je automaticky zaradená na volebný lístok, čo zabezpečuje rovnaké príležitosti pre všetkých aspirujúcich lídrov."
-        },
-        "identity-verification": {
-          "question": "Ako funguje overenie identity?",
-          "answer": "Svetová republika používa Self na overenie vašej identity prostredníctvom vášho pasu alebo občianskeho preukazu. Vaše súkromie je chránené—Self len potvrdzuje, že ste skutočná osoba bez odhalenia vašich osobných údajov."
-        },
-        "party-subsidies": {
-          "question": "Ako fungujú stranícke dotácie?",
-          "answer": "Svetová republika financuje politické strany na základe demokratickej podpory. Rozdeľujeme granty WDD úmerne volebním výsledkom, čím zabezpečujeme, že každý hlas priamo zvyšuje finančné zdroje strany."
-        },
-        "verification-required": {
-          "question": "Je na účasť potrebné overenie?",
-          "answer": "Overenie totožnosti je potrebné len na hlasovanie. Bez overenia môžete registrovať strany a prevádzať WDD získané zo straníckych dotácií."
         }
       }
     },

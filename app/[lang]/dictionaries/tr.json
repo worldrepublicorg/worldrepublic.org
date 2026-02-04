@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "YARDIM",
-          "faq": "SSS",
-          "support": "Destek"
+          "quickstart": "Hızlı Başlangıç",
+          "docs": "Belgeler",
+          "help_center": "Yardım Merkezi"
         },
         "source_code": {
           "title": "KAYNAK KODU"
@@ -94,39 +95,6 @@
           "title": "YASAL",
           "terms": "Kullanım Şartları",
           "privacy": "Gizlilik Politikası"
-        }
-      }
-    },
-    "faq": {
-      "title": "SSS",
-      "items": {
-        "app-purpose": {
-          "question": "Dünya Cumhuriyeti nedir?",
-          "answer": "Dünya Cumhuriyeti, kendi dijital para birimine sahip, açık kaynaklı bir küresel demokrasi platformudur."
-        },
-        "what-is-wdd": {
-          "question": "WDD nedir?",
-          "answer": "WDD (dünya drahması), Dünya Cumhuriyeti'nin blockchain-native resmi para birimidir ve birden fazla ağda standart ERC-20 token olarak çıkarılmıştır."
-        },
-        "drachma-value": {
-          "question": "Drahma değerini nereden alır?",
-          "answer": "Drahmi, Dünya Cumhuriyeti'nin resmi para birimi olmasından değer kazanır. Platformumuzun meşruiyeti arttıkça, WDD küresel yeniden dağıtımın aracı ve dünya ekonomisindeki ana değişim aracı haline gelebilir."
-        },
-        "test-elections": {
-          "question": "Test seçimleri nedir?",
-          "answer": "Test seçimleri, Dünya Cumhuriyeti vatandaşlarının siyasi partiler için oy kullandığı deneylerdir. Her parti otomatik olarak oy pusulasına dahil edilir ve tüm gelecek vadeden liderler için eşit fırsat sağlanır."
-        },
-        "identity-verification": {
-          "question": "Kimlik doğrulama nasıl çalışır?",
-          "answer": "Dünya Cumhuriyeti pasaportunuz veya ulusal kimliğiniz aracılığıyla kimliğinizi doğrulamak için Self kullanır. Gizliliğiniz korunur—Self yalnızca kişisel verilerinizi açığa çıkarmadan gerçek bir kişi olduğunuzu doğrular."
-        },
-        "party-subsidies": {
-          "question": "Parti sübvansiyonları nasıl işler?",
-          "answer": "Dünya Cumhuriyeti, siyasi partileri demokratik desteğe dayalı olarak finanse eder. WDD hibelerini seçim sonuçlarıyla orantılı olarak dağıtarak her oyun bir partinin mali kaynaklarını doğrudan artırmasını sağlarız."
-        },
-        "verification-required": {
-          "question": "Katılmak için doğrulama gerekiyor mu?",
-          "answer": "Kimlik doğrulaması sadece oy kullanmak için gereklidir. Doğrulama olmadan parti kaydedebilir ve parti ödeneklerinden kazanılan WDD'yi transfer edebilirsiniz."
         }
       }
     },

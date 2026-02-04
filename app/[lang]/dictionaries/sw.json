@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "MSAADA",
-          "faq": "Maswali ya Mara kwa Mara",
-          "support": "Msaada"
+          "quickstart": "Anza Haraka",
+          "docs": "Nyaraka",
+          "help_center": "Kituo cha Msaada"
         },
         "source_code": {
           "title": "MSIMBO CHANZO"
@@ -94,39 +95,6 @@
           "title": "KISHERIA",
           "terms": "Masharti ya Matumizi",
           "privacy": "Sera ya Faragha"
-        }
-      }
-    },
-    "faq": {
-      "title": "Maswali ya Mara kwa Mara",
-      "items": {
-        "app-purpose": {
-          "question": "Jamhuri ya Ulimwengu ni nini?",
-          "answer": "Jamhuri ya Dunia ni jukwaa la kidemokrasia kimataifa la chanzo huria lenye sarafu yake ya kidijitali."
-        },
-        "what-is-wdd": {
-          "question": "WDD ni nini?",
-          "answer": "WDD (drachma ya dunia) ni sarafu rasmi ya blockchain-native ya Jamhuri ya Dunia, iliyotolewa kama token ya kawaida ya ERC-20 katika mitandao mingi."
-        },
-        "drachma-value": {
-          "question": "Drachma inapata thamani yake wapi?",
-          "answer": "Drachma inapata thamani yake kutokana na kuwa sarafu rasmi ya Jamhuri ya Dunia. Kadiri uhalali wa jukwaa letu unavyokua, WDD inaweza kuwa chombo cha ugawaji upya wa kimataifa na njia kuu ya kubadilishana katika uchumi wa dunia."
-        },
-        "test-elections": {
-          "question": "Ni nini uchaguzi wa majaribio?",
-          "answer": "Uchaguzi wa majaribio ni majaribio ambapo raia wa Jamhuri ya Dunia hupigia kura vyama vya siasa. Kila chama kinajumuishwa kiotomatiki kwenye karatasi ya kura, kuhakikisha fursa sawa kwa viongozi wote wanaotarajia."
-        },
-        "identity-verification": {
-          "question": "Uthibitishaji wa utambulisho unafanyaje kazi?",
-          "answer": "Jamhuri ya Dunia hutumia Self kwa uthibitishaji wa utambulisho wako kupitia paspoti yako au kitambulisho cha kitaifa. Faragha yako imelindwa—Self inathibitisha tu kuwa wewe ni mtu halisi bila kufichua data yako ya kibinafsi."
-        },
-        "party-subsidies": {
-          "question": "Ruzuku za vyama hufanya kazi vipi?",
-          "answer": "Jamhuri ya Dunia hufadhili vyama vya siasa kulingana na uungwaji mkono wa kidemokrasia. Tunasambaza ruzuku za WDD kulingana na matokeo ya uchaguzi, kuhakikisha kwamba kila kura inaongeza rasilimali za kifedha za chama moja kwa moja."
-        },
-        "verification-required": {
-          "question": "Je, uthibitishaji unahitajika ili kushiriki?",
-          "answer": "Uthibitishaji wa utambulisho unahitajika tu kwa kupiga kura. Unaweza kusajili vyama na kuhamisha WDD iliyopatikana kutoka kwa ruzuku za vyama bila uthibitishaji."
         }
       }
     },

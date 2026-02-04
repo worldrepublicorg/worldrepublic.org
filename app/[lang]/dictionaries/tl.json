@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "TULONG",
-          "faq": "FAQ",
-          "support": "Support"
+          "quickstart": "Mabilis na Pagsisimula",
+          "docs": "Mga Dokumento",
+          "help_center": "Sentro ng Tulong"
         },
         "source_code": {
           "title": "SOURCE CODE"
@@ -94,39 +95,6 @@
           "title": "LEGAL",
           "terms": "Terms of Use",
           "privacy": "Privacy Policy"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Ano ang Republikang Pandaigdig?",
-          "answer": "Ang Republika ng Mundo ay isang open source na platform ng demokrasyang pandaigdig na may sariling digital currency."
-        },
-        "what-is-wdd": {
-          "question": "Ano ang WDD?",
-          "answer": "Ang WDD (world drachma) ay ang blockchain-native na opisyal na pera ng World Republic, na inilabas bilang standard na ERC-20 token sa maraming network."
-        },
-        "drachma-value": {
-          "question": "Saan nakukuha ng drachma ang halaga nito?",
-          "answer": "Ang drachma ay nakakakuha ng halaga nito mula sa pagiging opisyal na pera ng World Republic. Habang lumalago ang pagiging lehitimo ng aming platform, ang WDD ay maaaring maging sasakyan ng pandaigdigang muling pamamahagi at ang pangunahing daluyan ng palitan sa ekonomiya ng mundo."
-        },
-        "test-elections": {
-          "question": "Ano ang mga test election?",
-          "answer": "Ang mga pagsubok na halalan ay mga eksperimento kung saan ang mga mamamayan ng Republika ng Daigdig ay bumoboto para sa mga partidong pampulitika. Ang bawat partido ay awtomatikong kasama sa balota, na tinitiyak ang pantay na pagkakataon para sa lahat ng naghahangad na pinuno."
-        },
-        "identity-verification": {
-          "question": "Paano gumagana ang pagpapatunay ng pagkakakilanlan?",
-          "answer": "Ginagamit ng World Republic ang Self upang patunayan ang iyong pagkakakilanlan sa pamamagitan ng iyong pasaporte o pambansang ID. Ang iyong privacy ay protektado—Self ay kumpirmahin lamang na ikaw ay isang tunay na tao nang hindi inilalantad ang anumang iyong personal na data."
-        },
-        "party-subsidies": {
-          "question": "Paano gumagana ang subsidiya sa partido?",
-          "answer": "Pinopondohan ng Republika ng Daigdig ang mga partidong pampulitika batay sa demokratikong suporta. Namamahagi kami ng mga grant ng WDD nang proporsyonal sa mga resulta ng halalan, na tinitiyak na ang bawat boto ay direktang nagpapataas ng pinansyal na yaman ng isang partido."
-        },
-        "verification-required": {
-          "question": "Kailangan ba ng beripikasyon para makasali?",
-          "answer": "Ang pagpapatunay ng pagkakakilanlan ay kailangan lamang sa pagboto. Maaari kang magrehistro ng mga partido at maglipat ng WDD na nakuha mula sa subsidiya ng partido nang walang beripikasyon."
         }
       }
     },

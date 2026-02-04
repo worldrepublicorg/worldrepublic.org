@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "UBUFA",
-          "faq": "Ibibazo byinshi",
-          "support": "Ubufasha"
+          "quickstart": "Gutangira Vuba",
+          "docs": "Inyandiko",
+          "help_center": "Ikigo cy'Ubufasha"
         },
         "source_code": {
           "title": "KODE Y'INSHINGANO"
@@ -94,39 +95,6 @@
           "title": "UBUTEKEREZA",
           "terms": "Amabwiriza yo gukoresha",
           "privacy": "Politiki y'ubwigenge"
-        }
-      }
-    },
-    "faq": {
-      "title": "Ibibazo byinshi",
-      "items": {
-        "app-purpose": {
-          "question": "Repubulika y'isi ni iki?",
-          "answer": "Repubulika y'Isi ni urubuga rwa demokarasi isi rufite isoko ifunguye hamwe nifaranga ryarwo."
-        },
-        "what-is-wdd": {
-          "question": "WDD ni iki?",
-          "answer": "WDD (drachma y'isi) ni ifaranga ryemewe rya blockchain-native rya Repubulika y'Isi, ryasohowe nk'amashini ya ERC-20 y'ibanze mu mirongo myinshi."
-        },
-        "drachma-value": {
-          "question": "Drachma ibona agaciro ki?",
-          "answer": "Drachma ikura agaciro kayo kuba ifaranga ryemewe rya Repubulika y'Isi. Uko ubwemere bw'urubuga rwacu bwiyongera, WDD irashobora kuba igikoresho cyo kugabanya isi no kuba uburyo nyamukuru bwo guhana mu bukungu bw'isi."
-        },
-        "test-elections": {
-          "question": "Ni iki amatora y'igerageza?",
-          "answer": "Amatora y'igerageza ni ubushakashatsi aho abaturage ba Repubulika y'Isi batora amashyaka ya politiki. Buri shyaka rishyirwa ku rupapuro rw'itora mu buryo bwikora, bigaha amahirwe angana abayobozi bose babyifuza."
-        },
-        "identity-verification": {
-          "question": "Uko kwemeza aho wavuka gukora gute?",
-          "answer": "Repubulika y'Isi ikoresha Self kugira ngo yemeze ubwoba bwawe ukoresheje pasiporo cyangwa indangamuntu y'igihugu. Ubwigenge bwawe bukabuzwa—Self gusa ikemeza ko uri umuntu w'ukuri nta makuru y'ubwoba wayerekana."
-        },
-        "party-subsidies": {
-          "question": "Inkunga z'amashyaka zikora gute?",
-          "answer": "Repubulika y'Isi itera inkunga amashyaka ya politiki hashingiwe ku nkunga ya demokarasi. Dutanga inkunga za WDD zikwiriye hagendewe ku byavuye mu matora, tukizeza ko buri jwi ryongera umutungo w'ishyaka."
-        },
-        "verification-required": {
-          "question": "Ese birakenewe kwemeza umwirondoro kugira ngo witabire?",
-          "answer": "Kwemeza umwirondoro bisabwa gusa mu gutora. Ushobora kwandikisha amashyaka no koherereza WDD wavanye mu nkunga z'amashyaka utabanje kwemeza umwirondoro."
         }
       }
     },

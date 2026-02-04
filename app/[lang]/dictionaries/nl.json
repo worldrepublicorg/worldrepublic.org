@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "HELP",
-          "faq": "FAQ",
-          "support": "Ondersteuning"
+          "quickstart": "Snelstart",
+          "docs": "Documentatie",
+          "help_center": "Helpcentrum"
         },
         "source_code": {
           "title": "BRONCODE"
@@ -94,39 +95,6 @@
           "title": "JURIDISCH",
           "terms": "Gebruiksvoorwaarden",
           "privacy": "Privacybeleid"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Wat is de Wereldrepubliek?",
-          "answer": "De Wereldrepubliek is een open source wereldwijd democratieplatform met zijn eigen digitale valuta."
-        },
-        "what-is-wdd": {
-          "question": "Wat is WDD?",
-          "answer": "WDD (werelddrachme) is de blockchain-native officiële munteenheid van de Wereldrepubliek, uitgegeven als standaard ERC-20 token op meerdere netwerken."
-        },
-        "drachma-value": {
-          "question": "Waar krijgt de drachme zijn waarde vandaan?",
-          "answer": "De drachme ontleent zijn waarde aan het feit dat het de officiële valuta van de Wereldrepubliek is. Naarmate de legitimiteit van ons platform groeit, kan WDD het voertuig worden voor wereldwijde herverdeling en het belangrijkste ruilmiddel in de wereldeconomie."
-        },
-        "test-elections": {
-          "question": "Wat zijn testverkiezingen?",
-          "answer": "Testverkiezingen zijn experimenten waarbij burgers van de Wereldrepubliek stemmen op politieke partijen. Elke partij wordt automatisch op het stembiljet geplaatst, wat gelijke kansen garandeert voor alle aspirant-leiders."
-        },
-        "identity-verification": {
-          "question": "Hoe werkt identiteitsverificatie?",
-          "answer": "De Wereldrepubliek gebruikt Self om uw identiteit te verifiëren via uw paspoort of nationale ID. Uw privacy is beschermd—Self bevestigt alleen dat u een echt persoon bent zonder uw persoonlijke gegevens bloot te stellen."
-        },
-        "party-subsidies": {
-          "question": "Hoe werken partijsubsidies?",
-          "answer": "De Wereldrepubliek financiert politieke partijen op basis van democratische steun. We verdelen WDD-beurzen evenredig aan de verkiezingsresultaten, zodat elke stem de financiële middelen van een partij direct vergroot."
-        },
-        "verification-required": {
-          "question": "Is verificatie nodig om deel te nemen?",
-          "answer": "Identiteitsverificatie is alleen vereist om te stemmen. Je kunt zonder verificatie partijen registreren en WDD overmaken die verkregen is uit partijsubsidies."
         }
       }
     },

@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "POMOĆ",
-          "faq": "ČPP",
-          "support": "Podrška"
+          "quickstart": "Brzi početak",
+          "docs": "Dokumentacija",
+          "help_center": "Centar za pomoć"
         },
         "source_code": {
           "title": "IZVORNI KOD"
@@ -94,39 +95,6 @@
           "title": "PRAVNI",
           "terms": "Uslovi korištenja",
           "privacy": "Politika privatnosti"
-        }
-      }
-    },
-    "faq": {
-      "title": "ČPP",
-      "items": {
-        "app-purpose": {
-          "question": "Šta je Svjetska Republika?",
-          "answer": "Svjetska republika je platforma za globalnu demokratiju otvorenog koda sa vlastitom digitalnom valutom."
-        },
-        "what-is-wdd": {
-          "question": "Šta je WDD?",
-          "answer": "WDD (svjetska drahma) je službena valuta Svjetske republike koja je blockchain-native, izdana kao standardni ERC-20 token na više mreža."
-        },
-        "drachma-value": {
-          "question": "Odakle dolazi vrijednost drahme?",
-          "answer": "Drahma svoju vrijednost crpi iz činjenice da je zvanična valuta Svjetske Republike. Kako legitimitet naše platforme raste, WDD može postati sredstvo globalne redistribucije i glavni medij razmjene u svjetskoj ekonomiji."
-        },
-        "test-elections": {
-          "question": "Šta su test izbori?",
-          "answer": "Testni izbori su eksperimenti u kojima građani Svjetska republika glasaju za političke stranke. Svaka stranka je automatski uključena na glasački listić, osiguravajući jednake mogućnosti za sve ambiciozne lidere."
-        },
-        "identity-verification": {
-          "question": "Kako funkcioniše provjera identiteta?",
-          "answer": "Svjetska Republika koristi Self za verifikaciju vašeg identiteta putem vašeg pasoša ili nacionalne lične karte. Vaša privatnost je zaštićena—Self samo potvrđuje da ste stvarna osoba bez otkrivanja vaših ličnih podataka."
-        },
-        "party-subsidies": {
-          "question": "Kako funkcioniraju stranačke subvencije?",
-          "answer": "Svjetska republika finansira političke stranke na osnovu demokratske podrške. Dijelimo WDD sredstva proporcionalno izbornim rezultatima, osiguravajući da svaki glas direktno povećava finansijske resurse stranke."
-        },
-        "verification-required": {
-          "question": "Je li potrebna verifikacija za učešće?",
-          "answer": "Verifikacija identiteta je potrebna samo za glasanje. Možete registrovati stranke i prenositi WDD zarađen od stranačkih subvencija bez verifikacije."
         }
       }
     },

@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "AYUDA",
-          "faq": "Preguntas frecuentes",
-          "support": "Soporte"
+          "quickstart": "Inicio rápido",
+          "docs": "Documentación",
+          "help_center": "Centro de ayuda"
         },
         "source_code": {
           "title": "CÓDIGO FUENTE"
@@ -94,39 +95,6 @@
           "title": "LEGAL",
           "terms": "Términos de uso",
           "privacy": "Política de privacidad"
-        }
-      }
-    },
-    "faq": {
-      "title": "Preguntas frecuentes",
-      "items": {
-        "app-purpose": {
-          "question": "¿Qué es la República Mundial?",
-          "answer": "La República Mundial es una plataforma de democracia global de código abierto con su propia moneda digital."
-        },
-        "what-is-wdd": {
-          "question": "¿Qué es WDD?",
-          "answer": "WDD (dracma mundial) es la moneda oficial nativa de blockchain de la República Mundial, emitida como token ERC-20 estándar en múltiples redes."
-        },
-        "drachma-value": {
-          "question": "¿De dónde obtiene su valor el dracma?",
-          "answer": "El dracma deriva su valor de ser la moneda oficial de la República Mundial. A medida que crece la legitimidad de nuestra plataforma, WDD puede convertirse en el vehículo de redistribución global y el principal medio de intercambio en la economía mundial."
-        },
-        "test-elections": {
-          "question": "¿Qué son las elecciones de prueba?",
-          "answer": "Las elecciones de prueba son experimentos donde los ciudadanos de la República Mundial votan por partidos políticos. Cada partido se incluye automáticamente en la boleta, asegurando igualdad de oportunidades para todos los aspirantes a líderes."
-        },
-        "identity-verification": {
-          "question": "¿Cómo funciona la verificación de identidad?",
-          "answer": "La República Mundial utiliza Self para verificar tu identidad a través de tu pasaporte o documento de identidad nacional. Tu privacidad está protegida—Self solo confirma que eres una persona real sin exponer ninguno de tus datos personales."
-        },
-        "party-subsidies": {
-          "question": "¿Cómo funcionan los subsidios a los partidos?",
-          "answer": "República Mundial financia a los partidos políticos basándose en el apoyo democrático. Distribuimos subvenciones de WDD proporcionales a los resultados electorales, asegurando que cada voto aumente directamente los recursos financieros de un partido."
-        },
-        "verification-required": {
-          "question": "¿Es necesaria la verificación para participar?",
-          "answer": "La verificación de identidad solo es necesaria para votar. Puedes registrar partidos y transferir los WDD obtenidos de los subsidios del partido sin necesidad de verificación."
         }
       }
     },

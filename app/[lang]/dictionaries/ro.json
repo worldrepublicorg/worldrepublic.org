@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "AJUTOR",
-          "faq": "Întrebări frecvente",
-          "support": "Suport"
+          "quickstart": "Start rapid",
+          "docs": "Documentație",
+          "help_center": "Centru de Ajutor"
         },
         "source_code": {
           "title": "COD SURSĂ"
@@ -94,39 +95,6 @@
           "title": "LEGAL",
           "terms": "Termeni și condiții",
           "privacy": "Politica de confidențialitate"
-        }
-      }
-    },
-    "faq": {
-      "title": "Întrebări frecvente",
-      "items": {
-        "app-purpose": {
-          "question": "Ce este Republica Mondială?",
-          "answer": "Republica Mondială este o platformă de democrație globală open source cu propria monedă digitală."
-        },
-        "what-is-wdd": {
-          "question": "Ce este WDD?",
-          "answer": "WDD (drachma mondială) este moneda oficială nativă blockchain a Republicii Mondiale, emisă ca token ERC-20 standard pe mai multe rețele."
-        },
-        "drachma-value": {
-          "question": "De unde își obține drahma valoarea?",
-          "answer": "Drahma își derivă valoarea din faptul că este moneda oficială a Republicii Mondiale. Pe măsură ce legitimitatea platformei noastre crește, WDD poate deveni vehiculul redistribuirii globale și principalul mijloc de schimb în economia mondială."
-        },
-        "test-elections": {
-          "question": "Ce sunt alegerile de test?",
-          "answer": "Alegerile de testare sunt experimente în care cetățenii Republica Mondială votează pentru partide politice. Fiecare partid este inclus automat pe buletinul de vot, asigurând șanse egale pentru toți liderii aspiranți."
-        },
-        "identity-verification": {
-          "question": "Cum funcționează verificarea identității?",
-          "answer": "Republica Mondială folosește Self pentru a verifica identitatea ta prin pașaportul sau buletinul tău. Confidențialitatea ta este protejată—Self confirmă doar că ești o persoană reală fără să-ți expună datele personale."
-        },
-        "party-subsidies": {
-          "question": "Cum funcționează subvențiile pentru partide?",
-          "answer": "Republica Mondială finanțează partidele politice pe baza sprijinului democratic. Distribuim granturi WDD proporțional cu rezultatele alegerilor, asigurând că fiecare vot crește direct resursele financiare ale unui partid."
-        },
-        "verification-required": {
-          "question": "Este necesară verificarea pentru a participa?",
-          "answer": "Verificarea identității este necesară doar pentru vot. Puteți înregistra partide și transfera WDD obținuți din subvențiile pentru partide fără verificare."
         }
       }
     },

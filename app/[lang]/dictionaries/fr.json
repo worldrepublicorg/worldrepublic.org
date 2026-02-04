@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "AIDE",
-          "faq": "FAQ",
-          "support": "Support"
+          "quickstart": "Démarrage rapide",
+          "docs": "Docs",
+          "help_center": "Centre d'aide"
         },
         "source_code": {
           "title": "CODE SOURCE"
@@ -94,39 +95,6 @@
           "title": "LÉGAL",
           "terms": "Conditions d'utilisation",
           "privacy": "Politique de confidentialité"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Qu'est-ce que la République mondiale ?",
-          "answer": "La République mondiale est une plateforme de démocratie mondiale open source avec sa propre monnaie numérique."
-        },
-        "what-is-wdd": {
-          "question": "Qu'est-ce que WDD?",
-          "answer": "WDD (drachme mondiale) est la monnaie officielle native à la blockchain de la République mondiale, émise en tant que token ERC-20 standard sur plusieurs réseaux."
-        },
-        "drachma-value": {
-          "question": "D'où vient la valeur du drachme ?",
-          "answer": "La drachme tire sa valeur du fait qu'elle est la monnaie officielle de la République mondiale. À mesure que la légitimité de notre plateforme grandit, WDD peut devenir le véhicule de la redistribution mondiale et le principal moyen d'échange dans l'économie mondiale."
-        },
-        "test-elections": {
-          "question": "Que sont les élections de test?",
-          "answer": "Les élections tests sont des expériences où les citoyens de la République mondiale votent pour des partis politiques. Chaque parti est automatiquement inclus sur le bulletin de vote, garantissant l'égalité des chances pour tous les aspirants dirigeants."
-        },
-        "identity-verification": {
-          "question": "Comment fonctionne la vérification d'identité ?",
-          "answer": "La République mondiale utilise Self pour vérifier votre identité via votre passeport ou votre carte d'identité nationale. Votre vie privée est protégée—Self confirme uniquement que vous êtes une vraie personne sans exposer vos données personnelles."
-        },
-        "party-subsidies": {
-          "question": "Comment fonctionnent les subventions aux partis ?",
-          "answer": "La République mondiale finance les partis politiques sur la base du soutien démocratique. Nous distribuons des subventions WDD proportionnellement aux résultats des élections, garantissant que chaque vote augmente directement les ressources financières d'un parti."
-        },
-        "verification-required": {
-          "question": "Faut-il être vérifié pour participer ?",
-          "answer": "La vérification d'identité n'est requise que pour voter. Vous pouvez enregistrer un parti et transférer les WDD issus des subventions aux partis sans vérification."
         }
       }
     },

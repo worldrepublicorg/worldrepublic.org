@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "SEGÍTSÉG",
-          "faq": "GYIK",
-          "support": "Ügyfélszolgálat"
+          "quickstart": "Gyorsindítás",
+          "docs": "Dokuk",
+          "help_center": "Súgóközpont"
         },
         "source_code": {
           "title": "FORRÁSKÓD"
@@ -94,39 +95,6 @@
           "title": "JOGI",
           "terms": "Használati feltételek",
           "privacy": "Adatvédelmi irányelvek"
-        }
-      }
-    },
-    "faq": {
-      "title": "GYIK",
-      "items": {
-        "app-purpose": {
-          "question": "Mi a Világköztársaság?",
-          "answer": "A Világköztársaság egy nyílt forráskódú globális demokrácia platform saját digitális valutával."
-        },
-        "what-is-wdd": {
-          "question": "Mi a WDD?",
-          "answer": "A WDD (világdrachma) a Világköztársaság blokklánc-alapú hivatalos fizetőeszköze, amelyet több hálózaton szabványos ERC-20 tokenként bocsátanak ki."
-        },
-        "drachma-value": {
-          "question": "Honnan származik a drachma értéke?",
-          "answer": "A drachma értéke abból ered, hogy a Világköztársaság hivatalos fizetőeszköze. Ahogy platformunk legitimitása növekszik, a WDD a globális újraelosztás eszközévé és a világgazdaság fő csereeszközévé válhat."
-        },
-        "test-elections": {
-          "question": "Mik a tesztválasztások?",
-          "answer": "A tesztválasztások olyan kísérletek, ahol a Világköztársaság polgárai politikai pártokra szavaznak. Minden párt automatikusan felkerül a szavazólapra, egyenlő esélyeket biztosítva minden törekvő vezető számára."
-        },
-        "identity-verification": {
-          "question": "Hogyan működik a személyazonosság-ellenőrzés?",
-          "answer": "A Világköztársaság a Self rendszert használja a személyazonosság igazolására az útlevél vagy személyi igazolvány segítségével. Az Ön személyes adatai védve vannak – a Self csupán azt igazolja, hogy Ön valós személy, anélkül, hogy adatait felfedné."
-        },
-        "party-subsidies": {
-          "question": "Hogyan működnek a párttámogatások?",
-          "answer": "A Világköztársaság demokratikus támogatottság alapján finanszírozza a politikai pártokat. A választási eredményekkel arányosan osztunk szét WDD támogatásokat, biztosítva, hogy minden szavazat közvetlenül növelje egy párt pénzügyi forrásait."
-        },
-        "verification-required": {
-          "question": "Szükséges a hitelesítés a részvételhez?",
-          "answer": "Személyazonosság-ellenőrzés csak a szavazáshoz szükséges. Pártot regisztrálni és a párttámogatásokból szerzett WDD-t mozgatni hitelesítés nélkül is lehet."
         }
       }
     },

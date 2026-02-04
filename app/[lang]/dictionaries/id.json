@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "BANTUAN",
-          "faq": "FAQ",
-          "support": "Dukungan"
+          "quickstart": "Mulai Cepat",
+          "docs": "Dokumen",
+          "help_center": "Pusat Bantuan"
         },
         "source_code": {
           "title": "KODE SUMBER"
@@ -94,39 +95,6 @@
           "title": "LEGAL",
           "terms": "Ketentuan Penggunaan",
           "privacy": "Kebijakan Privasi"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Apa itu Republik Dunia?",
-          "answer": "Republik Dunia adalah platform demokrasi global sumber terbuka dengan mata uang digitalnya sendiri."
-        },
-        "what-is-wdd": {
-          "question": "Apa itu WDD?",
-          "answer": "WDD (drachma dunia) adalah mata uang resmi blockchain-native Republik Dunia, diterbitkan sebagai token ERC-20 standar di beberapa jaringan."
-        },
-        "drachma-value": {
-          "question": "Dari mana nilai drachma berasal?",
-          "answer": "Drachma memperoleh nilainya dari menjadi mata uang resmi Republik Dunia. Seiring bertumbuhnya legitimasi platform kami, WDD dapat menjadi kendaraan redistribusi global dan alat tukar utama dalam ekonomi dunia."
-        },
-        "test-elections": {
-          "question": "Apa itu pemilihan uji?",
-          "answer": "Pemilu uji coba adalah eksperimen di mana warga Republik Dunia memilih partai politik. Setiap partai secara otomatis dimasukkan dalam surat suara, memastikan kesempatan yang sama bagi semua calon pemimpin."
-        },
-        "identity-verification": {
-          "question": "Bagaimana cara kerja verifikasi identitas?",
-          "answer": "Republik Dunia menggunakan Self untuk memverifikasi identitas Anda melalui paspor atau KTP Anda. Privasi Anda dilindungi—Self hanya mengonfirmasi bahwa Anda adalah orang yang nyata tanpa mengekspos data pribadi Anda."
-        },
-        "party-subsidies": {
-          "question": "Bagaimana cara kerja subsidi partai?",
-          "answer": "Republik Dunia mendanai partai politik berdasarkan dukungan demokratis. Kami mendistribusikan hibah WDD secara proporsional dengan hasil pemilu, memastikan bahwa setiap suara secara langsung meningkatkan sumber daya keuangan partai."
-        },
-        "verification-required": {
-          "question": "Apakah perlu verifikasi untuk berpartisipasi?",
-          "answer": "Verifikasi identitas hanya diperlukan untuk memilih. Anda dapat mendaftarkan partai dan mentransfer WDD yang diperoleh dari subsidi partai tanpa verifikasi."
         }
       }
     },

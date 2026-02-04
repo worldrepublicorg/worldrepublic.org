@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "TRỢ GIÚP",
-          "faq": "Câu hỏi thường gặp",
-          "support": "Hỗ trợ"
+          "quickstart": "Bắt đầu nhanh",
+          "docs": "Tài liệu",
+          "help_center": "Trung tâm trợ giúp"
         },
         "source_code": {
           "title": "MÃ NGUỒN"
@@ -94,39 +95,6 @@
           "title": "PHÁP LÝ",
           "terms": "Điều khoản sử dụng",
           "privacy": "Chính sách bảo mật"
-        }
-      }
-    },
-    "faq": {
-      "title": "Câu hỏi thường gặp",
-      "items": {
-        "app-purpose": {
-          "question": "Cộng hòa Thế giới là gì?",
-          "answer": "Cộng hòa Thế giới là một nền tảng dân chủ toàn cầu mã nguồn mở với tiền kỹ thuật số riêng."
-        },
-        "what-is-wdd": {
-          "question": "WDD là gì?",
-          "answer": "WDD (drachma thế giới) là tiền tệ chính thức blockchain-native của Cộng hòa Thế giới, được phát hành dưới dạng token ERC-20 tiêu chuẩn trên nhiều mạng."
-        },
-        "drachma-value": {
-          "question": "Drachma lấy giá trị từ đâu?",
-          "answer": "Đồng drachma lấy giá trị từ việc là tiền tệ chính thức của Cộng hòa Thế giới. Khi tính hợp pháp của nền tảng của chúng tôi tăng lên, WDD có thể trở thành phương tiện phân phối lại toàn cầu và phương tiện trao đổi chính trong nền kinh tế thế giới."
-        },
-        "test-elections": {
-          "question": "Bầu cử thử nghiệm là gì?",
-          "answer": "Bầu cử thử nghiệm là những cuộc thử nghiệm nơi công dân Cộng hòa Thế giới bỏ phiếu cho các đảng chính trị. Mọi đảng phái đều tự động được đưa vào lá phiếu, đảm bảo cơ hội bình đẳng cho tất cả các nhà lãnh đạo đầy tham vọng."
-        },
-        "identity-verification": {
-          "question": "Xác minh danh tính hoạt động như thế nào?",
-          "answer": "Cộng hòa Thế giới sử dụng Self để xác minh danh tính của bạn thông qua hộ chiếu hoặc chứng minh nhân dân của bạn. Quyền riêng tư của bạn được bảo vệ—Self chỉ xác nhận rằng bạn là người thật mà không tiết lộ bất kỳ dữ liệu cá nhân nào của bạn."
-        },
-        "party-subsidies": {
-          "question": "Trợ cấp cho đảng hoạt động như thế nào?",
-          "answer": "Cộng hòa Thế giới tài trợ cho các đảng chính trị dựa trên sự ủng hộ dân chủ. Chúng tôi phân phối các khoản tài trợ WDD tỷ lệ thuận với kết quả bầu cử, đảm bảo rằng mỗi lá phiếu trực tiếp làm tăng nguồn lực tài chính của đảng."
-        },
-        "verification-required": {
-          "question": "Có cần xác minh để tham gia không?",
-          "answer": "Xác minh danh tính chỉ bắt buộc khi bỏ phiếu. Bạn có thể đăng ký đảng và chuyển WDD nhận được từ trợ cấp đảng mà không cần xác minh."
         }
       }
     },

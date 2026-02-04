@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "YORDAM",
-          "faq": "Savol-javob",
-          "support": "Qo'llab-quvvatlash"
+          "quickstart": "Tezkor boshlash",
+          "docs": "Hujjatlar",
+          "help_center": "Yordam markazi"
         },
         "source_code": {
           "title": "MANBA KODI"
@@ -94,39 +95,6 @@
           "title": "HUQUQIY",
           "terms": "Foydalanish shartlari",
           "privacy": "Maxfiylik siyosati"
-        }
-      }
-    },
-    "faq": {
-      "title": "Savol-javob",
-      "items": {
-        "app-purpose": {
-          "question": "Jahon Respublikasi nima?",
-          "answer": "Dunyo Respublikasi — o‘z raqamli valyutasiga ega ochiq manbali global demokratiya platformasi."
-        },
-        "what-is-wdd": {
-          "question": "WDD nima?",
-          "answer": "WDD (jahon drahmasi) Jahon Respublikasining blockchain-native rasmiy valyutasidir va bir nechta tarmoqlarda standart ERC-20 token sifatida chiqarilgan."
-        },
-        "drachma-value": {
-          "question": "Draxmaning qiymati qayerdan keladi?",
-          "answer": "Draxma o'z qiymatini Jahon Respublikasining rasmiy valyutasi bo'lishidan oladi. Platformamizning qonuniyligi oshgani sayin, WDD global qayta taqsimlash vositasi va jahon iqtisodiyotida asosiy almashinuv vositasiga aylanishi mumkin."
-        },
-        "test-elections": {
-          "question": "Test saylovlar nima?",
-          "answer": "Sinov saylovlari Jahon Respublikasi fuqarolari siyosiy partiyalar uchun ovoz beradigan tajribalardir. Har bir partiya avtomatik ravishda byulletenga kiritiladi va barcha intiluvchan liderlar uchun teng imkoniyatlarni ta'minlaydi."
-        },
-        "identity-verification": {
-          "question": "Shaxsni tekshirish qanday ishlaydi?",
-          "answer": "Jahon Respublikasi pasportingiz yoki milliy ID kartaingiz orqali identifikatsiyangizni tasdiqlash uchun Self-dan foydalanadi. Maxfiyligingiz himoyalangan—Self shaxsiy ma'lumotlaringizni oshkor qilmasdan siz haqiqiy shaxs ekanligingizni tasdiqlaydi."
-        },
-        "party-subsidies": {
-          "question": "Partiya subsidiyalari qanday ishlaydi?",
-          "answer": "Jahon Respublikasi siyosiy partiyalarni demokratik qo'llab-quvvatlash asosida moliyalashtiradi. Biz WDD grantlarini saylov natijalariga mutanosib ravishda taqsimlaymiz va har bir ovoz partiyaning moliyaviy resurslarini bevosita oshirishini ta'minlaymiz."
-        },
-        "verification-required": {
-          "question": "Qatnashish uchun tasdiqlash shartmi?",
-          "answer": "Shaxsni tasdiqlash faqat ovoz berish uchun talab qilinadi. Siz tasdiqlashsiz partiya ro'yxatdan o'tkazishingiz va partiya subsidiyalaridan olingan WDD mablag'larini o'tkazishingiz mumkin."
         }
       }
     },

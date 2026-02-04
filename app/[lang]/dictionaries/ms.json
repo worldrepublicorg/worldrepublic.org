@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "BANTUAN",
-          "faq": "Soalan lazim",
-          "support": "Sokongan"
+          "quickstart": "Mula Pantas",
+          "docs": "Dokumen",
+          "help_center": "Pusat Bantuan"
         },
         "source_code": {
           "title": "KOD SUMBER"
@@ -94,39 +95,6 @@
           "title": "UNDANG-UNDANG",
           "terms": "Terma penggunaan",
           "privacy": "Dasar privasi"
-        }
-      }
-    },
-    "faq": {
-      "title": "Soalan lazim",
-      "items": {
-        "app-purpose": {
-          "question": "Apakah itu Republik Dunia?",
-          "answer": "Republik Dunia ialah platform demokrasi global sumber terbuka dengan mata wang digitalnya sendiri."
-        },
-        "what-is-wdd": {
-          "question": "Apakah WDD?",
-          "answer": "WDD (drachma dunia) ialah mata wang rasmi blockchain-native Republik Dunia, dikeluarkan sebagai token ERC-20 standard merentas beberapa rangkaian."
-        },
-        "drachma-value": {
-          "question": "Dari manakah nilai drachma diperoleh?",
-          "answer": "Drachma mendapat nilainya daripada menjadi mata wang rasmi Republik Dunia. Apabila kesahihan platform kami berkembang, WDD boleh menjadi kenderaan pengagihan semula global dan medium pertukaran utama dalam ekonomi dunia."
-        },
-        "test-elections": {
-          "question": "Apakah pilihan raya ujian?",
-          "answer": "Pilihan raya ujian adalah eksperimen di mana warganegara Republik Dunia mengundi parti politik. Setiap parti disertakan secara automatik dalam kertas undi, memastikan peluang saksama untuk semua pemimpin yang bercita-cita tinggi."
-        },
-        "identity-verification": {
-          "question": "Bagaimanakah pengesahan identiti berfungsi?",
-          "answer": "Republik Dunia menggunakan Self untuk mengesahkan identiti anda melalui pasport atau kad pengenalan negara anda. Privasi anda dilindungi—Self hanya mengesahkan bahawa anda adalah orang sebenar tanpa mendedahkan sebarang data peribadi anda."
-        },
-        "party-subsidies": {
-          "question": "Bagaimanakah subsidi parti berfungsi?",
-          "answer": "Republik Dunia membiayai parti politik berdasarkan sokongan demokratik. Kami mengagihkan geran WDD secara berkadar dengan keputusan pilihan raya, memastikan setiap undi meningkatkan sumber kewangan parti secara langsung."
-        },
-        "verification-required": {
-          "question": "Adakah pengesahan diperlukan untuk menyertai?",
-          "answer": "Pengesahan identiti hanya diperlukan untuk mengundi. Anda boleh mendaftar parti dan memindahkan WDD yang diperolehi daripada subsidi parti tanpa pengesahan."
         }
       }
     },

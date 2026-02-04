@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "CAWIMADA",
-          "faq": "Su'aalaha la isticmaalo",
-          "support": "Taageero"
+          "quickstart": "Bilaabid Degdeg ah",
+          "docs": "Dukumentiyo",
+          "help_center": "Xarunta Caawinaada"
         },
         "source_code": {
           "title": "KODKA ILADA"
@@ -94,39 +95,6 @@
           "title": "SHARCI",
           "terms": "Shuruudaha isticmaalka",
           "privacy": "Siyaasadda sirta"
-        }
-      }
-    },
-    "faq": {
-      "title": "Su'aalaha la isticmaalo",
-      "items": {
-        "app-purpose": {
-          "question": "Maxay tahay Jamhuuriyadda Adduunka?",
-          "answer": "Jamhuuriyadda Adduunka waa madal dimuqraadiyad caalami ah oo il furan oo leh lacagteeda dhijitaalka ah."
-        },
-        "what-is-wdd": {
-          "question": "WDD waa maxay?",
-          "answer": "WDD (drachma adduunka) waa lacagta rasmiga ah ee blockchain-native ee Jamhuuriyadda Adduunka, oo la soo saaray sida token caadiga ah ee ERC-20 ee shabakadaha badan."
-        },
-        "drachma-value": {
-          "question": "Xaggee ka timaadaa qiimaha drachma?",
-          "answer": "Drachma waxay qiimaheeda ka heshaa inay tahay lacagta rasmiga ah ee Jamhuuriyadda Adduunka. Marka sharcinimada barxaddeena ay korto, WDD waxay noqon kartaa gaadiidka dib-u-qaybinta caalamiga ah iyo dhexdhexaadinta ugu weyn ee sarrifka dhaqaalaha adduunka."
-        },
-        "test-elections": {
-          "question": "Maxa ay tahay doorashada tijaabada?",
-          "answer": "Doorashooyinka tijaabada ah waa tijaabooyin ay muwaadiniinta Jamhuuriyadda Adduunka u codeeyaan xisbiyada siyaasadeed. Xisbi kastaa si toos ah ayaa loogu daraa warqadda codbixinta, iyadoo la hubinayo fursad loo siman yahay dhammaan hoggaamiyeyaasha hamiga leh."
-        },
-        "identity-verification": {
-          "question": "Sidee xaqiijinta aqoonsiga ay u shaqeysaa?",
-          "answer": "Jamhuuriyadda Adduunka waxay isticmaashaa Self si loo xaqiijiyo aqoonsigaaga adigoo adeegsanaya baasabooradaaga ama aqoonsiga qaranka. Sirtaada waa la ilaaliyay—Self kaliya wuxuu xaqiijiyaa inaad qof run ah tahay iyadoo aan waxba ka muujin macluumaadkaaga shaqsiyeed."
-        },
-        "party-subsidies": {
-          "question": "Sidee u shaqeeyaan kaalmooyinka xisbiyadu?",
-          "answer": "Jamhuuriyadda Adduunka waxay maalgelisaa xisbiyada siyaasadeed iyadoo ku saleysan taageerada dimuqraadiga. Waxaan u qeybinaa deeqaha WDD si waafaqsan natiijooyinka doorashada, taasoo xaqiijineysa in cod kasta uu si toos ah u kordhiyo dhaqaalaha xisbiga."
-        },
-        "verification-required": {
-          "question": "Ma loo baahan yahay xaqiijin si looga qayb qaato?",
-          "answer": "Xaqiijinta aqoonsiga waxaa loo baahan yahay oo kaliya codaynta. Waad diiwaangelin kartaa xisbiyo waana wareejin kartaa WDD-ga laga helo kaalmada xisbiyada adoon lahayn xaqiijin."
         }
       }
     },

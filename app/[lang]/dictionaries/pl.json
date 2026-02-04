@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "POMOC",
-          "faq": "FAQ",
-          "support": "Wsparcie"
+          "quickstart": "Szybki start",
+          "docs": "Dokumentacja",
+          "help_center": "Centrum Pomocy"
         },
         "source_code": {
           "title": "KOD ŹRÓDŁOWY"
@@ -94,39 +95,6 @@
           "title": "PRAWNE",
           "terms": "Regulamin",
           "privacy": "Polityka prywatności"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Czym jest Światowa Republika?",
-          "answer": "Republika Światowa to platforma globalnej demokracji o otwartym kodzie źródłowym z własną walutą cyfrową."
-        },
-        "what-is-wdd": {
-          "question": "Czym jest WDD?",
-          "answer": "WDD (drachma światowa) jest oficjalną walutą natywną blockchain Republiki Świata, emitowaną jako standardowy token ERC-20 w wielu sieciach."
-        },
-        "drachma-value": {
-          "question": "Skąd bierze się wartość drachmy?",
-          "answer": "Drachma czerpie swoją wartość z bycia oficjalną walutą Republiki Świata. W miarę wzrostu legitymizacji naszej platformy, WDD może stać się narzędziem globalnej redystrybucji i głównym środkiem wymiany w gospodarce światowej."
-        },
-        "test-elections": {
-          "question": "Czym są wybory testowe?",
-          "answer": "Wybory testowe to eksperymenty, w których obywatele Republika Światowa głosują na partie polityczne. Każda partia jest automatycznie uwzględniana na karcie do głosowania, zapewniając równe szanse wszystkim aspirującym liderom."
-        },
-        "identity-verification": {
-          "question": "Jak działa weryfikacja tożsamości?",
-          "answer": "Republika Świata używa Self do weryfikacji Twojej tożsamości poprzez Twój paszport lub dowód osobisty. Twoja prywatność jest chroniona—Self tylko potwierdza, że jesteś prawdziwą osobą bez ujawniania Twoich danych osobowych."
-        },
-        "party-subsidies": {
-          "question": "Jak działają dotacje dla partii?",
-          "answer": "Republika Światowa finansuje partie polityczne w oparciu o poparcie demokratyczne. Rozdzielamy granty WDD proporcjonalnie do wyników wyborów, zapewniając, że każdy głos bezpośrednio zwiększa zasoby finansowe partii."
-        },
-        "verification-required": {
-          "question": "Czy do uczestnictwa wymagana jest weryfikacja?",
-          "answer": "Weryfikacja tożsamości jest wymagana tylko do głosowania. Możesz rejestrować partie i przesyłać WDD uzyskane z dotacji partyjnych bez weryfikacji."
         }
       }
     },

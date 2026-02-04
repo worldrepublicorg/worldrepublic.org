@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "IRANLỌWỌ",
-          "faq": "Awọn ibeere ti o wọpọ",
-          "support": "Atilẹyin"
+          "quickstart": "Ibẹrẹ Yara",
+          "docs": "Awọn iwe aṣẹ",
+          "help_center": "Ile-iṣẹ Iranlọwọ"
         },
         "source_code": {
           "title": "KÓÒDÙ ORÍSÙN"
@@ -94,39 +95,6 @@
           "title": "OFIN",
           "terms": "Awọn ofin lilo",
           "privacy": "Eto Ikọkọ"
-        }
-      }
-    },
-    "faq": {
-      "title": "Awọn ibeere ti o wọpọ",
-      "items": {
-        "app-purpose": {
-          "question": "Kini Orilẹ-ede Agbaye?",
-          "answer": "Orilẹ-ede Olominira Agbaye jẹ pẹpẹ ijọba onilawada agbaye orisun ṣiṣi pẹlu owo oni-nọmba tirẹ."
-        },
-        "what-is-wdd": {
-          "question": "Kini WDD?",
-          "answer": "WDD (drachma agbaye) jẹ owo osise blockchain-native ti Orilẹ-ede Agbaye, ti a ṣe agbekalẹ bi aami ERC-20 ti o wọpọ ni ọpọlọpọ awọn nẹtiwọọki."
-        },
-        "drachma-value": {
-          "question": "Nibo ni drachma gba iye rẹ?",
-          "answer": "Drachma naa gba iye rẹ lati jijẹ owo osise ti World Republic. Bi ẹtọ ti pẹpẹ wa ṣe n dagba, WDD le di ọkọ ti atunkọ agbaye ati alabọde paṣipaarọ akọkọ ni eto-ọrọ agbaye."
-        },
-        "test-elections": {
-          "question": "Kini awọn idibo idanwo?",
-          "answer": "Awọn idibo idanwo jẹ awọn idanwo nibiti awọn ara ilu Ìjọba Àpapọ̀ Ayé dibo fun awọn ẹgbẹ oselu. Gbogbo ẹgbẹ ni a fi kun laifọwọyi lori iwe idibo, aridaju anfani dogba fun gbogbo awọn oludari ti o nireti."
-        },
-        "identity-verification": {
-          "question": "Bawo ni iwadi aami ṣe n ṣiṣẹ?",
-          "answer": "Orilẹ-ede Agbaye nlo Self lati jẹrisi idanimọ rẹ nipasẹ pasipọọti rẹ tabi ID orilẹ-ede rẹ. Ikọkọ rẹ ni aabo—Self kan jẹrisi pe o jẹ eniyan otitọ laisi fifihan eyikeyi data ti ara ẹni rẹ."
-        },
-        "party-subsidies": {
-          "question": "Bawo ni awọn ifunni ẹgbẹ ṣe n ṣiṣẹ?",
-          "answer": "Ìjọba Àpapọ̀ Ayé n ṣe inawo awọn ẹgbẹ oselu ti o da lori atilẹyin tiwantiwa. A n pin awọn ifunni WDD ni ibamu si awọn abajade idibo, ni idaniloju pe ibo kọọkan n mu awọn orisun inawo ẹgbẹ pọ si taara."
-        },
-        "verification-required": {
-          "question": "Ṣé ìjẹ́rìí pọn dandan láti kópa?",
-          "answer": "Ìjẹ́rìí idánimọ̀ wúlò fún ìbò dídì nìkan. O lè forukọsilẹ ẹgbẹ́ kí o sì gbé WDD tí o rí láti inú owó ìrànwọ́ ẹgbẹ́ lọ láìsí ìjẹ́rìí."
         }
       }
     },

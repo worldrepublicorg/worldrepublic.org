@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "HELP",
-          "faq": "FAQ",
-          "support": "Support"
+          "quickstart": "Quickstart",
+          "docs": "Docs",
+          "help_center": "Help Center"
         },
         "source_code": {
           "title": "SOURCE CODE"
@@ -94,39 +95,6 @@
           "title": "LEGAL",
           "terms": "Terms of Use",
           "privacy": "Privacy Policy"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "What is the World Republic?",
-          "answer": "The World Republic is an open source global democracy platform with its own digital currency."
-        },
-        "what-is-wdd": {
-          "question": "What is WDD?",
-          "answer": "WDD (world drachma) is the blockchain-native official currency of the World Republic, issued as a standard ERC-20 token across multiple networks."
-        },
-        "drachma-value": {
-          "question": "What gives WDD its value?",
-          "answer": "The drachma derives its value from being the official currency of the World Republic. As the legitimacy of our platform grows, WDD can become the vehicle of global redistribution and the main medium of exchange in the world economy."
-        },
-        "test-elections": {
-          "question": "What are test elections?",
-          "answer": "Test elections are experiments where World Republic citizens vote for political parties. Every party is automatically included on the ballot, ensuring equal opportunity for all aspiring leaders."
-        },
-        "identity-verification": {
-          "question": "How does identity verification work?",
-          "answer": "The World Republic uses Self to verify your identity through your passport or national ID. Your privacy is protected—Self only confirms you're a real person without exposing any of your personal data."
-        },
-        "party-subsidies": {
-          "question": "How do party subsidies work?",
-          "answer": "The World Republic funds political parties based on democratic support. We distribute WDD grants proportional to election results, ensuring that every vote directly increases a party's financial resources."
-        },
-        "verification-required": {
-          "question": "Do I need verification to participate?",
-          "answer": "Identity verification is required only for voting. You can register parties and transfer WDD earned from party subsidies without verification."
         }
       }
     },

@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "PALĪDZĪBA",
-          "faq": "BUJ",
-          "support": "Atbalsts"
+          "quickstart": "Ātrais sākums",
+          "docs": "Dokumentācija",
+          "help_center": "Palīdzības centrs"
         },
         "source_code": {
           "title": "AVOTA KODS"
@@ -94,39 +95,6 @@
           "title": "JURIDISKAIS",
           "terms": "Lietošanas noteikumi",
           "privacy": "Privātuma politika"
-        }
-      }
-    },
-    "faq": {
-      "title": "BUJ",
-      "items": {
-        "app-purpose": {
-          "question": "Kas ir Pasaules Republika?",
-          "answer": "Pasaules Republika ir atvērtā koda globālās demokrātijas platforma ar savu digitālo valūtu."
-        },
-        "what-is-wdd": {
-          "question": "Kas ir WDD?",
-          "answer": "WDD (pasaules drahma) ir Pasaules Republikas oficiālā valūta, kas ir blockchain-native, izdota kā standarta ERC-20 tokens vairākos tīklos."
-        },
-        "drachma-value": {
-          "question": "No kurienes drahma iegūst savu vērtību?",
-          "answer": "Drahma savu vērtību iegūst no tā, ka tā ir Pasaules Republikas oficiālā valūta. Pieaugot mūsu platformas leģitimtātei, WDD var kļūt par globālās pārdales līdzekli un galveno apmaiņas līdzekli pasaules ekonomikā."
-        },
-        "test-elections": {
-          "question": "Kas ir testa vēlēšanas?",
-          "answer": "Testa vēlēšanas ir eksperimenti, kuros Pasaules Republika pilsoņi balso par politiskajām partijām. Katra partija tiek automātiski iekļauta vēlēšanu sarakstā, nodrošinot vienlīdzīgas iespējas visiem topošajiem līderiem."
-        },
-        "identity-verification": {
-          "question": "Kā darbojas identitātes pārbaude?",
-          "answer": "Pasaules Republika izmanto Self, lai apstiprinātu jūsu identitāti, izmantojot jūsu pasi vai valsts ID. Jūsu privātums ir aizsargāts—Self tikai apstiprina, ka esat īsta persona, neizpaužot jūsu personīgos datus."
-        },
-        "party-subsidies": {
-          "question": "Kā darbojas partiju subsīdijas?",
-          "answer": "Pasaules Republika finansē politiskās partijas, pamatojoties uz demokrātisku atbalstu. Mēs sadalām WDD grantus proporcionāli vēlēšanu rezultātiem, nodrošinot, ka katra balss tieši palielina partijas finanšu resursus."
-        },
-        "verification-required": {
-          "question": "Vai dalībai ir nepieciešama verifikācija?",
-          "answer": "Identitātes pārbaude ir nepieciešama tikai balsošanai. Jūs varat reģistrēt partijas un pārskaitīt no partiju subsīdijām iegūto WDD bez verifikācijas."
         }
       }
     },

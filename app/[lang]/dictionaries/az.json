@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "KÖMƏK",
-          "faq": "FAQ",
-          "support": "Dəstək"
+          "quickstart": "Tez Başlanğıc",
+          "docs": "Sənədlər",
+          "help_center": "Yardım Mərkəzi"
         },
         "source_code": {
           "title": "MƏNBƏ KODU"
@@ -94,39 +95,6 @@
           "title": "HÜQUQİ",
           "terms": "İstifadə Şərtləri",
           "privacy": "Məxfilik Siyasəti"
-        }
-      }
-    },
-    "faq": {
-      "title": "FAQ",
-      "items": {
-        "app-purpose": {
-          "question": "Dünya Respublikası nədir?",
-          "answer": "Dünya Respublikası öz rəqəmsal valyutası olan açıq mənbəli qlobal demokratiya platformasıdır."
-        },
-        "what-is-wdd": {
-          "question": "WDD nədir?",
-          "answer": "WDD (dünya draxması) Dünya Respublikasının blockchain-native rəsmi valyutasıdır və bir neçə şəbəkədə standart ERC-20 token kimi buraxılmışdır."
-        },
-        "drachma-value": {
-          "question": "Drahmanın dəyəri nədən yaranır?",
-          "answer": "Draxma öz dəyərini Dünya Respublikasının rəsmi valyutası olmaqdan alır. Platformamızın legitimliyi artdıqca, WDD qlobal yenidən bölüşdürmə vasitəsi və dünya iqtisadiyyatında əsas mübadilə vasitəsi ola bilər."
-        },
-        "test-elections": {
-          "question": "Test seçkiləri nədir?",
-          "answer": "Sınaq seçkiləri Dünya Respublikası vətəndaşlarının siyasi partiyalara səs verdiyi eksperimentlərdir. Hər bir partiya avtomatik olaraq bülletenə daxil edilir və bütün iddialı liderlər üçün bərabər imkanlar təmin edilir."
-        },
-        "identity-verification": {
-          "question": "Şəxsiyyət yoxlaması necə işləyir?",
-          "answer": "Dünya Respublikası pasportunuz və ya milli şəxsiyyətiniz vasitəsilə şəxsiyyətinizi təsdiqləmək üçün Self istifadə edir. Məxfilik qorunur—Self yalnız şəxsi məlumatlarınızı açıqlamadan gerçək bir şəxs olduğunuzu təsdiqləyir."
-        },
-        "party-subsidies": {
-          "question": "Partiya subsidiyaları necə işləyir?",
-          "answer": "Dünya Respublikası siyasi partiyaları demokratik dəstək əsasında maliyyələşdirir. Biz seçki nəticələrinə mütənasib olaraq WDD qrantlarını bölüşdürürük və hər bir səsin partiyanın maliyyə resurslarını birbaşa artırmasını təmin edirik."
-        },
-        "verification-required": {
-          "question": "İştirak etmək üçün təsdiqləmə lazımdır?",
-          "answer": "Şəxsiyyətin təsdiqlənməsi yalnız səsvermə üçün tələb olunur. Təsdiqləmə olmadan da partiya qeydiyyatdan keçirə və partiya subsidiyalarından qazanılan WDD-ni köçürə bilərsiniz."
         }
       }
     },

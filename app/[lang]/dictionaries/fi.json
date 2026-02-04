@@ -84,8 +84,9 @@
         },
         "help": {
           "title": "APUA",
-          "faq": "UKK",
-          "support": "Tuki"
+          "quickstart": "Pika-aloitus",
+          "docs": "Dokumentit",
+          "help_center": "Ohjekeskus"
         },
         "source_code": {
           "title": "LÄHDEKOODI"
@@ -94,39 +95,6 @@
           "title": "LAILLINEN",
           "terms": "Käyttöehdot",
           "privacy": "Tietosuojakäytäntö"
-        }
-      }
-    },
-    "faq": {
-      "title": "UKK",
-      "items": {
-        "app-purpose": {
-          "question": "Mikä on Maailman tasavalta?",
-          "answer": "Maailman tasavalta on avoimen lähdekoodin maailmanlaajuinen demokratiaalusta, jolla on oma digitaalinen valuutta."
-        },
-        "what-is-wdd": {
-          "question": "Mikä on WDD?",
-          "answer": "WDD (maailman drakma) on Maailman tasavallan blockchain-native virallinen valuutta, joka on laskettu liikkeeseen standardina ERC-20 tokenina useilla verkkoilla."
-        },
-        "drachma-value": {
-          "question": "Mistä drakma saa arvonsa?",
-          "answer": "Drakma saa arvonsa siitä, että se on Maailman tasavallan virallinen valuutta. Alustamme legitimiteetin kasvaessa WDD:stä voi tulla globaalin uudelleenjakelun väline ja maailmantalouden tärkein vaihdon väline."
-        },
-        "test-elections": {
-          "question": "Mitä ovat testivaalit?",
-          "answer": "Koe-vaalit ovat kokeiluja, joissa Maailman tasavalta -kansalaiset äänestävät poliittisia puolueita. Jokainen puolue sisällytetään automaattisesti äänestyslippuun, mikä takaa yhtäläiset mahdollisuudet kaikille pyrkiville johtajille."
-        },
-        "identity-verification": {
-          "question": "Miten henkilöllisyyden vahvistus toimii?",
-          "answer": "Maailman tasavalta käyttää Selfiä henkilöllisyytesi vahvistamiseen passin tai henkilötodistuksen kautta. Yksityisyytesi on suojattu—Self vahvistaa vain, että olet oikea henkilö paljastamatta henkilötietojasi."
-        },
-        "party-subsidies": {
-          "question": "Miten puoluetukijärjestelmä toimii?",
-          "answer": "Maailman tasavalta rahoittaa poliittisia puolueita demokraattisen kannatuksen perusteella. Jaamme WDD-avustuksia vaalitulosten mukaisessa suhteessa varmistaen, että jokainen ääni kasvattaa suoraan puolueen taloudellisia resursseja."
-        },
-        "verification-required": {
-          "question": "Tarvitaanko osallistumiseen vahvistus?",
-          "answer": "Henkilöllisyyden vahvistaminen vaaditaan vain äänestämiseen. Voit rekisteröidä puolueita ja siirtää puoluetuista saatuja WDD-varajo ilman vahvistusta."
         }
       }
     },
