@@ -90,11 +90,29 @@ export async function POST(req: Request) {
       });
     } catch (dbError) {
       // Check for unique constraint violation (duplicate vote)
+      // Error code might be nested in different properties depending on driver
+      const errorCode =
+        (dbError &&
+          typeof dbError === "object" &&
+          ("code" in dbError
+            ? dbError.code
+            : "cause" in dbError &&
+                dbError.cause &&
+                typeof dbError.cause === "object" &&
+                "code" in dbError.cause
+              ? dbError.cause.code
+              : null)) ||
+        null;
+
+      const errorMessage =
+        dbError instanceof Error ? dbError.message : String(dbError);
+
+      // Check for duplicate vote by error code or message content
       if (
-        dbError &&
-        typeof dbError === "object" &&
-        "code" in dbError &&
-        dbError.code === "23505"
+        errorCode === "23505" ||
+        errorMessage.includes("votes_election_nullifier_idx") ||
+        errorMessage.includes("unique constraint") ||
+        errorMessage.includes("duplicate key")
       ) {
         return NextResponse.json(
           {
@@ -119,11 +137,56 @@ export async function POST(req: Request) {
     );
   } catch (error) {
     console.error("Self verification error:", error);
+
+    // Check for unique constraint violation in outer catch (in case inner catch didn't catch it)
+    const errorCode =
+      (error &&
+        typeof error === "object" &&
+        ("code" in error
+          ? error.code
+          : "cause" in error &&
+              error.cause &&
+              typeof error.cause === "object" &&
+              "code" in error.cause
+            ? error.cause.code
+            : null)) ||
+      null;
+
+    if (errorCode === "23505") {
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "You have already voted in this election",
+        },
+        { status: 200 },
+      );
+    }
+
+    // Check if error message contains unique constraint hint
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    if (
+      errorCode === "23505" ||
+      errorMessage.includes("votes_election_nullifier_idx") ||
+      errorMessage.includes("unique constraint") ||
+      errorMessage.includes("duplicate key") ||
+      errorMessage.includes("already exists")
+    ) {
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "You have already voted in this election",
+        },
+        { status: 200 },
+      );
+    }
+
     return NextResponse.json(
       {
         status: "error",
         result: false,
-        reason: error instanceof Error ? error.message : "Unknown error",
+        reason: errorMessage,
       },
       { status: 200 },
     );
