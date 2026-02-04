@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Választások hamarosan",
+        "test_verification": {
+          "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most, hogy készen álljon a szavazásra.",
+          "button": "Teszt"
+        }
       },
       "parties": {
         "tabs": {

@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Volby začínají brzy",
+        "test_verification": {
+          "description": "Vyzkoušejte náš systém ověřování totožnosti nyní, abyste byli připraveni k hlasování.",
+          "button": "Test"
+        }
       },
       "parties": {
         "tabs": {

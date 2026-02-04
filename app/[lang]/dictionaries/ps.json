@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "ټاکنې ژر پیلیږي",
+        "test_verification": {
+          "description": "زموږ د هویت تایید سیسټم اوس هڅه وکړئ ترڅو رایې ورکولو ته چمتو اوسئ.",
+          "button": "ازموینه"
+        }
       },
       "parties": {
         "tabs": {

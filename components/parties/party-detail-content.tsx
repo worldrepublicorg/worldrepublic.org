@@ -256,7 +256,6 @@ export function PartyDetailContent({
               className="mt-6!"
               label={dictionary.common.vote}
               dictionary={dictionary}
-              lang={lang ?? "en"}
             />
           </div>
         </div>

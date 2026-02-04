@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Amatora aratangira vuba",
+        "test_verification": {
+          "description": "Gerageza sisitemu yacu yo kugenzura umwirondoro ubu kugirango witegure gutora.",
+          "button": "Gerageza"
+        }
       },
       "parties": {
         "tabs": {

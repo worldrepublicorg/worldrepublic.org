@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Awọn idibo bẹrẹ laipẹ",
+        "test_verification": {
+          "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi lati ṣetan fun ibo.",
+          "button": "Idanwo"
+        }
       },
       "parties": {
         "tabs": {

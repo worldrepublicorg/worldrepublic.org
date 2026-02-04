@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "ការបោះឆ្នោតជិតមកដល់ហើយ",
+        "test_verification": {
+          "description": "សាកល្បងប្រព័ន្ធផ្ទៀងផ្ទាត់អត្តសញ្ញាណរបស់យើងឥឡូវនេះ ដើម្បីត្រៀមខ្លួនសម្រាប់ការបោះឆ្នោត។",
+          "button": "សាកល្បង"
+        }
       },
       "parties": {
         "tabs": {

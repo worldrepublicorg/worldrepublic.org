@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Seçimler yakında başlıyor",
+        "test_verification": {
+          "description": "Oylamaya hazır olmak için kimlik doğrulama sistemimizi şimdi deneyin.",
+          "button": "Test"
+        }
       },
       "parties": {
         "tabs": {

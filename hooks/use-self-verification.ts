@@ -14,12 +14,6 @@ type SelfAppBuilderType = {
   build: () => unknown;
 };
 
-// Optional voting parameters for election voting
-export interface VoteParams {
-  electionId: string;
-  partyId: string;
-}
-
 const resolveCallbackUrl = (lang: string | undefined): string | null => {
   if (typeof window === "undefined") return null;
   const envCallback = process.env.NEXT_PUBLIC_SELF_CALLBACK;
@@ -46,7 +40,6 @@ const resolveCallbackUrl = (lang: string | undefined): string | null => {
 export function useSelfVerification(
   userId: string | null,
   lang: string | undefined,
-  voteParams?: VoteParams,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -102,9 +95,7 @@ export function useSelfVerification(
           config: Record<string, unknown>,
         ) => { build: () => unknown };
         const AppCtor = SelfAppBuilder as unknown as SelfAppCtor;
-
-        // Build the config, optionally including vote data
-        const config: Record<string, unknown> = {
+        const app = new AppCtor({
           version: 2,
           appName: "World Republic",
           scope: "world-republic",
@@ -116,17 +107,7 @@ export function useSelfVerification(
           disclosures: {
             ofac: true,
           },
-        };
-
-        // Include vote data in userDefinedData if voting
-        if (voteParams) {
-          config.userDefinedData = JSON.stringify({
-            electionId: voteParams.electionId,
-            partyId: voteParams.partyId,
-          });
-        }
-
-        const app = new AppCtor(config).build() as unknown as SelfApp;
+        }).build() as unknown as SelfApp;
         const link = getUniversalLink(app as unknown);
         setSelfApp(app);
         setSelfQRcodeWrapperCmp(() => SelfQRcodeWrapper);
@@ -140,7 +121,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, voteParams?.electionId, voteParams?.partyId]);
+  }, [userId, lang]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;

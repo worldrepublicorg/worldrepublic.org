@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "নির্বাচন শীঘ্রই আসছে",
+        "test_verification": {
+          "description": "ভোটের জন্য প্রস্তুত থাকতে এখনই আমাদের পরিচয় যাচাইকরণ সিস্টেম ব্যবহার করে দেখুন।",
+          "button": "পরীক্ষা"
+        }
       },
       "parties": {
         "tabs": {

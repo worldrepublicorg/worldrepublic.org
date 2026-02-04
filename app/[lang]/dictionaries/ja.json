@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "選挙がまもなく始まります",
+        "test_verification": {
+          "description": "投票の準備をするために、今すぐ本人確認システムをお試しください。",
+          "button": "テスト"
+        }
       },
       "parties": {
         "tabs": {

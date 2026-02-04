@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Elections are starting soon",
+        "test_verification": {
+          "description": "Try our identity verification system now to be ready for voting.",
+          "button": "Test"
+        }
       },
       "parties": {
         "tabs": {

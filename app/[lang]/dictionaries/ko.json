@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "선거가 곧 시작됩니다",
+        "test_verification": {
+          "description": "투표 준비를 위해 지금 본인 확인 시스템을 사용해 보세요.",
+          "button": "테스트"
+        }
       },
       "parties": {
         "tabs": {

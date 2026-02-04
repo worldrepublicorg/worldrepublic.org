@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Pemilu segera dimulai",
+        "test_verification": {
+          "description": "Coba sistem verifikasi identitas kami sekarang agar siap untuk pemungutan suara.",
+          "button": "Uji"
+        }
       },
       "parties": {
         "tabs": {

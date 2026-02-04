@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Vaalit alkavat pian",
+        "test_verification": {
+          "description": "Kokeile henkilöllisyyden varmennusjärjestelmäämme nyt, jotta olet valmis äänestämään.",
+          "button": "Testaa"
+        }
       },
       "parties": {
         "tabs": {

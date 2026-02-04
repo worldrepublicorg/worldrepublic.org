@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Verkiezingen beginnen binnenkort",
+        "test_verification": {
+          "description": "Probeer nu ons identiteitsverificatiesysteem om klaar te zijn voor de stemming.",
+          "button": "Test"
+        }
       },
       "parties": {
         "tabs": {

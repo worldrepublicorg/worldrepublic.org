@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "L'elezzioni principianu prestu",
+        "test_verification": {
+          "description": "Pruvate u nostru sistema di verificazione di l'identità avà per esse pronti à votà.",
+          "button": "Prouva"
+        }
       },
       "parties": {
         "tabs": {

@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Vēlēšanas drīz sāksies",
+        "test_verification": {
+          "description": "Izmēģiniet mūsu identitātes pārbaudes sistēmu tagad, lai būtu gatavi balsošanai.",
+          "button": "Tests"
+        }
       },
       "parties": {
         "tabs": {

@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Zabe yana zuwa",
+        "test_verification": {
+          "description": "Gwada tsarin tantance asalinmu yanzu don kasancewa cikin shiri don jefa ƙuri'a.",
+          "button": "Gwaji"
+        }
       },
       "parties": {
         "tabs": {

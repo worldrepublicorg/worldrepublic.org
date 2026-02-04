@@ -18,10 +18,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
-import {
-  useSelfVerification,
-  type VoteParams,
-} from "@/hooks/use-self-verification";
+import { useSelfVerification } from "@/hooks/use-self-verification";
 
 interface SelfVerificationDialogProps {
   open: boolean;
@@ -29,8 +26,6 @@ interface SelfVerificationDialogProps {
   onSuccess?: () => void;
   userId: string | null;
   dictionary: Dictionary;
-  /** Optional voting parameters for election voting */
-  voteParams?: VoteParams;
 }
 
 export function SelfVerificationDialog({
@@ -39,7 +34,6 @@ export function SelfVerificationDialog({
   onSuccess,
   userId,
   dictionary,
-  voteParams,
 }: SelfVerificationDialogProps) {
   const { lang } = useParams<{ lang: string }>();
   const {
@@ -49,7 +43,7 @@ export function SelfVerificationDialog({
     callbackReachable,
     isLoading,
     isMobile,
-  } = useSelfVerification(userId, lang, voteParams);
+  } = useSelfVerification(userId, lang);
 
   const handleSuccess = async () => {
     if (onSuccess) {

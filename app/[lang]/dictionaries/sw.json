@@ -23,9 +23,11 @@
         }
       },
       "vote": {
-        "no_active_election": "No active election",
-        "search_parties": "Search parties...",
-        "vote_recorded": "Your vote has been recorded"
+        "no_active_election": "Uchaguzi unaanza hivi karibuni",
+        "test_verification": {
+          "description": "Jaribu mfumo wetu wa uthibitishaji wa utambulisho sasa ili uwe tayari kupiga kura.",
+          "button": "Jaribu"
+        }
       },
       "parties": {
         "tabs": {
