@@ -5,7 +5,7 @@ import { votes } from "@/lib/db/schema";
 
 // Hard-coded for testing - will be passed via userDefinedData later
 const TEST_ELECTION_ID = "9341dcef-7c00-4f5b-9c4b-6e4b481fc607";
-const TEST_PARTY_ID = "0691b005-175f-4975-a1c6-d424eea2f3c7";
+const TEST_PARTY_ID = "8d33df6d-3d33-4857-8c8c-cca20b734429";
 
 function createVerifier(origin: string) {
   const scope = "world-republic";
