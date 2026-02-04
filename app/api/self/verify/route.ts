@@ -81,22 +81,33 @@ export async function POST(req: Request) {
       );
     }
 
-    // Store or update the vote in the database
-    // Uses upsert: if same person votes again, update their party choice
-    await db
-      .insert(votes)
-      .values({
+    // Store the vote in the database
+    try {
+      await db.insert(votes).values({
         electionId: TEST_ELECTION_ID,
         partyId: TEST_PARTY_ID,
         selfNullifier: String(nullifier),
-      })
-      .onConflictDoUpdate({
-        target: [votes.electionId, votes.selfNullifier],
-        set: {
-          partyId: TEST_PARTY_ID,
-          updatedAt: new Date(),
-        },
       });
+    } catch (dbError) {
+      // Check for unique constraint violation (duplicate vote)
+      if (
+        dbError &&
+        typeof dbError === "object" &&
+        "code" in dbError &&
+        dbError.code === "23505"
+      ) {
+        return NextResponse.json(
+          {
+            status: "error",
+            result: false,
+            reason: "You have already voted in this election",
+          },
+          { status: 200 },
+        );
+      }
+      // Re-throw other database errors
+      throw dbError;
+    }
 
     return NextResponse.json(
       {
