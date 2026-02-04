@@ -36,13 +36,6 @@ export default function VotePageClient({
       />
 
       <div className="flex-1 overflow-y-auto px-4 py-4">
-        <div className="mb-6">
-          <Typography variant="body" level={1} className="text-gray-600">
-            Participate in global elections and help shape the future of the
-            World Republic.
-          </Typography>
-        </div>
-
         <ElectionsList elections={elections} dictionary={dictionary} />
       </div>
     </div>

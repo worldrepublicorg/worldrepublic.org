@@ -68,14 +68,14 @@ export function ElectionCard({
 
       <div className="flex flex-col gap-2 mt-3">
         <div className="flex items-center gap-2 text-gray-600">
-          <PiCalendarBlank size={18} />
+          <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
           <Typography variant="body" level={2} className="text-[15px]">
             {formatDate(election.startsAt)} - {formatDate(election.endsAt)}
           </Typography>
         </div>
 
         <div className="flex items-center gap-2 text-gray-600">
-          <PiCoins size={18} />
+          <PiCoins className="text-gray-500 shrink-0" size={15} />
           <Typography variant="body" level={2} className="text-[15px]">
             Reward pool: {parseInt(election.rewardPool).toLocaleString()} WDD
           </Typography>
