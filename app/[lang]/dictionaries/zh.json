@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "选举即将开始",
-        "test_verification": {
-          "description": "立即尝试我们的身份验证系统，为投票做好准备。",
-          "button": "测试"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

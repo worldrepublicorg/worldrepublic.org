@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "การเลือกตั้งใกล้เข้ามาแล้ว",
-        "test_verification": {
-          "description": "ลองใช้ระบบยืนยันตัวตนของเราตอนนี้เพื่อเตรียมพร้อมสำหรับการลงคะแนน",
-          "button": "ทดสอบ"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

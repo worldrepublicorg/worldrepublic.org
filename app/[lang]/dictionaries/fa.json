@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "انتخابات به زودی شروع می‌شود",
-        "test_verification": {
-          "description": "سیستم تأیید هویت ما را اکنون امتحان کنید تا برای رأی‌گیری آماده باشید.",
-          "button": "آزمایش"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Verkiesings begin binnekort",
-        "test_verification": {
-          "description": "Probeer ons identiteitsverifikasiestelsel nou om gereed te wees vir stemming.",
-          "button": "Toets"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

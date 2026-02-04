@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Elecciones comienzan pronto",
-        "test_verification": {
-          "description": "Pruebe nuestro sistema de verificación de identidad ahora para estar listo para votar.",
-          "button": "Prueba"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

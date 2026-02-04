@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "الانتخابات ستبدأ قريباً",
-        "test_verification": {
-          "description": "جرب نظام التحقق من الهوية الخاص بنا الآن لتكون مستعدًا للتصويت.",
-          "button": "اختبار"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

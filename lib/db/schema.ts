@@ -264,6 +264,66 @@ export const transactionsRelations = relations(transactions, ({ one }) => ({
   }),
 }));
 
+// Elections table - scheduled elections with start/end times
+export const elections = pgTable(
+  "elections",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    name: text("name").notNull(),
+    startsAt: timestamp("starts_at", { mode: "date" }).notNull(),
+    endsAt: timestamp("ends_at", { mode: "date" }).notNull(),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    // Index for finding active election (startsAt <= now < endsAt)
+    index("elections_starts_at_idx").on(table.startsAt),
+    index("elections_ends_at_idx").on(table.endsAt),
+  ],
+);
+
+// Votes table - one vote per person per election
+export const votes = pgTable(
+  "votes",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    electionId: uuid("election_id")
+      .notNull()
+      .references(() => elections.id, { onDelete: "cascade" }),
+    selfNullifier: text("self_nullifier").notNull(),
+    partyId: uuid("party_id")
+      .notNull()
+      .references(() => parties.id, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    // One vote per person per election
+    uniqueIndex("votes_election_nullifier_idx").on(
+      table.electionId,
+      table.selfNullifier,
+    ),
+    index("votes_party_id_idx").on(table.partyId),
+    index("votes_election_id_idx").on(table.electionId),
+  ],
+);
+
+// Elections relations
+export const electionsRelations = relations(elections, ({ many }) => ({
+  votes: many(votes),
+}));
+
+// Votes relations
+export const votesRelations = relations(votes, ({ one }) => ({
+  election: one(elections, {
+    fields: [votes.electionId],
+    references: [elections.id],
+  }),
+  party: one(parties, {
+    fields: [votes.partyId],
+    references: [parties.id],
+  }),
+}));
+
 // Analytics table - language request tracking
 export const languageRequests = pgTable("language_requests", {
   locale: text("locale").primaryKey(),

@@ -63,6 +63,7 @@ export function VotePageClient({
                 className="mt-6!"
                 label={dictionary.common.vote}
                 dictionary={dictionary}
+                lang={lang}
               />
             </div>
           </div>

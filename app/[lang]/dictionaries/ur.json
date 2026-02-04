@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "انتخابات قریب ہیں",
-        "test_verification": {
-          "description": "ووٹنگ کے لیے تیار رہنے کے لیے ابھی ہمارا شناخت کی تصدیق کا نظام آزمائیں۔",
-          "button": "ٹیسٹ"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

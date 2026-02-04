@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Bầu cử sắp bắt đầu",
-        "test_verification": {
-          "description": "Hãy thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để sẵn sàng bỏ phiếu.",
-          "button": "Kiểm tra"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

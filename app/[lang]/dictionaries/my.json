@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "ရွေးကောက်ပွဲများ မကြာမီလာမည်",
-        "test_verification": {
-          "description": "မဲပေးရန် အဆင်သင့်ဖြစ်စေရန် ကျွန်ုပ်တို့၏ အထောက်အထားစိစစ်ခြင်းစနစ်ကို ယခုပင် စမ်းသုံးကြည့်ပါ။",
-          "button": "စမ်းသပ်"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

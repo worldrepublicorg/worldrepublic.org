@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Alegerile se apropie",
-        "test_verification": {
-          "description": "Încercați sistemul nostru de verificare a identității acum pentru a fi pregătiți de vot.",
-          "button": "Test"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

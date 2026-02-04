@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "ચૂંટણીઓ ટૂંક સમયમાં છે",
-        "test_verification": {
-          "description": "મતદાન માટે તૈયાર રહેવા માટે અત્યારે જ અમારી ઓળખ ચકાસણી સિસ્ટમનો પ્રયાસ કરો.",
-          "button": "પરીક્ષણ"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

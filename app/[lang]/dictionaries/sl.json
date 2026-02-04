@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Volitve se začnejo kmalu",
-        "test_verification": {
-          "description": "Preizkusite naš sistem za preverjanje identitete zdaj, da boste pripravljeni na glasovanje.",
-          "button": "Test"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

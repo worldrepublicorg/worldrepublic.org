@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Οι εκλογές ξεκινούν σύντομα",
-        "test_verification": {
-          "description": "Δοκιμάστε το σύστημα επαλήθευσης ταυτότητας τώρα για να είστε έτοιμοι για την ψηφοφορία.",
-          "button": "Δοκιμή"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {

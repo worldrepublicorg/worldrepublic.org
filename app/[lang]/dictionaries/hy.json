@@ -23,11 +23,9 @@
         }
       },
       "vote": {
-        "no_active_election": "Ընտրությունները շուտով սկսվում են",
-        "test_verification": {
-          "description": "Փորձեք մեր ինքնության ստուգման համակարգը հիմա, որպեսզի պատրաստ լինեք քվեարկությանը:",
-          "button": "Թեստ"
-        }
+        "no_active_election": "No active election",
+        "search_parties": "Search parties...",
+        "vote_recorded": "Your vote has been recorded"
       },
       "parties": {
         "tabs": {
