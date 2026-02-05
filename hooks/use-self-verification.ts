@@ -41,7 +41,6 @@ export function useSelfVerification(
   userId: string | null,
   lang: string | undefined,
   partyId?: string,
-  partyName?: string,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -64,13 +63,7 @@ export function useSelfVerification(
         return;
       }
       const callback = resolveCallbackUrl(lang);
-      
-      // Redirect to homepage with success flag and party name if present
-      // This handles mobile app redirects correctly regardless of where the vote started
-      let nextTarget = `/${lang || "en"}/`;
-      if (partyName) {
-        nextTarget += `?voteSuccess=true&partyName=${encodeURIComponent(partyName)}`;
-      }
+      const nextTarget = `/${lang || "en"}/`;
 
       if (!callback) {
         setCallbackReachable(false);
@@ -130,7 +123,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, partyId, partyName]);
+  }, [userId, lang, partyId]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;
