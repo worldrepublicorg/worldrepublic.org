@@ -12,8 +12,9 @@ import {
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { PiCheckCircleFill, PiClockCountdownFill } from "react-icons/pi";
+import { PiClockCountdownFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { VoteSuccessDialog } from "@/components/vote/vote-success-dialog";
 
 const SelfVerificationDialog = dynamic(
   () =>
@@ -129,38 +130,13 @@ export function VoteButton({
       />
 
       {/* Vote success dialog */}
-      <AlertDialog
+      <VoteSuccessDialog
         open={successDialogOpen}
-        onOpenChange={(open) => {
-          if (!open) handleSuccessDialogClose();
-        }}
-      >
-        <AlertDialogContent>
-          <AlertDialogHeader
-            icon={
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
-                <PiCheckCircleFill className="h-[30px] w-[30px] text-green-600" />
-              </div>
-            }
-          >
-            <Typography variant="heading" level={3}>
-              Vote cast successfully
-            </Typography>
-          </AlertDialogHeader>
-          <AlertDialogDescription>
-            <Typography>
-              {partyName
-                ? "Your vote for " + partyName + " has been recorded."
-                : "Your vote has been recorded."}
-            </Typography>
-          </AlertDialogDescription>
-          <AlertDialogFooter>
-            <Button onClick={handleSuccessDialogClose} className="w-full">
-              Done
-            </Button>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+        onOpenChange={setSuccessDialogOpen}
+        onClose={handleSuccessDialogClose}
+        partyName={partyName}
+        dictionary={dictionary}
+      />
     </>
   );
 }

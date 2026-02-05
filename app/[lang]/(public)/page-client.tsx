@@ -1,11 +1,13 @@
 "use client";
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TabPills } from "@/components/tab-pills";
 import { VoteButton } from "@/components/vote/vote-button";
+import { VoteSuccessDialog } from "@/components/vote/vote-success-dialog";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
@@ -18,7 +20,28 @@ export function VotePageClient({
   dictionary: Dictionary;
 }) {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const tab = searchParams.get("tab");
+  const voteSuccess = searchParams.get("voteSuccess");
+  const partyName = searchParams.get("partyName");
+
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false);
+
+  // Handle vote success redirect from mobile
+  useEffect(() => {
+    if (voteSuccess === "true") {
+      setSuccessDialogOpen(true);
+    }
+  }, [voteSuccess]);
+
+  const handleSuccessDialogClose = () => {
+    setSuccessDialogOpen(false);
+    // Remove query params
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("voteSuccess");
+    params.delete("partyName");
+    router.replace(`/${lang}/?${params.toString()}`);
+  };
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -89,6 +112,14 @@ export function VotePageClient({
           </div>
         )}
       </div>
+
+      <VoteSuccessDialog
+        open={successDialogOpen}
+        onOpenChange={setSuccessDialogOpen}
+        onClose={handleSuccessDialogClose}
+        partyName={partyName || undefined}
+        dictionary={dictionary}
+      />
     </>
   );
 }
