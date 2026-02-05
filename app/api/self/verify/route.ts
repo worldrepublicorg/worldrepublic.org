@@ -1,7 +1,8 @@
 import { AllIds, DefaultConfigStore, SelfBackendVerifier } from "@selfxyz/core";
+import { and, eq, gt, lte } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
-import { votes } from "@/lib/db/schema";
+import { elections, votes } from "@/lib/db/schema";
 
 // Hard-coded for testing - will be passed via userDefinedData later
 const TEST_ELECTION_ID = "9341dcef-7c00-4f5b-9c4b-6e4b481fc607";
@@ -76,6 +77,65 @@ export async function POST(req: Request) {
           status: "error",
           result: false,
           reason: "Nullifier not found in verification result",
+        },
+        { status: 200 },
+      );
+    }
+
+    // Verify the election exists and is currently active
+    const now = new Date();
+    const activeElection = await db
+      .select({ id: elections.id })
+      .from(elections)
+      .where(
+        and(
+          eq(elections.id, TEST_ELECTION_ID),
+          lte(elections.startsAt, now), // Election has started
+          gt(elections.endsAt, now), // Election has not ended
+        ),
+      )
+      .limit(1);
+
+    if (activeElection.length === 0) {
+      // Check if election exists but is not active
+      const electionExists = await db
+        .select({
+          id: elections.id,
+          startsAt: elections.startsAt,
+          endsAt: elections.endsAt,
+        })
+        .from(elections)
+        .where(eq(elections.id, TEST_ELECTION_ID))
+        .limit(1);
+
+      if (electionExists.length === 0) {
+        return NextResponse.json(
+          {
+            status: "error",
+            result: false,
+            reason: "Election not found",
+          },
+          { status: 200 },
+        );
+      }
+
+      const election = electionExists[0];
+      if (election.startsAt > now) {
+        return NextResponse.json(
+          {
+            status: "error",
+            result: false,
+            reason: "Election has not started yet",
+          },
+          { status: 200 },
+        );
+      }
+
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "Election has ended",
         },
         { status: 200 },
       );
