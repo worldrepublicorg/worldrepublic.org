@@ -41,6 +41,8 @@ export function useSelfVerification(
   userId: string | null,
   lang: string | undefined,
   partyId?: string,
+  partyName?: string,
+  returnPath?: string,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -63,7 +65,17 @@ export function useSelfVerification(
         return;
       }
       const callback = resolveCallbackUrl(lang);
-      const nextTarget = `/${lang || "en"}/`;
+      
+      // Determine return URL: use provided returnPath or current location
+      const returnUrl = returnPath || (typeof window !== "undefined" ? window.location.pathname : `/${lang || "en"}/`);
+      
+      // Build dynamic nextTarget with vote success params
+      // Encode partyName to be safe in URL
+      const successParams = partyName 
+        ? `?voteSuccess=true&partyName=${encodeURIComponent(partyName)}`
+        : `?voteSuccess=true`;
+        
+      const nextTarget = `${returnUrl}${successParams}`;
 
       if (!callback) {
         setCallbackReachable(false);
@@ -123,7 +135,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, partyId]);
+  }, [userId, lang, partyId, partyName, returnPath]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;
