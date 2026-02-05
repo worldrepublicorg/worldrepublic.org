@@ -12,7 +12,7 @@ import {
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { PiCheckCircleFill, PiClockCountdownFill } from "react-icons/pi";
+import { PiClockCountdownFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const SelfVerificationDialog = dynamic(
@@ -29,7 +29,6 @@ interface VoteButtonProps {
   label?: string;
   dictionary: Dictionary;
   partyId?: string;
-  partyName?: string;
 }
 
 export function VoteButton({
@@ -38,7 +37,6 @@ export function VoteButton({
   label,
   dictionary,
   partyId,
-  partyName,
 }: VoteButtonProps) {
   const router = useRouter();
   const buttonLabel = label || dictionary.common.vote;
@@ -47,7 +45,6 @@ export function VoteButton({
     useState(false);
   const [selfVerificationDialogOpen, setSelfVerificationDialogOpen] =
     useState(false);
-  const [successDialogOpen, setSuccessDialogOpen] = useState(false);
   // Generate a random UUID for self-verification
   const [randomUserId, setRandomUserId] = useState<string | null>(null);
 
@@ -70,11 +67,6 @@ export function VoteButton({
   };
 
   const handleVerificationSuccess = async () => {
-    setSuccessDialogOpen(true);
-  };
-
-  const handleSuccessDialogClose = () => {
-    setSuccessDialogOpen(false);
     router.refresh();
   };
 
@@ -127,40 +119,6 @@ export function VoteButton({
         dictionary={dictionary}
         partyId={partyId}
       />
-
-      {/* Vote success dialog */}
-      <AlertDialog
-        open={successDialogOpen}
-        onOpenChange={(open) => {
-          if (!open) handleSuccessDialogClose();
-        }}
-      >
-        <AlertDialogContent>
-          <AlertDialogHeader
-            icon={
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
-                <PiCheckCircleFill className="h-[30px] w-[30px] text-green-600" />
-              </div>
-            }
-          >
-            <Typography variant="heading" level={3}>
-              Vote cast successfully
-            </Typography>
-          </AlertDialogHeader>
-          <AlertDialogDescription>
-            <Typography>
-              {partyName
-                ? "Your vote for " + partyName + " has been recorded."
-                : "Your vote has been recorded."}
-            </Typography>
-          </AlertDialogDescription>
-          <AlertDialogFooter>
-            <Button onClick={handleSuccessDialogClose} className="w-full">
-              Done
-            </Button>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
     </>
   );
 }
