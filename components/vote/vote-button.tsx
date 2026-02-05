@@ -28,6 +28,7 @@ interface VoteButtonProps {
   className?: string;
   label?: string;
   dictionary: Dictionary;
+  partyId?: string;
 }
 
 export function VoteButton({
@@ -35,6 +36,7 @@ export function VoteButton({
   className,
   label,
   dictionary,
+  partyId,
 }: VoteButtonProps) {
   const router = useRouter();
   const buttonLabel = label || dictionary.common.vote;
@@ -115,6 +117,7 @@ export function VoteButton({
         onSuccess={handleVerificationSuccess}
         userId={randomUserId}
         dictionary={dictionary}
+        partyId={partyId}
       />
     </>
   );

@@ -256,6 +256,7 @@ export function PartyDetailContent({
               className="mt-6!"
               label={dictionary.common.vote}
               dictionary={dictionary}
+              partyId={party.id}
             />
           </div>
         </div>

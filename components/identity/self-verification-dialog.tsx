@@ -26,6 +26,7 @@ interface SelfVerificationDialogProps {
   onSuccess?: () => void;
   userId: string | null;
   dictionary: Dictionary;
+  partyId?: string;
 }
 
 export function SelfVerificationDialog({
@@ -34,6 +35,7 @@ export function SelfVerificationDialog({
   onSuccess,
   userId,
   dictionary,
+  partyId,
 }: SelfVerificationDialogProps) {
   const { lang } = useParams<{ lang: string }>();
   const {
@@ -43,7 +45,7 @@ export function SelfVerificationDialog({
     callbackReachable,
     isLoading,
     isMobile,
-  } = useSelfVerification(userId, lang);
+  } = useSelfVerification(userId, lang, partyId);
 
   const handleSuccess = async () => {
     if (onSuccess) {

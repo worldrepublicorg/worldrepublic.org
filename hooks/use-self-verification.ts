@@ -40,6 +40,7 @@ const resolveCallbackUrl = (lang: string | undefined): string | null => {
 export function useSelfVerification(
   userId: string | null,
   lang: string | undefined,
+  partyId?: string,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -104,6 +105,7 @@ export function useSelfVerification(
           deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
           userId: userId,
           userIdType: "uuid",
+          userDefinedData: partyId ? JSON.stringify({ partyId }) : undefined,
           disclosures: {
             ofac: true,
           },
@@ -121,7 +123,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang]);
+  }, [userId, lang, partyId]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;

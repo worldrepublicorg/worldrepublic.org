@@ -2,7 +2,7 @@ import { AllIds, DefaultConfigStore, SelfBackendVerifier } from "@selfxyz/core";
 import { and, eq, gt, lte } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
-import { elections, votes } from "@/lib/db/schema";
+import { elections, parties, votes } from "@/lib/db/schema";
 
 // Hard-coded for testing - will be passed via userDefinedData later
 const TEST_ELECTION_ID = "9341dcef-7c00-4f5b-9c4b-6e4b481fc607";
@@ -82,6 +82,43 @@ export async function POST(req: Request) {
       );
     }
 
+    // Extract partyId from userContextData (userDefinedData from frontend)
+    // userContextData contains the JSON we passed via userDefinedData
+    let partyId = TEST_PARTY_ID;
+    try {
+      // userContextData may contain additional Self SDK data, but our userDefinedData is embedded
+      // The format depends on Self SDK version - try parsing as JSON
+      if (typeof userContextData === "string") {
+        const parsed = JSON.parse(userContextData);
+        if (parsed?.partyId) {
+          partyId = parsed.partyId;
+        }
+      } else if (userContextData?.partyId) {
+        partyId = userContextData.partyId;
+      }
+    } catch {
+      // If parsing fails, use the fallback TEST_PARTY_ID
+      console.log("Using fallback TEST_PARTY_ID - userContextData parsing failed");
+    }
+
+    // Validate that the party exists
+    const partyExists = await db
+      .select({ id: parties.id })
+      .from(parties)
+      .where(eq(parties.id, partyId))
+      .limit(1);
+
+    if (partyExists.length === 0) {
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "Party not found",
+        },
+        { status: 200 },
+      );
+    }
+
     // Verify the election exists and is currently active
     const now = new Date();
     const activeElection = await db
@@ -145,7 +182,7 @@ export async function POST(req: Request) {
     try {
       await db.insert(votes).values({
         electionId: TEST_ELECTION_ID,
-        partyId: TEST_PARTY_ID,
+        partyId: partyId,
         selfNullifier: String(nullifier),
       });
     } catch (dbError) {
