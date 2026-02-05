@@ -83,34 +83,48 @@ export async function POST(req: Request) {
     }
 
     // Extract partyId from userContextData (userDefinedData from frontend)
-    // Self SDK sends userContextData as a hex-encoded string containing the userDefinedData
+    // userContextData contains the JSON we passed via userDefinedData
     let partyId = TEST_PARTY_ID;
     
+    // Debug: Log the raw userContextData to understand its structure
+    console.log("[Self Verify] userContextData type:", typeof userContextData);
+    console.log("[Self Verify] userContextData raw:", JSON.stringify(userContextData, null, 2));
+    
     try {
+      // userContextData may contain additional Self SDK data, but our userDefinedData is embedded
+      // The format depends on Self SDK version - try parsing as JSON
       if (typeof userContextData === "string") {
-        // userContextData is hex-encoded - look for JSON pattern "7b22" which is '{"' in hex
-        const jsonStartPattern = "7b22"; // '{"' in hex
-        const jsonStartIndex = userContextData.toLowerCase().indexOf(jsonStartPattern);
+        const parsed = JSON.parse(userContextData);
+        console.log("[Self Verify] Parsed userContextData:", JSON.stringify(parsed, null, 2));
         
-        if (jsonStartIndex !== -1) {
-          // Extract hex from the JSON start to the end
-          const hexJson = userContextData.slice(jsonStartIndex);
-          
-          // Decode hex to UTF-8 string
-          const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
-          console.log("[Self Verify] Decoded userDefinedData:", jsonString);
-          
-          // Parse the JSON
-          const parsed = JSON.parse(jsonString);
-          if (parsed?.partyId) {
-            partyId = parsed.partyId;
-            console.log("[Self Verify] Found partyId:", partyId);
+        // Try different possible locations for partyId
+        if (parsed?.partyId) {
+          partyId = parsed.partyId;
+          console.log("[Self Verify] Found partyId at root:", partyId);
+        } else if (parsed?.userDefinedData) {
+          // userDefinedData might be nested and itself be a JSON string
+          const userDefined = typeof parsed.userDefinedData === "string" 
+            ? JSON.parse(parsed.userDefinedData) 
+            : parsed.userDefinedData;
+          console.log("[Self Verify] Parsed userDefinedData:", JSON.stringify(userDefined, null, 2));
+          if (userDefined?.partyId) {
+            partyId = userDefined.partyId;
+            console.log("[Self Verify] Found partyId in userDefinedData:", partyId);
           }
-        } else {
-          // Try direct JSON parse as fallback
-          const parsed = JSON.parse(userContextData);
-          if (parsed?.partyId) {
-            partyId = parsed.partyId;
+        }
+      } else if (typeof userContextData === "object" && userContextData !== null) {
+        console.log("[Self Verify] userContextData is already an object");
+        if (userContextData.partyId) {
+          partyId = userContextData.partyId;
+          console.log("[Self Verify] Found partyId at root:", partyId);
+        } else if (userContextData.userDefinedData) {
+          const userDefined = typeof userContextData.userDefinedData === "string"
+            ? JSON.parse(userContextData.userDefinedData)
+            : userContextData.userDefinedData;
+          console.log("[Self Verify] Parsed userDefinedData:", JSON.stringify(userDefined, null, 2));
+          if (userDefined?.partyId) {
+            partyId = userDefined.partyId;
+            console.log("[Self Verify] Found partyId in userDefinedData:", partyId);
           }
         }
       }
@@ -118,6 +132,8 @@ export async function POST(req: Request) {
       // If parsing fails, use the fallback TEST_PARTY_ID
       console.log("[Self Verify] Using fallback TEST_PARTY_ID - parsing failed:", parseError);
     }
+    
+    console.log("[Self Verify] Final partyId:", partyId);
 
     // Validate that the party exists
     const partyExists = await db
