@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCheckCircleFill, PiClockCountdownFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -41,8 +41,6 @@ export function VoteButton({
   partyName,
 }: VoteButtonProps) {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const buttonLabel = label || dictionary.common.vote;
 
   const [preVerificationDialogOpen, setPreVerificationDialogOpen] =
@@ -71,43 +69,14 @@ export function VoteButton({
     setPreVerificationDialogOpen(true);
   };
 
-  // Check for vote success URL params (from mobile deeplink)
-  useEffect(() => {
-    const voteSuccess = searchParams.get("voteSuccess");
-    const successPartyName = searchParams.get("partyName");
-
-    if (voteSuccess === "true" && (successPartyName || partyName)) {
-      setSuccessDialogOpen(true);
-    }
-  }, [searchParams, partyName]);
-
   const handleVerificationSuccess = async () => {
     setSuccessDialogOpen(true);
   };
 
   const handleSuccessDialogClose = () => {
     setSuccessDialogOpen(false);
-    
-    // If we have success params in URL, clear them
-    if (searchParams.get("voteSuccess")) {
-      const newParams = new URLSearchParams(searchParams.toString());
-      newParams.delete("voteSuccess");
-      newParams.delete("partyName");
-      
-      const newPath = newParams.toString() 
-        ? `${pathname}?${newParams.toString()}` 
-        : pathname;
-        
-      router.replace(newPath);
-    } else {
-      router.refresh();
-    }
+    router.refresh();
   };
-
-  // Determine which party name to display (prop or URL param)
-  const displayPartyName = searchParams.get("partyName") 
-    ? decodeURIComponent(searchParams.get("partyName")!) 
-    : partyName;
 
   return (
     <>
@@ -157,8 +126,6 @@ export function VoteButton({
         userId={randomUserId}
         dictionary={dictionary}
         partyId={partyId}
-        partyName={partyName}
-        returnPath={pathname}
       />
 
       {/* Vote success dialog */}
@@ -182,8 +149,8 @@ export function VoteButton({
           </AlertDialogHeader>
           <AlertDialogDescription>
             <Typography>
-              {displayPartyName
-                ? "Your vote for " + displayPartyName + " has been recorded."
+              {partyName
+                ? "Your vote for " + partyName + " has been recorded."
                 : "Your vote has been recorded."}
             </Typography>
           </AlertDialogDescription>
