@@ -257,6 +257,7 @@ export function PartyDetailContent({
               label={dictionary.common.vote}
               dictionary={dictionary}
               partyId={party.id}
+              partyName={party.name}
             />
           </div>
         </div>
