@@ -12,7 +12,6 @@ import {
 import { useParams } from "next/navigation";
 import {
   PiArrowSquareOut,
-  PiGlobe,
   PiHeadset,
   PiRocketLaunch,
   PiUserCheckFill,
@@ -71,9 +70,9 @@ export function SelfVerificationDialog({
         className="block w-full"
       >
         <CustomListItem
-          startAdornment={<PiGlobe className="size-5 text-gray-400" />}
+          startAdornment={<PiRocketLaunch className="size-5 text-gray-400" />}
           label="Verification Guide"
-          endAdornment={<PiRocketLaunch className="size-4 text-gray-400" />}
+          endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
 
