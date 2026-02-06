@@ -343,10 +343,10 @@ export default function WalletPageClient({
                         .network_label
                     }
                     options={[
-                      {
-                        label: "Monad",
-                        value: "143",
-                      },
+                      // {
+                      //   label: "Monad",
+                      //   value: "143",
+                      // },
                       {
                         label: "World Chain",
                         value: "480",
@@ -444,7 +444,7 @@ export default function WalletPageClient({
 
                 <AlertDialogFooter>
                   <div className="flex flex-col gap-2 w-full">
-                    <a
+                    {/* <a
                       href="https://app.uniswap.org/explore/tokens/monad/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -466,7 +466,7 @@ export default function WalletPageClient({
                           <PiArrowSquareOut className="size-4 text-gray-400" />
                         }
                       />
-                    </a>
+                    </a> */}
                     <a
                       href="https://app.uniswap.org/explore/tokens/worldchain/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
