@@ -5,6 +5,33 @@ import { getDbReadOnly } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 
+/**
+ * Pick the most important election for the hero card/featured election.
+ * Priority: active > soonest upcoming > most recently ended.
+ */
+function pickFeaturedElection(elections: Election[]): Election | null {
+  if (elections.length === 0) return null;
+
+  const now = Date.now();
+
+  const active = elections.filter(
+    (election) => now >= election.startsAt && now <= election.endsAt,
+  );
+  if (active.length > 0) {
+    // Pick the one ending soonest
+    return active.sort((a, b) => a.endsAt - b.endsAt)[0];
+  }
+
+  const upcoming = elections.filter((election) => now < election.startsAt);
+  if (upcoming.length > 0) {
+    // Pick the one starting soonest
+    return upcoming.sort((a, b) => a.startsAt - b.startsAt)[0];
+  }
+
+  // All ended — pick the most recently ended
+  return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
+}
+
 // Helper to convert PostgreSQL election row to Election object
 function pgRowToElection(row: {
   id: string;
@@ -84,5 +111,20 @@ export async function getElectionResults(
   } catch (error) {
     console.error("Error fetching election results:", error);
     return [];
+  }
+}
+
+/**
+ * Get the ID of the featured election (most important one).
+ * Priority: active > soonest upcoming > most recently ended.
+ */
+export async function getFeaturedElectionId(): Promise<string | null> {
+  try {
+    const elections = await getElections();
+    const featured = pickFeaturedElection(elections);
+    return featured?.id ?? null;
+  } catch (error) {
+    console.error("Error fetching featured election ID:", error);
+    return null;
   }
 }

@@ -3,29 +3,8 @@ import { getDictionary, locales } from "@/app/[lang]/dictionaries";
 import { MenuLink } from "@/components/menu-link";
 import { TopBar } from "@/components/topbar";
 import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
-import { getElections } from "@/lib/actions/elections";
-import type { Election } from "@/lib/types/elections";
+import { getFeaturedElectionId } from "@/lib/actions/elections";
 import { VotePageClient } from "./page-client";
-
-function pickFeaturedElection(elections: Election[]): Election | null {
-  if (elections.length === 0) return null;
-
-  const now = Date.now();
-
-  const active = elections.filter(
-    (election) => now >= election.startsAt && now <= election.endsAt,
-  );
-  if (active.length > 0) {
-    return active.sort((a, b) => a.endsAt - b.endsAt)[0];
-  }
-
-  const upcoming = elections.filter((election) => now < election.startsAt);
-  if (upcoming.length > 0) {
-    return upcoming.sort((a, b) => a.startsAt - b.startsAt)[0];
-  }
-
-  return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
-}
 
 // This enables Static Site Generation (SSG) for all languages
 export async function generateStaticParams() {
@@ -39,9 +18,7 @@ export default async function VotePage({
 }) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
-  const elections = await getElections();
-  const featuredElection = pickFeaturedElection(elections);
-  const featuredElectionId = featuredElection?.id;
+  const featuredElectionId = (await getFeaturedElectionId()) ?? undefined;
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">

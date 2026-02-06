@@ -16,12 +16,10 @@ interface ElectionsListProps {
  */
 function pickHeroElection(elections: Election[]): Election | null {
   if (elections.length === 0) return null;
-  
+
   const now = Date.now();
 
-  const active = elections.filter(
-    (e) => now >= e.startsAt && now <= e.endsAt,
-  );
+  const active = elections.filter((e) => now >= e.startsAt && now <= e.endsAt);
   if (active.length > 0) {
     // Pick the one ending soonest
     return active.sort((a, b) => a.endsAt - b.endsAt)[0];
@@ -65,9 +63,7 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
   return (
     <div className="flex flex-col pb-24">
       {/* Hero card for the most important election */}
-      {heroElection && (
-        <ElectionHeroCard election={heroElection} lang={lang} />
-      )}
+      {heroElection && <ElectionHeroCard election={heroElection} lang={lang} />}
 
       {/* Active Elections Section (excluding hero) */}
       {activeElections.length > 0 && (

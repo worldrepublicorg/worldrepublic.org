@@ -18,11 +18,13 @@ import { copyToClipboard } from "@/lib/utils";
 interface PartyDetailContentProps {
   partyId: string;
   dictionary: Dictionary;
+  featuredElectionId?: string;
 }
 
 export function PartyDetailContent({
   partyId,
   dictionary,
+  featuredElectionId,
 }: PartyDetailContentProps) {
   const { lang } = useParams<{ lang: string }>();
   const { toast } = useToast();
@@ -257,6 +259,7 @@ export function PartyDetailContent({
               label={dictionary.common.vote}
               dictionary={dictionary}
               partyId={party.id}
+              electionId={featuredElectionId}
             />
           </div>
         </div>

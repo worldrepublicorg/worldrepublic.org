@@ -14,11 +14,13 @@ import { copyToClipboard } from "@/lib/utils";
 interface PartyDetailPageClientProps {
   partyId: string;
   dictionary: Dictionary;
+  featuredElectionId?: string;
 }
 
 export default function PartyDetailPageClient({
   partyId,
   dictionary,
+  featuredElectionId,
 }: PartyDetailPageClientProps) {
   const { lang } = useParams<{ lang: string }>();
   const { toast } = useToast();
@@ -101,7 +103,11 @@ export default function PartyDetailPageClient({
 
       {partyId && (
         <div className="flex flex-1 flex-col p-6">
-          <PartyDetailContent partyId={partyId} dictionary={dictionary} />
+          <PartyDetailContent
+            partyId={partyId}
+            dictionary={dictionary}
+            featuredElectionId={featuredElectionId}
+          />
         </div>
       )}
     </div>
