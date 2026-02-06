@@ -444,18 +444,18 @@ export default function WalletPageClient({
 
                 <AlertDialogFooter>
                   <div className="flex flex-col gap-2 w-full">
-                    {/* <a
-                      href="https://app.uniswap.org/explore/tokens/monad/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                    <a
+                      href="https://jumper.exchange/?fromChain=1&fromToken=0x0000000000000000000000000000000000000000&toChain=480&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.monad}
+                        label="WDD on Jumper"
                         startAdornment={
                           <Image
-                            src="/icons/chains/monad.png"
-                            alt={dictionary.pages.wallet.modals.trade.monad_alt}
+                            src="/icons/exchanges/jumper.png"
+                            alt="Jumper"
                             width={24}
                             height={24}
                             className="size-6 rounded-full"
@@ -466,7 +466,7 @@ export default function WalletPageClient({
                           <PiArrowSquareOut className="size-4 text-gray-400" />
                         }
                       />
-                    </a> */}
+                    </a>
                     <a
                       href="https://app.uniswap.org/explore/tokens/worldchain/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
@@ -474,11 +474,11 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.world}
+                        label="WDD on Uniswap"
                         startAdornment={
                           <Image
-                            src="/icons/chains/world.png"
-                            alt={dictionary.pages.wallet.modals.trade.world_alt}
+                            src="/icons/exchanges/uniswap.png"
+                            alt="Uniswap"
                             width={24}
                             height={24}
                             className="size-6 rounded-full"
