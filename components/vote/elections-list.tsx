@@ -1,8 +1,6 @@
 "use client";
 
-import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import Link from "next/link";
-import { PiChartBarHorizontalFill } from "react-icons/pi";
+import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { ElectionCard } from "@/components/vote/election-card";
 import { ElectionHeroCard } from "@/components/vote/election-hero-card";
 import type { Election } from "@/lib/types/elections";
@@ -16,7 +14,9 @@ interface ElectionsListProps {
  * Pick the most important election for the hero card.
  * Priority: active > soonest upcoming > most recently ended.
  */
-function pickHeroElection(elections: Election[]): Election {
+function pickHeroElection(elections: Election[]): Election | null {
+  if (elections.length === 0) return null;
+  
   const now = Date.now();
 
   const active = elections.filter(
@@ -40,7 +40,7 @@ function pickHeroElection(elections: Election[]): Election {
 export function ElectionsList({ elections, lang }: ElectionsListProps) {
   const now = Date.now();
 
-  // 0 elections — empty state
+  // Empty state
   if (elections.length === 0) {
     return (
       <div className="mt-4 mb-8 text-center text-sm text-gray-500">
@@ -49,53 +49,11 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
     );
   }
 
-  // 1 election — centered homepage-style layout
-  if (elections.length === 1) {
-    const election = elections[0];
-    const isActive = now >= election.startsAt && now <= election.endsAt;
-
-    const formatDate = (timestamp: number) => {
-      return new Date(timestamp).toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      });
-    };
-
-    return (
-      <div className="flex grow items-center justify-center">
-        <div className="flex w-full flex-col items-center justify-center p-6 text-center">
-          <div className="flex w-full flex-col items-center gap-4">
-            <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
-              <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
-            </div>
-            <Typography variant="heading" level={2}>
-              {election.name}
-            </Typography>
-            <Typography
-              variant="subtitle"
-              level={2}
-              className="text-gray-500"
-            >
-              {formatDate(election.startsAt)} - {formatDate(election.endsAt)}
-            </Typography>
-            <Link
-              href={`/${lang}/vote/elections/${election.id}`}
-              className="w-full"
-            >
-              <Button fullWidth className="mt-6!">
-                {isActive ? "Vote now" : "View details"}
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // 2+ elections — hero card on top + remaining cards below
+  // Hero card layout for all cases
   const heroElection = pickHeroElection(elections);
-  const remaining = elections.filter((e) => e.id !== heroElection.id);
+  const remaining = heroElection
+    ? elections.filter((e) => e.id !== heroElection.id)
+    : [];
 
   // Group the remaining elections
   const upcomingElections = remaining.filter((e) => now < e.startsAt);
@@ -107,7 +65,9 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
   return (
     <div className="flex flex-col pb-24">
       {/* Hero card for the most important election */}
-      <ElectionHeroCard election={heroElection} lang={lang} />
+      {heroElection && (
+        <ElectionHeroCard election={heroElection} lang={lang} />
+      )}
 
       {/* Active Elections Section (excluding hero) */}
       {activeElections.length > 0 && (

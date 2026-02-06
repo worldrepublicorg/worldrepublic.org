@@ -1,22 +1,26 @@
 "use client";
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TabPills } from "@/components/tab-pills";
-import { VoteButton } from "@/components/vote/vote-button";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
 
+interface VotePageClientProps {
+  lang: string;
+  dictionary: Dictionary;
+  featuredElectionId?: string;
+}
+
 export function VotePageClient({
   lang,
   dictionary,
-}: {
-  lang: string;
-  dictionary: Dictionary;
-}) {
+  featuredElectionId,
+}: VotePageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
 
@@ -24,6 +28,10 @@ export function VotePageClient({
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
+
+  const voteHref = featuredElectionId
+    ? `/${lang}/vote/elections/${featuredElectionId}`
+    : `/${lang}/vote`;
 
   return (
     <>
@@ -58,12 +66,11 @@ export function VotePageClient({
               >
                 {dictionary.pages.govern.sections.elections.subtitle}
               </Typography>
-              <VoteButton
-                fullWidth
-                className="mt-6!"
-                label={dictionary.common.vote}
-                dictionary={dictionary}
-              />
+              <Link href={voteHref} className="w-full">
+                <Button fullWidth className="mt-6!">
+                  {dictionary.common.vote}
+                </Button>
+              </Link>
             </div>
           </div>
         ) : (
