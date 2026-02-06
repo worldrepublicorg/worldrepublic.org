@@ -259,7 +259,7 @@ export function PartyDetailContent({
               label={dictionary.common.vote}
               dictionary={dictionary}
               partyId={party.id}
-              electionId={featuredElectionId}
+              electionId="9341dcef-7c00-4f5b-9c4b-6e4b481fc607"
             />
           </div>
         </div>

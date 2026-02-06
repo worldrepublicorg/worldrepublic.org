@@ -27,6 +27,8 @@ interface VoteButtonProps {
   fullWidth?: boolean;
   className?: string;
   label?: string;
+  /** Optional size, forwarded to the underlying UI kit Button. Defaults to "lg". */
+  size?: "sm" | "lg";
   /** Dictionary for i18n strings. Optional when electionId is provided (direct vote flow). */
   dictionary?: Dictionary;
   partyId?: string;
@@ -38,6 +40,7 @@ export function VoteButton({
   fullWidth = false,
   className,
   label,
+  size = "lg",
   dictionary,
   partyId,
   electionId,
@@ -85,6 +88,7 @@ export function VoteButton({
       <Button
         fullWidth={fullWidth}
         className={className}
+        size={size}
         onClick={handleVoteClick}
       >
         {buttonLabel}
@@ -114,7 +118,11 @@ export function VoteButton({
               </Typography>
             </AlertDialogDescription>
             <AlertDialogFooter>
-              <Button onClick={handlePreVerifyClick} className="w-full">
+              <Button
+                onClick={handlePreVerifyClick}
+                className="w-full"
+                size={size}
+              >
                 {dictionary.pages.govern.vote.test_verification.button}
               </Button>
             </AlertDialogFooter>

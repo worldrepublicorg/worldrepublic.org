@@ -1,6 +1,7 @@
 "use client";
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import Link from "next/link";
 import { PiUserFocus } from "react-icons/pi";
 import { VoteButton } from "@/components/vote/vote-button";
 import type { Party } from "@/lib/types/parties";
@@ -14,6 +15,7 @@ interface PartyVoteListProps {
 export function PartyVoteList({
   parties,
   electionId,
+  lang,
 }: PartyVoteListProps) {
   if (parties.length === 0) {
     return (
@@ -39,7 +41,10 @@ export function PartyVoteList({
             key={party.id}
             className="flex items-center justify-between gap-4 p-4"
           >
-            <div className="flex-1 min-w-0">
+            <Link
+              href={`/${lang}/parties/${party.id}`}
+              className="flex-1 min-w-0"
+            >
               <Typography
                 variant="subtitle"
                 level={3}
@@ -57,10 +62,11 @@ export function PartyVoteList({
                   {party.leaderUsername}
                 </Typography>
               </div>
-            </div>
+            </Link>
             <VoteButton
               electionId={electionId}
               partyId={party.id}
+              size="sm"
             />
           </div>
         ))}
