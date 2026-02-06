@@ -121,8 +121,21 @@ export async function getElectionResults(
 export async function getFeaturedElectionId(): Promise<string | null> {
   try {
     const elections = await getElections();
+    if (elections.length === 0) {
+      console.warn(
+        "getFeaturedElectionId: No elections found in database",
+      );
+      return null;
+    }
     const featured = pickFeaturedElection(elections);
-    return featured?.id ?? null;
+    if (!featured) {
+      console.error(
+        "getFeaturedElectionId: pickFeaturedElection returned null despite elections existing",
+        { electionsCount: elections.length },
+      );
+      return null;
+    }
+    return featured.id;
   } catch (error) {
     console.error("Error fetching featured election ID:", error);
     return null;

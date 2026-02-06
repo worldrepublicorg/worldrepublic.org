@@ -93,6 +93,11 @@ export function useSelfVerification(
           process.env.NEXT_PUBLIC_SELF_ENDPOINT ||
           `${window.location.origin}/api/self/verify`;
 
+        // Build userDefinedData object, only including defined values
+        const userDefinedDataObj: Record<string, string> = {};
+        if (electionId) userDefinedDataObj.electionId = electionId;
+        if (partyId) userDefinedDataObj.partyId = partyId;
+
         type SelfAppCtor = new (
           config: Record<string, unknown>,
         ) => { build: () => unknown };
@@ -106,7 +111,10 @@ export function useSelfVerification(
           deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
           userId: userId,
           userIdType: "uuid",
-          userDefinedData: (electionId || partyId) ? JSON.stringify({ electionId, partyId }) : undefined,
+          userDefinedData:
+            Object.keys(userDefinedDataObj).length > 0
+              ? JSON.stringify(userDefinedDataObj)
+              : undefined,
           disclosures: {
             ofac: true,
           },
