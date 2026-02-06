@@ -2,6 +2,7 @@
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
+import { useMemo } from "react";
 import { PiUserFocus } from "react-icons/pi";
 import { VoteButton } from "@/components/vote/vote-button";
 import type { Party } from "@/lib/types/parties";
@@ -17,7 +18,16 @@ export function PartyVoteList({
   electionId,
   lang,
 }: PartyVoteListProps) {
-  if (parties.length === 0) {
+  const shuffledParties = useMemo(() => {
+    const copy = [...parties];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }, [parties]);
+
+  if (shuffledParties.length === 0) {
     return (
       <div className="rounded-xl border border-gray-200 p-6 text-center">
         <Typography variant="body" level={3} className="text-gray-500">
@@ -36,7 +46,7 @@ export function PartyVoteList({
       </div>
 
       <div className="divide-y divide-gray-100">
-        {parties.map((party) => (
+        {shuffledParties.map((party) => (
           <div
             key={party.id}
             className="flex items-center justify-between gap-4 p-4"
