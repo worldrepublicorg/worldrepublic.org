@@ -50,7 +50,7 @@ export default function VotePageClient({
       <div className="flex grow flex-col overflow-y-auto">
         {activeTab === "elections" ? (
           <div className="flex-1 overflow-y-auto p-6">
-            <ElectionsList elections={elections} dictionary={dictionary} />
+            <ElectionsList elections={elections} lang={lang} />
           </div>
         ) : (
           <div className="flex grow items-center justify-center">

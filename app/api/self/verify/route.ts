@@ -4,10 +4,6 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
 
-// Hard-coded for testing - will be passed via userDefinedData later
-const TEST_ELECTION_ID = "9341dcef-7c00-4f5b-9c4b-6e4b481fc607";
-const TEST_PARTY_ID = "8d33df6d-3d33-4857-8c8c-cca20b734429";
-
 function createVerifier(origin: string) {
   const scope = "world-republic";
   const endpoint = `${origin}/api/self/verify`;
@@ -25,6 +21,80 @@ function createVerifier(origin: string) {
     allowedIds,
     configStore,
     userIdentifierType,
+  );
+}
+
+/**
+ * Parse electionId and partyId from userContextData.
+ * Self SDK sends userContextData as a hex-encoded string containing the userDefinedData JSON.
+ */
+function parseUserContextData(userContextData: unknown): {
+  electionId: string | null;
+  partyId: string | null;
+} {
+  let electionId: string | null = null;
+  let partyId: string | null = null;
+
+  try {
+    if (typeof userContextData === "string") {
+      // userContextData is hex-encoded - look for JSON pattern "7b22" which is '{"' in hex
+      const jsonStartPattern = "7b22";
+      const jsonStartIndex = userContextData
+        .toLowerCase()
+        .indexOf(jsonStartPattern);
+
+      if (jsonStartIndex !== -1) {
+        const hexJson = userContextData.slice(jsonStartIndex);
+        const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
+        console.log("[Self Verify] Decoded userDefinedData:", jsonString);
+
+        const parsed = JSON.parse(jsonString);
+        if (parsed?.electionId) {
+          electionId = parsed.electionId;
+          console.log("[Self Verify] Found electionId:", electionId);
+        }
+        if (parsed?.partyId) {
+          partyId = parsed.partyId;
+          console.log("[Self Verify] Found partyId:", partyId);
+        }
+      } else {
+        // Try direct JSON parse as fallback
+        const parsed = JSON.parse(userContextData);
+        if (parsed?.electionId) electionId = parsed.electionId;
+        if (parsed?.partyId) partyId = parsed.partyId;
+      }
+    }
+  } catch (parseError) {
+    console.log(
+      "[Self Verify] Failed to parse userContextData:",
+      parseError,
+    );
+  }
+
+  return { electionId, partyId };
+}
+
+function isDuplicateVoteError(error: unknown): boolean {
+  const errorCode =
+    (error &&
+      typeof error === "object" &&
+      ("code" in error
+        ? error.code
+        : "cause" in error &&
+            error.cause &&
+            typeof error.cause === "object" &&
+            "code" in error.cause
+          ? error.cause.code
+          : null)) ||
+    null;
+
+  const errorMessage = error instanceof Error ? error.message : String(error);
+
+  return (
+    errorCode === "23505" ||
+    errorMessage.includes("votes_election_nullifier_idx") ||
+    errorMessage.includes("unique constraint") ||
+    errorMessage.includes("duplicate key")
   );
 }
 
@@ -82,41 +152,29 @@ export async function POST(req: Request) {
       );
     }
 
-    // Extract partyId from userContextData (userDefinedData from frontend)
-    // Self SDK sends userContextData as a hex-encoded string containing the userDefinedData
-    let partyId = TEST_PARTY_ID;
-    
-    try {
-      if (typeof userContextData === "string") {
-        // userContextData is hex-encoded - look for JSON pattern "7b22" which is '{"' in hex
-        const jsonStartPattern = "7b22"; // '{"' in hex
-        const jsonStartIndex = userContextData.toLowerCase().indexOf(jsonStartPattern);
-        
-        if (jsonStartIndex !== -1) {
-          // Extract hex from the JSON start to the end
-          const hexJson = userContextData.slice(jsonStartIndex);
-          
-          // Decode hex to UTF-8 string
-          const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
-          console.log("[Self Verify] Decoded userDefinedData:", jsonString);
-          
-          // Parse the JSON
-          const parsed = JSON.parse(jsonString);
-          if (parsed?.partyId) {
-            partyId = parsed.partyId;
-            console.log("[Self Verify] Found partyId:", partyId);
-          }
-        } else {
-          // Try direct JSON parse as fallback
-          const parsed = JSON.parse(userContextData);
-          if (parsed?.partyId) {
-            partyId = parsed.partyId;
-          }
-        }
-      }
-    } catch (parseError) {
-      // If parsing fails, use the fallback TEST_PARTY_ID
-      console.log("[Self Verify] Using fallback TEST_PARTY_ID - parsing failed:", parseError);
+    // Parse electionId and partyId from userContextData
+    const { electionId, partyId } = parseUserContextData(userContextData);
+
+    if (!electionId) {
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "Election ID not found in verification data",
+        },
+        { status: 200 },
+      );
+    }
+
+    if (!partyId) {
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: "Party ID not found in verification data",
+        },
+        { status: 200 },
+      );
     }
 
     // Validate that the party exists
@@ -140,13 +198,13 @@ export async function POST(req: Request) {
     // Verify the election exists and is currently active
     const now = new Date();
     const activeElection = await db
-      .select({ id: elections.id })
+      .select({ id: elections.id, name: elections.name })
       .from(elections)
       .where(
         and(
-          eq(elections.id, TEST_ELECTION_ID),
-          lte(elections.startsAt, now), // Election has started
-          gt(elections.endsAt, now), // Election has not ended
+          eq(elections.id, electionId),
+          lte(elections.startsAt, now),
+          gt(elections.endsAt, now),
         ),
       )
       .limit(1);
@@ -160,7 +218,7 @@ export async function POST(req: Request) {
           endsAt: elections.endsAt,
         })
         .from(elections)
-        .where(eq(elections.id, TEST_ELECTION_ID))
+        .where(eq(elections.id, electionId))
         .limit(1);
 
       if (electionExists.length === 0) {
@@ -199,36 +257,12 @@ export async function POST(req: Request) {
     // Store the vote in the database
     try {
       await db.insert(votes).values({
-        electionId: TEST_ELECTION_ID,
-        partyId: partyId,
+        electionId,
+        partyId,
         selfNullifier: String(nullifier),
       });
     } catch (dbError) {
-      // Check for unique constraint violation (duplicate vote)
-      // Error code might be nested in different properties depending on driver
-      const errorCode =
-        (dbError &&
-          typeof dbError === "object" &&
-          ("code" in dbError
-            ? dbError.code
-            : "cause" in dbError &&
-                dbError.cause &&
-                typeof dbError.cause === "object" &&
-                "code" in dbError.cause
-              ? dbError.cause.code
-              : null)) ||
-        null;
-
-      const errorMessage =
-        dbError instanceof Error ? dbError.message : String(dbError);
-
-      // Check for duplicate vote by error code or message content
-      if (
-        errorCode === "23505" ||
-        errorMessage.includes("votes_election_nullifier_idx") ||
-        errorMessage.includes("unique constraint") ||
-        errorMessage.includes("duplicate key")
-      ) {
+      if (isDuplicateVoteError(dbError)) {
         return NextResponse.json(
           {
             status: "error",
@@ -238,7 +272,6 @@ export async function POST(req: Request) {
           { status: 200 },
         );
       }
-      // Re-throw other database errors
       throw dbError;
     }
 
@@ -247,27 +280,15 @@ export async function POST(req: Request) {
         status: "success",
         result: true,
         credentialSubject: result.discloseOutput,
+        electionName: activeElection[0].name,
+        partyName: partyExists[0].id,
       },
       { status: 200 },
     );
   } catch (error) {
     console.error("Self verification error:", error);
 
-    // Check for unique constraint violation in outer catch (in case inner catch didn't catch it)
-    const errorCode =
-      (error &&
-        typeof error === "object" &&
-        ("code" in error
-          ? error.code
-          : "cause" in error &&
-              error.cause &&
-              typeof error.cause === "object" &&
-              "code" in error.cause
-            ? error.cause.code
-            : null)) ||
-      null;
-
-    if (errorCode === "23505") {
+    if (isDuplicateVoteError(error)) {
       return NextResponse.json(
         {
           status: "error",
@@ -278,25 +299,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Check if error message contains unique constraint hint
     const errorMessage = error instanceof Error ? error.message : String(error);
-    if (
-      errorCode === "23505" ||
-      errorMessage.includes("votes_election_nullifier_idx") ||
-      errorMessage.includes("unique constraint") ||
-      errorMessage.includes("duplicate key") ||
-      errorMessage.includes("already exists")
-    ) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "You have already voted in this election",
-        },
-        { status: 200 },
-      );
-    }
-
     return NextResponse.json(
       {
         status: "error",

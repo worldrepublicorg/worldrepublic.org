@@ -25,8 +25,9 @@ interface SelfVerificationDialogProps {
   onOpenChange: (open: boolean) => void;
   onSuccess?: () => void;
   userId: string | null;
-  dictionary: Dictionary;
+  dictionary?: Dictionary;
   partyId?: string;
+  electionId?: string;
 }
 
 export function SelfVerificationDialog({
@@ -36,6 +37,7 @@ export function SelfVerificationDialog({
   userId,
   dictionary,
   partyId,
+  electionId,
 }: SelfVerificationDialogProps) {
   const { lang } = useParams<{ lang: string }>();
   const {
@@ -45,7 +47,7 @@ export function SelfVerificationDialog({
     callbackReachable,
     isLoading,
     isMobile,
-  } = useSelfVerification(userId, lang, partyId);
+  } = useSelfVerification(userId, lang, partyId, electionId);
 
   const handleSuccess = async () => {
     if (onSuccess) {
@@ -69,7 +71,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiGlobe className="size-5 text-gray-400" />}
-          label={dictionary.components.identity.self.supported_countries}
+          label={dictionary?.components.identity.self.supported_countries ?? "Supported countries"}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -82,7 +84,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiHeadset className="size-5 text-gray-400" />}
-          label={dictionary.components.identity.self.support_telegram}
+          label={dictionary?.components.identity.self.support_telegram ?? "Self Support"}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -100,7 +102,7 @@ export function SelfVerificationDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            {dictionary.components.identity.verification_warning.title}
+            {dictionary?.components.identity.verification_warning.title ?? "Get verified"}
           </Typography>
         </AlertDialogHeader>
 
@@ -117,12 +119,12 @@ export function SelfVerificationDialog({
           </div>
         ) : isLoading ? (
           <div className="mb-6">
-            <Typography>{dictionary.common.loading}</Typography>
+            <Typography>{dictionary?.common.loading ?? "Loading..."}</Typography>
           </div>
         ) : isMobile ? (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary.components.identity.self.mobile_dialog_description}
+              {dictionary?.components.identity.self.mobile_dialog_description ?? "You will be redirected to the Self app to complete verification."}
             </AlertDialogDescription>
 
             {supportLinks}
@@ -133,14 +135,14 @@ export function SelfVerificationDialog({
                 disabled={!universalLink}
                 className="w-full"
               >
-                {dictionary.common.continue}
+                {dictionary?.common.continue ?? "Continue"}
               </Button>
             </AlertDialogFooter>
           </>
         ) : (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary.components.identity.self.dialog_description}
+              {dictionary?.components.identity.self.dialog_description ?? "Scan this QR code to verify with Self."}
             </AlertDialogDescription>
 
             <div className="mb-4 flex w-full justify-center">

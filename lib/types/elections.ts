@@ -6,3 +6,9 @@ export interface Election {
   rewardPool: string; // Decimal string
   createdAt: number; // Timestamp in milliseconds
 }
+
+export interface ElectionResult {
+  partyId: string;
+  partyName: string;
+  voteCount: number;
+}

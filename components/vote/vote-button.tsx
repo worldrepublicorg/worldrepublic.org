@@ -27,8 +27,11 @@ interface VoteButtonProps {
   fullWidth?: boolean;
   className?: string;
   label?: string;
-  dictionary: Dictionary;
+  /** Dictionary for i18n strings. Optional when electionId is provided (direct vote flow). */
+  dictionary?: Dictionary;
   partyId?: string;
+  /** When provided, skips the "no active election" dialog and goes directly to Self verification. */
+  electionId?: string;
 }
 
 export function VoteButton({
@@ -37,9 +40,11 @@ export function VoteButton({
   label,
   dictionary,
   partyId,
+  electionId,
 }: VoteButtonProps) {
   const router = useRouter();
-  const buttonLabel = label || dictionary.common.vote;
+  const buttonLabel =
+    label || dictionary?.common.vote || "Vote";
 
   const [preVerificationDialogOpen, setPreVerificationDialogOpen] =
     useState(false);
@@ -62,8 +67,13 @@ export function VoteButton({
   };
 
   const handleVoteClick = () => {
-    // Always go directly to pre-verification dialog, no auth check
-    setPreVerificationDialogOpen(true);
+    if (electionId) {
+      // Direct vote flow — go straight to Self verification
+      setSelfVerificationDialogOpen(true);
+    } else {
+      // Legacy flow — show pre-verification dialog
+      setPreVerificationDialogOpen(true);
+    }
   };
 
   const handleVerificationSuccess = async () => {
@@ -80,35 +90,37 @@ export function VoteButton({
         {buttonLabel}
       </Button>
 
-      {/* Pre-verification dialog */}
-      <AlertDialog
-        open={preVerificationDialogOpen}
-        onOpenChange={setPreVerificationDialogOpen}
-      >
-        <AlertDialogContent>
-          <AlertDialogHeader
-            icon={
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                <PiClockCountdownFill className="h-[30px] w-[30px] text-gray-400" />
-              </div>
-            }
-          >
-            <Typography variant="heading" level={3}>
-              {dictionary.pages.govern.vote.no_active_election}
-            </Typography>
-          </AlertDialogHeader>
-          <AlertDialogDescription>
-            <Typography>
-              {dictionary.pages.govern.vote.test_verification.description}
-            </Typography>
-          </AlertDialogDescription>
-          <AlertDialogFooter>
-            <Button onClick={handlePreVerifyClick} className="w-full">
-              {dictionary.pages.govern.vote.test_verification.button}
-            </Button>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      {/* Pre-verification dialog (legacy flow when no electionId) */}
+      {!electionId && dictionary && (
+        <AlertDialog
+          open={preVerificationDialogOpen}
+          onOpenChange={setPreVerificationDialogOpen}
+        >
+          <AlertDialogContent>
+            <AlertDialogHeader
+              icon={
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                  <PiClockCountdownFill className="h-[30px] w-[30px] text-gray-400" />
+                </div>
+              }
+            >
+              <Typography variant="heading" level={3}>
+                {dictionary.pages.govern.vote.no_active_election}
+              </Typography>
+            </AlertDialogHeader>
+            <AlertDialogDescription>
+              <Typography>
+                {dictionary.pages.govern.vote.test_verification.description}
+              </Typography>
+            </AlertDialogDescription>
+            <AlertDialogFooter>
+              <Button onClick={handlePreVerifyClick} className="w-full">
+                {dictionary.pages.govern.vote.test_verification.button}
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
 
       {/* Self verification dialog */}
       <SelfVerificationDialog
@@ -118,6 +130,7 @@ export function VoteButton({
         userId={randomUserId}
         dictionary={dictionary}
         partyId={partyId}
+        electionId={electionId}
       />
     </>
   );

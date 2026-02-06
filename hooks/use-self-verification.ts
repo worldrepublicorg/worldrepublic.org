@@ -41,6 +41,7 @@ export function useSelfVerification(
   userId: string | null,
   lang: string | undefined,
   partyId?: string,
+  electionId?: string,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -105,7 +106,7 @@ export function useSelfVerification(
           deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
           userId: userId,
           userIdType: "uuid",
-          userDefinedData: partyId ? JSON.stringify({ partyId }) : undefined,
+          userDefinedData: (electionId || partyId) ? JSON.stringify({ electionId, partyId }) : undefined,
           disclosures: {
             ofac: true,
           },
@@ -123,7 +124,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, partyId]);
+  }, [userId, lang, partyId, electionId]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;
