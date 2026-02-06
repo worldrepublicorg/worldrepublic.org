@@ -1,7 +1,7 @@
 "use client";
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretLeft, PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -22,7 +22,6 @@ export default function PartyDetailPageClient({
   dictionary,
   featuredElectionId,
 }: PartyDetailPageClientProps) {
-  const { lang } = useParams<{ lang: string }>();
   const { toast } = useToast();
   const router = useRouter();
   const [party, setParty] = useState<Party | null>(null);
@@ -46,7 +45,7 @@ export default function PartyDetailPageClient({
   // Share URL
   const getShareUrl = () => {
     if (typeof window === "undefined") return "";
-    return `${window.location.origin}/${lang}/parties/${party?.id || partyId}`;
+    return `${window.location.origin}/parties/${party?.id || partyId}`;
   };
 
   return (

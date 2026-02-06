@@ -798,7 +798,7 @@ export function PoliticalPartyList({
                 selectedPartyForDrawer && (
                   <button
                     onClick={async () => {
-                      const shareUrl = `${window.location.origin}/${lang}/parties/${selectedPartyForDrawer.id}`;
+                      const shareUrl = `${window.location.origin}/parties/${selectedPartyForDrawer.id}`;
                       const shareTitle = selectedPartyForDrawer.name;
 
                       // Check if Web Share API is supported
