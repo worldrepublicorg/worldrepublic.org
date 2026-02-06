@@ -99,14 +99,14 @@ export function ElectionDetailContent({
           </Typography>
         </div>
         <div className="divide-y divide-gray-100">
-          <div className="flex items-center gap-3 p-4">
-            <PiCalendarBlank className="text-gray-400 shrink-0" size={18} />
+          <div className="flex items-center gap-2 p-4">
+            <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
               {formatDate(election.startsAt)} - {formatDate(election.endsAt)}
             </Typography>
           </div>
-          <div className="flex items-center gap-3 p-4">
-            <PiCoins className="text-gray-400 shrink-0" size={18} />
+          <div className="flex items-center gap-2 p-4">
+            <PiCoins className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
               Reward pool:{" "}
               {Number.parseInt(election.rewardPool).toLocaleString()} WDD
@@ -117,11 +117,7 @@ export function ElectionDetailContent({
 
       {/* Conditional content based on election status */}
       {isActive && (
-        <PartyVoteList
-          parties={parties}
-          electionId={election.id}
-          lang={lang}
-        />
+        <PartyVoteList parties={parties} electionId={election.id} lang={lang} />
       )}
 
       {isUpcoming && (

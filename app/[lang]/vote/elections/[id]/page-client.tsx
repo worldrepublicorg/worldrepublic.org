@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { PiCaretLeft } from "react-icons/pi";
-import { ElectionDetailContent } from "@/components/vote/election-detail-content";
 import { TopBar } from "@/components/topbar";
+import { ElectionDetailContent } from "@/components/vote/election-detail-content";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 
