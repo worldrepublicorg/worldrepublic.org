@@ -14,6 +14,7 @@ import {
   PiArrowSquareOut,
   PiGlobe,
   PiHeadset,
+  PiRocketLaunch,
   PiUserCheckFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -64,15 +65,15 @@ export function SelfVerificationDialog({
   const supportLinks = (
     <div className="mb-4 flex flex-col gap-2">
       <a
-        href="https://map.self.xyz/"
+        href="https://docs.worldrepublic.org/quickstart/get-verified"
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full"
       >
         <CustomListItem
           startAdornment={<PiGlobe className="size-5 text-gray-400" />}
-          label={dictionary?.components.identity.self.supported_countries ?? "Supported countries"}
-          endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
+          label="Verification Guide"
+          endAdornment={<PiRocketLaunch className="size-4 text-gray-400" />}
         />
       </a>
 
@@ -84,7 +85,10 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiHeadset className="size-5 text-gray-400" />}
-          label={dictionary?.components.identity.self.support_telegram ?? "Self Support"}
+          label={
+            dictionary?.components.identity.self.support_telegram ??
+            "Self Support"
+          }
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -102,7 +106,7 @@ export function SelfVerificationDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            {dictionary?.components.identity.verification_warning.title ?? "Get verified"}
+            Confirm your eligibility
           </Typography>
         </AlertDialogHeader>
 
@@ -119,12 +123,15 @@ export function SelfVerificationDialog({
           </div>
         ) : isLoading ? (
           <div className="mb-6">
-            <Typography>{dictionary?.common.loading ?? "Loading..."}</Typography>
+            <Typography>
+              {dictionary?.common.loading ?? "Loading..."}
+            </Typography>
           </div>
         ) : isMobile ? (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary?.components.identity.self.mobile_dialog_description ?? "You will be redirected to the Self app to complete verification."}
+              {dictionary?.components.identity.self.mobile_dialog_description ??
+                "You will be redirected to the Self app to complete verification."}
             </AlertDialogDescription>
 
             {supportLinks}
@@ -142,7 +149,8 @@ export function SelfVerificationDialog({
         ) : (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary?.components.identity.self.dialog_description ?? "Scan this QR code to verify with Self."}
+              {dictionary?.components.identity.self.dialog_description ??
+                "Scan this QR code to verify with Self."}
             </AlertDialogDescription>
 
             <div className="mb-4 flex w-full justify-center">
