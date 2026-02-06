@@ -39,7 +39,8 @@ export function PartyVoteList({
         party.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (party.leaderUsername
           ?.toLowerCase()
-          .includes(searchTerm.toLowerCase()) ?? false),
+          .includes(searchTerm.toLowerCase()) ??
+          false),
     );
   }, [shuffledParties, searchTerm]);
 
@@ -58,13 +59,13 @@ export function PartyVoteList({
       <Typography
         variant="subtitle"
         level={1}
-        className="mb-3 text-[19px] font-semibold px-6"
+        className="mb-3! text-[19px] font-semibold"
       >
         Choose a party
       </Typography>
 
       {/* Search bar */}
-      <div className="mb-5 h-12.5 px-6">
+      <div className="mb-5 h-12.5">
         <Input
           type="text"
           startAdornment={
@@ -89,51 +90,49 @@ export function PartyVoteList({
       </div>
 
       {/* Parties list */}
-      <div className="px-6 pb-6">
-        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-          {filteredParties.length === 0 ? (
-            <div className="mt-12 mb-8 p-6 text-center text-sm text-gray-500">
-              No parties found matching your search.
-            </div>
-          ) : (
-            <div className="divide-y divide-gray-100">
-              {filteredParties.map((party) => (
-                <div
-                  key={party.id}
-                  className="flex items-center justify-between gap-4 p-4"
+      <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        {filteredParties.length === 0 ? (
+          <div className="mt-12 mb-8 p-6 text-center text-sm text-gray-500">
+            No parties found matching your search.
+          </div>
+        ) : (
+          <div className="divide-y divide-gray-100">
+            {filteredParties.map((party) => (
+              <div
+                key={party.id}
+                className="flex items-center justify-between gap-4 p-4"
+              >
+                <Link
+                  href={`/${lang}/parties/${party.id}`}
+                  className="flex-1 min-w-0"
                 >
-                  <Link
-                    href={`/${lang}/parties/${party.id}`}
-                    className="flex-1 min-w-0"
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-900 truncate"
                   >
+                    {party.name}
+                  </Typography>
+                  <div className="flex items-center gap-1 mt-1">
+                    <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
                     <Typography
-                      variant="subtitle"
-                      level={3}
-                      className="text-gray-900 truncate"
+                      variant="body"
+                      level={4}
+                      className="text-gray-500 truncate"
                     >
-                      {party.name}
+                      {party.leaderUsername}
                     </Typography>
-                    <div className="flex items-center gap-1 mt-1">
-                      <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
-                      <Typography
-                        variant="body"
-                        level={4}
-                        className="text-gray-500 truncate"
-                      >
-                        {party.leaderUsername}
-                      </Typography>
-                    </div>
-                  </Link>
-                  <VoteButton
-                    electionId={electionId}
-                    partyId={party.id}
-                    size="sm"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+                  </div>
+                </Link>
+                <VoteButton
+                  electionId={electionId}
+                  partyId={party.id}
+                  size="sm"
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
