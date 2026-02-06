@@ -25,13 +25,15 @@ const BottomNav = () => {
   ];
 
   const isActive = (path: string) => {
-    const currentPath = pathname.split("/")[2] || "";
+    const sectionSegment = pathname.split("/")[2] || "";
+    // Treat the whole /[lang]/vote section (and its children) as the first tab
+    const currentSection = sectionSegment === "vote" ? "" : sectionSegment;
     const targetPath = path.slice(1) || "";
-    // Root path is active when there's no second segment
+    // Root path is active when we're on the root section or the vote section
     if (path === "/") {
-      return currentPath === "";
+      return currentSection === "";
     }
-    return currentPath === targetPath;
+    return currentSection === targetPath;
   };
 
   return (
