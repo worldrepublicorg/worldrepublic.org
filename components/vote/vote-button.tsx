@@ -67,14 +67,6 @@ export function VoteButton({
   };
 
   const handleVoteClick = () => {
-    // If partyId is provided, electionId is required for voting
-    if (partyId && !electionId) {
-      console.error(
-        "VoteButton: electionId is required when partyId is provided",
-      );
-      return;
-    }
-
     if (electionId) {
       // Direct vote flow — go straight to Self verification
       setSelfVerificationDialogOpen(true);
