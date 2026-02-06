@@ -74,12 +74,13 @@ export function PartyCard({
       )}
       onClick={handleCardClick}
     >
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
+      <div className="flex items-center justify-between gap-2">
+        <div className="min-w-0 flex-1">
           <Typography
             variant="subtitle"
             level={1}
-            className="text-[19px] font-semibold"
+            className="truncate text-[19px] font-semibold"
+            title={party.name}
           >
             {party.name}
           </Typography>

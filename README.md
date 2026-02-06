@@ -1,6 +1,6 @@
 # World Republic
 
-Open source Next.js app for the World Republic platform—discover and found parties, prep for elections and referendums, and verify identity with Self before voting. Includes server actions and UI; wire up your own auth, database, and deploy stack to get started.
+Open-source Next.js app for the World Republic platform—discover and found parties, prep for elections and referendums, and verify identity with Self before voting. Includes server actions and UI; wire up your own auth, database, and deploy stack to get started.
 
 ## Features
 
