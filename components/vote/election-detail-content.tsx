@@ -53,11 +53,14 @@ export function ElectionDetailContent({
   const isUpcoming = now < election.startsAt;
   const isEnded = now > election.endsAt;
 
-  const formatDate = (timestamp: number) => {
-    return new Date(timestamp).toLocaleDateString(undefined, {
+  const formatDateTime = (timestamp: number) => {
+    return new Date(timestamp).toLocaleString(undefined, {
       year: "numeric",
       month: "short",
       day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZoneName: "short",
     });
   };
 
@@ -102,7 +105,7 @@ export function ElectionDetailContent({
           <div className="flex items-center gap-2 p-4">
             <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
-              {formatDate(election.startsAt)} - {formatDate(election.endsAt)}
+              {formatDateTime(election.startsAt)} – {formatDateTime(election.endsAt)}
             </Typography>
           </div>
           <div className="flex items-center gap-2 p-4">
@@ -123,7 +126,7 @@ export function ElectionDetailContent({
       {isUpcoming && (
         <div className="flex flex-col items-center gap-3 rounded-xl border border-blue-100 bg-blue-50 p-6 text-center">
           <Typography variant="subtitle" level={2} className="text-blue-900">
-            Voting opens {formatDate(election.startsAt)}
+            Voting opens {formatDateTime(election.startsAt)}
           </Typography>
           <Typography variant="body" level={3} className="text-blue-700">
             Check back when the election starts to cast your vote.
