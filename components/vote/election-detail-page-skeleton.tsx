@@ -1,5 +1,14 @@
-import { Button, Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiCalendarBlank, PiCaretLeft, PiCoins, PiUserFocus } from "react-icons/pi";
+import {
+  Button,
+  Skeleton,
+  Typography,
+} from "@worldcoin/mini-apps-ui-kit-react";
+import {
+  PiCalendarBlank,
+  PiCaretLeft,
+  PiCoins,
+  PiUserFocus,
+} from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TopBar } from "@/components/topbar";
 
@@ -81,11 +90,8 @@ export function ElectionDetailPageSkeleton({
 
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between gap-4"
-              >
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+              <div key={i} className="flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <Skeleton height={24} width="60%" className="mb-1 rounded" />
                   <div className="flex items-center gap-1 mt-1">
@@ -98,11 +104,6 @@ export function ElectionDetailPageSkeleton({
             ))}
           </div>
         </div>
-
-        {/* Non-reactive Vote button - same as homepage */}
-        <Button disabled fullWidth className="mt-6!">
-          {dictionary.common.vote}
-        </Button>
       </div>
     </div>
   );
