@@ -44,7 +44,10 @@ export const metadata: Metadata = {
     template: APP_TITLE_TEMPLATE,
   },
   description: APP_DESCRIPTION,
-  icons: "/icons/apple-touch-icon.png",
+  icons: {
+    icon: "/icons/android-chrome-192x192.png",
+    apple: "/icons/apple-touch-icon.png",
+  },
   formatDetection: {
     telephone: false,
   },
