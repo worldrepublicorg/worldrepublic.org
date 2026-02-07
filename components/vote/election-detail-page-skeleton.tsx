@@ -1,4 +1,8 @@
-import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import {
+  Button,
+  Skeleton,
+  Typography,
+} from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiCalendarBlank,
   PiCaretLeft,
@@ -95,7 +99,9 @@ export function ElectionDetailPageSkeleton({
                     <Skeleton height={16} width={100} className="rounded" />
                   </div>
                 </div>
-                <Skeleton height={32} width={72} className="rounded-full" />
+                <Button disabled size="sm">
+                  {dictionary.common.vote}
+                </Button>
               </div>
             ))}
           </div>
