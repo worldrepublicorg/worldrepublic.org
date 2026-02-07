@@ -65,9 +65,9 @@ export function MyPartySection({
             <Skeleton height={30} width={30} className="rounded-full" />
           </div>
           {/* Party website */}
-          <div className="flex items-center justify-between mt-3">
-            <Skeleton height={20} width={120} />
-            <Skeleton height={20} width={95} />
+          <div className="flex items-center justif y-between mt-4">
+            <Skeleton height={22} width={120} />
+            <Skeleton height={22} width={95} />
           </div>
         </div>
       ) : userParty ? (
