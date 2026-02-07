@@ -26,8 +26,8 @@ export function ElectionDetailPageSkeleton({
       <div className="flex flex-1 flex-col p-6">
         {/* Hero section - skeletons for title and status badge */}
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
-          <Skeleton height={32} width={220} className="rounded-lg" />
-          <Skeleton height={24} width={72} className="rounded-full" />
+          <Skeleton height={36} width={200} className="rounded-lg" />
+          <Skeleton height={30} width={60} className="rounded-full" />
         </div>
 
         {/* Election info card - fixed header, skeletons for variable content */}
