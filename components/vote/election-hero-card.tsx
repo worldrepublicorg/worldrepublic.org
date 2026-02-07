@@ -3,6 +3,7 @@
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
+import { formatElectionDate } from "@/lib/format-date";
 import type { Election } from "@/lib/types/elections";
 
 interface ElectionHeroCardProps {
@@ -14,14 +15,6 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
   const isUpcoming = now < election.startsAt;
-
-  const formatDate = (timestamp: number) => {
-    return new Date(timestamp).toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
 
   return (
     <Link
@@ -53,7 +46,7 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={16} />
             <Typography variant="body" level={2}>
-              {formatDate(election.startsAt)} - {formatDate(election.endsAt)}
+              {formatElectionDate(election.startsAt, lang)} - {formatElectionDate(election.endsAt, lang)}
             </Typography>
           </div>
 

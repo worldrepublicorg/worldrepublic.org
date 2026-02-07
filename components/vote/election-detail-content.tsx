@@ -7,6 +7,7 @@ import { PiCalendarBlank, PiCoins, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionResults } from "@/components/vote/election-results";
 import { PartyVoteList } from "@/components/vote/party-vote-list";
+import { formatElectionDateTime } from "@/lib/format-date";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 
@@ -60,17 +61,6 @@ export function ElectionDetailContent({
   const isUpcoming = now < election.startsAt;
   const isEnded = now > election.endsAt;
 
-  const formatDateTime = (timestamp: number) => {
-    return new Date(timestamp).toLocaleString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      timeZoneName: "short",
-    });
-  };
-
   return (
     <div className="flex flex-1 min-h-full flex-col">
       {/* Hero section */}
@@ -110,8 +100,8 @@ export function ElectionDetailContent({
           <div className="flex items-center gap-2">
             <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
-              {formatDateTime(election.startsAt)} –{" "}
-              {formatDateTime(election.endsAt)}
+              {formatElectionDateTime(election.startsAt, lang)} –{" "}
+              {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
           <div className="flex items-center gap-2">
@@ -159,7 +149,7 @@ export function ElectionDetailContent({
           <Typography variant="subtitle" level={2} className="text-blue-900">
             {t.voting_opens.replace(
               "{date}",
-              formatDateTime(election.startsAt),
+              formatElectionDateTime(election.startsAt, lang),
             )}
           </Typography>
           <Typography variant="body" level={3} className="text-blue-700">
