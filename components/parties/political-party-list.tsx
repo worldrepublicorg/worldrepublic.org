@@ -720,11 +720,11 @@ export function PoliticalPartyList({
                 : dictionary.pages.govern.parties.refresh}
             </Button>
           </div>
-        ) : isSearchActive && isSearching ? (
+        ) : isSearchActive && (isSearching || searchResults === null) ? (
           <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.common.loading}
           </div>
-        ) : isSearchActive && (searchResults?.length ?? 0) === 0 ? (
+        ) : isSearchActive && searchResults !== null && searchResults.length === 0 ? (
           <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>

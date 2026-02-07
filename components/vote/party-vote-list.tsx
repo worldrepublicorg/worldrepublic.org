@@ -110,11 +110,11 @@ export function PartyVoteList({
 
       {/* Parties list */}
       <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-        {isSearchActive && isSearching ? (
+        {isSearchActive && (isSearching || searchResults === null) ? (
           <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
             {dictionary.common.loading}
           </div>
-        ) : listToShow.length === 0 ? (
+        ) : isSearchActive && searchResults !== null && searchResults.length === 0 ? (
           <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
