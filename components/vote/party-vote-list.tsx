@@ -109,16 +109,18 @@ export function PartyVoteList({
       </div>
 
       {/* Parties list */}
-      <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-        {isSearchActive && (isSearching || searchResults === null) ? (
-          <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
-            {dictionary.common.loading}
-          </div>
-        ) : isSearchActive && searchResults !== null && searchResults.length === 0 ? (
-          <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
-            {dictionary.pages.govern.parties.no_parties_found}
-          </div>
-        ) : (
+      {isSearchActive && (isSearching || searchResults === null) ? (
+        <div className="mt-12 mb-8 text-center text-sm text-gray-500">
+          {dictionary.common.loading}
+        </div>
+      ) : isSearchActive &&
+        searchResults !== null &&
+        searchResults.length === 0 ? (
+        <div className="mt-12 mb-8 text-center text-sm text-gray-500">
+          {dictionary.pages.govern.parties.no_parties_found}
+        </div>
+      ) : (
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
             {listToShow.map((party) => (
               <div
@@ -156,8 +158,8 @@ export function PartyVoteList({
               </div>
             ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
