@@ -95,9 +95,13 @@ export function MyPartySection({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="tertiary" size="sm" className="inline-flex items-center gap-1.5">
+            <Button
+              variant="tertiary"
+              size="sm"
+              className="inline-flex items-center gap-1.5"
+            >
               {dictionary.pages.govern.parties.learn_more}
-              <PiArrowSquareOut className="size-4 shrink-0" />
+              <PiArrowSquareOut className="size-4 shrink-0 text-gray-400" />
             </Button>
           </Link>
         </div>
