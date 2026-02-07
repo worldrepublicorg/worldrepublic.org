@@ -53,7 +53,7 @@ export function ElectionDetailPageSkeleton({
             </div>
             <div className="flex items-center gap-2">
               <PiCoins className="text-gray-400 shrink-0 size-4" />
-              <Skeleton height={20} width={160} className="rounded" />
+              <Skeleton height={19} width={160} className="rounded" />
             </div>
           </div>
         </div>
@@ -68,8 +68,9 @@ export function ElectionDetailPageSkeleton({
         </Typography>
 
         <div className="mb-5 h-12.5">
-          <div className="bg-gray-100 text-gray-900 inline-flex h-14 w-full shrink cursor-text items-center overflow-hidden rounded-[0.625rem] border border-gray-100 px-4 outline-none transition-all duration-300 ease-out gap-2">
-            <div className="inline-flex shrink-0 items-center justify-center text-gray-500">
+          <div className="bg-gray-100 text-gray-900 h-14 inline-flex w-full shrink cursor-text items-center overflow-hidden border border-gray-100 rounded-[0.625rem] outline-none transition-all duration-300 ease-out px-4 gap-2">
+            {/* Start adornment - search icon */}
+            <div className="inline-flex items-center justify-center shrink-0 text-gray-500">
               <svg
                 className="h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +85,14 @@ export function ElectionDetailPageSkeleton({
                 />
               </svg>
             </div>
-            <Skeleton height={20} width={120} className="rounded" />
+            {/* Input placeholder text */}
+            <input
+              type="text"
+              placeholder={dictionary.pages.govern.parties.search_placeholder}
+              disabled
+              className="peer inline-block h-full grow w-full appearance-none bg-transparent border-none text-gray-900 placeholder:text-gray-500 focus:outline-none focus-visible:outline-none disabled:cursor-not-allowed text-sm leading-tight"
+              readOnly
+            />
           </div>
         </div>
 
