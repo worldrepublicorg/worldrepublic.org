@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
-import { PiPlus } from "react-icons/pi";
+import { PiArrowSquareOut, PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyCard } from "@/components/parties/party-card";
 import type { Party } from "@/lib/types/parties";
@@ -90,9 +90,14 @@ export function MyPartySection({
           >
             {dictionary.pages.govern.parties.run_on_elections_and_earn}
           </Typography>
-          <Link href="https://docs.worldrepublic.org/building-blocks/party-subsidies">
-            <Button variant="tertiary" size="sm">
+          <Link
+            href="https://docs.worldrepublic.org/building-blocks/party-subsidies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="tertiary" size="sm" className="inline-flex items-center gap-1.5">
               {dictionary.pages.govern.parties.learn_more}
+              <PiArrowSquareOut className="size-4 shrink-0" />
             </Button>
           </Link>
         </div>
