@@ -73,6 +73,21 @@
         },
         "delete_party": "Eliminar partido",
         "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Elección",
+          "not_found": "Elección no encontrada",
+          "not_found_description": "La elección que buscas no existe.",
+          "back_to_elections": "Volver a elecciones",
+          "status_active": "Activa",
+          "status_upcoming": "Próxima",
+          "status_ended": "Finalizada",
+          "election_info": "Información de la elección",
+          "reward_pool": "Fondo de recompensas: {amount} WDD",
+          "voting_opens": "La votación abre {date}",
+          "check_back": "Vuelve cuando la elección comience para emitir tu voto."
+        }
       }
     },
     "menu": {

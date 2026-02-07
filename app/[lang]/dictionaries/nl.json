@@ -73,6 +73,21 @@
         },
         "delete_party": "Partij verwijderen",
         "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Verkiezing",
+          "not_found": "Verkiezing niet gevonden",
+          "not_found_description": "De verkiezing die je zoekt bestaat niet.",
+          "back_to_elections": "Terug naar verkiezingen",
+          "status_active": "Actief",
+          "status_upcoming": "Aankomend",
+          "status_ended": "Beëindigd",
+          "election_info": "Verkiezingsinformatie",
+          "reward_pool": "Beloningspool: {amount} WDD",
+          "voting_opens": "Stemming opent {date}",
+          "check_back": "Kom terug wanneer de verkiezing begint om je stem uit te brengen."
+        }
       }
     },
     "menu": {

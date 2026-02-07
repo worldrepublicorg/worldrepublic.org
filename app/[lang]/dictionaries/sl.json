@@ -73,6 +73,21 @@
         },
         "delete_party": "Izbriši stranko",
         "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Volitve",
+          "not_found": "Volitve niso najdene",
+          "not_found_description": "Volitve, ki jih iščete, ne obstajajo.",
+          "back_to_elections": "Nazaj na volitve",
+          "status_active": "Aktivne",
+          "status_upcoming": "Prihajajoče",
+          "status_ended": "Končane",
+          "election_info": "Informacije o volitvah",
+          "reward_pool": "Sklad nagrad: {amount} WDD",
+          "voting_opens": "Glasovanje se odpre {date}",
+          "check_back": "Vrnite se, ko se volitve začnejo, da oddate svoj glas."
+        }
       }
     },
     "menu": {

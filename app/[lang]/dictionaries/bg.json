@@ -73,6 +73,21 @@
         },
         "delete_party": "Изтрий партия",
         "run_on_elections_and_earn": "Участвайте в избори и получете субсидии"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Избори",
+          "not_found": "Изборите не са намерени",
+          "not_found_description": "Изборите, които търсите, не съществуват.",
+          "back_to_elections": "Назад към изборите",
+          "status_active": "Активни",
+          "status_upcoming": "Предстоящи",
+          "status_ended": "Приключили",
+          "election_info": "Информация за изборите",
+          "reward_pool": "Награден фонд: {amount} WDD",
+          "voting_opens": "Гласуването отваря {date}",
+          "check_back": "Върнете се, когато изборите започнат, за да гласувате."
+        }
       }
     },
     "menu": {

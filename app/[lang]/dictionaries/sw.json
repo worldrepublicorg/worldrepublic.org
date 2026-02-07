@@ -73,6 +73,21 @@
         },
         "delete_party": "Futa chama",
         "run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Uchaguzi",
+          "not_found": "Uchaguzi haujapatikana",
+          "not_found_description": "Uchaguzi unaoutafuta haupo.",
+          "back_to_elections": "Rudi kwa uchaguzi",
+          "status_active": "Inaendelea",
+          "status_upcoming": "Inakuja",
+          "status_ended": "Imemalizika",
+          "election_info": "Taarifa za uchaguzi",
+          "reward_pool": "Dimbwi la zawadi: {amount} WDD",
+          "voting_opens": "Kupiga kura kunafunguliwa {date}",
+          "check_back": "Rudi uchaguzi unapoanza ili kupiga kura yako."
+        }
       }
     },
     "menu": {

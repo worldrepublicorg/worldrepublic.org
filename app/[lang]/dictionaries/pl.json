@@ -73,6 +73,21 @@
         },
         "delete_party": "Usuń partię",
         "run_on_elections_and_earn": "Startuj w wyborach i otrzymaj dotacje"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Wybory",
+          "not_found": "Nie znaleziono wyborów",
+          "not_found_description": "Wybory, których szukasz, nie istnieją.",
+          "back_to_elections": "Powrót do wyborów",
+          "status_active": "Aktywne",
+          "status_upcoming": "Nadchodzące",
+          "status_ended": "Zakończone",
+          "election_info": "Informacje o wyborach",
+          "reward_pool": "Pula nagród: {amount} WDD",
+          "voting_opens": "Głosowanie otwiera się {date}",
+          "check_back": "Wróć, gdy wybory się rozpoczną, aby oddać głos."
+        }
       }
     },
     "menu": {

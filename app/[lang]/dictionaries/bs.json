@@ -73,6 +73,21 @@
         },
         "delete_party": "Obriši stranku",
         "run_on_elections_and_earn": "Kandidujte se na izborima i dobijte subvencije"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Izbori",
+          "not_found": "Izbori nisu pronađeni",
+          "not_found_description": "Izbori koje tražite ne postoje.",
+          "back_to_elections": "Nazad na izbore",
+          "status_active": "Aktivno",
+          "status_upcoming": "Predstojeće",
+          "status_ended": "Završeno",
+          "election_info": "Informacije o izborima",
+          "reward_pool": "Nagradni fond: {amount} WDD",
+          "voting_opens": "Glasanje se otvara {date}",
+          "check_back": "Vratite se kada izbori počnu kako biste glasali."
+        }
       }
     },
     "menu": {

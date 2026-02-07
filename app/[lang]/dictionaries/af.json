@@ -73,6 +73,21 @@
         },
         "delete_party": "Skrap party",
         "run_on_elections_and_earn": "Ding aan verkiesings en kry subsidies"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Verkiesing",
+          "not_found": "Verkiesing nie gevind nie",
+          "not_found_description": "Die verkiesing waarna jy soek, bestaan nie.",
+          "back_to_elections": "Terug na verkiesings",
+          "status_active": "Aktief",
+          "status_upcoming": "Komende",
+          "status_ended": "Beëindig",
+          "election_info": "Verkiesingsinligting",
+          "reward_pool": "Beloningspoel: {amount} WDD",
+          "voting_opens": "Stemming open {date}",
+          "check_back": "Kom terug wanneer die verkiesing begin om jou stem uit te bring."
+        }
       }
     },
     "menu": {

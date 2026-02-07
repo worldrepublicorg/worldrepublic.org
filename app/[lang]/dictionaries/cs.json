@@ -73,6 +73,21 @@
         },
         "delete_party": "Smazat stranu",
         "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Volby",
+          "not_found": "Volby nenalezeny",
+          "not_found_description": "Volby, které hledáte, neexistují.",
+          "back_to_elections": "Zpět na volby",
+          "status_active": "Aktivní",
+          "status_upcoming": "Nadcházející",
+          "status_ended": "Ukončené",
+          "election_info": "Informace o volbách",
+          "reward_pool": "Fond odměn: {amount} WDD",
+          "voting_opens": "Hlasování se otevírá {date}",
+          "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat."
+        }
       }
     },
     "menu": {

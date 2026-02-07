@@ -73,6 +73,21 @@
         },
         "delete_party": "ګوند ړنګ کړئ",
         "run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "ټاکنې",
+          "not_found": "ټاکنې ونه موندل شوې",
+          "not_found_description": "هغه ټاکنې چې تاسو یې لټوئ شتون نلري.",
+          "back_to_elections": "ټاکنو ته بیرته",
+          "status_active": "فعال",
+          "status_upcoming": "راتلونکې",
+          "status_ended": "پای ته رسیدلې",
+          "election_info": "د ټاکنو معلومات",
+          "reward_pool": "د انعام ذخیره: {amount} WDD",
+          "voting_opens": "رایه ورکول پرانیستل کیږي {date}",
+          "check_back": "خپله رایه ورکولو لپاره کله چې ټاکنې پیل شي بیرته راشئ."
+        }
       }
     },
     "menu": {

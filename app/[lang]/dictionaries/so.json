@@ -73,6 +73,21 @@
         },
         "delete_party": "Tirtir xisbiga",
         "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Doorasho",
+          "not_found": "Doorashada lama helin",
+          "not_found_description": "Doorashada aad raadinayso ma jirto.",
+          "back_to_elections": "Ku noqo doorashooyinka",
+          "status_active": "Firfircoon",
+          "status_upcoming": "Soo socda",
+          "status_ended": "Dhammaatay",
+          "election_info": "Macluumaadka doorashada",
+          "reward_pool": "Kaydka abaalmarinta: {amount} WDD",
+          "voting_opens": "Codayntu way furantahay {date}",
+          "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso."
+        }
       }
     },
     "menu": {

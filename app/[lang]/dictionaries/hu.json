@@ -73,6 +73,21 @@
         },
         "delete_party": "Párt törlése",
         "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Választás",
+          "not_found": "Választás nem található",
+          "not_found_description": "A keresett választás nem létezik.",
+          "back_to_elections": "Vissza a választásokhoz",
+          "status_active": "Aktív",
+          "status_upcoming": "Közelgő",
+          "status_ended": "Lezárult",
+          "election_info": "Választási információk",
+          "reward_pool": "Jutalmazási alap: {amount} WDD",
+          "voting_opens": "Szavazás megnyílik {date}",
+          "check_back": "Térjen vissza, amikor a választás elkezdődik, hogy leadhassa szavazatát."
+        }
       }
     },
     "menu": {

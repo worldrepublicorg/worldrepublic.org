@@ -73,6 +73,21 @@
         },
         "delete_party": "দল মুছে ফেলুন",
         "run_on_elections_and_earn": "নির্বাচনে অংশ নিন এবং ভর্তুকি পান"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "নির্বাচন",
+          "not_found": "নির্বাচন পাওয়া যায়নি",
+          "not_found_description": "আপনি যে নির্বাচনটি খুঁজছেন তা বিদ্যমান নেই।",
+          "back_to_elections": "নির্বাচনে ফিরে যান",
+          "status_active": "সক্রিয়",
+          "status_upcoming": "আসন্ন",
+          "status_ended": "সমাপ্ত",
+          "election_info": "নির্বাচনের তথ্য",
+          "reward_pool": "পুরস্কার পুল: {amount} WDD",
+          "voting_opens": "ভোটদান শুরু হবে {date}",
+          "check_back": "আপনার ভোট দিতে নির্বাচন শুরু হলে ফিরে আসুন।"
+        }
       }
     },
     "menu": {

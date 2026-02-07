@@ -73,6 +73,21 @@
         },
         "delete_party": "Partiyani o'chirish",
         "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Saylov",
+          "not_found": "Saylov topilmadi",
+          "not_found_description": "Siz qidirayotgan saylov mavjud emas.",
+          "back_to_elections": "Saylovlarga qaytish",
+          "status_active": "Faol",
+          "status_upcoming": "Kelayotgan",
+          "status_ended": "Tugagan",
+          "election_info": "Saylov ma'lumotlari",
+          "reward_pool": "Mukofot jamg'armasi: {amount} WDD",
+          "voting_opens": "Ovoz berish ochiladi {date}",
+          "check_back": "Ovoz berish uchun saylov boshlanganda qaytib keling."
+        }
       }
     },
     "menu": {

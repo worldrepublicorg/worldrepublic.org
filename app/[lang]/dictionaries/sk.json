@@ -73,6 +73,21 @@
         },
         "delete_party": "Vymazať stranu",
         "run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Voľby",
+          "not_found": "Voľby nenájdené",
+          "not_found_description": "Voľby, ktoré hľadáte, neexistujú.",
+          "back_to_elections": "Späť na voľby",
+          "status_active": "Aktívne",
+          "status_upcoming": "Nadchádzajúce",
+          "status_ended": "Ukončené",
+          "election_info": "Informácie o voľbách",
+          "reward_pool": "Fond odmien: {amount} WDD",
+          "voting_opens": "Hlasovanie sa otvára {date}",
+          "check_back": "Vráťte sa, keď voľby začnú, aby ste mohli hlasovať."
+        }
       }
     },
     "menu": {

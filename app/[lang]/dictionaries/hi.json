@@ -73,6 +73,21 @@
         },
         "delete_party": "दल हटाएं",
         "run_on_elections_and_earn": "चुनाव में भाग लें और अनुदान प्राप्त करें"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "चुनाव",
+          "not_found": "चुनाव नहीं मिला",
+          "not_found_description": "आप जो चुनाव खोज रहे हैं वह मौजूद नहीं है।",
+          "back_to_elections": "चुनावों पर वापस जाएँ",
+          "status_active": "सक्रिय",
+          "status_upcoming": "आगामी",
+          "status_ended": "समाप्त",
+          "election_info": "चुनाव जानकारी",
+          "reward_pool": "इनाम पूल: {amount} WDD",
+          "voting_opens": "मतदान खुलता है {date}",
+          "check_back": "अपना वोट डालने के लिए चुनाव शुरू होने पर वापस आएँ।"
+        }
       }
     },
     "menu": {

@@ -73,6 +73,21 @@
         },
         "delete_party": "Ištrinti partiją",
         "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Rinkimai",
+          "not_found": "Rinkimai nerasti",
+          "not_found_description": "Rinkimai, kurių ieškote, neegzistuoja.",
+          "back_to_elections": "Grįžti į rinkimus",
+          "status_active": "Aktyvūs",
+          "status_upcoming": "Būsimi",
+          "status_ended": "Pasibaigę",
+          "election_info": "Rinkimų informacija",
+          "reward_pool": "Atlygio fondas: {amount} WDD",
+          "voting_opens": "Balsavimas prasideda {date}",
+          "check_back": "Grįžkite, kai rinkimai prasidės, kad galėtumėte balsuoti."
+        }
       }
     },
     "menu": {

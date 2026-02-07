@@ -73,6 +73,21 @@
         },
         "delete_party": "Tanggalin ang partido",
         "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Halalan",
+          "not_found": "Hindi natagpuan ang halalan",
+          "not_found_description": "Ang halalan na hinahanap mo ay hindi umiiral.",
+          "back_to_elections": "Bumalik sa mga halalan",
+          "status_active": "Aktibo",
+          "status_upcoming": "Paparating",
+          "status_ended": "Natapos",
+          "election_info": "Impormasyon ng halalan",
+          "reward_pool": "Premyong pool: {amount} WDD",
+          "voting_opens": "Magbubukas ang botohan {date}",
+          "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto."
+        }
       }
     },
     "menu": {

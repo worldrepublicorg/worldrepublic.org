@@ -73,6 +73,21 @@
         },
         "delete_party": "Sguassà u partitu",
         "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Elezzione",
+          "not_found": "Elezzione micca truvata",
+          "not_found_description": "L'elezzione chì cercate ùn esiste micca.",
+          "back_to_elections": "Torna à l'elezzioni",
+          "status_active": "Attiva",
+          "status_upcoming": "In arrivu",
+          "status_ended": "Finita",
+          "election_info": "Infurmazione nant'à l'elezzione",
+          "reward_pool": "Fondu di ricumpensa: {amount} WDD",
+          "voting_opens": "U votu s'apre {date}",
+          "check_back": "Tornate quandu l'elezzione cumencia per vutà."
+        }
       }
     },
     "menu": {

@@ -73,6 +73,21 @@
         },
         "delete_party": "Partei löschen",
         "run_on_elections_and_earn": "Bei Wahlen antreten und Subventionen erhalten"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Wahl",
+          "not_found": "Wahl nicht gefunden",
+          "not_found_description": "Die gesuchte Wahl existiert nicht.",
+          "back_to_elections": "Zurück zu Wahlen",
+          "status_active": "Aktiv",
+          "status_upcoming": "Bevorstehend",
+          "status_ended": "Beendet",
+          "election_info": "Wahlinformationen",
+          "reward_pool": "Belohnungspool: {amount} WDD",
+          "voting_opens": "Abstimmung öffnet {date}",
+          "check_back": "Kommen Sie zurück, wenn die Wahl beginnt, um Ihre Stimme abzugeben."
+        }
       }
     },
     "menu": {

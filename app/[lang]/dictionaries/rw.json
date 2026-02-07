@@ -73,6 +73,21 @@
         },
         "delete_party": "Siba ishyirahamwe",
         "run_on_elections_and_earn": "Injira mu ntoranyamihigo no guhabwa imisanzure"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Amatora",
+          "not_found": "Amatora ntiyabonetse",
+          "not_found_description": "Amatora ushaka ntabwo abaho.",
+          "back_to_elections": "Subira ku matora",
+          "status_active": "Arakora",
+          "status_upcoming": "Aje",
+          "status_ended": "Yarangiye",
+          "election_info": "Amakuru y'amatora",
+          "reward_pool": "Ikigega cy'ibihembo: {amount} WDD",
+          "voting_opens": "Itora rifungura {date}",
+          "check_back": "Garuka iyo amatora atangiye kugira ngo utore."
+        }
       }
     },
     "menu": {

@@ -73,6 +73,21 @@
         },
         "delete_party": "Pa ẹgbẹ rẹ",
         "run_on_elections_and_earn": "Dara pẹlu awọn idibo ki o si gba awọn iranlọwọ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Ìdìbò",
+          "not_found": "A kò rí ìdìbò",
+          "not_found_description": "Ìdìbò tí o ń wá kò sí.",
+          "back_to_elections": "Padà sí àwọn ìdìbò",
+          "status_active": "Ṣíṣẹ́",
+          "status_upcoming": "Ń bọ̀",
+          "status_ended": "Ti parí",
+          "election_info": "Àlàyé ìdìbò",
+          "reward_pool": "Adágún ẹ̀bùn: {amount} WDD",
+          "voting_opens": "Ìdìbò ń ṣí {date}",
+          "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò."
+        }
       }
     },
     "menu": {

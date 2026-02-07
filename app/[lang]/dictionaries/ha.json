@@ -73,6 +73,21 @@
         },
         "delete_party": "Share jam'iyya",
         "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Zaɓe",
+          "not_found": "Ba a sami zaɓe ba",
+          "not_found_description": "Zaɓen da kuke nema ba ya wanzu.",
+          "back_to_elections": "Komawa zuwa zaɓe",
+          "status_active": "Mai aiki",
+          "status_upcoming": "Mai zuwa",
+          "status_ended": "Ya ƙare",
+          "election_info": "Bayanan zaɓe",
+          "reward_pool": "Tafkin lada: {amount} WDD",
+          "voting_opens": "Jefa ƙuri'a ya buɗe {date}",
+          "check_back": "Ku dawo lokacin da zaɓe ya fara don jefa ƙuri'arku."
+        }
       }
     },
     "menu": {

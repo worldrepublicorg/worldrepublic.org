@@ -29,6 +29,21 @@
           "button": "Test"
         }
       },
+      "elections": {
+        "detail": {
+          "topbar_title": "Election",
+          "not_found": "Election not found",
+          "not_found_description": "The election you're looking for doesn't exist.",
+          "back_to_elections": "Back to elections",
+          "status_active": "Active",
+          "status_upcoming": "Upcoming",
+          "status_ended": "Ended",
+          "election_info": "Election info",
+          "reward_pool": "Reward pool: {amount} WDD",
+          "voting_opens": "Voting opens {date}",
+          "check_back": "Check back when the election starts to cast your vote."
+        }
+      },
       "parties": {
         "tabs": {
           "registry": "Registry",

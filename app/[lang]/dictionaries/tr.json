@@ -73,6 +73,21 @@
         },
         "delete_party": "Partiyi sil",
         "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Seçim",
+          "not_found": "Seçim bulunamadı",
+          "not_found_description": "Aradığınız seçim mevcut değil.",
+          "back_to_elections": "Seçimlere geri dön",
+          "status_active": "Aktif",
+          "status_upcoming": "Yaklaşan",
+          "status_ended": "Sona erdi",
+          "election_info": "Seçim bilgileri",
+          "reward_pool": "Ödül havuzu: {amount} WDD",
+          "voting_opens": "Oylama açılıyor {date}",
+          "check_back": "Oyunuzu kullanmak için seçim başladığında geri dönün."
+        }
       }
     },
     "menu": {

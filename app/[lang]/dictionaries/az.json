@@ -73,6 +73,21 @@
         },
         "delete_party": "Partiyanı sil",
         "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Seçki",
+          "not_found": "Seçki tapılmadı",
+          "not_found_description": "Axtardığınız seçki mövcud deyil.",
+          "back_to_elections": "Seçkilərə qayıt",
+          "status_active": "Aktiv",
+          "status_upcoming": "Gələcək",
+          "status_ended": "Bitmiş",
+          "election_info": "Seçki məlumatı",
+          "reward_pool": "Mükafat hovuzu: {amount} WDD",
+          "voting_opens": "Səsvermə açılır {date}",
+          "check_back": "Səsinizi vermək üçün seçki başlayanda geri qayıdın."
+        }
       }
     },
     "menu": {

@@ -73,6 +73,21 @@
         },
         "delete_party": "حذف حزب",
         "run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "انتخابات",
+          "not_found": "انتخابات یافت نشد",
+          "not_found_description": "انتخاباتی که به دنبال آن هستید وجود ندارد.",
+          "back_to_elections": "بازگشت به انتخابات",
+          "status_active": "فعال",
+          "status_upcoming": "آینده",
+          "status_ended": "پایان‌یافته",
+          "election_info": "اطلاعات انتخابات",
+          "reward_pool": "مخزن پاداش: {amount} WDD",
+          "voting_opens": "رأی‌گیری باز می‌شود {date}",
+          "check_back": "برای رأی دادن، زمانی که انتخابات شروع شد بازگردید."
+        }
       }
     },
     "menu": {

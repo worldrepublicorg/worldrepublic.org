@@ -73,6 +73,21 @@
         },
         "delete_party": "ပါတီကို ဖျက်ပါ",
         "run_on_elections_and_earn": "ရွေးကောက်ပွဲတွင် ဝင်ရောက်ယှဉ်ပြိုင်ပြီး ထောက်ပံ့ငွေရယူပါ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "ရွေးကောက်ပွဲ",
+          "not_found": "ရွေးကောက်ပွဲ မတွေ့ပါ",
+          "not_found_description": "သင်ရှာဖွေနေသော ရွေးကောက်ပွဲ မရှိပါ။",
+          "back_to_elections": "ရွေးကောက်ပွဲများသို့ ပြန်သွားရန်",
+          "status_active": "လက်ရှိ",
+          "status_upcoming": "လာမည့်",
+          "status_ended": "ပြီးဆုံးပြီ",
+          "election_info": "ရွေးကောက်ပွဲ အချက်အလက်",
+          "reward_pool": "ဆုလာဘ်ရန်ပုံငွေ: {amount} WDD",
+          "voting_opens": "မဲပေးခြင်း စတင်သည် {date}",
+          "check_back": "သင့်မဲပေးရန် ရွေးကောက်ပွဲ စတင်သည့်အခါ ပြန်လာပါ။"
+        }
       }
     },
     "menu": {

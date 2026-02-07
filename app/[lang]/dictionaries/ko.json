@@ -73,6 +73,21 @@
         },
         "delete_party": "정당 삭제",
         "run_on_elections_and_earn": "선거에 출마하고 보조금을 받으세요"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "선거",
+          "not_found": "선거를 찾을 수 없습니다",
+          "not_found_description": "찾으시는 선거가 존재하지 않습니다.",
+          "back_to_elections": "선거 목록으로 돌아가기",
+          "status_active": "진행 중",
+          "status_upcoming": "예정",
+          "status_ended": "종료",
+          "election_info": "선거 정보",
+          "reward_pool": "보상 풀: {amount} WDD",
+          "voting_opens": "투표 시작 {date}",
+          "check_back": "선거가 시작되면 투표하러 다시 방문해 주세요."
+        }
       }
     },
     "menu": {

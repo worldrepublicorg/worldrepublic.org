@@ -73,6 +73,21 @@
         },
         "delete_party": "Xóa đảng",
         "run_on_elections_and_earn": "Tham gia bầu cử và nhận trợ cấp"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Bầu cử",
+          "not_found": "Không tìm thấy cuộc bầu cử",
+          "not_found_description": "Cuộc bầu cử bạn đang tìm kiếm không tồn tại.",
+          "back_to_elections": "Quay lại danh sách bầu cử",
+          "status_active": "Đang diễn ra",
+          "status_upcoming": "Sắp tới",
+          "status_ended": "Đã kết thúc",
+          "election_info": "Thông tin bầu cử",
+          "reward_pool": "Quỹ giải thưởng: {amount} WDD",
+          "voting_opens": "Bỏ phiếu mở {date}",
+          "check_back": "Quay lại khi cuộc bầu cử bắt đầu để bỏ phiếu."
+        }
       }
     },
     "menu": {

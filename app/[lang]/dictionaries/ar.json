@@ -73,6 +73,21 @@
         },
         "delete_party": "حذف الحزب",
         "run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "انتخاب",
+          "not_found": "الانتخاب غير موجود",
+          "not_found_description": "الانتخاب الذي تبحث عنه غير موجود.",
+          "back_to_elections": "العودة إلى الانتخابات",
+          "status_active": "نشط",
+          "status_upcoming": "قادم",
+          "status_ended": "انتهى",
+          "election_info": "معلومات الانتخاب",
+          "reward_pool": "مجمع المكافآت: {amount} WDD",
+          "voting_opens": "يفتح التصويت {date}",
+          "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك."
+        }
       }
     },
     "menu": {

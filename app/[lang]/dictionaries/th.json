@@ -73,6 +73,21 @@
         },
         "delete_party": "ลบพรรค",
         "run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "การเลือกตั้ง",
+          "not_found": "ไม่พบการเลือกตั้ง",
+          "not_found_description": "การเลือกตั้งที่คุณกำลังมองหาไม่มีอยู่",
+          "back_to_elections": "กลับไปที่การเลือกตั้ง",
+          "status_active": "กำลังดำเนินการ",
+          "status_upcoming": "กำลังจะมาถึง",
+          "status_ended": "สิ้นสุดแล้ว",
+          "election_info": "ข้อมูลการเลือกตั้ง",
+          "reward_pool": "กองทุนรางวัล: {amount} WDD",
+          "voting_opens": "การลงคะแนนเปิด {date}",
+          "check_back": "กลับมาเมื่อการเลือกตั้งเริ่มต้นเพื่อลงคะแนนของคุณ"
+        }
       }
     },
     "menu": {

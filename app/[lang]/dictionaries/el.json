@@ -73,6 +73,21 @@
         },
         "delete_party": "Διαγραφή κόμματος",
         "run_on_elections_and_earn": "Καταθέστε υποψηφιότητα στις εκλογές και λάβετε επιδοτήσεις"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Εκλογή",
+          "not_found": "Η εκλογή δεν βρέθηκε",
+          "not_found_description": "Η εκλογή που αναζητάτε δεν υπάρχει.",
+          "back_to_elections": "Πίσω στις εκλογές",
+          "status_active": "Ενεργή",
+          "status_upcoming": "Επερχόμενη",
+          "status_ended": "Ολοκληρωμένη",
+          "election_info": "Πληροφορίες εκλογής",
+          "reward_pool": "Ταμείο ανταμοιβών: {amount} WDD",
+          "voting_opens": "Η ψηφοφορία ανοίγει {date}",
+          "check_back": "Επιστρέψτε όταν ξεκινήσει η εκλογή για να ψηφίσετε."
+        }
       }
     },
     "menu": {

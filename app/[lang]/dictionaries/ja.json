@@ -73,6 +73,21 @@
         },
         "delete_party": "政党を削除",
         "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "選挙",
+          "not_found": "選挙が見つかりません",
+          "not_found_description": "お探しの選挙は存在しません。",
+          "back_to_elections": "選挙一覧に戻る",
+          "status_active": "投票中",
+          "status_upcoming": "予定",
+          "status_ended": "終了",
+          "election_info": "選挙情報",
+          "reward_pool": "報酬プール: {amount} WDD",
+          "voting_opens": "投票開始 {date}",
+          "check_back": "選挙が始まったら投票するために戻ってきてください。"
+        }
       }
     },
     "menu": {

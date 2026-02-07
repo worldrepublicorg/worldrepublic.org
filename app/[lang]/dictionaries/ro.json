@@ -73,6 +73,21 @@
         },
         "delete_party": "Șterge partidul",
         "run_on_elections_and_earn": "Candidează la alegeri și primește subvenții"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Alegeri",
+          "not_found": "Alegerile nu au fost găsite",
+          "not_found_description": "Alegerile pe care le căutați nu există.",
+          "back_to_elections": "Înapoi la alegeri",
+          "status_active": "Active",
+          "status_upcoming": "Viitoare",
+          "status_ended": "Încheiate",
+          "election_info": "Informații despre alegeri",
+          "reward_pool": "Fond de recompense: {amount} WDD",
+          "voting_opens": "Votarea se deschide {date}",
+          "check_back": "Reveniți când alegerile încep pentru a vota."
+        }
       }
     },
     "menu": {

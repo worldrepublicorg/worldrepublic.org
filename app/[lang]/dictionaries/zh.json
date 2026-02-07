@@ -73,6 +73,21 @@
         },
         "delete_party": "删除政党",
         "run_on_elections_and_earn": "参加选举并获得补贴"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "选举",
+          "not_found": "未找到选举",
+          "not_found_description": "您查找的选举不存在。",
+          "back_to_elections": "返回选举列表",
+          "status_active": "进行中",
+          "status_upcoming": "即将开始",
+          "status_ended": "已结束",
+          "election_info": "选举信息",
+          "reward_pool": "奖池: {amount} WDD",
+          "voting_opens": "投票开放 {date}",
+          "check_back": "选举开始后回来投票。"
+        }
       }
     },
     "menu": {

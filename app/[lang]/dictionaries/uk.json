@@ -73,6 +73,21 @@
         },
         "delete_party": "Видалити партію",
         "run_on_elections_and_earn": "Беріть участь у виборах і отримуйте субсидії"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Вибори",
+          "not_found": "Вибори не знайдено",
+          "not_found_description": "Вибори, які ви шукаєте, не існують.",
+          "back_to_elections": "Повернутися до виборів",
+          "status_active": "Активні",
+          "status_upcoming": "Майбутні",
+          "status_ended": "Завершені",
+          "election_info": "Інформація про вибори",
+          "reward_pool": "Призовий фонд: {amount} WDD",
+          "voting_opens": "Голосування відкривається {date}",
+          "check_back": "Поверніться, коли вибори розпочнуться, щоб проголосувати."
+        }
       }
     },
     "menu": {

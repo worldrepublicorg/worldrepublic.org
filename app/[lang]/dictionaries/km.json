@@ -73,6 +73,21 @@
         },
         "delete_party": "លុបគណបក្ស",
         "run_on_elections_and_earn": "ចូលរួមការបោះឆ្នោត និងទទួលបានការបញ្ចុះតម្លៃ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "ការបោះឆ្នោត",
+          "not_found": "រកមិនឃើញការបោះឆ្នោត",
+          "not_found_description": "ការបោះឆ្នោតដែលអ្នកកំពុងស្វែងរកមិនមានទេ។",
+          "back_to_elections": "ត្រឡប់ទៅការបោះឆ្នោត",
+          "status_active": "សកម្ម",
+          "status_upcoming": "នាពេលខាងមុខ",
+          "status_ended": "បានបញ្ចប់",
+          "election_info": "ព័ត៌មានការបោះឆ្នោត",
+          "reward_pool": "មូលនិធិរង្វាន់: {amount} WDD",
+          "voting_opens": "ការបោះឆ្នោតបើក {date}",
+          "check_back": "សូមត្រឡប់មកវិញពេលការបោះឆ្នោតចាប់ផ្តើមដើម្បីបោះឆ្នោតរបស់អ្នក។"
+        }
       }
     },
     "menu": {

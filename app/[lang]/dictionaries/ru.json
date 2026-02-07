@@ -73,6 +73,21 @@
         },
         "delete_party": "Удалить партию",
         "run_on_elections_and_earn": "Участвуйте в выборах и получайте субсидии"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Выборы",
+          "not_found": "Выборы не найдены",
+          "not_found_description": "Выборы, которые вы ищете, не существуют.",
+          "back_to_elections": "Назад к выборам",
+          "status_active": "Активные",
+          "status_upcoming": "Предстоящие",
+          "status_ended": "Завершённые",
+          "election_info": "Информация о выборах",
+          "reward_pool": "Призовой фонд: {amount} WDD",
+          "voting_opens": "Голосование открывается {date}",
+          "check_back": "Вернитесь, когда выборы начнутся, чтобы проголосовать."
+        }
       }
     },
     "menu": {

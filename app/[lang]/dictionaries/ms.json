@@ -73,6 +73,21 @@
         },
         "delete_party": "Padam parti",
         "run_on_elections_and_earn": "Bertanding dalam pilihan raya dan dapatkan subsidi"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Pilihan Raya",
+          "not_found": "Pilihan raya tidak ditemui",
+          "not_found_description": "Pilihan raya yang anda cari tidak wujud.",
+          "back_to_elections": "Kembali ke pilihan raya",
+          "status_active": "Aktif",
+          "status_upcoming": "Akan datang",
+          "status_ended": "Tamat",
+          "election_info": "Maklumat pilihan raya",
+          "reward_pool": "Kumpulan ganjaran: {amount} WDD",
+          "voting_opens": "Pengundian dibuka {date}",
+          "check_back": "Kembali apabila pilihan raya bermula untuk mengundi."
+        }
       }
     },
     "menu": {

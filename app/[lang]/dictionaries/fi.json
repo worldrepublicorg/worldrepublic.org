@@ -73,6 +73,21 @@
         },
         "delete_party": "Poista puolue",
         "run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Vaali",
+          "not_found": "Vaalia ei löytynyt",
+          "not_found_description": "Etsimääsi vaalia ei ole olemassa.",
+          "back_to_elections": "Takaisin vaaleihin",
+          "status_active": "Aktiivinen",
+          "status_upcoming": "Tuleva",
+          "status_ended": "Päättynyt",
+          "election_info": "Vaalitiedot",
+          "reward_pool": "Palkintopooli: {amount} WDD",
+          "voting_opens": "Äänestys avautuu {date}",
+          "check_back": "Palaa takaisin vaalin alkaessa äänestääksesi."
+        }
       }
     },
     "menu": {

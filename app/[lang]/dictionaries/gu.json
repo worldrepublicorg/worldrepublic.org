@@ -73,6 +73,21 @@
         },
         "delete_party": "પક્ષ કાઢી નાખો",
         "run_on_elections_and_earn": "ચૂંટણીમાં ભાગ લો અને સબસિડી મેળવો"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "ચૂંટણી",
+          "not_found": "ચૂંટણી મળી નથી",
+          "not_found_description": "તમે જે ચૂંટણી શોધી રહ્યા છો તે અસ્તિત્વમાં નથી.",
+          "back_to_elections": "ચૂંટણીઓ પર પાછા જાઓ",
+          "status_active": "સક્રિય",
+          "status_upcoming": "આગામી",
+          "status_ended": "સમાપ્ત",
+          "election_info": "ચૂંટણી માહિતી",
+          "reward_pool": "ઈનામ પૂલ: {amount} WDD",
+          "voting_opens": "મતદાન ખુલશે {date}",
+          "check_back": "તમારો મત આપવા માટે ચૂંટણી શરૂ થાય ત્યારે પાછા આવો."
+        }
       }
     },
     "menu": {

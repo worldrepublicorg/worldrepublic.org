@@ -1,4 +1,5 @@
 import { unstable_cache } from "next/cache";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { getElection, getElectionResults } from "@/lib/actions/elections";
 import { getParties } from "@/lib/actions/parties";
 import type { Election, ElectionResult } from "@/lib/types/elections";
@@ -35,6 +36,7 @@ export default async function ElectionDetailPage({
   params: Promise<{ lang: string; id: string }>;
 }) {
   const { lang, id } = await params;
+  const dictionary = await getDictionary(lang);
 
   const election: Election | null = await getCachedElection(id);
 
@@ -45,6 +47,7 @@ export default async function ElectionDetailPage({
         parties={[]}
         results={[]}
         lang={lang}
+        dictionary={dictionary}
       />
     );
   }
@@ -69,6 +72,7 @@ export default async function ElectionDetailPage({
       parties={electionParties}
       results={results}
       lang={lang}
+      dictionary={dictionary}
     />
   );
 }

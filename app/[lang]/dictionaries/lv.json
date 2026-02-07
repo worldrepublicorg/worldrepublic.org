@@ -73,6 +73,21 @@
         },
         "delete_party": "Dzēst partiju",
         "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Vēlēšanas",
+          "not_found": "Vēlēšanas nav atrastas",
+          "not_found_description": "Jūsu meklētās vēlēšanas nepastāv.",
+          "back_to_elections": "Atpakaļ uz vēlēšanām",
+          "status_active": "Aktīvas",
+          "status_upcoming": "Gaidāmas",
+          "status_ended": "Beigušās",
+          "election_info": "Vēlēšanu informācija",
+          "reward_pool": "Atlīdzības fonds: {amount} WDD",
+          "voting_opens": "Balsošana sākas {date}",
+          "check_back": "Atgriezieties, kad vēlēšanas sāksies, lai balsotu."
+        }
       }
     },
     "menu": {

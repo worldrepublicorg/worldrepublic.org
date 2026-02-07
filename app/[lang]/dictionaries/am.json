@@ -73,6 +73,21 @@
         },
         "delete_party": "ፓርቲ ሰርዝ",
         "run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "ምርጫ",
+          "not_found": "ምርጫ አልተገኘም",
+          "not_found_description": "እየፈለጉት ያለው ምርጫ የለም።",
+          "back_to_elections": "ወደ ምርጫዎች ተመለስ",
+          "status_active": "ንቁ",
+          "status_upcoming": "መጪ",
+          "status_ended": "ያለቀ",
+          "election_info": "የምርጫ መረጃ",
+          "reward_pool": "የሽልማት ገንዳ: {amount} WDD",
+          "voting_opens": "ድምጽ መስጫ ይከፈታል {date}",
+          "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ።"
+        }
       }
     },
     "menu": {

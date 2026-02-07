@@ -73,6 +73,21 @@
         },
         "delete_party": "Ջնջել կուսակցությունը",
         "run_on_elections_and_earn": "Մասնակցեք ընտրություններին և ստացեք սուբսիդիաներ"
+      },
+      "elections": {
+        "detail": {
+          "topbar_title": "Ընտրություն",
+          "not_found": "Ընտրությունը չի գտնվել",
+          "not_found_description": " Delays փնտրdelays delays գdelaysdelays :",
+          "back_to_elections": "Վerays delays tndelays",
+          "status_active": "Ակdelays",
+          "status_upcoming": "Apsdelays",
+          "status_ended": "Avedays",
+          "election_info": "Wndelays delays",
+          "reward_pool": "Wdelays delays: {amount} WDD",
+          "voting_opens": "Qdelays delays {date}",
+          "check_back": "Vedays delays delays delays wndelays delays delays."
+        }
       }
     },
     "menu": {
