@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswap တွင်",
-          "monad": "Monad WDD Uniswap တွင်",
-          "world": "World Chain WDD Uniswap တွင်",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumper တွင်",
+          "uniswap": "WDD Uniswap တွင်"
         },
         "delete_account": {
           "description": "ဤအရာသည် သင့်အကောင့်ကို အမြဲတမ်းဖျက်ပြီး သင့်ဒေတာအားလုံးကို ကျွန်ုပ်တို့၏ဆာဗာများမှ ဖယ်ရှားမည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြင်ဆင်မရပါ — ကျေးဇူးပြု၍ သတိဖြင့် ဆက်လက်ပါ။",

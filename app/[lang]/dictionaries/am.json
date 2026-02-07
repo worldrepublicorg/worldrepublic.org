@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD በUniswap ላይ",
-          "monad": "Monad WDD በUniswap ላይ",
-          "world": "World Chain WDD በUniswap ላይ",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD በJumper ላይ",
+          "uniswap": "WDD በUniswap ላይ"
         },
         "delete_account": {
           "description": "ይህ የእርስዎን መለያ ለዘለዓለም ያጠፋል እና ሁሉንም ውሂቦችዎን ከሰርቨሮቻችን ያስወግዳል። ይህ እርምጃ ሊመለስ አይችልም — እባክዎ በጥንቃቄ ይሂዱ።",

@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswapissa",
-          "monad": "Monad WDD Uniswapissa",
-          "world": "World Chain WDD Uniswapissa",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumperissa",
+          "uniswap": "WDD Uniswapissa"
         },
         "delete_account": {
           "description": "Tämä poistaa pysyvästi tilisi ja poistaa kaikki tietosi palvelimiltamme. Tätä toimintoa ei voi perua — jatka varovasti.",

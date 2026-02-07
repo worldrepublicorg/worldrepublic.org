@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD sur Uniswap",
-          "monad": "Monad WDD sur Uniswap",
-          "world": "World Chain WDD sur Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD sur Jumper",
+          "uniswap": "WDD sur Uniswap"
         },
         "delete_account": {
           "description": "Cela supprimera définitivement votre compte et supprimera toutes vos données de nos serveurs. Cette action ne peut pas être annulée — veuillez continuer avec précaution.",

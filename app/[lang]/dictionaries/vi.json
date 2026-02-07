@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD trên Uniswap",
-          "monad": "Monad WDD trên Uniswap",
-          "world": "World Chain WDD trên Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD trên Jumper",
+          "uniswap": "WDD trên Uniswap"
         },
         "delete_account": {
           "description": "Điều này sẽ xóa vĩnh viễn tài khoản của bạn và xóa tất cả dữ liệu khỏi máy chủ của chúng tôi. Hành động này không thể hoàn tác — vui lòng tiếp tục một cách thận trọng.",

@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD 在 Uniswap 上",
-          "monad": "Monad WDD 在 Uniswap 上",
-          "world": "World Chain WDD 在 Uniswap 上",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD 在 Jumper 上",
+          "uniswap": "WDD 在 Uniswap 上"
         },
         "delete_account": {
           "description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",

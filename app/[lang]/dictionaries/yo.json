@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD lori Uniswap",
-          "monad": "Monad WDD lori Uniswap",
-          "world": "World Chain WDD lori Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD lori Jumper",
+          "uniswap": "WDD lori Uniswap"
         },
         "delete_account": {
           "description": "Eyi yoo pa iroyin rẹ lailai ati yọ awọn data rẹ kuro ni awọn server wa. Iṣẹ yii ko le yipada — tẹsiwaju pẹlu iṣọra.",

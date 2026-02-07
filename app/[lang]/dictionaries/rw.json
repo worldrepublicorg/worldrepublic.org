@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD kuri Uniswap",
-          "monad": "Monad WDD kuri Uniswap",
-          "world": "World Chain WDD kuri Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD kuri Jumper",
+          "uniswap": "WDD kuri Uniswap"
         },
         "delete_account": {
           "description": "Ibi bizasiba konti yawe byuzuye kandi bizakuramo amakuru yawe yose ku maseriveri yacu. Iki gikorwa ntikishobora guhindurwa — komeza ufatanya.",

@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswap-da",
-          "monad": "Monad WDD Uniswap-da",
-          "world": "World Chain WDD Uniswap-da",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumper-da",
+          "uniswap": "WDD Uniswap-da"
         },
         "delete_account": {
           "description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",

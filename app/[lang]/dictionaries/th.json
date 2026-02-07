@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD บน Uniswap",
-          "monad": "Monad WDD บน Uniswap",
-          "world": "World Chain WDD บน Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD บน Jumper",
+          "uniswap": "WDD บน Uniswap"
         },
         "delete_account": {
           "description": "การดำเนินการนี้จะลบบัญชีของคุณอย่างถาวรและลบข้อมูลทั้งหมดของคุณจากเซิร์ฟเวอร์ของเรา การดำเนินการนี้ไม่สามารถยกเลิกได้ — กรุณาดำเนินการต่อด้วยความระมัดระวัง",

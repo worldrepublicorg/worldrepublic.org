@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswap",
-          "monad": "Monad WDD Uniswap",
-          "world": "World Chain WDD Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumper",
+          "uniswap": "WDD Uniswap"
         },
         "delete_account": {
           "description": "Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių. Šio veiksmo negalima atšaukti — tęskite atsargiai.",

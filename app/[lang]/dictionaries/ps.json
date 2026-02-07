@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD په Uniswap کې",
-          "monad": "Monad WDD په Uniswap کې",
-          "world": "World Chain WDD په Uniswap کې",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD په Jumper کې",
+          "uniswap": "WDD په Uniswap کې"
         },
         "delete_account": {
           "description": "دا به ستاسو حساب د تل لپاره ړنګ کړي او ټول معلومات د زموږ سرورونو څخه لرې کړي. دا عمل بیرته راګرځول کیدی نشي — مهرباني وکړئ په احتیاط سره ادامه ورکړئ.",

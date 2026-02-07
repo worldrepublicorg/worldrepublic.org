@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswap",
-          "monad": "Monad WDD Uniswap",
-          "world": "World Chain WDD Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumper",
+          "uniswap": "WDD Uniswap"
         },
         "delete_account": {
           "description": "Tani waxay tirtiri doontaa akoonkaaga si joogto ah waxayna ka saari doontaa dhammaan xogtaaga serverkeena. Tallaaboobadan ma la soo celin karo — fadlan sii wad si taxadar leh.",

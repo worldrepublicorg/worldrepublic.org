@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD を Uniswap で",
-          "monad": "Monad WDD を Uniswap で",
-          "world": "World Chain WDD を Uniswap で",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD を Jumper で",
+          "uniswap": "WDD を Uniswap で"
         },
         "delete_account": {
           "description": "これにより、アカウントが永続的に削除され、すべてのデータがサーバーから削除されます。この操作は元に戻せません — 慎重に続行してください。",

@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD na Uniswap",
-          "monad": "Monad WDD na Uniswap",
-          "world": "World Chain WDD na Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD na Jumper",
+          "uniswap": "WDD na Uniswap"
         },
         "delete_account": {
           "description": "Toto permanentne vymaže váš účet a odstráni všetky vaše dáta z našich serverov. Túto akciu nemožno vrátiť späť — pokračujte opatrne.",

@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD akan Uniswap",
-          "monad": "Monad WDD akan Uniswap",
-          "world": "World Chain WDD akan Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD akan Jumper",
+          "uniswap": "WDD akan Uniswap"
         },
         "delete_account": {
           "description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",

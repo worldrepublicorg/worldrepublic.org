@@ -451,7 +451,7 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label="WDD on Jumper"
+                        label={dictionary.pages.wallet.modals.trade.jumper}
                         startAdornment={
                           <Image
                             src="/icons/exchanges/jumper.png"
@@ -474,7 +474,7 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label="WDD on Uniswap"
+                        label={dictionary.pages.wallet.modals.trade.uniswap}
                         startAdornment={
                           <Image
                             src="/icons/exchanges/uniswap.png"

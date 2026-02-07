@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD kwenye Uniswap",
-          "monad": "Monad WDD kwenye Uniswap",
-          "world": "World Chain WDD kwenye Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD kwenye Jumper",
+          "uniswap": "WDD kwenye Uniswap"
         },
         "delete_account": {
           "description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",

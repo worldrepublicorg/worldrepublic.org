@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD Uniswap-ում",
-          "monad": "Monad WDD Uniswap-ում",
-          "world": "World Chain WDD Uniswap-ում",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD Jumper-ում",
+          "uniswap": "WDD Uniswap-ում"
         },
         "delete_account": {
           "description": "Սա մշտապես կջնջի ձեր հաշիվը և կհեռացնի բոլոր ձեր տվյալները մեր սերվերներից: Այս գործողությունը չի կարող հետարկվել — խնդրում ենք շարունակել զգուշորեն:",

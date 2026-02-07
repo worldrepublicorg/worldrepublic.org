@@ -134,12 +134,8 @@
           }
         },
         "trade": {
-          "base": "Base WDD nantu à Uniswap",
-          "monad": "Monad WDD nantu à Uniswap",
-          "world": "World Chain WDD nantu à Uniswap",
-          "base_alt": "Base",
-          "monad_alt": "Monad",
-          "world_alt": "World Chain"
+          "jumper": "WDD nantu à Jumper",
+          "uniswap": "WDD nantu à Uniswap"
         },
         "delete_account": {
           "description": "Questu sguasserà permanentemente u to cuntu è rimuverà tutti i to dati da i nostri serveri. Questa azione ùn pò esse annullata — per piacè cuntinue cù cura.",
