@@ -22,61 +22,20 @@ body {
     "Helvetica Neue", Arial, sans-serif;
 }
 
+.safe-area-spacer {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 .pb-safe {
-  padding-bottom: 56px; /* Default padding */
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
 }
 
 .mb-safe {
-  margin-bottom: 56px; /* Default margin */
-}
-
-@media only screen and (device-width: 375px) and (device-height: 812px) and (
-    -webkit-device-pixel-ratio: 3
-  ),
-  /* iPhone X/XS/11 Pro */ only screen and (device-width: 414px) and (
-    device-height: 896px
-  ) and (-webkit-device-pixel-ratio: 2),
-  /* iPhone XR/11 */ only screen and (device-width: 390px) and (
-    device-height: 844px
-  ) and (-webkit-device-pixel-ratio: 3),
-  /* iPhone 12/13 Pro,
-  iPhone 14/15 */ only screen and (device-width: 428px) and (
-    device-height: 926px
-  ) and (-webkit-device-pixel-ratio: 3),
-  /* iPhone 12/13 Pro Max,
-  iPhone 14 Plus/15 Plus */ only screen and (device-width: 393px) and (
-    device-height: 852px
-  ) and (-webkit-device-pixel-ratio: 3),
-  /* iPhone 14 Pro/15 Pro,
-  iPhone 16 */ only screen and (device-width: 430px) and (
-    device-height: 932px
-  ) and (-webkit-device-pixel-ratio: 3),
-  /* iPhone 14 Pro Max/15 Plus/15 Pro Max,
-  iPhone 16 Plus */ only screen and (device-width: 402px) and (
-    device-height: 874px
-  ) and (-webkit-device-pixel-ratio: 3),
-  /* iPhone 16 Pro */ only screen and (device-width: 440px) and (
-    device-height: 956px
-  ) and (-webkit-device-pixel-ratio: 3) /* iPhone 16 Pro Max */ {
-  .safe-area-spacer {
-    padding-bottom: 20px;
-  }
-
-  .pb-safe {
-    padding-bottom: 76px; /* 56px (default) + 20px (safe area) = 76px */
-  }
-
-  .mb-safe {
-    margin-bottom: 76px; /* 56px (default) + 20px (safe area) = 76px */
-  }
-
-  .scroll-to-top-bottom {
-    bottom: 92px; /* 56px (nav) + 20px (safe area) + 16px (gap) = 92px */
-  }
+  margin-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
 }
 
 .scroll-to-top-bottom {
-  bottom: 72px; /* 56px (nav) + 16px (gap) = 72px */
+  bottom: calc(56px + 16px + env(safe-area-inset-bottom, 0px));
 }
 
 /* Custom Select styling - 15px text size */

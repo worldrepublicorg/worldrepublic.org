@@ -9,7 +9,12 @@ export function ScrollToTopButton({ show, onClick }: ScrollToTopButtonProps) {
   if (!show) return null;
 
   return (
-    <div className="fixed right-4 z-50 h-12 w-12 scroll-to-top-bottom">
+    <div
+      className="fixed right-4 z-50 h-12 w-12 scroll-to-top-bottom"
+      onClick={(e) => e.stopPropagation()}
+      onTouchStart={(e) => e.stopPropagation()}
+      onTouchEnd={(e) => e.stopPropagation()}
+    >
       <button
         onClick={onClick}
         onTouchStart={(e) => {

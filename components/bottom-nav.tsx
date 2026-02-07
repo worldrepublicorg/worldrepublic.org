@@ -37,7 +37,7 @@ const BottomNav = () => {
   };
 
   return (
-    <nav className="bg-gray-0 fixed bottom-0 left-1/2 w-full max-w-xl -translate-x-1/2!">
+    <nav className="bg-gray-0 fixed bottom-0 left-1/2 z-40 w-full max-w-xl -translate-x-1/2!">
       <div className="flex h-14 items-center justify-around">
         {navItems.map(({ path, icon: Icon }) => {
           const href = `/${lang}${path}`;
