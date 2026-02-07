@@ -56,7 +56,7 @@ export function MyPartySection({
       </div>
 
       {isLoading ? (
-        <div className="h-[104px] rounded-xl border border-gray-200 p-4">
+        <div className="h-[104px]! rounded-xl border border-gray-200 p-4">
           <div className="flex items-center justify-between">
             <div className="flex-1">
               <Skeleton height={24} width="60%" />
