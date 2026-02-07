@@ -117,9 +117,7 @@ export function SelfVerificationDialog({
           </div>
         ) : isLoading ? (
           <div className="mb-6">
-            <Typography>
-              {dictionary.common.loading}
-            </Typography>
+            <Typography>{dictionary.common.loading}</Typography>
           </div>
         ) : isMobile ? (
           <>

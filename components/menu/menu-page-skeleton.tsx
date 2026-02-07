@@ -75,7 +75,9 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
             <div className="flex flex-col gap-2">
               <CustomListItem
                 label={dictionary.pages.menu.sections.help.quickstart}
-                startAdornment={<PiRocketLaunch className="size-5 text-gray-400" />}
+                startAdornment={
+                  <PiRocketLaunch className="size-5 text-gray-400" />
+                }
                 endAdornment={
                   <PiArrowSquareOut className="size-4 text-gray-400" />
                 }
@@ -83,7 +85,9 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
               />
               <CustomListItem
                 label={dictionary.pages.menu.sections.help.docs}
-                startAdornment={<PiBookOpenText className="size-5 text-gray-400" />}
+                startAdornment={
+                  <PiBookOpenText className="size-5 text-gray-400" />
+                }
                 endAdornment={
                   <PiArrowSquareOut className="size-4 text-gray-400" />
                 }

@@ -502,9 +502,7 @@ export async function getParties(
     }
 
     const orderClause =
-      filters?.order === "random"
-        ? sql`random()`
-        : desc(parties.createdAt);
+      filters?.order === "random" ? sql`random()` : desc(parties.createdAt);
 
     // Execute query with timeout and retry logic
     const queryStartTime = performance.now();

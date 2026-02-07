@@ -9,10 +9,7 @@ interface ElectionResultsProps {
   dictionary: Dictionary;
 }
 
-export function ElectionResults({
-  results,
-  dictionary,
-}: ElectionResultsProps) {
+export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
   const totalVotes = results.reduce((sum, r) => sum + r.voteCount, 0);
   const t = dictionary.pages.govern.elections.detail;
 
@@ -24,8 +21,7 @@ export function ElectionResults({
             {t.results_title}
           </Typography>
           <Typography variant="body" level={3} className="text-gray-500">
-            {totalVotes}{" "}
-            {totalVotes === 1 ? t.vote_singular : t.vote_plural}
+            {totalVotes} {totalVotes === 1 ? t.vote_singular : t.vote_plural}
           </Typography>
         </div>
       </div>
@@ -65,10 +61,8 @@ export function ElectionResults({
                     className="text-gray-600"
                   >
                     {result.voteCount}{" "}
-                    {result.voteCount === 1
-                      ? t.vote_singular
-                      : t.vote_plural}{" "}
-                    ({percentage}%)
+                    {result.voteCount === 1 ? t.vote_singular : t.vote_plural} (
+                    {percentage}%)
                   </Typography>
                 </div>
                 {/* Bar visualization */}

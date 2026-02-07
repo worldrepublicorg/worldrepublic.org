@@ -106,7 +106,10 @@ export function useSelfVerification(
           deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
           userId: userId,
           userIdType: "uuid",
-          userDefinedData: (electionId || partyId) ? JSON.stringify({ electionId, partyId }) : undefined,
+          userDefinedData:
+            electionId || partyId
+              ? JSON.stringify({ electionId, partyId })
+              : undefined,
           disclosures: {
             ofac: true,
           },

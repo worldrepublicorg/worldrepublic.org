@@ -37,7 +37,11 @@ function pickHeroElection(elections: Election[]): Election | null {
   return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
 }
 
-export function ElectionsList({ elections, lang, dictionary }: ElectionsListProps) {
+export function ElectionsList({
+  elections,
+  lang,
+  dictionary,
+}: ElectionsListProps) {
   const now = Date.now();
 
   // Empty state

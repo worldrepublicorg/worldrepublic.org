@@ -724,7 +724,9 @@ export function PoliticalPartyList({
           <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.common.loading}
           </div>
-        ) : isSearchActive && searchResults !== null && searchResults.length === 0 ? (
+        ) : isSearchActive &&
+          searchResults !== null &&
+          searchResults.length === 0 ? (
           <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
@@ -750,9 +752,7 @@ export function PoliticalPartyList({
               />
             ))}
 
-            {showLoadMore && (
-              <div ref={loadMoreRef} className="h-14 py-4" />
-            )}
+            {showLoadMore && <div ref={loadMoreRef} className="h-14 py-4" />}
           </>
         )}
       </div>

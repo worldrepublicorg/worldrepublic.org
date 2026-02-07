@@ -68,7 +68,8 @@ async function ElectionDetailData({
       electionParties = partiesResult;
     } catch (error) {
       const errorDetails = {
-        errorType: error instanceof Error ? error.constructor.name : typeof error,
+        errorType:
+          error instanceof Error ? error.constructor.name : typeof error,
         errorMessage: error instanceof Error ? error.message : String(error),
         timestamp: new Date().toISOString(),
         lang,

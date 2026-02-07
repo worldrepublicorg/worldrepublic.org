@@ -31,11 +31,7 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
       <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
-            <Typography
-              variant="heading"
-              level={3}
-              className="text-gray-900"
-            >
+            <Typography variant="heading" level={3} className="text-gray-900">
               {election.name}
             </Typography>
           </div>

@@ -65,10 +65,7 @@ function parseUserContextData(userContextData: unknown): {
       }
     }
   } catch (parseError) {
-    console.log(
-      "[Self Verify] Failed to parse userContextData:",
-      parseError,
-    );
+    console.log("[Self Verify] Failed to parse userContextData:", parseError);
   }
 
   return { electionId, partyId };
