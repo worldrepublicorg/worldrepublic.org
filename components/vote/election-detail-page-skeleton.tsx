@@ -101,10 +101,10 @@ export function ElectionDetailPageSkeleton({
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
               <div key={i} className="flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
-                  <Skeleton height={24} width="60%" className="mb-1 rounded" />
+                  <Skeleton height={18} width="60%" className="mb-1 rounded" />
                   <div className="flex items-center gap-1 mt-1">
                     <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
-                    <Skeleton height={16} width={100} className="rounded" />
+                    <Skeleton height={17} width={100} className="rounded" />
                   </div>
                 </div>
                 <Button disabled size="sm">
