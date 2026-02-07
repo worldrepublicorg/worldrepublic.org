@@ -186,7 +186,12 @@
         "dialog_description": "Скануйте цей QR‑код, щоб пройти верифікацію через Self.",
         "mobile_dialog_description": "Вас буде перенаправлено до застосунку Self, щоб пройти верифікацію.",
         "supported_countries": "Підтримувані країни",
-        "support_telegram": "Підтримка Self"
+        "support_telegram": "Підтримка Self",
+        "confirm_eligibility": "Підтвердіть свою правомочність",
+        "verification_guide": "Посібник з верифікації",
+        "qr_alt": "QR-код верифікації Self",
+        "callback_warning": "Попередження",
+        "callback_warning_description": "URL зворотного виклику верифікації недоступний з вашого телефону. Встановіть NEXT_PUBLIC_SELF_CALLBACK на публічну URL-адресу (або встановіть NEXT_PUBLIC_PUBLIC_BASE_URL на домен тунелю/попереднього перегляду)."
       },
       "verification_warning": {
         "title": "Отримайте верифікацію"

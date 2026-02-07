@@ -186,7 +186,12 @@
         "dialog_description": "Skannaa tämä QR-koodi vahvistaaksesi Selfillä.",
         "mobile_dialog_description": "Sinut ohjataan Self-sovellukseen suorittamaan vahvistus.",
         "supported_countries": "Tuetut maat",
-        "support_telegram": "Self-tuki"
+        "support_telegram": "Self-tuki",
+        "confirm_eligibility": "Vahvista kelpoisuutesi",
+        "verification_guide": "Todennusopas",
+        "qr_alt": "Self-todennuksen QR",
+        "callback_warning": "Varoitus",
+        "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen)."
       },
       "verification_warning": {
         "title": "Hanki vahvistus"

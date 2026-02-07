@@ -186,7 +186,12 @@
         "dialog_description": "이 QR 코드를 스캔하여 Self에서 인증하세요.",
         "mobile_dialog_description": "본인 인증을 완료하려면 Self 앱으로 이동합니다.",
         "supported_countries": "지원되는 국가",
-        "support_telegram": "Self 지원"
+        "support_telegram": "Self 지원",
+        "confirm_eligibility": "자격을 확인하세요",
+        "verification_guide": "인증 가이드",
+        "qr_alt": "Self 인증 QR",
+        "callback_warning": "경고",
+        "callback_warning_description": "인증 콜백 URL에 휴대폰에서 접근할 수 없습니다. NEXT_PUBLIC_SELF_CALLBACK을 공개 URL로 설정하세요 (또는 NEXT_PUBLIC_PUBLIC_BASE_URL을 터널/미리보기 도메인으로 설정하세요)."
       },
       "verification_warning": {
         "title": "인증 받기"

@@ -186,7 +186,12 @@
         "dialog_description": "इस क्यूआर कोड को स्कैन करके Self पर वेरिफाई करें।",
         "mobile_dialog_description": "सत्यापन पूरा करने के लिए आपको Self ऐप पर भेजा जाएगा।",
         "supported_countries": "समर्थित देश",
-        "support_telegram": "Self सहायता"
+        "support_telegram": "Self सहायता",
+        "confirm_eligibility": "अपनी पात्रता की पुष्टि करें",
+        "verification_guide": "सत्यापन गाइड",
+        "qr_alt": "Self सत्यापन QR",
+        "callback_warning": "चेतावनी",
+        "callback_warning_description": "सत्यापन कॉलबैक URL आपके फ़ोन से पहुँच योग्य नहीं है। NEXT_PUBLIC_SELF_CALLBACK को सार्वजनिक URL पर सेट करें (या NEXT_PUBLIC_PUBLIC_BASE_URL को टनल/प्रीव्यू डोमेन पर सेट करें)।"
       },
       "verification_warning": {
         "title": "सत्यापन प्राप्त करें"

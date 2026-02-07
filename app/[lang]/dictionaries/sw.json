@@ -186,7 +186,12 @@
         "dialog_description": "Changanua msimbo huu wa QR ili kuthibitisha kwa Self.",
         "mobile_dialog_description": "Utaelekezwa kwenye app ya Self kukamilisha uthibitishaji.",
         "supported_countries": "Nchi zinazoungwa mkono",
-        "support_telegram": "Msaada wa Self"
+        "support_telegram": "Msaada wa Self",
+        "confirm_eligibility": "Thibitisha ustahiki wako",
+        "verification_guide": "Mwongozo wa uthibitishaji",
+        "qr_alt": "QR ya uthibitishaji wa Self",
+        "callback_warning": "Onyo",
+        "callback_warning_description": "URL ya kupigiwa simu ya uthibitishaji haiwezi kufikiwa kutoka kwa simu yako. Weka NEXT_PUBLIC_SELF_CALLBACK kwa URL ya umma (au weka NEXT_PUBLIC_PUBLIC_BASE_URL kwa kikoa cha tunnel/hakiki)."
       },
       "verification_warning": {
         "title": "Pata uthibitisho"

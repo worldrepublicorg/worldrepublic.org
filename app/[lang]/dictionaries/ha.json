@@ -186,7 +186,12 @@
         "dialog_description": "Duba wannan lambar QR don tabbatarwa ta Self.",
         "mobile_dialog_description": "Za a mayar da kai zuwa manhajar Self don kammala tantancewa.",
         "supported_countries": "Kasashen da ake tallafawa",
-        "support_telegram": "Tallafin Self"
+        "support_telegram": "Tallafin Self",
+        "confirm_eligibility": "Tabbatar da cancantarku",
+        "verification_guide": "Jagorar tabbatarwa",
+        "qr_alt": "QR na tabbatar da Self",
+        "callback_warning": "Gargadi",
+        "callback_warning_description": "URL ɗin mayar da tabbatarwa ba za a iya samun shi daga wayarku ba. Saita NEXT_PUBLIC_SELF_CALLBACK zuwa URL na jama'a (ko saita NEXT_PUBLIC_PUBLIC_BASE_URL zuwa yankin rami/dubawa)."
       },
       "verification_warning": {
         "title": "Samu tabbatarwa"

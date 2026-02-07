@@ -25,7 +25,7 @@ interface SelfVerificationDialogProps {
   onOpenChange: (open: boolean) => void;
   onSuccess?: () => void;
   userId: string | null;
-  dictionary?: Dictionary;
+  dictionary: Dictionary;
   partyId?: string;
   electionId?: string;
 }
@@ -71,7 +71,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiRocketLaunch className="size-5 text-gray-400" />}
-          label="Verification Guide"
+          label={dictionary.components.identity.self.verification_guide}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -84,10 +84,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiHeadset className="size-5 text-gray-400" />}
-          label={
-            dictionary?.components.identity.self.support_telegram ??
-            "Self Support"
-          }
+          label={dictionary.components.identity.self.support_telegram}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -105,32 +102,29 @@ export function SelfVerificationDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            Confirm your eligibility
+            {dictionary.components.identity.self.confirm_eligibility}
           </Typography>
         </AlertDialogHeader>
 
         {!callbackReachable ? (
           <div className="mb-6 rounded-2xl bg-yellow-50 p-4 text-yellow-900">
             <Typography variant="subtitle" level={4} className="mb-2">
-              Warning
+              {dictionary.components.identity.self.callback_warning}
             </Typography>
             <Typography>
-              The verification callback URL is not reachable from your phone.
-              Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set
-              NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).
+              {dictionary.components.identity.self.callback_warning_description}
             </Typography>
           </div>
         ) : isLoading ? (
           <div className="mb-6">
             <Typography>
-              {dictionary?.common.loading ?? "Loading..."}
+              {dictionary.common.loading}
             </Typography>
           </div>
         ) : isMobile ? (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary?.components.identity.self.mobile_dialog_description ??
-                "You will be redirected to the Self app to complete verification."}
+              {dictionary.components.identity.self.mobile_dialog_description}
             </AlertDialogDescription>
 
             {supportLinks}
@@ -141,15 +135,14 @@ export function SelfVerificationDialog({
                 disabled={!universalLink}
                 className="w-full"
               >
-                {dictionary?.common.continue ?? "Continue"}
+                {dictionary.common.continue}
               </Button>
             </AlertDialogFooter>
           </>
         ) : (
           <>
             <AlertDialogDescription className="mb-4">
-              {dictionary?.components.identity.self.dialog_description ??
-                "Scan this QR code to verify with Self."}
+              {dictionary.components.identity.self.dialog_description}
             </AlertDialogDescription>
 
             <div className="mb-4 flex w-full justify-center">
@@ -163,7 +156,7 @@ export function SelfVerificationDialog({
               ) : universalLink ? (
                 <div className="rounded-2xl p-4">
                   <img
-                    alt="Self verification QR"
+                    alt={dictionary.components.identity.self.qr_alt}
                     src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
                       universalLink,
                     )}`}

@@ -186,7 +186,12 @@
         "dialog_description": "扫描此二维码以在 Self 完成验证。",
         "mobile_dialog_description": "您将被重定向到 Self 应用以完成验证。",
         "supported_countries": "支持的国家/地区",
-        "support_telegram": "Self 支持"
+        "support_telegram": "Self 支持",
+        "confirm_eligibility": "确认您的资格",
+        "verification_guide": "验证指南",
+        "qr_alt": "Self 验证二维码",
+        "callback_warning": "警告",
+        "callback_warning_description": "验证回调 URL 无法从您的手机访问。请将 NEXT_PUBLIC_SELF_CALLBACK 设置为公共 URL（或将 NEXT_PUBLIC_PUBLIC_BASE_URL 设置为隧道/预览域名）。"
       },
       "verification_warning": {
         "title": "获取验证"

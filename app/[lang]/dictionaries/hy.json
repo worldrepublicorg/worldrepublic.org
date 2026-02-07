@@ -186,7 +186,12 @@
         "dialog_description": "Սկանավորեք այս QR կոդը՝ ինքնությունը Self-ով հաստատելու համար։",
         "mobile_dialog_description": "Կվերահղվեք Self հավելված՝ հաստատումը ավարտելու համար։",
         "supported_countries": "Աջակցվող երկրներ",
-        "support_telegram": "Self աջակցություն"
+        "support_telegram": "Self աջակցություն",
+        "confirm_eligibility": "Հաստատեկ ձեր իրավասւտյւնը",
+        "verification_guide": "Հաստատման ուղեցույց",
+        "qr_alt": "Self հաստատման QR",
+        "callback_warning": "Նախազգուշացում",
+        "callback_warning_description": "Հաստատման callback URL-ը ձեր հեռախոսից հասնելի չէ. Սահմանեկ NEXT_PUBLIC_SELF_CALLBACK հանրային URL-ի վրա (կամ սահմանեկ NEXT_PUBLIC_PUBLIC_BASE_URL tunnel/preview դոմենի վրա)."
       },
       "verification_warning": {
         "title": "Ստացեք հաստատում"

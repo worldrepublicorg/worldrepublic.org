@@ -186,7 +186,12 @@
         "dialog_description": "このQRコードをスキャンしてSelfで本人確認を行ってください。",
         "mobile_dialog_description": "確認を完了するためにSelfアプリへリダイレクトされます。",
         "supported_countries": "対応国",
-        "support_telegram": "Selfサポート"
+        "support_telegram": "Selfサポート",
+        "confirm_eligibility": "資格を確認してください",
+        "verification_guide": "認証ガイド",
+        "qr_alt": "Self認証QR",
+        "callback_warning": "警告",
+        "callback_warning_description": "認証コールバックURLにお使いの電話からアクセスできません。NEXT_PUBLIC_SELF_CALLBACKをパブリックURLに設定してください（またはNEXT_PUBLIC_PUBLIC_BASE_URLをトンネル/プレビュードメインに設定してください）。"
       },
       "verification_warning": {
         "title": "認証を取得"

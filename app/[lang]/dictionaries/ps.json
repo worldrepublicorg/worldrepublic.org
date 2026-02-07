@@ -186,7 +186,12 @@
         "dialog_description": "د Self سره د تایید لپاره دا QR کوډ سکین کړئ.",
         "mobile_dialog_description": "د تصدیق بشپړولو لپاره به تاسو Self اپ ته ولېږدول شئ.",
         "supported_countries": "ملاتړ شوي هېوادونه",
-        "support_telegram": "د Self ملاتړ"
+        "support_telegram": "د Self ملاتړ",
+        "confirm_eligibility": "خپل وړتیا تایید کړئ",
+        "verification_guide": "د تایید لارښود",
+        "qr_alt": "د Self تایید QR",
+        "callback_warning": "خبرداری",
+        "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ)."
       },
       "verification_warning": {
         "title": "تایید ترلاسه کړئ"

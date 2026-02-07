@@ -186,7 +186,12 @@
         "dialog_description": "Zeskanuj ten kod QR, aby zweryfikować się w Self.",
         "mobile_dialog_description": "Zostaniesz przekierowany do aplikacji Self, aby przejść weryfikację.",
         "supported_countries": "Obsługiwane kraje",
-        "support_telegram": "Wsparcie Self"
+        "support_telegram": "Wsparcie Self",
+        "confirm_eligibility": "Potwierdź swoją kwalifikowalność",
+        "verification_guide": "Przewodnik weryfikacji",
+        "qr_alt": "QR weryfikacji Self",
+        "callback_warning": "Ostrzeżenie",
+        "callback_warning_description": "URL zwrotny weryfikacji nie jest osiągalny z Twojego telefonu. Ustaw NEXT_PUBLIC_SELF_CALLBACK na publiczny URL (lub ustaw NEXT_PUBLIC_PUBLIC_BASE_URL na domenę tunelu/podglądu)."
       },
       "verification_warning": {
         "title": "Uzyskaj weryfikację"

@@ -186,7 +186,12 @@
         "dialog_description": "برای تأیید با Self این کد QR را اسکن کنید.",
         "mobile_dialog_description": "برای تکمیل تأیید، به اپلیکیشن Self هدایت می‌شوید.",
         "supported_countries": "کشورهای پشتیبانی‌شده",
-        "support_telegram": "پشتیبانی Self"
+        "support_telegram": "پشتیبانی Self",
+        "confirm_eligibility": "واجد شرایط بودن خود را تأیید کنید",
+        "verification_guide": "راهنمای تأیید هویت",
+        "qr_alt": "QR تأیید Self",
+        "callback_warning": "هشدار",
+        "callback_warning_description": "آدرس URL بازگشت تأیید از تلفن شما قابل دسترسی نیست. NEXT_PUBLIC_SELF_CALLBACK را روی یک URL عمومی تنظیم کنید (یا NEXT_PUBLIC_PUBLIC_BASE_URL را روی یک دامنه تونل/پیش‌نمایش تنظیم کنید)."
       },
       "verification_warning": {
         "title": "دریافت تأیید"

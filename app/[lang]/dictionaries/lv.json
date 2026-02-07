@@ -186,7 +186,12 @@
         "dialog_description": "Skenējiet šo QR kodu, lai verificētos ar Self.",
         "mobile_dialog_description": "Jūs tiksiet novirzīts uz Self lietotni, lai pabeigtu verifikāciju.",
         "supported_countries": "Atbalstītās valstis",
-        "support_telegram": "Self atbalsts"
+        "support_telegram": "Self atbalsts",
+        "confirm_eligibility": "Apstipriniet savu atbilstību",
+        "verification_guide": "Verifikācijas ceļvedis",
+        "qr_alt": "Self verifikācijas QR",
+        "callback_warning": "Brīdinājums",
+        "callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu)."
       },
       "verification_warning": {
         "title": "Iegūstiet apstiprinājumu"

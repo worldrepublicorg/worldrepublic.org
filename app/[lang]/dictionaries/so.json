@@ -186,7 +186,12 @@
         "dialog_description": "Sawir QR-kan si aad isaga xaqiijiso adigoo adeegsanaya Self.",
         "mobile_dialog_description": "Waxaa lagu geyn doonaa app-ka Self si aad u dhammaystirto xaqiijinta.",
         "supported_countries": "Dalalka la taageeray",
-        "support_telegram": "Taageerada Self"
+        "support_telegram": "Taageerada Self",
+        "confirm_eligibility": "Xaqiiji xaqa aad u leedahay",
+        "verification_guide": "Hagaha xaqiijinta",
+        "qr_alt": "QR xaqiijinta Self",
+        "callback_warning": "Digniin",
+        "callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah)."
       },
       "verification_warning": {
         "title": "Heli xaqiijinta"

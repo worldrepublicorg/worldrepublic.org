@@ -186,7 +186,12 @@
         "dialog_description": "Skenirajte to kodo QR za preverjanje s Self.",
         "mobile_dialog_description": "Preusmerjeni boste v aplikacijo Self, da opravite preverjanje.",
         "supported_countries": "Podprte države",
-        "support_telegram": "Podpora Self"
+        "support_telegram": "Podpora Self",
+        "confirm_eligibility": "Potrdite svojo upravičenost",
+        "verification_guide": "Vodnik za preverjanje",
+        "qr_alt": "QR za preverjanje Self",
+        "callback_warning": "Opozorilo",
+        "callback_warning_description": "URL za povratni klic preverjanja ni dosegljiv iz vašega telefona. Nastavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ali nastavite NEXT_PUBLIC_PUBLIC_BASE_URL na domeno predora/predogleda)."
       },
       "verification_warning": {
         "title": "Pridobite preverjanje"

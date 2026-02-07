@@ -186,7 +186,12 @@
         "dialog_description": "Self સાથે ચકાસવા માટે આ QR કોડ સ્કેન કરો.",
         "mobile_dialog_description": "ચકાસણી પૂર્ણ કરવા તમને Self એપ પર મોકલવામાં આવશે.",
         "supported_countries": "સમર્થિત દેશો",
-        "support_telegram": "Self સપોર્ટ"
+        "support_telegram": "Self સપોર્ટ",
+        "confirm_eligibility": "તમારી પાત્રતાની પુષ્ટિ કરો",
+        "verification_guide": "ચકાસણી માર્ગદર્શિકા",
+        "qr_alt": "Self ચકાસણી QR",
+        "callback_warning": "ચેતવણી",
+        "callback_warning_description": "ચકાસણી કૉલબૅક URL તમારા ફોનથી ઍક્સેસ કરી શકાતું નથી. NEXT_PUBLIC_SELF_CALLBACK ને જાહેર URL પર સેટ કરો (અથવા NEXT_PUBLIC_PUBLIC_BASE_URL ને ટનલ/પ્રિવ્યૂ ડોમેન પર સેટ કરો)."
       },
       "verification_warning": {
         "title": "ચકાસો"

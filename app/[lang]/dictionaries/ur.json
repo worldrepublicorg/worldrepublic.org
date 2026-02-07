@@ -186,7 +186,12 @@
         "dialog_description": "Self کے ذریعے تصدیق کے لیے یہ کیو آر کوڈ اسکین کریں۔",
         "mobile_dialog_description": "توثیق مکمل کرنے کے لیے آپ کو Self ایپ پر بھیجا جائے گا۔",
         "supported_countries": "معاونت یافتہ ممالک",
-        "support_telegram": "Self سپورٹ"
+        "support_telegram": "Self سپورٹ",
+        "confirm_eligibility": "اپنی اہلیت کی تصدیق کریں",
+        "verification_guide": "تصدیق گائیڈ",
+        "qr_alt": "Self تصدیق QR",
+        "callback_warning": "انتباہ",
+        "callback_warning_description": "تصدیق کال بیک URL آپ کے فون سے قابل رسائی نہیں ہے۔ NEXT_PUBLIC_SELF_CALLBACK کو عوامی URL پر سیٹ کریں (یا NEXT_PUBLIC_PUBLIC_BASE_URL کو ٹنل/پریویو ڈومین پر سیٹ کریں)۔"
       },
       "verification_warning": {
         "title": "تصدیق حاصل کریں"

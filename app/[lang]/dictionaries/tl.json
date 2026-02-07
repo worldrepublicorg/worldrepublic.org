@@ -186,7 +186,12 @@
         "dialog_description": "I-scan ang QR code na ito para mag-verify sa Self.",
         "mobile_dialog_description": "Ire-redirect ka sa Self app upang tapusin ang beripikasyon.",
         "supported_countries": "Mga suportadong bansa",
-        "support_telegram": "Self Support"
+        "support_telegram": "Self Support",
+        "confirm_eligibility": "Kumpirmahin ang iyong pagiging kwalipikado",
+        "verification_guide": "Gabay sa pagpapatunay",
+        "qr_alt": "QR ng pagpapatunay ng Self",
+        "callback_warning": "Babala",
+        "callback_warning_description": "Ang URL ng callback ng pagpapatunay ay hindi maabot mula sa iyong telepono. Itakda ang NEXT_PUBLIC_SELF_CALLBACK sa isang pampublikong URL (o itakda ang NEXT_PUBLIC_PUBLIC_BASE_URL sa isang tunnel/preview na domain)."
       },
       "verification_warning": {
         "title": "Kumuha ng pagpapatunay"

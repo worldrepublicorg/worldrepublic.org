@@ -186,7 +186,12 @@
         "dialog_description": "Scan uyu kode ya QR kugira ngo wemezwe ukoresheje Self.",
         "mobile_dialog_description": "Uzasubizwa kuri porogaramu ya Self kugira ngo urangize kwemezwa.",
         "supported_countries": "Ibihugu bishyigikiwe",
-        "support_telegram": "Ubafasha bwa Self"
+        "support_telegram": "Ubafasha bwa Self",
+        "confirm_eligibility": "Emeza ubufite uburenganzira",
+        "verification_guide": "Umuyobozi wo kwemeza",
+        "qr_alt": "QR yo kwemeza Self",
+        "callback_warning": "Umuburo",
+        "callback_warning_description": "URL yo gusubiza yo kwemeza ntishobora kugerwaho kuva kuri telefone yawe. Shyira NEXT_PUBLIC_SELF_CALLBACK kuri URL rusange (cyangwa shyira NEXT_PUBLIC_PUBLIC_BASE_URL kuri domaine ya tunnel/preview)."
       },
       "verification_warning": {
         "title": "Bona kwemeza"

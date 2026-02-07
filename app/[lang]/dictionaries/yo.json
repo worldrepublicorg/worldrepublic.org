@@ -186,7 +186,12 @@
         "dialog_description": "Ṣàyẹ̀wò kóòdù QR yìí láti fọwọsi pẹ̀lú Self.",
         "mobile_dialog_description": "A ó yí ọ lọ sí app Self láti parí ìfọwọsi.",
         "supported_countries": "Àwọn orílẹ̀-èdè tí a ń ṣe àtìlẹ́yìn",
-        "support_telegram": "Ìtìlẹ́yìn Self"
+        "support_telegram": "Ìtìlẹ́yìn Self",
+        "confirm_eligibility": "Jẹ́rìísí ẹ̀tọ́ rẹ",
+        "verification_guide": "Ìtọ́sọ́nà ìjẹ́rìísí",
+        "qr_alt": "QR ìjẹ́rìísí Self",
+        "callback_warning": "Ìkìlọ̀",
+        "callback_warning_description": "URL ìpèsè padà ìjẹ́rìísí kò ṣeé dé láti ẹ̀rọ fóònù rẹ. Ṣètò NEXT_PUBLIC_SELF_CALLBACK sí URL gbogbogbò (tàbí ṣètò NEXT_PUBLIC_PUBLIC_BASE_URL sí orúkọ àgbègbè tunnel/àyẹ̀wò)."
       },
       "verification_warning": {
         "title": "Gba ijẹrisi"

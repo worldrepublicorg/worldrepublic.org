@@ -186,7 +186,12 @@
         "dialog_description": "Skandeer hierdie QR-kode om met Self te verifieer.",
         "mobile_dialog_description": "Jy sal na die Self-app herlei word om verifikasie te voltooi.",
         "supported_countries": "Ondersteunde lande",
-        "support_telegram": "Self Ondersteuning"
+        "support_telegram": "Self Ondersteuning",
+        "confirm_eligibility": "Bevestig jou geskiktheid",
+        "verification_guide": "Verifikasiegids",
+        "qr_alt": "Self-verifikasie QR",
+        "callback_warning": "Waarskuwing",
+        "callback_warning_description": "Die verifikasie-terugbel-URL is nie bereikbaar vanaf jou foon nie. Stel NEXT_PUBLIC_SELF_CALLBACK in op 'n publieke URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op 'n tonnel-/voorskou-domein)."
       },
       "verification_warning": {
         "title": "Kry verifikasie"

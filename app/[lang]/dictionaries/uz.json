@@ -186,7 +186,12 @@
         "dialog_description": "Self bilan tasdiqlash uchun ushbu QR kodni skaner qiling.",
         "mobile_dialog_description": "Tasdiqlashni yakunlash uchun Self ilovasiga yo‘naltirilasiz.",
         "supported_countries": "Qo‘llab-quvvatlanadigan mamlakatlar",
-        "support_telegram": "Self yordami"
+        "support_telegram": "Self yordami",
+        "confirm_eligibility": "Muvofiqligingizni tasdiqlang",
+        "verification_guide": "Tasdiqlash qo'llanmasi",
+        "qr_alt": "Self tasdiqlash QR",
+        "callback_warning": "Ogohlantirish",
+        "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating)."
       },
       "verification_warning": {
         "title": "Tasdiqlash"

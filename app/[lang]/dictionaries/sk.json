@@ -186,7 +186,12 @@
         "dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
         "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na vykonanie overenia.",
         "supported_countries": "Podporované krajiny",
-        "support_telegram": "Podpora Self"
+        "support_telegram": "Podpora Self",
+        "confirm_eligibility": "Potvrďte svoju oprávnenosť",
+        "verification_guide": "Sprievodca overením",
+        "qr_alt": "QR kód overenia Self",
+        "callback_warning": "Upozornenie",
+        "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu)."
       },
       "verification_warning": {
         "title": "Získajte overenie"

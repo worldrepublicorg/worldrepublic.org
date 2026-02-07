@@ -186,7 +186,12 @@
         "dialog_description": "สแกนคิวอาร์โค้ดนี้เพื่อยืนยันตัวตนกับ Self",
         "mobile_dialog_description": "คุณจะถูกเปลี่ยนเส้นทางไปยังแอป Self เพื่อทำการยืนยันให้เสร็จสิ้น",
         "supported_countries": "ประเทศที่รองรับ",
-        "support_telegram": "ฝ่ายสนับสนุน Self"
+        "support_telegram": "ฝ่ายสนับสนุน Self",
+        "confirm_eligibility": "ยืนยันสิทธิ์ของคุณ",
+        "verification_guide": "คู่มือการยืนยัน",
+        "qr_alt": "QR การยืนยัน Self",
+        "callback_warning": "คำเตือน",
+        "callback_warning_description": "URL callback การยืนยันไม่สามารถเข้าถึงได้จากโทรศัพท์ของคุณ ตั้งค่า NEXT_PUBLIC_SELF_CALLBACK เป็น URL สาธารณะ (หรือตั้งค่า NEXT_PUBLIC_PUBLIC_BASE_URL เป็นโดเมน tunnel/preview)"
       },
       "verification_warning": {
         "title": "รับการยืนยันตัวตน"

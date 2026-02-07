@@ -186,7 +186,12 @@
         "dialog_description": "Imbas kod QR ini untuk mengesahkan dengan Self.",
         "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melengkapkan pengesahan.",
         "supported_countries": "Negara yang disokong",
-        "support_telegram": "Sokongan Self"
+        "support_telegram": "Sokongan Self",
+        "confirm_eligibility": "Sahkan kelayakan anda",
+        "verification_guide": "Panduan pengesahan",
+        "qr_alt": "QR pengesahan Self",
+        "callback_warning": "Amaran",
+        "callback_warning_description": "URL panggilan balik pengesahan tidak boleh dicapai dari telefon anda. Tetapkan NEXT_PUBLIC_SELF_CALLBACK ke URL awam (atau tetapkan NEXT_PUBLIC_PUBLIC_BASE_URL ke domain terowong/pratonton)."
       },
       "verification_warning": {
         "title": "Dapatkan pengesahan"

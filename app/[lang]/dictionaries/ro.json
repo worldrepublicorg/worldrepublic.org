@@ -186,7 +186,12 @@
         "dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
         "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a efectua verificarea.",
         "supported_countries": "Țări acceptate",
-        "support_telegram": "Suport Self"
+        "support_telegram": "Suport Self",
+        "confirm_eligibility": "Confirmă-ți eligibilitatea",
+        "verification_guide": "Ghid de verificare",
+        "qr_alt": "QR de verificare Self",
+        "callback_warning": "Avertisment",
+        "callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare)."
       },
       "verification_warning": {
         "title": "Obțineți verificarea"

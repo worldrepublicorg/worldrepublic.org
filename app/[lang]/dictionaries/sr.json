@@ -186,7 +186,12 @@
         "dialog_description": "Скенирајте овај QR код да бисте се верификовали преко Self.",
         "mobile_dialog_description": "Бићете преусмерени у Self апликацију да довршите верификацију.",
         "supported_countries": "Подржане земље",
-        "support_telegram": "Подршка Self"
+        "support_telegram": "Подршка Self",
+        "confirm_eligibility": "Потврдите своју подобност",
+        "verification_guide": "Водич за верификацију",
+        "qr_alt": "QR за Self верификацију",
+        "callback_warning": "Упозорење",
+        "callback_warning_description": "URL повратног позива верификације није доступан са вашег телефона. Поставите NEXT_PUBLIC_SELF_CALLBACK на јавни URL (или поставите NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домен)."
       },
       "verification_warning": {
         "title": "Добијте верификацију"

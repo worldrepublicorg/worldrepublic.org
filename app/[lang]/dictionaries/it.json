@@ -186,7 +186,12 @@
         "dialog_description": "Scansiona questo codice QR per verificarti con Self.",
         "mobile_dialog_description": "Verrai reindirizzato all'app Self per effettuare la verifica.",
         "supported_countries": "Paesi supportati",
-        "support_telegram": "Supporto Self"
+        "support_telegram": "Supporto Self",
+        "confirm_eligibility": "Conferma la tua idoneità",
+        "verification_guide": "Guida alla verifica",
+        "qr_alt": "QR di verifica Self",
+        "callback_warning": "Avviso",
+        "callback_warning_description": "L'URL di callback della verifica non è raggiungibile dal tuo telefono. Imposta NEXT_PUBLIC_SELF_CALLBACK su un URL pubblico (o imposta NEXT_PUBLIC_PUBLIC_BASE_URL su un dominio tunnel/anteprima)."
       },
       "verification_warning": {
         "title": "Ottieni verifica"

@@ -186,7 +186,12 @@
         "dialog_description": "Quét mã QR này để xác minh với Self.",
         "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để thực hiện xác minh.",
         "supported_countries": "Các quốc gia được hỗ trợ",
-        "support_telegram": "Hỗ trợ Self"
+        "support_telegram": "Hỗ trợ Self",
+        "confirm_eligibility": "Xác nhận tư cách của bạn",
+        "verification_guide": "Hướng dẫn xác minh",
+        "qr_alt": "Mã QR xác minh Self",
+        "callback_warning": "Cảnh báo",
+        "callback_warning_description": "URL gọi lại xác minh không thể truy cập được từ điện thoại của bạn. Đặt NEXT_PUBLIC_SELF_CALLBACK thành URL công khai (hoặc đặt NEXT_PUBLIC_PUBLIC_BASE_URL thành tên miền đường hầm/xem trước)."
       },
       "verification_warning": {
         "title": "Nhận xác minh"

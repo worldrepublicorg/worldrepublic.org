@@ -186,7 +186,12 @@
         "dialog_description": "Naskenujte tento QR kód pro ověření přes Self.",
         "mobile_dialog_description": "Budete přesměrováni do aplikace Self k provedení ověření.",
         "supported_countries": "Podporované země",
-        "support_telegram": "Podpora Self"
+        "support_telegram": "Podpora Self",
+        "confirm_eligibility": "Potvrďte svou způsobilost",
+        "verification_guide": "Průvodce ověřením",
+        "qr_alt": "QR kód pro ověření Self",
+        "callback_warning": "Varování",
+        "callback_warning_description": "URL zpětného volání ověření není dostupná z vašeho telefonu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na veřejnou URL (nebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunel/náhledovou doménu)."
       },
       "verification_warning": {
         "title": "Získejte ověření"

@@ -186,7 +186,12 @@
         "dialog_description": "امسح رمز الاستجابة السريعة هذا للتحقق عبر Self.",
         "mobile_dialog_description": "سيتم إعادة توجيهك إلى تطبيق Self لإكمال التحقق.",
         "supported_countries": "الدول المدعومة",
-        "support_telegram": "دعم Self"
+        "support_telegram": "دعم Self",
+        "confirm_eligibility": "أكّد أهليتك",
+        "verification_guide": "دليل التحقق",
+        "qr_alt": "رمز QR للتحقق من Self",
+        "callback_warning": "تحذير",
+        "callback_warning_description": "لا يمكن الوصول إلى عنوان URL الخاص بنداء التحقق من هاتفك. اضبط NEXT_PUBLIC_SELF_CALLBACK على عنوان URL عام (أو اضبط NEXT_PUBLIC_PUBLIC_BASE_URL على نطاق نفق/معاينة)."
       },
       "verification_warning": {
         "title": "احصل على التحقق"

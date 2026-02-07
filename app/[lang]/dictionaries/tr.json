@@ -186,7 +186,12 @@
         "dialog_description": "Self ile doğrulamak için bu QR kodunu tarayın.",
         "mobile_dialog_description": "Doğrulamayı gerçekleştirmek için Self uygulamasına yönlendirileceksiniz.",
         "supported_countries": "Desteklenen ülkeler",
-        "support_telegram": "Self Desteği"
+        "support_telegram": "Self Desteği",
+        "confirm_eligibility": "Uygunluğunuzu onaylayın",
+        "verification_guide": "Doğrulama kılavuzu",
+        "qr_alt": "Self doğrulama QR",
+        "callback_warning": "Uyarı",
+        "callback_warning_description": "Doğrulama geri arama URL'si telefonunuzdan erişilebilir değil. NEXT_PUBLIC_SELF_CALLBACK'i herkese açık bir URL'ye ayarlayın (veya NEXT_PUBLIC_PUBLIC_BASE_URL'yi bir tünel/önizleme alan adına ayarlayın)."
       },
       "verification_warning": {
         "title": "Doğrulama al"

@@ -186,7 +186,12 @@
         "dialog_description": "Self দিয়ে যাচাই করতে এই কিউআর কোডটি স্ক্যান করুন।",
         "mobile_dialog_description": "যাচাইকরণ সম্পূর্ণ করতে আপনাকে Self অ্যাপে পাঠানো হবে।",
         "supported_countries": "সমর্থিত দেশসমূহ",
-        "support_telegram": "Self সাপোর্ট"
+        "support_telegram": "Self সাপোর্ট",
+        "confirm_eligibility": "আপনার যোগ্যতা নিশ্চিত করুন",
+        "verification_guide": "যাচাইকরণ নির্দেশিকা",
+        "qr_alt": "Self যাচাইকরণ QR",
+        "callback_warning": "সতর্কতা",
+        "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।"
       },
       "verification_warning": {
         "title": "যাচাইকরণ পান"

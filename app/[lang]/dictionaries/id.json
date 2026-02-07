@@ -186,7 +186,12 @@
         "dialog_description": "Pindai kode QR ini untuk verifikasi dengan Self.",
         "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melakukan verifikasi.",
         "supported_countries": "Negara yang didukung",
-        "support_telegram": "Dukungan Self"
+        "support_telegram": "Dukungan Self",
+        "confirm_eligibility": "Konfirmasi kelayakan Anda",
+        "verification_guide": "Panduan verifikasi",
+        "qr_alt": "QR verifikasi Self",
+        "callback_warning": "Peringatan",
+        "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau)."
       },
       "verification_warning": {
         "title": "Dapatkan verifikasi"

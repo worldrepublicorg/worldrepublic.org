@@ -186,7 +186,12 @@
         "dialog_description": "Scannen Sie diesen QR-Code, um sich mit Self zu verifizieren.",
         "mobile_dialog_description": "Du wirst zur Self-App weitergeleitet, um die Verifizierung durchzuführen.",
         "supported_countries": "Unterstützte Länder",
-        "support_telegram": "Self Support"
+        "support_telegram": "Self Support",
+        "confirm_eligibility": "Bestätigen Sie Ihre Berechtigung",
+        "verification_guide": "Verifizierungsleitfaden",
+        "qr_alt": "Self-Verifizierungs-QR",
+        "callback_warning": "Warnung",
+        "callback_warning_description": "Die Verifizierungs-Callback-URL ist von Ihrem Telefon nicht erreichbar. Setzen Sie NEXT_PUBLIC_SELF_CALLBACK auf eine öffentliche URL (oder setzen Sie NEXT_PUBLIC_PUBLIC_BASE_URL auf eine Tunnel-/Vorschau-Domain)."
       },
       "verification_warning": {
         "title": "Verifizierung erhalten"

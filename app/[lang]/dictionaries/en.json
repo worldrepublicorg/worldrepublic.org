@@ -183,8 +183,13 @@
   "components": {
     "identity": {
       "self": {
+        "confirm_eligibility": "Confirm your eligibility",
         "dialog_description": "Scan this QR code to verify with Self.",
         "mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
+        "verification_guide": "Verification guide",
+        "qr_alt": "Self verification QR",
+        "callback_warning": "Warning",
+        "callback_warning_description": "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).",
         "supported_countries": "Supported countries",
         "support_telegram": "Self Support"
       },

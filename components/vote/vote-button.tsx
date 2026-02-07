@@ -29,8 +29,8 @@ interface VoteButtonProps {
   label?: string;
   /** Optional size, forwarded to the underlying UI kit Button. Defaults to "lg". */
   size?: "sm" | "lg";
-  /** Dictionary for i18n strings. Optional when electionId is provided (direct vote flow). */
-  dictionary?: Dictionary;
+  /** Dictionary for i18n strings. */
+  dictionary: Dictionary;
   partyId?: string;
   /** When provided, skips the "no active election" dialog and goes directly to Self verification. */
   electionId?: string;
@@ -46,8 +46,7 @@ export function VoteButton({
   electionId,
 }: VoteButtonProps) {
   const router = useRouter();
-  const buttonLabel =
-    label || dictionary?.common.vote || "Vote";
+  const buttonLabel = label || dictionary.common.vote;
 
   const [preVerificationDialogOpen, setPreVerificationDialogOpen] =
     useState(false);
@@ -95,7 +94,7 @@ export function VoteButton({
       </Button>
 
       {/* Pre-verification dialog (legacy flow when no electionId) */}
-      {!electionId && dictionary && (
+      {!electionId && (
         <AlertDialog
           open={preVerificationDialogOpen}
           onOpenChange={setPreVerificationDialogOpen}
