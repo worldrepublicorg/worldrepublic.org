@@ -62,7 +62,7 @@ export function MyPartySection({
             <div className="flex-1">
               <Skeleton height={24} width="60%" className="mb-[3px]" />
             </div>
-            <Skeleton height={30} width={30} className="rounded-full" />
+            <Skeleton height={32} width={32} className="rounded-full" />
           </div>
           {/* Party website */}
           <div className="flex items-center justif y-between mt-4">
