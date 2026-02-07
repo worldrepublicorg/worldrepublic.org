@@ -60,7 +60,7 @@ export function MyPartySection({
           <div className="flex items-center justify-between">
             {/* Party name */}
             <div className="flex-1">
-              <Skeleton height={24} width="60%" className="mb-[3px]" />
+              <Skeleton height={24} width="60%" className="mb-1" />
             </div>
             <Skeleton height={32} width={32} className="rounded-full" />
           </div>
