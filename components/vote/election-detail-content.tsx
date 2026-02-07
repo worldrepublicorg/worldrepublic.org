@@ -67,7 +67,7 @@ export function ElectionDetailContent({
   return (
     <div className="flex flex-1 min-h-full flex-col">
       {/* Hero section */}
-      <div className="mt-2 mb-6 flex flex-col items-center">
+      <div className="mt-2 mb-6 flex flex-wrap items-center justify-center gap-2">
         <Typography
           variant="heading"
           level={2}
@@ -75,23 +75,21 @@ export function ElectionDetailContent({
         >
           {election.name}
         </Typography>
-        <div className="mt-3">
-          {isActive && (
-            <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
-              Active
-            </span>
-          )}
-          {isUpcoming && (
-            <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
-              Upcoming
-            </span>
-          )}
-          {isEnded && (
-            <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800">
-              Ended
-            </span>
-          )}
-        </div>
+        {isActive && (
+          <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
+            Active
+          </span>
+        )}
+        {isUpcoming && (
+          <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
+            Upcoming
+          </span>
+        )}
+        {isEnded && (
+          <span className="inline-flex shrink-0 items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800">
+            Ended
+          </span>
+        )}
       </div>
 
       {/* Election info card */}
