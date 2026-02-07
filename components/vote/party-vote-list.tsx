@@ -96,11 +96,11 @@ export function PartyVoteList({
             No parties found matching your search.
           </div>
         ) : (
-          <div className="divide-y divide-gray-100">
+          <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
             {filteredParties.map((party) => (
               <div
                 key={party.id}
-                className="flex items-center justify-between gap-4 p-4"
+                className="flex items-center justify-between gap-4"
               >
                 <Link
                   href={`/${lang}/parties/${party.id}`}
