@@ -1,8 +1,4 @@
-import {
-  Button,
-  Skeleton,
-  Typography,
-} from "@worldcoin/mini-apps-ui-kit-react";
+import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiCalendarBlank,
   PiCaretLeft,
