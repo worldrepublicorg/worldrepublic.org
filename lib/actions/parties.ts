@@ -1,10 +1,19 @@
 "use server";
 
-import { and, desc, eq, getTableColumns, ilike, isNull, or } from "drizzle-orm";
+import {
+  and,
+  desc,
+  eq,
+  getTableColumns,
+  ilike,
+  isNull,
+  or,
+  sql,
+} from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { getUserProfile } from "@/lib/actions/member";
 import { db, getDbReadOnly } from "@/lib/db/connection";
-import { parties, userProfiles, users } from "@/lib/db/schema";
+import { parties, users } from "@/lib/db/schema";
 import type {
   CreatePartyData,
   Party,
@@ -487,9 +496,15 @@ export async function getParties(
         or(
           ilike(parties.name, searchPattern),
           ilike(parties.description, searchPattern),
+          ilike(parties.leaderUsername, searchPattern),
         )!,
       )!;
     }
+
+    const orderClause =
+      filters?.order === "random"
+        ? sql`random()`
+        : desc(parties.createdAt);
 
     // Execute query with timeout and retry logic
     const queryStartTime = performance.now();
@@ -499,7 +514,7 @@ export async function getParties(
           .select(getTableColumns(parties))
           .from(parties)
           .where(whereCondition)
-          .orderBy(desc(parties.createdAt))
+          .orderBy(orderClause)
           .limit(limit)
           .offset(offset);
       },

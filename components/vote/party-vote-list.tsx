@@ -2,10 +2,11 @@
 
 import { Input, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PiUserFocus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { VoteButton } from "@/components/vote/vote-button";
+import { getParties } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
 
 interface PartyVoteListProps {
@@ -15,6 +16,8 @@ interface PartyVoteListProps {
   dictionary: Dictionary;
 }
 
+const SEARCH_DEBOUNCE_MS = 300;
+
 export function PartyVoteList({
   parties,
   electionId,
@@ -22,32 +25,45 @@ export function PartyVoteList({
   dictionary,
 }: PartyVoteListProps) {
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<Party[] | null>(null);
+  const [isSearching, setIsSearching] = useState(false);
+  const searchTermRef = useRef(searchTerm);
+  searchTermRef.current = searchTerm;
 
-  const shuffledParties = useMemo(() => {
-    const copy = [...parties];
-    for (let i = copy.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
+  useEffect(() => {
+    const trimmed = searchTerm.trim();
+    if (trimmed === "") {
+      setSearchResults(null);
+      setIsSearching(false);
+      return;
     }
-    return copy;
-  }, [parties]);
+    const timeoutId = setTimeout(async () => {
+      setIsSearching(true);
+      try {
+        const results = await getParties({
+          search: trimmed,
+          limit: 50,
+        });
+        if (searchTermRef.current.trim() === trimmed) {
+          setSearchResults(results ?? []);
+        }
+      } catch {
+        if (searchTermRef.current.trim() === trimmed) {
+          setSearchResults([]);
+        }
+      } finally {
+        if (searchTermRef.current.trim() === trimmed) {
+          setIsSearching(false);
+        }
+      }
+    }, SEARCH_DEBOUNCE_MS);
+    return () => clearTimeout(timeoutId);
+  }, [searchTerm]);
 
-  // Filter parties based on search term
-  const filteredParties = useMemo(() => {
-    if (searchTerm.trim() === "") {
-      return shuffledParties;
-    }
-    return shuffledParties.filter(
-      (party) =>
-        party.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (party.leaderUsername
-          ?.toLowerCase()
-          .includes(searchTerm.toLowerCase()) ??
-          false),
-    );
-  }, [shuffledParties, searchTerm]);
+  const isSearchActive = searchTerm.trim() !== "";
+  const listToShow = isSearchActive ? (searchResults ?? []) : parties;
 
-  if (parties.length === 0) {
+  if (parties.length === 0 && !isSearchActive) {
     return (
       <div className="rounded-xl border border-gray-200 p-6 text-center">
         <Typography variant="body" level={3} className="text-gray-500">
@@ -93,14 +109,18 @@ export function PartyVoteList({
       </div>
 
       {/* Parties list */}
-      <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-        {filteredParties.length === 0 ? (
+      <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        {isSearchActive && isSearching ? (
+          <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
+            {dictionary.common.loading}
+          </div>
+        ) : listToShow.length === 0 ? (
           <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
         ) : (
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
-            {filteredParties.map((party) => (
+            {listToShow.map((party) => (
               <div
                 key={party.id}
                 className="flex items-center justify-between gap-4"

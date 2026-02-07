@@ -103,6 +103,8 @@ export function PoliticalPartyList({
     localStorage.setItem("userParty", JSON.stringify({ checked: true, party }));
   };
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<Party[] | null>(null);
+  const [isSearching, setIsSearching] = useState(false);
   const [displayCount, setDisplayCount] = useState<number>(20);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
@@ -316,10 +318,46 @@ export function PoliticalPartyList({
     };
   }, [isLoadingMore, parties, hasMoreParties, loadMoreParties]);
 
-  // Reset display count and hasMore flags when search changes
+  // Reset display count and hasMore flags when search is cleared
   useEffect(() => {
-    setDisplayCount(20);
-    setHasMoreParties(true);
+    if (searchTerm.trim() === "") {
+      setDisplayCount(20);
+      setHasMoreParties(true);
+      setSearchResults(null);
+    }
+  }, [searchTerm]);
+
+  // Debounced server-action search (300 ms)
+  const searchTermRef = useRef(searchTerm);
+  searchTermRef.current = searchTerm;
+  useEffect(() => {
+    const trimmed = searchTerm.trim();
+    if (trimmed === "") {
+      setSearchResults(null);
+      setIsSearching(false);
+      return;
+    }
+    const timeoutId = setTimeout(async () => {
+      setIsSearching(true);
+      try {
+        const results = await getParties({
+          search: trimmed,
+          limit: 50,
+        });
+        if (searchTermRef.current.trim() === trimmed) {
+          setSearchResults(results ?? []);
+        }
+      } catch {
+        if (searchTermRef.current.trim() === trimmed) {
+          setSearchResults([]);
+        }
+      } finally {
+        if (searchTermRef.current.trim() === trimmed) {
+          setIsSearching(false);
+        }
+      }
+    }, 300);
+    return () => clearTimeout(timeoutId);
   }, [searchTerm]);
 
   // Scroll to top button
@@ -587,21 +625,14 @@ export function PoliticalPartyList({
     });
   };
 
-  // Filter parties based on search term
-  const filteredParties =
-    searchTerm.trim() === ""
-      ? parties
-      : parties.filter(
-          (party) =>
-            party.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (party.description
-              ?.toLowerCase()
-              .includes(searchTerm.toLowerCase()) ??
-              false),
-        );
-
-  // Get only the parties to display based on the current display count
-  const partiesToDisplay = filteredParties.slice(0, displayCount);
+  // Browse list: parties to display (when not searching) with infinite scroll
+  const partiesToDisplay = parties.slice(0, displayCount);
+  const isSearchActive = searchTerm.trim() !== "";
+  const listToShow = isSearchActive ? (searchResults ?? []) : partiesToDisplay;
+  const showLoadMore =
+    !isSearchActive &&
+    parties.length > displayCount &&
+    listToShow.length === partiesToDisplay.length;
 
   // Check if user is leader (founder) of the party
   // Note: We compare userParty?.id with party.id to check if user founded this party
@@ -689,14 +720,17 @@ export function PoliticalPartyList({
                 : dictionary.pages.govern.parties.refresh}
             </Button>
           </div>
-        ) : filteredParties.length === 0 ? (
-          // Search filter - no results match
+        ) : isSearchActive && isSearching ? (
+          <div className="mt-12 mb-8 text-center text-sm text-gray-500">
+            {dictionary.common.loading}
+          </div>
+        ) : isSearchActive && (searchResults?.length ?? 0) === 0 ? (
           <div className="mt-12 mb-8 text-center text-sm text-gray-500">
             {dictionary.pages.govern.parties.no_parties_found}
           </div>
         ) : (
           <>
-            {partiesToDisplay.map((party, index) => (
+            {listToShow.map((party, index) => (
               <PartyCard
                 key={party.id}
                 party={party}
@@ -711,12 +745,12 @@ export function PoliticalPartyList({
                   setSelectedParty(party);
                   setIsDeleteDialogOpen(true);
                 }}
-                isLastItem={index === partiesToDisplay.length - 1}
+                isLastItem={index === listToShow.length - 1}
                 dictionary={dictionary}
               />
             ))}
 
-            {filteredParties.length > displayCount && (
+            {showLoadMore && (
               <div ref={loadMoreRef} className="h-14 py-4" />
             )}
           </>

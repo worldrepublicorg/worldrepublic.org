@@ -27,4 +27,5 @@ export interface PartyFilters {
   search?: string;
   limit?: number;
   offset?: number;
+  order?: "newest" | "random";
 }
