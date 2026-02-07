@@ -1,5 +1,8 @@
 import { unstable_cache } from "next/cache";
+import { Suspense } from "react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { ElectionDetailPageSkeleton } from "@/components/vote/election-detail-page-skeleton";
 import { getElection, getElectionResults } from "@/lib/actions/elections";
 import { getParties } from "@/lib/actions/parties";
 import type { Election, ElectionResult } from "@/lib/types/elections";
@@ -30,14 +33,15 @@ const getCachedParties = unstable_cache(
   { revalidate: 60, tags: ["parties-list"] },
 );
 
-export default async function ElectionDetailPage({
-  params,
+async function ElectionDetailData({
+  id,
+  lang,
+  dictionary,
 }: {
-  params: Promise<{ lang: string; id: string }>;
+  id: string;
+  lang: string;
+  dictionary: Dictionary;
 }) {
-  const { lang, id } = await params;
-  const dictionary = await getDictionary(lang);
-
   const election: Election | null = await getCachedElection(id);
 
   if (!election) {
@@ -55,7 +59,6 @@ export default async function ElectionDetailPage({
   const now = Date.now();
   const isEnded = now > election.endsAt;
 
-  // Fetch parties for active/upcoming elections, results for ended ones
   let electionParties: Party[] = [];
   let results: ElectionResult[] = [];
 
@@ -74,5 +77,20 @@ export default async function ElectionDetailPage({
       lang={lang}
       dictionary={dictionary}
     />
+  );
+}
+
+export default async function ElectionDetailPage({
+  params,
+}: {
+  params: Promise<{ lang: string; id: string }>;
+}) {
+  const { lang, id } = await params;
+  const dictionary = await getDictionary(lang);
+
+  return (
+    <Suspense fallback={<ElectionDetailPageSkeleton dictionary={dictionary} />}>
+      <ElectionDetailData id={id} lang={lang} dictionary={dictionary} />
+    </Suspense>
   );
 }
