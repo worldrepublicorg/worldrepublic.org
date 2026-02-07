@@ -86,7 +86,9 @@
           "election_info": "የምርጫ መረጃ",
           "reward_pool": "የሽልማት ገንዳ: {amount} WDD",
           "voting_opens": "ድምጽ መስጫ ይከፈታል {date}",
-          "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ።"
+          "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ።",
+          "choose_a_party": "ፓርቲ ይምረጡ",
+          "no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።"
         }
       }
     },

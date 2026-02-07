@@ -86,7 +86,9 @@
           "election_info": "Informații despre alegeri",
           "reward_pool": "Fond de recompense: {amount} WDD",
           "voting_opens": "Votarea se deschide {date}",
-          "check_back": "Reveniți când alegerile încep pentru a vota."
+          "check_back": "Reveniți când alegerile încep pentru a vota.",
+          "choose_a_party": "Alegeți un partid",
+          "no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri."
         }
       }
     },

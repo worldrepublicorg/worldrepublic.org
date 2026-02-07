@@ -86,7 +86,9 @@
           "election_info": "Wndelays delays",
           "reward_pool": "Wdelays delays: {amount} WDD",
           "voting_opens": "Qdelays delays {date}",
-          "check_back": "Vedays delays delays delays wndelays delays delays."
+          "check_back": "Vedays delays delays delays wndelays delays delays.",
+          "choose_a_party": "Ընտրեք կուսակցություն",
+          "no_parties_for_election": "Այս ընտրության համար կուսակցություններ չկան։"
         }
       }
     },

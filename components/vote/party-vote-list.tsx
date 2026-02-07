@@ -4,6 +4,7 @@ import { Input, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { PiUserFocus } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { VoteButton } from "@/components/vote/vote-button";
 import type { Party } from "@/lib/types/parties";
 
@@ -11,12 +12,14 @@ interface PartyVoteListProps {
   parties: Party[];
   electionId: string;
   lang: string;
+  dictionary: Dictionary;
 }
 
 export function PartyVoteList({
   parties,
   electionId,
   lang,
+  dictionary,
 }: PartyVoteListProps) {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
@@ -48,7 +51,7 @@ export function PartyVoteList({
     return (
       <div className="rounded-xl border border-gray-200 p-6 text-center">
         <Typography variant="body" level={3} className="text-gray-500">
-          No parties available for this election.
+          {dictionary.pages.govern.elections.detail.no_parties_for_election}
         </Typography>
       </div>
     );
@@ -61,7 +64,7 @@ export function PartyVoteList({
         level={1}
         className="mb-3! text-[19px] font-semibold"
       >
-        Choose a party
+        {dictionary.pages.govern.elections.detail.choose_a_party}
       </Typography>
 
       {/* Search bar */}
@@ -83,7 +86,7 @@ export function PartyVoteList({
               />
             </svg>
           }
-          label="Search parties..."
+          label={dictionary.pages.govern.parties.search_placeholder}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -93,7 +96,7 @@ export function PartyVoteList({
       <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
         {filteredParties.length === 0 ? (
           <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
-            No parties found matching your search.
+            {dictionary.pages.govern.parties.no_parties_found}
           </div>
         ) : (
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
@@ -128,6 +131,7 @@ export function PartyVoteList({
                   electionId={electionId}
                   partyId={party.id}
                   size="sm"
+                  dictionary={dictionary}
                 />
               </div>
             ))}

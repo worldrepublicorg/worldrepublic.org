@@ -86,7 +86,9 @@
           "election_info": "Seçki məlumatı",
           "reward_pool": "Mükafat hovuzu: {amount} WDD",
           "voting_opens": "Səsvermə açılır {date}",
-          "check_back": "Səsinizi vermək üçün seçki başlayanda geri qayıdın."
+          "check_back": "Səsinizi vermək üçün seçki başlayanda geri qayıdın.",
+          "choose_a_party": "Partiya seçin",
+          "no_parties_for_election": "Bu seçki üçün partiya yoxdur."
         }
       }
     },

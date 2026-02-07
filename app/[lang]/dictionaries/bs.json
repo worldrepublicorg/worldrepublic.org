@@ -86,7 +86,9 @@
           "election_info": "Informacije o izborima",
           "reward_pool": "Nagradni fond: {amount} WDD",
           "voting_opens": "Glasanje se otvara {date}",
-          "check_back": "Vratite se kada izbori počnu kako biste glasali."
+          "check_back": "Vratite se kada izbori počnu kako biste glasali.",
+          "choose_a_party": "Odaberite stranku",
+          "no_parties_for_election": "Nema dostupnih stranaka za ove izbore."
         }
       }
     },

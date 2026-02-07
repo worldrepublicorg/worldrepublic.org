@@ -86,7 +86,9 @@
           "election_info": "Verkiesingsinligting",
           "reward_pool": "Beloningspoel: {amount} WDD",
           "voting_opens": "Stemming open {date}",
-          "check_back": "Kom terug wanneer die verkiesing begin om jou stem uit te bring."
+          "check_back": "Kom terug wanneer die verkiesing begin om jou stem uit te bring.",
+          "choose_a_party": "Kies 'n party",
+          "no_parties_for_election": "Geen partye beskikbaar vir hierdie verkiesing nie."
         }
       }
     },

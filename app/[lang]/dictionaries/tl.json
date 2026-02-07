@@ -86,7 +86,9 @@
           "election_info": "Impormasyon ng halalan",
           "reward_pool": "Premyong pool: {amount} WDD",
           "voting_opens": "Magbubukas ang botohan {date}",
-          "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto."
+          "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto.",
+          "choose_a_party": "Pumili ng partido",
+          "no_parties_for_election": "Walang partidong magagamit para sa halalang ito."
         }
       }
     },

@@ -86,7 +86,9 @@
           "election_info": "선거 정보",
           "reward_pool": "보상 풀: {amount} WDD",
           "voting_opens": "투표 시작 {date}",
-          "check_back": "선거가 시작되면 투표하러 다시 방문해 주세요."
+          "check_back": "선거가 시작되면 투표하러 다시 방문해 주세요.",
+          "choose_a_party": "정당을 선택하세요",
+          "no_parties_for_election": "이 선거에 참여 가능한 정당이 없습니다."
         }
       }
     },

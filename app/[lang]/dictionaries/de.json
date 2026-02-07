@@ -86,7 +86,9 @@
           "election_info": "Wahlinformationen",
           "reward_pool": "Belohnungspool: {amount} WDD",
           "voting_opens": "Abstimmung öffnet {date}",
-          "check_back": "Kommen Sie zurück, wenn die Wahl beginnt, um Ihre Stimme abzugeben."
+          "check_back": "Kommen Sie zurück, wenn die Wahl beginnt, um Ihre Stimme abzugeben.",
+          "choose_a_party": "Partei wählen",
+          "no_parties_for_election": "Keine Parteien für diese Wahl verfügbar."
         }
       }
     },

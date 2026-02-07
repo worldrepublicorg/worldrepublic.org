@@ -86,7 +86,9 @@
           "election_info": "Bayanan zaɓe",
           "reward_pool": "Tafkin lada: {amount} WDD",
           "voting_opens": "Jefa ƙuri'a ya buɗe {date}",
-          "check_back": "Ku dawo lokacin da zaɓe ya fara don jefa ƙuri'arku."
+          "check_back": "Ku dawo lokacin da zaɓe ya fara don jefa ƙuri'arku.",
+          "choose_a_party": "Zaɓi jam'iyya",
+          "no_parties_for_election": "Babu jam'iyyun da ke samuwa don wannan zaɓe."
         }
       }
     },

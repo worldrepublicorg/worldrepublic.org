@@ -86,7 +86,9 @@
           "election_info": "Maklumat pilihan raya",
           "reward_pool": "Kumpulan ganjaran: {amount} WDD",
           "voting_opens": "Pengundian dibuka {date}",
-          "check_back": "Kembali apabila pilihan raya bermula untuk mengundi."
+          "check_back": "Kembali apabila pilihan raya bermula untuk mengundi.",
+          "choose_a_party": "Pilih parti",
+          "no_parties_for_election": "Tiada parti tersedia untuk pilihan raya ini."
         }
       }
     },

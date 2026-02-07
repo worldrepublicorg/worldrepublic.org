@@ -125,7 +125,7 @@ export function ElectionDetailContent({
 
       {/* Conditional content based on election status */}
       {isActive && (
-        <PartyVoteList parties={parties} electionId={election.id} lang={lang} />
+        <PartyVoteList parties={parties} electionId={election.id} lang={lang} dictionary={dictionary} />
       )}
 
       {isUpcoming && (

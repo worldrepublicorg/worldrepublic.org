@@ -86,7 +86,9 @@
           "election_info": "Seçim bilgileri",
           "reward_pool": "Ödül havuzu: {amount} WDD",
           "voting_opens": "Oylama açılıyor {date}",
-          "check_back": "Oyunuzu kullanmak için seçim başladığında geri dönün."
+          "check_back": "Oyunuzu kullanmak için seçim başladığında geri dönün.",
+          "choose_a_party": "Bir parti seçin",
+          "no_parties_for_election": "Bu seçim için uygun parti bulunmuyor."
         }
       }
     },

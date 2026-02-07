@@ -3,20 +3,24 @@
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Election } from "@/lib/types/elections";
 import { cn } from "@/lib/utils";
 
 interface ElectionCardProps {
   election: Election;
   lang: string;
+  dictionary: Dictionary;
   isLastItem?: boolean;
 }
 
 export function ElectionCard({
   election,
   lang,
+  dictionary,
   isLastItem = false,
 }: ElectionCardProps) {
+  const t = dictionary.pages.govern.elections.detail;
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
   const isUpcoming = now < election.startsAt;
@@ -49,17 +53,17 @@ export function ElectionCard({
           <div>
             {isActive && (
               <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
-                Active
+                {t.status_active}
               </span>
             )}
             {isUpcoming && (
               <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
-                Upcoming
+                {t.status_upcoming}
               </span>
             )}
             {isEnded && (
               <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
-                Ended
+                {t.status_ended}
               </span>
             )}
           </div>
@@ -76,8 +80,10 @@ export function ElectionCard({
           <div className="flex items-center gap-2 text-gray-600">
             <PiCoins className="text-gray-500 shrink-0" size={15} />
             <Typography variant="body" level={2} className="text-[15px]">
-              Reward pool:{" "}
-              {Number.parseInt(election.rewardPool).toLocaleString()} WDD
+              {t.reward_pool.replace(
+                "{amount}",
+                Number.parseInt(election.rewardPool).toLocaleString(),
+              )}
             </Typography>
           </div>
         </div>

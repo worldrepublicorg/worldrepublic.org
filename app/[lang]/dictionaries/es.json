@@ -86,7 +86,9 @@
           "election_info": "Información de la elección",
           "reward_pool": "Fondo de recompensas: {amount} WDD",
           "voting_opens": "La votación abre {date}",
-          "check_back": "Vuelve cuando la elección comience para emitir tu voto."
+          "check_back": "Vuelve cuando la elección comience para emitir tu voto.",
+          "choose_a_party": "Elige un partido",
+          "no_parties_for_election": "No hay partidos disponibles para esta elección."
         }
       }
     },

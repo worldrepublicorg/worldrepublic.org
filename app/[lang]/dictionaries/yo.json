@@ -86,7 +86,9 @@
           "election_info": "Àlàyé ìdìbò",
           "reward_pool": "Adágún ẹ̀bùn: {amount} WDD",
           "voting_opens": "Ìdìbò ń ṣí {date}",
-          "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò."
+          "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò.",
+          "choose_a_party": "Yan ẹgbẹ́ kan",
+          "no_parties_for_election": "Kò sí ẹgbẹ́ tó wà fún ìdìbò yìí."
         }
       }
     },

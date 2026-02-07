@@ -1,6 +1,7 @@
 "use client";
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionCard } from "@/components/vote/election-card";
 import { ElectionHeroCard } from "@/components/vote/election-hero-card";
 import type { Election } from "@/lib/types/elections";
@@ -8,6 +9,7 @@ import type { Election } from "@/lib/types/elections";
 interface ElectionsListProps {
   elections: Election[];
   lang: string;
+  dictionary: Dictionary;
 }
 
 /**
@@ -35,7 +37,7 @@ function pickHeroElection(elections: Election[]): Election | null {
   return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
 }
 
-export function ElectionsList({ elections, lang }: ElectionsListProps) {
+export function ElectionsList({ elections, lang, dictionary }: ElectionsListProps) {
   const now = Date.now();
 
   // Empty state
@@ -81,6 +83,7 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
                 key={election.id}
                 election={election}
                 lang={lang}
+                dictionary={dictionary}
                 isLastItem={index === activeElections.length - 1}
               />
             ))}
@@ -104,6 +107,7 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
                 key={election.id}
                 election={election}
                 lang={lang}
+                dictionary={dictionary}
                 isLastItem={index === upcomingElections.length - 1}
               />
             ))}
@@ -127,6 +131,7 @@ export function ElectionsList({ elections, lang }: ElectionsListProps) {
                 key={election.id}
                 election={election}
                 lang={lang}
+                dictionary={dictionary}
                 isLastItem={index === endedElections.length - 1}
               />
             ))}

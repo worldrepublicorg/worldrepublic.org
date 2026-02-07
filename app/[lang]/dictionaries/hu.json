@@ -86,7 +86,9 @@
           "election_info": "Választási információk",
           "reward_pool": "Jutalmazási alap: {amount} WDD",
           "voting_opens": "Szavazás megnyílik {date}",
-          "check_back": "Térjen vissza, amikor a választás elkezdődik, hogy leadhassa szavazatát."
+          "check_back": "Térjen vissza, amikor a választás elkezdődik, hogy leadhassa szavazatát.",
+          "choose_a_party": "Válasszon pártot",
+          "no_parties_for_election": "Nincsenek elérhető pártok ehhez a választáshoz."
         }
       }
     },

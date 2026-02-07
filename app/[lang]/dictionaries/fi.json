@@ -86,7 +86,9 @@
           "election_info": "Vaalitiedot",
           "reward_pool": "Palkintopooli: {amount} WDD",
           "voting_opens": "Äänestys avautuu {date}",
-          "check_back": "Palaa takaisin vaalin alkaessa äänestääksesi."
+          "check_back": "Palaa takaisin vaalin alkaessa äänestääksesi.",
+          "choose_a_party": "Valitse puolue",
+          "no_parties_for_election": "Tähän vaaliin ei ole saatavilla puolueita."
         }
       }
     },

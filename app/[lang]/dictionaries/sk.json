@@ -86,7 +86,9 @@
           "election_info": "Informácie o voľbách",
           "reward_pool": "Fond odmien: {amount} WDD",
           "voting_opens": "Hlasovanie sa otvára {date}",
-          "check_back": "Vráťte sa, keď voľby začnú, aby ste mohli hlasovať."
+          "check_back": "Vráťte sa, keď voľby začnú, aby ste mohli hlasovať.",
+          "choose_a_party": "Vyberte stranu",
+          "no_parties_for_election": "Pre tieto voľby nie sú k dispozícii žiadne strany."
         }
       }
     },

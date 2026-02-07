@@ -86,7 +86,9 @@
           "election_info": "Vēlēšanu informācija",
           "reward_pool": "Atlīdzības fonds: {amount} WDD",
           "voting_opens": "Balsošana sākas {date}",
-          "check_back": "Atgriezieties, kad vēlēšanas sāksies, lai balsotu."
+          "check_back": "Atgriezieties, kad vēlēšanas sāksies, lai balsotu.",
+          "choose_a_party": "Izvēlieties partiju",
+          "no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju."
         }
       }
     },

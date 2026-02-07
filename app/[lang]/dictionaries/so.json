@@ -86,7 +86,9 @@
           "election_info": "Macluumaadka doorashada",
           "reward_pool": "Kaydka abaalmarinta: {amount} WDD",
           "voting_opens": "Codayntu way furantahay {date}",
-          "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso."
+          "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso.",
+          "choose_a_party": "Dooro xisbi",
+          "no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan."
         }
       }
     },
