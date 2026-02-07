@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TopBar } from "@/components/topbar";
 import { ElectionDetailContent } from "@/components/vote/election-detail-content";
 import type { Election, ElectionResult } from "@/lib/types/elections";
@@ -24,6 +26,19 @@ export default function ElectionDetailPageClient({
   dictionary,
 }: ElectionDetailPageClientProps) {
   const router = useRouter();
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
@@ -48,6 +63,8 @@ export default function ElectionDetailPageClient({
           dictionary={dictionary}
         />
       </div>
+
+      <ScrollToTopButton show={showScrollToTop} onClick={scrollToTop} />
     </div>
   );
 }
