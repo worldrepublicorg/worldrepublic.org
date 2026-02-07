@@ -30,7 +30,7 @@ export function ElectionResults({ results }: ElectionResultsProps) {
           </Typography>
         </div>
       ) : (
-        <div className="divide-y divide-gray-100">
+        <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
           {results.map((result, index) => {
             const percentage =
               totalVotes > 0
@@ -38,7 +38,7 @@ export function ElectionResults({ results }: ElectionResultsProps) {
                 : 0;
 
             return (
-              <div key={result.partyId} className="p-4">
+              <div key={result.partyId}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium text-gray-400">

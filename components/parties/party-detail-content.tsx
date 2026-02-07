@@ -100,7 +100,7 @@ export function PartyDetailContent({
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <div className="h-6 w-1/4 animate-pulse rounded bg-gray-100"></div>
             </div>
-            <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-8 p-4 divide-y divide-gray-100">
               <div className="flex items-center justify-between gap-6">
                 <div className="h-5 w-1/3 animate-pulse rounded bg-gray-100"></div>
                 <div className="h-5 w-1/3 animate-pulse rounded bg-gray-100"></div>
@@ -185,7 +185,7 @@ export function PartyDetailContent({
               </Typography>
             </div>
 
-            <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-8 p-4 divide-y divide-gray-100">
               {/* Leader */}
               {party.leaderUsername && (
                 <div className="flex items-center justify-between gap-6">
