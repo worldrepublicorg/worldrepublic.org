@@ -96,7 +96,7 @@ export function PartyVoteList({
             No parties found matching your search.
           </div>
         ) : (
-          <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+          <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
             {filteredParties.map((party) => (
               <div
                 key={party.id}

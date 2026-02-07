@@ -101,7 +101,7 @@ export function ElectionDetailContent({
             Election info
           </Typography>
         </div>
-        <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+        <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
           <div className="flex items-center gap-2">
             <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
