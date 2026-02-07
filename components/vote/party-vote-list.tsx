@@ -92,7 +92,7 @@ export function PartyVoteList({
       {/* Parties list */}
       <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
         {filteredParties.length === 0 ? (
-          <div className="mt-12 mb-8 p-6 text-center text-sm text-gray-500">
+          <div className="mt-8 mb-8 p-6 text-center text-sm text-gray-500">
             No parties found matching your search.
           </div>
         ) : (
