@@ -54,14 +54,17 @@ export function PartiesPageSkeleton({ dictionary }: PartiesPageSkeletonProps) {
             <div className="flex items-center justify-between">
               {/* Party name */}
               <div className="flex-1">
-                <Skeleton height={24} width="60%" className="mb-1" />
+                <Skeleton height={24} width="60%" className="mb-[3px]" />
               </div>
-              <Skeleton height={32} width={32} className="rounded-full" />
+              <Skeleton height={30} width={30} className="rounded-full" />
+            </div>
+            <div className="mt-2.5">
+              <Skeleton height={16} width="80%" />
             </div>
             {/* Party website */}
-            <div className="flex items-center justify-between mt-3">
-              <Skeleton height={20} width={120} />
-              <Skeleton height={20} width={95} />
+            <div className="flex items-center justify-between mt-2.5">
+              <Skeleton height={18} width={120} />
+              <Skeleton height={18} width={95} />
             </div>
           </div>
         </div>
