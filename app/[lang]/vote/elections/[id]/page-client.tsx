@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
@@ -12,7 +12,7 @@ import type { Party } from "@/lib/types/parties";
 
 interface ElectionDetailPageClientProps {
   election: Election | null;
-  parties: Party[];
+  parties: Party[] | null;
   results: ElectionResult[];
   lang: string;
   dictionary: Dictionary;

@@ -2,6 +2,7 @@
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { PiCalendarBlank, PiCoins, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionResults } from "@/components/vote/election-results";
@@ -11,7 +12,7 @@ import type { Party } from "@/lib/types/parties";
 
 interface ElectionDetailContentProps {
   election: Election | null;
-  parties: Party[];
+  parties: Party[] | null;
   results: ElectionResult[];
   lang: string;
   dictionary: Dictionary;
@@ -24,6 +25,7 @@ export function ElectionDetailContent({
   lang,
   dictionary,
 }: ElectionDetailContentProps) {
+  const router = useRouter();
   const t = dictionary.pages.govern.elections.detail;
 
   if (!election) {
@@ -108,7 +110,8 @@ export function ElectionDetailContent({
           <div className="flex items-center gap-2">
             <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
             <Typography variant="body" level={3} className="text-gray-700">
-              {formatDateTime(election.startsAt)} – {formatDateTime(election.endsAt)}
+              {formatDateTime(election.startsAt)} –{" "}
+              {formatDateTime(election.endsAt)}
             </Typography>
           </div>
           <div className="flex items-center gap-2">
@@ -124,9 +127,32 @@ export function ElectionDetailContent({
       </div>
 
       {/* Conditional content based on election status */}
-      {isActive && (
-        <PartyVoteList parties={parties} electionId={election.id} lang={lang} dictionary={dictionary} />
-      )}
+      {isActive &&
+        (parties === null ? (
+          <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
+            <Typography
+              variant="body"
+              level={3}
+              className="text-sm text-gray-500"
+            >
+              {dictionary.pages.govern.parties.error_loading}
+            </Typography>
+            <Button
+              variant="tertiary"
+              size="sm"
+              onClick={() => router.refresh()}
+            >
+              {dictionary.pages.govern.parties.refresh}
+            </Button>
+          </div>
+        ) : (
+          <PartyVoteList
+            parties={parties}
+            electionId={election.id}
+            lang={lang}
+            dictionary={dictionary}
+          />
+        ))}
 
       {isUpcoming && (
         <div className="flex flex-col items-center gap-3 rounded-xl border border-blue-100 bg-blue-50 p-6 text-center">

@@ -25,9 +25,14 @@ const getCachedResults = unstable_cache(
   { revalidate: 60, tags: ["election-results"] },
 );
 
+// If parties is null (error), throw so we don't cache the failure (same as Parties page)
 const getCachedParties = unstable_cache(
   async () => {
-    return await getParties();
+    const parties = await getParties();
+    if (parties === null) {
+      throw new Error("Failed to fetch parties");
+    }
+    return parties;
   },
   ["parties-list"],
   { revalidate: 60, tags: ["parties-list"] },
@@ -59,14 +64,28 @@ async function ElectionDetailData({
   const now = Date.now();
   const isEnded = now > election.endsAt;
 
-  let electionParties: Party[] = [];
+  let electionParties: Party[] | null = [];
   let results: ElectionResult[] = [];
 
   if (isEnded) {
     results = await getCachedResults(id);
   } else {
-    const partiesResult = await getCachedParties();
-    electionParties = partiesResult ?? [];
+    try {
+      electionParties = await getCachedParties();
+    } catch (error) {
+      const errorDetails = {
+        errorType: error instanceof Error ? error.constructor.name : typeof error,
+        errorMessage: error instanceof Error ? error.message : String(error),
+        timestamp: new Date().toISOString(),
+        lang,
+        electionId: id,
+      };
+      console.error(
+        "[ElectionDetailPage] Error fetching parties:",
+        JSON.stringify(errorDetails, null, 2),
+      );
+      electionParties = null;
+    }
   }
 
   return (
