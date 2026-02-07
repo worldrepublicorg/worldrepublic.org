@@ -174,6 +174,12 @@
           "sent": "已发送"
         }
       }
+    },
+    "error": {
+      "title": "出了点问题",
+      "description": "发生了意外错误。请重试。",
+      "error_id": "错误 ID: {digest}",
+      "try_again": "重试"
     }
   },
   "components": {

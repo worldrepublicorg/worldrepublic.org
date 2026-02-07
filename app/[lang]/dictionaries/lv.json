@@ -174,6 +174,12 @@
           "sent": "Nosūtīts"
         }
       }
+    },
+    "error": {
+      "title": "Kaut kas nogāja greizi",
+      "description": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz.",
+      "error_id": "Kļūdas ID: {digest}",
+      "try_again": "Mēģināt vēlreiz"
     }
   },
   "components": {

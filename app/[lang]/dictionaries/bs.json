@@ -174,6 +174,12 @@
           "sent": "Poslano"
         }
       }
+    },
+    "error": {
+      "title": "Nešto je pošlo po krivu",
+      "description": "Došlo je do neočekivane greške. Molimo pokušajte ponovo.",
+      "error_id": "ID greške: {digest}",
+      "try_again": "Pokušaj ponovo"
     }
   },
   "components": {

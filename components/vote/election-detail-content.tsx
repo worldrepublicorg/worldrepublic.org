@@ -33,19 +33,19 @@ export function ElectionDetailContent({
         <Typography
           variant="heading"
           level={3}
-          className="mt-4 text-center text-gray-900"
+          className="mt-4! text-center text-gray-900"
         >
           {t.not_found}
         </Typography>
         <Typography
           variant="body"
           level={2}
-          className="mt-2 text-center text-gray-500"
+          className="mt-2! text-center text-gray-500"
         >
           {t.not_found_description}
         </Typography>
         <Link href={`/${lang}/vote`}>
-          <Button variant="secondary" className="mt-8">
+          <Button variant="secondary" className="mt-8!">
             {t.back_to_elections}
           </Button>
         </Link>

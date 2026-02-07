@@ -174,6 +174,12 @@
           "sent": "Enviado"
         }
       }
+    },
+    "error": {
+      "title": "Algo deu errado",
+      "description": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+      "error_id": "ID do erro: {digest}",
+      "try_again": "Tentar novamente"
     }
   },
   "components": {

@@ -92,6 +92,12 @@
         "run_on_elections_and_earn": "Run on elections and get subsidies"
       }
     },
+    "error": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again.",
+      "error_id": "Error ID: {digest}",
+      "try_again": "Try again"
+    },
     "menu": {
       "sections": {
         "account": {
