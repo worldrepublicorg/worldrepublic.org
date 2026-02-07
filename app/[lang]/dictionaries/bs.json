@@ -88,7 +88,11 @@
           "voting_opens": "Glasanje se otvara {date}",
           "check_back": "Vratite se kada izbori počnu kako biste glasali.",
           "choose_a_party": "Odaberite stranku",
-          "no_parties_for_election": "Nema dostupnih stranaka za ove izbore."
+          "no_parties_for_election": "Nema dostupnih stranaka za ove izbore.",
+          "results_title": "Rezultati",
+          "vote_singular": "glas",
+          "vote_plural": "glasova",
+          "no_votes": "U ovim izborima nije bilo glasova."
         }
       }
     },

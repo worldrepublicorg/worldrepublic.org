@@ -88,7 +88,11 @@
           "voting_opens": "Glasovanje se odpre {date}",
           "check_back": "Vrnite se, ko se volitve začnejo, da oddate svoj glas.",
           "choose_a_party": "Izberite stranko",
-          "no_parties_for_election": "Za te volitve ni na voljo nobena stranka."
+          "no_parties_for_election": "Za te volitve ni na voljo nobena stranka.",
+          "results_title": "Rezultati",
+          "vote_singular": "glas",
+          "vote_plural": "glasov",
+          "no_votes": "V teh volitvah ni bilo oddanih glasov."
         }
       }
     },

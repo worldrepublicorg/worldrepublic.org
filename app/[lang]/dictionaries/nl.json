@@ -88,7 +88,11 @@
           "voting_opens": "Stemming opent {date}",
           "check_back": "Kom terug wanneer de verkiezing begint om je stem uit te brengen.",
           "choose_a_party": "Kies een partij",
-          "no_parties_for_election": "Geen partijen beschikbaar voor deze verkiezing."
+          "no_parties_for_election": "Geen partijen beschikbaar voor deze verkiezing.",
+          "results_title": "Resultaten",
+          "vote_singular": "stem",
+          "vote_plural": "stemmen",
+          "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing."
         }
       }
     },

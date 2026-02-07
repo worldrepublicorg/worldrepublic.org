@@ -88,7 +88,11 @@
           "voting_opens": "ድምጽ መስጫ ይከፈታል {date}",
           "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ።",
           "choose_a_party": "ፓርቲ ይምረጡ",
-          "no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።"
+          "no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።",
+          "results_title": "ውጤቶች",
+          "vote_singular": "ድምፅ",
+          "vote_plural": "ድምፆች",
+          "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።"
         }
       }
     },

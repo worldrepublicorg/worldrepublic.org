@@ -88,7 +88,11 @@
           "voting_opens": "Kupiga kura kunafunguliwa {date}",
           "check_back": "Rudi uchaguzi unapoanza ili kupiga kura yako.",
           "choose_a_party": "Chagua chama",
-          "no_parties_for_election": "Hakuna vyama vinavyopatikana kwa uchaguzi huu."
+          "no_parties_for_election": "Hakuna vyama vinavyopatikana kwa uchaguzi huu.",
+          "results_title": "Matokeo",
+          "vote_singular": "kura",
+          "vote_plural": "kura",
+          "no_votes": "Hakuna kura zilizopigwa katika uchaguzi huu."
         }
       }
     },

@@ -88,7 +88,11 @@
           "voting_opens": "Magbubukas ang botohan {date}",
           "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto.",
           "choose_a_party": "Pumili ng partido",
-          "no_parties_for_election": "Walang partidong magagamit para sa halalang ito."
+          "no_parties_for_election": "Walang partidong magagamit para sa halalang ito.",
+          "results_title": "Mga Resulta",
+          "vote_singular": "boto",
+          "vote_plural": "boto",
+          "no_votes": "Walang bumoto sa halalang ito."
         }
       }
     },

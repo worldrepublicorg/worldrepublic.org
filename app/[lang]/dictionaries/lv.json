@@ -88,7 +88,11 @@
           "voting_opens": "Balsošana sākas {date}",
           "check_back": "Atgriezieties, kad vēlēšanas sāksies, lai balsotu.",
           "choose_a_party": "Izvēlieties partiju",
-          "no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju."
+          "no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju.",
+          "results_title": "Rezultāti",
+          "vote_singular": "balss",
+          "vote_plural": "balsis",
+          "no_votes": "Šajās vēlēšanās neviena balss netika nodota."
         }
       }
     },

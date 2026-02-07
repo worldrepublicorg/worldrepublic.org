@@ -43,7 +43,11 @@
           "voting_opens": "Voting opens {date}",
           "check_back": "Check back when the election starts to cast your vote.",
           "choose_a_party": "Choose a party",
-          "no_parties_for_election": "No parties available for this election."
+          "no_parties_for_election": "No parties available for this election.",
+          "results_title": "Results",
+          "vote_singular": "vote",
+          "vote_plural": "votes",
+          "no_votes": "No votes were cast in this election."
         }
       },
       "parties": {

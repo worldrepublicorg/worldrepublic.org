@@ -88,7 +88,11 @@
           "voting_opens": "Votarea se deschide {date}",
           "check_back": "Reveniți când alegerile încep pentru a vota.",
           "choose_a_party": "Alegeți un partid",
-          "no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri."
+          "no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri.",
+          "results_title": "Rezultate",
+          "vote_singular": "vot",
+          "vote_plural": "voturi",
+          "no_votes": "Nu au fost exprimate voturi în această alegere."
         }
       }
     },

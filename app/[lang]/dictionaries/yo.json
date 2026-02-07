@@ -88,7 +88,11 @@
           "voting_opens": "Ìdìbò ń ṣí {date}",
           "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò.",
           "choose_a_party": "Yan ẹgbẹ́ kan",
-          "no_parties_for_election": "Kò sí ẹgbẹ́ tó wà fún ìdìbò yìí."
+          "no_parties_for_election": "Kò sí ẹgbẹ́ tó wà fún ìdìbò yìí.",
+          "results_title": "Àwọn àbájáde",
+          "vote_singular": "ìbò",
+          "vote_plural": "ìbò",
+          "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí."
         }
       }
     },

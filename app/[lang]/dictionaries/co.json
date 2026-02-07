@@ -88,7 +88,11 @@
           "voting_opens": "U votu s'apre {date}",
           "check_back": "Tornate quandu l'elezzione cumencia per vutà.",
           "choose_a_party": "Sceglie un partitu",
-          "no_parties_for_election": "Nisun partitu dispunibule per questa elezzione."
+          "no_parties_for_election": "Nisun partitu dispunibule per questa elezzione.",
+          "results_title": "Risultati",
+          "vote_singular": "votu",
+          "vote_plural": "voti",
+          "no_votes": "Ùn ci sò stati voti in questa elezzione."
         }
       }
     },

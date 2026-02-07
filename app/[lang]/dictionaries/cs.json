@@ -88,7 +88,11 @@
           "voting_opens": "Hlasování se otevírá {date}",
           "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat.",
           "choose_a_party": "Vyberte stranu",
-          "no_parties_for_election": "Pro tyto volby nejsou k dispozici žádné strany."
+          "no_parties_for_election": "Pro tyto volby nejsou k dispozici žádné strany.",
+          "results_title": "Výsledky",
+          "vote_singular": "hlas",
+          "vote_plural": "hlasů",
+          "no_votes": "V těchto volbách nebyly odevzdány žádné hlasy."
         }
       }
     },

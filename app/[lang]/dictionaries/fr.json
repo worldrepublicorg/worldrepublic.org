@@ -88,7 +88,11 @@
           "voting_opens": "Le vote ouvre {date}",
           "check_back": "Revenez quand l'élection commence pour voter.",
           "choose_a_party": "Choisissez un parti",
-          "no_parties_for_election": "Aucun parti disponible pour cette élection."
+          "no_parties_for_election": "Aucun parti disponible pour cette élection.",
+          "results_title": "Résultats",
+          "vote_singular": "vote",
+          "vote_plural": "votes",
+          "no_votes": "Aucun vote n’a été exprimé lors de cette élection."
         }
       }
     },

@@ -88,7 +88,11 @@
           "voting_opens": "يفتح التصويت {date}",
           "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك.",
           "choose_a_party": "اختر حزباً",
-          "no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب."
+          "no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب.",
+          "results_title": "النتائج",
+          "vote_singular": "صوت",
+          "vote_plural": "أصوات",
+          "no_votes": "لم يتم الإدلاء بأي أصوات في هذا الانتخاب."
         }
       }
     },

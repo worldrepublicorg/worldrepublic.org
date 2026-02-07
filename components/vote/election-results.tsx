@@ -1,24 +1,31 @@
 "use client";
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { ElectionResult } from "@/lib/types/elections";
 
 interface ElectionResultsProps {
   results: ElectionResult[];
+  dictionary: Dictionary;
 }
 
-export function ElectionResults({ results }: ElectionResultsProps) {
+export function ElectionResults({
+  results,
+  dictionary,
+}: ElectionResultsProps) {
   const totalVotes = results.reduce((sum, r) => sum + r.voteCount, 0);
+  const t = dictionary.pages.govern.elections.detail;
 
   return (
     <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
       <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
         <div className="flex items-center justify-between">
           <Typography variant="subtitle" level={3} className="text-gray-900">
-            Results
+            {t.results_title}
           </Typography>
           <Typography variant="body" level={3} className="text-gray-500">
-            {totalVotes} {totalVotes === 1 ? "vote" : "votes"}
+            {totalVotes}{" "}
+            {totalVotes === 1 ? t.vote_singular : t.vote_plural}
           </Typography>
         </div>
       </div>
@@ -26,7 +33,7 @@ export function ElectionResults({ results }: ElectionResultsProps) {
       {results.length === 0 ? (
         <div className="p-6 text-center">
           <Typography variant="body" level={3} className="text-gray-500">
-            No votes were cast in this election.
+            {t.no_votes}
           </Typography>
         </div>
       ) : (
@@ -57,7 +64,10 @@ export function ElectionResults({ results }: ElectionResultsProps) {
                     level={3}
                     className="text-gray-600"
                   >
-                    {result.voteCount} {result.voteCount === 1 ? "vote" : "votes"}{" "}
+                    {result.voteCount}{" "}
+                    {result.voteCount === 1
+                      ? t.vote_singular
+                      : t.vote_plural}{" "}
                     ({percentage}%)
                   </Typography>
                 </div>

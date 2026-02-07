@@ -142,7 +142,7 @@ export function ElectionDetailContent({
         </div>
       )}
 
-      {isEnded && <ElectionResults results={results} />}
+      {isEnded && <ElectionResults results={results} dictionary={dictionary} />}
     </div>
   );
 }

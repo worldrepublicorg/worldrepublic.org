@@ -88,7 +88,11 @@
           "voting_opens": "رأی‌گیری باز می‌شود {date}",
           "check_back": "برای رأی دادن، زمانی که انتخابات شروع شد بازگردید.",
           "choose_a_party": "یک حزب انتخاب کنید",
-          "no_parties_for_election": "هیچ حزبی برای این انتخابات موجود نیست."
+          "no_parties_for_election": "هیچ حزبی برای این انتخابات موجود نیست.",
+          "results_title": "نتایج",
+          "vote_singular": "رأی",
+          "vote_plural": "رأی",
+          "no_votes": "هیچ رأیی در این انتخابات داده نشد."
         }
       }
     },

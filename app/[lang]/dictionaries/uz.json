@@ -88,7 +88,11 @@
           "voting_opens": "Ovoz berish ochiladi {date}",
           "check_back": "Ovoz berish uchun saylov boshlanganda qaytib keling.",
           "choose_a_party": "Partiyani tanlang",
-          "no_parties_for_election": "Bu saylov uchun partiyalar mavjud emas."
+          "no_parties_for_election": "Bu saylov uchun partiyalar mavjud emas.",
+          "results_title": "Natijalar",
+          "vote_singular": "ovoz",
+          "vote_plural": "ovoz",
+          "no_votes": "Bu saylovda hech qanday ovoz berilmadi."
         }
       }
     },

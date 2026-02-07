@@ -88,7 +88,11 @@
           "voting_opens": "Səsvermə açılır {date}",
           "check_back": "Səsinizi vermək üçün seçki başlayanda geri qayıdın.",
           "choose_a_party": "Partiya seçin",
-          "no_parties_for_election": "Bu seçki üçün partiya yoxdur."
+          "no_parties_for_election": "Bu seçki üçün partiya yoxdur.",
+          "results_title": "Nəticələr",
+          "vote_singular": "səs",
+          "vote_plural": "səs",
+          "no_votes": "Bu seçimdə heç bir səs verilmədi."
         }
       }
     },

@@ -88,7 +88,11 @@
           "voting_opens": "Pemungutan suara dibuka {date}",
           "check_back": "Kembali saat pemilihan dimulai untuk memberikan suara Anda.",
           "choose_a_party": "Pilih partai",
-          "no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini."
+          "no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini.",
+          "results_title": "Hasil",
+          "vote_singular": "suara",
+          "vote_plural": "suara",
+          "no_votes": "Tidak ada suara yang diberikan dalam pemilihan ini."
         }
       }
     },

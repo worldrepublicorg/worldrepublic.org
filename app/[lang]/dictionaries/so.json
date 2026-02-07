@@ -88,7 +88,11 @@
           "voting_opens": "Codayntu way furantahay {date}",
           "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso.",
           "choose_a_party": "Dooro xisbi",
-          "no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan."
+          "no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan.",
+          "results_title": "Natiijoyin",
+          "vote_singular": "cod",
+          "vote_plural": "codad",
+          "no_votes": "Doorashadaan lama codin."
         }
       }
     },

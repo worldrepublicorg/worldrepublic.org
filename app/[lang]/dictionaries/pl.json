@@ -88,7 +88,11 @@
           "voting_opens": "Głosowanie otwiera się {date}",
           "check_back": "Wróć, gdy wybory się rozpoczną, aby oddać głos.",
           "choose_a_party": "Wybierz partię",
-          "no_parties_for_election": "Brak dostępnych partii dla tych wyborów."
+          "no_parties_for_election": "Brak dostępnych partii dla tych wyborów.",
+          "results_title": "Wyniki",
+          "vote_singular": "głos",
+          "vote_plural": "głosów",
+          "no_votes": "W tych wyborach nie oddano żadnych głosów."
         }
       }
     },

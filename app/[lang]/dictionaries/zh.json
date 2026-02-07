@@ -88,7 +88,11 @@
           "voting_opens": "投票开放 {date}",
           "check_back": "选举开始后回来投票。",
           "choose_a_party": "选择一个政党",
-          "no_parties_for_election": "本次选举没有可用的政党。"
+          "no_parties_for_election": "本次选举没有可用的政党。",
+          "results_title": "结果",
+          "vote_singular": "票",
+          "vote_plural": "票",
+          "no_votes": "本次选举没有投票。"
         }
       }
     },

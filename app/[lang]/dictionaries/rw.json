@@ -88,7 +88,11 @@
           "voting_opens": "Itora rifungura {date}",
           "check_back": "Garuka iyo amatora atangiye kugira ngo utore.",
           "choose_a_party": "Hitamo ishyaka",
-          "no_parties_for_election": "Nta mashyaka aboneka kuri aya matora."
+          "no_parties_for_election": "Nta mashyaka aboneka kuri aya matora.",
+          "results_title": "Ibisubizo",
+          "vote_singular": "amajwi",
+          "vote_plural": "amajwi",
+          "no_votes": "Nta majwi yatanzwe muri iyi matora."
         }
       }
     },

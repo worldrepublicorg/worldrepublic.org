@@ -88,7 +88,11 @@
           "voting_opens": "Äänestys avautuu {date}",
           "check_back": "Palaa takaisin vaalin alkaessa äänestääksesi.",
           "choose_a_party": "Valitse puolue",
-          "no_parties_for_election": "Tähän vaaliin ei ole saatavilla puolueita."
+          "no_parties_for_election": "Tähän vaaliin ei ole saatavilla puolueita.",
+          "results_title": "Tulokset",
+          "vote_singular": "ääni",
+          "vote_plural": "ääntä",
+          "no_votes": "Tässä vaalissa ei annettu ääniä."
         }
       }
     },

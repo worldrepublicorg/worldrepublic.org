@@ -88,7 +88,11 @@
           "voting_opens": "મતદાન ખુલશે {date}",
           "check_back": "તમારો મત આપવા માટે ચૂંટણી શરૂ થાય ત્યારે પાછા આવો.",
           "choose_a_party": "પક્ષ પસંદ કરો",
-          "no_parties_for_election": "આ ચૂંટણી માટે કોઈ પક્ષ ઉપલબ્ધ નથી."
+          "no_parties_for_election": "આ ચૂંટણી માટે કોઈ પક્ષ ઉપલબ્ધ નથી.",
+          "results_title": "પરિણામો",
+          "vote_singular": "મત",
+          "vote_plural": "મતો",
+          "no_votes": "આ ચૂંટણીમાં કોઈ મત આપવામાં આવ્યા નથી."
         }
       }
     },

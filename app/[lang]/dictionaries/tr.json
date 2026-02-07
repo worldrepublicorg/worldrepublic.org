@@ -88,7 +88,11 @@
           "voting_opens": "Oylama açılıyor {date}",
           "check_back": "Oyunuzu kullanmak için seçim başladığında geri dönün.",
           "choose_a_party": "Bir parti seçin",
-          "no_parties_for_election": "Bu seçim için uygun parti bulunmuyor."
+          "no_parties_for_election": "Bu seçim için uygun parti bulunmuyor.",
+          "results_title": "Sonuçlar",
+          "vote_singular": "oy",
+          "vote_plural": "oy",
+          "no_votes": "Bu seçimde hiç oy kullanılmadı."
         }
       }
     },

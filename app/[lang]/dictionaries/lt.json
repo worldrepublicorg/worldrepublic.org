@@ -88,7 +88,11 @@
           "voting_opens": "Balsavimas prasideda {date}",
           "check_back": "Grįžkite, kai rinkimai prasidės, kad galėtumėte balsuoti.",
           "choose_a_party": "Pasirinkite partiją",
-          "no_parties_for_election": "Šiems rinkimams nėra prieinamų partijų."
+          "no_parties_for_election": "Šiems rinkimams nėra prieinamų partijų.",
+          "results_title": "Rezultatai",
+          "vote_singular": "balsas",
+          "vote_plural": "balsų",
+          "no_votes": "Šiuose rinkimuose nebuvo balsuota."
         }
       }
     },

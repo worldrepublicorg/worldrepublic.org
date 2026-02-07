@@ -88,7 +88,11 @@
           "voting_opens": "رایه ورکول پرانیستل کیږي {date}",
           "check_back": "خپله رایه ورکولو لپاره کله چې ټاکنې پیل شي بیرته راشئ.",
           "choose_a_party": "یوه ګوند غوره کړئ",
-          "no_parties_for_election": "د دې ټاکنو لپاره هیڅ ګوند شتون نلري."
+          "no_parties_for_election": "د دې ټاکنو لپاره هیڅ ګوند شتون نلري.",
+          "results_title": "پایلې",
+          "vote_singular": "رای",
+          "vote_plural": "رایې",
+          "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل."
         }
       }
     },
