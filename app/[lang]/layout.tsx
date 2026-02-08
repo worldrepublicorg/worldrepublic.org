@@ -1,7 +1,6 @@
 "use client";
 
 import { SessionProvider } from "next-auth/react";
-import { WalletAuthCacheSync } from "@/components/wallet/wallet-auth-cache-sync";
 
 export default function AuthLayout({
   children,
@@ -9,9 +8,6 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SessionProvider refetchOnWindowFocus={true}>
-      <WalletAuthCacheSync />
-      {children}
-    </SessionProvider>
+    <SessionProvider refetchOnWindowFocus={true}>{children}</SessionProvider>
   );
 }

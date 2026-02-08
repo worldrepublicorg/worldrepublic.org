@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   PiArrowCircleUpFill,
   PiArrowSquareOut,
@@ -39,15 +39,9 @@ import { CustomSelect } from "@/components/custom-select";
 import { MenuLink } from "@/components/menu-link";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
-import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
-import {
-  type GetWalletAuthAndDataProfileData,
-  type GetWalletAuthAndDataTransaction,
-  getWalletAuthAndData,
-  withdrawTokens,
-} from "@/lib/actions/member";
+import { withdrawTokens } from "@/lib/actions/member";
 import {
   cn,
   formatFullAmount,
@@ -55,91 +49,45 @@ import {
   truncateToPrecision,
 } from "@/lib/utils";
 
-const WALLET_AUTH_STATE_KEY = "walletAuthState";
-
-function getCachedWalletAuthState(): { authenticated: boolean } | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(WALLET_AUTH_STATE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as unknown;
-    if (
-      parsed &&
-      typeof parsed === "object" &&
-      "authenticated" in parsed &&
-      typeof (parsed as { authenticated: unknown }).authenticated === "boolean"
-    ) {
-      return {
-        authenticated: (parsed as { authenticated: boolean }).authenticated,
-      };
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-function setCachedWalletAuthState(authenticated: boolean) {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(
-      WALLET_AUTH_STATE_KEY,
-      JSON.stringify({ authenticated }),
-    );
-  } catch {
-    // ignore
-  }
+interface Transaction {
+  id: number;
+  type: string;
+  amount: number;
+  walletAddress?: string;
+  selectedChain?: string;
+  recipientUserId?: string;
+  createdAt: number;
+  isReceived: boolean;
 }
 
 interface WalletPageClientProps {
+  profileData: {
+    walletBalance: number | null;
+    selfVerifiedAt: number | null;
+    username: string | null;
+    userId: string;
+    userUuid: string | null;
+  } | null;
+  isAuthenticated: boolean;
   lang: string;
   dictionary: Dictionary;
+  transactions?: Transaction[] | null;
 }
 
 export default function WalletPageClient({
+  profileData,
+  isAuthenticated,
+  lang,
   dictionary,
+  transactions,
 }: WalletPageClientProps) {
   const params = useParams<{ lang: string }>();
   const [isSignInDialogOpen, setIsSignInDialogOpen] = useState(false);
-  const { user, isAuthenticated: clientIsAuthenticated } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
+  const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
-  const [cachedAuthState] = useState<{ authenticated: boolean } | null>(
-    getCachedWalletAuthState,
-  );
-  const [serverData, setServerData] = useState<{
-    authenticated: boolean;
-    profileData: GetWalletAuthAndDataProfileData | null;
-    transactions: GetWalletAuthAndDataTransaction[] | null;
-  } | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    getWalletAuthAndData().then((result) => {
-      if (cancelled) return;
-      setServerData(result);
-      setCachedWalletAuthState(result.authenticated);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const showSkeleton =
-    serverData === null && cachedAuthState?.authenticated !== false;
-
-  const profileData: GetWalletAuthAndDataProfileData | null =
-    serverData?.profileData ?? null;
-  const isAuthenticated = serverData
-    ? serverData.authenticated
-    : cachedAuthState?.authenticated === false
-      ? false
-      : false;
-  const transactions: GetWalletAuthAndDataTransaction[] =
-    serverData?.transactions ?? [];
-
-  const authenticated = isAuthenticated || clientIsAuthenticated;
   const walletBalance = profileData?.walletBalance ?? null;
 
   // Dialog state management
@@ -195,9 +143,7 @@ export default function WalletPageClient({
         setSelectedChain("");
         setAmount("");
 
-        const fresh = await getWalletAuthAndData();
-        setServerData(fresh);
-        setCachedWalletAuthState(fresh.authenticated);
+        // Refresh user profile to update balance display
         router.refresh();
       } else {
         toast.error({
@@ -242,28 +188,43 @@ export default function WalletPageClient({
   const getButtonState = () => {
     // Check if address is empty first
     if (!walletAddress.trim()) {
-      return { disabled: true, text: dictionary.common.invalid_address };
+      return {
+        disabled: true,
+        text: dictionary.common.invalid_address,
+      };
     }
 
     // Check for address validation errors
     const addressError = getAddressValidationError(walletAddress);
     if (addressError) {
-      return { disabled: true, text: addressError };
+      return {
+        disabled: true,
+        text: addressError,
+      };
     }
 
     // Check if chain is selected
     if (!isChainSelected) {
-      return { disabled: true, text: dictionary.common.withdraw };
+      return {
+        disabled: true,
+        text: dictionary.common.withdraw,
+      };
     }
 
     const amountNum = parseFloat(amount);
 
     if (!amount || isNaN(amountNum)) {
-      return { disabled: true, text: dictionary.common.withdraw };
+      return {
+        disabled: true,
+        text: dictionary.common.withdraw,
+      };
     }
 
     if (amountNum < 10) {
-      return { disabled: true, text: dictionary.toasts.wallet.min_amount };
+      return {
+        disabled: true,
+        text: dictionary.toasts.wallet.min_amount,
+      };
     }
 
     if (amountNum > maxWithdrawable) {
@@ -273,14 +234,15 @@ export default function WalletPageClient({
       };
     }
 
-    return { disabled: false, text: dictionary.common.withdraw };
+    return {
+      disabled: false,
+      text: dictionary.common.withdraw,
+    };
   };
 
   const buttonState = getButtonState();
 
-  if (showSkeleton) {
-    return <WalletPageSkeleton />;
-  }
+  const authenticated = isAuthenticated || clientIsAuthenticated;
 
   return (
     <div className="pb-safe flex flex-col">
@@ -380,14 +342,24 @@ export default function WalletPageClient({
                       dictionary.pages.wallet.modals.send.withdraw_to_crypto
                         .network_label
                     }
-                    options={[{ label: "World Chain", value: "480" }]}
+                    options={[
+                      // {
+                      //   label: "Monad",
+                      //   value: "143",
+                      // },
+                      {
+                        label: "World Chain",
+                        value: "480",
+                      },
+                    ]}
                   />
 
                   <Input
                     value={amount}
                     type="number"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      setAmount(e.target.value);
+                      const value = e.target.value;
+                      setAmount(value);
                     }}
                     endAdornment={
                       <button
