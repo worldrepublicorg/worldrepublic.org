@@ -50,7 +50,7 @@ export function ElectionDetailPageSkeleton({
             <div className="flex items-center gap-2">
               <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
               <div className="flex min-w-0 flex-1 flex-col gap-1">
-                <Skeleton height={18} width="95%" className="rounded" />
+                <Skeleton height={17} width="95%" className="rounded" />
                 <Skeleton height={17} width="20%" className="rounded" />
               </div>
             </div>
