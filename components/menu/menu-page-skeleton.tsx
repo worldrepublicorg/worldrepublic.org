@@ -73,7 +73,7 @@ export function MenuPageSkeleton() {
               />
               <CustomListItem
                 label={
-                  <Skeleton height={18} width={48} className="rounded-lg" />
+                  <Skeleton height={18} width={40} className="rounded-lg" />
                 }
                 startAdornment={
                   <PiBookOpenText className="size-5 text-gray-400" />
