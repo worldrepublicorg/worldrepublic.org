@@ -1,10 +1,5 @@
-import { Skeleton, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import {
-  PiArrowsClockwise,
-  PiArrowUp,
-  PiCaretDown,
-  PiList,
-} from "react-icons/pi";
+import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
+import { PiArrowsClockwise, PiArrowUp, PiList } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 export default function WalletPageLoading() {
@@ -55,7 +50,6 @@ export default function WalletPageLoading() {
               disabled
             >
               <Skeleton height={20} width={48} className="rounded-lg" />
-              <PiCaretDown className="size-4 text-gray-500" />
             </button>
 
             {/* Transaction skeletons */}
