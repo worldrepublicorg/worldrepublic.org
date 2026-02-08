@@ -208,7 +208,7 @@ export function ElectionDetailPageLoading() {
                   </div>
                 </div>
                 <Button disabled size="sm">
-                  <Skeleton height={15} width={80} className="rounded-lg" />
+                  <Skeleton height={15} width={40} className="rounded-lg" />
                 </Button>
               </div>
             ))}
