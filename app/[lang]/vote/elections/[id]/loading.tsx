@@ -7,7 +7,7 @@ import {
 } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
-export function ElectionDetailPageLoading() {
+export default function ElectionDetailPageLoading() {
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
