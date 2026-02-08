@@ -1,4 +1,4 @@
-import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
 import {
   PiArrowSquareOut,
   PiBookOpenText,
@@ -8,21 +8,16 @@ import {
   PiLifebuoy,
   PiRocketLaunch,
   PiShieldCheck,
+  PiSignIn,
   PiX,
 } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 
-interface MenuPageSkeletonProps {
-  dictionary: Dictionary;
-}
-
-export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
+export function MenuPageSkeleton() {
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
-        title={dictionary.nav.menu}
         startAdornment={<div className="size-10" />}
         endAdornment={
           <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
@@ -36,25 +31,22 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
           {/* Account Section */}
           <div>
             <div className="mb-4 flex">
-              <Typography
-                variant="subtitle"
-                level={3}
-                className="text-gray-400"
-              >
-                {dictionary.pages.menu.sections.account.title}
-              </Typography>
+              <Skeleton height={18} width={40} className="rounded-lg" />
             </div>
             <div className="flex flex-col gap-2">
               {/* Sign in / Account info skeleton */}
-              <div className="min-h-14 bg-gray-50 rounded-2xl flex items-center p-4">
-                <div className="mr-3 shrink-0 size-5 animate-pulse rounded-full bg-gray-200" />
-                <div className="flex min-w-0 grow flex-col items-start gap-0.5">
-                  <div className="h-5 w-20 animate-pulse rounded bg-gray-200"></div>
-                </div>
-              </div>
+              <CustomListItem
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
+                startAdornment={<PiSignIn className="size-5 text-gray-400" />}
+                noPointer
+              />
               {/* Language item */}
               <CustomListItem
-                label={dictionary.pages.menu.sections.account.language}
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={<PiGlobe className="size-5 text-gray-400" />}
                 noPointer
               />
@@ -64,17 +56,13 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
           {/* Help Section */}
           <div>
             <div className="mb-4 flex">
-              <Typography
-                variant="subtitle"
-                level={3}
-                className="text-gray-400"
-              >
-                {dictionary.pages.menu.sections.help.title}
-              </Typography>
+              <Skeleton height={18} width={40} className="rounded-lg" />
             </div>
             <div className="flex flex-col gap-2">
               <CustomListItem
-                label={dictionary.pages.menu.sections.help.quickstart}
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={
                   <PiRocketLaunch className="size-5 text-gray-400" />
                 }
@@ -84,7 +72,9 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
                 noPointer
               />
               <CustomListItem
-                label={dictionary.pages.menu.sections.help.docs}
+                label={
+                  <Skeleton height={18} width={48} className="rounded-lg" />
+                }
                 startAdornment={
                   <PiBookOpenText className="size-5 text-gray-400" />
                 }
@@ -94,7 +84,9 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
                 noPointer
               />
               <CustomListItem
-                label={dictionary.pages.menu.sections.help.help_center}
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={<PiLifebuoy className="size-5 text-gray-400" />}
                 endAdornment={
                   <PiArrowSquareOut className="size-4 text-gray-400" />
@@ -107,17 +99,13 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
           {/* Source Code Section */}
           <div>
             <div className="mb-4 flex">
-              <Typography
-                variant="subtitle"
-                level={3}
-                className="text-gray-400"
-              >
-                {dictionary.pages.menu.sections.source_code.title}
-              </Typography>
+              <Skeleton height={18} width={40} className="rounded-lg" />
             </div>
             <div className="flex flex-col gap-2">
               <CustomListItem
-                label="GitHub"
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={
                   <PiGithubLogo className="size-5 text-gray-400" />
                 }
@@ -132,22 +120,20 @@ export function MenuPageSkeleton({ dictionary }: MenuPageSkeletonProps) {
           {/* Legal Section */}
           <div>
             <div className="mb-4 flex">
-              <Typography
-                variant="subtitle"
-                level={3}
-                className="text-gray-400"
-              >
-                {dictionary.pages.menu.sections.legal.title}
-              </Typography>
+              <Skeleton height={18} width={40} className="rounded-lg" />
             </div>
             <div className="flex flex-col gap-2">
               <CustomListItem
-                label={dictionary.pages.menu.sections.legal.terms}
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={<PiFileText className="size-5 text-gray-400" />}
                 noPointer
               />
               <CustomListItem
-                label={dictionary.pages.menu.sections.legal.privacy}
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
                 startAdornment={
                   <PiShieldCheck className="size-5 text-gray-400" />
                 }

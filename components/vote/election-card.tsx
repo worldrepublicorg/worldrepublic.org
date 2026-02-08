@@ -66,7 +66,8 @@ export function ElectionCard({
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
             <Typography variant="body" level={2} className="text-[15px]">
-              {formatElectionDate(election.startsAt, lang)} - {formatElectionDate(election.endsAt, lang)}
+              {formatElectionDate(election.startsAt, lang)} -{" "}
+              {formatElectionDate(election.endsAt, lang)}
             </Typography>
           </div>
 

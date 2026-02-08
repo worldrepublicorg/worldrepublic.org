@@ -43,7 +43,6 @@ import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
 import {
-  type GetWalletAuthAndDataProfileData,
   type GetWalletAuthAndDataResult,
   type GetWalletAuthAndDataTransaction,
   getWalletAuthAndData,
@@ -55,42 +54,10 @@ import {
   getBalancePrecision,
   truncateToPrecision,
 } from "@/lib/utils";
-
-const WALLET_AUTH_STATE_KEY = "walletAuthState";
-
-function getCachedWalletData(): GetWalletAuthAndDataResult | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(WALLET_AUTH_STATE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as unknown;
-    if (
-      parsed &&
-      typeof parsed === "object" &&
-      "authenticated" in parsed &&
-      typeof (parsed as { authenticated: unknown }).authenticated === "boolean"
-    ) {
-      const obj = parsed as Record<string, unknown>;
-      return {
-        authenticated: obj.authenticated as boolean,
-        profileData: (obj.profileData as GetWalletAuthAndDataProfileData) ?? null,
-        transactions: (obj.transactions as GetWalletAuthAndDataTransaction[]) ?? null,
-      };
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-function setCachedWalletData(result: GetWalletAuthAndDataResult) {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(WALLET_AUTH_STATE_KEY, JSON.stringify(result));
-  } catch {
-    // ignore
-  }
-}
+import {
+  getCachedWalletData,
+  setCachedWalletData,
+} from "@/lib/wallet-auth-cache";
 
 interface WalletPageClientProps {
   lang: string;
@@ -109,7 +76,8 @@ export default function WalletPageClient({
   const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
     getCachedWalletData,
   );
-  const [serverData, setServerData] = useState<GetWalletAuthAndDataResult | null>(null);
+  const [serverData, setServerData] =
+    useState<GetWalletAuthAndDataResult | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -127,7 +95,8 @@ export default function WalletPageClient({
   const showSkeleton = data === null;
   const profileData = data?.profileData ?? null;
   const isAuthenticated = data?.authenticated ?? false;
-  const transactions: GetWalletAuthAndDataTransaction[] = data?.transactions ?? [];
+  const transactions: GetWalletAuthAndDataTransaction[] =
+    data?.transactions ?? [];
 
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const walletBalance = profileData?.walletBalance ?? null;

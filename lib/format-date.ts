@@ -15,7 +15,10 @@ export function formatElectionDate(timestamp: number, lang: string): string {
  * Format an election date and time in the given locale.
  * Uses the app language and the user's local timezone.
  */
-export function formatElectionDateTime(timestamp: number, lang: string): string {
+export function formatElectionDateTime(
+  timestamp: number,
+  lang: string,
+): string {
   const locale = lang?.trim() || "en";
   return new Date(timestamp).toLocaleString(locale, {
     year: "numeric",

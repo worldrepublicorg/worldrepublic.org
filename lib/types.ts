@@ -6,7 +6,7 @@ export interface CustomListItemProps
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     "className" | "style"
   > {
-  label?: string;
+  label?: React.ReactNode;
   description?: string;
   startAdornment?: React.ReactNode;
   endAdornment?: React.ReactNode;

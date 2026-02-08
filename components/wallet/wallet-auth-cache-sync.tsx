@@ -2,8 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
-
-const WALLET_AUTH_STATE_KEY = "walletAuthState";
+import { WALLET_AUTH_STATE_KEY } from "@/lib/wallet-auth-cache";
 
 /**
  * Syncs wallet auth state to localStorage when the user is authenticated.

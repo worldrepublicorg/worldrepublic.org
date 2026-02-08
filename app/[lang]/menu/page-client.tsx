@@ -14,7 +14,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { signOut as nextAuthSignOut } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   PiArrowSquareOut,
   PiBookOpenText,
@@ -33,22 +33,44 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { SignInDialog } from "@/components/auth/sign-in-dialog";
 import { CustomListItem } from "@/components/custom-list-item";
+import { MenuPageSkeleton } from "@/components/menu/menu-page-skeleton";
 import { TopBar } from "@/components/topbar";
+import { getWalletAuthAndData } from "@/lib/actions/member";
+import {
+  getCachedWalletData,
+  setCachedWalletData,
+} from "@/lib/wallet-auth-cache";
 
 interface MenuPageClientProps {
   lang: string;
-  isAuthenticated: boolean;
   dictionary: Dictionary;
 }
 
 export default function MenuPageClient({
   lang,
-  isAuthenticated,
   dictionary,
 }: MenuPageClientProps) {
   const router = useRouter();
   const { toast } = useToast();
   const [showSignInDialog, setShowSignInDialog] = useState(false);
+
+  const [cachedData] = useState(() => getCachedWalletData());
+  const [serverAuth, setServerAuth] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    getWalletAuthAndData().then((result) => {
+      if (cancelled) return;
+      setServerAuth(result.authenticated);
+      setCachedWalletData(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const showSkeleton = serverAuth === null && cachedData === null;
+  const isAuthenticated = serverAuth ?? cachedData?.authenticated ?? false;
 
   const handleClose = () => {
     // Check if there's a stored return URL
@@ -66,6 +88,11 @@ export default function MenuPageClient({
 
   const handleSignOut = async () => {
     try {
+      setCachedWalletData({
+        authenticated: false,
+        profileData: null,
+        transactions: null,
+      });
       await nextAuthSignOut({
         redirect: false,
       });
@@ -163,6 +190,10 @@ export default function MenuPageClient({
       ],
     },
   ];
+
+  if (showSkeleton) {
+    return <MenuPageSkeleton />;
+  }
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">

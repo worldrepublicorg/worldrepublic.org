@@ -46,7 +46,8 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={16} />
             <Typography variant="body" level={2}>
-              {formatElectionDate(election.startsAt, lang)} - {formatElectionDate(election.endsAt, lang)}
+              {formatElectionDate(election.startsAt, lang)} -{" "}
+              {formatElectionDate(election.endsAt, lang)}
             </Typography>
           </div>
 

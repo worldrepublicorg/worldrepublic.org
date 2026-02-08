@@ -27,15 +27,18 @@ const CustomListItem = forwardRef<HTMLButtonElement, CustomListItemProps>(
         <div className="flex min-w-0 grow flex-col items-start gap-0.5">
           {children ?? (
             <>
-              {label && (
-                <Typography
-                  variant="subtitle"
-                  level={3}
-                  className="w-full grow truncate text-left"
-                >
-                  {label}
-                </Typography>
-              )}
+              {label &&
+                (typeof label === "string" ? (
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="w-full grow truncate text-left"
+                  >
+                    {label}
+                  </Typography>
+                ) : (
+                  label
+                ))}
               {description && (
                 <Typography
                   level={4}
