@@ -39,7 +39,9 @@ export function MenuPageSkeleton() {
                 label={
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
-                startAdornment={<PiSignIn className="size-5 text-gray-400" />}
+                startAdornment={
+                  <Skeleton height={20} width={20} className="rounded-full" />
+                }
                 noPointer
               />
               {/* Language item */}
