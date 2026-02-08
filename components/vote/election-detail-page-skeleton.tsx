@@ -147,7 +147,7 @@ export function ElectionDetailPageLoading() {
         {/* Election info card - fixed header, skeletons for variable content */}
         <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
           <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
-            <Skeleton height={18} width={200} className="rounded-lg" />
+            <Skeleton height={18} width={120} className="rounded-lg" />
           </div>
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
             <div className="flex items-center gap-2">
@@ -188,7 +188,6 @@ export function ElectionDetailPageLoading() {
             {/* Input placeholder text */}
             <input
               type="text"
-              placeholder="Search"
               disabled
               className="peer inline-block h-full grow w-full appearance-none bg-transparent border-none text-gray-900 placeholder:text-gray-500 focus:outline-none focus-visible:outline-none disabled:cursor-not-allowed text-sm leading-tight"
               readOnly
