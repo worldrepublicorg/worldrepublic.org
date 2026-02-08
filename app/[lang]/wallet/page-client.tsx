@@ -44,6 +44,7 @@ import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
 import {
   type GetWalletAuthAndDataProfileData,
+  type GetWalletAuthAndDataResult,
   type GetWalletAuthAndDataTransaction,
   getWalletAuthAndData,
   withdrawTokens,
@@ -57,7 +58,7 @@ import {
 
 const WALLET_AUTH_STATE_KEY = "walletAuthState";
 
-function getCachedWalletAuthState(): { authenticated: boolean } | null {
+function getCachedWalletData(): GetWalletAuthAndDataResult | null {
   if (typeof window === "undefined") return null;
   try {
     const raw = localStorage.getItem(WALLET_AUTH_STATE_KEY);
@@ -69,8 +70,11 @@ function getCachedWalletAuthState(): { authenticated: boolean } | null {
       "authenticated" in parsed &&
       typeof (parsed as { authenticated: unknown }).authenticated === "boolean"
     ) {
+      const obj = parsed as Record<string, unknown>;
       return {
-        authenticated: (parsed as { authenticated: boolean }).authenticated,
+        authenticated: obj.authenticated as boolean,
+        profileData: (obj.profileData as GetWalletAuthAndDataProfileData) ?? null,
+        transactions: (obj.transactions as GetWalletAuthAndDataTransaction[]) ?? null,
       };
     }
     return null;
@@ -79,13 +83,10 @@ function getCachedWalletAuthState(): { authenticated: boolean } | null {
   }
 }
 
-function setCachedWalletAuthState(authenticated: boolean) {
+function setCachedWalletData(result: GetWalletAuthAndDataResult) {
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem(
-      WALLET_AUTH_STATE_KEY,
-      JSON.stringify({ authenticated }),
-    );
+    localStorage.setItem(WALLET_AUTH_STATE_KEY, JSON.stringify(result));
   } catch {
     // ignore
   }
@@ -105,39 +106,28 @@ export default function WalletPageClient({
   const router = useRouter();
   const { toast } = useToast();
 
-  const [cachedAuthState] = useState<{ authenticated: boolean } | null>(
-    getCachedWalletAuthState,
+  const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
+    getCachedWalletData,
   );
-  const [serverData, setServerData] = useState<{
-    authenticated: boolean;
-    profileData: GetWalletAuthAndDataProfileData | null;
-    transactions: GetWalletAuthAndDataTransaction[] | null;
-  } | null>(null);
+  const [serverData, setServerData] = useState<GetWalletAuthAndDataResult | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     getWalletAuthAndData().then((result) => {
       if (cancelled) return;
       setServerData(result);
-      setCachedWalletAuthState(result.authenticated);
+      setCachedWalletData(result);
     });
     return () => {
       cancelled = true;
     };
   }, []);
 
-  const showSkeleton =
-    serverData === null && cachedAuthState?.authenticated !== false;
-
-  const profileData: GetWalletAuthAndDataProfileData | null =
-    serverData?.profileData ?? null;
-  const isAuthenticated = serverData
-    ? serverData.authenticated
-    : cachedAuthState?.authenticated === false
-      ? false
-      : false;
-  const transactions: GetWalletAuthAndDataTransaction[] =
-    serverData?.transactions ?? [];
+  const data = serverData ?? cachedData;
+  const showSkeleton = data === null;
+  const profileData = data?.profileData ?? null;
+  const isAuthenticated = data?.authenticated ?? false;
+  const transactions: GetWalletAuthAndDataTransaction[] = data?.transactions ?? [];
 
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const walletBalance = profileData?.walletBalance ?? null;
@@ -197,7 +187,7 @@ export default function WalletPageClient({
 
         const fresh = await getWalletAuthAndData();
         setServerData(fresh);
-        setCachedWalletAuthState(fresh.authenticated);
+        setCachedWalletData(fresh);
         router.refresh();
       } else {
         toast.error({
