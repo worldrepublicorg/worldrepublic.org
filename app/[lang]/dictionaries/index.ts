@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import en from "./en.json";
 
 export type Dictionary = typeof en;
@@ -58,14 +59,18 @@ const dictionaries = {
 
 const DEFAULT_LOCALE: keyof typeof dictionaries = "en";
 
-export const getDictionary = async (locale: string) => {
-  const hasLocale = locale in dictionaries;
-  const actualLocale = (
-    hasLocale ? locale : DEFAULT_LOCALE
-  ) as keyof typeof dictionaries;
-  const loader = dictionaries[actualLocale];
-  return loader();
-};
+export const getDictionary = unstable_cache(
+  async (locale: string) => {
+    const hasLocale = locale in dictionaries;
+    const actualLocale = (
+      hasLocale ? locale : DEFAULT_LOCALE
+    ) as keyof typeof dictionaries;
+    const loader = dictionaries[actualLocale];
+    return loader();
+  },
+  ["dictionary"],
+  { revalidate: 3600 },
+);
 
 // Export locales for static generation
 export const locales = Object.keys(dictionaries);
