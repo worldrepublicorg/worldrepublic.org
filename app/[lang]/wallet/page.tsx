@@ -1,8 +1,6 @@
 import { eq } from "drizzle-orm";
-import { Suspense } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import { getTransactions, getUserProfile } from "@/lib/actions/member";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db/connection";
@@ -87,9 +85,5 @@ export default async function WalletPage({
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  return (
-    <Suspense fallback={<WalletPageSkeleton dictionary={dictionary} />}>
-      <WalletProfileData lang={lang} dictionary={dictionary} />
-    </Suspense>
-  );
+  return <WalletProfileData lang={lang} dictionary={dictionary} />;
 }
