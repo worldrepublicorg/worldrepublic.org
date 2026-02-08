@@ -51,7 +51,7 @@ export function ElectionDetailPageSkeleton({
               <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
               <div className="flex min-w-0 flex-1 flex-col gap-1">
                 <Skeleton height={17} width="95%" className="rounded" />
-                <Skeleton height={17} width="20%" className="rounded" />
+                <Skeleton height={18} width="20%" className="rounded" />
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -154,7 +154,7 @@ export function ElectionDetailPageLoading() {
               <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
               <div className="flex min-w-0 flex-1 flex-col gap-1">
                 <Skeleton height={17} width="95%" className="rounded" />
-                <Skeleton height={17} width="20%" className="rounded" />
+                <Skeleton height={18} width="20%" className="rounded" />
               </div>
             </div>
             <div className="flex items-center gap-2">
