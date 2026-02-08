@@ -23,6 +23,14 @@ export function useAuth() {
     try {
       // Clear cached user data
       localStorage.removeItem("userParty");
+      try {
+        localStorage.setItem(
+          "walletAuthState",
+          JSON.stringify({ authenticated: false }),
+        );
+      } catch {
+        // ignore
+      }
 
       await nextAuthSignOut({
         redirect: false,

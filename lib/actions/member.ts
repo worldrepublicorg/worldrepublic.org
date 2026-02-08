@@ -1,7 +1,8 @@
 "use server";
 
-import { and, desc, eq, isNull, or, sql } from "drizzle-orm";
+import { and, desc, eq, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
+import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
 import { parties, transactions, userProfiles, users } from "@/lib/db/schema";
 import { validateUsername } from "@/lib/utils";
@@ -241,6 +242,149 @@ export async function deleteUserAccount(userUuid: string) {
 }
 
 // ============================================================================
+// Wallet auth + data (client-only wallet page)
+// ============================================================================
+
+export type GetWalletAuthAndDataProfileData = {
+  walletBalance: number | null;
+  selfVerifiedAt: number | null;
+  username: string | null;
+  userId: string;
+  userUuid: string | null;
+};
+
+export type GetWalletAuthAndDataTransaction = {
+  id: number;
+  type: string;
+  amount: number;
+  walletAddress?: string;
+  selectedChain?: string;
+  recipientUserId?: string;
+  createdAt: number;
+  isReceived: boolean;
+};
+
+export type GetWalletAuthAndDataResult = {
+  authenticated: boolean;
+  profileData: GetWalletAuthAndDataProfileData | null;
+  transactions: GetWalletAuthAndDataTransaction[] | null;
+};
+
+export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult> {
+  const session = await auth();
+  const isAuthenticated = !!session?.user;
+
+  if (!isAuthenticated || !session?.user?.id) {
+    return {
+      authenticated: false,
+      profileData: null,
+      transactions: null,
+    };
+  }
+
+  const authUserId = parseInt(String(session.user.id), 10);
+
+  const [userResult, profileResult, transactionsResult] = await Promise.all([
+    db
+      .select({ uuid: users.uuid })
+      .from(users)
+      .where(eq(users.id, authUserId))
+      .limit(1)
+      .then(([user]) => user || null),
+    getUserProfile(),
+    getTransactions(100),
+  ]);
+
+  const userUuid = userResult?.uuid ?? null;
+  if (!userUuid) {
+    return {
+      authenticated: true,
+      profileData: null,
+      transactions: null,
+    };
+  }
+
+  let profileData: GetWalletAuthAndDataProfileData = {
+    walletBalance: null,
+    selfVerifiedAt: null,
+    username: null,
+    userId: session.user.id,
+    userUuid,
+  };
+  if (profileResult.success && profileResult.profile) {
+    profileData = {
+      walletBalance: profileResult.profile.walletBalance ?? null,
+      selfVerifiedAt: profileResult.profile.selfVerifiedAt ?? null,
+      username: profileResult.profile.username ?? null,
+      userId: session.user.id,
+      userUuid,
+    };
+  }
+
+  const transactionsData =
+    transactionsResult.success && transactionsResult.transactions
+      ? transactionsResult.transactions
+      : [];
+
+  return {
+    authenticated: true,
+    profileData,
+    transactions: transactionsData,
+  };
+}
+
+// ============================================================================
+// Transaction History
+// ============================================================================
+
+export async function getTransactions(limit: number = 50) {
+  try {
+    const userUuid = await getUserUuidFromSession();
+
+    const readDb = getDbReadOnly();
+    // Get all transactions where user is sender OR recipient
+    const transactionRows = await readDb
+      .select()
+      .from(transactions)
+      .where(
+        or(
+          eq(transactions.userId, userUuid),
+          eq(transactions.recipientUserId, userUuid),
+        ),
+      )
+      .orderBy(desc(transactions.createdAt))
+      .limit(limit);
+
+    return {
+      success: true,
+      transactions: transactionRows.map((t) => ({
+        id: t.id,
+        type: t.type,
+        amount: parseFloat(t.amount || "0"),
+        // For WITHDRAWAL
+        walletAddress: t.walletAddress || undefined,
+        selectedChain: t.selectedChain || undefined,
+        // For TRANSFER
+        recipientUserId: t.recipientUserId || undefined,
+        // Common
+        transactionId: t.transactionId || undefined,
+        createdAt: t.createdAt.getTime(),
+        // Helper: is this a received transfer?
+        isReceived: t.recipientUserId === userUuid,
+      })),
+    };
+  } catch (error) {
+    console.error("Error fetching transactions:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "Could not fetch transactions",
+      transactions: [],
+    };
+  }
+}
+
+// ============================================================================
 // Token Withdrawal
 // ============================================================================
 
@@ -410,57 +554,6 @@ export async function withdrawTokens(
       success: false,
       error:
         error instanceof Error ? error.message : "Could not withdraw tokens",
-    };
-  }
-}
-
-// ============================================================================
-// Transaction History
-// ============================================================================
-
-export async function getTransactions(limit: number = 50) {
-  try {
-    const userUuid = await getUserUuidFromSession();
-
-    const readDb = getDbReadOnly();
-    // Get all transactions where user is sender OR recipient
-    const transactionRows = await readDb
-      .select()
-      .from(transactions)
-      .where(
-        or(
-          eq(transactions.userId, userUuid),
-          eq(transactions.recipientUserId, userUuid),
-        ),
-      )
-      .orderBy(desc(transactions.createdAt))
-      .limit(limit);
-
-    return {
-      success: true,
-      transactions: transactionRows.map((t) => ({
-        id: t.id,
-        type: t.type,
-        amount: parseFloat(t.amount || "0"),
-        // For WITHDRAWAL
-        walletAddress: t.walletAddress || undefined,
-        selectedChain: t.selectedChain || undefined,
-        // For TRANSFER
-        recipientUserId: t.recipientUserId || undefined,
-        // Common
-        transactionId: t.transactionId || undefined,
-        createdAt: t.createdAt.getTime(),
-        // Helper: is this a received transfer?
-        isReceived: t.recipientUserId === userUuid,
-      })),
-    };
-  } catch (error) {
-    console.error("Error fetching transactions:", error);
-    return {
-      success: false,
-      error:
-        error instanceof Error ? error.message : "Could not fetch transactions",
-      transactions: [],
     };
   }
 }

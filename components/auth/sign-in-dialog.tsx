@@ -114,6 +114,14 @@ export function SignInDialog({
       if (verifyResult.verified) {
         await new Promise((resolve) => setTimeout(resolve, 100));
         await update();
+        try {
+          localStorage.setItem(
+            "walletAuthState",
+            JSON.stringify({ authenticated: true }),
+          );
+        } catch {
+          // ignore
+        }
         router.refresh();
         setShowPasskeyOptions(false);
         setShowNameInput(false);
@@ -186,6 +194,14 @@ export function SignInDialog({
       if (verifyResult.verified) {
         await new Promise((resolve) => setTimeout(resolve, 100));
         await update();
+        try {
+          localStorage.setItem(
+            "walletAuthState",
+            JSON.stringify({ authenticated: true }),
+          );
+        } catch {
+          // ignore
+        }
         router.refresh();
         setShowNameInput(false);
         setShowPasskeyOptions(false);
