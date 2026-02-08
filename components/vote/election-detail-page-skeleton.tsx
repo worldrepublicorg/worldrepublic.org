@@ -130,7 +130,6 @@ export function ElectionDetailPageLoading() {
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
-        title="..."
         startAdornment={
           <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
             <PiCaretLeft className="size-4 text-gray-900" />
