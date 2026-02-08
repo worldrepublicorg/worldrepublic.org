@@ -166,7 +166,7 @@ export function ElectionDetailPageLoading() {
         </div>
 
         {/* Choose a party section - fixed label, search skeleton, party row skeletons */}
-        <Skeleton height={23} width={200} className="rounded-lg mb-3" />
+        <Skeleton height={23} width={200} className="rounded-lg mb-3!" />
 
         <div className="mb-5 h-12.5">
           <div className="bg-gray-100 text-gray-900 h-14 inline-flex w-full shrink cursor-text items-center overflow-hidden border border-gray-100 rounded-[0.625rem] outline-none transition-all duration-300 ease-out px-4 gap-2">
