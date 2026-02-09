@@ -135,6 +135,9 @@ export function SignInDialog({
       }
     } catch (error) {
       console.error("Passkey sign-in error:", error);
+      // Instead of silently resetting, guide the user to create a new account
+      // so they have an actionable next step.
+      setShowNameInput(true);
       setIsLoading(false);
     }
   };

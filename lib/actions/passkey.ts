@@ -29,45 +29,21 @@ export async function getPasskeyOptions() {
     const rpId = getRpId();
     const db = getDbReadOnly();
 
+    // Count existing passkeys so the client knows whether to offer
+    // "Sign in" vs "Create account"
     const allAuthenticators = await db
-      .select({
-        credentialID: authenticators.credentialID,
-        userId: authenticators.userId,
-        providerAccountId: authenticators.providerAccountId,
-        credentialPublicKey: authenticators.credentialPublicKey,
-        counter: authenticators.counter,
-        credentialDeviceType: authenticators.credentialDeviceType,
-        credentialBackedUp: authenticators.credentialBackedUp,
-        transports: authenticators.transports,
-      })
+      .select({ credentialID: authenticators.credentialID })
       .from(authenticators);
 
     const passkeyCount = allAuthenticators.length;
 
-    // Build allowCredentials based on passkey count:
-    // - 0 passkeys: omit allowCredentials (will trigger registration)
-    // - 1 passkey: include it so browser verifies directly
-    // - Multiple passkeys: include all so browser shows selection
-    let allowCredentials:
-      | Array<{
-          id: Buffer;
-          type: "public-key";
-        }>
-      | undefined;
-
-    if (passkeyCount > 0) {
-      allowCredentials = allAuthenticators.map((auth) => ({
-        id: Buffer.from(auth.credentialID, "base64url"),
-        type: "public-key" as const,
-        transports: auth.transports
-          ? JSON.parse(auth.transports)
-          : undefined,
-      }));
-    }
-
+    // Use discoverable credential flow: omit allowCredentials entirely.
+    // All passkeys are registered with requireResidentKey: true, so the
+    // browser/OS can discover them by rpId alone. This is more reliable on
+    // mobile (Android Credential Manager, iOS) than sending an explicit
+    // allowCredentials list which requires exact credential-ID matching.
     const options = await generateAuthenticationOptions({
       rpID: rpId,
-      allowCredentials,
       userVerification: "preferred",
     });
 
