@@ -126,6 +126,7 @@ export function SignInDialog({
         setShowPasskeyOptions(false);
         setShowNameInput(false);
         onOpenChange(false);
+        router.push("/");
       } else {
         throw new Error("Authentication verification failed");
       }
@@ -207,6 +208,7 @@ export function SignInDialog({
         setShowPasskeyOptions(false);
         setPasskeyName("");
         onOpenChange(false);
+        router.push("/");
       } else {
         throw new Error("Registration verification failed");
       }
