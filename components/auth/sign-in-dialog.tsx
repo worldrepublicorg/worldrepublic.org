@@ -95,10 +95,6 @@ export function SignInDialog({
             error.message.includes("cancel") ||
             error.message.includes("abort"))
         ) {
-          // NotAllowedError can mean user cancelled OR browser couldn't find a
-          // matching credential (common on mobile). Instead of silently failing,
-          // guide the user to create a new account.
-          setShowNameInput(true);
           setIsLoading(false);
           return;
         }
@@ -135,9 +131,6 @@ export function SignInDialog({
       }
     } catch (error) {
       console.error("Passkey sign-in error:", error);
-      // Instead of silently resetting, guide the user to create a new account
-      // so they have an actionable next step.
-      setShowNameInput(true);
       setIsLoading(false);
     }
   };
