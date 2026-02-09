@@ -23,7 +23,7 @@ export function WalletPageSkeleton() {
         <div className="flex flex-col items-center justify-center">
           <Skeleton height={18} width={40} className="rounded-lg mt-1!" />
           <div className="flex items-center justify-center mt-3">
-            <Skeleton height={41} width={180} />
+            <Skeleton height={41} width={180} className="rounded-lg" />
           </div>
           <div className="flex flex-row w-full justify-around mt-5 px-6">
             <div className="flex flex-1 flex-col items-center gap-2">

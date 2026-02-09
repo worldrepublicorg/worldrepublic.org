@@ -29,8 +29,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 // Lazy load heavy dialog component
 const SignInDialog = dynamic(
-  () =>
-    import("@/components/auth/sign-in-dialog").then((mod) => mod.SignInDialog),
+  () => import("@/components/sign-in-dialog").then((mod) => mod.SignInDialog),
   { ssr: false },
 );
 

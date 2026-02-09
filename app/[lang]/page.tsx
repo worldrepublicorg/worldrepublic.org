@@ -1,42 +1,18 @@
-import { Suspense } from "react";
 import { getDictionary, locales } from "@/app/[lang]/dictionaries";
-import { MenuLink } from "@/components/menu-link";
-import { TopBar } from "@/components/topbar";
-import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
-import { getFeaturedElectionId } from "@/lib/actions/elections";
-import { VotePageClient } from "./page-client";
+import { HomePageClient } from "./page-client";
 
 // This enables Static Site Generation (SSG) for all languages
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export default async function VotePage({
+export default async function HomePage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
-  const featuredElectionId = (await getFeaturedElectionId()) ?? undefined;
 
-  return (
-    <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        title={dictionary.nav.world_republic}
-        endAdornment={<MenuLink lang={lang} />}
-      />
-      {/* Suspense is required when using useSearchParams in a Client Component
-          embedded in a statically generated page */}
-      <Suspense
-        fallback={<VotePageSkeleton dictionary={dictionary} lang={lang} />}
-      >
-        <VotePageClient
-          lang={lang}
-          dictionary={dictionary}
-          featuredElectionId={featuredElectionId}
-        />
-      </Suspense>
-    </div>
-  );
+  return <HomePageClient lang={lang} dictionary={dictionary} />;
 }

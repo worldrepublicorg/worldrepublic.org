@@ -17,7 +17,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 const SelfVerificationDialog = dynamic(
   () =>
-    import("@/components/identity/self-verification-dialog").then(
+    import("@/components/self-verification-dialog").then(
       (mod) => mod.SelfVerificationDialog,
     ),
   { ssr: false },

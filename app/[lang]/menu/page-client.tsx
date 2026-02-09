@@ -31,9 +31,9 @@ import {
   PiX,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { SignInDialog } from "@/components/auth/sign-in-dialog";
 import { CustomListItem } from "@/components/custom-list-item";
 import { MenuPageSkeleton } from "@/components/menu/menu-page-skeleton";
+import { SignInDialog } from "@/components/sign-in-dialog";
 import { TopBar } from "@/components/topbar";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {

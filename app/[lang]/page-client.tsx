@@ -3,26 +3,41 @@
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
+import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
+import { TopBar } from "@/components/topbar";
+import { getFeaturedElectionId } from "@/lib/actions/elections";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
 
-interface VotePageClientProps {
+interface HomePageClientProps {
   lang: string;
   dictionary: Dictionary;
-  featuredElectionId?: string;
 }
 
-export function VotePageClient({
-  lang,
-  dictionary,
-  featuredElectionId,
-}: VotePageClientProps) {
+export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
+
+  const [featuredElectionId, setFeaturedElectionId] = useState<
+    string | null | undefined
+  >(undefined);
+
+  useEffect(() => {
+    let cancelled = false;
+    getFeaturedElectionId().then((result) => {
+      if (cancelled) return;
+      setFeaturedElectionId(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -33,8 +48,17 @@ export function VotePageClient({
     ? `/${lang}/vote/elections/${featuredElectionId}`
     : `/${lang}/vote`;
 
+  // Show skeleton while loading
+  if (featuredElectionId === undefined) {
+    return <HomePageSkeleton />;
+  }
+
   return (
-    <>
+    <div className="pb-safe flex min-h-dvh flex-col">
+      <TopBar
+        title={dictionary.nav.world_republic}
+        endAdornment={<MenuLink lang={lang} />}
+      />
       <TabPills
         activeTab={activeTab}
         lang={lang}
@@ -96,6 +120,6 @@ export function VotePageClient({
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
