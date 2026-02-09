@@ -1,5 +1,5 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiChartBarHorizontalFill, PiList } from "react-icons/pi";
+import { PiList } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 /**
@@ -26,9 +26,7 @@ export function HomePageSkeleton() {
       <div className="flex grow items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center p-6 text-center">
           <div className="flex w-full flex-col items-center gap-4">
-            <div className="mb-4! flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
-              <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
-            </div>
+            <Skeleton height={96} width={96} className="rounded-full mb-4!" />
             <Skeleton height={36} width={120} className="rounded-lg" />
             <Skeleton height={20} width={160} className="rounded-lg" />
             <Skeleton height={56} width="100%" className="mt-6! rounded-full" />
