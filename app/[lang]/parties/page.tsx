@@ -69,7 +69,7 @@ export default async function PartiesPage({
   const dictionary = await getDictionary(lang);
 
   return (
-    <Suspense fallback={<PartiesPageSkeleton dictionary={dictionary} />}>
+    <Suspense fallback={<PartiesPageSkeleton />}>
       <PartiesData lang={lang} dictionary={dictionary} />
     </Suspense>
   );
