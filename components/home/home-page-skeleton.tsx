@@ -31,7 +31,7 @@ export function HomePageSkeleton() {
             </div>
             <Skeleton height={36} width={120} className="rounded-lg" />
             <Skeleton height={20} width={160} className="rounded-lg" />
-            <Skeleton height={56} width="100%" className="mt-6 rounded-full" />
+            <Skeleton height={56} width="100%" className="mt-6! rounded-full" />
           </div>
         </div>
       </div>

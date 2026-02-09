@@ -11,6 +11,10 @@ import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { getFeaturedElectionId } from "@/lib/actions/elections";
+import {
+  getCachedFeaturedElectionId,
+  setCachedFeaturedElectionId,
+} from "@/lib/featured-election-cache";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
@@ -24,7 +28,10 @@ export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
 
-  const [featuredElectionId, setFeaturedElectionId] = useState<
+  const [cachedFeaturedElectionId] = useState<string | null>(
+    getCachedFeaturedElectionId,
+  );
+  const [serverFeaturedElectionId, setServerFeaturedElectionId] = useState<
     string | null | undefined
   >(undefined);
 
@@ -32,12 +39,17 @@ export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
     let cancelled = false;
     getFeaturedElectionId().then((result) => {
       if (cancelled) return;
-      setFeaturedElectionId(result);
+      setServerFeaturedElectionId(result);
+      setCachedFeaturedElectionId(result);
     });
     return () => {
       cancelled = true;
     };
   }, []);
+
+  // Use server data if available, otherwise fall back to cache
+  const featuredElectionId =
+    serverFeaturedElectionId ?? cachedFeaturedElectionId;
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -48,8 +60,8 @@ export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
     ? `/${lang}/vote/elections/${featuredElectionId}`
     : `/${lang}/vote`;
 
-  // Show skeleton while loading
-  if (featuredElectionId === undefined) {
+  // Show skeleton only when we have no data (no cache and no server result yet)
+  if (featuredElectionId === null || featuredElectionId === undefined) {
     return <HomePageSkeleton />;
   }
 
