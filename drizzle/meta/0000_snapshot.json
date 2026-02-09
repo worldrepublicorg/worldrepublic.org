@@ -765,18 +765,6 @@
           "notNull": true,
           "default": "'0'"
         },
-        "self_verified_at": {
-          "name": "self_verified_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "self_nullifier": {
-          "name": "self_nullifier",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
         "username": {
           "name": "username",
           "type": "varchar(30)",
@@ -805,21 +793,6 @@
         }
       },
       "indexes": {
-        "user_profiles_self_nullifier_idx": {
-          "name": "user_profiles_self_nullifier_idx",
-          "columns": [
-            {
-              "expression": "self_nullifier",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
         "user_profiles_username_idx": {
           "name": "user_profiles_username_idx",
           "columns": [
@@ -855,27 +828,6 @@
           "columns": [
             {
               "expression": "created_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "user_profiles_active_verified_idx": {
-          "name": "user_profiles_active_verified_idx",
-          "columns": [
-            {
-              "expression": "account_deleted_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "self_verified_at",
               "isExpression": false,
               "asc": true,
               "nulls": "last"

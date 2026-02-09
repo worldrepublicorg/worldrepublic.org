@@ -186,8 +186,6 @@ export const userProfiles = pgTable(
     walletBalance: decimal("wallet_balance", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
-    selfVerifiedAt: timestamp("self_verified_at"),
-    selfNullifier: text("self_nullifier"), // Self verification nullifier (unique to prevent duplicate verifications)
     username: varchar("username", { length: 30 }).notNull(), // Required username, auto-generated on profile creation
     accountDeletedAt: timestamp("account_deleted_at"),
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
@@ -195,16 +193,10 @@ export const userProfiles = pgTable(
   },
   (table) => [
     // Note: authUserId already has .unique() on the column, so no explicit index needed
-    uniqueIndex("user_profiles_self_nullifier_idx").on(table.selfNullifier),
     // Note: Username unique index with LOWER() is created via raw SQL in migration for case-insensitive uniqueness
     uniqueIndex("user_profiles_username_idx").on(table.username),
     index("user_profiles_account_deleted_at_idx").on(table.accountDeletedAt),
     index("user_profiles_created_at_idx").on(table.createdAt),
-    // Composite index for active verified users (common query pattern)
-    index("user_profiles_active_verified_idx").on(
-      table.accountDeletedAt,
-      table.selfVerifiedAt,
-    ),
   ],
 );
 

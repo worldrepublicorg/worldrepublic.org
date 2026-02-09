@@ -122,7 +122,6 @@ export async function createUserProfile(
     authUserId,
     username,
     walletBalance: "0",
-    selfVerifiedAt: null,
   });
 
   // Re-fetch the newly created profile using the read replica
@@ -181,9 +180,6 @@ export async function getUserProfile() {
         walletBalance: profile.walletBalance
           ? parseFloat(profile.walletBalance)
           : undefined,
-        selfVerifiedAt: profile.selfVerifiedAt
-          ? profile.selfVerifiedAt.getTime()
-          : undefined,
         username: profile.username || undefined,
         accountDeletedAt: profile.accountDeletedAt
           ? profile.accountDeletedAt.getTime()
@@ -219,7 +215,6 @@ export async function deleteUserAccount(userUuid: string) {
     // Use PostgreSQL transaction for atomic soft delete
     await db.transaction(async (tx) => {
       // Soft delete: set accountDeletedAt and clear sensitive data
-      // Preserve selfVerifiedAt to prevent duplicate rewards if user re-registers
       await tx
         .update(userProfiles)
         .set({
@@ -247,7 +242,6 @@ export async function deleteUserAccount(userUuid: string) {
 
 export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
-  selfVerifiedAt: number | null;
   username: string | null;
   userId: string;
   userUuid: string | null;
@@ -309,7 +303,6 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
 
   let profileData: GetWalletAuthAndDataProfileData = {
     walletBalance: null,
-    selfVerifiedAt: null,
     username: null,
     userId: session.user.id,
     userUuid,
@@ -317,7 +310,6 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
   if (profileResult.success && profileResult.profile) {
     profileData = {
       walletBalance: profileResult.profile.walletBalance ?? null,
-      selfVerifiedAt: profileResult.profile.selfVerifiedAt ?? null,
       username: profileResult.profile.username ?? null,
       userId: session.user.id,
       userUuid,
