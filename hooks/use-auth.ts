@@ -2,6 +2,7 @@
 
 import { signOut as nextAuthSignOut, useSession } from "next-auth/react";
 import { useState } from "react";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 export function useAuth() {
   const { data, status } = useSession();
@@ -24,10 +25,12 @@ export function useAuth() {
       // Clear cached user data
       localStorage.removeItem("userParty");
       try {
-        localStorage.setItem(
-          "walletAuthState",
-          JSON.stringify({ authenticated: false }),
-        );
+        setCachedWalletData({
+          authenticated: false,
+          profileData: null,
+          transactions: null,
+          email: null,
+        });
       } catch {
         // ignore
       }

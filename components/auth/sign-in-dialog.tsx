@@ -25,6 +25,7 @@ import {
   verifyPasskeyAuthentication,
   verifyPasskeyRegistration,
 } from "@/lib/actions/passkey";
+import { AUTH_DISPLAY_CACHE_KEY } from "@/lib/wallet-auth-cache";
 
 interface SignInDialogProps {
   open: boolean;
@@ -116,7 +117,7 @@ export function SignInDialog({
         await update();
         try {
           localStorage.setItem(
-            "walletAuthState",
+            AUTH_DISPLAY_CACHE_KEY,
             JSON.stringify({ authenticated: true }),
           );
         } catch {
@@ -196,7 +197,7 @@ export function SignInDialog({
         await update();
         try {
           localStorage.setItem(
-            "walletAuthState",
+            AUTH_DISPLAY_CACHE_KEY,
             JSON.stringify({ authenticated: true }),
           );
         } catch {

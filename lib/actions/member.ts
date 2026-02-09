@@ -268,6 +268,7 @@ export type GetWalletAuthAndDataResult = {
   authenticated: boolean;
   profileData: GetWalletAuthAndDataProfileData | null;
   transactions: GetWalletAuthAndDataTransaction[] | null;
+  email: string | null;
 };
 
 export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult> {
@@ -279,6 +280,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
       authenticated: false,
       profileData: null,
       transactions: null,
+      email: null,
     };
   }
 
@@ -301,6 +303,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
       authenticated: true,
       profileData: null,
       transactions: null,
+      email: session.user?.email ?? null,
     };
   }
 
@@ -330,6 +333,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
     authenticated: true,
     profileData,
     transactions: transactionsData,
+    email: session.user?.email ?? null,
   };
 }
 

@@ -4,12 +4,12 @@ import type {
   GetWalletAuthAndDataTransaction,
 } from "@/lib/actions/member";
 
-export const WALLET_AUTH_STATE_KEY = "walletAuthState";
+export const AUTH_DISPLAY_CACHE_KEY = "authDisplayCache";
 
 export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(WALLET_AUTH_STATE_KEY);
+    const raw = localStorage.getItem(AUTH_DISPLAY_CACHE_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as unknown;
     if (
@@ -25,6 +25,7 @@ export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
           (obj.profileData as GetWalletAuthAndDataProfileData) ?? null,
         transactions:
           (obj.transactions as GetWalletAuthAndDataTransaction[]) ?? null,
+        email: (obj.email as string) ?? null,
       };
     }
     return null;
@@ -36,7 +37,7 @@ export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
 export function setCachedWalletData(result: GetWalletAuthAndDataResult) {
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem(WALLET_AUTH_STATE_KEY, JSON.stringify(result));
+    localStorage.setItem(AUTH_DISPLAY_CACHE_KEY, JSON.stringify(result));
   } catch {
     // ignore
   }

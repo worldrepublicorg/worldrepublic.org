@@ -14,7 +14,7 @@ import {
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   PiCaretLeft,
   PiPencilSimple,
@@ -23,35 +23,58 @@ import {
   PiTrashFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
-import { deleteUserAccount, setUsername } from "@/lib/actions/member";
+import {
+  deleteUserAccount,
+  getWalletAuthAndData,
+  setUsername,
+} from "@/lib/actions/member";
+import {
+  getCachedWalletData,
+  setCachedWalletData,
+} from "@/lib/wallet-auth-cache";
 
 interface AccountPageClientProps {
-  profileData: {
-    selfVerifiedAt: number | null;
-    username: string | null;
-    userId: string;
-    userUuid: string | null;
-  } | null;
-  isAuthenticated: boolean;
   lang: string;
   dictionary: Dictionary;
 }
 
 export default function AccountPageClient({
-  profileData,
-  isAuthenticated,
   lang,
   dictionary,
 }: AccountPageClientProps) {
-  const { signOut, user } = useAuth();
+  const { signOut } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
-  const username = profileData?.username ?? null;
+  const [cachedData] = useState(() => getCachedWalletData());
+  const [serverData, setServerData] = useState<Awaited<
+    ReturnType<typeof getWalletAuthAndData>
+  > | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    getWalletAuthAndData().then((result) => {
+      if (cancelled) return;
+      setServerData(result);
+      setCachedWalletData(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const data = serverData ?? cachedData;
+  const showSkeleton = data === null;
+  const email = data?.email ?? null;
+  const username = data?.profileData?.username ?? null;
+  const isAuthenticated = data?.authenticated ?? false;
+  const authenticated = isAuthenticated || clientIsAuthenticated;
+  const userUuid = data?.profileData?.userUuid ?? null;
 
   // State for form validation
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
@@ -61,26 +84,19 @@ export default function AccountPageClient({
 
   const handleSignOut = async () => {
     try {
-      // Disconnect wallet and sign out from NextAuth
       await signOut();
-
-      // Simple redirect - always redirect to root page
       window.location.href = `/${lang}/`;
     } catch (error) {
       console.error("Error signing out:", error);
-
-      // Show error message
       toast.error({
         title: dictionary.toasts.wallet.sign_out_failed,
       });
-
-      // Still redirect even if there was an error
       window.location.href = `/${lang}/`;
     }
   };
 
   const handleDeleteAccount = async () => {
-    if (!user?.id) {
+    if (!userUuid) {
       toast.error({
         title: dictionary.toasts.wallet.no_wallet,
       });
@@ -90,14 +106,12 @@ export default function AccountPageClient({
     setIsDeletingAccount(true);
 
     try {
-      const result = await deleteUserAccount(user.id);
+      const result = await deleteUserAccount(userUuid);
 
       if (result.success) {
         toast.success({
           title: dictionary.toasts.wallet.account_deleted,
         });
-
-        // Sign out and redirect to earn page
         await handleSignOut();
       } else {
         toast.error({
@@ -114,7 +128,38 @@ export default function AccountPageClient({
     }
   };
 
-  const authenticated = isAuthenticated || clientIsAuthenticated;
+  const handleUsernameSave = async () => {
+    setIsUpdatingUsername(true);
+    try {
+      const result = await setUsername(editUsernameValue.trim());
+      if (result.success) {
+        toast.success({
+          title: dictionary.toasts.parties.updated,
+        });
+        setEditUsernameDialogOpen(false);
+        setEditUsernameValue("");
+        const fresh = await getWalletAuthAndData();
+        setServerData(fresh);
+        setCachedWalletData(fresh);
+        router.refresh();
+      } else {
+        toast.error({
+          title: result.error || dictionary.toasts.parties.update_failed,
+        });
+      }
+    } catch (error) {
+      console.error("Error updating username:", error);
+      toast.error({
+        title: dictionary.toasts.parties.update_failed,
+      });
+    } finally {
+      setIsUpdatingUsername(false);
+    }
+  };
+
+  if (showSkeleton) {
+    return <AccountPageSkeleton />;
+  }
 
   return (
     <div className="pb-safe flex flex-col">
@@ -156,13 +201,13 @@ export default function AccountPageClient({
                 </Typography>
               </div>
               <div className="flex flex-col gap-2">
-                {user?.email && (
+                {email && (
                   <div>
                     <CustomListItem
                       label={
                         dictionary.pages.menu.sections.account.account_info
                       }
-                      description={user.email}
+                      description={email}
                     />
                   </div>
                 )}
@@ -292,32 +337,7 @@ export default function AccountPageClient({
           </AlertDialogDescription>
           <AlertDialogFooter>
             <Button
-              onClick={async () => {
-                setIsUpdatingUsername(true);
-                try {
-                  const result = await setUsername(editUsernameValue.trim());
-                  if (result.success) {
-                    toast.success({
-                      title: dictionary.toasts.parties.updated,
-                    });
-                    setEditUsernameDialogOpen(false);
-                    setEditUsernameValue("");
-                    router.refresh();
-                  } else {
-                    toast.error({
-                      title:
-                        result.error || dictionary.toasts.parties.update_failed,
-                    });
-                  }
-                } catch (error) {
-                  console.error("Error updating username:", error);
-                  toast.error({
-                    title: dictionary.toasts.parties.update_failed,
-                  });
-                } finally {
-                  setIsUpdatingUsername(false);
-                }
-              }}
+              onClick={handleUsernameSave}
               disabled={isUpdatingUsername || !editUsernameValue.trim()}
             >
               {isUpdatingUsername

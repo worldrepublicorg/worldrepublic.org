@@ -92,6 +92,7 @@ export default function MenuPageClient({
         authenticated: false,
         profileData: null,
         transactions: null,
+        email: null,
       });
       await nextAuthSignOut({
         redirect: false,

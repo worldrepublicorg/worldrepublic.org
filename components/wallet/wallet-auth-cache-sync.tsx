@@ -2,7 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
-import { WALLET_AUTH_STATE_KEY } from "@/lib/wallet-auth-cache";
+import { AUTH_DISPLAY_CACHE_KEY } from "@/lib/wallet-auth-cache";
 
 /**
  * Syncs wallet auth state to localStorage when the user is authenticated.
@@ -16,7 +16,7 @@ export function WalletAuthCacheSync() {
     if (status === "authenticated") {
       try {
         localStorage.setItem(
-          WALLET_AUTH_STATE_KEY,
+          AUTH_DISPLAY_CACHE_KEY,
           JSON.stringify({ authenticated: true }),
         );
       } catch {
