@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { PiCaretLeft, PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
+import { PartyDetailPageSkeleton } from "@/components/parties/party-detail-page-skeleton";
 import { TopBar } from "@/components/topbar";
 import { getParty } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
@@ -24,21 +25,26 @@ export default function PartyDetailPageClient({
 }: PartyDetailPageClientProps) {
   const { toast } = useToast();
   const router = useRouter();
-  const [party, setParty] = useState<Party | null>(null);
+  const [party, setParty] = useState<Party | null | undefined>(undefined);
 
-  // Fetch party for TopBar share button
+  // Fetch party for TopBar share button and to know when to show content
   const fetchPartyForShare = async () => {
     if (!partyId || typeof partyId !== "string") return;
     try {
       const partyData = await getParty(partyId);
-      setParty(partyData);
+      setParty(partyData ?? null);
     } catch (error) {
       console.error("Error fetching party for share:", error);
+      setParty(null);
     }
   };
 
   // Fetch party when id changes
   useEffect(() => {
+    if (!partyId || typeof partyId !== "string") {
+      setParty(null);
+      return;
+    }
     fetchPartyForShare();
   }, [partyId]);
 
@@ -47,6 +53,11 @@ export default function PartyDetailPageClient({
     if (typeof window === "undefined") return "";
     return `${window.location.origin}/parties/${party?.id || partyId}`;
   };
+
+  // Show skeleton until first fetch has completed (party undefined = still loading)
+  if (!partyId || party === undefined) {
+    return <PartyDetailPageSkeleton />;
+  }
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
