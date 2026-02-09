@@ -88,7 +88,6 @@ export function SignInDialog({
       try {
         authenticationResponse = await startAuthentication(optionsResult);
       } catch (error) {
-        // User cancelled
         if (
           error instanceof Error &&
           (error.name === "NotAllowedError" ||
@@ -96,6 +95,10 @@ export function SignInDialog({
             error.message.includes("cancel") ||
             error.message.includes("abort"))
         ) {
+          // NotAllowedError can mean user cancelled OR browser couldn't find a
+          // matching credential (common on mobile). Instead of silently failing,
+          // guide the user to create a new account.
+          setShowNameInput(true);
           setIsLoading(false);
           return;
         }

@@ -59,6 +59,9 @@ export async function getPasskeyOptions() {
       allowCredentials = allAuthenticators.map((auth) => ({
         id: Buffer.from(auth.credentialID, "base64url"),
         type: "public-key" as const,
+        transports: auth.transports
+          ? JSON.parse(auth.transports)
+          : undefined,
       }));
     }
 
