@@ -49,7 +49,7 @@ export function PartiesPageSkeleton() {
 
         {/* Discover Section */}
         <div className="mb-3! px-6 w-full">
-          <Skeleton height={23} width={80} className="rounded-lg" />
+          <Skeleton height={22} width={80} className="rounded-lg" />
         </div>
 
         {/* Search bar skeleton */}
