@@ -2,6 +2,7 @@
 
 import {
   Button,
+  Skeleton,
   Typography,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
@@ -80,41 +81,41 @@ export function PartyDetailContent({
       {isLoading ? (
         // Loading state
         <div className="flex flex-1 min-h-full flex-col">
-          {/* Hero section skeleton */}
+          {/* Hero section */}
           <div className="mt-6 mb-10 flex flex-col items-center">
-            <div className="h-9 w-3/4 animate-pulse rounded-lg bg-gray-100"></div>
+            <Skeleton height={36} width="75%" className="rounded-lg" />
           </div>
 
-          {/* Description skeleton */}
+          {/* Description card */}
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
-              <div className="h-6 w-5/12 animate-pulse rounded bg-gray-100"></div>
+              <Skeleton height={24} width={120} className="rounded-lg" />
             </div>
             <div className="p-4">
-              <div className="h-20 w-full animate-pulse rounded bg-gray-100"></div>
+              <Skeleton height={80} width="100%" className="rounded" />
             </div>
           </div>
 
-          {/* Party Info skeleton */}
+          {/* Party Info card */}
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
-              <div className="h-6 w-1/4 animate-pulse rounded bg-gray-100"></div>
+              <Skeleton height={24} width={80} className="rounded-lg" />
             </div>
             <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
               <div className="flex items-center justify-between gap-6">
-                <div className="h-5 w-1/3 animate-pulse rounded bg-gray-100"></div>
-                <div className="h-5 w-1/3 animate-pulse rounded bg-gray-100"></div>
+                <Skeleton height={20} width="33%" className="rounded" />
+                <Skeleton height={20} width="33%" className="rounded" />
               </div>
               <div className="flex items-center justify-between gap-6">
-                <div className="h-5 w-1/4 animate-pulse rounded bg-gray-100"></div>
-                <div className="h-5 w-1/2 animate-pulse rounded bg-gray-100"></div>
+                <Skeleton height={20} width="25%" className="rounded" />
+                <Skeleton height={20} width="50%" className="rounded" />
               </div>
             </div>
           </div>
 
           {/* Vote button skeleton */}
           <div className="mt-auto">
-            <div className="h-14 w-full animate-pulse rounded-full bg-gray-100 mt-6"></div>
+            <Skeleton height={56} width="100%" className="mt-6! rounded-full" />
           </div>
         </div>
       ) : error ? (
