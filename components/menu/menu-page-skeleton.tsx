@@ -1,16 +1,4 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import {
-  PiArrowSquareOut,
-  PiBookOpenText,
-  PiFileText,
-  PiGithubLogo,
-  PiGlobe,
-  PiLifebuoy,
-  PiRocketLaunch,
-  PiShieldCheck,
-  PiSignIn,
-  PiX,
-} from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 
@@ -20,9 +8,7 @@ export function MenuPageSkeleton() {
       <TopBar
         startAdornment={<div className="size-10" />}
         endAdornment={
-          <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
-            <PiX className="size-4 text-gray-900" />
-          </div>
+          <Skeleton height={40} width={40} className="rounded-full" />
         }
       />
 
@@ -49,7 +35,9 @@ export function MenuPageSkeleton() {
                 label={
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
-                startAdornment={<PiGlobe className="size-5 text-gray-400" />}
+                startAdornment={
+                  <Skeleton height={20} width={20} className="rounded-full" />
+                }
                 noPointer
               />
             </div>
@@ -66,10 +54,10 @@ export function MenuPageSkeleton() {
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
                 startAdornment={
-                  <PiRocketLaunch className="size-5 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 endAdornment={
-                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 noPointer
               />
@@ -78,10 +66,10 @@ export function MenuPageSkeleton() {
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
                 startAdornment={
-                  <PiBookOpenText className="size-5 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 endAdornment={
-                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 noPointer
               />
@@ -89,9 +77,11 @@ export function MenuPageSkeleton() {
                 label={
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
-                startAdornment={<PiLifebuoy className="size-5 text-gray-400" />}
+                startAdornment={
+                  <Skeleton height={20} width={20} className="rounded-full" />
+                }
                 endAdornment={
-                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 noPointer
               />
@@ -109,10 +99,10 @@ export function MenuPageSkeleton() {
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
                 startAdornment={
-                  <PiGithubLogo className="size-5 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 endAdornment={
-                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 noPointer
               />
@@ -129,7 +119,9 @@ export function MenuPageSkeleton() {
                 label={
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
-                startAdornment={<PiFileText className="size-5 text-gray-400" />}
+                startAdornment={
+                  <Skeleton height={20} width={20} className="rounded-full" />
+                }
                 noPointer
               />
               <CustomListItem
@@ -137,7 +129,7 @@ export function MenuPageSkeleton() {
                   <Skeleton height={18} width={40} className="rounded-lg" />
                 }
                 startAdornment={
-                  <PiShieldCheck className="size-5 text-gray-400" />
+                  <Skeleton height={20} width={20} className="rounded-full" />
                 }
                 noPointer
               />

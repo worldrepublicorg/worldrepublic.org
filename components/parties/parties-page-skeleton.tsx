@@ -1,5 +1,4 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiList, PiPlus } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 /**
@@ -13,9 +12,7 @@ export function PartiesPageSkeleton() {
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
         endAdornment={
-          <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
-            <PiList className="size-4 text-gray-900" />
-          </div>
+          <Skeleton height={40} width={40} className="rounded-full" />
         }
       />
 
@@ -29,7 +26,7 @@ export function PartiesPageSkeleton() {
               disabled
               aria-label="Create party"
             >
-              <PiPlus className="size-4 text-gray-900" />
+              <Skeleton height={16} width={16} className="rounded-full" />
             </button>
           </div>
           {/* Party card skeleton */}

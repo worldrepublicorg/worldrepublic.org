@@ -1,5 +1,4 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiArrowsClockwise, PiArrowUp, PiList } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 /**
@@ -13,9 +12,7 @@ export function WalletPageSkeleton() {
     <div className="pb-safe flex flex-col">
       <TopBar
         endAdornment={
-          <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
-            <PiList className="size-4 text-gray-900" />
-          </div>
+          <Skeleton height={40} width={40} className="rounded-full" />
         }
       />
       <div className="flex flex-col gap-9 p-6">
@@ -28,13 +25,13 @@ export function WalletPageSkeleton() {
           <div className="flex flex-row w-full justify-around mt-5 px-6">
             <div className="flex flex-1 flex-col items-center gap-2">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
-                <PiArrowUp className="h-5 w-5 text-gray-900" />
+                <Skeleton height={20} width={20} className="rounded-full" />
               </div>
               <Skeleton height={17} width={32} className="rounded-lg" />
             </div>
             <div className="flex flex-1 flex-col items-center gap-2">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
-                <PiArrowsClockwise className="h-5 w-5 text-gray-900" />
+                <Skeleton height={20} width={20} className="rounded-full" />
               </div>
               <Skeleton height={17} width={32} className="rounded-lg" />
             </div>

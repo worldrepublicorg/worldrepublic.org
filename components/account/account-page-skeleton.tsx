@@ -1,5 +1,4 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiCaretLeft, PiPencilSimple, PiTrash } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 /**
@@ -13,9 +12,7 @@ export function AccountPageSkeleton() {
     <div className="pb-safe flex flex-col">
       <TopBar
         startAdornment={
-          <div className="flex size-10 items-center justify-center rounded-full bg-gray-100">
-            <PiCaretLeft className="size-4 text-gray-900" />
-          </div>
+          <Skeleton height={40} width={40} className="rounded-full" />
         }
       />
       <div className="flex flex-col gap-8 p-6">
@@ -38,7 +35,7 @@ export function AccountPageSkeleton() {
                 <Skeleton height={17} width={40} className="rounded-lg" />
               </div>
               <div className="ml-4 shrink-0">
-                <PiPencilSimple className="size-4 text-gray-400" />
+                <Skeleton height={16} width={16} className="rounded-full" />
               </div>
             </div>
           </div>
@@ -56,7 +53,7 @@ export function AccountPageSkeleton() {
                 <Skeleton height={17} width={40} className="rounded-lg" />
               </div>
               <div className="ml-4 shrink-0">
-                <PiTrash className="size-4 text-gray-400" />
+                <Skeleton height={16} width={16} className="rounded-full" />
               </div>
             </div>
           </div>
