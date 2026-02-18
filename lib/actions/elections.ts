@@ -1,9 +1,11 @@
 "use server";
 
 import { count, desc, eq, getTableColumns } from "drizzle-orm";
+import { getParties } from "@/lib/actions/parties";
 import { getDbReadOnly } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
 import type { Election, ElectionResult } from "@/lib/types/elections";
+import type { Party } from "@/lib/types/parties";
 
 /**
  * Pick the most important election for the hero card/featured election.
@@ -112,6 +114,43 @@ export async function getElectionResults(
     console.error("Error fetching election results:", error);
     return [];
   }
+}
+
+export type GetElectionDetailResult = {
+  election: Election | null;
+  parties: Party[] | null;
+  results: ElectionResult[];
+};
+
+/**
+ * Fetch election detail with parties and results in one parallel round trip.
+ * Used by the election detail page (client calls this, then caches in localStorage).
+ */
+export async function getElectionDetail(
+  id: string,
+): Promise<GetElectionDetailResult> {
+  const [election, results, partiesList] = await Promise.all([
+    getElection(id),
+    getElectionResults(id),
+    getParties({ limit: 100, order: "random" }),
+  ]);
+
+  if (!election) {
+    return { election: null, parties: null, results: [] };
+  }
+
+  const now = Date.now();
+  const isEnded = now > election.endsAt;
+
+  if (isEnded) {
+    return { election, parties: null, results };
+  }
+
+  return {
+    election,
+    parties: partiesList ?? null,
+    results: [],
+  };
 }
 
 /**
