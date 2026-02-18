@@ -7,6 +7,18 @@ import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 import ElectionDetailPageClient from "./page-client";
 
+const getCachedRandomParties = unstable_cache(
+  async () => {
+    const parties = await getParties({ limit: 100, order: "random" });
+    if (parties === null) {
+      throw new Error("Failed to fetch parties");
+    }
+    return parties;
+  },
+  ["parties-list-random"],
+  { revalidate: 60, tags: ["parties-list"] },
+);
+
 const getCachedElection = unstable_cache(
   async (id: string) => {
     return await getElection(id);
@@ -56,14 +68,7 @@ async function ElectionDetailData({
     results = await getCachedResults(id);
   } else {
     try {
-      const partiesResult = await getParties({
-        limit: 100,
-        order: "random",
-      });
-      if (partiesResult === null) {
-        throw new Error("Failed to fetch parties");
-      }
-      electionParties = partiesResult;
+      electionParties = await getCachedRandomParties();
     } catch (error) {
       const errorDetails = {
         errorType:

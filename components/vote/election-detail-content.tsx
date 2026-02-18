@@ -137,7 +137,7 @@ export function ElectionDetailContent({
           </div>
         ) : (
           <PartyVoteList
-            parties={parties}
+            initialParties={parties}
             electionId={election.id}
             lang={lang}
             dictionary={dictionary}
