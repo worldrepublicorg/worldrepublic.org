@@ -29,7 +29,7 @@ export function ElectionCard({
 
   return (
     <Link
-      href={`/${lang}/vote/elections/${election.id}`}
+      href={`/${lang}/vote/elections?id=${election.id}`}
       className={cn("block", !isLastItem && "mb-4")}
     >
       <div className="rounded-xl border border-gray-200 p-4">

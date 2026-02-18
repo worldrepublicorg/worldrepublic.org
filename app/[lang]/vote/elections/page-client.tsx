@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -15,20 +15,22 @@ import {
 } from "@/lib/election-detail-cache";
 
 interface ElectionDetailPageClientProps {
-  id: string;
   lang: string;
   dictionary: Dictionary;
 }
 
 export default function ElectionDetailPageClient({
-  id,
   lang,
   dictionary,
 }: ElectionDetailPageClientProps) {
   const router = useRouter();
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
 
-  const [cachedData] = useState(() => getCachedElectionDetail(id));
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const [cachedData] = useState(() =>
+    id ? getCachedElectionDetail(id) : null,
+  );
   const [serverData, setServerData] = useState<Awaited<
     ReturnType<typeof getElectionDetail>
   > | undefined>(undefined);
@@ -47,12 +49,23 @@ export default function ElectionDetailPageClient({
   }, [id]);
 
   useEffect(() => {
+    if (id === null || id === "") {
+      router.replace(`/${lang}/vote`);
+      return;
+    }
+  }, [id, lang, router]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setShowScrollToTop(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (id === null || id === "") {
+    return null;
+  }
 
   const data = serverData ?? cachedData;
   const scrollToTop = () => {

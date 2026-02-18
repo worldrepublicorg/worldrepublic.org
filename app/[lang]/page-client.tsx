@@ -57,7 +57,7 @@ export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
     : TABS[0];
 
   const voteHref = featuredElectionId
-    ? `/${lang}/vote/elections/${featuredElectionId}`
+    ? `/${lang}/vote/elections?id=${featuredElectionId}`
     : `/${lang}/vote`;
 
   // Show skeleton only when we have no data (no cache and no server result yet)

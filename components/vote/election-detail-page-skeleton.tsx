@@ -9,7 +9,7 @@ import { TopBar } from "@/components/topbar";
 
 /**
  * Election detail page skeleton. Used by:
- * - app/[lang]/vote/elections/[id]/loading.tsx (route-level loading)
+ * - app/[lang]/vote/elections/loading.tsx (route-level loading)
  * - ElectionDetailPageClient when data is undefined (loading state)
  * No title in TopBar to avoid text popping before data.
  */

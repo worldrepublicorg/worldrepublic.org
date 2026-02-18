@@ -18,7 +18,7 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
 
   return (
     <Link
-      href={`/${lang}/vote/elections/${election.id}`}
+      href={`/${lang}/vote/elections?id=${election.id}`}
       className="block mb-6"
     >
       <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
