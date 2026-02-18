@@ -69,7 +69,7 @@ export async function getElections(): Promise<Election[]> {
   }
 }
 
-export async function getElection(id: string): Promise<Election | null> {
+async function getElection(id: string): Promise<Election | null> {
   try {
     const readDb = getDbReadOnly();
 
@@ -87,7 +87,7 @@ export async function getElection(id: string): Promise<Election | null> {
   }
 }
 
-export async function getElectionResults(
+async function getElectionResults(
   electionId: string,
 ): Promise<ElectionResult[]> {
   try {

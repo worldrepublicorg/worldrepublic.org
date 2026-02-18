@@ -1,4 +1,4 @@
-export const FEATURED_ELECTION_CACHE_KEY = "featuredElectionCache";
+const FEATURED_ELECTION_CACHE_KEY = "featuredElectionCache";
 
 export function getCachedFeaturedElectionId(): string | null {
   if (typeof window === "undefined") return null;
