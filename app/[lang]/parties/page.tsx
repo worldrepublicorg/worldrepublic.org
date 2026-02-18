@@ -19,7 +19,7 @@ const getCachedParties = unstable_cache(
     return parties;
   },
   ["parties-list"],
-  { revalidate: 60, tags: ["parties-list"] },
+  { revalidate: 3600, tags: ["parties-list"] },
 );
 
 // This enables Static Site Generation (SSG) for all languages
