@@ -14,6 +14,8 @@ interface PartyVoteListProps {
   electionId: string;
   lang: string;
   dictionary: Dictionary;
+  /** When provided, party name/row opens the drawer instead of navigating to party page. */
+  onPartyClick?: (party: Party) => void;
 }
 
 const SEARCH_DEBOUNCE_MS = 300;
@@ -34,6 +36,7 @@ export function PartyVoteList({
   electionId,
   lang,
   dictionary,
+  onPartyClick,
 }: PartyVoteListProps) {
   const [parties, setParties] = useState<Party[]>(() =>
     shuffleArray(initialParties),
@@ -221,28 +224,54 @@ export function PartyVoteList({
                   key={party.id}
                   className="flex items-center justify-between gap-4"
                 >
-                  <Link
-                    href={`/${lang}/parties/${party.id}`}
-                    className="flex-1 min-w-0"
-                  >
-                    <Typography
-                      variant="subtitle"
-                      level={3}
-                      className="text-gray-900 truncate"
+                  {onPartyClick ? (
+                    <button
+                      type="button"
+                      onClick={() => onPartyClick(party)}
+                      className="flex-1 min-w-0 text-left cursor-pointer rounded-md -m-1 p-1 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-inset"
                     >
-                      {party.name}
-                    </Typography>
-                    <div className="flex items-center gap-1 mt-1">
-                      <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
                       <Typography
-                        variant="body"
-                        level={4}
-                        className="text-gray-500 truncate"
+                        variant="subtitle"
+                        level={3}
+                        className="text-gray-900 truncate"
                       >
-                        {party.leaderUsername}
+                        {party.name}
                       </Typography>
-                    </div>
-                  </Link>
+                      <div className="flex items-center gap-1 mt-1">
+                        <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
+                        <Typography
+                          variant="body"
+                          level={4}
+                          className="text-gray-500 truncate"
+                        >
+                          {party.leaderUsername}
+                        </Typography>
+                      </div>
+                    </button>
+                  ) : (
+                    <Link
+                      href={`/${lang}/parties/${party.id}`}
+                      className="flex-1 min-w-0"
+                    >
+                      <Typography
+                        variant="subtitle"
+                        level={3}
+                        className="text-gray-900 truncate"
+                      >
+                        {party.name}
+                      </Typography>
+                      <div className="flex items-center gap-1 mt-1">
+                        <PiUserFocus className="size-3.5 text-gray-400 shrink-0" />
+                        <Typography
+                          variant="body"
+                          level={4}
+                          className="text-gray-500 truncate"
+                        >
+                          {party.leaderUsername}
+                        </Typography>
+                      </div>
+                    </Link>
+                  )}
                   <VoteButton
                     electionId={electionId}
                     partyId={party.id}

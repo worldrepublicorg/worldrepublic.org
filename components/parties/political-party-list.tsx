@@ -2,9 +2,6 @@
 
 import {
   Button,
-  Drawer,
-  DrawerContent,
-  DrawerTitle,
   Input,
   Typography,
   useToast,
@@ -13,7 +10,6 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import type { FocusEvent as ReactFocusEvent } from "react";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 // Lazy load heavy dialog component
@@ -22,13 +18,12 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
-import { CustomDrawerHeader } from "@/components/parties/custom-drawer-header";
 import { ConfirmRegisterPartyDialog } from "@/components/parties/dialogs/confirm-register-party-dialog";
 import { CreateUpdatePartyDialog } from "@/components/parties/dialogs/create-update-party-dialog";
 import { DeletePartyDialog } from "@/components/parties/dialogs/delete-party-dialog";
 import { MyPartySection } from "@/components/parties/my-party-section";
 import { PartyCard } from "@/components/parties/party-card";
-import { PartyDetailContent } from "@/components/parties/party-detail-content";
+import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { useAuth } from "@/hooks/use-auth";
 import {
@@ -198,53 +193,6 @@ export function PoliticalPartyList({
 
     fetchUserPartyData();
   }, [isAuthenticated, authLoading]);
-
-  // Track whether we pushed a drawer state to history
-  // This prevents cleanup from interfering with Next.js router navigation
-  const drawerStatePushedRef = useRef(false);
-
-  // Handle Android back button for drawer
-  useEffect(() => {
-    if (!isDrawerOpen) {
-      // Reset ref when drawer closes normally (not via back button)
-      drawerStatePushedRef.current = false;
-      return;
-    }
-
-    // Push a state to history when drawer opens
-    const state = { drawerOpen: true };
-    window.history.pushState(state, "");
-    drawerStatePushedRef.current = true;
-
-    // Handle back button press
-    const handlePopState = () => {
-      // Close the drawer instead of navigating back
-      setIsDrawerOpen(false);
-      // Prevent default navigation by pushing state back
-      // Note: We keep ref as true since we're pushing state back
-      window.history.pushState(state, "");
-      // Ref stays true - will be reset when effect cleanup runs
-    };
-
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-
-      // Only clean up history if WE pushed a state, not based on current history state
-      // This prevents interference with Next.js router navigation
-      if (drawerStatePushedRef.current) {
-        const currentPath = window.location.pathname;
-        // Only manipulate history if we're still on the parties page
-        // If Next.js router has already navigated away, don't interfere
-        if (currentPath.includes("/parties")) {
-          // Use replaceState to clear our state without triggering navigation
-          window.history.replaceState(null, "");
-        }
-        drawerStatePushedRef.current = false;
-      }
-    };
-  }, [isDrawerOpen]);
 
   // Load more parties when scrolling near bottom
   const loadMoreParties = async () => {
@@ -822,68 +770,13 @@ export function PoliticalPartyList({
       {/* Scroll to top button */}
       <ScrollToTopButton show={showScrollToTop} onClick={scrollToTop} />
 
-      {/* Party Detail Drawer */}
-      <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-        <DrawerContent className="flex flex-col">
-          <div className="shrink-0 px-6 pt-6">
-            <CustomDrawerHeader
-              icon={
-                selectedPartyForDrawer && (
-                  <button
-                    onClick={async () => {
-                      const shareUrl = `${window.location.origin}/parties/${selectedPartyForDrawer.id}`;
-                      const shareTitle = selectedPartyForDrawer.name;
-
-                      // Check if Web Share API is supported
-                      if (navigator.share) {
-                        try {
-                          await navigator.share({
-                            title: shareTitle,
-                            url: shareUrl,
-                          });
-                        } catch (error) {
-                          // User cancelled or share failed - fallback to clipboard
-                          if (
-                            error instanceof Error &&
-                            error.name !== "AbortError"
-                          ) {
-                            await navigator.clipboard.writeText(shareUrl);
-                            toast.success({
-                              title: dictionary.toasts.copied,
-                            });
-                          }
-                        }
-                      } else {
-                        // Fallback for browsers that don't support Web Share API
-                        await navigator.clipboard.writeText(shareUrl);
-                        toast.success({
-                          title: dictionary.toasts.copied,
-                        });
-                      }
-                    }}
-                    className="flex size-10 items-center justify-center rounded-full bg-gray-100"
-                    aria-label={dictionary.pages.govern.parties.share_party}
-                  >
-                    <PiShareNetwork className="size-4 text-gray-900" />
-                  </button>
-                )
-              }
-            >
-              <DrawerTitle>
-                {dictionary.pages.govern.parties.party_details}
-              </DrawerTitle>
-            </CustomDrawerHeader>
-          </div>
-          <div className="flex-1 overflow-y-auto px-6 pb-6">
-            {selectedPartyForDrawer && (
-              <PartyDetailContent
-                partyId={selectedPartyForDrawer.id}
-                dictionary={dictionary}
-              />
-            )}
-          </div>
-        </DrawerContent>
-      </Drawer>
+      <PartyDetailDrawer
+        open={isDrawerOpen}
+        onOpenChange={setIsDrawerOpen}
+        party={selectedPartyForDrawer}
+        dictionary={dictionary}
+        lang={lang}
+      />
     </div>
   );
 }

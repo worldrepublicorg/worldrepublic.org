@@ -3,8 +3,10 @@
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { PiCalendarBlank, PiCoins, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ElectionResults } from "@/components/vote/election-results";
 import { PartyVoteList } from "@/components/vote/party-vote-list";
 import { formatElectionDateTime } from "@/lib/format-date";
@@ -29,6 +31,9 @@ export function ElectionDetailContent({
 }: ElectionDetailContentProps) {
   const router = useRouter();
   const t = dictionary.pages.govern.elections.detail;
+  const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
+    useState<Party | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   if (!election) {
     return (
@@ -142,6 +147,10 @@ export function ElectionDetailContent({
             electionId={election.id}
             lang={lang}
             dictionary={dictionary}
+            onPartyClick={(party) => {
+              setSelectedPartyForDrawer(party);
+              setIsDrawerOpen(true);
+            }}
           />
         ))}
 
@@ -160,6 +169,14 @@ export function ElectionDetailContent({
       )}
 
       {isEnded && <ElectionResults results={results} dictionary={dictionary} />}
+
+      <PartyDetailDrawer
+        open={isDrawerOpen}
+        onOpenChange={setIsDrawerOpen}
+        party={selectedPartyForDrawer}
+        dictionary={dictionary}
+        lang={lang}
+      />
     </div>
   );
 }
