@@ -203,7 +203,7 @@ export function PartyDetailContent({
                   </div>
                   <button
                     onClick={handleCopyLeaderAddress}
-                    className="min-w-0 flex-1 flex items-center gap-1 cursor-pointer text-left overflow-hidden"
+                    className="min-w-0 flex-1 flex items-center justify-end gap-1 cursor-pointer text-right overflow-hidden"
                   >
                     <Typography
                       variant="body"
@@ -239,7 +239,7 @@ export function PartyDetailContent({
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="min-w-0 flex-1 overflow-hidden"
+                    className="min-w-0 flex-1 flex justify-end overflow-hidden text-right"
                   >
                     <Typography
                       variant="body"
