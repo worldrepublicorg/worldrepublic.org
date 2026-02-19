@@ -92,7 +92,8 @@
           "results_title": "ውጤቶች",
           "vote_singular": "ድምፅ",
           "vote_plural": "ድምፆች",
-          "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።"
+          "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
+          "test_election_name": "የሙከራ ምርጫ {n}"
         }
       }
     },

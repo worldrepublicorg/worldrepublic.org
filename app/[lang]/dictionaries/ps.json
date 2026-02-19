@@ -92,7 +92,8 @@
           "results_title": "پایلې",
           "vote_singular": "رای",
           "vote_plural": "رایې",
-          "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل."
+          "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
+          "test_election_name": "آزمایښتي ټاکنه {n}"
         }
       }
     },

@@ -92,7 +92,8 @@
           "results_title": "Natiijoyin",
           "vote_singular": "cod",
           "vote_plural": "codad",
-          "no_votes": "Doorashadaan lama codin."
+          "no_votes": "Doorashadaan lama codin.",
+          "test_election_name": "Doorasho tijaabo {n}"
         }
       }
     },

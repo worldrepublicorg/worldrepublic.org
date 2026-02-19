@@ -8,6 +8,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionResults } from "@/components/vote/election-results";
 import { PartyVoteList } from "@/components/vote/party-vote-list";
 import { formatElectionDateTime } from "@/lib/format-date";
+import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 
@@ -70,7 +71,7 @@ export function ElectionDetailContent({
           level={2}
           className="text-center text-gray-900"
         >
-          {election.name}
+          {localizeElectionName(election.name, t.test_election_name)}
         </Typography>
         {isActive && (
           <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">

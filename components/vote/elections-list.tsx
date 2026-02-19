@@ -69,7 +69,7 @@ export function ElectionsList({
   return (
     <div className="flex flex-col pb-24">
       {/* Hero card for the most important election */}
-      {heroElection && <ElectionHeroCard election={heroElection} lang={lang} />}
+      {heroElection && <ElectionHeroCard election={heroElection} lang={lang} dictionary={dictionary} />}
 
       {/* Active Elections Section (excluding hero) */}
       {activeElections.length > 0 && (

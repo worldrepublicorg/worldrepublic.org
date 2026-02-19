@@ -92,7 +92,8 @@
           "results_title": "Rezultate",
           "vote_singular": "vot",
           "vote_plural": "voturi",
-          "no_votes": "Nu au fost exprimate voturi în această alegere."
+          "no_votes": "Nu au fost exprimate voturi în această alegere.",
+          "test_election_name": "Alegere de test {n}"
         }
       }
     },

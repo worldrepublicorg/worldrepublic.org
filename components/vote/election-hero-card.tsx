@@ -3,15 +3,18 @@
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { formatElectionDate } from "@/lib/format-date";
+import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election } from "@/lib/types/elections";
 
 interface ElectionHeroCardProps {
   election: Election;
   lang: string;
+  dictionary: Dictionary;
 }
 
-export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
+export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCardProps) {
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
   const isUpcoming = now < election.startsAt;
@@ -25,7 +28,7 @@ export function ElectionHeroCard({ election, lang }: ElectionHeroCardProps) {
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
             <Typography variant="heading" level={3} className="text-gray-900">
-              {election.name}
+              {localizeElectionName(election.name, dictionary.pages.govern.elections.detail.test_election_name)}
             </Typography>
           </div>
           <div>

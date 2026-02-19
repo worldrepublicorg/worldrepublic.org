@@ -92,7 +92,8 @@
           "results_title": "Rezultāti",
           "vote_singular": "balss",
           "vote_plural": "balsis",
-          "no_votes": "Šajās vēlēšanās neviena balss netika nodota."
+          "no_votes": "Šajās vēlēšanās neviena balss netika nodota.",
+          "test_election_name": "Testa vēlēšanas {n}"
         }
       }
     },

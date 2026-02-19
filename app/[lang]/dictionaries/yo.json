@@ -92,7 +92,8 @@
           "results_title": "Àwọn àbájáde",
           "vote_singular": "ìbò",
           "vote_plural": "ìbò",
-          "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí."
+          "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí.",
+          "test_election_name": "Ìdìbò ìdànwò {n}"
         }
       }
     },

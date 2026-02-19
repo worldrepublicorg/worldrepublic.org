@@ -92,7 +92,8 @@
           "results_title": "परिणाम",
           "vote_singular": "वोट",
           "vote_plural": "वोट",
-          "no_votes": "इस चुनाव में कोई वोट नहीं डाला गया।"
+          "no_votes": "इस चुनाव में कोई वोट नहीं डाला गया।",
+          "test_election_name": "परीक्षण चुनाव {n}"
         }
       }
     },

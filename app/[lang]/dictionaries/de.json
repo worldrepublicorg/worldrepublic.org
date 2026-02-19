@@ -92,7 +92,8 @@
           "results_title": "Ergebnisse",
           "vote_singular": "Stimme",
           "vote_plural": "Stimmen",
-          "no_votes": "Bei dieser Wahl wurden keine Stimmen abgegeben."
+          "no_votes": "Bei dieser Wahl wurden keine Stimmen abgegeben.",
+          "test_election_name": "Testwahl {n}"
         }
       }
     },

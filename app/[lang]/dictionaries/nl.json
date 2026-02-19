@@ -92,7 +92,8 @@
           "results_title": "Resultaten",
           "vote_singular": "stem",
           "vote_plural": "stemmen",
-          "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing."
+          "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
+          "test_election_name": "Testverkiezing {n}"
         }
       }
     },

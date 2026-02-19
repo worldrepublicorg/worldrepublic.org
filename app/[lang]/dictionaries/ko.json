@@ -92,7 +92,8 @@
           "results_title": "결과",
           "vote_singular": "표",
           "vote_plural": "표",
-          "no_votes": "이 선거에서 투표가 없었습니다."
+          "no_votes": "이 선거에서 투표가 없었습니다.",
+          "test_election_name": "테스트 선거 {n}"
         }
       }
     },

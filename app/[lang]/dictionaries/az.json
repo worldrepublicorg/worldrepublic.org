@@ -92,7 +92,8 @@
           "results_title": "Nəticələr",
           "vote_singular": "səs",
           "vote_plural": "səs",
-          "no_votes": "Bu seçimdə heç bir səs verilmədi."
+          "no_votes": "Bu seçimdə heç bir səs verilmədi.",
+          "test_election_name": "Sınaq seçkisi {n}"
         }
       }
     },

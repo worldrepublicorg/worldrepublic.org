@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { formatElectionDate } from "@/lib/format-date";
+import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election } from "@/lib/types/elections";
 import { cn } from "@/lib/utils";
 
@@ -40,7 +41,7 @@ export function ElectionCard({
               level={1}
               className="text-[19px] font-semibold"
             >
-              {election.name}
+              {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
           <div>

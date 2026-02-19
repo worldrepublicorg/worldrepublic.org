@@ -92,7 +92,8 @@
           "results_title": "結果",
           "vote_singular": "票",
           "vote_plural": "票",
-          "no_votes": "この選挙では投票がありませんでした。"
+          "no_votes": "この選挙では投票がありませんでした。",
+          "test_election_name": "テスト選挙 {n}"
         }
       }
     },

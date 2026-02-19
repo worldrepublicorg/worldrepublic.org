@@ -92,7 +92,8 @@
           "results_title": "Natijalar",
           "vote_singular": "ovoz",
           "vote_plural": "ovoz",
-          "no_votes": "Bu saylovda hech qanday ovoz berilmadi."
+          "no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
+          "test_election_name": "Sinov saylovi {n}"
         }
       }
     },

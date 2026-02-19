@@ -92,7 +92,8 @@
           "results_title": "Rezultatai",
           "vote_singular": "balsas",
           "vote_plural": "balsų",
-          "no_votes": "Šiuose rinkimuose nebuvo balsuota."
+          "no_votes": "Šiuose rinkimuose nebuvo balsuota.",
+          "test_election_name": "Testiniai rinkimai {n}"
         }
       }
     },

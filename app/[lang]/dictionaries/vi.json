@@ -92,7 +92,8 @@
           "results_title": "Kết quả",
           "vote_singular": "phiếu",
           "vote_plural": "phiếu",
-          "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này."
+          "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
+          "test_election_name": "Bầu cử thử nghiệm {n}"
         }
       }
     },

@@ -92,7 +92,8 @@
           "results_title": "نتائج",
           "vote_singular": "ووٹ",
           "vote_plural": "ووٹ",
-          "no_votes": "اس الیکشن میں کوئی ووٹ نہیں ڈالا گیا۔"
+          "no_votes": "اس الیکشن میں کوئی ووٹ نہیں ڈالا گیا۔",
+          "test_election_name": "ٹیسٹ انتخابات {n}"
         }
       }
     },

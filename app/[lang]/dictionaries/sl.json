@@ -92,7 +92,8 @@
           "results_title": "Rezultati",
           "vote_singular": "glas",
           "vote_plural": "glasov",
-          "no_votes": "V teh volitvah ni bilo oddanih glasov."
+          "no_votes": "V teh volitvah ni bilo oddanih glasov.",
+          "test_election_name": "Testne volitve {n}"
         }
       }
     },
