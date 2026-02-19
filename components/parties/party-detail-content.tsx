@@ -150,7 +150,7 @@ export function PartyDetailContent({
             <Typography
               variant="heading"
               level={2}
-              className="w-full min-w-0 truncate text-center text-gray-900"
+              className="w-full min-w-0 break-all text-center text-gray-900"
               title={party.name}
             >
               {party.name}
