@@ -228,7 +228,7 @@ export function PartyVoteList({
                     <button
                       type="button"
                       onClick={() => onPartyClick(party)}
-                      className="flex-1 min-w-0 text-left cursor-pointer rounded-md -m-1 p-1 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-inset"
+                      className="flex-1 min-w-0 text-left cursor-pointer rounded-md -m-1 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-inset"
                     >
                       <Typography
                         variant="subtitle"
