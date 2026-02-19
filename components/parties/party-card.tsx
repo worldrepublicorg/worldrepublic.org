@@ -79,7 +79,7 @@ export function PartyCard({
           <Typography
             variant="subtitle"
             level={1}
-            className="truncate text-[19px] font-semibold"
+            className="wrap-break-word text-[19px] font-semibold"
             title={party.name}
           >
             {party.name}
