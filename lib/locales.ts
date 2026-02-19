@@ -36,7 +36,6 @@ export const locales = [
   "gu",
   "ha",
   "hu",
-  "hy",
   "vi",
   "tr",
   "yo",

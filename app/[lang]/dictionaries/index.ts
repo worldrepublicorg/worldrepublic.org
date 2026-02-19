@@ -18,7 +18,6 @@ const dictionaries = {
   es: () => import("./es.json").then((module) => module.default),
   ha: () => import("./ha.json").then((module) => module.default),
   hu: () => import("./hu.json").then((module) => module.default),
-  hy: () => import("./hy.json").then((module) => module.default),
   ja: () => import("./ja.json").then((module) => module.default),
   ko: () => import("./ko.json").then((module) => module.default),
   km: () => import("./km.json").then((module) => module.default),

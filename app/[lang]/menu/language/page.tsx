@@ -29,7 +29,6 @@ const languages = [
   { code: "ha", label: "Hausa" },
   { code: "hi", label: "हिन्दी (Hindi)" },
   { code: "hu", label: "Magyar (Hungarian)" },
-  { code: "hy", label: "Հայերեն (Armenian)" },
   { code: "id", label: "Bahasa Indonesia (Indonesian)" },
   { code: "it", label: "Italiano (Italian)" },
   { code: "ja", label: "日本語 (Japanese)" },
