@@ -146,11 +146,12 @@ export function PartyDetailContent({
         // Party details
         <div className="flex flex-1 min-h-full flex-col">
           {/* Hero section */}
-          <div className="mt-6 mb-10 flex flex-col items-center">
+          <div className="mt-6 mb-10 w-full min-w-0 flex flex-col items-center">
             <Typography
               variant="heading"
               level={2}
-              className="text-center text-gray-900"
+              className="w-full min-w-0 truncate text-center text-gray-900"
+              title={party.name}
             >
               {party.name}
             </Typography>
@@ -202,16 +203,17 @@ export function PartyDetailContent({
                   </div>
                   <button
                     onClick={handleCopyLeaderAddress}
-                    className="flex items-center gap-1 cursor-pointer"
+                    className="min-w-0 flex-1 flex items-center gap-1 cursor-pointer text-left overflow-hidden"
                   >
                     <Typography
                       variant="body"
                       level={3}
-                      className="font-medium text-gray-900"
+                      className="font-medium text-gray-900 truncate"
+                      title={party.leaderUsername}
                     >
                       {party.leaderUsername}
                     </Typography>
-                    <PiCopy className="size-4 text-gray-400" />
+                    <PiCopy className="size-4 text-gray-400 shrink-0" />
                   </button>
                 </div>
               )}
@@ -237,11 +239,12 @@ export function PartyDetailContent({
                     }
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="min-w-0 flex-1 overflow-hidden"
                   >
                     <Typography
                       variant="body"
                       level={3}
-                      className="line-clamp-1 break-all font-medium"
+                      className="font-medium truncate"
                       title={party.websiteUrl}
                     >
                       {party.websiteUrl}
