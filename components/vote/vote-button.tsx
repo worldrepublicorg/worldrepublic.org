@@ -68,12 +68,13 @@ export function VoteButton({
     setSelfVerificationDialogOpen(true);
   };
 
+  const isTestElection =
+    electionId === "b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1";
+
   const handleVoteClick = () => {
-    if (electionId) {
-      // Direct vote flow — go straight to Self verification
+    if (electionId && !isTestElection) {
       setSelfVerificationDialogOpen(true);
     } else {
-      // Legacy flow — show pre-verification dialog
       setPreVerificationDialogOpen(true);
     }
   };
@@ -94,7 +95,7 @@ export function VoteButton({
       </Button>
 
       {/* Pre-verification dialog (legacy flow when no electionId) */}
-      {!electionId && (
+      {(!electionId || isTestElection) && (
         <AlertDialog
           open={preVerificationDialogOpen}
           onOpenChange={setPreVerificationDialogOpen}
