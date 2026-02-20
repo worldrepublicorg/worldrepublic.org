@@ -1,6 +1,6 @@
 "use server";
 
-import { count, desc, eq, getTableColumns } from "drizzle-orm";
+import { count, desc, eq, getTableColumns, inArray, not } from "drizzle-orm";
 import { getParties } from "@/lib/actions/parties";
 import { getDbReadOnly } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
@@ -11,9 +11,7 @@ import type { Party } from "@/lib/types/parties";
  * Pick the most important election for the hero card/featured election.
  * Priority: active > soonest upcoming > most recently ended.
  */
-const EXCLUDED_FEATURED_IDS = new Set([
-  "b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1",
-]);
+const EXCLUDED_FEATURED_IDS = new Set(["b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1"]);
 
 function pickFeaturedElection(elections: Election[]): Election | null {
   const candidates = elections.filter((e) => !EXCLUDED_FEATURED_IDS.has(e.id));
@@ -62,9 +60,13 @@ export async function getElections(): Promise<Election[]> {
   try {
     const readDb = getDbReadOnly();
 
+    const excluded = [...EXCLUDED_FEATURED_IDS];
     const electionRows = await readDb
       .select(getTableColumns(elections))
       .from(elections)
+      .where(
+        excluded.length > 0 ? not(inArray(elections.id, excluded)) : undefined,
+      )
       .orderBy(desc(elections.startsAt));
 
     return electionRows.map(pgRowToElection);
