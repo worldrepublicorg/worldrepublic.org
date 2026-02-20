@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "选举即将开始",
         "test_verification": {
-          "description": "立即尝试我们的身份验证系统，为投票做好准备。",
+          "description": "立即尝试我们的身份验证系统，为投票做好准备",
           "button": "测试"
         }
       },

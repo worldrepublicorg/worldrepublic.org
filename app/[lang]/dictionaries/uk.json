@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Вибори скоро розпочнуться",
         "test_verification": {
-          "description": "Спробуйте нашу систему verification особи зараз, щоб бути готовими до голосування.",
+          "description": "Спробуйте нашу систему verification особи зараз, щоб бути готовими до голосування",
           "button": "Тест"
         }
       },

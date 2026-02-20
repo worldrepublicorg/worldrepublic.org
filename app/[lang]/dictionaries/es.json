@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "La elección comienza pronto",
         "test_verification": {
-          "description": "Pruebe nuestro sistema de verificación de identidad ahora para estar listo para votar.",
+          "description": "Pruebe nuestro sistema de verificación de identidad ahora para estar listo para votar",
           "button": "Prueba"
         }
       },

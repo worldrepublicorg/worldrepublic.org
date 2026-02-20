@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "L'élection approche",
         "test_verification": {
-          "description": "Essayez notre système de vérification d'identité dès maintenant pour être prêt à voter.",
+          "description": "Essayez notre système de vérification d'identité dès maintenant pour être prêt à voter",
           "button": "Test"
         }
       },

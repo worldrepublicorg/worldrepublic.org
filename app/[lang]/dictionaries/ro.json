@@ -25,7 +25,7 @@
       "vote": {
         "no_active_election": "Alegerile încep în curând",
         "test_verification": {
-          "description": "Încercați sistemul nostru de verificare a identității acum pentru a fi pregătiți de vot.",
+          "description": "Încercați sistemul nostru de verificare a identității acum pentru a fi pregătiți de vot",
           "button": "Test"
         }
       },

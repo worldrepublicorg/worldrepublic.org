@@ -154,11 +154,11 @@ export function ElectionDetailContent({
       {isUpcoming && (
         <div className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
           <Typography variant="body" level={3} className="text-gray-500">
-            {t.check_back}
+            {dictionary.pages.govern.vote.test_verification.description}
           </Typography>
           <VoteButton
             size="sm"
-            label={t.try_verification}
+            label={dictionary.pages.govern.vote.test_verification.button}
             dictionary={dictionary}
             electionId="b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1"
             partyId="72fd551e-19fe-4274-a9e6-14e69654d224"
