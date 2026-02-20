@@ -130,7 +130,7 @@ export function ElectionDetailContent({
             <Typography
               variant="body"
               level={3}
-              className="text-sm text-gray-500"
+              className="text-gray-500"
             >
               {dictionary.pages.govern.parties.error_loading}
             </Typography>
@@ -156,21 +156,11 @@ export function ElectionDetailContent({
         ))}
 
       {isUpcoming && (
-        <div className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
-          <Typography variant="subtitle" level={2} className="text-gray-900">
-            {t.voting_opens.replace(
-              "{date}",
-              formatElectionDateTime(election.startsAt, lang),
-            )}
-          </Typography>
+        <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
           <Typography variant="body" level={3} className="text-gray-500">
             {t.check_back}
           </Typography>
-          <VoteButton
-            size="sm"
-            label={t.try_verification}
-            dictionary={dictionary}
-          />
+          <VoteButton label={t.try_verification} dictionary={dictionary} />
         </div>
       )}
 
