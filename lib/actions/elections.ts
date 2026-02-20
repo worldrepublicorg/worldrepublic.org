@@ -11,12 +11,17 @@ import type { Party } from "@/lib/types/parties";
  * Pick the most important election for the hero card/featured election.
  * Priority: active > soonest upcoming > most recently ended.
  */
+const EXCLUDED_FEATURED_IDS = new Set([
+  "b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1",
+]);
+
 function pickFeaturedElection(elections: Election[]): Election | null {
-  if (elections.length === 0) return null;
+  const candidates = elections.filter((e) => !EXCLUDED_FEATURED_IDS.has(e.id));
+  if (candidates.length === 0) return null;
 
   const now = Date.now();
 
-  const active = elections.filter(
+  const active = candidates.filter(
     (election) => now >= election.startsAt && now <= election.endsAt,
   );
   if (active.length > 0) {
@@ -24,14 +29,14 @@ function pickFeaturedElection(elections: Election[]): Election | null {
     return active.sort((a, b) => a.endsAt - b.endsAt)[0];
   }
 
-  const upcoming = elections.filter((election) => now < election.startsAt);
+  const upcoming = candidates.filter((election) => now < election.startsAt);
   if (upcoming.length > 0) {
     // Pick the one starting soonest
     return upcoming.sort((a, b) => a.startsAt - b.startsAt)[0];
   }
 
   // All ended — pick the most recently ended
-  return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
+  return candidates.sort((a, b) => b.endsAt - a.endsAt)[0];
 }
 
 // Helper to convert PostgreSQL election row to Election object
