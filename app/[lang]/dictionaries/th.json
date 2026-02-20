@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "การเลือกตั้งใกล้เข้ามาแล้ว",
+        "no_active_election": "การเลือกตั้งจะเริ่มเร็วๆ นี้",
         "test_verification": {
           "description": "ลองใช้ระบบยืนยันตัวตนของเราตอนนี้เพื่อเตรียมพร้อมสำหรับการลงคะแนน",
           "button": "ทดสอบ"
@@ -93,7 +93,8 @@
           "vote_singular": "เสียง",
           "vote_plural": "เสียง",
           "no_votes": "ไม่มีการลงคะแนนในการเลือกตั้งนี้",
-          "test_election_name": "การเลือกตั้งทดสอบ {n}"
+          "test_election_name": "การเลือกตั้งทดสอบ {n}",
+          "try_verification": "ลองยืนยันตัวตน"
         }
       }
     },

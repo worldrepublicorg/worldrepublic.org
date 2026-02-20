@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "ټاکنې ژر پیلیږي",
+        "no_active_election": "ټاکنې ډېر ژر پیلیږي",
         "test_verification": {
           "description": "زموږ د هویت تایید سیسټم اوس هڅه وکړئ ترڅو رایې ورکولو ته چمتو اوسئ.",
           "button": "ازموینه"
@@ -93,7 +93,8 @@
           "vote_singular": "رای",
           "vote_plural": "رایې",
           "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
-          "test_election_name": "آزمایښتي ټاکنه {n}"
+          "test_election_name": "آزمایښتي ټاکنه {n}",
+          "try_verification": "تصدیق آزمایښت وکړئ"
         }
       }
     },

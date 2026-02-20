@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Wahlen beginnen bald",
+        "no_active_election": "Wahl beginnt bald",
         "test_verification": {
           "description": "Testen Sie jetzt unser Identitätsverifizierungssystem, um für die Abstimmung bereit zu sein.",
           "button": "Testen"
@@ -93,7 +93,8 @@
           "vote_singular": "Stimme",
           "vote_plural": "Stimmen",
           "no_votes": "Bei dieser Wahl wurden keine Stimmen abgegeben.",
-          "test_election_name": "Testwahl {n}"
+          "test_election_name": "Testwahl {n}",
+          "try_verification": "Verifizierung testen"
         }
       }
     },

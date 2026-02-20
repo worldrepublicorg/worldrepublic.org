@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Zabe yana zuwa",
+        "no_active_election": "Zaɓe yana farawa nan ba da jimawa ba",
         "test_verification": {
           "description": "Gwada tsarin tantance asalinmu yanzu don kasancewa cikin shiri don jefa ƙuri'a.",
           "button": "Gwaji"
@@ -93,7 +93,8 @@
           "vote_singular": "ƙuri’a",
           "vote_plural": "ƙuri’u",
           "no_votes": "Ba a jefa ƙuri’a a wannan zaɓen ba.",
-          "test_election_name": "Zaɓen gwaji {n}"
+          "test_election_name": "Zaɓen gwaji {n}",
+          "try_verification": "Gwada tabbatarwa"
         }
       }
     },

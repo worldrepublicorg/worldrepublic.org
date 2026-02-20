@@ -93,7 +93,8 @@
           "vote_singular": "голос",
           "vote_plural": "голосов",
           "no_votes": "В этих выборах не было подано голосов.",
-          "test_election_name": "Тестовые выборы {n}"
+          "test_election_name": "Тестовые выборы {n}",
+          "try_verification": "Попробовать верификацию"
         }
       }
     },

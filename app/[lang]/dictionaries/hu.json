@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Választások hamarosan",
+        "no_active_election": "A választás hamarosan kezdődik",
         "test_verification": {
           "description": "Próbálja ki személyazonosság-ellenőrző rendszerünket most, hogy készen álljon a szavazásra.",
           "button": "Teszt"
@@ -93,7 +93,8 @@
           "vote_singular": "szavazat",
           "vote_plural": "szavazat",
           "no_votes": "Ebben a választásban nem adtak le szavazatot.",
-          "test_election_name": "Tesztválasztás {n}"
+          "test_election_name": "Tesztválasztás {n}",
+          "try_verification": "Ellenőrzés kipróbálása"
         }
       }
     },

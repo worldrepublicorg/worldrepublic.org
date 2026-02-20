@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Seçkilər tezliklə başlayır",
+        "no_active_election": "Seçki tezliklə başlayacaq",
         "test_verification": {
           "description": "Səsverməyə hazır olmaq üçün indi şəxsiyyəti təsdiqləmə sistemimizi sınayın.",
           "button": "Sınaq"
@@ -93,7 +93,8 @@
           "vote_singular": "səs",
           "vote_plural": "səs",
           "no_votes": "Bu seçimdə heç bir səs verilmədi.",
-          "test_election_name": "Sınaq seçkisi {n}"
+          "test_election_name": "Sınaq seçkisi {n}",
+          "try_verification": "Doğrulamanı sına"
         }
       }
     },

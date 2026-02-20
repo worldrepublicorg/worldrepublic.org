@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Bầu cử sắp bắt đầu",
+        "no_active_election": "Cuộc bầu cử sắp bắt đầu",
         "test_verification": {
           "description": "Hãy thử hệ thống xác minh danh tính của chúng tôi ngay bây giờ để sẵn sàng bỏ phiếu.",
           "button": "Kiểm tra"
@@ -93,7 +93,8 @@
           "vote_singular": "phiếu",
           "vote_plural": "phiếu",
           "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
-          "test_election_name": "Bầu cử thử nghiệm {n}"
+          "test_election_name": "Bầu cử thử nghiệm {n}",
+          "try_verification": "Thử xác minh"
         }
       }
     },

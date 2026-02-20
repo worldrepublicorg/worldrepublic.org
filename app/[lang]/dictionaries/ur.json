@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "انتخابات قریب ہیں",
+        "no_active_election": "انتخاب جلد شروع ہو رہا ہے",
         "test_verification": {
           "description": "ووٹنگ کے لیے تیار رہنے کے لیے ابھی ہمارا شناخت کی تصدیق کا نظام آزمائیں۔",
           "button": "ٹیسٹ"
@@ -93,7 +93,8 @@
           "vote_singular": "ووٹ",
           "vote_plural": "ووٹ",
           "no_votes": "اس الیکشن میں کوئی ووٹ نہیں ڈالا گیا۔",
-          "test_election_name": "ٹیسٹ انتخابات {n}"
+          "test_election_name": "ٹیسٹ انتخابات {n}",
+          "try_verification": "تصدیق آزمائیں"
         }
       }
     },

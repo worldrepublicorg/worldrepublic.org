@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Amatora aratangira vuba",
+        "no_active_election": "Amatora atangira vuba",
         "test_verification": {
           "description": "Gerageza sisitemu yacu yo kugenzura umwirondoro ubu kugirango witegure gutora.",
           "button": "Gerageza"
@@ -93,7 +93,8 @@
           "vote_singular": "amajwi",
           "vote_plural": "amajwi",
           "no_votes": "Nta majwi yatanzwe muri iyi matora.",
-          "test_election_name": "Itora ry'igerageza {n}"
+          "test_election_name": "Itora ry'igerageza {n}",
+          "try_verification": "Gerageza kwemeza"
         }
       }
     },

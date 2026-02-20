@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Wybory wkrótce",
+        "no_active_election": "Wybory wkrótce się rozpoczną",
         "test_verification": {
           "description": "Wypróbuj nasz system weryfikacji tożsamości już teraz, aby być gotowym do głosowania.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "głos",
           "vote_plural": "głosów",
           "no_votes": "W tych wyborach nie oddano żadnych głosów.",
-          "test_election_name": "Wybory testowe {n}"
+          "test_election_name": "Wybory testowe {n}",
+          "try_verification": "Wypróbuj weryfikację"
         }
       }
     },

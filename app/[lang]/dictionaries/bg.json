@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Изборите започват скоро",
+        "no_active_election": "Изборът започва скоро",
         "test_verification": {
           "description": "Изпробвайте нашата система за проверка на самоличността сега, за да сте готови за гласуване.",
           "button": "Тест"
@@ -93,7 +93,8 @@
           "vote_singular": "глас",
           "vote_plural": "гласа",
           "no_votes": "В тези избори не бяха подадени гласове.",
-          "test_election_name": "Тестов избор {n}"
+          "test_election_name": "Тестов избор {n}",
+          "try_verification": "Опитайте верификация"
         }
       }
     },

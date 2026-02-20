@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Doorashooyinku waxay bilaabanayaan dhowaan",
+        "no_active_election": "Doorashada dhowaan ayay bilaabmaysaa",
         "test_verification": {
           "description": "Isku day nidaamka xaqiijinta aqoonsiga hadda si aad diyaar ugu noqoto codaynta.",
           "button": "Tijaabi"
@@ -93,7 +93,8 @@
           "vote_singular": "cod",
           "vote_plural": "codad",
           "no_votes": "Doorashadaan lama codin.",
-          "test_election_name": "Doorasho tijaabo {n}"
+          "test_election_name": "Doorasho tijaabo {n}",
+          "try_verification": "Tijaabi xaqiijinta"
         }
       }
     },

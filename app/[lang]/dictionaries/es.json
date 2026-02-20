@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Elecciones comienzan pronto",
+        "no_active_election": "La elección comienza pronto",
         "test_verification": {
           "description": "Pruebe nuestro sistema de verificación de identidad ahora para estar listo para votar.",
           "button": "Prueba"
@@ -93,7 +93,8 @@
           "vote_singular": "voto",
           "vote_plural": "votos",
           "no_votes": "No se emitieron votos en esta elección.",
-          "test_election_name": "Elección de prueba {n}"
+          "test_election_name": "Elección de prueba {n}",
+          "try_verification": "Probar verificación"
         }
       }
     },

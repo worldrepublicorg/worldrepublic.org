@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Les élections approchent",
+        "no_active_election": "L'élection approche",
         "test_verification": {
           "description": "Essayez notre système de vérification d'identité dès maintenant pour être prêt à voter.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "vote",
           "vote_plural": "votes",
           "no_votes": "Aucun vote n’a été exprimé lors de cette élection.",
-          "test_election_name": "Élection de test {n}"
+          "test_election_name": "Élection de test {n}",
+          "try_verification": "Essayer la vérification"
         }
       }
     },

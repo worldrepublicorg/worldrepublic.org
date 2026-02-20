@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Rinkimai prasideda netrukus",
+        "no_active_election": "Rinkimai prasidės netrukus",
         "test_verification": {
           "description": "Išbandykite mūsų tapatybės patvirtinimo sistemą dabar, kad būtumėte pasiruošę balsavimui.",
           "button": "Testas"
@@ -93,7 +93,8 @@
           "vote_singular": "balsas",
           "vote_plural": "balsų",
           "no_votes": "Šiuose rinkimuose nebuvo balsuota.",
-          "test_election_name": "Testiniai rinkimai {n}"
+          "test_election_name": "Testiniai rinkimai {n}",
+          "try_verification": "Išbandyti patvirtinimą"
         }
       }
     },

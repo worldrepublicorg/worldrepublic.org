@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Awọn idibo bẹrẹ laipẹ",
+        "no_active_election": "Ìdìbò ń bẹ̀rẹ̀ láìpẹ́",
         "test_verification": {
           "description": "Gbiyanju eto ijẹrisi idanimọ wa ni bayi lati ṣetan fun ibo.",
           "button": "Idanwo"
@@ -93,7 +93,8 @@
           "vote_singular": "ìbò",
           "vote_plural": "ìbò",
           "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí.",
-          "test_election_name": "Ìdìbò ìdànwò {n}"
+          "test_election_name": "Ìdìbò ìdànwò {n}",
+          "try_verification": "Gbiyanju ìjẹ́rìísí"
         }
       }
     },

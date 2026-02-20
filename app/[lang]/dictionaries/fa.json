@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "انتخابات به زودی شروع می‌شود",
+        "no_active_election": "انتخابات به‌زودی آغاز می‌شود",
         "test_verification": {
           "description": "سیستم تأیید هویت ما را اکنون امتحان کنید تا برای رأی‌گیری آماده باشید.",
           "button": "آزمایش"
@@ -93,7 +93,8 @@
           "vote_singular": "رأی",
           "vote_plural": "رأی",
           "no_votes": "هیچ رأیی در این انتخابات داده نشد.",
-          "test_election_name": "انتخابات آزمایشی {n}"
+          "test_election_name": "انتخابات آزمایشی {n}",
+          "try_verification": "تأیید هویت را امتحان کنید"
         }
       }
     },

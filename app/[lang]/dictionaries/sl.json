@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Volitve se začnejo kmalu",
+        "no_active_election": "Volitve se bodo kmalu začele",
         "test_verification": {
           "description": "Preizkusite naš sistem za preverjanje identitete zdaj, da boste pripravljeni na glasovanje.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "glas",
           "vote_plural": "glasov",
           "no_votes": "V teh volitvah ni bilo oddanih glasov.",
-          "test_election_name": "Testne volitve {n}"
+          "test_election_name": "Testne volitve {n}",
+          "try_verification": "Preizkusite preverjanje"
         }
       }
     },

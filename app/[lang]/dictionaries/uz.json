@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Saylovlar tez orada boshlanadi",
+        "no_active_election": "Saylov tez orada boshlanadi",
         "test_verification": {
           "description": "Ovoz berishga tayyor bo'lish uchun shaxsni tasdiqlash tizimimizni hoziroq sinab ko'ring.",
           "button": "Sinov"
@@ -93,7 +93,8 @@
           "vote_singular": "ovoz",
           "vote_plural": "ovoz",
           "no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
-          "test_election_name": "Sinov saylovi {n}"
+          "test_election_name": "Sinov saylovi {n}",
+          "try_verification": "Tekshiruvni sinab ko'ring"
         }
       }
     },

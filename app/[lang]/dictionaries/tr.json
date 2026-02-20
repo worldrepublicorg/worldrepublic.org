@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Seçimler yakında başlıyor",
+        "no_active_election": "Seçim yakında başlıyor",
         "test_verification": {
           "description": "Oylamaya hazır olmak için kimlik doğrulama sistemimizi şimdi deneyin.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "oy",
           "vote_plural": "oy",
           "no_votes": "Bu seçimde hiç oy kullanılmadı.",
-          "test_election_name": "Test seçimi {n}"
+          "test_election_name": "Test seçimi {n}",
+          "try_verification": "Doğrulamayı dene"
         }
       }
     },

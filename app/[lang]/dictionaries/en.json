@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Elections are starting soon",
+        "no_active_election": "Election is starting soon",
         "test_verification": {
           "description": "Try our identity verification system now to be ready for voting.",
           "button": "Test"
@@ -48,7 +48,8 @@
           "vote_singular": "vote",
           "vote_plural": "votes",
           "no_votes": "No votes were cast in this election.",
-          "test_election_name": "Test election {n}"
+          "test_election_name": "Test election {n}",
+          "try_verification": "Try verification"
         }
       },
       "parties": {

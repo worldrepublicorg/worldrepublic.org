@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "L'elezzioni principianu prestu",
+        "no_active_election": "L'elezzione principia prestu",
         "test_verification": {
           "description": "Pruvate u nostru sistema di verificazione di l'identità avà per esse pronti à votà.",
           "button": "Prouva"
@@ -93,7 +93,8 @@
           "vote_singular": "votu",
           "vote_plural": "voti",
           "no_votes": "Ùn ci sò stati voti in questa elezzione.",
-          "test_election_name": "Elezione di prova {n}"
+          "test_election_name": "Elezione di prova {n}",
+          "try_verification": "Pruvate a verificazione"
         }
       }
     },

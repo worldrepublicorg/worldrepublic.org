@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Verkiezingen beginnen binnenkort",
+        "no_active_election": "Verkiezing begint binnenkort",
         "test_verification": {
           "description": "Probeer nu ons identiteitsverificatiesysteem om klaar te zijn voor de stemming.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "stem",
           "vote_plural": "stemmen",
           "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
-          "test_election_name": "Testverkiezing {n}"
+          "test_election_name": "Testverkiezing {n}",
+          "try_verification": "Verificatie proberen"
         }
       }
     },

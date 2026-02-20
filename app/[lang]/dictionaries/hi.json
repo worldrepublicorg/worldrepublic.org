@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "चुनाव जल्द शुरू होंगे",
+        "no_active_election": "चुनाव जल्द शुरू हो रहा है",
         "test_verification": {
           "description": "मतदान के लिए तैयार रहने के लिए अभी हमारी पहचान सत्यापन प्रणाली का प्रयास करें।",
           "button": "परीक्षण"
@@ -93,7 +93,8 @@
           "vote_singular": "वोट",
           "vote_plural": "वोट",
           "no_votes": "इस चुनाव में कोई वोट नहीं डाला गया।",
-          "test_election_name": "परीक्षण चुनाव {n}"
+          "test_election_name": "परीक्षण चुनाव {n}",
+          "try_verification": "सत्यापन आज़माएँ"
         }
       }
     },

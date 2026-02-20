@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Malapit na ang halalan",
+        "no_active_election": "Malapit nang magsimula ang halalan",
         "test_verification": {
           "description": "Subukan ang aming sistema ng pag-verify ng pagkakakilanlan ngayon upang maging handa sa pagboto.",
           "button": "Subukan"
@@ -93,7 +93,8 @@
           "vote_singular": "boto",
           "vote_plural": "boto",
           "no_votes": "Walang bumoto sa halalang ito.",
-          "test_election_name": "Test election {n}"
+          "test_election_name": "Test election {n}",
+          "try_verification": "Subukan ang pagpapatunay"
         }
       }
     },

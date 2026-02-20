@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "ምርጫዎች በቅርቡ ይጀምራሉ",
+        "no_active_election": "ምርጫው በቅርቡ ይጀምራል",
         "test_verification": {
           "description": "ለድምጽ መስጠት ዝግጁ ለመሆን የእኛን የማንነት ማረጋገጫ ስርዓት አሁን ይሞክሩ።",
           "button": "ሙከራ"
@@ -93,7 +93,8 @@
           "vote_singular": "ድምፅ",
           "vote_plural": "ድምፆች",
           "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
-          "test_election_name": "የሙከራ ምርጫ {n}"
+          "test_election_name": "የሙከራ ምርጫ {n}",
+          "try_verification": "ማረጋገጫ ሞክር"
         }
       }
     },

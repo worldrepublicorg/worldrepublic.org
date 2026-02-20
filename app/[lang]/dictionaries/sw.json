@@ -93,7 +93,8 @@
           "vote_singular": "kura",
           "vote_plural": "kura",
           "no_votes": "Hakuna kura zilizopigwa katika uchaguzi huu.",
-          "test_election_name": "Uchaguzi wa majaribio {n}"
+          "test_election_name": "Uchaguzi wa majaribio {n}",
+          "try_verification": "Jaribu uthibitisho"
         }
       }
     },

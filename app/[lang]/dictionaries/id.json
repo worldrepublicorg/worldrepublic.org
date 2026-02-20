@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Pemilu segera dimulai",
+        "no_active_election": "Pemilihan segera dimulai",
         "test_verification": {
           "description": "Coba sistem verifikasi identitas kami sekarang agar siap untuk pemungutan suara.",
           "button": "Uji"
@@ -93,7 +93,8 @@
           "vote_singular": "suara",
           "vote_plural": "suara",
           "no_votes": "Tidak ada suara yang diberikan dalam pemilihan ini.",
-          "test_election_name": "Pemilu uji coba {n}"
+          "test_election_name": "Pemilu uji coba {n}",
+          "try_verification": "Coba verifikasi"
         }
       }
     },

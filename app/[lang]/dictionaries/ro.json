@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Alegerile se apropie",
+        "no_active_election": "Alegerile încep în curând",
         "test_verification": {
           "description": "Încercați sistemul nostru de verificare a identității acum pentru a fi pregătiți de vot.",
           "button": "Test"
@@ -93,7 +93,8 @@
           "vote_singular": "vot",
           "vote_plural": "voturi",
           "no_votes": "Nu au fost exprimate voturi în această alegere.",
-          "test_election_name": "Alegere de test {n}"
+          "test_election_name": "Alegere de test {n}",
+          "try_verification": "Încercați verificarea"
         }
       }
     },

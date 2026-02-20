@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "Pilihan raya hampir tiba",
+        "no_active_election": "Pilihan raya bermula tidak lama lagi",
         "test_verification": {
           "description": "Cuba sistem pengesahan identiti kami sekarang untuk bersedia untuk mengundi.",
           "button": "Uji"
@@ -93,7 +93,8 @@
           "vote_singular": "undi",
           "vote_plural": "undi",
           "no_votes": "Tiada undi diberikan dalam pilihan raya ini.",
-          "test_election_name": "Pilihan raya ujian {n}"
+          "test_election_name": "Pilihan raya ujian {n}",
+          "try_verification": "Cuba pengesahan"
         }
       }
     },

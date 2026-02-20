@@ -23,7 +23,7 @@
         }
       },
       "vote": {
-        "no_active_election": "الانتخابات ستبدأ قريباً",
+        "no_active_election": "الانتخاب سيبدأ قريباً",
         "test_verification": {
           "description": "جرب نظام التحقق من الهوية الخاص بنا الآن لتكون مستعدًا للتصويت.",
           "button": "اختبار"
@@ -93,7 +93,8 @@
           "vote_singular": "صوت",
           "vote_plural": "أصوات",
           "no_votes": "لم يتم الإدلاء بأي أصوات في هذا الانتخاب.",
-          "test_election_name": "انتخاب تجريبي {n}"
+          "test_election_name": "انتخاب تجريبي {n}",
+          "try_verification": "جرّب التحقق"
         }
       }
     },

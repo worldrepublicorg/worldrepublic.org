@@ -9,6 +9,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ElectionResults } from "@/components/vote/election-results";
 import { PartyVoteList } from "@/components/vote/party-vote-list";
+import { VoteButton } from "@/components/vote/vote-button";
 import { formatElectionDateTime } from "@/lib/format-date";
 import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election, ElectionResult } from "@/lib/types/elections";
@@ -155,16 +156,21 @@ export function ElectionDetailContent({
         ))}
 
       {isUpcoming && (
-        <div className="flex flex-col items-center gap-3 rounded-xl border border-blue-100 bg-blue-50 p-6 text-center">
-          <Typography variant="subtitle" level={2} className="text-blue-900">
+        <div className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
+          <Typography variant="subtitle" level={2} className="text-gray-900">
             {t.voting_opens.replace(
               "{date}",
               formatElectionDateTime(election.startsAt, lang),
             )}
           </Typography>
-          <Typography variant="body" level={3} className="text-blue-700">
+          <Typography variant="body" level={3} className="text-gray-500">
             {t.check_back}
           </Typography>
+          <VoteButton
+            size="sm"
+            label={t.try_verification}
+            dictionary={dictionary}
+          />
         </div>
       )}
 
