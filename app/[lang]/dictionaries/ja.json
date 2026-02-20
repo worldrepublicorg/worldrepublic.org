@@ -86,7 +86,7 @@
           "election_info": "選挙情報",
           "reward_pool": "報酬プール: {amount} WDD",
           "voting_opens": "投票開始 {date}",
-          "check_back": "選挙が始まったら投票するために戻ってきてください。",
+          "check_back": "選挙が始まったら投票するために戻ってきてください",
           "choose_a_party": "政党を選択",
           "no_parties_for_election": "この選挙に利用可能な政党はありません。",
           "results_title": "結果",

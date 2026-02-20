@@ -152,7 +152,7 @@ export function ElectionDetailContent({
         ))}
 
       {isUpcoming && (
-        <div className="my-4 flex flex-col items-center gap-3 p-4 text-center">
+        <div className="flex flex-col items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 p-6 text-center">
           <Typography variant="body" level={3} className="text-gray-500">
             {t.check_back}
           </Typography>

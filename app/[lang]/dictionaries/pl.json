@@ -86,7 +86,7 @@
           "election_info": "Informacje o wyborach",
           "reward_pool": "Pula nagród: {amount} WDD",
           "voting_opens": "Głosowanie otwiera się {date}",
-          "check_back": "Wróć, gdy wybory się rozpoczną, aby oddać głos.",
+          "check_back": "Wróć, gdy wybory się rozpoczną, aby oddać głos",
           "choose_a_party": "Wybierz partię",
           "no_parties_for_election": "Brak dostępnych partii dla tych wyborów.",
           "results_title": "Wyniki",

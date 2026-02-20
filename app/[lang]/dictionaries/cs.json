@@ -86,7 +86,7 @@
           "election_info": "Informace o volbách",
           "reward_pool": "Fond odměn: {amount} WDD",
           "voting_opens": "Hlasování se otevírá {date}",
-          "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat.",
+          "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat",
           "choose_a_party": "Vyberte stranu",
           "no_parties_for_election": "Pro tyto volby nejsou k dispozici žádné strany.",
           "results_title": "Výsledky",

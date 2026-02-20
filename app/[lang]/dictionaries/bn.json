@@ -86,7 +86,7 @@
           "election_info": "নির্বাচনের তথ্য",
           "reward_pool": "পুরস্কার পুল: {amount} WDD",
           "voting_opens": "ভোটদান শুরু হবে {date}",
-          "check_back": "আপনার ভোট দিতে নির্বাচন শুরু হলে ফিরে আসুন।",
+          "check_back": "আপনার ভোট দিতে নির্বাচন শুরু হলে ফিরে আসুন",
           "choose_a_party": "একটি দল বেছে নিন",
           "no_parties_for_election": "এই নির্বাচনের জন্য কোনো দল উপলব্ধ নেই।",
           "results_title": "ফলাফল",

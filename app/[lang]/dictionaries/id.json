@@ -86,7 +86,7 @@
           "election_info": "Info pemilihan",
           "reward_pool": "Kumpulan hadiah: {amount} WDD",
           "voting_opens": "Pemungutan suara dibuka {date}",
-          "check_back": "Kembali saat pemilihan dimulai untuk memberikan suara Anda.",
+          "check_back": "Kembali saat pemilihan dimulai untuk memberikan suara Anda",
           "choose_a_party": "Pilih partai",
           "no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini.",
           "results_title": "Hasil",

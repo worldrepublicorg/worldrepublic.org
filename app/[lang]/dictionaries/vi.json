@@ -86,7 +86,7 @@
           "election_info": "Thông tin bầu cử",
           "reward_pool": "Quỹ giải thưởng: {amount} WDD",
           "voting_opens": "Bỏ phiếu mở {date}",
-          "check_back": "Quay lại khi cuộc bầu cử bắt đầu để bỏ phiếu.",
+          "check_back": "Quay lại khi cuộc bầu cử bắt đầu để bỏ phiếu",
           "choose_a_party": "Chọn một đảng",
           "no_parties_for_election": "Không có đảng nào cho cuộc bầu cử này.",
           "results_title": "Kết quả",

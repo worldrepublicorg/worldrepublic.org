@@ -86,7 +86,7 @@
           "election_info": "معلومات الانتخاب",
           "reward_pool": "مجمع المكافآت: {amount} WDD",
           "voting_opens": "يفتح التصويت {date}",
-          "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك.",
+          "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك",
           "choose_a_party": "اختر حزباً",
           "no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب.",
           "results_title": "النتائج",
