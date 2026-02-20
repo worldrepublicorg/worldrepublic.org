@@ -116,7 +116,7 @@ export function ElectionDetailContent({
             <Typography variant="body" level={3} className="text-gray-700">
               {t.reward_pool.replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(),
+                Number.parseInt(election.rewardPool).toLocaleString(lang),
               )}
             </Typography>
           </div>

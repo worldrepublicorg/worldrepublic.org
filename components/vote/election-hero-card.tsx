@@ -58,7 +58,7 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
             <PiCoins className="text-gray-500 shrink-0" size={16} />
             <Typography variant="body" level={2}>
               Reward pool:{" "}
-              {Number.parseInt(election.rewardPool).toLocaleString()} WDD
+              {Number.parseInt(election.rewardPool).toLocaleString(lang)} WDD
             </Typography>
           </div>
         </div>
