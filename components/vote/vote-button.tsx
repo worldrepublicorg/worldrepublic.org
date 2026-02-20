@@ -120,7 +120,6 @@ export function VoteButton({
               <Button
                 onClick={handlePreVerifyClick}
                 className="w-full"
-                size={size}
               >
                 {dictionary.pages.govern.vote.test_verification.button}
               </Button>

@@ -127,11 +127,7 @@ export function ElectionDetailContent({
       {isActive &&
         (parties === null ? (
           <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
-            <Typography
-              variant="body"
-              level={3}
-              className="text-gray-500"
-            >
+            <Typography variant="body" level={3} className="text-gray-500">
               {dictionary.pages.govern.parties.error_loading}
             </Typography>
             <Button
@@ -156,11 +152,15 @@ export function ElectionDetailContent({
         ))}
 
       {isUpcoming && (
-        <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
+        <div className="my-4 flex flex-col items-center gap-3 p-4 text-center">
           <Typography variant="body" level={3} className="text-gray-500">
             {t.check_back}
           </Typography>
-          <VoteButton label={t.try_verification} dictionary={dictionary} />
+          <VoteButton
+            size="sm"
+            label={t.try_verification}
+            dictionary={dictionary}
+          />
         </div>
       )}
 
