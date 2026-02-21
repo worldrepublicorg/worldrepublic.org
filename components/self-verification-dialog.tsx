@@ -64,7 +64,7 @@ export function SelfVerificationDialog({
   const supportLinks = (
     <div className="mb-4 flex flex-col gap-2">
       <a
-        href="https://docs.worldrepublic.org/quickstart/get-verified"
+        href="https://wiki.worldrepublic.org/quickstart/get-verified"
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full"

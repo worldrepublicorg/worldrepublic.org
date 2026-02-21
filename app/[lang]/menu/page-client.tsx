@@ -144,19 +144,19 @@ export default function MenuPageClient({
       links: [
         {
           label: dictionary.pages.menu.sections.help.quickstart,
-          url: "https://docs.worldrepublic.org/quickstart",
+          url: "https://wiki.worldrepublic.org/quickstart",
           isExternal: true,
           startAdornment: <PiRocketLaunch className="size-5 text-gray-400" />,
         },
         {
           label: dictionary.pages.menu.sections.help.docs,
-          url: "https://docs.worldrepublic.org/",
+          url: "https://wiki.worldrepublic.org/",
           isExternal: true,
           startAdornment: <PiBookOpenText className="size-5 text-gray-400" />,
         },
         {
           label: dictionary.pages.menu.sections.help.help_center,
-          url: "https://docs.worldrepublic.org/help-center",
+          url: "https://wiki.worldrepublic.org/help-center",
           isExternal: true,
           startAdornment: <PiLifebuoy className="size-5 text-gray-400" />,
         },
