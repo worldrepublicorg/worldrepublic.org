@@ -218,7 +218,10 @@ export function TransactionHistoryContent({
 
   // Copy wallet address to clipboard
   const handleCopyWalletAddress = async (address: string) => {
-    await copyToClipboard(address, toast, undefined);
+    await copyToClipboard(address, toast, {
+      success: dictionary.toasts.copied,
+      error: dictionary.toasts.generic_error,
+    });
   };
 
   // Get transaction icon component

@@ -71,7 +71,10 @@ export function PartyDetailContent({
   // Copy leader address to clipboard
   const handleCopyLeaderAddress = async () => {
     if (!party?.leaderUsername) return;
-    await copyToClipboard(party.leaderUsername, toast);
+    await copyToClipboard(party.leaderUsername, toast, {
+      success: dictionary.toasts.copied,
+      error: dictionary.toasts.generic_error,
+    });
   };
 
   // Note: Leader check is not needed on detail page since management is on the card
