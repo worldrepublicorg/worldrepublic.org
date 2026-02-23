@@ -440,7 +440,7 @@ export default function WalletPageClient({
                         label={dictionary.pages.wallet.modals.trade.jumper}
                         startAdornment={
                           <Image
-                            src="/icons/exchanges/jumper.png"
+                            src="/icons/exchanges/jumper.svg"
                             alt="Jumper"
                             width={24}
                             height={24}
@@ -463,7 +463,7 @@ export default function WalletPageClient({
                         label={dictionary.pages.wallet.modals.trade.uniswap}
                         startAdornment={
                           <Image
-                            src="/icons/exchanges/uniswap.png"
+                            src="/icons/exchanges/uniswap.svg"
                             alt="Uniswap"
                             width={24}
                             height={24}
