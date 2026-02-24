@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Rejstřík",
-          "subsidies": "Dotace"
+          "subsidies": "Dotace",
+          "ambassadors": "Ambasadoři"
         },
         "discover": "Objevit",
         "search_placeholder": "Hledat strany...",
@@ -72,7 +73,14 @@
           "not_found_description": "Strana, kterou hledáte, neexistuje nebo byla rozpuštěna."
         },
         "delete_party": "Smazat stranu",
-        "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace"
+        "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace",
+        "ambassadors": {
+          "title": "Ambasadorský program",
+          "description": "Pozvěte přátele a získejte stipendium, když jejich strana obdrží dotace",
+          "copy_referral_link": "Kopírovat odkaz na doporučení",
+          "leaderboard": "Žebříček",
+          "no_stipends_yet": "Zatím žádná stipendia"
+        }
       },
       "elections": {
         "detail": {

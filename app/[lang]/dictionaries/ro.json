@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registru",
-          "subsidies": "Subvenții"
+          "subsidies": "Subvenții",
+          "ambassadors": "Ambasadori"
         },
         "discover": "Descoperă",
         "search_placeholder": "Caută partide...",
@@ -72,7 +73,14 @@
           "not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
         },
         "delete_party": "Șterge partidul",
-        "run_on_elections_and_earn": "Candidează la alegeri și primește subvenții"
+        "run_on_elections_and_earn": "Candidează la alegeri și primește subvenții",
+        "ambassadors": {
+          "title": "Programul Ambasadorilor",
+          "description": "Invită prieteni și câștigă o bursă când partidul lor primește subvenții",
+          "copy_referral_link": "Copiază linkul de recomandare",
+          "leaderboard": "Clasament",
+          "no_stipends_yet": "Încă nu există burse"
+        }
       },
       "elections": {
         "detail": {

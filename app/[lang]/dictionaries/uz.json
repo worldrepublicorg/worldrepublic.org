@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Reyestr",
-          "subsidies": "Subsidiyalar"
+          "subsidies": "Subsidiyalar",
+          "ambassadors": "Elchilar"
         },
         "discover": "Topish",
         "search_placeholder": "Partiyalarni qidirish...",
@@ -72,7 +73,14 @@
           "not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
         },
         "delete_party": "Partiyani o'chirish",
-        "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling"
+        "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling",
+        "ambassadors": {
+          "title": "Elchilar dasturi",
+          "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida stipendiya oling",
+          "copy_referral_link": "Tavsiya havolasini nusxalash",
+          "leaderboard": "Peshqadamlar jadvali",
+          "no_stipends_yet": "Hali stipendiyalar yo'q"
+        }
       },
       "elections": {
         "detail": {

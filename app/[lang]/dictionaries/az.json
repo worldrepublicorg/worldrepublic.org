@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Reyestr",
-          "subsidies": "Subsidiyalar"
+          "subsidies": "Subsidiyalar",
+          "ambassadors": "Səfirlər"
         },
         "discover": "Kəşf edin",
         "search_placeholder": "Partiyaları axtarın...",
@@ -72,7 +73,14 @@
           "not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
         },
         "delete_party": "Partiyanı sil",
-        "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin"
+        "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin",
+        "ambassadors": {
+          "title": "Səfir Proqramı",
+          "description": "Dostlarınızı dəvət edin və onların partiyası subsidiya aldıqda mükafat qazanın",
+          "copy_referral_link": "Tövsiyə linkini kopyala",
+          "leaderboard": "Liderlik cədvəli",
+          "no_stipends_yet": "Hələ mükafat yoxdur"
+        }
       },
       "elections": {
         "detail": {

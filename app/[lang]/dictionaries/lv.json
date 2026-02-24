@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Reģistrs",
-          "subsidies": "Subsīdijas"
+          "subsidies": "Subsīdijas",
+          "ambassadors": "Vēstnieki"
         },
         "discover": "Atklāt",
         "search_placeholder": "Meklēt partijas...",
@@ -72,7 +73,14 @@
           "not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
         },
         "delete_party": "Dzēst partiju",
-        "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas"
+        "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas",
+        "ambassadors": {
+          "title": "Vēstnieku programma",
+          "description": "Uzaiciniet draugus un nopelniet stipendiju, kad viņu partija saņem subsīdijas",
+          "copy_referral_link": "Kopēt atsauces saiti",
+          "leaderboard": "Līderu tabula",
+          "no_stipends_yet": "Vēl nav stipendiju"
+        }
       },
       "elections": {
         "detail": {

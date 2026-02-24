@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Nyilvántartás",
-          "subsidies": "Támogatások"
+          "subsidies": "Támogatások",
+          "ambassadors": "Nagykövetek"
         },
         "discover": "Felfedezés",
         "search_placeholder": "Pártok keresése...",
@@ -72,7 +73,14 @@
           "not_found_description": "A keresett párt nem létezik vagy feloszlott."
         },
         "delete_party": "Párt törlése",
-        "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat"
+        "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat",
+        "ambassadors": {
+          "title": "Nagyköveti program",
+          "description": "Hívd meg barátaidat, és keress ösztöndíjat, amikor pártjuk támogatást kap",
+          "copy_referral_link": "Ajánló link másolása",
+          "leaderboard": "Ranglista",
+          "no_stipends_yet": "Még nincsenek ösztöndíjak"
+        }
       },
       "elections": {
         "detail": {

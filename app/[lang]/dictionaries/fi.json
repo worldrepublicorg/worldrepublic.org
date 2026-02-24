@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Rekisteri",
-          "subsidies": "Tukiaiset"
+          "subsidies": "Tukiaiset",
+          "ambassadors": "Lähettiläät"
         },
         "discover": "Löydä",
         "search_placeholder": "Etsi puolueita...",
@@ -72,7 +73,14 @@
           "not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
         },
         "delete_party": "Poista puolue",
-        "run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea"
+        "run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea",
+        "ambassadors": {
+          "title": "Lähettiläsohjelma",
+          "description": "Kutsu ystäviä ja ansaitse stipendi, kun heidän puolueensa saa tukia",
+          "copy_referral_link": "Kopioi suosittelulinkki",
+          "leaderboard": "Tulostaulukko",
+          "no_stipends_yet": "Ei vielä stipendejä"
+        }
       },
       "elections": {
         "detail": {

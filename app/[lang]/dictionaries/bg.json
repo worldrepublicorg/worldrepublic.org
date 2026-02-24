@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Регистър",
-          "subsidies": "Субсидии"
+          "subsidies": "Субсидии",
+          "ambassadors": "Посланици"
         },
         "discover": "Открийте",
         "search_placeholder": "Търсене на партии...",
@@ -72,7 +73,14 @@
           "not_found_description": "Партията, която търсите, не съществува или е била разпусната."
         },
         "delete_party": "Изтрий партия",
-        "run_on_elections_and_earn": "Участвайте в избори и получете субсидии"
+        "run_on_elections_and_earn": "Участвайте в избори и получете субсидии",
+        "ambassadors": {
+          "title": "Програма за посланици",
+          "description": "Поканете приятели и получете стипендия, когато тяхната партия получи субсидии",
+          "copy_referral_link": "Копирай линк за препоръка",
+          "leaderboard": "Класация",
+          "no_stipends_yet": "Все още няма стипендии"
+        }
       },
       "elections": {
         "detail": {

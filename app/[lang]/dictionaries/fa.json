@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "دفتر ثبت",
-          "subsidies": "یارانه‌ها"
+          "subsidies": "یارانه‌ها",
+          "ambassadors": "سفیران"
         },
         "discover": "کشف کنید",
         "search_placeholder": "جستجوی احزاب...",
@@ -72,7 +73,14 @@
           "not_found_description": "حزبی که به دنبال آن هستید وجود ندارد یا منحل شده است."
         },
         "delete_party": "حذف حزب",
-        "run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید"
+        "run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید",
+        "ambassadors": {
+          "title": "برنامه سفیران",
+          "description": "دوستان خود را دعوت کنید و هنگامی که حزب آنها یارانه دریافت می‌کند، حقوق دریافت کنید",
+          "copy_referral_link": "کپی لینک معرفی",
+          "leaderboard": "جدول رده‌بندی",
+          "no_stipends_yet": "هنوز حقوقی وجود ندارد"
+        }
       },
       "elections": {
         "detail": {

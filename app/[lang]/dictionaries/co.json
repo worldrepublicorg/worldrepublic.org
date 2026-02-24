@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registru",
-          "subsidies": "Sannzi"
+          "subsidies": "Sannzi",
+          "ambassadors": "Ambasciatori"
         },
         "discover": "Scopre",
         "search_placeholder": "Ricerca partiti...",
@@ -72,7 +73,14 @@
           "not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
         },
         "delete_party": "Sguassà u partitu",
-        "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni"
+        "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni",
+        "ambassadors": {
+          "title": "Prugramma d'Ambasciatori",
+          "description": "Invite l'amichi è guadagnate una borsa quandu u so partitu riceve sussidii",
+          "copy_referral_link": "Cupiate u ligame di riferimentu",
+          "leaderboard": "Classificazione",
+          "no_stipends_yet": "Ancu nisuna borsa"
+        }
       },
       "elections": {
         "detail": {

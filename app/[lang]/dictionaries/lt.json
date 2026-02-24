@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registras",
-          "subsidies": "Subsidijos"
+          "subsidies": "Subsidijos",
+          "ambassadors": "Ambasadoriai"
         },
         "discover": "Atrasti",
         "search_placeholder": "Ieškoti partijų...",
@@ -72,7 +73,14 @@
           "not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
         },
         "delete_party": "Ištrinti partiją",
-        "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas"
+        "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas",
+        "ambassadors": {
+          "title": "Ambasadorių programa",
+          "description": "Pakvieskite draugus ir uždirbkite stipendiją, kai jų partija gaus subsidijas",
+          "copy_referral_link": "Kopijuoti rekomendacijos nuorodą",
+          "leaderboard": "Lyderių lentelė",
+          "no_stipends_yet": "Kol kas stipendijų nėra"
+        }
       },
       "elections": {
         "detail": {

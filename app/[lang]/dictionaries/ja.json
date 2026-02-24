@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "登録簿",
-          "subsidies": "助成金"
+          "subsidies": "助成金",
+          "ambassadors": "アンバサダー"
         },
         "discover": "発見",
         "search_placeholder": "政党を検索...",
@@ -72,7 +73,14 @@
           "not_found_description": "お探しの政党は存在しないか、解散されました。"
         },
         "delete_party": "政党を削除",
-        "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る"
+        "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る",
+        "ambassadors": {
+          "title": "アンバサダープログラム",
+          "description": "友達を招待して、彼らの政党が補助金を受け取ったときに奨励金を獲得しましょう",
+          "copy_referral_link": "紹介リンクをコピー",
+          "leaderboard": "リーダーボード",
+          "no_stipends_yet": "まだ奨励金はありません"
+        }
       },
       "elections": {
         "detail": {

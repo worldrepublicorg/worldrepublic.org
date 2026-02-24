@@ -55,7 +55,15 @@
       "parties": {
         "tabs": {
           "registry": "Registry",
-          "subsidies": "Subsidies"
+          "subsidies": "Subsidies",
+          "ambassadors": "Ambassadors"
+        },
+        "ambassadors": {
+          "title": "Ambassador Program",
+          "description": "Invite friends and earn a stipend when their party receives subsidies",
+          "copy_referral_link": "Copy referral link",
+          "leaderboard": "Leaderboard",
+          "no_stipends_yet": "No stipends yet"
         },
         "discover": "Discover",
         "search_placeholder": "Search parties...",

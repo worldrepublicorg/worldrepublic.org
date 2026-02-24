@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Register",
-          "subsidies": "Subvencije"
+          "subsidies": "Subvencije",
+          "ambassadors": "Ambasadorji"
         },
         "discover": "Odkrij",
         "search_placeholder": "Iskanje strank...",
@@ -72,7 +73,14 @@
           "not_found_description": "Stranka, ki jo iščete, ne obstaja ali je bila razpuščena."
         },
         "delete_party": "Izbriši stranko",
-        "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije"
+        "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije",
+        "ambassadors": {
+          "title": "Ambasadorski program",
+          "description": "Povabite prijatelje in zaslužite štipendijo, ko njihova stranka prejme subvencije",
+          "copy_referral_link": "Kopiraj povezavo za priporočilo",
+          "leaderboard": "Lestvica",
+          "no_stipends_yet": "Še ni štipendij"
+        }
       },
       "elections": {
         "detail": {

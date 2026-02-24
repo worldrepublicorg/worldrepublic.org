@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "السجل",
-          "subsidies": "الإعانات"
+          "subsidies": "الإعانات",
+          "ambassadors": "السفراء"
         },
         "discover": "اكتشف",
         "search_placeholder": "البحث عن الأحزاب...",
@@ -72,7 +73,14 @@
           "not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
         },
         "delete_party": "حذف الحزب",
-        "run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات"
+        "run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات",
+        "ambassadors": {
+          "title": "برنامج السفراء",
+          "description": "ادعُ أصدقاءك واحصل على مكافأة عندما يتلقى حزبهم إعانات",
+          "copy_referral_link": "نسخ رابط الإحالة",
+          "leaderboard": "لوحة المتصدرين",
+          "no_stipends_yet": "لا توجد مكافآت بعد"
+        }
       },
       "elections": {
         "detail": {

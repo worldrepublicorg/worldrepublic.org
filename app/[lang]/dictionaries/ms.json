@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Daftar",
-          "subsidies": "Subsidi"
+          "subsidies": "Subsidi",
+          "ambassadors": "Duta"
         },
         "discover": "Temui",
         "search_placeholder": "Cari parti...",
@@ -72,7 +73,14 @@
           "not_found_description": "Parti yang anda cari tidak wujud atau telah dibubarkan."
         },
         "delete_party": "Padam parti",
-        "run_on_elections_and_earn": "Bertanding dalam pilihan raya dan dapatkan subsidi"
+        "run_on_elections_and_earn": "Bertanding dalam pilihan raya dan dapatkan subsidi",
+        "ambassadors": {
+          "title": "Program Duta",
+          "description": "Jemput rakan dan dapatkan elaun apabila parti mereka menerima subsidi",
+          "copy_referral_link": "Salin pautan rujukan",
+          "leaderboard": "Papan pendahulu",
+          "no_stipends_yet": "Belum ada elaun"
+        }
       },
       "elections": {
         "detail": {

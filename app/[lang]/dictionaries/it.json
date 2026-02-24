@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registro",
-          "subsidies": "Sussidi"
+          "subsidies": "Sussidi",
+          "ambassadors": "Ambasciatori"
         },
         "discover": "Scopri",
         "search_placeholder": "Cerca partiti...",
@@ -72,7 +73,14 @@
           "not_found_description": "Il partito che stai cercando non esiste o è stato sciolto."
         },
         "delete_party": "Elimina partito",
-        "run_on_elections_and_earn": "Candidati alle elezioni e ottieni sussidi"
+        "run_on_elections_and_earn": "Candidati alle elezioni e ottieni sussidi",
+        "ambassadors": {
+          "title": "Programma Ambasciatori",
+          "description": "Invita amici e guadagna un compenso quando il loro partito riceve sussidi",
+          "copy_referral_link": "Copia link di riferimento",
+          "leaderboard": "Classifica",
+          "no_stipends_yet": "Ancora nessun compenso"
+        }
       },
       "elections": {
         "detail": {

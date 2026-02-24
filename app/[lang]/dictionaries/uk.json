@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Реєстр",
-          "subsidies": "Субсидії"
+          "subsidies": "Субсидії",
+          "ambassadors": "Амбасадори"
         },
         "discover": "Відкрити",
         "search_placeholder": "Пошук партій...",
@@ -72,7 +73,14 @@
           "not_found_description": "Партія, яку ви шукаєте, не існує або була розпущена."
         },
         "delete_party": "Видалити партію",
-        "run_on_elections_and_earn": "Беріть участь у виборах і отримуйте субсидії"
+        "run_on_elections_and_earn": "Беріть участь у виборах і отримуйте субсидії",
+        "ambassadors": {
+          "title": "Програма амбасадорів",
+          "description": "Запрошуйте друзів і отримуйте стипендію, коли їхня партія отримає субсидії",
+          "copy_referral_link": "Скопіювати реферальне посилання",
+          "leaderboard": "Таблиця лідерів",
+          "no_stipends_yet": "Стипендій поки немає"
+        }
       },
       "elections": {
         "detail": {

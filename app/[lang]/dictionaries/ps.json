@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "راجستر",
-          "subsidies": "سبسىډي"
+          "subsidies": "سبسىډي",
+          "ambassadors": "سفیران"
         },
         "discover": "موندل",
         "search_placeholder": "ګوندونه لټون...",
@@ -72,7 +73,14 @@
           "not_found_description": "ګوند چې تاسو یې لټون کوئ شتون نلري یا منحل شوی دی."
         },
         "delete_party": "ګوند ړنګ کړئ",
-        "run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ"
+        "run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ",
+        "ambassadors": {
+          "title": "د سفیرانو پروګرام",
+          "description": "ملګري بلنه ورکړئ او کله چې د دوی ګوند مرستې ترلاسه کړي وظیفه ترلاسه کړئ",
+          "copy_referral_link": "د راجع کولو لینک کاپي کړئ",
+          "leaderboard": "لیډربورډ",
+          "no_stipends_yet": "تر اوسه هیڅ وظیفه نشته"
+        }
       },
       "elections": {
         "detail": {

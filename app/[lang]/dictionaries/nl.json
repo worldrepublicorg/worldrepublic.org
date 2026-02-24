@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Register",
-          "subsidies": "Subsidies"
+          "subsidies": "Subsidies",
+          "ambassadors": "Ambassadeurs"
         },
         "discover": "Ontdekken",
         "search_placeholder": "Zoek partijen...",
@@ -72,7 +73,14 @@
           "not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
         },
         "delete_party": "Partij verwijderen",
-        "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies"
+        "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies",
+        "ambassadors": {
+          "title": "Ambassadeursprogramma",
+          "description": "Nodig vrienden uit en verdien een toelage wanneer hun partij subsidies ontvangt",
+          "copy_referral_link": "Kopieer verwijzingslink",
+          "leaderboard": "Ranglijst",
+          "no_stipends_yet": "Nog geen toelagen"
+        }
       },
       "elections": {
         "detail": {

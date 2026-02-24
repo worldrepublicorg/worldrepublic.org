@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "名册",
-          "subsidies": "补贴"
+          "subsidies": "补贴",
+          "ambassadors": "大使"
         },
         "discover": "发现",
         "search_placeholder": "搜索政党...",
@@ -72,7 +73,14 @@
           "not_found_description": "您要查找的政党不存在或已被解散。"
         },
         "delete_party": "删除政党",
-        "run_on_elections_and_earn": "参加选举并获得补贴"
+        "run_on_elections_and_earn": "参加选举并获得补贴",
+        "ambassadors": {
+          "title": "大使计划",
+          "description": "邀请朋友，当他们的政党获得补贴时赚取津贴",
+          "copy_referral_link": "复制推荐链接",
+          "leaderboard": "排行榜",
+          "no_stipends_yet": "暂无津贴"
+        }
       },
       "elections": {
         "detail": {

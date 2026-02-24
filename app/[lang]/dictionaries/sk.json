@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Register",
-          "subsidies": "Dotácie"
+          "subsidies": "Dotácie",
+          "ambassadors": "Ambasádori"
         },
         "discover": "Objaviť",
         "search_placeholder": "Hľadať strany...",
@@ -72,7 +73,14 @@
           "not_found_description": "Strana, ktorú hľadáte, neexistuje alebo bola rozpustená."
         },
         "delete_party": "Vymazať stranu",
-        "run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie"
+        "run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie",
+        "ambassadors": {
+          "title": "Ambasádorský program",
+          "description": "Pozvite priateľov a získajte štipendium, keď ich strana dostane dotácie",
+          "copy_referral_link": "Kopírovať odkaz na odporúčanie",
+          "leaderboard": "Rebríček",
+          "no_stipends_yet": "Zatiaľ žiadne štipendiá"
+        }
       },
       "elections": {
         "detail": {

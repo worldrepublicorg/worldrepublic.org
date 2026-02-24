@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Sicil",
-          "subsidies": "Ödenekler"
+          "subsidies": "Ödenekler",
+          "ambassadors": "Elçiler"
         },
         "discover": "Keşfet",
         "search_placeholder": "Parti ara...",
@@ -72,7 +73,14 @@
           "not_found_description": "Aradığınız parti mevcut değil veya feshedilmiş."
         },
         "delete_party": "Partiyi sil",
-        "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın"
+        "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın",
+        "ambassadors": {
+          "title": "Elçi Programı",
+          "description": "Arkadaşlarınızı davet edin ve partileri sübvansiyon aldığında burs kazanın",
+          "copy_referral_link": "Referans bağlantısını kopyala",
+          "leaderboard": "Sıralama",
+          "no_stipends_yet": "Henüz burs yok"
+        }
       },
       "elections": {
         "detail": {

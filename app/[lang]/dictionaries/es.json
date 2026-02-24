@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registro",
-          "subsidies": "Subsidios"
+          "subsidies": "Subsidios",
+          "ambassadors": "Embajadores"
         },
         "discover": "Descubrir",
         "search_placeholder": "Buscar partidos...",
@@ -72,7 +73,14 @@
           "not_found_description": "El partido que buscas no existe o ha sido disuelto."
         },
         "delete_party": "Eliminar partido",
-        "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones"
+        "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones",
+        "ambassadors": {
+          "title": "Programa de Embajadores",
+          "description": "Invita a amigos y gana un estipendio cuando su partido reciba subsidios",
+          "copy_referral_link": "Copiar enlace de referencia",
+          "leaderboard": "Clasificación",
+          "no_stipends_yet": "Aún no hay estipendios"
+        }
       },
       "elections": {
         "detail": {

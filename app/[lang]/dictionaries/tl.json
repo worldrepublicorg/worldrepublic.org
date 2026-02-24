@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Rehistro",
-          "subsidies": "Subsidiya"
+          "subsidies": "Subsidiya",
+          "ambassadors": "Mga Embahador"
         },
         "discover": "Tuklasin",
         "search_placeholder": "Maghanap ng partido...",
@@ -72,7 +73,14 @@
           "not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
         },
         "delete_party": "Tanggalin ang partido",
-        "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy"
+        "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy",
+        "ambassadors": {
+          "title": "Programang Embahador",
+          "description": "Mag-imbita ng mga kaibigan at kumita ng stipend kapag nakatanggap ng subsidyo ang kanilang partido",
+          "copy_referral_link": "Kopyahin ang referral link",
+          "leaderboard": "Leaderboard",
+          "no_stipends_yet": "Wala pang stipend"
+        }
       },
       "elections": {
         "detail": {

@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "បញ្ជី",
-          "subsidies": "ប្រាក់ឧបត្ថម្ភ"
+          "subsidies": "ប្រាក់ឧបត្ថម្ភ",
+          "ambassadors": "អ្នកតំណាង"
         },
         "discover": "រកឃើញ",
         "search_placeholder": "ស្វែងរកគណបក្ស...",
@@ -72,7 +73,14 @@
           "not_found_description": "គណបក្សដែលអ្នកកំពុងរកមិនមាន ឬត្រូវបានបំបែក។"
         },
         "delete_party": "លុបគណបក្ស",
-        "run_on_elections_and_earn": "ចូលរួមការបោះឆ្នោត និងទទួលបានការបញ្ចុះតម្លៃ"
+        "run_on_elections_and_earn": "ចូលរួមការបោះឆ្នោត និងទទួលបានការបញ្ចុះតម្លៃ",
+        "ambassadors": {
+          "title": "កម្មវិធីអ្នកតំណាង",
+          "description": "អញ្ជើញមិត្តភក្តិ ហើយទទួលបានប្រាក់ឧបត្ថម្ភនៅពេលគណបក្សរបស់ពួកគេទទួលបានជំនួយ",
+          "copy_referral_link": "ចម្លងតំណភ្ជាប់យោង",
+          "leaderboard": "តារាងចំណាត់ថ្នាក់",
+          "no_stipends_yet": "មិនទាន់មានប្រាក់ឧបត្ថម្ភទេ"
+        }
       },
       "elections": {
         "detail": {

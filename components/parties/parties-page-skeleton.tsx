@@ -16,6 +16,11 @@ export function PartiesPageSkeleton() {
         }
       />
 
+      <div className="flex gap-1 overflow-x-auto px-6">
+        <Skeleton height={36} width={80} className="rounded-full" />
+        <Skeleton height={36} width={80} className="rounded-full" />
+      </div>
+
       <main className="flex grow flex-col items-start">
         {/* My Party Section */}
         <div className="mt-4 mb-6 w-full px-6">

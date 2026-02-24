@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "رجسٹر",
-          "subsidies": "سبسڈی"
+          "subsidies": "سبسڈی",
+          "ambassadors": "سفیر"
         },
         "discover": "دریافت کریں",
         "search_placeholder": "جماعتیں تلاش کریں...",
@@ -72,7 +73,14 @@
           "not_found_description": "جماعت جسے آپ ڈھونڈ رہے ہیں وہ موجود نہیں ہے یا تحلیل ہو گئی ہے۔"
         },
         "delete_party": "پارٹی حذف کریں",
-        "run_on_elections_and_earn": "انتخابات میں حصہ لیں اور سبسڈی حاصل کریں"
+        "run_on_elections_and_earn": "انتخابات میں حصہ لیں اور سبسڈی حاصل کریں",
+        "ambassadors": {
+          "title": "سفیر پروگرام",
+          "description": "دوستوں کو مدعو کریں اور ان کی پارٹی کو سبسڈی ملنے پر وظیفہ حاصل کریں",
+          "copy_referral_link": "ریفرل لنک کاپی کریں",
+          "leaderboard": "لیڈر بورڈ",
+          "no_stipends_yet": "ابھی تک کوئی وظیفہ نہیں"
+        }
       },
       "elections": {
         "detail": {

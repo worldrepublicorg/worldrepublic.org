@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "पंजी",
-          "subsidies": "अनुदान"
+          "subsidies": "अनुदान",
+          "ambassadors": "राजदूत"
         },
         "discover": "खोजें",
         "search_placeholder": "दल खोजें...",
@@ -72,7 +73,14 @@
           "not_found_description": "आप जिस दल की तलाश कर रहे हैं वह मौजूद नहीं है या भंग हो गया है।"
         },
         "delete_party": "दल हटाएं",
-        "run_on_elections_and_earn": "चुनाव में भाग लें और अनुदान प्राप्त करें"
+        "run_on_elections_and_earn": "चुनाव में भाग लें और अनुदान प्राप्त करें",
+        "ambassadors": {
+          "title": "राजदूत कार्यक्रम",
+          "description": "दोस्तों को आमंत्रित करें और जब उनकी पार्टी को सब्सिडी मिले तो वजीफा कमाएं",
+          "copy_referral_link": "रेफरल लिंक कॉपी करें",
+          "leaderboard": "लीडरबोर्ड",
+          "no_stipends_yet": "अभी तक कोई वजीफा नहीं"
+        }
       },
       "elections": {
         "detail": {

@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Registre",
-          "subsidies": "Subventions"
+          "subsidies": "Subventions",
+          "ambassadors": "Ambassadeurs"
         },
         "discover": "Découvrir",
         "search_placeholder": "Rechercher des partis...",
@@ -72,7 +73,14 @@
           "not_found_description": "Le parti que vous recherchez n'existe pas ou a été dissous."
         },
         "delete_party": "Supprimer le parti",
-        "run_on_elections_and_earn": "Se présenter aux élections et obtenir des subventions"
+        "run_on_elections_and_earn": "Se présenter aux élections et obtenir des subventions",
+        "ambassadors": {
+          "title": "Programme d'Ambassadeurs",
+          "description": "Invitez des amis et gagnez une allocation lorsque leur parti reçoit des subventions",
+          "copy_referral_link": "Copier le lien de parrainage",
+          "leaderboard": "Classement",
+          "no_stipends_yet": "Pas encore d'allocations"
+        }
       },
       "elections": {
         "detail": {

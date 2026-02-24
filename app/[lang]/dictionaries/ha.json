@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Rijista",
-          "subsidies": "Tallafi"
+          "subsidies": "Tallafi",
+          "ambassadors": "Jakadu"
         },
         "discover": "Gano",
         "search_placeholder": "Nemo jam'iyyu...",
@@ -72,7 +73,14 @@
           "not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
         },
         "delete_party": "Share jam'iyya",
-        "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi"
+        "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi",
+        "ambassadors": {
+          "title": "Shirin Jakadu",
+          "description": "Gayyaci abokai kuma ka sami albashi idan jam'iyyarsu ta sami tallafi",
+          "copy_referral_link": "Kwafi hanyar haɗin gwiwa",
+          "leaderboard": "Jerin masu jagoranci",
+          "no_stipends_yet": "Babu albashin da aka samu tukuna"
+        }
       },
       "elections": {
         "detail": {

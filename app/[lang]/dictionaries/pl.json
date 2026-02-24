@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Rejestr",
-          "subsidies": "Dotacje"
+          "subsidies": "Dotacje",
+          "ambassadors": "Ambasadorzy"
         },
         "discover": "Odkryj",
         "search_placeholder": "Szukaj partii...",
@@ -72,7 +73,14 @@
           "not_found_description": "Partia, której szukasz, nie istnieje lub została rozwiązana."
         },
         "delete_party": "Usuń partię",
-        "run_on_elections_and_earn": "Startuj w wyborach i otrzymaj dotacje"
+        "run_on_elections_and_earn": "Startuj w wyborach i otrzymaj dotacje",
+        "ambassadors": {
+          "title": "Program Ambasadorski",
+          "description": "Zaproś znajomych i zdobądź stypendium, gdy ich partia otrzyma dotacje",
+          "copy_referral_link": "Kopiuj link polecający",
+          "leaderboard": "Ranking",
+          "no_stipends_yet": "Brak stypendiów"
+        }
       },
       "elections": {
         "detail": {

@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Igitabo",
-          "subsidies": "Inkunga"
+          "subsidies": "Inkunga",
+          "ambassadors": "Intumwa"
         },
         "discover": "Gushakisha",
         "search_placeholder": "Shakisha amashyirahamwe...",
@@ -72,7 +73,14 @@
           "not_found_description": "Amashyirahamwe ushakisha ntayabaho cyangwa yarimbuwe."
         },
         "delete_party": "Siba ishyirahamwe",
-        "run_on_elections_and_earn": "Injira mu ntoranyamihigo no guhabwa imisanzure"
+        "run_on_elections_and_earn": "Injira mu ntoranyamihigo no guhabwa imisanzure",
+        "ambassadors": {
+          "title": "Porogaramu y'Intumwa",
+          "description": "Tumira inshuti kandi ubone amafaranga iyo ishyaka ryabo rihawe inkunga",
+          "copy_referral_link": "Gukoporora umukururambaga",
+          "leaderboard": "Urutonde rw'abayobozi",
+          "no_stipends_yet": "Nta mafaranga ahari kugeza ubu"
+        }
       },
       "elections": {
         "detail": {

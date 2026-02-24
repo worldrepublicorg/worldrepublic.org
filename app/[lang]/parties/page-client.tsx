@@ -1,14 +1,24 @@
 "use client";
 
+import {
+  Button,
+  Typography,
+  useToast,
+} from "@worldcoin/mini-apps-ui-kit-react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { PiArrowSquareOut } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { MenuLink } from "@/components/menu-link";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import type { Party } from "@/lib/types/parties";
+import { copyToClipboard } from "@/lib/utils";
 
-const TABS = ["registry", "subsidies"] as const;
+const _DUMMY_REFERRAL_LINK = "https://worldrepublic.org/r/ABCDEF";
+
+const TABS = ["registry", "subsidies", "ambassadors"] as const;
 type TabKey = (typeof TABS)[number];
 
 interface PartiesPageClientProps {
@@ -24,6 +34,14 @@ export default function PartiesPageClient({
 }: PartiesPageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
+  const { toast } = useToast();
+
+  const handleCopyReferralLink = async () => {
+    await copyToClipboard(_DUMMY_REFERRAL_LINK, toast, {
+      success: dictionary.toasts.copied,
+      error: dictionary.toasts.generic_error,
+    });
+  };
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -37,7 +55,7 @@ export default function PartiesPageClient({
         endAdornment={<MenuLink lang={lang} />}
       />
 
-      {/* <TabPills
+      <TabPills
         activeTab={activeTab}
         lang={lang}
         basePath={`/${lang}/parties`}
@@ -46,12 +64,16 @@ export default function PartiesPageClient({
             key: "registry",
             label: dictionary.pages.govern.parties.tabs.registry,
           },
+          // {
+          //   key: "subsidies",
+          //   label: dictionary.pages.govern.parties.tabs.subsidies,
+          // },
           {
-            key: "subsidies",
-            label: dictionary.pages.govern.parties.tabs.subsidies,
+            key: "ambassadors",
+            label: dictionary.pages.govern.parties.tabs.ambassadors,
           },
         ]}
-      /> */}
+      />
 
       <main className="flex grow flex-col items-start">
         {activeTab === "registry" ? (
@@ -60,6 +82,60 @@ export default function PartiesPageClient({
             dictionary={dictionary}
             lang={lang}
           />
+        ) : activeTab === "ambassadors" ? (
+          <div className="flex flex-col items-start w-full px-6 pt-4 pb-6">
+            <div className="rounded-xl w-full border border-gray-200 bg-gray-50 p-4 mb-6 flex flex-col items-center text-center">
+              <Typography
+                variant="subtitle"
+                level={1}
+                className="mb-3! text-[19px] font-semibold"
+              >
+                {dictionary.pages.govern.parties.ambassadors.title}
+              </Typography>
+              <Typography
+                variant="body"
+                level={3}
+                className="text-sm text-gray-500"
+              >
+                {dictionary.pages.govern.parties.ambassadors.description}
+              </Typography>
+              <div className="mt-3 flex items-center gap-2">
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={handleCopyReferralLink}
+                >
+                  {dictionary.pages.govern.parties.ambassadors.copy_referral_link}
+                </Button>
+                <Link
+                  href="https://wiki.worldrepublic.org/building-blocks/party-subsidies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="tertiary"
+                    size="sm"
+                    className="inline-flex items-center gap-1.5"
+                  >
+                    {dictionary.pages.govern.parties.learn_more}
+                    <PiArrowSquareOut className="size-4 shrink-0 text-gray-400" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <Typography
+              variant="subtitle"
+              level={1}
+              className="mb-3! text-[19px] font-semibold"
+            >
+              {dictionary.pages.govern.parties.ambassadors.leaderboard}
+            </Typography>
+
+            <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+              {dictionary.pages.govern.parties.ambassadors.no_stipends_yet}
+            </div>
+          </div>
         ) : (
           <div className="flex w-full grow items-center justify-center">
             {/* Subsidies tab - empty for now */}

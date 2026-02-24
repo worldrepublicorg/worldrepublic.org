@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "ทะเบียน",
-          "subsidies": "เงินอุดหนุน"
+          "subsidies": "เงินอุดหนุน",
+          "ambassadors": "ทูต"
         },
         "discover": "ค้นพบ",
         "search_placeholder": "ค้นหาพรรค...",
@@ -72,7 +73,14 @@
           "not_found_description": "พรรคที่คุณกำลังมองหาไม่มีอยู่หรือถูกยุบแล้ว"
         },
         "delete_party": "ลบพรรค",
-        "run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน"
+        "run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน",
+        "ambassadors": {
+          "title": "โปรแกรมทูต",
+          "description": "เชิญเพื่อนและรับเงินอุดหนุนเมื่อพรรคของพวกเขาได้รับเงินสนับสนุน",
+          "copy_referral_link": "คัดลอกลิงก์แนะนำ",
+          "leaderboard": "กระดานผู้นำ",
+          "no_stipends_yet": "ยังไม่มีเงินอุดหนุน"
+        }
       },
       "elections": {
         "detail": {

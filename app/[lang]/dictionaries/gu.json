@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "રજિસ્ટ્રી",
-          "subsidies": "સબસિડી"
+          "subsidies": "સબસિડી",
+          "ambassadors": "રાજદૂત"
         },
         "discover": "શોધો",
         "search_placeholder": "પક્ષો શોધો...",
@@ -72,7 +73,14 @@
           "not_found_description": "તમે જે પક્ષ શોધી રહ્યા છો તે અસ્તિત્વમાં નથી અથવા વિસર્જન થયો છે."
         },
         "delete_party": "પક્ષ કાઢી નાખો",
-        "run_on_elections_and_earn": "ચૂંટણીમાં ભાગ લો અને સબસિડી મેળવો"
+        "run_on_elections_and_earn": "ચૂંટણીમાં ભાગ લો અને સબસિડી મેળવો",
+        "ambassadors": {
+          "title": "રાજદૂત કાર્યક્રમ",
+          "description": "મિત્રોને આમંત્રિત કરો અને જ્યારે તેમની પાર્ટી સબસિડી મેળવે ત્યારે વેતન મેળવો",
+          "copy_referral_link": "રેફરલ લિંક કૉપી કરો",
+          "leaderboard": "લીડરબોર્ડ",
+          "no_stipends_yet": "હજુ સુધી કોઈ વેતન નથી"
+        }
       },
       "elections": {
         "detail": {

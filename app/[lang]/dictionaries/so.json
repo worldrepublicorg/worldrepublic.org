@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "Diiwaanka",
-          "subsidies": "Kaalmada"
+          "subsidies": "Kaalmada",
+          "ambassadors": "Safiirrada"
         },
         "discover": "Hel",
         "search_placeholder": "Raadi xisbiyada...",
@@ -72,7 +73,14 @@
           "not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
         },
         "delete_party": "Tirtir xisbiga",
-        "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin"
+        "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin",
+        "ambassadors": {
+          "title": "Barnaamijka Safiirrada",
+          "description": "Ku casuuma saaxiibbo oo kasbado lacag marka xisbigoodu helo kaalmada",
+          "copy_referral_link": "Koobiyeey xiriirka tixraacaha",
+          "leaderboard": "Liiska hogaamiyeyaasha",
+          "no_stipends_yet": "Wali ma jirto lacag"
+        }
       },
       "elections": {
         "detail": {

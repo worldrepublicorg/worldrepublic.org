@@ -32,7 +32,8 @@
       "parties": {
         "tabs": {
           "registry": "রেজিস্ট্রি",
-          "subsidies": "ভর্তুকি"
+          "subsidies": "ভর্তুকি",
+          "ambassadors": "অ্যাম্বাসেডর"
         },
         "discover": "খুঁজুন",
         "search_placeholder": "দল খুঁজুন...",
@@ -72,7 +73,14 @@
           "not_found_description": "আপনি যে দল খুঁজছেন তা বিদ্যমান নেই বা ভেঙে দেওয়া হয়েছে।"
         },
         "delete_party": "দল মুছে ফেলুন",
-        "run_on_elections_and_earn": "নির্বাচনে অংশ নিন এবং ভর্তুকি পান"
+        "run_on_elections_and_earn": "নির্বাচনে অংশ নিন এবং ভর্তুকি পান",
+        "ambassadors": {
+          "title": "অ্যাম্বাসেডর প্রোগ্রাম",
+          "description": "বন্ধুদের আমন্ত্রণ জানান এবং তাদের দল ভর্তুকি পেলে বৃত্তি অর্জন করুন",
+          "copy_referral_link": "রেফারেল লিংক কপি করুন",
+          "leaderboard": "লিডারবোর্ড",
+          "no_stipends_yet": "এখনও কোনো বৃত্তি নেই"
+        }
       },
       "elections": {
         "detail": {
