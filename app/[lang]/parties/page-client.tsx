@@ -164,7 +164,7 @@ export default function PartiesPageClient({
               <Typography
                 variant="subtitle"
                 level={1}
-                className="mb-2 text-[21px] font-semibold"
+                className="mb-2 text-[22px] font-semibold"
               >
                 {dictionary.pages.govern.parties.ambassadors.title}
               </Typography>
@@ -175,7 +175,7 @@ export default function PartiesPageClient({
               >
                 {dictionary.pages.govern.parties.ambassadors.description}
               </Typography>
-              <div className="mt-4.5 flex items-center gap-2">
+              <div className="mt-5 flex items-center gap-2">
                 <Button
                   variant="primary"
                   size="sm"
