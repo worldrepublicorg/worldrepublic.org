@@ -8,7 +8,7 @@ import {
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PiArrowSquareOut } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { MenuLink } from "@/components/menu-link";
@@ -16,9 +16,13 @@ import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
+import { getWalletAuthAndData } from "@/lib/actions/member";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
-import { getCachedWalletData } from "@/lib/wallet-auth-cache";
+import {
+  getCachedWalletData,
+  setCachedWalletData,
+} from "@/lib/wallet-auth-cache";
 
 const SignInDialog = dynamic(
   () => import("@/components/sign-in-dialog").then((mod) => mod.SignInDialog),
@@ -45,14 +49,70 @@ export default function PartiesPageClient({
   const { isAuthenticated, showSignInDialog, setShowSignInDialog } = useAuth();
 
   const [cachedData] = useState(() => getCachedWalletData());
-  const referralCode = cachedData?.profileData?.referralCode ?? null;
+  const [referralCode, setReferralCode] = useState<string | null>(
+    cachedData?.profileData?.referralCode ?? null,
+  );
+
+  // Hydrate referral code from server when authenticated and not yet loaded
+  useEffect(() => {
+    if (!isAuthenticated || referralCode) return;
+
+    let cancelled = false;
+
+    const fetchReferralCode = async () => {
+      try {
+        const result = await getWalletAuthAndData();
+        if (cancelled) return;
+
+        if (result.profileData?.referralCode) {
+          setReferralCode(result.profileData.referralCode);
+        }
+
+        // Keep auth cache in sync so other pages see latest data
+        setCachedWalletData(result);
+      } catch {
+        // Best-effort only; handled on button click as well
+      }
+    };
+
+    void fetchReferralCode();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthenticated, referralCode]);
 
   const handleCopyReferralLink = async () => {
-    if (!isAuthenticated || !referralCode) {
+    if (!isAuthenticated) {
       setShowSignInDialog(true);
       return;
     }
-    const link = `${window.location.origin}/?ref=${referralCode}`;
+
+    let code = referralCode;
+
+    // Fallback: fetch fresh data if we don't yet have a referral code
+    if (!code) {
+      try {
+        const result = await getWalletAuthAndData();
+        if (result.profileData?.referralCode) {
+          code = result.profileData.referralCode;
+          setReferralCode(code);
+          setCachedWalletData(result);
+        }
+      } catch {
+        // Ignore here; we'll handle the "no code" case below
+      }
+    }
+
+    if (!code) {
+      // Unlikely, but avoid opening sign-in again when user is already authenticated
+      toast.error({
+        title: dictionary.toasts.generic_error,
+      });
+      return;
+    }
+
+    const link = `${window.location.origin}/?ref=${code}`;
     await copyToClipboard(link, toast, {
       success: dictionary.toasts.copied,
       error: dictionary.toasts.generic_error,
