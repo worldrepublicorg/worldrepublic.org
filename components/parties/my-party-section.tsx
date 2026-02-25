@@ -37,7 +37,7 @@ export function MyPartySection({
   onDeleteParty,
 }: MyPartySectionProps) {
   return (
-    <div className="mb-6 px-6 mt-4">
+    <div className="mb-6 px-6 mt-2">
       <div className="mb-3 flex items-center justify-between">
         <Typography
           variant="subtitle"

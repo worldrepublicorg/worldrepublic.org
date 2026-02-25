@@ -371,8 +371,10 @@ export function PoliticalPartyList({
 
     try {
       setIsCreating(true);
-      const result = await createPartyAction(formData);
+      const pendingReferral = localStorage.getItem("pending_referral") || undefined;
+      const result = await createPartyAction(formData, pendingReferral);
       if (result.success) {
+        if (pendingReferral) localStorage.removeItem("pending_referral");
         toast.success({
           title: dictionary.toasts.parties.registered,
         });

@@ -83,7 +83,10 @@ async function getUserUuidFromSession(): Promise<string> {
 
 // Party CRUD Operations
 
-export async function createParty(data: CreatePartyData) {
+export async function createParty(
+  data: CreatePartyData,
+  pendingReferralCode?: string,
+) {
   try {
     // Get UUID from session
     const userUuid = await getUserUuidFromSession();
@@ -112,7 +115,7 @@ export async function createParty(data: CreatePartyData) {
     }
 
     // Ensure user profile exists (will be created if it doesn't)
-    const profileResult = await getUserProfile();
+    const profileResult = await getUserProfile(pendingReferralCode);
     if (!profileResult.success || !profileResult.profile?.username) {
       return {
         success: false,

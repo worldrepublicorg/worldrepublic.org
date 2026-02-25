@@ -187,6 +187,7 @@ export const userProfiles = pgTable(
       .notNull()
       .default("0"),
     username: varchar("username", { length: 30 }).notNull(), // Required username, auto-generated on profile creation
+    referralCode: varchar("referral_code", { length: 8 }).notNull(), // Unique 8-char code for ambassador referral links
     accountDeletedAt: timestamp("account_deleted_at"),
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
@@ -195,6 +196,7 @@ export const userProfiles = pgTable(
     // Note: authUserId already has .unique() on the column, so no explicit index needed
     // Note: Username unique index with LOWER() is created via raw SQL in migration for case-insensitive uniqueness
     uniqueIndex("user_profiles_username_idx").on(table.username),
+    uniqueIndex("user_profiles_referral_code_idx").on(table.referralCode),
     index("user_profiles_account_deleted_at_idx").on(table.accountDeletedAt),
     index("user_profiles_created_at_idx").on(table.createdAt),
   ],
@@ -205,6 +207,38 @@ export const userProfilesRelations = relations(userProfiles, ({ one }) => ({
   user: one(users, {
     fields: [userProfiles.id],
     references: [users.uuid],
+  }),
+}));
+
+// Referrals table - tracks ambassador referral relationships
+export const referrals = pgTable(
+  "referrals",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    referrerId: uuid("referrer_id")
+      .notNull()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    referredId: uuid("referred_id")
+      .notNull()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("referrals_referred_id_idx").on(table.referredId),
+    index("referrals_referrer_id_idx").on(table.referrerId),
+  ],
+);
+
+export const referralsRelations = relations(referrals, ({ one }) => ({
+  referrer: one(users, {
+    fields: [referrals.referrerId],
+    references: [users.uuid],
+    relationName: "referrer",
+  }),
+  referred: one(users, {
+    fields: [referrals.referredId],
+    references: [users.uuid],
+    relationName: "referred",
   }),
 }));
 

@@ -59,10 +59,14 @@ export default function MenuPageClient({
 
   useEffect(() => {
     let cancelled = false;
-    getWalletAuthAndData().then((result) => {
+    const pendingReferral = localStorage.getItem("pending_referral") || undefined;
+    getWalletAuthAndData(pendingReferral).then((result) => {
       if (cancelled) return;
       setServerAuth(result.authenticated);
       setCachedWalletData(result);
+      if (pendingReferral && result.authenticated) {
+        localStorage.removeItem("pending_referral");
+      }
     });
     return () => {
       cancelled = true;

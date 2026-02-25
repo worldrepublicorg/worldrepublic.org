@@ -29,6 +29,13 @@
       "when": 1764388964116,
       "tag": "0003_drop_user_profiles_self_verification",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1764388964117,
+      "tag": "0004_add_referrals",
+      "breakpoints": true
     }
   ]
 }

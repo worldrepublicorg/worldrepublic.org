@@ -5,18 +5,25 @@ import {
   Typography,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { PiArrowSquareOut } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { MenuLink } from "@/components/menu-link";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
+import { useAuth } from "@/hooks/use-auth";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
+import { getCachedWalletData } from "@/lib/wallet-auth-cache";
 
-const _DUMMY_REFERRAL_LINK = "https://worldrepublic.org/r/ABCDEF";
+const SignInDialog = dynamic(
+  () => import("@/components/sign-in-dialog").then((mod) => mod.SignInDialog),
+  { ssr: false },
+);
 
 const TABS = ["registry", "subsidies", "ambassadors"] as const;
 type TabKey = (typeof TABS)[number];
@@ -35,9 +42,18 @@ export default function PartiesPageClient({
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
   const { toast } = useToast();
+  const { isAuthenticated, showSignInDialog, setShowSignInDialog } = useAuth();
+
+  const [cachedData] = useState(() => getCachedWalletData());
+  const referralCode = cachedData?.profileData?.referralCode ?? null;
 
   const handleCopyReferralLink = async () => {
-    await copyToClipboard(_DUMMY_REFERRAL_LINK, toast, {
+    if (!isAuthenticated || !referralCode) {
+      setShowSignInDialog(true);
+      return;
+    }
+    const link = `${window.location.origin}/?ref=${referralCode}`;
+    await copyToClipboard(link, toast, {
       success: dictionary.toasts.copied,
       error: dictionary.toasts.generic_error,
     });
@@ -88,7 +104,7 @@ export default function PartiesPageClient({
               <Typography
                 variant="subtitle"
                 level={1}
-                className="mb-3! text-[19px] font-semibold"
+                className="mb-2 text-[21px] font-semibold"
               >
                 {dictionary.pages.govern.parties.ambassadors.title}
               </Typography>
@@ -99,13 +115,16 @@ export default function PartiesPageClient({
               >
                 {dictionary.pages.govern.parties.ambassadors.description}
               </Typography>
-              <div className="mt-3 flex items-center gap-2">
+              <div className="mt-4.5 flex items-center gap-2">
                 <Button
                   variant="primary"
                   size="sm"
                   onClick={handleCopyReferralLink}
                 >
-                  {dictionary.pages.govern.parties.ambassadors.copy_referral_link}
+                  {
+                    dictionary.pages.govern.parties.ambassadors
+                      .copy_referral_link
+                  }
                 </Button>
                 <Link
                   href="https://wiki.worldrepublic.org/building-blocks/party-subsidies"
@@ -142,6 +161,12 @@ export default function PartiesPageClient({
           </div>
         )}
       </main>
+
+      <SignInDialog
+        open={showSignInDialog}
+        onOpenChange={setShowSignInDialog}
+        dictionary={dictionary}
+      />
     </div>
   );
 }

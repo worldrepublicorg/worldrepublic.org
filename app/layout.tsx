@@ -4,7 +4,9 @@ import "./globals.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
+import { Suspense } from "react";
 import BottomNav from "@/components/bottom-nav";
+import { ReferralCapture } from "@/components/referral-capture";
 import { cn } from "@/lib/utils";
 
 const rubik = localFont({
@@ -112,6 +114,9 @@ export default async function RootLayout({
           {children}
           <Toaster />
         </div>
+        <Suspense>
+          <ReferralCapture />
+        </Suspense>
         <BottomNav />
         <SpeedInsights />
       </body>

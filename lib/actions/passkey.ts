@@ -230,6 +230,7 @@ export async function verifyPasskeyRegistration(
   tempUserId: string,
   tempEmail: string | null,
   name?: string,
+  pendingReferralCode?: string,
 ) {
   try {
     if (!credential || !challenge || !tempUserId) {
@@ -289,7 +290,7 @@ export async function verifyPasskeyRegistration(
 
     // Create user profile immediately after user creation
     try {
-      await createUserProfile(newUser.uuid, newUser.id);
+      await createUserProfile(newUser.uuid, newUser.id, pendingReferralCode);
     } catch (error) {
       console.error("Error creating user profile:", error);
       // Don't fail registration if profile creation fails - it will be created lazily later

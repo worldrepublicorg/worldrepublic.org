@@ -4,7 +4,13 @@ import { and, desc, eq, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
-import { parties, transactions, userProfiles, users } from "@/lib/db/schema";
+import {
+  parties,
+  referrals,
+  transactions,
+  userProfiles,
+  users,
+} from "@/lib/db/schema";
 import { validateUsername } from "@/lib/utils";
 
 // ============================================================================
@@ -17,6 +23,16 @@ function generateUniqueUsername(): string {
   // Use base36 (0-9, a-z) for 8 characters = 2.8 trillion combinations
   const randomSuffix = Math.random().toString(36).substring(2, 10); // 8 chars
   return `citizen_${randomSuffix}`;
+}
+
+const REFERRAL_CHARSET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // No ambiguous 0/O/1/I/L
+
+function generateReferralCode(): string {
+  let code = "";
+  for (let i = 0; i < 8; i++) {
+    code += REFERRAL_CHARSET[Math.floor(Math.random() * REFERRAL_CHARSET.length)];
+  }
+  return code;
 }
 
 // Helper function to get user UUID from session
@@ -63,16 +79,18 @@ async function verifyUserAccess(userUuid: string) {
 // ============================================================================
 
 /**
- * Creates a user profile for a newly registered user
- * Always generates a random username (e.g., citizen_abc12345) regardless of sign-in method
- * (Gmail, passkey, etc.). This ensures privacy and consistency across all authentication methods.
+ * Creates a user profile for a newly registered user.
+ * Generates a random username and referral code. Optionally records a referral
+ * relationship if the new user arrived via an ambassador's referral link.
  * @param userUuid - UUID of the user from the users table
  * @param authUserId - Auth user ID (numeric ID from users table)
+ * @param pendingReferralCode - Optional referral code from the ambassador who referred this user
  * @returns The created profile or null if creation failed
  */
 export async function createUserProfile(
   userUuid: string,
   authUserId: number,
+  pendingReferralCode?: string,
 ): Promise<typeof userProfiles.$inferSelect | null> {
   const dbReadOnly = getDbReadOnly();
 
@@ -87,9 +105,7 @@ export async function createUserProfile(
     return existing;
   }
 
-  // Always generate a random username (never derived from email or other user data)
-  // This applies to all sign-in methods: Gmail, passkey, etc.
-  // Try to generate a unique username with a bounded number of attempts
+  // Generate a unique username
   let username: string | null = null;
   let isUnique = false;
   let attempts = 0;
@@ -116,13 +132,52 @@ export async function createUserProfile(
     throw new Error("Could not generate unique username.");
   }
 
+  // Generate a unique referral code (retry on collision, though astronomically unlikely)
+  let referralCode = generateReferralCode();
+  for (let i = 0; i < maxAttempts; i++) {
+    const [existingCode] = await dbReadOnly
+      .select({ id: userProfiles.id })
+      .from(userProfiles)
+      .where(eq(userProfiles.referralCode, referralCode))
+      .limit(1);
+    if (!existingCode) break;
+    referralCode = generateReferralCode();
+    if (i === maxAttempts - 1) {
+      throw new Error("Could not generate unique referral code.");
+    }
+  }
+
   // Create the profile row
   await db.insert(userProfiles).values({
     id: userUuid,
     authUserId,
     username,
+    referralCode,
     walletBalance: "0",
   });
+
+  // Record referral relationship if a valid referral code was provided
+  if (pendingReferralCode) {
+    try {
+      const [referrer] = await dbReadOnly
+        .select({ id: userProfiles.id })
+        .from(userProfiles)
+        .where(eq(userProfiles.referralCode, pendingReferralCode))
+        .limit(1);
+
+      if (referrer && referrer.id !== userUuid) {
+        await db
+          .insert(referrals)
+          .values({
+            referrerId: referrer.id,
+            referredId: userUuid,
+          })
+          .onConflictDoNothing({ target: referrals.referredId });
+      }
+    } catch (error) {
+      console.error("Error recording referral:", error);
+    }
+  }
 
   // Re-fetch the newly created profile using the read replica
   const [profile] = await dbReadOnly
@@ -134,7 +189,7 @@ export async function createUserProfile(
   return profile || null;
 }
 
-export async function getUserProfile() {
+export async function getUserProfile(pendingReferralCode?: string) {
   try {
     // Get user UUID from authenticated session
     const userUuid = await getUserUuidFromSession();
@@ -158,8 +213,11 @@ export async function getUserProfile() {
 
       const authUserId = parseInt(String(session.user.id), 10);
 
-      // Create the profile
-      const newProfile = await createUserProfile(userUuid, authUserId);
+      const newProfile = await createUserProfile(
+        userUuid,
+        authUserId,
+        pendingReferralCode,
+      );
 
       if (!newProfile) {
         throw new Error("Failed to create user profile");
@@ -181,6 +239,7 @@ export async function getUserProfile() {
           ? parseFloat(profile.walletBalance)
           : undefined,
         username: profile.username || undefined,
+        referralCode: profile.referralCode || undefined,
         accountDeletedAt: profile.accountDeletedAt
           ? profile.accountDeletedAt.getTime()
           : undefined,
@@ -243,6 +302,7 @@ export async function deleteUserAccount(userUuid: string) {
 export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
   username: string | null;
+  referralCode: string | null;
   userId: string;
   userUuid: string | null;
 };
@@ -265,7 +325,9 @@ export type GetWalletAuthAndDataResult = {
   email: string | null;
 };
 
-export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult> {
+export async function getWalletAuthAndData(
+  pendingReferralCode?: string,
+): Promise<GetWalletAuthAndDataResult> {
   const session = await auth();
   const isAuthenticated = !!session?.user;
 
@@ -287,7 +349,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
       .where(eq(users.id, authUserId))
       .limit(1)
       .then(([user]) => user || null),
-    getUserProfile(),
+    getUserProfile(pendingReferralCode),
     getTransactions(100),
   ]);
 
@@ -304,6 +366,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
   let profileData: GetWalletAuthAndDataProfileData = {
     walletBalance: null,
     username: null,
+    referralCode: null,
     userId: session.user.id,
     userUuid,
   };
@@ -311,6 +374,7 @@ export async function getWalletAuthAndData(): Promise<GetWalletAuthAndDataResult
     profileData = {
       walletBalance: profileResult.profile.walletBalance ?? null,
       username: profileResult.profile.username ?? null,
+      referralCode: profileResult.profile.referralCode ?? null,
       userId: session.user.id,
       userUuid,
     };

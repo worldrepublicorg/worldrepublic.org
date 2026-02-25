@@ -180,12 +180,14 @@ export function SignInDialog({
       }
 
       // Step 3: Verify the registration response
+      const pendingReferral = localStorage.getItem("pending_referral") || undefined;
       const verifyResult = await verifyPasskeyRegistration(
         registrationResponse,
         challenge,
         tempUserId,
         tempEmail,
         name || passkeyName || undefined,
+        pendingReferral,
       );
 
       if (verifyResult.error) {
@@ -200,6 +202,7 @@ export function SignInDialog({
             AUTH_DISPLAY_CACHE_KEY,
             JSON.stringify({ authenticated: true }),
           );
+          localStorage.removeItem("pending_referral");
         } catch {
           // ignore
         }
