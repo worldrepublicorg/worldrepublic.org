@@ -285,14 +285,14 @@ export default function PartiesPageClient({
                     level={3}
                     className="text-gray-500 text-right whitespace-nowrap"
                   >
-                    Leaders invited
+                    Invited
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
                     className="text-gray-500 text-right w-16"
                   >
-                    Total stipend
+                    Stipend
                   </Typography>
                 </div>
                 <div className="divide-y divide-gray-100">
@@ -319,7 +319,7 @@ export default function PartiesPageClient({
                         level={3}
                         className="text-gray-900 tabular-nums text-right"
                       >
-                        {entry.leadersInvited}
+                        {entry.totalInvited}
                       </Typography>
                       <Typography
                         variant="body"

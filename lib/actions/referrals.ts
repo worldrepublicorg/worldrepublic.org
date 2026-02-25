@@ -1,13 +1,13 @@
 "use server";
 
-import { and, asc, count, desc, eq, gt, isNull } from "drizzle-orm";
+import { asc, count, desc, eq } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDbReadOnly } from "@/lib/db/connection";
-import { parties, referrals, userProfiles } from "@/lib/db/schema";
+import { referrals, userProfiles } from "@/lib/db/schema";
 
 export type AmbassadorLeaderboardEntry = {
   username: string;
-  leadersInvited: number;
+  totalInvited: number;
   stipend: number;
 };
 
@@ -18,24 +18,16 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
     const rows = await readDb
       .select({
         username: userProfiles.username,
-        leadersInvited: count(parties.id),
+        totalInvited: count(referrals.referredId),
       })
       .from(referrals)
       .innerJoin(userProfiles, eq(userProfiles.id, referrals.referrerId))
-      .innerJoin(
-        parties,
-        and(
-          eq(parties.foundedBy, referrals.referredId),
-          isNull(parties.dissolvedAt),
-        ),
-      )
       .groupBy(userProfiles.id, userProfiles.username)
-      .having(gt(count(parties.id), 0))
-      .orderBy(desc(count(parties.id)), asc(userProfiles.username));
+      .orderBy(desc(count(referrals.referredId)), asc(userProfiles.username));
 
     return rows.map((row) => ({
       username: row.username,
-      leadersInvited: Number(row.leadersInvited),
+      totalInvited: Number(row.totalInvited),
       stipend: 0,
     }));
   },
