@@ -79,7 +79,10 @@
           "description": "دوستوں کو مدعو کریں اور ان کی پارٹی کو سبسڈی ملنے پر وظیفہ حاصل کریں",
           "copy_referral_link": "ریفرل لنک کاپی کریں",
           "leaderboard": "لیڈر بورڈ",
-          "no_stipends_yet": "ابھی تک کوئی وظیفہ نہیں"
+          "no_stipends_yet": "ابھی تک کوئی وظیفہ نہیں",
+          "col_ambassador": "سفیر",
+          "col_invited": "مدعو",
+          "col_stipend": "وظیفہ"
         }
       },
       "elections": {

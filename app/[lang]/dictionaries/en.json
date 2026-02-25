@@ -63,7 +63,10 @@
           "description": "Invite friends and earn a stipend when their party receives subsidies",
           "copy_referral_link": "Copy referral link",
           "leaderboard": "Leaderboard",
-          "no_stipends_yet": "No stipends yet"
+          "no_stipends_yet": "No stipends yet",
+          "col_ambassador": "Ambassador",
+          "col_invited": "Invited",
+          "col_stipend": "Stipend"
         },
         "discover": "Discover",
         "search_placeholder": "Search parties...",

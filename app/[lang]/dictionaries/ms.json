@@ -79,7 +79,10 @@
           "description": "Jemput rakan dan dapatkan elaun apabila parti mereka menerima subsidi",
           "copy_referral_link": "Salin pautan rujukan",
           "leaderboard": "Papan pendahulu",
-          "no_stipends_yet": "Belum ada elaun"
+          "no_stipends_yet": "Belum ada elaun",
+          "col_ambassador": "Duta",
+          "col_invited": "Dijemput",
+          "col_stipend": "Elaun"
         }
       },
       "elections": {

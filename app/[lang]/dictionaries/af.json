@@ -79,7 +79,10 @@
           "description": "Nooi vriende en verdien 'n stipendium wanneer hul party subsidies ontvang",
           "copy_referral_link": "Kopieer verwysingskakel",
           "leaderboard": "Ranglys",
-          "no_stipends_yet": "Nog geen stipendiums nie"
+          "no_stipends_yet": "Nog geen stipendiums nie",
+          "col_ambassador": "Ambassadeurs",
+          "col_invited": "Genooi",
+          "col_stipend": "Stipendium"
         }
       },
       "elections": {

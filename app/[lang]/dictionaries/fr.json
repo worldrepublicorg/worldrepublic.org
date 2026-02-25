@@ -79,7 +79,10 @@
           "description": "Invitez des amis et gagnez une allocation lorsque leur parti reçoit des subventions",
           "copy_referral_link": "Copier le lien de parrainage",
           "leaderboard": "Classement",
-          "no_stipends_yet": "Pas encore d'allocations"
+          "no_stipends_yet": "Pas encore d'allocations",
+          "col_ambassador": "Ambassadeurs",
+          "col_invited": "Invités",
+          "col_stipend": "Allocation"
         }
       },
       "elections": {

@@ -79,7 +79,10 @@
           "description": "Tumira inshuti kandi ubone amafaranga iyo ishyaka ryabo rihawe inkunga",
           "copy_referral_link": "Gukoporora umukururambaga",
           "leaderboard": "Urutonde rw'abayobozi",
-          "no_stipends_yet": "Nta mafaranga ahari kugeza ubu"
+          "no_stipends_yet": "Nta mafaranga ahari kugeza ubu",
+          "col_ambassador": "Intumwa",
+          "col_invited": "Batumiwe",
+          "col_stipend": "Amafaranga"
         }
       },
       "elections": {

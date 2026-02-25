@@ -79,7 +79,10 @@
           "description": "Gayyaci abokai kuma ka sami albashi idan jam'iyyarsu ta sami tallafi",
           "copy_referral_link": "Kwafi hanyar haɗin gwiwa",
           "leaderboard": "Jerin masu jagoranci",
-          "no_stipends_yet": "Babu albashin da aka samu tukuna"
+          "no_stipends_yet": "Babu albashin da aka samu tukuna",
+          "col_ambassador": "Jakadu",
+          "col_invited": "Waɗanda aka gayyata",
+          "col_stipend": "Albashi"
         }
       },
       "elections": {

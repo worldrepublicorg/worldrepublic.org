@@ -79,7 +79,10 @@
           "description": "दोस्तों को आमंत्रित करें और जब उनकी पार्टी को सब्सिडी मिले तो वजीफा कमाएं",
           "copy_referral_link": "रेफरल लिंक कॉपी करें",
           "leaderboard": "लीडरबोर्ड",
-          "no_stipends_yet": "अभी तक कोई वजीफा नहीं"
+          "no_stipends_yet": "अभी तक कोई वजीफा नहीं",
+          "col_ambassador": "राजदूत",
+          "col_invited": "आमंत्रित",
+          "col_stipend": "वजीफा"
         }
       },
       "elections": {

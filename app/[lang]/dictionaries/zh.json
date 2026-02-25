@@ -79,7 +79,10 @@
           "description": "邀请朋友，当他们的政党获得补贴时赚取津贴",
           "copy_referral_link": "复制推荐链接",
           "leaderboard": "排行榜",
-          "no_stipends_yet": "暂无津贴"
+          "no_stipends_yet": "暂无津贴",
+          "col_ambassador": "大使",
+          "col_invited": "邀请数",
+          "col_stipend": "津贴"
         }
       },
       "elections": {

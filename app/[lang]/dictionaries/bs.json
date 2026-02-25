@@ -79,7 +79,10 @@
           "description": "Pozovite prijatelje i zaradite stipendiju kada njihova stranka primi subvencije",
           "copy_referral_link": "Kopiraj link za preporuku",
           "leaderboard": "Rang lista",
-          "no_stipends_yet": "Još nema stipendija"
+          "no_stipends_yet": "Još nema stipendija",
+          "col_ambassador": "Ambasadori",
+          "col_invited": "Pozvani",
+          "col_stipend": "Stipendija"
         }
       },
       "elections": {

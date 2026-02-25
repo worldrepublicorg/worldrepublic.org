@@ -79,7 +79,10 @@
           "description": "Hívd meg barátaidat, és keress ösztöndíjat, amikor pártjuk támogatást kap",
           "copy_referral_link": "Ajánló link másolása",
           "leaderboard": "Ranglista",
-          "no_stipends_yet": "Még nincsenek ösztöndíjak"
+          "no_stipends_yet": "Még nincsenek ösztöndíjak",
+          "col_ambassador": "Nagykövetek",
+          "col_invited": "Meghívottak",
+          "col_stipend": "Ösztöndíj"
         }
       },
       "elections": {

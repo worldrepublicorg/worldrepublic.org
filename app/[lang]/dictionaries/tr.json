@@ -79,7 +79,10 @@
           "description": "Arkadaşlarınızı davet edin ve partileri sübvansiyon aldığında burs kazanın",
           "copy_referral_link": "Referans bağlantısını kopyala",
           "leaderboard": "Sıralama",
-          "no_stipends_yet": "Henüz burs yok"
+          "no_stipends_yet": "Henüz burs yok",
+          "col_ambassador": "Elçiler",
+          "col_invited": "Davet Edilenler",
+          "col_stipend": "Burs"
         }
       },
       "elections": {

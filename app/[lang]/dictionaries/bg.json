@@ -79,7 +79,10 @@
           "description": "Поканете приятели и получете стипендия, когато тяхната партия получи субсидии",
           "copy_referral_link": "Копирай линк за препоръка",
           "leaderboard": "Класация",
-          "no_stipends_yet": "Все още няма стипендии"
+          "no_stipends_yet": "Все още няма стипендии",
+          "col_ambassador": "Посланици",
+          "col_invited": "Поканени",
+          "col_stipend": "Стипендия"
         }
       },
       "elections": {

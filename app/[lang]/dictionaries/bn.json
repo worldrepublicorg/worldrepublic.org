@@ -79,7 +79,10 @@
           "description": "বন্ধুদের আমন্ত্রণ জানান এবং তাদের দল ভর্তুকি পেলে বৃত্তি অর্জন করুন",
           "copy_referral_link": "রেফারেল লিংক কপি করুন",
           "leaderboard": "লিডারবোর্ড",
-          "no_stipends_yet": "এখনও কোনো বৃত্তি নেই"
+          "no_stipends_yet": "এখনও কোনো বৃত্তি নেই",
+          "col_ambassador": "অ্যাম্বাসেডর",
+          "col_invited": "আমন্ত্রিত",
+          "col_stipend": "বৃত্তি"
         }
       },
       "elections": {

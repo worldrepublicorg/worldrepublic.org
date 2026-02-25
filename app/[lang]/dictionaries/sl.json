@@ -79,7 +79,10 @@
           "description": "Povabite prijatelje in zaslužite štipendijo, ko njihova stranka prejme subvencije",
           "copy_referral_link": "Kopiraj povezavo za priporočilo",
           "leaderboard": "Lestvica",
-          "no_stipends_yet": "Še ni štipendij"
+          "no_stipends_yet": "Še ni štipendij",
+          "col_ambassador": "Ambasadorji",
+          "col_invited": "Povabljeni",
+          "col_stipend": "Štipendija"
         }
       },
       "elections": {

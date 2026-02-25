@@ -79,7 +79,10 @@
           "description": "ملګري بلنه ورکړئ او کله چې د دوی ګوند مرستې ترلاسه کړي وظیفه ترلاسه کړئ",
           "copy_referral_link": "د راجع کولو لینک کاپي کړئ",
           "leaderboard": "لیډربورډ",
-          "no_stipends_yet": "تر اوسه هیڅ وظیفه نشته"
+          "no_stipends_yet": "تر اوسه هیڅ وظیفه نشته",
+          "col_ambassador": "سفیران",
+          "col_invited": "بلل شوي",
+          "col_stipend": "وظیفه"
         }
       },
       "elections": {

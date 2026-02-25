@@ -278,21 +278,21 @@ export default function PartiesPageClient({
                     level={3}
                     className="text-gray-500"
                   >
-                    Ambassador
+                    {dictionary.pages.govern.parties.ambassadors.col_ambassador}
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
                     className="text-gray-500 text-right whitespace-nowrap"
                   >
-                    Invited
+                    {dictionary.pages.govern.parties.ambassadors.col_invited}
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
                     className="text-gray-500 text-right w-16"
                   >
-                    Stipend
+                    {dictionary.pages.govern.parties.ambassadors.col_stipend}
                   </Typography>
                 </div>
                 <div className="divide-y divide-gray-100">

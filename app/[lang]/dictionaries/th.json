@@ -79,7 +79,10 @@
           "description": "เชิญเพื่อนและรับเงินอุดหนุนเมื่อพรรคของพวกเขาได้รับเงินสนับสนุน",
           "copy_referral_link": "คัดลอกลิงก์แนะนำ",
           "leaderboard": "กระดานผู้นำ",
-          "no_stipends_yet": "ยังไม่มีเงินอุดหนุน"
+          "no_stipends_yet": "ยังไม่มีเงินอุดหนุน",
+          "col_ambassador": "ทูต",
+          "col_invited": "ที่ถูกเชิญ",
+          "col_stipend": "เงินอุดหนุน"
         }
       },
       "elections": {

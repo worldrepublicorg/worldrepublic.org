@@ -79,7 +79,10 @@
           "description": "Convide amigos e ganhe um estipêndio quando o partido deles receber subsídios",
           "copy_referral_link": "Copiar link de indicação",
           "leaderboard": "Classificação",
-          "no_stipends_yet": "Ainda sem estipêndios"
+          "no_stipends_yet": "Ainda sem estipêndios",
+          "col_ambassador": "Embaixadores",
+          "col_invited": "Convidados",
+          "col_stipend": "Estipêndio"
         }
       },
       "elections": {
