@@ -2,6 +2,7 @@
 
 import {
   Button,
+  Skeleton,
   Typography,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
@@ -17,6 +18,10 @@ import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
 import { getWalletAuthAndData } from "@/lib/actions/member";
+import {
+  type AmbassadorLeaderboardEntry,
+  getAmbassadorLeaderboard,
+} from "@/lib/actions/referrals";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
 import {
@@ -53,6 +58,12 @@ export default function PartiesPageClient({
     cachedData?.profileData?.referralCode ?? null,
   );
 
+  const [leaderboard, setLeaderboard] = useState<
+    AmbassadorLeaderboardEntry[] | null
+  >(null);
+  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
+  const [leaderboardError, setLeaderboardError] = useState(false);
+
   // Hydrate referral code from server when authenticated and not yet loaded
   useEffect(() => {
     if (!isAuthenticated || referralCode) return;
@@ -81,6 +92,37 @@ export default function PartiesPageClient({
       cancelled = true;
     };
   }, [isAuthenticated, referralCode]);
+
+  // Client-side logic for tabs (declared early so effects can reference it)
+  const activeTab: TabKey = TABS.includes(tab as TabKey)
+    ? (tab as TabKey)
+    : TABS[0];
+
+  // Fetch leaderboard lazily when the ambassadors tab becomes active
+  useEffect(() => {
+    if (activeTab !== "ambassadors" || leaderboard !== null) return;
+
+    let cancelled = false;
+
+    const fetchLeaderboard = async () => {
+      setLeaderboardLoading(true);
+      setLeaderboardError(false);
+      try {
+        const data = await getAmbassadorLeaderboard();
+        if (!cancelled) setLeaderboard(data);
+      } catch {
+        if (!cancelled) setLeaderboardError(true);
+      } finally {
+        if (!cancelled) setLeaderboardLoading(false);
+      }
+    };
+
+    void fetchLeaderboard();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activeTab, leaderboard]);
 
   const handleCopyReferralLink = async () => {
     if (!isAuthenticated) {
@@ -118,11 +160,6 @@ export default function PartiesPageClient({
       error: dictionary.toasts.generic_error,
     });
   };
-
-  // Client-side logic for tabs
-  const activeTab: TabKey = TABS.includes(tab as TabKey)
-    ? (tab as TabKey)
-    : TABS[0];
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
@@ -211,9 +248,95 @@ export default function PartiesPageClient({
               {dictionary.pages.govern.parties.ambassadors.leaderboard}
             </Typography>
 
-            <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-              {dictionary.pages.govern.parties.ambassadors.no_stipends_yet}
-            </div>
+            {leaderboardLoading ? (
+              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
+                  <Skeleton height={20} width={100} className="rounded" />
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {[0, 1, 2].map((i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between px-4 py-3 gap-4"
+                    >
+                      <Skeleton height={16} width="40%" className="rounded" />
+                      <Skeleton height={16} width="20%" className="rounded" />
+                      <Skeleton height={16} width="20%" className="rounded" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : leaderboardError ? (
+              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                {dictionary.toasts.generic_error}
+              </div>
+            ) : leaderboard && leaderboard.length > 0 ? (
+              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto_auto] gap-4">
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-700"
+                  >
+                    Ambassador
+                  </Typography>
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-700 text-right whitespace-nowrap"
+                  >
+                    Leaders invited
+                  </Typography>
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-700 text-right w-16"
+                  >
+                    Total stipend
+                  </Typography>
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {leaderboard.map((entry, index) => (
+                    <div
+                      key={entry.username}
+                      className="grid grid-cols-[1fr_auto_auto] gap-4 items-center px-4 py-3"
+                    >
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
+                          {index + 1}
+                        </span>
+                        <Typography
+                          variant="body"
+                          level={3}
+                          className="font-medium text-gray-900 truncate"
+                          title={entry.username}
+                        >
+                          {entry.username}
+                        </Typography>
+                      </div>
+                      <Typography
+                        variant="body"
+                        level={3}
+                        className="text-gray-900 tabular-nums text-right"
+                      >
+                        {entry.leadersInvited}
+                      </Typography>
+                      <Typography
+                        variant="body"
+                        level={3}
+                        className="text-gray-400 tabular-nums text-right w-16"
+                      >
+                        0 WDD
+                      </Typography>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                {dictionary.pages.govern.parties.ambassadors.no_stipends_yet}
+              </div>
+            )}
           </div>
         ) : (
           <div className="flex w-full grow items-center justify-center">

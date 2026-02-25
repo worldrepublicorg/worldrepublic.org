@@ -145,6 +145,7 @@ export async function createParty(
     revalidatePath("/[lang]/parties", "page");
     revalidatePath("/[lang]/parties/[id]", "page");
     revalidateTag("parties-list", "default");
+    revalidateTag("ambassador-leaderboard", "default");
 
     return { success: true, partyId };
   } catch (error) {
@@ -342,6 +343,7 @@ export async function deleteParty(
     revalidatePath("/[lang]/parties", "page");
     revalidatePath("/[lang]/parties/[id]", "page");
     revalidateTag("parties-list", "default");
+    revalidateTag("ambassador-leaderboard", "default");
 
     return { success: true };
   } catch (error) {

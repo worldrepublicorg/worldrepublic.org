@@ -173,6 +173,8 @@ export async function createUserProfile(
             referredId: userUuid,
           })
           .onConflictDoNothing({ target: referrals.referredId });
+
+        revalidateTag("ambassador-leaderboard", "default");
       }
     } catch (error) {
       console.error("Error recording referral:", error);
