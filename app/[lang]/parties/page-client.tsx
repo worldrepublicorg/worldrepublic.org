@@ -127,7 +127,7 @@ export default function PartiesPageClient({
                   }
                 </Button>
                 <Link
-                  href="https://wiki.worldrepublic.org/building-blocks/party-subsidies"
+                  href="https://wiki.worldrepublic.org/building-blocks/ambassador-program"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
