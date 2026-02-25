@@ -276,21 +276,21 @@ export default function PartiesPageClient({
                   <Typography
                     variant="subtitle"
                     level={3}
-                    className="text-gray-700"
+                    className="text-gray-500"
                   >
                     Ambassador
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
-                    className="text-gray-700 text-right whitespace-nowrap"
+                    className="text-gray-500 text-right whitespace-nowrap"
                   >
                     Leaders invited
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
-                    className="text-gray-700 text-right w-16"
+                    className="text-gray-500 text-right w-16"
                   >
                     Total stipend
                   </Typography>
