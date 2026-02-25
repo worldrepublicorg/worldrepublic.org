@@ -32,7 +32,7 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
     }));
   },
   ["ambassador-leaderboard"],
-  { revalidate: 10, tags: ["ambassador-leaderboard"] },
+  { revalidate: 3600, tags: ["ambassador-leaderboard"] },
 );
 
 export async function getAmbassadorLeaderboard(): Promise<
