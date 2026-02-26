@@ -71,7 +71,7 @@ export function ElectionDetailPageSkeleton() {
             <input
               type="text"
               disabled
-              className="peer inline-block h-full grow w-full appearance-none bg-transparent border-none text-gray-900 placeholder:text-gray-500 focus:outline-none focus-visible:outline-none disabled:cursor-not-allowed text-sm leading-tight"
+              className="peer inline-block h-full grow w-full appearance-none bg-transparent border-none text-gray-900 placeholder:text-gray-500 focus:outline-none focus-visible:outline-none disabled:cursor-not-allowed text-sm! leading-tight"
               readOnly
             />
           </div>

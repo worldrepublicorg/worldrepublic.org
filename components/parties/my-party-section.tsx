@@ -86,7 +86,7 @@ export function MyPartySection({
           <Typography
             variant="body"
             level={3}
-            className="text-sm text-gray-500"
+            className="text-gray-500"
           >
             {dictionary.pages.govern.parties.run_on_elections_and_earn}
           </Typography>

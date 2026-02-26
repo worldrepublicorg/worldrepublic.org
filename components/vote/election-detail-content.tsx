@@ -80,17 +80,17 @@ export function ElectionDetailContent({
           {localizeElectionName(election.name, t.test_election_name)}
         </Typography>
         {isActive && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-sm! font-medium text-green-800">
             {t.status_active}
           </span>
         )}
         {isUpcoming && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-sm! font-medium text-blue-800">
             {t.status_upcoming}
           </span>
         )}
         {isEnded && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-gray-100 px-3 py-1 text-sm! font-medium text-gray-800">
             {t.status_ended}
           </span>
         )}

@@ -32,7 +32,7 @@ export function ElectionHeroCard({
       <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
-            <Typography variant="subtitle" level={1} className="text-[22px]">
+            <Typography variant="subtitle" level={1} className="text-[22px] font-semibold">
               {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
@@ -61,7 +61,7 @@ export function ElectionHeroCard({
 
           <div className="flex items-center gap-2 text-gray-600">
             <PiCoins className="text-gray-500 shrink-0" size={16} />
-            <Typography variant="body" level={3} className="text-sm!">
+            <Typography variant="body" level={3}>
               {t.reward_pool.replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(lang),

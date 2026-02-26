@@ -223,7 +223,7 @@ export default function PartiesPageClient({
               <Typography
                 variant="body"
                 level={3}
-                className="text-center text-sm text-gray-500"
+                className="text-center text-gray-500"
               >
                 {dictionary.pages.govern.parties.ambassadors.description}
                 <span className="inline-flex shrink-0 items-center">
