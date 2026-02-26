@@ -59,15 +59,17 @@ export function ElectionsList({
     ? elections.filter((e) => e.id !== heroElection.id)
     : [];
 
-  // Group the remaining elections
-  const upcomingElections = remaining.filter((e) => now < e.startsAt);
+  // Group the remaining elections (soonest first for upcoming)
+  const upcomingElections = remaining
+    .filter((e) => now < e.startsAt)
+    .sort((a, b) => a.startsAt - b.startsAt);
   const activeElections = remaining.filter(
     (e) => now >= e.startsAt && now <= e.endsAt,
   );
   const endedElections = remaining.filter((e) => now > e.endsAt);
 
   return (
-    <div className="flex flex-col pb-6">
+    <div className="flex flex-col">
       {/* Hero card for the most important election */}
       {heroElection && (
         <ElectionHeroCard
