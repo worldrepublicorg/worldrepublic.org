@@ -14,7 +14,11 @@ interface ElectionHeroCardProps {
   dictionary: Dictionary;
 }
 
-export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCardProps) {
+export function ElectionHeroCard({
+  election,
+  lang,
+  dictionary,
+}: ElectionHeroCardProps) {
   const t = dictionary.pages.govern.elections.detail;
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
@@ -28,7 +32,7 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
       <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
-            <Typography variant="heading" level={3} className="text-gray-900">
+            <Typography variant="subtitle" level={1} className="text-[22px]">
               {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
@@ -49,7 +53,7 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
         <div className="flex flex-col gap-2 mt-4">
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={16} />
-            <Typography variant="body" level={2}>
+            <Typography variant="body" level={3}>
               {formatElectionDate(election.startsAt, lang)} -{" "}
               {formatElectionDate(election.endsAt, lang)}
             </Typography>
@@ -57,7 +61,7 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
 
           <div className="flex items-center gap-2 text-gray-600">
             <PiCoins className="text-gray-500 shrink-0" size={16} />
-            <Typography variant="body" level={2}>
+            <Typography variant="body" level={3} className="text-sm!">
               {t.reward_pool.replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(lang),
@@ -66,7 +70,7 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
           </div>
         </div>
 
-        <Button fullWidth className="mt-5!">
+        <Button size="sm" fullWidth className="mt-5!">
           {dictionary.common.vote}
         </Button>
       </div>
