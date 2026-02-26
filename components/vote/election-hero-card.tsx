@@ -15,6 +15,7 @@ interface ElectionHeroCardProps {
 }
 
 export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCardProps) {
+  const t = dictionary.pages.govern.elections.detail;
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
   const isUpcoming = now < election.startsAt;
@@ -28,18 +29,18 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
             <Typography variant="heading" level={3} className="text-gray-900">
-              {localizeElectionName(election.name, dictionary.pages.govern.elections.detail.test_election_name)}
+              {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
           <div>
             {isActive && (
               <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">
-                Active
+                {t.status_active}
               </span>
             )}
             {isUpcoming && (
               <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">
-                Upcoming
+                {t.status_upcoming}
               </span>
             )}
           </div>
@@ -57,14 +58,16 @@ export function ElectionHeroCard({ election, lang, dictionary }: ElectionHeroCar
           <div className="flex items-center gap-2 text-gray-600">
             <PiCoins className="text-gray-500 shrink-0" size={16} />
             <Typography variant="body" level={2}>
-              Reward pool:{" "}
-              {Number.parseInt(election.rewardPool).toLocaleString(lang)} WDD
+              {t.reward_pool.replace(
+                "{amount}",
+                Number.parseInt(election.rewardPool).toLocaleString(lang),
+              )}
             </Typography>
           </div>
         </div>
 
         <Button fullWidth className="mt-5!">
-          {isActive ? "Vote now" : "View details"}
+          {dictionary.common.vote}
         </Button>
       </div>
     </Link>

@@ -211,7 +211,7 @@ export default function PartiesPageClient({
             lang={lang}
           />
         ) : activeTab === "ambassadors" ? (
-          <div className="flex flex-col items-start w-full px-6 pt-4 pb-6">
+          <div className="flex flex-col items-start w-full p-6">
             <div className="rounded-xl w-full border border-gray-200 bg-gray-50 p-4 mb-6 flex flex-col items-center text-center">
               <Typography
                 variant="subtitle"
