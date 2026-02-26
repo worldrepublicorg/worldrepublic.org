@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Ambassadeursprogram",
           "description": "Nooi vriende en verdien 'n stipendium wanneer hul party subsidies ontvang",
-          "copy_referral_link": "Kopieer verwysingskakel",
           "leaderboard": "Ranglys",
           "no_stipends_yet": "Nog geen stipendiums nie",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Genooi",
-          "col_stipend": "Stipendium"
+          "col_stipend": "Stipendium",
+          "share_referral_link": "Deel verwysingskakel"
         }
       },
       "elections": {

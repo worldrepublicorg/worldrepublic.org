@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Programa de Embajadores",
           "description": "Invita a amigos y gana un estipendio cuando su partido reciba subsidios",
-          "copy_referral_link": "Copiar enlace de referencia",
           "leaderboard": "Clasificación",
           "no_stipends_yet": "Aún no hay estipendios",
           "col_ambassador": "Embajadores",
           "col_invited": "Invitados",
-          "col_stipend": "Estipendio"
+          "col_stipend": "Estipendio",
+          "share_referral_link": "Compartir enlace de referencia"
         }
       },
       "elections": {

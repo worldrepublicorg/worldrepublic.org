@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Elchilar dasturi",
           "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida stipendiya oling",
-          "copy_referral_link": "Tavsiya havolasini nusxalash",
           "leaderboard": "Peshqadamlar jadvali",
           "no_stipends_yet": "Hali stipendiyalar yo'q",
           "col_ambassador": "Elchilar",
           "col_invited": "Taklif qilinganlar",
-          "col_stipend": "Stipendiya"
+          "col_stipend": "Stipendiya",
+          "share_referral_link": "Tavsiya havolasini ulashish"
         }
       },
       "elections": {

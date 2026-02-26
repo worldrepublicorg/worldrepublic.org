@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Program Ambasadorski",
           "description": "Zaproś znajomych i zdobądź stypendium, gdy ich partia otrzyma dotacje",
-          "copy_referral_link": "Kopiuj link polecający",
           "leaderboard": "Ranking",
           "no_stipends_yet": "Brak stypendiów",
           "col_ambassador": "Ambasadorzy",
           "col_invited": "Zaproszeni",
-          "col_stipend": "Stypendium"
+          "col_stipend": "Stypendium",
+          "share_referral_link": "Udostępnij link polecający"
         }
       },
       "elections": {

@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Botschafterprogramm",
           "description": "Laden Sie Freunde ein und verdienen Sie ein Stipendium, wenn deren Partei Zuschüsse erhält",
-          "copy_referral_link": "Empfehlungslink kopieren",
           "leaderboard": "Rangliste",
           "no_stipends_yet": "Noch keine Stipendien",
           "col_ambassador": "Botschafter",
           "col_invited": "Eingeladen",
-          "col_stipend": "Stipendium"
+          "col_stipend": "Stipendium",
+          "share_referral_link": "Empfehlungslink teilen"
         }
       },
       "elections": {

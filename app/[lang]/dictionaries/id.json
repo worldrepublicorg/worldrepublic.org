@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Program Duta",
           "description": "Undang teman dan dapatkan tunjangan saat partai mereka menerima subsidi",
-          "copy_referral_link": "Salin tautan referensi",
           "leaderboard": "Papan peringkat",
           "no_stipends_yet": "Belum ada tunjangan",
           "col_ambassador": "Duta",
           "col_invited": "Diundang",
-          "col_stipend": "Tunjangan"
+          "col_stipend": "Tunjangan",
+          "share_referral_link": "Bagikan tautan referensi"
         }
       },
       "elections": {

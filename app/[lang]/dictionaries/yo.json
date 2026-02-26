@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Ètò Aṣojú",
           "description": "Pe àwọn ọ̀rẹ́ rẹ kí o sì gba owó nígbà tí ẹgbẹ́ wọn bá gba ìrànwọ́",
-          "copy_referral_link": "Da àdírẹ́sì ìtọ́kasí",
           "leaderboard": "Àtòjọ olórí",
           "no_stipends_yet": "Kò sí owó kankan síbẹ̀",
           "col_ambassador": "Aṣojú",
           "col_invited": "Àwọn tí a pè",
-          "col_stipend": "Owó"
+          "col_stipend": "Owó",
+          "share_referral_link": "Pín àdírẹ́sì ìtọ́kasí"
         }
       },
       "elections": {

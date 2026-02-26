@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Ambasádorský program",
           "description": "Pozvite priateľov a získajte štipendium, keď ich strana dostane dotácie",
-          "copy_referral_link": "Kopírovať odkaz na odporúčanie",
           "leaderboard": "Rebríček",
           "no_stipends_yet": "Zatiaľ žiadne štipendiá",
           "col_ambassador": "Ambasádori",
           "col_invited": "Pozvaní",
-          "col_stipend": "Štipendium"
+          "col_stipend": "Štipendium",
+          "share_referral_link": "Zdieľať odkaz na odporúčanie"
         }
       },
       "elections": {

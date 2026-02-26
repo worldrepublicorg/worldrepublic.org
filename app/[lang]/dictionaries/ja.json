@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "アンバサダープログラム",
           "description": "友達を招待して、彼らの政党が補助金を受け取ったときに奨励金を獲得しましょう",
-          "copy_referral_link": "紹介リンクをコピー",
           "leaderboard": "リーダーボード",
           "no_stipends_yet": "まだ奨励金はありません",
           "col_ambassador": "アンバサダー",
           "col_invited": "招待数",
-          "col_stipend": "奨励金"
+          "col_stipend": "奨励金",
+          "share_referral_link": "紹介リンクを共有"
         }
       },
       "elections": {

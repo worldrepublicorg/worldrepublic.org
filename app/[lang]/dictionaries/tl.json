@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Programang Embahador",
           "description": "Mag-imbita ng mga kaibigan at kumita ng stipend kapag nakatanggap ng subsidyo ang kanilang partido",
-          "copy_referral_link": "Kopyahin ang referral link",
           "leaderboard": "Leaderboard",
           "no_stipends_yet": "Wala pang stipend",
           "col_ambassador": "Mga Embahador",
           "col_invited": "Inimbitahan",
-          "col_stipend": "Stipend"
+          "col_stipend": "Stipend",
+          "share_referral_link": "Ibahagi ang referral link"
         }
       },
       "elections": {

@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Programma Ambasciatori",
           "description": "Invita amici e guadagna un compenso quando il loro partito riceve sussidi",
-          "copy_referral_link": "Copia link di riferimento",
           "leaderboard": "Classifica",
           "no_stipends_yet": "Ancora nessun compenso",
           "col_ambassador": "Ambasciatori",
           "col_invited": "Invitati",
-          "col_stipend": "Compenso"
+          "col_stipend": "Compenso",
+          "share_referral_link": "Condividi link di riferimento"
         }
       },
       "elections": {

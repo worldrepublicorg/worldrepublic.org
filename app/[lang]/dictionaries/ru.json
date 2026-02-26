@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Программа амбассадоров",
           "description": "Приглашайте друзей и получайте стипендию, когда их партия получит субсидии",
-          "copy_referral_link": "Скопировать реферальную ссылку",
           "leaderboard": "Таблица лидеров",
           "no_stipends_yet": "Стипендий пока нет",
           "col_ambassador": "Амбассадоры",
           "col_invited": "Приглашённых",
-          "col_stipend": "Стипендия"
+          "col_stipend": "Стипендия",
+          "share_referral_link": "Поделиться реферальной ссылкой"
         }
       },
       "elections": {

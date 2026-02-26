@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Vēstnieku programma",
           "description": "Uzaiciniet draugus un nopelniet stipendiju, kad viņu partija saņem subsīdijas",
-          "copy_referral_link": "Kopēt atsauces saiti",
           "leaderboard": "Līderu tabula",
           "no_stipends_yet": "Vēl nav stipendiju",
           "col_ambassador": "Vēstnieki",
           "col_invited": "Uzaicināti",
-          "col_stipend": "Stipendija"
+          "col_stipend": "Stipendija",
+          "share_referral_link": "Kopīgot atsauces saiti"
         }
       },
       "elections": {

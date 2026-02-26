@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Chương trình Đại sứ",
           "description": "Mời bạn bè và nhận trợ cấp khi đảng của họ được nhận hỗ trợ",
-          "copy_referral_link": "Sao chép liên kết giới thiệu",
           "leaderboard": "Bảng xếp hạng",
           "no_stipends_yet": "Chưa có trợ cấp nào",
           "col_ambassador": "Đại sứ",
           "col_invited": "Người được mời",
-          "col_stipend": "Trợ cấp"
+          "col_stipend": "Trợ cấp",
+          "share_referral_link": "Chia sẻ liên kết giới thiệu"
         }
       },
       "elections": {

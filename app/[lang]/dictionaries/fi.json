@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Lähettiläsohjelma",
           "description": "Kutsu ystäviä ja ansaitse stipendi, kun heidän puolueensa saa tukia",
-          "copy_referral_link": "Kopioi suosittelulinkki",
           "leaderboard": "Tulostaulukko",
           "no_stipends_yet": "Ei vielä stipendejä",
           "col_ambassador": "Lähettiläät",
           "col_invited": "Kutsuttu",
-          "col_stipend": "Stipendi"
+          "col_stipend": "Stipendi",
+          "share_referral_link": "Jaa suosittelulinkki"
         }
       },
       "elections": {

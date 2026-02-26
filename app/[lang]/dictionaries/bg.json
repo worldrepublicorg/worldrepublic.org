@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Програма за посланици",
           "description": "Поканете приятели и получете стипендия, когато тяхната партия получи субсидии",
-          "copy_referral_link": "Копирай линк за препоръка",
           "leaderboard": "Класация",
           "no_stipends_yet": "Все още няма стипендии",
           "col_ambassador": "Посланици",
           "col_invited": "Поканени",
-          "col_stipend": "Стипендия"
+          "col_stipend": "Стипендия",
+          "share_referral_link": "Сподели линк за препоръка"
         }
       },
       "elections": {

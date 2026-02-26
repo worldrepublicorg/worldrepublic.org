@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Programul Ambasadorilor",
           "description": "Invită prieteni și câștigă o bursă când partidul lor primește subvenții",
-          "copy_referral_link": "Copiază linkul de recomandare",
           "leaderboard": "Clasament",
           "no_stipends_yet": "Încă nu există burse",
           "col_ambassador": "Ambasadori",
           "col_invited": "Invitați",
-          "col_stipend": "Bursă"
+          "col_stipend": "Bursă",
+          "share_referral_link": "Partajează linkul de recomandare"
         }
       },
       "elections": {

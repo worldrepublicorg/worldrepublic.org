@@ -77,12 +77,12 @@
         "ambassadors": {
           "title": "Səfir Proqramı",
           "description": "Dostlarınızı dəvət edin və onların partiyası subsidiya aldıqda mükafat qazanın",
-          "copy_referral_link": "Tövsiyə linkini kopyala",
           "leaderboard": "Liderlik cədvəli",
           "no_stipends_yet": "Hələ mükafat yoxdur",
           "col_ambassador": "Səfirlər",
           "col_invited": "Dəvət edilənlər",
-          "col_stipend": "Mükafat"
+          "col_stipend": "Mükafat",
+          "share_referral_link": "Tövsiyə linkini paylaşın"
         }
       },
       "elections": {

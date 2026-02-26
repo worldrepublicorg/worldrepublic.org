@@ -155,10 +155,24 @@ export default function PartiesPageClient({
     }
 
     const link = `${window.location.origin}/?ref=${code}`;
-    await copyToClipboard(link, toast, {
-      success: dictionary.toasts.copied,
-      error: dictionary.toasts.generic_error,
-    });
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ url: link });
+      } catch (error) {
+        if (error instanceof Error && error.name !== "AbortError") {
+          await copyToClipboard(link, toast, {
+            success: dictionary.toasts.copied,
+            error: dictionary.toasts.generic_error,
+          });
+        }
+      }
+    } else {
+      await copyToClipboard(link, toast, {
+        success: dictionary.toasts.copied,
+        error: dictionary.toasts.generic_error,
+      });
+    }
   };
 
   return (
@@ -220,7 +234,7 @@ export default function PartiesPageClient({
                 >
                   {
                     dictionary.pages.govern.parties.ambassadors
-                      .copy_referral_link
+                      .share_referral_link
                   }
                 </Button>
                 <Link
