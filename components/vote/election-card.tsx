@@ -63,9 +63,9 @@ export function ElectionCard({
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 mt-3">
-          <div className="flex items-center gap-1.5 text-gray-600">
-            <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
+        <div className="flex flex-col gap-1.5 mt-3">
+          <div className="flex items-center gap-2 text-gray-600">
+            <PiCalendarBlank className="text-gray-500 shrink-0" size={14} />
             <Typography variant="body" level={2} className="text-[14px]">
               {formatElectionDate(election.startsAt, lang)} -{" "}
               {formatElectionDate(election.endsAt, lang)}
@@ -73,7 +73,7 @@ export function ElectionCard({
           </div>
 
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCoins className="text-gray-500 shrink-0" size={15} />
+            <PiCoins className="text-gray-500 shrink-0" size={14} />
             <Typography variant="body" level={2} className="text-[14px]">
               {t.reward_pool.replace(
                 "{amount}",
