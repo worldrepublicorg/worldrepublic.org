@@ -31,7 +31,7 @@ export function VotePageSkeleton() {
             <Skeleton height={18} width="85%" className="rounded" />
             <Skeleton height={18} width="60%" className="rounded" />
           </div>
-          <Skeleton height={36} width="100%" className="mt-5! rounded-full" />
+          <Skeleton height={40} width="100%" className="mt-5! rounded-full" />
         </div>
 
         {/* Section title skeleton */}
