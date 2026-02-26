@@ -80,7 +80,8 @@ export default function WalletPageClient({
 
   useEffect(() => {
     let cancelled = false;
-    const pendingReferral = localStorage.getItem("pending_referral") || undefined;
+    const pendingReferral =
+      localStorage.getItem("pending_referral") || undefined;
     getWalletAuthAndData(pendingReferral).then((result) => {
       if (cancelled) return;
       setServerData(result);

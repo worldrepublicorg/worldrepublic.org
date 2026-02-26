@@ -7,11 +7,11 @@ import {
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { PiArrowSquareOut } from "react-icons/pi";
+import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { MenuLink } from "@/components/menu-link";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
@@ -63,6 +63,7 @@ export default function PartiesPageClient({
   >(null);
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const [leaderboardError, setLeaderboardError] = useState(false);
+  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
 
   // Hydrate referral code from server when authenticated and not yet loaded
   useEffect(() => {
@@ -215,44 +216,51 @@ export default function PartiesPageClient({
               <Typography
                 variant="subtitle"
                 level={1}
-                className="mb-2 text-[22px] font-semibold"
+                className="mb-[9px]! text-[22px] font-semibold"
               >
                 {dictionary.pages.govern.parties.ambassadors.title}
               </Typography>
               <Typography
                 variant="body"
                 level={3}
-                className="text-sm text-gray-500"
+                className="text-center text-sm text-gray-500"
               >
                 {dictionary.pages.govern.parties.ambassadors.description}
+                <span className="inline-flex shrink-0 items-center">
+                  <button
+                    type="button"
+                    onClick={() => setIsLearnMoreDrawerOpen(true)}
+                    className="inline-flex shrink-0 items-center justify-center text-gray-400"
+                    aria-label="Learn more"
+                  >
+                    <PiInfoFill className="mx-1 size-4 translate-y-[2px]!" />
+                  </button>
+                </span>
               </Typography>
-              <div className="mt-5 flex items-center gap-2">
+              <div className="mt-[21px]! flex items-center gap-2 w-full">
                 <Button
                   variant="primary"
                   size="sm"
                   onClick={handleCopyReferralLink}
+                  fullWidth
                 >
                   {
                     dictionary.pages.govern.parties.ambassadors
                       .share_referral_link
                   }
                 </Button>
-                <Link
-                  href="https://wiki.worldrepublic.org/building-blocks/ambassador-program"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="tertiary"
-                    size="sm"
-                    className="inline-flex items-center gap-1.5"
-                  >
-                    {dictionary.pages.govern.parties.learn_more}
-                    <PiArrowSquareOut className="size-4 shrink-0 text-gray-400" />
-                  </Button>
-                </Link>
               </div>
             </div>
+
+            <LearnMoreDrawer
+              open={isLearnMoreDrawerOpen}
+              onOpenChange={setIsLearnMoreDrawerOpen}
+              title={dictionary.pages.govern.parties.learn_more}
+              externalLink={{
+                url: "https://wiki.worldrepublic.org/building-blocks/ambassador-program",
+                label: dictionary.pages.govern.parties.ambassadors.title,
+              }}
+            />
 
             <Typography
               variant="subtitle"
