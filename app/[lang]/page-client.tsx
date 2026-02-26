@@ -35,7 +35,7 @@ export default function VotePageClient({
       <TabPills
         activeTab={activeTab}
         lang={lang}
-        basePath={`/${lang}/vote`}
+        basePath={`/${lang}`}
         tabs={[
           {
             key: "elections",
