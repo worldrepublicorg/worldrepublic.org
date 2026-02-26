@@ -1,48 +1,61 @@
-import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiChartBarHorizontalFill } from "react-icons/pi";
-import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { TabPills } from "@/components/tab-pills";
+import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
+import { TopBar } from "@/components/topbar";
 
-interface VotePageSkeletonProps {
-  dictionary: Dictionary;
-  lang: string;
-}
-
-export function VotePageSkeleton({ dictionary, lang }: VotePageSkeletonProps) {
+/**
+ * Vote page skeleton. Used by:
+ * - app/[lang]/vote/loading.tsx (route-level loading)
+ * - Vote page Suspense fallback
+ * No title in TopBar to avoid text popping before data (same as Parties/Wallet).
+ */
+export function VotePageSkeleton() {
   return (
-    <>
-      <TabPills
-        activeTab="elections"
-        lang={lang}
-        tabs={[
-          {
-            key: "elections",
-            label: dictionary.pages.govern.tabs.elections,
-          },
-          {
-            key: "referendums",
-            label: dictionary.pages.govern.tabs.referendums,
-          },
-        ]}
+    <div className="pb-safe flex min-h-dvh flex-col">
+      <TopBar
+        endAdornment={
+          <Skeleton height={40} width={40} className="rounded-full" />
+        }
       />
-      <div className="flex grow items-center justify-center">
-        <div className="flex w-full flex-col items-center justify-center p-6 text-center">
-          <div className="flex w-full flex-col items-center gap-4">
-            <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
-              <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
-            </div>
-            <Typography variant="heading" level={2}>
-              {dictionary.pages.govern.sections.elections.title}
-            </Typography>
-            <Typography variant="subtitle" level={2} className="text-gray-500">
-              {dictionary.pages.govern.sections.elections.subtitle}
-            </Typography>
-            <Button disabled fullWidth className="mt-6!">
-              {dictionary.common.vote}
-            </Button>
+      {/* Tab pills skeleton */}
+      <div className="flex gap-1 overflow-x-auto px-6">
+        <Skeleton height={36} width={80} className="rounded-full" />
+        <Skeleton height={36} width={80} className="rounded-full" />
+      </div>
+      <div className="flex grow flex-col overflow-y-auto p-6">
+        {/* Hero card skeleton (ElectionHeroCard) */}
+        <div className="mb-6 rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
+            <Skeleton height={26} width="70%" className="rounded-lg" />
+            <Skeleton height={22} width={70} className="rounded-full" />
           </div>
+          <div className="mt-4 flex flex-col gap-2">
+            <Skeleton height={18} width="85%" className="rounded" />
+            <Skeleton height={18} width="60%" className="rounded" />
+          </div>
+          <Skeleton height={36} width="100%" className="mt-5! rounded-full" />
+        </div>
+
+        {/* Section title skeleton */}
+        <Skeleton height={23} width={140} className="mb-3! rounded-lg" />
+
+        {/* Election card skeletons */}
+        <div className="flex flex-col">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className={`rounded-xl border border-gray-200 p-4 ${i < 3 ? "mb-4" : ""}`}
+            >
+              <div className="mb-2 flex items-center justify-between">
+                <Skeleton height={22} width="65%" className="rounded-lg" />
+                <Skeleton height={20} width={55} className="rounded-full" />
+              </div>
+              <div className="mt-3 flex flex-col gap-1.5">
+                <Skeleton height={16} width="75%" className="rounded" />
+                <Skeleton height={16} width="50%" className="rounded" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

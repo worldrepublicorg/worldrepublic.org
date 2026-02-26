@@ -14,7 +14,7 @@ const getCachedElections = unstable_cache(
     return await getElections();
   },
   ["elections-list"],
-  { revalidate: 60, tags: ["elections-list"] },
+  { revalidate: 86400, tags: ["elections-list"] },
 );
 
 export async function generateStaticParams() {
@@ -31,7 +31,13 @@ async function VoteData({
   const elections: Election[] = await getCachedElections();
 
   return (
-    <VotePageClient elections={elections} dictionary={dictionary} lang={lang} />
+    <div className="pb-safe flex min-h-dvh flex-col">
+      <TopBar
+        title={dictionary.nav.world_republic}
+        endAdornment={<MenuLink lang={lang} />}
+      />
+      <VotePageClient elections={elections} dictionary={dictionary} lang={lang} />
+    </div>
   );
 }
 
@@ -44,16 +50,8 @@ export default async function VotePage({
   const dictionary = await getDictionary(lang);
 
   return (
-    <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        title={dictionary.nav.world_republic}
-        endAdornment={<MenuLink lang={lang} />}
-      />
-      <Suspense
-        fallback={<VotePageSkeleton dictionary={dictionary} lang={lang} />}
-      >
-        <VoteData lang={lang} dictionary={dictionary} />
-      </Suspense>
-    </div>
+    <Suspense fallback={<VotePageSkeleton />}>
+      <VoteData lang={lang} dictionary={dictionary} />
+    </Suspense>
   );
 }
