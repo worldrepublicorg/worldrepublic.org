@@ -39,7 +39,7 @@ export function VotePageSkeleton() {
 
         {/* Election card skeletons */}
         <div className="flex flex-col">
-          {[1, 2, 3].map((i) => (
+          {[1, 2, 3, 4, 5].map((i) => (
             <div
               key={i}
               className={`rounded-xl border border-gray-200 p-4 ${i < 3 ? "mb-4" : ""}`}
