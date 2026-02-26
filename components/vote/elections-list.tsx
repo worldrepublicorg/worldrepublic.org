@@ -67,9 +67,15 @@ export function ElectionsList({
   const endedElections = remaining.filter((e) => now > e.endsAt);
 
   return (
-    <div className="flex flex-col pb-24">
+    <div className="flex flex-col pb-6">
       {/* Hero card for the most important election */}
-      {heroElection && <ElectionHeroCard election={heroElection} lang={lang} dictionary={dictionary} />}
+      {heroElection && (
+        <ElectionHeroCard
+          election={heroElection}
+          lang={lang}
+          dictionary={dictionary}
+        />
+      )}
 
       {/* Active Elections Section (excluding hero) */}
       {activeElections.length > 0 && (
