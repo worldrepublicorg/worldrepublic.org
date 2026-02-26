@@ -216,7 +216,7 @@ export default function PartiesPageClient({
               <Typography
                 variant="subtitle"
                 level={1}
-                className="mb-[9px]! text-[22px] font-semibold"
+                className="mb-[10px]! text-[22px] font-semibold"
               >
                 {dictionary.pages.govern.parties.ambassadors.title}
               </Typography>
