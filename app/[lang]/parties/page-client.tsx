@@ -212,7 +212,7 @@ export default function PartiesPageClient({
           />
         ) : activeTab === "ambassadors" ? (
           <div className="flex flex-col items-start w-full p-6">
-            <div className="rounded-xl w-full border border-gray-200 bg-gray-50 p-4 mb-6 flex flex-col items-center text-center">
+            <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center shadow-sm">
               <Typography
                 variant="subtitle"
                 level={1}
