@@ -68,7 +68,7 @@ export const getDictionary = unstable_cache(
     return loader();
   },
   ["dictionary"],
-  { revalidate: 3600 },
+  { revalidate: 10 },
 );
 
 // Export locales for static generation
