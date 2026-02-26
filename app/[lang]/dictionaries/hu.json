@@ -106,6 +106,12 @@
           "no_votes": "Ebben a választásban nem adtak le szavazatot.",
           "test_election_name": "Tesztválasztás {n}",
           "try_verification": "Ellenőrzés kipróbálása"
+        },
+        "list": {
+          "empty_state": "Nem található választás",
+          "active_section": "Aktív választások",
+          "upcoming_section": "Következő választások",
+          "previous_section": "Korábbi választások"
         }
       }
     },

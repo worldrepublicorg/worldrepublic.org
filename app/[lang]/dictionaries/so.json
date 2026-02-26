@@ -106,6 +106,12 @@
           "no_votes": "Doorashadaan lama codin.",
           "test_election_name": "Doorasho tijaabo {n}",
           "try_verification": "Tijaabi xaqiijinta"
+        },
+        "list": {
+          "empty_state": "Doorasho lama helin",
+          "active_section": "Doorashooyinka socda",
+          "upcoming_section": "Doorashooyinka soo socda",
+          "previous_section": "Doorashooyinkii hore"
         }
       }
     },

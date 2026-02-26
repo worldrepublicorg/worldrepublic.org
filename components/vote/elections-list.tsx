@@ -48,7 +48,7 @@ export function ElectionsList({
   if (elections.length === 0) {
     return (
       <div className="mt-4 mb-8 text-center text-sm text-gray-500">
-        No elections found
+        {dictionary.pages.govern.elections.list.empty_state}
       </div>
     );
   }
@@ -79,7 +79,7 @@ export function ElectionsList({
             level={1}
             className="text-[19px] font-semibold mb-3!"
           >
-            Active elections
+            {dictionary.pages.govern.elections.list.active_section}
           </Typography>
           <div className="flex flex-col">
             {activeElections.map((election, index) => (
@@ -103,7 +103,7 @@ export function ElectionsList({
             level={1}
             className="text-[19px] font-semibold mb-3!"
           >
-            Upcoming elections
+            {dictionary.pages.govern.elections.list.upcoming_section}
           </Typography>
           <div className="flex flex-col">
             {upcomingElections.map((election, index) => (
@@ -127,7 +127,7 @@ export function ElectionsList({
             level={1}
             className="text-[19px] font-semibold mb-3!"
           >
-            Previous elections
+            {dictionary.pages.govern.elections.list.previous_section}
           </Typography>
           <div className="flex flex-col">
             {endedElections.map((election, index) => (

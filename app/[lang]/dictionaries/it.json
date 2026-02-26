@@ -106,6 +106,12 @@
           "no_votes": "Nessun voto è stato espresso in questa elezione.",
           "test_election_name": "Elezione di prova {n}",
           "try_verification": "Prova la verifica"
+        },
+        "list": {
+          "empty_state": "Nessuna elezione trovata",
+          "active_section": "Elezioni attive",
+          "upcoming_section": "Elezioni imminenti",
+          "previous_section": "Elezioni precedenti"
         }
       }
     },

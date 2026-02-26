@@ -106,6 +106,12 @@
           "no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
           "test_election_name": "Sinov saylovi {n}",
           "try_verification": "Tekshiruvni sinab ko'ring"
+        },
+        "list": {
+          "empty_state": "Saylovlar topilmadi",
+          "active_section": "Faol saylovlar",
+          "upcoming_section": "Kelgusi saylovlar",
+          "previous_section": "Oldingi saylovlar"
         }
       }
     },

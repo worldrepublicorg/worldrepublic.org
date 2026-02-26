@@ -106,6 +106,12 @@
           "no_votes": "W tych wyborach nie oddano żadnych głosów.",
           "test_election_name": "Wybory testowe {n}",
           "try_verification": "Wypróbuj weryfikację"
+        },
+        "list": {
+          "empty_state": "Nie znaleziono wyborów",
+          "active_section": "Aktywne wybory",
+          "upcoming_section": "Nadchodzące wybory",
+          "previous_section": "Poprzednie wybory"
         }
       }
     },

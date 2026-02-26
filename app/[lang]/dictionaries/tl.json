@@ -106,6 +106,12 @@
           "no_votes": "Walang bumoto sa halalang ito.",
           "test_election_name": "Test election {n}",
           "try_verification": "Subukan ang pagpapatunay"
+        },
+        "list": {
+          "empty_state": "Walang natagpuang halalan",
+          "active_section": "Aktibong halalan",
+          "upcoming_section": "Paparating na halalan",
+          "previous_section": "Nakaraang halalan"
         }
       }
     },

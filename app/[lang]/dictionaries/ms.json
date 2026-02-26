@@ -106,6 +106,12 @@
           "no_votes": "Tiada undi diberikan dalam pilihan raya ini.",
           "test_election_name": "Pilihan raya ujian {n}",
           "try_verification": "Cuba pengesahan"
+        },
+        "list": {
+          "empty_state": "Tiada pilihan raya ditemui",
+          "active_section": "Pilihan raya aktif",
+          "upcoming_section": "Pilihan raya akan datang",
+          "previous_section": "Pilihan raya terdahulu"
         }
       }
     },

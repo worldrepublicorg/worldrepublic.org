@@ -106,6 +106,12 @@
           "no_votes": "В этих выборах не было подано голосов.",
           "test_election_name": "Тестовые выборы {n}",
           "try_verification": "Попробовать верификацию"
+        },
+        "list": {
+          "empty_state": "Выборы не найдены",
+          "active_section": "Активные выборы",
+          "upcoming_section": "Предстоящие выборы",
+          "previous_section": "Прошедшие выборы"
         }
       }
     },

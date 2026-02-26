@@ -106,6 +106,12 @@
           "no_votes": "V těchto volbách nebyly odevzdány žádné hlasy.",
           "test_election_name": "Testovací volba {n}",
           "try_verification": "Vyzkoušet ověření"
+        },
+        "list": {
+          "empty_state": "Nebyly nalezeny žádné volby",
+          "active_section": "Aktivní volby",
+          "upcoming_section": "Nadcházející volby",
+          "previous_section": "Předchozí volby"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "इस चुनाव में कोई वोट नहीं डाला गया।",
           "test_election_name": "परीक्षण चुनाव {n}",
           "try_verification": "सत्यापन आज़माएँ"
+        },
+        "list": {
+          "empty_state": "कोई चुनाव नहीं मिला",
+          "active_section": "सक्रिय चुनाव",
+          "upcoming_section": "आगामी चुनाव",
+          "previous_section": "पिछले चुनाव"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "Hakuna kura zilizopigwa katika uchaguzi huu.",
           "test_election_name": "Uchaguzi wa majaribio {n}",
           "try_verification": "Jaribu uthibitisho"
+        },
+        "list": {
+          "empty_state": "Hakuna uchaguzi uliopatikana",
+          "active_section": "Chaguzi zinazoendelea",
+          "upcoming_section": "Chaguzi zijazo",
+          "previous_section": "Chaguzi zilizopita"
         }
       }
     },

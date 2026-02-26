@@ -106,6 +106,12 @@
           "no_votes": "Šiuose rinkimuose nebuvo balsuota.",
           "test_election_name": "Testiniai rinkimai {n}",
           "try_verification": "Išbandyti patvirtinimą"
+        },
+        "list": {
+          "empty_state": "Rinkimų nerasta",
+          "active_section": "Aktyvūs rinkimai",
+          "upcoming_section": "Būsimi rinkimai",
+          "previous_section": "Ankstesni rinkimai"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "Ba a jefa ƙuri’a a wannan zaɓen ba.",
           "test_election_name": "Zaɓen gwaji {n}",
           "try_verification": "Gwada tabbatarwa"
+        },
+        "list": {
+          "empty_state": "Ba a sami zabe ba",
+          "active_section": "Zabe masu gudana",
+          "upcoming_section": "Zabe masu zuwa",
+          "previous_section": "Zabe da suka gabata"
         }
       }
     },

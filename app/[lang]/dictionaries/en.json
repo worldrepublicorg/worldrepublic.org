@@ -30,6 +30,12 @@
         }
       },
       "elections": {
+        "list": {
+          "empty_state": "No elections found",
+          "active_section": "Active elections",
+          "upcoming_section": "Upcoming elections",
+          "previous_section": "Previous elections"
+        },
         "detail": {
           "topbar_title": "Election",
           "not_found": "Election not found",

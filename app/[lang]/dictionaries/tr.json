@@ -106,6 +106,12 @@
           "no_votes": "Bu seçimde hiç oy kullanılmadı.",
           "test_election_name": "Test seçimi {n}",
           "try_verification": "Doğrulamayı dene"
+        },
+        "list": {
+          "empty_state": "Seçim bulunamadı",
+          "active_section": "Aktif seçimler",
+          "upcoming_section": "Yaklaşan seçimler",
+          "previous_section": "Önceki seçimler"
         }
       }
     },

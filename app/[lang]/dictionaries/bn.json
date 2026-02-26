@@ -106,6 +106,12 @@
           "no_votes": "এই নির্বাচনে কোনো ভোট পড়েনি।",
           "test_election_name": "পরীক্ষামূলক নির্বাচন {n}",
           "try_verification": "যাচাইকরণ চেষ্টা করুন"
+        },
+        "list": {
+          "empty_state": "কোন নির্বাচন পাওয়া যায়নি",
+          "active_section": "সক্রিয় নির্বাচন",
+          "upcoming_section": "আসন্ন নির্বাচন",
+          "previous_section": "পূর্ববর্তী নির্বাচন"
         }
       }
     },

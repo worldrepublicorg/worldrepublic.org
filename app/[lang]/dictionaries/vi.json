@@ -106,6 +106,12 @@
           "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
           "test_election_name": "Bầu cử thử nghiệm {n}",
           "try_verification": "Thử xác minh"
+        },
+        "list": {
+          "empty_state": "Không tìm thấy cuộc bầu cử nào",
+          "active_section": "Các cuộc bầu cử đang diễn ra",
+          "upcoming_section": "Các cuộc bầu cử sắp tới",
+          "previous_section": "Các cuộc bầu cử trước đây"
         }
       }
     },

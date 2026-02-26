@@ -106,6 +106,12 @@
           "no_votes": "V teh volitvah ni bilo oddanih glasov.",
           "test_election_name": "Testne volitve {n}",
           "try_verification": "Preizkusite preverjanje"
+        },
+        "list": {
+          "empty_state": "Volitev ni bilo mogoče najti",
+          "active_section": "Aktivne volitve",
+          "upcoming_section": "Prihajajoče volitve",
+          "previous_section": "Prejšnje volitve"
         }
       }
     },

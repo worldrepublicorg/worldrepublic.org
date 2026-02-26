@@ -106,6 +106,12 @@
           "no_votes": "هیچ رأیی در این انتخابات داده نشد.",
           "test_election_name": "انتخابات آزمایشی {n}",
           "try_verification": "تأیید هویت را امتحان کنید"
+        },
+        "list": {
+          "empty_state": "هیچ انتخاباتی یافت نشد",
+          "active_section": "انتخابات فعال",
+          "upcoming_section": "انتخابات آینده",
+          "previous_section": "انتخابات قبلی"
         }
       }
     },

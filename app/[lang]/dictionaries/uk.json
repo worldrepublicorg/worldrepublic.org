@@ -106,6 +106,12 @@
           "no_votes": "У цих виборах не було подано голосів.",
           "test_election_name": "Тестові вибори {n}",
           "try_verification": "Спробувати верифікацію"
+        },
+        "list": {
+          "empty_state": "Виборів не знайдено",
+          "active_section": "Активні вибори",
+          "upcoming_section": "Майбутні вибори",
+          "previous_section": "Попередні вибори"
         }
       }
     },

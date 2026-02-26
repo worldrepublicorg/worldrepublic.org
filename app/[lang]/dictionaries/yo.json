@@ -106,6 +106,12 @@
           "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí.",
           "test_election_name": "Ìdìbò ìdànwò {n}",
           "try_verification": "Gbiyanju ìjẹ́rìísí"
+        },
+        "list": {
+          "empty_state": "Ko si idibo ti a ri",
+          "active_section": "Awọn idibo ti n lọ lọwọ",
+          "upcoming_section": "Awọn idibo ti n bọ",
+          "previous_section": "Awọn idibo ti o kọja"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "Ùn ci sò stati voti in questa elezzione.",
           "test_election_name": "Elezione di prova {n}",
           "try_verification": "Pruvate a verificazione"
+        },
+        "list": {
+          "empty_state": "Nisuna elezzione trovata",
+          "active_section": "Elezzioni attive",
+          "upcoming_section": "Elezzioni à vene",
+          "previous_section": "Elezzioni passate"
         }
       }
     },

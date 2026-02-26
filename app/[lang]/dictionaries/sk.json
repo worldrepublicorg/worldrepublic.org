@@ -106,6 +106,12 @@
           "no_votes": "V týchto voľbách neboli odovzdané žiadne hlasy.",
           "test_election_name": "Testovacie voľby {n}",
           "try_verification": "Vyskúšať overenie"
+        },
+        "list": {
+          "empty_state": "Nenašli sa žiadne voľby",
+          "active_section": "Aktívne voľby",
+          "upcoming_section": "Nadchádzajúce voľby",
+          "previous_section": "Predchádzajúce voľby"
         }
       }
     },

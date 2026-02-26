@@ -106,6 +106,12 @@
           "no_votes": "Nu au fost exprimate voturi în această alegere.",
           "test_election_name": "Alegere de test {n}",
           "try_verification": "Încercați verificarea"
+        },
+        "list": {
+          "empty_state": "Nu s-au găsit alegeri",
+          "active_section": "Alegeri active",
+          "upcoming_section": "Alegeri viitoare",
+          "previous_section": "Alegeri anterioare"
         }
       }
     },

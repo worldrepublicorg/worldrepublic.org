@@ -106,6 +106,12 @@
           "no_votes": "В тези избори не бяха подадени гласове.",
           "test_election_name": "Тестов избор {n}",
           "try_verification": "Опитайте верификация"
+        },
+        "list": {
+          "empty_state": "Няма намерени избори",
+          "active_section": "Активни избори",
+          "upcoming_section": "Предстоящи избори",
+          "previous_section": "Предишни избори"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "Bu seçimdə heç bir səs verilmədi.",
           "test_election_name": "Sınaq seçkisi {n}",
           "try_verification": "Doğrulamanı sına"
+        },
+        "list": {
+          "empty_state": "Seçki tapılmadı",
+          "active_section": "Aktiv seçkilər",
+          "upcoming_section": "Gələcək seçkilər",
+          "previous_section": "Əvvəlki seçkilər"
         }
       }
     },

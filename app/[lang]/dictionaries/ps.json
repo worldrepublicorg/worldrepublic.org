@@ -106,6 +106,12 @@
           "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
           "test_election_name": "آزمایښتي ټاکنه {n}",
           "try_verification": "تصدیق آزمایښت وکړئ"
+        },
+        "list": {
+          "empty_state": "هیڅ ټاکنې ونه موندل شوې",
+          "active_section": "فعالې ټاکنې",
+          "upcoming_section": "راتلونکې ټاکنې",
+          "previous_section": "پخوانۍ ټاکنې"
         }
       }
     },

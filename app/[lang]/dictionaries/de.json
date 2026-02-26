@@ -106,6 +106,12 @@
           "no_votes": "Bei dieser Wahl wurden keine Stimmen abgegeben.",
           "test_election_name": "Testwahl {n}",
           "try_verification": "Verifizierung testen"
+        },
+        "list": {
+          "empty_state": "Keine Wahlen gefunden",
+          "active_section": "Aktive Wahlen",
+          "upcoming_section": "Bevorstehende Wahlen",
+          "previous_section": "Vergangene Wahlen"
         }
       }
     },

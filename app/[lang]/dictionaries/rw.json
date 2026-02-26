@@ -106,6 +106,12 @@
           "no_votes": "Nta majwi yatanzwe muri iyi matora.",
           "test_election_name": "Itora ry'igerageza {n}",
           "try_verification": "Gerageza kwemeza"
+        },
+        "list": {
+          "empty_state": "Nta matora yabonetse",
+          "active_section": "Amatora ari kuba",
+          "upcoming_section": "Amatora ari imbere",
+          "previous_section": "Amatora yashize"
         }
       }
     },

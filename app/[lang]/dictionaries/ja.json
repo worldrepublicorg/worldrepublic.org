@@ -106,6 +106,12 @@
           "no_votes": "この選挙では投票がありませんでした。",
           "test_election_name": "テスト選挙 {n}",
           "try_verification": "認証を試す"
+        },
+        "list": {
+          "empty_state": "選挙が見つかりませんでした",
+          "active_section": "現在の選挙",
+          "upcoming_section": "今後の選挙",
+          "previous_section": "過去の選挙"
         }
       }
     },

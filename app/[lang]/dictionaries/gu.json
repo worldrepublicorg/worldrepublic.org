@@ -106,6 +106,12 @@
           "no_votes": "આ ચૂંટણીમાં કોઈ મત આપવામાં આવ્યા નથી.",
           "test_election_name": "પરિક્ષણ ચૂંટણી {n}",
           "try_verification": "ચકાસણી અજમાવો"
+        },
+        "list": {
+          "empty_state": "કોઈ ચૂંટણી મળી નથી",
+          "active_section": "સક્રિય ચૂંટણીઓ",
+          "upcoming_section": "આગામી ચૂંટણીઓ",
+          "previous_section": "અગાઉની ચૂંટણીઓ"
         }
       }
     },

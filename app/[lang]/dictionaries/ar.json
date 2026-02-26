@@ -106,6 +106,12 @@
           "no_votes": "لم يتم الإدلاء بأي أصوات في هذا الانتخاب.",
           "test_election_name": "انتخاب تجريبي {n}",
           "try_verification": "جرّب التحقق"
+        },
+        "list": {
+          "empty_state": "لم يتم العثور على انتخابات",
+          "active_section": "الانتخابات النشطة",
+          "upcoming_section": "الانتخابات القادمة",
+          "previous_section": "الانتخابات السابقة"
         }
       }
     },

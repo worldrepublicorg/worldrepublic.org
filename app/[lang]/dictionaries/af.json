@@ -106,6 +106,12 @@
           "no_votes": "Geen stemme is in hierdie verkiesing uitgebring nie.",
           "test_election_name": "Toetsverkiesing {n}",
           "try_verification": "Probeer verifikasie"
+        },
+        "list": {
+          "empty_state": "Geen verkiesings gevind nie",
+          "active_section": "Aktiewe verkiesings",
+          "upcoming_section": "Komende verkiesings",
+          "previous_section": "Vorige verkiesings"
         }
       }
     },

@@ -106,6 +106,12 @@
           "no_votes": "اس الیکشن میں کوئی ووٹ نہیں ڈالا گیا۔",
           "test_election_name": "ٹیسٹ انتخابات {n}",
           "try_verification": "تصدیق آزمائیں"
+        },
+        "list": {
+          "empty_state": "کوئی انتخابات نہیں ملے",
+          "active_section": "فعال انتخابات",
+          "upcoming_section": "آئندہ انتخابات",
+          "previous_section": "گزشتہ انتخابات"
         }
       }
     },

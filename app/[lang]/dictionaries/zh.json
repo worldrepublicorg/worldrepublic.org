@@ -106,6 +106,12 @@
           "no_votes": "本次选举没有投票。",
           "test_election_name": "测试选举 {n}",
           "try_verification": "尝试验证"
+        },
+        "list": {
+          "empty_state": "未找到选举",
+          "active_section": "进行中的选举",
+          "upcoming_section": "即将到来的选举",
+          "previous_section": "往届选举"
         }
       }
     },

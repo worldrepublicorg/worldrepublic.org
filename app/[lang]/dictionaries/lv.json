@@ -106,6 +106,12 @@
           "no_votes": "Šajās vēlēšanās neviena balss netika nodota.",
           "test_election_name": "Testa vēlēšanas {n}",
           "try_verification": "Izmēģināt verifikāciju"
+        },
+        "list": {
+          "empty_state": "Vēlēšanas nav atrastas",
+          "active_section": "Aktīvās vēlēšanas",
+          "upcoming_section": "Gaidāmās vēlēšanas",
+          "previous_section": "Iepriekšējās vēlēšanas"
         }
       }
     },

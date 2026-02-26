@@ -106,6 +106,12 @@
           "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
           "test_election_name": "Testverkiezing {n}",
           "try_verification": "Verificatie proberen"
+        },
+        "list": {
+          "empty_state": "Geen verkiezingen gevonden",
+          "active_section": "Actieve verkiezingen",
+          "upcoming_section": "Komende verkiezingen",
+          "previous_section": "Vorige verkiezingen"
         }
       }
     },

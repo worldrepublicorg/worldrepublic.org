@@ -106,6 +106,12 @@
           "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
           "test_election_name": "የሙከራ ምርጫ {n}",
           "try_verification": "ማረጋገጫ ሞክር"
+        },
+        "list": {
+          "empty_state": "ምንም ምርጫዎች አልተገኙም",
+          "active_section": "ንቁ ምርጫዎች",
+          "upcoming_section": "የሚመጡ ምርጫዎች",
+          "previous_section": "የቀድሞ ምርጫዎች"
         }
       }
     },
