@@ -63,7 +63,7 @@ export function ElectionCard({
           </div>
         </div>
 
-        <div className="flex flex-col gap-1.5 mt-3">
+        <div className="flex flex-col gap-1.5 mt-[9px]">
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={14} />
             <Typography variant="body" level={2} className="text-[14px]">
