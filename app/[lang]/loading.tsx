@@ -1,5 +1,5 @@
-import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
+import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
 
-export default function HomePageLoading() {
-  return <HomePageSkeleton />;
+export default function VotePageLoading() {
+  return <VotePageSkeleton />;
 }

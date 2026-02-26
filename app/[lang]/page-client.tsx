@@ -1,79 +1,41 @@
 "use client";
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { PiChartBarHorizontalFill, PiScrollFill } from "react-icons/pi";
+import { PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
-import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
-import { TopBar } from "@/components/topbar";
-import { getFeaturedElectionId } from "@/lib/actions/elections";
-import {
-  getCachedFeaturedElectionId,
-  setCachedFeaturedElectionId,
-} from "@/lib/featured-election-cache";
+import { ElectionsList } from "@/components/vote/elections-list";
+import type { Election } from "@/lib/types/elections";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
 
-interface HomePageClientProps {
-  lang: string;
+interface VotePageClientProps {
+  elections: Election[];
   dictionary: Dictionary;
+  lang: string;
 }
 
-export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
+export default function VotePageClient({
+  elections,
+  dictionary,
+  lang,
+}: VotePageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
-
-  const [cachedFeaturedElectionId] = useState<string | null>(
-    getCachedFeaturedElectionId,
-  );
-  const [serverFeaturedElectionId, setServerFeaturedElectionId] = useState<
-    string | null | undefined
-  >(undefined);
-
-  useEffect(() => {
-    let cancelled = false;
-    getFeaturedElectionId().then((result) => {
-      if (cancelled) return;
-      setServerFeaturedElectionId(result);
-      setCachedFeaturedElectionId(result);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Use server data if available, otherwise fall back to cache
-  const featuredElectionId =
-    serverFeaturedElectionId ?? cachedFeaturedElectionId;
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
 
-  const voteHref = featuredElectionId
-    ? `/${lang}/vote/elections?id=${featuredElectionId}`
-    : `/${lang}/vote`;
-
-  // Show skeleton only when we have no data (no cache and no server result yet)
-  if (featuredElectionId === null || featuredElectionId === undefined) {
-    return <HomePageSkeleton />;
-  }
-
   return (
-    <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        title={dictionary.nav.world_republic}
-        endAdornment={<MenuLink lang={lang} />}
-      />
+    <>
       <TabPills
         activeTab={activeTab}
         lang={lang}
+        basePath={`/${lang}/vote`}
         tabs={[
           {
             key: "elections",
@@ -85,53 +47,40 @@ export function HomePageClient({ lang, dictionary }: HomePageClientProps) {
           },
         ]}
       />
-      <div className="flex grow items-center justify-center">
+      <div className="flex grow flex-col overflow-y-auto">
         {activeTab === "elections" ? (
-          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
-            <div className="flex w-full flex-col items-center gap-4">
-              <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
-                <PiChartBarHorizontalFill className="h-10 w-10 text-gray-400" />
-              </div>
-              <Typography variant="heading" level={2}>
-                {dictionary.pages.govern.sections.elections.title}
-              </Typography>
-              <Typography
-                variant="subtitle"
-                level={2}
-                className="text-gray-500"
-              >
-                {dictionary.pages.govern.sections.elections.subtitle}
-              </Typography>
-              <Link href={voteHref} className="w-full">
-                <Button fullWidth className="mt-6!">
-                  {dictionary.common.vote}
-                </Button>
-              </Link>
-            </div>
+          <div className="flex-1 overflow-y-auto p-6">
+            <ElectionsList
+              elections={elections}
+              lang={lang}
+              dictionary={dictionary}
+            />
           </div>
         ) : (
-          <div className="flex w-full flex-col items-center justify-center p-6 text-center">
-            <div className="flex w-full flex-col items-center gap-4">
-              <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
-                <PiScrollFill className="h-10 w-10 text-gray-400" />
+          <div className="flex grow items-center justify-center">
+            <div className="flex w-full flex-col items-center justify-center p-6 text-center">
+              <div className="flex w-full flex-col items-center gap-4">
+                <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
+                  <PiScrollFill className="h-10 w-10 text-gray-400" />
+                </div>
+                <Typography variant="heading" level={2}>
+                  {dictionary.pages.govern.sections.referendums.title}
+                </Typography>
+                <Typography
+                  variant="subtitle"
+                  level={2}
+                  className="text-gray-500"
+                >
+                  {dictionary.pages.govern.sections.referendums.subtitle}
+                </Typography>
+                <Button disabled fullWidth className="mt-6!">
+                  {dictionary.common.coming_soon}
+                </Button>
               </div>
-              <Typography variant="heading" level={2}>
-                {dictionary.pages.govern.sections.referendums.title}
-              </Typography>
-              <Typography
-                variant="subtitle"
-                level={2}
-                className="text-gray-500"
-              >
-                {dictionary.pages.govern.sections.referendums.subtitle}
-              </Typography>
-              <Button disabled fullWidth className="mt-6!">
-                {dictionary.common.coming_soon}
-              </Button>
             </div>
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 }
