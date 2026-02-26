@@ -75,7 +75,7 @@ export function ElectionCard({
           <div className="flex items-center gap-2 text-gray-600">
             <PiCoins className="text-gray-500 shrink-0" size={14} />
             <Typography variant="body" level={2} className="text-[14px]">
-              {t.reward_pool.replace(
+              {t[isUpcoming ? "reward_pool_minimum" : "reward_pool"].replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(lang),
               )}

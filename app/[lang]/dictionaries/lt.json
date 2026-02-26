@@ -96,6 +96,7 @@
           "status_ended": "Pasibaigę",
           "election_info": "Rinkimų informacija",
           "reward_pool": "Atlygio fondas: {amount} WDD",
+          "reward_pool_minimum": "Atlygio fondas: mažiausiai {amount} WDD",
           "voting_opens": "Balsavimas prasideda {date}",
           "check_back": "Grįžkite, kai rinkimai prasidės, kad galėtumėte balsuoti",
           "choose_a_party": "Pasirinkite partiją",

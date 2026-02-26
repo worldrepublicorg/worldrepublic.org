@@ -96,6 +96,7 @@
           "status_ended": "Beëindig",
           "election_info": "Verkiesingsinligting",
           "reward_pool": "Beloningspoel: {amount} WDD",
+          "reward_pool_minimum": "Beloningspoel: minimum {amount} WDD",
           "voting_opens": "Stemming open {date}",
           "check_back": "Kom terug wanneer die verkiesing begin om jou stem uit te bring",
           "choose_a_party": "Kies 'n party",

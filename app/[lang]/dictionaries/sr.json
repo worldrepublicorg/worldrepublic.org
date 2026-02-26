@@ -96,6 +96,7 @@
           "status_ended": "Завршени",
           "election_info": "Информације о изборима",
           "reward_pool": "Наградни фонд: {amount} WDD",
+          "reward_pool_minimum": "Наградни фонд: минимум {amount} WDD",
           "voting_opens": "Гласање се отвара {date}",
           "check_back": "Вратите се када избори почну како бисте гласали",
           "choose_a_party": "Изаберите странку",

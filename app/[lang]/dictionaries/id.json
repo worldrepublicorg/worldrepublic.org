@@ -96,6 +96,7 @@
           "status_ended": "Berakhir",
           "election_info": "Info pemilihan",
           "reward_pool": "Kumpulan hadiah: {amount} WDD",
+          "reward_pool_minimum": "Kumpulan hadiah: minimal {amount} WDD",
           "voting_opens": "Pemungutan suara dibuka {date}",
           "check_back": "Kembali saat pemilihan dimulai untuk memberikan suara Anda",
           "choose_a_party": "Pilih partai",

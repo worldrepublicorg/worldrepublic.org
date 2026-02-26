@@ -96,6 +96,7 @@
           "status_ended": "ያለቀ",
           "election_info": "የምርጫ መረጃ",
           "reward_pool": "የሽልማት ገንዳ: {amount} WDD",
+          "reward_pool_minimum": "የሽልማት ገንዳ: ቢያንስ {amount} WDD",
           "voting_opens": "ድምጽ መስጫ ይከፈታል {date}",
           "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ",
           "choose_a_party": "ፓርቲ ይምረጡ",

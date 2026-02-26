@@ -96,6 +96,7 @@
           "status_ended": "Tamat",
           "election_info": "Maklumat pilihan raya",
           "reward_pool": "Kumpulan ganjaran: {amount} WDD",
+          "reward_pool_minimum": "Kumpulan ganjaran: minimum {amount} WDD",
           "voting_opens": "Pengundian dibuka {date}",
           "check_back": "Kembali apabila pilihan raya bermula untuk mengundi",
           "choose_a_party": "Pilih parti",

@@ -96,6 +96,7 @@
           "status_ended": "Завершені",
           "election_info": "Інформація про вибори",
           "reward_pool": "Призовий фонд: {amount} WDD",
+          "reward_pool_minimum": "Призовий фонд: мінімум {amount} WDD",
           "voting_opens": "Голосування відкривається {date}",
           "check_back": "Поверніться, коли вибори розпочнуться, щоб проголосувати",
           "choose_a_party": "Оберіть партію",

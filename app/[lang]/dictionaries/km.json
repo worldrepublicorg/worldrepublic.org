@@ -96,6 +96,7 @@
           "status_ended": "បានបញ្ចប់",
           "election_info": "ព័ត៌មានការបោះឆ្នោត",
           "reward_pool": "មូលនិធិរង្វាន់: {amount} WDD",
+          "reward_pool_minimum": "មូលនិធិរង្វាន់: អប្បបរមា {amount} WDD",
           "voting_opens": "ការបោះឆ្នោតបើក {date}",
           "check_back": "សូមត្រឡប់មកវិញពេលការបោះឆ្នោតចាប់ផ្តើមដើម្បីបោះឆ្នោតរបស់អ្នក",
           "choose_a_party": "ជ្រើសរើសគណបក្ស",

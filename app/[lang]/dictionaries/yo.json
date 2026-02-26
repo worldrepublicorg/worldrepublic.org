@@ -96,6 +96,7 @@
           "status_ended": "Ti parí",
           "election_info": "Àlàyé ìdìbò",
           "reward_pool": "Adágún ẹ̀bùn: {amount} WDD",
+          "reward_pool_minimum": "Adágún ẹ̀bùn: o kere ju {amount} WDD",
           "voting_opens": "Ìdìbò ń ṣí {date}",
           "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò",
           "choose_a_party": "Yan ẹgbẹ́ kan",

@@ -96,6 +96,7 @@
           "status_ended": "Tugagan",
           "election_info": "Saylov ma'lumotlari",
           "reward_pool": "Mukofot jamg'armasi: {amount} WDD",
+          "reward_pool_minimum": "Mukofot jamg'armasi: minimal {amount} WDD",
           "voting_opens": "Ovoz berish ochiladi {date}",
           "check_back": "Ovoz berish uchun saylov boshlanganda qaytib keling",
           "choose_a_party": "Partiyani tanlang",

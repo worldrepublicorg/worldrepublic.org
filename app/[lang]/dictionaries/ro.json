@@ -96,6 +96,7 @@
           "status_ended": "Încheiate",
           "election_info": "Informații despre alegeri",
           "reward_pool": "Fond de recompense: {amount} WDD",
+          "reward_pool_minimum": "Fond de recompense: minim {amount} WDD",
           "voting_opens": "Votarea se deschide {date}",
           "check_back": "Reveniți când alegerile încep pentru a vota",
           "choose_a_party": "Alegeți un partid",

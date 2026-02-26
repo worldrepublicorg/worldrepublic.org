@@ -46,6 +46,7 @@
           "status_ended": "Ended",
           "election_info": "Election info",
           "reward_pool": "Reward pool: {amount} WDD",
+          "reward_pool_minimum": "Reward pool: minimum {amount} WDD",
           "voting_opens": "Voting opens {date}",
           "check_back": "Check back when the election starts to cast your vote",
           "choose_a_party": "Choose a party",

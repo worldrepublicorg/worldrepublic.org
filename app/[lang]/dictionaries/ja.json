@@ -96,6 +96,7 @@
           "status_ended": "終了",
           "election_info": "選挙情報",
           "reward_pool": "報酬プール: {amount} WDD",
+          "reward_pool_minimum": "報酬プール: 最小 {amount} WDD",
           "voting_opens": "投票開始 {date}",
           "check_back": "選挙が始まったら投票するために戻ってきてください",
           "choose_a_party": "政党を選択",

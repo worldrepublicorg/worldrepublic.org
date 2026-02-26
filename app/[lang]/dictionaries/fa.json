@@ -96,6 +96,7 @@
           "status_ended": "پایان‌یافته",
           "election_info": "اطلاعات انتخابات",
           "reward_pool": "مخزن پاداش: {amount} WDD",
+          "reward_pool_minimum": "مخزن پاداش: حداقل {amount} WDD",
           "voting_opens": "رأی‌گیری باز می‌شود {date}",
           "check_back": "برای رأی دادن، زمانی که انتخابات شروع شد بازگردید",
           "choose_a_party": "یک حزب انتخاب کنید",

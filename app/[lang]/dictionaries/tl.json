@@ -96,6 +96,7 @@
           "status_ended": "Natapos",
           "election_info": "Impormasyon ng halalan",
           "reward_pool": "Premyong pool: {amount} WDD",
+          "reward_pool_minimum": "Premyong pool: minimum {amount} WDD",
           "voting_opens": "Magbubukas ang botohan {date}",
           "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto",
           "choose_a_party": "Pumili ng partido",

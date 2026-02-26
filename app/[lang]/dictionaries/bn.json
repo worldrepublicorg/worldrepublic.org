@@ -96,6 +96,7 @@
           "status_ended": "সমাপ্ত",
           "election_info": "নির্বাচনের তথ্য",
           "reward_pool": "পুরস্কার পুল: {amount} WDD",
+          "reward_pool_minimum": "পুরস্কার পুল: সর্বনিম্ন {amount} WDD",
           "voting_opens": "ভোটদান শুরু হবে {date}",
           "check_back": "আপনার ভোট দিতে নির্বাচন শুরু হলে ফিরে আসুন",
           "choose_a_party": "একটি দল বেছে নিন",

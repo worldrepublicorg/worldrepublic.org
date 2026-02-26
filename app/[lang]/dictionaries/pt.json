@@ -96,6 +96,7 @@
           "status_ended": "Encerrada",
           "election_info": "Informações da eleição",
           "reward_pool": "Fundo de recompensas: {amount} WDD",
+          "reward_pool_minimum": "Fundo de recompensas: no mínimo {amount} WDD",
           "voting_opens": "Votação abre {date}",
           "check_back": "Volte quando a eleição começar para votar",
           "choose_a_party": "Escolha um partido",

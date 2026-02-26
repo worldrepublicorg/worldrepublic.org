@@ -96,6 +96,7 @@
           "status_ended": "已结束",
           "election_info": "选举信息",
           "reward_pool": "奖池: {amount} WDD",
+          "reward_pool_minimum": "奖池：最低 {amount} WDD",
           "voting_opens": "投票开放 {date}",
           "check_back": "选举开始后回来投票",
           "choose_a_party": "选择一个政党",

@@ -96,6 +96,7 @@
           "status_ended": "Ya ƙare",
           "election_info": "Bayanan zaɓe",
           "reward_pool": "Tafkin lada: {amount} WDD",
+          "reward_pool_minimum": "Tafkin lada: mafi karanci {amount} WDD",
           "voting_opens": "Jefa ƙuri'a ya buɗe {date}",
           "check_back": "Ku dawo lokacin da zaɓe ya fara don jefa ƙuri'arku",
           "choose_a_party": "Zaɓi jam'iyya",

@@ -96,6 +96,7 @@
           "status_ended": "Ukončené",
           "election_info": "Informace o volbách",
           "reward_pool": "Fond odměn: {amount} WDD",
+          "reward_pool_minimum": "Fond odměn: minimálně {amount} WDD",
           "voting_opens": "Hlasování se otevírá {date}",
           "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat",
           "choose_a_party": "Vyberte stranu",

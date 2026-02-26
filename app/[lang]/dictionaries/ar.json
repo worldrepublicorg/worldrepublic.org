@@ -96,6 +96,7 @@
           "status_ended": "انتهى",
           "election_info": "معلومات الانتخاب",
           "reward_pool": "مجمع المكافآت: {amount} WDD",
+          "reward_pool_minimum": "مجمع المكافآت: بحد أدنى {amount} WDD",
           "voting_opens": "يفتح التصويت {date}",
           "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك",
           "choose_a_party": "اختر حزباً",

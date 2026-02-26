@@ -96,6 +96,7 @@
           "status_ended": "Dhammaatay",
           "election_info": "Macluumaadka doorashada",
           "reward_pool": "Kaydka abaalmarinta: {amount} WDD",
+          "reward_pool_minimum": "Kaydka abaalmarinta: ugu yaraan {amount} WDD",
           "voting_opens": "Codayntu way furantahay {date}",
           "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso",
           "choose_a_party": "Dooro xisbi",

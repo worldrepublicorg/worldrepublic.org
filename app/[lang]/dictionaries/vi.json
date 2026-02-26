@@ -96,6 +96,7 @@
           "status_ended": "Đã kết thúc",
           "election_info": "Thông tin bầu cử",
           "reward_pool": "Quỹ giải thưởng: {amount} WDD",
+          "reward_pool_minimum": "Quỹ giải thưởng: tối thiểu {amount} WDD",
           "voting_opens": "Bỏ phiếu mở {date}",
           "check_back": "Quay lại khi cuộc bầu cử bắt đầu để bỏ phiếu",
           "choose_a_party": "Chọn một đảng",

@@ -96,6 +96,7 @@
           "status_ended": "સમાપ્ત",
           "election_info": "ચૂંટણી માહિતી",
           "reward_pool": "ઈનામ પૂલ: {amount} WDD",
+          "reward_pool_minimum": "ઈનામ પૂલ: લઘુત્તમ {amount} WDD",
           "voting_opens": "મતદાન ખુલશે {date}",
           "check_back": "તમારો મત આપવા માટે ચૂંટણી શરૂ થાય ત્યારે પાછા આવો",
           "choose_a_party": "પક્ષ પસંદ કરો",

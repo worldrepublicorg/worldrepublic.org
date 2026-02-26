@@ -96,6 +96,7 @@
           "status_ended": "Beendet",
           "election_info": "Wahlinformationen",
           "reward_pool": "Belohnungspool: {amount} WDD",
+          "reward_pool_minimum": "Belohnungspool: mindestens {amount} WDD",
           "voting_opens": "Abstimmung öffnet {date}",
           "check_back": "Kommen Sie zurück, wenn die Wahl beginnt, um Ihre Stimme abzugeben",
           "choose_a_party": "Partei wählen",

@@ -96,6 +96,7 @@
           "status_ended": "Lezárult",
           "election_info": "Választási információk",
           "reward_pool": "Jutalmazási alap: {amount} WDD",
+          "reward_pool_minimum": "Jutalmazási alap: minimum {amount} WDD",
           "voting_opens": "Szavazás megnyílik {date}",
           "check_back": "Térjen vissza, amikor a választás elkezdődik, hogy leadhassa szavazatát",
           "choose_a_party": "Válasszon pártot",

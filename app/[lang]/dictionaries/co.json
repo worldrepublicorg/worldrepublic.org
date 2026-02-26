@@ -96,6 +96,7 @@
           "status_ended": "Finita",
           "election_info": "Infurmazione nant'à l'elezzione",
           "reward_pool": "Fondu di ricumpensa: {amount} WDD",
+          "reward_pool_minimum": "Fondu di ricumpensa: minimu {amount} WDD",
           "voting_opens": "U votu s'apre {date}",
           "check_back": "Tornate quandu l'elezzione cumencia per vutà",
           "choose_a_party": "Sceglie un partitu",

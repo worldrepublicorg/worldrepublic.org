@@ -96,6 +96,7 @@
           "status_ended": "Ολοκληρωμένη",
           "election_info": "Πληροφορίες εκλογής",
           "reward_pool": "Ταμείο ανταμοιβών: {amount} WDD",
+          "reward_pool_minimum": "Ταμείο ανταμοιβών: ελάχιστο {amount} WDD",
           "voting_opens": "Η ψηφοφορία ανοίγει {date}",
           "check_back": "Επιστρέψτε όταν ξεκινήσει η εκλογή για να ψηφίσετε",
           "choose_a_party": "Επιλέξτε κόμμα",
