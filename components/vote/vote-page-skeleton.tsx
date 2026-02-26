@@ -42,10 +42,10 @@ export function VotePageSkeleton() {
           {[1, 2, 3, 4, 5].map((i) => (
             <div
               key={i}
-              className={`rounded-xl border border-gray-200 p-4 ${i < 3 ? "mb-4" : ""}`}
+              className={`rounded-xl border border-gray-200 p-4 ${i < 5 ? "mb-4" : ""}`}
             >
               <div className="mb-2 flex items-center justify-between">
-                <Skeleton height={23} width="65%" className="rounded-lg" />
+                <Skeleton height={24} width="65%" className="rounded-lg" />
                 <Skeleton height={20} width={55} className="rounded-full" />
               </div>
               <div className="mt-3 flex flex-col gap-1.5">
