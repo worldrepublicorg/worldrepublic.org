@@ -32,7 +32,11 @@ export function ElectionHeroCard({
       <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 shadow-sm">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
-            <Typography variant="subtitle" level={1} className="text-[22px] font-semibold">
+            <Typography
+              variant="subtitle"
+              level={1}
+              className="text-[22px] font-semibold"
+            >
               {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
@@ -50,7 +54,7 @@ export function ElectionHeroCard({
           </div>
         </div>
 
-        <div className="flex flex-col gap-1.5 mt-3">
+        <div className="flex flex-col gap-1.5 mt-4">
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
             <Typography variant="body" level={3}>
