@@ -158,6 +158,7 @@ export function ElectionDetailContent({
           </Typography>
           <VoteButton
             size="sm"
+            fullWidth
             label={dictionary.pages.govern.vote.test_verification.button}
             dictionary={dictionary}
             electionId="b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1"
