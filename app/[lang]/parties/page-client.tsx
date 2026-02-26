@@ -237,7 +237,7 @@ export default function PartiesPageClient({
                   </button>
                 </span>
               </Typography>
-              <div className="mt-[21px]! flex items-center gap-2 w-full">
+              <div className="mt-5 flex items-center gap-2 w-full">
                 <Button
                   variant="primary"
                   size="sm"
