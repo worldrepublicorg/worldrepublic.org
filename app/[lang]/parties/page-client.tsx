@@ -379,7 +379,6 @@ export default function PartiesPageClient({
               </Typography>
               <div className="mt-5 w-full">
                 <Button
-                  variant="tertiary"
                   size="sm"
                   onClick={() => setIsLearnMoreDrawerOpen(true)}
                   fullWidth

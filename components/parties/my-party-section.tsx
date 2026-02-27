@@ -5,9 +5,10 @@ import {
   Skeleton,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import Link from "next/link";
-import { PiArrowSquareOut, PiPlus } from "react-icons/pi";
+import { useState } from "react";
+import { PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { PartyCard } from "@/components/parties/party-card";
 import type { Party } from "@/lib/types/parties";
 
@@ -36,6 +37,8 @@ export function MyPartySection({
   onEditParty,
   onDeleteParty,
 }: MyPartySectionProps) {
+  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+
   return (
     <div className="mb-6 px-6 mt-2">
       <div className="mb-3 flex items-center justify-between">
@@ -90,20 +93,23 @@ export function MyPartySection({
           >
             {dictionary.pages.govern.parties.run_on_elections_and_earn}
           </Typography>
-          <Link
-            href="https://wiki.worldrepublic.org/building-blocks/party-subsidies"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            variant="tertiary"
+            size="sm"
+            onClick={() => setIsLearnMoreDrawerOpen(true)}
           >
-            <Button
-              variant="tertiary"
-              size="sm"
-              className="inline-flex items-center gap-1.5"
-            >
-              {dictionary.pages.govern.parties.learn_more}
-              <PiArrowSquareOut className="size-4 shrink-0 text-gray-400" />
-            </Button>
-          </Link>
+            {dictionary.pages.govern.parties.learn_more}
+          </Button>
+          
+          <LearnMoreDrawer
+            open={isLearnMoreDrawerOpen}
+            onOpenChange={setIsLearnMoreDrawerOpen}
+            title={dictionary.pages.govern.parties.learn_more}
+            externalLink={{
+              url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",
+              label: dictionary.pages.govern.parties.subsidies.title,
+            }}
+          />
         </div>
       )}
     </div>
