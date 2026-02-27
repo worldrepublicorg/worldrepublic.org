@@ -192,10 +192,10 @@ export default function PartiesPageClient({
             key: "registry",
             label: dictionary.pages.govern.parties.tabs.registry,
           },
-          // {
-          //   key: "subsidies",
-          //   label: dictionary.pages.govern.parties.tabs.subsidies,
-          // },
+          {
+            key: "subsidies",
+            label: dictionary.pages.govern.parties.tabs.subsidies,
+          },
           {
             key: "ambassadors",
             label: dictionary.pages.govern.parties.tabs.ambassadors,
@@ -360,11 +360,58 @@ export default function PartiesPageClient({
               </div>
             )}
           </div>
-        ) : (
-          <div className="flex w-full grow items-center justify-center">
-            {/* Subsidies tab - empty for now */}
+        ) : activeTab === "subsidies" ? (
+          <div className="flex flex-col items-start w-full p-6">
+            <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center shadow-sm">
+              <Typography
+                variant="subtitle"
+                level={1}
+                className="mb-[10px]! text-[22px] font-semibold"
+              >
+                {dictionary.pages.govern.parties.subsidies.title}
+              </Typography>
+              <Typography
+                variant="body"
+                level={3}
+                className="text-center text-gray-500"
+              >
+                {dictionary.pages.govern.parties.subsidies.description}
+              </Typography>
+              <div className="mt-5 w-full">
+                <Button
+                  variant="tertiary"
+                  size="sm"
+                  onClick={() => setIsLearnMoreDrawerOpen(true)}
+                  fullWidth
+                >
+                  {dictionary.pages.govern.parties.learn_more}
+                </Button>
+              </div>
+            </div>
+
+            <LearnMoreDrawer
+              open={isLearnMoreDrawerOpen}
+              onOpenChange={setIsLearnMoreDrawerOpen}
+              title={dictionary.pages.govern.parties.learn_more}
+              externalLink={{
+                url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",
+                label: dictionary.pages.govern.parties.subsidies.title,
+              }}
+            />
+
+            <Typography
+              variant="subtitle"
+              level={1}
+              className="mb-3! text-[19px] font-semibold"
+            >
+              {dictionary.pages.govern.parties.ambassadors.leaderboard}
+            </Typography>
+
+            <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+              {dictionary.pages.govern.parties.subsidies.no_subsidies_yet}
+            </div>
           </div>
-        )}
+        ) : null}
       </main>
 
       <SignInDialog

@@ -83,6 +83,11 @@
           "col_invited": "Kutsuttu",
           "col_stipend": "Stipendi",
           "share_referral_link": "Jaa suosittelulinkki"
+        },
+        "subsidies": {
+          "title": "Puolueiden tukiohjelma",
+          "no_subsidies_yet": "Ei vielä tukia",
+          "description": "Rahoitus, joka jaetaan puolueille niiden vaalimenestyksen perusteella"
         }
       },
       "elections": {

@@ -83,6 +83,11 @@
           "col_invited": "Invitați",
           "col_stipend": "Bursă",
           "share_referral_link": "Partajează linkul de recomandare"
+        },
+        "subsidies": {
+          "title": "Programul de Subvenții pentru Partide",
+          "no_subsidies_yet": "Încă nu există subvenții",
+          "description": "Finanțare distribuită partidelor pe baza performanței lor electorale"
         }
       },
       "elections": {

@@ -83,6 +83,11 @@
           "col_invited": "مدعو",
           "col_stipend": "وظیفہ",
           "share_referral_link": "ریفرل لنک شی어 کریں"
+        },
+        "subsidies": {
+          "title": "پارٹی سبسڈی پروگرام",
+          "no_subsidies_yet": "ابھی تک کوئی سبسڈی نہیں",
+          "description": "انتخابی کارکردگی کی بنیاد پر پارٹیوں میں تقسیم کی جانے والی فنڈنگ"
         }
       },
       "elections": {

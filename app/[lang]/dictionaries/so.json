@@ -83,6 +83,11 @@
           "col_invited": "La martiyay",
           "col_stipend": "Lacag",
           "share_referral_link": "La wadaag xiriirka tixraacaha"
+        },
+        "subsidies": {
+          "title": "Barnaamijka Kabida Xisbiyada",
+          "no_subsidies_yet": "Wali ma jiro kabitaan",
+          "description": "Maalgelin loo qeybiyo xisbiyada iyadoo lagu saleynayo waxqabadkooda doorashada"
         }
       },
       "elections": {

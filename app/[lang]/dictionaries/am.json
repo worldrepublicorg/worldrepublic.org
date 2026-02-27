@@ -83,6 +83,11 @@
           "col_invited": "የተጋበዙ",
           "col_stipend": "ስቲፔንድ",
           "share_referral_link": "የማጣቀሻ ማስፈንጠሪያ አጋራ"
+        },
+        "subsidies": {
+          "title": "የፓርቲ ድጎማ ፕሮግራም",
+          "no_subsidies_yet": "እስካሁን ምንም ድጎማ የለም",
+          "description": "በምርጫ ውጤታቸው መሰረት ለፓርቲዎች የሚከፋፈል የገንዘብ ድጋፍ"
         }
       },
       "elections": {

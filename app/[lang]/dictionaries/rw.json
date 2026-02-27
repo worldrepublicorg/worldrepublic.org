@@ -83,6 +83,11 @@
           "col_invited": "Batumiwe",
           "col_stipend": "Amafaranga",
           "share_referral_link": "Gusangiza umukururambaga"
+        },
+        "subsidies": {
+          "title": "Gahunda yo Gutera Inkunga Amashyaka",
+          "no_subsidies_yet": "Nta nkunga iraboneka",
+          "description": "Inkunga itangwa ku mashyaka hashingiwe ku musaruro wayo mu matora"
         }
       },
       "elections": {

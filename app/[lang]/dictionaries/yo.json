@@ -83,6 +83,11 @@
           "col_invited": "Àwọn tí a pè",
           "col_stipend": "Owó",
           "share_referral_link": "Pín àdírẹ́sì ìtọ́kasí"
+        },
+        "subsidies": {
+          "title": "Eto Ifunni Owo Ẹgbẹ Oselu",
+          "no_subsidies_yet": "Ko ti si ifunni owo",
+          "description": "Owo ti a pin fun awọn ẹgbẹ oselu da lori iṣẹ wọn ninu idibo"
         }
       },
       "elections": {

@@ -75,7 +75,7 @@
         "delete_party": "Ištrinti partiją",
         "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas",
         "ambassadors": {
-          "title": "Ambasadorių programa",
+          "title": "Ambasadorių Programa",
           "description": "Pakvieskite draugus ir uždirbkite stipendiją, kai jų partija gaus subsidijas",
           "leaderboard": "Lyderių lentelė",
           "no_stipends_yet": "Kol kas stipendijų nėra",
@@ -83,6 +83,11 @@
           "col_invited": "Pakviestieji",
           "col_stipend": "Stipendija",
           "share_referral_link": "Dalintis rekomendacijos nuoroda"
+        },
+        "subsidies": {
+          "title": "Partijų Subsidijavimo Programa",
+          "no_subsidies_yet": "Subsidijų dar nėra",
+          "description": "Finansavimas, skirstomas partijoms pagal jų rinkimų rezultatus"
         }
       },
       "elections": {

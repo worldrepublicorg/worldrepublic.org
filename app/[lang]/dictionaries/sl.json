@@ -75,7 +75,7 @@
         "delete_party": "Izbriši stranko",
         "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije",
         "ambassadors": {
-          "title": "Ambasadorski program",
+          "title": "Ambasadorski Program",
           "description": "Povabite prijatelje in zaslužite štipendijo, ko njihova stranka prejme subvencije",
           "leaderboard": "Lestvica",
           "no_stipends_yet": "Še ni štipendij",
@@ -83,6 +83,11 @@
           "col_invited": "Povabljeni",
           "col_stipend": "Štipendija",
           "share_referral_link": "Deli povezavo za priporočilo"
+        },
+        "subsidies": {
+          "title": "Program Subvencioniranja Strank",
+          "no_subsidies_yet": "Še ni subvencij",
+          "description": "Financiranje, razdeljeno strankam na podlagi njihovega volilnega uspeha"
         }
       },
       "elections": {

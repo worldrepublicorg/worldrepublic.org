@@ -83,6 +83,11 @@
           "col_invited": "Dəvət edilənlər",
           "col_stipend": "Mükafat",
           "share_referral_link": "Tövsiyə linkini paylaşın"
+        },
+        "subsidies": {
+          "title": "Partiya Subsidiya Proqramı",
+          "no_subsidies_yet": "Hələ ki, subsidiya yoxdur",
+          "description": "Seçki nəticələrinə əsasən partiyalara paylanan maliyyə"
         }
       },
       "elections": {

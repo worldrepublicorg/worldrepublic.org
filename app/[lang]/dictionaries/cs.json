@@ -75,7 +75,7 @@
         "delete_party": "Smazat stranu",
         "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace",
         "ambassadors": {
-          "title": "Ambasadorský program",
+          "title": "Ambasadorský Program",
           "description": "Pozvěte přátele a získejte stipendium, když jejich strana obdrží dotace",
           "leaderboard": "Žebříček",
           "no_stipends_yet": "Zatím žádná stipendia",
@@ -83,6 +83,11 @@
           "col_invited": "Pozvaní",
           "col_stipend": "Stipendium",
           "share_referral_link": "Sdílet odkaz na doporučení"
+        },
+        "subsidies": {
+          "title": "Program Dotací pro Strany",
+          "no_subsidies_yet": "Zatím žádné dotace",
+          "description": "Financování rozdělované stranám na základě jejich volebních výsledků"
         }
       },
       "elections": {

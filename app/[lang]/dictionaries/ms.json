@@ -83,6 +83,11 @@
           "col_invited": "Dijemput",
           "col_stipend": "Elaun",
           "share_referral_link": "Kongsi pautan rujukan"
+        },
+        "subsidies": {
+          "title": "Program Subsidi Parti",
+          "no_subsidies_yet": "Tiada subsidi lagi",
+          "description": "Pembiayaan diagihkan kepada parti berdasarkan prestasi pilihan raya mereka"
         }
       },
       "elections": {

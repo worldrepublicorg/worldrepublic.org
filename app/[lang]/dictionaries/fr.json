@@ -83,6 +83,11 @@
           "col_invited": "Invités",
           "col_stipend": "Allocation",
           "share_referral_link": "Partager le lien de parrainage"
+        },
+        "subsidies": {
+          "title": "Programme de Subvention des Partis",
+          "no_subsidies_yet": "Pas encore de subventions",
+          "description": "Financement distribué aux partis en fonction de leurs résultats électoraux"
         }
       },
       "elections": {

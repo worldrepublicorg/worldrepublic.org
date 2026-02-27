@@ -83,6 +83,11 @@
           "col_invited": "Convidados",
           "col_stipend": "Estipêndio",
           "share_referral_link": "Compartilhar link de indicação"
+        },
+        "subsidies": {
+          "title": "Programa de Subsídios Partidários",
+          "no_subsidies_yet": "Ainda sem subsídios",
+          "description": "Financiamento distribuído aos partidos com base no seu desempenho eleitoral"
         }
       },
       "elections": {

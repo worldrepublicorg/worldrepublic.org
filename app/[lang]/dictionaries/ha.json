@@ -83,6 +83,11 @@
           "col_invited": "Waɗanda aka gayyata",
           "col_stipend": "Albashi",
           "share_referral_link": "Raba hanyar haɗin gwiwa"
+        },
+        "subsidies": {
+          "title": "Shirin Tallafin Jam'iyya",
+          "no_subsidies_yet": "Babu tallafi tukuna",
+          "description": "Kudin da ake rabawa jam'iyyu dangane da kokarinsu a zabe"
         }
       },
       "elections": {

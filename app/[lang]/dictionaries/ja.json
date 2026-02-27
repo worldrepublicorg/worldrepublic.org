@@ -83,6 +83,11 @@
           "col_invited": "招待数",
           "col_stipend": "奨励金",
           "share_referral_link": "紹介リンクを共有"
+        },
+        "subsidies": {
+          "title": "政党助成金プログラム",
+          "no_subsidies_yet": "まだ助成金はありません",
+          "description": "選挙の成績に基づいて政党に分配される資金"
         }
       },
       "elections": {

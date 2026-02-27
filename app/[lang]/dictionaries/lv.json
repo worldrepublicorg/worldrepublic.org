@@ -75,7 +75,7 @@
         "delete_party": "Dzēst partiju",
         "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas",
         "ambassadors": {
-          "title": "Vēstnieku programma",
+          "title": "Vēstnieku Programma",
           "description": "Uzaiciniet draugus un nopelniet stipendiju, kad viņu partija saņem subsīdijas",
           "leaderboard": "Līderu tabula",
           "no_stipends_yet": "Vēl nav stipendiju",
@@ -83,6 +83,11 @@
           "col_invited": "Uzaicināti",
           "col_stipend": "Stipendija",
           "share_referral_link": "Kopīgot atsauces saiti"
+        },
+        "subsidies": {
+          "title": "Partiju Subsīdiju Programma",
+          "no_subsidies_yet": "Vēl nav subsīdiju",
+          "description": "Finansējums, kas tiek sadalīts partijām, pamatojoties uz to vēlēšanu rezultātiem"
         }
       },
       "elections": {

@@ -75,7 +75,7 @@
         "delete_party": "Párt törlése",
         "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat",
         "ambassadors": {
-          "title": "Nagyköveti program",
+          "title": "Nagyköveti Program",
           "description": "Hívd meg barátaidat, és keress ösztöndíjat, amikor pártjuk támogatást kap",
           "leaderboard": "Ranglista",
           "no_stipends_yet": "Még nincsenek ösztöndíjak",
@@ -83,6 +83,11 @@
           "col_invited": "Meghívottak",
           "col_stipend": "Ösztöndíj",
           "share_referral_link": "Ajánló link megosztása"
+        },
+        "subsidies": {
+          "title": "Párttámogatási Program",
+          "no_subsidies_yet": "Még nincsenek támogatások",
+          "description": "A pártok között választási eredményeik alapján elosztott támogatás"
         }
       },
       "elections": {

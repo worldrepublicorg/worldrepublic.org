@@ -83,6 +83,11 @@
           "col_invited": "مدعوون",
           "col_stipend": "مكافأة",
           "share_referral_link": "مشاركة رابط الإحالة"
+        },
+        "subsidies": {
+          "title": "برنامج دعم الأحزاب",
+          "no_subsidies_yet": "لا توجد إعانات حتى الآن",
+          "description": "تمويل يوزع على الأحزاب بناءً على أدائها الانتخابي"
         }
       },
       "elections": {

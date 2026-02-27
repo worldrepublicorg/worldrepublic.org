@@ -83,6 +83,11 @@
           "col_invited": "Invitati",
           "col_stipend": "Borsa",
           "share_referral_link": "Sparte u ligame di riferimentu"
+        },
+        "subsidies": {
+          "title": "Prugramma di Subvenzione di Partitu",
+          "no_subsidies_yet": "Ùn ci hè ancu suvvenzioni",
+          "description": "Finanziamentu distribuitu à i partiti basatu annantu à u so risultatu eletturale"
         }
       },
       "elections": {

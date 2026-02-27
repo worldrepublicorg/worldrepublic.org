@@ -83,6 +83,11 @@
           "col_invited": "आमंत्रित",
           "col_stipend": "वजीफा",
           "share_referral_link": "रेफरल लिंक शेयर करें"
+        },
+        "subsidies": {
+          "title": "पार्टी सब्सिडी कार्यक्रम",
+          "no_subsidies_yet": "अभी तक कोई सब्सिडी नहीं",
+          "description": "पार्टियों को उनके चुनावी प्रदर्शन के आधार पर वितरित धन"
         }
       },
       "elections": {

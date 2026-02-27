@@ -83,6 +83,11 @@
           "col_invited": "Davet Edilenler",
           "col_stipend": "Burs",
           "share_referral_link": "Referans bağlantısını paylaş"
+        },
+        "subsidies": {
+          "title": "Parti Sübvansiyon Programı",
+          "no_subsidies_yet": "Henüz sübvansiyon yok",
+          "description": "Partilere seçim performanslarına göre dağıtılan fonlar"
         }
       },
       "elections": {

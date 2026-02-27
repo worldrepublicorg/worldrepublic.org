@@ -83,6 +83,11 @@
           "col_invited": "Genooi",
           "col_stipend": "Stipendium",
           "share_referral_link": "Deel verwysingskakel"
+        },
+        "subsidies": {
+          "title": "Party Subsidieprogram",
+          "no_subsidies_yet": "Nog geen subsidies nie",
+          "description": "Befondsing versprei aan partye gebaseer op hul verkiesingsprestasie"
         }
       },
       "elections": {

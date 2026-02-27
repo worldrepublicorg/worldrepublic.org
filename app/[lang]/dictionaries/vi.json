@@ -83,6 +83,11 @@
           "col_invited": "Người được mời",
           "col_stipend": "Trợ cấp",
           "share_referral_link": "Chia sẻ liên kết giới thiệu"
+        },
+        "subsidies": {
+          "title": "Chương trình Trợ cấp Đảng",
+          "no_subsidies_yet": "Chưa có trợ cấp",
+          "description": "Kinh phí được phân bổ cho các đảng dựa trên kết quả bầu cử của họ"
         }
       },
       "elections": {

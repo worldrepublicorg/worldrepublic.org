@@ -75,6 +75,11 @@
           "col_invited": "Invited",
           "col_stipend": "Stipend"
         },
+        "subsidies": {
+          "title": "Party Subsidy Program",
+          "description": "Funding distributed to parties based on their electoral performance",
+          "no_subsidies_yet": "No subsidies yet"
+        },
         "discover": "Discover",
         "search_placeholder": "Search parties...",
         "no_parties_found": "No parties found",

@@ -83,6 +83,11 @@
           "col_invited": "Diundang",
           "col_stipend": "Tunjangan",
           "share_referral_link": "Bagikan tautan referensi"
+        },
+        "subsidies": {
+          "title": "Program Subsidi Partai",
+          "no_subsidies_yet": "Belum ada subsidi",
+          "description": "Pendanaan didistribusikan ke partai berdasarkan kinerja pemilu mereka"
         }
       },
       "elections": {

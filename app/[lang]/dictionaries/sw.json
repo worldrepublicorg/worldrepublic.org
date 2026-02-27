@@ -83,6 +83,11 @@
           "col_invited": "Waliokuwa Wageni",
           "col_stipend": "Posho",
           "share_referral_link": "Shiriki kiungo cha rufaa"
+        },
+        "subsidies": {
+          "title": "Mpango wa Ruzuku kwa Vyama",
+          "no_subsidies_yet": "Hakuna ruzuku bado",
+          "description": "Ufadhili unaosambazwa kwa vyama kulingana na matokeo yao ya uchaguzi"
         }
       },
       "elections": {

@@ -83,6 +83,11 @@
           "col_invited": "Uitgenodigd",
           "col_stipend": "Toelage",
           "share_referral_link": "Deel verwijzingslink"
+        },
+        "subsidies": {
+          "title": "Partijsubsidieprogramma",
+          "no_subsidies_yet": "Nog geen subsidies",
+          "description": "Financiering verdeeld onder partijen op basis van hun verkiesingsresultaten"
         }
       },
       "elections": {

@@ -83,6 +83,11 @@
           "col_invited": "Eingeladen",
           "col_stipend": "Stipendium",
           "share_referral_link": "Empfehlungslink teilen"
+        },
+        "subsidies": {
+          "title": "Parteisubventionsprogramm",
+          "no_subsidies_yet": "Noch keine Subventionen",
+          "description": "Finanzierung, die an Parteien basierend auf ihrem Wahlergebnis verteilt wird"
         }
       },
       "elections": {

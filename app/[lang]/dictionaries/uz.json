@@ -75,7 +75,7 @@
         "delete_party": "Partiyani o'chirish",
         "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling",
         "ambassadors": {
-          "title": "Elchilar dasturi",
+          "title": "Elchilar Dasturi",
           "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida stipendiya oling",
           "leaderboard": "Peshqadamlar jadvali",
           "no_stipends_yet": "Hali stipendiyalar yo'q",
@@ -83,6 +83,11 @@
           "col_invited": "Taklif qilinganlar",
           "col_stipend": "Stipendiya",
           "share_referral_link": "Tavsiya havolasini ulashish"
+        },
+        "subsidies": {
+          "title": "Partiyalarni Subsidiyalash Dasturi",
+          "no_subsidies_yet": "Hozircha subsidiyalar yo'q",
+          "description": "Partiyalarga saylov natijalariga ko'ra taqsimlanadigan moliyalashtirish"
         }
       },
       "elections": {

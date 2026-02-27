@@ -83,6 +83,11 @@
           "col_invited": "Invitati",
           "col_stipend": "Compenso",
           "share_referral_link": "Condividi link di riferimento"
+        },
+        "subsidies": {
+          "title": "Programma di Sussidi ai Partiti",
+          "no_subsidies_yet": "Nessun sussidio ancora",
+          "description": "Finanziamenti distribuiti ai partiti in base ai loro risultati elettorali"
         }
       },
       "elections": {

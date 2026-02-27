@@ -83,6 +83,11 @@
           "col_invited": "دعوت‌شدگان",
           "col_stipend": "حقوق",
           "share_referral_link": "اشتراک‌گذاری لینک معرفی"
+        },
+        "subsidies": {
+          "title": "برنامه یارانه احزاب",
+          "no_subsidies_yet": "هنوز یارانه‌ای وجود ندارد",
+          "description": "بودجه توزیع شده بین احزاب بر اساس عملکرد انتخاباتی آنها"
         }
       },
       "elections": {
