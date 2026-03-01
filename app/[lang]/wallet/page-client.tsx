@@ -436,7 +436,7 @@ export default function WalletPageClient({
                 <AlertDialogFooter>
                   <div className="flex flex-col gap-2 w-full">
                     <a
-                      href="https://jumper.exchange/?fromChain=1&fromToken=0x0000000000000000000000000000000000000000&toChain=480&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      href="https://jumper.exchange/?toChain=1&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full"
@@ -459,7 +459,7 @@ export default function WalletPageClient({
                       />
                     </a>
                     <a
-                      href="https://app.uniswap.org/explore/tokens/worldchain/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      href="https://app.uniswap.org/explore/tokens/ethereum/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full"
