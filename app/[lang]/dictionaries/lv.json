@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD Jumper",
-          "uniswap": "WDD Uniswap"
+          "ethereum_jumper": "Ethereum WDD Jumper",
+          "ethereum_uniswap": "Ethereum WDD Uniswap",
+          "worldchain_jumper": "World Chain WDD Jumper",
+          "worldchain_uniswap": "World Chain WDD Uniswap"
         },
         "delete_account": {
           "description": "Tas neatgriezeniski dzēsīs jūsu kontu un noņems visus jūsu datus no mūsu serveriem. Šo darbību nevar atsaukt — lūdzu, turpiniet uzmanīgi.",

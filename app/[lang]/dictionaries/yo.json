@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD lori Jumper",
-          "uniswap": "WDD lori Uniswap"
+          "ethereum_jumper": "Ethereum WDD lori Jumper",
+          "ethereum_uniswap": "Ethereum WDD lori Uniswap",
+          "worldchain_jumper": "World Chain WDD lori Jumper",
+          "worldchain_uniswap": "World Chain WDD lori Uniswap"
         },
         "delete_account": {
           "description": "Eyi yoo pa iroyin rẹ lailai ati yọ awọn data rẹ kuro ni awọn server wa. Iṣẹ yii ko le yipada — tẹsiwaju pẹlu iṣọra.",

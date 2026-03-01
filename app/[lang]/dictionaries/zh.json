@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD 在 Jumper 上",
-          "uniswap": "WDD 在 Uniswap 上"
+          "ethereum_jumper": "Ethereum WDD 在 Jumper 上",
+          "ethereum_uniswap": "Ethereum WDD 在 Uniswap 上",
+          "worldchain_jumper": "World Chain WDD 在 Jumper 上",
+          "worldchain_uniswap": "World Chain WDD 在 Uniswap 上"
         },
         "delete_account": {
           "description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",

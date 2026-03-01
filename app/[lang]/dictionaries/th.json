@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD บน Jumper",
-          "uniswap": "WDD บน Uniswap"
+          "ethereum_jumper": "Ethereum WDD บน Jumper",
+          "ethereum_uniswap": "Ethereum WDD บน Uniswap",
+          "worldchain_jumper": "World Chain WDD บน Jumper",
+          "worldchain_uniswap": "World Chain WDD บน Uniswap"
         },
         "delete_account": {
           "description": "การดำเนินการนี้จะลบบัญชีของคุณอย่างถาวรและลบข้อมูลทั้งหมดของคุณจากเซิร์ฟเวอร์ของเรา การดำเนินการนี้ไม่สามารถยกเลิกได้ — กรุณาดำเนินการต่อด้วยความระมัดระวัง",

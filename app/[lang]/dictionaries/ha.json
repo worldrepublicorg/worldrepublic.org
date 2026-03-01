@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD akan Jumper",
-          "uniswap": "WDD akan Uniswap"
+          "ethereum_jumper": "Ethereum WDD akan Jumper",
+          "ethereum_uniswap": "Ethereum WDD akan Uniswap",
+          "worldchain_jumper": "World Chain WDD akan Jumper",
+          "worldchain_uniswap": "World Chain WDD akan Uniswap"
         },
         "delete_account": {
           "description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",

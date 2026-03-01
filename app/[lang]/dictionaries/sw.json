@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD kwenye Jumper",
-          "uniswap": "WDD kwenye Uniswap"
+          "ethereum_jumper": "Ethereum WDD kwenye Jumper",
+          "ethereum_uniswap": "Ethereum WDD kwenye Uniswap",
+          "worldchain_jumper": "World Chain WDD kwenye Jumper",
+          "worldchain_uniswap": "World Chain WDD kwenye Uniswap"
         },
         "delete_account": {
           "description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",

@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD Jumper-da",
-          "uniswap": "WDD Uniswap-da"
+          "ethereum_jumper": "Ethereum WDD Jumper-da",
+          "ethereum_uniswap": "Ethereum WDD Uniswap-da",
+          "worldchain_jumper": "World Chain WDD Jumper-da",
+          "worldchain_uniswap": "World Chain WDD Uniswap-da"
         },
         "delete_account": {
           "description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",

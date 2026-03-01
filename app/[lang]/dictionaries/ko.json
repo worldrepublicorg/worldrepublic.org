@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD Jumper의",
-          "uniswap": "WDD Uniswap의"
+          "ethereum_jumper": "Ethereum WDD Jumper의",
+          "ethereum_uniswap": "Ethereum WDD Uniswap의",
+          "worldchain_jumper": "World Chain WDD Jumper의",
+          "worldchain_uniswap": "World Chain WDD Uniswap의"
         },
         "delete_account": {
           "description": "이것은 귀하의 계정을 영구적으로 삭제하고 모든 데이터를 서버에서 제거합니다. 이 작업은 되돌릴 수 없습니다 — 신중하게 진행하세요.",

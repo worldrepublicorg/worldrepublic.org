@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD Jumper တွင်",
-          "uniswap": "WDD Uniswap တွင်"
+          "ethereum_jumper": "Ethereum WDD Jumper တွင်",
+          "ethereum_uniswap": "Ethereum WDD Uniswap တွင်",
+          "worldchain_jumper": "World Chain WDD Jumper တွင်",
+          "worldchain_uniswap": "World Chain WDD Uniswap တွင်"
         },
         "delete_account": {
           "description": "ဤအရာသည် သင့်အကောင့်ကို အမြဲတမ်းဖျက်ပြီး သင့်ဒေတာအားလုံးကို ကျွန်ုပ်တို့၏ဆာဗာများမှ ဖယ်ရှားမည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြင်ဆင်မရပါ — ကျေးဇူးပြု၍ သတိဖြင့် ဆက်လက်ပါ။",

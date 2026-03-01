@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD kuri Jumper",
-          "uniswap": "WDD kuri Uniswap"
+          "ethereum_jumper": "Ethereum WDD kuri Jumper",
+          "ethereum_uniswap": "Ethereum WDD kuri Uniswap",
+          "worldchain_jumper": "World Chain WDD kuri Jumper",
+          "worldchain_uniswap": "World Chain WDD kuri Uniswap"
         },
         "delete_account": {
           "description": "Ibi bizasiba konti yawe byuzuye kandi bizakuramo amakuru yawe yose ku maseriveri yacu. Iki gikorwa ntikishobora guhindurwa — komeza ufatanya.",

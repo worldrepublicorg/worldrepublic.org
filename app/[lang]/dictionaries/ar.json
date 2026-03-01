@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD على Jumper",
-          "uniswap": "WDD على Uniswap"
+          "ethereum_jumper": "Ethereum WDD على Jumper",
+          "ethereum_uniswap": "Ethereum WDD على Uniswap",
+          "worldchain_jumper": "World Chain WDD على Jumper",
+          "worldchain_uniswap": "World Chain WDD على Uniswap"
         },
         "delete_account": {
           "description": "سيؤدي هذا إلى حذف حسابك نهائياً وإزالة جميع بياناتك من خوادمنا. لا يمكن التراجع عن هذا الإجراء — يرجى المتابعة بحذر.",

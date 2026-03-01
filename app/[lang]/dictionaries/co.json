@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD nantu à Jumper",
-          "uniswap": "WDD nantu à Uniswap"
+          "ethereum_jumper": "Ethereum WDD nantu à Jumper",
+          "ethereum_uniswap": "Ethereum WDD nantu à Uniswap",
+          "worldchain_jumper": "World Chain WDD nantu à Jumper",
+          "worldchain_uniswap": "World Chain WDD nantu à Uniswap"
         },
         "delete_account": {
           "description": "Questu sguasserà permanentemente u to cuntu è rimuverà tutti i to dati da i nostri serveri. Questa azione ùn pò esse annullata — per piacè cuntinue cù cura.",

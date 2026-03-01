@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD በJumper ላይ",
-          "uniswap": "WDD በUniswap ላይ"
+          "ethereum_jumper": "Ethereum WDD በJumper ላይ",
+          "ethereum_uniswap": "Ethereum WDD በUniswap ላይ",
+          "worldchain_jumper": "World Chain WDD በJumper ላይ",
+          "worldchain_uniswap": "World Chain WDD በUniswap ላይ"
         },
         "delete_account": {
           "description": "ይህ የእርስዎን መለያ ለዘለዓለም ያጠፋል እና ሁሉንም ውሂቦችዎን ከሰርቨሮቻችን ያስወግዳል። ይህ እርምጃ ሊመለስ አይችልም — እባክዎ በጥንቃቄ ይሂዱ።",

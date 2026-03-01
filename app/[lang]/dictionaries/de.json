@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD auf Jumper",
-          "uniswap": "WDD auf Uniswap"
+          "ethereum_jumper": "Ethereum WDD auf Jumper",
+          "ethereum_uniswap": "Ethereum WDD auf Uniswap",
+          "worldchain_jumper": "World Chain WDD auf Jumper",
+          "worldchain_uniswap": "World Chain WDD auf Uniswap"
         },
         "delete_account": {
           "description": "Dies wird Ihr Konto dauerhaft löschen und alle Ihre Daten von unseren Servern entfernen. Diese Aktion kann nicht rückgängig gemacht werden — bitte fahren Sie vorsichtig fort.",

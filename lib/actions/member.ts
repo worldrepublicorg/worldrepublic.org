@@ -466,7 +466,7 @@ export async function withdrawTokens(
     }
 
     // Server-side validation for selected chain
-    const allowedChains = ["56", "143", "480", "8453"];
+    const allowedChains = ["1", "56", "143", "480", "8453"];
     if (!allowedChains.includes(selectedChain)) {
       return { success: false, error: "Invalid chain" };
     }
@@ -532,7 +532,7 @@ export async function withdrawTokens(
     if (selectedChain === "480") {
       fromAddress = "0x7aCA7AFDa78884fE0a58fb8B3988B9f93F963950";
     } else {
-      // For chains 56 (BSC), 143 (Monad), and 8453 (Base), use the original address
+      // For chains 1 (Ethereum), 56 (BSC), 143 (Monad), and 8453 (Base), use the original address
       fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac";
     }
 

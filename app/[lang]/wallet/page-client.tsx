@@ -343,7 +343,10 @@ export default function WalletPageClient({
                       dictionary.pages.wallet.modals.send.withdraw_to_crypto
                         .network_label
                     }
-                    options={[{ label: "World Chain", value: "480" }]}
+                    options={[
+                      { label: "Ethereum", value: "1" },
+                      { label: "World Chain", value: "480" },
+                    ]}
                   />
 
                   <Input
@@ -442,7 +445,7 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.jumper}
+                        label={dictionary.pages.wallet.modals.trade.ethereum_jumper}
                         startAdornment={
                           <Image
                             src="/icons/exchanges/jumper.svg"
@@ -465,7 +468,53 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.uniswap}
+                        label={dictionary.pages.wallet.modals.trade.ethereum_uniswap}
+                        startAdornment={
+                          <Image
+                            src="/icons/exchanges/uniswap.svg"
+                            alt="Uniswap"
+                            width={24}
+                            height={24}
+                            className="size-6 rounded-full"
+                            priority
+                          />
+                        }
+                        endAdornment={
+                          <PiArrowSquareOut className="size-4 text-gray-400" />
+                        }
+                      />
+                    </a>
+                    <a
+                      href="https://jumper.exchange/?toChain=480&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CustomListItem
+                        label={dictionary.pages.wallet.modals.trade.worldchain_jumper}
+                        startAdornment={
+                          <Image
+                            src="/icons/exchanges/jumper.svg"
+                            alt="Jumper"
+                            width={24}
+                            height={24}
+                            className="size-6 rounded-full"
+                            priority
+                          />
+                        }
+                        endAdornment={
+                          <PiArrowSquareOut className="size-4 text-gray-400" />
+                        }
+                      />
+                    </a>
+                    <a
+                      href="https://app.uniswap.org/explore/tokens/worldchain/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CustomListItem
+                        label={dictionary.pages.wallet.modals.trade.worldchain_uniswap}
                         startAdornment={
                           <Image
                             src="/icons/exchanges/uniswap.svg"

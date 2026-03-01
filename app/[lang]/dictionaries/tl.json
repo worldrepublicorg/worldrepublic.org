@@ -163,8 +163,10 @@
           }
         },
         "trade": {
-          "jumper": "WDD sa Jumper",
-          "uniswap": "WDD sa Uniswap"
+          "ethereum_jumper": "Ethereum WDD sa Jumper",
+          "ethereum_uniswap": "Ethereum WDD sa Uniswap",
+          "worldchain_jumper": "World Chain WDD sa Jumper",
+          "worldchain_uniswap": "World Chain WDD sa Uniswap"
         },
         "delete_account": {
           "description": "Ito ay permanenteng mag-delete ng inyong account at mag-aalis ng lahat ng inyong data sa aming mga server. Ang aksyon na ito ay hindi maaaring ma-undo — magpatuloy nang may pag-iingat.",
