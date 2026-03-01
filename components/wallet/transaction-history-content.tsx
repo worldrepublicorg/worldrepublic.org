@@ -239,16 +239,21 @@ export function TransactionHistoryContent({
 
   // Get chain logo path
   const getChainLogoPath = (selectedChain?: string): string | null => {
-    if (selectedChain === "143") {
-      return "/icons/chains/monad.png";
+    if (selectedChain === "1") {
+      return "/icons/chains/ethereum.svg";
     }
     if (selectedChain === "480") {
-      return "/icons/chains/world.png";
-    }
-    if (selectedChain === "8453") {
-      return "/icons/chains/base.png";
+      return "/icons/chains/world.svg";
     }
     return null;
+  };
+
+  const getChainDisplayName = (selectedChain?: string): string => {
+    if (selectedChain === "1") return "Ethereum";
+    if (selectedChain === "143") return "Monad";
+    if (selectedChain === "480") return "World Chain";
+    if (selectedChain === "8453") return "Base";
+    return selectedChain || "";
   };
 
   // Get unique transaction types from transactions
@@ -430,15 +435,7 @@ export function TransactionHistoryContent({
                     getChainLogoPath(transaction.selectedChain) ? (
                       <Image
                         src={getChainLogoPath(transaction.selectedChain)!}
-                        alt={
-                          transaction.selectedChain === "143"
-                            ? "Monad"
-                            : transaction.selectedChain === "480"
-                              ? "World Chain"
-                              : transaction.selectedChain === "8453"
-                                ? "Base"
-                                : transaction.selectedChain || ""
-                        }
+                        alt={getChainDisplayName(transaction.selectedChain)}
                         width={30}
                         height={30}
                         className="rounded-full"
@@ -486,13 +483,7 @@ export function TransactionHistoryContent({
                         )}
                         {transaction.selectedChain && (
                           <span className="text-xs text-gray-500 mt-px">
-                            {transaction.selectedChain === "143"
-                              ? "Monad"
-                              : transaction.selectedChain === "480"
-                                ? "World Chain"
-                                : transaction.selectedChain === "8453"
-                                  ? "Base"
-                                  : transaction.selectedChain}
+                            {getChainDisplayName(transaction.selectedChain)}
                           </span>
                         )}
                       </div>
