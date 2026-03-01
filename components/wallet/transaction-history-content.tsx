@@ -433,15 +433,13 @@ export function TransactionHistoryContent({
                   <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gray-100">
                     {transaction.type === "WITHDRAWAL" &&
                     getChainLogoPath(transaction.selectedChain) ? (
-                      <div className="size-[30px] shrink-0 overflow-hidden rounded-full bg-white">
-                        <Image
-                          src={getChainLogoPath(transaction.selectedChain)!}
-                          alt={getChainDisplayName(transaction.selectedChain)}
-                          width={30}
-                          height={30}
-                          className="size-[30px] rounded-full object-cover object-center"
-                        />
-                      </div>
+                      <Image
+                        src={getChainLogoPath(transaction.selectedChain)!}
+                        alt={getChainDisplayName(transaction.selectedChain)}
+                        width={30}
+                        height={30}
+                        className="rounded-full"
+                      />
                     ) : (
                       <IconComponent className="size-4.5 text-gray-400" />
                     )}

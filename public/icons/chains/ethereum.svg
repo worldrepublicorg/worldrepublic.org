@@ -1,1 +1,10 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3387 2259" width="3387" height="2259"><style>.a{fill:#fff}.b{fill:#343434}.c{fill:#8c8c8c}.d{fill:#3c3c3b}.e{fill:#141414}.f{fill:#393939}</style><path fill-rule="evenodd" class="a" d="m3704-225v2697h-3968v-2697z"/><path class="b" d="m1682.1 1428.5l10.9 10.9 499.6-295.3-499.6-828.7-10.9 37.1z"/><path class="c" d="m1693 1439.4v-1124l-499.6 828.7z"/><path class="d" d="m1686.9 1924.7l6.1 18 499.9-703.9-499.9 295.1-6.1 7.5z"/><path class="c" d="m1193.4 1238.8l499.6 703.9v-408.8z"/><path class="e" d="m1693 917.1v522.3l499.6-295.3z"/><path class="f" d="m1693 917.1l-499.6 227 499.6 295.3z"/></svg>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338 338" width="338" height="338">
+	<defs>
+		<image width="3387" height="2259" id="img1" href="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMzODcgMjI1OSIgd2lkdGg9IjMzODciIGhlaWdodD0iMjI1OSI+PHN0eWxlPi5he2ZpbGw6I2ZmZn0uYntmaWxsOiMzNDM0MzR9LmN7ZmlsbDojOGM4YzhjfS5ke2ZpbGw6IzNjM2MzYn0uZXtmaWxsOiMxNDE0MTR9LmZ7ZmlsbDojMzkzOTM5fTwvc3R5bGU+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGFzcz0iYSIgZD0ibTM3MDQtMjI1djI2OTdoLTM5Njh2LTI2OTd6Ii8+PHBhdGggY2xhc3M9ImIiIGQ9Im0xNjgyLjEgMTQyOC41bDEwLjkgMTAuOSA0OTkuNi0yOTUuMy00OTkuNi04MjguNy0xMC45IDM3LjF6Ii8+PHBhdGggY2xhc3M9ImMiIGQ9Im0xNjkzIDE0MzkuNHYtMTEyNGwtNDk5LjYgODI4Ljd6Ii8+PHBhdGggY2xhc3M9ImQiIGQ9Im0xNjg2LjkgMTkyNC43bDYuMSAxOCA0OTkuOS03MDMuOS00OTkuOSAyOTUuMS02LjEgNy41eiIvPjxwYXRoIGNsYXNzPSJjIiBkPSJtMTE5My40IDEyMzguOGw0OTkuNiA3MDMuOXYtNDA4Ljh6Ii8+PHBhdGggY2xhc3M9ImUiIGQ9Im0xNjkzIDkxNy4xdjUyMi4zbDQ5OS42LTI5NS4zeiIvPjxwYXRoIGNsYXNzPSJmIiBkPSJtMTY5MyA5MTcuMWwtNDk5LjYgMjI3IDQ5OS42IDI5NS4zeiIvPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m0.73 0.54h337.09v337.09h-337.09z"/>
+	<use id="Ethereum-Logo.wine" href="#img1" transform="matrix(.127,0,0,.127,-47,25)"/>
+</svg>
