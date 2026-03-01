@@ -438,7 +438,7 @@ export function TransactionHistoryContent({
                         alt={getChainDisplayName(transaction.selectedChain)}
                         width={30}
                         height={30}
-                        className="rounded-full"
+                        className="rounded-full bg-white"
                       />
                     ) : (
                       <IconComponent className="size-4.5 text-gray-400" />
