@@ -20,9 +20,9 @@ import { useAuth } from "@/hooks/use-auth";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {
   type AmbassadorLeaderboardEntry,
-  getAmbassadorLeaderboard
-  getSubsidyLeaderboard
-  type SubsidyLeaderboardEntryrdEntryrdEntry,
+  getAmbassadorLeaderboard,
+  getSubsidyLeaderboard,
+  type SubsidyLeaderboardEntry,
 } from "@/lib/actions/referrals";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
