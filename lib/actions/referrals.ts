@@ -3,7 +3,7 @@
 import { and, asc, count, desc, eq, gt, sql, sum } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDbReadOnly } from "@/lib/db/connection";
-import { referrals, streams, userProfiles } from "@/lib/db/schema";
+import { parties, referrals, streams, userProfiles } from "@/lib/db/schema";
 import { STREAM_DURATION_S } from "@/lib/streams";
 
 export type AmbassadorLeaderboardEntry = {
@@ -83,6 +83,52 @@ export async function getAmbassadorLeaderboard(): Promise<
     return await getCachedAmbassadorLeaderboard();
   } catch (error) {
     console.error("[getAmbassadorLeaderboard] Error:", error);
+    return [];
+  }
+}
+
+// ── Subsidy leaderboard ─────────────────────────────────────────
+
+export type SubsidyLeaderboardEntry = {
+  leaderUsername: string;
+  partyName: string;
+  totalSubsidy: number;
+};
+
+const getCachedSubsidyLeaderboard = unstable_cache(
+  async (): Promise<SubsidyLeaderboardEntry[]> => {
+    const readDb = getDbReadOnly();
+
+    const rows = await readDb
+      .select({
+        partyId: parties.id,
+        partyName: parties.name,
+        leaderUsername: parties.leaderUsername,
+        totalSubsidy: sum(streams.totalAmount),
+      })
+      .from(streams)
+      .innerJoin(parties, eq(streams.partyId, parties.id))
+      .where(eq(streams.type, "SUBSIDY"))
+      .groupBy(parties.id, parties.name, parties.leaderUsername)
+      .orderBy(desc(sum(streams.totalAmount)), asc(parties.name));
+
+    return rows.map((row) => ({
+      leaderUsername: row.leaderUsername,
+      partyName: row.partyName,
+      totalSubsidy: Number.parseFloat(row.totalSubsidy ?? "0"),
+    }));
+  },
+  ["subsidy-leaderboard"],
+  { revalidate: 86400, tags: ["subsidy-leaderboard"] },
+);
+
+export async function getSubsidyLeaderboard(): Promise<
+  SubsidyLeaderboardEntry[]
+> {
+  try {
+    return await getCachedSubsidyLeaderboard();
+  } catch (error) {
+    console.error("[getSubsidyLeaderboard] Error:", error);
     return [];
   }
 }

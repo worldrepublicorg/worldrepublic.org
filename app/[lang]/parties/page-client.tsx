@@ -20,7 +20,9 @@ import { useAuth } from "@/hooks/use-auth";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {
   type AmbassadorLeaderboardEntry,
+  type SubsidyLeaderboardEntry,
   getAmbassadorLeaderboard,
+  getSubsidyLeaderboard,
 } from "@/lib/actions/referrals";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
@@ -64,6 +66,13 @@ export default function PartiesPageClient({
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const [leaderboardError, setLeaderboardError] = useState(false);
   const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+
+  const [subsidyLeaderboard, setSubsidyLeaderboard] = useState<
+    SubsidyLeaderboardEntry[] | null
+  >(null);
+  const [subsidyLeaderboardLoading, setSubsidyLeaderboardLoading] =
+    useState(false);
+  const [subsidyLeaderboardError, setSubsidyLeaderboardError] = useState(false);
 
   // Hydrate referral code from server when authenticated and not yet loaded
   useEffect(() => {
@@ -124,6 +133,32 @@ export default function PartiesPageClient({
       cancelled = true;
     };
   }, [activeTab, leaderboard]);
+
+  // Fetch subsidy leaderboard lazily when the subsidies tab becomes active
+  useEffect(() => {
+    if (activeTab !== "subsidies" || subsidyLeaderboard !== null) return;
+
+    let cancelled = false;
+
+    const fetchSubsidyLeaderboard = async () => {
+      setSubsidyLeaderboardLoading(true);
+      setSubsidyLeaderboardError(false);
+      try {
+        const data = await getSubsidyLeaderboard();
+        if (!cancelled) setSubsidyLeaderboard(data);
+      } catch {
+        if (!cancelled) setSubsidyLeaderboardError(true);
+      } finally {
+        if (!cancelled) setSubsidyLeaderboardLoading(false);
+      }
+    };
+
+    void fetchSubsidyLeaderboard();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activeTab, subsidyLeaderboard]);
 
   const handleCopyReferralLink = async () => {
     if (!isAuthenticated) {
@@ -408,9 +443,86 @@ export default function PartiesPageClient({
               {dictionary.pages.govern.parties.ambassadors.leaderboard}
             </Typography>
 
-            <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-              {dictionary.pages.govern.parties.subsidies.no_subsidies_yet}
-            </div>
+            {subsidyLeaderboardLoading ? (
+              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
+                  <Skeleton height={20} width={100} className="rounded" />
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {[0, 1, 2].map((i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between px-4 py-3 gap-4"
+                    >
+                      <Skeleton height={16} width="60%" className="rounded" />
+                      <Skeleton height={16} width="20%" className="rounded" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : subsidyLeaderboardError ? (
+              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                {dictionary.toasts.generic_error}
+              </div>
+            ) : subsidyLeaderboard && subsidyLeaderboard.length > 0 ? (
+              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto] gap-4">
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-500"
+                  >
+                    Leader
+                  </Typography>
+                  <Typography
+                    variant="subtitle"
+                    level={3}
+                    className="text-gray-500 text-right"
+                  >
+                    Subsidy
+                  </Typography>
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {subsidyLeaderboard.map((entry, index) => (
+                    <div
+                      key={`${entry.leaderUsername}-${entry.partyName}`}
+                      className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3"
+                    >
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
+                          {index + 1}
+                        </span>
+                        <Typography
+                          variant="body"
+                          level={3}
+                          className="font-medium text-gray-900 truncate"
+                          title={`${entry.leaderUsername} (${entry.partyName})`}
+                        >
+                          {entry.leaderUsername}
+                          <span className="text-gray-400">
+                            {" "}
+                            ({entry.partyName})
+                          </span>
+                        </Typography>
+                      </div>
+                      <Typography
+                        variant="body"
+                        level={3}
+                        className="text-gray-900 tabular-nums text-right"
+                      >
+                        {entry.totalSubsidy > 0
+                          ? `${entry.totalSubsidy.toFixed(2)} WDD`
+                          : "0 WDD"}
+                      </Typography>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                {dictionary.pages.govern.parties.subsidies.no_subsidies_yet}
+              </div>
+            )}
           </div>
         ) : null}
       </main>
