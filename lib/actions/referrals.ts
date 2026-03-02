@@ -1,9 +1,10 @@
 "use server";
 
-import { asc, count, desc, eq } from "drizzle-orm";
+import { and, asc, count, desc, eq, gt, sql, sum } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDbReadOnly } from "@/lib/db/connection";
-import { referrals, userProfiles } from "@/lib/db/schema";
+import { referrals, streams, userProfiles } from "@/lib/db/schema";
+import { STREAM_DURATION_S } from "@/lib/streams";
 
 export type AmbassadorLeaderboardEntry = {
   username: string;
@@ -11,12 +12,15 @@ export type AmbassadorLeaderboardEntry = {
   stipend: number;
 };
 
+const YEAR_S = 365 * 24 * 3600;
+
 const getCachedAmbassadorLeaderboard = unstable_cache(
   async (): Promise<AmbassadorLeaderboardEntry[]> => {
     const readDb = getDbReadOnly();
 
     const rows = await readDb
       .select({
+        userId: userProfiles.id,
         username: userProfiles.username,
         totalInvited: count(referrals.referredId),
       })
@@ -25,10 +29,38 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       .groupBy(userProfiles.id, userProfiles.username)
       .orderBy(desc(count(referrals.referredId)), asc(userProfiles.username));
 
+    const now = new Date();
+
+    // Batch-fetch active AMBASSADOR streams for all referrers
+    const referrerIds = rows.map((r) => r.userId);
+    const stipendMap = new Map<string, number>();
+
+    if (referrerIds.length > 0) {
+      const streamRows = await readDb
+        .select({
+          userId: streams.userId,
+          totalRate: sum(streams.ratePerSecond),
+        })
+        .from(streams)
+        .where(
+          and(
+            eq(streams.type, "AMBASSADOR"),
+            gt(streams.endsAt, now),
+          ),
+        )
+        .groupBy(streams.userId);
+
+      for (const sr of streamRows) {
+        const annualRate =
+          Number.parseFloat(sr.totalRate ?? "0") * YEAR_S;
+        stipendMap.set(sr.userId, annualRate);
+      }
+    }
+
     return rows.map((row) => ({
       username: row.username,
       totalInvited: Number(row.totalInvited),
-      stipend: 0,
+      stipend: stipendMap.get(row.userId) ?? 0,
     }));
   },
   ["ambassador-leaderboard"],

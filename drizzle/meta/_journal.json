@@ -36,6 +36,13 @@
       "when": 1764388964117,
       "tag": "0004_add_referrals",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1764388964118,
+      "tag": "0005_add_streams",
+      "breakpoints": true
     }
   ]
 }

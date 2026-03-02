@@ -29,6 +29,7 @@ interface Transaction {
   walletAddress?: string;
   selectedChain?: string;
   recipientUserId?: string;
+  streamType?: string;
   createdAt: number;
   isReceived: boolean;
 }
@@ -167,7 +168,6 @@ export function TransactionHistoryContent({
     return amount.toFixed(6);
   };
 
-  // Get transaction type label
   const getTransactionLabel = (transaction: Transaction): string => {
     if (transaction.type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
@@ -177,15 +177,34 @@ export function TransactionHistoryContent({
         ? dictionary.pages.wallet.transactions.types.received
         : dictionary.pages.wallet.transactions.types.sent;
     }
+    if (transaction.type === "STREAM_CREATED") {
+      const prefix =
+        transaction.streamType === "AMBASSADOR"
+          ? "Ambassador Reward"
+          : "Party Subsidy";
+      return `${prefix} — Stream Created`;
+    }
+    if (transaction.type === "STREAM_UPDATED") {
+      const prefix =
+        transaction.streamType === "AMBASSADOR"
+          ? "Ambassador Reward"
+          : "Party Subsidy";
+      return `${prefix} — Stream Updated`;
+    }
     return transaction.type;
   };
 
-  // Get transaction amount display (positive/negative)
   const getAmountDisplay = (transaction: Transaction): string => {
     const isZero = Math.abs(transaction.amount) < 0.000001;
     const amount = formatAmount(transaction.amount);
 
-    // Handle zero amounts with proper sign
+    const isStream =
+      transaction.type === "STREAM_CREATED" ||
+      transaction.type === "STREAM_UPDATED";
+    if (isStream) {
+      return isZero ? "+<0.000001" : `+${amount}`;
+    }
+
     if (isZero) {
       if (
         transaction.type === "WITHDRAWAL" ||
@@ -208,9 +227,14 @@ export function TransactionHistoryContent({
     return `-${amount}`;
   };
 
-  // Get amount color class
   const getAmountColor = (transaction: Transaction): string => {
     if (transaction.type === "TRANSFER" && transaction.isReceived) {
+      return "text-green-600";
+    }
+    if (
+      transaction.type === "STREAM_CREATED" ||
+      transaction.type === "STREAM_UPDATED"
+    ) {
       return "text-green-600";
     }
     return "text-gray-900";
@@ -224,17 +248,22 @@ export function TransactionHistoryContent({
     });
   };
 
-  // Get transaction icon component
   const getTransactionIcon = (transaction: Transaction) => {
     if (transaction.type === "WITHDRAWAL") {
-      return PiArrowCircleUpFill; // Fallback if no chain selected
+      return PiArrowCircleUpFill;
     }
     if (transaction.type === "TRANSFER") {
       return transaction.isReceived
         ? PiArrowCircleDownFill
         : PiArrowCircleUpFill;
     }
-    return PiClock; // Default fallback
+    if (
+      transaction.type === "STREAM_CREATED" ||
+      transaction.type === "STREAM_UPDATED"
+    ) {
+      return PiArrowCircleDownFill;
+    }
+    return PiClock;
   };
 
   // Get chain logo path
@@ -267,13 +296,20 @@ export function TransactionHistoryContent({
     (tx) => tx.type === "TRANSFER" && !tx.isReceived,
   );
 
+  const hasStreamTx = transactions.some(
+    (tx) => tx.type === "STREAM_CREATED" || tx.type === "STREAM_UPDATED",
+  );
+
   transactions.forEach((tx) => {
-    if (tx.type !== "TRANSFER") {
+    if (
+      tx.type !== "TRANSFER" &&
+      tx.type !== "STREAM_CREATED" &&
+      tx.type !== "STREAM_UPDATED"
+    ) {
       types.add(tx.type);
     }
   });
 
-  // Helper to get label for a transaction type
   const getTypeLabel = (type: string): string => {
     if (type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
@@ -281,7 +317,6 @@ export function TransactionHistoryContent({
     return type;
   };
 
-  // Add non-TRANSFER types
   Array.from(types)
     .sort()
     .forEach((type) => {
@@ -291,7 +326,6 @@ export function TransactionHistoryContent({
       });
     });
 
-  // Add TRANSFER options if they exist
   if (hasReceivedTransfer) {
     options.push({
       value: "TRANSFER_RECEIVED",
@@ -304,10 +338,15 @@ export function TransactionHistoryContent({
       label: dictionary.pages.wallet.transactions.types.sent,
     });
   }
+  if (hasStreamTx) {
+    options.push({
+      value: "REWARDS",
+      label: "Rewards",
+    });
+  }
 
   const availableFilterOptions = options;
 
-  // Filter transactions based on selected filter
   let filteredTransactions = transactions;
   if (selectedFilter === "TRANSFER_RECEIVED") {
     filteredTransactions = transactions.filter(
@@ -316,6 +355,10 @@ export function TransactionHistoryContent({
   } else if (selectedFilter === "TRANSFER_SENT") {
     filteredTransactions = transactions.filter(
       (tx) => tx.type === "TRANSFER" && !tx.isReceived,
+    );
+  } else if (selectedFilter === "REWARDS") {
+    filteredTransactions = transactions.filter(
+      (tx) => tx.type === "STREAM_CREATED" || tx.type === "STREAM_UPDATED",
     );
   } else if (selectedFilter !== "ALL") {
     filteredTransactions = transactions.filter(

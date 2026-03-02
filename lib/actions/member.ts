@@ -1,16 +1,22 @@
 "use server";
 
-import { and, desc, eq, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
 import {
   parties,
   referrals,
+  streams,
   transactions,
   userProfiles,
   users,
 } from "@/lib/db/schema";
+import {
+  type StreamData,
+  computeStreamAccrued,
+  computeWalletBalance,
+} from "@/lib/streams";
 import { validateUsername } from "@/lib/utils";
 
 // ============================================================================
@@ -316,6 +322,7 @@ export type GetWalletAuthAndDataTransaction = {
   walletAddress?: string;
   selectedChain?: string;
   recipientUserId?: string;
+  streamType?: string;
   createdAt: number;
   isReceived: boolean;
 };
@@ -324,8 +331,36 @@ export type GetWalletAuthAndDataResult = {
   authenticated: boolean;
   profileData: GetWalletAuthAndDataProfileData | null;
   transactions: GetWalletAuthAndDataTransaction[] | null;
+  streams: StreamData[] | null;
   email: string | null;
 };
+
+async function getUserStreamsByUuid(userUuid: string): Promise<StreamData[]> {
+  const readDb = getDbReadOnly();
+  const rows = await readDb
+    .select()
+    .from(streams)
+    .where(eq(streams.userId, userUuid))
+    .orderBy(asc(streams.startedAt));
+
+  return rows.map((r) => ({
+    id: r.id,
+    type: r.type as "SUBSIDY" | "AMBASSADOR",
+    totalAmount: Number.parseFloat(r.totalAmount),
+    initialAmount: Number.parseFloat(r.initialAmount),
+    withdrawnAmount: Number.parseFloat(r.withdrawnAmount),
+    ratePerSecond: Number.parseFloat(r.ratePerSecond),
+    startedAt: r.startedAt.getTime(),
+    endsAt: r.endsAt.getTime(),
+    partyId: r.partyId,
+    electionId: r.electionId,
+  }));
+}
+
+export async function getUserStreams(): Promise<StreamData[]> {
+  const userUuid = await getUserUuidFromSession();
+  return getUserStreamsByUuid(userUuid);
+}
 
 export async function getWalletAuthAndData(
   pendingReferralCode?: string,
@@ -338,6 +373,7 @@ export async function getWalletAuthAndData(
       authenticated: false,
       profileData: null,
       transactions: null,
+      streams: null,
       email: null,
     };
   }
@@ -361,12 +397,21 @@ export async function getWalletAuthAndData(
       authenticated: true,
       profileData: null,
       transactions: null,
+      streams: null,
       email: session.user?.email ?? null,
     };
   }
 
+  const userStreams = await getUserStreamsByUuid(userUuid);
+
+  // Compute wallet balance from streams
+  const walletBalance =
+    userStreams.length > 0
+      ? computeWalletBalance(userStreams, Date.now())
+      : null;
+
   let profileData: GetWalletAuthAndDataProfileData = {
-    walletBalance: null,
+    walletBalance,
     username: null,
     referralCode: null,
     userId: session.user.id,
@@ -374,7 +419,8 @@ export async function getWalletAuthAndData(
   };
   if (profileResult.success && profileResult.profile) {
     profileData = {
-      walletBalance: profileResult.profile.walletBalance ?? null,
+      walletBalance:
+        walletBalance ?? profileResult.profile.walletBalance ?? null,
       username: profileResult.profile.username ?? null,
       referralCode: profileResult.profile.referralCode ?? null,
       userId: session.user.id,
@@ -391,6 +437,7 @@ export async function getWalletAuthAndData(
     authenticated: true,
     profileData,
     transactions: transactionsData,
+    streams: userStreams.length > 0 ? userStreams : null,
     email: session.user?.email ?? null,
   };
 }
@@ -423,16 +470,16 @@ export async function getTransactions(limit: number = 50) {
         id: t.id,
         type: t.type,
         amount: parseFloat(t.amount || "0"),
-        // For WITHDRAWAL
         walletAddress: t.walletAddress || undefined,
         selectedChain: t.selectedChain || undefined,
-        // For TRANSFER
         recipientUserId: t.recipientUserId || undefined,
-        // Common
         transactionId: t.transactionId || undefined,
+        streamType: t.streamType || undefined,
         createdAt: t.createdAt.getTime(),
-        // Helper: is this a received transfer?
-        isReceived: t.recipientUserId === userUuid,
+        isReceived:
+          t.recipientUserId === userUuid ||
+          t.type === "STREAM_CREATED" ||
+          t.type === "STREAM_UPDATED",
       })),
     };
   } catch (error) {
@@ -456,88 +503,127 @@ export async function withdrawTokens(
   amount: string,
 ) {
   try {
-    // Get user UUID from session
     const userUuid = await getUserUuidFromSession();
 
-    // Server-side validation for wallet address
     const evmAddressRegex = /^0x[a-fA-F0-9]{40}$/;
     if (!evmAddressRegex.test(walletAddress)) {
       return { success: false, error: "Invalid wallet address" };
     }
 
-    // Server-side validation for selected chain
     const allowedChains = ["1", "56", "143", "480", "8453"];
     if (!allowedChains.includes(selectedChain)) {
       return { success: false, error: "Invalid chain" };
     }
 
-    // Server-side validation for amount
     const amountNumber = parseFloat(amount);
     if (isNaN(amountNumber) || amountNumber <= 0) {
       return { success: false, error: "Invalid amount" };
     }
 
-    // Floor to 18 dp to avoid rounding up beyond true balance
     const flooredAmount = Math.floor(amountNumber * 1e18) / 1e18;
-
-    // Check minimum withdrawal amount
     if (flooredAmount < 10) {
       return { success: false, error: "Minimum 10 WDD" };
     }
 
-    // Use PostgreSQL transaction for atomic withdrawal
+    const nowMs = Date.now();
+
+    // Debit streams inside a DB transaction with row-level locking
     const result = await db.transaction(async (tx) => {
-      // Get current profile - transaction isolation provides atomicity
-      const [profile] = await tx
-        .select()
-        .from(userProfiles)
-        .where(eq(userProfiles.id, userUuid))
-        .limit(1);
+      // SELECT ... FOR UPDATE to prevent concurrent withdrawal races
+      const userStreams = await tx.execute(
+        sql`SELECT * FROM streams WHERE user_id = ${userUuid} FOR UPDATE`,
+      );
 
-      if (!profile) {
-        throw new Error("User not found");
-      }
+      const streamRows = (
+        "rows" in userStreams ? userStreams.rows : userStreams
+      ) as Array<{
+        id: string;
+        type: string;
+        total_amount: string;
+        initial_amount: string;
+        withdrawn_amount: string;
+        rate_per_second: string;
+        started_at: string | Date;
+        ends_at: string | Date;
+        party_id: string;
+        election_id: string;
+      }>;
 
-      // Parse current balance
-      const walletBalance = parseFloat(profile.walletBalance || "0");
+      const streamDataList: (StreamData & { dbId: string })[] = streamRows.map(
+        (r) => ({
+          dbId: r.id,
+          id: r.id,
+          type: r.type as "SUBSIDY" | "AMBASSADOR",
+          totalAmount: Number.parseFloat(r.total_amount),
+          initialAmount: Number.parseFloat(r.initial_amount),
+          withdrawnAmount: Number.parseFloat(r.withdrawn_amount),
+          ratePerSecond: Number.parseFloat(r.rate_per_second),
+          startedAt: new Date(r.started_at).getTime(),
+          endsAt: new Date(r.ends_at).getTime(),
+          partyId: r.party_id,
+          electionId: r.election_id,
+        }),
+      );
 
-      // Check sufficient balance
-      if (walletBalance < flooredAmount) {
+      const balance = computeWalletBalance(streamDataList, nowMs);
+      if (balance < flooredAmount) {
         throw new Error(
-          `Tried ${flooredAmount} but only have ${walletBalance} WDD.`,
+          `Tried ${flooredAmount} but only have ${balance.toFixed(6)} WDD.`,
         );
       }
 
-      // Calculate new balance
-      const newWalletBalance = walletBalance - flooredAmount;
+      // Debit oldest streams first
+      let remaining = flooredAmount;
+      const sortedStreams = [...streamDataList].sort(
+        (a, b) => a.startedAt - b.startedAt,
+      );
+      const debits: {
+        streamId: string;
+        oldWithdrawn: number;
+        newWithdrawn: number;
+      }[] = [];
 
-      // Update balance atomically
+      for (const s of sortedStreams) {
+        if (remaining <= 0) break;
+        const accrued = computeStreamAccrued(s, nowMs);
+        const available = Math.max(0, accrued - s.withdrawnAmount);
+        if (available <= 0) continue;
+
+        const debit = Math.min(available, remaining);
+        debits.push({
+          streamId: s.dbId,
+          oldWithdrawn: s.withdrawnAmount,
+          newWithdrawn: s.withdrawnAmount + debit,
+        });
+        remaining -= debit;
+      }
+
+      for (const d of debits) {
+        await tx
+          .update(streams)
+          .set({ withdrawnAmount: d.newWithdrawn.toFixed(18) })
+          .where(eq(streams.id, d.streamId));
+      }
+
+      const newBalance = balance - flooredAmount;
       await tx
         .update(userProfiles)
         .set({
-          walletBalance: newWalletBalance.toFixed(18),
+          walletBalance: Math.max(0, newBalance).toFixed(18),
           updatedAt: new Date(),
         })
         .where(eq(userProfiles.id, userUuid));
 
-      // Return original value for potential revert
-      return {
-        oldWalletBalance: walletBalance,
-      };
+      return { debits, oldBalance: balance };
     });
 
-    // Transaction succeeded, proceed with blockchain transaction
-    // Determine the from address based on the selected chain
     let fromAddress: string;
     if (selectedChain === "480") {
       fromAddress = "0x7aCA7AFDa78884fE0a58fb8B3988B9f93F963950";
     } else {
-      // For chains 1 (Ethereum), 56 (BSC), 143 (Monad), and 8453 (Base), use the original address
       fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac";
     }
 
-    // Convert flooredAmount (18 decimals) to wei as string
-    // Since we store 18 decimals, we can directly multiply by 10^18
     const amountWei = BigInt(Math.floor(flooredAmount * 1e18)).toString();
 
     const response = await fetch(
@@ -564,14 +650,19 @@ export async function withdrawTokens(
       },
     );
 
-    // If blockchain transaction fails, we need to revert the database
     if (!response.ok) {
-      // Revert balance using another transaction
+      // Revert stream debits to original values
       await db.transaction(async (tx) => {
+        for (const d of result.debits) {
+          await tx
+            .update(streams)
+            .set({ withdrawnAmount: d.oldWithdrawn.toFixed(18) })
+            .where(eq(streams.id, d.streamId));
+        }
         await tx
           .update(userProfiles)
           .set({
-            walletBalance: result.oldWalletBalance.toFixed(18),
+            walletBalance: result.oldBalance.toFixed(18),
             updatedAt: new Date(),
           })
           .where(eq(userProfiles.id, userUuid));
@@ -585,12 +676,10 @@ export async function withdrawTokens(
       };
     }
 
-    // Monitor transaction and handle failures
     const data = await response.json();
     const transactionId = data.result?.transactions?.[0]?.id;
 
     if (transactionId) {
-      // Store withdrawal record in PostgreSQL
       await db.insert(transactions).values({
         userId: userUuid,
         type: "WITHDRAWAL",
@@ -600,16 +689,14 @@ export async function withdrawTokens(
         transactionId,
       });
 
-      // Revalidate paths that show wallet data
       revalidatePath("/[lang]/wallet", "page");
 
       return {
         success: true,
         transactionId,
       };
-    } else {
-      return { success: false, error: "Transaction ID not found" };
     }
+    return { success: false, error: "Transaction ID not found" };
   } catch (error) {
     console.error("Error withdrawing tokens:", error);
     return {

@@ -3,6 +3,7 @@ import type {
   GetWalletAuthAndDataResult,
   GetWalletAuthAndDataTransaction,
 } from "@/lib/actions/member";
+import type { StreamData } from "@/lib/streams";
 
 export const AUTH_DISPLAY_CACHE_KEY = "authDisplayCache";
 
@@ -25,6 +26,7 @@ export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
           (obj.profileData as GetWalletAuthAndDataProfileData) ?? null,
         transactions:
           (obj.transactions as GetWalletAuthAndDataTransaction[]) ?? null,
+        streams: (obj.streams as StreamData[]) ?? null,
         email: (obj.email as string) ?? null,
       };
     }

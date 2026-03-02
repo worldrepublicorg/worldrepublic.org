@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   PiArrowCircleUpFill,
   PiArrowSquareOut,
@@ -47,6 +47,7 @@ import {
   getWalletAuthAndData,
   withdrawTokens,
 } from "@/lib/actions/member";
+import { type StreamData, computeWalletBalance } from "@/lib/streams";
 import {
   cn,
   formatFullAmount,
@@ -103,9 +104,36 @@ export default function WalletPageClient({
     data?.transactions ?? [];
 
   const authenticated = isAuthenticated || clientIsAuthenticated;
-  const walletBalance = profileData?.walletBalance ?? null;
+  const userStreams: StreamData[] = data?.streams ?? [];
+  const serverBalance = profileData?.walletBalance ?? null;
 
-  // Dialog state management
+  // Live-ticking balance from streams
+  const [liveBalance, setLiveBalance] = useState<number | null>(null);
+  const streamsRef = useRef(userStreams);
+  streamsRef.current = userStreams;
+
+  const computeBalance = useCallback(() => {
+    const s = streamsRef.current;
+    if (s.length > 0) {
+      return computeWalletBalance(s, Date.now());
+    }
+    return null;
+  }, []);
+
+  useEffect(() => {
+    if (userStreams.length === 0) {
+      setLiveBalance(null);
+      return;
+    }
+    setLiveBalance(computeBalance());
+    const interval = setInterval(() => {
+      setLiveBalance(computeBalance());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [userStreams, computeBalance]);
+
+  const walletBalance = liveBalance ?? serverBalance;
+
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
 
   // Helper function to get address validation error message
@@ -175,10 +203,7 @@ export default function WalletPageClient({
     }
   };
 
-  // Calculate display balance (offchain only)
   const displayBalanceNumber = walletBalance || 0;
-
-  // Calculate total WDD balance for Send dialog (offchain balance)
   const totalBalanceNumber = walletBalance || 0;
 
   // Format display balance with truncation and buffer

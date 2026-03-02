@@ -243,7 +243,7 @@ export const referralsRelations = relations(referrals, ({ one }) => ({
 }));
 
 // Transactions table - unified transaction records for all transaction types
-// Types: WITHDRAWAL, TRANSFER
+// Types: WITHDRAWAL, TRANSFER, STREAM_CREATED, STREAM_UPDATED
 export const transactions = pgTable(
   "transactions",
   {
@@ -251,30 +251,28 @@ export const transactions = pgTable(
     userId: uuid("user_id")
       .notNull()
       .references(() => users.uuid, { onDelete: "cascade" }),
-    type: varchar("type", { length: 30 }).notNull(), // Transaction type
+    type: varchar("type", { length: 30 }).notNull(),
     amount: decimal("amount", { precision: 36, scale: 18 }).notNull(),
     // For WITHDRAWAL only
-    walletAddress: text("wallet_address"), // EVM address (nullable)
-    selectedChain: varchar("selected_chain", { length: 10 }), // Chain ID (nullable)
+    walletAddress: text("wallet_address"),
+    selectedChain: varchar("selected_chain", { length: 10 }),
     // For TRANSFER only
-    recipientUserId: uuid("recipient_user_id"), // Recipient user UUID (nullable, FK to users.uuid)
+    recipientUserId: uuid("recipient_user_id"),
     // For WITHDRAWAL: Thirdweb transaction ID
     // For TRANSFER: Internal transaction UUID
-    // For internal transactions: null
-    transactionId: text("transaction_id"), // Nullable
+    transactionId: text("transaction_id"),
+    // For STREAM_CREATED / STREAM_UPDATED only
+    streamId: uuid("stream_id"),
+    streamType: varchar("stream_type", { length: 20 }), // "SUBSIDY" | "AMBASSADOR"
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
   },
   (table) => [
-    // Composite indexes (removed single-column ones for better performance)
     index("transactions_user_created_idx").on(table.userId, table.createdAt),
-    // Index for recipient lookups (for transfers - shows received transfers)
     index("transactions_recipient_created_idx").on(
       table.recipientUserId,
       table.createdAt,
     ),
-    // Index for type filtering
     index("transactions_type_created_idx").on(table.type, table.createdAt),
-    // Note: Unique index on transactionId (partial, only when not null) is created via raw SQL in migration
   ],
 );
 
@@ -301,10 +299,10 @@ export const elections = pgTable(
     rewardPool: decimal("reward_pool", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
+    distributedAt: timestamp("distributed_at", { mode: "date" }),
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
   },
   (table) => [
-    // Index for finding active election (startsAt <= now < endsAt)
     index("elections_starts_at_idx").on(table.startsAt),
     index("elections_ends_at_idx").on(table.endsAt),
   ],
@@ -349,6 +347,56 @@ export const votesRelations = relations(votes, ({ one }) => ({
   }),
   party: one(parties, {
     fields: [votes.partyId],
+    references: [parties.id],
+  }),
+}));
+
+// Streams table - linear vesting streams for subsidies and ambassador rewards
+export const streams = pgTable(
+  "streams",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    type: varchar("type", { length: 20 }).notNull(), // "SUBSIDY" | "AMBASSADOR"
+    electionId: uuid("election_id")
+      .notNull()
+      .references(() => elections.id, { onDelete: "cascade" }),
+    partyId: uuid("party_id")
+      .notNull()
+      .references(() => parties.id, { onDelete: "cascade" }),
+    totalAmount: decimal("total_amount", { precision: 36, scale: 18 }).notNull(),
+    initialAmount: decimal("initial_amount", { precision: 36, scale: 18 })
+      .notNull()
+      .default("0"),
+    withdrawnAmount: decimal("withdrawn_amount", { precision: 36, scale: 18 })
+      .notNull()
+      .default("0"),
+    ratePerSecond: decimal("rate_per_second", { precision: 36, scale: 18 }).notNull(),
+    startedAt: timestamp("started_at", { mode: "date" }).notNull(),
+    endsAt: timestamp("ends_at", { mode: "date" }).notNull(),
+    sourceStreamId: uuid("source_stream_id"),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    index("streams_user_id_idx").on(table.userId),
+    index("streams_user_type_idx").on(table.userId, table.type),
+    index("streams_election_id_idx").on(table.electionId),
+  ],
+);
+
+export const streamsRelations = relations(streams, ({ one }) => ({
+  user: one(users, {
+    fields: [streams.userId],
+    references: [users.uuid],
+  }),
+  election: one(elections, {
+    fields: [streams.electionId],
+    references: [elections.id],
+  }),
+  party: one(parties, {
+    fields: [streams.partyId],
     references: [parties.id],
   }),
 }));

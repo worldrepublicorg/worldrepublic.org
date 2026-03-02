@@ -29,6 +29,7 @@ export function useAuth() {
           authenticated: false,
           profileData: null,
           transactions: null,
+          streams: null,
           email: null,
         });
       } catch {
