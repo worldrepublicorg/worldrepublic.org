@@ -47,13 +47,8 @@ import {
   getWalletAuthAndData,
   withdrawTokens,
 } from "@/lib/actions/member";
-import { type StreamData, computeWalletBalance } from "@/lib/streams";
-import {
-  cn,
-  formatFullAmount,
-  getBalancePrecision,
-  truncateToPrecision,
-} from "@/lib/utils";
+import { computeWalletBalance, type StreamData } from "@/lib/streams";
+import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
 import {
   getCachedWalletData,
   setCachedWalletData,
@@ -206,17 +201,11 @@ export default function WalletPageClient({
   const displayBalanceNumber = walletBalance || 0;
   const totalBalanceNumber = walletBalance || 0;
 
-  // Format display balance with truncation and buffer
+  // Format display balance with fixed 4 decimals
   const truncatedDisplay = Math.floor(displayBalanceNumber * 1e18) / 1e18;
   const safeDisplayAmount = Math.max(0, truncatedDisplay - 1e-12);
-  const displayPrecision = getBalancePrecision(safeDisplayAmount);
-  const truncatedDisplayBalance = truncateToPrecision(
-    safeDisplayAmount,
-    displayPrecision,
-  );
-  const finalDisplayPrecision =
-    truncatedDisplayBalance === 0 ? 2 : displayPrecision;
-  const displayBalance = truncatedDisplayBalance.toFixed(finalDisplayPrecision);
+  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, 4);
+  const displayBalance = truncatedDisplayBalance.toFixed(4);
 
   // Format send balance with small buffer only (no truncation for dialog)
   const safeSendAmount = Math.max(0, totalBalanceNumber - 1e-12);
@@ -470,7 +459,9 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.ethereum_jumper}
+                        label={
+                          dictionary.pages.wallet.modals.trade.ethereum_jumper
+                        }
                         startAdornment={
                           <Image
                             src="/icons/exchanges/jumper.svg"
@@ -493,7 +484,9 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.ethereum_uniswap}
+                        label={
+                          dictionary.pages.wallet.modals.trade.ethereum_uniswap
+                        }
                         startAdornment={
                           <Image
                             src="/icons/exchanges/uniswap.svg"
@@ -516,7 +509,9 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.worldchain_jumper}
+                        label={
+                          dictionary.pages.wallet.modals.trade.worldchain_jumper
+                        }
                         startAdornment={
                           <Image
                             src="/icons/exchanges/jumper.svg"
@@ -539,7 +534,10 @@ export default function WalletPageClient({
                       className="block w-full"
                     >
                       <CustomListItem
-                        label={dictionary.pages.wallet.modals.trade.worldchain_uniswap}
+                        label={
+                          dictionary.pages.wallet.modals.trade
+                            .worldchain_uniswap
+                        }
                         startAdornment={
                           <Image
                             src="/icons/exchanges/uniswap.svg"
