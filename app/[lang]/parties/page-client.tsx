@@ -329,7 +329,7 @@ export default function PartiesPageClient({
               </div>
             ) : leaderboard && leaderboard.length > 0 ? (
               <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
-                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto_auto] gap-4">
+                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_4rem_auto] gap-4">
                   <Typography
                     variant="subtitle"
                     level={3}
@@ -356,7 +356,7 @@ export default function PartiesPageClient({
                   {leaderboard.map((entry, index) => (
                     <div
                       key={entry.username}
-                      className="grid grid-cols-[1fr_auto_auto] gap-4 items-center px-4 py-3"
+                      className="grid grid-cols-[1fr_4rem_auto] gap-4 items-center px-4 py-3"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
