@@ -348,7 +348,9 @@ export default function PartiesPageClient({
                         level={3}
                         className="text-gray-400 tabular-nums text-right w-16"
                       >
-                        0 WDD
+                        {entry.stipend > 0
+                          ? `${entry.stipend.toFixed(2)} WDD`
+                          : "0 WDD"}
                       </Typography>
                     </div>
                   ))}

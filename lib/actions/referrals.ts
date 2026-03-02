@@ -57,11 +57,20 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       }
     }
 
-    return rows.map((row) => ({
+    const entries = rows.map((row) => ({
       username: row.username,
       totalInvited: Number(row.totalInvited),
       stipend: stipendMap.get(row.userId) ?? 0,
     }));
+
+    // Sort by stipend descending (highest first), then by invited count, then username
+    entries.sort((a, b) => {
+      if (b.stipend !== a.stipend) return b.stipend - a.stipend;
+      if (b.totalInvited !== a.totalInvited) return b.totalInvited - a.totalInvited;
+      return a.username.localeCompare(b.username);
+    });
+
+    return entries;
   },
   ["ambassador-leaderboard"],
   { revalidate: 86400, tags: ["ambassador-leaderboard"] },
