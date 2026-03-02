@@ -1,6 +1,5 @@
-import { and, count, desc, eq, gt, isNull, sql } from "drizzle-orm";
-import type { PostgresJsDatabase } from "drizzle-orm/postgres-js";
-import { computeStreamAccrued, STREAM_DURATION_S } from "../streams";
+import { and, count, desc, eq, gt, sql } from "drizzle-orm";
+import type { PgDatabase } from "drizzle-orm/pg-core";
 import type * as schemaImport from "../db/schema";
 import {
   elections,
@@ -10,8 +9,11 @@ import {
   transactions,
   votes,
 } from "../db/schema";
+import { computeStreamAccrued, STREAM_DURATION_S } from "../streams";
 
 type Schema = typeof schemaImport;
+// biome-ignore lint/suspicious/noExplicitAny: Supports both postgres-js, neon-serverless, and neon-http drivers
+type AnyDb = PgDatabase<any, Schema>;
 
 export interface DistributionEntry {
   partyName: string;
@@ -32,8 +34,32 @@ export interface DistributionSummary {
   entries: DistributionEntry[];
 }
 
+interface PendingStreamWrite {
+  freezeStreamId?: string;
+  freezeEndsAt?: Date;
+  insertStream: {
+    userId: string;
+    type: "SUBSIDY" | "AMBASSADOR";
+    electionId: string;
+    partyId: string;
+    totalAmount: string;
+    initialAmount: string;
+    withdrawnAmount: string;
+    ratePerSecond: string;
+    startedAt: Date;
+    endsAt: Date;
+    sourceStreamId?: string;
+  };
+  insertTransaction: {
+    userId: string;
+    type: string;
+    amount: string;
+    streamType: "SUBSIDY" | "AMBASSADOR";
+  };
+}
+
 export async function distributeElectionSubsidies(
-  db: PostgresJsDatabase<Schema>,
+  db: AnyDb,
   electionId: string,
   options: { dryRun?: boolean } = {},
 ): Promise<DistributionSummary> {
@@ -42,172 +68,207 @@ export async function distributeElectionSubsidies(
   const nowDate = new Date();
   const nowMs = nowDate.getTime();
 
-  const summary = await db.transaction(async (tx) => {
-    // 1. Load and validate election
-    const [election] = await tx
-      .select()
-      .from(elections)
-      .where(eq(elections.id, electionId))
+  // ── Phase 1: Read & validate ──────────────────────────────────
+
+  const [election] = await db
+    .select()
+    .from(elections)
+    .where(eq(elections.id, electionId))
+    .limit(1);
+
+  if (!election) {
+    throw new Error(`Election ${electionId} not found`);
+  }
+  if (election.distributedAt) {
+    throw new Error(
+      `Election ${electionId} was already distributed at ${election.distributedAt.toISOString()}`,
+    );
+  }
+  if (election.endsAt > nowDate) {
+    throw new Error(
+      `Election ${electionId} has not ended yet (ends ${election.endsAt.toISOString()})`,
+    );
+  }
+
+  const rewardPool = Number.parseFloat(election.rewardPool);
+  if (rewardPool <= 0) {
+    throw new Error(`Election ${electionId} has no reward pool`);
+  }
+
+  const voteRows = await db
+    .select({
+      partyId: votes.partyId,
+      partyName: parties.name,
+      leaderUserId: parties.foundedBy,
+      leaderUsername: parties.leaderUsername,
+      voteCount: count(votes.id),
+    })
+    .from(votes)
+    .innerJoin(parties, eq(votes.partyId, parties.id))
+    .where(eq(votes.electionId, electionId))
+    .groupBy(
+      votes.partyId,
+      parties.name,
+      parties.foundedBy,
+      parties.leaderUsername,
+    )
+    .orderBy(desc(count(votes.id)));
+
+  const totalVotes = voteRows.reduce((sum, r) => sum + r.voteCount, 0);
+  if (totalVotes === 0) {
+    throw new Error(`Election ${electionId} has no votes`);
+  }
+
+  // ── Phase 2: Compute allocations ──────────────────────────────
+
+  const entries: DistributionEntry[] = [];
+  const pendingWrites: PendingStreamWrite[] = [];
+
+  for (const row of voteRows) {
+    const partySubsidy = (rewardPool * row.voteCount) / totalVotes;
+    if (partySubsidy <= 0) continue;
+
+    const subsidyWrite = await computeStreamWrite(
+      db,
+      {
+        userId: row.leaderUserId,
+        type: "SUBSIDY",
+        electionId,
+        partyId: row.partyId,
+        newAllocation: partySubsidy,
+      },
+      nowDate,
+      nowMs,
+    );
+    pendingWrites.push(subsidyWrite);
+
+    const entry: DistributionEntry = {
+      partyName: row.partyName,
+      leaderUsername: row.leaderUsername,
+      leaderUserId: row.leaderUserId,
+      subsidy: partySubsidy.toFixed(18),
+      streamAction: subsidyWrite.insertTransaction.type === "STREAM_CREATED"
+        ? "CREATED"
+        : "UPDATED",
+      ambassadorUsername: null,
+      ambassadorReward: null,
+      ambassadorStreamAction: null,
+    };
+
+    // Ambassador rewards: look up referrer
+    const [referral] = await db
+      .select({ referrerId: referrals.referrerId })
+      .from(referrals)
+      .where(eq(referrals.referredId, row.leaderUserId))
       .limit(1);
 
-    if (!election) {
-      throw new Error(`Election ${electionId} not found`);
-    }
-    if (election.distributedAt) {
-      throw new Error(
-        `Election ${electionId} was already distributed at ${election.distributedAt.toISOString()}`,
-      );
-    }
-    if (election.endsAt > nowDate) {
-      throw new Error(
-        `Election ${electionId} has not ended yet (ends ${election.endsAt.toISOString()})`,
-      );
-    }
+    if (referral) {
+      const ambassadorReward = partySubsidy * 0.1;
 
-    const rewardPool = Number.parseFloat(election.rewardPool);
-    if (rewardPool <= 0) {
-      throw new Error(`Election ${electionId} has no reward pool`);
-    }
+      const referrerUsername = await db
+        .select({
+          username: sql<string>`(SELECT username FROM user_profiles WHERE id = ${referral.referrerId})`,
+        })
+        .from(sql`(SELECT 1) AS _`)
+        .then((rows) => rows[0]?.username ?? "unknown");
 
-    // 2. Compute vote shares per party
-    const voteRows = await tx
-      .select({
-        partyId: votes.partyId,
-        partyName: parties.name,
-        leaderUserId: parties.foundedBy,
-        leaderUsername: parties.leaderUsername,
-        voteCount: count(votes.id),
-      })
-      .from(votes)
-      .innerJoin(parties, eq(votes.partyId, parties.id))
-      .where(eq(votes.electionId, electionId))
-      .groupBy(
-        votes.partyId,
-        parties.name,
-        parties.foundedBy,
-        parties.leaderUsername,
-      )
-      .orderBy(desc(count(votes.id)));
-
-    const totalVotes = voteRows.reduce((sum, r) => sum + r.voteCount, 0);
-    if (totalVotes === 0) {
-      throw new Error(`Election ${electionId} has no votes`);
-    }
-
-    const entries: DistributionEntry[] = [];
-
-    // 3. For each party with votes
-    for (const row of voteRows) {
-      const partySubsidy = (rewardPool * row.voteCount) / totalVotes;
-      if (partySubsidy <= 0) continue;
-
-      // Create/rollover SUBSIDY stream for the party leader
-      const subsidyResult = await createOrRolloverStream(
-        tx,
+      const ambassadorWrite = await computeStreamWrite(
+        db,
         {
-          userId: row.leaderUserId,
-          type: "SUBSIDY",
+          userId: referral.referrerId,
+          type: "AMBASSADOR",
           electionId,
           partyId: row.partyId,
-          newAllocation: partySubsidy,
+          newAllocation: ambassadorReward,
         },
         nowDate,
         nowMs,
       );
+      pendingWrites.push(ambassadorWrite);
 
-      const entry: DistributionEntry = {
-        partyName: row.partyName,
-        leaderUsername: row.leaderUsername,
-        leaderUserId: row.leaderUserId,
-        subsidy: partySubsidy.toFixed(18),
-        streamAction: subsidyResult.action,
-        ambassadorUsername: null,
-        ambassadorReward: null,
-        ambassadorStreamAction: null,
-      };
+      entry.ambassadorUsername = referrerUsername;
+      entry.ambassadorReward = ambassadorReward.toFixed(18);
+      entry.ambassadorStreamAction =
+        ambassadorWrite.insertTransaction.type === "STREAM_CREATED"
+          ? "CREATED"
+          : "UPDATED";
+    }
 
-      // 4. Ambassador rewards: look up referrer
-      const [referral] = await tx
-        .select({
-          referrerId: referrals.referrerId,
-        })
-        .from(referrals)
-        .where(eq(referrals.referredId, row.leaderUserId))
-        .limit(1);
+    entries.push(entry);
+  }
 
-      if (referral) {
-        const ambassadorReward = partySubsidy * 0.1;
+  const summary: DistributionSummary = {
+    electionId,
+    electionName: election.name,
+    rewardPool: election.rewardPool,
+    totalVotes,
+    entries,
+  };
 
-        // Look up referrer username for the summary
-        const referrerUsername = await tx
-          .select({
-            username: sql<string>`(SELECT username FROM user_profiles WHERE id = ${referral.referrerId})`,
-          })
-          .from(sql`(SELECT 1) AS _`)
-          .then((rows) => rows[0]?.username ?? "unknown");
+  if (dryRun) {
+    return summary;
+  }
 
-        const ambassadorResult = await createOrRolloverStream(
-          tx,
-          {
-            userId: referral.referrerId,
-            type: "AMBASSADOR",
-            electionId,
-            partyId: row.partyId,
-            newAllocation: ambassadorReward,
-          },
-          nowDate,
-          nowMs,
-        );
+  // ── Phase 3: Write (only if not dry run) ──────────────────────
 
-        entry.ambassadorUsername = referrerUsername;
-        entry.ambassadorReward = ambassadorReward.toFixed(18);
-        entry.ambassadorStreamAction = ambassadorResult.action;
+  // Re-check guard to narrow the race window
+  const [recheck] = await db
+    .select({ distributedAt: elections.distributedAt })
+    .from(elections)
+    .where(eq(elections.id, electionId))
+    .limit(1);
+
+  if (recheck?.distributedAt) {
+    throw new Error(
+      `Election ${electionId} was distributed by another process at ${recheck.distributedAt.toISOString()}`,
+    );
+  }
+
+  // Claim the election first to prevent concurrent runs
+  await db
+    .update(elections)
+    .set({ distributedAt: nowDate })
+    .where(eq(elections.id, electionId));
+
+  try {
+    for (const write of pendingWrites) {
+      if (write.freezeStreamId) {
+        await db
+          .update(streams)
+          .set({ endsAt: write.freezeEndsAt! })
+          .where(eq(streams.id, write.freezeStreamId));
       }
 
-      entries.push(entry);
-    }
+      const [newStream] = await db
+        .insert(streams)
+        .values(write.insertStream)
+        .returning({ id: streams.id });
 
-    // 5. Mark election as distributed
-    await tx
-      .update(elections)
-      .set({ distributedAt: nowDate })
-      .where(eq(elections.id, electionId));
-
-    if (dryRun) {
-      throw new DryRunRollback({
-        electionId,
-        electionName: election.name,
-        rewardPool: election.rewardPool,
-        totalVotes,
-        entries,
+      await db.insert(transactions).values({
+        ...write.insertTransaction,
+        streamId: newStream.id,
       });
     }
-
-    return {
-      electionId,
-      electionName: election.name,
-      rewardPool: election.rewardPool,
-      totalVotes,
-      entries,
-    };
-  });
+  } catch (error) {
+    // If writes fail, clear distributedAt so it can be retried
+    await db
+      .update(elections)
+      .set({ distributedAt: null })
+      .where(eq(elections.id, electionId))
+      .catch(() => undefined);
+    throw error;
+  }
 
   return summary;
 }
 
-class DryRunRollback extends Error {
-  summary: DistributionSummary;
-  constructor(summary: DistributionSummary) {
-    super("DRY_RUN_ROLLBACK");
-    this.summary = summary;
-  }
-}
-
-// Re-export so the script can catch it
-export { DryRunRollback };
-
-async function createOrRolloverStream(
-  tx: Parameters<Parameters<PostgresJsDatabase<Schema>["transaction"]>[0]>[0],
+/**
+ * Reads existing stream state and computes the write operations needed,
+ * without actually executing them. This separates reads from writes so
+ * the function works with HTTP-only database drivers (no transactions).
+ */
+async function computeStreamWrite(
+  db: AnyDb,
   params: {
     userId: string;
     type: "SUBSIDY" | "AMBASSADOR";
@@ -217,12 +278,11 @@ async function createOrRolloverStream(
   },
   nowDate: Date,
   nowMs: number,
-): Promise<{ streamId: string; action: "CREATED" | "UPDATED" }> {
+): Promise<PendingStreamWrite> {
   const { userId, type, electionId, partyId, newAllocation } = params;
   const endsAt = new Date(nowMs + STREAM_DURATION_S * 1000);
 
-  // Check for existing active stream
-  const [existingStream] = await tx
+  const [existingStream] = await db
     .select()
     .from(streams)
     .where(
@@ -234,11 +294,7 @@ async function createOrRolloverStream(
     )
     .limit(1);
 
-  let streamId: string;
-  let action: "CREATED" | "UPDATED";
-
   if (existingStream) {
-    // Rollover: freeze old stream and create new one with carried-over balance
     const streamData = {
       id: existingStream.id,
       type: existingStream.type as "SUBSIDY" | "AMBASSADOR",
@@ -254,24 +310,18 @@ async function createOrRolloverStream(
 
     const accrued = computeStreamAccrued(streamData, nowMs);
     const withdrawn = streamData.withdrawnAmount;
-    const availableNow = accrued - withdrawn; // carry-over (already available)
+    const availableNow = accrued - withdrawn;
     const unvested = streamData.totalAmount - accrued;
 
-    // Freeze old stream
-    await tx
-      .update(streams)
-      .set({ endsAt: nowDate })
-      .where(eq(streams.id, existingStream.id));
-
-    // New stream: initialAmount = available now, vesting portion = unvested + newAllocation
     const newInitialAmount = Math.max(0, availableNow);
     const vestingPortion = Math.max(0, unvested) + newAllocation;
     const newTotalAmount = newInitialAmount + vestingPortion;
     const ratePerSecond = vestingPortion / STREAM_DURATION_S;
 
-    const [newStream] = await tx
-      .insert(streams)
-      .values({
+    return {
+      freezeStreamId: existingStream.id,
+      freezeEndsAt: nowDate,
+      insertStream: {
         userId,
         type,
         electionId,
@@ -283,44 +333,36 @@ async function createOrRolloverStream(
         startedAt: nowDate,
         endsAt,
         sourceStreamId: existingStream.id,
-      })
-      .returning({ id: streams.id });
-
-    streamId = newStream.id;
-    action = "UPDATED";
-  } else {
-    // Brand new stream
-    const ratePerSecond = newAllocation / STREAM_DURATION_S;
-
-    const [newStream] = await tx
-      .insert(streams)
-      .values({
+      },
+      insertTransaction: {
         userId,
-        type,
-        electionId,
-        partyId,
-        totalAmount: newAllocation.toFixed(18),
-        initialAmount: "0",
-        withdrawnAmount: "0",
-        ratePerSecond: ratePerSecond.toFixed(18),
-        startedAt: nowDate,
-        endsAt,
-      })
-      .returning({ id: streams.id });
-
-    streamId = newStream.id;
-    action = "CREATED";
+        type: "STREAM_UPDATED",
+        amount: newAllocation.toFixed(18),
+        streamType: type,
+      },
+    };
   }
 
-  // Insert transaction history row
-  const txType = action === "CREATED" ? "STREAM_CREATED" : "STREAM_UPDATED";
-  await tx.insert(transactions).values({
-    userId,
-    type: txType,
-    amount: newAllocation.toFixed(18),
-    streamId,
-    streamType: type,
-  });
+  const ratePerSecond = newAllocation / STREAM_DURATION_S;
 
-  return { streamId, action };
+  return {
+    insertStream: {
+      userId,
+      type,
+      electionId,
+      partyId,
+      totalAmount: newAllocation.toFixed(18),
+      initialAmount: "0",
+      withdrawnAmount: "0",
+      ratePerSecond: ratePerSecond.toFixed(18),
+      startedAt: nowDate,
+      endsAt,
+    },
+    insertTransaction: {
+      userId,
+      type: "STREAM_CREATED",
+      amount: newAllocation.toFixed(18),
+      streamType: type,
+    },
+  };
 }

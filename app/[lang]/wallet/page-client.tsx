@@ -201,11 +201,11 @@ export default function WalletPageClient({
   const displayBalanceNumber = walletBalance || 0;
   const totalBalanceNumber = walletBalance || 0;
 
-  // Format display balance with fixed 4 decimals
   const truncatedDisplay = Math.floor(displayBalanceNumber * 1e18) / 1e18;
   const safeDisplayAmount = Math.max(0, truncatedDisplay - 1e-12);
-  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, 5);
-  const displayBalance = truncatedDisplayBalance.toFixed(5);
+  const precision = safeDisplayAmount === 0 ? 2 : 5;
+  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, precision);
+  const displayBalance = truncatedDisplayBalance.toFixed(precision);
 
   // Format send balance with small buffer only (no truncation for dialog)
   const safeSendAmount = Math.max(0, totalBalanceNumber - 1e-12);
