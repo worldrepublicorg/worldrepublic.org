@@ -204,8 +204,8 @@ export default function WalletPageClient({
   // Format display balance with fixed 4 decimals
   const truncatedDisplay = Math.floor(displayBalanceNumber * 1e18) / 1e18;
   const safeDisplayAmount = Math.max(0, truncatedDisplay - 1e-12);
-  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, 4);
-  const displayBalance = truncatedDisplayBalance.toFixed(4);
+  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, 5);
+  const displayBalance = truncatedDisplayBalance.toFixed(5);
 
   // Format send balance with small buffer only (no truncation for dialog)
   const safeSendAmount = Math.max(0, totalBalanceNumber - 1e-12);
