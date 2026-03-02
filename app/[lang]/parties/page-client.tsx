@@ -20,9 +20,9 @@ import { useAuth } from "@/hooks/use-auth";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {
   type AmbassadorLeaderboardEntry,
+  type SubsidyLeaderboardEntry,
   getAmbassadorLeaderboard,
   getSubsidyLeaderboard,
-  type SubsidyLeaderboardEntry,
 } from "@/lib/actions/referrals";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
@@ -347,7 +347,7 @@ export default function PartiesPageClient({
                   <Typography
                     variant="subtitle"
                     level={3}
-                    className="text-gray-500 text-right whitespace-nowrap"
+                    className="text-gray-500 text-right w-16"
                   >
                     {dictionary.pages.govern.parties.ambassadors.col_stipend}
                   </Typography>
@@ -374,14 +374,14 @@ export default function PartiesPageClient({
                       <Typography
                         variant="body"
                         level={3}
-                        className="text-gray-400 tabular-nums text-right"
+                        className="text-gray-900 tabular-nums text-right"
                       >
                         {entry.totalInvited}
                       </Typography>
                       <Typography
                         variant="body"
                         level={3}
-                        className="text-gray-900 tabular-nums text-right whitespace-nowrap"
+                        className="text-gray-400 tabular-nums text-right w-16"
                       >
                         {entry.stipend > 0
                           ? `${entry.stipend.toFixed(2)} WDD`
