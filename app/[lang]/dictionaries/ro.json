@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Programul de Subvenții pentru Partide",
           "no_subsidies_yet": "Încă nu există subvenții",
-          "description": "Finanțare distribuită partidelor pe baza performanței lor electorale"
+          "description": "Finanțare distribuită partidelor pe baza performanței lor electorale",
+          "col_subsidy": "Subvenție"
         }
       },
       "elections": {

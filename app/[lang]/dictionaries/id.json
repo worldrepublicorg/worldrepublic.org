@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Program Subsidi Partai",
           "no_subsidies_yet": "Belum ada subsidi",
-          "description": "Pendanaan didistribusikan ke partai berdasarkan kinerja pemilu mereka"
+          "description": "Pendanaan didistribusikan ke partai berdasarkan kinerja pemilu mereka",
+          "col_subsidy": "Subsidi"
         }
       },
       "elections": {

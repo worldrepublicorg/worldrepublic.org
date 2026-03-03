@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "政党助成金プログラム",
           "no_subsidies_yet": "まだ助成金はありません",
-          "description": "選挙の成績に基づいて政党に分配される資金"
+          "description": "選挙の成績に基づいて政党に分配される資金",
+          "col_subsidy": "補助金"
         }
       },
       "elections": {

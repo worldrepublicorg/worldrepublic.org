@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Párttámogatási Program",
           "no_subsidies_yet": "Még nincsenek támogatások",
-          "description": "A pártok között választási eredményeik alapján elosztott támogatás"
+          "description": "A pártok között választási eredményeik alapján elosztott támogatás",
+          "col_subsidy": "Támogatás"
         }
       },
       "elections": {

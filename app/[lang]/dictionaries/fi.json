@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Puolueiden tukiohjelma",
           "no_subsidies_yet": "Ei vielä tukia",
-          "description": "Rahoitus, joka jaetaan puolueille niiden vaalimenestyksen perusteella"
+          "description": "Rahoitus, joka jaetaan puolueille niiden vaalimenestyksen perusteella",
+          "col_subsidy": "Tuki"
         }
       },
       "elections": {

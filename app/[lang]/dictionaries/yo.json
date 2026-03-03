@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Eto Ifunni Owo Ẹgbẹ Oselu",
           "no_subsidies_yet": "Ko ti si ifunni owo",
-          "description": "Owo ti a pin fun awọn ẹgbẹ oselu da lori iṣẹ wọn ninu idibo"
+          "description": "Owo ti a pin fun awọn ẹgbẹ oselu da lori iṣẹ wọn ninu idibo",
+          "col_subsidy": "Owó ìrànwọ́"
         }
       },
       "elections": {

@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Partijsubsidieprogramma",
           "no_subsidies_yet": "Nog geen subsidies",
-          "description": "Financiering verdeeld onder partijen op basis van hun verkiesingsresultaten"
+          "description": "Financiering verdeeld onder partijen op basis van hun verkiesingsresultaten",
+          "col_subsidy": "Subsidie"
         }
       },
       "elections": {

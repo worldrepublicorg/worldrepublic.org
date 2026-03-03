@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Gahunda yo Gutera Inkunga Amashyaka",
           "no_subsidies_yet": "Nta nkunga iraboneka",
-          "description": "Inkunga itangwa ku mashyaka hashingiwe ku musaruro wayo mu matora"
+          "description": "Inkunga itangwa ku mashyaka hashingiwe ku musaruro wayo mu matora",
+          "col_subsidy": "Inkunga"
         }
       },
       "elections": {

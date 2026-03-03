@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Shirin Tallafin Jam'iyya",
           "no_subsidies_yet": "Babu tallafi tukuna",
-          "description": "Kudin da ake rabawa jam'iyyu dangane da kokarinsu a zabe"
+          "description": "Kudin da ake rabawa jam'iyyu dangane da kokarinsu a zabe",
+          "col_subsidy": "Tallafi"
         }
       },
       "elections": {

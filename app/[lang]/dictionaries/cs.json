@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Program Dotací pro Strany",
           "no_subsidies_yet": "Zatím žádné dotace",
-          "description": "Financování rozdělované stranám na základě jejich volebních výsledků"
+          "description": "Financování rozdělované stranám na základě jejich volebních výsledků",
+          "col_subsidy": "Dotace"
         }
       },
       "elections": {

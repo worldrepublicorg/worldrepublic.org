@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Programa de Subsídios Partidários",
           "no_subsidies_yet": "Ainda sem subsídios",
-          "description": "Financiamento distribuído aos partidos com base no seu desempenho eleitoral"
+          "description": "Financiamento distribuído aos partidos com base no seu desempenho eleitoral",
+          "col_subsidy": "Subsídio"
         }
       },
       "elections": {

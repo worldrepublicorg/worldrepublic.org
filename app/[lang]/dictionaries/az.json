@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Partiya Subsidiya Proqramı",
           "no_subsidies_yet": "Hələ ki, subsidiya yoxdur",
-          "description": "Seçki nəticələrinə əsasən partiyalara paylanan maliyyə"
+          "description": "Seçki nəticələrinə əsasən partiyalara paylanan maliyyə",
+          "col_subsidy": "Subsidiya"
         }
       },
       "elections": {

@@ -472,14 +472,14 @@ export default function PartiesPageClient({
                     level={3}
                     className="text-gray-500"
                   >
-                    Leader
+                    {dictionary.pages.govern.parties.detail.leader}
                   </Typography>
                   <Typography
                     variant="subtitle"
                     level={3}
                     className="text-gray-500 text-right"
                   >
-                    Subsidy
+                    {dictionary.pages.govern.parties.subsidies.col_subsidy}
                   </Typography>
                 </div>
                 <div className="divide-y divide-gray-100">

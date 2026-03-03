@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Program Subvencioniranja Stranaka",
           "no_subsidies_yet": "Još nema subvencija",
-          "description": "Finansiranje koje se distribuira strankama na osnovu njihovog izbornog rezultata"
+          "description": "Finansiranje koje se distribuira strankama na osnovu njihovog izbornog rezultata",
+          "col_subsidy": "Subvencija"
         }
       },
       "elections": {

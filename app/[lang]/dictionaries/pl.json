@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Program Dotacji dla Partii",
           "no_subsidies_yet": "Brak dotacji",
-          "description": "Fundusze rozdzielane między partie na podstawie ich wyników wyborczych"
+          "description": "Fundusze rozdzielane między partie na podstawie ich wyników wyborczych",
+          "col_subsidy": "Dotacja"
         }
       },
       "elections": {

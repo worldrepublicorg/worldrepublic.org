@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Barnaamijka Kabida Xisbiyada",
           "no_subsidies_yet": "Wali ma jiro kabitaan",
-          "description": "Maalgelin loo qeybiyo xisbiyada iyadoo lagu saleynayo waxqabadkooda doorashada"
+          "description": "Maalgelin loo qeybiyo xisbiyada iyadoo lagu saleynayo waxqabadkooda doorashada",
+          "col_subsidy": "Kaalmo"
         }
       },
       "elections": {

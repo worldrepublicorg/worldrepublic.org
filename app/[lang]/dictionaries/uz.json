@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Partiyalarni Subsidiyalash Dasturi",
           "no_subsidies_yet": "Hozircha subsidiyalar yo'q",
-          "description": "Partiyalarga saylov natijalariga ko'ra taqsimlanadigan moliyalashtirish"
+          "description": "Partiyalarga saylov natijalariga ko'ra taqsimlanadigan moliyalashtirish",
+          "col_subsidy": "Subsidiya"
         }
       },
       "elections": {

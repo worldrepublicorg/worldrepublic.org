@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "የፓርቲ ድጎማ ፕሮግራም",
           "no_subsidies_yet": "እስካሁን ምንም ድጎማ የለም",
-          "description": "በምርጫ ውጤታቸው መሰረት ለፓርቲዎች የሚከፋፈል የገንዘብ ድጋፍ"
+          "description": "በምርጫ ውጤታቸው መሰረት ለፓርቲዎች የሚከፋፈል የገንዘብ ድጋፍ",
+          "col_subsidy": "ድጎማ"
         }
       },
       "elections": {

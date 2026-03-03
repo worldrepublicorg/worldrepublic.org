@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Mpango wa Ruzuku kwa Vyama",
           "no_subsidies_yet": "Hakuna ruzuku bado",
-          "description": "Ufadhili unaosambazwa kwa vyama kulingana na matokeo yao ya uchaguzi"
+          "description": "Ufadhili unaosambazwa kwa vyama kulingana na matokeo yao ya uchaguzi",
+          "col_subsidy": "Ruzuku"
         }
       },
       "elections": {

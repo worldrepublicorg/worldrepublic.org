@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Partiju Subsīdiju Programma",
           "no_subsidies_yet": "Vēl nav subsīdiju",
-          "description": "Finansējums, kas tiek sadalīts partijām, pamatojoties uz to vēlēšanu rezultātiem"
+          "description": "Finansējums, kas tiek sadalīts partijām, pamatojoties uz to vēlēšanu rezultātiem",
+          "col_subsidy": "Subsīdija"
         }
       },
       "elections": {

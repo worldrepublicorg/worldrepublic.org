@@ -78,7 +78,8 @@
         "subsidies": {
           "title": "Party Subsidy Program",
           "description": "Funding distributed to parties based on their electoral performance",
-          "no_subsidies_yet": "No subsidies yet"
+          "no_subsidies_yet": "No subsidies yet",
+          "col_subsidy": "Subsidy"
         },
         "discover": "Discover",
         "search_placeholder": "Search parties...",

@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Chương trình Trợ cấp Đảng",
           "no_subsidies_yet": "Chưa có trợ cấp",
-          "description": "Kinh phí được phân bổ cho các đảng dựa trên kết quả bầu cử của họ"
+          "description": "Kinh phí được phân bổ cho các đảng dựa trên kết quả bầu cử của họ",
+          "col_subsidy": "Trợ cấp"
         }
       },
       "elections": {

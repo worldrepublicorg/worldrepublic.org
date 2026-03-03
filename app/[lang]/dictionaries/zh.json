@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "政党补贴计划",
           "no_subsidies_yet": "暂无补贴",
-          "description": "根据政党的选举表现分配的资金"
+          "description": "根据政党的选举表现分配的资金",
+          "col_subsidy": "补贴"
         }
       },
       "elections": {

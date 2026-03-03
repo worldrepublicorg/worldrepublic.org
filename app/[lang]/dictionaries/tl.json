@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Programa ng Subsidiya sa Partido",
           "no_subsidies_yet": "Wala pang subsidiya",
-          "description": "Pondo na ipinamamahagi sa mga partido batay sa kanilang pagganap sa halalan"
+          "description": "Pondo na ipinamamahagi sa mga partido batay sa kanilang pagganap sa halalan",
+          "col_subsidy": "Subsidiya"
         }
       },
       "elections": {

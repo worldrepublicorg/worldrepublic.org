@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "정당 보조금 프로그램",
           "no_subsidies_yet": "아직 보조금이 없습니다",
-          "description": "선거 성적에 따라 정당에 배분되는 자금"
+          "description": "선거 성적에 따라 정당에 배분되는 자금",
+          "col_subsidy": "보조금"
         }
       },
       "elections": {

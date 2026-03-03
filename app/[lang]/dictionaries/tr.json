@@ -87,7 +87,8 @@
         "subsidies": {
           "title": "Parti Sübvansiyon Programı",
           "no_subsidies_yet": "Henüz sübvansiyon yok",
-          "description": "Partilere seçim performanslarına göre dağıtılan fonlar"
+          "description": "Partilere seçim performanslarına göre dağıtılan fonlar",
+          "col_subsidy": "Sübvansiyon"
         }
       },
       "elections": {
