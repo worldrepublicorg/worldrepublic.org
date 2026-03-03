@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ",
         "ambassadors": {
           "title": "د سفیرانو پروګرام",
-          "description": "ملګري بلنه ورکړئ او کله چې د دوی ګوند مرستې ترلاسه کړي وظیفه ترلاسه کړئ",
+          "description": "ملګري بلنه ورکړئ او کله چې د دوی ګوند مرستې ترلاسه کړي جایزه ترلاسه کړئ",
           "leaderboard": "لیډربورډ",
-          "no_rewards_yet": "تر اوسه هیڅ وظیفه نشته",
+          "no_rewards_yet": "تر اوسه هیڅ جایزه نشته",
           "col_ambassador": "سفیران",
           "col_invited": "بلل شوي",
-          "col_reward": "وظیفه",
+          "col_reward": "جایزه",
           "share_referral_link": "د راجع کولو لینک شریک کړئ"
         },
         "subsidies": {

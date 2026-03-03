@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın",
         "ambassadors": {
           "title": "Elçi Programı",
-          "description": "Arkadaşlarınızı davet edin ve partileri sübvansiyon aldığında burs kazanın",
+          "description": "Arkadaşlarınızı davet edin ve partileri sübvansiyon aldığında ödül kazanın",
           "leaderboard": "Sıralama",
-          "no_rewards_yet": "Henüz burs yok",
+          "no_rewards_yet": "Henüz ödül yok",
           "col_ambassador": "Elçiler",
           "col_invited": "Davet Edilenler",
-          "col_reward": "Burs",
+          "col_reward": "Ödül",
           "share_referral_link": "Referans bağlantısını paylaş"
         },
         "subsidies": {

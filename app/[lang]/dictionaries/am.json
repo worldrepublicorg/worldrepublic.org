@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ",
         "ambassadors": {
           "title": "የአምባሳደር ፕሮግራም",
-          "description": "ጓደኞችን ይጋብዙ እና ፓርቲያቸው ድጎማ ሲቀበል ስቲፔንድ ያግኙ",
+          "description": "ጓደኞችን ይጋብዙ እና ፓርቲያቸው ድጎማ ሲቀበል ምርጥ ዋጋ ያግኙ",
           "leaderboard": "ደረጃ ሰንጠረዥ",
-          "no_rewards_yet": "እስካሁን ምንም ስቲፔንድ የለም",
+          "no_rewards_yet": "እስካሁን ምንም ምርጥ ዋጋ የለም",
           "col_ambassador": "አምባሳደሮች",
           "col_invited": "የተጋበዙ",
-          "col_reward": "ስቲፔንድ",
+          "col_reward": "ምርጥ ዋጋ",
           "share_referral_link": "የማጣቀሻ ማስፈንጠሪያ አጋራ"
         },
         "subsidies": {

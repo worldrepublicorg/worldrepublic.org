@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas",
         "ambassadors": {
           "title": "Ambasadorių Programa",
-          "description": "Pakvieskite draugus ir uždirbkite stipendiją, kai jų partija gaus subsidijas",
+          "description": "Pakvieskite draugus ir uždirbkite atlygį, kai jų partija gaus subsidijas",
           "leaderboard": "Lyderių lentelė",
-          "no_rewards_yet": "Kol kas stipendijų nėra",
+          "no_rewards_yet": "Kol kas atlygių nėra",
           "col_ambassador": "Ambasadoriai",
           "col_invited": "Pakviestieji",
-          "col_reward": "Stipendija",
+          "col_reward": "Atlygis",
           "share_referral_link": "Dalintis rekomendacijos nuoroda"
         },
         "subsidies": {

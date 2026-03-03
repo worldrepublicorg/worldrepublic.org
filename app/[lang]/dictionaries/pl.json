@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Startuj w wyborach i otrzymaj dotacje",
         "ambassadors": {
           "title": "Program Ambasadorski",
-          "description": "Zaproś znajomych i zdobądź stypendium, gdy ich partia otrzyma dotacje",
+          "description": "Zaproś znajomych i zdobądź nagrodę, gdy ich partia otrzyma dotacje",
           "leaderboard": "Ranking",
-          "no_rewards_yet": "Brak stypendiów",
+          "no_rewards_yet": "Brak nagród",
           "col_ambassador": "Ambasadorzy",
           "col_invited": "Zaproszeni",
-          "col_reward": "Stypendium",
+          "col_reward": "Nagroda",
           "share_referral_link": "Udostępnij link polecający"
         },
         "subsidies": {

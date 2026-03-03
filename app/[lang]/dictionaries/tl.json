@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy",
         "ambassadors": {
           "title": "Programang Embahador",
-          "description": "Mag-imbita ng mga kaibigan at kumita ng stipend kapag nakatanggap ng subsidyo ang kanilang partido",
+          "description": "Mag-imbita ng mga kaibigan at kumita ng gantimpala kapag nakatanggap ng subsidyo ang kanilang partido",
           "leaderboard": "Leaderboard",
-          "no_rewards_yet": "Wala pang stipend",
+          "no_rewards_yet": "Wala pang gantimpala",
           "col_ambassador": "Mga Embahador",
           "col_invited": "Inimbitahan",
-          "col_reward": "Stipend",
+          "col_reward": "Gantimpala",
           "share_referral_link": "Ibahagi ang referral link"
         },
         "subsidies": {

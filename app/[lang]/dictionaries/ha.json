@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi",
         "ambassadors": {
           "title": "Shirin Jakadu",
-          "description": "Gayyaci abokai kuma ka sami albashi idan jam'iyyarsu ta sami tallafi",
+          "description": "Gayyaci abokai kuma ka sami lada idan jam'iyyarsu ta sami tallafi",
           "leaderboard": "Jerin masu jagoranci",
-          "no_rewards_yet": "Babu albashin da aka samu tukuna",
+          "no_rewards_yet": "Babu lada da aka samu tukuna",
           "col_ambassador": "Jakadu",
           "col_invited": "Waɗanda aka gayyata",
-          "col_reward": "Albashi",
+          "col_reward": "Lada",
           "share_referral_link": "Raba hanyar haɗin gwiwa"
         },
         "subsidies": {

@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku",
         "ambassadors": {
           "title": "Programu ya Mabalozi",
-          "description": "Alika marafiki na upate posho wakati chama chao kinapopokea ruzuku",
+          "description": "Alika marafiki na upate tuzo wakati chama chao kinapopokea ruzuku",
           "leaderboard": "Ubao wa viongozi",
-          "no_rewards_yet": "Bado hakuna posho",
+          "no_rewards_yet": "Bado hakuna tuzo",
           "col_ambassador": "Mabalozi",
           "col_invited": "Waliokuwa Wageni",
-          "col_reward": "Posho",
+          "col_reward": "Tuzo",
           "share_referral_link": "Shiriki kiungo cha rufaa"
         },
         "subsidies": {

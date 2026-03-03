@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling",
         "ambassadors": {
           "title": "Elchilar Dasturi",
-          "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida stipendiya oling",
+          "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida mukofot oling",
           "leaderboard": "Peshqadamlar jadvali",
-          "no_rewards_yet": "Hali stipendiyalar yo'q",
+          "no_rewards_yet": "Hali mukofotlar yo'q",
           "col_ambassador": "Elchilar",
           "col_invited": "Taklif qilinganlar",
-          "col_reward": "Stipendiya",
+          "col_reward": "Mukofot",
           "share_referral_link": "Tavsiya havolasini ulashish"
         },
         "subsidies": {

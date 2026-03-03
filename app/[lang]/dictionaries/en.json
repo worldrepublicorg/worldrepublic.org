@@ -67,13 +67,13 @@
         },
         "ambassadors": {
           "title": "Ambassador Program",
-          "description": "Invite friends and earn a stipend when their party receives subsidies",
+          "description": "Invite friends and earn a reward when their party receives subsidies",
           "share_referral_link": "Share referral link",
           "leaderboard": "Leaderboard",
-          "no_rewards_yet": "No stipends yet",
+          "no_rewards_yet": "No rewards yet",
           "col_ambassador": "Ambassador",
           "col_invited": "Invited",
-          "col_reward": "Stipend"
+          "col_reward": "Reward"
         },
         "subsidies": {
           "title": "Party Subsidy Program",

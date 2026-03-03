@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Dara pẹlu awọn idibo ki o si gba awọn iranlọwọ",
         "ambassadors": {
           "title": "Ètò Aṣojú",
-          "description": "Pe àwọn ọ̀rẹ́ rẹ kí o sì gba owó nígbà tí ẹgbẹ́ wọn bá gba ìrànwọ́",
+          "description": "Pe àwọn ọ̀rẹ́ rẹ kí o sì gba ẹbun nígbà tí ẹgbẹ́ wọn bá gba ìrànwọ́",
           "leaderboard": "Àtòjọ olórí",
-          "no_rewards_yet": "Kò sí owó kankan síbẹ̀",
+          "no_rewards_yet": "Kò sí ẹbun kankan síbẹ̀",
           "col_ambassador": "Aṣojú",
           "col_invited": "Àwọn tí a pè",
-          "col_reward": "Owó",
+          "col_reward": "Ẹbun",
           "share_referral_link": "Pín àdírẹ́sì ìtọ́kasí"
         },
         "subsidies": {

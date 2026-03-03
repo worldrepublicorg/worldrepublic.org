@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Kandidirajte na volitvah in prejmite subvencije",
         "ambassadors": {
           "title": "Ambasadorski Program",
-          "description": "Povabite prijatelje in zaslužite štipendijo, ko njihova stranka prejme subvencije",
+          "description": "Povabite prijatelje in zaslužite nagrado, ko njihova stranka prejme subvencije",
           "leaderboard": "Lestvica",
-          "no_rewards_yet": "Še ni štipendij",
+          "no_rewards_yet": "Še ni nagrad",
           "col_ambassador": "Ambasadorji",
           "col_invited": "Povabljeni",
-          "col_reward": "Štipendija",
+          "col_reward": "Nagrada",
           "share_referral_link": "Deli povezavo za priporočilo"
         },
         "subsidies": {

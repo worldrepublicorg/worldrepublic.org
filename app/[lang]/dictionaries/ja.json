@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る",
         "ambassadors": {
           "title": "アンバサダープログラム",
-          "description": "友達を招待して、彼らの政党が補助金を受け取ったときに奨励金を獲得しましょう",
+          "description": "友達を招待して、彼らの政党が補助金を受け取ったときに報酬を獲得しましょう",
           "leaderboard": "リーダーボード",
-          "no_rewards_yet": "まだ奨励金はありません",
+          "no_rewards_yet": "まだ報酬はありません",
           "col_ambassador": "アンバサダー",
           "col_invited": "招待数",
-          "col_reward": "奨励金",
+          "col_reward": "報酬",
           "share_referral_link": "紹介リンクを共有"
         },
         "subsidies": {

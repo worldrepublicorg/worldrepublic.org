@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "انتخابات میں حصہ لیں اور سبسڈی حاصل کریں",
         "ambassadors": {
           "title": "سفیر پروگرام",
-          "description": "دوستوں کو مدعو کریں اور ان کی پارٹی کو سبسڈی ملنے پر وظیفہ حاصل کریں",
+          "description": "دوستوں کو مدعو کریں اور ان کی پارٹی کو سبسڈی ملنے پر انعام حاصل کریں",
           "leaderboard": "لیڈر بورڈ",
-          "no_rewards_yet": "ابھی تک کوئی وظیفہ نہیں",
+          "no_rewards_yet": "ابھی تک کوئی انعام نہیں",
           "col_ambassador": "سفیر",
           "col_invited": "مدعو",
-          "col_reward": "وظیفہ",
+          "col_reward": "انعام",
           "share_referral_link": "ریفرل لنک شی어 کریں"
         },
         "subsidies": {

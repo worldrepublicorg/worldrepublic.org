@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones",
         "ambassadors": {
           "title": "Programa de Embajadores",
-          "description": "Invita a amigos y gana un estipendio cuando su partido reciba subsidios",
+          "description": "Invita a amigos y gana una recompensa cuando su partido reciba subsidios",
           "leaderboard": "Clasificación",
-          "no_rewards_yet": "Aún no hay estipendios",
+          "no_rewards_yet": "Aún no hay recompensas",
           "col_ambassador": "Embajadores",
           "col_invited": "Invitados",
-          "col_reward": "Estipendio",
+          "col_reward": "Recompensa",
           "share_referral_link": "Compartir enlace de referencia"
         },
         "subsidies": {

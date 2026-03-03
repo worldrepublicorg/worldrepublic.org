@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Ding aan verkiesings en kry subsidies",
         "ambassadors": {
           "title": "Ambassadeursprogram",
-          "description": "Nooi vriende en verdien 'n stipendium wanneer hul party subsidies ontvang",
+          "description": "Nooi vriende en verdien 'n beloning wanneer hul party subsidies ontvang",
           "leaderboard": "Ranglys",
-          "no_rewards_yet": "Nog geen stipendiums nie",
+          "no_rewards_yet": "Nog geen belonings nie",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Genooi",
-          "col_reward": "Stipendium",
+          "col_reward": "Beloning",
           "share_referral_link": "Deel verwysingskakel"
         },
         "subsidies": {

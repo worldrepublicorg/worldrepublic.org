@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Se présenter aux élections et obtenir des subventions",
         "ambassadors": {
           "title": "Programme d'Ambassadeurs",
-          "description": "Invitez des amis et gagnez une allocation lorsque leur parti reçoit des subventions",
+          "description": "Invitez des amis et gagnez une récompense lorsque leur parti reçoit des subventions",
           "leaderboard": "Classement",
-          "no_rewards_yet": "Pas encore d'allocations",
+          "no_rewards_yet": "Pas encore de récompenses",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Invités",
-          "col_reward": "Allocation",
+          "col_reward": "Récompense",
           "share_referral_link": "Partager le lien de parrainage"
         },
         "subsidies": {

@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin",
         "ambassadors": {
           "title": "Barnaamijka Safiirrada",
-          "description": "Ku casuuma saaxiibbo oo kasbado lacag marka xisbigoodu helo kaalmada",
+          "description": "Ku casuuma saaxiibbo oo kasbado abaalmarin marka xisbigoodu helo kaalmada",
           "leaderboard": "Liiska hogaamiyeyaasha",
-          "no_rewards_yet": "Wali ma jirto lacag",
+          "no_rewards_yet": "Wali ma jirto abaalmarin",
           "col_ambassador": "Safiirrada",
           "col_invited": "La martiyay",
-          "col_reward": "Lacag",
+          "col_reward": "Abaalmarin",
           "share_referral_link": "La wadaag xiriirka tixraacaha"
         },
         "subsidies": {

@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Injira mu ntoranyamihigo no guhabwa imisanzure",
         "ambassadors": {
           "title": "Porogaramu y'Intumwa",
-          "description": "Tumira inshuti kandi ubone amafaranga iyo ishyaka ryabo rihawe inkunga",
+          "description": "Tumira inshuti kandi ubone igihembo iyo ishyaka ryabo rihawe inkunga",
           "leaderboard": "Urutonde rw'abayobozi",
-          "no_rewards_yet": "Nta mafaranga ahari kugeza ubu",
+          "no_rewards_yet": "Nta bighembo bihari kugeza ubu",
           "col_ambassador": "Intumwa",
           "col_invited": "Batumiwe",
-          "col_reward": "Amafaranga",
+          "col_reward": "Igihembo",
           "share_referral_link": "Gusangiza umukururambaga"
         },
         "subsidies": {

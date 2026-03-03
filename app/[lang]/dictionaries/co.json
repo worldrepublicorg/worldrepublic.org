@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni",
         "ambassadors": {
           "title": "Prugramma d'Ambasciatori",
-          "description": "Invite l'amichi è guadagnate una borsa quandu u so partitu riceve sussidii",
+          "description": "Invite l'amichi è guadagnate una ricumpensa quandu u so partitu riceve sussidii",
           "leaderboard": "Classificazione",
-          "no_rewards_yet": "Ancu nisuna borsa",
+          "no_rewards_yet": "Ancu nisuna ricumpensa",
           "col_ambassador": "Ambasciatori",
           "col_invited": "Invitati",
-          "col_reward": "Borsa",
+          "col_reward": "Ricumpensa",
           "share_referral_link": "Sparte u ligame di riferimentu"
         },
         "subsidies": {

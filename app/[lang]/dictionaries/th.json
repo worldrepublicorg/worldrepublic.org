@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน",
         "ambassadors": {
           "title": "โปรแกรมทูต",
-          "description": "เชิญเพื่อนและรับเงินอุดหนุนเมื่อพรรคของพวกเขาได้รับเงินสนับสนุน",
+          "description": "เชิญเพื่อนและรับรางวัลเมื่อพรรคของพวกเขาได้รับเงินสนับสนุน",
           "leaderboard": "กระดานผู้นำ",
-          "no_rewards_yet": "ยังไม่มีเงินอุดหนุน",
+          "no_rewards_yet": "ยังไม่มีรางวัล",
           "col_ambassador": "ทูต",
           "col_invited": "ที่ถูกเชิญ",
-          "col_reward": "เงินอุดหนุน",
+          "col_reward": "รางวัล",
           "share_referral_link": "แชร์ลิงก์แนะนำ"
         },
         "subsidies": {

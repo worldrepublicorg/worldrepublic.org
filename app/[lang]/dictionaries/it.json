@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Candidati alle elezioni e ottieni sussidi",
         "ambassadors": {
           "title": "Programma Ambasciatori",
-          "description": "Invita amici e guadagna un compenso quando il loro partito riceve sussidi",
+          "description": "Invita amici e guadagna una ricompensa quando il loro partito riceve sussidi",
           "leaderboard": "Classifica",
-          "no_rewards_yet": "Ancora nessun compenso",
+          "no_rewards_yet": "Ancora nessuna ricompensa",
           "col_ambassador": "Ambasciatori",
           "col_invited": "Invitati",
-          "col_reward": "Compenso",
+          "col_reward": "Ricompensa",
           "share_referral_link": "Condividi link di riferimento"
         },
         "subsidies": {

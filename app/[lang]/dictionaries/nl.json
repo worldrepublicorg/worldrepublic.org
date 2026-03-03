@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies",
         "ambassadors": {
           "title": "Ambassadeursprogramma",
-          "description": "Nodig vrienden uit en verdien een toelage wanneer hun partij subsidies ontvangt",
+          "description": "Nodig vrienden uit en verdien een beloning wanneer hun partij subsidies ontvangt",
           "leaderboard": "Ranglijst",
-          "no_rewards_yet": "Nog geen toelagen",
+          "no_rewards_yet": "Nog geen beloningen",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Uitgenodigd",
-          "col_reward": "Toelage",
+          "col_reward": "Beloning",
           "share_referral_link": "Deel verwijzingslink"
         },
         "subsidies": {

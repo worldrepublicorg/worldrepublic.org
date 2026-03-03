@@ -76,12 +76,12 @@
         "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas",
         "ambassadors": {
           "title": "Vēstnieku Programma",
-          "description": "Uzaiciniet draugus un nopelniet stipendiju, kad viņu partija saņem subsīdijas",
+          "description": "Uzaiciniet draugus un nopelniet atlīdzību, kad viņu partija saņem subsīdijas",
           "leaderboard": "Līderu tabula",
-          "no_rewards_yet": "Vēl nav stipendiju",
+          "no_rewards_yet": "Vēl nav atlīdzību",
           "col_ambassador": "Vēstnieki",
           "col_invited": "Uzaicināti",
-          "col_reward": "Stipendija",
+          "col_reward": "Atlīdzība",
           "share_referral_link": "Kopīgot atsauces saiti"
         },
         "subsidies": {
