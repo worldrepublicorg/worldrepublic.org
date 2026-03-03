@@ -198,12 +198,17 @@
         "days_ago": "{days}д тому",
         "filter": {
           "all_types": "Всі типи",
-          "select_type": "Виберіть тип"
+          "select_type": "Виберіть тип",
+          "rewards": "Нагороди"
         },
         "types": {
           "withdrawal": "Виведення",
           "received": "Отримано",
-          "sent": "Відправлено"
+          "sent": "Відправлено",
+          "ambassador_reward": "Нагорода посла",
+          "party_subsidy": "Партійна субсидія",
+          "stream_created": "Потік створено",
+          "stream_updated": "Потік оновлено"
         }
       }
     },

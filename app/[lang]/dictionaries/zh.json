@@ -198,12 +198,17 @@
         "days_ago": "{days}天前",
         "filter": {
           "all_types": "所有类型",
-          "select_type": "选择类型"
+          "select_type": "选择类型",
+          "rewards": "奖励"
         },
         "types": {
           "withdrawal": "提现",
           "received": "已收到",
-          "sent": "已发送"
+          "sent": "已发送",
+          "ambassador_reward": "大使奖励",
+          "party_subsidy": "政党补贴",
+          "stream_created": "流已创建",
+          "stream_updated": "流已更新"
         }
       }
     },

@@ -198,12 +198,17 @@
         "days_ago": "{days}วันที่แล้ว",
         "filter": {
           "all_types": "ทุกประเภท",
-          "select_type": "เลือกประเภท"
+          "select_type": "เลือกประเภท",
+          "rewards": "รางวัล"
         },
         "types": {
           "withdrawal": "ถอน",
           "received": "รับแล้ว",
-          "sent": "ส่งแล้ว"
+          "sent": "ส่งแล้ว",
+          "ambassador_reward": "รางวัลทูต",
+          "party_subsidy": "เงินอุดหนุนพรรค",
+          "stream_created": "สร้างสตรีมแล้ว",
+          "stream_updated": "อัปเดตสตรีมแล้ว"
         }
       }
     },

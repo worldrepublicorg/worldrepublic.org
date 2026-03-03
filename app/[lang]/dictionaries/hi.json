@@ -198,12 +198,17 @@
         "days_ago": "{days}दिन पहले",
         "filter": {
           "all_types": "सभी प्रकार",
-          "select_type": "प्रकार चुनें"
+          "select_type": "प्रकार चुनें",
+          "rewards": "पुरस्कार"
         },
         "types": {
           "withdrawal": "निकासी",
           "received": "प्राप्त",
-          "sent": "भेजा गया"
+          "sent": "भेजा गया",
+          "ambassador_reward": "राजदूत पुरस्कार",
+          "party_subsidy": "पार्टी सब्सिडी",
+          "stream_created": "स्ट्रीम बनाई गई",
+          "stream_updated": "स्ट्रीम अपडेट की गई"
         }
       }
     },

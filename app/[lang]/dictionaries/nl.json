@@ -198,12 +198,17 @@
         "days_ago": "{days}d geleden",
         "filter": {
           "all_types": "Alle typen",
-          "select_type": "Type selecteren"
+          "select_type": "Type selecteren",
+          "rewards": "Beloningen"
         },
         "types": {
           "withdrawal": "Opname",
           "received": "Ontvangen",
-          "sent": "Verzonden"
+          "sent": "Verzonden",
+          "ambassador_reward": "Ambassadeursbeloning",
+          "party_subsidy": "Partijsubsidie",
+          "stream_created": "Stroom aangemaakt",
+          "stream_updated": "Stroom bijgewerkt"
         }
       }
     },

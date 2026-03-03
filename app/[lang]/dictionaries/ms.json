@@ -198,12 +198,17 @@
         "days_ago": "{days}h lalu",
         "filter": {
           "all_types": "Semua jenis",
-          "select_type": "Pilih jenis"
+          "select_type": "Pilih jenis",
+          "rewards": "Ganjaran"
         },
         "types": {
           "withdrawal": "Pengeluaran",
           "received": "Diterima",
-          "sent": "Dihantar"
+          "sent": "Dihantar",
+          "ambassador_reward": "Ganjaran duta",
+          "party_subsidy": "Subsidi parti",
+          "stream_created": "Strim dicipta",
+          "stream_updated": "Strim dikemaskini"
         }
       }
     },

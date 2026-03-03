@@ -198,12 +198,17 @@
         "days_ago": "{days}দিন আগে",
         "filter": {
           "all_types": "সব ধরন",
-          "select_type": "ধরন নির্বাচন করুন"
+          "select_type": "ধরন নির্বাচন করুন",
+          "rewards": "পুরস্কার"
         },
         "types": {
           "withdrawal": "উত্তোলন",
           "received": "প্রাপ্ত",
-          "sent": "প্রেরিত"
+          "sent": "প্রেরিত",
+          "ambassador_reward": "রাষ্ট্রদূত পুরস্কার",
+          "party_subsidy": "পার্টি ভর্তুকি",
+          "stream_created": "স্ট্রিম তৈরি হয়েছে",
+          "stream_updated": "স্ট্রিম আপডেট হয়েছে"
         }
       }
     },

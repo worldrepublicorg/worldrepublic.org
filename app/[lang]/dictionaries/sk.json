@@ -198,12 +198,17 @@
         "days_ago": "pred {days}d",
         "filter": {
           "all_types": "Všetky typy",
-          "select_type": "Vyberte typ"
+          "select_type": "Vyberte typ",
+          "rewards": "Odmeny"
         },
         "types": {
           "withdrawal": "Výber",
           "received": "Prijaté",
-          "sent": "Odoslané"
+          "sent": "Odoslané",
+          "ambassador_reward": "Odmena veľvyslanca",
+          "party_subsidy": "Stranícka dotácia",
+          "stream_created": "Prúd vytvorený",
+          "stream_updated": "Prúd aktualizovaný"
         }
       }
     },

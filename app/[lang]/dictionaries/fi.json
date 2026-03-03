@@ -198,12 +198,17 @@
         "days_ago": "{days}pv sitten",
         "filter": {
           "all_types": "Kaikki tyypit",
-          "select_type": "Valitse tyyppi"
+          "select_type": "Valitse tyyppi",
+          "rewards": "Palkinnot"
         },
         "types": {
           "withdrawal": "Nosto",
           "received": "Vastaanotettu",
-          "sent": "Lähetetty"
+          "sent": "Lähetetty",
+          "ambassador_reward": "Suurlähettilään palkinto",
+          "party_subsidy": "Puoluetuki",
+          "stream_created": "Stream luotu",
+          "stream_updated": "Stream päivitetty"
         }
       }
     },

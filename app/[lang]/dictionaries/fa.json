@@ -198,12 +198,17 @@
         "days_ago": "{days}روز پیش",
         "filter": {
           "all_types": "همه انواع",
-          "select_type": "نوع را انتخاب کنید"
+          "select_type": "نوع را انتخاب کنید",
+          "rewards": "پاداش‌ها"
         },
         "types": {
           "withdrawal": "برداشت",
           "received": "دریافت شده",
-          "sent": "ارسال شده"
+          "sent": "ارسال شده",
+          "ambassador_reward": "پاداش سفیر",
+          "party_subsidy": "یارانه حزب",
+          "stream_created": "جریان ایجاد شد",
+          "stream_updated": "جریان به‌روزرسانی شد"
         }
       }
     },

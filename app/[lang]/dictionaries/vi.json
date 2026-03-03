@@ -198,12 +198,17 @@
         "days_ago": "{days}ngày trước",
         "filter": {
           "all_types": "Tất cả các loại",
-          "select_type": "Chọn loại"
+          "select_type": "Chọn loại",
+          "rewards": "Phần thưởng"
         },
         "types": {
           "withdrawal": "Rút tiền",
           "received": "Đã nhận",
-          "sent": "Đã gửi"
+          "sent": "Đã gửi",
+          "ambassador_reward": "Phần thưởng đại sứ",
+          "party_subsidy": "Trợ cấp đảng",
+          "stream_created": "Luồng đã tạo",
+          "stream_updated": "Luồng đã cập nhật"
         }
       }
     },

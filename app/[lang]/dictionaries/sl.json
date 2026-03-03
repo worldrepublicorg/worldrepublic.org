@@ -198,12 +198,17 @@
         "days_ago": "pred {days}d",
         "filter": {
           "all_types": "Vse vrste",
-          "select_type": "Izberite vrsto"
+          "select_type": "Izberite vrsto",
+          "rewards": "Nagrade"
         },
         "types": {
           "withdrawal": "Dvig",
           "received": "Prejeto",
-          "sent": "Poslano"
+          "sent": "Poslano",
+          "ambassador_reward": "Nagrada veleposlanika",
+          "party_subsidy": "Strankarska subvencija",
+          "stream_created": "Tok ustvarjen",
+          "stream_updated": "Tok posodobljen"
         }
       }
     },

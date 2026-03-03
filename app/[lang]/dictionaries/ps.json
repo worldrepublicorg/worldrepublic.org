@@ -198,12 +198,17 @@
         "days_ago": "{days}ورځې وړاندې",
         "filter": {
           "all_types": "ټول ډولونه",
-          "select_type": "ډول وټاکئ"
+          "select_type": "ډول وټاکئ",
+          "rewards": "مکافات"
         },
         "types": {
           "withdrawal": "وتل",
           "received": "ترلېدل",
-          "sent": "لیږل شوي"
+          "sent": "لیږل شوي",
+          "ambassador_reward": "د سفیر مکافات",
+          "party_subsidy": "د ګوند سبسايډي",
+          "stream_created": "جریان جوړ شو",
+          "stream_updated": "جریان تازه شو"
         }
       }
     },

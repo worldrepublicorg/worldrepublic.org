@@ -198,12 +198,17 @@
         "days_ago": "{days}ថ្ងៃមុន",
         "filter": {
           "all_types": "ប្រភេទទាំងអស់",
-          "select_type": "ជ្រើសរើសប្រភេទ"
+          "select_type": "ជ្រើសរើសប្រភេទ",
+          "rewards": "រង្វាន់"
         },
         "types": {
           "withdrawal": "ដកចេញ",
           "received": "បានទទួល",
-          "sent": "បានផ្ញើ"
+          "sent": "បានផ្ញើ",
+          "ambassador_reward": "រង្វាន់ឯកអគ្គរដ្ឋទូត",
+          "party_subsidy": "ការឧបត្ថម្ភធនគណបក្ស",
+          "stream_created": "បានបង្កើតស្ទ្រីម",
+          "stream_updated": "បានធ្វើបច្ចុប្បន្នភាពស្ទ្រីម"
         }
       }
     },

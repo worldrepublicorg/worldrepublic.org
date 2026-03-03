@@ -180,16 +180,16 @@ export function TransactionHistoryContent({
     if (transaction.type === "STREAM_CREATED") {
       const prefix =
         transaction.streamType === "AMBASSADOR"
-          ? "Ambassador Reward"
-          : "Party Subsidy";
-      return `${prefix} — Stream Created`;
+          ? dictionary.pages.wallet.transactions.types.ambassador_reward
+          : dictionary.pages.wallet.transactions.types.party_subsidy;
+      return `${prefix} — ${dictionary.pages.wallet.transactions.types.stream_created}`;
     }
     if (transaction.type === "STREAM_UPDATED") {
       const prefix =
         transaction.streamType === "AMBASSADOR"
-          ? "Ambassador Reward"
-          : "Party Subsidy";
-      return `${prefix} — Stream Updated`;
+          ? dictionary.pages.wallet.transactions.types.ambassador_reward
+          : dictionary.pages.wallet.transactions.types.party_subsidy;
+      return `${prefix} — ${dictionary.pages.wallet.transactions.types.stream_updated}`;
     }
     return transaction.type;
   };
@@ -338,10 +338,10 @@ export function TransactionHistoryContent({
       label: dictionary.pages.wallet.transactions.types.sent,
     });
   }
-  if (hasStreamTx) {
+    if (hasStreamTx) {
     options.push({
       value: "REWARDS",
-      label: "Rewards",
+      label: dictionary.pages.wallet.transactions.filter.rewards,
     });
   }
 

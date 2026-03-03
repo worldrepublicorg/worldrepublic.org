@@ -198,12 +198,17 @@
         "days_ago": "{days}a ang nakalipas",
         "filter": {
           "all_types": "Lahat ng uri",
-          "select_type": "Pumili ng uri"
+          "select_type": "Pumili ng uri",
+          "rewards": "Mga Gantimpala"
         },
         "types": {
           "withdrawal": "Pag-withdraw",
           "received": "Natanggap",
-          "sent": "Naipadala"
+          "sent": "Naipadala",
+          "ambassador_reward": "Gantimpala ng embahador",
+          "party_subsidy": "Subsidiya ng partido",
+          "stream_created": "Nilikha ang stream",
+          "stream_updated": "Na-update ang stream"
         }
       }
     },

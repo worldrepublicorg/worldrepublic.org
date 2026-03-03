@@ -198,12 +198,17 @@
         "days_ago": "{days}ọjọ sẹhin",
         "filter": {
           "all_types": "Gbogbo awọn iru",
-          "select_type": "Yan iru"
+          "select_type": "Yan iru",
+          "rewards": "Awọn ẹbun"
         },
         "types": {
           "withdrawal": "Yiyọ kuro",
           "received": "Ti gba",
-          "sent": "Ti ranṣẹ"
+          "sent": "Ti ranṣẹ",
+          "ambassador_reward": "Ẹbun aṣoju",
+          "party_subsidy": "Owó ìrànwọ́ ẹgbẹ́",
+          "stream_created": "Ṣiṣẹda ṣiṣan",
+          "stream_updated": "Imudojuiwọn ṣiṣan"
         }
       }
     },

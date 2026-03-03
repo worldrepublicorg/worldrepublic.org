@@ -198,12 +198,17 @@
         "days_ago": "ከ{days}ቀን በፊት",
         "filter": {
           "all_types": "ሁሉም አይነቶች",
-          "select_type": "አይነት ይምረጡ"
+          "select_type": "አይነት ይምረጡ",
+          "rewards": "ሽልማቶች"
         },
         "types": {
           "withdrawal": "መውጣት",
           "received": "ተቀብሏል",
-          "sent": "ተልኳል"
+          "sent": "ተልኳል",
+          "ambassador_reward": "የአምባሳደር ሽልማት",
+          "party_subsidy": "የፓርቲ ድጎማ",
+          "stream_created": "ዥረት ተፈጥሯል",
+          "stream_updated": "ዥረት ተዘumenaል"
         }
       }
     },

@@ -198,12 +198,17 @@
         "days_ago": "há {days}d",
         "filter": {
           "all_types": "Todos os tipos",
-          "select_type": "Selecionar tipo"
+          "select_type": "Selecionar tipo",
+          "rewards": "Recompensas"
         },
         "types": {
           "withdrawal": "Saque",
           "received": "Recebido",
-          "sent": "Enviado"
+          "sent": "Enviado",
+          "ambassador_reward": "Recompensa de embaixador",
+          "party_subsidy": "Subsídio partidário",
+          "stream_created": "Fluxo criado",
+          "stream_updated": "Fluxo atualizado"
         }
       }
     },

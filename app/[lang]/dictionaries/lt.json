@@ -198,12 +198,17 @@
         "days_ago": "prieš {days}d",
         "filter": {
           "all_types": "Visi tipai",
-          "select_type": "Pasirinkite tipą"
+          "select_type": "Pasirinkite tipą",
+          "rewards": "Apdovanojimai"
         },
         "types": {
           "withdrawal": "Išėmimas",
           "received": "Gauta",
-          "sent": "Išsiųsta"
+          "sent": "Išsiųsta",
+          "ambassador_reward": "Ambasadoriaus atlygis",
+          "party_subsidy": "Partijos subsidija",
+          "stream_created": "Srautas sukurtas",
+          "stream_updated": "Srautas atnaujintas"
         }
       }
     },

@@ -198,12 +198,17 @@
         "days_ago": "{days}maalin kahor",
         "filter": {
           "all_types": "Dhammaan noocyada",
-          "select_type": "Dooro nooca"
+          "select_type": "Dooro nooca",
+          "rewards": "Abaalmarino"
         },
         "types": {
           "withdrawal": "Bixinta",
           "received": "La helay",
-          "sent": "La diray"
+          "sent": "La diray",
+          "ambassador_reward": "Abaalmarinta safiirka",
+          "party_subsidy": "Kaalmada xisbiga",
+          "stream_created": "Socodka la abuuray",
+          "stream_updated": "Socodka la cusbooneysiiyay"
         }
       }
     },

@@ -198,12 +198,17 @@
         "days_ago": "{days}日前",
         "filter": {
           "all_types": "すべてのタイプ",
-          "select_type": "タイプを選択"
+          "select_type": "タイプを選択",
+          "rewards": "報酬"
         },
         "types": {
           "withdrawal": "引き出し",
           "received": "受信済み",
-          "sent": "送信済み"
+          "sent": "送信済み",
+          "ambassador_reward": "アンバサダー報酬",
+          "party_subsidy": "政党助成金",
+          "stream_created": "ストリーム作成",
+          "stream_updated": "ストリーム更新"
         }
       }
     },

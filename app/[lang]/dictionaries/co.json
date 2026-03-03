@@ -198,12 +198,17 @@
         "days_ago": "{days}g fà",
         "filter": {
           "all_types": "Tutti i tipi",
-          "select_type": "Selezziunate u tipu"
+          "select_type": "Selezziunate u tipu",
+          "rewards": "Ricumpense"
         },
         "types": {
           "withdrawal": "Ritira",
           "received": "Ricevutu",
-          "sent": "Inviatu"
+          "sent": "Inviatu",
+          "ambassador_reward": "Ricumpensa ambasciatore",
+          "party_subsidy": "Sussidiu di partitu",
+          "stream_created": "Flussu creatu",
+          "stream_updated": "Flussu aghjurnatu"
         }
       }
     },

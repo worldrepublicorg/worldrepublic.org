@@ -198,12 +198,17 @@
         "days_ago": "acum {days}zile",
         "filter": {
           "all_types": "Toate tipurile",
-          "select_type": "Selectați tipul"
+          "select_type": "Selectați tipul",
+          "rewards": "Recompense"
         },
         "types": {
           "withdrawal": "Retragere",
           "received": "Primit",
-          "sent": "Trimis"
+          "sent": "Trimis",
+          "ambassador_reward": "Recompensă ambasador",
+          "party_subsidy": "Subvenție partid",
+          "stream_created": "Flux creat",
+          "stream_updated": "Flux actualizat"
         }
       }
     },

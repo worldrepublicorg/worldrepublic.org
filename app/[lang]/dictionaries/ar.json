@@ -198,12 +198,17 @@
         "days_ago": "منذ {days}ي",
         "filter": {
           "all_types": "جميع الأنواع",
-          "select_type": "اختر النوع"
+          "select_type": "اختر النوع",
+          "rewards": "مكافآت"
         },
         "types": {
           "withdrawal": "سحب",
           "received": "تم الاستلام",
-          "sent": "تم الإرسال"
+          "sent": "تم الإرسال",
+          "ambassador_reward": "مكافأة السفير",
+          "party_subsidy": "دعم الحزب",
+          "stream_created": "تم إنشاء التدفق",
+          "stream_updated": "تم تحديث التدفق"
         }
       }
     },

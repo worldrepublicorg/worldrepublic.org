@@ -198,12 +198,17 @@
         "days_ago": "iminsi {days} ishize",
         "filter": {
           "all_types": "Ubwoko bwose",
-          "select_type": "Hitamo ubwoko"
+          "select_type": "Hitamo ubwoko",
+          "rewards": "Ibihembo"
         },
         "types": {
           "withdrawal": "Gukuramo",
           "received": "Wakiriwe",
-          "sent": "Watumwe"
+          "sent": "Watumwe",
+          "ambassador_reward": "Igihembo cya ambasaderi",
+          "party_subsidy": "Inkunga y'ishyaka",
+          "stream_created": "Umugezi waremiwe",
+          "stream_updated": "Umugezi wavuguruwe"
         }
       }
     },

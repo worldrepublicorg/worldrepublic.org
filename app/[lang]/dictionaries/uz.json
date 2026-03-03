@@ -198,12 +198,17 @@
         "days_ago": "{days}kun oldin",
         "filter": {
           "all_types": "Barcha turlar",
-          "select_type": "Turini tanlang"
+          "select_type": "Turini tanlang",
+          "rewards": "Mukofotlar"
         },
         "types": {
           "withdrawal": "Yechib olish",
           "received": "Qabul qilindi",
-          "sent": "Yuborildi"
+          "sent": "Yuborildi",
+          "ambassador_reward": "Elchi mukofoti",
+          "party_subsidy": "Partiya subsidiyasi",
+          "stream_created": "Oqim yaratildi",
+          "stream_updated": "Oqim yangilandi"
         }
       }
     },

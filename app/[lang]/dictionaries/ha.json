@@ -198,12 +198,17 @@
         "days_ago": "da {days}k",
         "filter": {
           "all_types": "Duk nau'ukan",
-          "select_type": "Zaɓi nau'i"
+          "select_type": "Zaɓi nau'i",
+          "rewards": "Kyaututtuka"
         },
         "types": {
           "withdrawal": "Cirewa",
           "received": "An karɓa",
-          "sent": "An aika"
+          "sent": "An aika",
+          "ambassador_reward": "Kyautar jakada",
+          "party_subsidy": "Tallafin jam'iyya",
+          "stream_created": "An ƙirƙiri riba",
+          "stream_updated": "An sabunta riba"
         }
       }
     },

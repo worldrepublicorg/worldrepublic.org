@@ -198,12 +198,17 @@
         "days_ago": "{days}g əvvəl",
         "filter": {
           "all_types": "Bütün növlər",
-          "select_type": "Növü seçin"
+          "select_type": "Növü seçin",
+          "rewards": "Mükafatlar"
         },
         "types": {
           "withdrawal": "Çıxarış",
           "received": "Qəbul edildi",
-          "sent": "Göndərildi"
+          "sent": "Göndərildi",
+          "ambassador_reward": "Səfir mükafatı",
+          "party_subsidy": "Partiya subsidiyası",
+          "stream_created": "Axın yaradıldı",
+          "stream_updated": "Axın yeniləndi"
         }
       }
     },

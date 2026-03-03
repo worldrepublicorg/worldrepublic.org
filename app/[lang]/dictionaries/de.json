@@ -198,12 +198,17 @@
         "days_ago": "vor {days}d",
         "filter": {
           "all_types": "Alle Typen",
-          "select_type": "Typ auswählen"
+          "select_type": "Typ auswählen",
+          "rewards": "Belohnungen"
         },
         "types": {
           "withdrawal": "Abhebung",
           "received": "Empfangen",
-          "sent": "Gesendet"
+          "sent": "Gesendet",
+          "ambassador_reward": "Botschafterbelohnung",
+          "party_subsidy": "Parteisubvention",
+          "stream_created": "Stream erstellt",
+          "stream_updated": "Stream aktualisiert"
         }
       }
     },

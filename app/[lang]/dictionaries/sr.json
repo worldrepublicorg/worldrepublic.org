@@ -198,12 +198,17 @@
         "days_ago": "пре {days}д",
         "filter": {
           "all_types": "Сви типови",
-          "select_type": "Изаберите тип"
+          "select_type": "Изаберите тип",
+          "rewards": "Награде"
         },
         "types": {
           "withdrawal": "Повлачење",
           "received": "Примљено",
-          "sent": "Послато"
+          "sent": "Послато",
+          "ambassador_reward": "Награда амбасадора",
+          "party_subsidy": "Партијска субвенција",
+          "stream_created": "Ток креиран",
+          "stream_updated": "Ток ажуриран"
         }
       }
     },

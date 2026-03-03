@@ -198,12 +198,17 @@
         "days_ago": "πριν {days}η",
         "filter": {
           "all_types": "Όλοι οι τύποι",
-          "select_type": "Επιλέξτε τύπο"
+          "select_type": "Επιλέξτε τύπο",
+          "rewards": "Ανταμοιβές"
         },
         "types": {
           "withdrawal": "Ανάληψη",
           "received": "Λήφθηκε",
-          "sent": "Απεστάλη"
+          "sent": "Απεστάλη",
+          "ambassador_reward": "Ανταμοιβή πρεσβευτή",
+          "party_subsidy": "Επιδότηση κόμματος",
+          "stream_created": "Η ροή δημιουργήθηκε",
+          "stream_updated": "Η ροή ενημερώθηκε"
         }
       }
     },

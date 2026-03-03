@@ -198,12 +198,17 @@
         "days_ago": "{days}일 전",
         "filter": {
           "all_types": "모든 유형",
-          "select_type": "유형 선택"
+          "select_type": "유형 선택",
+          "rewards": "보상"
         },
         "types": {
           "withdrawal": "인출",
           "received": "수신됨",
-          "sent": "전송됨"
+          "sent": "전송됨",
+          "ambassador_reward": "앰배서더 보상",
+          "party_subsidy": "정당 보조금",
+          "stream_created": "스트림 생성됨",
+          "stream_updated": "스트림 업데이트됨"
         }
       }
     },

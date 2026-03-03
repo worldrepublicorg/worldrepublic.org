@@ -198,12 +198,17 @@
         "days_ago": "преди {days}д",
         "filter": {
           "all_types": "Всички типове",
-          "select_type": "Изберете тип"
+          "select_type": "Изберете тип",
+          "rewards": "Награди"
         },
         "types": {
           "withdrawal": "Теглене",
           "received": "Получено",
-          "sent": "Изпратено"
+          "sent": "Изпратено",
+          "ambassador_reward": "Награда за посланик",
+          "party_subsidy": "Партийна субсидия",
+          "stream_created": "Потокът е създаден",
+          "stream_updated": "Потокът е актуализиран"
         }
       }
     },

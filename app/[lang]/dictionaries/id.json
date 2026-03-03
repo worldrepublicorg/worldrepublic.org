@@ -198,12 +198,17 @@
         "days_ago": "{days}h yang lalu",
         "filter": {
           "all_types": "Semua jenis",
-          "select_type": "Pilih jenis"
+          "select_type": "Pilih jenis",
+          "rewards": "Hadiah"
         },
         "types": {
           "withdrawal": "Penarikan",
           "received": "Diterima",
-          "sent": "Terkirim"
+          "sent": "Terkirim",
+          "ambassador_reward": "Hadiah duta",
+          "party_subsidy": "Subsidi partai",
+          "stream_created": "Stream dibuat",
+          "stream_updated": "Stream diperbarui"
         }
       }
     },

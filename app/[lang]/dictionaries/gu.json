@@ -198,12 +198,17 @@
         "days_ago": "{days}દિવસ પહેલાં",
         "filter": {
           "all_types": "બધા પ્રકારો",
-          "select_type": "પ્રકાર પસંદ કરો"
+          "select_type": "પ્રકાર પસંદ કરો",
+          "rewards": "ઇનામો"
         },
         "types": {
           "withdrawal": "નિકાસ",
           "received": "પ્રાપ્ત",
-          "sent": "મોકલ્યું"
+          "sent": "મોકલ્યું",
+          "ambassador_reward": "એમ્બેસેડર ઇનામ",
+          "party_subsidy": "પાર્ટી સબસિડી",
+          "stream_created": "સ્ટ્રીમ બનાવ્યું",
+          "stream_updated": "સ્ટ્રીમ અપડેટ કર્યું"
         }
       }
     },

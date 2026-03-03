@@ -204,12 +204,17 @@
         "days_ago": "{days}d ago",
         "filter": {
           "all_types": "All types",
-          "select_type": "Select type"
+          "select_type": "Select type",
+          "rewards": "Rewards"
         },
         "types": {
           "withdrawal": "Withdrawal",
           "received": "Received",
-          "sent": "Sent"
+          "sent": "Sent",
+          "ambassador_reward": "Ambassador reward",
+          "party_subsidy": "Party subsidy",
+          "stream_created": "Stream created",
+          "stream_updated": "Stream updated"
         }
       }
     }

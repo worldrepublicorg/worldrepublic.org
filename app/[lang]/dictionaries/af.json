@@ -198,12 +198,17 @@
         "days_ago": "{days}d gelede",
         "filter": {
           "all_types": "Alle tipes",
-          "select_type": "Kies tipe"
+          "select_type": "Kies tipe",
+          "rewards": "Belonings"
         },
         "types": {
           "withdrawal": "Onttrekking",
           "received": "Ontvang",
-          "sent": "Gestuur"
+          "sent": "Gestuur",
+          "ambassador_reward": "Ambassadeur beloning",
+          "party_subsidy": "Party subsidie",
+          "stream_created": "Stroom geskep",
+          "stream_updated": "Stroom opgedateer"
         }
       }
     },

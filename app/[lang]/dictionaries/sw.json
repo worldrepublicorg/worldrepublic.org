@@ -198,12 +198,17 @@
         "days_ago": "siku {days} zilizopita",
         "filter": {
           "all_types": "Aina zote",
-          "select_type": "Chagua aina"
+          "select_type": "Chagua aina",
+          "rewards": "Zawadi"
         },
         "types": {
           "withdrawal": "Kutoa",
           "received": "Imepokelewa",
-          "sent": "Imetumwa"
+          "sent": "Imetumwa",
+          "ambassador_reward": "Zawadi ya balozi",
+          "party_subsidy": "Ruzuku ya chama",
+          "stream_created": "Mtiririko umetengenezwa",
+          "stream_updated": "Mtiririko umesasishwa"
         }
       }
     },

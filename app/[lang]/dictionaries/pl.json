@@ -198,12 +198,17 @@
         "days_ago": "{days}dn temu",
         "filter": {
           "all_types": "Wszystkie typy",
-          "select_type": "Wybierz typ"
+          "select_type": "Wybierz typ",
+          "rewards": "Nagrody"
         },
         "types": {
           "withdrawal": "Wypłata",
           "received": "Otrzymano",
-          "sent": "Wysłano"
+          "sent": "Wysłano",
+          "ambassador_reward": "Nagroda ambasadora",
+          "party_subsidy": "Dotacja dla partii",
+          "stream_created": "Strumień utworzony",
+          "stream_updated": "Strumień zaktualizowany"
         }
       }
     },

@@ -198,12 +198,17 @@
         "days_ago": "{days} napja",
         "filter": {
           "all_types": "Összes típus",
-          "select_type": "Típus kiválasztása"
+          "select_type": "Típus kiválasztása",
+          "rewards": "Jutalmak"
         },
         "types": {
           "withdrawal": "Kivétel",
           "received": "Fogadva",
-          "sent": "Küldve"
+          "sent": "Küldve",
+          "ambassador_reward": "Nagyköveti jutalom",
+          "party_subsidy": "Párttámogatás",
+          "stream_created": "Stream létrehozva",
+          "stream_updated": "Stream frissítve"
         }
       }
     },

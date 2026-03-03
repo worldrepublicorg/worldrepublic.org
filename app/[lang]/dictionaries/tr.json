@@ -198,12 +198,17 @@
         "days_ago": "{days}gün önce",
         "filter": {
           "all_types": "Tüm türler",
-          "select_type": "Tür seç"
+          "select_type": "Tür seç",
+          "rewards": "Ödüller"
         },
         "types": {
           "withdrawal": "Çekme",
           "received": "Alındı",
-          "sent": "Gönderildi"
+          "sent": "Gönderildi",
+          "ambassador_reward": "Elçi ödülü",
+          "party_subsidy": "Parti sübvansiyonu",
+          "stream_created": "Akış oluşturuldu",
+          "stream_updated": "Akış güncellendi"
         }
       }
     },

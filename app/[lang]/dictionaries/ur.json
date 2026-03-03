@@ -198,12 +198,17 @@
         "days_ago": "{days}دن پہلے",
         "filter": {
           "all_types": "تمام اقسام",
-          "select_type": "قسم منتخب کریں"
+          "select_type": "قسم منتخب کریں",
+          "rewards": "انعامات"
         },
         "types": {
           "withdrawal": "نکالنے",
           "received": "موصول",
-          "sent": "بھیجا گیا"
+          "sent": "بھیجا گیا",
+          "ambassador_reward": "سفیر کا انعام",
+          "party_subsidy": "پارٹی سبسڈی",
+          "stream_created": "اسٹریم بنائی گئی",
+          "stream_updated": "اسٹریم اپ ڈیٹ کی گئی"
         }
       }
     },

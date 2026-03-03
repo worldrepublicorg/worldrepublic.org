@@ -198,12 +198,17 @@
         "days_ago": "pirms {days}d",
         "filter": {
           "all_types": "Visi veidi",
-          "select_type": "Izvēlieties veidu"
+          "select_type": "Izvēlieties veidu",
+          "rewards": "Atlīdzības"
         },
         "types": {
           "withdrawal": "Izņemšana",
           "received": "Saņemts",
-          "sent": "Nosūtīts"
+          "sent": "Nosūtīts",
+          "ambassador_reward": "Vēstnieka atlīdzība",
+          "party_subsidy": "Partijas subsīdija",
+          "stream_created": "Straume izveidota",
+          "stream_updated": "Straume atjaunināta"
         }
       }
     },
