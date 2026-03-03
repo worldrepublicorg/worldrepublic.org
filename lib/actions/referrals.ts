@@ -110,7 +110,7 @@ const getCachedSubsidyLeaderboard = unstable_cache(
       .innerJoin(parties, eq(streams.partyId, parties.id))
       .where(eq(streams.type, "SUBSIDY"))
       .groupBy(parties.id, parties.name, parties.leaderUsername)
-      .orderBy(desc(sum(streams.totalAmount)), asc(parties.name));
+      .orderBy(desc(sum(streams.totalAmount)), asc(parties.leaderUsername));
 
     return rows.map((row) => ({
       leaderUsername: row.leaderUsername,
