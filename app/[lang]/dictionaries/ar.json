@@ -78,10 +78,10 @@
           "title": "برنامج السفراء",
           "description": "ادعُ أصدقاءك واحصل على مكافأة عندما يتلقى حزبهم إعانات",
           "leaderboard": "لوحة المتصدرين",
-          "no_stipends_yet": "لا توجد مكافآت بعد",
+          "no_rewards_yet": "لا توجد مكافآت بعد",
           "col_ambassador": "السفراء",
           "col_invited": "مدعوون",
-          "col_stipend": "مكافأة",
+          "col_reward": "مكافأة",
           "share_referral_link": "مشاركة رابط الإحالة"
         },
         "subsidies": {

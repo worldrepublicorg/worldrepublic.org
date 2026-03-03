@@ -78,10 +78,10 @@
           "title": "Nagyköveti Program",
           "description": "Hívd meg barátaidat, és keress ösztöndíjat, amikor pártjuk támogatást kap",
           "leaderboard": "Ranglista",
-          "no_stipends_yet": "Még nincsenek ösztöndíjak",
+          "no_rewards_yet": "Még nincsenek ösztöndíjak",
           "col_ambassador": "Nagykövetek",
           "col_invited": "Meghívottak",
-          "col_stipend": "Ösztöndíj",
+          "col_reward": "Ösztöndíj",
           "share_referral_link": "Ajánló link megosztása"
         },
         "subsidies": {

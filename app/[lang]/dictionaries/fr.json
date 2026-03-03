@@ -78,10 +78,10 @@
           "title": "Programme d'Ambassadeurs",
           "description": "Invitez des amis et gagnez une allocation lorsque leur parti reçoit des subventions",
           "leaderboard": "Classement",
-          "no_stipends_yet": "Pas encore d'allocations",
+          "no_rewards_yet": "Pas encore d'allocations",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Invités",
-          "col_stipend": "Allocation",
+          "col_reward": "Allocation",
           "share_referral_link": "Partager le lien de parrainage"
         },
         "subsidies": {

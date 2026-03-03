@@ -78,10 +78,10 @@
           "title": "Ambasadorių Programa",
           "description": "Pakvieskite draugus ir uždirbkite stipendiją, kai jų partija gaus subsidijas",
           "leaderboard": "Lyderių lentelė",
-          "no_stipends_yet": "Kol kas stipendijų nėra",
+          "no_rewards_yet": "Kol kas stipendijų nėra",
           "col_ambassador": "Ambasadoriai",
           "col_invited": "Pakviestieji",
-          "col_stipend": "Stipendija",
+          "col_reward": "Stipendija",
           "share_referral_link": "Dalintis rekomendacijos nuoroda"
         },
         "subsidies": {

@@ -78,10 +78,10 @@
           "title": "Porogaramu y'Intumwa",
           "description": "Tumira inshuti kandi ubone amafaranga iyo ishyaka ryabo rihawe inkunga",
           "leaderboard": "Urutonde rw'abayobozi",
-          "no_stipends_yet": "Nta mafaranga ahari kugeza ubu",
+          "no_rewards_yet": "Nta mafaranga ahari kugeza ubu",
           "col_ambassador": "Intumwa",
           "col_invited": "Batumiwe",
-          "col_stipend": "Amafaranga",
+          "col_reward": "Amafaranga",
           "share_referral_link": "Gusangiza umukururambaga"
         },
         "subsidies": {

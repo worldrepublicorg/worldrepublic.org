@@ -78,10 +78,10 @@
           "title": "Ambasadorski Program",
           "description": "Pozovite prijatelje i zaradite stipendiju kada njihova stranka primi subvencije",
           "leaderboard": "Rang lista",
-          "no_stipends_yet": "Još nema stipendija",
+          "no_rewards_yet": "Još nema stipendija",
           "col_ambassador": "Ambasadori",
           "col_invited": "Pozvani",
-          "col_stipend": "Stipendija",
+          "col_reward": "Stipendija",
           "share_referral_link": "Podijeli link za preporuku"
         },
         "subsidies": {

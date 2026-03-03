@@ -78,10 +78,10 @@
           "title": "برنامه سفیران",
           "description": "دوستان خود را دعوت کنید و هنگامی که حزب آنها یارانه دریافت می‌کند، حقوق دریافت کنید",
           "leaderboard": "جدول رده‌بندی",
-          "no_stipends_yet": "هنوز حقوقی وجود ندارد",
+          "no_rewards_yet": "هنوز حقوقی وجود ندارد",
           "col_ambassador": "سفیران",
           "col_invited": "دعوت‌شدگان",
-          "col_stipend": "حقوق",
+          "col_reward": "حقوق",
           "share_referral_link": "اشتراک‌گذاری لینک معرفی"
         },
         "subsidies": {

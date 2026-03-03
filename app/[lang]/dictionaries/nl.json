@@ -78,10 +78,10 @@
           "title": "Ambassadeursprogramma",
           "description": "Nodig vrienden uit en verdien een toelage wanneer hun partij subsidies ontvangt",
           "leaderboard": "Ranglijst",
-          "no_stipends_yet": "Nog geen toelagen",
+          "no_rewards_yet": "Nog geen toelagen",
           "col_ambassador": "Ambassadeurs",
           "col_invited": "Uitgenodigd",
-          "col_stipend": "Toelage",
+          "col_reward": "Toelage",
           "share_referral_link": "Deel verwijzingslink"
         },
         "subsidies": {

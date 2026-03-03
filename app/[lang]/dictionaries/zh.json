@@ -78,10 +78,10 @@
           "title": "大使计划",
           "description": "邀请朋友，当他们的政党获得补贴时赚取津贴",
           "leaderboard": "排行榜",
-          "no_stipends_yet": "暂无津贴",
+          "no_rewards_yet": "暂无津贴",
           "col_ambassador": "大使",
           "col_invited": "邀请数",
-          "col_stipend": "津贴",
+          "col_reward": "津贴",
           "share_referral_link": "分享推荐链接"
         },
         "subsidies": {

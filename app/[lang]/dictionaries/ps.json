@@ -78,10 +78,10 @@
           "title": "د سفیرانو پروګرام",
           "description": "ملګري بلنه ورکړئ او کله چې د دوی ګوند مرستې ترلاسه کړي وظیفه ترلاسه کړئ",
           "leaderboard": "لیډربورډ",
-          "no_stipends_yet": "تر اوسه هیڅ وظیفه نشته",
+          "no_rewards_yet": "تر اوسه هیڅ وظیفه نشته",
           "col_ambassador": "سفیران",
           "col_invited": "بلل شوي",
-          "col_stipend": "وظیفه",
+          "col_reward": "وظیفه",
           "share_referral_link": "د راجع کولو لینک شریک کړئ"
         },
         "subsidies": {

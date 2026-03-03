@@ -349,7 +349,7 @@ export default function PartiesPageClient({
                     level={3}
                     className="text-gray-500 text-right w-16"
                   >
-                    {dictionary.pages.govern.parties.ambassadors.col_stipend}
+                    {dictionary.pages.govern.parties.ambassadors.col_reward}
                   </Typography>
                 </div>
                 <div className="divide-y divide-gray-100">
@@ -383,8 +383,8 @@ export default function PartiesPageClient({
                         level={3}
                         className="text-gray-900 tabular-nums text-right w-16"
                       >
-                        {entry.stipend > 0
-                          ? `${entry.stipend.toFixed(2)} WDD`
+                        {entry.reward > 0
+                          ? `${entry.reward.toFixed(2)} WDD`
                           : "0 WDD"}
                       </Typography>
                     </div>
@@ -393,7 +393,7 @@ export default function PartiesPageClient({
               </div>
             ) : (
               <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-                {dictionary.pages.govern.parties.ambassadors.no_stipends_yet}
+                {dictionary.pages.govern.parties.ambassadors.no_rewards_yet}
               </div>
             )}
           </div>

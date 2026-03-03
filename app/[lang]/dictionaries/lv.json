@@ -78,10 +78,10 @@
           "title": "Vēstnieku Programma",
           "description": "Uzaiciniet draugus un nopelniet stipendiju, kad viņu partija saņem subsīdijas",
           "leaderboard": "Līderu tabula",
-          "no_stipends_yet": "Vēl nav stipendiju",
+          "no_rewards_yet": "Vēl nav stipendiju",
           "col_ambassador": "Vēstnieki",
           "col_invited": "Uzaicināti",
-          "col_stipend": "Stipendija",
+          "col_reward": "Stipendija",
           "share_referral_link": "Kopīgot atsauces saiti"
         },
         "subsidies": {

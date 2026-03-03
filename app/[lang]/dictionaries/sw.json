@@ -78,10 +78,10 @@
           "title": "Programu ya Mabalozi",
           "description": "Alika marafiki na upate posho wakati chama chao kinapopokea ruzuku",
           "leaderboard": "Ubao wa viongozi",
-          "no_stipends_yet": "Bado hakuna posho",
+          "no_rewards_yet": "Bado hakuna posho",
           "col_ambassador": "Mabalozi",
           "col_invited": "Waliokuwa Wageni",
-          "col_stipend": "Posho",
+          "col_reward": "Posho",
           "share_referral_link": "Shiriki kiungo cha rufaa"
         },
         "subsidies": {

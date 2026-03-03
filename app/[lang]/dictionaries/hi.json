@@ -78,10 +78,10 @@
           "title": "राजदूत कार्यक्रम",
           "description": "दोस्तों को आमंत्रित करें और जब उनकी पार्टी को सब्सिडी मिले तो वजीफा कमाएं",
           "leaderboard": "लीडरबोर्ड",
-          "no_stipends_yet": "अभी तक कोई वजीफा नहीं",
+          "no_rewards_yet": "अभी तक कोई वजीफा नहीं",
           "col_ambassador": "राजदूत",
           "col_invited": "आमंत्रित",
-          "col_stipend": "वजीफा",
+          "col_reward": "वजीफा",
           "share_referral_link": "रेफरल लिंक शेयर करें"
         },
         "subsidies": {

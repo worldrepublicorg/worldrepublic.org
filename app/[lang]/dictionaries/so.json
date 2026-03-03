@@ -78,10 +78,10 @@
           "title": "Barnaamijka Safiirrada",
           "description": "Ku casuuma saaxiibbo oo kasbado lacag marka xisbigoodu helo kaalmada",
           "leaderboard": "Liiska hogaamiyeyaasha",
-          "no_stipends_yet": "Wali ma jirto lacag",
+          "no_rewards_yet": "Wali ma jirto lacag",
           "col_ambassador": "Safiirrada",
           "col_invited": "La martiyay",
-          "col_stipend": "Lacag",
+          "col_reward": "Lacag",
           "share_referral_link": "La wadaag xiriirka tixraacaha"
         },
         "subsidies": {

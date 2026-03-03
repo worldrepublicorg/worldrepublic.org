@@ -78,10 +78,10 @@
           "title": "Prugramma d'Ambasciatori",
           "description": "Invite l'amichi è guadagnate una borsa quandu u so partitu riceve sussidii",
           "leaderboard": "Classificazione",
-          "no_stipends_yet": "Ancu nisuna borsa",
+          "no_rewards_yet": "Ancu nisuna borsa",
           "col_ambassador": "Ambasciatori",
           "col_invited": "Invitati",
-          "col_stipend": "Borsa",
+          "col_reward": "Borsa",
           "share_referral_link": "Sparte u ligame di riferimentu"
         },
         "subsidies": {

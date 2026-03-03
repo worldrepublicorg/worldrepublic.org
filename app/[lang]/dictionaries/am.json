@@ -78,10 +78,10 @@
           "title": "የአምባሳደር ፕሮግራም",
           "description": "ጓደኞችን ይጋብዙ እና ፓርቲያቸው ድጎማ ሲቀበል ስቲፔንድ ያግኙ",
           "leaderboard": "ደረጃ ሰንጠረዥ",
-          "no_stipends_yet": "እስካሁን ምንም ስቲፔንድ የለም",
+          "no_rewards_yet": "እስካሁን ምንም ስቲፔንድ የለም",
           "col_ambassador": "አምባሳደሮች",
           "col_invited": "የተጋበዙ",
-          "col_stipend": "ስቲፔንድ",
+          "col_reward": "ስቲፔንድ",
           "share_referral_link": "የማጣቀሻ ማስፈንጠሪያ አጋራ"
         },
         "subsidies": {

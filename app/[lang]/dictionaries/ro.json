@@ -78,10 +78,10 @@
           "title": "Programul Ambasadorilor",
           "description": "Invită prieteni și câștigă o bursă când partidul lor primește subvenții",
           "leaderboard": "Clasament",
-          "no_stipends_yet": "Încă nu există burse",
+          "no_rewards_yet": "Încă nu există burse",
           "col_ambassador": "Ambasadori",
           "col_invited": "Invitați",
-          "col_stipend": "Bursă",
+          "col_reward": "Bursă",
           "share_referral_link": "Partajează linkul de recomandare"
         },
         "subsidies": {

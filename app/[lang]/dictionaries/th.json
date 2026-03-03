@@ -78,10 +78,10 @@
           "title": "โปรแกรมทูต",
           "description": "เชิญเพื่อนและรับเงินอุดหนุนเมื่อพรรคของพวกเขาได้รับเงินสนับสนุน",
           "leaderboard": "กระดานผู้นำ",
-          "no_stipends_yet": "ยังไม่มีเงินอุดหนุน",
+          "no_rewards_yet": "ยังไม่มีเงินอุดหนุน",
           "col_ambassador": "ทูต",
           "col_invited": "ที่ถูกเชิญ",
-          "col_stipend": "เงินอุดหนุน",
+          "col_reward": "เงินอุดหนุน",
           "share_referral_link": "แชร์ลิงก์แนะนำ"
         },
         "subsidies": {

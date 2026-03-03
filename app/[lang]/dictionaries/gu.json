@@ -78,10 +78,10 @@
           "title": "રાજદૂત કાર્યક્રમ",
           "description": "મિત્રોને આમંત્રિત કરો અને જ્યારે તેમની પાર્ટી સબસિડી મેળવે ત્યારે વેતન મેળવો",
           "leaderboard": "લીડરબોર્ડ",
-          "no_stipends_yet": "હજુ સુધી કોઈ વેતન નથી",
+          "no_rewards_yet": "હજુ સુધી કોઈ વેતન નથી",
           "col_ambassador": "રાજદૂત",
           "col_invited": "આમંત્રિત",
-          "col_stipend": "વેતન",
+          "col_reward": "વેતન",
           "share_referral_link": "રેફરલ લિંક શેર કરો"
         },
         "subsidies": {

@@ -78,10 +78,10 @@
           "title": "홍보대사 프로그램",
           "description": "친구를 초대하고 그들의 정당이 보조금을 받으면 장려금을 받으세요",
           "leaderboard": "리더보드",
-          "no_stipends_yet": "아직 장려금이 없습니다",
+          "no_rewards_yet": "아직 장려금이 없습니다",
           "col_ambassador": "홍보대사",
           "col_invited": "초대됨",
-          "col_stipend": "장려금",
+          "col_reward": "장려금",
           "share_referral_link": "추천 링크 공유"
         },
         "subsidies": {

@@ -78,10 +78,10 @@
           "title": "Elchilar Dasturi",
           "description": "Do'stlaringizni taklif qiling va ularning partiyasi subsidiya olganida stipendiya oling",
           "leaderboard": "Peshqadamlar jadvali",
-          "no_stipends_yet": "Hali stipendiyalar yo'q",
+          "no_rewards_yet": "Hali stipendiyalar yo'q",
           "col_ambassador": "Elchilar",
           "col_invited": "Taklif qilinganlar",
-          "col_stipend": "Stipendiya",
+          "col_reward": "Stipendiya",
           "share_referral_link": "Tavsiya havolasini ulashish"
         },
         "subsidies": {

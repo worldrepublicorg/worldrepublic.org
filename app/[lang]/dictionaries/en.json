@@ -70,10 +70,10 @@
           "description": "Invite friends and earn a stipend when their party receives subsidies",
           "share_referral_link": "Share referral link",
           "leaderboard": "Leaderboard",
-          "no_stipends_yet": "No stipends yet",
+          "no_rewards_yet": "No stipends yet",
           "col_ambassador": "Ambassador",
           "col_invited": "Invited",
-          "col_stipend": "Stipend"
+          "col_reward": "Stipend"
         },
         "subsidies": {
           "title": "Party Subsidy Program",

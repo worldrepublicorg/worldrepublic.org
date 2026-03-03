@@ -78,10 +78,10 @@
           "title": "Chương trình Đại sứ",
           "description": "Mời bạn bè và nhận trợ cấp khi đảng của họ được nhận hỗ trợ",
           "leaderboard": "Bảng xếp hạng",
-          "no_stipends_yet": "Chưa có trợ cấp nào",
+          "no_rewards_yet": "Chưa có trợ cấp nào",
           "col_ambassador": "Đại sứ",
           "col_invited": "Người được mời",
-          "col_stipend": "Trợ cấp",
+          "col_reward": "Trợ cấp",
           "share_referral_link": "Chia sẻ liên kết giới thiệu"
         },
         "subsidies": {

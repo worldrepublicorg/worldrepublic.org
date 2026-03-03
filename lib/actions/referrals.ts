@@ -9,7 +9,7 @@ import { STREAM_DURATION_S } from "@/lib/streams";
 export type AmbassadorLeaderboardEntry = {
   username: string;
   totalInvited: number;
-  stipend: number;
+  reward: number;
 };
 
 const YEAR_S = 365 * 24 * 3600;
@@ -33,7 +33,7 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
 
     // Batch-fetch active AMBASSADOR streams for all referrers
     const referrerIds = rows.map((r) => r.userId);
-    const stipendMap = new Map<string, number>();
+    const rewardMap = new Map<string, number>();
 
     if (referrerIds.length > 0) {
       const streamRows = await readDb
@@ -53,19 +53,19 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       for (const sr of streamRows) {
         const annualRate =
           Number.parseFloat(sr.totalRate ?? "0") * YEAR_S;
-        stipendMap.set(sr.userId, annualRate);
+        rewardMap.set(sr.userId, annualRate);
       }
     }
 
     const entries = rows.map((row) => ({
       username: row.username,
       totalInvited: Number(row.totalInvited),
-      stipend: stipendMap.get(row.userId) ?? 0,
+      reward: rewardMap.get(row.userId) ?? 0,
     }));
 
-    // Sort by stipend descending (highest first), then by invited count, then username
+    // Sort by reward descending (highest first), then by invited count, then username
     entries.sort((a, b) => {
-      if (b.stipend !== a.stipend) return b.stipend - a.stipend;
+      if (b.reward !== a.reward) return b.reward - a.reward;
       if (b.totalInvited !== a.totalInvited) return b.totalInvited - a.totalInvited;
       return a.username.localeCompare(b.username);
     });

@@ -78,10 +78,10 @@
           "title": "Program Duta",
           "description": "Jemput rakan dan dapatkan elaun apabila parti mereka menerima subsidi",
           "leaderboard": "Papan pendahulu",
-          "no_stipends_yet": "Belum ada elaun",
+          "no_rewards_yet": "Belum ada elaun",
           "col_ambassador": "Duta",
           "col_invited": "Dijemput",
-          "col_stipend": "Elaun",
+          "col_reward": "Elaun",
           "share_referral_link": "Kongsi pautan rujukan"
         },
         "subsidies": {
