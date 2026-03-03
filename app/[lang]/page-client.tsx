@@ -58,18 +58,23 @@ export default function VotePageClient({
           </div>
         ) : (
           <div className="flex grow items-center justify-center">
-            <div className="flex w-full flex-col items-center justify-center p-6 text-center">
-              <div className="flex w-full flex-col items-center gap-4">
-                <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
+            <div className="flex w-full min-w-0 flex-col items-center justify-center p-6 text-center">
+              <div className="flex w-full min-w-0 flex-col items-center gap-4">
+                <div className="mb-4 flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-gray-100">
                   <PiScrollFill className="h-10 w-10 text-gray-400" />
                 </div>
-                <Typography variant="heading" level={2}>
+                <Typography
+                  variant="heading"
+                  level={2}
+                  className="w-full min-w-0 wrap-break-word text-center"
+                  title={dictionary.pages.govern.sections.referendums.title}
+                >
                   {dictionary.pages.govern.sections.referendums.title}
                 </Typography>
                 <Typography
                   variant="subtitle"
                   level={2}
-                  className="text-gray-500"
+                  className="w-full min-w-0 wrap-break-word text-center text-gray-500"
                 >
                   {dictionary.pages.govern.sections.referendums.subtitle}
                 </Typography>
