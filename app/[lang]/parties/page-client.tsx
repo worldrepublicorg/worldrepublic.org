@@ -108,6 +108,17 @@ export default function PartiesPageClient({
     ? (tab as TabKey)
     : TABS[0];
 
+  const locale = lang.trim() || "en";
+
+  const formatInteger = (value: number): string =>
+    value.toLocaleString(locale);
+
+  const formatTokenAmount = (amount: number): string =>
+    amount.toLocaleString(locale, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
   // Fetch leaderboard lazily when the ambassadors tab becomes active
   useEffect(() => {
     if (activeTab !== "ambassadors" || leaderboard !== null) return;
@@ -376,7 +387,7 @@ export default function PartiesPageClient({
                         level={3}
                         className="text-gray-400 tabular-nums text-right"
                       >
-                        {entry.totalInvited}
+                        {formatInteger(entry.totalInvited)}
                       </Typography>
                       <Typography
                         variant="body"
@@ -384,7 +395,7 @@ export default function PartiesPageClient({
                         className="text-gray-900 tabular-nums text-right w-16"
                       >
                         {entry.reward > 0
-                          ? `${entry.reward.toFixed(2)} WDD`
+                          ? `${formatTokenAmount(entry.reward)} WDD`
                           : "0 WDD"}
                       </Typography>
                     </div>
@@ -511,7 +522,7 @@ export default function PartiesPageClient({
                         className="text-gray-900 tabular-nums text-right"
                       >
                         {entry.totalSubsidy > 0
-                          ? `${entry.totalSubsidy.toFixed(2)} WDD`
+                          ? `${formatTokenAmount(entry.totalSubsidy)} WDD`
                           : "0 WDD"}
                       </Typography>
                     </div>

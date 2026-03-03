@@ -37,11 +37,13 @@ interface Transaction {
 interface TransactionHistoryContentProps {
   transactions?: Transaction[] | null;
   dictionary: Dictionary;
+  lang: string;
 }
 
 export function TransactionHistoryContent({
   transactions: transactionsProp,
   dictionary,
+  lang,
 }: TransactionHistoryContentProps) {
   const { toast } = useToast();
 
@@ -116,6 +118,8 @@ export function TransactionHistoryContent({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [transactionsProp]); // Only fetch if transactions prop is not provided
 
+  const locale = lang.trim() || "en";
+
   // Format date
   const formatDate = (timestamp: number): string => {
     const date = new Date(timestamp);
@@ -149,7 +153,7 @@ export function TransactionHistoryContent({
       );
 
     const currentDate = new Date();
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString(locale, {
       month: "short",
       day: "numeric",
       year:
@@ -162,10 +166,14 @@ export function TransactionHistoryContent({
   // Format amount (display 6 decimals, but stored with 18 decimals precision)
   const formatAmount = (amount: number): string => {
     // If amount is effectively zero (stored as 0.000000...), show <0.000001
-    if (Math.abs(amount) < 0.000001) {
+    const absAmount = Math.abs(amount);
+    if (absAmount < 0.000001) {
       return "<0.000001";
     }
-    return amount.toFixed(6);
+    return absAmount.toLocaleString(locale, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   };
 
   const getTransactionLabel = (transaction: Transaction): string => {

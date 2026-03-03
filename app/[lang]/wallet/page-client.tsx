@@ -128,6 +128,7 @@ export default function WalletPageClient({
   }, [userStreams, computeBalance]);
 
   const walletBalance = liveBalance ?? serverBalance;
+  const locale = params.lang?.trim() || "en";
 
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
 
@@ -204,8 +205,14 @@ export default function WalletPageClient({
   const truncatedDisplay = Math.floor(displayBalanceNumber * 1e18) / 1e18;
   const safeDisplayAmount = Math.max(0, truncatedDisplay - 1e-12);
   const precision = safeDisplayAmount === 0 ? 2 : 5;
-  const truncatedDisplayBalance = truncateToPrecision(safeDisplayAmount, precision);
-  const displayBalance = truncatedDisplayBalance.toFixed(precision);
+  const truncatedDisplayBalance = truncateToPrecision(
+    safeDisplayAmount,
+    precision,
+  );
+  const displayBalance = truncatedDisplayBalance.toLocaleString(locale, {
+    minimumFractionDigits: precision,
+    maximumFractionDigits: precision,
+  });
 
   // Format send balance with small buffer only (no truncation for dialog)
   const safeSendAmount = Math.max(0, totalBalanceNumber - 1e-12);
@@ -569,6 +576,7 @@ export default function WalletPageClient({
           <TransactionHistoryContent
             transactions={authenticated ? transactions : []}
             dictionary={dictionary}
+            lang={params.lang}
           />
         </div>
       </div>
