@@ -40,6 +40,7 @@ const APP_TITLE_TEMPLATE = "%s - World Republic";
 const APP_DESCRIPTION = "Experiment with global democracy";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.worldrepublic.org"),
   applicationName: APP_NAME,
   title: {
     default: APP_DEFAULT_TITLE,
