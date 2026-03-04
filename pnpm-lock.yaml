@@ -54,9 +54,6 @@ importers:
       next-auth:
         specifier: ^5.0.0-beta.30
         version: 5.0.0-beta.30(@simplewebauthn/browser@9.0.1)(@simplewebauthn/server@9.0.3(encoding@0.1.13))(next@16.0.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
-      postgres:
-        specifier: ^3.4.7
-        version: 3.4.7
       react:
         specifier: ^19.2.3
         version: 19.2.3
@@ -6243,7 +6240,8 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  postgres@3.4.7: {}
+  postgres@3.4.7:
+    optional: true
 
   preact-render-to-string@6.5.11(preact@10.24.3):
     dependencies:
