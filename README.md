@@ -33,8 +33,8 @@ Open-source Next.js app for the World Republic platform—discover and found par
    ```
 
 3. **Configure environment variables:**
-   - `LOCAL_DATABASE_URL` — local Postgres (e.g., Neon Local Connect) — https://console.neon.tech/
-   - `DATABASE_URL` — remote Postgres URL — https://console.neon.tech/
+   - `DATABASE_URL_LOCAL_DEV` — direct (non-pooled) Postgres URL for local dev — https://console.neon.tech/
+   - `DATABASE_URL` — pooler Postgres URL (used in production) — https://console.neon.tech/
    - `NEXTAUTH_SECRET` — secret for NextAuth (generate with `openssl rand -base64 32`)
    - `NEXTAUTH_URL` — app base URL (e.g., http://localhost:3000)
    - `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` — Google OAuth credentials — https://console.cloud.google.com/apis/credentials
@@ -66,6 +66,11 @@ Open-source Next.js app for the World Republic platform—discover and found par
 - **Migrations:** Schema is managed with Drizzle ORM (see `drizzle/` directory)
 - **Reset:** `pnpm tsx scripts/reset-database.ts` — drops all tables and applies fresh schema
 - **Seed:** `pnpm tsx scripts/seed-parties.ts` — populates sample parties
+- **Distribute election subsidies (admin):** Run directly when needed:
+  ```bash
+  pnpm tsx scripts/distribute.ts <electionId> [--dry-run]
+  ```
+  Use `--dry-run` to preview without committing. Requires `DATABASE_URL` in env.
 
 ## License
 

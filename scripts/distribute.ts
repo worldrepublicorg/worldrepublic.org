@@ -19,7 +19,7 @@ const electionId = args.find((a) => !a.startsWith("--"));
 
 if (!electionId) {
   console.error(
-    "Usage: npx tsx scripts/distribute.ts <electionId> [--dry-run]",
+    "Usage: pnpm tsx scripts/distribute.ts <electionId> [--dry-run]",
   );
   process.exit(1);
 }
