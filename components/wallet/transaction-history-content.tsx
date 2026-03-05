@@ -520,10 +520,9 @@ export function TransactionHistoryContent({
                         {getAmountDisplay(transaction)} WDD
                       </Typography>
                     </div>
-                    {/* Additional details (address + chain for withdrawals, stream event for streams) */}
+                    {/* Additional details */}
                     {(transaction.walletAddress ||
-                      transaction.recipientUserId ||
-                      streamEventLabel) && (
+                      transaction.recipientUserId) && (
                       <div className="mt-1 flex flex-wrap gap-2">
                         {transaction.walletAddress && (
                           <button
@@ -545,15 +544,19 @@ export function TransactionHistoryContent({
                             {getChainDisplayName(transaction.selectedChain)}
                           </span>
                         )}
-                        {streamEventLabel && (
-                          <span className="text-xs text-gray-500 mt-px">
-                            {streamEventLabel}
-                          </span>
-                        )}
                       </div>
                     )}
-                    {/* Date */}
-                    <div className="mt-1">
+                    {/* Stream event + Date (same separation as optional extra line) */}
+                    <div className="mt-1 flex flex-wrap gap-2">
+                      {streamEventLabel && (
+                        <Typography
+                          variant="body"
+                          level={4}
+                          className="text-gray-500"
+                        >
+                          {streamEventLabel}
+                        </Typography>
+                      )}
                       <Typography
                         variant="body"
                         level={4}
