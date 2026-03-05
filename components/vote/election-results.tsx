@@ -13,6 +13,25 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
   const totalVotes = results.reduce((sum, r) => sum + r.voteCount, 0);
   const t = dictionary.pages.govern.elections.detail;
 
+  // Sort by vote count descending, then by party name ascending for ties
+  const sorted = [...results].sort((a, b) => {
+    if (b.voteCount !== a.voteCount) return b.voteCount - a.voteCount;
+    return a.partyName.localeCompare(b.partyName, undefined, {
+      sensitivity: "base",
+    });
+  });
+
+  // Competition ranking: same rank for same vote count
+  const withRank: { result: ElectionResult; rank: number }[] = [];
+  for (let i = 0; i < sorted.length; i++) {
+    const result = sorted[i];
+    const rank =
+      i > 0 && result.voteCount === sorted[i - 1].voteCount
+        ? withRank[i - 1].rank
+        : i + 1;
+    withRank.push({ result, rank });
+  }
+
   return (
     <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
       <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
@@ -34,7 +53,7 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
         </div>
       ) : (
         <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
-          {results.map((result, index) => {
+          {withRank.map(({ result, rank }) => {
             const percentage =
               totalVotes > 0
                 ? Math.round((result.voteCount / totalVotes) * 100)
@@ -45,7 +64,7 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <div className="flex min-w-0 flex-1 items-center gap-2">
                     <span className="shrink-0 text-sm font-medium text-gray-400">
-                      #{index + 1}
+                      #{rank}
                     </span>
                     <Typography
                       variant="subtitle"
