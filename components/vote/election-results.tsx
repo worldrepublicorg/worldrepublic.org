@@ -42,15 +42,15 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
 
             return (
               <div key={result.partyId}>
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-gray-400">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <div className="flex min-w-0 flex-1 items-center gap-2">
+                    <span className="shrink-0 text-sm font-medium text-gray-400">
                       #{index + 1}
                     </span>
                     <Typography
                       variant="subtitle"
                       level={3}
-                      className="text-gray-900"
+                      className="min-w-0 text-gray-900"
                     >
                       {result.partyName}
                     </Typography>
@@ -58,7 +58,7 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
                   <Typography
                     variant="body"
                     level={3}
-                    className="text-gray-600"
+                    className="shrink-0 whitespace-nowrap text-gray-600"
                   >
                     {result.voteCount}{" "}
                     {result.voteCount === 1 ? t.vote_singular : t.vote_plural} (
