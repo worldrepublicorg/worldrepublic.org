@@ -8,7 +8,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
@@ -110,8 +110,7 @@ export default function PartiesPageClient({
 
   const locale = lang.trim() || "en";
 
-  const formatInteger = (value: number): string =>
-    value.toLocaleString(locale);
+  const formatInteger = (value: number): string => value.toLocaleString(locale);
 
   const formatTokenAmount = (amount: number): string =>
     amount.toLocaleString(locale, {
@@ -339,66 +338,86 @@ export default function PartiesPageClient({
                 {dictionary.toasts.generic_error}
               </div>
             ) : leaderboard && leaderboard.length > 0 ? (
-              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
-                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto_auto] gap-4">
-                  <Typography
-                    variant="subtitle"
-                    level={3}
-                    className="text-gray-500"
-                  >
-                    {dictionary.pages.govern.parties.ambassadors.col_ambassador}
-                  </Typography>
-                  <Typography
-                    variant="subtitle"
-                    level={3}
-                    className="text-gray-500 text-right whitespace-nowrap"
-                  >
-                    {dictionary.pages.govern.parties.ambassadors.col_invited}
-                  </Typography>
-                  <Typography
-                    variant="subtitle"
-                    level={3}
-                    className="text-gray-500 text-right w-16"
-                  >
-                    {dictionary.pages.govern.parties.ambassadors.col_reward}
-                  </Typography>
-                </div>
-                <div className="divide-y divide-gray-100">
-                  {leaderboard.map((entry, index) => (
-                    <div
-                      key={entry.username}
-                      className="grid grid-cols-[1fr_auto_auto] gap-4 items-center px-4 py-3"
+              <div className="rounded-xl border border-gray-200 overflow-hidden w-full min-w-0">
+                <div
+                  className="grid min-w-0"
+                  style={{
+                    gridTemplateColumns:
+                      "minmax(0, 1fr) max-content max-content",
+                  }}
+                >
+                  {/* Single header background spanning full width */}
+                  <div
+                    className="col-span-full row-start-1 min-h-10 border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0"
+                    aria-hidden
+                  />
+                  {/* Header row – labels only; column widths come from data grid below */}
+                  <div className="col-start-1 row-start-1 px-4 py-3 flex items-center">
+                    <Typography
+                      variant="subtitle"
+                      level={3}
+                      className="text-gray-500 leading-tight truncate min-w-0"
                     >
-                      <div className="flex items-center gap-2 min-w-0">
+                      {
+                        dictionary.pages.govern.parties.ambassadors.col_ambassador
+                      }
+                    </Typography>
+                  </div>
+                  <div className="col-start-2 row-start-1 relative px-6 py-3 min-w-0">
+                    <Typography
+                      variant="subtitle"
+                      level={3}
+                      className="text-gray-500 whitespace-nowrap leading-tight absolute right-6 top-1/2 -translate-y-1/2!"
+                    >
+                      {dictionary.pages.govern.parties.ambassadors.col_invited}
+                    </Typography>
+                  </div>
+                  <div className="col-start-3 row-start-1 relative px-4 py-3 min-w-0">
+                    <Typography
+                      variant="subtitle"
+                      level={3}
+                      className="text-gray-500 whitespace-nowrap leading-tight absolute right-4 top-1/2 -translate-y-1/2!"
+                    >
+                      {dictionary.pages.govern.parties.ambassadors.col_reward}
+                    </Typography>
+                  </div>
+                  {/* Data rows – these define column widths (Invited/Reward = max-content) */}
+                  {leaderboard.map((entry, index) => (
+                    <Fragment key={entry.username}>
+                      <div className="flex items-center gap-2 min-w-0 pl-4 py-3">
                         <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
                           {index + 1}
                         </span>
                         <Typography
                           variant="body"
                           level={3}
-                          className="font-medium text-gray-900 truncate"
+                          className="font-medium text-gray-900 truncate min-w-0"
                           title={entry.username}
                         >
                           {entry.username}
                         </Typography>
                       </div>
-                      <Typography
-                        variant="body"
-                        level={3}
-                        className="text-gray-400 tabular-nums text-right"
-                      >
-                        {formatInteger(entry.totalInvited)}
-                      </Typography>
-                      <Typography
-                        variant="body"
-                        level={3}
-                        className="text-gray-900 tabular-nums text-right w-16"
-                      >
-                        {entry.reward > 0
-                          ? `${formatTokenAmount(entry.reward)} WDD`
-                          : "0 WDD"}
-                      </Typography>
-                    </div>
+                      <div className="flex items-center justify-end px-6 py-3 whitespace-nowrap">
+                        <Typography
+                          variant="body"
+                          level={3}
+                          className="text-gray-400 tabular-nums"
+                        >
+                          {formatInteger(entry.totalInvited)}
+                        </Typography>
+                      </div>
+                      <div className="flex items-center justify-end pr-4 py-3 whitespace-nowrap">
+                        <Typography
+                          variant="body"
+                          level={3}
+                          className="text-gray-900 tabular-nums"
+                        >
+                          {entry.reward > 0
+                            ? `${formatTokenAmount(entry.reward)} WDD`
+                            : "0 WDD"}
+                        </Typography>
+                      </div>
+                    </Fragment>
                   ))}
                 </div>
               </div>
