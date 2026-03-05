@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "World Republic",
     short_name: "World Republic",
-    description: "Experiment with global democracy",
+    description: "The new OS of humanity",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -37,7 +37,7 @@ const twkLausanne = localFont({
 const APP_NAME = "World Republic";
 const APP_DEFAULT_TITLE = "World Republic";
 const APP_TITLE_TEMPLATE = "%s - World Republic";
-const APP_DESCRIPTION = "Experiment with global democracy";
+const APP_DESCRIPTION = "The new OS of humanity";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.worldrepublic.org"),
