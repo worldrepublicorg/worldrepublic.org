@@ -352,7 +352,7 @@ export function TransactionHistoryContent({
       label: dictionary.pages.wallet.transactions.types.sent,
     });
   }
-    if (hasStreamTx) {
+  if (hasStreamTx) {
     options.push({
       value: "REWARDS",
       label: dictionary.pages.wallet.transactions.filter.rewards,
@@ -523,7 +523,7 @@ export function TransactionHistoryContent({
                     {/* Additional details */}
                     {(transaction.walletAddress ||
                       transaction.recipientUserId) && (
-                      <div className="mt-1 flex flex-wrap items-center gap-x-0 text-xs text-gray-500">
+                      <div className="mt-0.5 flex flex-wrap items-center gap-x-0 text-xs text-gray-500">
                         {transaction.walletAddress && (
                           <>
                             <button
@@ -552,26 +552,14 @@ export function TransactionHistoryContent({
                       </div>
                     )}
                     {/* Stream event + Date */}
-                    <div className="mt-1 flex flex-wrap items-center gap-x-0 text-gray-500">
+                    <div className="mt-1 flex flex-wrap items-center gap-x-0 text-xs text-gray-500">
                       {streamEventLabel && (
                         <>
-                          <Typography
-                            variant="body"
-                            level={4}
-                            className="text-gray-500"
-                          >
-                            {streamEventLabel}
-                          </Typography>
-                          <span className="mx-1.5 text-gray-500">·</span>
+                          <span>{streamEventLabel}</span>
+                          <span className="mx-1.5">·</span>
                         </>
                       )}
-                      <Typography
-                        variant="body"
-                        level={4}
-                        className="text-gray-500"
-                      >
-                        {formatDate(transaction.createdAt)}
-                      </Typography>
+                      <span>{formatDate(transaction.createdAt)}</span>
                     </div>
                   </div>
                 </div>
