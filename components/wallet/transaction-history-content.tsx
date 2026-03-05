@@ -504,14 +504,67 @@ export function TransactionHistoryContent({
                   </div>
                   {/* Transaction details */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-2">
-                      <Typography
-                        variant="body"
-                        level={3}
-                        className="font-medium text-gray-900"
-                      >
-                        {getTransactionLabel(transaction)}
-                      </Typography>
+                    <div className="flex flex-wrap items-start justify-between gap-2">
+                      <div>
+                        <Typography
+                          variant="body"
+                          level={3}
+                          className="font-medium text-gray-900"
+                        >
+                          {getTransactionLabel(transaction)}
+                        </Typography>
+                        {/* Details + Date (one line: withdrawal info or stream event, then date) */}
+                        {(() => {
+                          const hasWithdrawalDetails =
+                            transaction.walletAddress ||
+                            transaction.recipientUserId;
+                          const hasDetailsBeforeDate =
+                            transaction.walletAddress ||
+                            transaction.selectedChain ||
+                            streamEventLabel;
+                          return (
+                            <div className="flex flex-wrap items-center gap-x-0 text-xs text-gray-500 mt-1">
+                              {transaction.walletAddress && (
+                                <>
+                                  <button
+                                    onClick={() =>
+                                      handleCopyWalletAddress(
+                                        transaction.walletAddress!,
+                                      )
+                                    }
+                                    className="flex items-center gap-1 hover:text-gray-700"
+                                  >
+                                    <span className="line-clamp-1">
+                                      {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
+                                    </span>
+                                    <PiCopy className="h-3 w-3" />
+                                  </button>
+                                  {transaction.selectedChain && (
+                                    <span className="mx-1">·</span>
+                                  )}
+                                </>
+                              )}
+                              {transaction.selectedChain && (
+                                <span>
+                                  {getChainDisplayName(
+                                    transaction.selectedChain,
+                                  )}
+                                </span>
+                              )}
+                              {!hasWithdrawalDetails && streamEventLabel && (
+                                <>
+                                  <span>{streamEventLabel}</span>
+                                  <span className="mx-1">·</span>
+                                </>
+                              )}
+                              {hasWithdrawalDetails && hasDetailsBeforeDate && (
+                                <span className="mx-1">·</span>
+                              )}
+                              <span>{formatDate(transaction.createdAt)}</span>
+                            </div>
+                          );
+                        })()}
+                      </div>
                       <Typography
                         variant="body"
                         level={3}
@@ -523,55 +576,6 @@ export function TransactionHistoryContent({
                         {getAmountDisplay(transaction)} WDD
                       </Typography>
                     </div>
-                    {/* Details + Date (one line: withdrawal info or stream event, then date) */}
-                    {(() => {
-                      const hasWithdrawalDetails =
-                        transaction.walletAddress ||
-                        transaction.recipientUserId;
-                      const hasDetailsBeforeDate =
-                        transaction.walletAddress ||
-                        transaction.selectedChain ||
-                        streamEventLabel;
-                      return (
-                        <div className="flex flex-wrap items-center gap-x-0 text-xs text-gray-500 mt-1">
-                          {transaction.walletAddress && (
-                            <>
-                              <button
-                                onClick={() =>
-                                  handleCopyWalletAddress(
-                                    transaction.walletAddress!,
-                                  )
-                                }
-                                className="flex items-center gap-1 hover:text-gray-700"
-                              >
-                                <span className="line-clamp-1">
-                                  {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
-                                </span>
-                                <PiCopy className="h-3 w-3" />
-                              </button>
-                              {transaction.selectedChain && (
-                                <span className="mx-1">·</span>
-                              )}
-                            </>
-                          )}
-                          {transaction.selectedChain && (
-                            <span>
-                              {getChainDisplayName(transaction.selectedChain)}
-                            </span>
-                          )}
-                          {!hasWithdrawalDetails && streamEventLabel && (
-                            <>
-                              <span>{streamEventLabel}</span>
-                              <span className="mx-1">·</span>
-                            </>
-                          )}
-                          {hasWithdrawalDetails && hasDetailsBeforeDate && (
-                            <span className="mx-1">·</span>
-                          )}
-                          <span>{formatDate(transaction.createdAt)}</span>
-                        </div>
-                      );
-                    })()}
                   </div>
                 </div>
               );
