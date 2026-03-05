@@ -523,39 +523,47 @@ export function TransactionHistoryContent({
                     {/* Additional details */}
                     {(transaction.walletAddress ||
                       transaction.recipientUserId) && (
-                      <div className="mt-1 flex flex-wrap gap-2">
+                      <div className="mt-1 flex flex-wrap items-center gap-x-0 text-xs text-gray-500">
                         {transaction.walletAddress && (
-                          <button
-                            onClick={() =>
-                              handleCopyWalletAddress(
-                                transaction.walletAddress!,
-                              )
-                            }
-                            className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700"
-                          >
-                            <span className="line-clamp-1">
-                              {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
-                            </span>
-                            <PiCopy className="h-3 w-3" />
-                          </button>
+                          <>
+                            <button
+                              onClick={() =>
+                                handleCopyWalletAddress(
+                                  transaction.walletAddress!,
+                                )
+                              }
+                              className="flex items-center gap-1 hover:text-gray-700"
+                            >
+                              <span className="line-clamp-1">
+                                {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
+                              </span>
+                              <PiCopy className="h-3 w-3" />
+                            </button>
+                            {transaction.selectedChain && (
+                              <span className="mx-1.5">·</span>
+                            )}
+                          </>
                         )}
                         {transaction.selectedChain && (
-                          <span className="text-xs text-gray-500 mt-px">
+                          <span className="mt-px">
                             {getChainDisplayName(transaction.selectedChain)}
                           </span>
                         )}
                       </div>
                     )}
-                    {/* Stream event + Date (same separation as optional extra line) */}
-                    <div className="mt-1 flex flex-wrap gap-2">
+                    {/* Stream event + Date */}
+                    <div className="mt-1 flex flex-wrap items-center gap-x-0 text-gray-500">
                       {streamEventLabel && (
-                        <Typography
-                          variant="body"
-                          level={4}
-                          className="text-gray-500"
-                        >
-                          {streamEventLabel}
-                        </Typography>
+                        <>
+                          <Typography
+                            variant="body"
+                            level={4}
+                            className="text-gray-500"
+                          >
+                            {streamEventLabel}
+                          </Typography>
+                          <span className="mx-1.5 text-gray-500">·</span>
+                        </>
                       )}
                       <Typography
                         variant="body"
