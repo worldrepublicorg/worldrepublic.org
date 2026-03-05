@@ -532,7 +532,7 @@ export function TransactionHistoryContent({
                       return (
                         <div
                           className={cn(
-                            "flex flex-wrap items-center gap-x-0 text-xs text-gray-500",
+                            "flex flex-wrap items-center gap-x-0 text-[12px]! text-gray-500",
                             hasWithdrawalDetails ? "mt-[3px]" : "mt-1",
                           )}
                         >
@@ -557,26 +557,20 @@ export function TransactionHistoryContent({
                             </>
                           )}
                           {transaction.selectedChain && (
-                            <span className="mt-px">
-                              {getChainDisplayName(
-                                transaction.selectedChain,
-                              )}
+                            <span>
+                              {getChainDisplayName(transaction.selectedChain)}
                             </span>
                           )}
                           {!hasWithdrawalDetails && streamEventLabel && (
                             <>
-                              <span className="mt-px">
-                                {streamEventLabel}
-                              </span>
+                              <span>{streamEventLabel}</span>
                               <span className="mx-1.5">·</span>
                             </>
                           )}
                           {hasWithdrawalDetails && hasDetailsBeforeDate && (
                             <span className="mx-1.5">·</span>
                           )}
-                          <span className="mt-px">
-                            {formatDate(transaction.createdAt)}
-                          </span>
+                          <span>{formatDate(transaction.createdAt)}</span>
                         </div>
                       );
                     })()}
