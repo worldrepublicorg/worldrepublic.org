@@ -530,12 +530,7 @@ export function TransactionHistoryContent({
                         transaction.selectedChain ||
                         streamEventLabel;
                       return (
-                        <div
-                          className={cn(
-                            "flex flex-wrap items-center gap-x-0 text-[12px]! text-gray-500",
-                            hasWithdrawalDetails ? "mt-[3px]" : "mt-1",
-                          )}
-                        >
+                        <div className="flex flex-wrap items-center gap-x-0 text-xs text-gray-500 mt-1">
                           {transaction.walletAddress && (
                             <>
                               <button
