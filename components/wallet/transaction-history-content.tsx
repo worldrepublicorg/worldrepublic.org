@@ -505,16 +505,6 @@ export function TransactionHistoryContent({
                   {/* Transaction details */}
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-row-reverse flex-wrap items-start justify-between gap-2">
-                      <Typography
-                        variant="body"
-                        level={3}
-                        className={cn(
-                          "shrink-0 whitespace-nowrap font-mono font-medium",
-                          getAmountColor(transaction),
-                        )}
-                      >
-                        {getAmountDisplay(transaction)} WDD
-                      </Typography>
                       <div className="flex flex-col">
                         <Typography
                           variant="body"
@@ -575,6 +565,16 @@ export function TransactionHistoryContent({
                           );
                         })()}
                       </div>
+                      <Typography
+                        variant="body"
+                        level={3}
+                        className={cn(
+                          "shrink-0 whitespace-nowrap font-mono font-medium",
+                          getAmountColor(transaction),
+                        )}
+                      >
+                        {getAmountDisplay(transaction)} WDD
+                      </Typography>
                     </div>
                   </div>
                 </div>
