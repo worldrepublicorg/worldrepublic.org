@@ -186,20 +186,26 @@ export function TransactionHistoryContent({
         : dictionary.pages.wallet.transactions.types.sent;
     }
     if (transaction.type === "STREAM_CREATED") {
-      const prefix =
-        transaction.streamType === "AMBASSADOR"
-          ? dictionary.pages.wallet.transactions.types.ambassador_reward
-          : dictionary.pages.wallet.transactions.types.party_subsidy;
-      return `${prefix} — ${dictionary.pages.wallet.transactions.types.stream_created}`;
+      return transaction.streamType === "AMBASSADOR"
+        ? dictionary.pages.wallet.transactions.types.ambassador_reward
+        : dictionary.pages.wallet.transactions.types.party_subsidy;
     }
     if (transaction.type === "STREAM_UPDATED") {
-      const prefix =
-        transaction.streamType === "AMBASSADOR"
-          ? dictionary.pages.wallet.transactions.types.ambassador_reward
-          : dictionary.pages.wallet.transactions.types.party_subsidy;
-      return `${prefix} — ${dictionary.pages.wallet.transactions.types.stream_updated}`;
+      return transaction.streamType === "AMBASSADOR"
+        ? dictionary.pages.wallet.transactions.types.ambassador_reward
+        : dictionary.pages.wallet.transactions.types.party_subsidy;
     }
     return transaction.type;
+  };
+
+  const getStreamEventLabel = (transaction: Transaction): string | null => {
+    if (transaction.type === "STREAM_CREATED") {
+      return dictionary.pages.wallet.transactions.types.stream_created;
+    }
+    if (transaction.type === "STREAM_UPDATED") {
+      return dictionary.pages.wallet.transactions.types.stream_updated;
+    }
+    return null;
   };
 
   const getAmountDisplay = (transaction: Transaction): string => {
@@ -478,6 +484,7 @@ export function TransactionHistoryContent({
           <div className="mb-6 space-y-8">
             {filteredTransactions.map((transaction) => {
               const IconComponent = getTransactionIcon(transaction);
+              const streamEventLabel = getStreamEventLabel(transaction);
               return (
                 <div key={transaction.id} className="flex items-center gap-4">
                   {/* Transaction icon */}
@@ -513,9 +520,10 @@ export function TransactionHistoryContent({
                         {getAmountDisplay(transaction)} WDD
                       </Typography>
                     </div>
-                    {/* Additional details */}
+                    {/* Additional details (address + chain for withdrawals, stream event for streams) */}
                     {(transaction.walletAddress ||
-                      transaction.recipientUserId) && (
+                      transaction.recipientUserId ||
+                      streamEventLabel) && (
                       <div className="mt-1 flex flex-wrap gap-2">
                         {transaction.walletAddress && (
                           <button
@@ -537,10 +545,15 @@ export function TransactionHistoryContent({
                             {getChainDisplayName(transaction.selectedChain)}
                           </span>
                         )}
+                        {streamEventLabel && (
+                          <span className="text-xs text-gray-500 mt-px">
+                            {streamEventLabel}
+                          </span>
+                        )}
                       </div>
                     )}
                     {/* Date */}
-                    <div className="mt-1 flex items-center justify-between gap-2">
+                    <div className="mt-1">
                       <Typography
                         variant="body"
                         level={4}
