@@ -118,6 +118,55 @@ export default function PartiesPageClient({
       maximumFractionDigits: 2,
     });
 
+  // Tie-break: custom usernames (non-citizen_) first alphabetically, then citizen_ usernames alphabetically
+  const compareUsernameTieBreak = (a: string, b: string): number => {
+    const aCustom = !a.startsWith("citizen_");
+    const bCustom = !b.startsWith("citizen_");
+    if (aCustom && !bCustom) return -1;
+    if (!aCustom && bCustom) return 1;
+    return a.localeCompare(b, undefined, { sensitivity: "base" });
+  };
+
+  // Ambassador leaderboard: tie-aware rank (by reward), then by totalInvited, then by username (custom first, then citizen_)
+  const ambassadorWithRank = (() => {
+    if (!leaderboard || leaderboard.length === 0) return [];
+    const sorted = [...leaderboard].sort((a, b) => {
+      if (b.reward !== a.reward) return b.reward - a.reward;
+      if (b.totalInvited !== a.totalInvited) return b.totalInvited - a.totalInvited;
+      return compareUsernameTieBreak(a.username, b.username);
+    });
+    const withRank: { entry: AmbassadorLeaderboardEntry; rank: number }[] = [];
+    for (let i = 0; i < sorted.length; i++) {
+      const entry = sorted[i];
+      const rank =
+        i > 0 && entry.reward === sorted[i - 1].reward
+          ? withRank[i - 1].rank
+          : i + 1;
+      withRank.push({ entry, rank });
+    }
+    return withRank;
+  })();
+
+  // Subsidy leaderboard: tie-aware rank (by totalSubsidy), ties by leaderUsername (custom first, then citizen_)
+  const subsidyWithRank = (() => {
+    if (!subsidyLeaderboard || subsidyLeaderboard.length === 0) return [];
+    const sorted = [...subsidyLeaderboard].sort((a, b) => {
+      if (b.totalSubsidy !== a.totalSubsidy)
+        return b.totalSubsidy - a.totalSubsidy;
+      return compareUsernameTieBreak(a.leaderUsername, b.leaderUsername);
+    });
+    const withRank: { entry: SubsidyLeaderboardEntry; rank: number }[] = [];
+    for (let i = 0; i < sorted.length; i++) {
+      const entry = sorted[i];
+      const rank =
+        i > 0 && entry.totalSubsidy === sorted[i - 1].totalSubsidy
+          ? withRank[i - 1].rank
+          : i + 1;
+      withRank.push({ entry, rank });
+    }
+    return withRank;
+  })();
+
   // Fetch leaderboard lazily when the ambassadors tab becomes active
   useEffect(() => {
     if (activeTab !== "ambassadors" || leaderboard !== null) return;
@@ -382,11 +431,11 @@ export default function PartiesPageClient({
                     </Typography>
                   </div>
                   {/* Data rows – these define column widths (Invited/Reward = max-content) */}
-                  {leaderboard.map((entry, index) => (
+                  {ambassadorWithRank.map(({ entry, rank }) => (
                     <Fragment key={entry.username}>
                       <div className="flex items-center gap-2 min-w-0 pl-4 py-3">
                         <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
-                          {index + 1}
+                          {rank}
                         </span>
                         <Typography
                           variant="body"
@@ -513,14 +562,14 @@ export default function PartiesPageClient({
                   </Typography>
                 </div>
                 <div className="divide-y divide-gray-100">
-                  {subsidyLeaderboard.map((entry, index) => (
+                  {subsidyWithRank.map(({ entry, rank }) => (
                     <div
                       key={`${entry.leaderUsername}-${entry.partyName}`}
                       className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
-                          {index + 1}
+                          {rank}
                         </span>
                         <Typography
                           variant="body"
