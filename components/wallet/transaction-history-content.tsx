@@ -515,7 +515,10 @@ export function TransactionHistoryContent({
                       <Typography
                         variant="body"
                         level={3}
-                        className={`font-mono font-medium ${getAmountColor(transaction)}`}
+                        className={cn(
+                          "shrink-0 whitespace-nowrap font-mono font-medium",
+                          getAmountColor(transaction),
+                        )}
                       >
                         {getAmountDisplay(transaction)} WDD
                       </Typography>
@@ -547,7 +550,7 @@ export function TransactionHistoryContent({
                                 <PiCopy className="h-3 w-3" />
                               </button>
                               {transaction.selectedChain && (
-                                <span className="mx-1.5">·</span>
+                                <span className="mx-1">·</span>
                               )}
                             </>
                           )}
@@ -559,11 +562,11 @@ export function TransactionHistoryContent({
                           {!hasWithdrawalDetails && streamEventLabel && (
                             <>
                               <span>{streamEventLabel}</span>
-                              <span className="mx-1.5">·</span>
+                              <span className="mx-1">·</span>
                             </>
                           )}
                           {hasWithdrawalDetails && hasDetailsBeforeDate && (
-                            <span className="mx-1.5">·</span>
+                            <span className="mx-1">·</span>
                           )}
                           <span>{formatDate(transaction.createdAt)}</span>
                         </div>
