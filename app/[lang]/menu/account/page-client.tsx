@@ -19,6 +19,7 @@ import {
   PiCaretLeft,
   PiPencilSimple,
   PiPencilSimpleFill,
+  PiShareNetwork,
   PiTrash,
   PiTrashFill,
 } from "react-icons/pi";
@@ -32,6 +33,7 @@ import {
   getWalletAuthAndData,
   setUsername,
 } from "@/lib/actions/member";
+import { copyToClipboard } from "@/lib/utils";
 import {
   getCachedWalletData,
   setCachedWalletData,
@@ -76,6 +78,7 @@ export default function AccountPageClient({
   const showSkeleton = data === null;
   const email = data?.email ?? null;
   const username = data?.profileData?.username ?? null;
+  const referralCode = data?.profileData?.referralCode ?? null;
   const isAuthenticated = data?.authenticated ?? false;
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const userUuid = data?.profileData?.userUuid ?? null;
@@ -129,6 +132,46 @@ export default function AccountPageClient({
       });
     } finally {
       setIsDeletingAccount(false);
+    }
+  };
+
+  const handleShareReferralLink = async () => {
+    let code = referralCode;
+    if (!code) {
+      try {
+        const result = await getWalletAuthAndData();
+        if (result.profileData?.referralCode) {
+          code = result.profileData.referralCode;
+          setServerData(result);
+          setCachedWalletData(result);
+        }
+      } catch {
+        // Ignore; we'll handle the "no code" case below
+      }
+    }
+    if (!code) {
+      toast.error({
+        title: dictionary.toasts.generic_error,
+      });
+      return;
+    }
+    const link = `${window.location.origin}/?ref=${code}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ url: link });
+      } catch (error) {
+        if (error instanceof Error && error.name !== "AbortError") {
+          await copyToClipboard(link, toast, {
+            success: dictionary.toasts.copied,
+            error: dictionary.toasts.generic_error,
+          });
+        }
+      }
+    } else {
+      await copyToClipboard(link, toast, {
+        success: dictionary.toasts.copied,
+        error: dictionary.toasts.generic_error,
+      });
     }
   };
 
@@ -232,6 +275,21 @@ export default function AccountPageClient({
                     />
                   </div>
                 )}
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    void handleShareReferralLink();
+                  }}
+                  className="cursor-pointer"
+                >
+                  <CustomListItem
+                    label="Referral code"
+                    description={referralCode ?? ""}
+                    endAdornment={
+                      <PiShareNetwork className="size-4 text-gray-400" />
+                    }
+                  />
+                </div>
               </div>
             </div>
 
