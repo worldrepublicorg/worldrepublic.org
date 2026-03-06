@@ -146,7 +146,7 @@ export default function WalletPageClient({
         ? "<0.000001"
         : streamRatePerDay.toLocaleString(locale, {
             minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
+            maximumFractionDigits: 6,
           })
       : null;
 
@@ -309,10 +309,10 @@ export default function WalletPageClient({
           {formattedStreamRate != null && latestStreamEndsAt != null && (
             <Typography
               variant="subtitle"
-              level={4}
-              className="text-gray-400 mt-1.5!"
+              level={3}
+              className="text-gray-500 mt-2!"
             >
-              {formattedStreamRate} WDD/day until{" "}
+              ~{formattedStreamRate} WDD/day until{" "}
               {formatElectionDate(latestStreamEndsAt, locale)}
             </Typography>
           )}
