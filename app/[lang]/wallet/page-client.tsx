@@ -575,6 +575,7 @@ export default function WalletPageClient({
           </div>
           <TransactionHistoryContent
             transactions={authenticated ? transactions : []}
+            streams={authenticated ? userStreams : null}
             dictionary={dictionary}
             lang={params.lang}
           />

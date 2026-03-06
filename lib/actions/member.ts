@@ -323,6 +323,7 @@ export type GetWalletAuthAndDataTransaction = {
   selectedChain?: string;
   recipientUserId?: string;
   streamType?: string;
+  streamId?: string;
   createdAt: number;
   isReceived: boolean;
 };
@@ -475,6 +476,7 @@ export async function getTransactions(limit: number = 50) {
         recipientUserId: t.recipientUserId || undefined,
         transactionId: t.transactionId || undefined,
         streamType: t.streamType || undefined,
+        streamId: t.streamId ?? undefined,
         createdAt: t.createdAt.getTime(),
         isReceived:
           t.recipientUserId === userUuid ||

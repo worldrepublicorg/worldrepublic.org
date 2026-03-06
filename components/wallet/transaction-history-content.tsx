@@ -20,6 +20,7 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { getTransactions } from "@/lib/actions/member";
+import type { StreamData } from "@/lib/streams";
 import { cn, copyToClipboard } from "@/lib/utils";
 
 interface Transaction {
@@ -30,18 +31,21 @@ interface Transaction {
   selectedChain?: string;
   recipientUserId?: string;
   streamType?: string;
+  streamId?: string;
   createdAt: number;
   isReceived: boolean;
 }
 
 interface TransactionHistoryContentProps {
   transactions?: Transaction[] | null;
+  streams?: StreamData[] | null;
   dictionary: Dictionary;
   lang: string;
 }
 
 export function TransactionHistoryContent({
   transactions: transactionsProp,
+  streams = null,
   dictionary,
   lang,
 }: TransactionHistoryContentProps) {
@@ -206,6 +210,25 @@ export function TransactionHistoryContent({
       return dictionary.pages.wallet.transactions.types.stream_updated;
     }
     return null;
+  };
+
+  // WDD/day for stream transactions (when streams are provided and tx has streamId)
+  const getStreamRatePerDayFormatted = (transaction: Transaction): string | null => {
+    if (
+      !streams?.length ||
+      !transaction.streamId ||
+      (transaction.type !== "STREAM_CREATED" && transaction.type !== "STREAM_UPDATED")
+    ) {
+      return null;
+    }
+    const stream = streams.find((s) => s.id === transaction.streamId);
+    if (!stream) return null;
+    const ratePerDay = stream.ratePerSecond * 86400;
+    if (ratePerDay < 0.000001) return "<0.000001";
+    return ratePerDay.toLocaleString(locale, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   };
 
   const getAmountDisplay = (transaction: Transaction): string => {
@@ -523,7 +546,7 @@ export function TransactionHistoryContent({
                         {getAmountDisplay(transaction)} WDD
                       </Typography>
                     </div>
-                    {/* Details + Date (one line: withdrawal info or stream event, then date) */}
+                    {/* Details + Date (one line: withdrawal info or stream event, then date; stream rows add WDD/day on the right) */}
                     {(() => {
                       const hasWithdrawalDetails =
                         transaction.walletAddress ||
@@ -532,43 +555,54 @@ export function TransactionHistoryContent({
                         transaction.walletAddress ||
                         transaction.selectedChain ||
                         streamEventLabel;
+                      const streamRateFormatted =
+                        getStreamRatePerDayFormatted(transaction);
                       return (
-                        <div className="flex flex-wrap items-center gap-x-0 text-xs text-gray-500 mt-1">
-                          {transaction.walletAddress && (
-                            <>
-                              <button
-                                onClick={() =>
-                                  handleCopyWalletAddress(
-                                    transaction.walletAddress!,
-                                  )
-                                }
-                                className="flex items-center gap-1 hover:text-gray-700"
-                              >
-                                <span className="line-clamp-1">
-                                  {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
-                                </span>
-                                <PiCopy className="h-3 w-3" />
-                              </button>
-                              {transaction.selectedChain && (
+                        <div className="flex items-center justify-between gap-2 text-xs text-gray-500 mt-1">
+                          <div className="flex flex-wrap items-center gap-x-0 min-w-0">
+                            {transaction.walletAddress && (
+                              <>
+                                <button
+                                  onClick={() =>
+                                    handleCopyWalletAddress(
+                                      transaction.walletAddress!,
+                                    )
+                                  }
+                                  className="flex items-center gap-1 hover:text-gray-700"
+                                >
+                                  <span className="line-clamp-1">
+                                    {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
+                                  </span>
+                                  <PiCopy className="h-3 w-3" />
+                                </button>
+                                {transaction.selectedChain && (
+                                  <span className="mx-1">·</span>
+                                )}
+                              </>
+                            )}
+                            {transaction.selectedChain && (
+                              <span>
+                                {getChainDisplayName(
+                                  transaction.selectedChain,
+                                )}
+                              </span>
+                            )}
+                            {!hasWithdrawalDetails && streamEventLabel && (
+                              <>
+                                <span>{streamEventLabel}</span>
                                 <span className="mx-1">·</span>
-                              )}
-                            </>
-                          )}
-                          {transaction.selectedChain && (
-                            <span>
-                              {getChainDisplayName(transaction.selectedChain)}
+                              </>
+                            )}
+                            {hasWithdrawalDetails && hasDetailsBeforeDate && (
+                              <span className="mx-1">·</span>
+                            )}
+                            <span>{formatDate(transaction.createdAt)}</span>
+                          </div>
+                          {streamRateFormatted != null && (
+                            <span className="shrink-0">
+                              {streamRateFormatted} WDD/day
                             </span>
                           )}
-                          {!hasWithdrawalDetails && streamEventLabel && (
-                            <>
-                              <span>{streamEventLabel}</span>
-                              <span className="mx-1">·</span>
-                            </>
-                          )}
-                          {hasWithdrawalDetails && hasDetailsBeforeDate && (
-                            <span className="mx-1">·</span>
-                          )}
-                          <span>{formatDate(transaction.createdAt)}</span>
                         </div>
                       );
                     })()}
