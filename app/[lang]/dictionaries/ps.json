@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "پورته کول ناکام شول",
         "no_transactions": "تراوسه کوم معاملات نشته",
+        "wdd_per_day": "WDD/ورځ",
         "just_now": "همدا اوس",
         "minutes_ago": "{minutes}دقیقې وړاندې",
         "hours_ago": "{hours}ساعته وړاندې",

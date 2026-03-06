@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "読み込みに失敗しました",
         "no_transactions": "まだ取引がありません",
+        "wdd_per_day": "WDD/日",
         "just_now": "たった今",
         "minutes_ago": "{minutes}分前",
         "hours_ago": "{hours}時間前",

@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "መጫን አልተሳካም",
         "no_transactions": "እስካሁን ምንም ግብይቶች የሉም",
+        "wdd_per_day": "WDD/ቀን",
         "just_now": "አሁን",
         "minutes_ago": "ከ{minutes}ደቂቃ በፊት",
         "hours_ago": "ከ{hours}ሰዓት በፊት",

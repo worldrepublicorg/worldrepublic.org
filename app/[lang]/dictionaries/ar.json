@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "فشل التحميل",
         "no_transactions": "لا توجد معاملات بعد",
+        "wdd_per_day": "WDD/يوم",
         "just_now": "الآن",
         "minutes_ago": "منذ {minutes}د",
         "hours_ago": "منذ {hours}س",

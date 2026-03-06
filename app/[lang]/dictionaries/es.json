@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Error al cargar",
         "no_transactions": "Aún no hay transacciones",
+        "wdd_per_day": "WDD/día",
         "just_now": "Ahora mismo",
         "minutes_ago": "hace {minutes}m",
         "hours_ago": "hace {hours}h",

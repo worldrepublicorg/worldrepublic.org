@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "로드 실패",
         "no_transactions": "아직 거래가 없습니다",
+        "wdd_per_day": "WDD/일",
         "just_now": "방금",
         "minutes_ago": "{minutes}분 전",
         "hours_ago": "{hours}시간 전",

@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Yuklashda xatolik",
         "no_transactions": "Hali tranzaksiyalar yo'q",
+        "wdd_per_day": "WDD/kun",
         "just_now": "Hozir",
         "minutes_ago": "{minutes}daq oldin",
         "hours_ago": "{hours}soat oldin",

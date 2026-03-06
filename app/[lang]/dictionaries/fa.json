@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "بارگذاری ناموفق",
         "no_transactions": "هنوز تراکنشی وجود ندارد",
+        "wdd_per_day": "WDD/روز",
         "just_now": "همین الان",
         "minutes_ago": "{minutes}دقیقه پیش",
         "hours_ago": "{hours}ساعت پیش",

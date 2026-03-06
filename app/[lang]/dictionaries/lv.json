@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Neizdevās ielādēt",
         "no_transactions": "Vēl nav darījumu",
+        "wdd_per_day": "WDD/diena",
         "just_now": "Tikko",
         "minutes_ago": "pirms {minutes}min",
         "hours_ago": "pirms {hours}h",

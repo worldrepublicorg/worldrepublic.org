@@ -198,6 +198,7 @@
       "transactions": {
         "failed_to_load": "Failed to load",
         "no_transactions": "No transactions yet",
+        "wdd_per_day": "WDD/day",
         "just_now": "Just now",
         "minutes_ago": "{minutes}m ago",
         "hours_ago": "{hours}h ago",

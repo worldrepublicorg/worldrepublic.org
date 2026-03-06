@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Impossibile à carricà",
         "no_transactions": "Nisuna transazzione ancora",
+        "wdd_per_day": "WDD/ghjornu",
         "just_now": "Avà",
         "minutes_ago": "{minutes}m fà",
         "hours_ago": "{hours}h fà",

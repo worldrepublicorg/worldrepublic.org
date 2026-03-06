@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Waxaa la guuldareystay in la soo dejiyo",
         "no_transactions": "Wali ma jiraan wax ganacsi ah",
+        "wdd_per_day": "WDD/maalin",
         "just_now": "Hadda",
         "minutes_ago": "{minutes}daqiiqo kahor",
         "hours_ago": "{hours}saac kahor",

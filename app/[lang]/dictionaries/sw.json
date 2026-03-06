@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Imeshindwa kupakia",
         "no_transactions": "Bado hakuna maambukizi",
+        "wdd_per_day": "WDD/siku",
         "just_now": "Hivi sasa",
         "minutes_ago": "dakika {minutes} zilizopita",
         "hours_ago": "masaa {hours} yaliyopita",

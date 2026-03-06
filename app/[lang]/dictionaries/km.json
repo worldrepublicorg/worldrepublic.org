@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "មិនអាចផ្ទុក",
         "no_transactions": "មិនទាន់មានប្រតិបត្តិការទេ",
+        "wdd_per_day": "WDD/ថ្ងៃ",
         "just_now": "ឥឡូវនេះ",
         "minutes_ago": "{minutes}នាទីមុន",
         "hours_ago": "{hours}ម៉ោងមុន",

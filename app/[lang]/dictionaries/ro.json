@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Încărcare eșuată",
         "no_transactions": "Încă nu există tranzacții",
+        "wdd_per_day": "WDD/zi",
         "just_now": "Chiar acum",
         "minutes_ago": "acum {minutes}min",
         "hours_ago": "acum {hours}ore",

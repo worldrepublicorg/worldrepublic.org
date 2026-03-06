@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Không thể tải",
         "no_transactions": "Chưa có giao dịch",
+        "wdd_per_day": "WDD/ngày",
         "just_now": "Vừa xong",
         "minutes_ago": "{minutes}phút trước",
         "hours_ago": "{hours}giờ trước",

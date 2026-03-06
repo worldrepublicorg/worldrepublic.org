@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Не вдалося завантажити",
         "no_transactions": "Поки немає транзакцій",
+        "wdd_per_day": "WDD/день",
         "just_now": "Щойно",
         "minutes_ago": "{minutes}хв тому",
         "hours_ago": "{hours}год тому",

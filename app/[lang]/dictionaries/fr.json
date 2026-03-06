@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Échec du chargement",
         "no_transactions": "Aucune transaction pour le moment",
+        "wdd_per_day": "WDD/jour",
         "just_now": "À l'instant",
         "minutes_ago": "il y a {minutes}min",
         "hours_ago": "il y a {hours}h",

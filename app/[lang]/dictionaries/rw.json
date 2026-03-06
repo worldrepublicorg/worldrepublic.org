@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Kuzana byanze",
         "no_transactions": "Nta gahunda zigeze",
+        "wdd_per_day": "WDD/umunsi",
         "just_now": "Ubu",
         "minutes_ago": "iminota {minutes} ishize",
         "hours_ago": "amasaha {hours} asize",

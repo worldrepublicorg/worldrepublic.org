@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Lataus epäonnistui",
         "no_transactions": "Ei vielä tapahtumia",
+        "wdd_per_day": "WDD/päivä",
         "just_now": "Juuri nyt",
         "minutes_ago": "{minutes}min sitten",
         "hours_ago": "{hours}t sitten",

@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "An kasa lodawa",
         "no_transactions": "Babu ma'amaloli tukuna",
+        "wdd_per_day": "WDD/rana",
         "just_now": "Yanzu",
         "minutes_ago": "da {minutes}m",
         "hours_ago": "da {hours}h",

@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Betöltés sikertelen",
         "no_transactions": "Még nincsenek tranzakciók",
+        "wdd_per_day": "WDD/nap",
         "just_now": "Épp most",
         "minutes_ago": "{minutes} perce",
         "hours_ago": "{hours} órája",

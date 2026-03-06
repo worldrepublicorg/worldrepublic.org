@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Kuna lati gbe",
         "no_transactions": "Ko si awọn iṣowo sibẹ",
+        "wdd_per_day": "WDD/ọjọ",
         "just_now": "Ni bayi",
         "minutes_ago": "{minutes}iṣẹju sẹhin",
         "hours_ago": "{hours}wakati sẹhin",

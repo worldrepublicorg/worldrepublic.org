@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Nepodařilo se načíst",
         "no_transactions": "Zatím žádné transakce",
+        "wdd_per_day": "WDD/den",
         "just_now": "Právě teď",
         "minutes_ago": "před {minutes}m",
         "hours_ago": "před {hours}h",

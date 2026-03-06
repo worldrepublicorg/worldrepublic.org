@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Kon nie laai nie",
         "no_transactions": "Nog geen transaksies nie",
+        "wdd_per_day": "WDD/dag",
         "just_now": "Net nou",
         "minutes_ago": "{minutes}m gelede",
         "hours_ago": "{hours}u gelede",

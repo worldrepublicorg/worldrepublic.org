@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Неуспешно зареждане",
         "no_transactions": "Все още няма транзакции",
+        "wdd_per_day": "WDD/ден",
         "just_now": "Току-що",
         "minutes_ago": "преди {minutes}м",
         "hours_ago": "преди {hours}ч",

@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "ဖွင့်ရန် မအောင်မြင်ပါ",
         "no_transactions": "အရောင်းအဝယ် မရှိသေးပါ",
+        "wdd_per_day": "WDD/ရက်",
         "just_now": "ယခု",
         "minutes_ago": "{minutes}မိနစ် က",
         "hours_ago": "{hours}နာရီ က",

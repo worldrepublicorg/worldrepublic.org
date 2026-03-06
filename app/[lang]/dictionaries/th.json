@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "โหลดล้มเหลว",
         "no_transactions": "ยังไม่มีธุรกรรม",
+        "wdd_per_day": "WDD/วัน",
         "just_now": "เมื่อสักครู่",
         "minutes_ago": "{minutes}นาทีที่แล้ว",
         "hours_ago": "{hours}ชั่วโมงที่แล้ว",

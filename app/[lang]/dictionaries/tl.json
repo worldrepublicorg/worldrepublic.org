@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Nabigo sa pag-load",
         "no_transactions": "Walang mga transaksyon pa",
+        "wdd_per_day": "WDD/araw",
         "just_now": "Ngayon lang",
         "minutes_ago": "{minutes}m ang nakalipas",
         "hours_ago": "{hours}o ang nakalipas",

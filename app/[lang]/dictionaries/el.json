@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Αποτυχία φόρτωσης",
         "no_transactions": "Δεν υπάρχουν ακόμα συναλλαγές",
+        "wdd_per_day": "WDD/ημέρα",
         "just_now": "Μόλις τώρα",
         "minutes_ago": "πριν {minutes}λ",
         "hours_ago": "πριν {hours}ω",

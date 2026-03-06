@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "લોડ કરવામાં નિષ્ફળ",
         "no_transactions": "હજુ સુધી કોઈ લેનદેન નથી",
+        "wdd_per_day": "WDD/દિવસ",
         "just_now": "હમણાં",
         "minutes_ago": "{minutes}મિ પહેલાં",
         "hours_ago": "{hours}ક સમય પહેલાં",

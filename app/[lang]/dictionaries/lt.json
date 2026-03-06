@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Įkelti nepavyko",
         "no_transactions": "Dar nėra operacijų",
+        "wdd_per_day": "WDD/diena",
         "just_now": "Ką tik",
         "minutes_ago": "prieš {minutes}min",
         "hours_ago": "prieš {hours}val",

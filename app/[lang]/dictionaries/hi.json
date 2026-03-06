@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "लोड करने में विफल",
         "no_transactions": "अभी तक कोई लेनदेन नहीं",
+        "wdd_per_day": "WDD/दिन",
         "just_now": "अभी",
         "minutes_ago": "{minutes}मि पहले",
         "hours_ago": "{hours}घं पहले",

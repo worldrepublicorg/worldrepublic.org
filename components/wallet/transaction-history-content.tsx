@@ -600,7 +600,8 @@ export function TransactionHistoryContent({
                           </div>
                           {streamRateFormatted != null && (
                             <span className="shrink-0">
-                              ({streamRateFormatted} WDD/day)
+                              ({streamRateFormatted}{" "}
+                              {dictionary.pages.wallet.transactions.wdd_per_day})
                             </span>
                           )}
                         </div>

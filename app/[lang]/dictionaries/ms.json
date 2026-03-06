@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Gagal memuatkan",
         "no_transactions": "Tiada transaksi lagi",
+        "wdd_per_day": "WDD/hari",
         "just_now": "Baru sahaja",
         "minutes_ago": "{minutes}m lalu",
         "hours_ago": "{hours}j lalu",

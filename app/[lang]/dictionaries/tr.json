@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Yüklenemedi",
         "no_transactions": "Henüz işlem yok",
+        "wdd_per_day": "WDD/gün",
         "just_now": "Az önce",
         "minutes_ago": "{minutes}dk önce",
         "hours_ago": "{hours}sa önce",

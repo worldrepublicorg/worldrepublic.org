@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Nalaganje ni uspelo",
         "no_transactions": "Še ni transakcij",
+        "wdd_per_day": "WDD/dan",
         "just_now": "Ravno zdaj",
         "minutes_ago": "pred {minutes}min",
         "hours_ago": "pred {hours}h",

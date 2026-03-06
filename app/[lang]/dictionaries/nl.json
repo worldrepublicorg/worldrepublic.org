@@ -192,6 +192,7 @@
       "transactions": {
         "failed_to_load": "Laden mislukt",
         "no_transactions": "Nog geen transacties",
+        "wdd_per_day": "WDD/dag",
         "just_now": "Zojuist",
         "minutes_ago": "{minutes}min geleden",
         "hours_ago": "{hours}u geleden",
