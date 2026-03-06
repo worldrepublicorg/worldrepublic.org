@@ -47,6 +47,7 @@ import {
   getWalletAuthAndData,
   withdrawTokens,
 } from "@/lib/actions/member";
+import { formatElectionDate } from "@/lib/format-date";
 import { computeWalletBalance, type StreamData } from "@/lib/streams";
 import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
 import {
@@ -129,6 +130,25 @@ export default function WalletPageClient({
 
   const walletBalance = liveBalance ?? serverBalance;
   const locale = params.lang?.trim() || "en";
+
+  // Stream rate line: total WDD/day and latest end date (only when user has streams)
+  const streamRatePerDay =
+    userStreams.length > 0
+      ? userStreams.reduce((sum, s) => sum + s.ratePerSecond, 0) * 86400
+      : null;
+  const latestStreamEndsAt =
+    userStreams.length > 0
+      ? Math.max(...userStreams.map((s) => s.endsAt))
+      : null;
+  const formattedStreamRate =
+    streamRatePerDay != null
+      ? streamRatePerDay < 0.000001
+        ? "<0.000001"
+        : streamRatePerDay.toLocaleString(locale, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 6,
+          })
+      : null;
 
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
 
@@ -286,6 +306,16 @@ export default function WalletPageClient({
           <Typography variant="heading" level={1} className="font-mono mt-3!">
             {displayBalance} WDD
           </Typography>
+          {formattedStreamRate != null && latestStreamEndsAt != null && (
+            <Typography
+              variant="subtitle"
+              level={3}
+              className="text-gray-500 mt-2!"
+            >
+              ~{formattedStreamRate} WDD/day until{" "}
+              {formatElectionDate(latestStreamEndsAt, locale)}
+            </Typography>
+          )}
 
           <div className="flex flex-row w-full justify-around mt-5 px-6">
             {/* Send */}
