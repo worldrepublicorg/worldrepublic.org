@@ -127,6 +127,7 @@
         "account": {
           "title": "TÀI KHOẢN",
           "account_info": "Thông tin tài khoản",
+          "referral_code": "Mã giới thiệu",
           "language": "Ngôn ngữ"
         },
         "help": {

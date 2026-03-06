@@ -127,6 +127,7 @@
         "account": {
           "title": "AKAUN",
           "account_info": "Maklumat akaun",
+          "referral_code": "Kod rujukan",
           "language": "Bahasa"
         },
         "help": {

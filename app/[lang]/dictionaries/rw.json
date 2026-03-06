@@ -127,6 +127,7 @@
         "account": {
           "title": "KONTI",
           "account_info": "Amakuru ya konti",
+          "referral_code": "Kode y'ubutumire",
           "language": "Ururimi"
         },
         "help": {

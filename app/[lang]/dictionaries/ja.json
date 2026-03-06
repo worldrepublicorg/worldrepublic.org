@@ -127,6 +127,7 @@
         "account": {
           "title": "アカウント",
           "account_info": "アカウント情報",
+          "referral_code": "紹介コード",
           "language": "言語"
         },
         "help": {

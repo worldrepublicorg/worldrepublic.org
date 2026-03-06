@@ -127,6 +127,7 @@
         "account": {
           "title": "COMPTE",
           "account_info": "Informations du compte",
+          "referral_code": "Code de parrainage",
           "language": "Langue"
         },
         "help": {

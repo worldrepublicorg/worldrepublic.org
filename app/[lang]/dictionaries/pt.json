@@ -127,6 +127,7 @@
         "account": {
           "title": "CONTA",
           "account_info": "Informações da conta",
+          "referral_code": "Código de indicação",
           "language": "Idioma"
         },
         "help": {

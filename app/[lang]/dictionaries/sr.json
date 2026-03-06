@@ -127,6 +127,7 @@
         "account": {
           "title": "РАЧУН",
           "account_info": "Информације о рачуну",
+          "referral_code": "Реферални код",
           "language": "Језик"
         },
         "help": {

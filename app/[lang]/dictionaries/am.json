@@ -127,6 +127,7 @@
         "account": {
           "title": "መለያ",
           "account_info": "የመለያ መረጃ",
+          "referral_code": "የማጣቀሻ ኮድ",
           "language": "ቋንቋ"
         },
         "help": {

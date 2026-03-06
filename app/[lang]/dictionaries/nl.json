@@ -127,6 +127,7 @@
         "account": {
           "title": "ACCOUNT",
           "account_info": "Accountinformatie",
+          "referral_code": "Verwijzingscode",
           "language": "Taal"
         },
         "help": {

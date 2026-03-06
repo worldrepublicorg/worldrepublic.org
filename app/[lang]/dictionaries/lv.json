@@ -127,6 +127,7 @@
         "account": {
           "title": "KONTS",
           "account_info": "Konta informācija",
+          "referral_code": "Ieteikuma kods",
           "language": "Valoda"
         },
         "help": {

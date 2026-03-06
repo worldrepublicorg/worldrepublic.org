@@ -127,6 +127,7 @@
         "account": {
           "title": "اکاؤنٹ",
           "account_info": "اکاؤنٹ کی معلومات",
+          "referral_code": "ریفَرل کوڈ",
           "language": "زبان"
         },
         "help": {

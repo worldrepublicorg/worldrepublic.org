@@ -127,6 +127,7 @@
         "account": {
           "title": "ACCOUNT",
           "account_info": "Account information",
+          "referral_code": "Referral code",
           "language": "Wika"
         },
         "help": {

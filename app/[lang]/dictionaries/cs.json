@@ -127,6 +127,7 @@
         "account": {
           "title": "ÚČET",
           "account_info": "Informace o účtu",
+          "referral_code": "Kód doporučení",
           "language": "Jazyk"
         },
         "help": {

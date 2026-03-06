@@ -127,6 +127,7 @@
         "account": {
           "title": "CONT",
           "account_info": "Informații cont",
+          "referral_code": "Cod de recomandare",
           "language": "Limbă"
         },
         "help": {

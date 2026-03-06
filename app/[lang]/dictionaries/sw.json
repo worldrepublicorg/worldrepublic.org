@@ -127,6 +127,7 @@
         "account": {
           "title": "AKAUNTI",
           "account_info": "Taarifa za akaunti",
+          "referral_code": "Msimbo wa rufaa",
           "language": "Lugha"
         },
         "help": {

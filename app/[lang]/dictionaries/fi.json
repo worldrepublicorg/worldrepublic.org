@@ -127,6 +127,7 @@
         "account": {
           "title": "TILI",
           "account_info": "Tilitiedot",
+          "referral_code": "Suosittelukoodi",
           "language": "Kieli"
         },
         "help": {

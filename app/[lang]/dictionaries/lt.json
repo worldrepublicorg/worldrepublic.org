@@ -127,6 +127,7 @@
         "account": {
           "title": "PASKYRA",
           "account_info": "Paskyros informacija",
+          "referral_code": "Rekomendacijos kodas",
           "language": "Kalba"
         },
         "help": {

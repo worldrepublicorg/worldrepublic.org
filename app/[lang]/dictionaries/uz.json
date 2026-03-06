@@ -127,6 +127,7 @@
         "account": {
           "title": "HISOB",
           "account_info": "Hisob ma'lumoti",
+          "referral_code": "Tavsiya kodi",
           "language": "Til"
         },
         "help": {

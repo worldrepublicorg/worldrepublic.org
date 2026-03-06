@@ -127,6 +127,7 @@
         "account": {
           "title": "ΛΟΓΑΡΙΑΣΜΟΣ",
           "account_info": "Πληροφορίες λογαριασμού",
+          "referral_code": "Κωδικός παραπομπής",
           "language": "Γλώσσα"
         },
         "help": {

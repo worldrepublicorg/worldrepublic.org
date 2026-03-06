@@ -127,6 +127,7 @@
         "account": {
           "title": "HESAP",
           "account_info": "Hesap bilgileri",
+          "referral_code": "Davet kodu",
           "language": "Dil"
         },
         "help": {

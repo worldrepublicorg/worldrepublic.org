@@ -127,6 +127,7 @@
         "account": {
           "title": "HESAB",
           "account_info": "Hesab məlumatı",
+          "referral_code": "Tövsiyə kodu",
           "language": "Dil"
         },
         "help": {

@@ -127,6 +127,7 @@
         "account": {
           "title": "账户",
           "account_info": "账户信息",
+          "referral_code": "推荐码",
           "language": "语言"
         },
         "help": {

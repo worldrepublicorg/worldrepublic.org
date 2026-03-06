@@ -127,6 +127,7 @@
         "account": {
           "title": "REKENING",
           "account_info": "Rekeninginligting",
+          "referral_code": "Verwysingskode",
           "language": "Taal"
         },
         "help": {

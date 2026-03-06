@@ -283,7 +283,7 @@ export default function AccountPageClient({
                   className="cursor-pointer"
                 >
                   <CustomListItem
-                    label="Referral code"
+                    label={dictionary.pages.menu.sections.account.referral_code}
                     description={referralCode ?? ""}
                     endAdornment={
                       <PiShareNetwork className="size-4 text-gray-400" />

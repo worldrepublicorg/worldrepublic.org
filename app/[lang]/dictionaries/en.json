@@ -133,6 +133,7 @@
         "account": {
           "title": "ACCOUNT",
           "account_info": "Account info",
+          "referral_code": "Referral code",
           "language": "Language"
         },
         "help": {

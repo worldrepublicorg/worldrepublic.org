@@ -127,6 +127,7 @@
         "account": {
           "title": "FIÓK",
           "account_info": "Fiók információk",
+          "referral_code": "Ajánlókód",
           "language": "Nyelv"
         },
         "help": {

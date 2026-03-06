@@ -127,6 +127,7 @@
         "account": {
           "title": "ખાતું",
           "account_info": "ખાતાની માહિતી",
+          "referral_code": "રેફરલ કોડ",
           "language": "ભાષા"
         },
         "help": {

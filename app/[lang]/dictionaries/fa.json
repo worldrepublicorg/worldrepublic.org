@@ -127,6 +127,7 @@
         "account": {
           "title": "حساب کاربری",
           "account_info": "اطلاعات حساب",
+          "referral_code": "کد معرف",
           "language": "زبان"
         },
         "help": {
