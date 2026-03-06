@@ -7,9 +7,15 @@ import type { ElectionResult } from "@/lib/types/elections";
 interface ElectionResultsProps {
   results: ElectionResult[];
   dictionary: Dictionary;
+  /** When set, the whole row is clickable and opens the party detail drawer. */
+  onResultClick?: (result: ElectionResult) => void;
 }
 
-export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
+export function ElectionResults({
+  results,
+  dictionary,
+  onResultClick,
+}: ElectionResultsProps) {
   const totalVotes = results.reduce((sum, r) => sum + r.voteCount, 0);
   const t = dictionary.pages.govern.elections.detail;
 
@@ -60,7 +66,11 @@ export function ElectionResults({ results, dictionary }: ElectionResultsProps) {
                 : 0;
 
             return (
-              <div key={result.partyId}>
+              <div
+                key={result.partyId}
+                onClick={() => onResultClick?.(result)}
+                className="cursor-pointer"
+              >
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <div className="flex min-w-0 flex-1 items-center gap-2">
                     <span className="shrink-0 text-sm font-medium text-gray-400">

@@ -167,7 +167,19 @@ export function ElectionDetailContent({
         </div>
       )}
 
-      {isEnded && <ElectionResults results={results} dictionary={dictionary} />}
+      {isEnded && (
+        <ElectionResults
+          results={results}
+          dictionary={dictionary}
+          onResultClick={(result) => {
+            setSelectedPartyForDrawer({
+              id: result.partyId,
+              name: result.partyName,
+            } as Party);
+            setIsDrawerOpen(true);
+          }}
+        />
+      )}
 
       <PartyDetailDrawer
         open={isDrawerOpen}
