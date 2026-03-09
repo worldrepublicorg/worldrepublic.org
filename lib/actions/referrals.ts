@@ -73,7 +73,7 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
     return entries;
   },
   ["ambassador-leaderboard"],
-  { revalidate: 86400, tags: ["ambassador-leaderboard"] },
+  { revalidate: 60, tags: ["ambassador-leaderboard"] },
 );
 
 export async function getAmbassadorLeaderboard(): Promise<
@@ -119,7 +119,7 @@ const getCachedSubsidyLeaderboard = unstable_cache(
     }));
   },
   ["subsidy-leaderboard"],
-  { revalidate: 86400, tags: ["subsidy-leaderboard"] },
+  { revalidate: 60, tags: ["subsidy-leaderboard"] },
 );
 
 export async function getSubsidyLeaderboard(): Promise<
