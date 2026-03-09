@@ -1,10 +1,9 @@
 "use server";
 
-import { and, asc, count, desc, eq, gt, sql, sum } from "drizzle-orm";
+import { and, asc, count, desc, eq, gt, sum } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDbReadOnly } from "@/lib/db/connection";
 import { parties, referrals, streams, userProfiles } from "@/lib/db/schema";
-import { STREAM_DURATION_S } from "@/lib/streams";
 
 export type AmbassadorLeaderboardEntry = {
   username: string;
@@ -99,24 +98,47 @@ const getCachedSubsidyLeaderboard = unstable_cache(
   async (): Promise<SubsidyLeaderboardEntry[]> => {
     const readDb = getDbReadOnly();
 
+    // For each party, use the current stream (latest endsAt). Total ever earned:
+    // - Rollover stream (sourceStreamId set): totalAmount is "remaining + new", so add withdrawnAmount.
+    // - Single stream (no sourceStreamId): totalAmount is already the full earned amount.
     const rows = await readDb
       .select({
         partyId: parties.id,
         partyName: parties.name,
         leaderUsername: parties.leaderUsername,
-        totalSubsidy: sum(streams.totalAmount),
+        totalAmount: streams.totalAmount,
+        withdrawnAmount: streams.withdrawnAmount,
+        sourceStreamId: streams.sourceStreamId,
+        endsAt: streams.endsAt,
       })
       .from(streams)
       .innerJoin(parties, eq(streams.partyId, parties.id))
       .where(eq(streams.type, "SUBSIDY"))
-      .groupBy(parties.id, parties.name, parties.leaderUsername)
-      .orderBy(desc(sum(streams.totalAmount)), asc(parties.leaderUsername));
+      .orderBy(asc(parties.id), desc(streams.endsAt));
 
-    return rows.map((row) => ({
-      leaderUsername: row.leaderUsername,
-      partyName: row.partyName,
-      totalSubsidy: Number.parseFloat(row.totalSubsidy ?? "0"),
-    }));
+    const byParty = new Map<
+      string,
+      { leaderUsername: string; partyName: string; totalSubsidy: number }
+    >();
+    for (const row of rows) {
+      if (byParty.has(row.partyId)) continue;
+      const totalNum = Number.parseFloat(row.totalAmount ?? "0");
+      const withdrawnNum = Number.parseFloat(row.withdrawnAmount ?? "0");
+      const total = row.sourceStreamId
+        ? totalNum + withdrawnNum
+        : totalNum;
+      byParty.set(row.partyId, {
+        leaderUsername: row.leaderUsername,
+        partyName: row.partyName,
+        totalSubsidy: total,
+      });
+    }
+    const entries = Array.from(byParty.values());
+    entries.sort((a, b) => {
+      if (b.totalSubsidy !== a.totalSubsidy) return b.totalSubsidy - a.totalSubsidy;
+      return a.leaderUsername.localeCompare(b.leaderUsername);
+    });
+    return entries;
   },
   ["subsidy-leaderboard"],
   { revalidate: 60, tags: ["subsidy-leaderboard"] },
