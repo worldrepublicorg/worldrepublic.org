@@ -88,6 +88,7 @@ export async function getAmbassadorLeaderboard(): Promise<
 // ── Subsidy leaderboard ─────────────────────────────────────────
 
 export type SubsidyLeaderboardEntry = {
+  partyId: string;
   leaderUsername: string;
   partyName: string;
   totalSubsidy: number;
@@ -132,7 +133,12 @@ const getCachedSubsidyLeaderboard = unstable_cache(
         totalSubsidy: total,
       });
     }
-    const entries = Array.from(byParty.values());
+    const entries: SubsidyLeaderboardEntry[] = Array.from(
+      byParty.entries(),
+    ).map(([partyId, value]) => ({
+      partyId,
+      ...value,
+    }));
     entries.sort((a, b) => {
       if (b.totalSubsidy !== a.totalSubsidy) return b.totalSubsidy - a.totalSubsidy;
       return a.leaderUsername.localeCompare(b.leaderUsername);

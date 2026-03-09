@@ -13,6 +13,7 @@ import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { MenuLink } from "@/components/menu-link";
+import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
@@ -73,6 +74,10 @@ export default function PartiesPageClient({
   const [subsidyLeaderboardLoading, setSubsidyLeaderboardLoading] =
     useState(false);
   const [subsidyLeaderboardError, setSubsidyLeaderboardError] = useState(false);
+
+  const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
+    useState<Party | null>(null);
+  const [isPartyDrawerOpen, setIsPartyDrawerOpen] = useState(false);
 
   // Hydrate referral code from server when authenticated and not yet loaded
   useEffect(() => {
@@ -564,8 +569,15 @@ export default function PartiesPageClient({
                 <div className="divide-y divide-gray-100">
                   {subsidyWithRank.map(({ entry, rank }) => (
                     <div
-                      key={`${entry.leaderUsername}-${entry.partyName}`}
-                      className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3"
+                      key={entry.partyId}
+                      onClick={() => {
+                        setSelectedPartyForDrawer({
+                          id: entry.partyId,
+                          name: entry.partyName,
+                        } as Party);
+                        setIsPartyDrawerOpen(true);
+                      }}
+                      className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3 cursor-pointer"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
@@ -605,6 +617,14 @@ export default function PartiesPageClient({
           </div>
         ) : null}
       </main>
+
+      <PartyDetailDrawer
+        open={isPartyDrawerOpen}
+        onOpenChange={setIsPartyDrawerOpen}
+        party={selectedPartyForDrawer}
+        dictionary={dictionary}
+        lang={lang}
+      />
 
       <SignInDialog
         open={showSignInDialog}
