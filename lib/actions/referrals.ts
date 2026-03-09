@@ -1,6 +1,6 @@
 "use server";
 
-import { and, asc, count, desc, eq, gt, sum } from "drizzle-orm";
+import { asc, count, desc, eq } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDbReadOnly } from "@/lib/db/connection";
 import { parties, referrals, streams, userProfiles } from "@/lib/db/schema";
@@ -10,8 +10,6 @@ export type AmbassadorLeaderboardEntry = {
   totalInvited: number;
   reward: number;
 };
-
-const YEAR_S = 365 * 24 * 3600;
 
 const getCachedAmbassadorLeaderboard = unstable_cache(
   async (): Promise<AmbassadorLeaderboardEntry[]> => {
@@ -28,9 +26,8 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       .groupBy(userProfiles.id, userProfiles.username)
       .orderBy(desc(count(referrals.referredId)), asc(userProfiles.username));
 
-    const now = new Date();
-
-    // Batch-fetch active AMBASSADOR streams for all referrers
+    // For each referrer, total ever earned = current AMBASSADOR stream (latest endsAt):
+    // rollover stream → totalAmount + withdrawnAmount; single stream → totalAmount
     const referrerIds = rows.map((r) => r.userId);
     const rewardMap = new Map<string, number>();
 
@@ -38,21 +35,23 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       const streamRows = await readDb
         .select({
           userId: streams.userId,
-          totalRate: sum(streams.ratePerSecond),
+          totalAmount: streams.totalAmount,
+          withdrawnAmount: streams.withdrawnAmount,
+          sourceStreamId: streams.sourceStreamId,
+          endsAt: streams.endsAt,
         })
         .from(streams)
-        .where(
-          and(
-            eq(streams.type, "AMBASSADOR"),
-            gt(streams.endsAt, now),
-          ),
-        )
-        .groupBy(streams.userId);
+        .where(eq(streams.type, "AMBASSADOR"))
+        .orderBy(asc(streams.userId), desc(streams.endsAt));
 
+      const seen = new Set<string>();
       for (const sr of streamRows) {
-        const annualRate =
-          Number.parseFloat(sr.totalRate ?? "0") * YEAR_S;
-        rewardMap.set(sr.userId, annualRate);
+        if (seen.has(sr.userId)) continue;
+        seen.add(sr.userId);
+        const totalNum = Number.parseFloat(sr.totalAmount ?? "0");
+        const withdrawnNum = Number.parseFloat(sr.withdrawnAmount ?? "0");
+        const total = sr.sourceStreamId ? totalNum + withdrawnNum : totalNum;
+        rewardMap.set(sr.userId, total);
       }
     }
 
