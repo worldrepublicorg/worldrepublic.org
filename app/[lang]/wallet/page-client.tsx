@@ -53,6 +53,7 @@ import {
   getCachedWalletData,
   setCachedWalletData,
 } from "@/lib/wallet-auth-cache";
+import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 interface WalletPageClientProps {
   lang: string;
@@ -224,6 +225,12 @@ export default function WalletPageClient({
 
   // Determine button state and text
   const getButtonState = () => {
+    const getMinAmountText = (minAmount: number) =>
+      dictionary.toasts.wallet.min_amount.replace(
+        /[\p{Nd}]+/u,
+        new Intl.NumberFormat(locale).format(minAmount),
+      );
+
     // Check if address is empty first
     if (!walletAddress.trim()) {
       return { disabled: true, text: dictionary.common.invalid_address };
@@ -235,19 +242,20 @@ export default function WalletPageClient({
       return { disabled: true, text: addressError };
     }
 
-    // Check if chain is selected
-    if (!isChainSelected) {
-      return { disabled: true, text: dictionary.common.withdraw };
-    }
-
     const amountNum = parseFloat(amount);
 
     if (!amount || isNaN(amountNum)) {
       return { disabled: true, text: dictionary.common.withdraw };
     }
 
-    if (amountNum < 10) {
-      return { disabled: true, text: dictionary.toasts.wallet.min_amount };
+    // Keep the default disabled CTA until a chain is chosen.
+    if (!isChainSelected) {
+      return { disabled: true, text: dictionary.common.withdraw };
+    }
+
+    const minAmount = getMinWithdrawalAmount(selectedChain);
+    if (amountNum < minAmount) {
+      return { disabled: true, text: getMinAmountText(minAmount) };
     }
 
     if (amountNum > maxWithdrawable) {

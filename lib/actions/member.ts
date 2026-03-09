@@ -18,6 +18,7 @@ import {
   computeWalletBalance,
 } from "@/lib/streams";
 import { validateUsername } from "@/lib/utils";
+import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 // ============================================================================
 // Helper Functions
@@ -512,7 +513,13 @@ export async function withdrawTokens(
       return { success: false, error: "Invalid wallet address" };
     }
 
-    const allowedChains = ["1", "56", "143", "480", "8453"];
+    const allowedChains = [
+      "1",
+      // "56", // no longer supported
+      // "143", // no longer supported
+      "480",
+      // "8453", // no longer supported
+    ];
     if (!allowedChains.includes(selectedChain)) {
       return { success: false, error: "Invalid chain" };
     }
@@ -522,9 +529,10 @@ export async function withdrawTokens(
       return { success: false, error: "Invalid amount" };
     }
 
+    const minAmount = getMinWithdrawalAmount(selectedChain);
     const flooredAmount = Math.floor(amountNumber * 1e18) / 1e18;
-    if (flooredAmount < 10) {
-      return { success: false, error: "Minimum 10 WDD" };
+    if (flooredAmount < minAmount) {
+      return { success: false, error: `Minimum ${minAmount} WDD` };
     }
 
     const nowMs = Date.now();
