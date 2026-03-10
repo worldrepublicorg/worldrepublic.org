@@ -22,7 +22,7 @@ export function VotePageSkeleton() {
       </div>
       <div className="flex grow flex-col overflow-y-auto p-6">
         {/* Hero card skeleton (ElectionHeroCard) */}
-        <div className="mb-6 rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 !shadow-md shadow-gray-300">
+        <div className="mb-6 rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 !shadow-md">
           <div className="flex items-center justify-between">
             <Skeleton height={26} width="70%" className="rounded-lg" />
             <Skeleton height={22} width={70} className="rounded-full" />
