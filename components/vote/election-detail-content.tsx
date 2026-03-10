@@ -97,7 +97,7 @@ export function ElectionDetailContent({
       </div>
 
       {/* Election info card */}
-      <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+      <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
         <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
           <Typography variant="subtitle" level={3} className="text-gray-900">
             {t.election_info}

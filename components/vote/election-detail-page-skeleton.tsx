@@ -30,7 +30,7 @@ export function ElectionDetailPageSkeleton() {
           <Skeleton height={30} width={60} className="rounded-full" />
         </div>
 
-        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
           <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
             <Skeleton height={18} width={120} className="rounded-lg" />
           </div>
@@ -77,7 +77,7 @@ export function ElectionDetailPageSkeleton() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        <div className="overflow-hidden rounded-xl border border-gray-200">
           <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
               <div key={i} className="flex items-center justify-between gap-4">

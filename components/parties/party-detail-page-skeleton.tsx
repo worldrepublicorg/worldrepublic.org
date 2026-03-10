@@ -27,7 +27,7 @@ export function PartyDetailPageSkeleton() {
         </div>
 
         {/* Description card */}
-        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
           <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
             <Skeleton height={24} width={120} className="rounded-lg" />
           </div>
@@ -37,7 +37,7 @@ export function PartyDetailPageSkeleton() {
         </div>
 
         {/* Party Info card */}
-        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
           <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
             <Skeleton height={24} width={80} className="rounded-lg" />
           </div>

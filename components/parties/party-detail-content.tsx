@@ -90,7 +90,7 @@ export function PartyDetailContent({
           </div>
 
           {/* Description card */}
-          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <Skeleton height={24} width={120} className="rounded-lg" />
             </div>
@@ -100,7 +100,7 @@ export function PartyDetailContent({
           </div>
 
           {/* Party Info card */}
-          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <Skeleton height={24} width={80} className="rounded-lg" />
             </div>
@@ -162,7 +162,7 @@ export function PartyDetailContent({
 
           {/* Description */}
           {party.description && (
-            <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+            <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
               <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
                 <Typography
                   variant="subtitle"
@@ -183,7 +183,7 @@ export function PartyDetailContent({
           )}
 
           {/* Party Info */}
-          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+          <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <Typography variant="subtitle" level={3}>
                 {dictionary.pages.govern.parties.detail.party_info}
