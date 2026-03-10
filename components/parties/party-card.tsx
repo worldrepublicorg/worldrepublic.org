@@ -30,6 +30,7 @@ interface PartyCardProps {
   onDeleteParty: () => void;
   isLastItem?: boolean;
   dictionary: Dictionary;
+  className?: string;
 }
 
 export function PartyCard({
@@ -41,6 +42,7 @@ export function PartyCard({
   onDeleteParty,
   isLastItem = false,
   dictionary,
+  className,
 }: PartyCardProps) {
   const [isManagementDialogOpen, setIsManagementDialogOpen] = useState(false);
   const justClosedDialogRef = useRef(false);
@@ -71,6 +73,7 @@ export function PartyCard({
       className={cn(
         !isLastItem && "mb-4",
         "rounded-xl border border-gray-200 p-4 cursor-pointer",
+        className,
       )}
       onClick={handleCardClick}
     >

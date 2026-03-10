@@ -83,6 +83,7 @@ export function MyPartySection({
           onEditParty={onEditParty}
           onDeleteParty={onDeleteParty}
           dictionary={dictionary}
+          className="shadow-md"
         />
       ) : (
         <div className="flex flex-col items-center gap-3 p-4 text-center">
