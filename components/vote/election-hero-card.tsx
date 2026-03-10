@@ -29,7 +29,7 @@ export function ElectionHeroCard({
       href={`/${lang}/vote/elections?id=${election.id}`}
       className="block mb-6"
     >
-      <div className="rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 !shadow-md">
+      <div className="rounded-2xl border border-gray-200 p-6 !shadow-md">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
             <Typography
