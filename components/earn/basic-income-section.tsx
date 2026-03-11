@@ -20,7 +20,7 @@ interface BasicIncomeSectionProps {
   isAuthenticated: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
-  walletBalance: number | null;
+  storedWalletBalance: number | null;
   onSignIn: () => void;
   onSuccess: () => void;
 }
@@ -29,7 +29,7 @@ export function BasicIncomeSection({
   isAuthenticated,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
-  walletBalance,
+  storedWalletBalance,
   onSignIn,
   onSuccess,
 }: BasicIncomeSectionProps) {
@@ -44,7 +44,7 @@ export function BasicIncomeSection({
   } = useBasicIncome(
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
-    walletBalance,
+    storedWalletBalance,
     onSuccess,
   );
 
