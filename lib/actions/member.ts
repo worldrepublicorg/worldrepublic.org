@@ -310,10 +310,13 @@ export async function deleteUserAccount(userUuid: string) {
 
 export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
+  storedWalletBalance: number;
   username: string | null;
   referralCode: string | null;
   userId: string;
   userUuid: string | null;
+  basicIncomeActivatedAt: number | null;
+  lastBasicIncomeClaimAt: number | null;
 };
 
 export type GetWalletAuthAndDataTransaction = {
@@ -347,7 +350,7 @@ async function getUserStreamsByUuid(userUuid: string): Promise<StreamData[]> {
 
   return rows.map((r) => ({
     id: r.id,
-    type: r.type as "SUBSIDY" | "AMBASSADOR",
+    type: r.type as "SUBSIDY" | "AMBASSADOR" | "BASIC_INCOME",
     totalAmount: Number.parseFloat(r.totalAmount),
     initialAmount: Number.parseFloat(r.initialAmount),
     withdrawnAmount: Number.parseFloat(r.withdrawnAmount),
@@ -406,27 +409,46 @@ export async function getWalletAuthAndData(
 
   const userStreams = await getUserStreamsByUuid(userUuid);
 
-  // Compute wallet balance from streams
-  const walletBalance =
+  // Fetch BI-related fields directly from user_profiles
+  const readDb = getDbReadOnly();
+  const [profileRow] = await readDb
+    .select({
+      walletBalance: userProfiles.walletBalance,
+      basicIncomeActivatedAt: userProfiles.basicIncomeActivatedAt,
+      lastBasicIncomeClaimAt: userProfiles.lastBasicIncomeClaimAt,
+    })
+    .from(userProfiles)
+    .where(eq(userProfiles.id, userUuid))
+    .limit(1);
+
+  const storedWalletBalance = profileRow?.walletBalance
+    ? parseFloat(profileRow.walletBalance)
+    : 0;
+
+  // Total balance = stream balance (excluding BI) + walletBalance (which holds claimed BI)
+  const streamBalance =
     userStreams.length > 0
       ? computeWalletBalance(userStreams, Date.now())
-      : null;
+      : 0;
+  const walletBalance = streamBalance + storedWalletBalance;
 
   let profileData: GetWalletAuthAndDataProfileData = {
-    walletBalance,
+    walletBalance: walletBalance || null,
+    storedWalletBalance,
     username: null,
     referralCode: null,
     userId: session.user.id,
     userUuid,
+    basicIncomeActivatedAt:
+      profileRow?.basicIncomeActivatedAt?.getTime() ?? null,
+    lastBasicIncomeClaimAt:
+      profileRow?.lastBasicIncomeClaimAt?.getTime() ?? null,
   };
   if (profileResult.success && profileResult.profile) {
     profileData = {
-      walletBalance:
-        walletBalance ?? profileResult.profile.walletBalance ?? null,
+      ...profileData,
       username: profileResult.profile.username ?? null,
       referralCode: profileResult.profile.referralCode ?? null,
-      userId: session.user.id,
-      userUuid,
     };
   }
 
@@ -563,7 +585,7 @@ export async function withdrawTokens(
         (r) => ({
           dbId: r.id,
           id: r.id,
-          type: r.type as "SUBSIDY" | "AMBASSADOR",
+          type: r.type as "SUBSIDY" | "AMBASSADOR" | "BASIC_INCOME",
           totalAmount: Number.parseFloat(r.total_amount),
           initialAmount: Number.parseFloat(r.initial_amount),
           withdrawnAmount: Number.parseFloat(r.withdrawn_amount),
@@ -575,18 +597,32 @@ export async function withdrawTokens(
         }),
       );
 
-      const balance = computeWalletBalance(streamDataList, nowMs);
-      if (balance < flooredAmount) {
+      // Lock the user profile row too (for walletBalance debit)
+      const profileRows = await tx.execute(
+        sql`SELECT wallet_balance FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const profileRow = (
+        "rows" in profileRows ? profileRows.rows : profileRows
+      ) as Array<{ wallet_balance: string }>;
+      const storedWalletBalance = parseFloat(
+        profileRow[0]?.wallet_balance ?? "0",
+      );
+
+      // computeWalletBalance already excludes BASIC_INCOME streams
+      const streamBalance = computeWalletBalance(streamDataList, nowMs);
+      const totalBalance = streamBalance + storedWalletBalance;
+
+      if (totalBalance < flooredAmount) {
         throw new Error(
-          `Tried ${flooredAmount} but only have ${balance.toFixed(6)} WDD.`,
+          `Tried ${flooredAmount} but only have ${totalBalance.toFixed(6)} WDD.`,
         );
       }
 
-      // Debit oldest streams first
+      // Debit oldest non-BI streams first
       let remaining = flooredAmount;
-      const sortedStreams = [...streamDataList].sort(
-        (a, b) => a.startedAt - b.startedAt,
-      );
+      const sortedStreams = [...streamDataList]
+        .filter((s) => s.type !== "BASIC_INCOME")
+        .sort((a, b) => a.startedAt - b.startedAt);
       const debits: {
         streamId: string;
         oldWithdrawn: number;
@@ -615,16 +651,21 @@ export async function withdrawTokens(
           .where(eq(streams.id, d.streamId));
       }
 
-      const newBalance = balance - flooredAmount;
+      // Debit remainder from walletBalance (claimed BI lives here)
+      const newWalletBalance = Math.max(0, storedWalletBalance - remaining);
       await tx
         .update(userProfiles)
         .set({
-          walletBalance: Math.max(0, newBalance).toFixed(18),
+          walletBalance: newWalletBalance.toFixed(18),
           updatedAt: new Date(),
         })
         .where(eq(userProfiles.id, userUuid));
 
-      return { debits, oldBalance: balance };
+      return {
+        debits,
+        oldBalance: totalBalance,
+        oldWalletBalance: storedWalletBalance,
+      };
     });
 
     let fromAddress: string;
@@ -661,7 +702,7 @@ export async function withdrawTokens(
     );
 
     if (!response.ok) {
-      // Revert stream debits to original values
+      // Revert stream debits and walletBalance to original values
       await db.transaction(async (tx) => {
         for (const d of result.debits) {
           await tx
@@ -672,7 +713,7 @@ export async function withdrawTokens(
         await tx
           .update(userProfiles)
           .set({
-            walletBalance: result.oldBalance.toFixed(18),
+            walletBalance: result.oldWalletBalance.toFixed(18),
             updatedAt: new Date(),
           })
           .where(eq(userProfiles.id, userUuid));
@@ -713,6 +754,156 @@ export async function withdrawTokens(
       success: false,
       error:
         error instanceof Error ? error.message : "Could not withdraw tokens",
+    };
+  }
+}
+
+// ============================================================================
+// Basic Income
+// ============================================================================
+
+const BASIC_INCOME_RATE_PER_SECOND = 1 / 86400; // 1 WDD per day
+const BASIC_INCOME_BALANCE_CAP = 9.99;
+
+export async function activateBasicIncome(): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  try {
+    const userUuid = await getUserUuidFromSession();
+
+    const [profile] = await db
+      .select({
+        basicIncomeActivatedAt: userProfiles.basicIncomeActivatedAt,
+      })
+      .from(userProfiles)
+      .where(eq(userProfiles.id, userUuid))
+      .limit(1);
+
+    if (!profile) {
+      return { success: false, error: "Profile not found" };
+    }
+
+    if (profile.basicIncomeActivatedAt) {
+      return { success: true };
+    }
+
+    const now = new Date();
+    const endsAt = new Date(now.getTime() + 100 * 365.25 * 24 * 3600 * 1000);
+
+    await db.transaction(async (tx) => {
+      await tx
+        .update(userProfiles)
+        .set({
+          basicIncomeActivatedAt: now,
+          lastBasicIncomeClaimAt: now,
+          updatedAt: now,
+        })
+        .where(eq(userProfiles.id, userUuid));
+
+      await tx.insert(streams).values({
+        userId: userUuid,
+        type: "BASIC_INCOME",
+        totalAmount: "999999999",
+        initialAmount: "0",
+        withdrawnAmount: "0",
+        ratePerSecond: BASIC_INCOME_RATE_PER_SECOND.toFixed(18),
+        startedAt: now,
+        endsAt,
+        electionId: null,
+        partyId: null,
+      });
+    });
+
+    revalidatePath("/[lang]/earn", "page");
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error activating basic income:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "Could not activate basic income",
+    };
+  }
+}
+
+export async function claimBasicIncome(): Promise<{
+  success: boolean;
+  claimedAmount?: number;
+  error?: string;
+}> {
+  try {
+    const userUuid = await getUserUuidFromSession();
+
+    const result = await db.transaction(async (tx) => {
+      const profileRows = await tx.execute(
+        sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance
+            FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const rows = (
+        "rows" in profileRows ? profileRows.rows : profileRows
+      ) as Array<{
+        basic_income_activated_at: string | Date | null;
+        last_basic_income_claim_at: string | Date | null;
+        wallet_balance: string;
+      }>;
+
+      const profile = rows[0];
+      if (!profile?.basic_income_activated_at) {
+        return { success: false as const, error: "Basic income not activated" };
+      }
+
+      const activatedAt = new Date(
+        profile.basic_income_activated_at,
+      ).getTime();
+      const lastClaimAt = profile.last_basic_income_claim_at
+        ? new Date(profile.last_basic_income_claim_at).getTime()
+        : activatedAt;
+      const currentBalance = parseFloat(profile.wallet_balance || "0");
+
+      const now = Date.now();
+      const elapsedDays = (now - lastClaimAt) / 86_400_000;
+      const claimable = Math.min(elapsedDays, 1);
+      const maxCanClaim = Math.max(0, BASIC_INCOME_BALANCE_CAP - currentBalance);
+      const finalClaimable = Math.min(claimable, maxCanClaim);
+
+      if (finalClaimable <= 1e-12) {
+        if (maxCanClaim <= 0) {
+          return { success: false as const, error: "Balance cap reached" };
+        }
+        return { success: false as const, error: "Nothing to claim yet" };
+      }
+
+      const newBalance = currentBalance + finalClaimable;
+      await tx
+        .update(userProfiles)
+        .set({
+          walletBalance: newBalance.toFixed(18),
+          lastBasicIncomeClaimAt: new Date(now),
+          updatedAt: new Date(now),
+        })
+        .where(eq(userProfiles.id, userUuid));
+
+      return { success: true as const, claimedAmount: finalClaimable };
+    });
+
+    if (result.success) {
+      revalidatePath("/[lang]/earn", "page");
+      revalidatePath("/[lang]/wallet", "page");
+    }
+
+    return result;
+  } catch (error) {
+    console.error("Error claiming basic income:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "Could not claim basic income",
     };
   }
 }

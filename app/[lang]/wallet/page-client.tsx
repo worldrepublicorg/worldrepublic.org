@@ -102,8 +102,9 @@ export default function WalletPageClient({
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const userStreams: StreamData[] = data?.streams ?? [];
   const serverBalance = profileData?.walletBalance ?? null;
+  const storedWalletBalance = profileData?.storedWalletBalance ?? 0;
 
-  // Live-ticking balance from streams
+  // Live-ticking balance from streams (excludes BI streams) + stored wallet balance (claimed BI)
   const [liveBalance, setLiveBalance] = useState<number | null>(null);
   const streamsRef = useRef(userStreams);
   streamsRef.current = userStreams;
@@ -111,10 +112,10 @@ export default function WalletPageClient({
   const computeBalance = useCallback(() => {
     const s = streamsRef.current;
     if (s.length > 0) {
-      return computeWalletBalance(s, Date.now());
+      return computeWalletBalance(s, Date.now()) + storedWalletBalance;
     }
     return null;
-  }, []);
+  }, [storedWalletBalance]);
 
   useEffect(() => {
     if (userStreams.length === 0) {

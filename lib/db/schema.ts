@@ -188,6 +188,8 @@ export const userProfiles = pgTable(
       .default("0"),
     username: varchar("username", { length: 30 }).notNull(), // Required username, auto-generated on profile creation
     referralCode: varchar("referral_code", { length: 8 }).notNull(), // Unique 8-char code for ambassador referral links
+    basicIncomeActivatedAt: timestamp("basic_income_activated_at"),
+    lastBasicIncomeClaimAt: timestamp("last_basic_income_claim_at"),
     accountDeletedAt: timestamp("account_deleted_at"),
     createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
@@ -359,13 +361,13 @@ export const streams = pgTable(
     userId: uuid("user_id")
       .notNull()
       .references(() => users.uuid, { onDelete: "cascade" }),
-    type: varchar("type", { length: 20 }).notNull(), // "SUBSIDY" | "AMBASSADOR"
-    electionId: uuid("election_id")
-      .notNull()
-      .references(() => elections.id, { onDelete: "cascade" }),
-    partyId: uuid("party_id")
-      .notNull()
-      .references(() => parties.id, { onDelete: "cascade" }),
+    type: varchar("type", { length: 20 }).notNull(), // "SUBSIDY" | "AMBASSADOR" | "BASIC_INCOME"
+    electionId: uuid("election_id").references(() => elections.id, {
+      onDelete: "cascade",
+    }),
+    partyId: uuid("party_id").references(() => parties.id, {
+      onDelete: "cascade",
+    }),
     totalAmount: decimal("total_amount", { precision: 36, scale: 18 }).notNull(),
     initialAmount: decimal("initial_amount", { precision: 36, scale: 18 })
       .notNull()
