@@ -186,6 +186,12 @@ export const userProfiles = pgTable(
     walletBalance: decimal("wallet_balance", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
+    basicIncomeClaimedTotal: decimal("basic_income_claimed_total", {
+      precision: 36,
+      scale: 18,
+    })
+      .notNull()
+      .default("0"),
     username: varchar("username", { length: 30 }).notNull(), // Required username, auto-generated on profile creation
     referralCode: varchar("referral_code", { length: 8 }).notNull(), // Unique 8-char code for ambassador referral links
     basicIncomeActivatedAt: timestamp("basic_income_activated_at"),

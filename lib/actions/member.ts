@@ -311,6 +311,7 @@ export async function deleteUserAccount(userUuid: string) {
 export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
   storedWalletBalance: number;
+  basicIncomeClaimedTotal: number;
   username: string | null;
   referralCode: string | null;
   userId: string;
@@ -414,6 +415,7 @@ export async function getWalletAuthAndData(
   const [profileRow] = await readDb
     .select({
       walletBalance: userProfiles.walletBalance,
+      basicIncomeClaimedTotal: userProfiles.basicIncomeClaimedTotal,
       basicIncomeActivatedAt: userProfiles.basicIncomeActivatedAt,
       lastBasicIncomeClaimAt: userProfiles.lastBasicIncomeClaimAt,
     })
@@ -435,6 +437,9 @@ export async function getWalletAuthAndData(
   let profileData: GetWalletAuthAndDataProfileData = {
     walletBalance: walletBalance || null,
     storedWalletBalance,
+    basicIncomeClaimedTotal: profileRow?.basicIncomeClaimedTotal
+      ? parseFloat(profileRow.basicIncomeClaimedTotal)
+      : 0,
     username: null,
     referralCode: null,
     userId: session.user.id,
@@ -840,7 +845,7 @@ export async function claimBasicIncome(): Promise<{
 
     const result = await db.transaction(async (tx) => {
       const profileRows = await tx.execute(
-        sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance
+        sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance, basic_income_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
       const rows = (
@@ -849,6 +854,7 @@ export async function claimBasicIncome(): Promise<{
         basic_income_activated_at: string | Date | null;
         last_basic_income_claim_at: string | Date | null;
         wallet_balance: string;
+        basic_income_claimed_total: string;
       }>;
 
       const profile = rows[0];
@@ -863,11 +869,17 @@ export async function claimBasicIncome(): Promise<{
         ? new Date(profile.last_basic_income_claim_at).getTime()
         : activatedAt;
       const currentBalance = parseFloat(profile.wallet_balance || "0");
+      const basicIncomeClaimedTotal = parseFloat(
+        profile.basic_income_claimed_total || "0",
+      );
 
       const now = Date.now();
       const elapsedDays = (now - lastClaimAt) / 86_400_000;
       const claimable = Math.min(elapsedDays, 1);
-      const maxCanClaim = Math.max(0, BASIC_INCOME_BALANCE_CAP - currentBalance);
+      const maxCanClaim = Math.max(
+        0,
+        BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal,
+      );
       const finalClaimable = Math.min(claimable, maxCanClaim);
 
       if (finalClaimable <= 1e-12) {
@@ -878,10 +890,12 @@ export async function claimBasicIncome(): Promise<{
       }
 
       const newBalance = currentBalance + finalClaimable;
+      const newBasicIncomeClaimedTotal = basicIncomeClaimedTotal + finalClaimable;
       await tx
         .update(userProfiles)
         .set({
           walletBalance: newBalance.toFixed(18),
+          basicIncomeClaimedTotal: newBasicIncomeClaimedTotal.toFixed(18),
           lastBasicIncomeClaimAt: new Date(now),
           updatedAt: new Date(now),
         })

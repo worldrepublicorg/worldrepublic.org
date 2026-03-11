@@ -90,7 +90,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
             lastBasicIncomeClaimAt={
               profileData?.lastBasicIncomeClaimAt ?? null
             }
-            storedWalletBalance={profileData?.storedWalletBalance ?? 0}
+            basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             onSignIn={() => setShowSignInDialog(true)}
             onSuccess={fetchData}
           />
