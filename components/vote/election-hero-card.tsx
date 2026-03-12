@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { formatElectionDate } from "@/lib/format-date";
+import { getSafeLocale } from "@/lib/locale";
 import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election } from "@/lib/types/elections";
 
@@ -19,6 +20,7 @@ export function ElectionHeroCard({
   lang,
   dictionary,
 }: ElectionHeroCardProps) {
+  const locale = getSafeLocale(lang);
   const t = dictionary.pages.govern.elections.detail;
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
@@ -29,7 +31,7 @@ export function ElectionHeroCard({
       href={`/${lang}/vote/elections?id=${election.id}`}
       className="block mb-6"
     >
-      <div className="rounded-2xl border border-gray-200 p-6 !shadow-sm">
+      <div className="rounded-2xl border border-gray-200 p-6 shadow-sm!">
         <div className="flex items-center justify-between mb-3">
           <div className="flex-1">
             <Typography
@@ -68,7 +70,7 @@ export function ElectionHeroCard({
             <Typography variant="body" level={3}>
               {t.reward_pool.replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(lang),
+                Number.parseInt(election.rewardPool).toLocaleString(locale),
               )}
             </Typography>
           </div>

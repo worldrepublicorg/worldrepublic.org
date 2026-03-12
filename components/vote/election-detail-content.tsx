@@ -11,6 +11,7 @@ import { ElectionResults } from "@/components/vote/election-results";
 import { PartyVoteList } from "@/components/vote/party-vote-list";
 import { VoteButton } from "@/components/vote/vote-button";
 import { formatElectionDateTime } from "@/lib/format-date";
+import { getSafeLocale } from "@/lib/locale";
 import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
@@ -30,6 +31,7 @@ export function ElectionDetailContent({
   lang,
   dictionary,
 }: ElectionDetailContentProps) {
+  const locale = getSafeLocale(lang);
   const router = useRouter();
   const t = dictionary.pages.govern.elections.detail;
   const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
@@ -116,7 +118,7 @@ export function ElectionDetailContent({
             <Typography variant="body" level={3} className="text-gray-700">
               {t.reward_pool.replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(lang),
+                Number.parseInt(election.rewardPool).toLocaleString(locale),
               )}
             </Typography>
           </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { formatElectionDate } from "@/lib/format-date";
+import { getSafeLocale } from "@/lib/locale";
 import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election } from "@/lib/types/elections";
 import { cn } from "@/lib/utils";
@@ -22,6 +23,7 @@ export function ElectionCard({
   dictionary,
   isLastItem = false,
 }: ElectionCardProps) {
+  const locale = getSafeLocale(lang);
   const t = dictionary.pages.govern.elections.detail;
   const now = Date.now();
   const isActive = now >= election.startsAt && now <= election.endsAt;
@@ -77,7 +79,7 @@ export function ElectionCard({
             <Typography variant="body" level={2} className="text-[14px]">
               {t[isUpcoming ? "reward_pool_minimum" : "reward_pool"].replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(lang),
+                Number.parseInt(election.rewardPool).toLocaleString(locale),
               )}
             </Typography>
           </div>

@@ -1,9 +1,11 @@
+import { getSafeLocale } from "@/lib/locale";
+
 /**
  * Format an election date (date only) in the given locale.
  * Uses the app language for locale-aware formatting (order, month names, etc.).
  */
 export function formatElectionDate(timestamp: number, lang: string): string {
-  const locale = lang?.trim() || "en";
+  const locale = getSafeLocale(lang);
   return new Date(timestamp).toLocaleDateString(locale, {
     year: "numeric",
     month: "short",
@@ -19,7 +21,7 @@ export function formatElectionDateTime(
   timestamp: number,
   lang: string,
 ): string {
-  const locale = lang?.trim() || "en";
+  const locale = getSafeLocale(lang);
   return new Date(timestamp).toLocaleString(locale, {
     year: "numeric",
     month: "short",
