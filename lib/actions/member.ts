@@ -1,6 +1,6 @@
 "use server";
 
-import { and, asc, desc, eq, gt, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, not, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
@@ -485,9 +485,12 @@ export async function getTransactions(limit: number = 50) {
       .select()
       .from(transactions)
       .where(
-        or(
-          eq(transactions.userId, userUuid),
-          eq(transactions.recipientUserId, userUuid),
+        and(
+          or(
+            eq(transactions.userId, userUuid),
+            eq(transactions.recipientUserId, userUuid),
+          ),
+          not(eq(transactions.type, "BASIC_INCOME_CLAIM")),
         ),
       )
       .orderBy(desc(transactions.createdAt))
@@ -900,6 +903,13 @@ export async function claimBasicIncome(): Promise<{
           updatedAt: new Date(now),
         })
         .where(eq(userProfiles.id, userUuid));
+
+      await tx.insert(transactions).values({
+        userId: userUuid,
+        type: "BASIC_INCOME_CLAIM",
+        amount: finalClaimable.toFixed(18),
+        streamType: "BASIC_INCOME",
+      });
 
       return { success: true as const, claimedAmount: finalClaimable };
     });
