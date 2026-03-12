@@ -21,7 +21,7 @@ export function EarnPageSkeleton() {
           </div>
           <div className="flex w-full flex-col items-center gap-4">
             <Skeleton height={36} width={180} className="rounded-lg" />
-            <Skeleton height={20} width={180} className="rounded-lg" />
+            <Skeleton height={21} width={180} className="rounded-lg" />
             <Skeleton height={56} width={240} className="mt-5! mb-1! rounded-lg" />
             <Skeleton height={56} width="100%" className="mt-6! rounded-full" />
           </div>
