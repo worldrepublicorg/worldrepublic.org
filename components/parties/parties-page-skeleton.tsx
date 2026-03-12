@@ -35,7 +35,7 @@ export function PartiesPageSkeleton() {
             </button>
           </div>
           {/* Party card skeleton */}
-          <div className="rounded-xl border border-gray-200 p-4">
+          <div className="rounded-xl border border-gray-200 p-4 shadow-sm! shadow-gray-100">
             <div className="flex items-center justify-between">
               <div className="flex-1">
                 <Skeleton height={24} width="60%" className="mb-1 rounded-lg" />
