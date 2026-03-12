@@ -191,7 +191,6 @@ export function BasicIncomeSection({
                   <Button
                     onClick={handleClaim}
                     fullWidth
-                    className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                   >
                     Confirm
                   </Button>
