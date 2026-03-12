@@ -82,7 +82,7 @@ export function BasicIncomeSection({
             <div className="mt-6 w-full">
               <Button
                 fullWidth
-                className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]"
+                className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                 onClick={onSignIn}
               >
                 Sign in
@@ -114,7 +114,7 @@ export function BasicIncomeSection({
             </Typography>
             <Button
               fullWidth
-              className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]"
+              className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
               onClick={handleActivate}
               disabled={isActivating}
             >
@@ -166,7 +166,7 @@ export function BasicIncomeSection({
             <AlertDialogTrigger asChild>
               <Button
                 fullWidth
-                className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]"
+                className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                 disabled={isClaiming || maxClaimableAmount <= 0}
               >
                 Claim
@@ -191,7 +191,7 @@ export function BasicIncomeSection({
                   <Button
                     onClick={handleClaim}
                     fullWidth
-                    className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]"
+                    className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                   >
                     Confirm
                   </Button>
