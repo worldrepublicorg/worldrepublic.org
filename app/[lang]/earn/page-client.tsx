@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { BasicIncomeSection } from "@/components/earn/basic-income-section";
+import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
 import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
@@ -61,6 +62,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
   }, []);
 
   const data = serverData ?? cachedData;
+  const showSkeleton = data === null;
   const isAuthenticated =
     data?.authenticated ?? clientIsAuthenticated ?? false;
   const profileData = data?.profileData ?? null;
@@ -68,6 +70,10 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
+
+  if (showSkeleton) {
+    return <EarnPageSkeleton />;
+  }
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
