@@ -72,26 +72,35 @@ function parseUserContextData(userContextData: unknown): {
 }
 
 function isDuplicateVoteError(error: unknown): boolean {
-  const errorCode =
-    (error &&
-      typeof error === "object" &&
-      ("code" in error
-        ? error.code
-        : "cause" in error &&
-            error.cause &&
-            typeof error.cause === "object" &&
-            "code" in error.cause
-          ? error.cause.code
-          : null)) ||
-    null;
+  const getField = (key: "code" | "constraint"): string | null => {
+    if (!error || typeof error !== "object") return null;
+    const rootError = error as Record<string, unknown>;
+    if (key in rootError && typeof rootError[key] === "string") {
+      return rootError[key] as string;
+    }
+    if (
+      "cause" in rootError &&
+      rootError.cause &&
+      typeof rootError.cause === "object"
+    ) {
+      const causeError = rootError.cause as Record<string, unknown>;
+      if (key in causeError && typeof causeError[key] === "string") {
+        return causeError[key] as string;
+      }
+    }
+    return null;
+  };
 
+  const errorCode = getField("code");
+  const errorConstraint = getField("constraint");
   const errorMessage = error instanceof Error ? error.message : String(error);
 
+  // Only treat duplicate-key failures on the intended per-election index
+  // as "already voted in this election". Other unique failures should bubble.
   return (
-    errorCode === "23505" ||
-    errorMessage.includes("votes_election_nullifier_idx") ||
-    errorMessage.includes("unique constraint") ||
-    errorMessage.includes("duplicate key")
+    errorCode === "23505" &&
+    (errorConstraint === "votes_election_nullifier_idx" ||
+      errorMessage.includes("votes_election_nullifier_idx"))
   );
 }
 
