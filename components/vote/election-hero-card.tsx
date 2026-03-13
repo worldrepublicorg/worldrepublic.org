@@ -4,7 +4,7 @@ import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { PiCalendarBlank, PiCoins } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { formatElectionDate } from "@/lib/format-date";
+import { formatElectionDateTime } from "@/lib/format-date";
 import { getSafeLocale } from "@/lib/locale";
 import { localizeElectionName } from "@/lib/localize-election-name";
 import type { Election } from "@/lib/types/elections";
@@ -60,8 +60,8 @@ export function ElectionHeroCard({
           <div className="flex items-center gap-2 text-gray-600">
             <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
             <Typography variant="body" level={3}>
-              {formatElectionDate(election.startsAt, lang)} -{" "}
-              {formatElectionDate(election.endsAt, lang)}
+              {formatElectionDateTime(election.startsAt, lang)} -{" "}
+              {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
 
