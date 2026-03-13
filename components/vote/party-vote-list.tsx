@@ -218,7 +218,7 @@ export function PartyVoteList({
       ) : (
         <>
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
-            <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
               {listToShow.map((party) => (
                 <div
                   key={party.id}

@@ -568,7 +568,7 @@ export function TransactionHistoryContent({
                                       transaction.walletAddress!,
                                     )
                                   }
-                                  className="flex items-center gap-1 hover:text-gray-700"
+                                  className="flex items-center gap-1"
                                 >
                                   <span className="line-clamp-1">
                                     {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}

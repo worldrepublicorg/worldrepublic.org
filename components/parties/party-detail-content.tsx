@@ -104,7 +104,7 @@ export function PartyDetailContent({
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <Skeleton height={24} width={80} className="rounded-lg" />
             </div>
-            <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
               <div className="flex items-center justify-between gap-6">
                 <Skeleton height={20} width="33%" className="rounded" />
                 <Skeleton height={20} width="33%" className="rounded" />
@@ -190,7 +190,7 @@ export function PartyDetailContent({
               </Typography>
             </div>
 
-            <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
               {/* Leader */}
               {party.leaderUsername && (
                 <div className="flex items-center justify-between gap-6">

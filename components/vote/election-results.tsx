@@ -58,7 +58,7 @@ export function ElectionResults({
           </Typography>
         </div>
       ) : (
-        <div className="flex flex-col gap-7 p-4 divide-y divide-gray-100">
+        <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
           {withRank.map(({ result, rank }) => {
             const percentage =
               totalVotes > 0
