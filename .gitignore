@@ -34,12 +34,6 @@ yarn-error.log*
 .env*
 !.env.example
 
-# logs
-withdrawal-logs/
-
-# referral codes
-referral-codes/
-
 # Vercel
 .vercel
 
