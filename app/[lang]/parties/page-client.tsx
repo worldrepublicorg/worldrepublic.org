@@ -494,7 +494,7 @@ export default function PartiesPageClient({
               <Typography
                 variant="body"
                 level={3}
-                className="text-center text-gray-500"
+                className="text-center text-gray-500 mt-px!"
               >
                 {dictionary.pages.govern.parties.subsidies.description}
               </Typography>
