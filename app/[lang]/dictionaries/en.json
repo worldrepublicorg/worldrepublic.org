@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "World Republic",
+    "earn": "Earn",
     "menu": "Menu"
   },
   "pages": {
@@ -127,6 +128,53 @@
       "description": "An unexpected error occurred. Please try again.",
       "error_id": "Error ID: {digest}",
       "try_again": "Try again"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Basic income",
+        "savings": "Savings"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Get money for being human",
+        "subtitle_claim": "Claim your drachma",
+        "tooltip_claim": "1 WDD/day, capped at 1 WDD. Return within 24 hours to maximize earnings.",
+        "claim_button": "Claim",
+        "alert": {
+          "claim": {
+            "title": "Confirm claim",
+            "description": "You are about to claim {amount} WDD. This will be added to your wallet balance."
+          }
+        },
+        "setup_subtitle": "Set up your basic income",
+        "activate_loading": "Activating...",
+        "activate_button": "Activate basic income"
+      },
+      "savings": {
+        "title": "Savings account",
+        "subtitle": "Earn interest every second",
+        "tooltip": "69% annual base rate. Collect and reinvest regularly to achieve close to 100% effective returns. Withdraw anytime.",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw",
+        "balance": "Balance",
+        "amount_deposit": "Amount to deposit",
+        "amount_withdraw": "Amount to withdraw",
+        "interest": "Interest",
+        "collect": "Collect",
+        "alert": {
+          "collect": {
+            "title": "Confirm collection",
+            "description": "You are about to collect {amount} WDD in interest."
+          },
+          "deposit": {
+            "title": "Confirm deposit",
+            "description": "You are about to deposit {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Confirm withdrawal",
+            "description": "You are about to withdraw {amount} WDD."
+          }
+        }
+      }
     },
     "menu": {
       "sections": {

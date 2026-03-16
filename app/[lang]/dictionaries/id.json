@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Republik Dunia",
+    "earn": "Pendapatan",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Terjadi kesalahan",
+      "description": "Terjadi kesalahan tak terduga. Silakan coba lagi.",
+      "error_id": "ID Kesalahan: {digest}",
+      "try_again": "Coba lagi"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Pendapatan dasar",
+        "savings": "Tabungan"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Dapatkan uang karena Anda manusia",
+        "subtitle_claim": "Klaim drachma Anda",
+        "tooltip_claim": "1 WDD/hari, dibatasi 1 WDD. Kembali dalam 24 jam untuk memaksimalkan hasil.",
+        "claim_button": "Klaim",
+        "alert": {
+          "claim": {
+            "title": "Konfirmasi klaim",
+            "description": "Anda akan mengklaim {amount} WDD. Ini akan ditambahkan ke saldo dompet Anda."
+          }
+        },
+        "setup_subtitle": "Siapkan pendapatan dasar Anda",
+        "activate_loading": "Mengaktifkan...",
+        "activate_button": "Aktifkan pendapatan dasar"
+      },
+      "savings": {
+        "title": "Rekening tabungan",
+        "subtitle": "Dapatkan bunga setiap detik",
+        "tooltip": "Suku bunga dasar tahunan 69%. Cairkan dan investasikan kembali secara rutin untuk mencapai imbal hasil efektif mendekati 100%. Tarik kapan saja.",
+        "deposit": "Setor",
+        "withdraw": "Tarik",
+        "balance": "Saldo",
+        "amount_deposit": "Jumlah untuk disetor",
+        "amount_withdraw": "Jumlah untuk ditarik",
+        "interest": "Bunga",
+        "collect": "Cairkan",
+        "alert": {
+          "collect": {
+            "title": "Konfirmasi pencairan",
+            "description": "Anda akan mencairkan {amount} WDD dalam bentuk bunga."
+          },
+          "deposit": {
+            "title": "Konfirmasi setoran",
+            "description": "Anda akan menyetor {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Konfirmasi penarikan",
+            "description": "Anda akan menarik {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stream diperbarui"
         }
       }
-    },
-    "error": {
-      "title": "Terjadi kesalahan",
-      "description": "Terjadi kesalahan tak terduga. Silakan coba lagi.",
-      "error_id": "ID Kesalahan: {digest}",
-      "try_again": "Coba lagi"
     }
   },
   "components": {

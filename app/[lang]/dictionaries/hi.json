@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "विश्व गणराज्य",
+    "earn": "कमाएं",
     "menu": "मेनू"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "कुछ गलत हो गया",
+      "description": "एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें।",
+      "error_id": "त्रुटि ID: {digest}",
+      "try_again": "पुनः प्रयास करें"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "बुनियादी आय",
+        "savings": "बचत"
+      },
+      "basic_income": {
+        "subtitle_unauth": "मानव होने के लिए पैसा प्राप्त करें",
+        "subtitle_claim": "अपना द्राखमा प्राप्त करें",
+        "tooltip_claim": "1 WDD/दिन, 1 WDD तक सीमित। कमाई को अधिकतम करने के लिए 24 घंटे के भीतर वापस आएं।",
+        "claim_button": "प्राप्त करें",
+        "alert": {
+          "claim": {
+            "title": "प्राप्ति की पुष्टि करें",
+            "description": "आप {amount} WDD प्राप्त करने वाले हैं। यह आपके वॉलेट बैलेंस में जोड़ा जाएगा।"
+          }
+        },
+        "setup_subtitle": "अपनी बुनियादी आय सेट करें",
+        "activate_loading": "सक्रिय हो रहा है...",
+        "activate_button": "बुनियादी आय सक्रिय करें"
+      },
+      "savings": {
+        "title": "बचत खाता",
+        "subtitle": "हर सेकंड ब्याज कमाएं",
+        "tooltip": "69% वार्षिक आधार दर। नियमित रूप से एकत्र करें और पुनर्निवेश करें ताकि 100% के करीब प्रभावी रिटर्न प्राप्त करें। कभी भी निकालें।",
+        "deposit": "जमा करें",
+        "withdraw": "निकालें",
+        "balance": "शेष राशि",
+        "amount_deposit": "जमा करने की राशि",
+        "amount_withdraw": "निकालने की राशि",
+        "interest": "ब्याज",
+        "collect": "एकत्र करें",
+        "alert": {
+          "collect": {
+            "title": "एकत्रीकरण की पुष्टि करें",
+            "description": "आप {amount} WDD ब्याज एकत्र करने वाले हैं।"
+          },
+          "deposit": {
+            "title": "जमा की पुष्टि करें",
+            "description": "आप {amount} WDD जमा करने वाले हैं।"
+          },
+          "withdraw": {
+            "title": "निकासी की पुष्टि करें",
+            "description": "आप {amount} WDD निकालने वाले हैं।"
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "स्ट्रीम अपडेट की गई"
         }
       }
-    },
-    "error": {
-      "title": "कुछ गलत हो गया",
-      "description": "एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें।",
-      "error_id": "त्रुटि ID: {digest}",
-      "try_again": "पुनः प्रयास करें"
     }
   },
   "components": {

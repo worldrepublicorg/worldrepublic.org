@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Wereldrepubliek",
+    "earn": "Verdienen",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Er ging iets mis",
+      "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+      "error_id": "Fout-ID: {digest}",
+      "try_again": "Opnieuw proberen"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Basisinkomen",
+        "savings": "Sparen"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Krijg geld voor het mens zijn",
+        "subtitle_claim": "Claim je drachme",
+        "tooltip_claim": "1 WDD/dag, beperkt tot 1 WDD. Kom binnen 24 uur terug om je verdiensten te maximaliseren.",
+        "claim_button": "Claimen",
+        "alert": {
+          "claim": {
+            "title": "Claim bevestigen",
+            "description": "Je staat op het punt om {amount} WDD te claimen. Dit wordt toegevoegd aan je portemonnee saldo."
+          }
+        },
+        "setup_subtitle": "Stel je basisinkomen in",
+        "activate_loading": "Activeren...",
+        "activate_button": "Basisinkomen activeren"
+      },
+      "savings": {
+        "title": "Spaarrekening",
+        "subtitle": "Verdien elke seconde rente",
+        "tooltip": "69% jaarlijks basistarief. Verzamel en herinvesteer regelmatig om dicht bij 100% effectieve rendementen te komen. Op elk moment opnemen.",
+        "deposit": "Storten",
+        "withdraw": "Opnemen",
+        "balance": "Saldo",
+        "amount_deposit": "Bedrag om te storten",
+        "amount_withdraw": "Bedrag om op te nemen",
+        "interest": "Rente",
+        "collect": "Verzamelen",
+        "alert": {
+          "collect": {
+            "title": "Verzameling bevestigen",
+            "description": "Je staat op het punt om {amount} WDD aan rente te verzamelen."
+          },
+          "deposit": {
+            "title": "Storting bevestigen",
+            "description": "Je staat op het punt om {amount} WDD te storten."
+          },
+          "withdraw": {
+            "title": "Opname bevestigen",
+            "description": "Je staat op het punt om {amount} WDD op te nemen."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stroom bijgewerkt"
         }
       }
-    },
-    "error": {
-      "title": "Er ging iets mis",
-      "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
-      "error_id": "Fout-ID: {digest}",
-      "try_again": "Opnieuw proberen"
     }
   },
   "components": {

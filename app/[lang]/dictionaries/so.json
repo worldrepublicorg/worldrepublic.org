@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Jamhuuriyadda Adduunka",
+    "earn": "Hel",
     "menu": "Liiska"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Wax baa qaldan",
+      "description": "Khalad aan la fileyn ayaa dhacay. Fadlan mar kale isku day.",
+      "error_id": "Aqoonsiga khaladka: {digest}",
+      "try_again": "Mar kale isku day"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Dakhliga aasaasiga ah",
+        "savings": "Kaydinta"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Hel lacag aad u ahaan lahayd aadanaha",
+        "subtitle_claim": "Qaad drachmaaga",
+        "tooltip_claim": "1 WDD/maalin, xadid 1 WDD. Ku noqo 24 saacadood si aad u aaddeysato dakhligaaga.",
+        "claim_button": "Qaad",
+        "alert": {
+          "claim": {
+            "title": "Xaqiiji qaadista",
+            "description": "Waxaad qaadan doontaa {amount} WDD. Tani waxay ku daraan doontaa dhammaan kisaskaga."
+          }
+        },
+        "setup_subtitle": "Deji dakhligaaga aasaasiga ah",
+        "activate_loading": "Firfircoonaya...",
+        "activate_button": "Firfircooni dakhliga aasaasiga ah"
+      },
+      "savings": {
+        "title": "Akoonka kaydinta",
+        "subtitle": "Hel faa'iido maalin kasta",
+        "tooltip": "69% heerka sannadka. Uruur oo dib u maalgelin si aad u gaarto 100% faa'iido. Ka soo qaad waqtiga aad rabto.",
+        "deposit": "Ku kaydi",
+        "withdraw": "Ka soo qaad",
+        "balance": "Dhammaan",
+        "amount_deposit": "Lacagta la kaydin doono",
+        "amount_withdraw": "Lacagta la soo qaadan doono",
+        "interest": "Faa'iido",
+        "collect": "Uruur",
+        "alert": {
+          "collect": {
+            "title": "Xaqiiji uruurinta",
+            "description": "Waxaad uruurin doontaa {amount} WDD faa'iido."
+          },
+          "deposit": {
+            "title": "Xaqiiji kaydinta",
+            "description": "Waxaad ku kaydin doontaa {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Xaqiiji soo qaadista",
+            "description": "Waxaad ka soo qaadan doontaa {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Socodka la cusbooneysiiyay"
         }
       }
-    },
-    "error": {
-      "title": "Wax baa qaldan",
-      "description": "Khalad aan la fileyn ayaa dhacay. Fadlan mar kale isku day.",
-      "error_id": "Aqoonsiga khaladka: {digest}",
-      "try_again": "Mar kale isku day"
     }
   },
   "components": {

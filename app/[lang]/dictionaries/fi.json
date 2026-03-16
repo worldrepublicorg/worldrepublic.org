@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Maailman tasavalta",
+    "earn": "Ansaitse",
     "menu": "Valikko"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Jokin meni pieleen",
+      "description": "Odottamaton virhe tapahtui. Yritä uudelleen.",
+      "error_id": "Virhetunnus: {digest}",
+      "try_again": "Yritä uudelleen"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Perustulo",
+        "savings": "Säästöt"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Saa rahaa ihmisenä olemisesta",
+        "subtitle_claim": "Nosta drakmas",
+        "tooltip_claim": "1 WDD/päivä, enintään 1 WDD. Palaa 24 tunnin sisällä maksimoidaksesi tulot.",
+        "claim_button": "Nosta",
+        "alert": {
+          "claim": {
+            "title": "Vahvista nosto",
+            "description": "Olet nostamassa {amount} WDD:tä. Tämä lisätään lompakkosi saldoon."
+          }
+        },
+        "setup_subtitle": "Aseta perustulosi",
+        "activate_loading": "Aktivoidaan...",
+        "activate_button": "Aktivoi perustulo"
+      },
+      "savings": {
+        "title": "Säästötili",
+        "subtitle": "Ansaitse korkoa joka sekunti",
+        "tooltip": "69% vuosikorko. Kerää ja sijoitusta uudelleen säännöllisesti saavuttaaksesi lähes 100% tehokkaat tuotot. Nosta milloin tahansa.",
+        "deposit": "Talleta",
+        "withdraw": "Nosta",
+        "balance": "Saldo",
+        "amount_deposit": "Talletettava määrä",
+        "amount_withdraw": "Nostettava määrä",
+        "interest": "Korko",
+        "collect": "Kerää",
+        "alert": {
+          "collect": {
+            "title": "Vahvista keräys",
+            "description": "Olet keräämässä {amount} WDD korkoa."
+          },
+          "deposit": {
+            "title": "Vahvista talletus",
+            "description": "Olet tallettamassa {amount} WDD:tä."
+          },
+          "withdraw": {
+            "title": "Vahvista nosto",
+            "description": "Olet nostamassa {amount} WDD:tä."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stream päivitetty"
         }
       }
-    },
-    "error": {
-      "title": "Jokin meni pieleen",
-      "description": "Odottamaton virhe tapahtui. Yritä uudelleen.",
-      "error_id": "Virhetunnus: {digest}",
-      "try_again": "Yritä uudelleen"
     }
   },
   "components": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Dünya Cumhuriyeti",
+    "earn": "Kazan",
     "menu": "Menü"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Bir şeyler ters gitti",
+      "description": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+      "error_id": "Hata kimliği: {digest}",
+      "try_again": "Tekrar dene"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Temel gelir",
+        "savings": "Tasarruf"
+      },
+      "basic_income": {
+        "subtitle_unauth": "İnsan olduğun için para al",
+        "subtitle_claim": "Drahmanı talep et",
+        "tooltip_claim": "Günde 1 WDD, 1 WDD ile sınırlı. Kazancı maksimize etmek için 24 saat içinde geri dön.",
+        "claim_button": "Talep Et",
+        "alert": {
+          "claim": {
+            "title": "Talebi onayla",
+            "description": "{amount} WDD talep etmek üzeresiniz. Bu miktar cüzdan bakiyenize eklenecek."
+          }
+        },
+        "setup_subtitle": "Temel gelirini kur",
+        "activate_loading": "Aktifleştiriliyor...",
+        "activate_button": "Temel geliri aktifleştir"
+      },
+      "savings": {
+        "title": "Tasarruf hesabı",
+        "subtitle": "Her saniye faiz kazan",
+        "tooltip": "Yıllık %69 temel oran. Düzenli olarak topla ve yeniden yatırım yaparak %100'e yakın etkili getiri elde et. İstediğin zaman çek.",
+        "deposit": "Yatır",
+        "withdraw": "Çek",
+        "balance": "Bakiye",
+        "amount_deposit": "Yatırılacak miktar",
+        "amount_withdraw": "Çekilecek miktar",
+        "interest": "Faiz",
+        "collect": "Topla",
+        "alert": {
+          "collect": {
+            "title": "Toplamayı onayla",
+            "description": "{amount} WDD faiz toplamak üzeresiniz."
+          },
+          "deposit": {
+            "title": "Yatırmayı onayla",
+            "description": "{amount} WDD yatırmak üzeresiniz."
+          },
+          "withdraw": {
+            "title": "Çekmeyi onayla",
+            "description": "{amount} WDD çekmek üzeresiniz."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Akış güncellendi"
         }
       }
-    },
-    "error": {
-      "title": "Bir şeyler ters gitti",
-      "description": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
-      "error_id": "Hata kimliği: {digest}",
-      "try_again": "Tekrar dene"
     }
   },
   "components": {

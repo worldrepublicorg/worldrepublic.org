@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Pasaulio Respublika",
+    "earn": "Uždirbti",
     "menu": "Meniu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Kažkas nutiko",
+      "description": "Įvyko netikėta klaida. Bandykite dar kartą.",
+      "error_id": "Klaidos ID: {digest}",
+      "try_again": "Bandyti dar kartą"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Bazinis pajamas",
+        "savings": "Santaupos"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Gaukite pinigus už tai, kad esate žmogus",
+        "subtitle_claim": "Atsiimkite savo drakmas",
+        "tooltip_claim": "1 WDD/dieną, maksimaliai 1 WDD. Grįžkite per 24 valandas, kad maksimaliai padidintumėte uždarbį.",
+        "claim_button": "Atsiimti",
+        "alert": {
+          "claim": {
+            "title": "Patvirtinti atsiėmimą",
+            "description": "Ketinate atsiimti {amount} WDD. Tai bus pridėta prie jūsų piniginės likučio."
+          }
+        },
+        "setup_subtitle": "Nustatykite savo bazinius pajamas",
+        "activate_loading": "Aktyvuojama...",
+        "activate_button": "Aktyvuoti bazinius pajamas"
+      },
+      "savings": {
+        "title": "Sąskaita santaupoms",
+        "subtitle": "Uždirbkite palūkanas kas sekundę",
+        "tooltip": "69% metinė bazinė norma. Rinkite ir reinvestuokite reguliariai, kad pasiektumėte beveik 100% efektyvų grąžą. Išimkite bet kada.",
+        "deposit": "Įdėti",
+        "withdraw": "Išimti",
+        "balance": "Likutis",
+        "amount_deposit": "Suma įdėjimui",
+        "amount_withdraw": "Suma išėmimui",
+        "interest": "Palūkanos",
+        "collect": "Rinkti",
+        "alert": {
+          "collect": {
+            "title": "Patvirtinti rinkimą",
+            "description": "Ketinate surinkti {amount} WDD palūkanų."
+          },
+          "deposit": {
+            "title": "Patvirtinti įdėjimą",
+            "description": "Ketinate įdėti {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Patvirtinti išėmimą",
+            "description": "Ketinate išimti {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Srautas atnaujintas"
         }
       }
-    },
-    "error": {
-      "title": "Kažkas nutiko",
-      "description": "Įvyko netikėta klaida. Bandykite dar kartą.",
-      "error_id": "Klaidos ID: {digest}",
-      "try_again": "Bandyti dar kartą"
     }
   },
   "components": {

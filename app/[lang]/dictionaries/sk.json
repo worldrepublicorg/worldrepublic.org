@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Svetová republika",
+    "earn": "Zarábať",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Niečo sa pokazilo",
+      "description": "Vyskytla sa neočakávaná chyba. Skúste to prosím znova.",
+      "error_id": "ID chyby: {digest}",
+      "try_again": "Skúsiť znova"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Základný príjem",
+        "savings": "Úspory"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Získajte peniaze za to, že ste človek",
+        "subtitle_claim": "Vyberte si svoju drachmu",
+        "tooltip_claim": "1 WDD/deň, limit 1 WDD. Vráťte sa do 24 hodín pre maximalizáciu zárobkov.",
+        "claim_button": "Vybrať",
+        "alert": {
+          "claim": {
+            "title": "Potvrdiť výber",
+            "description": "Chystáte sa vybrať {amount} WDD. Toto sa pridá do vášho peňaženky zostatku."
+          }
+        },
+        "setup_subtitle": "Nastavte si základný príjem",
+        "activate_loading": "Aktivujem...",
+        "activate_button": "Aktivovať základný príjem"
+      },
+      "savings": {
+        "title": "Sporiaci účet",
+        "subtitle": "Zarábajte úrok každú sekundu",
+        "tooltip": "69% ročná základná sadzba. Zbierajte a reinvestujte pravidelne pre dosiahnutie blízko 100% efektívnych výnosov. Vyberte kedykoľvek.",
+        "deposit": "Vložiť",
+        "withdraw": "Vybrať",
+        "balance": "Zostatok",
+        "amount_deposit": "Suma na vloženie",
+        "amount_withdraw": "Suma na výber",
+        "interest": "Úrok",
+        "collect": "Zobrať",
+        "alert": {
+          "collect": {
+            "title": "Potvrdiť zber",
+            "description": "Chystáte sa zobrať {amount} WDD v úroku."
+          },
+          "deposit": {
+            "title": "Potvrdiť vklad",
+            "description": "Chystáte sa vložiť {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Potvrdiť výber",
+            "description": "Chystáte sa vybrať {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Prúd aktualizovaný"
         }
       }
-    },
-    "error": {
-      "title": "Niečo sa pokazilo",
-      "description": "Vyskytla sa neočakávaná chyba. Skúste to prosím znova.",
-      "error_id": "ID chyby: {digest}",
-      "try_again": "Skúsiť znova"
     }
   },
   "components": {

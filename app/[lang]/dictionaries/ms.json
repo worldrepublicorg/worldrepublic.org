@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Republik Dunia",
+    "earn": "Pendapatan",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Sesuatu telah berlaku",
+      "description": "Ralat yang tidak dijangka telah berlaku. Sila cuba lagi.",
+      "error_id": "ID Ralat: {digest}",
+      "try_again": "Cuba lagi"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Pendapatan asas",
+        "savings": "Simpanan"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Dapatkan wang kerana anda manusia",
+        "subtitle_claim": "Tuntut drachma anda",
+        "tooltip_claim": "1 WDD/hari, dihadkan kepada 1 WDD. Kembali dalam masa 24 jam untuk memaksimumkan hasil.",
+        "claim_button": "Tuntut",
+        "alert": {
+          "claim": {
+            "title": "Sahkan tuntutan",
+            "description": "Anda akan menuntut {amount} WDD. Ia akan ditambah ke baki dompet anda."
+          }
+        },
+        "setup_subtitle": "Sediakan pendapatan asas anda",
+        "activate_loading": "Mengaktifkan...",
+        "activate_button": "Aktifkan pendapatan asas"
+      },
+      "savings": {
+        "title": "Akaun simpanan",
+        "subtitle": "Dapatkan faedah setiap saat",
+        "tooltip": "Kadar asas tahunan 69%. Tebus dan labur semula secara berkala untuk mencapai pulangan efektif hampir 100%. Keluarkan bila-bila masa.",
+        "deposit": "Deposit",
+        "withdraw": "Keluarkan",
+        "balance": "Baki",
+        "amount_deposit": "Amaun untuk dideposit",
+        "amount_withdraw": "Amaun untuk dikeluarkan",
+        "interest": "Faedah",
+        "collect": "Tebus faedah",
+        "alert": {
+          "collect": {
+            "title": "Sahkan tebusan faedah",
+            "description": "Anda akan menebus {amount} WDD dalam bentuk faedah."
+          },
+          "deposit": {
+            "title": "Sahkan deposit",
+            "description": "Anda akan mendeposit {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Sahkan pengeluaran",
+            "description": "Anda akan mengeluarkan {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Strim dikemaskini"
         }
       }
-    },
-    "error": {
-      "title": "Sesuatu telah berlaku",
-      "description": "Ralat yang tidak dijangka telah berlaku. Sila cuba lagi.",
-      "error_id": "ID Ralat: {digest}",
-      "try_again": "Cuba lagi"
     }
   },
   "components": {

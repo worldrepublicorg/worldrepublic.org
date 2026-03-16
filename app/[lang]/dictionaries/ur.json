@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "عالمی جمہوریہ",
+    "earn": "کمائیں",
     "menu": "مینو"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "کچھ غلط ہو گیا",
+      "description": "ایک غیر متوقع خرابی ہوئی۔ براہ کرم دوبارہ کوشش کریں۔",
+      "error_id": "خرابی ID: {digest}",
+      "try_again": "دوبارہ کوشش کریں"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "بنیادی آمدنی",
+        "savings": "بچت"
+      },
+      "basic_income": {
+        "subtitle_unauth": "انسان ہونے کی وجہ سے پیسے حاصل کریں",
+        "subtitle_claim": "اپنا دراخما حاصل کریں",
+        "tooltip_claim": "1 WDD/دن، 1 WDD تک محدود۔ آمدنی کو زیادہ سے زیادہ بنانے کے لیے 24 گھنٹے کے اندر واپس آئیں۔",
+        "claim_button": "حاصل کریں",
+        "alert": {
+          "claim": {
+            "title": "حصول کی تصدیق کریں",
+            "description": "آپ {amount} WDD حاصل کرنے والے ہیں۔ یہ آپ کے والیٹ بیلنس میں شامل ہو جائے گا۔"
+          }
+        },
+        "setup_subtitle": "اپنی بنیادی آمدنی ترتیب دیں",
+        "activate_loading": "فعال ہو رہا ہے...",
+        "activate_button": "بنیادی آمدنی فعال کریں"
+      },
+      "savings": {
+        "title": "بچت کا اکاؤنٹ",
+        "subtitle": "ہر سیکنڈ سود کمائیں",
+        "tooltip": "69% سالانہ بنیادی شرح۔ باقاعدگی سے جمع کریں اور دوبارہ سرمایہ کاری کریں تاکہ 100% کے قریب مؤثر منافع حاصل کریں۔ کسی بھی وقت نکالیں۔",
+        "deposit": "جمع کریں",
+        "withdraw": "نکالیں",
+        "balance": "بیلنس",
+        "amount_deposit": "جمع کرنے کی رقم",
+        "amount_withdraw": "نکالنے کی رقم",
+        "interest": "سود",
+        "collect": "جمع کریں",
+        "alert": {
+          "collect": {
+            "title": "جمع کرنے کی تصدیق کریں",
+            "description": "آپ {amount} WDD سود جمع کرنے والے ہیں۔"
+          },
+          "deposit": {
+            "title": "جمع کرنے کی تصدیق کریں",
+            "description": "آپ {amount} WDD جمع کرنے والے ہیں۔"
+          },
+          "withdraw": {
+            "title": "نکالنے کی تصدیق کریں",
+            "description": "آپ {amount} WDD نکالنے والے ہیں۔"
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "اسٹریم اپ ڈیٹ کی گئی"
         }
       }
-    },
-    "error": {
-      "title": "کچھ غلط ہو گیا",
-      "description": "ایک غیر متوقع خرابی ہوئی۔ براہ کرم دوبارہ کوشش کریں۔",
-      "error_id": "خرابی ID: {digest}",
-      "try_again": "دوبارہ کوشش کریں"
     }
   },
   "components": {

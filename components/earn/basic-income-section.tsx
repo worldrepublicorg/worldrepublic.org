@@ -14,9 +14,11 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useEffect, useState } from "react";
 import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { useBasicIncome } from "@/hooks/use-basic-income";
 
 interface BasicIncomeSectionProps {
+  dictionary: Dictionary;
   isAuthenticated: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
@@ -26,6 +28,7 @@ interface BasicIncomeSectionProps {
 }
 
 export function BasicIncomeSection({
+  dictionary,
   isAuthenticated,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
@@ -61,6 +64,8 @@ export function BasicIncomeSection({
     setShowTooltip(!showTooltip);
   };
 
+  const amountString = maxClaimableAmount.toFixed(6);
+
   if (!isAuthenticated) {
     return (
       <div className="flex grow items-center justify-center">
@@ -70,14 +75,14 @@ export function BasicIncomeSection({
           </div>
           <div className="flex w-full flex-col items-center gap-4">
             <Typography variant="heading" level={2}>
-              Basic income
+              {dictionary.pages.earn.tabs.basic_income}
             </Typography>
             <Typography
               variant="subtitle"
               level={2}
               className="text-gray-500"
             >
-              Get money for being human
+              {dictionary.pages.earn.basic_income.subtitle_unauth}
             </Typography>
             <div className="mt-6 w-full">
               <Button
@@ -85,7 +90,7 @@ export function BasicIncomeSection({
                 className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                 onClick={onSignIn}
               >
-                Sign in
+                {dictionary.common.sign_in}
               </Button>
             </div>
           </div>
@@ -103,14 +108,14 @@ export function BasicIncomeSection({
           </div>
           <div className="flex w-full flex-col items-center gap-4">
             <Typography variant="heading" level={2}>
-              Basic income
+              {dictionary.pages.earn.tabs.basic_income}
             </Typography>
             <Typography
               variant="subtitle"
               level={2}
               className="text-gray-500"
             >
-              Set up your basic income
+              {dictionary.pages.earn.basic_income.setup_subtitle}
             </Typography>
             <Button
               fullWidth
@@ -118,7 +123,9 @@ export function BasicIncomeSection({
               onClick={handleActivate}
               disabled={isActivating}
             >
-              {isActivating ? "Activating..." : "Activate basic income"}
+              {isActivating
+                ? dictionary.pages.earn.basic_income.activate_loading
+                : dictionary.pages.earn.basic_income.activate_button}
             </Button>
           </div>
         </div>
@@ -134,14 +141,14 @@ export function BasicIncomeSection({
         </div>
         <div className="flex w-full flex-col items-center gap-4">
           <Typography variant="heading" level={2}>
-            Basic income
+            {dictionary.pages.earn.tabs.basic_income}
           </Typography>
           <Typography
             variant="subtitle"
             level={2}
             className="mx-auto text-center text-gray-500"
           >
-            Claim your drachma
+            {dictionary.pages.earn.basic_income.subtitle_claim}
             <span className="group relative inline-flex items-center align-baseline">
               <PiInfoFill
                 className="ml-1 h-4 w-4 translate-y-[2px]! cursor-help text-gray-400"
@@ -152,15 +159,14 @@ export function BasicIncomeSection({
               {showTooltip && (
                 <div className="absolute -right-4 bottom-full z-40 mb-2 w-[calc(100dvw/2+24px)] max-w-xs transform rounded-lg border border-gray-200 bg-white p-3 text-xs shadow-lg!">
                   <div className="rounded-lg bg-white text-left text-xs text-gray-700">
-                    1 WDD/day, capped at 1 WDD. Return within 24 hours to
-                    maximize earnings.
+                    {dictionary.pages.earn.basic_income.tooltip_claim}
                   </div>
                 </div>
               )}
             </span>
           </Typography>
           <div className="mt-5 mb-1 font-mono text-7xl font-semibold">
-            {maxClaimableAmount.toFixed(6)}
+            {amountString}
           </div>
           <AlertDialog>
             <AlertDialogTrigger asChild>
@@ -169,7 +175,7 @@ export function BasicIncomeSection({
                 className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
                 disabled={isClaiming || maxClaimableAmount <= 0}
               >
-                Claim
+                {dictionary.pages.earn.basic_income.claim_button}
               </Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
@@ -180,11 +186,15 @@ export function BasicIncomeSection({
                   </div>
                 }
               >
-                <AlertDialogTitle>Confirm claim</AlertDialogTitle>
+                <AlertDialogTitle>
+                  {dictionary.pages.earn.basic_income.alert.claim.title}
+                </AlertDialogTitle>
               </AlertDialogHeader>
               <AlertDialogDescription>
-                You are about to claim {maxClaimableAmount.toFixed(6)} WDD. This
-                will be added to your wallet balance.
+                {dictionary.pages.earn.basic_income.alert.claim.description.replace(
+                  "{amount}",
+                  amountString,
+                )}
               </AlertDialogDescription>
               <AlertDialogFooter>
                 <AlertDialogClose asChild>
@@ -192,7 +202,7 @@ export function BasicIncomeSection({
                     onClick={handleClaim}
                     fullWidth
                   >
-                    Confirm
+                    {dictionary.common.confirm}
                   </Button>
                 </AlertDialogClose>
               </AlertDialogFooter>

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "الجمهورية العالمية",
+    "earn": "كسب",
     "menu": "القائمة"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "حدث خطأ ما",
+      "description": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+      "error_id": "معرّف الخطأ: {digest}",
+      "try_again": "حاول مرة أخرى"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "الدخل الأساسي",
+        "savings": "التوفير"
+      },
+      "basic_income": {
+        "subtitle_unauth": "احصل على المال لكونك إنساناً",
+        "subtitle_claim": "احصل على دراخمك",
+        "tooltip_claim": "1 WDD يومياً، بحد أقصى 1 WDD. عد خلال 24 ساعة لتعظيم أرباحك.",
+        "claim_button": "احصل",
+        "alert": {
+          "claim": {
+            "title": "تأكيد الحصول",
+            "description": "أنت على وشك الحصول على {amount} WDD. سيتم إضافة هذا المبلغ إلى رصيد محفظتك."
+          }
+        },
+        "setup_subtitle": "أعد إعداد دخلك الأساسي",
+        "activate_loading": "جاري التفعيل...",
+        "activate_button": "تفعيل الدخل الأساسي"
+      },
+      "savings": {
+        "title": "حساب التوفير",
+        "subtitle": "اكسب فائدة كل ثانية",
+        "tooltip": "معدل أساسي سنوي 69%. اجمع وأعد استثمار بانتظام لتحقيق عوائد فعالة قريبة من 100%. اسحب في أي وقت.",
+        "deposit": "إيداع",
+        "withdraw": "سحب",
+        "balance": "الرصيد",
+        "amount_deposit": "المبلغ للإيداع",
+        "amount_withdraw": "المبلغ للسحب",
+        "interest": "الفائدة",
+        "collect": "جمع",
+        "alert": {
+          "collect": {
+            "title": "تأكيد الجمع",
+            "description": "أنت على وشك جمع {amount} WDD من الفائدة."
+          },
+          "deposit": {
+            "title": "تأكيد الإيداع",
+            "description": "أنت على وشك إيداع {amount} WDD."
+          },
+          "withdraw": {
+            "title": "تأكيد السحب",
+            "description": "أنت على وشك سحب {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "تم تحديث التدفق"
         }
       }
-    },
-    "error": {
-      "title": "حدث خطأ ما",
-      "description": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
-      "error_id": "معرّف الخطأ: {digest}",
-      "try_again": "حاول مرة أخرى"
     }
   },
   "components": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Pasaules Republika",
+    "earn": "Nopelnīt",
     "menu": "Izvēlne"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Kaut kas nogāja greizi",
+      "description": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz.",
+      "error_id": "Kļūdas ID: {digest}",
+      "try_again": "Mēģināt vēlreiz"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Pamata ienākumi",
+        "savings": "Uzkrājumi"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Saņemiet naudu par to, ka esat cilvēks",
+        "subtitle_claim": "Pieprasiet savu drahmu",
+        "tooltip_claim": "1 WDD/dienā, ierobežots līdz 1 WDD. Atgriezieties 24 stundu laikā, lai maksimāli palielinātu ienākumus.",
+        "claim_button": "Pieprasīt",
+        "alert": {
+          "claim": {
+            "title": "Apstiprināt pieprasījumu",
+            "description": "Jūs gatavojaties pieprasīt {amount} WDD. Tas tiks pievienots jūsu maku bilancei."
+          }
+        },
+        "setup_subtitle": "Iestatiet savus pamata ienākumus",
+        "activate_loading": "Aktivizē...",
+        "activate_button": "Aktivizēt pamata ienākumus"
+      },
+      "savings": {
+        "title": "Uzkrājumu konts",
+        "subtitle": "Nopelniet procentus katru sekundi",
+        "tooltip": "69% gada bāzes likme. Vāciet un reinvestējiet regulāri, lai sasniegtu gandrīz 100% efektīvu atdevi. Izņemiet jebkurā laikā.",
+        "deposit": "Iemaksāt",
+        "withdraw": "Izņemt",
+        "balance": "Bilance",
+        "amount_deposit": "Iemaksājamā summa",
+        "amount_withdraw": "Izņemamā summa",
+        "interest": "Procenti",
+        "collect": "Vākt",
+        "alert": {
+          "collect": {
+            "title": "Apstiprināt vākšanu",
+            "description": "Jūs gatavojaties vākt {amount} WDD procentus."
+          },
+          "deposit": {
+            "title": "Apstiprināt iemaksu",
+            "description": "Jūs gatavojaties iemaksāt {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Apstiprināt izņemšanu",
+            "description": "Jūs gatavojaties izņemt {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Straume atjaunināta"
         }
       }
-    },
-    "error": {
-      "title": "Kaut kas nogāja greizi",
-      "description": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz.",
-      "error_id": "Kļūdas ID: {digest}",
-      "try_again": "Mēģināt vēlreiz"
     }
   },
   "components": {

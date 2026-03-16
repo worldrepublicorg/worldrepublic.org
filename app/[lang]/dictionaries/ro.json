@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Republica Mondială",
+    "earn": "Câştigă",
     "menu": "Meniu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Ceva nu a mers bine",
+      "description": "A apărut o eroare neașteptată. Te rugăm să încerci din nou.",
+      "error_id": "ID eroare: {digest}",
+      "try_again": "Încearcă din nou"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Venit de bază",
+        "savings": "Economii"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Primește bani pentru că ești om",
+        "subtitle_claim": "Încasează-ți drahma",
+        "tooltip_claim": "1 WDD/zi, limitat la 1 WDD. Revino în 24 de ore pentru a maximiza câştigurile.",
+        "claim_button": "Încasează",
+        "alert": {
+          "claim": {
+            "title": "Confirmă încasarea",
+            "description": "Ești pe cale să încasezi {amount} WDD. Aceasta va fi adăugată la soldul portofelului tău."
+          }
+        },
+        "setup_subtitle": "Configurează-ți venitul de bază",
+        "activate_loading": "Se activează...",
+        "activate_button": "Activează venitul de bază"
+      },
+      "savings": {
+        "title": "Cont de economii",
+        "subtitle": "Câştigă dobândă în fiecare secundă",
+        "tooltip": "Rata anuală de bază 69%. Colectează și reinvestește regulat pentru a obține randamente efective aproape de 100%. Retrage oricând.",
+        "deposit": "Depune",
+        "withdraw": "Retrage",
+        "balance": "Sold",
+        "amount_deposit": "Suma de depus",
+        "amount_withdraw": "Suma de retras",
+        "interest": "Dobândă",
+        "collect": "Colectează",
+        "alert": {
+          "collect": {
+            "title": "Confirmă colectarea",
+            "description": "Ești pe cale să colectezi {amount} WDD ca dobândă."
+          },
+          "deposit": {
+            "title": "Confirmă depunerea",
+            "description": "Ești pe cale să depui {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Confirmă retragerea",
+            "description": "Ești pe cale să retragi {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Flux actualizat"
         }
       }
-    },
-    "error": {
-      "title": "Ceva nu a mers bine",
-      "description": "A apărut o eroare neașteptată. Te rugăm să încerci din nou.",
-      "error_id": "ID eroare: {digest}",
-      "try_again": "Încearcă din nou"
     }
   },
   "components": {

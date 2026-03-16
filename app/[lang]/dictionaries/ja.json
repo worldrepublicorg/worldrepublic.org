@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "世界共和国",
+    "earn": "収益",
     "menu": "メニュー"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "問題が発生しました",
+      "description": "予期しないエラーが発生しました。もう一度お試しください。",
+      "error_id": "エラーID: {digest}",
+      "try_again": "もう一度試す"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "基本所得",
+        "savings": "貯蓄"
+      },
+      "basic_income": {
+        "subtitle_unauth": "人間であることへの報酬を受け取る",
+        "subtitle_claim": "ドラクマを受け取る",
+        "tooltip_claim": "1 WDD/日（上限 1 WDD）。24 時間以内に戻ると収益を最大化できます。",
+        "claim_button": "受け取る",
+        "alert": {
+          "claim": {
+            "title": "受け取りの確認",
+            "description": "{amount} WDD を受け取ります。ウォレット残高に追加されます。"
+          }
+        },
+        "setup_subtitle": "基本所得を設定",
+        "activate_loading": "有効化中...",
+        "activate_button": "基本所得を有効化"
+      },
+      "savings": {
+        "title": "貯蓄口座",
+        "subtitle": "毎秒利息が発生",
+        "tooltip": "年率 69% のベースレート。定期的に受け取りと再投資を行うことで実効利回りを 100% 近くまで高められます。いつでも出金可能。",
+        "deposit": "入金",
+        "withdraw": "出金",
+        "balance": "残高",
+        "amount_deposit": "入金額",
+        "amount_withdraw": "出金額",
+        "interest": "利息",
+        "collect": "利息を受け取る",
+        "alert": {
+          "collect": {
+            "title": "利息受け取りの確認",
+            "description": "利息として {amount} WDD を受け取ります。"
+          },
+          "deposit": {
+            "title": "入金の確認",
+            "description": "{amount} WDD を入金します。"
+          },
+          "withdraw": {
+            "title": "出金の確認",
+            "description": "{amount} WDD を出金します。"
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "ストリーム更新"
         }
       }
-    },
-    "error": {
-      "title": "問題が発生しました",
-      "description": "予期しないエラーが発生しました。もう一度お試しください。",
-      "error_id": "エラーID: {digest}",
-      "try_again": "もう一度試す"
     }
   },
   "components": {

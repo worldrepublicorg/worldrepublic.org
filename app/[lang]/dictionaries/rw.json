@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Repubulika y'Isi",
+    "earn": "Kongera",
     "menu": "Ibikubiye"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Hari ikintu kitagenze neza",
+      "description": "Ikosa ritateganyijwe ryabaye. Nyamuneka ongera ugerageze.",
+      "error_id": "ID y'ikosa: {digest}",
+      "try_again": "Ongera ugerageze"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Amafaranga y'ibanze",
+        "savings": "Kwibika"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Bona amafaranga kubera ko uri umuntu",
+        "subtitle_claim": "Saba drachma yawe",
+        "tooltip_claim": "1 WDD/umunsi, gihagaritse kuri 1 WDD. Garuka mu masaha 24 kugira ngo wongere amafaranga.",
+        "claim_button": "Saba",
+        "alert": {
+          "claim": {
+            "title": "Emeza gusaba",
+            "description": "Ugiye gusaba {amount} WDD. Ibi bizongerwa ku mafaranga yawe."
+          }
+        },
+        "setup_subtitle": "Shiraho amafaranga yawe y'ibanze",
+        "activate_loading": "Gukora...",
+        "activate_button": "Kora amafaranga y'ibanze"
+      },
+      "savings": {
+        "title": "Konti y'ubwibiko",
+        "subtitle": "Kongera amafaranga buri segonda",
+        "tooltip": "69% umwaka wose. Kora buri gihe kandi ugarure amafaranga kugira ngo ubone 100% y'inyungu. Kuramo igihe icyo ari cyo cyose.",
+        "deposit": "Shyira",
+        "withdraw": "Kuramo",
+        "balance": "Amafaranga",
+        "amount_deposit": "Umubare wo gushyira",
+        "amount_withdraw": "Umubare wo kuramo",
+        "interest": "Inyungu",
+        "collect": "Koranya",
+        "alert": {
+          "collect": {
+            "title": "Emeza gukoranya",
+            "description": "Ugiye gukoranya {amount} WDD mu nyungu."
+          },
+          "deposit": {
+            "title": "Emeza gushyira",
+            "description": "Ugiye gushyira {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Emeza gukuramo",
+            "description": "Ugiye gukuramo {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Umugezi wavuguruwe"
         }
       }
-    },
-    "error": {
-      "title": "Hari ikintu kitagenze neza",
-      "description": "Ikosa ritateganyijwe ryabaye. Nyamuneka ongera ugerageze.",
-      "error_id": "ID y'ikosa: {digest}",
-      "try_again": "Ongera ugerageze"
     }
   },
   "components": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Repubblica Mondiale",
+    "earn": "Guadagna",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Qualcosa è andato storto",
+      "description": "Si è verificato un errore imprevisto. Per favore riprova.",
+      "error_id": "ID errore: {digest}",
+      "try_again": "Riprova"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Reddito di base",
+        "savings": "Risparmi"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Ricevi denaro per essere umano",
+        "subtitle_claim": "Riscatta la tua dracma",
+        "tooltip_claim": "1 WDD/giorno, limitato a 1 WDD. Ritorna entro 24 ore per massimizzare i guadagni.",
+        "claim_button": "Riscatta",
+        "alert": {
+          "claim": {
+            "title": "Conferma riscatto",
+            "description": "Stai per riscattare {amount} WDD. Questo sarà aggiunto al saldo del tuo portafoglio."
+          }
+        },
+        "setup_subtitle": "Configura il tuo reddito di base",
+        "activate_loading": "Attivazione in corso...",
+        "activate_button": "Attiva reddito di base"
+      },
+      "savings": {
+        "title": "Conto risparmi",
+        "subtitle": "Guadagna interessi ogni secondo",
+        "tooltip": "Tasso base annuo del 69%. Raccogli e reinvesti regolarmente per ottenere rendimenti effettivi vicini al 100%. Preleva in qualsiasi momento.",
+        "deposit": "Deposita",
+        "withdraw": "Preleva",
+        "balance": "Saldo",
+        "amount_deposit": "Importo da depositare",
+        "amount_withdraw": "Importo da prelevare",
+        "interest": "Interessi",
+        "collect": "Raccogli",
+        "alert": {
+          "collect": {
+            "title": "Conferma raccolta",
+            "description": "Stai per raccogliere {amount} WDD di interessi."
+          },
+          "deposit": {
+            "title": "Conferma deposito",
+            "description": "Stai per depositare {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Conferma prelievo",
+            "description": "Stai per prelevare {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Flusso aggiornato"
         }
       }
-    },
-    "error": {
-      "title": "Qualcosa è andato storto",
-      "description": "Si è verificato un errore imprevisto. Per favore riprova.",
-      "error_id": "ID errore: {digest}",
-      "try_again": "Riprova"
     }
   },
   "components": {

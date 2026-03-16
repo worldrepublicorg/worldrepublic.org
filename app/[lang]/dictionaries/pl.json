@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Republika Światowa",
+    "earn": "Zarabiaj",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Coś poszło nie tak",
+      "description": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie.",
+      "error_id": "ID błędu: {digest}",
+      "try_again": "Spróbuj ponownie"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Dochód podstawowy",
+        "savings": "Oszczędności"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Otrzymuj pieniądze za bycie człowiekiem",
+        "subtitle_claim": "Odbierz swoje drachmy",
+        "tooltip_claim": "1 WDD/dzień, limit 1 WDD. Wróć w ciągu 24 godzin, aby zmaksymalizować zyski.",
+        "claim_button": "Odbierz",
+        "alert": {
+          "claim": {
+            "title": "Potwierdź odbiór",
+            "description": "Zamierzasz odebrać {amount} WDD. Kwota zostanie dodana do salda twojego portfela."
+          }
+        },
+        "setup_subtitle": "Skonfiguruj swój dochód podstawowy",
+        "activate_loading": "Aktywowanie...",
+        "activate_button": "Aktywuj dochód podstawowy"
+      },
+      "savings": {
+        "title": "Konto oszczędnościowe",
+        "subtitle": "Odsetki naliczane co sekundę",
+        "tooltip": "69% rocznej stopy bazowej. Regularnie odbieraj i reinwestuj, aby osiągnąć niemal 100% efektywnego zwrotu. Wypłata w dowolnym momencie.",
+        "deposit": "Wpłać",
+        "withdraw": "Wypłać",
+        "balance": "Saldo",
+        "amount_deposit": "Kwota wpłaty",
+        "amount_withdraw": "Kwota wypłaty",
+        "interest": "Odsetki",
+        "collect": "Odbierz",
+        "alert": {
+          "collect": {
+            "title": "Potwierdź odbiór",
+            "description": "Zamierzasz odebrać {amount} WDD w odsetkach."
+          },
+          "deposit": {
+            "title": "Potwierdź wpłatę",
+            "description": "Zamierzasz wpłacić {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Potwierdź wypłatę",
+            "description": "Zamierzasz wypłacić {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Strumień zaktualizowany"
         }
       }
-    },
-    "error": {
-      "title": "Coś poszło nie tak",
-      "description": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie.",
-      "error_id": "ID błędu: {digest}",
-      "try_again": "Spróbuj ponownie"
     }
   },
   "components": {

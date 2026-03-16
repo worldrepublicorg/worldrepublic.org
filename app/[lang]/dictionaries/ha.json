@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Jamhuriyar Duniya",
+    "earn": "Samu",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Wani abu ya tashi kuskure",
+      "description": "Kuskure da ba a zata ba ya faru. Da fatan za a sake gwadawa.",
+      "error_id": "ID na kuskure: {digest}",
+      "try_again": "Sake gwadawa"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Kudin shiga na asali",
+        "savings": "Ajiya"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Samu kuɗi don kasancewar ɗan adam",
+        "subtitle_claim": "Nemi drachma ɗinku",
+        "tooltip_claim": "1 WDD/rana, an iyakance zuwa 1 WDD. Komo cikin sa'o'i 24 don haɓaka ribar.",
+        "claim_button": "Nemi",
+        "alert": {
+          "claim": {
+            "title": "Tabbatar da nema",
+            "description": "Kuna shirin neman {amount} WDD. Wannan zai ƙara zuwa ma'aunin jakar kuɗinku."
+          }
+        },
+        "setup_subtitle": "Saita kuɗin shiga na asali ɗinku",
+        "activate_loading": "Ana kunna...",
+        "activate_button": "Kunna kuɗin shiga na asali"
+      },
+      "savings": {
+        "title": "Asusun ajiya",
+        "subtitle": "Samu riba a kowane dakika",
+        "tooltip": "69% yawan riba na shekara. Tattara kuma sake saka jari akai-akai don samun kusan 100% riba mai tasiri. Cire kowane lokaci.",
+        "deposit": "Saka",
+        "withdraw": "Cire",
+        "balance": "Ma'auni",
+        "amount_deposit": "Adadin da za a saka",
+        "amount_withdraw": "Adadin da za a cire",
+        "interest": "Riba",
+        "collect": "Tattara",
+        "alert": {
+          "collect": {
+            "title": "Tabbatar da tattarawa",
+            "description": "Kuna shirin tattara {amount} WDD a riba."
+          },
+          "deposit": {
+            "title": "Tabbatar da saka",
+            "description": "Kuna shirin saka {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Tabbatar da cirewa",
+            "description": "Kuna shirin cire {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "An sabunta riba"
         }
       }
-    },
-    "error": {
-      "title": "Wani abu ya tashi kuskure",
-      "description": "Kuskure da ba a zata ba ya faru. Da fatan za a sake gwadawa.",
-      "error_id": "ID na kuskure: {digest}",
-      "try_again": "Sake gwadawa"
     }
   },
   "components": {

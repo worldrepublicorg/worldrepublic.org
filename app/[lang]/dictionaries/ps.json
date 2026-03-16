@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "نړۍ جمهوریت",
+    "earn": "کسب",
     "menu": "مینو"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "یو څه غلطی وشوه",
+      "description": "یوه غیر متوقعه تېروتنه وشوه. مهرباني وکړئ بیا هڅه وکړئ.",
+      "error_id": "د تېروتنې ID: {digest}",
+      "try_again": "بیا هڅه وکړئ"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "اساسي عاید",
+        "savings": "پانګه"
+      },
+      "basic_income": {
+        "subtitle_unauth": "د انسانیت لپاره پیسې ترلاسه کړئ",
+        "subtitle_claim": "ستاسو دراخما غوښتنه وکړئ",
+        "tooltip_claim": "په ورځ کې 1 WDD، تر 1 WDD پورې محدود. د عایدونو زیاتولو لپاره په 24 ساعتونو کې بیرته راګرځئ.",
+        "claim_button": "غوښتنه",
+        "alert": {
+          "claim": {
+            "title": "غوښتنه تایید کړئ",
+            "description": "تاسو {amount} WDD غوښتنه کوئ. دا به ستاسو د والیټ بیټلانس سره اضافه شي."
+          }
+        },
+        "setup_subtitle": "ستاسو اساسي عاید تنظیم کړئ",
+        "activate_loading": "فعال کېږي...",
+        "activate_button": "اساسي عاید فعال کړئ"
+      },
+      "savings": {
+        "title": "پانګه حساب",
+        "subtitle": "په هره ثانیه کې سود ترلاسه کړئ",
+        "tooltip": "کلنۍ 69% اساسي نرخ. د ټول شوي سود منظم راټولول او بیا پانګه اچونه د 100% نږدې اغیزمن عاید ترلاسه کولو لپاره. هر وخت ووتل.",
+        "deposit": "ډیپوزټ",
+        "withdraw": "ووتل",
+        "balance": "بیټلانس",
+        "amount_deposit": "د ډیپوزټ کولو اندازه",
+        "amount_withdraw": "د ووتلو اندازه",
+        "interest": "سود",
+        "collect": "راټولول",
+        "alert": {
+          "collect": {
+            "title": "د راټولولو تایید",
+            "description": "تاسو {amount} WDD سود راټولوئ."
+          },
+          "deposit": {
+            "title": "د ډیپوزټ تایید",
+            "description": "تاسو {amount} WDD ډیپوزټ کوئ."
+          },
+          "withdraw": {
+            "title": "د ووتلو تایید",
+            "description": "تاسو {amount} WDD ووتلو."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "جریان تازه شو"
         }
       }
-    },
-    "error": {
-      "title": "یو څه غلطی وشوه",
-      "description": "یوه غیر متوقعه تېروتنه وشوه. مهرباني وکړئ بیا هڅه وکړئ.",
-      "error_id": "د تېروتنې ID: {digest}",
-      "try_again": "بیا هڅه وکړئ"
     }
   },
   "components": {

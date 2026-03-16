@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Svjetska republika",
+    "earn": "Zaraditi",
     "menu": "Meni"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Nešto je pošlo po krivu",
+      "description": "Došlo je do neočekivane greške. Molimo pokušajte ponovo.",
+      "error_id": "ID greške: {digest}",
+      "try_again": "Pokušaj ponovo"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Osnovni prihod",
+        "savings": "Štednja"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Zaradite novac jer ste čovjek",
+        "subtitle_claim": "Zatražite svoju drahmu",
+        "tooltip_claim": "1 WDD/dan, maksimalno 1 WDD. Vratite se u roku od 24 sata da maksimizirate prihod.",
+        "claim_button": "Zatraži",
+        "alert": {
+          "claim": {
+            "title": "Potvrda zahtjeva",
+            "description": "Zatražit ćete {amount} WDD. Ovo će se dodati na stanje vašeg novčanika."
+          }
+        },
+        "setup_subtitle": "Postavite svoj osnovni prihod",
+        "activate_loading": "Aktiviranje...",
+        "activate_button": "Aktiviraj osnovni prihod"
+      },
+      "savings": {
+        "title": "Štedni račun",
+        "subtitle": "Zaradite kamatu svake sekunde",
+        "tooltip": "69% godišnja osnovna kamata. Redovito skupljajte i reinvestirajte da postignete skoro 100% godišnji efektivni prinos. Povlačenje u bilo kom trenutku.",
+        "deposit": "Depozit",
+        "withdraw": "Povlačenje",
+        "balance": "Stanje",
+        "amount_deposit": "Iznos depozita",
+        "amount_withdraw": "Iznos za povlačenje",
+        "interest": "Kamate",
+        "collect": "Skupljanje",
+        "alert": {
+          "collect": {
+            "title": "Potvrda skupljanja",
+            "description": "Skupljat ćete {amount} WDD kamata."
+          },
+          "deposit": {
+            "title": "Potvrda depozita",
+            "description": "Deponirat ćete {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Potvrda povlačenja",
+            "description": "Povući ćete {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Tok ažuriran"
         }
       }
-    },
-    "error": {
-      "title": "Nešto je pošlo po krivu",
-      "description": "Došlo je do neočekivane greške. Molimo pokušajte ponovo.",
-      "error_id": "ID greške: {digest}",
-      "try_again": "Pokušaj ponovo"
     }
   },
   "components": {

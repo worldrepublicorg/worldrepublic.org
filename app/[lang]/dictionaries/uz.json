@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Jahon Respublikasi",
+    "earn": "Daromad",
     "menu": "Menyu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Nimadir xato ketdi",
+      "description": "Kutilmagan xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
+      "error_id": "Xato ID: {digest}",
+      "try_again": "Qayta urinib ko'ring"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Asosiy daromad",
+        "savings": "Jamg'arma"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Inson bo'lganingiz uchun pul oling",
+        "subtitle_claim": "Draxmani talab qiling",
+        "tooltip_claim": "Kuniga 1 WDD, 1 WDD bilan cheklanadi. Daromadni oshirish uchun 24 soat ichida qayting.",
+        "claim_button": "Talab qil",
+        "alert": {
+          "claim": {
+            "title": "Talabni tasdiqlang",
+            "description": "Siz {amount} WDD talab qilmoqdasiz. Bu mablag' hamyon balansingizga qo'shiladi."
+          }
+        },
+        "setup_subtitle": "Asosiy daromadni sozlang",
+        "activate_loading": "Faollashtirilmoqda...",
+        "activate_button": "Asosiy daromadni faollashtir"
+      },
+      "savings": {
+        "title": "Jamg'arma hisobi",
+        "subtitle": "Har soniyada foiz oling",
+        "tooltip": "Yiliga 69% bazaviy stavka. To'plangan foizlarni muntazam yig'ib qayta kiritib, 100% ga yaqin samarali daromadga erishing. Istalgan vaqtda yechib oling.",
+        "deposit": "Kiritish",
+        "withdraw": "Yechib olish",
+        "balance": "Balans",
+        "amount_deposit": "Kiritiladigan summa",
+        "amount_withdraw": "Yechib olinadigan summa",
+        "interest": "Foiz",
+        "collect": "Yig'ish",
+        "alert": {
+          "collect": {
+            "title": "Yig'ishni tasdiqlang",
+            "description": "Siz {amount} WDD foiz yig'moqdasiz."
+          },
+          "deposit": {
+            "title": "Kiritishni tasdiqlang",
+            "description": "Siz {amount} WDD kiritmoqdasiz."
+          },
+          "withdraw": {
+            "title": "Yechib olishni tasdiqlang",
+            "description": "Siz {amount} WDD yechib olmoqdasiz."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Oqim yangilandi"
         }
       }
-    },
-    "error": {
-      "title": "Nimadir xato ketdi",
-      "description": "Kutilmagan xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
-      "error_id": "Xato ID: {digest}",
-      "try_again": "Qayta urinib ko'ring"
     }
   },
   "components": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Jamhuri ya Dunia",
+    "earn": "Pata",
     "menu": "Menyu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Kuna kitu kimekwenda vibaya",
+      "description": "Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena.",
+      "error_id": "Kitambulisho cha hitilafu: {digest}",
+      "try_again": "Jaribu tena"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Mapato ya msingi",
+        "savings": "Akiba"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Pata pesa kwa kuwa mtu",
+        "subtitle_claim": "Omba drachma yako",
+        "tooltip_claim": "1 WDD/siku, kikomo cha 1 WDD. Rudi ndani ya masaa 24 ili kuongeza mapato.",
+        "claim_button": "Omba",
+        "alert": {
+          "claim": {
+            "title": "Thibitisha ombi",
+            "description": "Unakaribia kuomba {amount} WDD. Hii itaongezwa kwenye salio la mkoba wako."
+          }
+        },
+        "setup_subtitle": "Sanidi mapato yako ya msingi",
+        "activate_loading": "Inamilikiwa...",
+        "activate_button": "Amilisha mapato ya msingi"
+      },
+      "savings": {
+        "title": "Akaunti ya akiba",
+        "subtitle": "Pata riba kila sekunde",
+        "tooltip": "Kiwango cha msingi cha 69% kwa mwaka. Kusanya na kuwekeza tena mara kwa mara ili kufikia karibu 100% ya faida ya ufanisi. Toa wakati wowote.",
+        "deposit": "Weka",
+        "withdraw": "Toa",
+        "balance": "Salio",
+        "amount_deposit": "Kiasi cha kuweka",
+        "amount_withdraw": "Kiasi cha kutoa",
+        "interest": "Riba",
+        "collect": "Kusanya",
+        "alert": {
+          "collect": {
+            "title": "Thibitisha ukusanyaji",
+            "description": "Unakaribia kukusanya {amount} WDD ya riba."
+          },
+          "deposit": {
+            "title": "Thibitisha amana",
+            "description": "Unakaribia kuweka {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Thibitisha kutoa",
+            "description": "Unakaribia kutoa {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Mtiririko umesasishwa"
         }
       }
-    },
-    "error": {
-      "title": "Kuna kitu kimekwenda vibaya",
-      "description": "Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena.",
-      "error_id": "Kitambulisho cha hitilafu: {digest}",
-      "try_again": "Jaribu tena"
     }
   },
   "components": {

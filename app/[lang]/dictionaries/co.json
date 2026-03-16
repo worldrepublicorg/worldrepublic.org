@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Ripùblica Mundiale",
+    "earn": "Guadagnà",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Qualcosa hè andatu male",
+      "description": "Un errore imprevisto hè accadutu. Per piacè pruvate di novu.",
+      "error_id": "ID di l'errore: {digest}",
+      "try_again": "Prova di novu"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Redditu di basa",
+        "savings": "Risparmi"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Ottene soldi per esse umanu",
+        "subtitle_claim": "Rivendica a to drachma",
+        "tooltip_claim": "1 WDD/ghjornu, limitatu à 1 WDD. Ritorna in 24 ore per massimizà i guadagni.",
+        "claim_button": "Rivendica",
+        "alert": {
+          "claim": {
+            "title": "Cunfirma a rivendicazione",
+            "description": "Stai per rivendicà {amount} WDD. Questu serà aghjuntu à u to saldu portafogliu."
+          }
+        },
+        "setup_subtitle": "Cunfigura u to redditu di basa",
+        "activate_loading": "Attivazione...",
+        "activate_button": "Attiva u redditu di basa"
+      },
+      "savings": {
+        "title": "Contu di risparmi",
+        "subtitle": "Guadagna interessi ogni secunda",
+        "tooltip": "69% tassu annu di basa. Raccogli è reinvesti regolarmente per ottene rendimenti efficaci vicinu à 100% annu. Ritira quandu vogli.",
+        "deposit": "Deposita",
+        "withdraw": "Ritira",
+        "balance": "Saldu",
+        "amount_deposit": "Ammontu da deposità",
+        "amount_withdraw": "Ammontu da ritirà",
+        "interest": "Interessi",
+        "collect": "Raccogli",
+        "alert": {
+          "collect": {
+            "title": "Cunfirma a raccolta",
+            "description": "Stai per raccoglie {amount} WDD in interessi."
+          },
+          "deposit": {
+            "title": "Cunfirma u depositu",
+            "description": "Stai per deposità {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Cunfirma u ritiru",
+            "description": "Stai per ritirà {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Flussu aghjurnatu"
         }
       }
-    },
-    "error": {
-      "title": "Qualcosa hè andatu male",
-      "description": "Un errore imprevisto hè accadutu. Per piacè pruvate di novu.",
-      "error_id": "ID di l'errore: {digest}",
-      "try_again": "Prova di novu"
     }
   },
   "components": {

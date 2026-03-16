@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Dünya Respublikası",
+    "earn": "Qazan",
     "menu": "Menyu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Nəsə xəta baş verdi",
+      "description": "Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
+      "error_id": "Xəta ID: {digest}",
+      "try_again": "Yenidən cəhd et"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Əsas gəlir",
+        "savings": "Yığım"
+      },
+      "basic_income": {
+        "subtitle_unauth": "İnsan olduğun üçün pul al",
+        "subtitle_claim": "Drahmanı tələb et",
+        "tooltip_claim": "Gündə 1 WDD, maksimum 1 WDD. Qazancı artırmaq üçün 24 saat ərzində geri qayıdın.",
+        "claim_button": "Tələb et",
+        "alert": {
+          "claim": {
+            "title": "Tələbini təsdiqlə",
+            "description": "{amount} WDD tələb edəcəksiniz. Bu məbləğ cüzdan balansınıza əlavə ediləcək."
+          }
+        },
+        "setup_subtitle": "Əsas gəliri qur",
+        "activate_loading": "Aktivləşdirilir...",
+        "activate_button": "Əsas gəliri aktivləşdir"
+      },
+      "savings": {
+        "title": "Yığım hesabı",
+        "subtitle": "Hər saniyə faiz qazan",
+        "tooltip": "İllik 69% baza dərəcəsi. Yığdığını mütəmadi toplayıb yenidən yatıraraq 100%-ə yaxın effektiv gəlir əldə et. İstənilən vaxt çıxar.",
+        "deposit": "Yatır",
+        "withdraw": "Çıxar",
+        "balance": "Balans",
+        "amount_deposit": "Yatırılacaq məbləğ",
+        "amount_withdraw": "Çıxarılacaq məbləğ",
+        "interest": "Faiz",
+        "collect": "Topla",
+        "alert": {
+          "collect": {
+            "title": "Toplanmanı təsdiqlə",
+            "description": "{amount} WDD faiz toplayacaqsınız."
+          },
+          "deposit": {
+            "title": "Yatırmanı təsdiqlə",
+            "description": "{amount} WDD yatıracaqsınız."
+          },
+          "withdraw": {
+            "title": "Çıxarmanı təsdiqlə",
+            "description": "{amount} WDD çıxaracaqsınız."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Axın yeniləndi"
         }
       }
-    },
-    "error": {
-      "title": "Nəsə xəta baş verdi",
-      "description": "Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
-      "error_id": "Xəta ID: {digest}",
-      "try_again": "Yenidən cəhd et"
     }
   },
   "components": {

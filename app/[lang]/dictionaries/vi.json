@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Cộng hòa Thế giới",
+    "earn": "Kiếm tiền",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Đã xảy ra lỗi",
+      "description": "Đã xảy ra lỗi không mong đợi. Vui lòng thử lại.",
+      "error_id": "Mã lỗi: {digest}",
+      "try_again": "Thử lại"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Thu nhập cơ bản",
+        "savings": "Tiết kiệm"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Nhận tiền vì là con người",
+        "subtitle_claim": "Nhận drachma của bạn",
+        "tooltip_claim": "1 WDD/ngày, giới hạn 1 WDD. Quay lại trong vòng 24 giờ để tối đa hóa thu nhập.",
+        "claim_button": "Nhận",
+        "alert": {
+          "claim": {
+            "title": "Xác nhận nhận",
+            "description": "Bạn sắp nhận {amount} WDD. Số tiền này sẽ được thêm vào số dư ví của bạn."
+          }
+        },
+        "setup_subtitle": "Thiết lập thu nhập cơ bản",
+        "activate_loading": "Đang kích hoạt...",
+        "activate_button": "Kích hoạt thu nhập cơ bản"
+      },
+      "savings": {
+        "title": "Tài khoản tiết kiệm",
+        "subtitle": "Kiếm lãi mỗi giây",
+        "tooltip": "Lãi suất cơ bản 69% mỗi năm. Thu thập và tái đầu tư thường xuyên để đạt hiệu suất gần 100%. Rút tiền bất cứ lúc nào.",
+        "deposit": "Gửi tiền",
+        "withdraw": "Rút tiền",
+        "balance": "Số dư",
+        "amount_deposit": "Số tiền gửi",
+        "amount_withdraw": "Số tiền rút",
+        "interest": "Lãi suất",
+        "collect": "Thu lãi",
+        "alert": {
+          "collect": {
+            "title": "Xác nhận thu lãi",
+            "description": "Bạn sắp thu {amount} WDD tiền lãi."
+          },
+          "deposit": {
+            "title": "Xác nhận gửi tiền",
+            "description": "Bạn sắp gửi {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Xác nhận rút tiền",
+            "description": "Bạn sắp rút {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Luồng đã cập nhật"
         }
       }
-    },
-    "error": {
-      "title": "Đã xảy ra lỗi",
-      "description": "Đã xảy ra lỗi không mong đợi. Vui lòng thử lại.",
-      "error_id": "Mã lỗi: {digest}",
-      "try_again": "Thử lại"
     }
   },
   "components": {

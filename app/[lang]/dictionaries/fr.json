@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "République mondiale",
+    "earn": "Gagner",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Une erreur est survenue",
+      "description": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+      "error_id": "ID de l'erreur : {digest}",
+      "try_again": "Réessayer"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Revenu de base",
+        "savings": "Épargne"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Recevez de l'argent pour être humain",
+        "subtitle_claim": "Réclamez votre drachme",
+        "tooltip_claim": "1 WDD/jour, plafonné à 1 WDD. Revenez dans les 24 heures pour maximiser vos gains.",
+        "claim_button": "Réclamer",
+        "alert": {
+          "claim": {
+            "title": "Confirmer la réclamation",
+            "description": "Vous êtes sur le point de réclamer {amount} WDD. Ce montant sera ajouté à votre solde de portefeuille."
+          }
+        },
+        "setup_subtitle": "Configurez votre revenu de base",
+        "activate_loading": "Activation...",
+        "activate_button": "Activer le revenu de base"
+      },
+      "savings": {
+        "title": "Compte d'épargne",
+        "subtitle": "Gagnez des intérêts chaque seconde",
+        "tooltip": "Taux de base annuel de 69%. Collectez et réinvestissez régulièrement pour atteindre des rendements effectifs proches de 100%. Retirez à tout moment.",
+        "deposit": "Déposer",
+        "withdraw": "Retirer",
+        "balance": "Solde",
+        "amount_deposit": "Montant à déposer",
+        "amount_withdraw": "Montant à retirer",
+        "interest": "Intérêts",
+        "collect": "Collecter",
+        "alert": {
+          "collect": {
+            "title": "Confirmer la collecte",
+            "description": "Vous êtes sur le point de collecter {amount} WDD d'intérêts."
+          },
+          "deposit": {
+            "title": "Confirmer le dépôt",
+            "description": "Vous êtes sur le point de déposer {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Confirmer le retrait",
+            "description": "Vous êtes sur le point de retirer {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Flux mis à jour"
         }
       }
-    },
-    "error": {
-      "title": "Une erreur est survenue",
-      "description": "Une erreur inattendue s'est produite. Veuillez réessayer.",
-      "error_id": "ID de l'erreur : {digest}",
-      "try_again": "Réessayer"
     }
   },
   "components": {

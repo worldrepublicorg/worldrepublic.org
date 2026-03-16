@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "세계 공화국",
+    "earn": "적립",
     "menu": "메뉴"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "문제가 발생했습니다",
+      "description": "예기치 않은 오류가 발생했습니다. 다시 시도해 주세요.",
+      "error_id": "오류 ID: {digest}",
+      "try_again": "다시 시도"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "기본소득",
+        "savings": "저축"
+      },
+      "basic_income": {
+        "subtitle_unauth": "인간이기에 받는 소득",
+        "subtitle_claim": "드라크마를 수령하세요",
+        "tooltip_claim": "하루 1 WDD, 최대 1 WDD. 수익을 극대화하려면 24시간 내에 다시 방문하세요.",
+        "claim_button": "수령",
+        "alert": {
+          "claim": {
+            "title": "수령 확인",
+            "description": "{amount} WDD를 수령하려고 합니다. 금액은 지갑 잔액에 추가됩니다."
+          }
+        },
+        "setup_subtitle": "기본소득 설정",
+        "activate_loading": "활성화 중...",
+        "activate_button": "기본소득 활성화"
+      },
+      "savings": {
+        "title": "저축 계좌",
+        "subtitle": "매초 이자가 쌓입니다",
+        "tooltip": "연 69% 기준 금리. 정기적으로 이자를 수령하고 재투자하여 실질 수익률을 100%에 가깝게 달성하세요. 언제든 출금 가능.",
+        "deposit": "예치",
+        "withdraw": "출금",
+        "balance": "잔액",
+        "amount_deposit": "예치 금액",
+        "amount_withdraw": "출금 금액",
+        "interest": "이자",
+        "collect": "수령",
+        "alert": {
+          "collect": {
+            "title": "수령 확인",
+            "description": "이자로 {amount} WDD를 수령하려고 합니다."
+          },
+          "deposit": {
+            "title": "예치 확인",
+            "description": "{amount} WDD를 예치하려고 합니다."
+          },
+          "withdraw": {
+            "title": "출금 확인",
+            "description": "{amount} WDD를 출금하려고 합니다."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "스트림 업데이트됨"
         }
       }
-    },
-    "error": {
-      "title": "문제가 발생했습니다",
-      "description": "예기치 않은 오류가 발생했습니다. 다시 시도해 주세요.",
-      "error_id": "오류 ID: {digest}",
-      "try_again": "다시 시도"
     }
   },
   "components": {

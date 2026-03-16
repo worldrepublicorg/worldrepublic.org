@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Svetovna republika",
+    "earn": "Zasluži",
     "menu": "Meni"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Nekaj je šlo narobe",
+      "description": "Prišlo je do nepričakovane napake. Prosimo, poskusite znova.",
+      "error_id": "ID napake: {digest}",
+      "try_again": "Poskusi znova"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Osnovni dohodek",
+        "savings": "Varčevanje"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Prejmi denar za to, da si človek",
+        "subtitle_claim": "Zahtevaj svojo drahmo",
+        "tooltip_claim": "1 WDD/dan, omejeno na 1 WDD. Vrnite se v 24 urah za maksimiziranje zaslužka.",
+        "claim_button": "Zahtevaj",
+        "alert": {
+          "claim": {
+            "title": "Potrdi zahtevo",
+            "description": "O zahtevanju {amount} WDD. To bo dodano v vaše stanje denarnice."
+          }
+        },
+        "setup_subtitle": "Nastavi svoj osnovni dohodek",
+        "activate_loading": "Aktiviranje...",
+        "activate_button": "Aktiviraj osnovni dohodek"
+      },
+      "savings": {
+        "title": "Varčevalni račun",
+        "subtitle": "Zasluži obresti vsako sekundo",
+        "tooltip": "69% letna osnovna stopnja. Zbirajte in ponovno vlagajte redno za dosego blizu 100% efektivnih donosov. Dvignite kadarkoli.",
+        "deposit": "Depozit",
+        "withdraw": "Dvigni",
+        "balance": "Stanje",
+        "amount_deposit": "Znesek za depozit",
+        "amount_withdraw": "Znesek za dvig",
+        "interest": "Obresti",
+        "collect": "Zberi",
+        "alert": {
+          "collect": {
+            "title": "Potrdi zbiranje",
+            "description": "O zbiranju {amount} WDD obresti."
+          },
+          "deposit": {
+            "title": "Potrdi depozit",
+            "description": "O depozitu {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Potrdi dvig",
+            "description": "O dvigu {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Tok posodobljen"
         }
       }
-    },
-    "error": {
-      "title": "Nekaj je šlo narobe",
-      "description": "Prišlo je do nepričakovane napake. Prosimo, poskusite znova.",
-      "error_id": "ID napake: {digest}",
-      "try_again": "Poskusi znova"
     }
   },
   "components": {

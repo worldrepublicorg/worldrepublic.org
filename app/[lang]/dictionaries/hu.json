@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Világköztársaság",
+    "earn": "Keresés",
     "menu": "Menü"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Valami hiba történt",
+      "description": "Váratlan hiba lépett fel. Kérjük, próbáld újra.",
+      "error_id": "Hiba azonosító: {digest}",
+      "try_again": "Próbáld újra"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Alapjövedelem",
+        "savings": "Megtakarítás"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Kapjon pénzt azért, mert ember",
+        "subtitle_claim": "Igényelje a drachmáját",
+        "tooltip_claim": "1 WDD/nap, maximum 1 WDD. Térjen vissza 24 órán belül a bevétel maximalizálásához.",
+        "claim_button": "Igényelés",
+        "alert": {
+          "claim": {
+            "title": "Igényelés megerősítése",
+            "description": "Ön {amount} WDD-t fog igényelni. Ez hozzáadódik a tárcaegyenlegéhez."
+          }
+        },
+        "setup_subtitle": "Állítsa be az alapjövedelmét",
+        "activate_loading": "Aktiválás...",
+        "activate_button": "Alapjövedelem aktiválása"
+      },
+      "savings": {
+        "title": "Megtakarítási számla",
+        "subtitle": "Keressen kamatot minden másodpercben",
+        "tooltip": "69% éves alapkamat. Gyűjtsön és újrabefektessen rendszeresen, hogy közel 100% éves hozamot érjen el. Bármikor kivonható.",
+        "deposit": "Betét",
+        "withdraw": "Kivonás",
+        "balance": "Egyenleg",
+        "amount_deposit": "Betéti összeg",
+        "amount_withdraw": "Kivonandó összeg",
+        "interest": "Kamat",
+        "collect": "Gyűjtés",
+        "alert": {
+          "collect": {
+            "title": "Gyűjtés megerősítése",
+            "description": "Ön {amount} WDD kamatot fog gyűjteni."
+          },
+          "deposit": {
+            "title": "Betét megerősítése",
+            "description": "Ön {amount} WDD-t fog betenni."
+          },
+          "withdraw": {
+            "title": "Kivonás megerősítése",
+            "description": "Ön {amount} WDD-t fog kivonni."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stream frissítve"
         }
       }
-    },
-    "error": {
-      "title": "Valami hiba történt",
-      "description": "Váratlan hiba lépett fel. Kérjük, próbáld újra.",
-      "error_id": "Hiba azonosító: {digest}",
-      "try_again": "Próbáld újra"
     }
   },
   "components": {

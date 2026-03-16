@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Weltrepublik",
+    "earn": "Verdienen",
     "menu": "Menü"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Etwas ist schiefgelaufen",
+      "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "error_id": "Fehler-ID: {digest}",
+      "try_again": "Erneut versuchen"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Grundeinkommen",
+        "savings": "Sparen"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Geld erhalten, weil du Mensch bist",
+        "subtitle_claim": "Fordere deine Drachmen an",
+        "tooltip_claim": "1 WDD/Tag, begrenzt auf 1 WDD. Kehre innerhalb von 24 Stunden zurück, um Erträge zu maximieren.",
+        "claim_button": "Anfordern",
+        "alert": {
+          "claim": {
+            "title": "Anforderung bestätigen",
+            "description": "Du bist dabei, {amount} WDD anzufordern. Der Betrag wird deinem Geldbörse-Guthaben hinzugefügt."
+          }
+        },
+        "setup_subtitle": "Richte dein Grundeinkommen ein",
+        "activate_loading": "Aktiviere...",
+        "activate_button": "Grundeinkommen aktivieren"
+      },
+      "savings": {
+        "title": "Sparkonto",
+        "subtitle": "Sekündlich Zinsen verdienen",
+        "tooltip": "69% jährlicher Basiszins. Durch regelmäßiges Einsammeln und Reinvestieren erreichst du nahezu 100% effektive Rendite. Auszahlung jederzeit möglich.",
+        "deposit": "Einzahlen",
+        "withdraw": "Abheben",
+        "balance": "Kontostand",
+        "amount_deposit": "Einzahlungsbetrag",
+        "amount_withdraw": "Abhebungsbetrag",
+        "interest": "Zinsen",
+        "collect": "Einsammeln",
+        "alert": {
+          "collect": {
+            "title": "Einsammeln bestätigen",
+            "description": "Du bist dabei, {amount} WDD an Zinsen einzusammeln."
+          },
+          "deposit": {
+            "title": "Einzahlung bestätigen",
+            "description": "Du bist dabei, {amount} WDD einzuzahlen."
+          },
+          "withdraw": {
+            "title": "Abhebung bestätigen",
+            "description": "Du bist dabei, {amount} WDD abzuheben."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stream aktualisiert"
         }
       }
-    },
-    "error": {
-      "title": "Etwas ist schiefgelaufen",
-      "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
-      "error_id": "Fehler-ID: {digest}",
-      "try_again": "Erneut versuchen"
     }
   },
   "components": {

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "વિશ્વ ગણરાજ્ય",
+    "earn": "કમાવો",
     "menu": "મેનુ"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "કંઈક ખોટું થયું",
+      "description": "એક અણધારી ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+      "error_id": "ભૂલ ID: {digest}",
+      "try_again": "ફરી પ્રયાસ કરો"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "મૂળભૂત આવક",
+        "savings": "બચત"
+      },
+      "basic_income": {
+        "subtitle_unauth": "માનવ હોવાના બદલામાં પૈસા મેળવો",
+        "subtitle_claim": "તમારો ડ્રક્મા ક્લેમ કરો",
+        "tooltip_claim": "દિવસે 1 WDD, 1 WDD પર કેપ. કમાણી વધારવા માટે 24 કલાકમાં પાછા આવો.",
+        "claim_button": "ક્લેમ કરો",
+        "alert": {
+          "claim": {
+            "title": "ક્લેમની પુષ્ટિ કરો",
+            "description": "તમે {amount} WDD ક્લેમ કરવા જઈ રહ્યા છો. આ તમારા વૉલેટ બેલેન્સમાં ઉમેરાશે."
+          }
+        },
+        "setup_subtitle": "તમારી મૂળભૂત આવક સેટ કરો",
+        "activate_loading": "સક્રિય કરી રહ્યા છીએ...",
+        "activate_button": "મૂળભૂત આવક સક્રિય કરો"
+      },
+      "savings": {
+        "title": "બચત ખાતું",
+        "subtitle": "દરેક સેકન્ડે વ્યાજ કમાવો",
+        "tooltip": "વાર્ષિક 69% આધાર દર. નિયમિત રીતે એકત્ર કરીને અને પુનઃનિવેશ કરીને 100% નજીક અસરકારક પરત મેળવો. ક્યારેય પણ ઉપાડો.",
+        "deposit": "જમા કરો",
+        "withdraw": "ઉપાડો",
+        "balance": "બેલેન્સ",
+        "amount_deposit": "જમા કરવાની રકમ",
+        "amount_withdraw": "ઉપાડવાની રકમ",
+        "interest": "વ્યાજ",
+        "collect": "એકત્ર કરો",
+        "alert": {
+          "collect": {
+            "title": "એકત્ર કરવાની પુષ્ટિ કરો",
+            "description": "તમે {amount} WDD વ્યાજ તરીકે એકત્ર કરવા જઈ રહ્યા છો."
+          },
+          "deposit": {
+            "title": "જમાની પુષ્ટિ કરો",
+            "description": "તમે {amount} WDD જમા કરવા જઈ રહ્યા છો."
+          },
+          "withdraw": {
+            "title": "ઉપાડની પુષ્ટિ કરો",
+            "description": "તમે {amount} WDD ઉપાડવા જઈ રહ્યા છો."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "સ્ટ્રીમ અપડેટ કર્યું"
         }
       }
-    },
-    "error": {
-      "title": "કંઈક ખોટું થયું",
-      "description": "એક અણધારી ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
-      "error_id": "ભૂલ ID: {digest}",
-      "try_again": "ફરી પ્રયાસ કરો"
     }
   },
   "components": {

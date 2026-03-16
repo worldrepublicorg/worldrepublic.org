@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "República Mundial",
+    "earn": "Ganar",
     "menu": "Menú"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Algo salió mal",
+      "description": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+      "error_id": "ID del error: {digest}",
+      "try_again": "Intentar de nuevo"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Renta básica",
+        "savings": "Ahorros"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Obtén dinero por ser humano",
+        "subtitle_claim": "Reclama tu dracma",
+        "tooltip_claim": "1 WDD/día, con tope de 1 WDD. Vuelve dentro de 24 horas para maximizar tus ganancias.",
+        "claim_button": "Reclamar",
+        "alert": {
+          "claim": {
+            "title": "Confirmar reclamo",
+            "description": "Estás a punto de reclamar {amount} WDD. Se añadirá a tu saldo de billetera."
+          }
+        },
+        "setup_subtitle": "Configura tu renta básica",
+        "activate_loading": "Activando...",
+        "activate_button": "Activar renta básica"
+      },
+      "savings": {
+        "title": "Cuenta de ahorros",
+        "subtitle": "Gana intereses cada segundo",
+        "tooltip": "Tasa base anual del 69%. Cobra y reinvierte regularmente para acercarte a un rendimiento efectivo del 100%. Retira en cualquier momento.",
+        "deposit": "Depositar",
+        "withdraw": "Retirar",
+        "balance": "Saldo",
+        "amount_deposit": "Cantidad a depositar",
+        "amount_withdraw": "Cantidad a retirar",
+        "interest": "Interés",
+        "collect": "Cobrar",
+        "alert": {
+          "collect": {
+            "title": "Confirmar cobro",
+            "description": "Estás a punto de cobrar {amount} WDD en intereses."
+          },
+          "deposit": {
+            "title": "Confirmar depósito",
+            "description": "Estás a punto de depositar {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Confirmar retiro",
+            "description": "Estás a punto de retirar {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Flujo actualizado"
         }
       }
-    },
-    "error": {
-      "title": "Algo salió mal",
-      "description": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
-      "error_id": "ID del error: {digest}",
-      "try_again": "Intentar de nuevo"
     }
   },
   "components": {

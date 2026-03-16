@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Ìjọba Àpapọ̀ Ayé",
+    "earn": "Gba owo",
     "menu": "Akojọ"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Nkan kan ti ṣàṣìṣe",
+      "description": "Àṣìṣe tí a kò retí ti ṣẹlẹ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
+      "error_id": "ID àṣìṣe: {digest}",
+      "try_again": "Gbìyànjú lẹ́ẹ̀kan sí i"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Owo ibẹrẹ",
+        "savings": "Ifipamọ"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Gba owo nitori pe o jẹ eniyan",
+        "subtitle_claim": "Gba drachma rẹ",
+        "tooltip_claim": "1 WDD/ọjọ, ti a fi idiwọ si 1 WDD. Pada laarin awọn wakati 24 lati pọ owo ti o gba.",
+        "claim_button": "Gba",
+        "alert": {
+          "claim": {
+            "title": "Jẹrisi gbigba",
+            "description": "O nlo lati gba {amount} WDD. Eyi yoo kun si iye owo rẹ."
+          }
+        },
+        "setup_subtitle": "Ṣeto owo ibẹrẹ rẹ",
+        "activate_loading": "Nṣiṣẹ...",
+        "activate_button": "Mu owo ibẹrẹ ṣiṣẹ"
+      },
+      "savings": {
+        "title": "Iroyin ifipamọ",
+        "subtitle": "Gba owo-ori ni gbogbo aaya",
+        "tooltip": "69% owo-ori ọdọọdun. Gba ati tun ṣe ifowopamọ ni akoko lati gba ibẹrẹ 100% ti o dara. Ya jade nigbakugba.",
+        "deposit": "Fi pamọ",
+        "withdraw": "Ya jade",
+        "balance": "Iye owo",
+        "amount_deposit": "Iye lati fi pamọ",
+        "amount_withdraw": "Iye lati ya jade",
+        "interest": "Owo-ori",
+        "collect": "Gba",
+        "alert": {
+          "collect": {
+            "title": "Jẹrisi gbigba",
+            "description": "O nlo lati gba {amount} WDD ni owo-ori."
+          },
+          "deposit": {
+            "title": "Jẹrisi ifipamọ",
+            "description": "O nlo lati fi {amount} WDD pamọ."
+          },
+          "withdraw": {
+            "title": "Jẹrisi yiyọ jade",
+            "description": "O nlo lati ya {amount} WDD jade."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Imudojuiwọn ṣiṣan"
         }
       }
-    },
-    "error": {
-      "title": "Nkan kan ti ṣàṣìṣe",
-      "description": "Àṣìṣe tí a kò retí ti ṣẹlẹ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
-      "error_id": "ID àṣìṣe: {digest}",
-      "try_again": "Gbìyànjú lẹ́ẹ̀kan sí i"
     }
   },
   "components": {

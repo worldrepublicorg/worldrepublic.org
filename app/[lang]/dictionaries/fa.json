@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "جمهوری جهانی",
+    "earn": "درآمد",
     "menu": "منو"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "مشکلی پیش آمد",
+      "description": "یک خطای غیرمنتظره رخ داد. لطفاً دوباره تلاش کنید.",
+      "error_id": "شناسه خطا: {digest}",
+      "try_again": "تلاش مجدد"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "درآمد پایه",
+        "savings": "پس‌انداز"
+      },
+      "basic_income": {
+        "subtitle_unauth": "برای انسان بودن پول دریافت کنید",
+        "subtitle_claim": "دراخمای خود را دریافت کنید",
+        "tooltip_claim": "۱ WDD در روز، حداکثر ۱ WDD. برای حداکثر درآمد ظرف ۲۴ ساعت بازگردید.",
+        "claim_button": "دریافت",
+        "alert": {
+          "claim": {
+            "title": "تأیید دریافت",
+            "description": "شما در حال دریافت {amount} WDD هستید. این مبلغ به موجودی کیف پول شما اضافه خواهد شد."
+          }
+        },
+        "setup_subtitle": "درآمد پایه خود را تنظیم کنید",
+        "activate_loading": "در حال فعال‌سازی...",
+        "activate_button": "فعال‌سازی درآمد پایه"
+      },
+      "savings": {
+        "title": "حساب پس‌انداز",
+        "subtitle": "هر ثانیه سود دریافت کنید",
+        "tooltip": "نرخ پایه سالانه ۶۹٪. به طور منظم جمع‌آوری و سرمایه‌گذاری مجدد کنید تا به بازده مؤثر نزدیک به ۱۰۰٪ دست یابید. هر زمان برداشت کنید.",
+        "deposit": "واریز",
+        "withdraw": "برداشت",
+        "balance": "موجودی",
+        "amount_deposit": "مبلغ واریز",
+        "amount_withdraw": "مبلغ برداشت",
+        "interest": "سود",
+        "collect": "جمع‌آوری",
+        "alert": {
+          "collect": {
+            "title": "تأیید جمع‌آوری",
+            "description": "شما در حال جمع‌آوری {amount} WDD سود هستید."
+          },
+          "deposit": {
+            "title": "تأیید واریز",
+            "description": "شما در حال واریز {amount} WDD هستید."
+          },
+          "withdraw": {
+            "title": "تأیید برداشت",
+            "description": "شما در حال برداشت {amount} WDD هستید."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "جریان به‌روزرسانی شد"
         }
       }
-    },
-    "error": {
-      "title": "مشکلی پیش آمد",
-      "description": "یک خطای غیرمنتظره رخ داد. لطفاً دوباره تلاش کنید.",
-      "error_id": "شناسه خطا: {digest}",
-      "try_again": "تلاش مجدد"
     }
   },
   "components": {

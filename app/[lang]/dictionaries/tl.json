@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Republika ng Daigdig",
+    "earn": "Kumita",
     "menu": "Menu"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "May nangyaring mali",
+      "description": "Naganap ang isang hindi inaasahang error. Pakisubukang muli.",
+      "error_id": "Error ID: {digest}",
+      "try_again": "Subukang muli"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Pangunahing kita",
+        "savings": "Pagtitipid"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Kumuha ng pera dahil ikaw ay tao",
+        "subtitle_claim": "Kunin ang inyong drachma",
+        "tooltip_claim": "1 WDD/araw, limitado sa 1 WDD. Bumalik sa loob ng 24 oras para mapakinabangan ang kita.",
+        "claim_button": "Kunin",
+        "alert": {
+          "claim": {
+            "title": "Kumpirmahin ang pag-claim",
+            "description": "Kukunin mo ang {amount} WDD. Ito ay idadagdag sa balanse ng inyong wallet."
+          }
+        },
+        "setup_subtitle": "I-setup ang inyong pangunahing kita",
+        "activate_loading": "Ina-activate...",
+        "activate_button": "I-activate ang pangunahing kita"
+      },
+      "savings": {
+        "title": "Savings account",
+        "subtitle": "Kumita ng interes bawat segundo",
+        "tooltip": "69% taunang base rate. Mag-collect at mag-reinvest nang regular para makamit ang halos 100% effective returns. Mag-withdraw kahit kailan.",
+        "deposit": "Mag-deposit",
+        "withdraw": "Mag-withdraw",
+        "balance": "Balanse",
+        "amount_deposit": "Halaga para i-deposit",
+        "amount_withdraw": "Halaga para i-withdraw",
+        "interest": "Interes",
+        "collect": "Mag-collect",
+        "alert": {
+          "collect": {
+            "title": "Kumpirmahin ang pag-collect",
+            "description": "Mag-collect ka ng {amount} WDD na interes."
+          },
+          "deposit": {
+            "title": "Kumpirmahin ang pag-deposit",
+            "description": "Mag-deposit ka ng {amount} WDD."
+          },
+          "withdraw": {
+            "title": "Kumpirmahin ang pag-withdraw",
+            "description": "Mag-withdraw ka ng {amount} WDD."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Na-update ang stream"
         }
       }
-    },
-    "error": {
-      "title": "May nangyaring mali",
-      "description": "Naganap ang isang hindi inaasahang error. Pakisubukang muli.",
-      "error_id": "Error ID: {digest}",
-      "try_again": "Subukang muli"
     }
   },
   "components": {

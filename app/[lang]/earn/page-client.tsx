@@ -77,18 +77,27 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar title="Earn" endAdornment={<MenuLink lang={lang} />} />
+      <TopBar
+        title={dictionary.nav.earn}
+        endAdornment={<MenuLink lang={lang} />}
+      />
 
       <TabPills
         activeTab={activeTab}
         lang={lang}
         basePath={`/${lang}/earn`}
-        tabs={[{ key: "basic_income", label: "Basic income" }]}
+        tabs={[
+          {
+            key: "basic_income",
+            label: dictionary.pages.earn.tabs.basic_income,
+          },
+        ]}
       />
 
       <main className="flex grow flex-col">
         {activeTab === "basic_income" && (
           <BasicIncomeSection
+            dictionary={dictionary}
             isAuthenticated={isAuthenticated}
             basicIncomeActivatedAt={
               profileData?.basicIncomeActivatedAt ?? null

@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "የዓለም ሪፓብሊክ",
+    "earn": "መገኘት",
     "menu": "ሜኑ"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "የሆነ ስህተት ተከስቷል",
+      "description": "ያልተጠበቀ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።",
+      "error_id": "የስህተት መለያ: {digest}",
+      "try_again": "እንደገና ሞክር"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "መሰረታዊ ገቢ",
+        "savings": "መቆጠብ"
+      },
+      "basic_income": {
+        "subtitle_unauth": "ሰው ስለሆኑ ገንዘብ ያግኙ",
+        "subtitle_claim": "የእርስዎን ድራክማ ይጠይቁ",
+        "tooltip_claim": "1 WDD/ቀን፣ ከፍተኛ 1 WDD። ገቢዎን ለማሳደግ በ24 ሰዓት ውስጥ ይመለሱ።",
+        "claim_button": "መጠየቅ",
+        "alert": {
+          "claim": {
+            "title": "መጠየቅ ማረጋገጥ",
+            "description": "እርስዎ {amount} WDD ይጠይቃሉ። ይህ ወደ የእርስዎ የባህር ዳር ሂሳብ ይጨመራል።"
+          }
+        },
+        "setup_subtitle": "መሰረታዊ ገቢዎን ያዋቅሩ",
+        "activate_loading": "እየተገበረ ነው...",
+        "activate_button": "መሰረታዊ ገቢ ያግብሩ"
+      },
+      "savings": {
+        "title": "የመቆጠቢያ ሂሳብ",
+        "subtitle": "በእያንዳንዱ ሰከንድ ወለድ ያግኙ",
+        "tooltip": "69% ዓመታዊ መሰረታዊ ወለድ። በየጊዜው ይሰብስቡ እና እንደገና ይወድቁ በዚህም ከ100% ቅርብ ዓመታዊ ውጤታማ ምላሽ ያገኛሉ። በማንኛውም ጊዜ ማውጣት ይቻላል።",
+        "deposit": "መዋስ",
+        "withdraw": "ማውጣት",
+        "balance": "ሂሳብ",
+        "amount_deposit": "የመዋሻ መጠን",
+        "amount_withdraw": "የማውጣት መጠን",
+        "interest": "ወለድ",
+        "collect": "ማሰብስብ",
+        "alert": {
+          "collect": {
+            "title": "ማሰብስብ ማረጋገጥ",
+            "description": "እርስዎ {amount} WDD ወለድ ይሰብስባሉ።"
+          },
+          "deposit": {
+            "title": "መዋስ ማረጋገጥ",
+            "description": "እርስዎ {amount} WDD ይዋሳሉ።"
+          },
+          "withdraw": {
+            "title": "ማውጣት ማረጋገጥ",
+            "description": "እርስዎ {amount} WDD ይወጣሉ።"
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "ዥረት ተዘumenaል"
         }
       }
-    },
-    "error": {
-      "title": "የሆነ ስህተት ተከስቷል",
-      "description": "ያልተጠበቀ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።",
-      "error_id": "የስህተት መለያ: {digest}",
-      "try_again": "እንደገና ሞክር"
     }
   },
   "components": {

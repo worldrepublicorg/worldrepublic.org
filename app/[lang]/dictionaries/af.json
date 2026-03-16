@@ -1,6 +1,7 @@
 {
   "nav": {
     "world_republic": "Wêreldrepubliek",
+    "earn": "Verdien",
     "menu": "Spyskaart"
   },
   "pages": {
@@ -122,6 +123,59 @@
         }
       }
     },
+    "error": {
+      "title": "Iets het fout gegaan",
+      "description": "'n Onverwagte fout het voorgekom. Probeer asseblief weer.",
+      "error_id": "Fout-ID: {digest}",
+      "try_again": "Probeer weer"
+    },
+    "earn": {
+      "tabs": {
+        "basic_income": "Basiese inkomste",
+        "savings": "Spaarrekening"
+      },
+      "basic_income": {
+        "subtitle_unauth": "Kry geld omdat jy mens is",
+        "subtitle_claim": "Eis jou drachma op",
+        "tooltip_claim": "1 WDD/dag, beperk tot 1 WDD. Keer binne 24 uur terug om verdienste te maksimeer.",
+        "claim_button": "Eis op",
+        "alert": {
+          "claim": {
+            "title": "Bevestig eis",
+            "description": "Jy is op die punt om {amount} WDD op te eis. Dit sal by jou beursiebalans gevoeg word."
+          }
+        },
+        "setup_subtitle": "Stel jou basiese inkomste op",
+        "activate_loading": "Aktiveer...",
+        "activate_button": "Aktiveer basiese inkomste"
+      },
+      "savings": {
+        "title": "Spaarrekening",
+        "subtitle": "Verdien rente elke sekonde",
+        "tooltip": "69% jaarlikse basiskoers. Versamel en herbeleeg gereeld om naby aan 100% effektiewe opbrengste te behaal. Onttrek enige tyd.",
+        "deposit": "Deponeer",
+        "withdraw": "Onttrek",
+        "balance": "Balans",
+        "amount_deposit": "Bedrag om te deponeer",
+        "amount_withdraw": "Bedrag om te onttrek",
+        "interest": "Rente",
+        "collect": "Versamel",
+        "alert": {
+          "collect": {
+            "title": "Bevestig versameling",
+            "description": "Jy is op die punt om {amount} WDD in rente te versamel."
+          },
+          "deposit": {
+            "title": "Bevestig deposito",
+            "description": "Jy is op die punt om {amount} WDD te deponeer."
+          },
+          "withdraw": {
+            "title": "Bevestig onttrekking",
+            "description": "Jy is op die punt om {amount} WDD te onttrek."
+          }
+        }
+      }
+    },
     "menu": {
       "sections": {
         "account": {
@@ -213,12 +267,6 @@
           "stream_updated": "Stroom opgedateer"
         }
       }
-    },
-    "error": {
-      "title": "Iets het fout gegaan",
-      "description": "'n Onverwagte fout het voorgekom. Probeer asseblief weer.",
-      "error_id": "Fout-ID: {digest}",
-      "try_again": "Probeer weer"
     }
   },
   "components": {
