@@ -115,7 +115,6 @@ export default function AccountPageClient({
   const userUuid = data?.profileData?.userUuid ?? null;
   const linkedProviders = data?.linkedProviders ?? null;
   const googleLinked = linkedProviders?.hasGoogle ?? false;
-  const googleLinkedEmail = linkedProviders?.googleEmail ?? null;
   const passkeyCount = linkedProviders?.passkeyCount ?? 0;
 
   // State for form validation
