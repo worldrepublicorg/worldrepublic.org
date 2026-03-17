@@ -16,7 +16,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   PiCaretLeft,
   PiLinkSimple,
@@ -68,12 +68,13 @@ export default function AccountPageClient({
     ReturnType<typeof getWalletAuthAndData>
   > | null>(null);
 
+  const hasHandledLink = useRef(false);
+
   useEffect(() => {
     const link = searchParams.get("link");
     const error = searchParams.get("error");
-    if (link !== "google") {
-      return;
-    }
+    if (link !== "google" || hasHandledLink.current) return;
+    hasHandledLink.current = true;
 
     if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
       toast.error({
