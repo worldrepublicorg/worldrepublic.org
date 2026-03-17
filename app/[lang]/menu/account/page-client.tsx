@@ -448,9 +448,12 @@ export default function AccountPageClient({
                     label="Passkeys"
                     description={`${passkeyCount} linked`}
                     endAdornment={
-                      <div className="flex items-center gap-1 text-gray-500">
-                        <PiPlus className="size-4" />
-                        <span>{isAddingPasskey ? "Adding..." : "Add"}</span>
+                      <div className="flex items-center text-gray-500 text-[15px]">
+                        {isAddingPasskey ? (
+                          <span>Adding...</span>
+                        ) : (
+                          <PiPlus className="size-4" />
+                        )}
                       </div>
                     }
                   />
