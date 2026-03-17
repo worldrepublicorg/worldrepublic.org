@@ -19,6 +19,7 @@ import { signIn } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import {
   PiCaretLeft,
+  PiCircleNotch,
   PiLinkSimple,
   PiPlus,
   PiPencilSimple,
@@ -26,7 +27,6 @@ import {
   PiShareNetwork,
   PiTrash,
   PiTrashFill,
-  PiCircleNotch,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
@@ -331,7 +331,7 @@ export default function AccountPageClient({
           title={dictionary.pages.menu.sections.account.account_info}
           startAdornment={
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push(`/${lang}/menu`)}
               className="flex size-10 items-center justify-center rounded-full bg-gray-100"
             >
               <PiCaretLeft className="size-4 text-gray-900" />
@@ -344,7 +344,7 @@ export default function AccountPageClient({
             title={dictionary.pages.menu.sections.account.account_info}
             startAdornment={
               <button
-                onClick={() => router.back()}
+                onClick={() => router.push(`/${lang}/menu`)}
                 className="flex size-10 items-center justify-center rounded-full bg-gray-100"
               >
                 <PiCaretLeft className="size-4 text-gray-900" />
