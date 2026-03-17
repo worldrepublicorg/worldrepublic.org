@@ -26,6 +26,7 @@ import {
   PiShareNetwork,
   PiTrash,
   PiTrashFill,
+  PiCircleNotch,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
@@ -431,7 +432,7 @@ export default function AccountPageClient({
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
-                            <span className="text-sm!">Linking...</span>
+                            <PiCircleNotch className="size-4 animate-spin" />
                           ) : (
                             <PiLinkSimple className="size-4" />
                           )}
@@ -455,7 +456,7 @@ export default function AccountPageClient({
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (
-                          <span className="text-sm!">Adding...</span>
+                          <PiCircleNotch className="size-4 animate-spin" />
                         ) : (
                           <PiPlus className="size-4" />
                         )}
