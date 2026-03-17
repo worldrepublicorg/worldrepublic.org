@@ -231,7 +231,12 @@
       },
       "sections": {
         "account": "ACCOUNT",
-        "danger_zone": "DANGER ZONE",
+        "security": "SECURITY",
+      "google_account": "Google account",
+      "google_not_linked": "Not linked",
+      "passkeys": "Passkeys",
+      "passkeys_linked": "{count} linked",
+      "danger_zone": "DANGER ZONE",
         "delete_account": {
           "description": "Permanently remove all your data"
         }
@@ -301,7 +306,12 @@
       "account_deleted": "Account deleted",
       "delete_failed": "Failed to delete account",
       "contract_address_error": "Cannot withdraw to contract address",
-      "sign_out_failed": "Failed to sign out"
+      "sign_out_failed": "Failed to sign out",
+      "google_linked": "Google account linked",
+      "google_already_linked": "Google account linked to another account",
+      "google_link_failed": "Could not start Google linking",
+      "passkey_added": "Passkey added",
+      "passkey_add_failed": "Could not add passkey"
     },
     "parties": {
       "updated": "Updated",

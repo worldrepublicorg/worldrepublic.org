@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "PASKYRA",
+        "security": "SAUGUMAS",
+        "google_account": "Google paskyra",
+        "google_not_linked": "Neprijungta",
+        "passkeys": "Prieigos raktai",
+        "passkeys_linked": "{count} prijungta",
         "danger_zone": "PAVOJINGA ZONA",
         "delete_account": {
           "description": "Permanentiškai pašalinkite visus savo duomenis"
@@ -301,7 +306,12 @@
       "account_deleted": "Paskyra ištrinta",
       "delete_failed": "Nepavyko ištrinti paskyros",
       "contract_address_error": "Negalima išimti į sutarties adresą",
-      "sign_out_failed": "Atsijungimas nepavyko"
+      "sign_out_failed": "Atsijungimas nepavyko",
+      "google_linked": "Google paskyra prijungta",
+      "google_already_linked": "Google paskyra jau prijungta prie kitos paskyros",
+      "google_link_failed": "Nepavyko pradėti Google prijungimo",
+      "passkey_added": "Prieigos raktas pridėtas",
+      "passkey_add_failed": "Nepavyko pridėti prieigos rakto"
     },
     "parties": {
       "updated": "Atnaujinta",

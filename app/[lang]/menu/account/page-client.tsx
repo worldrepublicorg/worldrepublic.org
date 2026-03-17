@@ -79,11 +79,11 @@ export default function AccountPageClient({
 
     if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
       toast.error({
-        title: "Google account linked to another account",
+        title: dictionary.toasts.wallet.google_already_linked,
       });
     } else {
       toast.success({
-        title: "Google account linked",
+        title: dictionary.toasts.wallet.google_linked,
       });
     }
 
@@ -251,7 +251,7 @@ export default function AccountPageClient({
     } catch (error) {
       console.error("Error linking Google account:", error);
       toast.error({
-        title: "Could not start Google linking",
+        title: dictionary.toasts.wallet.google_link_failed,
       });
       setIsLinkingGoogle(false);
     }
@@ -303,7 +303,7 @@ export default function AccountPageClient({
 
       if (verifyResult.verified) {
         toast.success({
-          title: "Passkey added",
+          title: dictionary.toasts.wallet.passkey_added,
         });
         const fresh = await getWalletAuthAndData();
         setServerData(fresh);
@@ -313,7 +313,7 @@ export default function AccountPageClient({
     } catch (error) {
       console.error("Error adding passkey:", error);
       toast.error({
-        title: error instanceof Error ? error.message : "Could not add passkey",
+        title: error instanceof Error ? error.message : dictionary.toasts.wallet.passkey_add_failed,
       });
     } finally {
       setIsAddingPasskey(false);
@@ -412,7 +412,7 @@ export default function AccountPageClient({
             <div>
               <div className="mb-4 flex">
                 <Typography variant="subtitle" level={3} className="text-gray-400">
-                  SECURITY
+                  {dictionary.pages.wallet.sections.security}
                 </Typography>
               </div>
               <div className="flex flex-col gap-2">
@@ -427,8 +427,8 @@ export default function AccountPageClient({
                     className="cursor-pointer"
                   >
                     <CustomListItem
-                      label="Google account"
-                      description="Not linked"
+                      label={dictionary.pages.wallet.sections.google_account}
+                      description={dictionary.pages.wallet.sections.google_not_linked}
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
@@ -451,8 +451,8 @@ export default function AccountPageClient({
                   className="cursor-pointer"
                 >
                   <CustomListItem
-                    label="Passkeys"
-                    description={`${passkeyCount} linked`}
+                    label={dictionary.pages.wallet.sections.passkeys}
+                    description={dictionary.pages.wallet.sections.passkeys_linked.replace("{count}", String(passkeyCount))}
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (

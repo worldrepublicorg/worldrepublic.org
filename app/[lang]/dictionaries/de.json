@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "KONTO",
+        "security": "SICHERHEIT",
+        "google_account": "Google-Konto",
+        "google_not_linked": "Nicht verknüpft",
+        "passkeys": "Passkeys",
+        "passkeys_linked": "{count} verknüpft",
         "danger_zone": "GEFÄHRENZONE",
         "delete_account": {
           "description": "Alle Ihre Daten dauerhaft entfernen"
@@ -301,7 +306,12 @@
       "account_deleted": "Konto gelöscht",
       "delete_failed": "Löschen des Kontos fehlgeschlagen",
       "contract_address_error": "Auszahlung an Vertragsadresse nicht möglich",
-      "sign_out_failed": "Abmeldung fehlgeschlagen"
+      "sign_out_failed": "Abmeldung fehlgeschlagen",
+      "google_linked": "Google-Konto verknüpft",
+      "google_already_linked": "Google-Konto ist bereits mit einem anderen Konto verknüpft",
+      "google_link_failed": "Google-Verknüpfung konnte nicht gestartet werden",
+      "passkey_added": "Passkey hinzugefügt",
+      "passkey_add_failed": "Passkey konnte nicht hinzugefügt werden"
     },
     "parties": {
       "updated": "Aktualisiert",

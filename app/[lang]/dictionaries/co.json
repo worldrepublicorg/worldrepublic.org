@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "CUNTU",
+        "security": "SICUREZZA",
+        "google_account": "Contu Google",
+        "google_not_linked": "Micca ligatu",
+        "passkeys": "Chjavi di passu",
+        "passkeys_linked": "{count} ligati",
         "danger_zone": "ZONA DI PERICULU",
         "delete_account": {
           "description": "Rimuove permanentemente tutti i vostri dati"
@@ -301,7 +306,12 @@
       "account_deleted": "Cuntu sguassatu",
       "delete_failed": "A sguassatura di u cuntu hà fallitu",
       "contract_address_error": "Ùn si pò micca ritirà à un indirizzu di cuntrattu",
-      "sign_out_failed": "A disconnessione hà fallitu"
+      "sign_out_failed": "A disconnessione hà fallitu",
+      "google_linked": "Contu Google ligatu",
+      "google_already_linked": "U contu Google hè digià ligatu à un altru contu",
+      "google_link_failed": "Ùn si pò micca inizià a ligà Google",
+      "passkey_added": "Chjave di passu aghjunta",
+      "passkey_add_failed": "Ùn si pò micca aghjunghje a chjave di passu"
     },
     "parties": {
       "updated": "Aghjurnatu",

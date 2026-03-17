@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "AKAUNTI",
+        "security": "USALAMA",
+        "google_account": "Akaunti ya Google",
+        "google_not_linked": "Haijaunganishwa",
+        "passkeys": "Funguo za kuingia",
+        "passkeys_linked": "{count} imeunganishwa",
         "danger_zone": "ENEO LA HATARI",
         "delete_account": {
           "description": "Ondoa data zako zote kwa kudumu"
@@ -301,7 +306,12 @@
       "account_deleted": "Akaunti imefutwa",
       "delete_failed": "Kufuta akaunti hakukufaulu",
       "contract_address_error": "Haiwezi kutolewa kwenye anwani ya mkataba",
-      "sign_out_failed": "Kuondoka hakukufaulu"
+      "sign_out_failed": "Kuondoka hakukufaulu",
+      "google_linked": "Akaunti ya Google imeunganishwa",
+      "google_already_linked": "Akaunti ya Google tayari imeunganishwa na akaunti nyingine",
+      "google_link_failed": "Haikuweza kuanza kuunganisha Google",
+      "passkey_added": "Ufunguo wa kuingia umeongezwa",
+      "passkey_add_failed": "Haikuweza kuongeza ufunguo wa kuingia"
     },
     "parties": {
       "updated": "Imehakikiwa",

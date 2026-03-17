@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ACCOUNT",
+        "security": "SICUREZZA",
+        "google_account": "Account Google",
+        "google_not_linked": "Non collegato",
+        "passkeys": "Passkey",
+        "passkeys_linked": "{count} collegate",
         "danger_zone": "ZONA PERICOLO",
         "delete_account": {
           "description": "Rimuovi permanentemente tutti i tuoi dati"
@@ -301,7 +306,12 @@
       "account_deleted": "Account eliminato",
       "delete_failed": "Eliminazione account fallita",
       "contract_address_error": "Impossibile prelevare all'indirizzo contratto",
-      "sign_out_failed": "Disconnessione fallita"
+      "sign_out_failed": "Disconnessione fallita",
+      "google_linked": "Account Google collegato",
+      "google_already_linked": "L'account Google è già collegato a un altro account",
+      "google_link_failed": "Impossibile avviare il collegamento Google",
+      "passkey_added": "Passkey aggiunta",
+      "passkey_add_failed": "Impossibile aggiungere la passkey"
     },
     "parties": {
       "updated": "Aggiornato",

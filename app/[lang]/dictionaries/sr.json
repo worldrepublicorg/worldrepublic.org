@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "РАЧУН",
+        "security": "БЕЗБЕДНОСТ",
+        "google_account": "Google налог",
+        "google_not_linked": "Није повезан",
+        "passkeys": "Кључеви приступа",
+        "passkeys_linked": "{count} повезано",
         "danger_zone": "ОПАСНА ЗОНА",
         "delete_account": {
           "description": "Трајно уклоните све своје податке"
@@ -301,7 +306,12 @@
       "account_deleted": "Рачун обрисан",
       "delete_failed": "Брисање рачуна није успело",
       "contract_address_error": "Не може се подићи на адресу уговора",
-      "sign_out_failed": "Одјава није успела"
+      "sign_out_failed": "Одјава није успела",
+      "google_linked": "Google налог је повезан",
+      "google_already_linked": "Google налог је већ повезан са другим налогом",
+      "google_link_failed": "Није могуће покренути повезивање Google-а",
+      "passkey_added": "Кључ приступа је додат",
+      "passkey_add_failed": "Није могуће додати кључ приступа"
     },
     "parties": {
       "updated": "Ажурирано",

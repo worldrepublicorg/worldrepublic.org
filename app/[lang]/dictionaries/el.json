@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ΛΟΓΑΡΙΑΣΜΟΣ",
+        "security": "ΑΣΦΑΛΕΙΑ",
+        "google_account": "Λογαριασμός Google",
+        "google_not_linked": "Δεν είναι συνδεδεμένος",
+        "passkeys": "Κλειδιά πρόσβασης",
+        "passkeys_linked": "{count} συνδεδεμένα",
         "danger_zone": "ΖΩΝΗ ΚΙΝΔΥΝΟΥ",
         "delete_account": {
           "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
@@ -301,7 +306,12 @@
       "account_deleted": "Ο λογαριασμός διαγράφηκε",
       "delete_failed": "Αποτυχία διαγραφής λογαριασμού",
       "contract_address_error": "Δεν μπορεί να γίνει ανάληψη σε διεύθυνση συμβολαίου",
-      "sign_out_failed": "Η αποσύνδεση απέτυχε"
+      "sign_out_failed": "Η αποσύνδεση απέτυχε",
+      "google_linked": "Ο λογαριασμός Google συνδέθηκε",
+      "google_already_linked": "Ο λογαριασμός Google είναι ήδη συνδεδεμένος με άλλο λογαριασμό",
+      "google_link_failed": "Αποτυχία έναρξης σύνδεσης Google",
+      "passkey_added": "Προστέθηκε κλειδί πρόσβασης",
+      "passkey_add_failed": "Αποτυχία προσθήκης κλειδιού πρόσβασης"
     },
     "parties": {
       "updated": "Ενημερώθηκε",

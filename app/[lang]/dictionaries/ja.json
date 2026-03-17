@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "アカウント",
+        "security": "セキュリティ",
+        "google_account": "Googleアカウント",
+        "google_not_linked": "未リンク",
+        "passkeys": "パスキー",
+        "passkeys_linked": "{count}件リンク済み",
         "danger_zone": "危険区域",
         "delete_account": {
           "description": "すべてのデータを永続的に削除"
@@ -301,7 +306,12 @@
       "account_deleted": "アカウントを削除しました",
       "delete_failed": "アカウントの削除に失敗しました",
       "contract_address_error": "コントラクトアドレスへの出金はできません",
-      "sign_out_failed": "サインアウトに失敗しました"
+      "sign_out_failed": "サインアウトに失敗しました",
+      "google_linked": "Googleアカウントをリンクしました",
+      "google_already_linked": "Googleアカウントは既に別のアカウントにリンクされています",
+      "google_link_failed": "Googleのリンクを開始できませんでした",
+      "passkey_added": "パスキーを追加しました",
+      "passkey_add_failed": "パスキーを追加できませんでした"
     },
     "parties": {
       "updated": "更新しました",

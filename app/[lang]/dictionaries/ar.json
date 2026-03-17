@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "الحساب",
+        "security": "الأمان",
+        "google_account": "حساب Google",
+        "google_not_linked": "غير مرتبط",
+        "passkeys": "مفاتيح المرور",
+        "passkeys_linked": "{count} مرتبط",
         "danger_zone": "منطقة الخطر",
         "delete_account": {
           "description": "إزالة جميع بياناتك بشكل دائم"
@@ -301,7 +306,12 @@
       "account_deleted": "تم حذف الحساب",
       "delete_failed": "فشل في حذف الحساب",
       "contract_address_error": "لا يمكن السحب إلى عنوان العقد",
-      "sign_out_failed": "فشل في تسجيل الخروج"
+      "sign_out_failed": "فشل في تسجيل الخروج",
+      "google_linked": "تم ربط حساب Google",
+      "google_already_linked": "حساب Google مرتبط بالفعل بحساب آخر",
+      "google_link_failed": "تعذر بدء ربط Google",
+      "passkey_added": "تمت إضافة مفتاح المرور",
+      "passkey_add_failed": "تعذر إضافة مفتاح المرور"
     },
     "parties": {
       "updated": "تم التحديث",

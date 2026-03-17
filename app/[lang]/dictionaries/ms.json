@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "AKAUN",
+        "security": "KESELAMATAN",
+        "google_account": "Akaun Google",
+        "google_not_linked": "Tidak disambungkan",
+        "passkeys": "Kunci laluan",
+        "passkeys_linked": "{count} disambungkan",
         "danger_zone": "ZON BERBAHAYA",
         "delete_account": {
           "description": "Buang semua data anda secara kekal"
@@ -301,7 +306,12 @@
       "account_deleted": "Akaun dipadamkan",
       "delete_failed": "Gagal memadamkan akaun",
       "contract_address_error": "Tidak dapat mengeluarkan ke alamat kontrak",
-      "sign_out_failed": "Log keluar gagal"
+      "sign_out_failed": "Log keluar gagal",
+      "google_linked": "Akaun Google disambungkan",
+      "google_already_linked": "Akaun Google sudah disambungkan ke akaun lain",
+      "google_link_failed": "Tidak dapat memulakan penyambungan Google",
+      "passkey_added": "Kunci laluan ditambah",
+      "passkey_add_failed": "Tidak dapat menambah kunci laluan"
     },
     "parties": {
       "updated": "Dikemaskini",

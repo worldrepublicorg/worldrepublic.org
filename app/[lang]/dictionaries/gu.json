@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ખાતું",
+        "security": "સુરક્ષા",
+        "google_account": "Google એકાઉન્ટ",
+        "google_not_linked": "જોડાયેલ નથી",
+        "passkeys": "પાસકી",
+        "passkeys_linked": "{count} જોડાયેલ",
         "danger_zone": "જોખમ ક્ષેત્ર",
         "delete_account": {
           "description": "તમારા બધા ડેટાને કાયમી રીતે દૂર કરો"
@@ -301,7 +306,12 @@
       "account_deleted": "ખાતું કાઢી નાંખ્યું",
       "delete_failed": "ખાતું કાઢવામાં નિષ્ફળ",
       "contract_address_error": "કોન્ટ્રાક્ટ સરનામે ઉપાડ કરી શકાતું નથી",
-      "sign_out_failed": "સાઇન આઉટ નિષ્ફળ થયું"
+      "sign_out_failed": "સાઇન આઉટ નિષ્ફળ થયું",
+      "google_linked": "Google એકાઉન્ટ જોડાયો",
+      "google_already_linked": "Google એકાઉન્ટ પહેલેથી જ બીજા એકાઉન્ટ સાથે જોડાયેલ છે",
+      "google_link_failed": "Google લિંક શરૂ કરી શકાયું નહીં",
+      "passkey_added": "પાસકી ઉમેરાઈ",
+      "passkey_add_failed": "પાસકી ઉમેરી શકાયું નહીં"
     },
     "parties": {
       "updated": "અપડેટ થયું",

@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "CUENTA",
+        "security": "SEGURIDAD",
+        "google_account": "Cuenta de Google",
+        "google_not_linked": "No vinculada",
+        "passkeys": "Llaves de acceso",
+        "passkeys_linked": "{count} vinculadas",
         "danger_zone": "ZONA DE PELIGRO",
         "delete_account": {
           "description": "Eliminar permanentemente todos tus datos"
@@ -301,7 +306,12 @@
       "account_deleted": "Cuenta eliminada",
       "delete_failed": "Error al eliminar cuenta",
       "contract_address_error": "No se puede retirar a dirección de contrato",
-      "sign_out_failed": "Cerrar sesión falló"
+      "sign_out_failed": "Cerrar sesión falló",
+      "google_linked": "Cuenta de Google vinculada",
+      "google_already_linked": "La cuenta de Google ya está vinculada a otra cuenta",
+      "google_link_failed": "No se pudo iniciar la vinculación con Google",
+      "passkey_added": "Llave de acceso añadida",
+      "passkey_add_failed": "No se pudo añadir la llave de acceso"
     },
     "parties": {
       "updated": "Actualizado",

@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "حساب کاربری",
+        "security": "امنیت",
+        "google_account": "حساب گوگل",
+        "google_not_linked": "متصل نشده",
+        "passkeys": "گذرکلیدها",
+        "passkeys_linked": "{count} متصل",
         "danger_zone": "منطقه خطر",
         "delete_account": {
           "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
@@ -301,7 +306,12 @@
       "account_deleted": "حساب کاربری حذف شد",
       "delete_failed": "حذف حساب کاربری ناموفق بود",
       "contract_address_error": "نمی‌توان به آدرس قرارداد برداشت کرد",
-      "sign_out_failed": "خروج ناموفق"
+      "sign_out_failed": "خروج ناموفق",
+      "google_linked": "حساب گوگل متصل شد",
+      "google_already_linked": "حساب گوگل قبلاً به حساب دیگری متصل است",
+      "google_link_failed": "اتصال گوگل آغاز نشد",
+      "passkey_added": "گذرکلید اضافه شد",
+      "passkey_add_failed": "افزودن گذرکلید امکان‌پذیر نبود"
     },
     "parties": {
       "updated": "به‌روزرسانی شد",

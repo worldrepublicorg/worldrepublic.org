@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "FIÓK",
+        "security": "BIZTONSÁG",
+        "google_account": "Google-fiók",
+        "google_not_linked": "Nincs összekapcsolva",
+        "passkeys": "Azonosítókulcsok",
+        "passkeys_linked": "{count} összekapcsolva",
         "danger_zone": "VESZÉLYES ZÓNA",
         "delete_account": {
           "description": "Véglegesen távolítsa el az összes adatát"
@@ -301,7 +306,12 @@
       "account_deleted": "Fiók törölve",
       "delete_failed": "Fiók törlése sikertelen",
       "contract_address_error": "Nem vonható ki szerződés címre",
-      "sign_out_failed": "A kijelentkezés sikertelen"
+      "sign_out_failed": "A kijelentkezés sikertelen",
+      "google_linked": "Google-fiók összekapcsolva",
+      "google_already_linked": "A Google-fiók már össze van kapcsolva egy másik fiókkal",
+      "google_link_failed": "A Google összekapcsolás indítása sikertelen",
+      "passkey_added": "Azonosítókulcs hozzáadva",
+      "passkey_add_failed": "Azonosítókulcs hozzáadása sikertelen"
     },
     "parties": {
       "updated": "Frissítve",

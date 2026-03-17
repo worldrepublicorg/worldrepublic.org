@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "অ্যাকাউন্ট",
+        "security": "নিরাপত্তা",
+        "google_account": "Google অ্যাকাউন্ট",
+        "google_not_linked": "সংযুক্ত নেই",
+        "passkeys": "পাসকি",
+        "passkeys_linked": "{count} সংযুক্ত",
         "danger_zone": "বিপজ্জনক অঞ্চল",
         "delete_account": {
           "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
@@ -301,7 +306,12 @@
       "account_deleted": "অ্যাকাউন্ট মুছে ফেলা হয়েছে",
       "delete_failed": "অ্যাকাউন্ট মুছে ফেলতে ব্যর্থ",
       "contract_address_error": "চুক্তির ঠিকানায় উত্তোলন করা যাবে না",
-      "sign_out_failed": "সাইন আউট ব্যর্থ"
+      "sign_out_failed": "সাইন আউট ব্যর্থ",
+      "google_linked": "Google অ্যাকাউন্ট সংযুক্ত হয়েছে",
+      "google_already_linked": "Google অ্যাকাউন্ট ইতিমধ্যে অন্য অ্যাকাউন্টের সাথে সংযুক্ত",
+      "google_link_failed": "Google সংযোগ শুরু করা যায়নি",
+      "passkey_added": "পাসকি যোগ করা হয়েছে",
+      "passkey_add_failed": "পাসকি যোগ করা যায়নি"
     },
     "parties": {
       "updated": "আপডেট করা হয়েছে",

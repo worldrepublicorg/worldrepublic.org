@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "အကောင့်",
+        "security": "လုံခြုံရေး",
+        "google_account": "Google အကောင့်",
+        "google_not_linked": "မချိတ်ဆက်ထား",
+        "passkeys": "အဝင်သော့များ",
+        "passkeys_linked": "{count} ချိတ်ဆက်ထား",
         "danger_zone": "အန္တရာယ်ဇုံ",
         "delete_account": {
           "description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
@@ -301,7 +306,12 @@
       "account_deleted": "အကောင့်ဖျက်ပြီး",
       "delete_failed": "အကောင့်ဖျက်ရန် မအောင်မြင်",
       "contract_address_error": "စာချုပ်လိပ်စာသို့ ထုတ်ယူ၍မရပါ",
-      "sign_out_failed": "ထွက်ခွာခြင်း မအောင်မြင်ပါ"
+      "sign_out_failed": "ထွက်ခွာခြင်း မအောင်မြင်ပါ",
+      "google_linked": "Google အကောင့် ချိတ်ဆက်ပြီး",
+      "google_already_linked": "Google အကောင့်သည် အခြားအကောင့်နှင့် ချိတ်ဆက်ပြီးသား",
+      "google_link_failed": "Google ချိတ်ဆက်မှု စတင်မရ",
+      "passkey_added": "အဝင်သော့ ထည့်ပြီး",
+      "passkey_add_failed": "အဝင်သော့ ထည့်မရ"
     },
     "parties": {
       "updated": "အပ်ဒိတ်လုပ်ခဲ့သည်",

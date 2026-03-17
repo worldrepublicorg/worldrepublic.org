@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ACCOUNT",
+        "security": "BEVEILIGING",
+        "google_account": "Google-account",
+        "google_not_linked": "Niet gekoppeld",
+        "passkeys": "Toegangssleutels",
+        "passkeys_linked": "{count} gekoppeld",
         "danger_zone": "GEVAARZONE",
         "delete_account": {
           "description": "Verwijder permanent al uw gegevens"
@@ -301,7 +306,12 @@
       "account_deleted": "Account verwijderd",
       "delete_failed": "Account verwijderen mislukt",
       "contract_address_error": "Kan niet opnemen naar contract adres",
-      "sign_out_failed": "Uitloggen mislukt"
+      "sign_out_failed": "Uitloggen mislukt",
+      "google_linked": "Google-account gekoppeld",
+      "google_already_linked": "Google-account is al gekoppeld aan een ander account",
+      "google_link_failed": "Kon Google-koppeling niet starten",
+      "passkey_added": "Toegangssleutel toegevoegd",
+      "passkey_add_failed": "Kon toegangssleutel niet toevoegen"
     },
     "parties": {
       "updated": "Bijgewerkt",

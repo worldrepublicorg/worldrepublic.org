@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "حساب",
+        "security": "امنیت",
+        "google_account": "د ګوګل حساب",
+        "google_not_linked": "ناتړلی",
+        "passkeys": "د ننوتلو کلي",
+        "passkeys_linked": "{count} تړل شوی",
         "danger_zone": "د خطر ساحه",
         "delete_account": {
           "description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
@@ -301,7 +306,12 @@
       "account_deleted": "حساب ړنګ شو",
       "delete_failed": "د حساب ړنګول ناکام شو",
       "contract_address_error": "د تړون پتې ته نشي ووتل کیدی",
-      "sign_out_failed": "د ووتلو ناکامه"
+      "sign_out_failed": "د ووتلو ناکامه",
+      "google_linked": "د ګوګل حساب تړل شو",
+      "google_already_linked": "د ګوګل حساب دمخه له بل حساب سره تړل شوی",
+      "google_link_failed": "د ګوګل تړلو پیل نشو کولی",
+      "passkey_added": "د ننوتلو کلی اضافه شو",
+      "passkey_add_failed": "د ننوتلو کلی اضافه کول نشو کولی"
     },
     "parties": {
       "updated": "تازه شو",

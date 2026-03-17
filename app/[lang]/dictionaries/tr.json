@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "HESAP",
+        "security": "GÜVENLİK",
+        "google_account": "Google hesabı",
+        "google_not_linked": "Bağlı değil",
+        "passkeys": "Geçiş anahtarları",
+        "passkeys_linked": "{count} bağlı",
         "danger_zone": "TEHLİKE BÖLGESİ",
         "delete_account": {
           "description": "Tüm verilerinizi kalıcı olarak kaldırın"
@@ -301,7 +306,12 @@
       "account_deleted": "Hesap silindi",
       "delete_failed": "Hesap silme başarısız",
       "contract_address_error": "Sözleşme adresine çekim yapılamaz",
-      "sign_out_failed": "Çıkış başarısız"
+      "sign_out_failed": "Çıkış başarısız",
+      "google_linked": "Google hesabı bağlandı",
+      "google_already_linked": "Google hesabı zaten başka bir hesaba bağlı",
+      "google_link_failed": "Google bağlantısı başlatılamadı",
+      "passkey_added": "Geçiş anahtarı eklendi",
+      "passkey_add_failed": "Geçiş anahtarı eklenemedi"
     },
     "parties": {
       "updated": "Güncellendi",

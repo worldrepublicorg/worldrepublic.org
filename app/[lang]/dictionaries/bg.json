@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "АКАУНТ",
+        "security": "СИГУРНОСТ",
+        "google_account": "Google акаунт",
+        "google_not_linked": "Не е свързан",
+        "passkeys": "Ключове за достъп",
+        "passkeys_linked": "{count} свързани",
         "danger_zone": "ЗОНА НА ОПАСНОСТ",
         "delete_account": {
           "description": "Премахнете постоянно всички ваши данни"
@@ -301,7 +306,12 @@
       "account_deleted": "Акаунтът е изтрит",
       "delete_failed": "Изтриването на акаунта неуспешно",
       "contract_address_error": "Не може да се изтегли към адрес на договор",
-      "sign_out_failed": "Излизането неуспешно"
+      "sign_out_failed": "Излизането неуспешно",
+      "google_linked": "Google акаунтът е свързан",
+      "google_already_linked": "Google акаунтът вече е свързан с друг акаунт",
+      "google_link_failed": "Неуспешно свързване с Google",
+      "passkey_added": "Ключът за достъп е добавен",
+      "passkey_add_failed": "Неуспешно добавяне на ключ за достъп"
     },
     "parties": {
       "updated": "Актуализирано",

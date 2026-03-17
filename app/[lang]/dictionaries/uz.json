@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "HISOB",
+        "security": "XAVFSIZLIK",
+        "google_account": "Google hisobi",
+        "google_not_linked": "Ulangan emas",
+        "passkeys": "Kirish kalitlari",
+        "passkeys_linked": "{count} ulangan",
         "danger_zone": "XAVF HUDUDI",
         "delete_account": {
           "description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
@@ -301,7 +306,12 @@
       "account_deleted": "Hisob o'chirildi",
       "delete_failed": "Hisobni o'chirish muvaffaqiyatsiz",
       "contract_address_error": "Shartnoma manziliga yechib bo'lmaydi",
-      "sign_out_failed": "Chiqish muvaffaqiyatsiz"
+      "sign_out_failed": "Chiqish muvaffaqiyatsiz",
+      "google_linked": "Google hisobi ulandi",
+      "google_already_linked": "Google hisobi allaqachon boshqa hisobga ulangan",
+      "google_link_failed": "Google ulanishini boshlab bo'lmadi",
+      "passkey_added": "Kirish kaliti qo'shildi",
+      "passkey_add_failed": "Kirish kalitini qo'shib bo'lmadi"
     },
     "parties": {
       "updated": "Yangilandi",

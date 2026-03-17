@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "اکاؤنٹ",
+        "security": "حفاظت",
+        "google_account": "Google اکاؤنٹ",
+        "google_not_linked": "منسلک نہیں",
+        "passkeys": "پاس کی",
+        "passkeys_linked": "{count} منسلک",
         "danger_zone": "خطرناک زون",
         "delete_account": {
           "description": "اپنا تمام ڈیٹا مستقل طور پر ہٹائیں"
@@ -301,7 +306,12 @@
       "account_deleted": "اکاؤنٹ حذف ہو گیا",
       "delete_failed": "اکاؤنٹ حذف کرنے میں ناکام",
       "contract_address_error": "معاہدے کے پتے پر نکلوانا ممکن نہیں",
-      "sign_out_failed": "سائن آؤٹ ناکام"
+      "sign_out_failed": "سائن آؤٹ ناکام",
+      "google_linked": "Google اکاؤنٹ منسلک ہو گیا",
+      "google_already_linked": "Google اکاؤنٹ پہلے سے کسی دوسرے اکاؤنٹ سے منسلک ہے",
+      "google_link_failed": "Google لنک شروع نہیں ہو سکا",
+      "passkey_added": "پاس کی شامل ہو گئی",
+      "passkey_add_failed": "پاس کی شامل نہیں ہو سکی"
     },
     "parties": {
       "updated": "اپ ڈیٹ ہو گیا",

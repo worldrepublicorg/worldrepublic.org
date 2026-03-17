@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "CONTA",
+        "security": "SEGURANÇA",
+        "google_account": "Conta Google",
+        "google_not_linked": "Não vinculada",
+        "passkeys": "Chaves de acesso",
+        "passkeys_linked": "{count} vinculadas",
         "danger_zone": "ZONA DE PERIGO",
         "delete_account": {
           "description": "Remover permanentemente todos os seus dados"
@@ -301,7 +306,12 @@
       "account_deleted": "Conta excluída",
       "delete_failed": "Falha ao excluir conta",
       "contract_address_error": "Não é possível sacar para endereço de contrato",
-      "sign_out_failed": "Falha ao sair"
+      "sign_out_failed": "Falha ao sair",
+      "google_linked": "Conta Google vinculada",
+      "google_already_linked": "A conta Google já está vinculada a outra conta",
+      "google_link_failed": "Não foi possível iniciar a vinculação do Google",
+      "passkey_added": "Chave de acesso adicionada",
+      "passkey_add_failed": "Não foi possível adicionar a chave de acesso"
     },
     "parties": {
       "updated": "Atualizado",

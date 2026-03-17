@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "KONTI",
+        "security": "UMUTEKANO",
+        "google_account": "Konti ya Google",
+        "google_not_linked": "Ntabwo yihuze",
+        "passkeys": "Urufungo rwo kwinjira",
+        "passkeys_linked": "{count} yihuze",
         "danger_zone": "AHANTU H'INGOZA",
         "delete_account": {
           "description": "Kuraho byose byawe byose ubudahoraho"
@@ -301,7 +306,12 @@
       "account_deleted": "Konti yasibwe",
       "delete_failed": "Gusiba konti byanze",
       "contract_address_error": "Ntishobora gukuramo ku deresi y'umukono",
-      "sign_out_failed": "Gusohoka byanze"
+      "sign_out_failed": "Gusohoka byanze",
+      "google_linked": "Konti ya Google yihuze",
+      "google_already_linked": "Konti ya Google yarahuzwe n'undi konti",
+      "google_link_failed": "Ntibyashoboye gutangiza guhuza Google",
+      "passkey_added": "Urufungo rwo kwinjira rwongewe",
+      "passkey_add_failed": "Ntibyashoboye kongerera urufungo rwo kwinjira"
     },
     "parties": {
       "updated": "Yasubiramo",

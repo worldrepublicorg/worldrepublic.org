@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ACCOUNT",
+        "security": "SEGURIDAD",
+        "google_account": "Account sa Google",
+        "google_not_linked": "Hindi naka-link",
+        "passkeys": "Mga passkey",
+        "passkeys_linked": "{count} naka-link",
         "danger_zone": "DANGER ZONE",
         "delete_account": {
           "description": "Permanenteng alisin ang lahat ng iyong data"
@@ -301,7 +306,12 @@
       "account_deleted": "Na-delete ang account",
       "delete_failed": "Nabigo ang pag-delete ng account",
       "contract_address_error": "Hindi maaaring mag-withdraw sa contract address",
-      "sign_out_failed": "Nabigo ang pag-sign out"
+      "sign_out_failed": "Nabigo ang pag-sign out",
+      "google_linked": "Naka-link ang account sa Google",
+      "google_already_linked": "Ang account sa Google ay naka-link na sa ibang account",
+      "google_link_failed": "Hindi masimulan ang pag-link sa Google",
+      "passkey_added": "Naidagdag ang passkey",
+      "passkey_add_failed": "Hindi maidagdag ang passkey"
     },
     "parties": {
       "updated": "Na-update",

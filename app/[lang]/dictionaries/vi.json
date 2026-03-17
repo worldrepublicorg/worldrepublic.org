@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "TÀI KHOẢN",
+        "security": "BẢO MẬT",
+        "google_account": "Tài khoản Google",
+        "google_not_linked": "Chưa liên kết",
+        "passkeys": "Khóa truy cập",
+        "passkeys_linked": "{count} đã liên kết",
         "danger_zone": "KHU VỰC NGUY HIỂM",
         "delete_account": {
           "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
@@ -301,7 +306,12 @@
       "account_deleted": "Tài khoản đã được xóa",
       "delete_failed": "Xóa tài khoản thất bại",
       "contract_address_error": "Không thể rút tiền đến địa chỉ hợp đồng",
-      "sign_out_failed": "Đăng xuất thất bại"
+      "sign_out_failed": "Đăng xuất thất bại",
+      "google_linked": "Đã liên kết tài khoản Google",
+      "google_already_linked": "Tài khoản Google đã được liên kết với tài khoản khác",
+      "google_link_failed": "Không thể bắt đầu liên kết Google",
+      "passkey_added": "Đã thêm khóa truy cập",
+      "passkey_add_failed": "Không thể thêm khóa truy cập"
     },
     "parties": {
       "updated": "Đã cập nhật",

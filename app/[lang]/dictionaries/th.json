@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "บัญชี",
+        "security": "ความปลอดภัย",
+        "google_account": "บัญชี Google",
+        "google_not_linked": "ยังไม่ได้เชื่อมต่อ",
+        "passkeys": "พาสคีย์",
+        "passkeys_linked": "{count} เชื่อมต่อแล้ว",
         "danger_zone": "เขตอันตราย",
         "delete_account": {
           "description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
@@ -301,7 +306,12 @@
       "account_deleted": "ลบบัญชีแล้ว",
       "delete_failed": "ลบบัญชีไม่สำเร็จ",
       "contract_address_error": "ไม่สามารถถอนไปยังที่อยู่สัญญาได้",
-      "sign_out_failed": "ออกจากระบบไม่สำเร็จ"
+      "sign_out_failed": "ออกจากระบบไม่สำเร็จ",
+      "google_linked": "เชื่อมต่อบัญชี Google แล้ว",
+      "google_already_linked": "บัญชี Google เชื่อมต่อกับบัญชีอื่นอยู่แล้ว",
+      "google_link_failed": "ไม่สามารถเริ่มการเชื่อมต่อ Google ได้",
+      "passkey_added": "เพิ่มพาสคีย์แล้ว",
+      "passkey_add_failed": "ไม่สามารถเพิ่มพาสคีย์ได้"
     },
     "parties": {
       "updated": "อัปเดตแล้ว",

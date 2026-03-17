@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "KONTO",
+        "security": "BEZPIECZEŃSTWO",
+        "google_account": "Konto Google",
+        "google_not_linked": "Nie połączono",
+        "passkeys": "Klucze dostępu",
+        "passkeys_linked": "{count} połączonych",
         "danger_zone": "STREFA NIEBEZPIECZEŃSTWA",
         "delete_account": {
           "description": "Trwale usuń wszystkie swoje dane"
@@ -301,7 +306,12 @@
       "account_deleted": "Konto usunięte",
       "delete_failed": "Nie udało się usunąć konta",
       "contract_address_error": "Nie można wypłacić na adres kontraktu",
-      "sign_out_failed": "Wylogowanie nie powiodło się"
+      "sign_out_failed": "Wylogowanie nie powiodło się",
+      "google_linked": "Konto Google połączone",
+      "google_already_linked": "Konto Google jest już połączone z innym kontem",
+      "google_link_failed": "Nie udało się uruchomić łączenia z Google",
+      "passkey_added": "Klucz dostępu dodany",
+      "passkey_add_failed": "Nie udało się dodać klucza dostępu"
     },
     "parties": {
       "updated": "Zaktualizowano",

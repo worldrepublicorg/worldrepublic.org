@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "AKOONKA",
+        "security": "AMMAAN",
+        "google_account": "Akoonka Google",
+        "google_not_linked": "Ma xiriirin",
+        "passkeys": "Furahaasha gelitaanka",
+        "passkeys_linked": "{count} xiriiriyey",
         "danger_zone": "GOOBTA KHATARADA",
         "delete_account": {
           "description": "Si toos ah ka saar dhammaan xogtaada"
@@ -301,7 +306,12 @@
       "account_deleted": "Akoonka waa la tirtiray",
       "delete_failed": "Tirtirida akoonka way fashilantay",
       "contract_address_error": "Lama soo qaadi karo cinwaanka heshiiska",
-      "sign_out_failed": "Ka baxid ku guuldareystay"
+      "sign_out_failed": "Ka baxid ku guuldareystay",
+      "google_linked": "Akoonka Google waa la xiriiriyey",
+      "google_already_linked": "Akoonka Google horeba waa la xiriiriyey akoon kale",
+      "google_link_failed": "Xiriirinta Google ma bilaabmin karin",
+      "passkey_added": "Furahaasha gelitaanka waa lagu daray",
+      "passkey_add_failed": "Furahaasha gelitaanka ma darin karin"
     },
     "parties": {
       "updated": "Waa la cusbooneysiiyay",

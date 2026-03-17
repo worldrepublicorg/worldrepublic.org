@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "खाता",
+        "security": "सुरक्षा",
+        "google_account": "Google खाता",
+        "google_not_linked": "लिंक नहीं है",
+        "passkeys": "पासकी",
+        "passkeys_linked": "{count} लिंक किए गए",
         "danger_zone": "खतरनाक क्षेत्र",
         "delete_account": {
           "description": "अपना सभी डेटा स्थायी रूप से हटाएं"
@@ -301,7 +306,12 @@
       "account_deleted": "खाता हटा दिया गया",
       "delete_failed": "खाता हटाने में विफल",
       "contract_address_error": "अनुबंध पते पर निकासी नहीं कर सकते",
-      "sign_out_failed": "साइन आउट असफल"
+      "sign_out_failed": "साइन आउट असफल",
+      "google_linked": "Google खाता लिंक हो गया",
+      "google_already_linked": "Google खाता पहले से किसी अन्य खाते से लिंक है",
+      "google_link_failed": "Google लिंक शुरू नहीं हो सका",
+      "passkey_added": "पासकी जोड़ी गई",
+      "passkey_add_failed": "पासकी जोड़ने में विफल"
     },
     "parties": {
       "updated": "अपडेट किया गया",

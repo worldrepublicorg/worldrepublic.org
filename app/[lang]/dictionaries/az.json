@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "HESAB",
+        "security": "TƏHLÜKƏSİZLİK",
+        "google_account": "Google hesabı",
+        "google_not_linked": "Bağlı deyil",
+        "passkeys": "Giriş açarları",
+        "passkeys_linked": "{count} bağlı",
         "danger_zone": "TƏHLÜKƏ ZONASI",
         "delete_account": {
           "description": "Bütün məlumatlarınızı daimi olaraq silin"
@@ -301,7 +306,12 @@
       "account_deleted": "Hesab silindi",
       "delete_failed": "Hesabı silmək alınmadı",
       "contract_address_error": "Müqavilə ünvanına çıxarmaq olmaz",
-      "sign_out_failed": "Hesabdan çıxmaq alınmadı"
+      "sign_out_failed": "Hesabdan çıxmaq alınmadı",
+      "google_linked": "Google hesabı bağlandı",
+      "google_already_linked": "Google hesabı artıq başqa hesaba bağlıdır",
+      "google_link_failed": "Google bağlantısı başladıla bilmədi",
+      "passkey_added": "Giriş açarı əlavə edildi",
+      "passkey_add_failed": "Giriş açarı əlavə edilə bilmədi"
     },
     "parties": {
       "updated": "Yeniləndi",

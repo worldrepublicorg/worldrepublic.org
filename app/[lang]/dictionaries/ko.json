@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "계정",
+        "security": "보안",
+        "google_account": "Google 계정",
+        "google_not_linked": "연결되지 않음",
+        "passkeys": "패스키",
+        "passkeys_linked": "{count}개 연결됨",
         "danger_zone": "위험 구역",
         "delete_account": {
           "description": "모든 데이터를 영구적으로 제거"
@@ -301,7 +306,12 @@
       "account_deleted": "계정 삭제됨",
       "delete_failed": "계정 삭제 실패",
       "contract_address_error": "계약 주소로 출금할 수 없습니다",
-      "sign_out_failed": "로그아웃 실패"
+      "sign_out_failed": "로그아웃 실패",
+      "google_linked": "Google 계정이 연결되었습니다",
+      "google_already_linked": "Google 계정이 이미 다른 계정에 연결되어 있습니다",
+      "google_link_failed": "Google 연결을 시작할 수 없습니다",
+      "passkey_added": "패스키가 추가되었습니다",
+      "passkey_add_failed": "패스키를 추가할 수 없습니다"
     },
     "parties": {
       "updated": "업데이트됨",

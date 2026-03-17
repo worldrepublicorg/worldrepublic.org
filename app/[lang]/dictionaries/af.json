@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "REKENING",
+        "security": "SEKURITEIT",
+        "google_account": "Google-rekening",
+        "google_not_linked": "Nie gekoppel nie",
+        "passkeys": "Toegangsleutels",
+        "passkeys_linked": "{count} gekoppel",
         "danger_zone": "GEVAARSONE",
         "delete_account": {
           "description": "Verwyder permanent al jou data"
@@ -301,7 +306,12 @@
       "account_deleted": "Rekening geskrap",
       "delete_failed": "Kon nie rekening skrap nie",
       "contract_address_error": "Kan nie onttrek na kontrakadres nie",
-      "sign_out_failed": "Uitteken het misluk"
+      "sign_out_failed": "Uitteken het misluk",
+      "google_linked": "Google-rekening gekoppel",
+      "google_already_linked": "Google-rekening reeds aan 'n ander rekening gekoppel",
+      "google_link_failed": "Kon nie Google-koppeling begin nie",
+      "passkey_added": "Toegangsleutel bygevoeg",
+      "passkey_add_failed": "Kon nie toegangsleutel byvoeg nie"
     },
     "parties": {
       "updated": "Opgedateer",

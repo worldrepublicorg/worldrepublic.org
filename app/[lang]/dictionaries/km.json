@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "គណនី",
+        "security": "សន្តិសុខ",
+        "google_account": "គណនី Google",
+        "google_not_linked": "មិនបានភ្ជាប់",
+        "passkeys": "កូនសោចូល",
+        "passkeys_linked": "{count} ភ្ជាប់",
         "danger_zone": "តំបន់គ្រោះថ្នាក់",
         "delete_account": {
           "description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
@@ -301,7 +306,12 @@
       "account_deleted": "គណនីបានលុប",
       "delete_failed": "ការលុបគណនីបានបរាជ័យ",
       "contract_address_error": "មិនអាចដកចេញទៅអាសយដ្ឋានកិច្ចសន្យាបានទេ",
-      "sign_out_failed": "ការចេញពីប្រព័ន្ធបរាជ័យ"
+      "sign_out_failed": "ការចេញពីប្រព័ន្ធបរាជ័យ",
+      "google_linked": "គណនី Google ត្រូវបានភ្ជាប់",
+      "google_already_linked": "គណនី Google ភ្ជាប់ជាមួយគណនីផ្សេងរួចហើយ",
+      "google_link_failed": "មិនអាចចាប់ផ្តើមភ្ជាប់ Google បានទេ",
+      "passkey_added": "កូនសោចូលត្រូវបានបន្ថែម",
+      "passkey_add_failed": "មិនអាចបន្ថែមកូនសោចូលបានទេ"
     },
     "parties": {
       "updated": "បានធ្វើបច្ចុប្បន្នភាព",

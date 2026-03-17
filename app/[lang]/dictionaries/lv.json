@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "KONTS",
+        "security": "DROŠĪBA",
+        "google_account": "Google konts",
+        "google_not_linked": "Nav saistīts",
+        "passkeys": "Pieejas atslēgas",
+        "passkeys_linked": "{count} saistīts",
         "danger_zone": "BĪSTAMĀ ZONA",
         "delete_account": {
           "description": "Pastāvīgi noņemiet visus savus datus"
@@ -301,7 +306,12 @@
       "account_deleted": "Konts dzēsts",
       "delete_failed": "Konta dzēšana neizdevās",
       "contract_address_error": "Nevar izņemt uz līguma adresi",
-      "sign_out_failed": "Izrakstīšanās neizdevās"
+      "sign_out_failed": "Izrakstīšanās neizdevās",
+      "google_linked": "Google konts ir saistīts",
+      "google_already_linked": "Google konts jau ir saistīts ar citu kontu",
+      "google_link_failed": "Neizdevās sākt Google saistīšanu",
+      "passkey_added": "Pieejas atslēga pievienota",
+      "passkey_add_failed": "Neizdevās pievienot pieejas atslēgu"
     },
     "parties": {
       "updated": "Atjaunināts",

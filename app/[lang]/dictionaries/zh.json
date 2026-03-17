@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "账户",
+        "security": "安全",
+        "google_account": "Google 账户",
+        "google_not_linked": "未链接",
+        "passkeys": "通行密钥",
+        "passkeys_linked": "已链接 {count} 个",
         "danger_zone": "危险区域",
         "delete_account": {
           "description": "永久删除您的所有数据"
@@ -301,7 +306,12 @@
       "account_deleted": "账户已删除",
       "delete_failed": "删除账户失败",
       "contract_address_error": "无法提取到合约地址",
-      "sign_out_failed": "登出失败"
+      "sign_out_failed": "登出失败",
+      "google_linked": "Google 账户已链接",
+      "google_already_linked": "Google 账户已链接到其他账户",
+      "google_link_failed": "无法开始链接 Google",
+      "passkey_added": "已添加通行密钥",
+      "passkey_add_failed": "无法添加通行密钥"
     },
     "parties": {
       "updated": "已更新",

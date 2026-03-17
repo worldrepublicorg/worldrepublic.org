@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ASUSU",
+        "security": "TSARO",
+        "google_account": "Asusun Google",
+        "google_not_linked": "Babu haɗi",
+        "passkeys": "Mabuɗin shiga",
+        "passkeys_linked": "{count} an haɗa",
         "danger_zone": "YANKIN HADARI",
         "delete_account": {
           "description": "Cire duk bayanan ku na dindindin"
@@ -301,7 +306,12 @@
       "account_deleted": "An share asusu",
       "delete_failed": "Ya gaza share asusu",
       "contract_address_error": "Ba za a iya cire zuwa adireshin kwangilar ba",
-      "sign_out_failed": "Fita bai yi nasara ba"
+      "sign_out_failed": "Fita bai yi nasara ba",
+      "google_linked": "An haɗa asusun Google",
+      "google_already_linked": "Asusun Google yana da haɗi da wani asusu",
+      "google_link_failed": "Ba a iya fara haɗin Google",
+      "passkey_added": "An ƙara mabuɗin shiga",
+      "passkey_add_failed": "Ba a iya ƙara mabuɗin shiga"
     },
     "parties": {
       "updated": "An sabunta",

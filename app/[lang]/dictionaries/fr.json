@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "COMPTE",
+        "security": "SÉCURITÉ",
+        "google_account": "Compte Google",
+        "google_not_linked": "Non lié",
+        "passkeys": "Clés d'accès",
+        "passkeys_linked": "{count} lié(s)",
         "danger_zone": "ZONE DE DANGER",
         "delete_account": {
           "description": "Supprimer définitivement toutes vos données"
@@ -301,7 +306,12 @@
       "account_deleted": "Compte supprimé",
       "delete_failed": "Échec de la suppression du compte",
       "contract_address_error": "Impossible de retirer vers une adresse de contrat",
-      "sign_out_failed": "Déconnexion échouée"
+      "sign_out_failed": "Déconnexion échouée",
+      "google_linked": "Compte Google lié",
+      "google_already_linked": "Le compte Google est déjà lié à un autre compte",
+      "google_link_failed": "Impossible de démarrer la liaison Google",
+      "passkey_added": "Clé d'accès ajoutée",
+      "passkey_add_failed": "Impossible d'ajouter la clé d'accès"
     },
     "parties": {
       "updated": "Mis à jour",

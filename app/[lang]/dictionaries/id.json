@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "AKUN",
+        "security": "KEAMANAN",
+        "google_account": "Akun Google",
+        "google_not_linked": "Belum ditautkan",
+        "passkeys": "Kunci sandi",
+        "passkeys_linked": "{count} tertaut",
         "danger_zone": "ZONA BERBAHAYA",
         "delete_account": {
           "description": "Hapus permanen semua data Anda"
@@ -301,7 +306,12 @@
       "account_deleted": "Akun dihapus",
       "delete_failed": "Gagal menghapus akun",
       "contract_address_error": "Tidak dapat menarik ke alamat kontrak",
-      "sign_out_failed": "Keluar gagal"
+      "sign_out_failed": "Keluar gagal",
+      "google_linked": "Akun Google tertaut",
+      "google_already_linked": "Akun Google sudah tertaut ke akun lain",
+      "google_link_failed": "Tidak dapat memulai penautan Google",
+      "passkey_added": "Kunci sandi ditambahkan",
+      "passkey_add_failed": "Tidak dapat menambahkan kunci sandi"
     },
     "parties": {
       "updated": "Diperbarui",

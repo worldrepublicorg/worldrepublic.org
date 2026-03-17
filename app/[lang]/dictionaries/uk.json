@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ОБЛІКОВИЙ ЗАПИС",
+        "security": "БЕЗПЕКА",
+        "google_account": "Обліковий запис Google",
+        "google_not_linked": "Не підключено",
+        "passkeys": "Ключі доступу",
+        "passkeys_linked": "{count} підключено",
         "danger_zone": "НЕБЕЗПЕЧНА ЗОНА",
         "delete_account": {
           "description": "Назавжди видалити всі ваші дані"
@@ -301,7 +306,12 @@
       "account_deleted": "Обліковий запис видалено",
       "delete_failed": "Не вдалося видалити обліковий запис",
       "contract_address_error": "Не можна зняти на адресу контракту",
-      "sign_out_failed": "Вихід не вдався"
+      "sign_out_failed": "Вихід не вдався",
+      "google_linked": "Обліковий запис Google підключено",
+      "google_already_linked": "Обліковий запис Google вже підключено до іншого облікового запису",
+      "google_link_failed": "Не вдалося розпочати підключення Google",
+      "passkey_added": "Ключ доступу додано",
+      "passkey_add_failed": "Не вдалося додати ключ доступу"
     },
     "parties": {
       "updated": "Оновлено",

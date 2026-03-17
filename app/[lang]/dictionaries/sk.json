@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "ÚČET",
+        "security": "BEZPEČNOSŤ",
+        "google_account": "Účet Google",
+        "google_not_linked": "Nepripojené",
+        "passkeys": "Prístupové kľúče",
+        "passkeys_linked": "{count} pripojených",
         "danger_zone": "NEBEZPEČNÁ ZÓNA",
         "delete_account": {
           "description": "Trvalo odstráňte všetky vaše údaje"
@@ -301,7 +306,12 @@
       "account_deleted": "Účet vymazaný",
       "delete_failed": "Vymazanie účtu zlyhalo",
       "contract_address_error": "Nemožno vybrať na kontraktovú adresu",
-      "sign_out_failed": "Odhlásenie sa nepodarilo"
+      "sign_out_failed": "Odhlásenie sa nepodarilo",
+      "google_linked": "Účet Google bol pripojený",
+      "google_already_linked": "Účet Google je už pripojený k inému účtu",
+      "google_link_failed": "Nepodarilo sa spustiť prepojenie s Google",
+      "passkey_added": "Prístupový kľúč bol pridaný",
+      "passkey_add_failed": "Nepodarilo sa pridať prístupový kľúč"
     },
     "parties": {
       "updated": "Aktualizované",

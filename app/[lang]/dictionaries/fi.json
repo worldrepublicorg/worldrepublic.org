@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "TILI",
+        "security": "TURVALLISUUS",
+        "google_account": "Google-tili",
+        "google_not_linked": "Ei linkitetty",
+        "passkeys": "Passkey",
+        "passkeys_linked": "{count} linkitetty",
         "danger_zone": "VAARALLINEN ALUE",
         "delete_account": {
           "description": "Poista pysyvästi kaikki tietosi"
@@ -301,7 +306,12 @@
       "account_deleted": "Tili poistettu",
       "delete_failed": "Tilin poisto epäonnistui",
       "contract_address_error": "Ei voi nostaa sopimusosoitteeseen",
-      "sign_out_failed": "Kirjautuminen ulos epäonnistui"
+      "sign_out_failed": "Kirjautuminen ulos epäonnistui",
+      "google_linked": "Google-tili linkitetty",
+      "google_already_linked": "Google-tili on jo linkitetty toiseen tiliin",
+      "google_link_failed": "Google-linkitystä ei voitu aloittaa",
+      "passkey_added": "Passkey lisätty",
+      "passkey_add_failed": "Passkeyn lisääminen epäonnistui"
     },
     "parties": {
       "updated": "Päivitetty",

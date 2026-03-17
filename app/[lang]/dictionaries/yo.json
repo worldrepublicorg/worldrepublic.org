@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "IROYIN",
+        "security": "AABO",
+        "google_account": "Akọọlẹ Google",
+        "google_not_linked": "Ko sopọ",
+        "passkeys": "Bọtini wọle",
+        "passkeys_linked": "{count} ti sopọ",
         "danger_zone": "AGBAYE ELEWU",
         "delete_account": {
           "description": "Yọ gbogbo data rẹ lailai"
@@ -301,7 +306,12 @@
       "account_deleted": "Iroyin ti a pa",
       "delete_failed": "Pipa iroyin kuna",
       "contract_address_error": "Ko le ya jade si adirẹsi adehun",
-      "sign_out_failed": "Sign out kuna"
+      "sign_out_failed": "Sign out kuna",
+      "google_linked": "Akọọlẹ Google ti sopọ",
+      "google_already_linked": "Akọọlẹ Google ti sopọ pẹlu akọọlẹ miiran tẹlẹ",
+      "google_link_failed": "Ko le bẹrẹ sopọ Google",
+      "passkey_added": "Bọtini wọle ti fi kun",
+      "passkey_add_failed": "Ko le fi bọtini wọle kun"
     },
     "parties": {
       "updated": "Titunṣe",

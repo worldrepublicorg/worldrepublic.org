@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "CONT",
+        "security": "SECURITATE",
+        "google_account": "Cont Google",
+        "google_not_linked": "Nelinkuit",
+        "passkeys": "Chei de acces",
+        "passkeys_linked": "{count} linkuite",
         "danger_zone": "ZONĂ DE PERICOL",
         "delete_account": {
           "description": "Eliminați permanent toate datele dvs."
@@ -301,7 +306,12 @@
       "account_deleted": "Cont șters",
       "delete_failed": "Ștergerea contului a eșuat",
       "contract_address_error": "Nu se poate retrage către adresa de contract",
-      "sign_out_failed": "Deconectarea a eșuat"
+      "sign_out_failed": "Deconectarea a eșuat",
+      "google_linked": "Contul Google a fost linkuit",
+      "google_already_linked": "Contul Google este deja linkuit la un alt cont",
+      "google_link_failed": "Nu s-a putut începe linkuirea Google",
+      "passkey_added": "Cheia de acces a fost adăugată",
+      "passkey_add_failed": "Nu s-a putut adăuga cheia de acces"
     },
     "parties": {
       "updated": "Actualizat",

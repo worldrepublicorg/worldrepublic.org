@@ -231,6 +231,11 @@
       },
       "sections": {
         "account": "АККАУНТ",
+        "security": "БЕЗОПАСНОСТЬ",
+        "google_account": "Аккаунт Google",
+        "google_not_linked": "Не подключён",
+        "passkeys": "Ключи доступа",
+        "passkeys_linked": "{count} подключено",
         "danger_zone": "ОПАСНАЯ ЗОНА",
         "delete_account": {
           "description": "Навсегда удалить все ваши данные"
@@ -301,7 +306,12 @@
       "account_deleted": "Аккаунт удалён",
       "delete_failed": "Не удалось удалить аккаунт",
       "contract_address_error": "Невозможно вывести на адрес контракта",
-      "sign_out_failed": "Выход не удался"
+      "sign_out_failed": "Выход не удался",
+      "google_linked": "Аккаунт Google подключён",
+      "google_already_linked": "Аккаунт Google уже подключён к другому аккаунту",
+      "google_link_failed": "Не удалось начать подключение Google",
+      "passkey_added": "Ключ доступа добавлен",
+      "passkey_add_failed": "Не удалось добавить ключ доступа"
     },
     "parties": {
       "updated": "Обновлено",
