@@ -40,6 +40,7 @@ import {
 import {
   getPasskeyRegistrationOptions,
   linkPasskeyToAccount,
+  setLinkingIntent,
 } from "@/lib/actions/passkey";
 import { copyToClipboard } from "@/lib/utils";
 import {
@@ -242,6 +243,7 @@ export default function AccountPageClient({
   const handleLinkGoogle = async () => {
     try {
       setIsLinkingGoogle(true);
+      await setLinkingIntent();
       await signIn("google", {
         callbackUrl: `/${lang}/menu/account?link=google`,
       });

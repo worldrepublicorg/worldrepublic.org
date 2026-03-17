@@ -3,6 +3,7 @@ import { and, eq } from "drizzle-orm";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
+import { cookies } from "next/headers";
 import { cache } from "react";
 import { getDbReadOnly } from "./db/connection";
 import { accounts } from "./db/schema";
@@ -73,41 +74,49 @@ const { handlers, auth: uncachedAuth } = NextAuth({
         account.providerAccountId &&
         user?.id
       ) {
-        const readDb = getDbReadOnly();
-        const [existingAccount] = await readDb
-          .select({ userId: accounts.userId })
-          .from(accounts)
-          .where(
-            and(
-              eq(accounts.provider, "google"),
-              eq(accounts.providerAccountId, account.providerAccountId),
-            ),
-          )
-          .limit(1);
+        const cookieStore = await cookies();
+        const linkingUserId = cookieStore.get("auth-linking-intent")?.value;
 
-        const currentUserId = parseInt(String(user.id), 10);
-        if (
-          existingAccount &&
-          !Number.isNaN(currentUserId) &&
-          existingAccount.userId !== currentUserId
-        ) {
-          return "/en/menu/account?link=google&error=account_already_linked";
-        }
+        if (linkingUserId) {
+          const targetUserId = parseInt(linkingUserId, 10);
+          cookieStore.delete("auth-linking-intent");
 
-        if (!existingAccount && adapter.linkAccount) {
-          await adapter.linkAccount({
-            userId: String(user.id),
-            type: account.type as "oauth",
-            provider: account.provider,
-            providerAccountId: account.providerAccountId,
-            refresh_token: account.refresh_token ?? undefined,
-            access_token: account.access_token ?? undefined,
-            expires_at: account.expires_at ?? undefined,
-            id_token: account.id_token ?? undefined,
-            scope: account.scope ?? undefined,
-            session_state: account.session_state as string | undefined,
-            token_type: account.token_type ?? undefined,
-          });
+          if (Number.isNaN(targetUserId)) {
+            return "/en/menu/account?link=google&error=account_already_linked";
+          }
+
+          const readDb = getDbReadOnly();
+          const [existingAccount] = await readDb
+            .select({ userId: accounts.userId })
+            .from(accounts)
+            .where(
+              and(
+                eq(accounts.provider, "google"),
+                eq(accounts.providerAccountId, account.providerAccountId),
+              ),
+            )
+            .limit(1);
+
+          if (existingAccount && existingAccount.userId !== targetUserId) {
+            return "/en/menu/account?link=google&error=account_already_linked";
+          }
+
+          if (!existingAccount && adapter.linkAccount) {
+            await adapter.linkAccount({
+              userId: String(targetUserId),
+              type: account.type as "oauth",
+              provider: account.provider,
+              providerAccountId: account.providerAccountId,
+              refresh_token: account.refresh_token ?? undefined,
+              access_token: account.access_token ?? undefined,
+              expires_at: account.expires_at ?? undefined,
+              id_token: account.id_token ?? undefined,
+              scope: account.scope ?? undefined,
+              session_state: account.session_state as string | undefined,
+              token_type: account.token_type ?? undefined,
+            });
+          }
+
           return "/en/menu/account?link=google";
         }
       }

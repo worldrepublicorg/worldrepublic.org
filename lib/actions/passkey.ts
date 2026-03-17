@@ -377,6 +377,28 @@ export async function verifyPasskeyRegistration(
   }
 }
 
+export async function setLinkingIntent() {
+  const session = await auth();
+  if (!session?.user?.id) {
+    return { error: "Not authenticated" };
+  }
+
+  const cookieStore = await cookies();
+  const isProduction =
+    process.env.NODE_ENV === "production" &&
+    process.env.NEXTAUTH_URL?.startsWith("https");
+
+  cookieStore.set("auth-linking-intent", session.user.id, {
+    httpOnly: true,
+    secure: isProduction,
+    sameSite: "lax",
+    maxAge: 300,
+    path: "/",
+  });
+
+  return { success: true };
+}
+
 export async function linkPasskeyToAccount(
   credential: unknown,
   challenge: string,
