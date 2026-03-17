@@ -19,15 +19,14 @@ import { signIn } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import {
   PiCaretLeft,
+  PiCircleNotch,
   PiLinkSimple,
   PiPlus,
   PiPencilSimple,
   PiPencilSimpleFill,
   PiShareNetwork,
-  PiSpinnerGap,
   PiTrash,
   PiTrashFill,
-  PiSpinner,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
@@ -433,7 +432,7 @@ export default function AccountPageClient({
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
-                            <PiSpinner className="size-4 animate-spin" />
+                            <PiCircleNotch className="size-4 animate-spin" />
                           ) : (
                             <PiLinkSimple className="size-4" />
                           )}
@@ -457,7 +456,7 @@ export default function AccountPageClient({
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (
-                          <PiSpinner className="size-4 animate-spin" />
+                          <PiCircleNotch className="size-4 animate-spin" />
                         ) : (
                           <PiPlus className="size-4" />
                         )}
