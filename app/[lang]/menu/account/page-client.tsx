@@ -27,6 +27,7 @@ import {
   PiSpinnerGap,
   PiTrash,
   PiTrashFill,
+  PiSpinner,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
@@ -432,7 +433,7 @@ export default function AccountPageClient({
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
-                            <PiSpinnerGap className="size-4 animate-spin" />
+                            <PiSpinner className="size-4 animate-spin" />
                           ) : (
                             <PiLinkSimple className="size-4" />
                           )}
@@ -456,7 +457,7 @@ export default function AccountPageClient({
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (
-                          <PiSpinnerGap className="size-4 animate-spin" />
+                          <PiSpinner className="size-4 animate-spin" />
                         ) : (
                           <PiPlus className="size-4" />
                         )}
