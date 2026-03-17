@@ -28,6 +28,9 @@ export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
           (obj.transactions as GetWalletAuthAndDataTransaction[]) ?? null,
         streams: (obj.streams as StreamData[]) ?? null,
         email: (obj.email as string) ?? null,
+        linkedProviders:
+          (obj.linkedProviders as GetWalletAuthAndDataResult["linkedProviders"]) ??
+          null,
       };
     }
     return null;

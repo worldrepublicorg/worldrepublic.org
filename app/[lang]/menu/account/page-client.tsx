@@ -1,5 +1,6 @@
 "use client";
 
+import { startRegistration } from "@simplewebauthn/browser";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -13,10 +14,13 @@ import {
   Typography,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
 import { useEffect, useState } from "react";
 import {
   PiCaretLeft,
+  PiLinkSimple,
+  PiPlus,
   PiPencilSimple,
   PiPencilSimpleFill,
   PiShareNetwork,
@@ -33,6 +37,10 @@ import {
   getWalletAuthAndData,
   setUsername,
 } from "@/lib/actions/member";
+import {
+  getPasskeyRegistrationOptions,
+  linkPasskeyToAccount,
+} from "@/lib/actions/passkey";
 import { copyToClipboard } from "@/lib/utils";
 import {
   getCachedWalletData,
@@ -50,6 +58,7 @@ export default function AccountPageClient({
 }: AccountPageClientProps) {
   const { signOut } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { toast } = useToast();
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
@@ -57,6 +66,26 @@ export default function AccountPageClient({
   const [serverData, setServerData] = useState<Awaited<
     ReturnType<typeof getWalletAuthAndData>
   > | null>(null);
+
+  useEffect(() => {
+    const link = searchParams.get("link");
+    const error = searchParams.get("error");
+    if (link !== "google") {
+      return;
+    }
+
+    if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
+      toast.error({
+        title: "Google account already linked.",
+      });
+    } else {
+      toast.success({
+        title: "Google account linked.",
+      });
+    }
+
+    router.replace(`/${lang}/menu/account`);
+  }, [lang, router, searchParams, toast]);
 
   useEffect(() => {
     let cancelled = false;
@@ -82,12 +111,18 @@ export default function AccountPageClient({
   const isAuthenticated = data?.authenticated ?? false;
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const userUuid = data?.profileData?.userUuid ?? null;
+  const linkedProviders = data?.linkedProviders ?? null;
+  const googleLinked = linkedProviders?.hasGoogle ?? false;
+  const googleLinkedEmail = linkedProviders?.googleEmail ?? null;
+  const passkeyCount = linkedProviders?.passkeyCount ?? 0;
 
   // State for form validation
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
   const [editUsernameDialogOpen, setEditUsernameDialogOpen] = useState(false);
   const [editUsernameValue, setEditUsernameValue] = useState("");
   const [isUpdatingUsername, setIsUpdatingUsername] = useState(false);
+  const [isLinkingGoogle, setIsLinkingGoogle] = useState(false);
+  const [isAddingPasskey, setIsAddingPasskey] = useState(false);
 
   const handleSignOut = async () => {
     try {
@@ -204,6 +239,84 @@ export default function AccountPageClient({
     }
   };
 
+  const handleLinkGoogle = async () => {
+    try {
+      setIsLinkingGoogle(true);
+      await signIn("google", {
+        callbackUrl: `/${lang}/menu/account?link=google`,
+      });
+    } catch (error) {
+      console.error("Error linking Google account:", error);
+      toast.error({
+        title: "Could not start Google linking",
+      });
+      setIsLinkingGoogle(false);
+    }
+  };
+
+  const handleAddPasskey = async () => {
+    setIsAddingPasskey(true);
+    try {
+      const optionsResult = await getPasskeyRegistrationOptions(
+        null,
+        username || email || undefined,
+      );
+
+      if (optionsResult.error) {
+        throw new Error(optionsResult.error || "Failed to get registration options");
+      }
+
+      if (!("challenge" in optionsResult)) {
+        throw new Error("Invalid registration options");
+      }
+
+      const { challenge, tempUserId } = optionsResult;
+      let registrationResponse;
+      try {
+        registrationResponse = await startRegistration(optionsResult);
+      } catch (error) {
+        if (
+          error instanceof Error &&
+          (error.name === "NotAllowedError" ||
+            error.name === "AbortError" ||
+            error.message.includes("cancel") ||
+            error.message.includes("abort"))
+        ) {
+          setIsAddingPasskey(false);
+          return;
+        }
+        throw error;
+      }
+
+      const verifyResult = await linkPasskeyToAccount(
+        registrationResponse,
+        challenge,
+        tempUserId,
+      );
+
+      if (verifyResult.error) {
+        throw new Error(verifyResult.error || "Failed to link passkey");
+      }
+
+      if (verifyResult.verified) {
+        toast.success({
+          title: "Passkey added",
+        });
+        const fresh = await getWalletAuthAndData();
+        setServerData(fresh);
+        setCachedWalletData(fresh);
+        router.refresh();
+      }
+    } catch (error) {
+      console.error("Error adding passkey:", error);
+      toast.error({
+        title: error instanceof Error ? error.message : "Could not add passkey",
+      });
+    } finally {
+      setIsAddingPasskey(false);
+    }
+  };
+
   if (showSkeleton) {
     return <AccountPageSkeleton />;
   }
@@ -287,6 +400,58 @@ export default function AccountPageClient({
                     description={referralCode ?? ""}
                     endAdornment={
                       <PiShareNetwork className="size-4 text-gray-400" />
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-4 flex">
+                <Typography variant="subtitle" level={3} className="text-gray-400">
+                  Security
+                </Typography>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!googleLinked && !isLinkingGoogle) {
+                      void handleLinkGoogle();
+                    }
+                  }}
+                  className={googleLinked ? "" : "cursor-pointer"}
+                >
+                  <CustomListItem
+                    label="Google account"
+                    description={googleLinkedEmail || "Not linked"}
+                    endAdornment={
+                      googleLinked ? undefined : (
+                        <div className="flex items-center gap-1 text-gray-500">
+                          <PiLinkSimple className="size-4" />
+                          <span>{isLinkingGoogle ? "Linking..." : "Link"}</span>
+                        </div>
+                      )
+                    }
+                  />
+                </div>
+                <div
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!isAddingPasskey) {
+                      void handleAddPasskey();
+                    }
+                  }}
+                  className="cursor-pointer"
+                >
+                  <CustomListItem
+                    label="Passkeys"
+                    description={`${passkeyCount} linked`}
+                    endAdornment={
+                      <div className="flex items-center gap-1 text-gray-500">
+                        <PiPlus className="size-4" />
+                        <span>{isAddingPasskey ? "Adding..." : "Add"}</span>
+                      </div>
                     }
                   />
                 </div>

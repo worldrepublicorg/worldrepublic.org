@@ -1,8 +1,11 @@
 import "server-only";
+import { and, eq } from "drizzle-orm";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
 import { cache } from "react";
+import { getDbReadOnly } from "./db/connection";
+import { accounts } from "./db/schema";
 import { createNeonAdapterWithWebAuthn } from "./auth/adapter";
 import { pool } from "./db/connection";
 
@@ -64,7 +67,34 @@ const { handlers, auth: uncachedAuth } = NextAuth({
     strategy: "database",
   },
   callbacks: {
-    async signIn() {
+    async signIn({ user, account }) {
+      if (
+        account?.provider === "google" &&
+        account.providerAccountId &&
+        user?.id
+      ) {
+        const readDb = getDbReadOnly();
+        const [existingAccount] = await readDb
+          .select({ userId: accounts.userId })
+          .from(accounts)
+          .where(
+            and(
+              eq(accounts.provider, "google"),
+              eq(accounts.providerAccountId, account.providerAccountId),
+            ),
+          )
+          .limit(1);
+
+        const currentUserId = parseInt(String(user.id), 10);
+        if (
+          existingAccount &&
+          !Number.isNaN(currentUserId) &&
+          existingAccount.userId !== currentUserId
+        ) {
+          return "/en/menu/account?link=google&error=account_already_linked";
+        }
+      }
+
       return true;
     },
     session({ session, user }) {

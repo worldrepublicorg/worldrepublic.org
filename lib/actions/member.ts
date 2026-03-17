@@ -5,6 +5,7 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
 import {
+  accounts,
   parties,
   referrals,
   streams,
@@ -78,6 +79,23 @@ async function verifyUserAccess(userUuid: string) {
   return {
     userUuid: uuid,
     isAuthenticated: true,
+  };
+}
+
+async function getLinkedProviders(authUserId: number) {
+  const rows = await db
+    .select({
+      provider: accounts.provider,
+      providerAccountId: accounts.providerAccountId,
+    })
+    .from(accounts)
+    .where(eq(accounts.userId, authUserId));
+
+  return {
+    hasGoogle: rows.some((row) => row.provider === "google"),
+    googleEmail:
+      rows.find((row) => row.provider === "google")?.providerAccountId ?? null,
+    passkeyCount: rows.filter((row) => row.provider === "passkey").length,
   };
 }
 
@@ -339,6 +357,11 @@ export type GetWalletAuthAndDataResult = {
   transactions: GetWalletAuthAndDataTransaction[] | null;
   streams: StreamData[] | null;
   email: string | null;
+  linkedProviders: {
+    hasGoogle: boolean;
+    googleEmail: string | null;
+    passkeyCount: number;
+  } | null;
 };
 
 async function getUserStreamsByUuid(userUuid: string): Promise<StreamData[]> {
@@ -381,12 +404,14 @@ export async function getWalletAuthAndData(
       transactions: null,
       streams: null,
       email: null,
+      linkedProviders: null,
     };
   }
 
   const authUserId = parseInt(String(session.user.id), 10);
 
-  const [userResult, profileResult, transactionsResult] = await Promise.all([
+  const [userResult, profileResult, transactionsResult, linkedProviders] =
+    await Promise.all([
     db
       .select({ uuid: users.uuid })
       .from(users)
@@ -395,6 +420,7 @@ export async function getWalletAuthAndData(
       .then(([user]) => user || null),
     getUserProfile(pendingReferralCode),
     getTransactions(100),
+    getLinkedProviders(authUserId),
   ]);
 
   const userUuid = userResult?.uuid ?? null;
@@ -405,6 +431,7 @@ export async function getWalletAuthAndData(
       transactions: null,
       streams: null,
       email: session.user?.email ?? null,
+      linkedProviders,
     };
   }
 
@@ -468,6 +495,7 @@ export async function getWalletAuthAndData(
     transactions: transactionsData,
     streams: userStreams.length > 0 ? userStreams : null,
     email: session.user?.email ?? null,
+    linkedProviders,
   };
 }
 

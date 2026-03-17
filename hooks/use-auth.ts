@@ -31,6 +31,7 @@ export function useAuth() {
           transactions: null,
           streams: null,
           email: null,
+          linkedProviders: null,
         });
       } catch {
         // ignore

@@ -10,6 +10,7 @@ import { Buffer } from "buffer";
 import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { createUserProfile } from "@/lib/actions/member";
+import { auth } from "@/lib/auth";
 import { createNeonAdapterWithWebAuthn } from "@/lib/auth/adapter";
 import { getDbReadOnly, pool } from "@/lib/db/connection";
 import { accounts, authenticators, users } from "@/lib/db/schema";
@@ -373,5 +374,95 @@ export async function verifyPasskeyRegistration(
     }
 
     return { error: "Failed to verify registration" };
+  }
+}
+
+export async function linkPasskeyToAccount(
+  credential: unknown,
+  challenge: string,
+  tempUserId: string,
+) {
+  try {
+    if (!credential || !challenge || !tempUserId) {
+      return { error: "Missing required fields" };
+    }
+
+    const session = await auth();
+    if (!session?.user?.id) {
+      return { error: "Session expired, please sign in again." };
+    }
+
+    const authUserId = parseInt(String(session.user.id), 10);
+    if (Number.isNaN(authUserId)) {
+      return { error: "Session expired, please sign in again." };
+    }
+
+    const rpId = getRpId();
+    const origin = process.env.NEXTAUTH_URL || "http://localhost:3000";
+
+    const verification = await verifyRegistrationResponse({
+      response: credential as Parameters<
+        typeof verifyRegistrationResponse
+      >[0]["response"],
+      expectedChallenge: challenge,
+      expectedOrigin: origin,
+      expectedRPID: rpId,
+      requireUserVerification: false,
+    });
+
+    if (!verification.verified || !verification.registrationInfo) {
+      return { error: "Registration verification failed" };
+    }
+
+    const { credentialID, credentialPublicKey, counter } =
+      verification.registrationInfo;
+    const credentialIDString = Buffer.from(credentialID).toString("base64url");
+    const credentialPublicKeyString =
+      Buffer.from(credentialPublicKey).toString("base64");
+    const transports = (
+      credential as {
+        response: { getTransports?: () => string[] | null };
+      }
+    ).response.getTransports
+      ? (
+          credential as {
+            response: { getTransports: () => string[] | null };
+          }
+        ).response.getTransports()
+      : null;
+
+    const db = getDbReadOnly();
+    const [existingAuthenticator] = await db
+      .select({ credentialID: authenticators.credentialID })
+      .from(authenticators)
+      .where(eq(authenticators.credentialID, credentialIDString))
+      .limit(1);
+
+    if (existingAuthenticator) {
+      return { error: "This passkey is already linked to an account." };
+    }
+
+    await db.insert(authenticators).values({
+      credentialID: credentialIDString,
+      userId: authUserId,
+      providerAccountId: credentialIDString,
+      credentialPublicKey: credentialPublicKeyString,
+      counter,
+      credentialDeviceType: "singleDevice",
+      credentialBackedUp: verification.registrationInfo.credentialBackedUp || false,
+      transports: transports ? JSON.stringify(transports) : null,
+    });
+
+    await db.insert(accounts).values({
+      userId: authUserId,
+      type: "webauthn",
+      provider: "passkey",
+      providerAccountId: credentialIDString,
+    });
+
+    return { verified: true };
+  } catch (error) {
+    console.error("Error linking passkey:", error);
+    return { error: "Failed to link passkey" };
   }
 }
