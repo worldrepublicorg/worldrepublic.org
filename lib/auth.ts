@@ -93,6 +93,23 @@ const { handlers, auth: uncachedAuth } = NextAuth({
         ) {
           return "/en/menu/account?link=google&error=account_already_linked";
         }
+
+        if (!existingAccount && adapter.linkAccount) {
+          await adapter.linkAccount({
+            userId: String(user.id),
+            type: account.type as "oauth",
+            provider: account.provider,
+            providerAccountId: account.providerAccountId,
+            refresh_token: account.refresh_token ?? undefined,
+            access_token: account.access_token ?? undefined,
+            expires_at: account.expires_at ?? undefined,
+            id_token: account.id_token ?? undefined,
+            scope: account.scope ?? undefined,
+            session_state: account.session_state as string | undefined,
+            token_type: account.token_type ?? undefined,
+          });
+          return "/en/menu/account?link=google";
+        }
       }
 
       return true;
