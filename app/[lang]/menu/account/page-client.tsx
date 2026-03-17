@@ -409,32 +409,35 @@ export default function AccountPageClient({
             <div>
               <div className="mb-4 flex">
                 <Typography variant="subtitle" level={3} className="text-gray-400">
-                  Security
+                  SECURITY
                 </Typography>
               </div>
               <div className="flex flex-col gap-2">
-                <div
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (!googleLinked && !isLinkingGoogle) {
-                      void handleLinkGoogle();
-                    }
-                  }}
-                  className={googleLinked ? "" : "cursor-pointer"}
-                >
-                  <CustomListItem
-                    label="Google account"
-                    description={googleLinkedEmail || "Not linked"}
-                    endAdornment={
-                      googleLinked ? undefined : (
-                        <div className="flex items-center gap-1 text-gray-500">
-                          <PiLinkSimple className="size-4" />
-                          <span>{isLinkingGoogle ? "Linking..." : "Link"}</span>
+                {!googleLinked && (
+                  <div
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (!isLinkingGoogle) {
+                        void handleLinkGoogle();
+                      }
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <CustomListItem
+                      label="Google account"
+                      description="Not linked"
+                      endAdornment={
+                        <div className="flex items-center text-gray-500 text-sm">
+                          {isLinkingGoogle ? (
+                            <span>Linking...</span>
+                          ) : (
+                            <PiLinkSimple className="size-4" />
+                          )}
                         </div>
-                      )
-                    }
-                  />
-                </div>
+                      }
+                    />
+                  </div>
+                )}
                 <div
                   onClick={(e) => {
                     e.stopPropagation();
@@ -448,7 +451,7 @@ export default function AccountPageClient({
                     label="Passkeys"
                     description={`${passkeyCount} linked`}
                     endAdornment={
-                      <div className="flex items-center text-gray-500 text-[15px]">
+                      <div className="flex items-center text-gray-500 text-sm">
                         {isAddingPasskey ? (
                           <span>Adding...</span>
                         ) : (
