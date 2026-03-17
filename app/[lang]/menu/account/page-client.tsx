@@ -427,9 +427,9 @@ export default function AccountPageClient({
                       label="Google account"
                       description="Not linked"
                       endAdornment={
-                        <div className="flex items-center text-gray-500 text-sm">
+                        <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
-                            <span>Linking...</span>
+                            <span className="text-sm">Linking...</span>
                           ) : (
                             <PiLinkSimple className="size-4" />
                           )}
@@ -451,9 +451,9 @@ export default function AccountPageClient({
                     label="Passkeys"
                     description={`${passkeyCount} linked`}
                     endAdornment={
-                      <div className="flex items-center text-gray-500 text-sm">
+                      <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (
-                          <span>Adding...</span>
+                          <span className="text-sm">Adding...</span>
                         ) : (
                           <PiPlus className="size-4" />
                         )}
