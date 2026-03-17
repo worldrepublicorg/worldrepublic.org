@@ -78,11 +78,11 @@ export default function AccountPageClient({
 
     if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
       toast.error({
-        title: "Google account already linked.",
+        title: "Google account already linked",
       });
     } else {
       toast.success({
-        title: "Google account linked.",
+        title: "Google account linked",
       });
     }
 
