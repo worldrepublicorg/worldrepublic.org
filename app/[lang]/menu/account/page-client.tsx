@@ -429,7 +429,7 @@ export default function AccountPageClient({
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
-                            <span className="text-sm">Linking...</span>
+                            <span className="text-sm!">Linking...</span>
                           ) : (
                             <PiLinkSimple className="size-4" />
                           )}
@@ -453,7 +453,7 @@ export default function AccountPageClient({
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (
-                          <span className="text-sm">Adding...</span>
+                          <span className="text-sm!">Adding...</span>
                         ) : (
                           <PiPlus className="size-4" />
                         )}
