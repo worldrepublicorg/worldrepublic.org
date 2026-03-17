@@ -1,12 +1,12 @@
 import "server-only";
-import { and, eq } from "drizzle-orm";
+import { and, eq, isNull } from "drizzle-orm";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
 import { cookies } from "next/headers";
 import { cache } from "react";
 import { getDbReadOnly } from "./db/connection";
-import { accounts } from "./db/schema";
+import { accounts, users } from "./db/schema";
 import { createNeonAdapterWithWebAuthn } from "./auth/adapter";
 import { pool } from "./db/connection";
 
@@ -102,6 +102,7 @@ const { handlers, auth: uncachedAuth } = NextAuth({
           }
 
           if (!existingAccount && adapter.linkAccount) {
+            const readDbWrite = getDbReadOnly();
             await adapter.linkAccount({
               userId: String(targetUserId),
               type: account.type as "oauth",
@@ -115,6 +116,18 @@ const { handlers, auth: uncachedAuth } = NextAuth({
               session_state: account.session_state as string | undefined,
               token_type: account.token_type ?? undefined,
             });
+
+            if (user.email) {
+              await readDbWrite
+                .update(users)
+                .set({ email: user.email })
+                .where(
+                  and(
+                    eq(users.id, targetUserId),
+                    isNull(users.email),
+                  ),
+                );
+            }
           }
 
           return "/en/menu/account?link=google";
