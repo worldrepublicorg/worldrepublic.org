@@ -45,9 +45,7 @@ export function LearnMoreDrawer({
         </AlertDialogHeader>
 
         {info && (
-          <AlertDialogDescription>
-            {info}
-          </AlertDialogDescription>
+          <Typography className="text-gray-500">{info}</Typography>
         )}
 
         {externalLink && (
