@@ -2,10 +2,12 @@
 
 import {
   AlertDialog,
+  AlertDialogClose,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  Button,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { PiArrowSquareOut } from "react-icons/pi";
@@ -15,6 +17,8 @@ export interface LearnMoreDrawerProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   title: string;
+  /** Label for the close button (e.g. dictionary.common.close). Only used when info is present. */
+  closeLabel?: string;
   /** Optional info text displayed in the drawer body */
   info?: string;
   /** Optional external link - renders like Menu page links (PiArrowSquareOut) without start icon */
@@ -30,10 +34,13 @@ export function LearnMoreDrawer({
   open,
   onOpenChange,
   title,
+  closeLabel,
   info,
   externalLink,
 }: LearnMoreDrawerProps) {
-  const hasContent = info || externalLink;
+  const hasInfo = Boolean(info);
+  const hasExternalLink = Boolean(externalLink);
+  const hasContent = hasInfo || hasExternalLink;
 
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
@@ -44,15 +51,17 @@ export function LearnMoreDrawer({
           </Typography>
         </AlertDialogHeader>
 
-        {info && (
-          <AlertDialogDescription className="mb-4">
-            {info}
+        {hasInfo && <AlertDialogDescription>{info}</AlertDialogDescription>}
+
+        {!hasContent && (
+          <AlertDialogDescription className="text-gray-500">
+            —
           </AlertDialogDescription>
         )}
 
-        {externalLink && (
-          <AlertDialogFooter>
-            <div className="flex flex-col gap-2 w-full">
+        <AlertDialogFooter>
+          <div className="flex flex-col gap-2 w-full">
+            {hasExternalLink && externalLink && (
               <a
                 href={externalLink.url}
                 target="_blank"
@@ -66,15 +75,14 @@ export function LearnMoreDrawer({
                   }
                 />
               </a>
-            </div>
-          </AlertDialogFooter>
-        )}
-
-        {!hasContent && (
-          <AlertDialogDescription className="text-gray-500">
-            —
-          </AlertDialogDescription>
-        )}
+            )}
+            {hasInfo && closeLabel && (
+              <AlertDialogClose asChild>
+                <Button fullWidth>{closeLabel}</Button>
+              </AlertDialogClose>
+            )}
+          </div>
+        </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
   );

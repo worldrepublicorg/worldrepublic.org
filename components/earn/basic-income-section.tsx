@@ -152,6 +152,7 @@ export function BasicIncomeSection({
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.govern.parties.learn_more}
+            closeLabel={dictionary.common.close}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
           />
           <div className="mt-5 mb-1 font-mono text-7xl font-semibold">
