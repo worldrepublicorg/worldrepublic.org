@@ -269,6 +269,21 @@ export async function POST(req: Request) {
       });
     } catch (dbError) {
       if (isDuplicateVoteError(dbError)) {
+        // For the test election, treat duplicate votes as a successful vote
+        if (electionId === "b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1") {
+          return NextResponse.json(
+            {
+              status: "success",
+              result: true,
+              credentialSubject: result.discloseOutput,
+              electionName: activeElection[0].name,
+              partyName: partyExists[0].id,
+            },
+            { status: 200 },
+          );
+        }
+
+        // For all other elections, surface a duplicate-vote error
         return NextResponse.json(
           {
             status: "error",
@@ -293,17 +308,6 @@ export async function POST(req: Request) {
     );
   } catch (error) {
     console.error("Self verification error:", error);
-
-    if (isDuplicateVoteError(error)) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "You have already voted in this election",
-        },
-        { status: 200 },
-      );
-    }
 
     const errorMessage = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
