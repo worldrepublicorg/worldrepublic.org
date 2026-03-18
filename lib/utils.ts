@@ -26,6 +26,24 @@ export const formatFullAmount = (num: number): string => {
 };
 
 /**
+ * Determines the number of decimal places to display for balance values
+ * (copied from world-republic-pwa)
+ * @param balance - The balance value
+ * @returns The number of decimal places to display (2, 3, or 4)
+ */
+export const getBalancePrecision = (balance: number): number => {
+  if (balance === 0) {
+    return 2; // Show 2 decimals for zero balance
+  } else if (balance < 0.001) {
+    return 4; // Show 4 decimals for very small amounts
+  } else if (balance < 0.01) {
+    return 3; // Show 3 decimals for small amounts
+  } else {
+    return 2; // Show 2 decimals for normal amounts
+  }
+};
+
+/**
  * Truncates a number to a specified precision (truncates, doesn't round)
  * @param num - The number to truncate
  * @param precision - The number of decimal places to keep

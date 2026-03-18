@@ -4,7 +4,7 @@ import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PiWalletFill } from "react-icons/pi";
-import { truncateToPrecision } from "@/lib/utils";
+import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
 
 interface TopbarWalletBalanceDisplayProps {
   walletBalance: number | null;
@@ -21,16 +21,15 @@ export function TopbarWalletBalanceDisplay({
   const locale = lang.trim() || "en";
   const displayBalanceNumber = walletBalance || 0;
 
-  const truncatedDisplay = Math.floor(displayBalanceNumber * 1e18) / 1e18;
-  const safeDisplayAmount = Math.max(0, truncatedDisplay - 1e-12);
-  const precision = safeDisplayAmount === 0 ? 2 : 5;
+  const precision = getBalancePrecision(displayBalanceNumber);
   const truncatedDisplayBalance = truncateToPrecision(
-    safeDisplayAmount,
+    displayBalanceNumber,
     precision,
   );
+  const finalPrecision = truncatedDisplayBalance === 0 ? 2 : precision;
   const displayBalance = truncatedDisplayBalance.toLocaleString(locale, {
-    minimumFractionDigits: precision,
-    maximumFractionDigits: precision,
+    minimumFractionDigits: finalPrecision,
+    maximumFractionDigits: finalPrecision,
   });
 
   const targetHref = href ?? `/${lang}/menu/wallet`;
