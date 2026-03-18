@@ -103,7 +103,7 @@ export function useSelfVerification(
           scope: "world-republic",
           endpoint,
           endpointType: "staging_https",
-          deeplinkCallback: `${callback}?userId=${encodeURIComponent(userId)}&next=${encodeURIComponent(nextTarget)}`,
+          deeplinkCallback: `${callback}?next=${encodeURIComponent(nextTarget)}`,
           userId: userId,
           userIdType: "uuid",
           userDefinedData:
