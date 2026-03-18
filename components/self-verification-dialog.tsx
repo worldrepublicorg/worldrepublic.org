@@ -115,10 +115,6 @@ export function SelfVerificationDialog({
               {dictionary.components.identity.self.callback_warning_description}
             </Typography>
           </div>
-        ) : isLoading ? (
-          <div className="mb-6">
-            <Typography>{dictionary.common.loading}</Typography>
-          </div>
         ) : isMobile ? (
           <>
             <AlertDialogDescription className="mb-4">
@@ -130,7 +126,7 @@ export function SelfVerificationDialog({
             <AlertDialogFooter>
               <Button
                 onClick={handleContinue}
-                disabled={!universalLink}
+                disabled={isLoading || !universalLink}
                 className="w-full"
               >
                 {dictionary.common.continue}
@@ -144,7 +140,9 @@ export function SelfVerificationDialog({
             </AlertDialogDescription>
 
             <div className="mb-4 flex w-full justify-center">
-              {SelfQRcodeWrapperCmp && selfApp ? (
+              {isLoading ? (
+                <div className="h-[300px] w-[300px] p-4 animate-pulse rounded-2xl bg-gray-100" />
+              ) : SelfQRcodeWrapperCmp && selfApp ? (
                 <div className="rounded-2xl p-4">
                   <SelfQRcodeWrapperCmp
                     selfApp={selfApp}
