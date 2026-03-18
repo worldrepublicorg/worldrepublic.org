@@ -45,7 +45,7 @@ export function LearnMoreDrawer({
         </AlertDialogHeader>
 
         {info && (
-          <AlertDialogDescription className="mb-4">
+          <AlertDialogDescription>
             {info}
           </AlertDialogDescription>
         )}
