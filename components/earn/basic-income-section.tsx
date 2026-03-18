@@ -152,6 +152,7 @@ export function BasicIncomeSection({
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.govern.parties.learn_more}
+            showInfoIcon
             closeLabel={dictionary.common.close}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
           />
