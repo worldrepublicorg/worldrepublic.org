@@ -11,7 +11,7 @@ export function WalletPageSkeleton() {
   return (
     <div className="pb-safe flex flex-col">
       <TopBar
-        endAdornment={
+        startAdornment={
           <Skeleton height={40} width={40} className="rounded-full" />
         }
       />

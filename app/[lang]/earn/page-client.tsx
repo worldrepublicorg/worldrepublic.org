@@ -6,9 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { BasicIncomeSection } from "@/components/earn/basic-income-section";
 import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
-import { MenuLink } from "@/components/menu-link";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
+import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
 import {
   type GetWalletAuthAndDataResult,
@@ -79,7 +79,14 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
         title={dictionary.nav.earn}
-        endAdornment={<MenuLink lang={lang} />}
+        endAdornment={
+          isAuthenticated ? (
+            <TopbarWalletBalanceDisplay
+              walletBalance={profileData?.walletBalance ?? null}
+              lang={lang}
+            />
+          ) : null
+        }
       />
 
       <TabPills

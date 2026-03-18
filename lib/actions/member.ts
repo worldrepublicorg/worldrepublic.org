@@ -776,7 +776,7 @@ export async function withdrawTokens(
         transactionId,
       });
 
-      revalidatePath("/[lang]/wallet", "page");
+      revalidatePath("/[lang]/menu/wallet", "page");
 
       return {
         success: true,
@@ -944,7 +944,7 @@ export async function claimBasicIncome(): Promise<{
 
     if (result.success) {
       revalidatePath("/[lang]/earn", "page");
-      revalidatePath("/[lang]/wallet", "page");
+      revalidatePath("/[lang]/menu/wallet", "page");
     }
 
     return result;

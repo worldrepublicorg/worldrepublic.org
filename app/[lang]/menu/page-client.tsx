@@ -12,7 +12,6 @@ import {
   Typography,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { useRouter } from "next/navigation";
 import { signOut as nextAuthSignOut } from "next-auth/react";
 import { useEffect, useState } from "react";
 import {
@@ -28,7 +27,7 @@ import {
   PiSignOut,
   PiSignOutFill,
   PiUserCircle,
-  PiX,
+  PiWallet,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
@@ -50,7 +49,6 @@ export default function MenuPageClient({
   lang,
   dictionary,
 }: MenuPageClientProps) {
-  const router = useRouter();
   const { toast } = useToast();
   const [showSignInDialog, setShowSignInDialog] = useState(false);
 
@@ -75,20 +73,6 @@ export default function MenuPageClient({
 
   const showSkeleton = serverAuth === null && cachedData === null;
   const isAuthenticated = serverAuth ?? cachedData?.authenticated ?? false;
-
-  const handleClose = () => {
-    // Check if there's a stored return URL
-    const returnUrl = localStorage.getItem("menuReturnUrl");
-    if (returnUrl) {
-      // Navigate to the stored return URL
-      router.push(returnUrl);
-      // Clear the stored URL after using it
-      localStorage.removeItem("menuReturnUrl");
-    } else {
-      // Default to root page
-      router.push(`/${lang}/`);
-    }
-  };
 
   const handleSignOut = async () => {
     try {
@@ -126,6 +110,12 @@ export default function MenuPageClient({
                 startAdornment: (
                   <PiUserCircle className="size-5 text-gray-400" />
                 ),
+              },
+              {
+                label: dictionary.pages.wallet.topbar.title,
+                url: "/menu/wallet",
+                isExternal: false,
+                startAdornment: <PiWallet className="size-5 text-gray-400" />,
               },
             ]
           : [
@@ -204,18 +194,7 @@ export default function MenuPageClient({
 
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        title={dictionary.nav.menu}
-        startAdornment={<div className="size-10" />}
-        endAdornment={
-          <button
-            onClick={handleClose}
-            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
-          >
-            <PiX className="size-4 text-gray-900" />
-          </button>
-        }
-      />
+      <TopBar title={dictionary.nav.menu} />
 
       <div className="flex-1 overflow-y-auto px-6 pb-6 pt-4">
         <div className="flex flex-col gap-8">
@@ -264,6 +243,13 @@ export default function MenuPageClient({
                         startAdornment={link.startAdornment}
                         label={link.label}
                         href={`/${lang}${link.url}`}
+                        onClick={() => {
+                          // Store the current page as the return URL for wallet flow
+                          localStorage.setItem(
+                            "walletReturnUrl",
+                            window.location.pathname,
+                          );
+                        }}
                       />
                     )}
                   </div>

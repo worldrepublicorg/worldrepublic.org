@@ -12,11 +12,11 @@ import { Fragment, useEffect, useState } from "react";
 import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
-import { MenuLink } from "@/components/menu-link";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
+import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {
@@ -114,6 +114,9 @@ export default function PartiesPageClient({
     : TABS[0];
 
   const locale = lang.trim() || "en";
+  const headerAuthenticated =
+    cachedData?.authenticated ?? isAuthenticated ?? false;
+  const walletBalance = cachedData?.profileData?.walletBalance ?? null;
 
   const formatInteger = (value: number): string => value.toLocaleString(locale);
 
@@ -279,7 +282,11 @@ export default function PartiesPageClient({
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
         title={dictionary.pages.govern.sections.parties.title}
-        endAdornment={<MenuLink lang={lang} />}
+        endAdornment={
+          headerAuthenticated ? (
+            <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
+          ) : null
+        }
       />
 
       <TabPills

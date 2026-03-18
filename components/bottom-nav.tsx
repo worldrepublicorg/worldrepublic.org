@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import { FaLandmark, FaUsers, FaWallet } from "react-icons/fa";
+import { FaBars, FaLandmark, FaUsers } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
@@ -21,7 +21,7 @@ const BottomNav = () => {
   const navItems = [
     { path: "/", label: "vote", icon: FaLandmark },
     { path: "/parties", label: "parties", icon: FaUsers },
-    { path: "/wallet", label: "wallet", icon: FaWallet },
+    { path: "/menu", label: "menu", icon: FaBars },
   ];
 
   const isActive = (path: string) => {

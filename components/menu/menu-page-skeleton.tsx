@@ -7,9 +7,6 @@ export function MenuPageSkeleton() {
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
         startAdornment={<div className="size-10" />}
-        endAdornment={
-          <Skeleton height={40} width={40} className="rounded-full" />
-        }
       />
 
       <div className="flex-1 overflow-y-auto px-6 pb-6 pt-4">

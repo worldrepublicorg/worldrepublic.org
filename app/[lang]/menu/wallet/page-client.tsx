@@ -24,6 +24,7 @@ import {
   PiArrowsClockwise,
   PiArrowsClockwiseFill,
   PiArrowUp,
+  PiCaretLeft,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
@@ -35,7 +36,6 @@ const SignInDialog = dynamic(
 
 import { CustomListItem } from "@/components/custom-list-item";
 import { CustomSelect } from "@/components/custom-select";
-import { MenuLink } from "@/components/menu-link";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
 import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
@@ -64,6 +64,7 @@ export default function WalletPageClient({
   dictionary,
 }: WalletPageClientProps) {
   const params = useParams<{ lang: string }>();
+  const lang = params.lang;
   const [isSignInDialogOpen, setIsSignInDialogOpen] = useState(false);
   const { user, isAuthenticated: clientIsAuthenticated } = useAuth();
   const router = useRouter();
@@ -271,6 +272,16 @@ export default function WalletPageClient({
 
   const buttonState = getButtonState();
 
+  const handleClose = () => {
+    const returnUrl = localStorage.getItem("walletReturnUrl");
+    if (returnUrl) {
+      router.push(returnUrl);
+      localStorage.removeItem("walletReturnUrl");
+    } else {
+      router.push(`/${lang}/`);
+    }
+  };
+
   if (showSkeleton) {
     return <WalletPageSkeleton />;
   }
@@ -279,7 +290,14 @@ export default function WalletPageClient({
     <div className="pb-safe flex flex-col">
       <TopBar
         title={dictionary.pages.wallet.topbar.title}
-        endAdornment={<MenuLink lang={params.lang} />}
+        startAdornment={
+          <button
+            onClick={handleClose}
+            className="flex size-10 items-center justify-center rounded-full bg-gray-100"
+          >
+            <PiCaretLeft className="size-4 text-gray-900" />
+          </button>
+        }
       />
 
       <div className="flex flex-col gap-9 p-6">

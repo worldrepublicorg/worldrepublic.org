@@ -1,12 +1,23 @@
 "use client";
 
 import { Button, Typography } from "@worldcoin/mini-apps-ui-kit-react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TabPills } from "@/components/tab-pills";
+import { TopBar } from "@/components/topbar";
+import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { ElectionsList } from "@/components/vote/elections-list";
 import type { Election } from "@/lib/types/elections";
+import {
+  type GetWalletAuthAndDataResult,
+  getWalletAuthAndData,
+} from "@/lib/actions/member";
+import {
+  getCachedWalletData,
+  setCachedWalletData,
+} from "@/lib/wallet-auth-cache";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
@@ -25,6 +36,28 @@ export default function VotePageClient({
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
 
+  const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
+    getCachedWalletData,
+  );
+  const [serverData, setServerData] =
+    useState<GetWalletAuthAndDataResult | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    getWalletAuthAndData().then((result) => {
+      if (cancelled) return;
+      setServerData(result);
+      setCachedWalletData(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const data = serverData ?? cachedData;
+  const isAuthenticated = data?.authenticated ?? false;
+  const walletBalance = data?.profileData?.walletBalance ?? null;
+
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
@@ -32,6 +65,14 @@ export default function VotePageClient({
 
   return (
     <>
+      <TopBar
+        title={dictionary.nav.world_republic}
+        endAdornment={
+          isAuthenticated ? (
+            <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
+          ) : null
+        }
+      />
       <TabPills
         activeTab={activeTab}
         lang={lang}
