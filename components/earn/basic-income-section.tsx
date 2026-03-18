@@ -12,9 +12,10 @@ import {
   Button,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { useBasicIncome } from "@/hooks/use-basic-income";
 
 interface BasicIncomeSectionProps {
@@ -36,7 +37,7 @@ export function BasicIncomeSection({
   onSignIn,
   onSuccess,
 }: BasicIncomeSectionProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
 
   const {
     isActivating,
@@ -50,19 +51,6 @@ export function BasicIncomeSection({
     basicIncomeClaimedTotal,
     onSuccess,
   );
-
-  useEffect(() => {
-    const handleClickOutside = () => setShowTooltip(false);
-    if (showTooltip) {
-      document.addEventListener("click", handleClickOutside);
-      return () => document.removeEventListener("click", handleClickOutside);
-    }
-  }, [showTooltip]);
-
-  const handleTooltipClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setShowTooltip(!showTooltip);
-  };
 
   const amountString = maxClaimableAmount.toFixed(6);
 
@@ -149,22 +137,23 @@ export function BasicIncomeSection({
             className="mx-auto text-center text-gray-500"
           >
             {dictionary.pages.earn.basic_income.subtitle_claim}
-            <span className="group relative inline-flex items-center align-baseline">
-              <PiInfoFill
-                className="ml-1 h-4 w-4 translate-y-[2px]! cursor-help text-gray-400"
-                onClick={handleTooltipClick}
-                onMouseEnter={() => setShowTooltip(true)}
-                onMouseLeave={() => setShowTooltip(false)}
-              />
-              {showTooltip && (
-                <div className="absolute -right-4 bottom-full z-40 mb-2 w-[calc(100dvw/2+24px)] max-w-xs transform rounded-lg border border-gray-200 bg-white p-3 text-xs shadow-lg!">
-                  <div className="rounded-lg bg-white text-left text-xs text-gray-700">
-                    {dictionary.pages.earn.basic_income.tooltip_claim}
-                  </div>
-                </div>
-              )}
+            <span className="inline-flex shrink-0 items-center">
+              <button
+                type="button"
+                onClick={() => setIsLearnMoreDrawerOpen(true)}
+                className="inline-flex shrink-0 items-center justify-center text-gray-400"
+                aria-label="Learn more"
+              >
+                <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+              </button>
             </span>
           </Typography>
+          <LearnMoreDrawer
+            open={isLearnMoreDrawerOpen}
+            onOpenChange={setIsLearnMoreDrawerOpen}
+            title={dictionary.pages.govern.parties.learn_more}
+            info={dictionary.pages.earn.basic_income.tooltip_claim}
+          />
           <div className="mt-5 mb-1 font-mono text-7xl font-semibold">
             {amountString}
           </div>
