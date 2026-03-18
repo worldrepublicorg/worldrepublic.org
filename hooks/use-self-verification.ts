@@ -64,7 +64,6 @@ export function useSelfVerification(
         return;
       }
       const callback = resolveCallbackUrl(lang);
-      const nextTarget = `/${lang || "en"}/`;
 
       if (!callback) {
         setCallbackReachable(false);
@@ -103,7 +102,7 @@ export function useSelfVerification(
           scope: "world-republic",
           endpoint,
           endpointType: "staging_https",
-          deeplinkCallback: `${callback}?next=${encodeURIComponent(nextTarget)}`,
+          deeplinkCallback: `${callback}`,
           userId: userId,
           userIdType: "uuid",
           userDefinedData:
