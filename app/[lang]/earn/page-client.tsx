@@ -81,8 +81,12 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
         title={dictionary.nav.earn}
         endAdornment={
           <TopbarWalletBalanceDisplay
-            walletBalance={profileData?.walletBalance ?? null}
             lang={lang}
+            streams={data?.streams ?? undefined}
+            storedWalletBalance={
+              profileData?.storedWalletBalance ?? 0
+            }
+            snapshotBalance={profileData?.walletBalance ?? null}
           />
         }
       />

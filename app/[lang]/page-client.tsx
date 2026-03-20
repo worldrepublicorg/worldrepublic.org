@@ -55,7 +55,6 @@ export default function VotePageClient({
   }, []);
 
   const data = serverData ?? cachedData;
-  const walletBalance = data?.profileData?.walletBalance ?? null;
 
   // Client-side logic for tabs
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -67,7 +66,14 @@ export default function VotePageClient({
       <TopBar
         title={dictionary.nav.world_republic}
         endAdornment={
-          <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
+          <TopbarWalletBalanceDisplay
+            lang={lang}
+            streams={data?.streams ?? undefined}
+            storedWalletBalance={
+              data?.profileData?.storedWalletBalance ?? 0
+            }
+            snapshotBalance={data?.profileData?.walletBalance ?? null}
+          />
         }
       />
       <TabPills

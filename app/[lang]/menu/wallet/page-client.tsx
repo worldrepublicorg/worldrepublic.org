@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   PiArrowCircleUpFill,
   PiArrowSquareOut,
@@ -47,7 +47,11 @@ import {
   getWalletAuthAndData,
   withdrawTokens,
 } from "@/lib/actions/member";
-import { computeWalletBalance, type StreamData } from "@/lib/streams";
+import type { StreamData } from "@/lib/streams";
+import {
+  EMPTY_STREAMS,
+  useLiveWalletBalance,
+} from "@/hooks/use-live-wallet-balance";
 import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
 import {
   getCachedWalletData,
@@ -101,36 +105,15 @@ export default function WalletPageClient({
     data?.transactions ?? [];
 
   const authenticated = isAuthenticated || clientIsAuthenticated;
-  const userStreams: StreamData[] = data?.streams ?? [];
+  const userStreams: StreamData[] = data?.streams ?? EMPTY_STREAMS;
   const serverBalance = profileData?.walletBalance ?? null;
   const storedWalletBalance = profileData?.storedWalletBalance ?? 0;
 
-  // Live-ticking balance from streams (excludes BI streams) + stored wallet balance (claimed BI)
-  const [liveBalance, setLiveBalance] = useState<number | null>(null);
-  const streamsRef = useRef(userStreams);
-  streamsRef.current = userStreams;
-
-  const computeBalance = useCallback(() => {
-    const s = streamsRef.current;
-    if (s.length > 0) {
-      return computeWalletBalance(s, Date.now()) + storedWalletBalance;
-    }
-    return null;
-  }, [storedWalletBalance]);
-
-  useEffect(() => {
-    if (userStreams.length === 0) {
-      setLiveBalance(null);
-      return;
-    }
-    setLiveBalance(computeBalance());
-    const interval = setInterval(() => {
-      setLiveBalance(computeBalance());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [userStreams, computeBalance]);
-
-  const walletBalance = liveBalance ?? serverBalance;
+  const walletBalance = useLiveWalletBalance(
+    data?.streams,
+    storedWalletBalance,
+    serverBalance,
+  );
   const locale = params.lang?.trim() || "en";
 
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);

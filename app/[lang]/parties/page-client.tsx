@@ -114,7 +114,6 @@ export default function PartiesPageClient({
     : TABS[0];
 
   const locale = lang.trim() || "en";
-  const walletBalance = cachedData?.profileData?.walletBalance ?? null;
 
   const formatInteger = (value: number): string => value.toLocaleString(locale);
 
@@ -281,7 +280,16 @@ export default function PartiesPageClient({
       <TopBar
         title={dictionary.pages.govern.sections.parties.title}
         endAdornment={
-          <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
+          <TopbarWalletBalanceDisplay
+            lang={lang}
+            streams={cachedData?.streams ?? undefined}
+            storedWalletBalance={
+              cachedData?.profileData?.storedWalletBalance ?? 0
+            }
+            snapshotBalance={
+              cachedData?.profileData?.walletBalance ?? null
+            }
+          />
         }
       />
 

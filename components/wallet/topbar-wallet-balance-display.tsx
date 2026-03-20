@@ -4,22 +4,36 @@ import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PiWalletFill } from "react-icons/pi";
+import { useLiveWalletBalance } from "@/hooks/use-live-wallet-balance";
+import type { StreamData } from "@/lib/streams";
 import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
 
 interface TopbarWalletBalanceDisplayProps {
-  walletBalance: number | null;
   lang: string;
   href?: string;
+  /** From getWalletAuthAndData; live accrual when non-empty */
+  streams?: StreamData[] | null;
+  storedWalletBalance?: number;
+  /** profileData.walletBalance snapshot from last fetch */
+  snapshotBalance?: number | null;
 }
 
 export function TopbarWalletBalanceDisplay({
-  walletBalance,
   lang,
   href,
+  streams,
+  storedWalletBalance = 0,
+  snapshotBalance = null,
 }: TopbarWalletBalanceDisplayProps) {
   const pathname = usePathname();
   const locale = lang.trim() || "en";
-  const displayBalanceNumber = walletBalance || 0;
+
+  const liveTotal = useLiveWalletBalance(
+    streams,
+    storedWalletBalance,
+    snapshotBalance,
+  );
+  const displayBalanceNumber = liveTotal ?? 0;
 
   const precision = getBalancePrecision(displayBalanceNumber);
   const truncatedDisplayBalance = truncateToPrecision(
@@ -38,7 +52,6 @@ export function TopbarWalletBalanceDisplay({
     <Link
       href={targetHref}
       onClick={() => {
-        // Store the current page as the return URL for wallet/menu flows
         localStorage.setItem("walletReturnUrl", pathname);
       }}
     >
@@ -51,4 +64,3 @@ export function TopbarWalletBalanceDisplay({
     </Link>
   );
 }
-
