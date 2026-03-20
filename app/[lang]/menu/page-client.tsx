@@ -111,12 +111,6 @@ export default function MenuPageClient({
                   <PiUserCircle className="size-5 text-gray-400" />
                 ),
               },
-              {
-                label: dictionary.pages.wallet.topbar.title,
-                url: "/menu/wallet",
-                isExternal: false,
-                startAdornment: <PiWallet className="size-5 text-gray-400" />,
-              },
             ]
           : [
               {
@@ -127,6 +121,12 @@ export default function MenuPageClient({
                 onClick: () => setShowSignInDialog(true),
               },
             ]),
+        {
+          label: dictionary.pages.wallet.topbar.title,
+          url: "/menu/wallet",
+          isExternal: false,
+          startAdornment: <PiWallet className="size-5 text-gray-400" />,
+        },
         {
           label: dictionary.pages.menu.sections.account.language,
           url: "/menu/language",
