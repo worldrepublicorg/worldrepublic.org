@@ -55,7 +55,6 @@ export default function VotePageClient({
   }, []);
 
   const data = serverData ?? cachedData;
-  const isAuthenticated = data?.authenticated ?? false;
   const walletBalance = data?.profileData?.walletBalance ?? null;
 
   // Client-side logic for tabs
@@ -68,9 +67,7 @@ export default function VotePageClient({
       <TopBar
         title={dictionary.nav.world_republic}
         endAdornment={
-          isAuthenticated ? (
-            <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
-          ) : null
+          <TopbarWalletBalanceDisplay walletBalance={walletBalance} lang={lang} />
         }
       />
       <TabPills

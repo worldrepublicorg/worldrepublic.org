@@ -80,12 +80,10 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
       <TopBar
         title={dictionary.nav.earn}
         endAdornment={
-          isAuthenticated ? (
-            <TopbarWalletBalanceDisplay
-              walletBalance={profileData?.walletBalance ?? null}
-              lang={lang}
-            />
-          ) : null
+          <TopbarWalletBalanceDisplay
+            walletBalance={profileData?.walletBalance ?? null}
+            lang={lang}
+          />
         }
       />
 
