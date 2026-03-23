@@ -1,6 +1,6 @@
 "use server";
 
-import { and, asc, desc, eq, gt, not, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, inArray, not, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";
@@ -356,6 +356,7 @@ export type GetWalletAuthAndDataResult = {
   profileData: GetWalletAuthAndDataProfileData | null;
   transactions: GetWalletAuthAndDataTransaction[] | null;
   streams: StreamData[] | null;
+  streamRatesById?: Record<string, number> | null;
   email: string | null;
   linkedProviders: {
     hasGoogle: boolean;
@@ -413,6 +414,7 @@ export async function getWalletAuthAndData(
       profileData: null,
       transactions: null,
       streams: null,
+      streamRatesById: null,
       email: null,
       linkedProviders: null,
     };
@@ -440,6 +442,7 @@ export async function getWalletAuthAndData(
       profileData: null,
       transactions: null,
       streams: null,
+      streamRatesById: null,
       email: session.user?.email ?? null,
       linkedProviders,
     };
@@ -498,12 +501,37 @@ export async function getWalletAuthAndData(
     transactionsResult.success && transactionsResult.transactions
       ? transactionsResult.transactions
       : [];
+  const streamIds = Array.from(
+    new Set(
+      transactionsData
+        .map((t) => t.streamId)
+        .filter((id): id is string => !!id),
+    ),
+  );
+  let streamRatesById: Record<string, number> | null = null;
+  if (streamIds.length > 0) {
+    const streamRateRows = await readDb
+      .select({
+        id: streams.id,
+        ratePerSecond: streams.ratePerSecond,
+      })
+      .from(streams)
+      .where(inArray(streams.id, streamIds));
+
+    streamRatesById = Object.fromEntries(
+      streamRateRows.map((row) => [
+        row.id,
+        Number.parseFloat(row.ratePerSecond),
+      ]),
+    );
+  }
 
   return {
     authenticated: true,
     profileData,
     transactions: transactionsData,
     streams: userStreams.length > 0 ? userStreams : null,
+    streamRatesById,
     email: session.user?.email ?? null,
     linkedProviders,
   };

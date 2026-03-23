@@ -39,6 +39,7 @@ interface Transaction {
 interface TransactionHistoryContentProps {
   transactions?: Transaction[] | null;
   streams?: StreamData[] | null;
+  streamRatesById?: Record<string, number> | null;
   dictionary: Dictionary;
   lang: string;
 }
@@ -46,6 +47,7 @@ interface TransactionHistoryContentProps {
 export function TransactionHistoryContent({
   transactions: transactionsProp,
   streams = null,
+  streamRatesById = null,
   dictionary,
   lang,
 }: TransactionHistoryContentProps) {
@@ -215,15 +217,17 @@ export function TransactionHistoryContent({
   // WDD/day for stream transactions (when streams are provided and tx has streamId)
   const getStreamRatePerDayFormatted = (transaction: Transaction): string | null => {
     if (
-      !streams?.length ||
       !transaction.streamId ||
       (transaction.type !== "STREAM_CREATED" && transaction.type !== "STREAM_UPDATED")
     ) {
       return null;
     }
-    const stream = streams.find((s) => s.id === transaction.streamId);
-    if (!stream) return null;
-    const ratePerDay = stream.ratePerSecond * 86400;
+    const ratePerSecondFromHistory = streamRatesById?.[transaction.streamId];
+    const ratePerSecond =
+      ratePerSecondFromHistory ??
+      streams?.find((s) => s.id === transaction.streamId)?.ratePerSecond;
+    if (ratePerSecond == null) return null;
+    const ratePerDay = ratePerSecond * 86400;
     if (ratePerDay < 0.000001) return "<0.000001";
     return ratePerDay.toLocaleString(locale, {
       minimumFractionDigits: 2,
