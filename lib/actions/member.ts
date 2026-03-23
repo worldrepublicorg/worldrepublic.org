@@ -369,7 +369,17 @@ async function getUserStreamsByUuid(userUuid: string): Promise<StreamData[]> {
   const rows = await readDb
     .select()
     .from(streams)
-    .where(eq(streams.userId, userUuid))
+    .where(
+      and(
+        eq(streams.userId, userUuid),
+        // Only include leaf streams; superseded rows are historical snapshots.
+        sql`NOT EXISTS (
+          SELECT 1
+          FROM streams child
+          WHERE child.source_stream_id = ${streams.id}
+        )`,
+      ),
+    )
     .orderBy(asc(streams.startedAt));
 
   return rows.map((r) => ({
@@ -599,7 +609,15 @@ export async function withdrawTokens(
     const result = await db.transaction(async (tx) => {
       // SELECT ... FOR UPDATE to prevent concurrent withdrawal races
       const userStreams = await tx.execute(
-        sql`SELECT * FROM streams WHERE user_id = ${userUuid} FOR UPDATE`,
+        sql`SELECT *
+            FROM streams s
+            WHERE s.user_id = ${userUuid}
+              AND NOT EXISTS (
+                SELECT 1
+                FROM streams child
+                WHERE child.source_stream_id = s.id
+              )
+            FOR UPDATE`,
       );
 
       const streamRows = (
