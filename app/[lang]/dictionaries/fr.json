@@ -323,6 +323,12 @@
       "deleted": "Supprimé",
       "delete_failed": "Échec de la suppression",
       "delete_error": "Erreur lors de la suppression"
+    },
+    "basic_income": {
+      "activated": "Revenu de base activé",
+      "activate_failed": "Échec de l'activation",
+      "claimed": "Réclamé",
+      "claim_failed": "Échec de la réclamation"
     }
   },
   "common": {

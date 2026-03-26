@@ -323,6 +323,12 @@
       "deleted": "Ištrinta",
       "delete_failed": "Nepavyko ištrinti",
       "delete_error": "Klaida trinant"
+    },
+    "basic_income": {
+      "activated": "Baziniai pajamai aktyvuoti",
+      "activate_failed": "Aktyvavimas nepavyko",
+      "claimed": "Atsiimta",
+      "claim_failed": "Atsiėmimas nepavyko"
     }
   },
   "common": {

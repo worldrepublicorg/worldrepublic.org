@@ -323,6 +323,12 @@
       "deleted": "Eliminado",
       "delete_failed": "Error al eliminar",
       "delete_error": "Error al eliminar"
+    },
+    "basic_income": {
+      "activated": "Renta básica activada",
+      "activate_failed": "Error al activar",
+      "claimed": "Reclamado",
+      "claim_failed": "Error al reclamar"
     }
   },
   "common": {

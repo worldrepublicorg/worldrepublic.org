@@ -323,6 +323,12 @@
       "deleted": "O'chirildi",
       "delete_failed": "O'chirib bo'lmadi",
       "delete_error": "O'chirishda xatolik"
+    },
+    "basic_income": {
+      "activated": "Asosiy daromad faollashtirildi",
+      "activate_failed": "Faollashtirib bo'lmadi",
+      "claimed": "Talab qilindi",
+      "claim_failed": "Talab muvaffaqiyatsiz"
     }
   },
   "common": {

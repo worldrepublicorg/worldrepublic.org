@@ -323,6 +323,12 @@
       "deleted": "Sguassatu",
       "delete_failed": "Fiascu di a sguassà",
       "delete_error": "Errore di sguassà"
+    },
+    "basic_income": {
+      "activated": "Redditu di basa attivatu",
+      "activate_failed": "L'attivazione hà fallitu",
+      "claimed": "Rivendicatu",
+      "claim_failed": "A rivendicazione hà fallitu"
     }
   },
   "common": {

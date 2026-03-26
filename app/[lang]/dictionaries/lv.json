@@ -323,6 +323,12 @@
       "deleted": "Dzēsts",
       "delete_failed": "Neizdevās dzēst",
       "delete_error": "Kļūda dzēšot"
+    },
+    "basic_income": {
+      "activated": "Pamata ienākumi aktivizēti",
+      "activate_failed": "Aktivizēšana neizdevās",
+      "claimed": "Pieprasīts",
+      "claim_failed": "Pieprasījums neizdevās"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "মুছে ফেলা হয়েছে",
       "delete_failed": "মুছে ফেলতে ব্যর্থ",
       "delete_error": "মুছে ফেলার ত্রুটি"
+    },
+    "basic_income": {
+      "activated": "মৌলিক আয় সক্রিয় হয়েছে",
+      "activate_failed": "সক্রিয় করতে ব্যর্থ",
+      "claimed": "দাবি করা হয়েছে",
+      "claim_failed": "দাবি করতে ব্যর্থ"
     }
   },
   "common": {

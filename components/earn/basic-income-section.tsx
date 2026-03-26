@@ -46,6 +46,7 @@ export function BasicIncomeSection({
     handleActivate,
     handleClaim,
   } = useBasicIncome(
+    dictionary,
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
     basicIncomeClaimedTotal,

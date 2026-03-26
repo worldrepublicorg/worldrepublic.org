@@ -323,6 +323,12 @@
       "deleted": "Изтрито",
       "delete_failed": "Неуспешно изтриване",
       "delete_error": "Грешка при изтриване"
+    },
+    "basic_income": {
+      "activated": "Основният доход е активиран",
+      "activate_failed": "Активирането неуспешно",
+      "claimed": "Получено",
+      "claim_failed": "Получаването неуспешно"
     }
   },
   "common": {

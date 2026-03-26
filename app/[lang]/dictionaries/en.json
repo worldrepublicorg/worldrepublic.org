@@ -232,11 +232,11 @@
       "sections": {
         "account": "ACCOUNT",
         "security": "SECURITY",
-      "google_account": "Google account",
-      "google_not_linked": "Not linked",
-      "passkeys": "Passkeys",
-      "passkeys_linked": "{count} linked",
-      "danger_zone": "DANGER ZONE",
+        "google_account": "Google account",
+        "google_not_linked": "Not linked",
+        "passkeys": "Passkeys",
+        "passkeys_linked": "{count} linked",
+        "danger_zone": "DANGER ZONE",
         "delete_account": {
           "description": "Permanently remove all your data"
         }
@@ -323,6 +323,12 @@
       "deleted": "Deleted",
       "delete_failed": "Failed to delete",
       "delete_error": "Error deleting party"
+    },
+    "basic_income": {
+      "activated": "Basic income activated",
+      "activate_failed": "Failed to activate",
+      "claimed": "Claimed",
+      "claim_failed": "Failed to claim"
     }
   },
   "common": {

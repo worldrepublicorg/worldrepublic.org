@@ -323,6 +323,12 @@
       "deleted": "Usunięto",
       "delete_failed": "Nie udało się usunąć",
       "delete_error": "Błąd usuwania"
+    },
+    "basic_income": {
+      "activated": "Dochód podstawowy aktywowany",
+      "activate_failed": "Nie udało się aktywować",
+      "claimed": "Odebrano",
+      "claim_failed": "Nie udało się odebrać"
     }
   },
   "common": {

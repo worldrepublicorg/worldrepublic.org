@@ -323,6 +323,12 @@
       "deleted": "Видалено",
       "delete_failed": "Не вдалося видалити",
       "delete_error": "Помилка видалення"
+    },
+    "basic_income": {
+      "activated": "Базовий дохід активовано",
+      "activate_failed": "Не вдалося активувати",
+      "claimed": "Отримано",
+      "claim_failed": "Не вдалося отримати"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "हटाया गया",
       "delete_failed": "हटाने में विफल",
       "delete_error": "हटाने में त्रुटि"
+    },
+    "basic_income": {
+      "activated": "बुनियादी आय सक्रिय हो गई",
+      "activate_failed": "सक्रियण विफल",
+      "claimed": "प्राप्त किया गया",
+      "claim_failed": "प्राप्ति विफल"
     }
   },
   "common": {

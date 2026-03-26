@@ -323,6 +323,12 @@
       "deleted": "Poistettu",
       "delete_failed": "Poistaminen epäonnistui",
       "delete_error": "Virhe poistettaessa"
+    },
+    "basic_income": {
+      "activated": "Perustulo aktivioitu",
+      "activate_failed": "Aktivointi epäonnistui",
+      "claimed": "Nostettu",
+      "claim_failed": "Nosto epäonnistui"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "Geskrap",
       "delete_failed": "Kon nie skrap nie",
       "delete_error": "Fout met skrap"
+    },
+    "basic_income": {
+      "activated": "Basiese inkomste geaktiveer",
+      "activate_failed": "Aktivering het misluk",
+      "claimed": "Opgeëis",
+      "claim_failed": "Eis het misluk"
     }
   },
   "common": {

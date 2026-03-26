@@ -323,6 +323,12 @@
       "deleted": "ลบแล้ว",
       "delete_failed": "ลบไม่สำเร็จ",
       "delete_error": "ข้อผิดพลาดในการลบ"
+    },
+    "basic_income": {
+      "activated": "เปิดใช้งานรายได้พื้นฐานแล้ว",
+      "activate_failed": "เปิดใช้งานไม่สำเร็จ",
+      "claimed": "ขอรับแล้ว",
+      "claim_failed": "ขอรับไม่สำเร็จ"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "Șters",
       "delete_failed": "Nu s-a putut șterge",
       "delete_error": "Eroare la ștergere"
+    },
+    "basic_income": {
+      "activated": "Venitul de bază activat",
+      "activate_failed": "Activarea a eșuat",
+      "claimed": "Încasat",
+      "claim_failed": "Încasarea a eșuat"
     }
   },
   "common": {

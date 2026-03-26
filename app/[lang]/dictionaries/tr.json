@@ -323,6 +323,12 @@
       "deleted": "Silindi",
       "delete_failed": "Silinemedi",
       "delete_error": "Silme hatası"
+    },
+    "basic_income": {
+      "activated": "Temel gelir aktifleştirildi",
+      "activate_failed": "Aktifleştirme başarısız",
+      "claimed": "Talep edildi",
+      "claim_failed": "Talep başarısız"
     }
   },
   "common": {

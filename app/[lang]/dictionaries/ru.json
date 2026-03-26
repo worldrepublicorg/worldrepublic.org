@@ -323,6 +323,12 @@
       "deleted": "Удалено",
       "delete_failed": "Не удалось удалить",
       "delete_error": "Ошибка удаления"
+    },
+    "basic_income": {
+      "activated": "Базовый доход активирован",
+      "activate_failed": "Не удалось активировать",
+      "claimed": "Получено",
+      "claim_failed": "Не удалось получить"
     }
   },
   "common": {

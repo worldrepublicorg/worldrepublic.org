@@ -323,6 +323,12 @@
       "deleted": "تم الحذف",
       "delete_failed": "فشل الحذف",
       "delete_error": "خطأ في الحذف"
+    },
+    "basic_income": {
+      "activated": "تم تفعيل الدخل الأساسي",
+      "activate_failed": "فشل التفعيل",
+      "claimed": "تم الحصول",
+      "claim_failed": "فشل الحصول"
     }
   },
   "common": {

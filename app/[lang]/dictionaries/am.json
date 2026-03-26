@@ -323,6 +323,12 @@
       "deleted": "ተሰርዟል",
       "delete_failed": "መሰረዝ አልተቻለም",
       "delete_error": "በመሰረዝ ላይ ስህተት"
+    },
+    "basic_income": {
+      "activated": "መሰረታዊ ገቢ ተግብሯል",
+      "activate_failed": "መግባት አልተሳካም",
+      "claimed": "ተጠይቋል",
+      "claim_failed": "መጠየቅ አልተሳካም"
     }
   },
   "common": {

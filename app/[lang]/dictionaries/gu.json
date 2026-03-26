@@ -323,6 +323,12 @@
       "deleted": "કાઢી નાખ્યું",
       "delete_failed": "કાઢી નાખવામાં નિષ્ફળ",
       "delete_error": "કાઢી નાખવામાં ભૂલ"
+    },
+    "basic_income": {
+      "activated": "મૂળભૂત આવક સક્રિય થઈ",
+      "activate_failed": "સક્રિય કરવામાં નિષ્ફળ",
+      "claimed": "ક્લેમ થયું",
+      "claim_failed": "ક્લેમ નિષ્ફળ થયું"
     }
   },
   "common": {

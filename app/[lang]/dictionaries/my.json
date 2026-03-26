@@ -323,6 +323,12 @@
       "deleted": "ဖျက်ပြီးပါပြီ",
       "delete_failed": "ဖျက်ရန် မအောင်မြင်ပါ",
       "delete_error": "ဖျက်ရာတွင် အမှား"
+    },
+    "basic_income": {
+      "activated": "အခြေခံဝင်ငွေ ဖွင့်ပြီး",
+      "activate_failed": "ဖွင့်ရန် မအောင်မြင်",
+      "claimed": "ရယူပြီး",
+      "claim_failed": "ရယူရန် မအောင်မြင်"
     }
   },
   "common": {

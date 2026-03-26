@@ -323,6 +323,12 @@
       "deleted": "حذف کر دیا گیا",
       "delete_failed": "حذف کرنے میں ناکام",
       "delete_error": "حذف کرنے میں غلطی"
+    },
+    "basic_income": {
+      "activated": "بنیادی آمدنی فعال ہو گئی",
+      "activate_failed": "فعال کرنے میں ناکام",
+      "claimed": "حاصل کر لیا گیا",
+      "claim_failed": "حصول میں ناکام"
     }
   },
   "common": {

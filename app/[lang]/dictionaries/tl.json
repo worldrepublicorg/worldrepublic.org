@@ -323,6 +323,12 @@
       "deleted": "Tinanggal",
       "delete_failed": "Nabigong tanggalin",
       "delete_error": "Error sa pagtanggal"
+    },
+    "basic_income": {
+      "activated": "Na-activate ang basic income",
+      "activate_failed": "Nabigo ang pag-activate",
+      "claimed": "Na-claim",
+      "claim_failed": "Nabigo ang pag-claim"
     }
   },
   "common": {

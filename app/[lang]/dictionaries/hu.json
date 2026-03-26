@@ -323,6 +323,12 @@
       "deleted": "Törölve",
       "delete_failed": "Sikertelen törlés",
       "delete_error": "Hiba a törléskor"
+    },
+    "basic_income": {
+      "activated": "Alapjövedelem aktiválva",
+      "activate_failed": "Aktiválás sikertelen",
+      "claimed": "Igényelve",
+      "claim_failed": "Igényelés sikertelen"
     }
   },
   "common": {

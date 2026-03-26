@@ -323,6 +323,12 @@
       "deleted": "삭제됨",
       "delete_failed": "삭제 실패",
       "delete_error": "삭제 오류"
+    },
+    "basic_income": {
+      "activated": "기본소득 활성화됨",
+      "activate_failed": "활성화 실패",
+      "claimed": "수령 완료",
+      "claim_failed": "수령 실패"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "Izbrisano",
       "delete_failed": "Ni uspelo izbrisati",
       "delete_error": "Napaka pri brisanju"
+    },
+    "basic_income": {
+      "activated": "Osnovni dohodek aktiviran",
+      "activate_failed": "Aktivacija neuspešna",
+      "claimed": "Zahtevano",
+      "claim_failed": "Zahteva neuspešna"
     }
   },
   "common": {

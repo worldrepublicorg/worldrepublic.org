@@ -323,6 +323,12 @@
       "deleted": "Đã xóa",
       "delete_failed": "Xóa thất bại",
       "delete_error": "Lỗi khi xóa"
+    },
+    "basic_income": {
+      "activated": "Thu nhập cơ bản đã được kích hoạt",
+      "activate_failed": "Kích hoạt thất bại",
+      "claimed": "Đã nhận",
+      "claim_failed": "Nhận thất bại"
     }
   },
   "common": {

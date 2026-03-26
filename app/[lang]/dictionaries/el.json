@@ -323,6 +323,12 @@
       "deleted": "Διαγράφηκε",
       "delete_failed": "Αποτυχία διαγραφής",
       "delete_error": "Σφάλμα κατά τη διαγραφή"
+    },
+    "basic_income": {
+      "activated": "Το βασικό εισόδημα ενεργοποιήθηκε",
+      "activate_failed": "Η ενεργοποίηση απέτυχε",
+      "claimed": "Διεκδικήθηκε",
+      "claim_failed": "Η αξίωση απέτυχε"
     }
   },
   "common": {

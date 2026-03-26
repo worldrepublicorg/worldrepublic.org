@@ -323,6 +323,12 @@
       "deleted": "An share",
       "delete_failed": "Gaza sharewa",
       "delete_error": "Kuskure wajen sharewa"
+    },
+    "basic_income": {
+      "activated": "An kunna kuɗin shiga na asali",
+      "activate_failed": "Ya gaza kunna",
+      "claimed": "An nemi",
+      "claim_failed": "Ya gaza nema"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "Dihapus",
       "delete_failed": "Gagal menghapus",
       "delete_error": "Kesalahan menghapus"
+    },
+    "basic_income": {
+      "activated": "Pendapatan dasar diaktifkan",
+      "activate_failed": "Gagal mengaktifkan",
+      "claimed": "Berhasil diklaim",
+      "claim_failed": "Gagal mengklaim"
     }
   },
   "common": {

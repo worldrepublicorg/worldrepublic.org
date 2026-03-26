@@ -2,6 +2,7 @@
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useEffect, useState } from "react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   activateBasicIncome,
   claimBasicIncome,
@@ -10,6 +11,7 @@ import {
 const BALANCE_CAP = 9.99;
 
 export function useBasicIncome(
+  dictionary: Dictionary,
   basicIncomeActivatedAt: number | null,
   lastBasicIncomeClaimAt: number | null,
   basicIncomeClaimedTotal: number | null,
@@ -45,13 +47,13 @@ export function useBasicIncome(
     try {
       const result = await activateBasicIncome();
       if (result.success) {
-        toast.success({ title: "Basic income activated" });
+        toast.success({ title: dictionary.toasts.basic_income.activated });
         await onSuccess();
       } else {
-        toast.error({ title: result.error || "Failed to activate" });
+        toast.error({ title: dictionary.toasts.basic_income.activate_failed });
       }
     } catch {
-      toast.error({ title: "Failed to activate" });
+      toast.error({ title: dictionary.toasts.basic_income.activate_failed });
     } finally {
       setIsActivating(false);
     }
@@ -62,13 +64,13 @@ export function useBasicIncome(
     try {
       const result = await claimBasicIncome();
       if (result.success) {
-        toast.success({ title: "Claimed" });
+        toast.success({ title: dictionary.toasts.basic_income.claimed });
         await onSuccess();
       } else {
-        toast.error({ title: result.error || "Failed to claim" });
+        toast.error({ title: dictionary.toasts.basic_income.claim_failed });
       }
     } catch {
-      toast.error({ title: "Failed to claim" });
+      toast.error({ title: dictionary.toasts.basic_income.claim_failed });
     } finally {
       setIsClaiming(false);
     }

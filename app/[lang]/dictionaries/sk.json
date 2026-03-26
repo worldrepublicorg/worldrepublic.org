@@ -323,6 +323,12 @@
       "deleted": "Vymazané",
       "delete_failed": "Nepodarilo sa vymazať",
       "delete_error": "Chyba pri mazaní"
+    },
+    "basic_income": {
+      "activated": "Základný príjem aktivovaný",
+      "activate_failed": "Aktivácia zlyhala",
+      "claimed": "Vybraté",
+      "claim_failed": "Výber zlyhal"
     }
   },
   "common": {

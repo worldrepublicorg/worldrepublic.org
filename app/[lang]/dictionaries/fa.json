@@ -323,6 +323,12 @@
       "deleted": "حذف شد",
       "delete_failed": "حذف ناموفق بود",
       "delete_error": "خطا در حذف"
+    },
+    "basic_income": {
+      "activated": "درآمد پایه فعال شد",
+      "activate_failed": "فعال‌سازی ناموفق بود",
+      "claimed": "دریافت شد",
+      "claim_failed": "دریافت ناموفق بود"
     }
   },
   "common": {

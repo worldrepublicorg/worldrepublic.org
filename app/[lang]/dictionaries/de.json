@@ -323,6 +323,12 @@
       "deleted": "Gelöscht",
       "delete_failed": "Löschen fehlgeschlagen",
       "delete_error": "Fehler beim Löschen"
+    },
+    "basic_income": {
+      "activated": "Grundeinkommen aktiviert",
+      "activate_failed": "Aktivierung fehlgeschlagen",
+      "claimed": "Angefordert",
+      "claim_failed": "Anforderung fehlgeschlagen"
     }
   },
   "common": {

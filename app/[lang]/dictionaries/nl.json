@@ -323,6 +323,12 @@
       "deleted": "Verwijderd",
       "delete_failed": "Kon niet verwijderen",
       "delete_error": "Fout bij verwijderen"
+    },
+    "basic_income": {
+      "activated": "Basisinkomen geactiveerd",
+      "activate_failed": "Activeren mislukt",
+      "claimed": "Geclaimd",
+      "claim_failed": "Claimen mislukt"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "Imefutwa",
       "delete_failed": "Imeshindwa kufuta",
       "delete_error": "Hitilafu kufuta"
+    },
+    "basic_income": {
+      "activated": "Mapato ya msingi yameamilishwa",
+      "activate_failed": "Kumilisha hakukufaulu",
+      "claimed": "Yameombwa",
+      "claim_failed": "Kuomba hakukufaulu"
     }
   },
   "common": {

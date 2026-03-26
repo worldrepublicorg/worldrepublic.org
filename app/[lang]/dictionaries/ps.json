@@ -323,6 +323,12 @@
       "deleted": "ړنګ شو",
       "delete_failed": "د ړنګولو ناکامي",
       "delete_error": "د ړنګولو تېروتنه"
+    },
+    "basic_income": {
+      "activated": "اساسي عاید فعال شو",
+      "activate_failed": "فعال کول ناکام شول",
+      "claimed": "غوښتل شو",
+      "claim_failed": "غوښتنه ناکامه شوه"
     }
   },
   "common": {

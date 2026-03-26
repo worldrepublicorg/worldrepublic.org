@@ -323,6 +323,12 @@
       "deleted": "Byasibwe",
       "delete_failed": "Byaniranye gusiba",
       "delete_error": "Ikosa mu gusiba"
+    },
+    "basic_income": {
+      "activated": "Amafaranga y'ibanze yakozwe",
+      "activate_failed": "Gukora byanze",
+      "claimed": "Byasabwa",
+      "claim_failed": "Gusaba byanze"
     }
   },
   "common": {

@@ -323,6 +323,12 @@
       "deleted": "削除しました",
       "delete_failed": "削除に失敗しました",
       "delete_error": "削除エラー"
+    },
+    "basic_income": {
+      "activated": "基本所得を有効化しました",
+      "activate_failed": "有効化に失敗しました",
+      "claimed": "受け取り完了",
+      "claim_failed": "受け取りに失敗しました"
     }
   },
   "common": {

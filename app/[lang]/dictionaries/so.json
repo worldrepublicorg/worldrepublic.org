@@ -323,6 +323,12 @@
       "deleted": "La tirtiray",
       "delete_failed": "Waa lagu guuldareystay in la tirtiro",
       "delete_error": "Khalad tirtirida"
+    },
+    "basic_income": {
+      "activated": "Dakhliga aasaasiga ah waa la firfircooniyay",
+      "activate_failed": "Firfircoonida way fashilantay",
+      "claimed": "La qaaday",
+      "claim_failed": "Qaadista way fashilantay"
     }
   },
   "common": {

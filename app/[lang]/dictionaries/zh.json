@@ -323,6 +323,12 @@
       "deleted": "已删除",
       "delete_failed": "删除失败",
       "delete_error": "删除出错"
+    },
+    "basic_income": {
+      "activated": "基本收入已激活",
+      "activate_failed": "激活失败",
+      "claimed": "已领取",
+      "claim_failed": "领取失败"
     }
   },
   "common": {

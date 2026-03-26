@@ -323,6 +323,12 @@
       "deleted": "Excluído",
       "delete_failed": "Falha ao excluir",
       "delete_error": "Erro ao excluir"
+    },
+    "basic_income": {
+      "activated": "Renda básica ativada",
+      "activate_failed": "Falha ao ativar",
+      "claimed": "Recebido",
+      "claim_failed": "Falha ao receber"
     }
   },
   "common": {

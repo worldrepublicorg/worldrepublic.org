@@ -323,6 +323,12 @@
       "deleted": "បានលុប",
       "delete_failed": "បរាជ័យក្នុងការលុប",
       "delete_error": "កំហុសក្នុងការលុប"
+    },
+    "basic_income": {
+      "activated": "ចំណូលមូលដ្ឋានបានដំណើរការ",
+      "activate_failed": "ការដំណើរការបានបរាជ័យ",
+      "claimed": "បានទាមទារ",
+      "claim_failed": "ការទាមទារបានបរាជ័យ"
     }
   },
   "common": {

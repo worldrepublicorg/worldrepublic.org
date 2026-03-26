@@ -323,6 +323,12 @@
       "deleted": "Paare",
       "delete_failed": "Kuna lati paarẹ",
       "delete_error": "Aṣiṣe piparẹ"
+    },
+    "basic_income": {
+      "activated": "Owo ibẹrẹ ti a mu ṣiṣẹ",
+      "activate_failed": "Mu ṣiṣẹ kuna",
+      "claimed": "Ti a gba",
+      "claim_failed": "Gbigba kuna"
     }
   },
   "common": {
