@@ -587,6 +587,7 @@ export async function getTransactions(limit: number = 50) {
         createdAt: t.createdAt.getTime(),
         isReceived:
           t.recipientUserId === userUuid ||
+          t.type === "REFERRAL_VERIFIED_BONUS" ||
           t.type === "STREAM_CREATED" ||
           t.type === "STREAM_UPDATED",
       })),

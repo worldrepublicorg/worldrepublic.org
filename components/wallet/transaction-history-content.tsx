@@ -44,6 +44,8 @@ interface TransactionHistoryContentProps {
   lang: string;
 }
 
+const REFERRAL_VERIFIED_BONUS_LABEL = "Referral reward";
+
 export function TransactionHistoryContent({
   transactions: transactionsProp,
   streams = null,
@@ -201,6 +203,9 @@ export function TransactionHistoryContent({
         ? dictionary.pages.wallet.transactions.types.ambassador_reward
         : dictionary.pages.wallet.transactions.types.party_subsidy;
     }
+    if (transaction.type === "REFERRAL_VERIFIED_BONUS") {
+      return REFERRAL_VERIFIED_BONUS_LABEL;
+    }
     return transaction.type;
   };
 
@@ -215,10 +220,13 @@ export function TransactionHistoryContent({
   };
 
   // WDD/day for stream transactions (when streams are provided and tx has streamId)
-  const getStreamRatePerDayFormatted = (transaction: Transaction): string | null => {
+  const getStreamRatePerDayFormatted = (
+    transaction: Transaction,
+  ): string | null => {
     if (
       !transaction.streamId ||
-      (transaction.type !== "STREAM_CREATED" && transaction.type !== "STREAM_UPDATED")
+      (transaction.type !== "STREAM_CREATED" &&
+        transaction.type !== "STREAM_UPDATED")
     ) {
       return null;
     }
@@ -235,6 +243,20 @@ export function TransactionHistoryContent({
     });
   };
 
+  const isPositiveTransaction = (transaction: Transaction): boolean => {
+    if (transaction.type === "TRANSFER" && transaction.isReceived) {
+      return true;
+    }
+    if (
+      transaction.type === "STREAM_CREATED" ||
+      transaction.type === "STREAM_UPDATED" ||
+      transaction.type === "REFERRAL_VERIFIED_BONUS"
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   const getAmountDisplay = (transaction: Transaction): string => {
     const isZero = Math.abs(transaction.amount) < 0.000001;
     const amount = formatAmount(transaction.amount);
@@ -243,6 +265,10 @@ export function TransactionHistoryContent({
       transaction.type === "STREAM_CREATED" ||
       transaction.type === "STREAM_UPDATED";
     if (isStream) {
+      return isZero ? "+<0.000001" : `+${amount}`;
+    }
+
+    if (transaction.type === "REFERRAL_VERIFIED_BONUS") {
       return isZero ? "+<0.000001" : `+${amount}`;
     }
 
@@ -265,17 +291,11 @@ export function TransactionHistoryContent({
     ) {
       return `-${amount}`;
     }
-    return `-${amount}`;
+    return isPositiveTransaction(transaction) ? `+${amount}` : `-${amount}`;
   };
 
   const getAmountColor = (transaction: Transaction): string => {
-    if (transaction.type === "TRANSFER" && transaction.isReceived) {
-      return "text-green-600";
-    }
-    if (
-      transaction.type === "STREAM_CREATED" ||
-      transaction.type === "STREAM_UPDATED"
-    ) {
+    if (isPositiveTransaction(transaction)) {
       return "text-green-600";
     }
     return "text-gray-900";
@@ -300,7 +320,8 @@ export function TransactionHistoryContent({
     }
     if (
       transaction.type === "STREAM_CREATED" ||
-      transaction.type === "STREAM_UPDATED"
+      transaction.type === "STREAM_UPDATED" ||
+      transaction.type === "REFERRAL_VERIFIED_BONUS"
     ) {
       return PiArrowCircleDownFill;
     }
@@ -337,8 +358,11 @@ export function TransactionHistoryContent({
     (tx) => tx.type === "TRANSFER" && !tx.isReceived,
   );
 
-  const hasStreamTx = transactions.some(
-    (tx) => tx.type === "STREAM_CREATED" || tx.type === "STREAM_UPDATED",
+  const hasRewardTx = transactions.some(
+    (tx) =>
+      tx.type === "STREAM_CREATED" ||
+      tx.type === "STREAM_UPDATED" ||
+      tx.type === "REFERRAL_VERIFIED_BONUS",
   );
 
   transactions.forEach((tx) => {
@@ -354,6 +378,9 @@ export function TransactionHistoryContent({
   const getTypeLabel = (type: string): string => {
     if (type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
+    }
+    if (type === "REFERRAL_VERIFIED_BONUS") {
+      return REFERRAL_VERIFIED_BONUS_LABEL;
     }
     return type;
   };
@@ -379,7 +406,7 @@ export function TransactionHistoryContent({
       label: dictionary.pages.wallet.transactions.types.sent,
     });
   }
-  if (hasStreamTx) {
+  if (hasRewardTx) {
     options.push({
       value: "REWARDS",
       label: dictionary.pages.wallet.transactions.filter.rewards,
@@ -399,7 +426,10 @@ export function TransactionHistoryContent({
     );
   } else if (selectedFilter === "REWARDS") {
     filteredTransactions = transactions.filter(
-      (tx) => tx.type === "STREAM_CREATED" || tx.type === "STREAM_UPDATED",
+      (tx) =>
+        tx.type === "STREAM_CREATED" ||
+        tx.type === "STREAM_UPDATED" ||
+        tx.type === "REFERRAL_VERIFIED_BONUS",
     );
   } else if (selectedFilter !== "ALL") {
     filteredTransactions = transactions.filter(
@@ -586,9 +616,7 @@ export function TransactionHistoryContent({
                             )}
                             {transaction.selectedChain && (
                               <span>
-                                {getChainDisplayName(
-                                  transaction.selectedChain,
-                                )}
+                                {getChainDisplayName(transaction.selectedChain)}
                               </span>
                             )}
                             {!hasWithdrawalDetails && streamEventLabel && (
@@ -605,7 +633,8 @@ export function TransactionHistoryContent({
                           {streamRateFormatted != null && (
                             <span className="shrink-0">
                               ({streamRateFormatted}{" "}
-                              {dictionary.pages.wallet.transactions.wdd_per_day})
+                              {dictionary.pages.wallet.transactions.wdd_per_day}
+                              )
                             </span>
                           )}
                         </div>

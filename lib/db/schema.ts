@@ -283,6 +283,55 @@ export const referralsRelations = relations(referrals, ({ one }) => ({
   }),
 }));
 
+export const referralVerificationRewards = pgTable(
+  "referral_verification_rewards",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    referrerId: uuid("referrer_id")
+      .notNull()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    referredUserId: uuid("referred_user_id")
+      .notNull()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    scope: varchar("scope", { length: 64 }).notNull(),
+    selfNullifier: text("self_nullifier").notNull(),
+    rewardType: varchar("reward_type", { length: 64 }).notNull(),
+    amount: decimal("amount", { precision: 36, scale: 18 }).notNull(),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("ref_verif_rewards_scope_nullifier_type_idx").on(
+      table.scope,
+      table.selfNullifier,
+      table.rewardType,
+    ),
+    index("ref_verif_rewards_referrer_created_idx").on(
+      table.referrerId,
+      table.createdAt,
+    ),
+    index("ref_verif_rewards_referred_created_idx").on(
+      table.referredUserId,
+      table.createdAt,
+    ),
+  ],
+);
+
+export const referralVerificationRewardsRelations = relations(
+  referralVerificationRewards,
+  ({ one }) => ({
+    referrer: one(users, {
+      fields: [referralVerificationRewards.referrerId],
+      references: [users.uuid],
+      relationName: "referral_reward_referrer",
+    }),
+    referredUser: one(users, {
+      fields: [referralVerificationRewards.referredUserId],
+      references: [users.uuid],
+      relationName: "referral_reward_referred_user",
+    }),
+  }),
+);
+
 // Transactions table - unified transaction records for all transaction types
 // Types: WITHDRAWAL, TRANSFER, STREAM_CREATED, STREAM_UPDATED
 export const transactions = pgTable(
