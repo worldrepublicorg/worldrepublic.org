@@ -42,14 +42,14 @@ export function ElectionHeroCard({
               {localizeElectionName(election.name, t.test_election_name)}
             </Typography>
           </div>
-          <div>
+          <div className="flex items-center">
             {isActive && (
-              <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-[3px] text-xs font-medium text-green-800">
+              <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-[3px] text-xs! font-medium text-green-800">
                 {t.status_active}
               </span>
             )}
             {isUpcoming && (
-              <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-[3px] text-xs font-medium text-blue-800">
+              <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-[3px] text-xs! font-medium text-blue-800">
                 {t.status_upcoming}
               </span>
             )}
@@ -58,16 +58,16 @@ export function ElectionHeroCard({
 
         <div className="flex flex-col gap-1.5 mt-4">
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCalendarBlank className="text-gray-500 shrink-0" size={15} />
-            <Typography variant="body" level={3}>
+            <PiCalendarBlank className="text-gray-500 shrink-0" size={14} />
+            <Typography variant="body" level={3} className="text-[14px]">
               {formatElectionDateTime(election.startsAt, lang)} -{" "}
               {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
 
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCoins className="text-gray-500 shrink-0" size={15} />
-            <Typography variant="body" level={3}>
+            <PiCoins className="text-gray-500 shrink-0" size={14} />
+            <Typography variant="body" level={3} className="text-[14px]">
               {t.reward_pool.replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(locale),
