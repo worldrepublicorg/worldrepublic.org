@@ -239,7 +239,8 @@
         "danger_zone": "DANGER ZONE",
         "delete_account": {
           "description": "Permanently remove all your data"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Username",
@@ -285,7 +286,10 @@
         "callback_warning": "Warning",
         "callback_warning_description": "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).",
         "supported_countries": "Supported countries",
-        "support_telegram": "Self Support"
+        "support_telegram": "Self Support",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Get verified"

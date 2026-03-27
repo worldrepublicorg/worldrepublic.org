@@ -239,7 +239,8 @@
         "danger_zone": "د خطر ساحه",
         "delete_account": {
           "description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "د کارونکي نوم",
@@ -285,7 +286,10 @@
         "verification_guide": "د تایید لارښود",
         "qr_alt": "د Self تایید QR",
         "callback_warning": "خبرداری",
-        "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ)."
+        "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "تایید ترلاسه کړئ"

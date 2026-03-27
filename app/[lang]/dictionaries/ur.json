@@ -239,7 +239,8 @@
         "danger_zone": "خطرناک زون",
         "delete_account": {
           "description": "اپنا تمام ڈیٹا مستقل طور پر ہٹائیں"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "صارف نام",
@@ -285,7 +286,10 @@
         "verification_guide": "تصدیق گائیڈ",
         "qr_alt": "Self تصدیق QR",
         "callback_warning": "انتباہ",
-        "callback_warning_description": "تصدیق کال بیک URL آپ کے فون سے قابل رسائی نہیں ہے۔ NEXT_PUBLIC_SELF_CALLBACK کو عوامی URL پر سیٹ کریں (یا NEXT_PUBLIC_PUBLIC_BASE_URL کو ٹنل/پریویو ڈومین پر سیٹ کریں)۔"
+        "callback_warning_description": "تصدیق کال بیک URL آپ کے فون سے قابل رسائی نہیں ہے۔ NEXT_PUBLIC_SELF_CALLBACK کو عوامی URL پر سیٹ کریں (یا NEXT_PUBLIC_PUBLIC_BASE_URL کو ٹنل/پریویو ڈومین پر سیٹ کریں)۔",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "تصدیق حاصل کریں"

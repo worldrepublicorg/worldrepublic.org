@@ -239,7 +239,8 @@
         "danger_zone": "ОПАСНА ЗОНА",
         "delete_account": {
           "description": "Трајно уклоните све своје податке"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Корисничко име",
@@ -285,7 +286,10 @@
         "verification_guide": "Водич за верификацију",
         "qr_alt": "QR за Self верификацију",
         "callback_warning": "Упозорење",
-        "callback_warning_description": "URL повратног позива верификације није доступан са вашег телефона. Поставите NEXT_PUBLIC_SELF_CALLBACK на јавни URL (или поставите NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домен)."
+        "callback_warning_description": "URL повратног позива верификације није доступан са вашег телефона. Поставите NEXT_PUBLIC_SELF_CALLBACK на јавни URL (или поставите NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домен).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Добијте верификацију"

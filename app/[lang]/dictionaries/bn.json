@@ -239,7 +239,8 @@
         "danger_zone": "বিপজ্জনক অঞ্চল",
         "delete_account": {
           "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "ব্যবহারকারীর নাম",
@@ -285,7 +286,10 @@
         "verification_guide": "যাচাইকরণ নির্দেশিকা",
         "qr_alt": "Self যাচাইকরণ QR",
         "callback_warning": "সতর্কতা",
-        "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।"
+        "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "যাচাইকরণ পান"

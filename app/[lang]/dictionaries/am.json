@@ -239,7 +239,8 @@
         "danger_zone": "አደጋ ዞን",
         "delete_account": {
           "description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "የተጠቃሚ ስም",
@@ -285,7 +286,10 @@
         "verification_guide": "የማረጋገጫ መመሪያ",
         "qr_alt": "Self ማረጋገጫ QR",
         "callback_warning": "ማስጠንቀቂያ",
-        "callback_warning_description": "የማረጋገጫ callback URL ከስልክዎ ሊደረስበት አይችልም። NEXT_PUBLIC_SELF_CALLBACK ን ወደ ይፋ URL ያዘጋጁ (ወይም NEXT_PUBLIC_PUBLIC_BASE_URL ን ወደ ቱነል/ቅድመ-ዕይታ ጎራ ያዘጋጁ)።"
+        "callback_warning_description": "የማረጋገጫ callback URL ከስልክዎ ሊደረስበት አይችልም። NEXT_PUBLIC_SELF_CALLBACK ን ወደ ይፋ URL ያዘጋጁ (ወይም NEXT_PUBLIC_PUBLIC_BASE_URL ን ወደ ቱነል/ቅድመ-ዕይታ ጎራ ያዘጋጁ)።",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "ማረጋገጫ ያግኙ"

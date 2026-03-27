@@ -239,7 +239,8 @@
         "danger_zone": "GEVAARZONE",
         "delete_account": {
           "description": "Verwijder permanent al uw gegevens"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Gebruikersnaam",
@@ -285,7 +286,10 @@
         "verification_guide": "Verificatiegids",
         "qr_alt": "Self-verificatie QR",
         "callback_warning": "Waarschuwing",
-        "callback_warning_description": "De verificatie callback-URL is niet bereikbaar vanaf uw telefoon. Stel NEXT_PUBLIC_SELF_CALLBACK in op een openbare URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op een tunnel-/voorbeelddomein)."
+        "callback_warning_description": "De verificatie callback-URL is niet bereikbaar vanaf uw telefoon. Stel NEXT_PUBLIC_SELF_CALLBACK in op een openbare URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op een tunnel-/voorbeelddomein).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Verificatie krijgen"

@@ -239,7 +239,8 @@
         "danger_zone": "VAARALLINEN ALUE",
         "delete_account": {
           "description": "Poista pysyvästi kaikki tietosi"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Käyttäjänimi",
@@ -285,7 +286,10 @@
         "verification_guide": "Todennusopas",
         "qr_alt": "Self-todennuksen QR",
         "callback_warning": "Varoitus",
-        "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen)."
+        "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Hanki vahvistus"

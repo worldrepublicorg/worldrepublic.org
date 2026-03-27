@@ -239,7 +239,8 @@
         "danger_zone": "AGBAYE ELEWU",
         "delete_account": {
           "description": "Yọ gbogbo data rẹ lailai"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Orukọ olumulo",
@@ -285,7 +286,10 @@
         "verification_guide": "Ìtọ́sọ́nà ìjẹ́rìísí",
         "qr_alt": "QR ìjẹ́rìísí Self",
         "callback_warning": "Ìkìlọ̀",
-        "callback_warning_description": "URL ìpèsè padà ìjẹ́rìísí kò ṣeé dé láti ẹ̀rọ fóònù rẹ. Ṣètò NEXT_PUBLIC_SELF_CALLBACK sí URL gbogbogbò (tàbí ṣètò NEXT_PUBLIC_PUBLIC_BASE_URL sí orúkọ àgbègbè tunnel/àyẹ̀wò)."
+        "callback_warning_description": "URL ìpèsè padà ìjẹ́rìísí kò ṣeé dé láti ẹ̀rọ fóònù rẹ. Ṣètò NEXT_PUBLIC_SELF_CALLBACK sí URL gbogbogbò (tàbí ṣètò NEXT_PUBLIC_PUBLIC_BASE_URL sí orúkọ àgbègbè tunnel/àyẹ̀wò).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Gba ijẹrisi"

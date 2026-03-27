@@ -239,7 +239,8 @@
         "danger_zone": "PAVOJINGA ZONA",
         "delete_account": {
           "description": "Permanentiškai pašalinkite visus savo duomenis"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Vartotojo vardas",
@@ -285,7 +286,10 @@
         "verification_guide": "Patvirtinimo vadovas",
         "qr_alt": "Self patvirtinimo QR",
         "callback_warning": "Įspėjimas",
-        "callback_warning_description": "Patvirtinimo atgalinio iškvietimo URL nepasiekiamas iš jūsų telefono. Nustatykite NEXT_PUBLIC_SELF_CALLBACK į viešą URL (arba nustatykite NEXT_PUBLIC_PUBLIC_BASE_URL į tunelio/peržiūros domeną)."
+        "callback_warning_description": "Patvirtinimo atgalinio iškvietimo URL nepasiekiamas iš jūsų telefono. Nustatykite NEXT_PUBLIC_SELF_CALLBACK į viešą URL (arba nustatykite NEXT_PUBLIC_PUBLIC_BASE_URL į tunelio/peržiūros domeną).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Gaukite patvirtinimą"

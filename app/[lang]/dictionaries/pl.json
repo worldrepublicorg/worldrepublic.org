@@ -239,7 +239,8 @@
         "danger_zone": "STREFA NIEBEZPIECZEŃSTWA",
         "delete_account": {
           "description": "Trwale usuń wszystkie swoje dane"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Nazwa użytkownika",
@@ -285,7 +286,10 @@
         "verification_guide": "Przewodnik weryfikacji",
         "qr_alt": "QR weryfikacji Self",
         "callback_warning": "Ostrzeżenie",
-        "callback_warning_description": "URL zwrotny weryfikacji nie jest osiągalny z Twojego telefonu. Ustaw NEXT_PUBLIC_SELF_CALLBACK na publiczny URL (lub ustaw NEXT_PUBLIC_PUBLIC_BASE_URL na domenę tunelu/podglądu)."
+        "callback_warning_description": "URL zwrotny weryfikacji nie jest osiągalny z Twojego telefonu. Ustaw NEXT_PUBLIC_SELF_CALLBACK na publiczny URL (lub ustaw NEXT_PUBLIC_PUBLIC_BASE_URL na domenę tunelu/podglądu).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Uzyskaj weryfikację"

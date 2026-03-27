@@ -239,7 +239,8 @@
         "danger_zone": "TEHLİKE BÖLGESİ",
         "delete_account": {
           "description": "Tüm verilerinizi kalıcı olarak kaldırın"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Kullanıcı adı",
@@ -285,7 +286,10 @@
         "verification_guide": "Doğrulama kılavuzu",
         "qr_alt": "Self doğrulama QR",
         "callback_warning": "Uyarı",
-        "callback_warning_description": "Doğrulama geri arama URL'si telefonunuzdan erişilebilir değil. NEXT_PUBLIC_SELF_CALLBACK'i herkese açık bir URL'ye ayarlayın (veya NEXT_PUBLIC_PUBLIC_BASE_URL'yi bir tünel/önizleme alan adına ayarlayın)."
+        "callback_warning_description": "Doğrulama geri arama URL'si telefonunuzdan erişilebilir değil. NEXT_PUBLIC_SELF_CALLBACK'i herkese açık bir URL'ye ayarlayın (veya NEXT_PUBLIC_PUBLIC_BASE_URL'yi bir tünel/önizleme alan adına ayarlayın).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Doğrulama al"

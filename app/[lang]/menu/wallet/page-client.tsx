@@ -272,7 +272,9 @@ export default function WalletPageClient({
   };
 
   const isSelfVerified = Boolean(profileData?.selfVerifiedAt);
-  const identityStatusText = isSelfVerified ? "Verified" : "Not verified";
+  const identityStatusText = isSelfVerified
+    ? dictionary.components.identity.self.status_completed
+    : dictionary.components.identity.self.status_not_completed;
 
   const handleSelfVerificationClick = () => {
     if (!authenticated || !profileData?.userUuid) {
@@ -598,11 +600,11 @@ export default function WalletPageClient({
         <div>
           <div className="mb-4 mt-1.5 flex">
             <Typography variant="subtitle" level={3} className="text-gray-400">
-              IDENTIFICATION
+              {dictionary.pages.wallet.sections.identification}
             </Typography>
           </div>
           <CustomListItem
-            label="Self"
+            label={dictionary.components.identity.self.label}
             description={identityStatusText}
             onClick={handleSelfVerificationClick}
             noPointer={authenticated && isSelfVerified}

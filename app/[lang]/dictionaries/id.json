@@ -239,7 +239,8 @@
         "danger_zone": "ZONA BERBAHAYA",
         "delete_account": {
           "description": "Hapus permanen semua data Anda"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Nama pengguna",
@@ -285,7 +286,10 @@
         "verification_guide": "Panduan verifikasi",
         "qr_alt": "QR verifikasi Self",
         "callback_warning": "Peringatan",
-        "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau)."
+        "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Dapatkan verifikasi"

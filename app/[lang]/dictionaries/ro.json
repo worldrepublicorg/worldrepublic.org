@@ -239,7 +239,8 @@
         "danger_zone": "ZONĂ DE PERICOL",
         "delete_account": {
           "description": "Eliminați permanent toate datele dvs."
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Nume de utilizator",
@@ -285,7 +286,10 @@
         "verification_guide": "Ghid de verificare",
         "qr_alt": "QR de verificare Self",
         "callback_warning": "Avertisment",
-        "callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare)."
+        "callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Obțineți verificarea"

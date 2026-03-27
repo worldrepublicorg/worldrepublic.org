@@ -239,7 +239,8 @@
         "danger_zone": "AHANTU H'INGOZA",
         "delete_account": {
           "description": "Kuraho byose byawe byose ubudahoraho"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Izina ry'ukoresha",
@@ -285,7 +286,10 @@
         "verification_guide": "Umuyobozi wo kwemeza",
         "qr_alt": "QR yo kwemeza Self",
         "callback_warning": "Umuburo",
-        "callback_warning_description": "URL yo gusubiza yo kwemeza ntishobora kugerwaho kuva kuri telefone yawe. Shyira NEXT_PUBLIC_SELF_CALLBACK kuri URL rusange (cyangwa shyira NEXT_PUBLIC_PUBLIC_BASE_URL kuri domaine ya tunnel/preview)."
+        "callback_warning_description": "URL yo gusubiza yo kwemeza ntishobora kugerwaho kuva kuri telefone yawe. Shyira NEXT_PUBLIC_SELF_CALLBACK kuri URL rusange (cyangwa shyira NEXT_PUBLIC_PUBLIC_BASE_URL kuri domaine ya tunnel/preview).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Bona kwemeza"

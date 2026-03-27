@@ -239,7 +239,8 @@
         "danger_zone": "NEBEZPEČNÁ ZÓNA",
         "delete_account": {
           "description": "Trvalo odstráňte všetky vaše údaje"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Používateľské meno",
@@ -285,7 +286,10 @@
         "verification_guide": "Sprievodca overením",
         "qr_alt": "QR kód overenia Self",
         "callback_warning": "Upozornenie",
-        "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu)."
+        "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Získajte overenie"

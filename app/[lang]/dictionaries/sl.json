@@ -239,7 +239,8 @@
         "danger_zone": "NEBEZPEČNO OBMOČJE",
         "delete_account": {
           "description": "Trajno odstranite vse svoje podatke"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Uporabniško ime",
@@ -285,7 +286,10 @@
         "verification_guide": "Vodnik za preverjanje",
         "qr_alt": "QR za preverjanje Self",
         "callback_warning": "Opozorilo",
-        "callback_warning_description": "URL za povratni klic preverjanja ni dosegljiv iz vašega telefona. Nastavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ali nastavite NEXT_PUBLIC_PUBLIC_BASE_URL na domeno predora/predogleda)."
+        "callback_warning_description": "URL za povratni klic preverjanja ni dosegljiv iz vašega telefona. Nastavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ali nastavite NEXT_PUBLIC_PUBLIC_BASE_URL na domeno predora/predogleda).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Pridobite preverjanje"

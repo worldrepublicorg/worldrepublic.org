@@ -239,7 +239,8 @@
         "danger_zone": "GOOBTA KHATARADA",
         "delete_account": {
           "description": "Si toos ah ka saar dhammaan xogtaada"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Magaca isticmaalaha",
@@ -285,7 +286,10 @@
         "verification_guide": "Hagaha xaqiijinta",
         "qr_alt": "QR xaqiijinta Self",
         "callback_warning": "Digniin",
-        "callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah)."
+        "callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Heli xaqiijinta"

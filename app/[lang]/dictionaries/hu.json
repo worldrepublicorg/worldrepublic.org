@@ -239,7 +239,8 @@
         "danger_zone": "VESZÉLYES ZÓNA",
         "delete_account": {
           "description": "Véglegesen távolítsa el az összes adatát"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Felhasználónév",
@@ -285,7 +286,10 @@
         "verification_guide": "Hitelesítési útmutató",
         "qr_alt": "Self hitelesítési QR",
         "callback_warning": "Figyelmeztetés",
-        "callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre)."
+        "callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Igazolás kérése"

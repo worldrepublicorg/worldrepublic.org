@@ -239,7 +239,8 @@
         "danger_zone": "តំបន់គ្រោះថ្នាក់",
         "delete_account": {
           "description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "ឈ្មោះអ្នកប្រើប្រាស់",
@@ -285,7 +286,10 @@
         "verification_guide": "មគ្គុទ្ទេសក៍ការផ្ទៀងផ្ទាត់",
         "qr_alt": "QR ផ្ទៀងផ្ទាត់ Self",
         "callback_warning": "ការព្រមាន",
-        "callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។"
+        "callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "ទទួលបានការផ្ទៀងផ្ទាត់"

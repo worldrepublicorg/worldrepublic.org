@@ -239,7 +239,8 @@
         "danger_zone": "XAVF HUDUDI",
         "delete_account": {
           "description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Foydalanuvchi nomi",
@@ -285,7 +286,10 @@
         "verification_guide": "Tasdiqlash qo'llanmasi",
         "qr_alt": "Self tasdiqlash QR",
         "callback_warning": "Ogohlantirish",
-        "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating)."
+        "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Tasdiqlash"

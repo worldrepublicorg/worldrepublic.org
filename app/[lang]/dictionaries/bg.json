@@ -239,7 +239,8 @@
         "danger_zone": "ЗОНА НА ОПАСНОСТ",
         "delete_account": {
           "description": "Премахнете постоянно всички ваши данни"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Потребителско име",
@@ -285,7 +286,10 @@
         "verification_guide": "Ръководство за проверка",
         "qr_alt": "QR код за Self проверка",
         "callback_warning": "Предупреждение",
-        "callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн)."
+        "callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Получете потвърждение"

@@ -239,7 +239,8 @@
         "danger_zone": "ZONA PERICOLO",
         "delete_account": {
           "description": "Rimuovi permanentemente tutti i tuoi dati"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Nome utente",
@@ -285,7 +286,10 @@
         "verification_guide": "Guida alla verifica",
         "qr_alt": "QR di verifica Self",
         "callback_warning": "Avviso",
-        "callback_warning_description": "L'URL di callback della verifica non è raggiungibile dal tuo telefono. Imposta NEXT_PUBLIC_SELF_CALLBACK su un URL pubblico (o imposta NEXT_PUBLIC_PUBLIC_BASE_URL su un dominio tunnel/anteprima)."
+        "callback_warning_description": "L'URL di callback della verifica non è raggiungibile dal tuo telefono. Imposta NEXT_PUBLIC_SELF_CALLBACK su un URL pubblico (o imposta NEXT_PUBLIC_PUBLIC_BASE_URL su un dominio tunnel/anteprima).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Ottieni verifica"

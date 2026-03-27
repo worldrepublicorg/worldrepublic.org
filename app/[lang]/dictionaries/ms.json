@@ -239,7 +239,8 @@
         "danger_zone": "ZON BERBAHAYA",
         "delete_account": {
           "description": "Buang semua data anda secara kekal"
-        }
+        },
+        "identification": "IDENTIFICATION"
       },
       "username": {
         "label": "Nama pengguna",
@@ -285,7 +286,10 @@
         "verification_guide": "Panduan pengesahan",
         "qr_alt": "QR pengesahan Self",
         "callback_warning": "Amaran",
-        "callback_warning_description": "URL panggilan balik pengesahan tidak boleh dicapai dari telefon anda. Tetapkan NEXT_PUBLIC_SELF_CALLBACK ke URL awam (atau tetapkan NEXT_PUBLIC_PUBLIC_BASE_URL ke domain terowong/pratonton)."
+        "callback_warning_description": "URL panggilan balik pengesahan tidak boleh dicapai dari telefon anda. Tetapkan NEXT_PUBLIC_SELF_CALLBACK ke URL awam (atau tetapkan NEXT_PUBLIC_PUBLIC_BASE_URL ke domain terowong/pratonton).",
+        "label": "Self",
+        "status_completed": "Verified",
+        "status_not_completed": "Not verified"
       },
       "verification_warning": {
         "title": "Dapatkan pengesahan"
