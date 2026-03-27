@@ -1,9 +1,13 @@
 import { AllIds, DefaultConfigStore, SelfBackendVerifier } from "@selfxyz/core";
 import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
 import { db } from "@/lib/db/connection";
-import { userSelfVerifications, users } from "@/lib/db/schema";
+import { userSelfVerifications } from "@/lib/db/schema";
+import {
+  markAccountVerificationSessionFailed,
+  markAccountVerificationSessionVerified,
+  validateAccountVerificationSessionToken,
+} from "@/lib/self/account-verification-session";
 
 const ACCOUNT_SELF_SCOPE = "world-republic-account";
 
@@ -26,36 +30,36 @@ function createVerifier(origin: string) {
   );
 }
 
-async function getAuthenticatedUserUuid(): Promise<string | null> {
-  const session = await auth();
-  if (!session?.user?.id) return null;
+function parseAccountContextData(userContextData: unknown): {
+  sessionToken: string | null;
+} {
+  if (typeof userContextData !== "string") {
+    return { sessionToken: null };
+  }
 
-  const authUserId = Number.parseInt(String(session.user.id), 10);
-  if (Number.isNaN(authUserId)) return null;
+  try {
+    const jsonStartPattern = "7b22";
+    const jsonStartIndex = userContextData
+      .toLowerCase()
+      .indexOf(jsonStartPattern);
+    if (jsonStartIndex !== -1) {
+      const hexJson = userContextData.slice(jsonStartIndex);
+      const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
+      const parsed = JSON.parse(jsonString) as { sessionToken?: string };
+      return { sessionToken: parsed.sessionToken ?? null };
+    }
 
-  const [user] = await db
-    .select({ uuid: users.uuid })
-    .from(users)
-    .where(eq(users.id, authUserId))
-    .limit(1);
-
-  return user?.uuid ?? null;
+    const parsed = JSON.parse(userContextData) as { sessionToken?: string };
+    return { sessionToken: parsed.sessionToken ?? null };
+  } catch {
+    return { sessionToken: null };
+  }
 }
 
 export async function POST(req: Request) {
-  try {
-    const userUuid = await getAuthenticatedUserUuid();
-    if (!userUuid) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Authentication required",
-        },
-        { status: 200 },
-      );
-    }
+  let parsedSessionId: string | undefined;
 
+  try {
     const url = new URL(req.url);
     const origin = `${url.protocol}//${url.host}`;
     const verifier = createVerifier(origin);
@@ -75,6 +79,31 @@ export async function POST(req: Request) {
       );
     }
 
+    const { sessionToken } = parseAccountContextData(userContextData);
+    const sessionValidation = validateAccountVerificationSessionToken(
+      sessionToken ?? "",
+    );
+    if (!sessionValidation.ok) {
+      if (sessionValidation.sessionId) {
+        parsedSessionId = sessionValidation.sessionId;
+        markAccountVerificationSessionFailed(
+          sessionValidation.sessionId,
+          sessionValidation.reason,
+        );
+      }
+      return NextResponse.json(
+        {
+          status: "error",
+          result: false,
+          reason: sessionValidation.reason,
+        },
+        { status: 200 },
+      );
+    }
+
+    parsedSessionId = sessionValidation.payload.sessionId;
+    const userUuid = sessionValidation.payload.userUuid;
+
     const result = await verifier.verify(
       attestationId,
       proof,
@@ -84,6 +113,7 @@ export async function POST(req: Request) {
 
     const { isValid } = result.isValidDetails;
     if (!isValid) {
+      markAccountVerificationSessionFailed(parsedSessionId, "Verification failed");
       return NextResponse.json(
         {
           status: "error",
@@ -99,6 +129,10 @@ export async function POST(req: Request) {
     const verifiedUserIdentifier = result.userData?.userIdentifier;
 
     if (!nullifier || !verifiedUserIdentifier) {
+      markAccountVerificationSessionFailed(
+        parsedSessionId,
+        "Nullifier or user identifier missing in verification result",
+      );
       return NextResponse.json(
         {
           status: "error",
@@ -110,6 +144,10 @@ export async function POST(req: Request) {
     }
 
     if (verifiedUserIdentifier.toLowerCase() !== userUuid.toLowerCase()) {
+      markAccountVerificationSessionFailed(
+        parsedSessionId,
+        "Verified identity does not match authenticated account",
+      );
       return NextResponse.json(
         {
           status: "error",
@@ -135,6 +173,10 @@ export async function POST(req: Request) {
       existingNullifierBinding &&
       existingNullifierBinding.userId.toLowerCase() !== userUuid.toLowerCase()
     ) {
+      markAccountVerificationSessionFailed(
+        parsedSessionId,
+        "Self ID already linked to another account",
+      );
       return NextResponse.json(
         {
           status: "error",
@@ -166,6 +208,8 @@ export async function POST(req: Request) {
         },
       });
 
+    markAccountVerificationSessionVerified(parsedSessionId);
+
     return NextResponse.json(
       {
         status: "success",
@@ -175,6 +219,10 @@ export async function POST(req: Request) {
       { status: 200 },
     );
   } catch (error) {
+    if (parsedSessionId) {
+      const message = error instanceof Error ? error.message : String(error);
+      markAccountVerificationSessionFailed(parsedSessionId, message);
+    }
     const errorMessage = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
       {

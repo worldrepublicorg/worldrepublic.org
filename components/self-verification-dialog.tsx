@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useParams } from "next/navigation";
+import { useCallback, useEffect, useRef } from "react";
 import {
   PiArrowSquareOut,
   PiHeadset,
@@ -49,17 +50,68 @@ export function SelfVerificationDialog({
     selfApp,
     SelfQRcodeWrapperCmp,
     universalLink,
+    accountVerificationSessionId,
     callbackReachable,
     isLoading,
     isMobile,
   } = useSelfVerification(userId, lang, partyId, electionId, { mode });
+  const completionHandledRef = useRef(false);
 
-  const handleSuccess = async () => {
+  const handleSuccess = useCallback(async () => {
+    if (completionHandledRef.current) return;
+    completionHandledRef.current = true;
     if (onSuccess) {
       await onSuccess();
     }
     onOpenChange(false);
-  };
+  }, [onSuccess, onOpenChange]);
+
+  useEffect(() => {
+    if (!open) {
+      completionHandledRef.current = false;
+    }
+  }, [open]);
+
+  useEffect(() => {
+    if (
+      !open ||
+      mode !== "account" ||
+      !accountVerificationSessionId ||
+      !userId
+    ) {
+      return;
+    }
+
+    let isCancelled = false;
+    const poll = async () => {
+      try {
+        const res = await fetch(
+          `/api/self/account-verification-session/${accountVerificationSessionId}`,
+          {
+            cache: "no-store",
+          },
+        );
+        if (!res.ok || isCancelled) return;
+        const data = (await res.json()) as {
+          result?: boolean;
+          verificationSession?: { status?: string };
+        };
+        if (data?.result && data.verificationSession?.status === "verified") {
+          await handleSuccess();
+        }
+      } catch {
+        // Best-effort polling; user can still complete on same-device callback.
+      }
+    };
+
+    const interval = window.setInterval(poll, 2000);
+    void poll();
+
+    return () => {
+      isCancelled = true;
+      window.clearInterval(interval);
+    };
+  }, [open, mode, accountVerificationSessionId, userId, handleSuccess]);
 
   const handleContinue = () => {
     if (!universalLink) return;

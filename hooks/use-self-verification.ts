@@ -51,6 +51,8 @@ export function useSelfVerification(
   options?: UseSelfVerificationOptions,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
+  const [accountVerificationSessionId, setAccountVerificationSessionId] =
+    useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [callbackReachable, setCallbackReachable] = useState(true);
   const [selfApp, setSelfApp] = useState<SelfApp | null>(null);
@@ -97,6 +99,36 @@ export function useSelfVerification(
         };
         const { getUniversalLink } = coreMod;
         const { SelfAppBuilder, SelfQRcodeWrapper } = qrcodeMod;
+        let accountSessionToken: string | null = null;
+        if (mode === "account") {
+          const sessionRes = await fetch("/api/self/account-verification-session", {
+            method: "POST",
+          });
+          const sessionJson = (await sessionRes.json()) as {
+            result?: boolean;
+            verificationSession?: {
+              sessionId?: string;
+              token?: string;
+            };
+            reason?: string;
+          };
+
+          if (!sessionRes.ok || !sessionJson?.result) {
+            throw new Error(
+              sessionJson?.reason || "Failed to create account verification session",
+            );
+          }
+
+          accountSessionToken = sessionJson.verificationSession?.token ?? null;
+          const sessionId = sessionJson.verificationSession?.sessionId ?? null;
+          if (!accountSessionToken || !sessionId) {
+            throw new Error("Account verification session payload is incomplete");
+          }
+          setAccountVerificationSessionId(sessionId);
+        } else {
+          setAccountVerificationSessionId(null);
+        }
+
         const endpoint =
           mode === "account"
             ? `${window.location.origin}/api/self/verify-account`
@@ -124,9 +156,13 @@ export function useSelfVerification(
           userId: userId,
           userIdType,
           userDefinedData:
-            mode === "vote" && (electionId || partyId)
-              ? JSON.stringify({ electionId, partyId })
-              : undefined,
+            mode === "vote"
+              ? electionId || partyId
+                ? JSON.stringify({ electionId, partyId })
+                : undefined
+              : accountSessionToken
+                ? JSON.stringify({ sessionToken: accountSessionToken })
+                : undefined,
           disclosures: {
             ofac: true,
           },
@@ -139,6 +175,7 @@ export function useSelfVerification(
         return;
       } catch (err) {
         console.error("Self SDK import/build failed:", err);
+        setAccountVerificationSessionId(null);
         setUniversalLink(null);
         setIsLoading(false);
       }
@@ -158,6 +195,7 @@ export function useSelfVerification(
     selfApp,
     SelfQRcodeWrapperCmp,
     universalLink,
+    accountVerificationSessionId,
     callbackReachable,
     isLoading,
     isMobile,
