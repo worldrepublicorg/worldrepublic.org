@@ -301,7 +301,7 @@ export default function WalletPageClient({
         }
       />
 
-      <div className="flex flex-col gap-9 p-6">
+      <div className="flex flex-col gap-8 p-6">
         {/* WDD Balance Display */}
         <div className="flex flex-col items-center justify-center">
           <Typography
@@ -596,7 +596,7 @@ export default function WalletPageClient({
         </div>
 
         <div>
-          <div className="mb-4 flex">
+          <div className="mb-4 mt-1.5 flex">
             <Typography variant="subtitle" level={3} className="text-gray-400">
               IDENTIFICATION
             </Typography>
