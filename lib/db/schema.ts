@@ -218,6 +218,39 @@ export const userProfilesRelations = relations(userProfiles, ({ one }) => ({
   }),
 }));
 
+// Account-level Self verification records (independent from vote flow)
+export const userSelfVerifications = pgTable(
+  "user_self_verifications",
+  {
+    userId: uuid("user_id")
+      .primaryKey()
+      .references(() => users.uuid, { onDelete: "cascade" }),
+    scope: varchar("scope", { length: 64 }).notNull(),
+    selfNullifier: text("self_nullifier").notNull(),
+    selfVerifiedAt: timestamp("self_verified_at", { mode: "date" })
+      .notNull()
+      .defaultNow(),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("user_self_verifications_scope_nullifier_idx").on(
+      table.scope,
+      table.selfNullifier,
+    ),
+  ],
+);
+
+export const userSelfVerificationsRelations = relations(
+  userSelfVerifications,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [userSelfVerifications.userId],
+      references: [users.uuid],
+    }),
+  }),
+);
+
 // Referrals table - tracks ambassador referral relationships
 export const referrals = pgTable(
   "referrals",
@@ -374,14 +407,20 @@ export const streams = pgTable(
     partyId: uuid("party_id").references(() => parties.id, {
       onDelete: "cascade",
     }),
-    totalAmount: decimal("total_amount", { precision: 36, scale: 18 }).notNull(),
+    totalAmount: decimal("total_amount", {
+      precision: 36,
+      scale: 18,
+    }).notNull(),
     initialAmount: decimal("initial_amount", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
     withdrawnAmount: decimal("withdrawn_amount", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
-    ratePerSecond: decimal("rate_per_second", { precision: 36, scale: 18 }).notNull(),
+    ratePerSecond: decimal("rate_per_second", {
+      precision: 36,
+      scale: 18,
+    }).notNull(),
     startedAt: timestamp("started_at", { mode: "date" }).notNull(),
     endsAt: timestamp("ends_at", { mode: "date" }).notNull(),
     sourceStreamId: uuid("source_stream_id"),
