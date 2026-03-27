@@ -16,7 +16,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { PiFingerprint, PiSignIn } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
@@ -44,24 +44,13 @@ export function SignInDialog({
   const [showNameInput, setShowNameInput] = useState(false);
   const [showPasskeyOptions, setShowPasskeyOptions] = useState(false);
   const [passkeyName, setPasskeyName] = useState("");
-  const isGoogleSignInInFlightRef = useRef(false);
 
   const handleGoogleSignIn = async () => {
-    // Prevent duplicate OAuth starts, which can break PKCE checks.
-    if (isLoading || isGoogleSignInInFlightRef.current) return;
-
     setIsLoading(true);
-    isGoogleSignInInFlightRef.current = true;
-
-    try {
-      const callbackUrl = window.location.href;
-      await signIn("google", { callbackUrl });
-      onOpenChange(false);
-    } catch (error) {
-      console.error("Google sign-in error:", error);
-      isGoogleSignInInFlightRef.current = false;
-      setIsLoading(false);
-    }
+    await signIn("google", {
+      callbackUrl: "/",
+    });
+    onOpenChange(false);
   };
 
   const handleUseBiometrics = () => {
@@ -191,8 +180,7 @@ export function SignInDialog({
       }
 
       // Step 3: Verify the registration response
-      const pendingReferral =
-        localStorage.getItem("pending_referral") || undefined;
+      const pendingReferral = localStorage.getItem("pending_referral") || undefined;
       const verifyResult = await verifyPasskeyRegistration(
         registrationResponse,
         challenge,
