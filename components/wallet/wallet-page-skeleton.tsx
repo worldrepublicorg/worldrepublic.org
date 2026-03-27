@@ -15,7 +15,7 @@ export function WalletPageSkeleton() {
           <Skeleton height={40} width={40} className="rounded-full" />
         }
       />
-      <div className="flex flex-col gap-8 p-6">
+      <div className="flex flex-col gap-9 p-6">
         {/* Balance Display Skeleton */}
         <div className="flex flex-col items-center justify-center">
           <Skeleton height={18} width={40} className="rounded-lg mt-1!" />
@@ -40,11 +40,11 @@ export function WalletPageSkeleton() {
 
         {/* Identification Section */}
         <div>
-          <div className="mb-4 mt-1.5 flex">
+          <div className="mb-4 flex">
             <Skeleton height={18} width={96} className="rounded-lg" />
           </div>
-          <div className="min-h-14 w-full rounded-2xl bg-gray-50 p-4">
-            <div className="flex min-w-0 flex-col items-start gap-0.5">
+          <div className="rounded-2xl border border-gray-100 px-4 py-3">
+            <div className="flex items-center justify-between gap-2">
               <Skeleton height={20} width={32} className="rounded-lg" />
               <Skeleton height={17} width={80} className="rounded-lg" />
             </div>
