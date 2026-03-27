@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "การยืนยันตัวตน"
       },
       "username": {
         "label": "ชื่อผู้ใช้",
@@ -287,9 +287,9 @@
         "qr_alt": "QR การยืนยัน Self",
         "callback_warning": "คำเตือน",
         "callback_warning_description": "URL callback การยืนยันไม่สามารถเข้าถึงได้จากโทรศัพท์ของคุณ ตั้งค่า NEXT_PUBLIC_SELF_CALLBACK เป็น URL สาธารณะ (หรือตั้งค่า NEXT_PUBLIC_PUBLIC_BASE_URL เป็นโดเมน tunnel/preview)",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "ยืนยันแล้ว",
+        "status_not_completed": "ยังไม่ยืนยัน"
       },
       "verification_warning": {
         "title": "รับการยืนยันตัวตน"

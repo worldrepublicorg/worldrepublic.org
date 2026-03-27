@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Eliminar permanentemente todos tus datos"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFICACIÓN"
       },
       "username": {
         "label": "Nombre de usuario",
@@ -287,9 +287,9 @@
         "qr_alt": "QR de verificación de Self",
         "callback_warning": "Advertencia",
         "callback_warning_description": "La URL de callback de verificación no es accesible desde tu teléfono. Configura NEXT_PUBLIC_SELF_CALLBACK con una URL pública (o configura NEXT_PUBLIC_PUBLIC_BASE_URL con un dominio de túnel/vista previa).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Verificado",
+        "status_not_completed": "No verificado"
       },
       "verification_warning": {
         "title": "Obtener verificación"

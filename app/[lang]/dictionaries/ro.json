@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Eliminați permanent toate datele dvs."
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFICARE"
       },
       "username": {
         "label": "Nume de utilizator",
@@ -287,9 +287,9 @@
         "qr_alt": "QR de verificare Self",
         "callback_warning": "Avertisment",
         "callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Verificat",
+        "status_not_completed": "Neverificat"
       },
       "verification_warning": {
         "title": "Obțineți verificarea"

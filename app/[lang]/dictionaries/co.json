@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Rimuove permanentemente tutti i vostri dati"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFICAZIONE"
       },
       "username": {
         "label": "Nome d'utilizatore",
@@ -287,9 +287,9 @@
         "qr_alt": "QR di verificazione Self",
         "callback_warning": "Avvertimentu",
         "callback_warning_description": "L'URL di callback di verificazione ùn hè micca accessibile da u vostru telefunu. Impostate NEXT_PUBLIC_SELF_CALLBACK à un URL publicu (o impostate NEXT_PUBLIC_PUBLIC_BASE_URL à un duminiu di tunnel/preview).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Verificatu",
+        "status_not_completed": "Micca verificatu"
       },
       "verification_warning": {
         "title": "Obtener verificación"

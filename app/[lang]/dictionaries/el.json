@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "ΤΑΥΤΟΠΟΙΗΣΗ"
       },
       "username": {
         "label": "Όνομα χρήστη",
@@ -287,9 +287,9 @@
         "qr_alt": "QR επαλήθευσης Self",
         "callback_warning": "Προειδοποίηση",
         "callback_warning_description": "Η URL επανάκλησης επαλήθευσης δεν είναι προσβάσιμη από το τηλέφωνό σας. Ορίστε το NEXT_PUBLIC_SELF_CALLBACK σε δημόσια URL (ή ορίστε το NEXT_PUBLIC_PUBLIC_BASE_URL σε τομέα tunnel/preview).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Επαληθευμένο",
+        "status_not_completed": "Δεν επαληθεύτηκε"
       },
       "verification_warning": {
         "title": "Λάβετε επιβεβαίωση"

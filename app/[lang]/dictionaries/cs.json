@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Trvale odstraňte všechna vaše data"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKACE"
       },
       "username": {
         "label": "Uživatelské jméno",
@@ -287,9 +287,9 @@
         "qr_alt": "QR kód pro ověření Self",
         "callback_warning": "Varování",
         "callback_warning_description": "URL zpětného volání ověření není dostupná z vašeho telefonu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na veřejnou URL (nebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunel/náhledovou doménu).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Ověřeno",
+        "status_not_completed": "Neověřeno"
       },
       "verification_warning": {
         "title": "Získejte ověření"

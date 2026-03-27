@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Véglegesen távolítsa el az összes adatát"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "AZONOSÍTÁS"
       },
       "username": {
         "label": "Felhasználónév",
@@ -287,9 +287,9 @@
         "qr_alt": "Self hitelesítési QR",
         "callback_warning": "Figyelmeztetés",
         "callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Ellenőrizve",
+        "status_not_completed": "Nincs ellenőrizve"
       },
       "verification_warning": {
         "title": "Igazolás kérése"

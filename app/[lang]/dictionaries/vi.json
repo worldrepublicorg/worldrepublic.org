@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "ĐỊNH DANH"
       },
       "username": {
         "label": "Tên người dùng",
@@ -287,9 +287,9 @@
         "qr_alt": "Mã QR xác minh Self",
         "callback_warning": "Cảnh báo",
         "callback_warning_description": "URL gọi lại xác minh không thể truy cập được từ điện thoại của bạn. Đặt NEXT_PUBLIC_SELF_CALLBACK thành URL công khai (hoặc đặt NEXT_PUBLIC_PUBLIC_BASE_URL thành tên miền đường hầm/xem trước).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Đã xác minh",
+        "status_not_completed": "Chưa xác minh"
       },
       "verification_warning": {
         "title": "Nhận xác minh"

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "すべてのデータを永続的に削除"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "本人確認"
       },
       "username": {
         "label": "ユーザー名",
@@ -287,9 +287,9 @@
         "qr_alt": "Self認証QR",
         "callback_warning": "警告",
         "callback_warning_description": "認証コールバックURLにお使いの電話からアクセスできません。NEXT_PUBLIC_SELF_CALLBACKをパブリックURLに設定してください（またはNEXT_PUBLIC_PUBLIC_BASE_URLをトンネル/プレビュードメインに設定してください）。",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "認証済み",
+        "status_not_completed": "未認証"
       },
       "verification_warning": {
         "title": "認証を取得"

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "شناسایی"
       },
       "username": {
         "label": "نام کاربری",
@@ -287,9 +287,9 @@
         "qr_alt": "QR تأیید Self",
         "callback_warning": "هشدار",
         "callback_warning_description": "آدرس URL بازگشت تأیید از تلفن شما قابل دسترسی نیست. NEXT_PUBLIC_SELF_CALLBACK را روی یک URL عمومی تنظیم کنید (یا NEXT_PUBLIC_PUBLIC_BASE_URL را روی یک دامنه تونل/پیش‌نمایش تنظیم کنید).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "تأیید شده",
+        "status_not_completed": "تأیید نشده"
       },
       "verification_warning": {
         "title": "دریافت تأیید"

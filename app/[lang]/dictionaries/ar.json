@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "إزالة جميع بياناتك بشكل دائم"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "الهوية"
       },
       "username": {
         "label": "اسم المستخدم",
@@ -287,9 +287,9 @@
         "qr_alt": "رمز QR للتحقق من Self",
         "callback_warning": "تحذير",
         "callback_warning_description": "لا يمكن الوصول إلى عنوان URL الخاص بنداء التحقق من هاتفك. اضبط NEXT_PUBLIC_SELF_CALLBACK على عنوان URL عام (أو اضبط NEXT_PUBLIC_PUBLIC_BASE_URL على نطاق نفق/معاينة).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "متحقق",
+        "status_not_completed": "غير متحقق"
       },
       "verification_warning": {
         "title": "احصل على التحقق"

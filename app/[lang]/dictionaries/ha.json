@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Cire duk bayanan ku na dindindin"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "SHAIDA"
       },
       "username": {
         "label": "Sunan mai amfani",
@@ -287,9 +287,9 @@
         "qr_alt": "QR na tabbatar da Self",
         "callback_warning": "Gargadi",
         "callback_warning_description": "URL ɗin mayar da tabbatarwa ba za a iya samun shi daga wayarku ba. Saita NEXT_PUBLIC_SELF_CALLBACK zuwa URL na jama'a (ko saita NEXT_PUBLIC_PUBLIC_BASE_URL zuwa yankin rami/dubawa).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "An tabbatar",
+        "status_not_completed": "Ba a tabbatar ba"
       },
       "verification_warning": {
         "title": "Samu tabbatarwa"

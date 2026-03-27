@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Pastāvīgi noņemiet visus savus datus"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKĀCIJA"
       },
       "username": {
         "label": "Lietotājvārds",
@@ -287,9 +287,9 @@
         "qr_alt": "Self verifikācijas QR",
         "callback_warning": "Brīdinājums",
         "callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Pārbaudīts",
+        "status_not_completed": "Nav pārbaudīts"
       },
       "verification_warning": {
         "title": "Iegūstiet apstiprinājumu"

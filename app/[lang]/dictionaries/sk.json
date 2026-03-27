@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Trvalo odstráňte všetky vaše údaje"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKÁCIA"
       },
       "username": {
         "label": "Používateľské meno",
@@ -287,9 +287,9 @@
         "qr_alt": "QR kód overenia Self",
         "callback_warning": "Upozornenie",
         "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Overené",
+        "status_not_completed": "Neoverené"
       },
       "verification_warning": {
         "title": "Získajte overenie"

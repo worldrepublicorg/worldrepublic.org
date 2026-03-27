@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Ondoa data zako zote kwa kudumu"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "UTAMBULISHO"
       },
       "username": {
         "label": "Jina la mtumiaji",
@@ -287,9 +287,9 @@
         "qr_alt": "QR ya uthibitishaji wa Self",
         "callback_warning": "Onyo",
         "callback_warning_description": "URL ya kupigiwa simu ya uthibitishaji haiwezi kufikiwa kutoka kwa simu yako. Weka NEXT_PUBLIC_SELF_CALLBACK kwa URL ya umma (au weka NEXT_PUBLIC_PUBLIC_BASE_URL kwa kikoa cha tunnel/hakiki).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Imethibitishwa",
+        "status_not_completed": "Haijathibitishwa"
       },
       "verification_warning": {
         "title": "Pata uthibitisho"

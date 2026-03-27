@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Hapus permanen semua data Anda"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKASI"
       },
       "username": {
         "label": "Nama pengguna",
@@ -287,9 +287,9 @@
         "qr_alt": "QR verifikasi Self",
         "callback_warning": "Peringatan",
         "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Terverifikasi",
+        "status_not_completed": "Belum terverifikasi"
       },
       "verification_warning": {
         "title": "Dapatkan verifikasi"

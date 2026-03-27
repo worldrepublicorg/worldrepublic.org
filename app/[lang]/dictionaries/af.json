@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Verwyder permanent al jou data"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKASIE"
       },
       "username": {
         "label": "Gebruikersnaam",
@@ -287,9 +287,9 @@
         "qr_alt": "Self-verifikasie QR",
         "callback_warning": "Waarskuwing",
         "callback_warning_description": "Die verifikasie-terugbel-URL is nie bereikbaar vanaf jou foon nie. Stel NEXT_PUBLIC_SELF_CALLBACK in op 'n publieke URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op 'n tonnel-/voorskou-domein).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Geverifieer",
+        "status_not_completed": "Nie geverifieer nie"
       },
       "verification_warning": {
         "title": "Kry verifikasie"

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Премахнете постоянно всички ваши данни"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "ИДЕНТИФИКАЦИЯ"
       },
       "username": {
         "label": "Потребителско име",
@@ -287,9 +287,9 @@
         "qr_alt": "QR код за Self проверка",
         "callback_warning": "Предупреждение",
         "callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Проверено",
+        "status_not_completed": "Не е проверено"
       },
       "verification_warning": {
         "title": "Получете потвърждение"

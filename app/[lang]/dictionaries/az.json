@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Bütün məlumatlarınızı daimi olaraq silin"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "İDENFİKASİYA"
       },
       "username": {
         "label": "İstifadəçi adı",
@@ -287,9 +287,9 @@
         "qr_alt": "Self doğrulama QR",
         "callback_warning": "Xəbərdarlıq",
         "callback_warning_description": "Doğrulama geri çağırış URL-i telefonunuzdan əlçatan deyil. NEXT_PUBLIC_SELF_CALLBACK-i ictimai URL-ə təyin edin (və ya NEXT_PUBLIC_PUBLIC_BASE_URL-i tunel/önizləmə domeninə təyin edin).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Təsdiqləndi",
+        "status_not_completed": "Təsdiqlənməyib"
       },
       "verification_warning": {
         "title": "Təsdiqlə"

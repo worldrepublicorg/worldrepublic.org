@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Назавжди видалити всі ваші дані"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "ІДЕНТИФІКАЦІЯ"
       },
       "username": {
         "label": "Ім'я користувача",
@@ -287,9 +287,9 @@
         "qr_alt": "QR-код верифікації Self",
         "callback_warning": "Попередження",
         "callback_warning_description": "URL зворотного виклику верифікації недоступний з вашого телефону. Встановіть NEXT_PUBLIC_SELF_CALLBACK на публічну URL-адресу (або встановіть NEXT_PUBLIC_PUBLIC_BASE_URL на домен тунелю/попереднього перегляду).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Підтверджено",
+        "status_not_completed": "Не підтверджено"
       },
       "verification_warning": {
         "title": "Отримайте верифікацію"

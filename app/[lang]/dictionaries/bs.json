@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Trajno uklonite sve svoje podatke"
         },
-        "identification": "IDENTIFICATION"
+        "identification": "IDENTIFIKACIJA"
       },
       "username": {
         "label": "Korisničko ime",
@@ -287,9 +287,9 @@
         "qr_alt": "Self verifikacijski QR",
         "callback_warning": "Upozorenje",
         "callback_warning_description": "URL za povratni poziv verifikacije nije dostupan s vašeg telefona. Postavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ili postavite NEXT_PUBLIC_PUBLIC_BASE_URL na tunel/preview domenu).",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified"
+        "label": "MeID",
+        "status_completed": "Verificiran",
+        "status_not_completed": "Nije verificiran"
       },
       "verification_warning": {
         "title": "Dobijte verifikaciju"
