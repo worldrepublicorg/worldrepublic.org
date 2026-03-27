@@ -287,7 +287,7 @@
         "qr_alt": "QR pengesahan Self",
         "callback_warning": "Amaran",
         "callback_warning_description": "URL panggilan balik pengesahan tidak boleh dicapai dari telefon anda. Tetapkan NEXT_PUBLIC_SELF_CALLBACK ke URL awam (atau tetapkan NEXT_PUBLIC_PUBLIC_BASE_URL ke domain terowong/pratonton).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Disahkan",
         "status_not_completed": "Belum disahkan"
       },

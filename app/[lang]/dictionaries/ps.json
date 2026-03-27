@@ -287,7 +287,7 @@
         "qr_alt": "د Self تایید QR",
         "callback_warning": "خبرداری",
         "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "تایید شوی",
         "status_not_completed": "تایید شوی نه دی"
       },

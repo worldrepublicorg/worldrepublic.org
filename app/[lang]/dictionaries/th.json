@@ -287,7 +287,7 @@
         "qr_alt": "QR การยืนยัน Self",
         "callback_warning": "คำเตือน",
         "callback_warning_description": "URL callback การยืนยันไม่สามารถเข้าถึงได้จากโทรศัพท์ของคุณ ตั้งค่า NEXT_PUBLIC_SELF_CALLBACK เป็น URL สาธารณะ (หรือตั้งค่า NEXT_PUBLIC_PUBLIC_BASE_URL เป็นโดเมน tunnel/preview)",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "ยืนยันแล้ว",
         "status_not_completed": "ยังไม่ยืนยัน"
       },

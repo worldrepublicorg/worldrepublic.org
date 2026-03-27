@@ -287,7 +287,7 @@
         "qr_alt": "Self tasdiqlash QR",
         "callback_warning": "Ogohlantirish",
         "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Tasdiqlangan",
         "status_not_completed": "Tasdiqlanmagan"
       },

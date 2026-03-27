@@ -287,7 +287,7 @@
         "qr_alt": "Self patvirtinimo QR",
         "callback_warning": "Įspėjimas",
         "callback_warning_description": "Patvirtinimo atgalinio iškvietimo URL nepasiekiamas iš jūsų telefono. Nustatykite NEXT_PUBLIC_SELF_CALLBACK į viešą URL (arba nustatykite NEXT_PUBLIC_PUBLIC_BASE_URL į tunelio/peržiūros domeną).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Patvirtinta",
         "status_not_completed": "Nepatvirtinta"
       },

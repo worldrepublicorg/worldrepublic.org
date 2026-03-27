@@ -287,7 +287,7 @@
         "qr_alt": "Mã QR xác minh Self",
         "callback_warning": "Cảnh báo",
         "callback_warning_description": "URL gọi lại xác minh không thể truy cập được từ điện thoại của bạn. Đặt NEXT_PUBLIC_SELF_CALLBACK thành URL công khai (hoặc đặt NEXT_PUBLIC_PUBLIC_BASE_URL thành tên miền đường hầm/xem trước).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Đã xác minh",
         "status_not_completed": "Chưa xác minh"
       },

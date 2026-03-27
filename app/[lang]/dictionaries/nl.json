@@ -287,7 +287,7 @@
         "qr_alt": "Self-verificatie QR",
         "callback_warning": "Waarschuwing",
         "callback_warning_description": "De verificatie callback-URL is niet bereikbaar vanaf uw telefoon. Stel NEXT_PUBLIC_SELF_CALLBACK in op een openbare URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op een tunnel-/voorbeelddomein).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Geverifieerd",
         "status_not_completed": "Niet geverifieerd"
       },

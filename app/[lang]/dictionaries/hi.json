@@ -287,7 +287,7 @@
         "qr_alt": "Self सत्यापन QR",
         "callback_warning": "चेतावनी",
         "callback_warning_description": "सत्यापन कॉलबैक URL आपके फ़ोन से पहुँच योग्य नहीं है। NEXT_PUBLIC_SELF_CALLBACK को सार्वजनिक URL पर सेट करें (या NEXT_PUBLIC_PUBLIC_BASE_URL को टनल/प्रीव्यू डोमेन पर सेट करें)।",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "सत्यापित",
         "status_not_completed": "सत्यापित नहीं"
       },

@@ -287,7 +287,7 @@
         "qr_alt": "Self-Verifizierungs-QR",
         "callback_warning": "Warnung",
         "callback_warning_description": "Die Verifizierungs-Callback-URL ist von Ihrem Telefon nicht erreichbar. Setzen Sie NEXT_PUBLIC_SELF_CALLBACK auf eine öffentliche URL (oder setzen Sie NEXT_PUBLIC_PUBLIC_BASE_URL auf eine Tunnel-/Vorschau-Domain).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Verifiziert",
         "status_not_completed": "Nicht verifiziert"
       },

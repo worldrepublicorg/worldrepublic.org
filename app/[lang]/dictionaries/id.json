@@ -287,7 +287,7 @@
         "qr_alt": "QR verifikasi Self",
         "callback_warning": "Peringatan",
         "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Terverifikasi",
         "status_not_completed": "Belum terverifikasi"
       },

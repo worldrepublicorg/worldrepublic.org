@@ -287,7 +287,7 @@
         "qr_alt": "Self verifikācijas QR",
         "callback_warning": "Brīdinājums",
         "callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Pārbaudīts",
         "status_not_completed": "Nav pārbaudīts"
       },

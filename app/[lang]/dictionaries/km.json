@@ -287,7 +287,7 @@
         "qr_alt": "QR ផ្ទៀងផ្ទាត់ Self",
         "callback_warning": "ការព្រមាន",
         "callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "បានផ្ទៀងផ្ទាត់",
         "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់"
       },

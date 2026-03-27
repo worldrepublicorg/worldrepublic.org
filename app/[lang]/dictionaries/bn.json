@@ -287,7 +287,7 @@
         "qr_alt": "Self যাচাইকরণ QR",
         "callback_warning": "সতর্কতা",
         "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "যাচাইকৃত",
         "status_not_completed": "যাচাইকৃত নয়"
       },

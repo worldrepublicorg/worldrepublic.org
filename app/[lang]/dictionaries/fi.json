@@ -287,7 +287,7 @@
         "qr_alt": "Self-todennuksen QR",
         "callback_warning": "Varoitus",
         "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen).",
-        "label": "MeID",
+        "label": "Self",
         "status_completed": "Vahvistettu",
         "status_not_completed": "Ei vahvistettu"
       },
