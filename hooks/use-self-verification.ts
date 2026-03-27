@@ -14,12 +14,6 @@ type SelfAppBuilderType = {
   build: () => unknown;
 };
 
-export type SelfVerificationMode = "vote" | "account";
-
-interface UseSelfVerificationOptions {
-  mode?: SelfVerificationMode;
-}
-
 const resolveCallbackUrl = (lang: string | undefined): string | null => {
   if (typeof window === "undefined") return null;
   const envCallback = process.env.NEXT_PUBLIC_SELF_CALLBACK;
@@ -48,7 +42,6 @@ export function useSelfVerification(
   lang: string | undefined,
   partyId?: string,
   electionId?: string,
-  options?: UseSelfVerificationOptions,
 ) {
   const [universalLink, setUniversalLink] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -71,8 +64,6 @@ export function useSelfVerification(
         return;
       }
       const callback = resolveCallbackUrl(lang);
-      const mode = options?.mode ?? "vote";
-      const nextTarget = `/${lang || "en"}/menu/wallet`;
 
       if (!callback) {
         setCallbackReachable(false);
@@ -98,17 +89,8 @@ export function useSelfVerification(
         const { getUniversalLink } = coreMod;
         const { SelfAppBuilder, SelfQRcodeWrapper } = qrcodeMod;
         const endpoint =
-          mode === "account"
-            ? `${window.location.origin}/api/self/verify-account`
-            : process.env.NEXT_PUBLIC_SELF_ENDPOINT ||
-              `${window.location.origin}/api/self/verify`;
-        const scope =
-          mode === "account" ? "world-republic-account" : "world-republic";
-        const userIdType = "uuid";
-        const deeplinkCallback =
-          mode === "account"
-            ? `${callback}?next=${encodeURIComponent(nextTarget)}`
-            : callback;
+          process.env.NEXT_PUBLIC_SELF_ENDPOINT ||
+          `${window.location.origin}/api/self/verify`;
 
         type SelfAppCtor = new (
           config: Record<string, unknown>,
@@ -117,14 +99,14 @@ export function useSelfVerification(
         const app = new AppCtor({
           version: 2,
           appName: "World Republic",
-          scope,
+          scope: "world-republic",
           endpoint,
           endpointType: "staging_https",
-          deeplinkCallback,
+          deeplinkCallback: callback,
           userId: userId,
-          userIdType,
+          userIdType: "uuid",
           userDefinedData:
-            mode === "vote" && (electionId || partyId)
+            electionId || partyId
               ? JSON.stringify({ electionId, partyId })
               : undefined,
           disclosures: {
@@ -144,7 +126,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, partyId, electionId, options?.mode]);
+  }, [userId, lang, partyId, electionId]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;

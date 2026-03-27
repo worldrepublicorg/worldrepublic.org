@@ -18,10 +18,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
-import {
-  type SelfVerificationMode,
-  useSelfVerification,
-} from "@/hooks/use-self-verification";
+import { useSelfVerification } from "@/hooks/use-self-verification";
 
 interface SelfVerificationDialogProps {
   open: boolean;
@@ -31,7 +28,6 @@ interface SelfVerificationDialogProps {
   dictionary: Dictionary;
   partyId?: string;
   electionId?: string;
-  mode?: SelfVerificationMode;
 }
 
 export function SelfVerificationDialog({
@@ -42,10 +38,8 @@ export function SelfVerificationDialog({
   dictionary,
   partyId,
   electionId,
-  mode = "vote",
 }: SelfVerificationDialogProps) {
   const { lang } = useParams<{ lang: string }>();
-  const isAccountMode = mode === "account";
   const {
     selfApp,
     SelfQRcodeWrapperCmp,
@@ -53,35 +47,7 @@ export function SelfVerificationDialog({
     callbackReachable,
     isLoading,
     isMobile,
-  } = useSelfVerification(userId, lang, partyId, electionId, { mode });
-
-  const copy = {
-    title: isAccountMode
-      ? "Verify with Self"
-      : dictionary.components.identity.self.confirm_eligibility,
-    warningTitle: isAccountMode
-      ? "Warning"
-      : dictionary.components.identity.self.callback_warning,
-    warningBody: isAccountMode
-      ? "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain)."
-      : dictionary.components.identity.self.callback_warning_description,
-    mobileDescription: isAccountMode
-      ? "You will be redirected to the Self app to verify your account."
-      : dictionary.components.identity.self.mobile_dialog_description,
-    desktopDescription: isAccountMode
-      ? "Scan this QR code to complete account verification with Self."
-      : dictionary.components.identity.self.dialog_description,
-    verificationGuide: isAccountMode
-      ? "Verification guide"
-      : dictionary.components.identity.self.verification_guide,
-    support: isAccountMode
-      ? "Self Support"
-      : dictionary.components.identity.self.support_telegram,
-    continue: isAccountMode ? "Continue" : dictionary.common.continue,
-    qrAlt: isAccountMode
-      ? "Self verification QR"
-      : dictionary.components.identity.self.qr_alt,
-  };
+  } = useSelfVerification(userId, lang, partyId, electionId);
 
   const handleSuccess = async () => {
     if (onSuccess) {
@@ -105,7 +71,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiRocketLaunch className="size-5 text-gray-400" />}
-          label={copy.verificationGuide}
+          label={dictionary.components.identity.self.verification_guide}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -118,7 +84,7 @@ export function SelfVerificationDialog({
       >
         <CustomListItem
           startAdornment={<PiHeadset className="size-5 text-gray-400" />}
-          label={copy.support}
+          label={dictionary.components.identity.self.support_telegram}
           endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
         />
       </a>
@@ -136,21 +102,23 @@ export function SelfVerificationDialog({
           }
         >
           <Typography variant="heading" level={3}>
-            {copy.title}
+            {dictionary.components.identity.self.confirm_eligibility}
           </Typography>
         </AlertDialogHeader>
 
         {!callbackReachable ? (
           <div className="mb-6 rounded-2xl bg-yellow-50 p-4 text-yellow-900">
             <Typography variant="subtitle" level={4} className="mb-2">
-              {copy.warningTitle}
+              {dictionary.components.identity.self.callback_warning}
             </Typography>
-            <Typography>{copy.warningBody}</Typography>
+            <Typography>
+              {dictionary.components.identity.self.callback_warning_description}
+            </Typography>
           </div>
         ) : isMobile ? (
           <>
             <AlertDialogDescription className="mb-4">
-              {copy.mobileDescription}
+              {dictionary.components.identity.self.mobile_dialog_description}
             </AlertDialogDescription>
 
             {supportLinks}
@@ -161,14 +129,14 @@ export function SelfVerificationDialog({
                 disabled={isLoading || !universalLink}
                 className="w-full"
               >
-                {copy.continue}
+                {dictionary.common.continue}
               </Button>
             </AlertDialogFooter>
           </>
         ) : (
           <>
             <AlertDialogDescription className="mb-4">
-              {copy.desktopDescription}
+              {dictionary.components.identity.self.dialog_description}
             </AlertDialogDescription>
 
             <div className="mb-4 flex w-full justify-center">
@@ -184,7 +152,7 @@ export function SelfVerificationDialog({
               ) : universalLink ? (
                 <div className="rounded-2xl p-4">
                   <img
-                    alt={copy.qrAlt}
+                    alt={dictionary.components.identity.self.qr_alt}
                     src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
                       universalLink,
                     )}`}

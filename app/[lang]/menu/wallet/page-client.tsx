@@ -36,16 +36,11 @@ const SignInDialog = dynamic(
 
 import { CustomListItem } from "@/components/custom-list-item";
 import { CustomSelect } from "@/components/custom-select";
-import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
 import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
-import {
-  EMPTY_STREAMS,
-  useLiveWalletBalance,
-} from "@/hooks/use-live-wallet-balance";
 import {
   type GetWalletAuthAndDataResult,
   type GetWalletAuthAndDataTransaction,
@@ -53,6 +48,10 @@ import {
   withdrawTokens,
 } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
+import {
+  EMPTY_STREAMS,
+  useLiveWalletBalance,
+} from "@/hooks/use-live-wallet-balance";
 import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
 import {
   getCachedWalletData,
@@ -70,12 +69,8 @@ export default function WalletPageClient({
 }: WalletPageClientProps) {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
-  const {
-    user,
-    isAuthenticated: clientIsAuthenticated,
-    showSignInDialog,
-    setShowSignInDialog,
-  } = useAuth();
+  const [isSignInDialogOpen, setIsSignInDialogOpen] = useState(false);
+  const { user, isAuthenticated: clientIsAuthenticated } = useAuth();
   const router = useRouter();
   const { toast } = useToast();
 
@@ -122,7 +117,6 @@ export default function WalletPageClient({
   const locale = params.lang?.trim() || "en";
 
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
-  const [isSelfVerificationOpen, setIsSelfVerificationOpen] = useState(false);
 
   // Helper function to get address validation error message
   const getAddressValidationError = (address: string): string | null => {
@@ -269,18 +263,6 @@ export default function WalletPageClient({
     } else {
       router.push(`/${lang}/`);
     }
-  };
-
-  const isSelfVerified = Boolean(profileData?.selfVerifiedAt);
-  const identityStatusText = isSelfVerified ? "Verified" : "Not verified";
-
-  const handleSelfVerificationClick = () => {
-    if (!authenticated || !profileData?.userUuid) {
-      setShowSignInDialog(true);
-      return;
-    }
-    if (isSelfVerified) return;
-    setIsSelfVerificationOpen(true);
   };
 
   if (showSkeleton) {
@@ -598,33 +580,6 @@ export default function WalletPageClient({
         <div>
           <div className="mb-4 flex">
             <Typography variant="subtitle" level={3} className="text-gray-400">
-              IDENTIFICATION
-            </Typography>
-          </div>
-          <CustomListItem
-            label="Self"
-            description={identityStatusText}
-            onClick={handleSelfVerificationClick}
-            noPointer={authenticated && isSelfVerified}
-          />
-          <SelfVerificationDialog
-            open={isSelfVerificationOpen}
-            onOpenChange={setIsSelfVerificationOpen}
-            onSuccess={async () => {
-              const fresh = await getWalletAuthAndData();
-              setServerData(fresh);
-              setCachedWalletData(fresh);
-              router.refresh();
-            }}
-            userId={profileData?.userUuid ?? null}
-            dictionary={dictionary}
-            mode="account"
-          />
-        </div>
-
-        <div>
-          <div className="mb-4 flex">
-            <Typography variant="subtitle" level={3} className="text-gray-400">
               {dictionary.pages.wallet.history.title}
             </Typography>
           </div>
@@ -640,8 +595,8 @@ export default function WalletPageClient({
 
       {/* Sign-in dialog */}
       <SignInDialog
-        open={showSignInDialog}
-        onOpenChange={setShowSignInDialog}
+        open={isSignInDialogOpen}
+        onOpenChange={setIsSignInDialogOpen}
         dictionary={dictionary}
       />
     </div>

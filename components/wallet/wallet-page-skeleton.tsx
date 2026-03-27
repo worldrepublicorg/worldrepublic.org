@@ -38,19 +38,6 @@ export function WalletPageSkeleton() {
           </div>
         </div>
 
-        {/* Identification Section */}
-        <div>
-          <div className="mb-4 flex">
-            <Skeleton height={18} width={96} className="rounded-lg" />
-          </div>
-          <div className="rounded-2xl border border-gray-100 px-4 py-3">
-            <div className="flex items-center justify-between gap-2">
-              <Skeleton height={20} width={32} className="rounded-lg" />
-              <Skeleton height={17} width={80} className="rounded-lg" />
-            </div>
-          </div>
-        </div>
-
         {/* History Section */}
         <div>
           <div className="mb-4 flex">
