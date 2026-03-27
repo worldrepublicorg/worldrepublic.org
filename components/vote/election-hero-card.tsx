@@ -44,12 +44,12 @@ export function ElectionHeroCard({
           </div>
           <div className="flex items-center">
             {isActive && (
-              <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-[3px] text-xs! font-medium text-green-800">
+              <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-[3px] text-xs font-medium text-green-800">
                 {t.status_active}
               </span>
             )}
             {isUpcoming && (
-              <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-[3px] text-xs! font-medium text-blue-800">
+              <span className="inline-flex items-center rounded-full bg-blue-100 px-3 py-[3px] text-xs font-medium text-blue-800">
                 {t.status_upcoming}
               </span>
             )}
