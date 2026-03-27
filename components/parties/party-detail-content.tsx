@@ -175,7 +175,7 @@ export function PartyDetailContent({
               <Typography
                 variant="body"
                 level={3}
-                className="p-4 text-gray-700"
+                className="wrap-break-word p-4 text-gray-700"
               >
                 {party.description}
               </Typography>

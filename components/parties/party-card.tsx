@@ -154,7 +154,7 @@ export function PartyCard({
             as="p"
             variant="body"
             level={2}
-            className="text-[15px] text-gray-600 leading-snug!"
+            className="wrap-break-word text-[15px] text-gray-600 leading-snug!"
           >
             {party.description}
           </Typography>
