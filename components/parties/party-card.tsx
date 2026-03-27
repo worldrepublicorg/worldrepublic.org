@@ -161,7 +161,7 @@ export function PartyCard({
         </div>
       )}
 
-      <div className="mt-3 flex justify-between gap-2">
+      <div className="mt-3 flex justify-between gap-3">
         <div className="flex items-center gap-1">
           {party.websiteUrl ? (
             <>
