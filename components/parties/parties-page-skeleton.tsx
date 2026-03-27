@@ -92,11 +92,11 @@ export function PartiesPageSkeleton() {
                 </div>
                 <div className="mt-3">
                   <Skeleton
-                    height={16}
+                    height={15}
                     width="100%"
                     className="mb-1! rounded-lg"
                   />
-                  <Skeleton height={16} width="80%" className="rounded-lg" />
+                  <Skeleton height={15} width="80%" className="rounded-lg" />
                 </div>
                 <div className="flex items-center justify-between mt-3">
                   <Skeleton height={20} width={120} className="rounded-lg" />
