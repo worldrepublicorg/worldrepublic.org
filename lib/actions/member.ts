@@ -11,12 +11,13 @@ import {
   streams,
   transactions,
   userProfiles,
+  userSelfVerifications,
   users,
 } from "@/lib/db/schema";
 import {
-  type StreamData,
   computeStreamAccrued,
   computeWalletBalance,
+  type StreamData,
 } from "@/lib/streams";
 import { validateUsername } from "@/lib/utils";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
@@ -38,7 +39,8 @@ const REFERRAL_CHARSET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"; // No ambiguous 0/O/
 function generateReferralCode(): string {
   let code = "";
   for (let i = 0; i < 8; i++) {
-    code += REFERRAL_CHARSET[Math.floor(Math.random() * REFERRAL_CHARSET.length)];
+    code +=
+      REFERRAL_CHARSET[Math.floor(Math.random() * REFERRAL_CHARSET.length)];
   }
   return code;
 }
@@ -330,6 +332,7 @@ export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
   storedWalletBalance: number;
   basicIncomeClaimedTotal: number;
+  selfVerifiedAt: number | null;
   username: string | null;
   referralCode: string | null;
   userId: string;
@@ -424,16 +427,16 @@ export async function getWalletAuthAndData(
 
   const [userResult, profileResult, transactionsResult, linkedProviders] =
     await Promise.all([
-    db
-      .select({ uuid: users.uuid })
-      .from(users)
-      .where(eq(users.id, authUserId))
-      .limit(1)
-      .then(([user]) => user || null),
-    getUserProfile(pendingReferralCode),
-    getTransactions(100),
-    getLinkedProviders(authUserId),
-  ]);
+      db
+        .select({ uuid: users.uuid })
+        .from(users)
+        .where(eq(users.id, authUserId))
+        .limit(1)
+        .then(([user]) => user || null),
+      getUserProfile(pendingReferralCode),
+      getTransactions(100),
+      getLinkedProviders(authUserId),
+    ]);
 
   const userUuid = userResult?.uuid ?? null;
   if (!userUuid) {
@@ -463,15 +466,21 @@ export async function getWalletAuthAndData(
     .where(eq(userProfiles.id, userUuid))
     .limit(1);
 
+  const [selfVerificationRow] = await readDb
+    .select({
+      selfVerifiedAt: userSelfVerifications.selfVerifiedAt,
+    })
+    .from(userSelfVerifications)
+    .where(eq(userSelfVerifications.userId, userUuid))
+    .limit(1);
+
   const storedWalletBalance = profileRow?.walletBalance
     ? parseFloat(profileRow.walletBalance)
     : 0;
 
   // Total balance = stream balance (excluding BI) + walletBalance (which holds claimed BI)
   const streamBalance =
-    userStreams.length > 0
-      ? computeWalletBalance(userStreams, Date.now())
-      : 0;
+    userStreams.length > 0 ? computeWalletBalance(userStreams, Date.now()) : 0;
   const walletBalance = streamBalance + storedWalletBalance;
 
   let profileData: GetWalletAuthAndDataProfileData = {
@@ -480,6 +489,7 @@ export async function getWalletAuthAndData(
     basicIncomeClaimedTotal: profileRow?.basicIncomeClaimedTotal
       ? parseFloat(profileRow.basicIncomeClaimedTotal)
       : 0,
+    selfVerifiedAt: selfVerificationRow?.selfVerifiedAt?.getTime() ?? null,
     username: null,
     referralCode: null,
     userId: session.user.id,
@@ -939,9 +949,7 @@ export async function claimBasicIncome(): Promise<{
         return { success: false as const, error: "Basic income not activated" };
       }
 
-      const activatedAt = new Date(
-        profile.basic_income_activated_at,
-      ).getTime();
+      const activatedAt = new Date(profile.basic_income_activated_at).getTime();
       const lastClaimAt = profile.last_basic_income_claim_at
         ? new Date(profile.last_basic_income_claim_at).getTime()
         : activatedAt;
@@ -967,7 +975,8 @@ export async function claimBasicIncome(): Promise<{
       }
 
       const newBalance = currentBalance + finalClaimable;
-      const newBasicIncomeClaimedTotal = basicIncomeClaimedTotal + finalClaimable;
+      const newBasicIncomeClaimedTotal =
+        basicIncomeClaimedTotal + finalClaimable;
       await tx
         .update(userProfiles)
         .set({
@@ -999,9 +1008,7 @@ export async function claimBasicIncome(): Promise<{
     return {
       success: false,
       error:
-        error instanceof Error
-          ? error.message
-          : "Could not claim basic income",
+        error instanceof Error ? error.message : "Could not claim basic income",
     };
   }
 }
