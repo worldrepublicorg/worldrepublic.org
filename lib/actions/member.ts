@@ -626,11 +626,11 @@ export async function withdrawTokens(
     }
 
     const allowedChains = [
-      "1",
-      // "56", // no longer supported
-      // "143", // no longer supported
+      // "1", // temporarily disabled
+      // "56", // temporarily disabled
+      // "143", // temporarily disabled
       "480",
-      // "8453", // no longer supported
+      // "8453", // temporarily disabled
     ];
     if (!allowedChains.includes(selectedChain)) {
       return { success: false, error: "Invalid chain" };
@@ -770,7 +770,8 @@ export async function withdrawTokens(
     if (selectedChain === "480") {
       fromAddress = "0x7aCA7AFDa78884fE0a58fb8B3988B9f93F963950";
     } else {
-      fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac";
+      // fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac"; // Ethereum (temporarily disabled)
+      return { success: false, error: "Invalid chain" };
     }
 
     const amountWei = BigInt(Math.floor(flooredAmount * 1e18)).toString();
