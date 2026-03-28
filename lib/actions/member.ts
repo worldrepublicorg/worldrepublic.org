@@ -302,6 +302,11 @@ export async function deleteUserAccount(userUuid: string) {
 
     // Use PostgreSQL transaction for atomic soft delete
     await db.transaction(async (tx) => {
+      // Unlink Self verification so the same person can verify a new account later.
+      await tx
+        .delete(userSelfVerifications)
+        .where(eq(userSelfVerifications.userId, userUuid));
+
       // Soft delete: set accountDeletedAt and clear sensitive data
       await tx
         .update(userProfiles)
