@@ -48,17 +48,17 @@ export function ElectionCard({
           </div>
           <div className="flex items-center">
             {isActive && (
-              <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs! font-medium text-green-800">
+              <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-[11px]! font-medium text-green-800">
                 {t.status_active}
               </span>
             )}
             {isUpcoming && (
-              <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs! font-medium text-blue-800">
+              <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-[11px]! font-medium text-blue-800">
                 {t.status_upcoming}
               </span>
             )}
             {isEnded && (
-              <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs! font-medium text-gray-800">
+              <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px]! font-medium text-gray-800">
                 {t.status_ended}
               </span>
             )}
@@ -67,16 +67,16 @@ export function ElectionCard({
 
         <div className="flex flex-col gap-1.5 mt-3">
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCalendarBlank className="text-gray-500 shrink-0" size={13} />
-            <Typography variant="body" level={2} className="text-[13px]">
+            <PiCalendarBlank className="text-gray-500 shrink-0" size={12} />
+            <Typography variant="body" level={2} className="text-[12px]">
               {formatElectionDateTime(election.startsAt, lang)} -{" "}
               {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
 
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCoins className="text-gray-500 shrink-0" size={13} />
-            <Typography variant="body" level={2} className="text-[13px]">
+            <PiCoins className="text-gray-500 shrink-0" size={12} />
+            <Typography variant="body" level={2} className="text-[12px]">
               {t[isUpcoming ? "reward_pool_minimum" : "reward_pool"].replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(locale),

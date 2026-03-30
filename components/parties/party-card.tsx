@@ -165,7 +165,7 @@ export function PartyCard({
         <div className="flex items-center gap-1">
           {party.websiteUrl ? (
             <>
-              <PiLinkSimple className="text-gray-500 shrink-0" size={15} />
+              <PiLinkSimple className="text-gray-500 shrink-0" size={14} />
               <a
                 href={
                   party.websiteUrl.startsWith("http")
@@ -181,23 +181,23 @@ export function PartyCard({
                 <Typography
                   variant="label"
                   level={1}
-                  className="line-clamp-1 break-all text-[15px] text-[#0A66C2] font-normal"
+                  className="line-clamp-1 break-all text-[14px] text-[#0A66C2] font-normal"
                 >
                   {shortenUrl(party.websiteUrl)}
                 </Typography>
               </a>
             </>
           ) : (
-            <PiLinkSimple className="text-gray-300 shrink-0" size={15} />
+            <PiLinkSimple className="text-gray-300 shrink-0" size={14} />
           )}
         </div>
         <div className="flex items-center gap-1">
-          <PiUserFocus className="text-gray-500" size={15} />
+          <PiUserFocus className="text-gray-500" size={14} />
           <Typography
             as="span"
             variant="label"
             level={1}
-            className="text-[15px] font-semibold"
+            className="text-[14px] font-semibold"
           >
             {party.leaderUsername}
           </Typography>
