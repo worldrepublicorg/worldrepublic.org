@@ -28,8 +28,8 @@ export function VotePageSkeleton() {
             <Skeleton height={22} width={70} className="rounded-full" />
           </div>
           <div className="mt-4 flex flex-col gap-2">
-            <Skeleton height={18} width="85%" className="rounded" />
-            <Skeleton height={17} width="60%" className="rounded" />
+            <Skeleton height={17} width="85%" className="rounded" />
+            <Skeleton height={16} width="60%" className="rounded" />
           </div>
           <Skeleton height={40} width="100%" className="mt-5! rounded-full" />
         </div>
