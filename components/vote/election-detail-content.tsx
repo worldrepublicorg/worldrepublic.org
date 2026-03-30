@@ -82,17 +82,17 @@ export function ElectionDetailContent({
           {localizeElectionName(election.name, t.test_election_name)}
         </Typography>
         {isActive && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-sm! font-medium text-green-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-green-100 px-3 py-1 text-[13px]! font-medium text-green-800">
             {t.status_active}
           </span>
         )}
         {isUpcoming && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-sm! font-medium text-blue-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-blue-100 px-3 py-1 text-[13px]! font-medium text-blue-800">
             {t.status_upcoming}
           </span>
         )}
         {isEnded && (
-          <span className="inline-flex shrink-0 items-center rounded-full bg-gray-100 px-3 py-1 text-sm! font-medium text-gray-800">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-gray-100 px-3 py-1 text-[13px]! font-medium text-gray-800">
             {t.status_ended}
           </span>
         )}
@@ -105,17 +105,17 @@ export function ElectionDetailContent({
             {t.election_info}
           </Typography>
         </div>
-        <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+        <div className="flex flex-col gap-5.5 p-4 divide-y divide-gray-100">
           <div className="flex items-center gap-2">
-            <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
-            <Typography variant="body" level={3} className="text-gray-700">
+            <PiCalendarBlank className="text-gray-400 shrink-0" size={14} />
+            <Typography variant="body" level={3} className="text-[14px] text-gray-700">
               {formatElectionDateTime(election.startsAt, lang)} –{" "}
               {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
           <div className="flex items-center gap-2">
-            <PiCoins className="text-gray-400 shrink-0 size-4" />
-            <Typography variant="body" level={3} className="text-gray-700">
+            <PiCoins className="text-gray-400 shrink-0" size={14} />
+            <Typography variant="body" level={3} className="text-[14px] text-gray-700">
               {t.reward_pool.replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(locale),

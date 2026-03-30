@@ -34,7 +34,7 @@ export function ElectionDetailPageSkeleton() {
           <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
             <Skeleton height={18} width={120} className="rounded-lg" />
           </div>
-          <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+          <div className="flex flex-col gap-5.5 p-4 divide-y divide-gray-100">
             <div className="flex items-center gap-2">
               <PiCalendarBlank className="text-gray-400 shrink-0 size-4" />
               <div className="flex min-w-0 flex-1 flex-col gap-1">
