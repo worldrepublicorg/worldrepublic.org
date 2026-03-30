@@ -104,14 +104,14 @@ export function PartyDetailContent({
             <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 p-4">
               <Skeleton height={24} width={80} className="rounded-lg" />
             </div>
-            <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-5.5 p-4 divide-y divide-gray-100">
               <div className="flex items-center justify-between gap-6">
-                <Skeleton height={20} width="33%" className="rounded" />
-                <Skeleton height={20} width="33%" className="rounded" />
+                <Skeleton height={17} width="33%" className="rounded" />
+                <Skeleton height={17} width="33%" className="rounded" />
               </div>
               <div className="flex items-center justify-between gap-6">
-                <Skeleton height={20} width="25%" className="rounded" />
-                <Skeleton height={20} width="50%" className="rounded" />
+                <Skeleton height={17} width="25%" className="rounded" />
+                <Skeleton height={17} width="50%" className="rounded" />
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ export function PartyDetailContent({
               <Typography
                 variant="body"
                 level={3}
-                className="wrap-break-word p-4 text-gray-700"
+                className="wrap-break-word p-4 text-gray-700 text-[14px]"
               >
                 {party.description}
               </Typography>
@@ -190,16 +190,16 @@ export function PartyDetailContent({
               </Typography>
             </div>
 
-            <div className="flex flex-col gap-6 p-4 divide-y divide-gray-100">
+            <div className="flex flex-col gap-5.5 p-4 divide-y divide-gray-100">
               {/* Leader */}
               {party.leaderUsername && (
                 <div className="flex items-center justify-between gap-6">
                   <div className="flex items-center">
-                    <PiUserFocus className="mr-2 size-4 text-gray-400" />
+                    <PiUserFocus className="mr-2 text-gray-400 shrink-0" size={14} />
                     <Typography
                       variant="body"
                       level={3}
-                      className="text-gray-700"
+                      className="text-gray-700 text-[14px]"
                     >
                       {dictionary.pages.govern.parties.detail.leader}
                     </Typography>
@@ -211,12 +211,12 @@ export function PartyDetailContent({
                     <Typography
                       variant="body"
                       level={3}
-                      className="font-medium text-gray-900 truncate"
+                      className="font-medium text-gray-900 truncate text-[14px]"
                       title={party.leaderUsername}
                     >
                       {party.leaderUsername}
                     </Typography>
-                    <PiCopy className="size-4 text-gray-400 shrink-0" />
+                    <PiCopy className="text-gray-400 shrink-0" size={14} />
                   </button>
                 </div>
               )}
@@ -225,11 +225,11 @@ export function PartyDetailContent({
               {party.websiteUrl && (
                 <div className="flex items-center justify-between gap-6">
                   <div className="flex items-center shrink-0">
-                    <PiLinkSimple className="mr-2 size-4 text-gray-400 shrink-0" />
+                    <PiLinkSimple className="mr-2 text-gray-400 shrink-0" size={14} />
                     <Typography
                       variant="body"
                       level={3}
-                      className="whitespace-nowrap text-gray-700"
+                      className="whitespace-nowrap text-gray-700 text-[14px]"
                     >
                       {dictionary.pages.govern.parties.detail.website}
                     </Typography>
@@ -247,7 +247,7 @@ export function PartyDetailContent({
                     <Typography
                       variant="body"
                       level={3}
-                      className="font-medium truncate"
+                      className="font-medium truncate text-[14px]"
                       title={party.websiteUrl}
                     >
                       {party.websiteUrl}
