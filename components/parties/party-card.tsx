@@ -154,7 +154,8 @@ export function PartyCard({
             as="p"
             variant="body"
             level={2}
-            className="wrap-break-word text-[14px] text-gray-600 leading-snug!"
+            title={party.description}
+            className="line-clamp-3 wrap-break-word text-[14px] text-gray-600 leading-snug!"
           >
             {party.description}
           </Typography>
