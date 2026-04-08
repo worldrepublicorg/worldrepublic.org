@@ -40,27 +40,31 @@ export function SignInDialog({
 }: SignInDialogProps) {
   const router = useRouter();
   const { update } = useSession();
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadingGoogle, setLoadingGoogle] = useState(false);
+  const [loadingPasskey, setLoadingPasskey] = useState(false);
   const [showNameInput, setShowNameInput] = useState(false);
   const [showPasskeyOptions, setShowPasskeyOptions] = useState(false);
   const [passkeyName, setPasskeyName] = useState("");
   const isGoogleSignInInFlightRef = useRef(false);
 
+  const isBusy = loadingGoogle || loadingPasskey;
+
   const handleGoogleSignIn = async () => {
     // Prevent duplicate OAuth starts, which can break PKCE checks.
-    if (isLoading || isGoogleSignInInFlightRef.current) return;
+    if (isBusy || isGoogleSignInInFlightRef.current) return;
 
-    setIsLoading(true);
+    setLoadingGoogle(true);
     isGoogleSignInInFlightRef.current = true;
 
     try {
       const callbackUrl = window.location.href;
       await signIn("google", { callbackUrl });
+      resetDialogState();
       onOpenChange(false);
     } catch (error) {
       console.error("Google sign-in error:", error);
       isGoogleSignInInFlightRef.current = false;
-      setIsLoading(false);
+      setLoadingGoogle(false);
     }
   };
 
@@ -69,7 +73,8 @@ export function SignInDialog({
   };
 
   const handlePasskeySignIn = async () => {
-    setIsLoading(true);
+    if (isBusy) return;
+    setLoadingPasskey(true);
     try {
       // Step 1: Get authentication options from server
       const optionsResult = await getPasskeyOptions();
@@ -88,7 +93,7 @@ export function SignInDialog({
       // If no credentials exist, go straight to registration (create account flow)
       if (optionsResult.passkeyCount === 0) {
         setShowNameInput(true);
-        setIsLoading(false);
+        setLoadingPasskey(false);
         return;
       }
 
@@ -106,7 +111,7 @@ export function SignInDialog({
             error.message.includes("cancel") ||
             error.message.includes("abort"))
         ) {
-          setIsLoading(false);
+          setLoadingPasskey(false);
           return;
         }
         throw error;
@@ -134,8 +139,7 @@ export function SignInDialog({
           // ignore
         }
         router.refresh();
-        setShowPasskeyOptions(false);
-        setShowNameInput(false);
+        resetDialogState();
         onOpenChange(false);
         router.push("/");
       } else {
@@ -143,12 +147,13 @@ export function SignInDialog({
       }
     } catch (error) {
       console.error("Passkey sign-in error:", error);
-      setIsLoading(false);
+      setLoadingPasskey(false);
     }
   };
 
   const handlePasskeyRegister = async (name?: string) => {
-    setIsLoading(true);
+    if (isBusy) return;
+    setLoadingPasskey(true);
     try {
       // Step 1: Get registration options
       // Always create a new account, even if user has existing credentials
@@ -184,7 +189,7 @@ export function SignInDialog({
         ) {
           // Browser is preventing registration - might be device restriction
           // User can try again or use a different authenticator
-          setIsLoading(false);
+          setLoadingPasskey(false);
           return;
         }
         throw error;
@@ -219,9 +224,7 @@ export function SignInDialog({
           // ignore
         }
         router.refresh();
-        setShowNameInput(false);
-        setShowPasskeyOptions(false);
-        setPasskeyName("");
+        resetDialogState();
         onOpenChange(false);
         router.push("/");
       } else {
@@ -229,7 +232,7 @@ export function SignInDialog({
       }
     } catch (error) {
       console.error("Passkey registration error:", error);
-      setIsLoading(false);
+      setLoadingPasskey(false);
     }
   };
 
@@ -244,12 +247,19 @@ export function SignInDialog({
     }
   };
 
+  const resetDialogState = () => {
+    setShowPasskeyOptions(false);
+    setShowNameInput(false);
+    setPasskeyName("");
+    setLoadingGoogle(false);
+    setLoadingPasskey(false);
+    isGoogleSignInInFlightRef.current = false;
+  };
+
   // Reset state when dialog closes
   const handleOpenChange = (newOpen: boolean) => {
     if (!newOpen) {
-      setShowPasskeyOptions(false);
-      setShowNameInput(false);
-      setPasskeyName("");
+      resetDialogState();
     }
     onOpenChange(newOpen);
   };
@@ -327,9 +337,9 @@ export function SignInDialog({
               <Button
                 fullWidth
                 onClick={handleNameSubmit}
-                disabled={isLoading || !passkeyName.trim()}
+                disabled={loadingPasskey || !passkeyName.trim()}
               >
-                {isLoading
+                {loadingPasskey
                   ? dictionary.common.processing
                   : dictionary.common.continue}
               </Button>
@@ -348,17 +358,17 @@ export function SignInDialog({
               <Button
                 fullWidth
                 onClick={handlePasskeySignIn}
-                disabled={isLoading}
+                disabled={isBusy}
                 className="flex items-center justify-center gap-2"
               >
-                {isLoading
+                {loadingPasskey
                   ? dictionary.common.processing
                   : dictionary.common.sign_in}
               </Button>
               <Button
                 fullWidth
                 onClick={handleCreateAccount}
-                disabled={isLoading}
+                disabled={isBusy}
                 variant="tertiary"
                 className="flex items-center justify-center gap-2"
               >
@@ -372,21 +382,23 @@ export function SignInDialog({
               <Button
                 fullWidth
                 onClick={handleUseBiometrics}
-                disabled={isLoading}
+                disabled={isBusy}
                 className="flex items-center justify-center gap-2"
               >
                 <PiFingerprint className="size-5 text-white" />
-                {isLoading
+                {loadingPasskey
                   ? dictionary.common.processing
                   : dictionary.auth.sign_in_with_passkey}
               </Button>
               <Button
                 fullWidth
                 onClick={handleGoogleSignIn}
-                disabled={isLoading}
+                disabled={isBusy}
                 className="flex items-center justify-center gap-2"
               >
-                {dictionary.auth.sign_in_with_google}
+                {loadingGoogle
+                  ? dictionary.common.processing
+                  : dictionary.auth.sign_in_with_google}
               </Button>
             </div>
           </AlertDialogFooter>
