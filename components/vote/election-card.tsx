@@ -67,16 +67,16 @@ export function ElectionCard({
 
         <div className="flex flex-col gap-1.5 mt-3">
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCalendarBlank className="text-gray-500 shrink-0" size={12} />
-            <Typography variant="body" level={2} className="text-[12px]">
+            <PiCalendarBlank className="text-gray-500 shrink-0" size={13} />
+            <Typography variant="body" level={2} className="text-[13px]">
               {formatElectionDateTime(election.startsAt, lang)} -{" "}
               {formatElectionDateTime(election.endsAt, lang)}
             </Typography>
           </div>
 
           <div className="flex items-center gap-2 text-gray-600">
-            <PiCoins className="text-gray-500 shrink-0" size={12} />
-            <Typography variant="body" level={2} className="text-[12px]">
+            <PiCoins className="text-gray-500 shrink-0" size={13} />
+            <Typography variant="body" level={2} className="text-[13px]">
               {t[isUpcoming ? "reward_pool_minimum" : "reward_pool"].replace(
                 "{amount}",
                 Number.parseInt(election.rewardPool).toLocaleString(locale),
