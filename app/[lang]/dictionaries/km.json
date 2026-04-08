@@ -289,7 +289,8 @@
         "callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។",
         "label": "Self",
         "status_completed": "បានផ្ទៀងផ្ទាត់",
-        "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់"
+        "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់",
+        "learn_about_self": "ស្វែងយល់អំពី Self"
       },
       "verification_warning": {
         "title": "ទទួលបានការផ្ទៀងផ្ទាត់"

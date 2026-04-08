@@ -289,7 +289,8 @@
         "callback_warning_description": "URL zwrotny weryfikacji nie jest osiągalny z Twojego telefonu. Ustaw NEXT_PUBLIC_SELF_CALLBACK na publiczny URL (lub ustaw NEXT_PUBLIC_PUBLIC_BASE_URL na domenę tunelu/podglądu).",
         "label": "Self",
         "status_completed": "Zweryfikowano",
-        "status_not_completed": "Nie zweryfikowano"
+        "status_not_completed": "Nie zweryfikowano",
+        "learn_about_self": "Dowiedz się o Self"
       },
       "verification_warning": {
         "title": "Uzyskaj weryfikację"

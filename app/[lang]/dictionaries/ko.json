@@ -289,7 +289,8 @@
         "callback_warning_description": "인증 콜백 URL에 휴대폰에서 접근할 수 없습니다. NEXT_PUBLIC_SELF_CALLBACK을 공개 URL로 설정하세요 (또는 NEXT_PUBLIC_PUBLIC_BASE_URL을 터널/미리보기 도메인으로 설정하세요).",
         "label": "Self",
         "status_completed": "인증됨",
-        "status_not_completed": "미인증"
+        "status_not_completed": "미인증",
+        "learn_about_self": "Self 알아보기"
       },
       "verification_warning": {
         "title": "인증 받기"

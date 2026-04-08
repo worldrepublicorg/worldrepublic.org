@@ -289,7 +289,8 @@
         "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।",
         "label": "Self",
         "status_completed": "যাচাইকৃত",
-        "status_not_completed": "যাচাইকৃত নয়"
+        "status_not_completed": "যাচাইকৃত নয়",
+        "learn_about_self": "Self সম্পর্কে জানুন"
       },
       "verification_warning": {
         "title": "যাচাইকরণ পান"

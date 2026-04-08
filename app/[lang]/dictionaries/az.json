@@ -289,7 +289,8 @@
         "callback_warning_description": "Doğrulama geri çağırış URL-i telefonunuzdan əlçatan deyil. NEXT_PUBLIC_SELF_CALLBACK-i ictimai URL-ə təyin edin (və ya NEXT_PUBLIC_PUBLIC_BASE_URL-i tunel/önizləmə domeninə təyin edin).",
         "label": "Self",
         "status_completed": "Təsdiqləndi",
-        "status_not_completed": "Təsdiqlənməyib"
+        "status_not_completed": "Təsdiqlənməyib",
+        "learn_about_self": "Self haqqında öyrənin"
       },
       "verification_warning": {
         "title": "Təsdiqlə"

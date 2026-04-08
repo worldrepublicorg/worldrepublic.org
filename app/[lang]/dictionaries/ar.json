@@ -289,7 +289,8 @@
         "callback_warning_description": "لا يمكن الوصول إلى عنوان URL الخاص بنداء التحقق من هاتفك. اضبط NEXT_PUBLIC_SELF_CALLBACK على عنوان URL عام (أو اضبط NEXT_PUBLIC_PUBLIC_BASE_URL على نطاق نفق/معاينة).",
         "label": "Self",
         "status_completed": "متحقق",
-        "status_not_completed": "غير متحقق"
+        "status_not_completed": "غير متحقق",
+        "learn_about_self": "تعرّف على Self"
       },
       "verification_warning": {
         "title": "احصل على التحقق"

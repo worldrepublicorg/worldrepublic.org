@@ -289,7 +289,8 @@
         "callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн).",
         "label": "Self",
         "status_completed": "Проверено",
-        "status_not_completed": "Не е проверено"
+        "status_not_completed": "Не е проверено",
+        "learn_about_self": "Научете за Self"
       },
       "verification_warning": {
         "title": "Получете потвърждение"

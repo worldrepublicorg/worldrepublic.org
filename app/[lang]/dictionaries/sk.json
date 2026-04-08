@@ -289,7 +289,8 @@
         "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu).",
         "label": "Self",
         "status_completed": "Overené",
-        "status_not_completed": "Neoverené"
+        "status_not_completed": "Neoverené",
+        "learn_about_self": "Zistite viac o Self"
       },
       "verification_warning": {
         "title": "Získajte overenie"

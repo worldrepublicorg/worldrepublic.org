@@ -289,7 +289,8 @@
         "callback_warning_description": "تصدیق کال بیک URL آپ کے فون سے قابل رسائی نہیں ہے۔ NEXT_PUBLIC_SELF_CALLBACK کو عوامی URL پر سیٹ کریں (یا NEXT_PUBLIC_PUBLIC_BASE_URL کو ٹنل/پریویو ڈومین پر سیٹ کریں)۔",
         "label": "Self",
         "status_completed": "تصدیق شدہ",
-        "status_not_completed": "تصدیق نہیں ہوئی"
+        "status_not_completed": "تصدیق نہیں ہوئی",
+        "learn_about_self": "Self کے بارے میں جانیں"
       },
       "verification_warning": {
         "title": "تصدیق حاصل کریں"

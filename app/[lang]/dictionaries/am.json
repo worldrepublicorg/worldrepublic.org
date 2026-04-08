@@ -289,7 +289,8 @@
         "callback_warning_description": "የማረጋገጫ callback URL ከስልክዎ ሊደረስበት አይችልም። NEXT_PUBLIC_SELF_CALLBACK ን ወደ ይፋ URL ያዘጋጁ (ወይም NEXT_PUBLIC_PUBLIC_BASE_URL ን ወደ ቱነል/ቅድመ-ዕይታ ጎራ ያዘጋጁ)።",
         "label": "Self",
         "status_completed": "ተረጋግጧል",
-        "status_not_completed": "አልተረጋገጠም"
+        "status_not_completed": "አልተረጋገጠም",
+        "learn_about_self": "ስለ Self ይማሩ"
       },
       "verification_warning": {
         "title": "ማረጋገጫ ያግኙ"

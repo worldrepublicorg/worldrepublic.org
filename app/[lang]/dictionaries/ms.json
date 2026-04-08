@@ -289,7 +289,8 @@
         "callback_warning_description": "URL panggilan balik pengesahan tidak boleh dicapai dari telefon anda. Tetapkan NEXT_PUBLIC_SELF_CALLBACK ke URL awam (atau tetapkan NEXT_PUBLIC_PUBLIC_BASE_URL ke domain terowong/pratonton).",
         "label": "Self",
         "status_completed": "Disahkan",
-        "status_not_completed": "Belum disahkan"
+        "status_not_completed": "Belum disahkan",
+        "learn_about_self": "Ketahui tentang Self"
       },
       "verification_warning": {
         "title": "Dapatkan pengesahan"

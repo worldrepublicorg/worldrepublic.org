@@ -289,7 +289,8 @@
         "callback_warning_description": "验证回调 URL 无法从您的手机访问。请将 NEXT_PUBLIC_SELF_CALLBACK 设置为公共 URL（或将 NEXT_PUBLIC_PUBLIC_BASE_URL 设置为隧道/预览域名）。",
         "label": "Self",
         "status_completed": "已验证",
-        "status_not_completed": "未验证"
+        "status_not_completed": "未验证",
+        "learn_about_self": "了解 Self"
       },
       "verification_warning": {
         "title": "获取验证"

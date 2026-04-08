@@ -289,7 +289,8 @@
         "callback_warning_description": "L'URL di callback della verifica non è raggiungibile dal tuo telefono. Imposta NEXT_PUBLIC_SELF_CALLBACK su un URL pubblico (o imposta NEXT_PUBLIC_PUBLIC_BASE_URL su un dominio tunnel/anteprima).",
         "label": "Self",
         "status_completed": "Verificato",
-        "status_not_completed": "Non verificato"
+        "status_not_completed": "Non verificato",
+        "learn_about_self": "Scopri di più su Self"
       },
       "verification_warning": {
         "title": "Ottieni verifica"

@@ -281,6 +281,7 @@
         "confirm_eligibility": "Confirm your eligibility",
         "dialog_description": "Scan this QR code to verify with Self.",
         "mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
+        "learn_about_self": "Learn about Self",
         "verification_guide": "Verification guide",
         "qr_alt": "Self verification QR",
         "callback_warning": "Warning",

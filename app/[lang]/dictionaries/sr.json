@@ -289,7 +289,8 @@
         "callback_warning_description": "URL повратног позива верификације није доступан са вашег телефона. Поставите NEXT_PUBLIC_SELF_CALLBACK на јавни URL (или поставите NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домен).",
         "label": "Self",
         "status_completed": "Проверено",
-        "status_not_completed": "Није проверено"
+        "status_not_completed": "Није проверено",
+        "learn_about_self": "Saznajte više o Self"
       },
       "verification_warning": {
         "title": "Добијте верификацију"

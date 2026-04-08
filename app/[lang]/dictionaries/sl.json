@@ -289,7 +289,8 @@
         "callback_warning_description": "URL za povratni klic preverjanja ni dosegljiv iz vašega telefona. Nastavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ali nastavite NEXT_PUBLIC_PUBLIC_BASE_URL na domeno predora/predogleda).",
         "label": "Self",
         "status_completed": "Preverjeno",
-        "status_not_completed": "Ni preverjeno"
+        "status_not_completed": "Ni preverjeno",
+        "learn_about_self": "Spoznajte Self"
       },
       "verification_warning": {
         "title": "Pridobite preverjanje"

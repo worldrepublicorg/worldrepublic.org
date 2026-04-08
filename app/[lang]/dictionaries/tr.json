@@ -289,7 +289,8 @@
         "callback_warning_description": "Doğrulama geri arama URL'si telefonunuzdan erişilebilir değil. NEXT_PUBLIC_SELF_CALLBACK'i herkese açık bir URL'ye ayarlayın (veya NEXT_PUBLIC_PUBLIC_BASE_URL'yi bir tünel/önizleme alan adına ayarlayın).",
         "label": "Self",
         "status_completed": "Doğrulandı",
-        "status_not_completed": "Doğrulanmadı"
+        "status_not_completed": "Doğrulanmadı",
+        "learn_about_self": "Self hakkında bilgi edinin"
       },
       "verification_warning": {
         "title": "Doğrulama al"

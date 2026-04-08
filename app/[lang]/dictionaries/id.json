@@ -289,7 +289,8 @@
         "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
         "label": "Self",
         "status_completed": "Terverifikasi",
-        "status_not_completed": "Belum terverifikasi"
+        "status_not_completed": "Belum terverifikasi",
+        "learn_about_self": "Pelajari tentang Self"
       },
       "verification_warning": {
         "title": "Dapatkan verifikasi"

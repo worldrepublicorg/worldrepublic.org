@@ -14,6 +14,7 @@ import { useCallback, useEffect, useRef } from "react";
 import {
   PiArrowSquareOut,
   PiHeadset,
+  PiInfo,
   PiRocketLaunch,
   PiUserCheckFill,
 } from "react-icons/pi";
@@ -120,6 +121,19 @@ export function SelfVerificationDialog({
 
   const supportLinks = (
     <div className="mb-4 flex flex-col gap-2">
+      <a
+        href="https://self.xyz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+      >
+        <CustomListItem
+          startAdornment={<PiInfo className="size-5 text-gray-400" />}
+          label={dictionary.components.identity.self.learn_about_self}
+          endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
+        />
+      </a>
+
       <a
         href="https://wiki.worldrepublic.org/quickstart/get-verified"
         target="_blank"

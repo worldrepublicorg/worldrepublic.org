@@ -289,7 +289,8 @@
         "callback_warning_description": "L'URL di callback di verificazione ùn hè micca accessibile da u vostru telefunu. Impostate NEXT_PUBLIC_SELF_CALLBACK à un URL publicu (o impostate NEXT_PUBLIC_PUBLIC_BASE_URL à un duminiu di tunnel/preview).",
         "label": "Self",
         "status_completed": "Verificatu",
-        "status_not_completed": "Micca verificatu"
+        "status_not_completed": "Micca verificatu",
+        "learn_about_self": "Amparate nantu à Self"
       },
       "verification_warning": {
         "title": "Obtener verificación"

@@ -289,7 +289,8 @@
         "callback_warning_description": "URL ya kupigiwa simu ya uthibitishaji haiwezi kufikiwa kutoka kwa simu yako. Weka NEXT_PUBLIC_SELF_CALLBACK kwa URL ya umma (au weka NEXT_PUBLIC_PUBLIC_BASE_URL kwa kikoa cha tunnel/hakiki).",
         "label": "Self",
         "status_completed": "Imethibitishwa",
-        "status_not_completed": "Haijathibitishwa"
+        "status_not_completed": "Haijathibitishwa",
+        "learn_about_self": "Jifunze kuhusu Self"
       },
       "verification_warning": {
         "title": "Pata uthibitisho"

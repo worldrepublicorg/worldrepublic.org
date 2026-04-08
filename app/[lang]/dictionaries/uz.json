@@ -289,7 +289,8 @@
         "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating).",
         "label": "Self",
         "status_completed": "Tasdiqlangan",
-        "status_not_completed": "Tasdiqlanmagan"
+        "status_not_completed": "Tasdiqlanmagan",
+        "learn_about_self": "Self haqida bilib oling"
       },
       "verification_warning": {
         "title": "Tasdiqlash"

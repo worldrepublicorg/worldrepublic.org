@@ -289,7 +289,8 @@
         "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen).",
         "label": "Self",
         "status_completed": "Vahvistettu",
-        "status_not_completed": "Ei vahvistettu"
+        "status_not_completed": "Ei vahvistettu",
+        "learn_about_self": "Lue lisää Self"
       },
       "verification_warning": {
         "title": "Hanki vahvistus"

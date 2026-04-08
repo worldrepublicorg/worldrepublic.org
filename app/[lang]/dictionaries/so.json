@@ -289,7 +289,8 @@
         "callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah).",
         "label": "Self",
         "status_completed": "La xaqiijiyay",
-        "status_not_completed": "Lama xaqiijin"
+        "status_not_completed": "Lama xaqiijin",
+        "learn_about_self": "Baro wax ku saabsan Self"
       },
       "verification_warning": {
         "title": "Heli xaqiijinta"

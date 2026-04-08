@@ -289,7 +289,8 @@
         "callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu).",
         "label": "Self",
         "status_completed": "Pārbaudīts",
-        "status_not_completed": "Nav pārbaudīts"
+        "status_not_completed": "Nav pārbaudīts",
+        "learn_about_self": "Uzziniet par Self"
       },
       "verification_warning": {
         "title": "Iegūstiet apstiprinājumu"

@@ -289,7 +289,8 @@
         "callback_warning_description": "सत्यापन कॉलबैक URL आपके फ़ोन से पहुँच योग्य नहीं है। NEXT_PUBLIC_SELF_CALLBACK को सार्वजनिक URL पर सेट करें (या NEXT_PUBLIC_PUBLIC_BASE_URL को टनल/प्रीव्यू डोमेन पर सेट करें)।",
         "label": "Self",
         "status_completed": "सत्यापित",
-        "status_not_completed": "सत्यापित नहीं"
+        "status_not_completed": "सत्यापित नहीं",
+        "learn_about_self": "Self के बारे में जानें"
       },
       "verification_warning": {
         "title": "सत्यापन प्राप्त करें"

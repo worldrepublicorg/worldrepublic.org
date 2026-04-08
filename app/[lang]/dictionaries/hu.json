@@ -289,7 +289,8 @@
         "callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre).",
         "label": "Self",
         "status_completed": "Ellenőrizve",
-        "status_not_completed": "Nincs ellenőrizve"
+        "status_not_completed": "Nincs ellenőrizve",
+        "learn_about_self": "Tudjon meg többet a Self-ről"
       },
       "verification_warning": {
         "title": "Igazolás kérése"

@@ -289,7 +289,8 @@
         "callback_warning_description": "آدرس URL بازگشت تأیید از تلفن شما قابل دسترسی نیست. NEXT_PUBLIC_SELF_CALLBACK را روی یک URL عمومی تنظیم کنید (یا NEXT_PUBLIC_PUBLIC_BASE_URL را روی یک دامنه تونل/پیش‌نمایش تنظیم کنید).",
         "label": "Self",
         "status_completed": "تأیید شده",
-        "status_not_completed": "تأیید نشده"
+        "status_not_completed": "تأیید نشده",
+        "learn_about_self": "درباره Self بیشتر بدانید"
       },
       "verification_warning": {
         "title": "دریافت تأیید"

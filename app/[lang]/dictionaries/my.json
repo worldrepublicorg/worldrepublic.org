@@ -289,7 +289,8 @@
         "callback_warning_description": "အတည်ပြုခြင်း callback URL ကို သင့်ဖုန်းမှ ဝင်ရောက်၍မရပါ။ NEXT_PUBLIC_SELF_CALLBACK ကို အများသုံး URL သို့ သတ်မှတ်ပါ (သို့မဟုတ် NEXT_PUBLIC_PUBLIC_BASE_URL ကို tunnel/preview domain သို့ သတ်မှတ်ပါ)။",
         "label": "Self",
         "status_completed": "အတည်ပြုပြီး",
-        "status_not_completed": "အတည်မပြုရသေး"
+        "status_not_completed": "အတည်မပြုရသေး",
+        "learn_about_self": "Self အကြောင်းလေ့လာပါ"
       },
       "verification_warning": {
         "title": "အတည်ပြုချက်ရယူပါ"

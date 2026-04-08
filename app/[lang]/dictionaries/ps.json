@@ -289,7 +289,8 @@
         "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ).",
         "label": "Self",
         "status_completed": "تایید شوی",
-        "status_not_completed": "تایید شوی نه دی"
+        "status_not_completed": "تایید شوی نه دی",
+        "learn_about_self": "د Self په اړه زده کړئ"
       },
       "verification_warning": {
         "title": "تایید ترلاسه کړئ"
