@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
         },
-        "identification": "পরিচয়"
+        "verification": "যাচাইকরণ"
       },
       "username": {
         "label": "ব্যবহারকারীর নাম",

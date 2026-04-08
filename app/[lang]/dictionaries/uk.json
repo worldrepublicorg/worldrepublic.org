@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Назавжди видалити всі ваші дані"
         },
-        "identification": "ІДЕНТИФІКАЦІЯ"
+        "verification": "ВЕРИФІКАЦІЯ"
       },
       "username": {
         "label": "Ім'я користувача",

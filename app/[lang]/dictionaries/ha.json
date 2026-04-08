@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Cire duk bayanan ku na dindindin"
         },
-        "identification": "SHAIDA"
+        "verification": "TABBATARWA"
       },
       "username": {
         "label": "Sunan mai amfani",

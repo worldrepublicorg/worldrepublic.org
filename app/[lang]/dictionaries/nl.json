@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Verwijder permanent al uw gegevens"
         },
-        "identification": "IDENTIFICATIE"
+        "verification": "VERIFICATIE"
       },
       "username": {
         "label": "Gebruikersnaam",

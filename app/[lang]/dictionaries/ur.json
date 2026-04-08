@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "اپنا تمام ڈیٹا مستقل طور پر ہٹائیں"
         },
-        "identification": "شناخت"
+        "verification": "تصدیق"
       },
       "username": {
         "label": "صارف نام",

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Ondoa data zako zote kwa kudumu"
         },
-        "identification": "UTAMBULISHO"
+        "verification": "UTHIBITISHAJI"
       },
       "username": {
         "label": "Jina la mtumiaji",

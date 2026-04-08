@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
         },
-        "identification": "ΤΑΥΤΟΠΟΙΗΣΗ"
+        "verification": "ΕΠΑΛΗΘΕΥΣΗ"
       },
       "username": {
         "label": "Όνομα χρήστη",

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "अपना सभी डेटा स्थायी रूप से हटाएं"
         },
-        "identification": "पहचान"
+        "verification": "सत्यापन"
       },
       "username": {
         "label": "उपयोगकर्ता नाम",

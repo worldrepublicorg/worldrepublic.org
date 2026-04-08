@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Permanentiškai pašalinkite visus savo duomenis"
         },
-        "identification": "IDENTIFIKACIJA"
+        "verification": "PATVIRTINIMAS"
       },
       "username": {
         "label": "Vartotojo vardas",

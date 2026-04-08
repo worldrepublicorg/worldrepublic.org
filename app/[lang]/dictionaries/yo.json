@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Yọ gbogbo data rẹ lailai"
         },
-        "identification": "AMỌRAN"
+        "verification": "ÌMÚDÁJÚ"
       },
       "username": {
         "label": "Orukọ olumulo",

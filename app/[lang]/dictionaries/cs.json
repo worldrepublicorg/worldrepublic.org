@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Trvale odstraňte všechna vaše data"
         },
-        "identification": "IDENTIFIKACE"
+        "verification": "OVĚŘENÍ"
       },
       "username": {
         "label": "Uživatelské jméno",

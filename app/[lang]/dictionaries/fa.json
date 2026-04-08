@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
         },
-        "identification": "شناسایی"
+        "verification": "تأیید"
       },
       "username": {
         "label": "نام کاربری",

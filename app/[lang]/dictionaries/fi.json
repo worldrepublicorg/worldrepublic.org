@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Poista pysyvästi kaikki tietosi"
         },
-        "identification": "TUNNISTUS"
+        "verification": "VAHVISTUS"
       },
       "username": {
         "label": "Käyttäjänimi",

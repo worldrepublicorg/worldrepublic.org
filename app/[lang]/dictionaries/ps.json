@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
         },
-        "identification": "پېژندنه"
+        "verification": "تایید"
       },
       "username": {
         "label": "د کارونکي نوم",

@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Hapus permanen semua data Anda"
         },
-        "identification": "IDENTIFIKASI"
+        "verification": "VERIFIKASI"
       },
       "username": {
         "label": "Nama pengguna",

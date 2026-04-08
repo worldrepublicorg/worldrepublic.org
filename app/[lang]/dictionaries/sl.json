@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Trajno odstranite vse svoje podatke"
         },
-        "identification": "IDENTIFIKACIJA"
+        "verification": "PREVERJANJE"
       },
       "username": {
         "label": "Uporabniško ime",

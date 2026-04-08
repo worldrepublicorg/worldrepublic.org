@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Eliminați permanent toate datele dvs."
         },
-        "identification": "IDENTIFICARE"
+        "verification": "VERIFICARE"
       },
       "username": {
         "label": "Nume de utilizator",

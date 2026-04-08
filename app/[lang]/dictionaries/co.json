@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Rimuove permanentemente tutti i vostri dati"
         },
-        "identification": "IDENTIFICAZIONE"
+        "verification": "VERIFICAZIONE"
       },
       "username": {
         "label": "Nome d'utilizatore",

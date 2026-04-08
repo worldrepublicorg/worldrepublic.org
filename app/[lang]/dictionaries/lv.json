@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Pastāvīgi noņemiet visus savus datus"
         },
-        "identification": "IDENTIFIKĀCIJA"
+        "verification": "VERIFIKĀCIJA"
       },
       "username": {
         "label": "Lietotājvārds",

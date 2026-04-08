@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
         },
-        "identification": "ការកំណត់អត្តសញ្ញាណ៍"
+        "verification": "ការផ្ទៀងផ្ទាត់"
       },
       "username": {
         "label": "ឈ្មោះអ្នកប្រើប្រាស់",

@@ -38,7 +38,7 @@ export function WalletPageSkeleton() {
           </div>
         </div>
 
-        {/* Identification Section */}
+        {/* Verification Section */}
         <div>
           <div className="mb-4 mt-1.5 flex">
             <Skeleton height={18} width={96} className="rounded-lg" />

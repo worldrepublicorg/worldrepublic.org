@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
         },
-        "identification": "အထောက်အထား"
+        "verification": "အတည်ပြုခြင်း"
       },
       "username": {
         "label": "အသုံးပြုသူအမည်",

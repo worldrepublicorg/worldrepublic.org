@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "すべてのデータを永続的に削除"
         },
-        "identification": "本人確認"
+        "verification": "検証"
       },
       "username": {
         "label": "ユーザー名",

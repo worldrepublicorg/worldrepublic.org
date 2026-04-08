@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Премахнете постоянно всички ваши данни"
         },
-        "identification": "ИДЕНТИФИКАЦИЯ"
+        "verification": "ПРОВЕРКА"
       },
       "username": {
         "label": "Потребителско име",

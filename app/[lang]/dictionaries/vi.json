@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
         },
-        "identification": "ĐỊNH DANH"
+        "verification": "XÁC MINH"
       },
       "username": {
         "label": "Tên người dùng",

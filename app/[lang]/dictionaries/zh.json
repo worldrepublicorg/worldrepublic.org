@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "永久删除您的所有数据"
         },
-        "identification": "身份验证"
+        "verification": "验证"
       },
       "username": {
         "label": "用户名",

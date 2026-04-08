@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
         },
-        "identification": "ማንነት ማረጋገጥ"
+        "verification": "ማረጋገጫ"
       },
       "username": {
         "label": "የተጠቃሚ ስም",

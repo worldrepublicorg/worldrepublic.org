@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Permanenteng alisin ang lahat ng iyong data"
         },
-        "identification": "IDENTIFICATION"
+        "verification": "BERIPIKASYON"
       },
       "username": {
         "label": "Pangalan ng gumagamit",

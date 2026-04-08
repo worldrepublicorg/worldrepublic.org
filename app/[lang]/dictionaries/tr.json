@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Tüm verilerinizi kalıcı olarak kaldırın"
         },
-        "identification": "KİMLİK"
+        "verification": "DOĞRULAMA"
       },
       "username": {
         "label": "Kullanıcı adı",

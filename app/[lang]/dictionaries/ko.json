@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "모든 데이터를 영구적으로 제거"
         },
-        "identification": "신원확인"
+        "verification": "검증"
       },
       "username": {
         "label": "사용자 이름",

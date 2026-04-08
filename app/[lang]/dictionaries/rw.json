@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Kuraho byose byawe byose ubudahoraho"
         },
-        "identification": "KWEMEZA"
+        "verification": "IGENZURA"
       },
       "username": {
         "label": "Izina ry'ukoresha",

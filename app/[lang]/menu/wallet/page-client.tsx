@@ -600,7 +600,7 @@ export default function WalletPageClient({
         <div>
           <div className="mb-4 mt-1.5 flex">
             <Typography variant="subtitle" level={3} className="text-gray-400">
-              {dictionary.pages.wallet.sections.identification}
+              {dictionary.pages.wallet.sections.verification}
             </Typography>
           </div>
           <CustomListItem

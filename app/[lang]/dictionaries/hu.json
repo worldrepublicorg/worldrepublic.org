@@ -240,7 +240,7 @@
         "delete_account": {
           "description": "Véglegesen távolítsa el az összes adatát"
         },
-        "identification": "AZONOSÍTÁS"
+        "verification": "ELLENŐRZÉS"
       },
       "username": {
         "label": "Felhasználónév",
