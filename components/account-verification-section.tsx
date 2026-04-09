@@ -2,6 +2,7 @@
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import { useState } from "react";
+import { PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { SelfVerificationDialog } from "@/components/self-verification-dialog";
@@ -50,6 +51,13 @@ export function AccountVerificationSection({
         description={identityStatusText}
         onClick={handleSelfVerificationClick}
         noPointer={authenticated && isSelfVerified}
+        endAdornment={
+          !isSelfVerified ? (
+            <div className="flex items-center text-gray-500">
+              <PiPlus className="size-4" />
+            </div>
+          ) : undefined
+        }
       />
       <SelfVerificationDialog
         open={isSelfVerificationOpen}
