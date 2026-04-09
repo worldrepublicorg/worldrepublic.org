@@ -34,9 +34,9 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
+import { AccountVerificationSection } from "@/components/account-verification-section";
 import { CustomListItem } from "@/components/custom-list-item";
 import { CustomSelect } from "@/components/custom-select";
-import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { TopBar } from "@/components/topbar";
 import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
 import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
@@ -122,7 +122,6 @@ export default function WalletPageClient({
   const locale = params.lang?.trim() || "en";
 
   const [isWithdrawDialogOpen, setIsWithdrawDialogOpen] = useState(false);
-  const [isSelfVerificationOpen, setIsSelfVerificationOpen] = useState(false);
 
   // Helper function to get address validation error message
   const getAddressValidationError = (address: string): string | null => {
@@ -272,18 +271,6 @@ export default function WalletPageClient({
   };
 
   const isSelfVerified = Boolean(profileData?.selfVerifiedAt);
-  const identityStatusText = isSelfVerified
-    ? dictionary.components.identity.self.status_completed
-    : dictionary.components.identity.self.status_not_completed;
-
-  const handleSelfVerificationClick = () => {
-    if (!authenticated || !profileData?.userUuid) {
-      setShowSignInDialog(true);
-      return;
-    }
-    if (isSelfVerified) return;
-    setIsSelfVerificationOpen(true);
-  };
 
   if (showSkeleton) {
     return <WalletPageSkeleton />;
@@ -597,32 +584,19 @@ export default function WalletPageClient({
           </div>
         </div>
 
-        <div>
-          <div className="mb-4 mt-1.5 flex">
-            <Typography variant="subtitle" level={3} className="text-gray-400">
-              {dictionary.pages.wallet.sections.verification}
-            </Typography>
-          </div>
-          <CustomListItem
-            label={dictionary.components.identity.self.label}
-            description={identityStatusText}
-            onClick={handleSelfVerificationClick}
-            noPointer={authenticated && isSelfVerified}
-          />
-          <SelfVerificationDialog
-            open={isSelfVerificationOpen}
-            onOpenChange={setIsSelfVerificationOpen}
-            onSuccess={async () => {
-              const fresh = await getWalletAuthAndData();
-              setServerData(fresh);
-              setCachedWalletData(fresh);
-              router.refresh();
-            }}
-            userId={profileData?.userUuid ?? null}
-            dictionary={dictionary}
-            mode="account"
-          />
-        </div>
+        <AccountVerificationSection
+          dictionary={dictionary}
+          authenticated={authenticated}
+          userId={profileData?.userUuid ?? null}
+          isSelfVerified={isSelfVerified}
+          onRequireAuth={() => setShowSignInDialog(true)}
+          onSuccess={async () => {
+            const fresh = await getWalletAuthAndData();
+            setServerData(fresh);
+            setCachedWalletData(fresh);
+            router.refresh();
+          }}
+        />
 
         <div>
           <div className="mb-4 flex">

@@ -30,6 +30,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
+import { AccountVerificationSection } from "@/components/account-verification-section";
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
@@ -114,6 +115,7 @@ export default function AccountPageClient({
   const isAuthenticated = data?.authenticated ?? false;
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const userUuid = data?.profileData?.userUuid ?? null;
+  const isSelfVerified = Boolean(data?.profileData?.selfVerifiedAt);
   const linkedProviders = data?.linkedProviders ?? null;
   const googleLinked = linkedProviders?.hasGoogle ?? false;
   const passkeyCount = linkedProviders?.passkeyCount ?? 0;
@@ -408,6 +410,19 @@ export default function AccountPageClient({
                 </div>
               </div>
             </div>
+
+            <AccountVerificationSection
+              dictionary={dictionary}
+              authenticated={authenticated}
+              userId={userUuid}
+              isSelfVerified={isSelfVerified}
+              onSuccess={async () => {
+                const fresh = await getWalletAuthAndData();
+                setServerData(fresh);
+                setCachedWalletData(fresh);
+                router.refresh();
+              }}
+            />
 
             <div>
               <div className="mb-4 flex">

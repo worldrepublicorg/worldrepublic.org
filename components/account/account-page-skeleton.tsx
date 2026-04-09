@@ -41,6 +41,21 @@ export function AccountPageSkeleton() {
           </div>
         </div>
 
+        {/* Verification Section */}
+        <div>
+          <div className="mb-4 mt-1.5 flex">
+            <Skeleton height={18} width={72} className="rounded-lg" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="min-h-14 bg-gray-50 p-4 rounded-2xl flex items-center">
+              <div className="flex min-w-0 grow flex-col items-start gap-0.5">
+                <Skeleton height={18} width={48} className="rounded-lg" />
+                <Skeleton height={17} width={96} className="rounded-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Danger Zone Section */}
         <div>
           <div className="mb-4 flex">
