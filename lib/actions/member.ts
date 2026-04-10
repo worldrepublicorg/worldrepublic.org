@@ -569,7 +569,7 @@ export async function getWalletAuthAndData(
 // Transaction History
 // ============================================================================
 
-export async function getTransactions(limit: number = 50) {
+export async function getTransactions(limit: number = 50, offset: number = 0) {
   try {
     const userUuid = await getUserUuidFromSession();
 
@@ -585,10 +585,12 @@ export async function getTransactions(limit: number = 50) {
         ),
       )
       .orderBy(desc(transactions.createdAt))
+      .offset(offset)
       .limit(limit);
 
     return {
       success: true,
+      hasMore: transactionRows.length === limit,
       transactions: transactionRows.map((t) => ({
         id: t.id,
         type: t.type,
@@ -611,6 +613,7 @@ export async function getTransactions(limit: number = 50) {
     console.error("Error fetching transactions:", error);
     return {
       success: false,
+      hasMore: false,
       error:
         error instanceof Error ? error.message : "Could not fetch transactions",
       transactions: [],

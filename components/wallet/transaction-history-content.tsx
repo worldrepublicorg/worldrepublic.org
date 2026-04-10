@@ -9,7 +9,7 @@ import {
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   PiArrowCircleDownFill,
   PiArrowCircleUpFill,
@@ -19,6 +19,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
+import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { getTransactions } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
 import { cn, copyToClipboard } from "@/lib/utils";
@@ -44,6 +45,8 @@ interface TransactionHistoryContentProps {
   lang: string;
 }
 
+const TRANSACTIONS_PAGE_SIZE = 100;
+
 export function TransactionHistoryContent({
   transactions: transactionsProp,
   streams = null,
@@ -60,7 +63,14 @@ export function TransactionHistoryContent({
   const [error, setError] = useState("");
   const [selectedFilter, setSelectedFilter] = useState<string>("ALL");
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [hasMoreTransactions, setHasMoreTransactions] = useState(
+    (transactionsProp?.length || 0) >= TRANSACTIONS_PAGE_SIZE,
+  );
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [, setTick] = useState(0);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
 
   // Update periodically to refresh relative time displays
   // This triggers re-renders so formatDate() recalculates with current time
@@ -79,8 +89,38 @@ export function TransactionHistoryContent({
       setTransactions(transactionsProp || []);
       setIsLoading(false);
       setError("");
+      setHasMoreTransactions(
+        (transactionsProp?.length || 0) >= TRANSACTIONS_PAGE_SIZE,
+      );
     }
   }, [transactionsProp]);
+
+  const loadMoreTransactions = useCallback(async () => {
+    if (isLoadingMore || !hasMoreTransactions) return;
+
+    setIsLoadingMore(true);
+    try {
+      const result = await getTransactions(
+        TRANSACTIONS_PAGE_SIZE,
+        transactions.length,
+      );
+      if (result.success) {
+        const next = result.transactions || [];
+        if (next.length === 0) {
+          setHasMoreTransactions(false);
+        } else {
+          setTransactions((prev) => [...prev, ...next]);
+          setHasMoreTransactions(Boolean(result.hasMore));
+        }
+      } else {
+        setHasMoreTransactions(false);
+      }
+    } catch {
+      setHasMoreTransactions(false);
+    } finally {
+      setIsLoadingMore(false);
+    }
+  }, [transactionsProp, isLoadingMore, hasMoreTransactions, transactions.length]);
 
   // Fetch transactions only if not provided as prop
   useEffect(() => {
@@ -94,9 +134,10 @@ export function TransactionHistoryContent({
         setIsLoading(true);
         setError("");
 
-        const result = await getTransactions(100);
+        const result = await getTransactions(TRANSACTIONS_PAGE_SIZE, 0);
         if (result.success) {
           setTransactions(result.transactions || []);
+          setHasMoreTransactions(Boolean(result.hasMore));
         } else {
           throw new Error(
             result.error || dictionary.pages.wallet.transactions.failed_to_load,
@@ -123,6 +164,45 @@ export function TransactionHistoryContent({
     fetchTransactions();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [transactionsProp]); // Only fetch if transactions prop is not provided
+
+  // Infinite scroll setup for transaction history
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !isLoadingMore && hasMoreTransactions) {
+          void loadMoreTransactions();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (loadMoreRef.current) {
+      observerRef.current.observe(loadMoreRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [isLoadingMore, hasMoreTransactions, loadMoreTransactions]);
+
+  // Scroll to top button behavior
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const locale = lang.trim() || "en";
 
@@ -704,6 +784,7 @@ export function TransactionHistoryContent({
                 </div>
               );
             })}
+            {hasMoreTransactions && <div ref={loadMoreRef} className="h-14 py-4" />}
           </div>
         </div>
       )}
@@ -755,6 +836,8 @@ export function TransactionHistoryContent({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <ScrollToTopButton show={showScrollToTop} onClick={scrollToTop} />
     </div>
   );
 }
