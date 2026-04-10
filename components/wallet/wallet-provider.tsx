@@ -9,7 +9,7 @@ import { walletAuthChains } from "@/lib/wallet/chains";
 
 const walletConnectProjectId =
   process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ||
-  "00000000000000000000000000000000";
+  "b56e18d47c72ab683b10814fe9495694";
 
 const wagmiConfig = getDefaultConfig({
   appName: "World Republic",

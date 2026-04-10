@@ -82,6 +82,11 @@ export function SignInDialog({
     try {
       const result = await authenticateWithWallet("signin");
       if (!result.success) {
+        if (result.error === "wallet_not_connected") {
+          resetDialogState();
+          onOpenChange(false);
+          return;
+        }
         setLoadingWallet(false);
         return;
       }
