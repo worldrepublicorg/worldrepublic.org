@@ -171,6 +171,36 @@ export const authenticatorsRelations = relations(authenticators, ({ one }) => ({
   }),
 }));
 
+export const walletAuthNonces = pgTable(
+  "wallet_auth_nonces",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    nonce: varchar("nonce", { length: 255 }).notNull().unique(),
+    address: varchar("address", { length: 255 }),
+    chainId: integer("chain_id").notNull(),
+    intent: varchar("intent", { length: 20 }).notNull(),
+    expiresAt: timestamp("expires_at", {
+      mode: "date",
+      withTimezone: true,
+    }).notNull(),
+    consumedAt: timestamp("consumed_at", {
+      mode: "date",
+      withTimezone: true,
+    }),
+    createdAt: timestamp("created_at", {
+      mode: "date",
+      withTimezone: true,
+    })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => [
+    index("wallet_auth_nonces_expires_at_idx").on(table.expiresAt),
+    index("wallet_auth_nonces_consumed_at_idx").on(table.consumedAt),
+    index("wallet_auth_nonces_address_idx").on(table.address),
+  ],
+);
+
 // User Profiles table - for new app users only
 // Uses UUID from users table as primary key
 export const userProfiles = pgTable(
