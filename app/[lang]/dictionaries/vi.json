@@ -270,7 +270,11 @@
           "ambassador_reward": "Phần thưởng đại sứ",
           "party_subsidy": "Trợ cấp đảng",
           "stream_created": "Luồng đã tạo",
-          "stream_updated": "Luồng đã cập nhật"
+          "stream_updated": "Luồng đã cập nhật",
+          "savings_deposit": "Tiết kiệm gửi tiền",
+          "savings_withdrawal": "Tiết kiệm rút tiền",
+          "savings_interest": "Tiết kiệm lãi suất",
+          "referral_reward": "Phần thưởng giới thiệu"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Kích hoạt thất bại",
       "claimed": "Đã nhận",
       "claim_failed": "Nhận thất bại"
+    },
+    "savings": {
+      "collected": "Đã thu lãi",
+      "collect_failed": "Thu lãi thất bại",
+      "deposited": "Đã gửi tiền",
+      "deposit_failed": "Gửi tiền thất bại",
+      "withdrawn": "Đã rút tiền",
+      "withdraw_failed": "Rút tiền thất bại"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "Nagrada veleposlanika",
           "party_subsidy": "Strankarska subvencija",
           "stream_created": "Tok ustvarjen",
-          "stream_updated": "Tok posodobljen"
+          "stream_updated": "Tok posodobljen",
+          "savings_deposit": "Varčevanje depozit",
+          "savings_withdrawal": "Varčevanje dvigni",
+          "savings_interest": "Varčevanje obresti",
+          "referral_reward": "Nagrada za priporočilo"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivacija neuspešna",
       "claimed": "Zahtevano",
       "claim_failed": "Zahteva neuspešna"
+    },
+    "savings": {
+      "collected": "Zbrano",
+      "collect_failed": "Zbiranje neuspešno",
+      "deposited": "Deponirano",
+      "deposit_failed": "Depozit neuspešen",
+      "withdrawn": "Dvignjeno",
+      "withdraw_failed": "Dvig neuspešen"
     }
   },
   "common": {

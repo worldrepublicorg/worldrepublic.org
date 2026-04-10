@@ -270,7 +270,11 @@
           "ambassador_reward": "Abaalmarinta safiirka",
           "party_subsidy": "Kaalmada xisbiga",
           "stream_created": "Socodka la abuuray",
-          "stream_updated": "Socodka la cusbooneysiiyay"
+          "stream_updated": "Socodka la cusbooneysiiyay",
+          "savings_deposit": "Kaydinta ku kaydi",
+          "savings_withdrawal": "Kaydinta ka soo qaad",
+          "savings_interest": "Kaydinta faa'iido",
+          "referral_reward": "Abaalmarinta tixraaca"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Firfircoonida way fashilantay",
       "claimed": "La qaaday",
       "claim_failed": "Qaadista way fashilantay"
+    },
+    "savings": {
+      "collected": "La uruuriyay",
+      "collect_failed": "Uruurinta way fashilantay",
+      "deposited": "La kaydiyay",
+      "deposit_failed": "Kaydinta way fashilantay",
+      "withdrawn": "La soo qaaday",
+      "withdraw_failed": "Soo qaadista way fashilantay"
     }
   },
   "common": {

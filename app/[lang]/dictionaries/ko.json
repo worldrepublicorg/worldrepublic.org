@@ -270,7 +270,11 @@
           "ambassador_reward": "앰배서더 보상",
           "party_subsidy": "정당 보조금",
           "stream_created": "스트림 생성됨",
-          "stream_updated": "스트림 업데이트됨"
+          "stream_updated": "스트림 업데이트됨",
+          "savings_deposit": "저축 예치",
+          "savings_withdrawal": "저축 출금",
+          "savings_interest": "저축 이자",
+          "referral_reward": "추천 보상"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "활성화 실패",
       "claimed": "수령 완료",
       "claim_failed": "수령 실패"
+    },
+    "savings": {
+      "collected": "수령 완료",
+      "collect_failed": "수령 실패",
+      "deposited": "예치 완료",
+      "deposit_failed": "예치 실패",
+      "withdrawn": "출금 완료",
+      "withdraw_failed": "출금 실패"
     }
   },
   "common": {

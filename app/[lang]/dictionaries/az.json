@@ -270,7 +270,11 @@
           "ambassador_reward": "Səfir mükafatı",
           "party_subsidy": "Partiya subsidiyası",
           "stream_created": "Axın yaradıldı",
-          "stream_updated": "Axın yeniləndi"
+          "stream_updated": "Axın yeniləndi",
+          "savings_deposit": "Yığım yatır",
+          "savings_withdrawal": "Yığım çıxar",
+          "savings_interest": "Yığım faiz",
+          "referral_reward": "Referal mükafatı"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivləşdirmək alınmadı",
       "claimed": "Tələb olundu",
       "claim_failed": "Tələb uğursuz oldu"
+    },
+    "savings": {
+      "collected": "Toplandı",
+      "collect_failed": "Toplama uğursuz oldu",
+      "deposited": "Yatırıldı",
+      "deposit_failed": "Yatırma uğursuz oldu",
+      "withdrawn": "Çıxarıldı",
+      "withdraw_failed": "Çıxarma uğursuz oldu"
     }
   },
   "common": {

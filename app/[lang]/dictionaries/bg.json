@@ -270,7 +270,11 @@
           "ambassador_reward": "Награда за посланик",
           "party_subsidy": "Партийна субсидия",
           "stream_created": "Потокът е създаден",
-          "stream_updated": "Потокът е актуализиран"
+          "stream_updated": "Потокът е актуализиран",
+          "savings_deposit": "Спестявания депозирайте",
+          "savings_withdrawal": "Спестявания изтеглете",
+          "savings_interest": "Спестявания лихва",
+          "referral_reward": "Реферална награда"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Активирането неуспешно",
       "claimed": "Получено",
       "claim_failed": "Получаването неуспешно"
+    },
+    "savings": {
+      "collected": "Събрано",
+      "collect_failed": "Събирането неуспешно",
+      "deposited": "Депозирано",
+      "deposit_failed": "Депозитът неуспешен",
+      "withdrawn": "Изтеглено",
+      "withdraw_failed": "Изтеглянето неуспешно"
     }
   },
   "common": {

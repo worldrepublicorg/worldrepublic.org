@@ -270,7 +270,11 @@
           "ambassador_reward": "သံတမန်ဆု",
           "party_subsidy": "ပါတီထောက်ပံ့ကြေး",
           "stream_created": "စီးကြောင်း ဖန်တီးခဲ့သည်",
-          "stream_updated": "စီးကြောင်း မွမ်းမံခဲ့သည်"
+          "stream_updated": "စီးကြောင်း မွမ်းမံခဲ့သည်",
+          "savings_deposit": "ငွေစု ထည့်သွင်းပါ",
+          "savings_withdrawal": "ငွေစု ထုတ်ယူပါ",
+          "savings_interest": "ငွေစု အတိုး",
+          "referral_reward": "ညွှန်းဆို ဆုကြေး"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "ဖွင့်ရန် မအောင်မြင်",
       "claimed": "ရယူပြီး",
       "claim_failed": "ရယူရန် မအောင်မြင်"
+    },
+    "savings": {
+      "collected": "စုဆောင်းပြီး",
+      "collect_failed": "စုဆောင်းရန် မအောင်မြင်",
+      "deposited": "ထည့်သွင်းပြီး",
+      "deposit_failed": "ထည့်သွင်းရန် မအောင်မြင်",
+      "withdrawn": "ထုတ်ယူပြီး",
+      "withdraw_failed": "ထုတ်ယူရန် မအောင်မြင်"
     }
   },
   "common": {

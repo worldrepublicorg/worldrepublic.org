@@ -270,7 +270,11 @@
           "ambassador_reward": "Награда посла",
           "party_subsidy": "Партийная субсидия",
           "stream_created": "Поток создан",
-          "stream_updated": "Поток обновлен"
+          "stream_updated": "Поток обновлен",
+          "savings_deposit": "Сбережения пополнить",
+          "savings_withdrawal": "Сбережения вывести",
+          "savings_interest": "Сбережения проценты",
+          "referral_reward": "Реферальный бонус"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Не удалось активировать",
       "claimed": "Получено",
       "claim_failed": "Не удалось получить"
+    },
+    "savings": {
+      "collected": "Получено",
+      "collect_failed": "Не удалось получить",
+      "deposited": "Пополнено",
+      "deposit_failed": "Не удалось пополнить",
+      "withdrawn": "Выведено",
+      "withdraw_failed": "Не удалось вывести"
     }
   },
   "common": {

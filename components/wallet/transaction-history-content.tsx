@@ -44,8 +44,6 @@ interface TransactionHistoryContentProps {
   lang: string;
 }
 
-const REFERRAL_VERIFIED_BONUS_LABEL = "Referral reward";
-
 export function TransactionHistoryContent({
   transactions: transactionsProp,
   streams = null,
@@ -202,13 +200,13 @@ export function TransactionHistoryContent({
 
   const getTransactionLabel = (transaction: Transaction): string => {
     if (transaction.type === "SAVINGS_DEPOSIT") {
-      return "Savings deposit";
+      return dictionary.pages.wallet.transactions.types.savings_deposit;
     }
     if (transaction.type === "SAVINGS_WITHDRAWAL") {
-      return "Savings withdrawal";
+      return dictionary.pages.wallet.transactions.types.savings_withdrawal;
     }
     if (transaction.type === "SAVINGS_INTEREST_CLAIM") {
-      return "Savings interest";
+      return dictionary.pages.wallet.transactions.types.savings_interest;
     }
     if (transaction.type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
@@ -229,7 +227,7 @@ export function TransactionHistoryContent({
         : dictionary.pages.wallet.transactions.types.party_subsidy;
     }
     if (transaction.type === "REFERRAL_VERIFIED_BONUS") {
-      return REFERRAL_VERIFIED_BONUS_LABEL;
+      return dictionary.pages.wallet.transactions.types.referral_reward;
     }
     return transaction.type;
   };
@@ -417,19 +415,19 @@ export function TransactionHistoryContent({
 
   const getTypeLabel = (type: string): string => {
     if (type === "SAVINGS_DEPOSIT") {
-      return "Savings deposit";
+      return dictionary.pages.wallet.transactions.types.savings_deposit;
     }
     if (type === "SAVINGS_WITHDRAWAL") {
-      return "Savings withdrawal";
+      return dictionary.pages.wallet.transactions.types.savings_withdrawal;
     }
     if (type === "SAVINGS_INTEREST_CLAIM") {
-      return "Savings interest";
+      return dictionary.pages.wallet.transactions.types.savings_interest;
     }
     if (type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
     }
     if (type === "REFERRAL_VERIFIED_BONUS") {
-      return REFERRAL_VERIFIED_BONUS_LABEL;
+      return dictionary.pages.wallet.transactions.types.referral_reward;
     }
     return type;
   };

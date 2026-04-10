@@ -270,7 +270,11 @@
           "ambassador_reward": "مكافأة السفير",
           "party_subsidy": "دعم الحزب",
           "stream_created": "تم إنشاء التدفق",
-          "stream_updated": "تم تحديث التدفق"
+          "stream_updated": "تم تحديث التدفق",
+          "savings_deposit": "التوفير إيداع",
+          "savings_withdrawal": "التوفير سحب",
+          "savings_interest": "التوفير الفائدة",
+          "referral_reward": "مكافأة الإحالة"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "فشل التفعيل",
       "claimed": "تم الحصول",
       "claim_failed": "فشل الحصول"
+    },
+    "savings": {
+      "collected": "تم الجمع",
+      "collect_failed": "فشل الجمع",
+      "deposited": "تم الإيداع",
+      "deposit_failed": "فشل الإيداع",
+      "withdrawn": "تم السحب",
+      "withdraw_failed": "فشل السحب"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "એમ્બેસેડર ઇનામ",
           "party_subsidy": "પાર્ટી સબસિડી",
           "stream_created": "સ્ટ્રીમ બનાવ્યું",
-          "stream_updated": "સ્ટ્રીમ અપડેટ કર્યું"
+          "stream_updated": "સ્ટ્રીમ અપડેટ કર્યું",
+          "savings_deposit": "બચત જમા કરો",
+          "savings_withdrawal": "બચત ઉપાડો",
+          "savings_interest": "બચત વ્યાજ",
+          "referral_reward": "રેફરલ ઇનામ"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "સક્રિય કરવામાં નિષ્ફળ",
       "claimed": "ક્લેમ થયું",
       "claim_failed": "ક્લેમ નિષ્ફળ થયું"
+    },
+    "savings": {
+      "collected": "એકત્ર કર્યું",
+      "collect_failed": "એકત્ર કરવામાં નિષ્ફળ",
+      "deposited": "જમા થયું",
+      "deposit_failed": "જમા નિષ્ફળ થયું",
+      "withdrawn": "ઉપાડ્યું",
+      "withdraw_failed": "ઉપાડ નિષ્ફળ થયું"
     }
   },
   "common": {

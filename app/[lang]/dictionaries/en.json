@@ -270,7 +270,11 @@
           "ambassador_reward": "Ambassador reward",
           "party_subsidy": "Party subsidy",
           "stream_created": "Stream created",
-          "stream_updated": "Stream updated"
+          "stream_updated": "Stream updated",
+          "savings_deposit": "Savings deposit",
+          "savings_withdrawal": "Savings withdrawal",
+          "savings_interest": "Savings interest",
+          "referral_reward": "Referral reward"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Failed to activate",
       "claimed": "Claimed",
       "claim_failed": "Failed to claim"
+    },
+    "savings": {
+      "collected": "Collected",
+      "collect_failed": "Failed to collect",
+      "deposited": "Deposited",
+      "deposit_failed": "Deposit failed",
+      "withdrawn": "Withdrawn",
+      "withdraw_failed": "Withdrawal failed"
     }
   },
   "common": {

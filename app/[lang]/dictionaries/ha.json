@@ -270,7 +270,11 @@
           "ambassador_reward": "Kyautar jakada",
           "party_subsidy": "Tallafin jam'iyya",
           "stream_created": "An ƙirƙiri riba",
-          "stream_updated": "An sabunta riba"
+          "stream_updated": "An sabunta riba",
+          "savings_deposit": "Ajiya saka",
+          "savings_withdrawal": "Ajiya cire",
+          "savings_interest": "Ajiya riba",
+          "referral_reward": "Kyautar gayyata"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Ya gaza kunna",
       "claimed": "An nemi",
       "claim_failed": "Ya gaza nema"
+    },
+    "savings": {
+      "collected": "An tattara",
+      "collect_failed": "Ya gaza tattarawa",
+      "deposited": "An saka",
+      "deposit_failed": "Saka ya gaza",
+      "withdrawn": "An cire",
+      "withdraw_failed": "Cirewa ta gaza"
     }
   },
   "common": {

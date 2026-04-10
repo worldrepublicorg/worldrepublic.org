@@ -270,7 +270,11 @@
           "ambassador_reward": "Recompensă ambasador",
           "party_subsidy": "Subvenție partid",
           "stream_created": "Flux creat",
-          "stream_updated": "Flux actualizat"
+          "stream_updated": "Flux actualizat",
+          "savings_deposit": "Economii depune",
+          "savings_withdrawal": "Economii retrage",
+          "savings_interest": "Economii dobândă",
+          "referral_reward": "Recompensă de recomandare"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Activarea a eșuat",
       "claimed": "Încasat",
       "claim_failed": "Încasarea a eșuat"
+    },
+    "savings": {
+      "collected": "Colectat",
+      "collect_failed": "Colectarea a eșuat",
+      "deposited": "Depus",
+      "deposit_failed": "Depunerea a eșuat",
+      "withdrawn": "Retras",
+      "withdraw_failed": "Retragerea a eșuat"
     }
   },
   "common": {

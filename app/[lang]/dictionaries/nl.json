@@ -270,7 +270,11 @@
           "ambassador_reward": "Ambassadeursbeloning",
           "party_subsidy": "Partijsubsidie",
           "stream_created": "Stroom aangemaakt",
-          "stream_updated": "Stroom bijgewerkt"
+          "stream_updated": "Stroom bijgewerkt",
+          "savings_deposit": "Sparen storten",
+          "savings_withdrawal": "Sparen opnemen",
+          "savings_interest": "Sparen rente",
+          "referral_reward": "Verwijzingsbeloning"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Activeren mislukt",
       "claimed": "Geclaimd",
       "claim_failed": "Claimen mislukt"
+    },
+    "savings": {
+      "collected": "Verzameld",
+      "collect_failed": "Verzamelen mislukt",
+      "deposited": "Gestort",
+      "deposit_failed": "Storten mislukt",
+      "withdrawn": "Opgenomen",
+      "withdraw_failed": "Opname mislukt"
     }
   },
   "common": {

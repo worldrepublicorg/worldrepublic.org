@@ -270,7 +270,11 @@
           "ambassador_reward": "د سفیر مکافات",
           "party_subsidy": "د ګوند سبسايډي",
           "stream_created": "جریان جوړ شو",
-          "stream_updated": "جریان تازه شو"
+          "stream_updated": "جریان تازه شو",
+          "savings_deposit": "پانګه ډیپوزټ",
+          "savings_withdrawal": "پانګه ووتل",
+          "savings_interest": "پانګه سود",
+          "referral_reward": "د راجع کولو انعام"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "فعال کول ناکام شول",
       "claimed": "غوښتل شو",
       "claim_failed": "غوښتنه ناکامه شوه"
+    },
+    "savings": {
+      "collected": "راټول شو",
+      "collect_failed": "د راټولولو ناکامه",
+      "deposited": "ډیپوزټ شو",
+      "deposit_failed": "ډیپوزټ ناکام شو",
+      "withdrawn": "ووتل شو",
+      "withdraw_failed": "د ووتلو ناکامه"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "राजदूत पुरस्कार",
           "party_subsidy": "पार्टी सब्सिडी",
           "stream_created": "स्ट्रीम बनाई गई",
-          "stream_updated": "स्ट्रीम अपडेट की गई"
+          "stream_updated": "स्ट्रीम अपडेट की गई",
+          "savings_deposit": "बचत जमा करें",
+          "savings_withdrawal": "बचत निकालें",
+          "savings_interest": "बचत ब्याज",
+          "referral_reward": "रेफरल इनाम"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "सक्रियण विफल",
       "claimed": "प्राप्त किया गया",
       "claim_failed": "प्राप्ति विफल"
+    },
+    "savings": {
+      "collected": "एकत्र किया गया",
+      "collect_failed": "एकत्रीकरण विफल",
+      "deposited": "जमा किया गया",
+      "deposit_failed": "जमा विफल",
+      "withdrawn": "निकाला गया",
+      "withdraw_failed": "निकासी विफल"
     }
   },
   "common": {

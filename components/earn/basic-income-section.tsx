@@ -50,7 +50,7 @@ export function BasicIncomeSection({
           type="button"
           onClick={() => setIsLearnMoreDrawerOpen(true)}
           className="inline-flex shrink-0 items-center justify-center text-gray-400"
-          aria-label="Learn more"
+          aria-label={dictionary.pages.govern.parties.learn_more}
         >
           <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
         </button>

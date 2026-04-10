@@ -270,7 +270,11 @@
           "ambassador_reward": "Zawadi ya balozi",
           "party_subsidy": "Ruzuku ya chama",
           "stream_created": "Mtiririko umetengenezwa",
-          "stream_updated": "Mtiririko umesasishwa"
+          "stream_updated": "Mtiririko umesasishwa",
+          "savings_deposit": "Akiba weka",
+          "savings_withdrawal": "Akiba toa",
+          "savings_interest": "Akiba riba",
+          "referral_reward": "Zawadi ya rufaa"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Kumilisha hakukufaulu",
       "claimed": "Yameombwa",
       "claim_failed": "Kuomba hakukufaulu"
+    },
+    "savings": {
+      "collected": "Yamekusanywa",
+      "collect_failed": "Kukusanya hakukufaulu",
+      "deposited": "Imeingizwa",
+      "deposit_failed": "Kuweka hakukufaulu",
+      "withdrawn": "Imetolewa",
+      "withdraw_failed": "Kutoa hakukufaulu"
     }
   },
   "common": {

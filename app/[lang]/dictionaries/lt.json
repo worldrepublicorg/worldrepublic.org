@@ -270,7 +270,11 @@
           "ambassador_reward": "Ambasadoriaus atlygis",
           "party_subsidy": "Partijos subsidija",
           "stream_created": "Srautas sukurtas",
-          "stream_updated": "Srautas atnaujintas"
+          "stream_updated": "Srautas atnaujintas",
+          "savings_deposit": "Santaupos įdėti",
+          "savings_withdrawal": "Santaupos išimti",
+          "savings_interest": "Santaupos palūkanos",
+          "referral_reward": "Rekomendacijos atlygis"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktyvavimas nepavyko",
       "claimed": "Atsiimta",
       "claim_failed": "Atsiėmimas nepavyko"
+    },
+    "savings": {
+      "collected": "Surinkta",
+      "collect_failed": "Rinkimas nepavyko",
+      "deposited": "Įdėta",
+      "deposit_failed": "Įdėjimas nepavyko",
+      "withdrawn": "Išimta",
+      "withdraw_failed": "Išėmimas nepavyko"
     }
   },
   "common": {

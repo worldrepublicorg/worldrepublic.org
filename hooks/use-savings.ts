@@ -77,11 +77,13 @@ export function useSavings(
     try {
       const result = await depositToSavings(parsedAmount);
       if (result.success) {
-        toast.success({ title: "Deposited" });
+        toast.success({ title: dictionary.toasts.savings.deposited });
         setAmount("");
         await onSuccess();
       } else {
-        toast.error({ title: result.error || dictionary.toasts.generic_error });
+        toast.error({
+          title: result.error || dictionary.toasts.savings.deposit_failed,
+        });
       }
     } catch {
       toast.error({ title: dictionary.toasts.generic_error });
@@ -98,11 +100,13 @@ export function useSavings(
     try {
       const result = await withdrawFromSavings(parsedAmount);
       if (result.success) {
-        toast.success({ title: "Withdrawn" });
+        toast.success({ title: dictionary.toasts.savings.withdrawn });
         setAmount("");
         await onSuccess();
       } else {
-        toast.error({ title: result.error || dictionary.toasts.generic_error });
+        toast.error({
+          title: result.error || dictionary.toasts.savings.withdraw_failed,
+        });
       }
     } catch {
       toast.error({ title: dictionary.toasts.generic_error });
@@ -116,10 +120,12 @@ export function useSavings(
     try {
       const result = await claimSavingsInterest();
       if (result.success) {
-        toast.success({ title: "Interest collected" });
+        toast.success({ title: dictionary.toasts.savings.collected });
         await onSuccess();
       } else {
-        toast.error({ title: result.error || dictionary.toasts.generic_error });
+        toast.error({
+          title: result.error || dictionary.toasts.savings.collect_failed,
+        });
       }
     } catch {
       toast.error({ title: dictionary.toasts.generic_error });

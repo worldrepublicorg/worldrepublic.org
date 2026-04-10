@@ -270,7 +270,11 @@
           "ambassador_reward": "Vēstnieka atlīdzība",
           "party_subsidy": "Partijas subsīdija",
           "stream_created": "Straume izveidota",
-          "stream_updated": "Straume atjaunināta"
+          "stream_updated": "Straume atjaunināta",
+          "savings_deposit": "Uzkrājumi iemaksāt",
+          "savings_withdrawal": "Uzkrājumi izņemt",
+          "savings_interest": "Uzkrājumi procenti",
+          "referral_reward": "Ieteikuma atlīdzība"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivizēšana neizdevās",
       "claimed": "Pieprasīts",
       "claim_failed": "Pieprasījums neizdevās"
+    },
+    "savings": {
+      "collected": "Vākts",
+      "collect_failed": "Vākšana neizdevās",
+      "deposited": "Iemaksāts",
+      "deposit_failed": "Iemaksa neizdevās",
+      "withdrawn": "Izņemts",
+      "withdraw_failed": "Izņemšana neizdevās"
     }
   },
   "common": {

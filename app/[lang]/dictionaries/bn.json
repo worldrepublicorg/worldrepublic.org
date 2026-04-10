@@ -270,7 +270,11 @@
           "ambassador_reward": "রাষ্ট্রদূত পুরস্কার",
           "party_subsidy": "পার্টি ভর্তুকি",
           "stream_created": "স্ট্রিম তৈরি হয়েছে",
-          "stream_updated": "স্ট্রিম আপডেট হয়েছে"
+          "stream_updated": "স্ট্রিম আপডেট হয়েছে",
+          "savings_deposit": "সঞ্চয় জমা দিন",
+          "savings_withdrawal": "সঞ্চয় উত্তোলন করুন",
+          "savings_interest": "সঞ্চয় সুদ",
+          "referral_reward": "রেফারেল পুরস্কার"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "সক্রিয় করতে ব্যর্থ",
       "claimed": "দাবি করা হয়েছে",
       "claim_failed": "দাবি করতে ব্যর্থ"
+    },
+    "savings": {
+      "collected": "সংগৃহীত",
+      "collect_failed": "সংগ্রহ করতে ব্যর্থ",
+      "deposited": "জমা হয়েছে",
+      "deposit_failed": "জমা ব্যর্থ",
+      "withdrawn": "উত্তোলন করা হয়েছে",
+      "withdraw_failed": "উত্তোলন ব্যর্থ"
     }
   },
   "common": {

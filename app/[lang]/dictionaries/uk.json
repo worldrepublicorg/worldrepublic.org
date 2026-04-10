@@ -270,7 +270,11 @@
           "ambassador_reward": "Нагорода посла",
           "party_subsidy": "Партійна субсидія",
           "stream_created": "Потік створено",
-          "stream_updated": "Потік оновлено"
+          "stream_updated": "Потік оновлено",
+          "savings_deposit": "Заощадження покласти",
+          "savings_withdrawal": "Заощадження зняти",
+          "savings_interest": "Заощадження відсотки",
+          "referral_reward": "Реферальна винагорода"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Не вдалося активувати",
       "claimed": "Отримано",
       "claim_failed": "Не вдалося отримати"
+    },
+    "savings": {
+      "collected": "Зібрано",
+      "collect_failed": "Не вдалося зібрати",
+      "deposited": "Покладено",
+      "deposit_failed": "Не вдалося покласти",
+      "withdrawn": "Знято",
+      "withdraw_failed": "Не вдалося зняти"
     }
   },
   "common": {

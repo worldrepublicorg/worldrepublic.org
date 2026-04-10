@@ -270,7 +270,11 @@
           "ambassador_reward": "アンバサダー報酬",
           "party_subsidy": "政党助成金",
           "stream_created": "ストリーム作成",
-          "stream_updated": "ストリーム更新"
+          "stream_updated": "ストリーム更新",
+          "savings_deposit": "貯蓄 入金",
+          "savings_withdrawal": "貯蓄 出金",
+          "savings_interest": "貯蓄 利息",
+          "referral_reward": "紹介報酬"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "有効化に失敗しました",
       "claimed": "受け取り完了",
       "claim_failed": "受け取りに失敗しました"
+    },
+    "savings": {
+      "collected": "利息を受け取りました",
+      "collect_failed": "利息の受け取りに失敗しました",
+      "deposited": "入金しました",
+      "deposit_failed": "入金に失敗しました",
+      "withdrawn": "出金しました",
+      "withdraw_failed": "出金に失敗しました"
     }
   },
   "common": {

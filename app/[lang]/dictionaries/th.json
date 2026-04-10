@@ -270,7 +270,11 @@
           "ambassador_reward": "รางวัลทูต",
           "party_subsidy": "เงินอุดหนุนพรรค",
           "stream_created": "สร้างสตรีมแล้ว",
-          "stream_updated": "อัปเดตสตรีมแล้ว"
+          "stream_updated": "อัปเดตสตรีมแล้ว",
+          "savings_deposit": "ออมทรัพย์ ฝาก",
+          "savings_withdrawal": "ออมทรัพย์ ถอน",
+          "savings_interest": "ออมทรัพย์ ดอกเบี้ย",
+          "referral_reward": "รางวัลการแนะนำ"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "เปิดใช้งานไม่สำเร็จ",
       "claimed": "ขอรับแล้ว",
       "claim_failed": "ขอรับไม่สำเร็จ"
+    },
+    "savings": {
+      "collected": "ถอนดอกเบี้ยแล้ว",
+      "collect_failed": "ถอนไม่สำเร็จ",
+      "deposited": "ฝากแล้ว",
+      "deposit_failed": "ฝากไม่สำเร็จ",
+      "withdrawn": "ถอนไปแล้ว",
+      "withdraw_failed": "ถอนเงินไม่สำเร็จ"
     }
   },
   "common": {

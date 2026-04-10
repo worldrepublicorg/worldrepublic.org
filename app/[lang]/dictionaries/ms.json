@@ -270,7 +270,11 @@
           "ambassador_reward": "Ganjaran duta",
           "party_subsidy": "Subsidi parti",
           "stream_created": "Strim dicipta",
-          "stream_updated": "Strim dikemaskini"
+          "stream_updated": "Strim dikemaskini",
+          "savings_deposit": "Simpanan deposit",
+          "savings_withdrawal": "Simpanan keluarkan",
+          "savings_interest": "Simpanan faedah",
+          "referral_reward": "Ganjaran rujukan"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Gagal diaktifkan",
       "claimed": "Dituntut",
       "claim_failed": "Gagal menuntut"
+    },
+    "savings": {
+      "collected": "Faedah ditebus",
+      "collect_failed": "Gagal menebus faedah",
+      "deposited": "Dideposit",
+      "deposit_failed": "Deposit gagal",
+      "withdrawn": "Dikeluarkan",
+      "withdraw_failed": "Pengeluaran gagal"
     }
   },
   "common": {

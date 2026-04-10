@@ -270,7 +270,11 @@
           "ambassador_reward": "Ẹbun aṣoju",
           "party_subsidy": "Owó ìrànwọ́ ẹgbẹ́",
           "stream_created": "Ṣiṣẹda ṣiṣan",
-          "stream_updated": "Imudojuiwọn ṣiṣan"
+          "stream_updated": "Imudojuiwọn ṣiṣan",
+          "savings_deposit": "Ifipamọ fi pamọ",
+          "savings_withdrawal": "Ifipamọ ya jade",
+          "savings_interest": "Ifipamọ owo-ori",
+          "referral_reward": "Ẹsan ìtọkasi"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Mu ṣiṣẹ kuna",
       "claimed": "Ti a gba",
       "claim_failed": "Gbigba kuna"
+    },
+    "savings": {
+      "collected": "Ti a gba",
+      "collect_failed": "Gbigba kuna",
+      "deposited": "Ti a fi pamọ",
+      "deposit_failed": "Ifipamọ kuna",
+      "withdrawn": "Ti a ya jade",
+      "withdraw_failed": "Yiyọ jade kuna"
     }
   },
   "common": {

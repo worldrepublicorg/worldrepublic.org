@@ -270,7 +270,11 @@
           "ambassador_reward": "Igihembo cya ambasaderi",
           "party_subsidy": "Inkunga y'ishyaka",
           "stream_created": "Umugezi waremiwe",
-          "stream_updated": "Umugezi wavuguruwe"
+          "stream_updated": "Umugezi wavuguruwe",
+          "savings_deposit": "Kwibika shyira",
+          "savings_withdrawal": "Kwibika kuramo",
+          "savings_interest": "Kwibika inyungu",
+          "referral_reward": "Igihembo cyo gutumira"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Gukora byanze",
       "claimed": "Byasabwa",
       "claim_failed": "Gusaba byanze"
+    },
+    "savings": {
+      "collected": "Byakoranywe",
+      "collect_failed": "Gukoranya byanze",
+      "deposited": "Byashyizwe",
+      "deposit_failed": "Gushyira byanze",
+      "withdrawn": "Byakuwe",
+      "withdraw_failed": "Gukuramo byanze"
     }
   },
   "common": {

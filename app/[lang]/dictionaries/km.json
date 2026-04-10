@@ -270,7 +270,11 @@
           "ambassador_reward": "រង្វាន់ឯកអគ្គរដ្ឋទូត",
           "party_subsidy": "ការឧបត្ថម្ភធនគណបក្ស",
           "stream_created": "បានបង្កើតស្ទ្រីម",
-          "stream_updated": "បានធ្វើបច្ចុប្បន្នភាពស្ទ្រីម"
+          "stream_updated": "បានធ្វើបច្ចុប្បន្នភាពស្ទ្រីម",
+          "savings_deposit": "ការសន្សំ ដាក់ប្រាក់",
+          "savings_withdrawal": "ការសន្សំ ដកចេញ",
+          "savings_interest": "ការសន្សំ ការប្រាក់",
+          "referral_reward": "រង្វាន់ការណែនាំ"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "ការដំណើរការបានបរាជ័យ",
       "claimed": "បានទាមទារ",
       "claim_failed": "ការទាមទារបានបរាជ័យ"
+    },
+    "savings": {
+      "collected": "បានប្រមូល",
+      "collect_failed": "ការប្រមូលបានបរាជ័យ",
+      "deposited": "បានដាក់ប្រាក់",
+      "deposit_failed": "ការដាក់ប្រាក់បានបរាជ័យ",
+      "withdrawn": "បានដកចេញ",
+      "withdraw_failed": "ការដកចេញបានបរាជ័យ"
     }
   },
   "common": {

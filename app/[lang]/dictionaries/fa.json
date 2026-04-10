@@ -270,7 +270,11 @@
           "ambassador_reward": "پاداش سفیر",
           "party_subsidy": "یارانه حزب",
           "stream_created": "جریان ایجاد شد",
-          "stream_updated": "جریان به‌روزرسانی شد"
+          "stream_updated": "جریان به‌روزرسانی شد",
+          "savings_deposit": "پس‌انداز واریز",
+          "savings_withdrawal": "پس‌انداز برداشت",
+          "savings_interest": "پس‌انداز سود",
+          "referral_reward": "پاداش معرفی"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "فعال‌سازی ناموفق بود",
       "claimed": "دریافت شد",
       "claim_failed": "دریافت ناموفق بود"
+    },
+    "savings": {
+      "collected": "جمع‌آوری شد",
+      "collect_failed": "جمع‌آوری ناموفق بود",
+      "deposited": "واریز شد",
+      "deposit_failed": "واریز ناموفق بود",
+      "withdrawn": "برداشت شد",
+      "withdraw_failed": "برداشت ناموفق بود"
     }
   },
   "common": {

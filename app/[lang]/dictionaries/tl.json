@@ -270,7 +270,11 @@
           "ambassador_reward": "Gantimpala ng embahador",
           "party_subsidy": "Subsidiya ng partido",
           "stream_created": "Nilikha ang stream",
-          "stream_updated": "Na-update ang stream"
+          "stream_updated": "Na-update ang stream",
+          "savings_deposit": "Pagtitipid mag-deposit",
+          "savings_withdrawal": "Pagtitipid mag-withdraw",
+          "savings_interest": "Pagtitipid interes",
+          "referral_reward": "Gantimpala sa referral"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Nabigo ang pag-activate",
       "claimed": "Na-claim",
       "claim_failed": "Nabigo ang pag-claim"
+    },
+    "savings": {
+      "collected": "Na-collect",
+      "collect_failed": "Nabigo ang pag-collect",
+      "deposited": "Na-deposit",
+      "deposit_failed": "Nabigo ang pag-deposit",
+      "withdrawn": "Na-withdraw",
+      "withdraw_failed": "Nabigo ang pag-withdraw"
     }
   },
   "common": {

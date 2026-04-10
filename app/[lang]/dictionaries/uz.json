@@ -270,7 +270,11 @@
           "ambassador_reward": "Elchi mukofoti",
           "party_subsidy": "Partiya subsidiyasi",
           "stream_created": "Oqim yaratildi",
-          "stream_updated": "Oqim yangilandi"
+          "stream_updated": "Oqim yangilandi",
+          "savings_deposit": "Jamg'arma kiritish",
+          "savings_withdrawal": "Jamg'arma yechib olish",
+          "savings_interest": "Jamg'arma foiz",
+          "referral_reward": "Referal mukofoti"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Faollashtirib bo'lmadi",
       "claimed": "Talab qilindi",
       "claim_failed": "Talab muvaffaqiyatsiz"
+    },
+    "savings": {
+      "collected": "Yig'ildi",
+      "collect_failed": "Yig'ish muvaffaqiyatsiz",
+      "deposited": "Kiritildi",
+      "deposit_failed": "Kiritish muvaffaqiyatsiz",
+      "withdrawn": "Yechib olindi",
+      "withdraw_failed": "Yechib olish muvaffaqiyatsiz"
     }
   },
   "common": {

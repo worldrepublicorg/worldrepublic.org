@@ -270,7 +270,11 @@
           "ambassador_reward": "Nagroda ambasadora",
           "party_subsidy": "Dotacja dla partii",
           "stream_created": "Strumień utworzony",
-          "stream_updated": "Strumień zaktualizowany"
+          "stream_updated": "Strumień zaktualizowany",
+          "savings_deposit": "Oszczędności wpłać",
+          "savings_withdrawal": "Oszczędności wypłać",
+          "savings_interest": "Oszczędności odsetki",
+          "referral_reward": "Nagroda za polecenie"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Nie udało się aktywować",
       "claimed": "Odebrano",
       "claim_failed": "Nie udało się odebrać"
+    },
+    "savings": {
+      "collected": "Odebrano",
+      "collect_failed": "Nie udało się odebrać",
+      "deposited": "Wpłacono",
+      "deposit_failed": "Wpłata nieudana",
+      "withdrawn": "Wypłacono",
+      "withdraw_failed": "Wypłata nieudana"
     }
   },
   "common": {

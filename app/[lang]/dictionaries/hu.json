@@ -270,7 +270,11 @@
           "ambassador_reward": "Nagyköveti jutalom",
           "party_subsidy": "Párttámogatás",
           "stream_created": "Stream létrehozva",
-          "stream_updated": "Stream frissítve"
+          "stream_updated": "Stream frissítve",
+          "savings_deposit": "Megtakarítás betét",
+          "savings_withdrawal": "Megtakarítás kivonás",
+          "savings_interest": "Megtakarítás kamat",
+          "referral_reward": "Ajánlási jutalom"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktiválás sikertelen",
       "claimed": "Igényelve",
       "claim_failed": "Igényelés sikertelen"
+    },
+    "savings": {
+      "collected": "Összegyűjtve",
+      "collect_failed": "Gyűjtés sikertelen",
+      "deposited": "Betéve",
+      "deposit_failed": "Betét sikertelen",
+      "withdrawn": "Kivonva",
+      "withdraw_failed": "Kivonás sikertelen"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "Odmena veľvyslanca",
           "party_subsidy": "Stranícka dotácia",
           "stream_created": "Prúd vytvorený",
-          "stream_updated": "Prúd aktualizovaný"
+          "stream_updated": "Prúd aktualizovaný",
+          "savings_deposit": "Úspory vložiť",
+          "savings_withdrawal": "Úspory vybrať",
+          "savings_interest": "Úspory úrok",
+          "referral_reward": "Odmena za odporúčanie"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivácia zlyhala",
       "claimed": "Vybraté",
       "claim_failed": "Výber zlyhal"
+    },
+    "savings": {
+      "collected": "Zobrané",
+      "collect_failed": "Zber zlyhal",
+      "deposited": "Vložené",
+      "deposit_failed": "Vklad zlyhal",
+      "withdrawn": "Vybraté",
+      "withdraw_failed": "Výber zlyhal"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "Botschafterbelohnung",
           "party_subsidy": "Parteisubvention",
           "stream_created": "Stream erstellt",
-          "stream_updated": "Stream aktualisiert"
+          "stream_updated": "Stream aktualisiert",
+          "savings_deposit": "Sparen Einzahlen",
+          "savings_withdrawal": "Sparen Abheben",
+          "savings_interest": "Sparen Zinsen",
+          "referral_reward": "Empfehlungsprämie"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivierung fehlgeschlagen",
       "claimed": "Angefordert",
       "claim_failed": "Anforderung fehlgeschlagen"
+    },
+    "savings": {
+      "collected": "Eingesammelt",
+      "collect_failed": "Einsammeln fehlgeschlagen",
+      "deposited": "Eingezahlt",
+      "deposit_failed": "Einzahlung fehlgeschlagen",
+      "withdrawn": "Abgehoben",
+      "withdraw_failed": "Abhebung fehlgeschlagen"
     }
   },
   "common": {

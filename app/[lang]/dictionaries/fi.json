@@ -270,7 +270,11 @@
           "ambassador_reward": "Suurlähettilään palkinto",
           "party_subsidy": "Puoluetuki",
           "stream_created": "Stream luotu",
-          "stream_updated": "Stream päivitetty"
+          "stream_updated": "Stream päivitetty",
+          "savings_deposit": "Säästöt talleta",
+          "savings_withdrawal": "Säästöt nosta",
+          "savings_interest": "Säästöt korko",
+          "referral_reward": "Suosittelupalkkio"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivointi epäonnistui",
       "claimed": "Nostettu",
       "claim_failed": "Nosto epäonnistui"
+    },
+    "savings": {
+      "collected": "Kerätty",
+      "collect_failed": "Keräys epäonnistui",
+      "deposited": "Talletettu",
+      "deposit_failed": "Talletus epäonnistui",
+      "withdrawn": "Nostettu",
+      "withdraw_failed": "Nosto epäonnistui"
     }
   },
   "common": {

@@ -270,7 +270,11 @@
           "ambassador_reward": "سفیر کا انعام",
           "party_subsidy": "پارٹی سبسڈی",
           "stream_created": "اسٹریم بنائی گئی",
-          "stream_updated": "اسٹریم اپ ڈیٹ کی گئی"
+          "stream_updated": "اسٹریم اپ ڈیٹ کی گئی",
+          "savings_deposit": "بچت جمع کریں",
+          "savings_withdrawal": "بچت نکالیں",
+          "savings_interest": "بچت سود",
+          "referral_reward": "ریفرل انعام"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "فعال کرنے میں ناکام",
       "claimed": "حاصل کر لیا گیا",
       "claim_failed": "حصول میں ناکام"
+    },
+    "savings": {
+      "collected": "جمع کر لیا گیا",
+      "collect_failed": "جمع کرنے میں ناکام",
+      "deposited": "جمع کر دیا گیا",
+      "deposit_failed": "جمع کرنے میں ناکام",
+      "withdrawn": "نکال لیا گیا",
+      "withdraw_failed": "نکالنے میں ناکام"
     }
   },
   "common": {

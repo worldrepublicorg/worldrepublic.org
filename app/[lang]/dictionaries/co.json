@@ -270,7 +270,11 @@
           "ambassador_reward": "Ricumpensa ambasciatore",
           "party_subsidy": "Sussidiu di partitu",
           "stream_created": "Flussu creatu",
-          "stream_updated": "Flussu aghjurnatu"
+          "stream_updated": "Flussu aghjurnatu",
+          "savings_deposit": "Risparmi deposita",
+          "savings_withdrawal": "Risparmi ritira",
+          "savings_interest": "Risparmi interessi",
+          "referral_reward": "Ricumpensa di riferimentu"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "L'attivazione hà fallitu",
       "claimed": "Rivendicatu",
       "claim_failed": "A rivendicazione hà fallitu"
+    },
+    "savings": {
+      "collected": "Raccoltu",
+      "collect_failed": "A raccolta hà fallitu",
+      "deposited": "Depositat",
+      "deposit_failed": "U depositu hà fallitu",
+      "withdrawn": "Ritiratu",
+      "withdraw_failed": "U ritiru hà fallitu"
     }
   },
   "common": {

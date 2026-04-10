@@ -270,7 +270,11 @@
           "ambassador_reward": "Ανταμοιβή πρεσβευτή",
           "party_subsidy": "Επιδότηση κόμματος",
           "stream_created": "Η ροή δημιουργήθηκε",
-          "stream_updated": "Η ροή ενημερώθηκε"
+          "stream_updated": "Η ροή ενημερώθηκε",
+          "savings_deposit": "Οικονομίες κατάθεση",
+          "savings_withdrawal": "Οικονομίες ανάληψη",
+          "savings_interest": "Οικονομίες τόκος",
+          "referral_reward": "Ανταμοιβή παραπομπής"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Η ενεργοποίηση απέτυχε",
       "claimed": "Διεκδικήθηκε",
       "claim_failed": "Η αξίωση απέτυχε"
+    },
+    "savings": {
+      "collected": "Συλλέχθηκε",
+      "collect_failed": "Η συλλογή απέτυχε",
+      "deposited": "Κατατέθηκε",
+      "deposit_failed": "Η κατάθεση απέτυχε",
+      "withdrawn": "Αναλήφθηκε",
+      "withdraw_failed": "Η ανάληψη απέτυχε"
     }
   },
   "common": {

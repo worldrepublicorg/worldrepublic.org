@@ -270,7 +270,11 @@
           "ambassador_reward": "大使奖励",
           "party_subsidy": "政党补贴",
           "stream_created": "流已创建",
-          "stream_updated": "流已更新"
+          "stream_updated": "流已更新",
+          "savings_deposit": "储蓄 存入",
+          "savings_withdrawal": "储蓄 提取",
+          "savings_interest": "储蓄 利息",
+          "referral_reward": "推荐奖励"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "激活失败",
       "claimed": "已领取",
       "claim_failed": "领取失败"
+    },
+    "savings": {
+      "collected": "已领取",
+      "collect_failed": "领取失败",
+      "deposited": "已存入",
+      "deposit_failed": "存入失败",
+      "withdrawn": "已提取",
+      "withdraw_failed": "提取失败"
     }
   },
   "common": {

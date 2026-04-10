@@ -270,7 +270,11 @@
           "ambassador_reward": "Odměna ambasadora",
           "party_subsidy": "Stranická dotace",
           "stream_created": "Proud vytvořen",
-          "stream_updated": "Proud aktualizován"
+          "stream_updated": "Proud aktualizován",
+          "savings_deposit": "Spoření vložit",
+          "savings_withdrawal": "Spoření vybrat",
+          "savings_interest": "Spoření úrok",
+          "referral_reward": "Odměna za doporučení"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Aktivace selhala",
       "claimed": "Vybráno",
       "claim_failed": "Výběr selhal"
+    },
+    "savings": {
+      "collected": "Sebráno",
+      "collect_failed": "Sběr selhal",
+      "deposited": "Vloženo",
+      "deposit_failed": "Vklad selhal",
+      "withdrawn": "Vybráno",
+      "withdraw_failed": "Výběr selhal"
     }
   },
   "common": {

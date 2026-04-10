@@ -270,7 +270,11 @@
           "ambassador_reward": "የአምባሳደር ሽልማት",
           "party_subsidy": "የፓርቲ ድጎማ",
           "stream_created": "ዥረት ተፈጥሯል",
-          "stream_updated": "ዥረት ተዘumenaል"
+          "stream_updated": "ዥረት ተዘumenaል",
+          "savings_deposit": "መቆጠብ መዋስ",
+          "savings_withdrawal": "መቆጠብ ማውጣት",
+          "savings_interest": "መቆጠብ ወለድ",
+          "referral_reward": "የማጣቀሻ ሽልማት"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "መግባት አልተሳካም",
       "claimed": "ተጠይቋል",
       "claim_failed": "መጠየቅ አልተሳካም"
+    },
+    "savings": {
+      "collected": "ተሰብስቧል",
+      "collect_failed": "ማሰብስብ አልተሳካም",
+      "deposited": "ተዋሷል",
+      "deposit_failed": "መዋስ አልተሳካም",
+      "withdrawn": "ተወግዷል",
+      "withdraw_failed": "ማውጣት አልተሳካም"
     }
   },
   "common": {

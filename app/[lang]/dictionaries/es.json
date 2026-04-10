@@ -270,7 +270,11 @@
           "ambassador_reward": "Recompensa de embajador",
           "party_subsidy": "Subsidio del partido",
           "stream_created": "Flujo creado",
-          "stream_updated": "Flujo actualizado"
+          "stream_updated": "Flujo actualizado",
+          "savings_deposit": "Ahorros depositar",
+          "savings_withdrawal": "Ahorros retirar",
+          "savings_interest": "Ahorros interés",
+          "referral_reward": "Recompensa por referido"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Error al activar",
       "claimed": "Reclamado",
       "claim_failed": "Error al reclamar"
+    },
+    "savings": {
+      "collected": "Cobrado",
+      "collect_failed": "Error al cobrar",
+      "deposited": "Depositado",
+      "deposit_failed": "Error al depositar",
+      "withdrawn": "Retirado",
+      "withdraw_failed": "Error al retirar"
     }
   },
   "common": {

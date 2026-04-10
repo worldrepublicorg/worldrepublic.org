@@ -270,7 +270,11 @@
           "ambassador_reward": "Hadiah duta",
           "party_subsidy": "Subsidi partai",
           "stream_created": "Stream dibuat",
-          "stream_updated": "Stream diperbarui"
+          "stream_updated": "Stream diperbarui",
+          "savings_deposit": "Tabungan setor",
+          "savings_withdrawal": "Tabungan tarik",
+          "savings_interest": "Tabungan bunga",
+          "referral_reward": "Hadiah referral"
         }
       }
     }
@@ -334,6 +338,14 @@
       "activate_failed": "Gagal mengaktifkan",
       "claimed": "Berhasil diklaim",
       "claim_failed": "Gagal mengklaim"
+    },
+    "savings": {
+      "collected": "Berhasil dicairkan",
+      "collect_failed": "Gagal mencairkan",
+      "deposited": "Disetor",
+      "deposit_failed": "Setoran gagal",
+      "withdrawn": "Ditarik",
+      "withdraw_failed": "Penarikan gagal"
     }
   },
   "common": {
