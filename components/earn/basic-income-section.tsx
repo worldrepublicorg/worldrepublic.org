@@ -38,6 +38,25 @@ export function BasicIncomeSection({
   onSuccess,
 }: BasicIncomeSectionProps) {
   const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const renderInfoSubtitle = (text: string) => (
+    <Typography
+      variant="subtitle"
+      level={2}
+      className="mx-auto text-center text-gray-500"
+    >
+      {text}
+      <span className="inline-flex shrink-0 items-center">
+        <button
+          type="button"
+          onClick={() => setIsLearnMoreDrawerOpen(true)}
+          className="inline-flex shrink-0 items-center justify-center text-gray-400"
+          aria-label="Learn more"
+        >
+          <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+        </button>
+      </span>
+    </Typography>
+  );
 
   const {
     isActivating,
@@ -66,13 +85,13 @@ export function BasicIncomeSection({
             <Typography variant="heading" level={2}>
               {dictionary.pages.earn.tabs.basic_income}
             </Typography>
-            <Typography
-              variant="subtitle"
-              level={2}
-              className="text-gray-500"
-            >
-              {dictionary.pages.earn.basic_income.subtitle_unauth}
-            </Typography>
+            {renderInfoSubtitle(dictionary.pages.earn.basic_income.subtitle_unauth)}
+            <LearnMoreDrawer
+              open={isLearnMoreDrawerOpen}
+              onOpenChange={setIsLearnMoreDrawerOpen}
+              title={dictionary.pages.govern.parties.learn_more}
+              info={dictionary.pages.earn.basic_income.tooltip_claim}
+            />
             <div className="mt-6 w-full">
               <Button
                 fullWidth
@@ -99,13 +118,13 @@ export function BasicIncomeSection({
             <Typography variant="heading" level={2}>
               {dictionary.pages.earn.tabs.basic_income}
             </Typography>
-            <Typography
-              variant="subtitle"
-              level={2}
-              className="text-gray-500"
-            >
-              {dictionary.pages.earn.basic_income.setup_subtitle}
-            </Typography>
+            {renderInfoSubtitle(dictionary.pages.earn.basic_income.setup_subtitle)}
+            <LearnMoreDrawer
+              open={isLearnMoreDrawerOpen}
+              onOpenChange={setIsLearnMoreDrawerOpen}
+              title={dictionary.pages.govern.parties.learn_more}
+              info={dictionary.pages.earn.basic_income.tooltip_claim}
+            />
             <Button
               fullWidth
               className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
@@ -132,23 +151,7 @@ export function BasicIncomeSection({
           <Typography variant="heading" level={2}>
             {dictionary.pages.earn.tabs.basic_income}
           </Typography>
-          <Typography
-            variant="subtitle"
-            level={2}
-            className="mx-auto text-center text-gray-500"
-          >
-            {dictionary.pages.earn.basic_income.subtitle_claim}
-            <span className="inline-flex shrink-0 items-center">
-              <button
-                type="button"
-                onClick={() => setIsLearnMoreDrawerOpen(true)}
-                className="inline-flex shrink-0 items-center justify-center text-gray-400"
-                aria-label="Learn more"
-              >
-                <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
-              </button>
-            </span>
-          </Typography>
+          {renderInfoSubtitle(dictionary.pages.earn.basic_income.subtitle_claim)}
           <LearnMoreDrawer
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
