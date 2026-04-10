@@ -52,9 +52,9 @@ export const getRewardDecimals = (balance: number | null): number => {
 export const getBalancePrecision = (balance: number): number => {
   if (balance === 0) {
     return 2; // Show 2 decimals for zero balance
-  } else if (balance < 0.001) {
-    return 4; // Show 4 decimals for very small amounts
   } else if (balance < 0.01) {
+    return 4; // Show 4 decimals for very small amounts
+  } else if (balance < 0.1) {
     return 3; // Show 3 decimals for small amounts
   } else {
     return 2; // Show 2 decimals for normal amounts
