@@ -21,7 +21,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { getTransactions } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
-import { cn, copyToClipboard, getRewardDecimals } from "@/lib/utils";
+import { cn, copyToClipboard } from "@/lib/utils";
 
 interface Transaction {
   id: number;
@@ -184,10 +184,18 @@ export function TransactionHistoryContent({
       transaction.type === "SAVINGS_WITHDRAWAL" ||
       transaction.type === "SAVINGS_INTEREST_CLAIM";
 
-    const precision = isSavingsTransaction ? getRewardDecimals(absAmount) : 2;
+    const getSavingsTxPrecision = (txAmount: number): number => {
+      if (txAmount >= 100) return 2;
+      if (txAmount >= 10) return 3;
+      if (txAmount >= 1) return 4;
+      if (txAmount >= 0.1) return 5;
+      return 6;
+    };
+
+    const precision = isSavingsTransaction ? getSavingsTxPrecision(absAmount) : 2;
 
     return absAmount.toLocaleString(locale, {
-      minimumFractionDigits: precision,
+      minimumFractionDigits: 2,
       maximumFractionDigits: precision,
     });
   };
