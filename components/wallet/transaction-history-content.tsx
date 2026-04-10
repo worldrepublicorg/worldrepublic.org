@@ -21,7 +21,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { getTransactions } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
-import { cn, copyToClipboard } from "@/lib/utils";
+import { cn, copyToClipboard, getRewardDecimals } from "@/lib/utils";
 
 interface Transaction {
   id: number;
@@ -171,16 +171,24 @@ export function TransactionHistoryContent({
     });
   };
 
-  // Format amount (display 6 decimals, but stored with 18 decimals precision)
-  const formatAmount = (amount: number): string => {
+  // Format amount with transaction-type specific precision.
+  const formatAmount = (amount: number, transaction: Transaction): string => {
     // If amount is effectively zero (stored as 0.000000...), show <0.000001
     const absAmount = Math.abs(amount);
     if (absAmount < 0.000001) {
       return "<0.000001";
     }
+
+    const isSavingsTransaction =
+      transaction.type === "SAVINGS_DEPOSIT" ||
+      transaction.type === "SAVINGS_WITHDRAWAL" ||
+      transaction.type === "SAVINGS_INTEREST_CLAIM";
+
+    const precision = isSavingsTransaction ? getRewardDecimals(absAmount) : 2;
+
     return absAmount.toLocaleString(locale, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
+      minimumFractionDigits: precision,
+      maximumFractionDigits: precision,
     });
   };
 
@@ -274,7 +282,7 @@ export function TransactionHistoryContent({
 
   const getAmountDisplay = (transaction: Transaction): string => {
     const isZero = Math.abs(transaction.amount) < 0.000001;
-    const amount = formatAmount(transaction.amount);
+    const amount = formatAmount(transaction.amount, transaction);
 
     const isStream =
       transaction.type === "STREAM_CREATED" ||
