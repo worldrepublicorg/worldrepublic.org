@@ -336,6 +336,9 @@ export async function deleteUserAccount(userUuid: string) {
 export type GetWalletAuthAndDataProfileData = {
   walletBalance: number | null;
   storedWalletBalance: number;
+  savingsBalance: number;
+  unclaimedSavingsInterest: number;
+  savingsLastUpdatedAt: number | null;
   basicIncomeClaimedTotal: number;
   selfVerifiedAt: number | null;
   username: string | null;
@@ -463,6 +466,9 @@ export async function getWalletAuthAndData(
   const [profileRow] = await readDb
     .select({
       walletBalance: userProfiles.walletBalance,
+      savingsBalance: userProfiles.savingsBalance,
+      unclaimedSavingsInterest: userProfiles.unclaimedSavingsInterest,
+      savingsLastUpdatedAt: userProfiles.savingsLastUpdatedAt,
       basicIncomeClaimedTotal: userProfiles.basicIncomeClaimedTotal,
       basicIncomeActivatedAt: userProfiles.basicIncomeActivatedAt,
       lastBasicIncomeClaimAt: userProfiles.lastBasicIncomeClaimAt,
@@ -491,6 +497,13 @@ export async function getWalletAuthAndData(
   let profileData: GetWalletAuthAndDataProfileData = {
     walletBalance: walletBalance || null,
     storedWalletBalance,
+    savingsBalance: profileRow?.savingsBalance
+      ? parseFloat(profileRow.savingsBalance)
+      : 0,
+    unclaimedSavingsInterest: profileRow?.unclaimedSavingsInterest
+      ? parseFloat(profileRow.unclaimedSavingsInterest)
+      : 0,
+    savingsLastUpdatedAt: profileRow?.savingsLastUpdatedAt?.getTime() ?? null,
     basicIncomeClaimedTotal: profileRow?.basicIncomeClaimedTotal
       ? parseFloat(profileRow.basicIncomeClaimedTotal)
       : 0,
@@ -862,7 +875,26 @@ export async function withdrawTokens(
 // ============================================================================
 
 const BASIC_INCOME_RATE_PER_SECOND = 1 / 86400; // 1 WDD per day
-const BASIC_INCOME_BALANCE_CAP = 9.99;
+const NON_WITHDRAWABLE_BALANCE_BUFFER = 0.01;
+// Keep BI-related holdings strictly below minimum withdrawal amount.
+// This cap is intended to cover the combined BI wallet + BI savings ceiling.
+const BASIC_INCOME_BALANCE_CAP = Math.max(
+  0,
+  getMinWithdrawalAmount("480") - NON_WITHDRAWABLE_BALANCE_BUFFER,
+);
+const SAVINGS_ANNUAL_INTEREST_RATE = 0.69;
+const SAVINGS_DAILY_INTEREST_RATE = SAVINGS_ANNUAL_INTEREST_RATE / 365;
+
+function calculateAccruedSavingsInterest(
+  savingsBalance: number,
+  savingsLastUpdatedAt: Date | null,
+  nowMs: number,
+): number {
+  if (savingsBalance <= 0 || !savingsLastUpdatedAt) return 0;
+  const elapsedDays = (nowMs - savingsLastUpdatedAt.getTime()) / 86_400_000;
+  if (elapsedDays <= 0) return 0;
+  return savingsBalance * SAVINGS_DAILY_INTEREST_RATE * elapsedDays;
+}
 
 export async function activateBasicIncome(): Promise<{
   success: boolean;
@@ -1016,6 +1048,282 @@ export async function claimBasicIncome(): Promise<{
       success: false,
       error:
         error instanceof Error ? error.message : "Could not claim basic income",
+    };
+  }
+}
+
+// ============================================================================
+// Savings (Offchain)
+// ============================================================================
+
+export async function depositToSavings(amount: number): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  try {
+    const userUuid = await getUserUuidFromSession();
+    const flooredAmount = Math.floor(amount * 1e18) / 1e18;
+    if (!Number.isFinite(flooredAmount) || flooredAmount <= 0) {
+      return { success: false, error: "Deposit amount must be positive" };
+    }
+
+    await db.transaction(async (tx) => {
+      const profileRows = await tx.execute(
+        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at
+            FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const rows = (
+        "rows" in profileRows ? profileRows.rows : profileRows
+      ) as Array<{
+        wallet_balance: string;
+        savings_balance: string;
+        unclaimed_savings_interest: string;
+        savings_last_updated_at: string | Date | null;
+      }>;
+
+      const profile = rows[0];
+      if (!profile) {
+        throw new Error("Profile not found");
+      }
+
+      const currentWalletBalance = parseFloat(profile.wallet_balance || "0");
+      const currentSavingsBalance = parseFloat(profile.savings_balance || "0");
+      const currentUnclaimedInterest = parseFloat(
+        profile.unclaimed_savings_interest || "0",
+      );
+      const currentLastUpdatedAt = profile.savings_last_updated_at
+        ? new Date(profile.savings_last_updated_at)
+        : null;
+
+      if (currentWalletBalance < flooredAmount) {
+        throw new Error(
+          `Tried ${flooredAmount} but only have ${currentWalletBalance.toFixed(6)} WDD.`,
+        );
+      }
+
+      const now = new Date();
+      const nowMs = now.getTime();
+      const newlyAccruedInterest = calculateAccruedSavingsInterest(
+        currentSavingsBalance,
+        currentLastUpdatedAt,
+        nowMs,
+      );
+
+      await tx
+        .update(userProfiles)
+        .set({
+          walletBalance: (currentWalletBalance - flooredAmount).toFixed(18),
+          savingsBalance: (currentSavingsBalance + flooredAmount).toFixed(18),
+          unclaimedSavingsInterest: (
+            currentUnclaimedInterest + newlyAccruedInterest
+          ).toFixed(18),
+          savingsLastUpdatedAt: now,
+          updatedAt: now,
+        })
+        .where(eq(userProfiles.id, userUuid));
+
+      await tx.insert(transactions).values({
+        userId: userUuid,
+        type: "SAVINGS_DEPOSIT",
+        amount: flooredAmount.toFixed(18),
+      });
+    });
+
+    revalidatePath("/[lang]/earn", "page");
+    revalidatePath("/[lang]/menu/wallet", "page");
+    return { success: true };
+  } catch (error) {
+    console.error("Error depositing to savings:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error ? error.message : "Could not deposit to savings",
+    };
+  }
+}
+
+export async function withdrawFromSavings(amount: number): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  try {
+    const userUuid = await getUserUuidFromSession();
+    const flooredAmount = Math.floor(amount * 1e18) / 1e18;
+    if (!Number.isFinite(flooredAmount) || flooredAmount <= 0) {
+      return { success: false, error: "Withdrawal amount must be positive" };
+    }
+
+    await db.transaction(async (tx) => {
+      const profileRows = await tx.execute(
+        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at
+            FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const rows = (
+        "rows" in profileRows ? profileRows.rows : profileRows
+      ) as Array<{
+        wallet_balance: string;
+        savings_balance: string;
+        unclaimed_savings_interest: string;
+        savings_last_updated_at: string | Date | null;
+      }>;
+
+      const profile = rows[0];
+      if (!profile) {
+        throw new Error("Profile not found");
+      }
+
+      const currentWalletBalance = parseFloat(profile.wallet_balance || "0");
+      const currentSavingsBalance = parseFloat(profile.savings_balance || "0");
+      const currentUnclaimedInterest = parseFloat(
+        profile.unclaimed_savings_interest || "0",
+      );
+      const currentLastUpdatedAt = profile.savings_last_updated_at
+        ? new Date(profile.savings_last_updated_at)
+        : null;
+
+      if (currentSavingsBalance < flooredAmount) {
+        throw new Error(
+          `Tried ${flooredAmount} but only have ${currentSavingsBalance.toFixed(6)} WDD in savings.`,
+        );
+      }
+
+      const now = new Date();
+      const nowMs = now.getTime();
+      const newlyAccruedInterest = calculateAccruedSavingsInterest(
+        currentSavingsBalance,
+        currentLastUpdatedAt,
+        nowMs,
+      );
+
+      await tx
+        .update(userProfiles)
+        .set({
+          walletBalance: (currentWalletBalance + flooredAmount).toFixed(18),
+          savingsBalance: (currentSavingsBalance - flooredAmount).toFixed(18),
+          unclaimedSavingsInterest: (
+            currentUnclaimedInterest + newlyAccruedInterest
+          ).toFixed(18),
+          savingsLastUpdatedAt: now,
+          updatedAt: now,
+        })
+        .where(eq(userProfiles.id, userUuid));
+
+      await tx.insert(transactions).values({
+        userId: userUuid,
+        type: "SAVINGS_WITHDRAWAL",
+        amount: flooredAmount.toFixed(18),
+      });
+    });
+
+    revalidatePath("/[lang]/earn", "page");
+    revalidatePath("/[lang]/menu/wallet", "page");
+    return { success: true };
+  } catch (error) {
+    console.error("Error withdrawing from savings:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "Could not withdraw from savings",
+    };
+  }
+}
+
+export async function claimSavingsInterest(): Promise<{
+  success: boolean;
+  claimedAmount?: number;
+  error?: string;
+}> {
+  try {
+    const userUuid = await getUserUuidFromSession();
+
+    const result = await db.transaction(async (tx) => {
+      const profileRows = await tx.execute(
+        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at
+            FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const rows = (
+        "rows" in profileRows ? profileRows.rows : profileRows
+      ) as Array<{
+        wallet_balance: string;
+        savings_balance: string;
+        unclaimed_savings_interest: string;
+        savings_last_updated_at: string | Date | null;
+      }>;
+
+      const profile = rows[0];
+      if (!profile) {
+        return { success: false as const, error: "Profile not found" };
+      }
+
+      const currentWalletBalance = parseFloat(profile.wallet_balance || "0");
+      const currentSavingsBalance = parseFloat(profile.savings_balance || "0");
+      const currentUnclaimedInterest = parseFloat(
+        profile.unclaimed_savings_interest || "0",
+      );
+      const currentLastUpdatedAt = profile.savings_last_updated_at
+        ? new Date(profile.savings_last_updated_at)
+        : null;
+
+      const now = new Date();
+      const nowMs = now.getTime();
+      const newlyAccruedInterest = calculateAccruedSavingsInterest(
+        currentSavingsBalance,
+        currentLastUpdatedAt,
+        nowMs,
+      );
+      const totalInterestToClaim = currentUnclaimedInterest + newlyAccruedInterest;
+
+      if (totalInterestToClaim <= 1e-12) {
+        return { success: false as const, error: "Nothing to collect yet" };
+      }
+
+      const maxCanClaim = Math.max(
+        0,
+        BASIC_INCOME_BALANCE_CAP - (currentWalletBalance + currentSavingsBalance),
+      );
+      const finalClaimable = Math.min(totalInterestToClaim, maxCanClaim);
+
+      if (finalClaimable <= 1e-12) {
+        return { success: false as const, error: "Balance cap reached" };
+      }
+
+      await tx
+        .update(userProfiles)
+        .set({
+          walletBalance: (currentWalletBalance + finalClaimable).toFixed(18),
+          unclaimedSavingsInterest: (
+            totalInterestToClaim - finalClaimable
+          ).toFixed(18),
+          savingsLastUpdatedAt: now,
+          updatedAt: now,
+        })
+        .where(eq(userProfiles.id, userUuid));
+
+      await tx.insert(transactions).values({
+        userId: userUuid,
+        type: "SAVINGS_INTEREST_CLAIM",
+        amount: finalClaimable.toFixed(18),
+      });
+
+      return { success: true as const, claimedAmount: finalClaimable };
+    });
+
+    if (result.success) {
+      revalidatePath("/[lang]/earn", "page");
+      revalidatePath("/[lang]/menu/wallet", "page");
+    }
+
+    return result;
+  } catch (error) {
+    console.error("Error claiming savings interest:", error);
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "Could not claim savings interest",
     };
   }
 }

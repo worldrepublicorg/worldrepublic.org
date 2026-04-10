@@ -12,6 +12,7 @@ export function EarnPageSkeleton() {
 
       <div className="flex gap-1 overflow-x-auto px-6">
         <Skeleton height={36} width={110} className="rounded-full" />
+        <Skeleton height={36} width={110} className="rounded-full" />
       </div>
 
       <main className="flex grow items-center justify-center">

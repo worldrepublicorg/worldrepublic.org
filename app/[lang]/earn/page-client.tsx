@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { BasicIncomeSection } from "@/components/earn/basic-income-section";
 import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
+import { SavingsSection } from "@/components/earn/savings-section";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
@@ -24,7 +25,7 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
-const TABS = ["basic_income"] as const;
+const TABS = ["basic_income", "savings"] as const;
 type TabKey = (typeof TABS)[number];
 
 interface EarnPageClientProps {
@@ -100,6 +101,10 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
             key: "basic_income",
             label: dictionary.pages.earn.tabs.basic_income,
           },
+          {
+            key: "savings",
+            label: dictionary.pages.earn.tabs.savings,
+          },
         ]}
       />
 
@@ -116,6 +121,17 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
             }
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             onSignIn={() => setShowSignInDialog(true)}
+            onSuccess={fetchData}
+          />
+        )}
+        {activeTab === "savings" && (
+          <SavingsSection
+            dictionary={dictionary}
+            isAuthenticated={isAuthenticated}
+            walletBalance={profileData?.storedWalletBalance ?? 0}
+            savingsBalance={profileData?.savingsBalance ?? 0}
+            unclaimedSavingsInterest={profileData?.unclaimedSavingsInterest ?? 0}
+            savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
           />
         )}

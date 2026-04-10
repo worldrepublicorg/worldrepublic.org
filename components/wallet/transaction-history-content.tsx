@@ -185,6 +185,15 @@ export function TransactionHistoryContent({
   };
 
   const getTransactionLabel = (transaction: Transaction): string => {
+    if (transaction.type === "SAVINGS_DEPOSIT") {
+      return "Savings deposit";
+    }
+    if (transaction.type === "SAVINGS_WITHDRAWAL") {
+      return "Savings withdrawal";
+    }
+    if (transaction.type === "SAVINGS_INTEREST_CLAIM") {
+      return "Savings interest";
+    }
     if (transaction.type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
     }
@@ -245,6 +254,12 @@ export function TransactionHistoryContent({
 
   const isPositiveTransaction = (transaction: Transaction): boolean => {
     if (transaction.type === "TRANSFER" && transaction.isReceived) {
+      return true;
+    }
+    if (
+      transaction.type === "SAVINGS_WITHDRAWAL" ||
+      transaction.type === "SAVINGS_INTEREST_CLAIM"
+    ) {
       return true;
     }
     if (
@@ -310,6 +325,15 @@ export function TransactionHistoryContent({
   };
 
   const getTransactionIcon = (transaction: Transaction) => {
+    if (transaction.type === "SAVINGS_DEPOSIT") {
+      return PiArrowCircleUpFill;
+    }
+    if (
+      transaction.type === "SAVINGS_WITHDRAWAL" ||
+      transaction.type === "SAVINGS_INTEREST_CLAIM"
+    ) {
+      return PiArrowCircleDownFill;
+    }
     if (transaction.type === "WITHDRAWAL") {
       return PiArrowCircleUpFill;
     }
@@ -376,6 +400,15 @@ export function TransactionHistoryContent({
   });
 
   const getTypeLabel = (type: string): string => {
+    if (type === "SAVINGS_DEPOSIT") {
+      return "Savings deposit";
+    }
+    if (type === "SAVINGS_WITHDRAWAL") {
+      return "Savings withdrawal";
+    }
+    if (type === "SAVINGS_INTEREST_CLAIM") {
+      return "Savings interest";
+    }
     if (type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;
     }

@@ -186,6 +186,16 @@ export const userProfiles = pgTable(
     walletBalance: decimal("wallet_balance", { precision: 36, scale: 18 })
       .notNull()
       .default("0"),
+    savingsBalance: decimal("savings_balance", { precision: 36, scale: 18 })
+      .notNull()
+      .default("0"),
+    unclaimedSavingsInterest: decimal("unclaimed_savings_interest", {
+      precision: 36,
+      scale: 18,
+    })
+      .notNull()
+      .default("0"),
+    savingsLastUpdatedAt: timestamp("savings_last_updated_at"),
     basicIncomeClaimedTotal: decimal("basic_income_claimed_total", {
       precision: 36,
       scale: 18,
