@@ -24,7 +24,7 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { useSavings } from "@/hooks/use-savings";
-import { cn, formatFullAmount } from "@/lib/utils";
+import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 
 interface SavingsSectionProps {
   dictionary: Dictionary;
@@ -75,6 +75,7 @@ export function SavingsSection({
     const safeAmount = Math.max(0, source - 1e-12);
     return formatFullAmount(safeAmount);
   }, [selectedAction, walletBalance, savingsBalance]);
+  const rewardDecimals = getRewardDecimals(savingsBalance);
 
   const hasInsufficientBalance = () => {
     if (!amount || Number(amount) <= 0) return false;
@@ -251,7 +252,7 @@ export function SavingsSection({
                   <AlertDialogDescription>
                     {dictionary.pages.earn.savings.alert.collect.description.replace(
                       "{amount}",
-                      maxCollectableAmount.toFixed(6),
+                      maxCollectableAmount.toFixed(rewardDecimals),
                     )}
                   </AlertDialogDescription>
                   <AlertDialogFooter>
@@ -271,7 +272,7 @@ export function SavingsSection({
                 </AlertDialogContent>
               </AlertDialog>
               <Typography variant="number" level={5} className="font-['Rubik'] text-base">
-                {maxCollectableAmount.toFixed(6)}
+                {maxCollectableAmount.toFixed(rewardDecimals)}
               </Typography>
             </div>
           </div>

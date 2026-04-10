@@ -26,6 +26,24 @@ export const formatFullAmount = (num: number): string => {
 };
 
 /**
+ * Determines the number of decimal places to display for reward amounts
+ * based on the current savings balance.
+ */
+export const getRewardDecimals = (balance: number | null): number => {
+  const bal = balance || 0;
+  if (bal >= 1000000) return 3;
+  if (bal >= 100000) return 4;
+  if (bal >= 10000) return 5;
+  if (bal >= 1000) return 6;
+  if (bal >= 100) return 7;
+  if (bal >= 10) return 8;
+  if (bal >= 1) return 9;
+  if (bal >= 0.1) return 10;
+  if (bal >= 0.01) return 11;
+  return 12;
+};
+
+/**
  * Determines the number of decimal places to display for balance values
  * (copied from world-republic-pwa)
  * @param balance - The balance value
