@@ -199,6 +199,9 @@ export function TransactionHistoryContent({
   };
 
   const getTransactionLabel = (transaction: Transaction): string => {
+    if (transaction.type === "BASIC_INCOME_CLAIM") {
+      return dictionary.pages.earn.tabs.basic_income;
+    }
     if (transaction.type === "SAVINGS_DEPOSIT") {
       return dictionary.pages.wallet.transactions.types.savings_deposit;
     }
@@ -270,6 +273,9 @@ export function TransactionHistoryContent({
     if (transaction.type === "TRANSFER" && transaction.isReceived) {
       return true;
     }
+    if (transaction.type === "BASIC_INCOME_CLAIM") {
+      return true;
+    }
     if (
       transaction.type === "SAVINGS_WITHDRAWAL" ||
       transaction.type === "SAVINGS_INTEREST_CLAIM"
@@ -339,6 +345,9 @@ export function TransactionHistoryContent({
   };
 
   const getTransactionIcon = (transaction: Transaction) => {
+    if (transaction.type === "BASIC_INCOME_CLAIM") {
+      return PiArrowCircleDownFill;
+    }
     if (transaction.type === "SAVINGS_DEPOSIT") {
       return PiArrowCircleUpFill;
     }
@@ -422,6 +431,9 @@ export function TransactionHistoryContent({
     }
     if (type === "SAVINGS_INTEREST_CLAIM") {
       return dictionary.pages.wallet.transactions.types.savings_interest;
+    }
+    if (type === "BASIC_INCOME_CLAIM") {
+      return dictionary.pages.earn.tabs.basic_income;
     }
     if (type === "WITHDRAWAL") {
       return dictionary.pages.wallet.transactions.types.withdrawal;

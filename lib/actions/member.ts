@@ -579,12 +579,9 @@ export async function getTransactions(limit: number = 50) {
       .select()
       .from(transactions)
       .where(
-        and(
-          or(
-            eq(transactions.userId, userUuid),
-            eq(transactions.recipientUserId, userUuid),
-          ),
-          not(eq(transactions.type, "BASIC_INCOME_CLAIM")),
+        or(
+          eq(transactions.userId, userUuid),
+          eq(transactions.recipientUserId, userUuid),
         ),
       )
       .orderBy(desc(transactions.createdAt))
