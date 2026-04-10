@@ -177,7 +177,8 @@ export function TransactionHistoryContent({
       return "<0.000001";
     }
 
-    const isSavingsTransaction =
+    const usesDynamicPrecision =
+      transaction.type === "BASIC_INCOME_CLAIM" ||
       transaction.type === "SAVINGS_DEPOSIT" ||
       transaction.type === "SAVINGS_WITHDRAWAL" ||
       transaction.type === "SAVINGS_INTEREST_CLAIM";
@@ -190,7 +191,7 @@ export function TransactionHistoryContent({
       return 6;
     };
 
-    const precision = isSavingsTransaction ? getSavingsTxPrecision(absAmount) : 2;
+    const precision = usesDynamicPrecision ? getSavingsTxPrecision(absAmount) : 2;
 
     return absAmount.toLocaleString(locale, {
       minimumFractionDigits: 2,
