@@ -14,7 +14,7 @@ Open-source Next.js app for the World Republic platform—discover and found par
 
 - **Framework:** Next.js 16 (App Router), React 19
 - **Database:** PostgreSQL (Neon) with Drizzle ORM
-- **Auth:** NextAuth.js v5 (Google OAuth, WebAuthn, SIWE wallet auth)
+- **Auth:** NextAuth.js v5 (Google OAuth, WebAuthn)
 - **Identity:** Self (zero-knowledge verification)
 - **Blockchain:** thirdweb (WDD transactions)
 - **UI:** Worldcoin Mini Apps UI Kit, Tailwind CSS
@@ -38,7 +38,6 @@ Open-source Next.js app for the World Republic platform—discover and found par
    - `NEXTAUTH_SECRET` — secret for NextAuth (generate with `openssl rand -base64 32`)
    - `NEXTAUTH_URL` — app base URL (e.g., http://localhost:3000)
    - `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` — Google OAuth credentials — https://console.cloud.google.com/apis/credentials
-   - `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` — WalletConnect project ID for RainbowKit — https://cloud.walletconnect.com/
    - `THIRDWEB_SECRET_KEY` — thirdweb secret key — https://thirdweb.com/dashboard
 
 4. **Set up database**  

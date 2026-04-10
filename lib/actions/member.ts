@@ -20,7 +20,6 @@ import {
   type StreamData,
 } from "@/lib/streams";
 import { validateUsername } from "@/lib/utils";
-import { WALLET_PROVIDER_ID } from "@/lib/wallet-auth";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 // ============================================================================
@@ -99,10 +98,6 @@ async function getLinkedProviders(authUserId: number) {
     googleEmail:
       rows.find((row) => row.provider === "google")?.providerAccountId ?? null,
     passkeyCount: rows.filter((row) => row.provider === "passkey").length,
-    hasWallet: rows.some((row) => row.provider === WALLET_PROVIDER_ID),
-    walletAddress:
-      rows.find((row) => row.provider === WALLET_PROVIDER_ID)
-        ?.providerAccountId ?? null,
   };
 }
 
@@ -375,8 +370,6 @@ export type GetWalletAuthAndDataResult = {
     hasGoogle: boolean;
     googleEmail: string | null;
     passkeyCount: number;
-    hasWallet: boolean;
-    walletAddress: string | null;
   } | null;
 };
 

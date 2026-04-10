@@ -21,9 +21,9 @@ import {
   PiCaretLeft,
   PiCircleNotch,
   PiLinkSimple,
+  PiPlus,
   PiPencilSimple,
   PiPencilSimpleFill,
-  PiPlus,
   PiShareNetwork,
   PiTrash,
   PiTrashFill,
@@ -34,7 +34,6 @@ import { AccountVerificationSection } from "@/components/account-verification-se
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
-import { useWalletAuth } from "@/hooks/use-wallet-auth";
 import {
   deleteUserAccount,
   getWalletAuthAndData,
@@ -65,7 +64,6 @@ export default function AccountPageClient({
   const searchParams = useSearchParams();
   const { toast } = useToast();
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
-  const { authenticateWithWallet } = useWalletAuth();
 
   const [cachedData] = useState(() => getCachedWalletData());
   const [serverData, setServerData] = useState<Awaited<
@@ -80,10 +78,7 @@ export default function AccountPageClient({
     if (link !== "google" || hasHandledLink.current) return;
     hasHandledLink.current = true;
 
-    if (
-      error === "account_already_linked" ||
-      error === "OAuthAccountNotLinked"
-    ) {
+    if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
       toast.error({
         title: dictionary.toasts.wallet.google_already_linked,
       });
@@ -98,8 +93,7 @@ export default function AccountPageClient({
 
   useEffect(() => {
     let cancelled = false;
-    const pendingReferral =
-      localStorage.getItem("pending_referral") || undefined;
+    const pendingReferral = localStorage.getItem("pending_referral") || undefined;
     getWalletAuthAndData(pendingReferral).then((result) => {
       if (cancelled) return;
       setServerData(result);
@@ -125,8 +119,6 @@ export default function AccountPageClient({
   const linkedProviders = data?.linkedProviders ?? null;
   const googleLinked = linkedProviders?.hasGoogle ?? false;
   const passkeyCount = linkedProviders?.passkeyCount ?? 0;
-  const hasWallet = linkedProviders?.hasWallet ?? false;
-  const walletAddress = linkedProviders?.walletAddress ?? null;
 
   // State for form validation
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
@@ -135,7 +127,6 @@ export default function AccountPageClient({
   const [isUpdatingUsername, setIsUpdatingUsername] = useState(false);
   const [isLinkingGoogle, setIsLinkingGoogle] = useState(false);
   const [isAddingPasskey, setIsAddingPasskey] = useState(false);
-  const [isLinkingWallet, setIsLinkingWallet] = useState(false);
 
   const handleSignOut = async () => {
     try {
@@ -277,9 +268,7 @@ export default function AccountPageClient({
       );
 
       if (optionsResult.error) {
-        throw new Error(
-          optionsResult.error || "Failed to get registration options",
-        );
+        throw new Error(optionsResult.error || "Failed to get registration options");
       }
 
       if (!("challenge" in optionsResult)) {
@@ -326,43 +315,10 @@ export default function AccountPageClient({
     } catch (error) {
       console.error("Error adding passkey:", error);
       toast.error({
-        title:
-          error instanceof Error
-            ? error.message
-            : dictionary.toasts.wallet.passkey_add_failed,
+        title: error instanceof Error ? error.message : dictionary.toasts.wallet.passkey_add_failed,
       });
     } finally {
       setIsAddingPasskey(false);
-    }
-  };
-
-  const handleLinkWallet = async () => {
-    setIsLinkingWallet(true);
-    try {
-      const result = await authenticateWithWallet("link");
-      if (!result.success) {
-        if (result.error === "wallet_already_linked") {
-          toast.error({ title: "Wallet already linked to another account" });
-        } else if (result.error === "wallet_already_linked_on_this_account") {
-          toast.error({ title: "This account already has a linked wallet" });
-        } else if (result.error === "invalid_chain") {
-          toast.error({ title: "Please connect on Ethereum or World Chain" });
-        } else if (result.error !== "wallet_not_connected") {
-          toast.error({ title: "Failed to connect wallet" });
-        }
-        return;
-      }
-
-      toast.success({ title: "Wallet connected" });
-      const fresh = await getWalletAuthAndData();
-      setServerData(fresh);
-      setCachedWalletData(fresh);
-      router.refresh();
-    } catch (error) {
-      console.error("Error linking wallet:", error);
-      toast.error({ title: "Failed to connect wallet" });
-    } finally {
-      setIsLinkingWallet(false);
     }
   };
 
@@ -470,11 +426,7 @@ export default function AccountPageClient({
 
             <div>
               <div className="mb-4 flex">
-                <Typography
-                  variant="subtitle"
-                  level={3}
-                  className="text-gray-400"
-                >
+                <Typography variant="subtitle" level={3} className="text-gray-400">
                   {dictionary.pages.wallet.sections.security}
                 </Typography>
               </div>
@@ -491,9 +443,7 @@ export default function AccountPageClient({
                   >
                     <CustomListItem
                       label={dictionary.pages.wallet.sections.google_account}
-                      description={
-                        dictionary.pages.wallet.sections.google_not_linked
-                      }
+                      description={dictionary.pages.wallet.sections.google_not_linked}
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
@@ -509,34 +459,6 @@ export default function AccountPageClient({
                 <div
                   onClick={(e) => {
                     e.stopPropagation();
-                    if (!isLinkingWallet && !hasWallet) {
-                      void handleLinkWallet();
-                    }
-                  }}
-                  className={hasWallet ? "" : "cursor-pointer"}
-                >
-                  <CustomListItem
-                    label="Wallet"
-                    description={
-                      hasWallet ? walletAddress || "Linked" : "Not linked"
-                    }
-                    noPointer={hasWallet}
-                    endAdornment={
-                      !hasWallet ? (
-                        <div className="flex items-center text-gray-500">
-                          {isLinkingWallet ? (
-                            <PiCircleNotch className="size-4 animate-spin" />
-                          ) : (
-                            <PiLinkSimple className="size-4" />
-                          )}
-                        </div>
-                      ) : undefined
-                    }
-                  />
-                </div>
-                <div
-                  onClick={(e) => {
-                    e.stopPropagation();
                     if (!isAddingPasskey) {
                       void handleAddPasskey();
                     }
@@ -545,10 +467,7 @@ export default function AccountPageClient({
                 >
                   <CustomListItem
                     label={dictionary.pages.wallet.sections.passkeys}
-                    description={dictionary.pages.wallet.sections.passkeys_linked.replace(
-                      "{count}",
-                      String(passkeyCount),
-                    )}
+                    description={dictionary.pages.wallet.sections.passkeys_linked.replace("{count}", String(passkeyCount))}
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (

@@ -17,9 +17,8 @@ import {
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { useRef, useState } from "react";
-import { PiFingerprint, PiSignIn, PiWallet } from "react-icons/pi";
+import { PiFingerprint, PiSignIn } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { useWalletAuth } from "@/hooks/use-wallet-auth";
 import {
   getPasskeyOptions,
   getPasskeyRegistrationOptions,
@@ -43,14 +42,12 @@ export function SignInDialog({
   const { update } = useSession();
   const [loadingGoogle, setLoadingGoogle] = useState(false);
   const [loadingPasskey, setLoadingPasskey] = useState(false);
-  const [loadingWallet, setLoadingWallet] = useState(false);
   const [showNameInput, setShowNameInput] = useState(false);
   const [showPasskeyOptions, setShowPasskeyOptions] = useState(false);
   const [passkeyName, setPasskeyName] = useState("");
   const isGoogleSignInInFlightRef = useRef(false);
-  const { authenticateWithWallet } = useWalletAuth();
 
-  const isBusy = loadingGoogle || loadingPasskey || loadingWallet;
+  const isBusy = loadingGoogle || loadingPasskey;
 
   const handleGoogleSignIn = async () => {
     // Prevent duplicate OAuth starts, which can break PKCE checks.
@@ -73,37 +70,6 @@ export function SignInDialog({
 
   const handleUseBiometrics = () => {
     setShowPasskeyOptions(true);
-  };
-
-  const handleWalletSignIn = async () => {
-    if (isBusy) return;
-    setLoadingWallet(true);
-
-    try {
-      const result = await authenticateWithWallet("signin");
-      if (!result.success) {
-        setLoadingWallet(false);
-        return;
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 100));
-      await update();
-      try {
-        localStorage.setItem(
-          AUTH_DISPLAY_CACHE_KEY,
-          JSON.stringify({ authenticated: true }),
-        );
-      } catch {
-        // ignore
-      }
-      router.refresh();
-      resetDialogState();
-      onOpenChange(false);
-      router.push("/");
-    } catch (error) {
-      console.error("Wallet sign-in error:", error);
-      setLoadingWallet(false);
-    }
   };
 
   const handlePasskeySignIn = async () => {
@@ -287,7 +253,6 @@ export function SignInDialog({
     setPasskeyName("");
     setLoadingGoogle(false);
     setLoadingPasskey(false);
-    setLoadingWallet(false);
     isGoogleSignInInFlightRef.current = false;
   };
 
@@ -434,17 +399,6 @@ export function SignInDialog({
                 {loadingGoogle
                   ? dictionary.common.processing
                   : dictionary.auth.sign_in_with_google}
-              </Button>
-              <Button
-                fullWidth
-                onClick={handleWalletSignIn}
-                disabled={isBusy}
-                className="flex items-center justify-center gap-2"
-              >
-                <PiWallet className="size-5 text-white" />
-                {loadingWallet
-                  ? dictionary.common.processing
-                  : "Connect wallet"}
               </Button>
             </div>
           </AlertDialogFooter>
