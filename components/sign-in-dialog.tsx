@@ -139,7 +139,6 @@ export function SignInDialog({
         } catch {
           // ignore
         }
-        router.refresh();
         resetDialogState();
         onOpenChange(false);
         window.location.href = callbackUrl;
@@ -225,7 +224,6 @@ export function SignInDialog({
         } catch {
           // ignore
         }
-        router.refresh();
         resetDialogState();
         onOpenChange(false);
         window.location.href = callbackUrl;
