@@ -109,6 +109,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
       <main className="flex grow flex-col">
         {activeTab === "basic_income" && (
           <BasicIncomeSection
+            lang={lang}
             dictionary={dictionary}
             isAuthenticated={isAuthenticated}
             basicIncomeActivatedAt={
@@ -124,6 +125,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
         )}
         {activeTab === "savings" && (
           <SavingsSection
+            lang={lang}
             dictionary={dictionary}
             isAuthenticated={isAuthenticated}
             walletBalance={profileData?.storedWalletBalance ?? 0}

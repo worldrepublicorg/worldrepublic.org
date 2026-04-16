@@ -24,9 +24,11 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { useSavings } from "@/hooks/use-savings";
+import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 
 interface SavingsSectionProps {
+  lang: string;
   dictionary: Dictionary;
   isAuthenticated: boolean;
   walletBalance: number;
@@ -37,6 +39,7 @@ interface SavingsSectionProps {
 }
 
 export function SavingsSection({
+  lang,
   dictionary,
   isAuthenticated,
   walletBalance,
@@ -76,6 +79,15 @@ export function SavingsSection({
     return formatFullAmount(safeAmount);
   }, [selectedAction, walletBalance, savingsBalance]);
   const rewardDecimals = getRewardDecimals(savingsBalance);
+  const locale = getSafeLocale(lang);
+  const savingsBalanceDisplay = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: 4,
+    maximumFractionDigits: 4,
+  }).format(Math.floor(savingsBalance * 10000) / 10000);
+  const collectableAmountDisplay = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: rewardDecimals,
+    maximumFractionDigits: rewardDecimals,
+  }).format(maxCollectableAmount);
 
   const hasInsufficientBalance = () => {
     if (!amount || Number(amount) <= 0) return false;
@@ -178,7 +190,7 @@ export function SavingsSection({
                 level={5}
                 className="mb-4 font-['Rubik'] text-base"
               >
-                {(Math.floor(savingsBalance * 10000) / 10000).toFixed(4)} WDD
+                {savingsBalanceDisplay} WDD
               </Typography>
             </div>
             <div className="flex items-center justify-between">
@@ -252,7 +264,7 @@ export function SavingsSection({
                   <AlertDialogDescription>
                     {dictionary.pages.earn.savings.alert.collect.description.replace(
                       "{amount}",
-                      maxCollectableAmount.toFixed(rewardDecimals),
+                      collectableAmountDisplay,
                     )}
                   </AlertDialogDescription>
                   <AlertDialogFooter>
@@ -272,7 +284,7 @@ export function SavingsSection({
                 </AlertDialogContent>
               </AlertDialog>
               <Typography variant="number" level={5} className="font-['Rubik'] text-base">
-                {maxCollectableAmount.toFixed(rewardDecimals)}
+                {collectableAmountDisplay}
               </Typography>
             </div>
           </div>

@@ -17,8 +17,10 @@ import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { useBasicIncome } from "@/hooks/use-basic-income";
+import { getSafeLocale } from "@/lib/locale";
 
 interface BasicIncomeSectionProps {
+  lang: string;
   dictionary: Dictionary;
   isAuthenticated: boolean;
   basicIncomeActivatedAt: number | null;
@@ -29,6 +31,7 @@ interface BasicIncomeSectionProps {
 }
 
 export function BasicIncomeSection({
+  lang,
   dictionary,
   isAuthenticated,
   basicIncomeActivatedAt,
@@ -72,7 +75,11 @@ export function BasicIncomeSection({
     onSuccess,
   );
 
-  const amountString = maxClaimableAmount.toFixed(6);
+  const locale = getSafeLocale(lang);
+  const amountString = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: 6,
+    maximumFractionDigits: 6,
+  }).format(maxClaimableAmount);
 
   if (!isAuthenticated) {
     return (
