@@ -40,6 +40,8 @@ export function BasicIncomeSection({
   onSignIn,
   onSuccess,
 }: BasicIncomeSectionProps) {
+  const raisedButtonShadowClass =
+    "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-[0_2px_6px_rgba(0,0,0,0.10)]!";
   const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
   const renderInfoSubtitle = (text: string) => (
     <Typography
@@ -102,7 +104,7 @@ export function BasicIncomeSection({
             <div className="mt-6 w-full">
               <Button
                 fullWidth
-                className="shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
+                className={raisedButtonShadowClass}
                 onClick={onSignIn}
               >
                 {dictionary.common.sign_in}
@@ -134,7 +136,7 @@ export function BasicIncomeSection({
             />
             <Button
               fullWidth
-              className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
+              className={`mt-6! ${raisedButtonShadowClass}`}
               onClick={handleActivate}
               disabled={isActivating}
             >
@@ -172,7 +174,7 @@ export function BasicIncomeSection({
             <AlertDialogTrigger asChild>
               <Button
                 fullWidth
-                className="mt-6! shadow-[0_4px_10px_rgba(0,0,0,0.19)]!"
+                className={`mt-6! ${raisedButtonShadowClass}`}
                 disabled={isClaiming || maxClaimableAmount <= 0}
               >
                 {dictionary.pages.earn.basic_income.claim_button}
