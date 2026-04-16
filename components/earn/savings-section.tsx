@@ -88,6 +88,59 @@ export function SavingsSection({
     minimumFractionDigits: rewardDecimals,
     maximumFractionDigits: rewardDecimals,
   }).format(maxCollectableAmount);
+  const decimalSeparator =
+    new Intl.NumberFormat(locale)
+      .formatToParts(1.1)
+      .find((part) => part.type === "decimal")?.value ?? ".";
+
+  const toCanonicalAmount = (input: string): string => {
+    let normalized = input.trim().replace(/\s+/g, "");
+    if (decimalSeparator !== ".") {
+      normalized = normalized.split(decimalSeparator).join(".");
+    }
+    // Accept comma as decimal separator as a fallback.
+    normalized = normalized.replace(/,/g, ".");
+    normalized = normalized.replace(/[^0-9.]/g, "");
+
+    const firstDot = normalized.indexOf(".");
+    if (firstDot !== -1) {
+      normalized =
+        normalized.slice(0, firstDot + 1) +
+        normalized.slice(firstDot + 1).replace(/\./g, "");
+    }
+
+    if (normalized.startsWith(".")) {
+      normalized = `0${normalized}`;
+    }
+    return normalized;
+  };
+
+  const toLocalizedInputAmount = (canonicalAmount: string): string => {
+    if (!canonicalAmount) return "";
+
+    const hasTrailingDot = canonicalAmount.endsWith(".");
+    const numericPart = hasTrailingDot
+      ? canonicalAmount.slice(0, -1)
+      : canonicalAmount;
+    const parsed = Number(numericPart);
+
+    if (!Number.isFinite(parsed)) {
+      return canonicalAmount;
+    }
+
+    const fractionDigits = numericPart.includes(".")
+      ? numericPart.split(".")[1]?.length ?? 0
+      : 0;
+    const formatted = new Intl.NumberFormat(locale, {
+      useGrouping: false,
+      minimumFractionDigits: fractionDigits,
+      maximumFractionDigits: fractionDigits,
+    }).format(parsed);
+
+    return hasTrailingDot ? `${formatted}${decimalSeparator}` : formatted;
+  };
+
+  const localizedAmountInput = toLocalizedInputAmount(amount);
   const normalizedAmount = amount.trim().replace(",", ".");
   const parsedAmount = Number(normalizedAmount);
   const amountFractionDigits = normalizedAmount.includes(".")
@@ -206,10 +259,11 @@ export function SavingsSection({
             </div>
             <div className="flex items-center justify-between">
               <input
-                type="number"
+                type="text"
+                inputMode="decimal"
                 lang={locale}
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                value={localizedAmountInput}
+                onChange={(e) => setAmount(toCanonicalAmount(e.target.value))}
                 placeholder={
                   selectedAction === "deposit"
                     ? dictionary.pages.earn.savings.amount_deposit
