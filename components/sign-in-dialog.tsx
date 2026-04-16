@@ -17,7 +17,8 @@ import {
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { useRef, useState } from "react";
-import { PiFingerprint, PiGoogleLogo, PiSignIn } from "react-icons/pi";
+import { FaGoogle } from "react-icons/fa";
+import { PiFingerprint, PiSignIn } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
   getPasskeyOptions,
@@ -400,7 +401,7 @@ export function SignInDialog({
                 disabled={isBusy}
                 className="flex items-center justify-center gap-2"
               >
-                <PiGoogleLogo className="size-5 text-white" />
+                <FaGoogle className="size-5 text-white" />
                 {loadingGoogle
                   ? dictionary.common.processing
                   : dictionary.auth.sign_in_with_google}
