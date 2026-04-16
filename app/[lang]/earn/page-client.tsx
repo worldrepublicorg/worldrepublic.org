@@ -58,7 +58,9 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
     };
   }, []);
 
-  const data = serverData ?? cachedData;
+  // Prefer reactive cache data so auth/balance updates after passkey sign-in
+  // are reflected immediately without requiring a navigation refresh.
+  const data = cachedData ?? serverData;
   const showSkeleton = data === null;
   const isAuthenticated =
     data?.authenticated ?? clientIsAuthenticated ?? false;
