@@ -141,7 +141,9 @@ export function SignInDialog({
         }
         resetDialogState();
         onOpenChange(false);
-        window.location.href = callbackUrl;
+        if (window.location.href !== callbackUrl) {
+          window.location.href = callbackUrl;
+        }
       } else {
         throw new Error("Authentication verification failed");
       }
@@ -226,7 +228,9 @@ export function SignInDialog({
         }
         resetDialogState();
         onOpenChange(false);
-        window.location.href = callbackUrl;
+        if (window.location.href !== callbackUrl) {
+          window.location.href = callbackUrl;
+        }
       } else {
         throw new Error("Registration verification failed");
       }
