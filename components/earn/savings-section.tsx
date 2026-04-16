@@ -49,7 +49,7 @@ export function SavingsSection({
   onSuccess,
 }: SavingsSectionProps) {
   const raisedButtonShadowClass =
-    "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-[0_2px_6px_rgba(0,0,0,0.06)]!";
+    "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [selectedAction, setSelectedAction] = useState<"deposit" | "withdraw">(
     "deposit",
   );
