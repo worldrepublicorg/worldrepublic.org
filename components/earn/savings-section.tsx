@@ -88,6 +88,17 @@ export function SavingsSection({
     minimumFractionDigits: rewardDecimals,
     maximumFractionDigits: rewardDecimals,
   }).format(maxCollectableAmount);
+  const normalizedAmount = amount.trim().replace(",", ".");
+  const parsedAmount = Number(normalizedAmount);
+  const amountFractionDigits = normalizedAmount.includes(".")
+    ? normalizedAmount.split(".")[1]?.length ?? 0
+    : 0;
+  const amountDisplay = Number.isFinite(parsedAmount)
+    ? new Intl.NumberFormat(locale, {
+        minimumFractionDigits: amountFractionDigits,
+        maximumFractionDigits: amountFractionDigits,
+      }).format(parsedAmount)
+    : amount || "0";
 
   const hasInsufficientBalance = () => {
     if (!amount || Number(amount) <= 0) return false;
@@ -196,6 +207,7 @@ export function SavingsSection({
             <div className="flex items-center justify-between">
               <input
                 type="number"
+                lang={locale}
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder={
@@ -311,7 +323,7 @@ export function SavingsSection({
                 <AlertDialogDescription>
                   {dictionary.pages.earn.savings.alert.deposit.description.replace(
                     "{amount}",
-                    amount || "0",
+                    amountDisplay,
                   )}
                 </AlertDialogDescription>
                 <AlertDialogFooter>
@@ -355,7 +367,7 @@ export function SavingsSection({
                 <AlertDialogDescription>
                   {dictionary.pages.earn.savings.alert.withdraw.description.replace(
                     "{amount}",
-                    amount || "0",
+                    amountDisplay,
                   )}
                 </AlertDialogDescription>
                 <AlertDialogFooter>
