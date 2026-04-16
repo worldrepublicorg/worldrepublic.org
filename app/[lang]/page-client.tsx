@@ -8,16 +8,14 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import { ElectionsList } from "@/components/vote/elections-list";
 import type { Election } from "@/lib/types/elections";
 import {
   type GetWalletAuthAndDataResult,
   getWalletAuthAndData,
 } from "@/lib/actions/member";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 const TABS = ["elections", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
@@ -36,9 +34,7 @@ export default function VotePageClient({
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
 
-  const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
-    getCachedWalletData,
-  );
+  const cachedData = useWalletAuthCache();
   const [serverData, setServerData] =
     useState<GetWalletAuthAndDataResult | null>(null);
 

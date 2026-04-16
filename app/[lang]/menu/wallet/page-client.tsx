@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   PiArrowCircleUpFill,
   PiArrowSquareOut,
@@ -42,6 +42,7 @@ import { TransactionHistoryContent } from "@/components/wallet/transaction-histo
 import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   EMPTY_STREAMS,
   useLiveWalletBalance,
@@ -54,10 +55,7 @@ import {
 } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
 import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 interface WalletPageClientProps {
@@ -79,11 +77,10 @@ export default function WalletPageClient({
   const router = useRouter();
   const { toast } = useToast();
 
-  const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
-    getCachedWalletData,
-  );
+  const cachedData = useWalletAuthCache();
   const [serverData, setServerData] =
     useState<GetWalletAuthAndDataResult | null>(null);
+  const previousClientAuthRef = useRef(clientIsAuthenticated);
 
   useEffect(() => {
     let cancelled = false;
@@ -101,6 +98,33 @@ export default function WalletPageClient({
       cancelled = true;
     };
   }, []);
+
+  // Re-fetch wallet data when auth state flips to authenticated without navigation
+  // (e.g. passkey sign-in on the same page).
+  useEffect(() => {
+    const becameAuthenticated =
+      !previousClientAuthRef.current && clientIsAuthenticated;
+    previousClientAuthRef.current = clientIsAuthenticated;
+
+    if (!becameAuthenticated) return;
+
+    let cancelled = false;
+    const pendingReferral =
+      localStorage.getItem("pending_referral") || undefined;
+
+    getWalletAuthAndData(pendingReferral).then((result) => {
+      if (cancelled) return;
+      setServerData(result);
+      setCachedWalletData(result);
+      if (pendingReferral && result.authenticated) {
+        localStorage.removeItem("pending_referral");
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [clientIsAuthenticated]);
 
   const data = serverData ?? cachedData;
   const showSkeleton = data === null;

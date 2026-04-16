@@ -11,14 +11,12 @@ import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   type GetWalletAuthAndDataResult,
   getWalletAuthAndData,
 } from "@/lib/actions/member";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 const SignInDialog = dynamic(
   () => import("@/components/sign-in-dialog").then((mod) => mod.SignInDialog),
@@ -38,9 +36,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
   const tab = searchParams.get("tab");
   const { isAuthenticated: clientIsAuthenticated, showSignInDialog, setShowSignInDialog } = useAuth();
 
-  const [cachedData] = useState<GetWalletAuthAndDataResult | null>(
-    getCachedWalletData,
-  );
+  const cachedData = useWalletAuthCache();
   const [serverData, setServerData] =
     useState<GetWalletAuthAndDataResult | null>(null);
 

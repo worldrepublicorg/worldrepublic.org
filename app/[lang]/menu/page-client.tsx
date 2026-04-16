@@ -34,11 +34,9 @@ import { CustomListItem } from "@/components/custom-list-item";
 import { MenuPageSkeleton } from "@/components/menu/menu-page-skeleton";
 import { SignInDialog } from "@/components/sign-in-dialog";
 import { TopBar } from "@/components/topbar";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import { getWalletAuthAndData } from "@/lib/actions/member";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 interface MenuPageClientProps {
   lang: string;
@@ -52,7 +50,7 @@ export default function MenuPageClient({
   const { toast } = useToast();
   const [showSignInDialog, setShowSignInDialog] = useState(false);
 
-  const [cachedData] = useState(() => getCachedWalletData());
+  const cachedData = useWalletAuthCache();
   const [serverAuth, setServerAuth] = useState<boolean | null>(null);
 
   useEffect(() => {

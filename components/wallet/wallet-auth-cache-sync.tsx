@@ -1,8 +1,9 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { useEffect } from "react";
-import { AUTH_DISPLAY_CACHE_KEY } from "@/lib/wallet-auth-cache";
+import { useEffect, useRef } from "react";
+import { getWalletAuthAndData } from "@/lib/actions/member";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 /**
  * Syncs wallet auth state to localStorage when the user is authenticated.
@@ -11,18 +12,25 @@ import { AUTH_DISPLAY_CACHE_KEY } from "@/lib/wallet-auth-cache";
  */
 export function WalletAuthCacheSync() {
   const { status } = useSession();
+  const previousStatusRef = useRef(status);
 
   useEffect(() => {
-    if (status === "authenticated") {
-      try {
-        localStorage.setItem(
-          AUTH_DISPLAY_CACHE_KEY,
-          JSON.stringify({ authenticated: true }),
-        );
-      } catch {
-        // ignore
-      }
-    }
+    const becameAuthenticated =
+      previousStatusRef.current !== "authenticated" &&
+      status === "authenticated";
+    previousStatusRef.current = status;
+
+    if (!becameAuthenticated) return;
+
+    let cancelled = false;
+    getWalletAuthAndData().then((result) => {
+      if (cancelled) return;
+      setCachedWalletData(result);
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, [status]);
 
   return null;

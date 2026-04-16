@@ -34,6 +34,7 @@ import { AccountVerificationSection } from "@/components/account-verification-se
 import { CustomListItem } from "@/components/custom-list-item";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   deleteUserAccount,
   getWalletAuthAndData,
@@ -45,10 +46,7 @@ import {
   setLinkingIntent,
 } from "@/lib/actions/passkey";
 import { copyToClipboard } from "@/lib/utils";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 interface AccountPageClientProps {
   lang: string;
@@ -65,7 +63,7 @@ export default function AccountPageClient({
   const { toast } = useToast();
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
-  const [cachedData] = useState(() => getCachedWalletData());
+  const cachedData = useWalletAuthCache();
   const [serverData, setServerData] = useState<Awaited<
     ReturnType<typeof getWalletAuthAndData>
   > | null>(null);

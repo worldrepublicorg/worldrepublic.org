@@ -18,6 +18,7 @@ import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import {
   type AmbassadorLeaderboardEntry,
@@ -27,10 +28,7 @@ import {
 } from "@/lib/actions/referrals";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
-import {
-  getCachedWalletData,
-  setCachedWalletData,
-} from "@/lib/wallet-auth-cache";
+import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
 const SignInDialog = dynamic(
   () => import("@/components/sign-in-dialog").then((mod) => mod.SignInDialog),
@@ -56,7 +54,7 @@ export default function PartiesPageClient({
   const { toast } = useToast();
   const { isAuthenticated, showSignInDialog, setShowSignInDialog } = useAuth();
 
-  const [cachedData] = useState(() => getCachedWalletData());
+  const cachedData = useWalletAuthCache();
   const [referralCode, setReferralCode] = useState<string | null>(
     cachedData?.profileData?.referralCode ?? null,
   );

@@ -6,6 +6,11 @@ import type {
 import type { StreamData } from "@/lib/streams";
 
 export const AUTH_DISPLAY_CACHE_KEY = "authDisplayCache";
+const walletAuthCacheListeners = new Set<() => void>();
+
+function emitWalletAuthCacheChange() {
+  walletAuthCacheListeners.forEach((listener) => listener());
+}
 
 export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
   if (typeof window === "undefined") return null;
@@ -45,7 +50,15 @@ export function setCachedWalletData(result: GetWalletAuthAndDataResult) {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(AUTH_DISPLAY_CACHE_KEY, JSON.stringify(result));
+    emitWalletAuthCacheChange();
   } catch {
     // ignore
   }
+}
+
+export function subscribeWalletAuthCache(listener: () => void) {
+  walletAuthCacheListeners.add(listener);
+  return () => {
+    walletAuthCacheListeners.delete(listener);
+  };
 }
