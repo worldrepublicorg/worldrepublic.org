@@ -34,6 +34,7 @@ import { CustomListItem } from "@/components/custom-list-item";
 import { MenuPageSkeleton } from "@/components/menu/menu-page-skeleton";
 import { SignInDialog } from "@/components/sign-in-dialog";
 import { TopBar } from "@/components/topbar";
+import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import { setCachedWalletData } from "@/lib/wallet-auth-cache";
@@ -48,6 +49,7 @@ export default function MenuPageClient({
   dictionary,
 }: MenuPageClientProps) {
   const { toast } = useToast();
+  const { isAuthenticated: clientIsAuthenticated } = useAuth();
   const [showSignInDialog, setShowSignInDialog] = useState(false);
 
   const cachedData = useWalletAuthCache();
@@ -70,7 +72,8 @@ export default function MenuPageClient({
   }, []);
 
   const showSkeleton = serverAuth === null && cachedData === null;
-  const isAuthenticated = serverAuth ?? cachedData?.authenticated ?? false;
+  const isAuthenticated =
+    (serverAuth ?? cachedData?.authenticated ?? false) || clientIsAuthenticated;
 
   const handleSignOut = async () => {
     try {
