@@ -41,6 +41,14 @@ interface PoliticalPartyListProps {
   lang: string; // Language code from URL
 }
 
+const PENDING_PARTY_AUTH_STATE_KEY = "pendingPartyAuthState";
+type PendingPartyAuthFlow = "create" | "confirm-register";
+
+interface PendingPartyAuthState {
+  form: CreatePartyData;
+  flow: PendingPartyAuthFlow;
+}
+
 export function PoliticalPartyList({
   initialParties,
   dictionary,
@@ -144,12 +152,65 @@ export function PoliticalPartyList({
     setShouldOpenRegisterDialogAfterAuth,
   ] = useState(false);
 
+  const savePendingPartyAuthState = (flow: PendingPartyAuthFlow) => {
+    setPendingPartyForm(createPartyForm);
+    setShouldOpenRegisterDialogAfterAuth(flow === "confirm-register");
+    try {
+      const payload: PendingPartyAuthState = {
+        form: createPartyForm,
+        flow,
+      };
+      sessionStorage.setItem(
+        PENDING_PARTY_AUTH_STATE_KEY,
+        JSON.stringify(payload),
+      );
+    } catch {
+      // ignore sessionStorage failures
+    }
+  };
+
+  const clearPendingPartyAuthState = () => {
+    setPendingPartyForm(null);
+    setShouldOpenRegisterDialogAfterAuth(false);
+    try {
+      sessionStorage.removeItem(PENDING_PARTY_AUTH_STATE_KEY);
+    } catch {
+      // ignore sessionStorage failures
+    }
+  };
+
   // Sync parties from props when they change
   useEffect(() => {
     if (initialParties !== undefined && initialParties !== null) {
       setParties(initialParties);
     }
   }, [initialParties]);
+
+  // Restore pending create-party flow after full-page auth redirects
+  useEffect(() => {
+    if (pendingPartyForm) return;
+    try {
+      const raw = sessionStorage.getItem(PENDING_PARTY_AUTH_STATE_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw) as PendingPartyAuthState;
+      if (
+        !parsed ||
+        !parsed.form ||
+        (parsed.flow !== "create" && parsed.flow !== "confirm-register")
+      ) {
+        sessionStorage.removeItem(PENDING_PARTY_AUTH_STATE_KEY);
+        return;
+      }
+      setPendingPartyForm(parsed.form);
+      setShouldOpenRegisterDialogAfterAuth(parsed.flow === "confirm-register");
+    } catch {
+      try {
+        sessionStorage.removeItem(PENDING_PARTY_AUTH_STATE_KEY);
+      } catch {
+        // ignore sessionStorage failures
+      }
+    }
+  }, [pendingPartyForm]);
 
   // Fetch user party client-side when authenticated (with localStorage cache)
   useEffect(() => {
@@ -346,9 +407,8 @@ export function PoliticalPartyList({
   const handleCreateParty = async () => {
     // Check if user is authenticated
     if (!isAuthenticated || !user?.id) {
-      // Save the current form state and dialog state
-      setPendingPartyForm(createPartyForm);
-      setShouldOpenRegisterDialogAfterAuth(false);
+      // Save the current form state and dialog state for post-auth restoration
+      savePendingPartyAuthState("create");
       // Close the create dialog
       setIsCreateDialogOpen(false);
       // Open sign-in dialog
@@ -419,9 +479,8 @@ export function PoliticalPartyList({
   const executeCreateParty = async () => {
     // Check if user is authenticated
     if (!isAuthenticated || !user?.id) {
-      // Save the current form state and dialog state
-      setPendingPartyForm(createPartyForm);
-      setShouldOpenRegisterDialogAfterAuth(true);
+      // Save the current form state and dialog state for post-auth restoration
+      savePendingPartyAuthState("confirm-register");
       // Close the found party dialog
       setIsRegisterPartyDialogOpen(false);
       // Open sign-in dialog
@@ -452,16 +511,14 @@ export function PoliticalPartyList({
             performCreateParty(pendingPartyForm);
           }
           // Clear pending state
-          setPendingPartyForm(null);
-          setShouldOpenRegisterDialogAfterAuth(false);
+          clearPendingPartyAuthState();
         });
       } else {
         // User was in the create party dialog flow
         // Reopen the create dialog with the saved form data
         setIsCreateDialogOpen(true);
         // Clear pending state
-        setPendingPartyForm(null);
-        setShouldOpenRegisterDialogAfterAuth(false);
+        clearPendingPartyAuthState();
       }
     }
   }, [
@@ -718,9 +775,8 @@ export function PoliticalPartyList({
         onInputFocus={handleInputFocus}
         isAuthenticated={isAuthenticated}
         onSignInRequired={() => {
-          // Save the current form state
-          setPendingPartyForm(createPartyForm);
-          setShouldOpenRegisterDialogAfterAuth(false);
+          // Save the current form state for post-auth restoration
+          savePendingPartyAuthState("create");
           // Close the create dialog
           setIsCreateDialogOpen(false);
           // Open sign-in dialog
