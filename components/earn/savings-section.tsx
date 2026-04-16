@@ -48,6 +48,7 @@ export function SavingsSection({
   savingsLastUpdatedAt,
   onSuccess,
 }: SavingsSectionProps) {
+  const strongButtonShadowClass = "shadow-[0_4px_10px_rgba(0,0,0,0.19)]!";
   const [selectedAction, setSelectedAction] = useState<"deposit" | "withdraw">(
     "deposit",
   );
@@ -310,7 +311,7 @@ export function SavingsSection({
                     }
                     variant="primary"
                     size="sm"
-                    className="mr-2 h-9 min-w-20 rounded-full px-4 font-sans"
+                    className={`mr-2 h-9 min-w-20 rounded-full px-4 font-sans ${strongButtonShadowClass}`}
                   >
                     {dictionary.pages.earn.savings.collect}
                   </Button>
@@ -358,7 +359,11 @@ export function SavingsSection({
           {selectedAction === "deposit" ? (
             <AlertDialog open={depositDialogOpen} onOpenChange={setDepositDialogOpen}>
               <AlertDialogTrigger asChild>
-                <Button disabled={isActionDisabled} fullWidth>
+                <Button
+                  disabled={isActionDisabled}
+                  fullWidth
+                  className={strongButtonShadowClass}
+                >
                   {getActionButtonText()}
                 </Button>
               </AlertDialogTrigger>
@@ -402,7 +407,11 @@ export function SavingsSection({
               onOpenChange={setWithdrawDialogOpen}
             >
               <AlertDialogTrigger asChild>
-                <Button disabled={isActionDisabled} fullWidth>
+                <Button
+                  disabled={isActionDisabled}
+                  fullWidth
+                  className={strongButtonShadowClass}
+                >
                   {getActionButtonText()}
                 </Button>
               </AlertDialogTrigger>
