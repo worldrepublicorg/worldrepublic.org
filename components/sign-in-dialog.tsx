@@ -399,7 +399,7 @@ export function SignInDialog({
                 fullWidth
                 onClick={handleGoogleSignIn}
                 disabled={isBusy}
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-center gap-2.5"
               >
                 <FaGoogle className="size-4.5 text-white" />
                 {loadingGoogle
