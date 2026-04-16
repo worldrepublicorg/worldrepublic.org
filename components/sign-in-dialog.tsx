@@ -74,6 +74,7 @@ export function SignInDialog({
 
   const handlePasskeySignIn = async () => {
     if (isBusy) return;
+    const callbackUrl = window.location.href;
     setLoadingPasskey(true);
     try {
       // Step 1: Get authentication options from server
@@ -141,7 +142,7 @@ export function SignInDialog({
         router.refresh();
         resetDialogState();
         onOpenChange(false);
-        router.push("/");
+        window.location.href = callbackUrl;
       } else {
         throw new Error("Authentication verification failed");
       }
@@ -153,6 +154,7 @@ export function SignInDialog({
 
   const handlePasskeyRegister = async (name?: string) => {
     if (isBusy) return;
+    const callbackUrl = window.location.href;
     setLoadingPasskey(true);
     try {
       // Step 1: Get registration options
@@ -226,7 +228,7 @@ export function SignInDialog({
         router.refresh();
         resetDialogState();
         onOpenChange(false);
-        router.push("/");
+        window.location.href = callbackUrl;
       } else {
         throw new Error("Registration verification failed");
       }
