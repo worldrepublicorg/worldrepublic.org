@@ -401,7 +401,7 @@ export function SignInDialog({
                 disabled={isBusy}
                 className="flex items-center justify-center gap-[9px]"
               >
-                <FaGoogle className="size-4.5 text-white" />
+                <FaGoogle className="size-4.5 mx-px text-white" />
                 {loadingGoogle
                   ? dictionary.common.processing
                   : dictionary.auth.sign_in_with_google}
