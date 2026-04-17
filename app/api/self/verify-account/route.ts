@@ -18,7 +18,7 @@ import {
 const ACCOUNT_SELF_SCOPE = "world-republic-account";
 const VERIFIED_REFERRAL_REWARD_TYPE = "INVITE_VERIFIED_USER";
 const VERIFIED_REFERRAL_TRANSACTION_TYPE = "REFERRAL_VERIFIED_BONUS";
-const VERIFIED_REFERRAL_REWARD_AMOUNT = "5.000000000000000000";
+const VERIFIED_REFERRAL_REWARD_AMOUNT = "10.000000000000000000";
 
 function createVerifier(origin: string) {
   const endpoint = `${origin}/api/self/verify-account`;
