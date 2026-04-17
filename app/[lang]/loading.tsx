@@ -1,5 +1,5 @@
-import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
+import { GovernPageSkeleton } from "@/components/vote/govern-page-skeleton";
 
 export default function VotePageLoading() {
-  return <VotePageSkeleton />;
+  return <GovernPageSkeleton />;
 }

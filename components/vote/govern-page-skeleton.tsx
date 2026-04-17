@@ -2,12 +2,12 @@ import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
 import { TopBar } from "@/components/topbar";
 
 /**
- * Vote page skeleton. Used by:
- * - app/[lang]/vote/loading.tsx (route-level loading)
- * - Vote page Suspense fallback
+ * Govern page skeleton. Used by:
+ * - Homepage route-level loading and Suspense fallback
+ * - Govern page Suspense fallback
  * No title in TopBar to avoid text popping before data (same as Parties/Wallet).
  */
-export function VotePageSkeleton() {
+export function GovernPageSkeleton() {
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
@@ -17,6 +17,7 @@ export function VotePageSkeleton() {
       />
       {/* Tab pills skeleton */}
       <div className="flex gap-1 overflow-x-auto px-6">
+        <Skeleton height={36} width={80} className="rounded-full" />
         <Skeleton height={36} width={80} className="rounded-full" />
         <Skeleton height={36} width={80} className="rounded-full" />
       </div>

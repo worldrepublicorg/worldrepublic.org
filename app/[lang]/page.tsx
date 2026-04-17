@@ -1,7 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { Suspense } from "react";
 import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
-import { VotePageSkeleton } from "@/components/vote/vote-page-skeleton";
+import { GovernPageSkeleton } from "@/components/vote/govern-page-skeleton";
 import { getElections } from "@/lib/actions/elections";
 import type { Election } from "@/lib/types/elections";
 import VotePageClient from "./page-client";
@@ -48,7 +48,7 @@ export default async function VotePage({
   const dictionary = await getDictionary(lang);
 
   return (
-    <Suspense fallback={<VotePageSkeleton />}>
+    <Suspense fallback={<GovernPageSkeleton />}>
       <VoteData lang={lang} dictionary={dictionary} />
     </Suspense>
   );
