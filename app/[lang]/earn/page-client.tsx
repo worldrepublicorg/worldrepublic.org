@@ -31,10 +31,17 @@ interface EarnPageClientProps {
   dictionary: Dictionary;
 }
 
-export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps) {
+export default function EarnPageClient({
+  lang,
+  dictionary,
+}: EarnPageClientProps) {
   const searchParams = useSearchParams();
   const tab = searchParams.get("tab");
-  const { isAuthenticated: clientIsAuthenticated, showSignInDialog, setShowSignInDialog } = useAuth();
+  const {
+    isAuthenticated: clientIsAuthenticated,
+    showSignInDialog,
+    setShowSignInDialog,
+  } = useAuth();
 
   const cachedData = useWalletAuthCache();
   const [serverData, setServerData] =
@@ -62,8 +69,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
   // are reflected immediately without requiring a navigation refresh.
   const data = cachedData ?? serverData;
   const showSkeleton = data === null;
-  const isAuthenticated =
-    data?.authenticated ?? clientIsAuthenticated ?? false;
+  const isAuthenticated = data?.authenticated ?? clientIsAuthenticated ?? false;
   const profileData = data?.profileData ?? null;
 
   const activeTab: TabKey = TABS.includes(tab as TabKey)
@@ -82,9 +88,7 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
           <TopbarWalletBalanceDisplay
             lang={lang}
             streams={data?.streams ?? undefined}
-            storedWalletBalance={
-              profileData?.storedWalletBalance ?? 0
-            }
+            storedWalletBalance={profileData?.storedWalletBalance ?? 0}
             snapshotBalance={profileData?.walletBalance ?? null}
           />
         }
@@ -112,12 +116,8 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
             lang={lang}
             dictionary={dictionary}
             isAuthenticated={isAuthenticated}
-            basicIncomeActivatedAt={
-              profileData?.basicIncomeActivatedAt ?? null
-            }
-            lastBasicIncomeClaimAt={
-              profileData?.lastBasicIncomeClaimAt ?? null
-            }
+            basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
+            lastBasicIncomeClaimAt={profileData?.lastBasicIncomeClaimAt ?? null}
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             onSignIn={() => setShowSignInDialog(true)}
             onSuccess={fetchData}
@@ -128,9 +128,11 @@ export default function EarnPageClient({ lang, dictionary }: EarnPageClientProps
             lang={lang}
             dictionary={dictionary}
             isAuthenticated={isAuthenticated}
-            walletBalance={profileData?.storedWalletBalance ?? 0}
+            walletBalance={profileData?.walletBalance ?? 0}
             savingsBalance={profileData?.savingsBalance ?? 0}
-            unclaimedSavingsInterest={profileData?.unclaimedSavingsInterest ?? 0}
+            unclaimedSavingsInterest={
+              profileData?.unclaimedSavingsInterest ?? 0
+            }
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
           />

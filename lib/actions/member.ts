@@ -729,8 +729,12 @@ export async function withdrawTokens(
         );
       }
 
-      // Debit oldest non-BI streams first
+      // Debit wallet balance first (claimed BI lives here),
+      // then consume non-BI streams for any remainder.
       let remaining = flooredAmount;
+      const walletDebit = Math.min(storedWalletBalance, remaining);
+      remaining -= walletDebit;
+
       const sortedStreams = [...streamDataList]
         .filter((s) => s.type !== "BASIC_INCOME")
         .sort((a, b) => a.startedAt - b.startedAt);
@@ -755,6 +759,12 @@ export async function withdrawTokens(
         remaining -= debit;
       }
 
+      if (remaining > 1e-9) {
+        throw new Error(
+          `Tried ${flooredAmount} but only have ${(flooredAmount - remaining).toFixed(6)} WDD available right now.`,
+        );
+      }
+
       for (const d of debits) {
         await tx
           .update(streams)
@@ -762,8 +772,7 @@ export async function withdrawTokens(
           .where(eq(streams.id, d.streamId));
       }
 
-      // Debit remainder from walletBalance (claimed BI lives here)
-      const newWalletBalance = Math.max(0, storedWalletBalance - remaining);
+      const newWalletBalance = Math.max(0, storedWalletBalance - walletDebit);
       await tx
         .update(userProfiles)
         .set({
@@ -1072,6 +1081,17 @@ export async function depositToSavings(amount: number): Promise<{
         sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
+      const userStreams = await tx.execute(
+        sql`SELECT *
+            FROM streams s
+            WHERE s.user_id = ${userUuid}
+              AND NOT EXISTS (
+                SELECT 1
+                FROM streams child
+                WHERE child.source_stream_id = s.id
+              )
+            FOR UPDATE`,
+      );
       const rows = (
         "rows" in profileRows ? profileRows.rows : profileRows
       ) as Array<{
@@ -1079,6 +1099,20 @@ export async function depositToSavings(amount: number): Promise<{
         savings_balance: string;
         unclaimed_savings_interest: string;
         savings_last_updated_at: string | Date | null;
+      }>;
+      const streamRows = (
+        "rows" in userStreams ? userStreams.rows : userStreams
+      ) as Array<{
+        id: string;
+        type: string;
+        total_amount: string;
+        initial_amount: string;
+        withdrawn_amount: string;
+        rate_per_second: string;
+        started_at: string | Date;
+        ends_at: string | Date;
+        party_id: string;
+        election_id: string;
       }>;
 
       const profile = rows[0];
@@ -1095,24 +1129,82 @@ export async function depositToSavings(amount: number): Promise<{
         ? new Date(profile.savings_last_updated_at)
         : null;
 
-      if (currentWalletBalance < flooredAmount) {
+      const nowMs = Date.now();
+      const streamDataList: (StreamData & { dbId: string })[] = streamRows.map(
+        (r) => ({
+          dbId: r.id,
+          id: r.id,
+          type: r.type as "SUBSIDY" | "AMBASSADOR" | "BASIC_INCOME",
+          totalAmount: Number.parseFloat(r.total_amount),
+          initialAmount: Number.parseFloat(r.initial_amount),
+          withdrawnAmount: Number.parseFloat(r.withdrawn_amount),
+          ratePerSecond: Number.parseFloat(r.rate_per_second),
+          startedAt: new Date(r.started_at).getTime(),
+          endsAt: new Date(r.ends_at).getTime(),
+          partyId: r.party_id,
+          electionId: r.election_id,
+        }),
+      );
+      const streamBalance = computeWalletBalance(streamDataList, nowMs);
+      const totalBalance = currentWalletBalance + streamBalance;
+
+      if (totalBalance < flooredAmount) {
         throw new Error(
-          `Tried ${flooredAmount} but only have ${currentWalletBalance.toFixed(6)} WDD.`,
+          `Tried ${flooredAmount} but only have ${totalBalance.toFixed(6)} WDD.`,
         );
       }
 
+      let remaining = flooredAmount;
+      const walletDebit = Math.min(currentWalletBalance, remaining);
+      remaining -= walletDebit;
+
+      const sortedStreams = [...streamDataList]
+        .filter((s) => s.type !== "BASIC_INCOME")
+        .sort((a, b) => a.startedAt - b.startedAt);
+      const debits: {
+        streamId: string;
+        newWithdrawn: number;
+      }[] = [];
+
+      for (const s of sortedStreams) {
+        if (remaining <= 0) break;
+        const accrued = computeStreamAccrued(s, nowMs);
+        const available = Math.max(0, accrued - s.withdrawnAmount);
+        if (available <= 0) continue;
+
+        const debit = Math.min(available, remaining);
+        debits.push({
+          streamId: s.dbId,
+          newWithdrawn: s.withdrawnAmount + debit,
+        });
+        remaining -= debit;
+      }
+
+      if (remaining > 1e-9) {
+        throw new Error(
+          `Tried ${flooredAmount} but only have ${(flooredAmount - remaining).toFixed(6)} WDD available right now.`,
+        );
+      }
+
+      for (const d of debits) {
+        await tx
+          .update(streams)
+          .set({ withdrawnAmount: d.newWithdrawn.toFixed(18) })
+          .where(eq(streams.id, d.streamId));
+      }
+
       const now = new Date();
-      const nowMs = now.getTime();
+      const nowMsForInterest = now.getTime();
       const newlyAccruedInterest = calculateAccruedSavingsInterest(
         currentSavingsBalance,
         currentLastUpdatedAt,
-        nowMs,
+        nowMsForInterest,
       );
 
       await tx
         .update(userProfiles)
         .set({
-          walletBalance: (currentWalletBalance - flooredAmount).toFixed(18),
+          walletBalance: (currentWalletBalance - walletDebit).toFixed(18),
           savingsBalance: (currentSavingsBalance + flooredAmount).toFixed(18),
           unclaimedSavingsInterest: (
             currentUnclaimedInterest + newlyAccruedInterest
@@ -1273,7 +1365,8 @@ export async function claimSavingsInterest(): Promise<{
         currentLastUpdatedAt,
         nowMs,
       );
-      const totalInterestToClaim = currentUnclaimedInterest + newlyAccruedInterest;
+      const totalInterestToClaim =
+        currentUnclaimedInterest + newlyAccruedInterest;
 
       if (totalInterestToClaim <= 1e-12) {
         return { success: false as const, error: "Nothing to collect yet" };
@@ -1281,7 +1374,8 @@ export async function claimSavingsInterest(): Promise<{
 
       const maxCanClaim = Math.max(
         0,
-        BASIC_INCOME_BALANCE_CAP - (currentWalletBalance + currentSavingsBalance),
+        BASIC_INCOME_BALANCE_CAP -
+          (currentWalletBalance + currentSavingsBalance),
       );
       const finalClaimable = Math.min(totalInterestToClaim, maxCanClaim);
 
