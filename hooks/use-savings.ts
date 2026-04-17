@@ -23,7 +23,7 @@ export function useSavings(
   savingsBalance: number,
   unclaimedSavingsInterest: number,
   savingsLastUpdatedAt: number | null,
-  walletBalance: number,
+  basicIncomeClaimedTotal: number,
   onSuccess: () => Promise<void> | void,
 ) {
   const { toast } = useToast();
@@ -38,7 +38,7 @@ export function useSavings(
         const base = Math.max(0, unclaimedSavingsInterest);
         const maxCanCollect = Math.max(
           0,
-          BASIC_INCOME_AND_SAVINGS_CAP - (walletBalance + savingsBalance),
+          BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal,
         );
         setDisplayAvailableInterest(base);
         setMaxCollectableAmount(Math.min(base, maxCanCollect));
@@ -47,13 +47,11 @@ export function useSavings(
 
       const elapsedDays = (Date.now() - savingsLastUpdatedAt) / 86_400_000;
       const accrued =
-        savingsBalance *
-        SAVINGS_DAILY_INTEREST_RATE *
-        Math.max(0, elapsedDays);
+        savingsBalance * SAVINGS_DAILY_INTEREST_RATE * Math.max(0, elapsedDays);
       const total = Math.max(0, unclaimedSavingsInterest + accrued);
       const maxCanCollect = Math.max(
         0,
-        BASIC_INCOME_AND_SAVINGS_CAP - (walletBalance + savingsBalance),
+        BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal,
       );
       setDisplayAvailableInterest(total);
       setMaxCollectableAmount(Math.min(total, maxCanCollect));
@@ -66,7 +64,7 @@ export function useSavings(
     savingsBalance,
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
-    walletBalance,
+    basicIncomeClaimedTotal,
   ]);
 
   const handleDeposit = async () => {

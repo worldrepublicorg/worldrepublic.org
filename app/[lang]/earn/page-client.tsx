@@ -133,6 +133,7 @@ export default function EarnPageClient({
             unclaimedSavingsInterest={
               profileData?.unclaimedSavingsInterest ?? 0
             }
+            basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
           />

@@ -710,14 +710,32 @@ export async function withdrawTokens(
 
       // Lock the user profile row too (for walletBalance debit)
       const profileRows = await tx.execute(
-        sql`SELECT wallet_balance FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+        sql`SELECT wallet_balance, savings_balance, basic_income_claimed_total
+            FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
+      );
+      const selfVerificationRows = await tx.execute(
+        sql`SELECT self_verified_at FROM user_self_verifications WHERE user_id = ${userUuid} LIMIT 1`,
       );
       const profileRow = (
         "rows" in profileRows ? profileRows.rows : profileRows
-      ) as Array<{ wallet_balance: string }>;
+      ) as Array<{
+        wallet_balance: string;
+        savings_balance: string;
+        basic_income_claimed_total: string;
+      }>;
+      const verificationRow = (
+        "rows" in selfVerificationRows
+          ? selfVerificationRows.rows
+          : selfVerificationRows
+      ) as Array<{ self_verified_at: string | Date | null }>;
       const storedWalletBalance = parseFloat(
         profileRow[0]?.wallet_balance ?? "0",
       );
+      const savingsBalance = parseFloat(profileRow[0]?.savings_balance ?? "0");
+      const restrictedClaimedTotal = parseFloat(
+        profileRow[0]?.basic_income_claimed_total ?? "0",
+      );
+      const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
       // computeWalletBalance already excludes BASIC_INCOME streams
       const streamBalance = computeWalletBalance(streamDataList, nowMs);
@@ -729,10 +747,19 @@ export async function withdrawTokens(
         );
       }
 
-      // Debit wallet balance first (claimed BI lives here),
-      // then consume non-BI streams for any remainder.
+      // For unverified users, keep claimed BI + claimed savings-interest
+      // protected while still allowing stream-derived funds in wallet to move.
+      // The protected floor in wallet is the portion that cannot be covered
+      // by savings balance.
       let remaining = flooredAmount;
-      const walletDebit = Math.min(storedWalletBalance, remaining);
+      const protectedWalletFloor = isSelfVerified
+        ? 0
+        : Math.max(0, restrictedClaimedTotal - savingsBalance);
+      const maxWalletSpendable = Math.max(
+        0,
+        storedWalletBalance - protectedWalletFloor,
+      );
+      const walletDebit = Math.min(maxWalletSpendable, remaining);
       remaining -= walletDebit;
 
       const sortedStreams = [...streamDataList]
@@ -1332,7 +1359,7 @@ export async function claimSavingsInterest(): Promise<{
 
     const result = await db.transaction(async (tx) => {
       const profileRows = await tx.execute(
-        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at
+        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at, basic_income_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
       const rows = (
@@ -1342,6 +1369,7 @@ export async function claimSavingsInterest(): Promise<{
         savings_balance: string;
         unclaimed_savings_interest: string;
         savings_last_updated_at: string | Date | null;
+        basic_income_claimed_total: string;
       }>;
 
       const profile = rows[0];
@@ -1357,6 +1385,9 @@ export async function claimSavingsInterest(): Promise<{
       const currentLastUpdatedAt = profile.savings_last_updated_at
         ? new Date(profile.savings_last_updated_at)
         : null;
+      const basicIncomeClaimedTotal = parseFloat(
+        profile.basic_income_claimed_total || "0",
+      );
 
       const now = new Date();
       const nowMs = now.getTime();
@@ -1374,8 +1405,7 @@ export async function claimSavingsInterest(): Promise<{
 
       const maxCanClaim = Math.max(
         0,
-        BASIC_INCOME_BALANCE_CAP -
-          (currentWalletBalance + currentSavingsBalance),
+        BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal,
       );
       const finalClaimable = Math.min(totalInterestToClaim, maxCanClaim);
 
@@ -1387,6 +1417,9 @@ export async function claimSavingsInterest(): Promise<{
         .update(userProfiles)
         .set({
           walletBalance: (currentWalletBalance + finalClaimable).toFixed(18),
+          basicIncomeClaimedTotal: (
+            basicIncomeClaimedTotal + finalClaimable
+          ).toFixed(18),
           unclaimedSavingsInterest: (
             totalInterestToClaim - finalClaimable
           ).toFixed(18),

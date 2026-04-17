@@ -34,6 +34,7 @@ interface SavingsSectionProps {
   walletBalance: number;
   savingsBalance: number;
   unclaimedSavingsInterest: number;
+  basicIncomeClaimedTotal: number;
   savingsLastUpdatedAt: number | null;
   onSuccess: () => Promise<void> | void;
 }
@@ -45,6 +46,7 @@ export function SavingsSection({
   walletBalance,
   savingsBalance,
   unclaimedSavingsInterest,
+  basicIncomeClaimedTotal,
   savingsLastUpdatedAt,
   onSuccess,
 }: SavingsSectionProps) {
@@ -71,12 +73,13 @@ export function SavingsSection({
     savingsBalance,
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
-    walletBalance,
+    basicIncomeClaimedTotal,
     onSuccess,
   );
 
   const maxButtonAmount = useMemo(() => {
-    const source = selectedAction === "deposit" ? walletBalance : savingsBalance;
+    const source =
+      selectedAction === "deposit" ? walletBalance : savingsBalance;
     const safeAmount = Math.max(0, source - 1e-12);
     return formatFullAmount(safeAmount);
   }, [selectedAction, walletBalance, savingsBalance]);
@@ -131,7 +134,7 @@ export function SavingsSection({
     }
 
     const fractionDigits = numericPart.includes(".")
-      ? numericPart.split(".")[1]?.length ?? 0
+      ? (numericPart.split(".")[1]?.length ?? 0)
       : 0;
     const formatted = new Intl.NumberFormat(locale, {
       useGrouping: false,
@@ -146,7 +149,7 @@ export function SavingsSection({
   const normalizedAmount = amount.trim().replace(",", ".");
   const parsedAmount = Number(normalizedAmount);
   const amountFractionDigits = normalizedAmount.includes(".")
-    ? normalizedAmount.split(".")[1]?.length ?? 0
+    ? (normalizedAmount.split(".")[1]?.length ?? 0)
     : 0;
   const amountDisplay = Number.isFinite(parsedAmount)
     ? new Intl.NumberFormat(locale, {
@@ -158,7 +161,8 @@ export function SavingsSection({
   const hasInsufficientBalance = () => {
     if (!amount || Number(amount) <= 0) return false;
     const entered = Number(amount);
-    const source = selectedAction === "deposit" ? walletBalance : savingsBalance;
+    const source =
+      selectedAction === "deposit" ? walletBalance : savingsBalance;
     return entered > source + 1e-9;
   };
 
@@ -351,14 +355,21 @@ export function SavingsSection({
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
-              <Typography variant="number" level={5} className="font-['Rubik'] text-base">
+              <Typography
+                variant="number"
+                level={5}
+                className="font-['Rubik'] text-base"
+              >
                 {collectableAmountDisplay}
               </Typography>
             </div>
           </div>
 
           {selectedAction === "deposit" ? (
-            <AlertDialog open={depositDialogOpen} onOpenChange={setDepositDialogOpen}>
+            <AlertDialog
+              open={depositDialogOpen}
+              onOpenChange={setDepositDialogOpen}
+            >
               <AlertDialogTrigger asChild>
                 <Button
                   disabled={isActionDisabled}
