@@ -172,7 +172,9 @@ export default function EarnPageClient({
     for (let i = 0; i < sorted.length; i++) {
       const entry = sorted[i];
       const rank =
-        i > 0 && entry.reward === sorted[i - 1].reward
+        i > 0 &&
+        entry.reward === sorted[i - 1].reward &&
+        entry.totalInvited === sorted[i - 1].totalInvited
           ? withRank[i - 1].rank
           : i + 1;
       withRank.push({ entry, rank });
