@@ -340,7 +340,7 @@ export default function EarnPageClient({
         ]}
       />
 
-      <main className="flex grow flex-col items-start">
+      <main className="flex grow flex-col">
         {activeTab === "basic_income" ? (
           <BasicIncomeSection
             lang={lang}
