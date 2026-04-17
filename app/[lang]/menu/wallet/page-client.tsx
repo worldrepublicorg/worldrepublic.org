@@ -58,6 +58,11 @@ import { cn, formatFullAmount, truncateToPrecision } from "@/lib/utils";
 import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
+const EXCHANGE_ICON_SRCS = [
+  "/icons/exchanges/jumper.svg",
+  "/icons/exchanges/uniswap.svg",
+] as const;
+
 interface WalletPageClientProps {
   lang: string;
   dictionary: Dictionary;
@@ -81,6 +86,20 @@ export default function WalletPageClient({
   const [serverData, setServerData] =
     useState<GetWalletAuthAndDataResult | null>(null);
   const previousClientAuthRef = useRef(clientIsAuthenticated);
+  const hasPreloadedTradeIconsRef = useRef(false);
+
+  const preloadTradeIcons = () => {
+    if (hasPreloadedTradeIconsRef.current || typeof window === "undefined") {
+      return;
+    }
+
+    hasPreloadedTradeIconsRef.current = true;
+
+    for (const src of EXCHANGE_ICON_SRCS) {
+      const image = new window.Image();
+      image.src = src;
+    }
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -97,6 +116,10 @@ export default function WalletPageClient({
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  useEffect(() => {
+    preloadTradeIcons();
   }, []);
 
   // Re-fetch wallet data when auth state flips to authenticated without navigation
