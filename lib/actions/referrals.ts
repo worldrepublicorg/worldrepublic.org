@@ -52,6 +52,23 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
       rewardMap.set(tr.userId, Number.parseFloat(tr.totalAllocated ?? "0"));
     }
 
+    const verifiedBonusRows = await readDb
+      .select({
+        userId: transactions.userId,
+        totalAllocated: sum(transactions.amount),
+      })
+      .from(transactions)
+      .where(eq(transactions.type, "REFERRAL_VERIFIED_BONUS"))
+      .groupBy(transactions.userId);
+
+    for (const tr of verifiedBonusRows) {
+      const existingReward = rewardMap.get(tr.userId) ?? 0;
+      rewardMap.set(
+        tr.userId,
+        existingReward + Number.parseFloat(tr.totalAllocated ?? "0"),
+      );
+    }
+
     const entries = rows.map((row) => ({
       username: row.username,
       totalInvited: Number(row.totalInvited),
