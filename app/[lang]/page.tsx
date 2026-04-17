@@ -6,13 +6,13 @@ import { getElections } from "@/lib/actions/elections";
 import type { Election } from "@/lib/types/elections";
 import VotePageClient from "./page-client";
 
-// Cache elections list for 60 seconds
+// Cache elections list for 1 day
 const getCachedElections = unstable_cache(
   async () => {
     return await getElections();
   },
   ["elections-list"],
-  { revalidate: 60, tags: ["elections-list"] },
+  { revalidate: 86400, tags: ["elections-list"] },
 );
 
 export async function generateStaticParams() {

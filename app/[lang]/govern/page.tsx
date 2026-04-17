@@ -8,16 +8,16 @@ import type { Election } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 import GovernPageClient from "./page-client";
 
-// Cache elections list for 60 seconds
+// Cache elections list for 1 day
 const getCachedElections = unstable_cache(
   async () => {
     return await getElections();
   },
   ["elections-list"],
-  { revalidate: 60, tags: ["elections-list"] },
+  { revalidate: 86400, tags: ["elections-list"] },
 );
 
-// Cache parties list for 60 seconds - same for all users
+// Cache parties list for 1 day - same for all users
 // Invalidated via revalidateTag("parties-list") when parties change
 const getCachedParties = unstable_cache(
   async () => {
