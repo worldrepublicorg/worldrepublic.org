@@ -12,7 +12,7 @@ const getCachedElections = unstable_cache(
     return await getElections();
   },
   ["elections-list"],
-  { revalidate: 86400, tags: ["elections-list"] },
+  { revalidate: 60, tags: ["elections-list"] },
 );
 
 export async function generateStaticParams() {
