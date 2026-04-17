@@ -16,6 +16,7 @@ import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
 import { SavingsSection } from "@/components/earn/savings-section";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
+import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
@@ -84,6 +85,7 @@ export default function EarnPageClient({
   const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
     useState<Party | null>(null);
   const [isPartyDrawerOpen, setIsPartyDrawerOpen] = useState(false);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   const fetchData = useCallback(async () => {
     const result = await getWalletAuthAndData();
@@ -141,6 +143,8 @@ export default function EarnPageClient({
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
+  const showLeaderboardScrollToTop =
+    activeTab === "ambassadors" || activeTab === "subsidies";
 
   const locale = lang.trim() || "en";
 
@@ -251,6 +255,21 @@ export default function EarnPageClient({
     };
   }, [activeTab, subsidyLeaderboard]);
 
+  useEffect(() => {
+    if (!showLeaderboardScrollToTop) {
+      setShowScrollToTop(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showLeaderboardScrollToTop]);
+
   const handleCopyReferralLink = async () => {
     if (!isAuthenticated) {
       setShowSignInDialog(true);
@@ -298,6 +317,13 @@ export default function EarnPageClient({
         error: dictionary.toasts.generic_error,
       });
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   if (showSkeleton) {
@@ -689,6 +715,11 @@ export default function EarnPageClient({
         open={showSignInDialog}
         onOpenChange={setShowSignInDialog}
         dictionary={dictionary}
+      />
+
+      <ScrollToTopButton
+        show={showLeaderboardScrollToTop && showScrollToTop}
+        onClick={scrollToTop}
       />
     </div>
   );

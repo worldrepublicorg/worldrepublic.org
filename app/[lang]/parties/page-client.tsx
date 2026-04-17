@@ -14,6 +14,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDrawer } from "@/components/learn-more-drawer";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { PoliticalPartyList } from "@/components/parties/political-party-list";
+import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
@@ -76,6 +77,7 @@ export default function PartiesPageClient({
   const [selectedPartyForDrawer, setSelectedPartyForDrawer] =
     useState<Party | null>(null);
   const [isPartyDrawerOpen, setIsPartyDrawerOpen] = useState(false);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   // Hydrate referral code from server when authenticated and not yet loaded
   useEffect(() => {
@@ -110,6 +112,8 @@ export default function PartiesPageClient({
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
+  const showLeaderboardScrollToTop =
+    activeTab === "ambassadors" || activeTab === "subsidies";
 
   const locale = lang.trim() || "en";
 
@@ -224,6 +228,21 @@ export default function PartiesPageClient({
     };
   }, [activeTab, subsidyLeaderboard]);
 
+  useEffect(() => {
+    if (!showLeaderboardScrollToTop) {
+      setShowScrollToTop(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showLeaderboardScrollToTop]);
+
   const handleCopyReferralLink = async () => {
     if (!isAuthenticated) {
       setShowSignInDialog(true);
@@ -273,6 +292,13 @@ export default function PartiesPageClient({
         error: dictionary.toasts.generic_error,
       });
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -641,6 +667,11 @@ export default function PartiesPageClient({
         open={showSignInDialog}
         onOpenChange={setShowSignInDialog}
         dictionary={dictionary}
+      />
+
+      <ScrollToTopButton
+        show={showLeaderboardScrollToTop && showScrollToTop}
+        onClick={scrollToTop}
       />
     </div>
   );
