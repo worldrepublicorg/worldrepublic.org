@@ -130,7 +130,7 @@ export default function PartiesPageClient({
     return a.localeCompare(b, undefined, { sensitivity: "base" });
   };
 
-  // Ambassador leaderboard: tie-aware rank (by reward), then by totalInvited, then by username (custom first, then citizen_)
+  // Ambassador leaderboard: tie-aware rank (by reward + totalInvited), then by username (custom first, then citizen_)
   const ambassadorWithRank = (() => {
     if (!leaderboard || leaderboard.length === 0) return [];
     const sorted = [...leaderboard].sort((a, b) => {
@@ -142,7 +142,9 @@ export default function PartiesPageClient({
     for (let i = 0; i < sorted.length; i++) {
       const entry = sorted[i];
       const rank =
-        i > 0 && entry.reward === sorted[i - 1].reward
+        i > 0 &&
+        entry.reward === sorted[i - 1].reward &&
+        entry.totalInvited === sorted[i - 1].totalInvited
           ? withRank[i - 1].rank
           : i + 1;
       withRank.push({ entry, rank });
