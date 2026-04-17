@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { headers } from "next/headers";
 import "./globals.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -7,6 +8,7 @@ import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
 import { Suspense } from "react";
 import BottomNav from "@/components/bottom-nav";
 import { ReferralCapture } from "@/components/referral-capture";
+import { getBrandingForHost } from "@/lib/branding";
 import { cn } from "@/lib/utils";
 
 const rubik = localFont({
@@ -34,53 +36,55 @@ const twkLausanne = localFont({
   display: "swap",
 });
 
-const APP_NAME = "World Republic";
-const APP_DEFAULT_TITLE = "World Republic";
-const APP_TITLE_TEMPLATE = "%s - World Republic";
-const APP_DESCRIPTION = "The new OS of humanity";
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const host =
+    requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
+  const branding = getBrandingForHost(host);
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.worldrepublic.org"),
-  applicationName: APP_NAME,
-  title: {
-    default: APP_DEFAULT_TITLE,
-    template: APP_TITLE_TEMPLATE,
-  },
-  description: APP_DESCRIPTION,
-  icons: {
-    icon: "/icons/android-chrome-192x192.png",
-    apple: "/icons/apple-touch-icon.png",
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    siteName: APP_NAME,
-    url: "https://www.worldrepublic.org",
+  return {
+    metadataBase: new URL(branding.metadataBase),
+    applicationName: branding.appName,
     title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
+      default: branding.appDefaultTitle,
+      template: branding.appTitleTemplate,
     },
-    description: APP_DESCRIPTION,
-    images: [
-      {
-        url: "/icons/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "World Republic",
+    description: branding.description,
+    icons: {
+      icon: "/icons/android-chrome-192x192.png",
+      apple: "/icons/apple-touch-icon.png",
+    },
+    formatDetection: {
+      telephone: false,
+    },
+    openGraph: {
+      type: "website",
+      siteName: branding.appName,
+      url: branding.metadataBase,
+      title: {
+        default: branding.appDefaultTitle,
+        template: branding.appTitleTemplate,
       },
-    ],
-  },
-  twitter: {
-    card: "summary",
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
+      description: branding.description,
+      images: [
+        {
+          url: "/icons/android-chrome-512x512.png",
+          width: 512,
+          height: 512,
+          alt: branding.appName,
+        },
+      ],
     },
-    description: APP_DESCRIPTION,
-  },
-};
+    twitter: {
+      card: "summary",
+      title: {
+        default: branding.appDefaultTitle,
+        template: branding.appTitleTemplate,
+      },
+      description: branding.description,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#000000",

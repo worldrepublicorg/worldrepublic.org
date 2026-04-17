@@ -1,10 +1,17 @@
 import type { MetadataRoute } from "next";
+import { headers } from "next/headers";
+import { getBrandingForHost } from "@/lib/branding";
 
-export default function manifest(): MetadataRoute.Manifest {
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const requestHeaders = await headers();
+  const host =
+    requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
+  const branding = getBrandingForHost(host);
+
   return {
-    name: "World Republic",
-    short_name: "World Republic",
-    description: "The new OS of humanity",
+    name: branding.appName,
+    short_name: branding.appName,
+    description: branding.description,
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
