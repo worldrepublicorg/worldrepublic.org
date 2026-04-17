@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Bertanding dalam pilihan raya dan dapatkan subsidi",
         "ambassadors": {
           "title": "Program Duta",
-          "description": "Jemput rakan dan peroleh ganjaran apabila mereka disahkan dan apabila parti mereka menerima subsidi.",
+          "description": "Jemput rakan dan peroleh ganjaran apabila mereka berjaya disahkan dan apabila parti mereka menerima subsidi",
           "leaderboard": "Papan pendahulu",
           "no_rewards_yet": "Belum ada ganjaran",
           "col_ambassador": "Duta",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Program Subsidi Parti",
           "no_subsidies_yet": "Tiada subsidi lagi",
-          "description": "Pembiayaan diagihkan kepada parti berdasarkan prestasi pilihan raya mereka",
+          "description": "Pembiayaan berdasarkan prestasi pilihan raya",
           "col_subsidy": "Subsidi"
         }
       },

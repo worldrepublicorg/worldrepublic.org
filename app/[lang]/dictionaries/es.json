@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Presentarse a elecciones y obtener subvenciones",
         "ambassadors": {
           "title": "Programa de Embajadores",
-          "description": "Invita a tus amigos y gana recompensas cuando se verifiquen y cuando su partido reciba subsidios.",
+          "description": "Invita a tus amigos y gana recompensas cuando queden verificados y cuando su partido reciba subsidios",
           "leaderboard": "Clasificación",
           "no_rewards_yet": "Aún no hay recompensas",
           "col_ambassador": "Embajadores",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Programa de Subsidios para Partidos",
           "no_subsidies_yet": "Aún no hay subsidios",
-          "description": "Financiación distribuida a los partidos en función de sus resultados electorales",
+          "description": "Financiación basada en el rendimiento electoral",
           "col_subsidy": "Subsidio"
         }
       },

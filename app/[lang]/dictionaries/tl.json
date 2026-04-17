@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy",
         "ambassadors": {
           "title": "Programang Embahador",
-          "description": "Mag-imbita ng mga kaibigan at kumita ng mga gantimpala kapag na-verify sila at kapag nakakakuha ng subsidy ang kanilang partido.",
+          "description": "Mag-imbita ng mga kaibigan at kumita ng mga gantimpala kapag na-verify sila at kapag nakakakuha ng subsidy ang kanilang partido",
           "leaderboard": "Leaderboard",
           "no_rewards_yet": "Wala pang gantimpala",
           "col_ambassador": "Mga Embahador",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Programa ng Subsidiya sa Partido",
           "no_subsidies_yet": "Wala pang subsidiya",
-          "description": "Pondo na ipinamamahagi sa mga partido batay sa kanilang pagganap sa halalan",
+          "description": "Pondo batay sa pagganap sa halalan",
           "col_subsidy": "Subsidiya"
         }
       },

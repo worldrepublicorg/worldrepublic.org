@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku",
         "ambassadors": {
           "title": "Programu ya Mabalozi",
-          "description": "Alika marafiki na upate zawadi wanapothibitishwa na chama chao kinapopata ruzuku.",
+          "description": "Alika marafiki na upate zawadi wanapothibitishwa na chama chao kinapopata ruzuku",
           "leaderboard": "Ubao wa viongozi",
           "no_rewards_yet": "Bado hakuna tuzo",
           "col_ambassador": "Mabalozi",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Mpango wa Ruzuku kwa Vyama",
           "no_subsidies_yet": "Hakuna ruzuku bado",
-          "description": "Ufadhili unaosambazwa kwa vyama kulingana na matokeo yao ya uchaguzi",
+          "description": "Ufadhili kulingana na utendaji wa uchaguzi",
           "col_subsidy": "Ruzuku"
         }
       },

@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Kandidujte ve volbách a získejte dotace",
         "ambassadors": {
           "title": "Ambasadorský Program",
-          "description": "Pozvěte přátele a získejte odměny, když se ověří a když jejich strana získá dotace.",
+          "description": "Pozvěte přátele a získejte odměny, když budou ověřeni a když jejich strana získá dotace",
           "leaderboard": "Žebříček",
           "no_rewards_yet": "Zatím žádné odměny",
           "col_ambassador": "Ambasadoři",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Program Dotací pro Strany",
           "no_subsidies_yet": "Zatím žádné dotace",
-          "description": "Financování rozdělované stranám na základě jejich volebních výsledků",
+          "description": "Financování na základě volebního výkonu",
           "col_subsidy": "Dotace"
         }
       },

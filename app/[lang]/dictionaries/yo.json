@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Dara pẹlu awọn idibo ki o si gba awọn iranlọwọ",
         "ambassadors": {
           "title": "Ètò Aṣojú",
-          "description": "Pe awon ore ki o si gba ere nigbati won ba fidi ara won mule ati nigbati egbe oselu won ba gba iranwo owo.",
+          "description": "Pe awon ore ki o si gba ere nigbati won ba fidi ara won mule ati nigbati egbe oselu won ba gba iranwo owo",
           "leaderboard": "Àtòjọ olórí",
           "no_rewards_yet": "Kò sí ẹbun kankan síbẹ̀",
           "col_ambassador": "Aṣojú",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Eto Ifunni Owo Ẹgbẹ Oselu",
           "no_subsidies_yet": "Ko ti si ifunni owo",
-          "description": "Owo ti a pin fun awọn ẹgbẹ oselu da lori iṣẹ wọn ninu idibo",
+          "description": "Isuna ti o da lori bi won se sise ninu idibo",
           "col_subsidy": "Owó ìrànwọ́"
         }
       },

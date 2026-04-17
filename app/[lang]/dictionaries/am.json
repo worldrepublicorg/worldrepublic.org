@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ",
         "ambassadors": {
           "title": "የአምባሳደር ፕሮግራም",
-          "description": "ጓደኞችን ይጋብዙ እና ሲያረጋግጡ እና ፓርቲያቸው ድጎማ ሲያገኝ ሽልማቶችን ያግኙ።",
+          "description": "ጓደኞችን ይጋብዙ እና ሲረጋገጡ እና ፓርቲያቸው ድጎማ ሲያገኝ ሽልማቶችን ያግኙ",
           "leaderboard": "ደረጃ ሰንጠረዥ",
           "no_rewards_yet": "እስካሁን ምንም ምርጥ ዋጋ የለም",
           "col_ambassador": "አምባሳደሮች",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "የፓርቲ ድጎማ ፕሮግራም",
           "no_subsidies_yet": "እስካሁን ምንም ድጎማ የለም",
-          "description": "በምርጫ ውጤታቸው መሰረት ለፓርቲዎች የሚከፋፈል የገንዘብ ድጋፍ",
+          "description": "በምርጫ አፈጻጸም ላይ የተመሠረተ ፋይናንስ",
           "col_subsidy": "ድጎማ"
         }
       },

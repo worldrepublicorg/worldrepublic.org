@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Tham gia bầu cử và nhận trợ cấp",
         "ambassadors": {
           "title": "Chương trình Đại sứ",
-          "description": "Mời bạn bè và nhận thưởng khi họ xác minh và khi đảng của họ nhận trợ cấp.",
+          "description": "Mời bạn bè và nhận thưởng khi họ xác minh và khi đảng của họ nhận trợ cấp",
           "leaderboard": "Bảng xếp hạng",
           "no_rewards_yet": "Chưa có phần thưởng nào",
           "col_ambassador": "Đại sứ",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Chương trình Trợ cấp Đảng",
           "no_subsidies_yet": "Chưa có trợ cấp",
-          "description": "Kinh phí được phân bổ cho các đảng dựa trên kết quả bầu cử của họ",
+          "description": "Nguồn tài trợ dựa trên thành tích bầu cử",
           "col_subsidy": "Trợ cấp"
         }
       },

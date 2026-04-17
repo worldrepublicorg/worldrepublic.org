@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Seçimlerde aday olun ve ödenek alın",
         "ambassadors": {
           "title": "Elçi Programı",
-          "description": "Arkadaşlarını davet et ve onlar doğrulandığında ve partileri sübvansiyon aldığında ödüller kazan.",
+          "description": "Arkadaşlarını davet et ve onlar doğrulanmış olduğunda ve partileri sübvansiyon aldığında ödüller kazan",
           "leaderboard": "Sıralama",
           "no_rewards_yet": "Henüz ödül yok",
           "col_ambassador": "Elçiler",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Parti Sübvansiyon Programı",
           "no_subsidies_yet": "Henüz sübvansiyon yok",
-          "description": "Partilere seçim performanslarına göre dağıtılan fonlar",
+          "description": "Seçim performansına dayalı finansman",
           "col_subsidy": "Sübvansiyon"
         }
       },

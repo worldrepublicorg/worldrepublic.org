@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies",
         "ambassadors": {
           "title": "Ambassadeursprogramma",
-          "description": "Nodig vrienden uit en verdien beloningen wanneer zij zich verifiëren en wanneer hun partij subsidies ontvangt.",
+          "description": "Nodig vrienden uit en verdien beloningen wanneer zij geverifieerd worden en wanneer hun partij subsidies ontvangt",
           "leaderboard": "Ranglijst",
           "no_rewards_yet": "Nog geen beloningen",
           "col_ambassador": "Ambassadeurs",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Partijsubsidieprogramma",
           "no_subsidies_yet": "Nog geen subsidies",
-          "description": "Financiering verdeeld onder partijen op basis van hun verkiesingsresultaten",
+          "description": "Financiering op basis van electorale prestaties",
           "col_subsidy": "Subsidie"
         }
       },

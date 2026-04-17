@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Candidati alle elezioni e ottieni sussidi",
         "ambassadors": {
           "title": "Programma Ambasciatori",
-          "description": "Invita amici e guadagna ricompense quando si verificano e quando il loro partito riceve sussidi.",
+          "description": "Invita amici e guadagna ricompense quando vengono verificati e quando il loro partito riceve sussidi",
           "leaderboard": "Classifica",
           "no_rewards_yet": "Ancora nessuna ricompensa",
           "col_ambassador": "Ambasciatori",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Programma di Sussidi ai Partiti",
           "no_subsidies_yet": "Nessun sussidio ancora",
-          "description": "Finanziamenti distribuiti ai partiti in base ai loro risultati elettorali",
+          "description": "Finanziamento basato sulla performance elettorale",
           "col_subsidy": "Sussidio"
         }
       },

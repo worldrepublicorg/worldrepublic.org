@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi",
         "ambassadors": {
           "title": "Shirin Jakadu",
-          "description": "Gayyaci abokai kuma ka samu lada idan sun tabbatar da kansu da kuma idan jam’iyyarsu ta samu tallafi.",
+          "description": "Gayyaci abokai kuma ka samu lada idan sun tabbatar da kansu da kuma idan jam’iyyarsu ta samu tallafi",
           "leaderboard": "Jerin masu jagoranci",
           "no_rewards_yet": "Babu lada da aka samu tukuna",
           "col_ambassador": "Jakadu",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Shirin Tallafin Jam'iyya",
           "no_subsidies_yet": "Babu tallafi tukuna",
-          "description": "Kudin da ake rabawa jam'iyyu dangane da kokarinsu a zabe",
+          "description": "Tallafi bisa ga yadda aka yi a zabe",
           "col_subsidy": "Tallafi"
         }
       },

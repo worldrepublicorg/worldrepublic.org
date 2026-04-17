@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin",
         "ambassadors": {
           "title": "Səfir Proqramı",
-          "description": "Dostlarını dəvət et və onlar təsdiqlənəndə və partiyaları subsidiya alanda mükafat qazan.",
+          "description": "Dostlarını dəvət et və onlar təsdiqlənəndə və partiyaları subsidiya alanda mükafat qazan",
           "leaderboard": "Liderlik cədvəli",
           "no_rewards_yet": "Hələ mükafat yoxdur",
           "col_ambassador": "Səfirlər",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Partiya Subsidiya Proqramı",
           "no_subsidies_yet": "Hələ ki, subsidiya yoxdur",
-          "description": "Seçki nəticələrinə əsasən partiyalara paylanan maliyyə",
+          "description": "Seçki performansına əsaslanan maliyyələşdirmə",
           "col_subsidy": "Subsidiya"
         }
       },

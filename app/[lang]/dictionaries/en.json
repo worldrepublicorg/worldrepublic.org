@@ -68,7 +68,7 @@
         },
         "ambassadors": {
           "title": "Ambassador Program",
-          "description": "Invite friends and earn rewards when they verify and when their party gets subsidies.",
+          "description": "Invite friends and earn rewards when they get verified and when their party gets subsidies",
           "share_referral_link": "Share referral link",
           "leaderboard": "Leaderboard",
           "no_rewards_yet": "No rewards yet",
@@ -78,7 +78,7 @@
         },
         "subsidies": {
           "title": "Party Subsidy Program",
-          "description": "Funding distributed to parties based on their electoral performance",
+          "description": "Funding based on electoral performance",
           "no_subsidies_yet": "No subsidies yet",
           "col_subsidy": "Subsidy"
         },

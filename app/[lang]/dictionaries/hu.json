@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat",
         "ambassadors": {
           "title": "Nagyköveti Program",
-          "description": "Hívd meg barátaidat, és szerezz jutalmat, amikor hitelesítik magukat, és amikor a pártjuk támogatást kap.",
+          "description": "Hívd meg barátaidat, és szerezz jutalmat, amikor hitelesítik magukat, és amikor a pártjuk támogatást kap",
           "leaderboard": "Ranglista",
           "no_rewards_yet": "Még nincsenek jutalmak",
           "col_ambassador": "Nagykövetek",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Párttámogatási Program",
           "no_subsidies_yet": "Még nincsenek támogatások",
-          "description": "A pártok között választási eredményeik alapján elosztott támogatás",
+          "description": "A választási teljesítményen alapuló finanszírozás",
           "col_subsidy": "Támogatás"
         }
       },

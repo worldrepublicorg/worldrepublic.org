@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni",
         "ambassadors": {
           "title": "Prugramma d'Ambasciatori",
-          "description": "Invita amichi è guadagna ricumpense quandu si verificanu è quandu u so partitu riceve sussidi.",
+          "description": "Invita amichi è guadagna ricumpense quandu si verificanu è quandu u so partitu riceve sussidi",
           "leaderboard": "Classificazione",
           "no_rewards_yet": "Ancu nisuna ricumpensa",
           "col_ambassador": "Ambasciatori",
@@ -88,7 +88,7 @@
         "subsidies": {
           "title": "Prugramma di Subvenzione di Partitu",
           "no_subsidies_yet": "Ùn ci hè ancu suvvenzioni",
-          "description": "Finanziamentu distribuitu à i partiti basatu annantu à u so risultatu eletturale",
+          "description": "Finanziamentu basatu nantu à u rendimentu eletturale",
           "col_subsidy": "Sussidiu"
         }
       },
