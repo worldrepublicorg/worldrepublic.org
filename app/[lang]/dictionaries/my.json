@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "ပါတီများ",
         "elections": "ရွေးကောက်ပွဲများ",
         "referendums": "ဆန္ဒခံယူပွဲများ"
       },

@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "दल",
         "elections": "चुनाव",
         "referendums": "जनमत संग्रह"
       },

@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "দলসমূহ",
         "elections": "নির্বাচন",
         "referendums": "গণভোট"
       },

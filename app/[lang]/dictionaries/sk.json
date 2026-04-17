@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Strany",
         "elections": "Voľby",
         "referendums": "Referendá"
       },

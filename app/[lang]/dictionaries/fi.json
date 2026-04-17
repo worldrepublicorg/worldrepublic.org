@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Puolueet",
         "elections": "Vaalit",
         "referendums": "Kansanäänestykset"
       },

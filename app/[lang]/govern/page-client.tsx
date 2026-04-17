@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { PoliticalPartyList } from "@/components/parties/political-party-list";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { ElectionsList } from "@/components/vote/elections-list";
@@ -15,19 +16,22 @@ import {
   getWalletAuthAndData,
 } from "@/lib/actions/member";
 import type { Election } from "@/lib/types/elections";
+import type { Party } from "@/lib/types/parties";
 import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
-const TABS = ["elections", "referendums"] as const;
+const TABS = ["elections", "parties", "referendums"] as const;
 type TabKey = (typeof TABS)[number];
 
 interface GovernPageClientProps {
   elections: Election[];
+  parties: Party[] | null;
   dictionary: Dictionary;
   lang: string;
 }
 
 export default function GovernPageClient({
   elections,
+  parties,
   dictionary,
   lang,
 }: GovernPageClientProps) {
@@ -80,6 +84,10 @@ export default function GovernPageClient({
             label: dictionary.pages.govern.tabs.elections,
           },
           {
+            key: "parties",
+            label: dictionary.pages.govern.tabs.parties,
+          },
+          {
             key: "referendums",
             label: dictionary.pages.govern.tabs.referendums,
           },
@@ -94,6 +102,12 @@ export default function GovernPageClient({
               dictionary={dictionary}
             />
           </div>
+        ) : activeTab === "parties" ? (
+          <PoliticalPartyList
+            initialParties={parties}
+            dictionary={dictionary}
+            lang={lang}
+          />
         ) : (
           <div className="flex grow items-center justify-center">
             <div className="flex w-full min-w-0 flex-col items-center justify-center p-6 text-center">

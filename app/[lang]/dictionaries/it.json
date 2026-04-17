@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Partiti",
         "elections": "Elezioni",
         "referendums": "Referendum"
       },

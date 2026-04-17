@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Partiyalar",
         "elections": "Seçkilər",
         "referendums": "Referendumlar"
       },

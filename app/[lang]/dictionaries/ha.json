@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Jam'iyyu",
         "elections": "Zaɓe",
         "referendums": "Zaɓen raba gardama"
       },

@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Đảng phái",
         "elections": "Bầu cử",
         "referendums": "Trưng cầu dân ý"
       },

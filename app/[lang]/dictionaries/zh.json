@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "政党",
         "elections": "选举",
         "referendums": "公投"
       },

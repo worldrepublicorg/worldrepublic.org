@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Parti",
         "elections": "Pilihan raya",
         "referendums": "Referendum"
       },

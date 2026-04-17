@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "પાર્ટીઓ",
         "elections": "ચૂંટણીઓ",
         "referendums": "જનમત સંહિતાઓ"
       },

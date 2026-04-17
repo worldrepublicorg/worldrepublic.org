@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "ፓርቲዎች",
         "elections": "ምርጫዎች",
         "referendums": "የህዝብ ድምጽ"
       },

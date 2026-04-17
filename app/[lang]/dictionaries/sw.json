@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Vyakula",
         "elections": "Uchaguzi",
         "referendums": "Kura za maoni"
       },

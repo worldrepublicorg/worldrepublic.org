@@ -8,6 +8,7 @@
   "pages": {
     "govern": {
       "tabs": {
+        "parties": "Партии",
         "elections": "Выборы",
         "referendums": "Референдумы"
       },
