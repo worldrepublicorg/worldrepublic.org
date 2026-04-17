@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
@@ -37,6 +38,7 @@ export default function VotePageClient({
   const cachedData = useWalletAuthCache();
   const [serverData, setServerData] =
     useState<GetWalletAuthAndDataResult | null>(null);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -56,6 +58,26 @@ export default function VotePageClient({
   const activeTab: TabKey = TABS.includes(tab as TabKey)
     ? (tab as TabKey)
     : TABS[0];
+  const showElectionsScrollToTop = activeTab === "elections";
+
+  useEffect(() => {
+    if (!showElectionsScrollToTop) {
+      setShowScrollToTop(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showElectionsScrollToTop]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -126,6 +148,10 @@ export default function VotePageClient({
           </div>
         )}
       </div>
+      <ScrollToTopButton
+        show={showElectionsScrollToTop && showScrollToTop}
+        onClick={scrollToTop}
+      />
     </>
   );
 }
