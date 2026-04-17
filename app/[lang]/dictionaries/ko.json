@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "선거에 출마하고 보조금을 받으세요",
         "ambassadors": {
           "title": "홍보대사 프로그램",
-          "description": "친구를 초대하고 그들의 정당이 보조금을 받으면 보상을 받으세요",
+          "description": "친구를 초대하고, 친구가 인증을 완료할 때와 친구의 정당이 보조금을 받을 때 보상을 받으세요.",
           "leaderboard": "리더보드",
           "no_rewards_yet": "아직 보상이 없습니다",
           "col_ambassador": "홍보대사",

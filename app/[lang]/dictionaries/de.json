@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Bei Wahlen antreten und Subventionen erhalten",
         "ambassadors": {
           "title": "Botschafterprogramm",
-          "description": "Laden Sie Freunde ein und verdienen Sie eine Belohnung, wenn deren Partei Zuschüsse erhält",
+          "description": "Lade Freunde ein und verdiene Belohnungen, wenn sie sich verifizieren und wenn ihre Partei Zuschüsse erhält.",
           "leaderboard": "Rangliste",
           "no_rewards_yet": "Noch keine Belohnungen",
           "col_ambassador": "Botschafter",

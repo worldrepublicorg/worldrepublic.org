@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "参加选举并获得补贴",
         "ambassadors": {
           "title": "大使计划",
-          "description": "邀请朋友，当他们的政党获得补贴时赚取奖励",
+          "description": "邀请朋友并在他们完成验证以及其政党获得补贴时获得奖励。",
           "leaderboard": "排行榜",
           "no_rewards_yet": "暂无奖励",
           "col_ambassador": "大使",

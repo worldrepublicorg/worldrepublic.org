@@ -77,7 +77,7 @@
         "run_on_elections_and_earn": "Ikut pemilu dan dapatkan subsidi",
         "ambassadors": {
           "title": "Program Duta",
-          "description": "Undang teman dan dapatkan hadiah saat partai mereka menerima subsidi",
+          "description": "Undang teman dan dapatkan hadiah saat mereka terverifikasi dan saat partai mereka menerima subsidi.",
           "leaderboard": "Papan peringkat",
           "no_rewards_yet": "Belum ada hadiah",
           "col_ambassador": "Duta",
