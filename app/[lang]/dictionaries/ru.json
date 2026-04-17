@@ -182,6 +182,7 @@
           "title": "АККАУНТ",
           "account_info": "Информация об аккаунте",
           "referral_code": "Реферальный код",
+          "referred_by": "Пригласил",
           "language": "Язык"
         },
         "help": {

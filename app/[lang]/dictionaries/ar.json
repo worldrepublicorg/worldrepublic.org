@@ -182,6 +182,7 @@
           "title": "الحساب",
           "account_info": "معلومات الحساب",
           "referral_code": "رمز الإحالة",
+          "referred_by": "أحيل بواسطة",
           "language": "اللغة"
         },
         "help": {

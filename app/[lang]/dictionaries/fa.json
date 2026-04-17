@@ -182,6 +182,7 @@
           "title": "حساب کاربری",
           "account_info": "اطلاعات حساب",
           "referral_code": "کد معرف",
+          "referred_by": "معرفی‌شده توسط",
           "language": "زبان"
         },
         "help": {

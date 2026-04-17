@@ -182,6 +182,7 @@
           "title": "アカウント",
           "account_info": "アカウント情報",
           "referral_code": "紹介コード",
+          "referred_by": "紹介者",
           "language": "言語"
         },
         "help": {

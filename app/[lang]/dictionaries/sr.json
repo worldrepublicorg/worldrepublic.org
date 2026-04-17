@@ -182,6 +182,7 @@
           "title": "РАЧУН",
           "account_info": "Информације о рачуну",
           "referral_code": "Реферални код",
+          "referred_by": "Pozvao",
           "language": "Језик"
         },
         "help": {

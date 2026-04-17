@@ -21,9 +21,9 @@ import {
   PiCaretLeft,
   PiCircleNotch,
   PiLinkSimple,
-  PiPlus,
   PiPencilSimple,
   PiPencilSimpleFill,
+  PiPlus,
   PiShareNetwork,
   PiTrash,
   PiTrashFill,
@@ -76,7 +76,10 @@ export default function AccountPageClient({
     if (link !== "google" || hasHandledLink.current) return;
     hasHandledLink.current = true;
 
-    if (error === "account_already_linked" || error === "OAuthAccountNotLinked") {
+    if (
+      error === "account_already_linked" ||
+      error === "OAuthAccountNotLinked"
+    ) {
       toast.error({
         title: dictionary.toasts.wallet.google_already_linked,
       });
@@ -91,7 +94,8 @@ export default function AccountPageClient({
 
   useEffect(() => {
     let cancelled = false;
-    const pendingReferral = localStorage.getItem("pending_referral") || undefined;
+    const pendingReferral =
+      localStorage.getItem("pending_referral") || undefined;
     getWalletAuthAndData(pendingReferral).then((result) => {
       if (cancelled) return;
       setServerData(result);
@@ -110,6 +114,7 @@ export default function AccountPageClient({
   const email = data?.email ?? null;
   const username = data?.profileData?.username ?? null;
   const referralCode = data?.profileData?.referralCode ?? null;
+  const referredByUsername = data?.profileData?.referredByUsername ?? null;
   const isAuthenticated = data?.authenticated ?? false;
   const authenticated = isAuthenticated || clientIsAuthenticated;
   const userUuid = data?.profileData?.userUuid ?? null;
@@ -266,7 +271,9 @@ export default function AccountPageClient({
       );
 
       if (optionsResult.error) {
-        throw new Error(optionsResult.error || "Failed to get registration options");
+        throw new Error(
+          optionsResult.error || "Failed to get registration options",
+        );
       }
 
       if (!("challenge" in optionsResult)) {
@@ -313,7 +320,10 @@ export default function AccountPageClient({
     } catch (error) {
       console.error("Error adding passkey:", error);
       toast.error({
-        title: error instanceof Error ? error.message : dictionary.toasts.wallet.passkey_add_failed,
+        title:
+          error instanceof Error
+            ? error.message
+            : dictionary.toasts.wallet.passkey_add_failed,
       });
     } finally {
       setIsAddingPasskey(false);
@@ -406,6 +416,15 @@ export default function AccountPageClient({
                     }
                   />
                 </div>
+                {referredByUsername && (
+                  <div>
+                    <CustomListItem
+                      label={dictionary.pages.menu.sections.account.referred_by}
+                      description={referredByUsername}
+                      noPointer
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
@@ -424,7 +443,11 @@ export default function AccountPageClient({
 
             <div>
               <div className="mb-4 flex">
-                <Typography variant="subtitle" level={3} className="text-gray-400">
+                <Typography
+                  variant="subtitle"
+                  level={3}
+                  className="text-gray-400"
+                >
                   {dictionary.pages.wallet.sections.security}
                 </Typography>
               </div>
@@ -441,7 +464,9 @@ export default function AccountPageClient({
                   >
                     <CustomListItem
                       label={dictionary.pages.wallet.sections.google_account}
-                      description={dictionary.pages.wallet.sections.google_not_linked}
+                      description={
+                        dictionary.pages.wallet.sections.google_not_linked
+                      }
                       endAdornment={
                         <div className="flex items-center text-gray-500">
                           {isLinkingGoogle ? (
@@ -465,7 +490,10 @@ export default function AccountPageClient({
                 >
                   <CustomListItem
                     label={dictionary.pages.wallet.sections.passkeys}
-                    description={dictionary.pages.wallet.sections.passkeys_linked.replace("{count}", String(passkeyCount))}
+                    description={dictionary.pages.wallet.sections.passkeys_linked.replace(
+                      "{count}",
+                      String(passkeyCount),
+                    )}
                     endAdornment={
                       <div className="flex items-center text-gray-500">
                         {isAddingPasskey ? (

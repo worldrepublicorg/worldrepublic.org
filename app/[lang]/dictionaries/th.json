@@ -182,6 +182,7 @@
           "title": "บัญชี",
           "account_info": "ข้อมูลบัญชี",
           "referral_code": "รหัสแนะนำ",
+          "referred_by": "แนะนำโดย",
           "language": "ภาษา"
         },
         "help": {

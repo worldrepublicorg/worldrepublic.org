@@ -182,6 +182,7 @@
           "title": "TILI",
           "account_info": "Tilitiedot",
           "referral_code": "Suosittelukoodi",
+          "referred_by": "Suosittelija",
           "language": "Kieli"
         },
         "help": {

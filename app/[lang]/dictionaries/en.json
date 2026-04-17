@@ -182,6 +182,7 @@
           "title": "ACCOUNT",
           "account_info": "Account info",
           "referral_code": "Referral code",
+          "referred_by": "Referred by",
           "language": "Language"
         },
         "help": {

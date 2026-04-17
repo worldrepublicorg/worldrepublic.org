@@ -182,6 +182,7 @@
           "title": "COMPTE",
           "account_info": "Informations du compte",
           "referral_code": "Code de parrainage",
+          "referred_by": "Parrainé par",
           "language": "Langue"
         },
         "help": {

@@ -182,6 +182,7 @@
           "title": "REKENING",
           "account_info": "Rekeninginligting",
           "referral_code": "Verwysingskode",
+          "referred_by": "Verwys deur",
           "language": "Taal"
         },
         "help": {

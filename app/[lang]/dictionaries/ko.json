@@ -182,6 +182,7 @@
           "title": "계정",
           "account_info": "계정 정보",
           "referral_code": "추천 코드",
+          "referred_by": "추천인",
           "language": "언어"
         },
         "help": {

@@ -182,6 +182,7 @@
           "title": "खाता",
           "account_info": "खाता जानकारी",
           "referral_code": "रेफरल कोड",
+          "referred_by": "द्वारा रेफर किया गया",
           "language": "भाषा"
         },
         "help": {

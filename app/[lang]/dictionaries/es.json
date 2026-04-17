@@ -182,6 +182,7 @@
           "title": "CUENTA",
           "account_info": "Información de la cuenta",
           "referral_code": "Código de invitación",
+          "referred_by": "Referido por",
           "language": "Idioma"
         },
         "help": {

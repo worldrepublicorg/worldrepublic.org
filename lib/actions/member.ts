@@ -343,6 +343,7 @@ export type GetWalletAuthAndDataProfileData = {
   selfVerifiedAt: number | null;
   username: string | null;
   referralCode: string | null;
+  referredByUsername: string | null;
   userId: string;
   userUuid: string | null;
   basicIncomeActivatedAt: number | null;
@@ -463,6 +464,22 @@ export async function getWalletAuthAndData(
 
   // Fetch BI-related fields directly from user_profiles
   const readDb = getDbReadOnly();
+  const [referralRow] = await readDb
+    .select({ referrerId: referrals.referrerId })
+    .from(referrals)
+    .where(eq(referrals.referredId, userUuid))
+    .limit(1);
+
+  let referredByUsername: string | null = null;
+  if (referralRow?.referrerId) {
+    const [referrerProfileRow] = await readDb
+      .select({ username: userProfiles.username })
+      .from(userProfiles)
+      .where(eq(userProfiles.id, referralRow.referrerId))
+      .limit(1);
+    referredByUsername = referrerProfileRow?.username ?? null;
+  }
+
   const [profileRow] = await readDb
     .select({
       walletBalance: userProfiles.walletBalance,
@@ -510,6 +527,7 @@ export async function getWalletAuthAndData(
     selfVerifiedAt: selfVerificationRow?.selfVerifiedAt?.getTime() ?? null,
     username: null,
     referralCode: null,
+    referredByUsername,
     userId: session.user.id,
     userUuid,
     basicIncomeActivatedAt:
@@ -522,6 +540,7 @@ export async function getWalletAuthAndData(
       ...profileData,
       username: profileResult.profile.username ?? null,
       referralCode: profileResult.profile.referralCode ?? null,
+      referredByUsername,
     };
   }
 

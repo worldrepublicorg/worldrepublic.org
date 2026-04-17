@@ -182,6 +182,7 @@
           "title": "HISOB",
           "account_info": "Hisob ma'lumoti",
           "referral_code": "Tavsiya kodi",
+          "referred_by": "Taklif qilgan",
           "language": "Til"
         },
         "help": {

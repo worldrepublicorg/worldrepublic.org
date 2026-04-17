@@ -182,6 +182,7 @@
           "title": "HESAP",
           "account_info": "Hesap bilgileri",
           "referral_code": "Davet kodu",
+          "referred_by": "Davet eden",
           "language": "Dil"
         },
         "help": {

@@ -182,6 +182,7 @@
           "title": "FIÓK",
           "account_info": "Fiók információk",
           "referral_code": "Ajánlókód",
+          "referred_by": "Meghívta",
           "language": "Nyelv"
         },
         "help": {

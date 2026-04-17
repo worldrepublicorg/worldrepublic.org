@@ -182,6 +182,7 @@
           "title": "ACCOUNT",
           "account_info": "Accountinformatie",
           "referral_code": "Verwijzingscode",
+          "referred_by": "Verwezen door",
           "language": "Taal"
         },
         "help": {

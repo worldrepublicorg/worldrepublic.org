@@ -182,6 +182,7 @@
           "title": "ખાતું",
           "account_info": "ખાતાની માહિતી",
           "referral_code": "રેફરલ કોડ",
+          "referred_by": "દ્વારા રેફર કરેલ",
           "language": "ભાષા"
         },
         "help": {

@@ -182,6 +182,7 @@
           "title": "অ্যাকাউন্ট",
           "account_info": "অ্যাকাউন্ট তথ্য",
           "referral_code": "রেফারেল কোড",
+          "referred_by": "যিনি রেফার করেছেন",
           "language": "ভাষা"
         },
         "help": {

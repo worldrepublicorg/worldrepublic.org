@@ -182,6 +182,7 @@
           "title": "KONTO",
           "account_info": "Kontoinformationen",
           "referral_code": "Empfehlungscode",
+          "referred_by": "Geworben von",
           "language": "Sprache"
         },
         "help": {

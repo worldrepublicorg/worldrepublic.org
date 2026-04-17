@@ -182,6 +182,7 @@
           "title": "TÀI KHOẢN",
           "account_info": "Thông tin tài khoản",
           "referral_code": "Mã giới thiệu",
+          "referred_by": "Giới thiệu bởi",
           "language": "Ngôn ngữ"
         },
         "help": {

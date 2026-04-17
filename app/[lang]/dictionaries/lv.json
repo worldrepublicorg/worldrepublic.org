@@ -182,6 +182,7 @@
           "title": "KONTS",
           "account_info": "Konta informācija",
           "referral_code": "Ieteikuma kods",
+          "referred_by": "Ieteica",
           "language": "Valoda"
         },
         "help": {

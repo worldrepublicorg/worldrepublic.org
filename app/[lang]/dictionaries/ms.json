@@ -182,6 +182,7 @@
           "title": "AKAUN",
           "account_info": "Maklumat akaun",
           "referral_code": "Kod rujukan",
+          "referred_by": "Dirujuk oleh",
           "language": "Bahasa"
         },
         "help": {

@@ -182,6 +182,7 @@
           "title": "መለያ",
           "account_info": "የመለያ መረጃ",
           "referral_code": "የማጣቀሻ ኮድ",
+          "referred_by": "የጠቀሰው",
           "language": "ቋንቋ"
         },
         "help": {

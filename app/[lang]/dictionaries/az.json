@@ -182,6 +182,7 @@
           "title": "HESAB",
           "account_info": "Hesab məlumatı",
           "referral_code": "Tövsiyə kodu",
+          "referred_by": "Dəvət edən",
           "language": "Dil"
         },
         "help": {

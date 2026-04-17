@@ -182,6 +182,7 @@
           "title": "АКАУНТ",
           "account_info": "Информация за акаунта",
           "referral_code": "Реферален код",
+          "referred_by": "Препоръчан от",
           "language": "Език"
         },
         "help": {

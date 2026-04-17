@@ -182,6 +182,7 @@
           "title": "ÚČET",
           "account_info": "Informace o účtu",
           "referral_code": "Kód doporučení",
+          "referred_by": "Doporučil",
           "language": "Jazyk"
         },
         "help": {

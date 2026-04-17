@@ -182,6 +182,7 @@
           "title": "CONT",
           "account_info": "Informații cont",
           "referral_code": "Cod de recomandare",
+          "referred_by": "Recomandat de",
           "language": "Limbă"
         },
         "help": {
