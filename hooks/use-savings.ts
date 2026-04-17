@@ -24,6 +24,7 @@ export function useSavings(
   unclaimedSavingsInterest: number,
   savingsLastUpdatedAt: number | null,
   basicIncomeClaimedTotal: number,
+  isSelfVerified: boolean,
   onSuccess: () => Promise<void> | void,
 ) {
   const { toast } = useToast();
@@ -36,10 +37,9 @@ export function useSavings(
     const calculateInterest = () => {
       if (!savingsLastUpdatedAt || savingsBalance <= 0) {
         const base = Math.max(0, unclaimedSavingsInterest);
-        const maxCanCollect = Math.max(
-          0,
-          BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal,
-        );
+        const maxCanCollect = isSelfVerified
+          ? base
+          : Math.max(0, BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal);
         setDisplayAvailableInterest(base);
         setMaxCollectableAmount(Math.min(base, maxCanCollect));
         return;
@@ -49,10 +49,9 @@ export function useSavings(
       const accrued =
         savingsBalance * SAVINGS_DAILY_INTEREST_RATE * Math.max(0, elapsedDays);
       const total = Math.max(0, unclaimedSavingsInterest + accrued);
-      const maxCanCollect = Math.max(
-        0,
-        BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal,
-      );
+      const maxCanCollect = isSelfVerified
+        ? total
+        : Math.max(0, BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal);
       setDisplayAvailableInterest(total);
       setMaxCollectableAmount(Math.min(total, maxCanCollect));
     };
@@ -65,6 +64,7 @@ export function useSavings(
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
     basicIncomeClaimedTotal,
+    isSelfVerified,
   ]);
 
   const handleDeposit = async () => {

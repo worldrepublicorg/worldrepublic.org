@@ -116,6 +116,7 @@ export default function EarnPageClient({
             lang={lang}
             dictionary={dictionary}
             isAuthenticated={isAuthenticated}
+            isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
             lastBasicIncomeClaimAt={profileData?.lastBasicIncomeClaimAt ?? null}
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
@@ -134,6 +135,7 @@ export default function EarnPageClient({
               profileData?.unclaimedSavingsInterest ?? 0
             }
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
+            isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
           />

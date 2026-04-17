@@ -23,6 +23,7 @@ interface BasicIncomeSectionProps {
   lang: string;
   dictionary: Dictionary;
   isAuthenticated: boolean;
+  isSelfVerified: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
   basicIncomeClaimedTotal: number | null;
@@ -34,6 +35,7 @@ export function BasicIncomeSection({
   lang,
   dictionary,
   isAuthenticated,
+  isSelfVerified,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
   basicIncomeClaimedTotal,
@@ -74,6 +76,7 @@ export function BasicIncomeSection({
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
     basicIncomeClaimedTotal,
+    isSelfVerified,
     onSuccess,
   );
 
@@ -94,7 +97,9 @@ export function BasicIncomeSection({
             <Typography variant="heading" level={2}>
               {dictionary.pages.earn.tabs.basic_income}
             </Typography>
-            {renderInfoSubtitle(dictionary.pages.earn.basic_income.subtitle_unauth)}
+            {renderInfoSubtitle(
+              dictionary.pages.earn.basic_income.subtitle_unauth,
+            )}
             <LearnMoreDrawer
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
@@ -127,7 +132,9 @@ export function BasicIncomeSection({
             <Typography variant="heading" level={2}>
               {dictionary.pages.earn.tabs.basic_income}
             </Typography>
-            {renderInfoSubtitle(dictionary.pages.earn.basic_income.setup_subtitle)}
+            {renderInfoSubtitle(
+              dictionary.pages.earn.basic_income.setup_subtitle,
+            )}
             <LearnMoreDrawer
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
@@ -160,7 +167,9 @@ export function BasicIncomeSection({
           <Typography variant="heading" level={2}>
             {dictionary.pages.earn.tabs.basic_income}
           </Typography>
-          {renderInfoSubtitle(dictionary.pages.earn.basic_income.subtitle_claim)}
+          {renderInfoSubtitle(
+            dictionary.pages.earn.basic_income.subtitle_claim,
+          )}
           <LearnMoreDrawer
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
@@ -200,10 +209,7 @@ export function BasicIncomeSection({
               </AlertDialogDescription>
               <AlertDialogFooter>
                 <AlertDialogClose asChild>
-                  <Button
-                    onClick={handleClaim}
-                    fullWidth
-                  >
+                  <Button onClick={handleClaim} fullWidth>
                     {dictionary.common.confirm}
                   </Button>
                 </AlertDialogClose>

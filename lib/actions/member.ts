@@ -1006,10 +1006,18 @@ export async function claimBasicIncome(): Promise<{
     const userUuid = await getUserUuidFromSession();
 
     const result = await db.transaction(async (tx) => {
+      const selfVerificationRows = await tx.execute(
+        sql`SELECT self_verified_at FROM user_self_verifications WHERE user_id = ${userUuid} LIMIT 1`,
+      );
       const profileRows = await tx.execute(
         sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance, basic_income_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
+      const verificationRow = (
+        "rows" in selfVerificationRows
+          ? selfVerificationRows.rows
+          : selfVerificationRows
+      ) as Array<{ self_verified_at: string | Date | null }>;
       const rows = (
         "rows" in profileRows ? profileRows.rows : profileRows
       ) as Array<{
@@ -1032,14 +1040,14 @@ export async function claimBasicIncome(): Promise<{
       const basicIncomeClaimedTotal = parseFloat(
         profile.basic_income_claimed_total || "0",
       );
+      const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
       const now = Date.now();
       const elapsedDays = (now - lastClaimAt) / 86_400_000;
       const claimable = Math.min(elapsedDays, 1);
-      const maxCanClaim = Math.max(
-        0,
-        BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal,
-      );
+      const maxCanClaim = isSelfVerified
+        ? claimable
+        : Math.max(0, BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal);
       const finalClaimable = Math.min(claimable, maxCanClaim);
 
       if (finalClaimable <= 1e-12) {
@@ -1358,10 +1366,18 @@ export async function claimSavingsInterest(): Promise<{
     const userUuid = await getUserUuidFromSession();
 
     const result = await db.transaction(async (tx) => {
+      const selfVerificationRows = await tx.execute(
+        sql`SELECT self_verified_at FROM user_self_verifications WHERE user_id = ${userUuid} LIMIT 1`,
+      );
       const profileRows = await tx.execute(
         sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at, basic_income_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
+      const verificationRow = (
+        "rows" in selfVerificationRows
+          ? selfVerificationRows.rows
+          : selfVerificationRows
+      ) as Array<{ self_verified_at: string | Date | null }>;
       const rows = (
         "rows" in profileRows ? profileRows.rows : profileRows
       ) as Array<{
@@ -1388,6 +1404,7 @@ export async function claimSavingsInterest(): Promise<{
       const basicIncomeClaimedTotal = parseFloat(
         profile.basic_income_claimed_total || "0",
       );
+      const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
       const now = new Date();
       const nowMs = now.getTime();
@@ -1403,10 +1420,9 @@ export async function claimSavingsInterest(): Promise<{
         return { success: false as const, error: "Nothing to collect yet" };
       }
 
-      const maxCanClaim = Math.max(
-        0,
-        BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal,
-      );
+      const maxCanClaim = isSelfVerified
+        ? totalInterestToClaim
+        : Math.max(0, BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal);
       const finalClaimable = Math.min(totalInterestToClaim, maxCanClaim);
 
       if (finalClaimable <= 1e-12) {

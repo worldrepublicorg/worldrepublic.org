@@ -35,6 +35,7 @@ interface SavingsSectionProps {
   savingsBalance: number;
   unclaimedSavingsInterest: number;
   basicIncomeClaimedTotal: number;
+  isSelfVerified: boolean;
   savingsLastUpdatedAt: number | null;
   onSuccess: () => Promise<void> | void;
 }
@@ -47,6 +48,7 @@ export function SavingsSection({
   savingsBalance,
   unclaimedSavingsInterest,
   basicIncomeClaimedTotal,
+  isSelfVerified,
   savingsLastUpdatedAt,
   onSuccess,
 }: SavingsSectionProps) {
@@ -74,6 +76,7 @@ export function SavingsSection({
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
     basicIncomeClaimedTotal,
+    isSelfVerified,
     onSuccess,
   );
 

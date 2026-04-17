@@ -3,10 +3,7 @@
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useEffect, useState } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import {
-  activateBasicIncome,
-  claimBasicIncome,
-} from "@/lib/actions/member";
+import { activateBasicIncome, claimBasicIncome } from "@/lib/actions/member";
 
 const BALANCE_CAP = 9.99;
 
@@ -15,6 +12,7 @@ export function useBasicIncome(
   basicIncomeActivatedAt: number | null,
   lastBasicIncomeClaimAt: number | null,
   basicIncomeClaimedTotal: number | null,
+  isSelfVerified: boolean,
   onSuccess: () => void,
 ) {
   const [isActivating, setIsActivating] = useState(false);
@@ -33,14 +31,21 @@ export function useBasicIncome(
       const claimable = Math.max(0, Math.min(elapsedDays, 1));
       setClaimableAmount(claimable);
 
-      const maxCanClaim = Math.max(0, BALANCE_CAP - (basicIncomeClaimedTotal ?? 0));
+      const maxCanClaim = isSelfVerified
+        ? claimable
+        : Math.max(0, BALANCE_CAP - (basicIncomeClaimedTotal ?? 0));
       setMaxClaimableAmount(Math.min(claimable, maxCanClaim));
     };
 
     calculate();
     const interval = setInterval(calculate, 1000);
     return () => clearInterval(interval);
-  }, [basicIncomeActivatedAt, lastBasicIncomeClaimAt, basicIncomeClaimedTotal]);
+  }, [
+    basicIncomeActivatedAt,
+    lastBasicIncomeClaimAt,
+    basicIncomeClaimedTotal,
+    isSelfVerified,
+  ]);
 
   const handleActivate = async () => {
     setIsActivating(true);
