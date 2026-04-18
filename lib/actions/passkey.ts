@@ -8,26 +8,102 @@ import {
 } from "@simplewebauthn/server";
 import { Buffer } from "buffer";
 import { eq } from "drizzle-orm";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { createUserProfile } from "@/lib/actions/member";
 import { auth } from "@/lib/auth";
 import { createNeonAdapterWithWebAuthn } from "@/lib/auth/adapter";
 import { getDbReadOnly, pool } from "@/lib/db/connection";
 import { accounts, authenticators, users } from "@/lib/db/schema";
 
-function getRpId(): string {
-  const authUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
-  try {
-    const url = new URL(authUrl);
-    return url.hostname;
-  } catch {
-    return "localhost";
+const DEFAULT_PASSKEY_HOSTS = [
+  "www.worldrepublic.org",
+  "www.raisedbyhumanity.org",
+  "localhost",
+];
+
+function normalizeHost(host: string | null | undefined): string {
+  if (!host) return "";
+  const firstHost = host.split(",")[0]?.trim() ?? "";
+  const withoutProtocol = firstHost.replace(/^https?:\/\//, "");
+  const withoutPath = withoutProtocol.split("/")[0] ?? "";
+  const withoutPort = withoutPath.replace(/:\d+$/, "");
+  return withoutPort.toLowerCase();
+}
+
+function getAllowedPasskeyHosts(): string[] {
+  const configuredHosts = (process.env.AUTH_WEBAUTHN_ALLOWED_HOSTS ?? "")
+    .split(",")
+    .map((host) => normalizeHost(host))
+    .filter((host) => host.length > 0);
+  const defaultRpId = normalizeHost(process.env.AUTH_WEBAUTHN_RP_ID);
+
+  return [
+    ...new Set(
+      [defaultRpId, ...configuredHosts, ...DEFAULT_PASSKEY_HOSTS].filter(
+        (host) => host.length > 0,
+      ),
+    ),
+  ];
+}
+
+function getRequestProtocol(requestHeaders: Headers): "http" | "https" {
+  const forwardedProto = requestHeaders
+    .get("x-forwarded-proto")
+    ?.split(",")[0]
+    ?.trim()
+    .toLowerCase();
+
+  if (forwardedProto === "http" || forwardedProto === "https") {
+    return forwardedProto;
   }
+
+  return process.env.NODE_ENV === "production" ? "https" : "http";
+}
+
+async function getWebAuthnContext() {
+  const requestHeaders = await headers();
+  const hostHeader =
+    requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
+  const hostWithPort = hostHeader
+    ?.split(",")[0]
+    ?.trim()
+    .replace(/^https?:\/\//, "")
+    .split("/")[0];
+  const normalizedHost = normalizeHost(hostWithPort);
+  const allowedHosts = getAllowedPasskeyHosts();
+
+  if (!normalizedHost || !allowedHosts.includes(normalizedHost)) {
+    throw new Error("Unsupported host for passkey authentication");
+  }
+
+  const protocol = getRequestProtocol(requestHeaders);
+  const fallbackOrigin = `${protocol}://${hostWithPort ?? normalizedHost}`;
+  const originHeader = requestHeaders.get("origin");
+
+  let expectedOrigin = fallbackOrigin;
+  if (originHeader) {
+    try {
+      const parsedOrigin = new URL(originHeader);
+      if (normalizeHost(parsedOrigin.host) === normalizedHost) {
+        expectedOrigin = parsedOrigin.origin;
+      }
+    } catch {
+      expectedOrigin = fallbackOrigin;
+    }
+  }
+
+  return {
+    rpId: normalizedHost,
+    expectedOrigin,
+    secureCookies:
+      process.env.NODE_ENV === "production" &&
+      expectedOrigin.startsWith("https://"),
+  };
 }
 
 export async function getPasskeyOptions() {
   try {
-    const rpId = getRpId();
+    const { rpId } = await getWebAuthnContext();
     const db = getDbReadOnly();
 
     // Count existing passkeys so the client knows whether to offer
@@ -75,8 +151,11 @@ export async function verifyPasskeyAuthentication(
       return { error: "Missing credential or challenge" };
     }
 
-    const rpId = getRpId();
-    const origin = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const {
+      rpId,
+      expectedOrigin: origin,
+      secureCookies,
+    } = await getWebAuthnContext();
     const db = getDbReadOnly();
     const credentialIdString = (credential as { id: string }).id;
 
@@ -148,17 +227,14 @@ export async function verifyPasskeyAuthentication(
       expires,
     });
 
-    const isProduction =
-      process.env.NODE_ENV === "production" &&
-      process.env.NEXTAUTH_URL?.startsWith("https");
-    const cookieName = isProduction
+    const cookieName = secureCookies
       ? "__Secure-authjs.session-token"
       : "authjs.session-token";
 
     const cookieStore = await cookies();
     cookieStore.set(cookieName, session.sessionToken, {
       httpOnly: true,
-      secure: isProduction,
+      secure: secureCookies,
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 30,
       path: "/",
@@ -180,7 +256,7 @@ export async function getPasskeyRegistrationOptions(
   name?: string,
 ) {
   try {
-    const rpId = getRpId();
+    const { rpId } = await getWebAuthnContext();
     const rpName = process.env.AUTH_WEBAUTHN_RP_NAME || "World Republic";
 
     // Always create a new account for registration
@@ -238,8 +314,11 @@ export async function verifyPasskeyRegistration(
       return { error: "Missing required fields" };
     }
 
-    const rpId = getRpId();
-    const origin = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const {
+      rpId,
+      expectedOrigin: origin,
+      secureCookies,
+    } = await getWebAuthnContext();
 
     const verification = await verifyRegistrationResponse({
       response: credential as Parameters<
@@ -341,17 +420,14 @@ export async function verifyPasskeyRegistration(
       expires,
     });
 
-    const isProduction =
-      process.env.NODE_ENV === "production" &&
-      process.env.NEXTAUTH_URL?.startsWith("https");
-    const cookieName = isProduction
+    const cookieName = secureCookies
       ? "__Secure-authjs.session-token"
       : "authjs.session-token";
 
     const cookieStore = await cookies();
     cookieStore.set(cookieName, session.sessionToken, {
       httpOnly: true,
-      secure: isProduction,
+      secure: secureCookies,
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 30,
       path: "/",
@@ -384,13 +460,11 @@ export async function setLinkingIntent() {
   }
 
   const cookieStore = await cookies();
-  const isProduction =
-    process.env.NODE_ENV === "production" &&
-    process.env.NEXTAUTH_URL?.startsWith("https");
+  const { secureCookies } = await getWebAuthnContext();
 
   cookieStore.set("auth-linking-intent", session.user.id, {
     httpOnly: true,
-    secure: isProduction,
+    secure: secureCookies,
     sameSite: "lax",
     maxAge: 300,
     path: "/",
@@ -419,8 +493,7 @@ export async function linkPasskeyToAccount(
       return { error: "Session expired, please sign in again." };
     }
 
-    const rpId = getRpId();
-    const origin = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    const { rpId, expectedOrigin: origin } = await getWebAuthnContext();
 
     const verification = await verifyRegistrationResponse({
       response: credential as Parameters<
@@ -471,7 +544,8 @@ export async function linkPasskeyToAccount(
       credentialPublicKey: credentialPublicKeyString,
       counter,
       credentialDeviceType: "singleDevice",
-      credentialBackedUp: verification.registrationInfo.credentialBackedUp || false,
+      credentialBackedUp:
+        verification.registrationInfo.credentialBackedUp || false,
       transports: transports ? JSON.stringify(transports) : null,
     });
 

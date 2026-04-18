@@ -1,37 +1,24 @@
 import "server-only";
 import { and, eq, isNull } from "drizzle-orm";
+import { cookies } from "next/headers";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import Passkey from "next-auth/providers/passkey";
-import { cookies } from "next/headers";
 import { cache } from "react";
-import { getDbReadOnly } from "./db/connection";
-import { accounts, users } from "./db/schema";
 import { createNeonAdapterWithWebAuthn } from "./auth/adapter";
-import { pool } from "./db/connection";
+import { getDbReadOnly, pool } from "./db/connection";
+import { accounts, users } from "./db/schema";
 
 const authSecret = process.env.NEXTAUTH_SECRET;
 if (!authSecret) {
   throw new Error("AUTH_SECRET or NEXTAUTH_SECRET is not set");
 }
 
-const authUrl = process.env.NEXTAUTH_URL;
-if (!authUrl) {
-  throw new Error("AUTH_URL or NEXTAUTH_URL is not set");
-}
-
-// Extract domain from NEXTAUTH_URL for WebAuthn rpID
-const getRpId = () => {
-  try {
-    const url = new URL(authUrl);
-    return url.hostname;
-  } catch {
-    // Fallback for localhost
-    return "localhost";
-  }
-};
-
-const rpId = getRpId();
+const passkeyRpId =
+  process.env.AUTH_WEBAUTHN_RP_ID ||
+  (process.env.NODE_ENV === "development"
+    ? "localhost"
+    : "www.worldrepublic.org");
 const rpName = process.env.AUTH_WEBAUTHN_RP_NAME || "World Republic";
 
 const googleClientId = process.env.AUTH_GOOGLE_ID;
@@ -58,7 +45,7 @@ const { handlers, auth: uncachedAuth } = NextAuth({
     // biome-ignore lint/suspicious/noExplicitAny: Type compatibility issue with next-auth@5.0.0-beta.30
     (Passkey as any)({
       rpName,
-      rpID: rpId,
+      rpID: passkeyRpId,
     }),
   ],
   experimental: {
@@ -121,12 +108,7 @@ const { handlers, auth: uncachedAuth } = NextAuth({
               await readDbWrite
                 .update(users)
                 .set({ email: user.email })
-                .where(
-                  and(
-                    eq(users.id, targetUserId),
-                    isNull(users.email),
-                  ),
-                );
+                .where(and(eq(users.id, targetUserId), isNull(users.email)));
             }
           }
 
