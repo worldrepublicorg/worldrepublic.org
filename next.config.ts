@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import { locales } from "./lib/locales";
+
+const localePattern = locales.join("|");
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@selfxyz/core", "@selfxyz/qrcode"],
@@ -6,32 +9,32 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/:lang/earn",
+        source: `/:lang(${localePattern})/earn`,
         destination: "/:lang",
         permanent: true,
       },
       {
-        source: "/:lang/parties",
+        source: `/:lang(${localePattern})/parties`,
         destination: "/:lang/govern?tab=parties",
         permanent: true,
       },
       {
-        source: "/:lang/parties/:id",
+        source: `/:lang(${localePattern})/parties/:id`,
         destination: "/:lang/govern/parties/:id",
         permanent: true,
       },
       {
-        source: "/:lang/parties/:id/:path*",
+        source: `/:lang(${localePattern})/parties/:id/:path*`,
         destination: "/:lang/govern/parties/:id/:path*",
         permanent: true,
       },
       {
-        source: "/:lang/vote/elections",
+        source: `/:lang(${localePattern})/vote/elections`,
         destination: "/:lang/govern/elections",
         permanent: true,
       },
       {
-        source: "/:lang/vote/elections/:path*",
+        source: `/:lang(${localePattern})/vote/elections/:path*`,
         destination: "/:lang/govern/elections/:path*",
         permanent: true,
       },
