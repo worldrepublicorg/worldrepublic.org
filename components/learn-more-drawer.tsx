@@ -8,7 +8,7 @@ import {
   AlertDialogHeader,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiArrowSquareOut } from "react-icons/pi";
+import { PiArrowSquareOut, PiInfoFill } from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 
 export interface LearnMoreDrawerProps {
@@ -38,7 +38,13 @@ export function LearnMoreDrawer({
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent>
-        <AlertDialogHeader>
+        <AlertDialogHeader
+          icon={
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+              <PiInfoFill className="h-[30px] w-[30px] text-gray-400" />
+            </div>
+          }
+        >
           <Typography variant="heading" level={3}>
             {title}
           </Typography>
