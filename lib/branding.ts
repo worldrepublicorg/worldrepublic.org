@@ -19,7 +19,7 @@ const RAISED_BY_HUMANITY_BRANDING: AppBranding = {
   appDefaultTitle: "Raised by Humanity",
   appTitleTemplate: "%s - Raised by Humanity",
   description: "AI governance by a world parliament",
-  metadataBase: "https://raisedbyhumanity.org",
+  metadataBase: "https://www.raisedbyhumanity.org",
 };
 
 function normalizeHost(host: string | null | undefined): string {
