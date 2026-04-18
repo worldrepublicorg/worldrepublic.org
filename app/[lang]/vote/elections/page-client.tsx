@@ -71,6 +71,19 @@ export default function ElectionDetailPageClient({
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const handleBack = () => {
+    const fallbackPath = "/govern";
+    const hasSameOriginReferrer =
+      typeof document !== "undefined" &&
+      document.referrer.startsWith(window.location.origin);
+
+    if (window.history.length > 1 && hasSameOriginReferrer) {
+      router.back();
+      return;
+    }
+
+    router.push(fallbackPath);
+  };
 
   if (data === undefined || data === null) {
     return <ElectionDetailPageSkeleton />;
@@ -82,7 +95,7 @@ export default function ElectionDetailPageClient({
         title={dictionary.pages.govern.elections.detail.topbar_title}
         startAdornment={
           <button
-            onClick={() => router.back()}
+            onClick={handleBack}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >
             <PiCaretLeft className="size-4 text-gray-900" />

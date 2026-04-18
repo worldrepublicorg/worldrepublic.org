@@ -68,6 +68,20 @@ export default function PartyDetailPageClient({
     return shareUrl.toString();
   };
 
+  const handleBack = () => {
+    const fallbackPath = "/govern?tab=parties";
+    const hasSameOriginReferrer =
+      typeof document !== "undefined" &&
+      document.referrer.startsWith(window.location.origin);
+
+    if (window.history.length > 1 && hasSameOriginReferrer) {
+      router.back();
+      return;
+    }
+
+    router.push(fallbackPath);
+  };
+
   // Show skeleton until first fetch has completed (party undefined = still loading)
   if (!partyId || party === undefined) {
     return <PartyDetailPageSkeleton />;
@@ -79,7 +93,7 @@ export default function PartyDetailPageClient({
         title={dictionary.pages.govern.parties.party_details}
         startAdornment={
           <button
-            onClick={() => router.back()}
+            onClick={handleBack}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >
             <PiCaretLeft className="size-4 text-gray-900" />
