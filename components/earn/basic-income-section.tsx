@@ -106,7 +106,7 @@ export function BasicIncomeSection({
             <LearnMoreDrawer
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
-              title={dictionary.pages.govern.parties.learn_more}
+              title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
@@ -145,7 +145,7 @@ export function BasicIncomeSection({
             <LearnMoreDrawer
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
-              title={dictionary.pages.govern.parties.learn_more}
+              title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
@@ -184,7 +184,7 @@ export function BasicIncomeSection({
           <LearnMoreDrawer
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
-            title={dictionary.pages.govern.parties.learn_more}
+            title={dictionary.pages.earn.tabs.basic_income}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
             externalLink={{
               url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
