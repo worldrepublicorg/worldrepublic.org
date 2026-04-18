@@ -54,7 +54,12 @@ export default function HomePageClient({
   dictionary,
 }: HomePageClientProps) {
   const searchParams = useSearchParams();
-  const tab = searchParams.get("tab");
+  const getTabFromQuery = useCallback((value: string | null): TabKey => {
+    return TABS.includes(value as TabKey) ? (value as TabKey) : TABS[0];
+  }, []);
+  const [activeTab, setActiveTab] = useState<TabKey>(() =>
+    getTabFromQuery(searchParams.get("tab")),
+  );
   const { toast } = useToast();
   const {
     isAuthenticated: clientIsAuthenticated,
@@ -140,9 +145,28 @@ export default function HomePageClient({
     };
   }, [isAuthenticated, referralCode]);
 
-  const activeTab: TabKey = TABS.includes(tab as TabKey)
-    ? (tab as TabKey)
-    : TABS[0];
+  useEffect(() => {
+    const nextTab = getTabFromQuery(searchParams.get("tab"));
+    setActiveTab((previousTab) =>
+      previousTab === nextTab ? previousTab : nextTab,
+    );
+  }, [searchParams, getTabFromQuery]);
+
+  const handleTabChange = useCallback((nextTab: string) => {
+    if (!TABS.includes(nextTab as TabKey)) return;
+
+    const parsedNextTab = nextTab as TabKey;
+    setActiveTab((previousTab) =>
+      previousTab === parsedNextTab ? previousTab : parsedNextTab,
+    );
+
+    if (typeof window === "undefined") return;
+    const updatedParams = new URLSearchParams(window.location.search);
+    updatedParams.set("tab", parsedNextTab);
+    const nextUrl = `${window.location.pathname}?${updatedParams.toString()}`;
+    window.history.replaceState(window.history.state, "", nextUrl);
+  }, []);
+
   const showLeaderboardScrollToTop =
     activeTab === "ambassadors" || activeTab === "subsidies";
 
@@ -348,6 +372,7 @@ export default function HomePageClient({
         activeTab={activeTab}
         lang={lang}
         basePath={`/${lang}`}
+        onTabChange={handleTabChange}
         tabs={[
           {
             key: "basic_income",
@@ -369,10 +394,11 @@ export default function HomePageClient({
       />
 
       <main className="flex grow flex-col">
-        {activeTab === "basic_income" ? (
+        <div className={activeTab === "basic_income" ? "block" : "hidden"}>
           <BasicIncomeSection
             lang={lang}
             dictionary={dictionary}
+            isActive={activeTab === "basic_income"}
             isAuthenticated={isAuthenticated}
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
@@ -381,22 +407,25 @@ export default function HomePageClient({
             onSignIn={() => setShowSignInDialog(true)}
             onSuccess={fetchData}
           />
-        ) : activeTab === "savings" ? (
+        </div>
+
+        <div className={activeTab === "savings" ? "block" : "hidden"}>
           <SavingsSection
             lang={lang}
             dictionary={dictionary}
+            isActive={activeTab === "savings"}
             isAuthenticated={isAuthenticated}
             walletBalance={profileData?.walletBalance ?? 0}
             savingsBalance={profileData?.savingsBalance ?? 0}
-            unclaimedSavingsInterest={
-              profileData?.unclaimedSavingsInterest ?? 0
-            }
+            unclaimedSavingsInterest={profileData?.unclaimedSavingsInterest ?? 0}
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
           />
-        ) : activeTab === "ambassadors" ? (
+        </div>
+
+        {activeTab === "ambassadors" ? (
           <div className="flex flex-col items-start w-full p-6">
             <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center">
               <Typography

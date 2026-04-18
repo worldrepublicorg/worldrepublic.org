@@ -22,6 +22,7 @@ import { getSafeLocale } from "@/lib/locale";
 interface BasicIncomeSectionProps {
   lang: string;
   dictionary: Dictionary;
+  isActive?: boolean;
   isAuthenticated: boolean;
   isSelfVerified: boolean;
   basicIncomeActivatedAt: number | null;
@@ -34,6 +35,7 @@ interface BasicIncomeSectionProps {
 export function BasicIncomeSection({
   lang,
   dictionary,
+  isActive = true,
   isAuthenticated,
   isSelfVerified,
   basicIncomeActivatedAt,
@@ -77,6 +79,7 @@ export function BasicIncomeSection({
     lastBasicIncomeClaimAt,
     basicIncomeClaimedTotal,
     isSelfVerified,
+    isActive,
     onSuccess,
   );
 

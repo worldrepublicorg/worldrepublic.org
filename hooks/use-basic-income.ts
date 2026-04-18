@@ -13,6 +13,7 @@ export function useBasicIncome(
   lastBasicIncomeClaimAt: number | null,
   basicIncomeClaimedTotal: number | null,
   isSelfVerified: boolean,
+  isActive: boolean,
   onSuccess: () => void,
 ) {
   const [isActivating, setIsActivating] = useState(false);
@@ -22,7 +23,7 @@ export function useBasicIncome(
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!basicIncomeActivatedAt) return;
+    if (!isActive || !basicIncomeActivatedAt) return;
 
     const anchor = lastBasicIncomeClaimAt ?? basicIncomeActivatedAt;
 
@@ -41,6 +42,7 @@ export function useBasicIncome(
     const interval = setInterval(calculate, 1000);
     return () => clearInterval(interval);
   }, [
+    isActive,
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
     basicIncomeClaimedTotal,

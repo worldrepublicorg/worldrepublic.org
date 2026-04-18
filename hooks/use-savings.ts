@@ -25,6 +25,7 @@ export function useSavings(
   savingsLastUpdatedAt: number | null,
   basicIncomeClaimedTotal: number,
   isSelfVerified: boolean,
+  isActive: boolean,
   onSuccess: () => Promise<void> | void,
 ) {
   const { toast } = useToast();
@@ -34,6 +35,8 @@ export function useSavings(
   const [maxCollectableAmount, setMaxCollectableAmount] = useState(0);
 
   useEffect(() => {
+    if (!isActive) return;
+
     const calculateInterest = () => {
       if (!savingsLastUpdatedAt || savingsBalance <= 0) {
         const base = Math.max(0, unclaimedSavingsInterest);
@@ -60,6 +63,7 @@ export function useSavings(
     const interval = setInterval(calculateInterest, 1000);
     return () => clearInterval(interval);
   }, [
+    isActive,
     savingsBalance,
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,

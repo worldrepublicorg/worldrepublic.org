@@ -30,6 +30,7 @@ import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 interface SavingsSectionProps {
   lang: string;
   dictionary: Dictionary;
+  isActive?: boolean;
   isAuthenticated: boolean;
   walletBalance: number;
   savingsBalance: number;
@@ -43,6 +44,7 @@ interface SavingsSectionProps {
 export function SavingsSection({
   lang,
   dictionary,
+  isActive = true,
   isAuthenticated,
   walletBalance,
   savingsBalance,
@@ -77,6 +79,7 @@ export function SavingsSection({
     savingsLastUpdatedAt,
     basicIncomeClaimedTotal,
     isSelfVerified,
+    isActive,
     onSuccess,
   );
 

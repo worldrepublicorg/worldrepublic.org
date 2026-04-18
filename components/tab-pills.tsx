@@ -7,9 +7,16 @@ interface TabPillsProps {
   lang: string;
   tabs: Array<{ key: string; label: string }>;
   basePath?: string;
+  onTabChange?: (tabKey: string) => void;
 }
 
-export function TabPills({ activeTab, lang, tabs, basePath }: TabPillsProps) {
+export function TabPills({
+  activeTab,
+  lang,
+  tabs,
+  basePath,
+  onTabChange,
+}: TabPillsProps) {
   const path = basePath ?? `/${lang}`;
   return (
     <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -22,9 +29,19 @@ export function TabPills({ activeTab, lang, tabs, basePath }: TabPillsProps) {
             index === tabs.length - 1 && "pr-0",
           )}
         >
-          <Link href={`${path}?tab=${tab.key}`} className="block">
-            <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
-          </Link>
+          {onTabChange ? (
+            <button
+              type="button"
+              onClick={() => onTabChange(tab.key)}
+              className="block"
+            >
+              <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
+            </button>
+          ) : (
+            <Link href={`${path}?tab=${tab.key}`} className="block">
+              <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
+            </Link>
+          )}
         </div>
       ))}
     </div>
