@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Richte dein Grundeinkommen ein",
         "activate_loading": "Aktiviere...",
-        "activate_button": "Grundeinkommen aktivieren"
+        "activate_button": "Grundeinkommen aktivieren",
+        "world_drachma": "Welt-Drachme"
       },
       "savings": {
         "title": "Sparkonto",

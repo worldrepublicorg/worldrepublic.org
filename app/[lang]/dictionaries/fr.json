@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Configurez votre revenu de base",
         "activate_loading": "Activation...",
-        "activate_button": "Activer le revenu de base"
+        "activate_button": "Activer le revenu de base",
+        "world_drachma": "Drachme mondiale"
       },
       "savings": {
         "title": "Compte d'épargne",

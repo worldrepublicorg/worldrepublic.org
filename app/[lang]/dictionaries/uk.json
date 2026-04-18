@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Налаштуйте свій базовий дохід",
         "activate_loading": "Активується...",
-        "activate_button": "Активувати базовий дохід"
+        "activate_button": "Активувати базовий дохід",
+        "world_drachma": "Світова драхма"
       },
       "savings": {
         "title": "Ощадний рахунок",

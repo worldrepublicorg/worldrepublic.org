@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "ตั้งค่ารายได้พื้นฐานของคุณ",
         "activate_loading": "กำลังเปิดใช้งาน...",
-        "activate_button": "เปิดใช้งานรายได้พื้นฐาน"
+        "activate_button": "เปิดใช้งานรายได้พื้นฐาน",
+        "world_drachma": "ดรักมาของโลก"
       },
       "savings": {
         "title": "บัญชีออมทรัพย์",

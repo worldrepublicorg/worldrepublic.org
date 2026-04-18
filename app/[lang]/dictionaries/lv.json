@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Iestatiet savus pamata ienākumus",
         "activate_loading": "Aktivizē...",
-        "activate_button": "Aktivizēt pamata ienākumus"
+        "activate_button": "Aktivizēt pamata ienākumus",
+        "world_drachma": "Pasaules drahma"
       },
       "savings": {
         "title": "Uzkrājumu konts",

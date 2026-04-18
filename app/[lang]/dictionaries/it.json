@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Configura il tuo reddito di base",
         "activate_loading": "Attivazione in corso...",
-        "activate_button": "Attiva reddito di base"
+        "activate_button": "Attiva reddito di base",
+        "world_drachma": "Dracma mondiale"
       },
       "savings": {
         "title": "Conto risparmi",

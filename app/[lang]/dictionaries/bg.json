@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Настройте вашия основен доход",
         "activate_loading": "Активирам...",
-        "activate_button": "Активирайте основния доход"
+        "activate_button": "Активирайте основния доход",
+        "world_drachma": "Световна драхма"
       },
       "savings": {
         "title": "Спестовна сметка",

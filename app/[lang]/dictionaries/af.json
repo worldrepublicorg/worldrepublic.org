@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Stel jou basiese inkomste op",
         "activate_loading": "Aktiveer...",
-        "activate_button": "Aktiveer basiese inkomste"
+        "activate_button": "Aktiveer basiese inkomste",
+        "world_drachma": "Wêrelddrachme"
       },
       "savings": {
         "title": "Spaarrekening",

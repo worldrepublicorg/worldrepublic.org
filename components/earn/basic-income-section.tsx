@@ -108,6 +108,10 @@ export function BasicIncomeSection({
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.govern.parties.learn_more}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
+              externalLink={{
+                url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
+                label: dictionary.pages.earn.basic_income.world_drachma,
+              }}
             />
             <div className="mt-6 w-full">
               <Button
@@ -143,6 +147,10 @@ export function BasicIncomeSection({
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.govern.parties.learn_more}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
+              externalLink={{
+                url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
+                label: dictionary.pages.earn.basic_income.world_drachma,
+              }}
             />
             <Button
               fullWidth
@@ -178,6 +186,10 @@ export function BasicIncomeSection({
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.govern.parties.learn_more}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
+            externalLink={{
+              url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
+              label: dictionary.pages.earn.basic_income.world_drachma,
+            }}
           />
           <div className="mt-5 mb-1 font-mono text-7xl font-semibold">
             {amountString}

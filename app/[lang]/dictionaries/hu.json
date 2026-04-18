@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Állítsa be az alapjövedelmét",
         "activate_loading": "Aktiválás...",
-        "activate_button": "Alapjövedelem aktiválása"
+        "activate_button": "Alapjövedelem aktiválása",
+        "world_drachma": "Világdrachma"
       },
       "savings": {
         "title": "Megtakarítási számla",

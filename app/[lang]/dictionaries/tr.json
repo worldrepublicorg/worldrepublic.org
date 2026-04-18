@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Temel gelirini kur",
         "activate_loading": "Aktifleştiriliyor...",
-        "activate_button": "Temel geliri aktifleştir"
+        "activate_button": "Temel geliri aktifleştir",
+        "world_drachma": "Dünya drahması"
       },
       "savings": {
         "title": "Tasarruf hesabı",

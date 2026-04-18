@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Postavite svoj osnovni prihod",
         "activate_loading": "Aktiviranje...",
-        "activate_button": "Aktiviraj osnovni prihod"
+        "activate_button": "Aktiviraj osnovni prihod",
+        "world_drachma": "Svjetska drahma"
       },
       "savings": {
         "title": "Štedni račun",

@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Skonfiguruj swój dochód podstawowy",
         "activate_loading": "Aktywowanie...",
-        "activate_button": "Aktywuj dochód podstawowy"
+        "activate_button": "Aktywuj dochód podstawowy",
+        "world_drachma": "Światowa drachma"
       },
       "savings": {
         "title": "Konto oszczędnościowe",

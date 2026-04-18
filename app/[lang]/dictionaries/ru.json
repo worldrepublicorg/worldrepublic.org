@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Настройте свой базовый доход",
         "activate_loading": "Активация...",
-        "activate_button": "Активировать базовый доход"
+        "activate_button": "Активировать базовый доход",
+        "world_drachma": "Мировая драхма"
       },
       "savings": {
         "title": "Сберегательный счёт",

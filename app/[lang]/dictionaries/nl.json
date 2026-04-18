@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Stel je basisinkomen in",
         "activate_loading": "Activeren...",
-        "activate_button": "Basisinkomen activeren"
+        "activate_button": "Basisinkomen activeren",
+        "world_drachma": "Werelddrachme"
       },
       "savings": {
         "title": "Spaarrekening",

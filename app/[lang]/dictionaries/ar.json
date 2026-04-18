@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "أعد إعداد دخلك الأساسي",
         "activate_loading": "جاري التفعيل...",
-        "activate_button": "تفعيل الدخل الأساسي"
+        "activate_button": "تفعيل الدخل الأساسي",
+        "world_drachma": "الدراخما العالمية"
       },
       "savings": {
         "title": "حساب التوفير",

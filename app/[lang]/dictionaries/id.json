@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Siapkan pendapatan dasar Anda",
         "activate_loading": "Mengaktifkan...",
-        "activate_button": "Aktifkan pendapatan dasar"
+        "activate_button": "Aktifkan pendapatan dasar",
+        "world_drachma": "Drachma dunia"
       },
       "savings": {
         "title": "Rekening tabungan",

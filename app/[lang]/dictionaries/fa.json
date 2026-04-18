@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "درآمد پایه خود را تنظیم کنید",
         "activate_loading": "در حال فعال‌سازی...",
-        "activate_button": "فعال‌سازی درآمد پایه"
+        "activate_button": "فعال‌سازی درآمد پایه",
+        "world_drachma": "دراخمای جهانی"
       },
       "savings": {
         "title": "حساب پس‌انداز",

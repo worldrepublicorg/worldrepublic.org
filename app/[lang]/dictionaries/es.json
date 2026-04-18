@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Configura tu renta básica",
         "activate_loading": "Activando...",
-        "activate_button": "Activar renta básica"
+        "activate_button": "Activar renta básica",
+        "world_drachma": "Dracma mundial"
       },
       "savings": {
         "title": "Cuenta de ahorros",

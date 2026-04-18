@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Nastavte si základní příjem",
         "activate_loading": "Aktivuji...",
-        "activate_button": "Aktivovat základní příjem"
+        "activate_button": "Aktivovat základní příjem",
+        "world_drachma": "Světová drachma"
       },
       "savings": {
         "title": "Spořicí účet",

@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "আপনার মৌলিক আয় সেটআপ করুন",
         "activate_loading": "সক্রিয় করা হচ্ছে...",
-        "activate_button": "মৌলিক আয় সক্রিয় করুন"
+        "activate_button": "মৌলিক আয় সক্রিয় করুন",
+        "world_drachma": "বিশ্ব দ্রাখমা"
       },
       "savings": {
         "title": "সঞ্চয় অ্যাকাউন্ট",

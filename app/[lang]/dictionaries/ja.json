@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "基本所得を設定",
         "activate_loading": "有効化中...",
-        "activate_button": "基本所得を有効化"
+        "activate_button": "基本所得を有効化",
+        "world_drachma": "ワールドドラフマ"
       },
       "savings": {
         "title": "貯蓄口座",

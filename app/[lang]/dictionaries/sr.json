@@ -149,7 +149,8 @@
         },
         "setup_subtitle": "Подесите свој основни приход",
         "activate_loading": "Активира се...",
-        "activate_button": "Активирај основни приход"
+        "activate_button": "Активирај основни приход",
+        "world_drachma": "Светска драхма"
       },
       "savings": {
         "title": "Штедни рачун",
