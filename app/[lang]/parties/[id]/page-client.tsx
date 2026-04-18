@@ -8,6 +8,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
 import { PartyDetailPageSkeleton } from "@/components/parties/party-detail-page-skeleton";
 import { TopBar } from "@/components/topbar";
+import { getWalletAuthAndData } from "@/lib/actions/member";
 import { getParty } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
@@ -48,10 +49,23 @@ export default function PartyDetailPageClient({
     fetchPartyForShare();
   }, [partyId]);
 
-  // Share URL
-  const getShareUrl = () => {
+  const getShareUrl = async () => {
     if (typeof window === "undefined") return "";
-    return `${window.location.origin}/parties/${party?.id || partyId}`;
+    const shareUrl = new URL(
+      `${window.location.origin}/parties/${party?.id || partyId}`,
+    );
+
+    try {
+      const walletData = await getWalletAuthAndData();
+      const referralCode = walletData.profileData?.referralCode;
+      if (walletData.authenticated && referralCode) {
+        shareUrl.searchParams.set("ref", referralCode);
+      }
+    } catch {
+      // Best-effort only; share still works without referral code.
+    }
+
+    return shareUrl.toString();
   };
 
   // Show skeleton until first fetch has completed (party undefined = still loading)
@@ -75,7 +89,7 @@ export default function PartyDetailPageClient({
           party && (
             <button
               onClick={async () => {
-                const shareUrl = getShareUrl();
+                const shareUrl = await getShareUrl();
                 const shareTitle = party.name;
 
                 // Check if Web Share API is supported

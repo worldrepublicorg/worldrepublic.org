@@ -10,6 +10,7 @@ import { useEffect, useRef } from "react";
 import { PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomDrawerHeader } from "@/components/parties/custom-drawer-header";
+import { getWalletAuthAndData } from "@/lib/actions/member";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
 import type { Party } from "@/lib/types/parties";
 
@@ -26,7 +27,6 @@ export function PartyDetailDrawer({
   onOpenChange,
   party,
   dictionary,
-  lang,
 }: PartyDetailDrawerProps) {
   const { toast } = useToast();
   const drawerStatePushedRef = useRef(false);
@@ -60,30 +60,38 @@ export function PartyDetailDrawer({
 
   const handleShare = async () => {
     if (!party) return;
-    const shareUrl = lang
-      ? `${window.location.origin}/${lang}/parties/${party.id}`
-      : `${window.location.origin}/parties/${party.id}`;
+    const shareUrl = new URL(`${window.location.origin}/parties/${party.id}`);
     const shareTitle = party.name;
+
+    try {
+      const walletData = await getWalletAuthAndData();
+      const referralCode = walletData.profileData?.referralCode;
+      if (walletData.authenticated && referralCode) {
+        shareUrl.searchParams.set("ref", referralCode);
+      }
+    } catch {
+      // Best-effort only; share still works without referral code.
+    }
 
     if (navigator.share) {
       try {
         await navigator.share({
           title: shareTitle,
-          url: shareUrl,
+          url: shareUrl.toString(),
         });
       } catch (error) {
         if (
           error instanceof Error &&
           error.name !== "AbortError"
         ) {
-          await navigator.clipboard.writeText(shareUrl);
+          await navigator.clipboard.writeText(shareUrl.toString());
           toast.success({
             title: dictionary.toasts.copied,
           });
         }
       }
     } else {
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText(shareUrl.toString());
       toast.success({
         title: dictionary.toasts.copied,
       });
