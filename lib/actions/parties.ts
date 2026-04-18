@@ -142,6 +142,8 @@ export async function createParty(
     });
 
     // Revalidate paths and cache tags that show party/parties data
+    revalidatePath("/[lang]/govern", "page");
+    revalidatePath("/[lang]/govern/parties/[id]", "page");
     revalidatePath("/[lang]/parties", "page");
     revalidatePath("/[lang]/parties/[id]", "page");
     revalidateTag("parties-list", "default");
@@ -300,6 +302,8 @@ export async function updateParty(
     await db.update(parties).set(pgUpdates).where(eq(parties.id, partyId));
 
     // Revalidate paths and cache tags that show party/parties data
+    revalidatePath("/[lang]/govern", "page");
+    revalidatePath("/[lang]/govern/parties/[id]", "page");
     revalidatePath("/[lang]/parties", "page");
     revalidatePath(`/[lang]/parties/${partyId}`, "page");
     revalidateTag("parties-list", "default");
@@ -340,6 +344,8 @@ export async function deleteParty(
       .where(eq(parties.id, partyId));
 
     // Revalidate paths and cache tags that show party/parties data
+    revalidatePath("/[lang]/govern", "page");
+    revalidatePath("/[lang]/govern/parties/[id]", "page");
     revalidatePath("/[lang]/parties", "page");
     revalidatePath("/[lang]/parties/[id]", "page");
     revalidateTag("parties-list", "default");

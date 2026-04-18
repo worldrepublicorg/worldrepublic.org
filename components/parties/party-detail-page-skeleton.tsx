@@ -4,7 +4,7 @@ import { TopBar } from "@/components/topbar";
 
 /**
  * Party detail page skeleton. Used by:
- * - app/[lang]/parties/[id]/loading.tsx (route-level loading)
+ * - app/[lang]/govern/parties/[id]/loading.tsx (route-level loading)
  * - PartyDetailPageClient when party is null (loading state)
  * No title in TopBar to avoid text popping before data (same as other pages).
  */

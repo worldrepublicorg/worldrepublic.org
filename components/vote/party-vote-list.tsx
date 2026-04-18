@@ -156,8 +156,7 @@ export function PartyVoteList({
   const partiesToDisplay = parties.slice(0, displayCount);
   const listToShow = isSearchActive ? (searchResults ?? []) : partiesToDisplay;
   const showLoadMore =
-    !isSearchActive &&
-    (parties.length > displayCount || hasMoreParties);
+    !isSearchActive && (parties.length > displayCount || hasMoreParties);
 
   if (initialParties.length === 0 && !isSearchActive) {
     return (
@@ -250,7 +249,7 @@ export function PartyVoteList({
                     </button>
                   ) : (
                     <Link
-                      href={`/${lang}/parties/${party.id}`}
+                      href={`/${lang}/govern/parties/${party.id}`}
                       className="flex-1 min-w-0"
                     >
                       <Typography

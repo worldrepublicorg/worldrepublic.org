@@ -139,7 +139,7 @@ export function PartyDetailContent({
           >
             {error}
           </Typography>
-          <Link href={`/${lang}/parties`}>
+          <Link href={`/${lang}/govern?tab=parties`}>
             <Button variant="secondary" className="mt-8">
               {dictionary.pages.govern.parties.detail.back_to_parties}
             </Button>
@@ -195,7 +195,10 @@ export function PartyDetailContent({
               {party.leaderUsername && (
                 <div className="flex items-center justify-between gap-6">
                   <div className="flex items-center">
-                    <PiUserFocus className="mr-2 text-gray-400 shrink-0" size={14} />
+                    <PiUserFocus
+                      className="mr-2 text-gray-400 shrink-0"
+                      size={14}
+                    />
                     <Typography
                       variant="body"
                       level={3}
@@ -225,7 +228,10 @@ export function PartyDetailContent({
               {party.websiteUrl && (
                 <div className="flex items-center justify-between gap-6">
                   <div className="flex items-center shrink-0">
-                    <PiLinkSimple className="mr-2 text-gray-400 shrink-0" size={14} />
+                    <PiLinkSimple
+                      className="mr-2 text-gray-400 shrink-0"
+                      size={14}
+                    />
                     <Typography
                       variant="body"
                       level={3}
@@ -288,7 +294,7 @@ export function PartyDetailContent({
           >
             {dictionary.pages.govern.parties.detail.not_found_description}
           </Typography>
-          <Link href={`/${lang}/parties`}>
+          <Link href={`/${lang}/govern?tab=parties`}>
             <Button variant="secondary" className="mt-8">
               {dictionary.pages.govern.parties.detail.back_to_parties}
             </Button>

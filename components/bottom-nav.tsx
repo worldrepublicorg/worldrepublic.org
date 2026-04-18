@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-import { FaBars, FaLandmark, FaUsers } from "react-icons/fa";
+import { FaBars, FaDollarSign, FaLandmark } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
@@ -19,21 +19,18 @@ const BottomNav = () => {
   } | null>(null);
 
   const navItems = [
-    { path: "/", label: "vote", icon: FaLandmark },
-    { path: "/parties", label: "parties", icon: FaUsers },
+    { path: "/", label: "earn", icon: FaDollarSign },
+    { path: "/govern", label: "govern", icon: FaLandmark },
     { path: "/menu", label: "menu", icon: FaBars },
   ];
 
   const isActive = (path: string) => {
     const sectionSegment = pathname.split("/")[2] || "";
-    // Treat the whole /[lang]/vote section (and its children) as the first tab
-    const currentSection = sectionSegment === "vote" ? "" : sectionSegment;
-    const targetPath = path.slice(1) || "";
-    // Root path is active when we're on the root section or the vote section
+    const targetPath = path.slice(1);
     if (path === "/") {
-      return currentSection === "";
+      return sectionSegment === "";
     }
-    return currentSection === targetPath;
+    return sectionSegment === targetPath;
   };
 
   return (
@@ -114,11 +111,9 @@ const BottomNav = () => {
               <Icon
                 className={cn(
                   "relative block transition-transform duration-200 group-active:scale-95 pointer-events-none",
-                  Icon === FaUsers
-                    ? "h-[26px] w-[26px]"
-                    : Icon === FaLandmark
-                      ? "h-6 w-6"
-                      : "h-[22px] w-[22px]",
+                  Icon === FaDollarSign || Icon === FaLandmark
+                    ? "h-6 w-6"
+                    : "h-[22px] w-[22px]",
                 )}
               />
             </Link>

@@ -10,8 +10,8 @@ import { useEffect, useRef } from "react";
 import { PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomDrawerHeader } from "@/components/parties/custom-drawer-header";
-import { getWalletAuthAndData } from "@/lib/actions/member";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
+import { getWalletAuthAndData } from "@/lib/actions/member";
 import type { Party } from "@/lib/types/parties";
 
 export interface PartyDetailDrawerProps {
@@ -27,6 +27,7 @@ export function PartyDetailDrawer({
   onOpenChange,
   party,
   dictionary,
+  lang,
 }: PartyDetailDrawerProps) {
   const { toast } = useToast();
   const drawerStatePushedRef = useRef(false);
@@ -60,7 +61,7 @@ export function PartyDetailDrawer({
 
   const handleShare = async () => {
     if (!party) return;
-    const shareUrl = new URL(`${window.location.origin}/parties/${party.id}`);
+    const shareUrl = new URL(`${window.location.origin}/govern/parties/${party.id}`);
     const shareTitle = party.name;
 
     try {
@@ -80,10 +81,7 @@ export function PartyDetailDrawer({
           url: shareUrl.toString(),
         });
       } catch (error) {
-        if (
-          error instanceof Error &&
-          error.name !== "AbortError"
-        ) {
+        if (error instanceof Error && error.name !== "AbortError") {
           await navigator.clipboard.writeText(shareUrl.toString());
           toast.success({
             title: dictionary.toasts.copied,
@@ -122,10 +120,7 @@ export function PartyDetailDrawer({
         </div>
         <div className="flex-1 overflow-y-auto px-6 pb-6">
           {party && (
-            <PartyDetailContent
-              partyId={party.id}
-              dictionary={dictionary}
-            />
+            <PartyDetailContent partyId={party.id} dictionary={dictionary} />
           )}
         </div>
       </DrawerContent>

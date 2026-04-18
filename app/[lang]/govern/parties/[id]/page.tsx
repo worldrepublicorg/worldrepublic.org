@@ -14,6 +14,7 @@ export default async function PartyDetailPage({
   return (
     <PartyDetailPageClient
       partyId={id}
+      lang={lang}
       dictionary={dictionary}
       featuredElectionId={featuredElectionId}
     />

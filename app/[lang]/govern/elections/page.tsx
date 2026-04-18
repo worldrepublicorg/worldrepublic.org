@@ -1,11 +1,11 @@
 import { getDictionary, locales } from "@/app/[lang]/dictionaries";
-import EarnPageClient from "./page-client";
+import ElectionDetailPageClient from "./page-client";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export default async function EarnPage({
+export default async function ElectionDetailPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
@@ -13,5 +13,5 @@ export default async function EarnPage({
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  return <EarnPageClient lang={lang} dictionary={dictionary} />;
+  return <ElectionDetailPageClient lang={lang} dictionary={dictionary} />;
 }

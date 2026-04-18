@@ -31,9 +31,9 @@ export default function ElectionDetailPageClient({
   const [cachedData] = useState(() =>
     id ? getCachedElectionDetail(id) : null,
   );
-  const [serverData, setServerData] = useState<Awaited<
-    ReturnType<typeof getElectionDetail>
-  > | undefined>(undefined);
+  const [serverData, setServerData] = useState<
+    Awaited<ReturnType<typeof getElectionDetail>> | undefined
+  >(undefined);
 
   useEffect(() => {
     if (!id || typeof id !== "string") return;
@@ -50,7 +50,7 @@ export default function ElectionDetailPageClient({
 
   useEffect(() => {
     if (id === null || id === "") {
-      router.replace(`/${lang}/vote`);
+      router.replace(`/${lang}/govern`);
       return;
     }
   }, [id, lang, router]);
@@ -72,7 +72,7 @@ export default function ElectionDetailPageClient({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const handleBack = () => {
-    const fallbackPath = "/govern";
+    const fallbackPath = `/${lang}/govern`;
     const hasSameOriginReferrer =
       typeof document !== "undefined" &&
       document.referrer.startsWith(window.location.origin);

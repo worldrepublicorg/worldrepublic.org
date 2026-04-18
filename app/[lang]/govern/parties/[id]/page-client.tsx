@@ -15,12 +15,14 @@ import { copyToClipboard } from "@/lib/utils";
 
 interface PartyDetailPageClientProps {
   partyId: string;
+  lang: string;
   dictionary: Dictionary;
   featuredElectionId?: string;
 }
 
 export default function PartyDetailPageClient({
   partyId,
+  lang,
   dictionary,
   featuredElectionId,
 }: PartyDetailPageClientProps) {
@@ -52,7 +54,7 @@ export default function PartyDetailPageClient({
   const getShareUrl = async () => {
     if (typeof window === "undefined") return "";
     const shareUrl = new URL(
-      `${window.location.origin}/parties/${party?.id || partyId}`,
+      `${window.location.origin}/${lang}/govern/parties/${party?.id || partyId}`,
     );
 
     try {
@@ -69,7 +71,7 @@ export default function PartyDetailPageClient({
   };
 
   const handleBack = () => {
-    const fallbackPath = "/govern?tab=parties";
+    const fallbackPath = `/${lang}/govern?tab=parties`;
     const hasSameOriginReferrer =
       typeof document !== "undefined" &&
       document.referrer.startsWith(window.location.origin);

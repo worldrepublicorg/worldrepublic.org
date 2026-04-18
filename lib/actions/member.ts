@@ -1001,7 +1001,7 @@ export async function activateBasicIncome(): Promise<{
       });
     });
 
-    revalidatePath("/[lang]/earn", "page");
+    revalidatePath("/[lang]", "page");
 
     return { success: true };
   } catch (error) {
@@ -1100,7 +1100,7 @@ export async function claimBasicIncome(): Promise<{
     });
 
     if (result.success) {
-      revalidatePath("/[lang]/earn", "page");
+      revalidatePath("/[lang]", "page");
       revalidatePath("/[lang]/menu/wallet", "page");
     }
 
@@ -1275,7 +1275,7 @@ export async function depositToSavings(amount: number): Promise<{
       });
     });
 
-    revalidatePath("/[lang]/earn", "page");
+    revalidatePath("/[lang]", "page");
     revalidatePath("/[lang]/menu/wallet", "page");
     return { success: true };
   } catch (error) {
@@ -1361,7 +1361,7 @@ export async function withdrawFromSavings(amount: number): Promise<{
       });
     });
 
-    revalidatePath("/[lang]/earn", "page");
+    revalidatePath("/[lang]", "page");
     revalidatePath("/[lang]/menu/wallet", "page");
     return { success: true };
   } catch (error) {
@@ -1473,7 +1473,7 @@ export async function claimSavingsInterest(): Promise<{
     });
 
     if (result.success) {
-      revalidatePath("/[lang]/earn", "page");
+      revalidatePath("/[lang]", "page");
       revalidatePath("/[lang]/menu/wallet", "page");
     }
 
@@ -1565,6 +1565,8 @@ export async function setUsername(username: string) {
 
     // Revalidate paths and cache tags that show user profile and parties
     revalidatePath("/[lang]/menu/account", "page");
+    revalidatePath("/[lang]/govern", "page");
+    revalidatePath("/[lang]/govern/parties/[id]", "page");
     revalidatePath("/[lang]/parties", "page");
     revalidateTag("parties-list", "default");
 
