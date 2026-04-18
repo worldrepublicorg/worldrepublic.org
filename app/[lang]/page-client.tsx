@@ -14,7 +14,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { BasicIncomeSection } from "@/components/earn/basic-income-section";
 import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
 import { SavingsSection } from "@/components/earn/savings-section";
-import { LearnMoreDrawer } from "@/components/learn-more-drawer";
+import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
@@ -467,7 +467,7 @@ export default function HomePageClient({
               </div>
             </div>
 
-            <LearnMoreDrawer
+            <LearnMoreDialog
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.govern.parties.learn_more}
@@ -623,7 +623,7 @@ export default function HomePageClient({
               </div>
             </div>
 
-            <LearnMoreDrawer
+            <LearnMoreDialog
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.govern.parties.learn_more}

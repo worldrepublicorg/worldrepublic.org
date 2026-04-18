@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import { PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { LearnMoreDrawer } from "@/components/learn-more-drawer";
+import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { PartyCard } from "@/components/parties/party-card";
 import type { Party } from "@/lib/types/parties";
 
@@ -102,7 +102,7 @@ export function MyPartySection({
             {dictionary.pages.govern.parties.learn_more}
           </Button>
           
-          <LearnMoreDrawer
+          <LearnMoreDialog
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.govern.parties.learn_more}

@@ -11,7 +11,7 @@ import {
 import { PiArrowSquareOut, PiInfoFill } from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 
-export interface LearnMoreDrawerProps {
+export interface LearnMoreDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   title: string;
@@ -26,13 +26,13 @@ export interface LearnMoreDrawerProps {
  * Displays "Learn more" (or custom title), optional info text, and/or
  * an external link styled like Menu page links (with arrow icon, no start icon).
  */
-export function LearnMoreDrawer({
+export function LearnMoreDialog({
   open,
   onOpenChange,
   title,
   info,
   externalLink,
-}: LearnMoreDrawerProps) {
+}: LearnMoreDialogProps) {
   const hasContent = info || externalLink;
 
   return (

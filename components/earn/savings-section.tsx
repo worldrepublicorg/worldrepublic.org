@@ -22,7 +22,7 @@ import {
   PiPiggyBankFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { LearnMoreDrawer } from "@/components/learn-more-drawer";
+import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { useSavings } from "@/hooks/use-savings";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
@@ -219,10 +219,10 @@ export function SavingsSection({
               </button>
             </span>
           </Typography>
-          <LearnMoreDrawer
+          <LearnMoreDialog
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
-            title={dictionary.pages.govern.parties.learn_more}
+            title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
           />
         </div>

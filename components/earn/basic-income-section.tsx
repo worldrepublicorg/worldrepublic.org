@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { LearnMoreDrawer } from "@/components/learn-more-drawer";
+import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { useBasicIncome } from "@/hooks/use-basic-income";
 import { getSafeLocale } from "@/lib/locale";
 
@@ -103,7 +103,7 @@ export function BasicIncomeSection({
             {renderInfoSubtitle(
               dictionary.pages.earn.basic_income.subtitle_unauth,
             )}
-            <LearnMoreDrawer
+            <LearnMoreDialog
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.earn.tabs.basic_income}
@@ -142,7 +142,7 @@ export function BasicIncomeSection({
             {renderInfoSubtitle(
               dictionary.pages.earn.basic_income.setup_subtitle,
             )}
-            <LearnMoreDrawer
+            <LearnMoreDialog
               open={isLearnMoreDrawerOpen}
               onOpenChange={setIsLearnMoreDrawerOpen}
               title={dictionary.pages.earn.tabs.basic_income}
@@ -181,7 +181,7 @@ export function BasicIncomeSection({
           {renderInfoSubtitle(
             dictionary.pages.earn.basic_income.subtitle_claim,
           )}
-          <LearnMoreDrawer
+          <LearnMoreDialog
             open={isLearnMoreDrawerOpen}
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.earn.tabs.basic_income}
