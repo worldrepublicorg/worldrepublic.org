@@ -68,8 +68,8 @@ html::-webkit-progress-value {
 
 /* Match AlertDialog width to content width and center on desktop */
 @media (min-width: 768px) {
-  /* Target AlertDialogContent from Worldcoin UI Kit (Radix UI Dialog) */
-  [data-radix-dialog-content] {
+  /* Scope to Worldcoin UI Kit AlertDialog (Vaul drawer) only */
+  [data-vaul-drawer][data-vaul-drawer-direction="bottom"] {
     width: 36rem !important; /* Fixed width: max-w-xl = 576px, matches main content */
     max-width: 36rem;
     left: 50% !important;
