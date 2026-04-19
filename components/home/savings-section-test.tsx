@@ -102,11 +102,10 @@ export function SavingsSection({
     isActive,
     onSuccess,
   );
-  const {
-    walletBalance: worldchainWalletBalance,
-    savingsBalance: worldchainSavingsBalance,
-    availableInterest: worldchainAvailableInterest,
-  } = useWorldchainSavingsAccount();
+  const worldchainAccount = useWorldchainSavingsAccount();
+  const worldchainWalletBalance = worldchainAccount.balances.wallet;
+  const worldchainSavingsBalance = worldchainAccount.balances.savings;
+  const worldchainAvailableInterest = worldchainAccount.interest.available;
   const isWorldchainAccountSelected = selectedSavingsAccount === "worldchain";
   const isWorldchainReadOnly = isWorldchainAccountSelected && isWalletConnected;
   const displayWalletBalance = isWorldchainAccountSelected
