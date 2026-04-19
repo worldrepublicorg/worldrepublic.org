@@ -14,7 +14,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import type { ComponentProps } from "react";
 import { useState } from "react";
-import { PiWalletFill } from "react-icons/pi";
+import { PiLinkBreakFill, PiWalletFill } from "react-icons/pi";
 import { formatUnits } from "viem";
 import { useAccount, useConnect, useDisconnect, useReadContract } from "wagmi";
 import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
@@ -148,7 +148,13 @@ export function WalletConnectButton({
             </button>
           </AlertDialogTrigger>
           <AlertDialogContent>
-            <AlertDialogHeader>
+            <AlertDialogHeader
+              icon={
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                  <PiLinkBreakFill className="h-[30px] w-[30px] text-gray-400" />
+                </div>
+              }
+            >
               <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
             </AlertDialogHeader>
             <AlertDialogFooter>
