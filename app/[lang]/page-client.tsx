@@ -393,8 +393,14 @@ export default function HomePageClient({
         ]}
       />
 
-      <main className="flex grow flex-col">
-        <div className={activeTab === "basic_income" ? "flex grow" : "hidden"}>
+      <main className="flex min-h-0 grow flex-col overflow-hidden">
+        <div
+          className={
+            activeTab === "basic_income"
+              ? "flex min-h-0 grow overflow-y-auto"
+              : "hidden"
+          }
+        >
           <BasicIncomeSection
             lang={lang}
             dictionary={dictionary}
@@ -409,7 +415,13 @@ export default function HomePageClient({
           />
         </div>
 
-        <div className={activeTab === "savings" ? "flex grow" : "hidden"}>
+        <div
+          className={
+            activeTab === "savings"
+              ? "flex min-h-0 grow overflow-y-auto"
+              : "hidden"
+          }
+        >
           <SavingsSection
             lang={lang}
             dictionary={dictionary}
