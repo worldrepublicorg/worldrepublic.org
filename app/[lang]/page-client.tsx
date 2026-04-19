@@ -11,9 +11,9 @@ import { useSearchParams } from "next/navigation";
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { BasicIncomeSection } from "@/components/earn/basic-income-section";
-import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
-import { SavingsSection } from "@/components/earn/savings-section";
+import { BasicIncomeSection } from "@/components/home/basic-income-section";
+import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
+import { SavingsSection } from "@/components/home/savings-section";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
@@ -351,7 +351,7 @@ export default function HomePageClient({
   };
 
   if (showSkeleton) {
-    return <EarnPageSkeleton />;
+    return <HomePageSkeleton />;
   }
 
   return (

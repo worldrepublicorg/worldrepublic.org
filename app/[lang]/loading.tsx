@@ -1,5 +1,5 @@
-import { EarnPageSkeleton } from "@/components/earn/earn-page-skeleton";
+import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
 
 export default function HomePageLoading() {
-  return <EarnPageSkeleton />;
+  return <HomePageSkeleton />;
 }
