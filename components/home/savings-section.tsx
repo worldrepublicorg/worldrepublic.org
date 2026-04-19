@@ -16,12 +16,14 @@ import {
 import { useMemo, useState } from "react";
 import {
   PiCoinsFill,
+  PiCaretDown,
   PiHandArrowDownFill,
   PiHandArrowUpFill,
   PiInfoFill,
   PiPiggyBankFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { useSavings } from "@/hooks/use-savings";
 import { getSafeLocale } from "@/lib/locale";
@@ -54,12 +56,21 @@ export function SavingsSection({
   savingsLastUpdatedAt,
   onSuccess,
 }: SavingsSectionProps) {
+  const savingsAccountOptions = [
+    { value: "offchain", label: "Offchain" },
+    { value: "worldchain", label: "World Chain" },
+  ] as const;
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [selectedAction, setSelectedAction] = useState<"deposit" | "withdraw">(
     "deposit",
   );
+  const [selectedSavingsAccount, setSelectedSavingsAccount] = useState<
+    (typeof savingsAccountOptions)[number]["value"]
+  >("offchain");
   const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const [isSavingsAccountDialogOpen, setIsSavingsAccountDialogOpen] =
+    useState(false);
   const [collectDialogOpen, setCollectDialogOpen] = useState(false);
   const [depositDialogOpen, setDepositDialogOpen] = useState(false);
   const [withdrawDialogOpen, setWithdrawDialogOpen] = useState(false);
@@ -190,6 +201,9 @@ export function SavingsSection({
     !amount ||
     Number(amount) <= 0 ||
     hasInsufficientBalance();
+  const selectedSavingsAccountLabel =
+    savingsAccountOptions.find((option) => option.value === selectedSavingsAccount)
+      ?.label ?? savingsAccountOptions[0].label;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -249,6 +263,14 @@ export function SavingsSection({
                 {dictionary.pages.earn.savings.withdraw}
               </Pill>
             </div>
+            <button
+              type="button"
+              onClick={() => setIsSavingsAccountDialogOpen(true)}
+              className="flex h-9 min-w-fit items-center justify-between gap-1 rounded-full border-0 bg-gray-100 px-4 font-sans text-sm font-semibold text-gray-900"
+            >
+              <span>{selectedSavingsAccountLabel}</span>
+              <PiCaretDown className="size-3.5 text-gray-400" />
+            </button>
           </div>
 
           <div className="mb-4 rounded-xl border border-gray-200 p-4">
@@ -470,6 +492,41 @@ export function SavingsSection({
           )}
         </div>
       </div>
+
+      <AlertDialog
+        open={isSavingsAccountDialogOpen}
+        onOpenChange={setIsSavingsAccountDialogOpen}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>
+              {dictionary.pages.wallet.transactions.filter.select_type}
+            </AlertDialogTitle>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <div className="flex w-full flex-col gap-2">
+              {savingsAccountOptions.map((option) => (
+                <div
+                  key={option.value}
+                  className={cn(
+                    "rounded-2xl",
+                    selectedSavingsAccount === option.value && "border-2",
+                  )}
+                >
+                  <CustomListItem
+                    label={option.label}
+                    onClick={() => {
+                      setSelectedSavingsAccount(option.value);
+                      setIsSavingsAccountDialogOpen(false);
+                    }}
+                    noPointer={false}
+                  />
+                </div>
+              ))}
+            </div>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
