@@ -1,5 +1,5 @@
 import { Pill } from "@worldcoin/mini-apps-ui-kit-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 interface TabPillsProps {
@@ -17,6 +17,7 @@ export function TabPills({
   basePath,
   onTabChange,
 }: TabPillsProps) {
+  const router = useRouter();
   const path = basePath ?? `/${lang}`;
   return (
     <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -29,19 +30,19 @@ export function TabPills({
             index === tabs.length - 1 && "pr-0",
           )}
         >
-          {onTabChange ? (
-            <button
-              type="button"
-              onClick={() => onTabChange(tab.key)}
-              className="block"
-            >
-              <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
-            </button>
-          ) : (
-            <Link href={`${path}?tab=${tab.key}`} className="block">
-              <Pill checked={activeTab === tab.key}>{tab.label}</Pill>
-            </Link>
-          )}
+          <Pill
+            checked={activeTab === tab.key}
+            onClick={() => {
+              if (onTabChange) {
+                onTabChange(tab.key);
+                return;
+              }
+
+              router.push(`${path}?tab=${tab.key}`);
+            }}
+          >
+            {tab.label}
+          </Pill>
         </div>
       ))}
     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { SessionProvider } from "next-auth/react";
+import { RainbowKitWalletProvider } from "@/components/wallet/rainbow-kit-provider";
 import { WalletAuthCacheSync } from "@/components/wallet/wallet-auth-cache-sync";
 
 export default function AuthLayout({
@@ -10,8 +11,10 @@ export default function AuthLayout({
 }) {
   return (
     <SessionProvider refetchOnWindowFocus={true}>
-      <WalletAuthCacheSync />
-      {children}
+      <RainbowKitWalletProvider>
+        <WalletAuthCacheSync />
+        {children}
+      </RainbowKitWalletProvider>
     </SessionProvider>
   );
 }
