@@ -416,6 +416,7 @@ export default function HomePageClient({
             <WalletConnectButton
               connectLabel={dictionary.common.connect}
               disconnectLabel={dictionary.common.disconnect}
+              lang={lang}
               size="sm"
             />
           ) : (
