@@ -20,7 +20,7 @@ export function TopbarWalletConnectButton() {
   const { disconnect } = useDisconnect();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
 
-  const handleWalletButtonClick = () => {
+  const handleWalletButtonClick = async () => {
     if (isConnected) {
       disconnect();
       return;
@@ -42,8 +42,11 @@ export function TopbarWalletConnectButton() {
       (connector) => connector.id === "injected",
     );
     if (injectedConnector) {
-      connect({ connector: injectedConnector });
-      return;
+      const provider = await injectedConnector.getProvider();
+      if (provider) {
+        connect({ connector: injectedConnector });
+        return;
+      }
     }
 
     setWalletBrowserDialogOpen(true);
@@ -54,7 +57,7 @@ export function TopbarWalletConnectButton() {
       <Button
         variant="tertiary"
         size="sm"
-        onClick={handleWalletButtonClick}
+        onClick={() => void handleWalletButtonClick()}
         disabled={isPending}
         className="h-10 rounded-full px-4 text-sm font-semibold"
       >
