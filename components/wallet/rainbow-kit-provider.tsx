@@ -1,11 +1,12 @@
 "use client";
 
-import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { fallback, http } from "viem";
-import { WagmiProvider } from "wagmi";
+import { createConfig, createStorage, WagmiProvider } from "wagmi";
 import { worldchain } from "wagmi/chains";
+import { injected } from "wagmi/connectors";
 
 const WORLD_CHAIN_RPC_URLS = [
   "https://worldchain-mainnet.g.alchemy.com/public",
@@ -15,15 +16,13 @@ const WORLD_CHAIN_RPC_URLS = [
   "https://worldchain-mainnet.gateway.tenderly.co",
 ] as const;
 
-const walletConnectProjectId =
-  process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ||
-  "b56e18d47c72ab683b10814fe9495694";
-
-const wagmiConfig = getDefaultConfig({
-  appName: "World Republic",
-  projectId: walletConnectProjectId,
+const wagmiConfig = createConfig({
   chains: [worldchain],
+  connectors: [injected()],
   ssr: true,
+  storage: createStorage({
+    storage: typeof window !== "undefined" ? window.localStorage : undefined,
+  }),
   transports: {
     [worldchain.id]: fallback(WORLD_CHAIN_RPC_URLS.map((url) => http(url))),
   },
