@@ -32,7 +32,7 @@ export function TopbarWalletConnectButton() {
 
   return (
     <Button
-      variant="primary"
+      variant="tertiary"
       size="sm"
       onClick={handleWalletButtonClick}
       disabled={isPending}
