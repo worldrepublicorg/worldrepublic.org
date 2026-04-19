@@ -28,6 +28,7 @@ import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useSavings } from "@/hooks/use-savings";
+import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 
@@ -101,23 +102,41 @@ export function SavingsSection({
     isActive,
     onSuccess,
   );
+  const {
+    walletBalance: worldchainWalletBalance,
+    savingsBalance: worldchainSavingsBalance,
+    availableInterest: worldchainAvailableInterest,
+  } = useWorldchainSavingsAccount();
+  const isWorldchainAccountSelected = selectedSavingsAccount === "worldchain";
+  const isWorldchainReadOnly = isWorldchainAccountSelected && isWalletConnected;
+  const displayWalletBalance = isWorldchainAccountSelected
+    ? worldchainWalletBalance
+    : walletBalance;
+  const displaySavingsBalance = isWorldchainAccountSelected
+    ? worldchainSavingsBalance
+    : savingsBalance;
+  const displayCollectableAmount = isWorldchainAccountSelected
+    ? worldchainAvailableInterest
+    : maxCollectableAmount;
 
   const maxButtonAmount = useMemo(() => {
     const source =
-      selectedAction === "deposit" ? walletBalance : savingsBalance;
+      selectedAction === "deposit"
+        ? displayWalletBalance
+        : displaySavingsBalance;
     const safeAmount = Math.max(0, source - 1e-12);
     return formatFullAmount(safeAmount);
-  }, [selectedAction, walletBalance, savingsBalance]);
-  const rewardDecimals = getRewardDecimals(savingsBalance);
+  }, [selectedAction, displayWalletBalance, displaySavingsBalance]);
+  const rewardDecimals = getRewardDecimals(displaySavingsBalance);
   const locale = getSafeLocale(lang);
   const savingsBalanceDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 4,
     maximumFractionDigits: 4,
-  }).format(Math.floor(savingsBalance * 10000) / 10000);
+  }).format(Math.floor(displaySavingsBalance * 10000) / 10000);
   const collectableAmountDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: rewardDecimals,
     maximumFractionDigits: rewardDecimals,
-  }).format(maxCollectableAmount);
+  }).format(displayCollectableAmount);
   const decimalSeparator =
     new Intl.NumberFormat(locale)
       .formatToParts(1.1)
@@ -187,11 +206,14 @@ export function SavingsSection({
     if (!amount || Number(amount) <= 0) return false;
     const entered = Number(amount);
     const source =
-      selectedAction === "deposit" ? walletBalance : savingsBalance;
+      selectedAction === "deposit"
+        ? displayWalletBalance
+        : displaySavingsBalance;
     return entered > source + 1e-9;
   };
 
   const getActionButtonText = () => {
+    if (isWorldchainReadOnly) return dictionary.common.coming_soon;
     if (!amount || Number(amount) <= 0) {
       return selectedAction === "deposit"
         ? dictionary.pages.earn.savings.deposit
@@ -204,6 +226,7 @@ export function SavingsSection({
   };
 
   const isActionDisabled =
+    isWorldchainReadOnly ||
     isSavingsLoading ||
     !isAuthenticated ||
     !amount ||
@@ -214,7 +237,7 @@ export function SavingsSection({
       (option) => option.value === selectedSavingsAccount,
     )?.label ?? savingsAccountOptions[0].label;
   const showWorldChainConnectCta =
-    selectedSavingsAccount === "worldchain" && !isWalletConnected;
+    isWorldchainAccountSelected && !isWalletConnected;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -349,9 +372,10 @@ export function SavingsSection({
                 <AlertDialogTrigger asChild>
                   <Button
                     disabled={
+                      isWorldchainReadOnly ||
                       !isAuthenticated ||
                       isSavingsLoading ||
-                      maxCollectableAmount <= 0
+                      displayCollectableAmount <= 0
                     }
                     variant="primary"
                     size="sm"
