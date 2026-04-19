@@ -28,14 +28,6 @@ export function TopbarWalletConnectButton() {
       openConnectModal();
       return;
     }
-
-    const fallbackConnector =
-      connectors.find((connector) => connector.id === "injected") ??
-      connectors[0];
-
-    if (fallbackConnector) {
-      connect({ connector: fallbackConnector });
-    }
   };
 
   return (
