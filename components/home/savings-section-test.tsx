@@ -22,6 +22,7 @@ import {
   PiInfoFill,
   PiPiggyBankFill,
 } from "react-icons/pi";
+import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
@@ -65,6 +66,7 @@ export function SavingsSection({
   selectedSavingsAccount,
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
+  const { isConnected: isWalletConnected } = useAccount();
   const savingsAccountOptions = [
     { value: "offchain", label: "Offchain" },
     { value: "worldchain", label: "World Chain" },
@@ -211,6 +213,8 @@ export function SavingsSection({
     savingsAccountOptions.find(
       (option) => option.value === selectedSavingsAccount,
     )?.label ?? savingsAccountOptions[0].label;
+  const showWorldChainConnectCta =
+    selectedSavingsAccount === "worldchain" && !isWalletConnected;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -400,23 +404,22 @@ export function SavingsSection({
             </div>
           </div>
 
-          {!isAuthenticated ? (
-            selectedSavingsAccount === "worldchain" ? (
-              <WalletConnectButton
-                variant="primary"
-                fullWidth
-                className={raisedButtonShadowClass}
-                connectLabel="Connect wallet"
-              />
-            ) : (
-              <Button
-                fullWidth
-                className={raisedButtonShadowClass}
-                onClick={onSignIn}
-              >
-                {dictionary.common.sign_in}
-              </Button>
-            )
+          {showWorldChainConnectCta ? (
+            <WalletConnectButton
+              variant="primary"
+              fullWidth
+              compact={false}
+              className={raisedButtonShadowClass}
+              connectLabel="Connect wallet"
+            />
+          ) : !isAuthenticated ? (
+            <Button
+              fullWidth
+              className={raisedButtonShadowClass}
+              onClick={onSignIn}
+            >
+              {dictionary.common.sign_in}
+            </Button>
           ) : selectedAction === "deposit" ? (
             <AlertDialog
               open={depositDialogOpen}

@@ -366,7 +366,7 @@ export default function HomePageClient({
         title={dictionary.nav.earn}
         endAdornment={
           activeTab === "savings" && selectedSavingsAccount === "worldchain" ? (
-            <WalletConnectButton connectLabel="Connect" />
+            <WalletConnectButton connectLabel="Connect" size="sm" />
           ) : (
             <TopbarWalletBalanceDisplay
               lang={lang}

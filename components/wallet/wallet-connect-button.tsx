@@ -19,15 +19,17 @@ interface WalletConnectButtonProps {
   size?: ComponentProps<typeof Button>["size"];
   fullWidth?: boolean;
   className?: string;
+  compact?: boolean;
   connectLabel?: string;
   disconnectLabel?: string;
 }
 
 export function WalletConnectButton({
   variant = "tertiary",
-  size = "sm",
+  size,
   fullWidth = false,
   className,
+  compact = true,
   connectLabel = "Connect wallet",
   disconnectLabel = "Disconnect",
 }: WalletConnectButtonProps = {}) {
@@ -77,7 +79,7 @@ export function WalletConnectButton({
         onClick={() => void handleWalletButtonClick()}
         disabled={isPending}
         fullWidth={fullWidth}
-        className={`h-10 rounded-full px-4 text-sm font-semibold ${className ?? ""}`}
+        className={`${compact ? "h-10 rounded-full px-4 text-sm font-semibold " : ""}${className ?? ""}`}
       >
         {isConnected ? disconnectLabel : connectLabel}
       </Button>
