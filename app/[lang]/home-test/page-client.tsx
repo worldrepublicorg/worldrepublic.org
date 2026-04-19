@@ -23,7 +23,7 @@ import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
-import { TopbarWalletConnectButton } from "@/components/wallet/topbar-wallet-connect-button";
+import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
@@ -366,7 +366,7 @@ export default function HomePageClient({
         title={dictionary.nav.earn}
         endAdornment={
           activeTab === "savings" && selectedSavingsAccount === "worldchain" ? (
-            <TopbarWalletConnectButton />
+            <WalletConnectButton connectLabel="Connect" />
           ) : (
             <TopbarWalletBalanceDisplay
               lang={lang}
@@ -434,6 +434,7 @@ export default function HomePageClient({
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}
+            onSignIn={() => setShowSignInDialog(true)}
             selectedSavingsAccount={selectedSavingsAccount}
             onSelectedSavingsAccountChange={setSelectedSavingsAccount}
           />

@@ -25,6 +25,7 @@ import {
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
+import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useSavings } from "@/hooks/use-savings";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
@@ -43,6 +44,7 @@ interface SavingsSectionProps {
   isSelfVerified: boolean;
   savingsLastUpdatedAt: number | null;
   onSuccess: () => Promise<void> | void;
+  onSignIn: () => void;
   selectedSavingsAccount: SavingsAccountType;
   onSelectedSavingsAccountChange: (value: SavingsAccountType) => void;
 }
@@ -59,6 +61,7 @@ export function SavingsSection({
   isSelfVerified,
   savingsLastUpdatedAt,
   onSuccess,
+  onSignIn,
   selectedSavingsAccount,
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
@@ -397,7 +400,24 @@ export function SavingsSection({
             </div>
           </div>
 
-          {selectedAction === "deposit" ? (
+          {!isAuthenticated ? (
+            selectedSavingsAccount === "worldchain" ? (
+              <WalletConnectButton
+                variant="primary"
+                fullWidth
+                className={raisedButtonShadowClass}
+                connectLabel="Connect wallet"
+              />
+            ) : (
+              <Button
+                fullWidth
+                className={raisedButtonShadowClass}
+                onClick={onSignIn}
+              >
+                {dictionary.common.sign_in}
+              </Button>
+            )
+          ) : selectedAction === "deposit" ? (
             <AlertDialog
               open={depositDialogOpen}
               onOpenChange={setDepositDialogOpen}
