@@ -36,7 +36,7 @@ export function TopbarWalletConnectButton() {
       size="sm"
       onClick={handleWalletButtonClick}
       disabled={isPending}
-      className="h-10 rounded-full px-4 text-sm font-medium"
+      className="h-10 rounded-full px-4 text-sm font-semibold"
     >
       {isConnected ? "Disconnect" : "Connect wallet"}
     </Button>
