@@ -16,7 +16,7 @@ import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
 import {
   type SavingsAccountType,
   SavingsSection,
-} from "@/components/home/savings-section";
+} from "@/components/home/savings-section-test";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
