@@ -27,6 +27,16 @@ export function MenuPageSkeleton() {
                 }
                 noPointer
               />
+              {/* Wallet item */}
+              <CustomListItem
+                label={
+                  <Skeleton height={18} width={40} className="rounded-lg" />
+                }
+                startAdornment={
+                  <Skeleton height={20} width={20} className="rounded-full" />
+                }
+                noPointer
+              />
               {/* Language item */}
               <CustomListItem
                 label={
