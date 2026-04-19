@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Potrdi",
     "sign_in": "Prijavi se",
+    "connect": "Poveži",
+    "disconnect": "Prekini povezavo",
+    "connect_wallet": "Poveži denarnico",
     "max": "Maks",
     "loading": "Nalaganje...",
     "processing": "Obdelava...",

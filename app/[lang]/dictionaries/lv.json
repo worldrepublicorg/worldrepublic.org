@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Apstiprināt",
     "sign_in": "Pieteikties",
+    "connect": "Savienot",
+    "disconnect": "Atvienot",
+    "connect_wallet": "Savienot maku",
     "max": "Maksimums",
     "loading": "Ielādē...",
     "processing": "Apstrādā...",

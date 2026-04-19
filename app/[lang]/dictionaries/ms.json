@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Sahkan",
     "sign_in": "Log masuk",
+    "connect": "Sambung",
+    "disconnect": "Putuskan sambungan",
+    "connect_wallet": "Sambung dompet",
     "max": "Maks",
     "loading": "Memuat...",
     "processing": "Memproses...",

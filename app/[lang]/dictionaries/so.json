@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Xaqiiji",
     "sign_in": "Gal",
+    "connect": "Ku xir",
+    "disconnect": "Kala xir",
+    "connect_wallet": "Ku xir boorsada",
     "max": "Guud",
     "loading": "Soo dejinaya...",
     "processing": "Waxaa la shaqeynayaa...",

@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Onayla",
     "sign_in": "Giriş yap",
+    "connect": "Bağlan",
+    "disconnect": "Bağlantıyı kes",
+    "connect_wallet": "Cüzdanı bağla",
     "max": "Maks",
     "loading": "Yükleniyor...",
     "processing": "İşleniyor...",

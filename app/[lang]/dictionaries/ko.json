@@ -355,6 +355,9 @@
   "common": {
     "confirm": "확인",
     "sign_in": "로그인",
+    "connect": "연결",
+    "disconnect": "연결 해제",
+    "connect_wallet": "지갑 연결",
     "max": "최대",
     "loading": "로딩 중...",
     "processing": "처리 중...",

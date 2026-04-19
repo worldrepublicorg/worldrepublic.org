@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Thibitisha",
     "sign_in": "Ingia",
+    "connect": "Unganisha",
+    "disconnect": "Tenganisha",
+    "connect_wallet": "Unganisha pochi",
     "max": "Kiwango cha juu",
     "loading": "Inapakia...",
     "processing": "Inachakata...",

@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Confirmar",
     "sign_in": "Iniciar sesión",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "connect_wallet": "Conectar billetera",
     "max": "Máx",
     "loading": "Cargando...",
     "processing": "Procesando...",

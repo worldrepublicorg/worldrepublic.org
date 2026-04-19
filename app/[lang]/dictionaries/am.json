@@ -355,6 +355,9 @@
   "common": {
     "confirm": "ማረጋገጥ",
     "sign_in": "መግባት",
+    "connect": "አገናኝ",
+    "disconnect": "ግንኙነት አቋርጥ",
+    "connect_wallet": "የገንዘብ ቦርሳ አገናኝ",
     "max": "ከፍተኛ",
     "loading": "እየተጫነ ነው...",
     "processing": "በማስተካከል ላይ...",

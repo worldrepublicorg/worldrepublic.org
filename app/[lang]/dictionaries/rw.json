@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Emeza",
     "sign_in": "Injira",
+    "connect": "Huza",
+    "disconnect": "Hagarika ihuza",
+    "connect_wallet": "Huza ikofi",
     "max": "Menshi",
     "loading": "Birakura...",
     "processing": "Gukora...",

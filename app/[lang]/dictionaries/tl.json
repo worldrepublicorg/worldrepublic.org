@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Kumpirmahin",
     "sign_in": "Mag-sign in",
+    "connect": "Ikonekta",
+    "disconnect": "Idiskonekta",
+    "connect_wallet": "Ikonekta ang wallet",
     "max": "Max",
     "loading": "Naglo-load...",
     "processing": "Pinoproseso...",

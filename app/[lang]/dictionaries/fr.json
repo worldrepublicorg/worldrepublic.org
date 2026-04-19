@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Confirmer",
     "sign_in": "Se connecter",
+    "connect": "Connecter",
+    "disconnect": "Déconnecter",
+    "connect_wallet": "Connecter le portefeuille",
     "max": "Max",
     "loading": "Chargement...",
     "processing": "Traitement...",

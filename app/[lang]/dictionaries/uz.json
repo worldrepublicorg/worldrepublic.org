@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Tasdiqlash",
     "sign_in": "Kirish",
+    "connect": "Ulanish",
+    "disconnect": "Uzish",
+    "connect_wallet": "Hamyonni ulash",
     "max": "Maks",
     "loading": "Yuklanmoqda...",
     "processing": "Ishlanmoqda...",

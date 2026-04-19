@@ -355,6 +355,9 @@
   "common": {
     "confirm": "确认",
     "sign_in": "登录",
+    "connect": "连接",
+    "disconnect": "断开连接",
+    "connect_wallet": "连接钱包",
     "max": "最大",
     "loading": "加载中...",
     "processing": "处理中...",

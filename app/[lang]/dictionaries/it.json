@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Conferma",
     "sign_in": "Accedi",
+    "connect": "Connetti",
+    "disconnect": "Disconnetti",
+    "connect_wallet": "Connetti wallet",
     "max": "Max",
     "loading": "Caricamento...",
     "processing": "Elaborazione...",

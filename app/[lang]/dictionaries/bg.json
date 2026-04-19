@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Потвърдете",
     "sign_in": "Влезте",
+    "connect": "Свържи",
+    "disconnect": "Прекъсни връзката",
+    "connect_wallet": "Свържи портфейл",
     "max": "Макс",
     "loading": "Зареждане...",
     "processing": "Обработка...",

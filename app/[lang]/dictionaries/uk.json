@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Підтвердити",
     "sign_in": "Увійти",
+    "connect": "Підключити",
+    "disconnect": "Відключити",
+    "connect_wallet": "Підключити гаманець",
     "max": "Макс",
     "loading": "Завантаження...",
     "processing": "Обробка...",

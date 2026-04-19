@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Təsdiqlə",
     "sign_in": "Daxil ol",
+    "connect": "Qoşul",
+    "disconnect": "Bağlantını kəs",
+    "connect_wallet": "Cüzdanı qoş",
     "max": "Maks",
     "loading": "Yüklənir...",
     "processing": "İşlənir...",

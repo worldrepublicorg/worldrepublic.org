@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Konfirmasi",
     "sign_in": "Masuk",
+    "connect": "Hubungkan",
+    "disconnect": "Putuskan koneksi",
+    "connect_wallet": "Hubungkan dompet",
     "max": "Maks",
     "loading": "Memuat...",
     "processing": "Memproses...",

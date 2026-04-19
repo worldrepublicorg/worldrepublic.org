@@ -355,6 +355,9 @@
   "common": {
     "confirm": "تصدیق کریں",
     "sign_in": "سائن ان",
+    "connect": "منسلک کریں",
+    "disconnect": "منقطع کریں",
+    "connect_wallet": "والیٹ منسلک کریں",
     "max": "زیادہ سے زیادہ",
     "loading": "لوڈ ہو رہا ہے...",
     "processing": "پروسیسنگ...",

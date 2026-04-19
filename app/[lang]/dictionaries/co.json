@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Cunfirma",
     "sign_in": "Accedi",
+    "connect": "Cunnette",
+    "disconnect": "Disconnette",
+    "connect_wallet": "Cunnette u wallet",
     "max": "Max",
     "loading": "Caricamentu...",
     "processing": "Trattamentu...",

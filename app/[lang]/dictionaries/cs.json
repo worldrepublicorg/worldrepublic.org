@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Potvrdit",
     "sign_in": "Přihlásit se",
+    "connect": "Připojit",
+    "disconnect": "Odpojit",
+    "connect_wallet": "Připojit peněženku",
     "max": "Max",
     "loading": "Načítám...",
     "processing": "Zpracovávání...",

@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Επιβεβαίωση",
     "sign_in": "Σύνδεση",
+    "connect": "Σύνδεση",
+    "disconnect": "Αποσύνδεση",
+    "connect_wallet": "Σύνδεση πορτοφολιού",
     "max": "Μέγιστο",
     "loading": "Φόρτωση...",
     "processing": "Επεξεργασία...",

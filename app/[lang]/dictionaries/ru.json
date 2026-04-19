@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Подтвердить",
     "sign_in": "Войти",
+    "connect": "Подключить",
+    "disconnect": "Отключить",
+    "connect_wallet": "Подключить кошелек",
     "max": "Макс",
     "loading": "Загрузка...",
     "processing": "Обработка...",

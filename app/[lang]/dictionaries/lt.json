@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Patvirtinti",
     "sign_in": "Prisijungti",
+    "connect": "Prijungti",
+    "disconnect": "Atsijungti",
+    "connect_wallet": "Prijungti piniginę",
     "max": "Maks",
     "loading": "Kraunama...",
     "processing": "Apdorojama...",

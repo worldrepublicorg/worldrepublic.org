@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Jẹrisi",
     "sign_in": "Wọle",
+    "connect": "So pọ",
+    "disconnect": "Ge asopọ",
+    "connect_wallet": "So apamọwọ pọ",
     "max": "Opo",
     "loading": "Nṣiṣẹ...",
     "processing": "N ṣiṣẹ...",

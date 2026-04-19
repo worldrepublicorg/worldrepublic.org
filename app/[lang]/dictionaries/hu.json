@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Megerősítés",
     "sign_in": "Bejelentkezés",
+    "connect": "Csatlakozás",
+    "disconnect": "Kapcsolat bontása",
+    "connect_wallet": "Tárca csatlakoztatása",
     "max": "Max",
     "loading": "Betöltés...",
     "processing": "Feldolgozás...",

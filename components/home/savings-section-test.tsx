@@ -410,7 +410,8 @@ export function SavingsSection({
               fullWidth
               compact={false}
               className={raisedButtonShadowClass}
-              connectLabel="Connect wallet"
+              connectLabel={dictionary.common.connect_wallet}
+              disconnectLabel={dictionary.common.disconnect}
             />
           ) : !isAuthenticated ? (
             <Button

@@ -355,6 +355,9 @@
   "common": {
     "confirm": "تایید کړئ",
     "sign_in": "ننوتل",
+    "connect": "نښلول",
+    "disconnect": "بېلول",
+    "connect_wallet": "والټ ونښلوئ",
     "max": "اعظمي",
     "loading": "بار کېږي...",
     "processing": "پروسس کول...",

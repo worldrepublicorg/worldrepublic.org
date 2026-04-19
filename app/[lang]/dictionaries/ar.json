@@ -355,6 +355,9 @@
   "common": {
     "confirm": "تأكيد",
     "sign_in": "تسجيل الدخول",
+    "connect": "اتصل",
+    "disconnect": "قطع الاتصال",
+    "connect_wallet": "اتصل بالمحفظة",
     "max": "الحد الأقصى",
     "loading": "جاري التحميل...",
     "processing": "جاري المعالجة...",

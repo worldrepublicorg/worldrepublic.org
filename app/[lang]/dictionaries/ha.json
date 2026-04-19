@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Tabbatar",
     "sign_in": "Shiga",
+    "connect": "Haɗa",
+    "disconnect": "Cire haɗin",
+    "connect_wallet": "Haɗa walat",
     "max": "Mafi girma",
     "loading": "Ana loda...",
     "processing": "Ana aiki...",

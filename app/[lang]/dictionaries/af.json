@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Bevestig",
     "sign_in": "Teken in",
+    "connect": "Koppel",
+    "disconnect": "Ontkoppel",
+    "connect_wallet": "Koppel beursie",
     "max": "Maks",
     "loading": "Laai...",
     "processing": "Verwerk...",

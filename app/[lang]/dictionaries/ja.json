@@ -355,6 +355,9 @@
   "common": {
     "confirm": "確認",
     "sign_in": "サインイン",
+    "connect": "接続",
+    "disconnect": "切断",
+    "connect_wallet": "ウォレットを接続",
     "max": "最大",
     "loading": "読み込み中...",
     "processing": "処理中...",

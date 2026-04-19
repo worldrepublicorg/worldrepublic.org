@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Xác nhận",
     "sign_in": "Đăng nhập",
+    "connect": "Kết nối",
+    "disconnect": "Ngắt kết nối",
+    "connect_wallet": "Kết nối ví",
     "max": "Tối đa",
     "loading": "Đang tải...",
     "processing": "Đang xử lý...",

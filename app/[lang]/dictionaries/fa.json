@@ -355,6 +355,9 @@
   "common": {
     "confirm": "تأیید",
     "sign_in": "ورود",
+    "connect": "اتصال",
+    "disconnect": "قطع اتصال",
+    "connect_wallet": "اتصال کیف پول",
     "max": "حداکثر",
     "loading": "در حال بارگذاری...",
     "processing": "در حال پردازش...",

@@ -355,6 +355,9 @@
   "common": {
     "confirm": "បញ្ជាក់",
     "sign_in": "ចូល",
+    "connect": "ភ្ជាប់",
+    "disconnect": "ផ្ដាច់",
+    "connect_wallet": "ភ្ជាប់កាបូប",
     "max": "អតិបរមា",
     "loading": "កំពុងផ្ទុក...",
     "processing": "កំពុងដំណើរការ...",

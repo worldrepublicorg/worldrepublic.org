@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Potvrdi",
     "sign_in": "Prijava",
+    "connect": "Poveži",
+    "disconnect": "Prekini vezu",
+    "connect_wallet": "Poveži novčanik",
     "max": "Maks",
     "loading": "Učitavanje...",
     "processing": "Obrađuje se...",

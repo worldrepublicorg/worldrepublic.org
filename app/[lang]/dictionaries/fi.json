@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Vahvista",
     "sign_in": "Kirjaudu sisään",
+    "connect": "Yhdistä",
+    "disconnect": "Katkaise yhteys",
+    "connect_wallet": "Yhdistä lompakko",
     "max": "Maksimi",
     "loading": "Ladataan...",
     "processing": "Käsitellään...",

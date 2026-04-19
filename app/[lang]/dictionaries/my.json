@@ -355,6 +355,9 @@
   "common": {
     "confirm": "အတည်ပြုပါ",
     "sign_in": "ဝင်ပါ",
+    "connect": "ချိတ်ဆက်",
+    "disconnect": "ချိတ်ဆက်မှုဖြုတ်",
+    "connect_wallet": "Wallet ချိတ်ဆက်",
     "max": "အမြင့်ဆုံး",
     "loading": "ဖွင့်နေသည်...",
     "processing": "လုပ်ဆောင်နေသည်...",

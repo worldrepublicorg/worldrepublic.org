@@ -355,6 +355,9 @@
   "common": {
     "confirm": "Confirmă",
     "sign_in": "Conectare",
+    "connect": "Conectează",
+    "disconnect": "Deconectează",
+    "connect_wallet": "Conectează portofelul",
     "max": "Max",
     "loading": "Se încarcă...",
     "processing": "Se procesează...",
