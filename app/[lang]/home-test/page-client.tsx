@@ -47,6 +47,8 @@ const SignInDialog = dynamic(
 
 const TABS = ["basic_income", "savings", "subsidies", "ambassadors"] as const;
 type TabKey = (typeof TABS)[number];
+const SAVINGS_ACCOUNTS = ["offchain", "worldchain"] as const;
+const SAVINGS_ACCOUNT_QUERY_KEY = "savings_account";
 
 interface HomePageClientProps {
   lang: string;
@@ -61,6 +63,14 @@ export default function HomePageClient({
   const getTabFromQuery = useCallback((value: string | null): TabKey => {
     return TABS.includes(value as TabKey) ? (value as TabKey) : TABS[0];
   }, []);
+  const getSavingsAccountFromQuery = useCallback(
+    (value: string | null): SavingsAccountType => {
+      return SAVINGS_ACCOUNTS.includes(value as SavingsAccountType)
+        ? (value as SavingsAccountType)
+        : SAVINGS_ACCOUNTS[0];
+    },
+    [],
+  );
   const [activeTab, setActiveTab] = useState<TabKey>(() =>
     getTabFromQuery(searchParams.get("tab")),
   );
@@ -96,7 +106,9 @@ export default function HomePageClient({
   const [isPartyDrawerOpen, setIsPartyDrawerOpen] = useState(false);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [selectedSavingsAccount, setSelectedSavingsAccount] =
-    useState<SavingsAccountType>("offchain");
+    useState<SavingsAccountType>(() =>
+      getSavingsAccountFromQuery(searchParams.get(SAVINGS_ACCOUNT_QUERY_KEY)),
+    );
 
   const fetchData = useCallback(async () => {
     const result = await getWalletAuthAndData();
@@ -172,6 +184,41 @@ export default function HomePageClient({
     const nextUrl = `${window.location.pathname}?${updatedParams.toString()}`;
     window.history.replaceState(window.history.state, "", nextUrl);
   }, []);
+
+  const handleSavingsAccountChange = useCallback(
+    (nextSavingsAccount: SavingsAccountType) => {
+      setSelectedSavingsAccount((previousAccount) =>
+        previousAccount === nextSavingsAccount
+          ? previousAccount
+          : nextSavingsAccount,
+      );
+
+      if (typeof window === "undefined") return;
+      const updatedParams = new URLSearchParams(window.location.search);
+      if (nextSavingsAccount === "offchain") {
+        updatedParams.delete(SAVINGS_ACCOUNT_QUERY_KEY);
+      } else {
+        updatedParams.set(SAVINGS_ACCOUNT_QUERY_KEY, nextSavingsAccount);
+      }
+      const queryString = updatedParams.toString();
+      const nextUrl = queryString
+        ? `${window.location.pathname}?${queryString}`
+        : window.location.pathname;
+      window.history.replaceState(window.history.state, "", nextUrl);
+    },
+    [],
+  );
+
+  useEffect(() => {
+    const nextSavingsAccount = getSavingsAccountFromQuery(
+      searchParams.get(SAVINGS_ACCOUNT_QUERY_KEY),
+    );
+    setSelectedSavingsAccount((previousAccount) =>
+      previousAccount === nextSavingsAccount
+        ? previousAccount
+        : nextSavingsAccount,
+    );
+  }, [searchParams, getSavingsAccountFromQuery]);
 
   const showLeaderboardScrollToTop =
     activeTab === "ambassadors" || activeTab === "subsidies";
@@ -436,7 +483,7 @@ export default function HomePageClient({
             onSuccess={fetchData}
             onSignIn={() => setShowSignInDialog(true)}
             selectedSavingsAccount={selectedSavingsAccount}
-            onSelectedSavingsAccountChange={setSelectedSavingsAccount}
+            onSelectedSavingsAccountChange={handleSavingsAccountChange}
           />
         </div>
 
