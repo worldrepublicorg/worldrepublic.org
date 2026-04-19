@@ -103,6 +103,26 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
         />
+        <script
+          // Initialize standalone viewport height before first paint so loading
+          // skeletons and route-level fallbacks use the same layout as hydrated UI.
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  var root = document.documentElement;
+                  var mediaStandalone = window.matchMedia && window.matchMedia("(display-mode: standalone)").matches;
+                  var iosStandalone = "standalone" in navigator && !!navigator.standalone;
+                  var isStandalone = mediaStandalone || iosStandalone;
+                  root.dataset.displayMode = isStandalone ? "standalone" : "browser";
+                  if (!isStandalone) return;
+                  var vh = Math.round((window.visualViewport && window.visualViewport.height) || window.innerHeight);
+                  root.style.setProperty("--standalone-app-height", vh + "px");
+                } catch (_) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         className={cn(
