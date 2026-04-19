@@ -8,6 +8,7 @@ import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
 import { Suspense } from "react";
 import BottomNav from "@/components/bottom-nav";
 import { ReferralCapture } from "@/components/referral-capture";
+import { StandaloneViewportFix } from "@/components/standalone-viewport-fix";
 import { getBrandingForHost } from "@/lib/branding";
 import { cn } from "@/lib/utils";
 
@@ -108,14 +109,15 @@ export default async function RootLayout({
         className={cn(
           rubik.variable,
           twkLausanne.variable,
-          "relative min-h-dvh antialiased",
+          "app-shell relative min-h-screen antialiased",
         )}
       >
+        <StandaloneViewportFix />
         <div
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(0,85,99,0.08),transparent)]"
         />
-        <div className="mx-auto flex min-h-dvh w-full max-w-xl flex-col bg-white ring-1 ring-gray-100">
+        <div className="app-shell mx-auto flex min-h-screen w-full max-w-xl flex-col bg-white ring-1 ring-gray-100">
           {children}
           <Toaster />
         </div>

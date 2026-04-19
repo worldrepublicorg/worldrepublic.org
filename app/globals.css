@@ -22,6 +22,14 @@ body {
     "Helvetica Neue", Arial, sans-serif;
 }
 
+:root {
+  --standalone-app-height: 100vh;
+}
+
+html[data-display-mode="standalone"] .app-shell {
+  min-height: var(--standalone-app-height) !important;
+}
+
 .safe-area-spacer {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
