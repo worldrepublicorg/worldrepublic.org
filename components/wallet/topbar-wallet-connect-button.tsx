@@ -16,6 +16,14 @@ export function TopbarWalletConnectButton() {
       return;
     }
 
+    const injectedConnector = connectors.find(
+      (connector) => connector.id === "injected",
+    );
+    if (injectedConnector) {
+      connect({ connector: injectedConnector });
+      return;
+    }
+
     if (openConnectModal) {
       openConnectModal();
       return;
