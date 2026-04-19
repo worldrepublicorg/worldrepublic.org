@@ -108,14 +108,14 @@ export default async function RootLayout({
         className={cn(
           rubik.variable,
           twkLausanne.variable,
-          "relative min-h-screen antialiased",
+          "relative min-h-dvh antialiased",
         )}
       >
         <div
           aria-hidden
           className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(100%_60%_at_50%_0%,rgba(0,85,99,0.08),transparent)]"
         />
-        <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col bg-white ring-1 ring-gray-100">
+        <div className="mx-auto flex min-h-dvh w-full max-w-xl flex-col bg-white ring-1 ring-gray-100">
           {children}
           <Toaster />
         </div>
