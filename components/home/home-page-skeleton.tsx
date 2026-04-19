@@ -23,8 +23,8 @@ export function HomePageSkeleton() {
         <Skeleton height={36} width={80} className="rounded-full" />
       </div>
 
-      <main className="flex min-h-0 grow overflow-y-auto">
-        <div className="flex grow w-full flex-col items-center justify-center p-6">
+      <main className="flex grow items-center justify-center">
+        <div className="flex w-full flex-col items-center p-6">
           {/* Icon/illustration placeholder */}
           <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-gray-100">
             <Skeleton height={40} width={40} className="rounded-full" />
