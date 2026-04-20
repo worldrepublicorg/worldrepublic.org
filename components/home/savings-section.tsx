@@ -12,20 +12,30 @@ import {
   Button,
   Pill,
   Typography,
+  useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useMemo, useState } from "react";
 import {
+  PiCaretDown,
   PiCoinsFill,
   PiHandArrowDownFill,
   PiHandArrowUpFill,
   PiInfoFill,
   PiPiggyBankFill,
 } from "react-icons/pi";
+import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
+import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
+import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
+import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
+import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
+
+export type SavingsAccountType = "offchain" | "worldchain";
 
 interface SavingsSectionProps {
   lang: string;
@@ -39,6 +49,9 @@ interface SavingsSectionProps {
   isSelfVerified: boolean;
   savingsLastUpdatedAt: number | null;
   onSuccess: () => Promise<void> | void;
+  onSignIn: () => void;
+  selectedSavingsAccount: SavingsAccountType;
+  onSelectedSavingsAccountChange: (value: SavingsAccountType) => void;
 }
 
 export function SavingsSection({
@@ -53,13 +66,26 @@ export function SavingsSection({
   isSelfVerified,
   savingsLastUpdatedAt,
   onSuccess,
+  onSignIn,
+  selectedSavingsAccount,
+  onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
+  const { isConnected: isWalletConnected } = useAccount();
+  const { toast } = useToast();
+  const { isOnWorldChain, isSwitching, switchToWorldChain } =
+    useWorldChainGuard();
+  const savingsAccountOptions = [
+    { value: "offchain", label: "Offchain" },
+    { value: "worldchain", label: "World Chain" },
+  ] as const;
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [selectedAction, setSelectedAction] = useState<"deposit" | "withdraw">(
     "deposit",
   );
   const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
+  const [isSavingsAccountDialogOpen, setIsSavingsAccountDialogOpen] =
+    useState(false);
   const [collectDialogOpen, setCollectDialogOpen] = useState(false);
   const [depositDialogOpen, setDepositDialogOpen] = useState(false);
   const [withdrawDialogOpen, setWithdrawDialogOpen] = useState(false);
@@ -82,23 +108,46 @@ export function SavingsSection({
     isActive,
     onSuccess,
   );
+  const worldchainAccount = useWorldchainSavingsAccount();
+  const worldchainWalletBalance = worldchainAccount.balances.wallet;
+  const worldchainSavingsBalance = worldchainAccount.balances.savings;
+  const worldchainAvailableInterest = worldchainAccount.interest.available;
+  const isWorldchainAccountSelected = selectedSavingsAccount === "worldchain";
+  const isOffchainAccountSelected = !isWorldchainAccountSelected;
+  const isCurrentAccountLoading = isWorldchainAccountSelected
+    ? worldchainAccount.status.isLoading
+    : isSavingsLoading;
+  const displayWalletBalance = isWorldchainAccountSelected
+    ? worldchainWalletBalance
+    : walletBalance;
+  const displaySavingsBalance = isWorldchainAccountSelected
+    ? worldchainSavingsBalance
+    : savingsBalance;
+  const displayCollectableAmount = isWorldchainAccountSelected
+    ? worldchainAvailableInterest
+    : maxCollectableAmount;
 
   const maxButtonAmount = useMemo(() => {
     const source =
-      selectedAction === "deposit" ? walletBalance : savingsBalance;
+      selectedAction === "deposit"
+        ? displayWalletBalance
+        : displaySavingsBalance;
     const safeAmount = Math.max(0, source - 1e-12);
     return formatFullAmount(safeAmount);
-  }, [selectedAction, walletBalance, savingsBalance]);
-  const rewardDecimals = getRewardDecimals(savingsBalance);
+  }, [selectedAction, displayWalletBalance, displaySavingsBalance]);
+  const rewardDecimals = getRewardDecimals(displaySavingsBalance);
+  const collectableAmountForUi = Number(
+    displayCollectableAmount.toFixed(rewardDecimals),
+  );
   const locale = getSafeLocale(lang);
   const savingsBalanceDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 4,
     maximumFractionDigits: 4,
-  }).format(Math.floor(savingsBalance * 10000) / 10000);
+  }).format(Math.floor(displaySavingsBalance * 10000) / 10000);
   const collectableAmountDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: rewardDecimals,
     maximumFractionDigits: rewardDecimals,
-  }).format(maxCollectableAmount);
+  }).format(collectableAmountForUi);
   const decimalSeparator =
     new Intl.NumberFormat(locale)
       .formatToParts(1.1)
@@ -168,7 +217,9 @@ export function SavingsSection({
     if (!amount || Number(amount) <= 0) return false;
     const entered = Number(amount);
     const source =
-      selectedAction === "deposit" ? walletBalance : savingsBalance;
+      selectedAction === "deposit"
+        ? displayWalletBalance
+        : displaySavingsBalance;
     return entered > source + 1e-9;
   };
 
@@ -185,11 +236,20 @@ export function SavingsSection({
   };
 
   const isActionDisabled =
-    isSavingsLoading ||
-    !isAuthenticated ||
+    isCurrentAccountLoading ||
+    (isWorldchainAccountSelected && isWalletConnected && !isOnWorldChain) ||
+    (isOffchainAccountSelected && !isAuthenticated) ||
     !amount ||
     Number(amount) <= 0 ||
     hasInsufficientBalance();
+  const selectedSavingsAccountLabel =
+    savingsAccountOptions.find(
+      (option) => option.value === selectedSavingsAccount,
+    )?.label ?? savingsAccountOptions[0].label;
+  const showWorldChainConnectCta =
+    isWorldchainAccountSelected && !isWalletConnected;
+  const showWorldChainSwitchCta =
+    isWorldchainAccountSelected && isWalletConnected && !isOnWorldChain;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -224,6 +284,10 @@ export function SavingsSection({
             onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
+            externalLink={{
+              url: "https://worldscan.org/address/0x234302db10a54bdc11094a8ef816b0eaa5fce3f7#code",
+              label: dictionary.pages.earn.savings.smart_contract_link,
+            }}
           />
         </div>
 
@@ -249,6 +313,14 @@ export function SavingsSection({
                 {dictionary.pages.earn.savings.withdraw}
               </Pill>
             </div>
+            <button
+              type="button"
+              onClick={() => setIsSavingsAccountDialogOpen(true)}
+              className="flex h-9 min-w-fit items-center justify-between gap-1 rounded-full border-0 bg-gray-100 px-4 font-sans text-sm font-semibold text-gray-900"
+            >
+              <span>{selectedSavingsAccountLabel}</span>
+              <PiCaretDown className="size-3.5 text-gray-400" />
+            </button>
           </div>
 
           <div className="mb-4 rounded-xl border border-gray-200 p-4">
@@ -316,9 +388,10 @@ export function SavingsSection({
                 <AlertDialogTrigger asChild>
                   <Button
                     disabled={
-                      !isAuthenticated ||
-                      isSavingsLoading ||
-                      maxCollectableAmount <= 0
+                      (isOffchainAccountSelected && !isAuthenticated) ||
+                      showWorldChainSwitchCta ||
+                      isCurrentAccountLoading ||
+                      collectableAmountForUi <= 0
                     }
                     variant="primary"
                     size="sm"
@@ -349,10 +422,19 @@ export function SavingsSection({
                     <AlertDialogClose asChild>
                       <Button
                         onClick={async () => {
-                          await handleCollectInterest();
-                          setCollectDialogOpen(false);
+                          try {
+                            if (isWorldchainAccountSelected) {
+                              await worldchainAccount.actions.collect();
+                            } else {
+                              await handleCollectInterest();
+                            }
+                          } catch (err) {
+                            toast.error({ title: formatTxError(err) });
+                          } finally {
+                            setCollectDialogOpen(false);
+                          }
                         }}
-                        disabled={isSavingsLoading}
+                        disabled={isCurrentAccountLoading}
                         fullWidth
                       >
                         {dictionary.common.confirm}
@@ -371,7 +453,53 @@ export function SavingsSection({
             </div>
           </div>
 
-          {selectedAction === "deposit" ? (
+          {showWorldChainConnectCta ? (
+            <ConnectWalletButton
+              variant="primary"
+              fullWidth
+              compact={false}
+              className={raisedButtonShadowClass}
+              connectLabel={dictionary.common.connect_wallet}
+              disconnectLabel={dictionary.common.disconnect}
+              disconnectDescription={
+                dictionary.pages.wallet.modals.disconnect.confirm
+              }
+              walletBrowserDialogTitle={
+                dictionary.pages.wallet.modals.connect_wallet_browser.title
+              }
+              walletBrowserDialogDescription={
+                dictionary.pages.wallet.modals.connect_wallet_browser
+                  .description
+              }
+              walletBrowserDialogButtonLabel={
+                dictionary.pages.wallet.modals.connect_wallet_browser.copy_link
+              }
+              copiedToastTitle={dictionary.toasts.copied}
+              copyErrorToastTitle={dictionary.toasts.generic_error}
+              lang={lang}
+            />
+          ) : showWorldChainSwitchCta ? (
+            <Button
+              fullWidth
+              className={raisedButtonShadowClass}
+              disabled={isSwitching}
+              onClick={async () => {
+                await switchToWorldChain();
+              }}
+            >
+              {isSwitching
+                ? dictionary.common.loading
+                : dictionary.common.switch_to_world_chain}
+            </Button>
+          ) : !isAuthenticated && isOffchainAccountSelected ? (
+            <Button
+              fullWidth
+              className={raisedButtonShadowClass}
+              onClick={onSignIn}
+            >
+              {dictionary.common.sign_in}
+            </Button>
+          ) : selectedAction === "deposit" ? (
             <AlertDialog
               open={depositDialogOpen}
               onOpenChange={setDepositDialogOpen}
@@ -407,10 +535,20 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        await handleDeposit();
-                        setDepositDialogOpen(false);
+                        try {
+                          if (isWorldchainAccountSelected) {
+                            await worldchainAccount.actions.deposit(amount);
+                            setAmount("");
+                          } else {
+                            await handleDeposit();
+                          }
+                        } catch (err) {
+                          toast.error({ title: formatTxError(err) });
+                        } finally {
+                          setDepositDialogOpen(false);
+                        }
                       }}
-                      disabled={isSavingsLoading}
+                      disabled={isCurrentAccountLoading}
                       fullWidth
                     >
                       {dictionary.common.confirm}
@@ -455,10 +593,20 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        await handleWithdraw();
-                        setWithdrawDialogOpen(false);
+                        try {
+                          if (isWorldchainAccountSelected) {
+                            await worldchainAccount.actions.withdraw(amount);
+                            setAmount("");
+                          } else {
+                            await handleWithdraw();
+                          }
+                        } catch (err) {
+                          toast.error({ title: formatTxError(err) });
+                        } finally {
+                          setWithdrawDialogOpen(false);
+                        }
                       }}
-                      disabled={isSavingsLoading}
+                      disabled={isCurrentAccountLoading}
                       fullWidth
                     >
                       {dictionary.common.confirm}
@@ -470,6 +618,41 @@ export function SavingsSection({
           )}
         </div>
       </div>
+
+      <AlertDialog
+        open={isSavingsAccountDialogOpen}
+        onOpenChange={setIsSavingsAccountDialogOpen}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>
+              {dictionary.pages.wallet.transactions.filter.select_type}
+            </AlertDialogTitle>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <div className="flex w-full flex-col gap-2">
+              {savingsAccountOptions.map((option) => (
+                <div
+                  key={option.value}
+                  className={cn(
+                    "rounded-2xl",
+                    selectedSavingsAccount === option.value && "border-2",
+                  )}
+                >
+                  <CustomListItem
+                    label={option.label}
+                    onClick={() => {
+                      onSelectedSavingsAccountChange(option.value);
+                      setIsSavingsAccountDialogOpen(false);
+                    }}
+                    noPointer={false}
+                  />
+                </div>
+              ))}
+            </div>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

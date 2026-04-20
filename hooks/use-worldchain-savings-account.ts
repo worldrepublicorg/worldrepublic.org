@@ -89,10 +89,7 @@ const tokenStakingPerTokenAbi = [
 ] as const;
 
 type EthereumProvider = {
-  request: (args: {
-    method: string;
-    params?: unknown[];
-  }) => Promise<unknown>;
+  request: (args: { method: string; params?: unknown[] }) => Promise<unknown>;
 };
 
 function parseHexChainId(raw: unknown): number | null {

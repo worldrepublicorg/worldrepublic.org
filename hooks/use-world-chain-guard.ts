@@ -13,17 +13,12 @@ const WORLD_CHAIN_ADD_PARAMS = {
   chainId: WORLD_CHAIN_ID_HEX,
   chainName: "World Chain",
   nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
-  rpcUrls: [
-    "https://worldchain-mainnet.g.alchemy.com/public"
-  ],
+  rpcUrls: ["https://worldchain-mainnet.g.alchemy.com/public"],
   blockExplorerUrls: ["https://worldscan.org"],
 } as const;
 
 type EthereumProvider = {
-  request: (args: {
-    method: string;
-    params?: unknown[];
-  }) => Promise<unknown>;
+  request: (args: { method: string; params?: unknown[] }) => Promise<unknown>;
 };
 
 function parseHexChainId(raw: unknown): number | null {
