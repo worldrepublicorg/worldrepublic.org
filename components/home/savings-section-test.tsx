@@ -12,6 +12,7 @@ import {
   Button,
   Pill,
   Typography,
+  useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useMemo, useState } from "react";
 import {
@@ -68,6 +69,7 @@ export function SavingsSection({
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
   const { isConnected: isWalletConnected } = useAccount();
+  const { toast } = useToast();
   const savingsAccountOptions = [
     { value: "offchain", label: "Offchain" },
     { value: "worldchain", label: "World Chain" },
@@ -412,12 +414,22 @@ export function SavingsSection({
                     <AlertDialogClose asChild>
                       <Button
                         onClick={async () => {
-                          if (isWorldchainAccountSelected) {
-                            await worldchainAccount.actions.collect();
-                          } else {
-                            await handleCollectInterest();
+                          try {
+                            if (isWorldchainAccountSelected) {
+                              await worldchainAccount.actions.collect();
+                            } else {
+                              await handleCollectInterest();
+                            }
+                          } catch (err) {
+                            toast.error({
+                              title:
+                                err instanceof Error
+                                  ? err.message
+                                  : "Transaction failed",
+                            });
+                          } finally {
+                            setCollectDialogOpen(false);
                           }
-                          setCollectDialogOpen(false);
                         }}
                         disabled={isCurrentAccountLoading}
                         fullWidth
@@ -506,13 +518,23 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        if (isWorldchainAccountSelected) {
-                          await worldchainAccount.actions.deposit(amount);
-                          setAmount("");
-                        } else {
-                          await handleDeposit();
+                        try {
+                          if (isWorldchainAccountSelected) {
+                            await worldchainAccount.actions.deposit(amount);
+                            setAmount("");
+                          } else {
+                            await handleDeposit();
+                          }
+                        } catch (err) {
+                          toast.error({
+                            title:
+                              err instanceof Error
+                                ? err.message
+                                : "Transaction failed",
+                          });
+                        } finally {
+                          setDepositDialogOpen(false);
                         }
-                        setDepositDialogOpen(false);
                       }}
                       disabled={isCurrentAccountLoading}
                       fullWidth
@@ -559,13 +581,23 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        if (isWorldchainAccountSelected) {
-                          await worldchainAccount.actions.withdraw(amount);
-                          setAmount("");
-                        } else {
-                          await handleWithdraw();
+                        try {
+                          if (isWorldchainAccountSelected) {
+                            await worldchainAccount.actions.withdraw(amount);
+                            setAmount("");
+                          } else {
+                            await handleWithdraw();
+                          }
+                        } catch (err) {
+                          toast.error({
+                            title:
+                              err instanceof Error
+                                ? err.message
+                                : "Transaction failed",
+                          });
+                        } finally {
+                          setWithdrawDialogOpen(false);
                         }
-                        setWithdrawDialogOpen(false);
                       }}
                       disabled={isCurrentAccountLoading}
                       fullWidth
