@@ -15,6 +15,7 @@ import {
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { PiPowerFill, PiWalletFill } from "react-icons/pi";
+import type { Connector } from "wagmi";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import {
@@ -35,6 +36,8 @@ interface ConnectWalletButtonProps {
   walletBrowserDialogTitle?: string;
   walletBrowserDialogDescription?: string;
   walletBrowserDialogButtonLabel?: string;
+  walletPickerDialogTitle?: string;
+  walletPickerDialogDescription?: string;
   copiedToastTitle?: string;
   copyErrorToastTitle?: string;
   lang?: string;
@@ -52,6 +55,8 @@ export function ConnectWalletButton({
   walletBrowserDialogTitle = "Open in wallet app",
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
+  walletPickerDialogTitle = "Choose a wallet",
+  walletPickerDialogDescription = "Multiple browser wallets were found. Select one to connect.",
   copiedToastTitle = "Copied",
   copyErrorToastTitle = "An error occurred",
   lang = "en",
@@ -63,6 +68,10 @@ export function ConnectWalletButton({
   const disconnect = useDisconnect();
   const connectors = useConnectors();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
+  const [walletPickerDialogOpen, setWalletPickerDialogOpen] = useState(false);
+  const [availableDesktopConnectors, setAvailableDesktopConnectors] = useState<
+    Connector[]
+  >([]);
   const [disconnectDialogOpen, setDisconnectDialogOpen] = useState(false);
   const worldchainAccount = useWorldchainSavingsAccount();
   const rawBalance = worldchainAccount.balances.wallet;
@@ -84,15 +93,28 @@ export function ConnectWalletButton({
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         userAgent,
       );
-    const injectedConnector = connectors.find(
-      (connector) => connector.id === "injected",
-    );
-    if (injectedConnector) {
-      const provider = await injectedConnector.getProvider();
-      if (provider) {
-        connect.mutate({ connector: injectedConnector });
+    const connectorsWithProvider = (
+      await Promise.all(
+        connectors.map(async (connector) => {
+          try {
+            const provider = await connector.getProvider();
+            return provider ? connector : null;
+          } catch {
+            return null;
+          }
+        }),
+      )
+    ).filter((connector): connector is Connector => connector !== null);
+
+    if (connectorsWithProvider.length > 0) {
+      if (!isMobileDevice && connectorsWithProvider.length > 1) {
+        setAvailableDesktopConnectors(connectorsWithProvider);
+        setWalletPickerDialogOpen(true);
         return;
       }
+
+      connect.mutate({ connector: connectorsWithProvider[0] });
+      return;
     }
 
     if (isMobileDevice) {
@@ -177,6 +199,42 @@ export function ConnectWalletButton({
           {connectLabel}
         </Button>
       )}
+
+      <AlertDialog
+        open={walletPickerDialogOpen}
+        onOpenChange={setWalletPickerDialogOpen}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader
+            icon={
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                <PiWalletFill className="h-[30px] w-[30px] text-gray-400" />
+              </div>
+            }
+          >
+            <AlertDialogTitle>{walletPickerDialogTitle}</AlertDialogTitle>
+          </AlertDialogHeader>
+          <AlertDialogDescription>
+            {walletPickerDialogDescription}
+          </AlertDialogDescription>
+          <div className="flex flex-col gap-2">
+            {availableDesktopConnectors.map((connector, index) => (
+              <Button
+                key={`${connector.id}-${connector.name}-${index}`}
+                variant="tertiary"
+                fullWidth
+                disabled={connect.isPending}
+                onClick={() => {
+                  connect.mutate({ connector });
+                  setWalletPickerDialogOpen(false);
+                }}
+              >
+                {connector.name}
+              </Button>
+            ))}
+          </div>
+        </AlertDialogContent>
+      </AlertDialog>
 
       <AlertDialog
         open={walletBrowserDialogOpen}
