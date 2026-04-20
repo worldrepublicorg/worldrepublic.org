@@ -1,6 +1,6 @@
-export const DEFAULT_MIN_WITHDRAWAL_AMOUNT = 10;
-export const ETHEREUM_MIN_WITHDRAWAL_AMOUNT = 100;
-export const WORLD_CHAIN_MIN_WITHDRAWAL_AMOUNT = 10;
+const DEFAULT_MIN_WITHDRAWAL_AMOUNT = 10;
+const ETHEREUM_MIN_WITHDRAWAL_AMOUNT = 100;
+const WORLD_CHAIN_MIN_WITHDRAWAL_AMOUNT = 10;
 
 export function getMinWithdrawalAmount(chainId: string): number {
   if (chainId === "1") {

@@ -409,11 +409,6 @@ async function getUserStreamsByUuid(userUuid: string): Promise<StreamData[]> {
   }));
 }
 
-export async function getUserStreams(): Promise<StreamData[]> {
-  const userUuid = await getUserUuidFromSession();
-  return getUserStreamsByUuid(userUuid);
-}
-
 export async function getWalletAuthAndData(
   pendingReferralCode?: string,
 ): Promise<GetWalletAuthAndDataResult> {

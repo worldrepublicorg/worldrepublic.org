@@ -14,7 +14,7 @@ import { PartyDetailContent } from "@/components/parties/party-detail-content";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import type { Party } from "@/lib/types/parties";
 
-export interface PartyDetailDrawerProps {
+interface PartyDetailDrawerProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   party: Party | null;

@@ -11,8 +11,6 @@ export interface StreamData {
   electionId: string | null;
 }
 
-const STREAM_DURATION_S = 365 * 24 * 3600;
-
 export function computeStreamAccrued(
   stream: StreamData,
   nowMs: number,
@@ -40,19 +38,3 @@ export function computeWalletBalance(
   }
   return Math.max(0, totalAccrued - totalWithdrawn);
 }
-
-export function computeTotalRatePerSecond(
-  streams: StreamData[],
-  nowMs: number,
-): number {
-  let rate = 0;
-  for (const s of streams) {
-    if (s.type === "BASIC_INCOME") continue;
-    if (nowMs >= s.startedAt && nowMs < s.endsAt) {
-      rate += s.ratePerSecond;
-    }
-  }
-  return rate;
-}
-
-export { STREAM_DURATION_S };

@@ -11,7 +11,7 @@ import {
 import { PiArrowSquareOut, PiInfoFill } from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 
-export interface LearnMoreDialogProps {
+interface LearnMoreDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   title: string;

@@ -1,4 +1,4 @@
-export type AppBranding = {
+type AppBranding = {
   appName: string;
   appDefaultTitle: string;
   appTitleTemplate: string;
