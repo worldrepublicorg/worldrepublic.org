@@ -381,7 +381,8 @@
     "close": "Затвори",
     "updating": "Ажурирање...",
     "save": "Сачувај",
-    "vote": "Гласај"
+    "vote": "Гласај",
+    "switch_to_world_chain": "Пребаци на World Chain"
   },
   "auth": {
     "choose_method": "Изаберите жељени начин.",

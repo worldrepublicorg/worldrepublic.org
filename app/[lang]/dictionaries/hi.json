@@ -381,7 +381,8 @@
     "close": "बंद करें",
     "updating": "अपडेट कर रहे हैं...",
     "save": "सहेजें",
-    "vote": "मतदान करें"
+    "vote": "मतदान करें",
+    "switch_to_world_chain": "World Chain पर स्विच करें"
   },
   "auth": {
     "choose_method": "अपनी पसंदीदा विधि चुनें।",

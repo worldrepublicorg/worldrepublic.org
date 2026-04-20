@@ -381,7 +381,8 @@
     "close": "إغلاق",
     "updating": "جاري التحديث...",
     "save": "حفظ",
-    "vote": "صوت"
+    "vote": "صوت",
+    "switch_to_world_chain": "التبديل إلى World Chain"
   },
   "auth": {
     "choose_method": "اختر الطريقة المفضلة لديك.",

@@ -381,7 +381,8 @@
     "close": "بند کریں",
     "updating": "اپڈیٹ ہو رہا ہے...",
     "save": "محفوظ کریں",
-    "vote": "ووٹ دیں"
+    "vote": "ووٹ دیں",
+    "switch_to_world_chain": "World Chain پر سوئچ کریں"
   },
   "auth": {
     "choose_method": "اپنی پسندیدہ طریقہ منتخب کریں.",

@@ -381,7 +381,8 @@
     "close": "Đóng",
     "updating": "Đang cập nhật...",
     "save": "Lưu",
-    "vote": "Bỏ phiếu"
+    "vote": "Bỏ phiếu",
+    "switch_to_world_chain": "Chuyển sang World Chain"
   },
   "auth": {
     "choose_method": "Chọn phương thức ưa thích của bạn.",

@@ -381,7 +381,8 @@
     "close": "Yopish",
     "updating": "Yangilanmoqda...",
     "save": "Saqlash",
-    "vote": "Ovoz bering"
+    "vote": "Ovoz bering",
+    "switch_to_world_chain": "World Chain ga o‘ting"
   },
   "auth": {
     "choose_method": "Afzal ko'rgan usulni tanlang.",

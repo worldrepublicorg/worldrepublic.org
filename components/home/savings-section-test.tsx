@@ -490,7 +490,9 @@ export function SavingsSection({
                   await switchToWorldChain();
                 }}
               >
-                {isSwitching ? "Switching..." : "Switch to World Chain"}
+                {isSwitching
+                  ? dictionary.common.loading
+                  : dictionary.common.switch_to_world_chain}
               </Button>
           ) : !isAuthenticated && isOffchainAccountSelected ? (
             <Button

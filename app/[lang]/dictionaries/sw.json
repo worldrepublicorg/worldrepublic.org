@@ -381,7 +381,8 @@
     "close": "Funga",
     "updating": "Inasasisha...",
     "save": "Hifadhi",
-    "vote": "Piga kura"
+    "vote": "Piga kura",
+    "switch_to_world_chain": "Badilisha kwenda World Chain"
   },
   "auth": {
     "choose_method": "Chagua njia unayopenda.",

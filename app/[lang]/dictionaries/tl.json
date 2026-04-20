@@ -381,7 +381,8 @@
     "close": "Isara",
     "updating": "Nag-a-update...",
     "save": "I-save",
-    "vote": "Bumoto"
+    "vote": "Bumoto",
+    "switch_to_world_chain": "Lumipat sa World Chain"
   },
   "auth": {
     "choose_method": "Pumili ng iyong ginustong paraan.",

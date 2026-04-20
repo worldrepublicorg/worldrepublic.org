@@ -381,7 +381,8 @@
     "close": "Tutup",
     "updating": "Mengemas kini...",
     "save": "Simpan",
-    "vote": "Undi"
+    "vote": "Undi",
+    "switch_to_world_chain": "Tukar ke World Chain"
   },
   "auth": {
     "choose_method": "Pilih kaedah pilihan anda.",

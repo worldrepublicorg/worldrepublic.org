@@ -381,7 +381,8 @@
     "close": "Uždaryti",
     "updating": "Atnaujinama...",
     "save": "Išsaugoti",
-    "vote": "Balsuoti"
+    "vote": "Balsuoti",
+    "switch_to_world_chain": "Perjungti į World Chain"
   },
   "auth": {
     "choose_method": "Pasirinkite pageidaujamą metodą.",

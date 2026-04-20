@@ -381,7 +381,8 @@
     "close": "Chjude",
     "updating": "Aghjurnamentu...",
     "save": "Salvà",
-    "vote": "Votà"
+    "vote": "Votà",
+    "switch_to_world_chain": "Passa à World Chain"
   },
   "auth": {
     "choose_method": "Scegli u metudu preferitu.",

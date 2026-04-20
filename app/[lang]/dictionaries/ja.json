@@ -381,7 +381,8 @@
     "close": "閉じる",
     "updating": "更新中...",
     "save": "保存",
-    "vote": "投票"
+    "vote": "投票",
+    "switch_to_world_chain": "World Chainに切り替える"
   },
   "auth": {
     "choose_method": "希望する方法を選択してください。",

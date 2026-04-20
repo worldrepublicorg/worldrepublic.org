@@ -381,7 +381,8 @@
     "close": "ปิด",
     "updating": "กำลังอัปเดต...",
     "save": "บันทึก",
-    "vote": "ลงคะแนน"
+    "vote": "ลงคะแนน",
+    "switch_to_world_chain": "สลับไปยัง World Chain"
   },
   "auth": {
     "choose_method": "เลือกวิธีการที่คุณต้องการ.",

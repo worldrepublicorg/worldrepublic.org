@@ -381,7 +381,8 @@
     "close": "Κλείσιμο",
     "updating": "Ενημέρωση...",
     "save": "Αποθήκευση",
-    "vote": "Ψηφίστε"
+    "vote": "Ψηφίστε",
+    "switch_to_world_chain": "Μετάβαση σε World Chain"
   },
   "auth": {
     "choose_method": "Επιλέξτε την προτιμώμενη μέθοδο.",

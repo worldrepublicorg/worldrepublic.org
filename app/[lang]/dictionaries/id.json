@@ -381,7 +381,8 @@
     "close": "Tutup",
     "updating": "Memperbarui...",
     "save": "Simpan",
-    "vote": "Pilih"
+    "vote": "Pilih",
+    "switch_to_world_chain": "Beralih ke World Chain"
   },
   "auth": {
     "choose_method": "Pilih metode pilihan Anda.",

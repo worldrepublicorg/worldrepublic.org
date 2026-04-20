@@ -381,7 +381,8 @@
     "close": "Закрити",
     "updating": "Оновлення...",
     "save": "Зберегти",
-    "vote": "Голосувати"
+    "vote": "Голосувати",
+    "switch_to_world_chain": "Перемкнутися на World Chain"
   },
   "auth": {
     "choose_method": "Виберіть бажаний метод.",

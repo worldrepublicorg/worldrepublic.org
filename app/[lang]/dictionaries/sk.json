@@ -381,7 +381,8 @@
     "close": "Zavrieť",
     "updating": "Aktualizácia...",
     "save": "Uložiť",
-    "vote": "Hlasovať"
+    "vote": "Hlasovať",
+    "switch_to_world_chain": "Prepnúť na World Chain"
   },
   "auth": {
     "choose_method": "Vyberte preferovanú metódu.",

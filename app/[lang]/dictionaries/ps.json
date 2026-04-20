@@ -381,7 +381,8 @@
     "close": "تړل",
     "updating": "تازه کول...",
     "save": "خوندي کړئ",
-    "vote": "رايه ورکړه"
+    "vote": "رايه ورکړه",
+    "switch_to_world_chain": "World Chain ته واړوئ"
   },
   "auth": {
     "choose_method": "خپل غوره میتود غوره کړئ.",

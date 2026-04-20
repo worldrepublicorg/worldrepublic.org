@@ -381,7 +381,8 @@
     "close": "Aizvērt",
     "updating": "Atjaunina...",
     "save": "Saglabāt",
-    "vote": "Balsot"
+    "vote": "Balsot",
+    "switch_to_world_chain": "Pārslēgties uz World Chain"
   },
   "auth": {
     "choose_method": "Izvēlieties vēlamo metodi.",

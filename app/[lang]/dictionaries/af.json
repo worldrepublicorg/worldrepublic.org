@@ -381,7 +381,8 @@
     "close": "Sluit",
     "updating": "Besig om op te dateer...",
     "save": "Stoor",
-    "vote": "Stem"
+    "vote": "Stem",
+    "switch_to_world_chain": "Skakel oor na World Chain"
   },
   "auth": {
     "choose_method": "Kies jou voorkeurmetode.",

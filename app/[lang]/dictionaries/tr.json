@@ -381,7 +381,8 @@
     "close": "Kapat",
     "updating": "Güncelleniyor...",
     "save": "Kaydet",
-    "vote": "Oy ver"
+    "vote": "Oy ver",
+    "switch_to_world_chain": "World Chain'e geç"
   },
   "auth": {
     "choose_method": "Tercih ettiğiniz yöntemi seçin.",

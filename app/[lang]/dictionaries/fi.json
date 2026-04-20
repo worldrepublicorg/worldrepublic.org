@@ -381,7 +381,8 @@
     "close": "Sulje",
     "updating": "Päivitetään...",
     "save": "Tallenna",
-    "vote": "Äänestä"
+    "vote": "Äänestä",
+    "switch_to_world_chain": "Vaihda World Chainiin"
   },
   "auth": {
     "choose_method": "Valitse haluamasi menetelmä.",

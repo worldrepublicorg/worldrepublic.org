@@ -381,7 +381,8 @@
     "close": "Schließen",
     "updating": "Aktualisiere...",
     "save": "Speichern",
-    "vote": "Abstimmen"
+    "vote": "Abstimmen",
+    "switch_to_world_chain": "Zu World Chain wechseln"
   },
   "auth": {
     "choose_method": "Wählen Sie Ihre bevorzugte Methode.",

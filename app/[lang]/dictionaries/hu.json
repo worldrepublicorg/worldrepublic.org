@@ -381,7 +381,8 @@
     "close": "Bezárás",
     "updating": "Frissítés...",
     "save": "Mentés",
-    "vote": "Szavazás"
+    "vote": "Szavazás",
+    "switch_to_world_chain": "Váltás World Chainre"
   },
   "auth": {
     "choose_method": "Válassza ki az előnyben részesített módszert.",

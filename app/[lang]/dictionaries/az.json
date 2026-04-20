@@ -381,7 +381,8 @@
     "close": "Bağla",
     "updating": "Yenilənir...",
     "save": "Saxla",
-    "vote": "Səs ver"
+    "vote": "Səs ver",
+    "switch_to_world_chain": "World Chain-ə keç"
   },
   "auth": {
     "choose_method": "Üstünlük verdiyiniz metodu seçin.",

@@ -381,7 +381,8 @@
     "close": "ዝጋ",
     "updating": "በመቅረጽ ላይ...",
     "save": "አስቀምጥ",
-    "vote": "መጥየት"
+    "vote": "መጥየት",
+    "switch_to_world_chain": "ወደ World Chain ቀይር"
   },
   "auth": {
     "choose_method": "የሚመርጡትን ዘዴ ይምረጡ.",

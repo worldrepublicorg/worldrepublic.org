@@ -381,7 +381,8 @@
     "close": "Pa",
     "updating": "N ṣe imudojuiwọn...",
     "save": "Fi pamọ",
-    "vote": "Dibò"
+    "vote": "Dibò",
+    "switch_to_world_chain": "Yipada si World Chain"
   },
   "auth": {
     "choose_method": "Yan ọna ti o fẹ.",

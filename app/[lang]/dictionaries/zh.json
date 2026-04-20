@@ -381,7 +381,8 @@
     "close": "关闭",
     "updating": "更新中...",
     "save": "保存",
-    "vote": "投票"
+    "vote": "投票",
+    "switch_to_world_chain": "切换到 World Chain"
   },
   "auth": {
     "choose_method": "选择您喜欢的方法。",

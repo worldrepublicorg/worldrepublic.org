@@ -381,7 +381,8 @@
     "close": "بستن",
     "updating": "در حال به‌روزرسانی...",
     "save": "ذخیره",
-    "vote": "رای دهید"
+    "vote": "رای دهید",
+    "switch_to_world_chain": "تغییر به World Chain"
   },
   "auth": {
     "choose_method": "روش مورد نظر خود را انتخاب کنید.",

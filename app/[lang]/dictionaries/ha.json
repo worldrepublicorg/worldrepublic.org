@@ -381,7 +381,8 @@
     "close": "Rufe",
     "updating": "Ana sabuntawa...",
     "save": "Ajiye",
-    "vote": "Ka zabe"
+    "vote": "Ka zabe",
+    "switch_to_world_chain": "Canza zuwa World Chain"
   },
   "auth": {
     "choose_method": "Zaɓi hanyar da kuka fi so.",

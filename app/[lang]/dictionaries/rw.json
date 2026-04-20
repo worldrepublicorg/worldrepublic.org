@@ -381,7 +381,8 @@
     "close": "Funga",
     "updating": "Gusubiramo...",
     "save": "Bika",
-    "vote": "Vota"
+    "vote": "Vota",
+    "switch_to_world_chain": "Hindukira kuri World Chain"
   },
   "auth": {
     "choose_method": "Hitamo uburyo wifuza.",

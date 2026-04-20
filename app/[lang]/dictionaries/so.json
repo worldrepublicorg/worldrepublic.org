@@ -381,7 +381,8 @@
     "close": "Xidh",
     "updating": "Cusbooneysiinta...",
     "save": "Keydin",
-    "vote": "Codsi"
+    "vote": "Codsi",
+    "switch_to_world_chain": "U beddel World Chain"
   },
   "auth": {
     "choose_method": "Dooro habka aad doorbidayso.",

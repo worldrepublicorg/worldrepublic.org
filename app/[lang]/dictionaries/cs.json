@@ -381,7 +381,8 @@
     "close": "Zavřít",
     "updating": "Aktualizace...",
     "save": "Uložit",
-    "vote": "Hlasovat"
+    "vote": "Hlasovat",
+    "switch_to_world_chain": "Přepnout na World Chain"
   },
   "auth": {
     "choose_method": "Vyberte preferovanou metodu.",

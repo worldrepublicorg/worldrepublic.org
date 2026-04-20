@@ -381,7 +381,8 @@
     "close": "Sluiten",
     "updating": "Bijwerken...",
     "save": "Opslaan",
-    "vote": "Stemmen"
+    "vote": "Stemmen",
+    "switch_to_world_chain": "Schakel over naar World Chain"
   },
   "auth": {
     "choose_method": "Kies uw voorkeursmethode.",

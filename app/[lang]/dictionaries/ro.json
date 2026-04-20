@@ -381,7 +381,8 @@
     "close": "Închide",
     "updating": "Actualizare...",
     "save": "Salvează",
-    "vote": "Votează"
+    "vote": "Votează",
+    "switch_to_world_chain": "Comută la World Chain"
   },
   "auth": {
     "choose_method": "Alegeți metoda preferată.",
