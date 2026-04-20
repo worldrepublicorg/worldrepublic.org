@@ -5,7 +5,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { formatUnits, parseUnits } from "viem";
 import {
   useAccount,
-  useChainId,
   usePublicClient,
   useReadContracts,
   useSwitchChain,
@@ -107,7 +106,6 @@ function parseHexChainId(raw: unknown): number | null {
 export function useWorldchainSavingsAccount() {
   const { toast } = useToast();
   const { address, isConnected, connector } = useAccount();
-  const chainId = useChainId();
   const { switchChainAsync } = useSwitchChain();
   const publicClient = usePublicClient({ chainId: WORLD_CHAIN_ID });
   const { writeContractAsync } = useWriteContract();
@@ -225,7 +223,7 @@ export function useWorldchainSavingsAccount() {
       throw new Error("Wallet not connected");
     }
 
-    const preflightChainId = (await getLiveChainId()) ?? chainId;
+    const preflightChainId = await getLiveChainId();
     if (preflightChainId !== WORLD_CHAIN_ID) {
       try {
         await switchChainAsync({ chainId: WORLD_CHAIN_ID });
@@ -235,7 +233,7 @@ export function useWorldchainSavingsAccount() {
       }
     }
 
-    const postSwitchChainId = (await getLiveChainId()) ?? chainId;
+    const postSwitchChainId = await getLiveChainId();
     if (postSwitchChainId !== WORLD_CHAIN_ID) {
       toast.error({ title: "Please switch to World Chain to continue." });
       throw new Error("Chain switch failed");
@@ -248,7 +246,6 @@ export function useWorldchainSavingsAccount() {
   }, [
     isConnected,
     address,
-    chainId,
     getLiveChainId,
     switchChainAsync,
     toast,

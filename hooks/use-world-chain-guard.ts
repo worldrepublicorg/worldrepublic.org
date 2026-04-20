@@ -118,13 +118,28 @@ export function useWorldChainGuard() {
     void refreshLiveChainId();
   }, [refreshLiveChainId, chainId]);
 
+  useEffect(() => {
+    if (typeof window === "undefined" || !isConnected) return;
+    const handleFocusRefresh = () => {
+      void refreshLiveChainId();
+    };
+    window.addEventListener("focus", handleFocusRefresh);
+    document.addEventListener("visibilitychange", handleFocusRefresh);
+    return () => {
+      window.removeEventListener("focus", handleFocusRefresh);
+      document.removeEventListener("visibilitychange", handleFocusRefresh);
+    };
+  }, [isConnected, refreshLiveChainId]);
+
   const switchToWorldChain = useCallback(async () => {
     if (!isConnected || !connector) {
       toast.error({ title: "Connect your wallet first." });
       return false;
     }
     if (isSwitching) return false;
-    if (chainId === WORLD_CHAIN_ID) return true;
+
+    const preflightChainId = await refreshLiveChainId();
+    if (preflightChainId === WORLD_CHAIN_ID) return true;
 
     setIsSwitching(true);
 
@@ -144,14 +159,14 @@ export function useWorldChainGuard() {
         });
       }
       const currentLiveChainId = await refreshLiveChainId();
-      if (
-        currentLiveChainId !== null &&
-        currentLiveChainId !== WORLD_CHAIN_ID
-      ) {
-        toast.error({ title: "Please switch to World Chain to continue." });
+      if (currentLiveChainId !== WORLD_CHAIN_ID) {
+        toast.error({
+          title:
+            "Couldn't switch to World Chain. Please switch networks in your wallet.",
+        });
         return false;
       }
-      return currentLiveChainId === null ? chainId === WORLD_CHAIN_ID : true;
+      return true;
     } catch (err) {
       toast.error({ title: formatTxError(err) });
       return false;
@@ -168,7 +183,7 @@ export function useWorldChainGuard() {
     refreshLiveChainId,
   ]);
 
-  const isOnWorldChain = (liveChainId ?? chainId) === WORLD_CHAIN_ID;
+  const isOnWorldChain = isConnected && liveChainId === WORLD_CHAIN_ID;
 
   return {
     isOnWorldChain,
