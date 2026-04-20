@@ -37,7 +37,7 @@ export function MyPartySection({
   onEditParty,
   onDeleteParty,
 }: MyPartySectionProps) {
-  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
 
   return (
     <div className="mb-6 px-6 mt-2">
@@ -97,14 +97,14 @@ export function MyPartySection({
           <Button
             variant="tertiary"
             size="sm"
-            onClick={() => setIsLearnMoreDrawerOpen(true)}
+            onClick={() => setIsLearnMoreDialogOpen(true)}
           >
             {dictionary.pages.govern.parties.learn_more}
           </Button>
           
           <LearnMoreDialog
-            open={isLearnMoreDrawerOpen}
-            onOpenChange={setIsLearnMoreDrawerOpen}
+            open={isLearnMoreDialogOpen}
+            onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.govern.parties.learn_more}
             externalLink={{
               url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",

@@ -78,7 +78,7 @@ export default function HomePageClient({
   >(null);
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const [leaderboardError, setLeaderboardError] = useState(false);
-  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
 
   const [subsidyLeaderboard, setSubsidyLeaderboard] = useState<
     SubsidyLeaderboardEntry[] | null
@@ -444,7 +444,7 @@ export default function HomePageClient({
                 <span className="inline-flex shrink-0 items-center">
                   <button
                     type="button"
-                    onClick={() => setIsLearnMoreDrawerOpen(true)}
+                    onClick={() => setIsLearnMoreDialogOpen(true)}
                     className="inline-flex shrink-0 items-center justify-center text-gray-400"
                     aria-label="Learn more"
                   >
@@ -468,8 +468,8 @@ export default function HomePageClient({
             </div>
 
             <LearnMoreDialog
-              open={isLearnMoreDrawerOpen}
-              onOpenChange={setIsLearnMoreDrawerOpen}
+              open={isLearnMoreDialogOpen}
+              onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.govern.parties.learn_more}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/ambassador-program",
@@ -615,7 +615,7 @@ export default function HomePageClient({
               <div className="mt-5 w-full">
                 <Button
                   size="sm"
-                  onClick={() => setIsLearnMoreDrawerOpen(true)}
+                  onClick={() => setIsLearnMoreDialogOpen(true)}
                   fullWidth
                 >
                   {dictionary.pages.govern.parties.learn_more}
@@ -624,8 +624,8 @@ export default function HomePageClient({
             </div>
 
             <LearnMoreDialog
-              open={isLearnMoreDrawerOpen}
-              onOpenChange={setIsLearnMoreDrawerOpen}
+              open={isLearnMoreDialogOpen}
+              onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.govern.parties.learn_more}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",

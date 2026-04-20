@@ -46,7 +46,7 @@ export function BasicIncomeSection({
 }: BasicIncomeSectionProps) {
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
-  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
   const renderInfoSubtitle = (text: string) => (
     <Typography
       variant="subtitle"
@@ -57,7 +57,7 @@ export function BasicIncomeSection({
       <span className="inline-flex shrink-0 items-center">
         <button
           type="button"
-          onClick={() => setIsLearnMoreDrawerOpen(true)}
+          onClick={() => setIsLearnMoreDialogOpen(true)}
           className="inline-flex shrink-0 items-center justify-center text-gray-400"
           aria-label={dictionary.pages.govern.parties.learn_more}
         >
@@ -104,8 +104,8 @@ export function BasicIncomeSection({
               dictionary.pages.earn.basic_income.subtitle_unauth,
             )}
             <LearnMoreDialog
-              open={isLearnMoreDrawerOpen}
-              onOpenChange={setIsLearnMoreDrawerOpen}
+              open={isLearnMoreDialogOpen}
+              onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               externalLink={{
@@ -143,8 +143,8 @@ export function BasicIncomeSection({
               dictionary.pages.earn.basic_income.setup_subtitle,
             )}
             <LearnMoreDialog
-              open={isLearnMoreDrawerOpen}
-              onOpenChange={setIsLearnMoreDrawerOpen}
+              open={isLearnMoreDialogOpen}
+              onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               externalLink={{
@@ -182,8 +182,8 @@ export function BasicIncomeSection({
             dictionary.pages.earn.basic_income.subtitle_claim,
           )}
           <LearnMoreDialog
-            open={isLearnMoreDrawerOpen}
-            onOpenChange={setIsLearnMoreDrawerOpen}
+            open={isLearnMoreDialogOpen}
+            onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.earn.tabs.basic_income}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
             externalLink={{

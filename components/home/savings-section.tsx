@@ -59,7 +59,7 @@ export function SavingsSection({
   const [selectedAction, setSelectedAction] = useState<"deposit" | "withdraw">(
     "deposit",
   );
-  const [isLearnMoreDrawerOpen, setIsLearnMoreDrawerOpen] = useState(false);
+  const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
   const [collectDialogOpen, setCollectDialogOpen] = useState(false);
   const [depositDialogOpen, setDepositDialogOpen] = useState(false);
   const [withdrawDialogOpen, setWithdrawDialogOpen] = useState(false);
@@ -211,7 +211,7 @@ export function SavingsSection({
             <span className="inline-flex shrink-0 items-center">
               <button
                 type="button"
-                onClick={() => setIsLearnMoreDrawerOpen(true)}
+                onClick={() => setIsLearnMoreDialogOpen(true)}
                 className="inline-flex shrink-0 items-center justify-center text-gray-400"
                 aria-label={dictionary.pages.govern.parties.learn_more}
               >
@@ -220,8 +220,8 @@ export function SavingsSection({
             </span>
           </Typography>
           <LearnMoreDialog
-            open={isLearnMoreDrawerOpen}
-            onOpenChange={setIsLearnMoreDrawerOpen}
+            open={isLearnMoreDialogOpen}
+            onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
           />
