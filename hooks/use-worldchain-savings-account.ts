@@ -246,7 +246,6 @@ export function useWorldchainSavingsAccount() {
             abi: erc20Abi,
             functionName: "approve",
             args: [WORLD_SAVINGS_CONTRACT_ADDRESS, amountWei],
-            chainId: WORLD_CHAIN_ID,
           })) as `0x${string}`;
           await waitForSuccessReceipt(approveHash, client);
         }
@@ -256,7 +255,6 @@ export function useWorldchainSavingsAccount() {
           abi: tokenStakingPerTokenAbi,
           functionName: "stake",
           args: [amountWei],
-          chainId: WORLD_CHAIN_ID,
         })) as `0x${string}`;
         await waitForSuccessReceipt(stakeHash, client);
         await refresh();
@@ -287,7 +285,6 @@ export function useWorldchainSavingsAccount() {
           abi: tokenStakingPerTokenAbi,
           functionName: "withdraw",
           args: [amountWei],
-          chainId: WORLD_CHAIN_ID,
         })) as `0x${string}`;
         await waitForSuccessReceipt(withdrawHash, client);
         await refresh();
@@ -311,7 +308,6 @@ export function useWorldchainSavingsAccount() {
         abi: tokenStakingPerTokenAbi,
         functionName: "redeem",
         args: [],
-        chainId: WORLD_CHAIN_ID,
       })) as `0x${string}`;
       await waitForSuccessReceipt(redeemHash, client);
       await refresh();
