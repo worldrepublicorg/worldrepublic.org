@@ -1,6 +1,5 @@
 "use client";
 
-import { useConnectModal } from "@rainbow-me/rainbowkit";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -54,12 +53,11 @@ export function ConnectWalletButton({
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
   copiedToastTitle = "Copied",
-  copyErrorToastTitle,
+  copyErrorToastTitle = "No browser wallet found.",
   lang = "en",
 }: ConnectWalletButtonProps = {}) {
   const { isConnected } = useAccount();
   const { toast } = useToast();
-  const { openConnectModal } = useConnectModal();
   const { connectors, connect, isPending } = useConnect();
   const { disconnect } = useDisconnect();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
@@ -84,12 +82,6 @@ export function ConnectWalletButton({
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         userAgent,
       );
-
-    if (!isMobileDevice && openConnectModal) {
-      openConnectModal();
-      return;
-    }
-
     const injectedConnector = connectors.find(
       (connector) => connector.id === "injected",
     );
@@ -101,7 +93,14 @@ export function ConnectWalletButton({
       }
     }
 
-    setWalletBrowserDialogOpen(true);
+    if (isMobileDevice) {
+      setWalletBrowserDialogOpen(true);
+      return;
+    }
+
+    toast.error({
+      title: copyErrorToastTitle,
+    });
   };
 
   const handleCopyLink = async () => {

@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
 import "./globals.css";
-import "@rainbow-me/rainbowkit/styles.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
