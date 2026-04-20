@@ -76,8 +76,12 @@ export function computeRolledOverStreamState(
   ratePerSecond: number;
 } {
   const durationMs = existing.endsAt - existing.startedAt;
-  const elapsedMs = Math.min(Math.max(0, nowMs - existing.startedAt), durationMs);
-  const accrued = existing.initialAmount + existing.ratePerSecond * (elapsedMs / 1000);
+  const elapsedMs = Math.min(
+    Math.max(0, nowMs - existing.startedAt),
+    durationMs,
+  );
+  const accrued =
+    existing.initialAmount + existing.ratePerSecond * (elapsedMs / 1000);
   const withdrawn = existing.withdrawnAmount;
   const availableNow = accrued - withdrawn;
   const unvested = existing.totalAmount - accrued;

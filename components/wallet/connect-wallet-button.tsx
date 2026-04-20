@@ -19,7 +19,7 @@ import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
 
-interface WalletConnectButtonProps {
+interface ConnectWalletButtonProps {
   variant?: ComponentProps<typeof Button>["variant"];
   size?: ComponentProps<typeof Button>["size"];
   fullWidth?: boolean;
@@ -31,7 +31,7 @@ interface WalletConnectButtonProps {
   lang?: string;
 }
 
-export function WalletConnectButton({
+export function ConnectWalletButton({
   variant = "tertiary",
   size,
   fullWidth = false,
@@ -41,7 +41,7 @@ export function WalletConnectButton({
   disconnectLabel = "Disconnect",
   disconnectDescription = "Are you sure you want to disconnect your wallet?",
   lang = "en",
-}: WalletConnectButtonProps = {}) {
+}: ConnectWalletButtonProps = {}) {
   const { isConnected } = useAccount();
   const { openConnectModal } = useConnectModal();
   const { connectors, connect, isPending } = useConnect();

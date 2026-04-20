@@ -39,7 +39,6 @@ export function SignInDialog({
   onOpenChange,
   dictionary,
 }: SignInDialogProps) {
-  const router = useRouter();
   const { update } = useSession();
   const [loadingGoogle, setLoadingGoogle] = useState(false);
   const [loadingPasskey, setLoadingPasskey] = useState(false);

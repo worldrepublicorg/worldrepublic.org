@@ -431,7 +431,8 @@ export function PoliticalPartyList({
 
     try {
       setIsCreating(true);
-      const pendingReferral = localStorage.getItem("pending_referral") || undefined;
+      const pendingReferral =
+        localStorage.getItem("pending_referral") || undefined;
       const result = await createPartyAction(formData, pendingReferral);
       if (result.success) {
         if (pendingReferral) localStorage.removeItem("pending_referral");
@@ -708,11 +709,7 @@ export function PoliticalPartyList({
         {initialParties === null ? (
           // Error state (only when initial load failed)
           <div className="mt-12 mb-8 flex flex-col items-center gap-3 p-4 text-center">
-            <Typography
-              variant="body"
-              level={3}
-              className="text-gray-500"
-            >
+            <Typography variant="body" level={3} className="text-gray-500">
               {dictionary.pages.govern.parties.error_loading}
             </Typography>
             <Button

@@ -22,8 +22,8 @@ import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
 import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
+import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
-import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
@@ -413,7 +413,7 @@ export default function HomePageClient({
         title={dictionary.nav.earn}
         endAdornment={
           activeTab === "savings" && selectedSavingsAccount === "worldchain" ? (
-            <WalletConnectButton
+            <ConnectWalletButton
               connectLabel={dictionary.common.connect}
               disconnectLabel={dictionary.common.disconnect}
               disconnectDescription={

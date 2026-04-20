@@ -78,7 +78,8 @@ const getCachedAmbassadorLeaderboard = unstable_cache(
     // Sort by reward descending (highest first), then by invited count, then username
     entries.sort((a, b) => {
       if (b.reward !== a.reward) return b.reward - a.reward;
-      if (b.totalInvited !== a.totalInvited) return b.totalInvited - a.totalInvited;
+      if (b.totalInvited !== a.totalInvited)
+        return b.totalInvited - a.totalInvited;
       return a.username.localeCompare(b.username);
     });
 
@@ -137,7 +138,8 @@ const getCachedSubsidyLeaderboard = unstable_cache(
       totalSubsidy: Number.parseFloat(row.totalAllocated ?? "0"),
     }));
     entries.sort((a, b) => {
-      if (b.totalSubsidy !== a.totalSubsidy) return b.totalSubsidy - a.totalSubsidy;
+      if (b.totalSubsidy !== a.totalSubsidy)
+        return b.totalSubsidy - a.totalSubsidy;
       return a.leaderUsername.localeCompare(b.leaderUsername);
     });
     return entries;

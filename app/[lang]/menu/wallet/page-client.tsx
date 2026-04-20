@@ -42,11 +42,11 @@ import { TransactionHistoryContent } from "@/components/wallet/transaction-histo
 import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
 import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
-import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   EMPTY_STREAMS,
   useLiveWalletBalance,
 } from "@/hooks/use-live-wallet-balance";
+import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   type GetWalletAuthAndDataResult,
   type GetWalletAuthAndDataTransaction,

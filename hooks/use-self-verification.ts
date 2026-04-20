@@ -101,9 +101,12 @@ export function useSelfVerification(
         const { SelfAppBuilder, SelfQRcodeWrapper } = qrcodeMod;
         let accountSessionToken: string | null = null;
         if (mode === "account") {
-          const sessionRes = await fetch("/api/self/account-verification-session", {
-            method: "POST",
-          });
+          const sessionRes = await fetch(
+            "/api/self/account-verification-session",
+            {
+              method: "POST",
+            },
+          );
           const sessionJson = (await sessionRes.json()) as {
             result?: boolean;
             verificationSession?: {
@@ -115,14 +118,17 @@ export function useSelfVerification(
 
           if (!sessionRes.ok || !sessionJson?.result) {
             throw new Error(
-              sessionJson?.reason || "Failed to create account verification session",
+              sessionJson?.reason ||
+                "Failed to create account verification session",
             );
           }
 
           accountSessionToken = sessionJson.verificationSession?.token ?? null;
           const sessionId = sessionJson.verificationSession?.sessionId ?? null;
           if (!accountSessionToken || !sessionId) {
-            throw new Error("Account verification session payload is incomplete");
+            throw new Error(
+              "Account verification session payload is incomplete",
+            );
           }
           setAccountVerificationSessionId(sessionId);
         } else {

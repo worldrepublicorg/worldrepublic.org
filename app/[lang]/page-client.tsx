@@ -417,7 +417,9 @@ export default function HomePageClient({
             isAuthenticated={isAuthenticated}
             walletBalance={profileData?.walletBalance ?? 0}
             savingsBalance={profileData?.savingsBalance ?? 0}
-            unclaimedSavingsInterest={profileData?.unclaimedSavingsInterest ?? 0}
+            unclaimedSavingsInterest={
+              profileData?.unclaimedSavingsInterest ?? 0
+            }
             basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}

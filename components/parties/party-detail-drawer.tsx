@@ -61,7 +61,9 @@ export function PartyDetailDrawer({
 
   const handleShare = async () => {
     if (!party) return;
-    const shareUrl = new URL(`${window.location.origin}/govern/parties/${party.id}`);
+    const shareUrl = new URL(
+      `${window.location.origin}/govern/parties/${party.id}`,
+    );
     const shareTitle = party.name;
 
     try {

@@ -18,10 +18,7 @@ export function computeStreamAccrued(
   nowMs: number,
 ): number {
   const durationMs = stream.endsAt - stream.startedAt;
-  const elapsedMs = Math.min(
-    Math.max(0, nowMs - stream.startedAt),
-    durationMs,
-  );
+  const elapsedMs = Math.min(Math.max(0, nowMs - stream.startedAt), durationMs);
   const elapsedSec = elapsedMs / 1000;
   return stream.initialAmount + stream.ratePerSecond * elapsedSec;
 }

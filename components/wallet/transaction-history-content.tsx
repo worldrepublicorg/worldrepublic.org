@@ -120,7 +120,12 @@ export function TransactionHistoryContent({
     } finally {
       setIsLoadingMore(false);
     }
-  }, [transactionsProp, isLoadingMore, hasMoreTransactions, transactions.length]);
+  }, [
+    transactionsProp,
+    isLoadingMore,
+    hasMoreTransactions,
+    transactions.length,
+  ]);
 
   // Fetch transactions only if not provided as prop
   useEffect(() => {
@@ -271,7 +276,9 @@ export function TransactionHistoryContent({
       return 6;
     };
 
-    const precision = usesDynamicPrecision ? getSavingsTxPrecision(absAmount) : 2;
+    const precision = usesDynamicPrecision
+      ? getSavingsTxPrecision(absAmount)
+      : 2;
 
     return absAmount.toLocaleString(locale, {
       minimumFractionDigits: 2,
@@ -786,7 +793,9 @@ export function TransactionHistoryContent({
                 </div>
               );
             })}
-            {hasMoreTransactions && <div ref={loadMoreRef} className="h-14 py-4" />}
+            {hasMoreTransactions && (
+              <div ref={loadMoreRef} className="h-14 py-4" />
+            )}
           </div>
         </div>
       )}

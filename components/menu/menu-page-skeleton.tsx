@@ -5,9 +5,7 @@ import { TopBar } from "@/components/topbar";
 export function MenuPageSkeleton() {
   return (
     <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        startAdornment={<div className="size-10" />}
-      />
+      <TopBar startAdornment={<div className="size-10" />} />
 
       <div className="flex-1 overflow-y-auto px-6 pb-6 pt-4">
         <div className="flex flex-col gap-8">

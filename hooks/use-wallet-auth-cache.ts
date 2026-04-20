@@ -1,12 +1,12 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import type { GetWalletAuthAndDataResult } from "@/lib/actions/member";
 import {
   AUTH_DISPLAY_CACHE_KEY,
   getCachedWalletData,
   subscribeWalletAuthCache,
 } from "@/lib/wallet-auth-cache";
-import type { GetWalletAuthAndDataResult } from "@/lib/actions/member";
 
 function subscribe(onStoreChange: () => void) {
   const unsubscribe = subscribeWalletAuthCache(onStoreChange);

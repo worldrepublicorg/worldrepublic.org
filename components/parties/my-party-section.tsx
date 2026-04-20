@@ -87,11 +87,7 @@ export function MyPartySection({
         />
       ) : (
         <div className="flex flex-col items-center gap-3 p-4 text-center">
-          <Typography
-            variant="body"
-            level={3}
-            className="text-gray-500"
-          >
+          <Typography variant="body" level={3} className="text-gray-500">
             {dictionary.pages.govern.parties.run_on_elections_and_earn}
           </Typography>
           <Button
@@ -101,7 +97,7 @@ export function MyPartySection({
           >
             {dictionary.pages.govern.parties.learn_more}
           </Button>
-          
+
           <LearnMoreDialog
             open={isLearnMoreDialogOpen}
             onOpenChange={setIsLearnMoreDialogOpen}

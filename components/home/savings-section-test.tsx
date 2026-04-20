@@ -26,7 +26,7 @@ import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
-import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
+import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { getSafeLocale } from "@/lib/locale";
@@ -439,7 +439,7 @@ export function SavingsSection({
           </div>
 
           {showWorldChainConnectCta ? (
-            <WalletConnectButton
+            <ConnectWalletButton
               variant="primary"
               fullWidth
               compact={false}
