@@ -30,6 +30,7 @@ import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
+import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 
@@ -421,12 +422,7 @@ export function SavingsSection({
                               await handleCollectInterest();
                             }
                           } catch (err) {
-                            toast.error({
-                              title:
-                                err instanceof Error
-                                  ? err.message
-                                  : "Transaction failed",
-                            });
+                            toast.error({ title: formatTxError(err) });
                           } finally {
                             setCollectDialogOpen(false);
                           }
@@ -526,12 +522,7 @@ export function SavingsSection({
                             await handleDeposit();
                           }
                         } catch (err) {
-                          toast.error({
-                            title:
-                              err instanceof Error
-                                ? err.message
-                                : "Transaction failed",
-                          });
+                          toast.error({ title: formatTxError(err) });
                         } finally {
                           setDepositDialogOpen(false);
                         }
@@ -589,12 +580,7 @@ export function SavingsSection({
                             await handleWithdraw();
                           }
                         } catch (err) {
-                          toast.error({
-                            title:
-                              err instanceof Error
-                                ? err.message
-                                : "Transaction failed",
-                          });
+                          toast.error({ title: formatTxError(err) });
                         } finally {
                           setWithdrawDialogOpen(false);
                         }
