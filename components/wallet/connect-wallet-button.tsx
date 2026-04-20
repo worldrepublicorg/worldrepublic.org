@@ -182,7 +182,13 @@ export function ConnectWalletButton({
         onOpenChange={setWalletBrowserDialogOpen}
       >
         <AlertDialogContent>
-          <AlertDialogHeader>
+          <AlertDialogHeader
+            icon={
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                <PiWalletFill className="h-[30px] w-[30px] text-gray-400" />
+              </div>
+            }
+          >
             <AlertDialogTitle>{walletBrowserDialogTitle}</AlertDialogTitle>
           </AlertDialogHeader>
           <AlertDialogDescription>
