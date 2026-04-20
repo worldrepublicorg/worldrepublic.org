@@ -58,6 +58,44 @@ interface PendingStreamWrite {
   };
 }
 
+export function computeRolledOverStreamState(
+  existing: {
+    totalAmount: number;
+    initialAmount: number;
+    withdrawnAmount: number;
+    ratePerSecond: number;
+    startedAt: number;
+    endsAt: number;
+  },
+  nowMs: number,
+  newAllocation: number,
+): {
+  newInitialAmount: number;
+  newTotalAmount: number;
+  newWithdrawnAmount: number;
+  ratePerSecond: number;
+} {
+  const durationMs = existing.endsAt - existing.startedAt;
+  const elapsedMs = Math.min(Math.max(0, nowMs - existing.startedAt), durationMs);
+  const accrued = existing.initialAmount + existing.ratePerSecond * (elapsedMs / 1000);
+  const withdrawn = existing.withdrawnAmount;
+  const availableNow = accrued - withdrawn;
+  const unvested = existing.totalAmount - accrued;
+
+  const newInitialAmount = Math.max(0, availableNow);
+  const vestingPortion = Math.max(0, unvested) + newAllocation;
+  const newTotalAmount = newInitialAmount + vestingPortion;
+
+  return {
+    newInitialAmount,
+    newTotalAmount,
+    // Keep withdrawals scoped to the current stream window.
+    // Carrying historical withdrawals causes double-subtraction on the child stream.
+    newWithdrawnAmount: 0,
+    ratePerSecond: vestingPortion / STREAM_DURATION_S,
+  };
+}
+
 export async function distributeElectionSubsidies(
   db: AnyDb,
   electionId: string,
@@ -147,9 +185,10 @@ export async function distributeElectionSubsidies(
       leaderUsername: row.leaderUsername,
       leaderUserId: row.leaderUserId,
       subsidy: partySubsidy.toFixed(18),
-      streamAction: subsidyWrite.insertTransaction.type === "STREAM_CREATED"
-        ? "CREATED"
-        : "UPDATED",
+      streamAction:
+        subsidyWrite.insertTransaction.type === "STREAM_CREATED"
+          ? "CREATED"
+          : "UPDATED",
       ambassadorUsername: null,
       ambassadorReward: null,
       ambassadorStreamAction: null,
@@ -308,15 +347,11 @@ async function computeStreamWrite(
       electionId: existingStream.electionId,
     };
 
-    const accrued = computeStreamAccrued(streamData, nowMs);
-    const withdrawn = streamData.withdrawnAmount;
-    const availableNow = accrued - withdrawn;
-    const unvested = streamData.totalAmount - accrued;
-
-    const newInitialAmount = Math.max(0, availableNow);
-    const vestingPortion = Math.max(0, unvested) + newAllocation;
-    const newTotalAmount = newInitialAmount + vestingPortion;
-    const ratePerSecond = vestingPortion / STREAM_DURATION_S;
+    const rolledOver = computeRolledOverStreamState(
+      streamData,
+      nowMs,
+      newAllocation,
+    );
 
     return {
       freezeStreamId: existingStream.id,
@@ -326,10 +361,10 @@ async function computeStreamWrite(
         type,
         electionId,
         partyId,
-        totalAmount: newTotalAmount.toFixed(18),
-        initialAmount: newInitialAmount.toFixed(18),
-        withdrawnAmount: withdrawn.toFixed(18),
-        ratePerSecond: ratePerSecond.toFixed(18),
+        totalAmount: rolledOver.newTotalAmount.toFixed(18),
+        initialAmount: rolledOver.newInitialAmount.toFixed(18),
+        withdrawnAmount: rolledOver.newWithdrawnAmount.toFixed(18),
+        ratePerSecond: rolledOver.ratePerSecond.toFixed(18),
         startedAt: nowDate,
         endsAt,
         sourceStreamId: existingStream.id,

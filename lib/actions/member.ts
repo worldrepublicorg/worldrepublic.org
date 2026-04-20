@@ -624,6 +624,7 @@ export async function getTransactions(limit: number = 50, offset: number = 0) {
         isReceived:
           t.recipientUserId === userUuid ||
           t.type === "REFERRAL_VERIFIED_BONUS" ||
+          t.type === "ADMIN_STREAM_REPAIR" ||
           t.type === "STREAM_CREATED" ||
           t.type === "STREAM_UPDATED",
       })),

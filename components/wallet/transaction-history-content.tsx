@@ -366,7 +366,8 @@ export function TransactionHistoryContent({
     if (
       transaction.type === "STREAM_CREATED" ||
       transaction.type === "STREAM_UPDATED" ||
-      transaction.type === "REFERRAL_VERIFIED_BONUS"
+      transaction.type === "REFERRAL_VERIFIED_BONUS" ||
+      transaction.type === "ADMIN_STREAM_REPAIR"
     ) {
       return true;
     }
@@ -449,7 +450,8 @@ export function TransactionHistoryContent({
     if (
       transaction.type === "STREAM_CREATED" ||
       transaction.type === "STREAM_UPDATED" ||
-      transaction.type === "REFERRAL_VERIFIED_BONUS"
+      transaction.type === "REFERRAL_VERIFIED_BONUS" ||
+      transaction.type === "ADMIN_STREAM_REPAIR"
     ) {
       return PiArrowCircleDownFill;
     }
