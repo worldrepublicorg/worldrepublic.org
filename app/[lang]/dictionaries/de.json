@@ -237,8 +237,8 @@
           "deleting": "Wird gelöscht..."
         },
         "connect_wallet_browser": {
-          "title": "In Wallet-App öffnen",
-          "description": "Zum Verbinden kopiere diesen Link und öffne ihn im integrierten Browser einer Wallet-App.",
+          "title": "In MetaMask öffnen",
+          "description": "Um dich zu verbinden, kopiere diesen Link und öffne ihn im integrierten Browser von MetaMask.",
           "copy_link": "Link kopieren"
         }
       },

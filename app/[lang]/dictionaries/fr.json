@@ -237,8 +237,8 @@
           "deleting": "Suppression..."
         },
         "connect_wallet_browser": {
-          "title": "Ouvrir dans l'application de portefeuille",
-          "description": "Pour vous connecter, copiez ce lien et ouvrez-le dans le navigateur intégré d'une application de portefeuille.",
+          "title": "Ouvrir dans MetaMask",
+          "description": "Pour vous connecter, copiez ce lien et ouvrez-le dans le navigateur intégré de MetaMask.",
           "copy_link": "Copier le lien"
         }
       },

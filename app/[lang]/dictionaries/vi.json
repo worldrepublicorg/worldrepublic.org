@@ -237,8 +237,8 @@
           "deleting": "Đang xóa..."
         },
         "connect_wallet_browser": {
-          "title": "Mở trong ứng dụng ví",
-          "description": "Để kết nối, hãy sao chép liên kết này và mở nó trong trình duyệt tích hợp của ứng dụng ví.",
+          "title": "Mở trong MetaMask",
+          "description": "Để kết nối, hãy sao chép liên kết này và mở nó trong trình duyệt tích hợp của MetaMask.",
           "copy_link": "Sao chép liên kết"
         }
       },

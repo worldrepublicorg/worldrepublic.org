@@ -237,8 +237,8 @@
           "deleting": "Ana share..."
         },
         "connect_wallet_browser": {
-          "title": "Buɗe a manhajar walat",
-          "description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a burauzar da aka gina a cikin manhajar walat.",
+          "title": "Buɗe a MetaMask",
+          "description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a cikin burauzar da aka gina a MetaMask.",
           "copy_link": "Kwafi mahaɗi"
         }
       },

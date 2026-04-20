@@ -237,8 +237,8 @@
           "deleting": "Eliminazione in corso..."
         },
         "connect_wallet_browser": {
-          "title": "Apri nell'app portafoglio",
-          "description": "Per connetterti, copia questo link e aprilo nel browser integrato di un'app portafoglio.",
+          "title": "Apri in MetaMask",
+          "description": "Per connetterti, copia questo link e aprilo nel browser integrato di MetaMask.",
           "copy_link": "Copia link"
         }
       },

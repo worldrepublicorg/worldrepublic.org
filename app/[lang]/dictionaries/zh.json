@@ -237,8 +237,8 @@
           "deleting": "删除中..."
         },
         "connect_wallet_browser": {
-          "title": "在钱包应用中打开",
-          "description": "要连接，请复制此链接并在钱包应用的内置浏览器中打开。",
+          "title": "在 MetaMask 中打开",
+          "description": "要连接，请复制此链接并在 MetaMask 的内置浏览器中打开。",
           "copy_link": "复制链接"
         }
       },

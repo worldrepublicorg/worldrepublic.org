@@ -237,8 +237,8 @@
           "deleting": "Menghapus..."
         },
         "connect_wallet_browser": {
-          "title": "Buka di aplikasi dompet",
-          "description": "Untuk terhubung, salin tautan ini lalu buka di browser bawaan aplikasi dompet.",
+          "title": "Buka di MetaMask",
+          "description": "Untuk terhubung, salin tautan ini lalu buka di browser bawaan MetaMask.",
           "copy_link": "Salin tautan"
         }
       },

@@ -237,8 +237,8 @@
           "deleting": "Inafutwa..."
         },
         "connect_wallet_browser": {
-          "title": "Fungua kwenye programu ya pochi",
-          "description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya programu ya pochi.",
+          "title": "Fungua kwenye MetaMask",
+          "description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya MetaMask.",
           "copy_link": "Nakili kiungo"
         }
       },

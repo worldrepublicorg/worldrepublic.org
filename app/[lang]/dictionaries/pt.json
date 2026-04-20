@@ -237,8 +237,8 @@
           "deleting": "Excluindo..."
         },
         "connect_wallet_browser": {
-          "title": "Abrir no app de carteira",
-          "description": "Para conectar, copie este link e abra-o no navegador integrado de um app de carteira.",
+          "title": "Abrir no MetaMask",
+          "description": "Para conectar, copie este link e abra-o no navegador integrado do MetaMask.",
           "copy_link": "Copiar link"
         }
       },

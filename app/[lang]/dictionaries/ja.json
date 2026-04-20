@@ -237,8 +237,8 @@
           "deleting": "削除中..."
         },
         "connect_wallet_browser": {
-          "title": "ウォレットアプリで開く",
-          "description": "接続するには、このリンクをコピーしてウォレットアプリ内のブラウザーで開いてください。",
+          "title": "MetaMaskで開く",
+          "description": "接続するには、このリンクをコピーしてMetaMask内蔵ブラウザで開いてください。",
           "copy_link": "リンクをコピー"
         }
       },

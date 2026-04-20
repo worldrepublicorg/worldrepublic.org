@@ -237,8 +237,8 @@
           "deleting": "Gusiba..."
         },
         "connect_wallet_browser": {
-          "title": "Fungura muri porogaramu y'ikofi",
-          "description": "Kugira ngo uhuze, kopira iyi linki maze uyifungure muri browser yubatswe muri porogaramu y'ikofi.",
+          "title": "Fungura muri MetaMask",
+          "description": "Kugira ngo uhuze, kopira iyi linki hanyuma uyifungure muri browser yubatswe muri MetaMask.",
           "copy_link": "Kopira linki"
         }
       },

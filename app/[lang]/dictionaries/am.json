@@ -237,8 +237,8 @@
           "deleting": "እየተጠፋ ነው..."
         },
         "connect_wallet_browser": {
-          "title": "በዋሌት መተግበሪያ ውስጥ ክፈት",
-          "description": "ለመገናኘት ይህን አገናኝ ቅዳ እና በዋሌት መተግበሪያ ውስጥ ባለው አብሮ የተገነባ አሳሽ ክፈት።",
+          "title": "በMetaMask ክፈት",
+          "description": "ለመገናኘት ይህን አገናኝ ቅዳ እና በMetaMask አብሮ በተሰራ አሳሽ ውስጥ ክፈት።",
           "copy_link": "አገናኝ ቅዳ"
         }
       },

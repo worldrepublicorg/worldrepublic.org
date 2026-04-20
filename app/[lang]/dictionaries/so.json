@@ -237,8 +237,8 @@
           "deleting": "Tirtiraya..."
         },
         "connect_wallet_browser": {
-          "title": "Ka fur app-ka boorsada",
-          "description": "Si aad ugu xirmato, nuqul ka samee linkigan oo ka fur browser-ka ku dhex jira app-ka boorsada.",
+          "title": "Ku fur MetaMask",
+          "description": "Si aad u xirto, nuqul xiriirkan oo ku fur browser-ka ku dhex-jira MetaMask.",
           "copy_link": "Nuqul ka samee linkiga"
         }
       },

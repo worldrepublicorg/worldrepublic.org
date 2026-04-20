@@ -237,8 +237,8 @@
           "deleting": "Skrap..."
         },
         "connect_wallet_browser": {
-          "title": "Maak oop in beursie-toep",
-          "description": "Om te koppel, kopieer hierdie skakel en maak dit in 'n beursie-toep se ingeboude blaaier oop.",
+          "title": "Maak oop in MetaMask",
+          "description": "Om te koppel, kopieer hierdie skakel en maak dit in MetaMask se ingeboude blaaier oop.",
           "copy_link": "Kopieer skakel"
         }
       },

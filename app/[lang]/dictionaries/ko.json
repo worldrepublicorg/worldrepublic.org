@@ -237,8 +237,8 @@
           "deleting": "삭제 중..."
         },
         "connect_wallet_browser": {
-          "title": "지갑 앱에서 열기",
-          "description": "연결하려면 이 링크를 복사한 뒤 지갑 앱의 내장 브라우저에서 여세요.",
+          "title": "MetaMask에서 열기",
+          "description": "연결하려면 이 링크를 복사한 다음 MetaMask의 내장 브라우저에서 여세요.",
           "copy_link": "링크 복사"
         }
       },

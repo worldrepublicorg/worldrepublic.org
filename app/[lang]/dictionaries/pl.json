@@ -237,8 +237,8 @@
           "deleting": "Usuwanie..."
         },
         "connect_wallet_browser": {
-          "title": "Otwórz w aplikacji portfela",
-          "description": "Aby połączyć, skopiuj ten link i otwórz go we wbudowanej przeglądarce aplikacji portfela.",
+          "title": "Otwórz w MetaMask",
+          "description": "Aby się połączyć, skopiuj ten link i otwórz go w wbudowanej przeglądarce MetaMask.",
           "copy_link": "Kopiuj link"
         }
       },

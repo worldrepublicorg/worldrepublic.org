@@ -237,8 +237,8 @@
           "deleting": "Ina-delete..."
         },
         "connect_wallet_browser": {
-          "title": "Buksan sa app ng pitaka",
-          "description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng isang app ng pitaka.",
+          "title": "Buksan sa MetaMask",
+          "description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng MetaMask.",
           "copy_link": "Kopyahin ang link"
         }
       },

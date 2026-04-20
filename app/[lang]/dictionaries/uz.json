@@ -237,8 +237,8 @@
           "deleting": "O'chirilmoqda..."
         },
         "connect_wallet_browser": {
-          "title": "Hamyon ilovasida oching",
-          "description": "Ulanish uchun ushbu havolani nusxalang va uni hamyon ilovasining ichki brauzerida oching.",
+          "title": "MetaMask'da oching",
+          "description": "Ulanish uchun ushbu havolani nusxalang va uni MetaMask'ning ichki brauzerida oching.",
           "copy_link": "Havolani nusxalash"
         }
       },

@@ -237,8 +237,8 @@
           "deleting": "Silinir..."
         },
         "connect_wallet_browser": {
-          "title": "Cuzdan tətbiqində aç",
-          "description": "Qoşulmaq üçün bu linki kopyalayın və cüzdan tətbiqinin daxili brauzerində açın.",
+          "title": "MetaMask-də aç",
+          "description": "Qoşulmaq üçün bu linki kopyalayın və MetaMask-ın daxili brauzerində açın.",
           "copy_link": "Linki kopyala"
         }
       },

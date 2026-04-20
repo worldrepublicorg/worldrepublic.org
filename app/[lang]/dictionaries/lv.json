@@ -237,8 +237,8 @@
           "deleting": "Dzēš..."
         },
         "connect_wallet_browser": {
-          "title": "Atvērt makā lietotnē",
-          "description": "Lai pieslēgtos, nokopējiet šo saiti un atveriet to maka lietotnes iebūvētajā pārlūkā.",
+          "title": "Atvērt MetaMask",
+          "description": "Lai pieslēgtos, nokopējiet šo saiti un atveriet to MetaMask iebūvētajā pārlūkā.",
           "copy_link": "Kopēt saiti"
         }
       },

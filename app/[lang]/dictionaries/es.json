@@ -237,8 +237,8 @@
           "deleting": "Eliminando..."
         },
         "connect_wallet_browser": {
-          "title": "Abrir en la app de billetera",
-          "description": "Para conectar, copia este enlace y ábrelo en el navegador integrado de una app de billetera.",
+          "title": "Abrir en MetaMask",
+          "description": "Para conectarte, copia este enlace y ábrelo en el navegador integrado de MetaMask.",
           "copy_link": "Copiar enlace"
         }
       },

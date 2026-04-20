@@ -237,8 +237,8 @@
           "deleting": "Siliniyor..."
         },
         "connect_wallet_browser": {
-          "title": "Cüzdan uygulamasında aç",
-          "description": "Bağlanmak için bu bağlantıyı kopyalayın ve bir cüzdan uygulamasının yerleşik tarayıcısında açın.",
+          "title": "MetaMask'te aç",
+          "description": "Bağlanmak için bu bağlantıyı kopyalayın ve MetaMask'in yerleşik tarayıcısında açın.",
           "copy_link": "Bağlantıyı kopyala"
         }
       },

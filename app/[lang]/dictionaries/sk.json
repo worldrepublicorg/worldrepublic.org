@@ -237,8 +237,8 @@
           "deleting": "Mažem..."
         },
         "connect_wallet_browser": {
-          "title": "Otvoriť v aplikácii peňaženky",
-          "description": "Na pripojenie skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači peňaženkovej aplikácie.",
+          "title": "Otvoriť v MetaMask",
+          "description": "Ak sa chcete pripojiť, skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači MetaMask.",
           "copy_link": "Kopírovať odkaz"
         }
       },

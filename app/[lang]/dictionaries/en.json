@@ -237,8 +237,8 @@
           "deleting": "Deleting..."
         },
         "connect_wallet_browser": {
-          "title": "Open in wallet app",
-          "description": "To connect, copy this link and open it in a wallet app's built-in browser.",
+          "title": "Open in MetaMask",
+          "description": "To connect, copy this link and open it in MetaMask's built-in browser.",
           "copy_link": "Copy link"
         }
       },

@@ -237,8 +237,8 @@
           "deleting": "Se șterge..."
         },
         "connect_wallet_browser": {
-          "title": "Deschide în aplicația portofel",
-          "description": "Pentru conectare, copiază acest link și deschide-l în browserul integrat al unei aplicații portofel.",
+          "title": "Deschide în MetaMask",
+          "description": "Pentru conectare, copiază acest link și deschide-l în browserul integrat MetaMask.",
           "copy_link": "Copiază linkul"
         }
       },

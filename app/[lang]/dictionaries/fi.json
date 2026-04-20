@@ -237,8 +237,8 @@
           "deleting": "Poistetaan..."
         },
         "connect_wallet_browser": {
-          "title": "Avaa lompakkosovelluksessa",
-          "description": "Yhdistämistä varten kopioi tämä linkki ja avaa se lompakkosovelluksen sisäänrakennetussa selaimessa.",
+          "title": "Avaa MetaMaskissa",
+          "description": "Yhdistääksesi kopioi tämä linkki ja avaa se MetaMaskin sisäänrakennetussa selaimessa.",
           "copy_link": "Kopioi linkki"
         }
       },

@@ -237,8 +237,8 @@
           "deleting": "Brisanje..."
         },
         "connect_wallet_browser": {
-          "title": "Otvori u aplikaciji novčanika",
-          "description": "Za povezivanje kopirajte ovaj link i otvorite ga u ugrađenom pregledniku aplikacije novčanika.",
+          "title": "Otvori u MetaMask-u",
+          "description": "Za povezivanje kopirajte ovaj link i otvorite ga u MetaMask ugrađenom pregledniku.",
           "copy_link": "Kopiraj link"
         }
       },

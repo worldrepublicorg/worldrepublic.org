@@ -237,8 +237,8 @@
           "deleting": "ဖျက်နေသည်..."
         },
         "connect_wallet_browser": {
-          "title": "Wallet အက်ပ်တွင် ဖွင့်ရန်",
-          "description": "ချိတ်ဆက်ရန် ဤလင့်ကို ကူးယူပြီး ပိုက်ဆံအိတ်အက်ပ်၏ built-in browser တွင် ဖွင့်ပါ။",
+          "title": "MetaMask တွင်ဖွင့်ပါ",
+          "description": "ချိတ်ဆက်ရန် ဤလင့်ခ်ကို ကူးယူပြီး MetaMask ၏ built-in browser တွင် ဖွင့်ပါ။",
           "copy_link": "လင့် ကူးယူရန်"
         }
       },

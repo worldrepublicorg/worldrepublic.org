@@ -237,8 +237,8 @@
           "deleting": "Törlés..."
         },
         "connect_wallet_browser": {
-          "title": "Megnyitás a tárcaalkalmazásban",
-          "description": "A kapcsolódáshoz másold ki ezt a linket, és nyisd meg egy tárcaalkalmazás beépített böngészőjében.",
+          "title": "Megnyitás MetaMaskban",
+          "description": "A csatlakozáshoz másold ki ezt a linket, és nyisd meg a MetaMask beépített böngészőjében.",
           "copy_link": "Link másolása"
         }
       },

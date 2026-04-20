@@ -237,8 +237,8 @@
           "deleting": "Ištrinama..."
         },
         "connect_wallet_browser": {
-          "title": "Atidaryti piniginės programėlėje",
-          "description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją piniginės programėlės integruotoje naršyklėje.",
+          "title": "Atidaryti MetaMask",
+          "description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją MetaMask integruotoje naršyklėje.",
           "copy_link": "Kopijuoti nuorodą"
         }
       },
