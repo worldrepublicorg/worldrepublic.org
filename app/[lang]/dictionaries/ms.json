@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Adakah anda pasti mahu log keluar?"
         },
+        "disconnect": {
+          "confirm": "Adakah anda pasti mahu memutuskan sambungan dompet anda?"
+        },
         "send": {
           "button": "Hantar",
           "withdraw_to_crypto": {

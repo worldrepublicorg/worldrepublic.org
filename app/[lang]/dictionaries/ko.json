@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "로그아웃하시겠습니까?"
         },
+        "disconnect": {
+          "confirm": "지갑 연결을 해제하시겠습니까?"
+        },
         "send": {
           "button": "보내기",
           "withdraw_to_crypto": {

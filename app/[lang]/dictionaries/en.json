@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Are you sure you want to sign out?"
         },
+        "disconnect": {
+          "confirm": "Are you sure you want to disconnect your wallet?"
+        },
         "send": {
           "button": "Send",
           "withdraw_to_crypto": {

@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Weet je zeker dat je wilt uitloggen?"
         },
+        "disconnect": {
+          "confirm": "Weet je zeker dat je je wallet wilt ontkoppelen?"
+        },
         "send": {
           "button": "Versturen",
           "withdraw_to_crypto": {

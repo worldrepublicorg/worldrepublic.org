@@ -27,7 +27,7 @@ interface WalletConnectButtonProps {
   compact?: boolean;
   connectLabel?: string;
   disconnectLabel?: string;
-  confirmLabel?: string;
+  disconnectDescription?: string;
   lang?: string;
 }
 
@@ -39,7 +39,7 @@ export function WalletConnectButton({
   compact = true,
   connectLabel = "Connect wallet",
   disconnectLabel = "Disconnect",
-  confirmLabel = "Confirm",
+  disconnectDescription = "Are you sure you want to disconnect your wallet?",
   lang = "en",
 }: WalletConnectButtonProps = {}) {
   const { isConnected } = useAccount();
@@ -118,6 +118,9 @@ export function WalletConnectButton({
             >
               <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
             </AlertDialogHeader>
+            <AlertDialogDescription>
+              {disconnectDescription}
+            </AlertDialogDescription>
             <AlertDialogFooter>
               <Button
                 variant="primary"
@@ -127,7 +130,7 @@ export function WalletConnectButton({
                   setDisconnectDialogOpen(false);
                 }}
               >
-                {confirmLabel}
+                {disconnectLabel}
               </Button>
             </AlertDialogFooter>
           </AlertDialogContent>

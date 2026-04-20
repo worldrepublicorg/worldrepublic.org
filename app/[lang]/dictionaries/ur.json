@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "کیا آپ واقعی سائن آؤٹ کرنا چاہتے ہیں؟"
         },
+        "disconnect": {
+          "confirm": "کیا آپ واقعی اپنا والیٹ منقطع کرنا چاہتے ہیں؟"
+        },
         "send": {
           "button": "بھیجیں",
           "withdraw_to_crypto": {

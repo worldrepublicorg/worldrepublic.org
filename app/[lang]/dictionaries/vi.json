@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Bạn có chắc chắn muốn đăng xuất?"
         },
+        "disconnect": {
+          "confirm": "Bạn có chắc chắn muốn ngắt kết nối ví của mình không?"
+        },
         "send": {
           "button": "Gửi",
           "withdraw_to_crypto": {

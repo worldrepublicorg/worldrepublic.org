@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "သင်သည် ထွက်ရန် သေချာပါသလား။"
         },
+        "disconnect": {
+          "confirm": "သင့် wallet ကို ချိတ်ဆက်မှုဖြုတ်လိုသည်မှာ သေချာပါသလား?"
+        },
         "send": {
           "button": "ပို့ပါ",
           "withdraw_to_crypto": {

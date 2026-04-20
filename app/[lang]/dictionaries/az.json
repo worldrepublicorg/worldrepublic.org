@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Hesabdan çıxmaq istədiyinizə əminsiniz?"
         },
+        "disconnect": {
+          "confirm": "Cüzdanınızı ayırmaq istədiyinizə əminsiniz?"
+        },
         "send": {
           "button": "Göndər",
           "withdraw_to_crypto": {

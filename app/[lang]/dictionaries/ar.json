@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "هل أنت متأكد من أنك تريد تسجيل الخروج؟"
         },
+        "disconnect": {
+          "confirm": "هل أنت متأكد أنك تريد قطع اتصال محفظتك؟"
+        },
         "send": {
           "button": "إرسال",
           "withdraw_to_crypto": {

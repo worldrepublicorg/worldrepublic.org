@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Sei sicuro di voler uscire?"
         },
+        "disconnect": {
+          "confirm": "Sei sicuro di voler disconnettere il tuo wallet?"
+        },
         "send": {
           "button": "Invia",
           "withdraw_to_crypto": {

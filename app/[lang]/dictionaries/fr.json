@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Êtes-vous sûr de vouloir vous déconnecter ?"
         },
+        "disconnect": {
+          "confirm": "Êtes-vous sûr de vouloir déconnecter votre portefeuille ?"
+        },
         "send": {
           "button": "Envoyer",
           "withdraw_to_crypto": {

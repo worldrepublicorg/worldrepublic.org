@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "サインアウトしてもよろしいですか？"
         },
+        "disconnect": {
+          "confirm": "ウォレットの接続を解除してもよろしいですか？"
+        },
         "send": {
           "button": "送信",
           "withdraw_to_crypto": {

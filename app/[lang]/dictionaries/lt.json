@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Ar tikrai norite atsijungti?"
         },
+        "disconnect": {
+          "confirm": "Ar tikrai norite atjungti savo piniginę?"
+        },
         "send": {
           "button": "Siųsti",
           "withdraw_to_crypto": {

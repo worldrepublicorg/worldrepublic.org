@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Na pewno się wylogować?"
         },
+        "disconnect": {
+          "confirm": "Czy na pewno chcesz odłączyć swój portfel?"
+        },
         "send": {
           "button": "Wyślij",
           "withdraw_to_crypto": {

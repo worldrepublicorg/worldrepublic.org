@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Jeste li sigurni da se želite odjaviti?"
         },
+        "disconnect": {
+          "confirm": "Jeste li sigurni da želite prekinuti vezu sa svojim novčanikom?"
+        },
         "send": {
           "button": "Pošaljite",
           "withdraw_to_crypto": {

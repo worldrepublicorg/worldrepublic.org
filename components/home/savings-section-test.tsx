@@ -442,7 +442,9 @@ export function SavingsSection({
               className={raisedButtonShadowClass}
               connectLabel={dictionary.common.connect_wallet}
               disconnectLabel={dictionary.common.disconnect}
-              confirmLabel={dictionary.common.confirm}
+              disconnectDescription={
+                dictionary.pages.wallet.modals.disconnect.confirm
+              }
               lang={lang}
             />
           ) : !isAuthenticated && isOffchainAccountSelected ? (

@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Tem certeza de que deseja sair?"
         },
+        "disconnect": {
+          "confirm": "Tem certeza de que deseja desconectar sua carteira?"
+        },
         "send": {
           "button": "Enviar",
           "withdraw_to_crypto": {

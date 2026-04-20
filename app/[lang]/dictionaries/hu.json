@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Biztosan ki akar jelentkezni?"
         },
+        "disconnect": {
+          "confirm": "Biztosan le szeretnéd választani a tárcádat?"
+        },
         "send": {
           "button": "Küldés",
           "withdraw_to_crypto": {

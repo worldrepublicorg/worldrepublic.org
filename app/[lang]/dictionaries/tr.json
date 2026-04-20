@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Çıkış yapmak istediğinizden emin misiniz?"
         },
+        "disconnect": {
+          "confirm": "Cüzdanınızın bağlantısını kesmek istediğinizden emin misiniz?"
+        },
         "send": {
           "button": "Gönder",
           "withdraw_to_crypto": {

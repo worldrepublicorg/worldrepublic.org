@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "确定要退出登录吗？"
         },
+        "disconnect": {
+          "confirm": "您确定要断开您的钱包连接吗？"
+        },
         "send": {
           "button": "发送",
           "withdraw_to_crypto": {

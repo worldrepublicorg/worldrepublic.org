@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Ali se res želite odjaviti?"
         },
+        "disconnect": {
+          "confirm": "Ali ste prepričani, da želite odklopiti svojo denarnico?"
+        },
         "send": {
           "button": "Pošlji",
           "withdraw_to_crypto": {

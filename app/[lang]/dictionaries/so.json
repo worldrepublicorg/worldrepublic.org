@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "Ma hubtaa inaad rabto inaad ka bixito?"
         },
+        "disconnect": {
+          "confirm": "Ma hubtaa inaad rabto inaad kala xirto boorsadaada?"
+        },
         "send": {
           "button": "Dir",
           "withdraw_to_crypto": {

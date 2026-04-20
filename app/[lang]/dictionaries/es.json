@@ -213,6 +213,9 @@
         "sign_out": {
           "confirm": "¿Seguro que quieres cerrar sesión?"
         },
+        "disconnect": {
+          "confirm": "¿Seguro que quieres desconectar tu billetera?"
+        },
         "send": {
           "button": "Enviar",
           "withdraw_to_crypto": {
