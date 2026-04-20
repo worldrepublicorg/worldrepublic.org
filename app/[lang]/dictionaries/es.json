@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Esto eliminará permanentemente tu cuenta y eliminará todos tus datos de nuestros servidores. Esta acción no se puede deshacer — por favor continúa con precaución.",
           "deleting": "Eliminando..."
+        },
+        "connect_wallet_browser": {
+          "title": "Abrir en la app de billetera",
+          "description": "Para conectar, copia este enlace y ábrelo en el navegador integrado de una app de billetera.",
+          "copy_link": "Copiar enlace"
         }
       },
       "sections": {

@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "이것은 귀하의 계정을 영구적으로 삭제하고 모든 데이터를 서버에서 제거합니다. 이 작업은 되돌릴 수 없습니다 — 신중하게 진행하세요.",
           "deleting": "삭제 중..."
+        },
+        "connect_wallet_browser": {
+          "title": "지갑 앱에서 열기",
+          "description": "연결하려면 이 링크를 복사한 뒤 지갑 앱의 내장 브라우저에서 여세요.",
+          "copy_link": "링크 복사"
         }
       },
       "sections": {

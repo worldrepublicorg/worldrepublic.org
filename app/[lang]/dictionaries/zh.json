@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",
           "deleting": "删除中..."
+        },
+        "connect_wallet_browser": {
+          "title": "在钱包应用中打开",
+          "description": "要连接，请复制此链接并在钱包应用的内置浏览器中打开。",
+          "copy_link": "复制链接"
         }
       },
       "sections": {

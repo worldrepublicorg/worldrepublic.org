@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Dit sal jou rekening permanent skrap en al jou data van ons bedieners verwyder. Hierdie aksie kan nie ongedaan gemaak word nie — gaan voort met omsigtigheid.",
           "deleting": "Skrap..."
+        },
+        "connect_wallet_browser": {
+          "title": "Maak oop in beursie-toep",
+          "description": "Om te koppel, kopieer hierdie skakel en maak dit in 'n beursie-toep se ingeboude blaaier oop.",
+          "copy_link": "Kopieer skakel"
         }
       },
       "sections": {

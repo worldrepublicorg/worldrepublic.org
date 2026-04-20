@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Tämä poistaa pysyvästi tilisi ja poistaa kaikki tietosi palvelimiltamme. Tätä toimintoa ei voi perua — jatka varovasti.",
           "deleting": "Poistetaan..."
+        },
+        "connect_wallet_browser": {
+          "title": "Avaa lompakkosovelluksessa",
+          "description": "Yhdistämistä varten kopioi tämä linkki ja avaa se lompakkosovelluksen sisäänrakennetussa selaimessa.",
+          "copy_link": "Kopioi linkki"
         }
       },
       "sections": {

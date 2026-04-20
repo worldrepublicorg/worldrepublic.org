@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Tani waxay tirtiri doontaa akoonkaaga si joogto ah waxayna ka saari doontaa dhammaan xogtaaga serverkeena. Tallaaboobadan ma la soo celin karo — fadlan sii wad si taxadar leh.",
           "deleting": "Tirtiraya..."
+        },
+        "connect_wallet_browser": {
+          "title": "Ka fur app-ka boorsada",
+          "description": "Si aad ugu xirmato, nuqul ka samee linkigan oo ka fur browser-ka ku dhex jira app-ka boorsada.",
+          "copy_link": "Nuqul ka samee linkiga"
         }
       },
       "sections": {

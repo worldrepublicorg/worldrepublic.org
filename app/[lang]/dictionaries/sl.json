@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "To bo trajno izbrisalo vaš račun in odstranilo vse vaše podatke z naših strežnikov. Tega dejanja ni mogoče razveljaviti — nadaljujte previdno.",
           "deleting": "Brisanje..."
+        },
+        "connect_wallet_browser": {
+          "title": "Odpri v aplikaciji denarnice",
+          "description": "Za povezavo kopiraj to povezavo in jo odpri v vgrajenem brskalniku aplikacije denarnice.",
+          "copy_link": "Kopiraj povezavo"
         }
       },
       "sections": {

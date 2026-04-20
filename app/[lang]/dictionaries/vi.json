@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Điều này sẽ xóa vĩnh viễn tài khoản của bạn và xóa tất cả dữ liệu khỏi máy chủ của chúng tôi. Hành động này không thể hoàn tác — vui lòng tiếp tục một cách thận trọng.",
           "deleting": "Đang xóa..."
+        },
+        "connect_wallet_browser": {
+          "title": "Mở trong ứng dụng ví",
+          "description": "Để kết nối, hãy sao chép liên kết này và mở nó trong trình duyệt tích hợp của ứng dụng ví.",
+          "copy_link": "Sao chép liên kết"
         }
       },
       "sections": {

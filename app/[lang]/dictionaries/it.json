@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Questo eliminerà definitivamente il tuo account e rimuoverà tutti i tuoi dati dai nostri server. Questa azione non può essere annullata — procedi con cautela.",
           "deleting": "Eliminazione in corso..."
+        },
+        "connect_wallet_browser": {
+          "title": "Apri nell'app portafoglio",
+          "description": "Per connetterti, copia questo link e aprilo nel browser integrato di un'app portafoglio.",
+          "copy_link": "Copia link"
         }
       },
       "sections": {

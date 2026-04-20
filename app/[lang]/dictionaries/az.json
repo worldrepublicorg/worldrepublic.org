@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",
           "deleting": "Silinir..."
+        },
+        "connect_wallet_browser": {
+          "title": "Cuzdan tətbiqində aç",
+          "description": "Qoşulmaq üçün bu linki kopyalayın və cüzdan tətbiqinin daxili brauzerində açın.",
+          "copy_link": "Linki kopyala"
         }
       },
       "sections": {

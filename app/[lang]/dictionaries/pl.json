@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "To na zawsze usunie Twoje konto i wszystkie dane z naszych serwerów. Tej akcji nie można cofnąć — kontynuuj ostrożnie.",
           "deleting": "Usuwanie..."
+        },
+        "connect_wallet_browser": {
+          "title": "Otwórz w aplikacji portfela",
+          "description": "Aby połączyć, skopiuj ten link i otwórz go we wbudowanej przeglądarce aplikacji portfela.",
+          "copy_link": "Kopiuj link"
         }
       },
       "sections": {

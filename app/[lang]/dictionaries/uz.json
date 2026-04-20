@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Bu hisobingizni butunlay o'chiradi va barcha ma'lumotlaringizni serverlarimizdan olib tashlaydi. Bu amalni qaytarib bo'lmaydi — iltimos ehtiyotkorlik bilan davom eting.",
           "deleting": "O'chirilmoqda..."
+        },
+        "connect_wallet_browser": {
+          "title": "Hamyon ilovasida oching",
+          "description": "Ulanish uchun ushbu havolani nusxalang va uni hamyon ilovasining ichki brauzerida oching.",
+          "copy_link": "Havolani nusxalash"
         }
       },
       "sections": {

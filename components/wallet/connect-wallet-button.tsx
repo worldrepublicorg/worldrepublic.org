@@ -11,13 +11,18 @@ import {
   AlertDialogTrigger,
   Button,
   Typography,
+  useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { PiPowerFill, PiWalletFill } from "react-icons/pi";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
-import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
+import {
+  copyToClipboard,
+  getBalancePrecision,
+  truncateToPrecision,
+} from "@/lib/utils";
 
 interface ConnectWalletButtonProps {
   variant?: ComponentProps<typeof Button>["variant"];
@@ -28,6 +33,11 @@ interface ConnectWalletButtonProps {
   connectLabel?: string;
   disconnectLabel?: string;
   disconnectDescription?: string;
+  walletBrowserDialogTitle?: string;
+  walletBrowserDialogDescription?: string;
+  walletBrowserDialogButtonLabel?: string;
+  copiedToastTitle?: string;
+  copyErrorToastTitle?: string;
   lang?: string;
 }
 
@@ -40,9 +50,15 @@ export function ConnectWalletButton({
   connectLabel = "Connect wallet",
   disconnectLabel = "Disconnect",
   disconnectDescription = "Are you sure you want to disconnect your wallet?",
+  walletBrowserDialogTitle = "Open in wallet app",
+  walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
+  walletBrowserDialogButtonLabel = "Copy link",
+  copiedToastTitle = "Copied",
+  copyErrorToastTitle,
   lang = "en",
 }: ConnectWalletButtonProps = {}) {
   const { isConnected } = useAccount();
+  const { toast } = useToast();
   const { openConnectModal } = useConnectModal();
   const { connectors, connect, isPending } = useConnect();
   const { disconnect } = useDisconnect();
@@ -58,6 +74,8 @@ export function ConnectWalletButton({
     minimumFractionDigits: finalPrecision,
     maximumFractionDigits: finalPrecision,
   });
+  const walletSavingsUrl =
+    "https://www.worldrepublic.org/?tab=savings&savings_account=worldchain";
 
   const handleWalletButtonClick = async () => {
     const userAgent =
@@ -84,6 +102,17 @@ export function ConnectWalletButton({
     }
 
     setWalletBrowserDialogOpen(true);
+  };
+
+  const handleCopyLink = async () => {
+    const copied = await copyToClipboard(walletSavingsUrl, toast, {
+      success: copiedToastTitle,
+      error: copyErrorToastTitle,
+    });
+
+    if (copied) {
+      setWalletBrowserDialogOpen(false);
+    }
   };
 
   return (
@@ -154,14 +183,14 @@ export function ConnectWalletButton({
       >
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>No wallet detected</AlertDialogTitle>
+            <AlertDialogTitle>{walletBrowserDialogTitle}</AlertDialogTitle>
           </AlertDialogHeader>
           <AlertDialogDescription>
-            Please open this page inside a wallet app's built-in browser.
+            {walletBrowserDialogDescription}
           </AlertDialogDescription>
           <AlertDialogFooter>
-            <Button onClick={() => setWalletBrowserDialogOpen(false)} fullWidth>
-              OK
+            <Button onClick={() => void handleCopyLink()} fullWidth>
+              {walletBrowserDialogButtonLabel}
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>

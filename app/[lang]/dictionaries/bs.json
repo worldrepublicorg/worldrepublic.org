@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Ovo će trajno obrisati vaš račun i ukloniti sve vaše podatke sa naših servera. Ova akcija se ne može poništiti — molimo budite oprezni.",
           "deleting": "Brisanje..."
+        },
+        "connect_wallet_browser": {
+          "title": "Otvori u aplikaciji novčanika",
+          "description": "Za povezivanje kopirajte ovaj link i otvorite ga u ugrađenom pregledniku aplikacije novčanika.",
+          "copy_link": "Kopiraj link"
         }
       },
       "sections": {

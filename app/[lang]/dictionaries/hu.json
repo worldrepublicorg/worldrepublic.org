@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Ez véglegesen törölni fogja a fiókját és eltávolítja az összes adatát szervereinkről. Ez a művelet nem vonható vissza — kérjük, óvatosan járjon el.",
           "deleting": "Törlés..."
+        },
+        "connect_wallet_browser": {
+          "title": "Megnyitás a tárcaalkalmazásban",
+          "description": "A kapcsolódáshoz másold ki ezt a linket, és nyisd meg egy tárcaalkalmazás beépített böngészőjében.",
+          "copy_link": "Link másolása"
         }
       },
       "sections": {

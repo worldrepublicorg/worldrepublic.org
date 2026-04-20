@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Isso excluirá permanentemente sua conta e removerá todos os seus dados de nossos servidores. Esta ação não pode ser desfeita — por favor, continue com cuidado.",
           "deleting": "Excluindo..."
+        },
+        "connect_wallet_browser": {
+          "title": "Abrir no app de carteira",
+          "description": "Para conectar, copie este link e abra-o no navegador integrado de um app de carteira.",
+          "copy_link": "Copiar link"
         }
       },
       "sections": {

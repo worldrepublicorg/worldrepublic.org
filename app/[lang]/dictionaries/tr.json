@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Bu, hesabınızı kalıcı olarak silecek ve tüm verilerinizi sunucularımızdan kaldıracaktır. Bu işlem geri alınamaz — lütfen dikkatli devam edin.",
           "deleting": "Siliniyor..."
+        },
+        "connect_wallet_browser": {
+          "title": "Cüzdan uygulamasında aç",
+          "description": "Bağlanmak için bu bağlantıyı kopyalayın ve bir cüzdan uygulamasının yerleşik tarayıcısında açın.",
+          "copy_link": "Bağlantıyı kopyala"
         }
       },
       "sections": {

@@ -419,6 +419,17 @@ export default function HomePageClient({
               disconnectDescription={
                 dictionary.pages.wallet.modals.disconnect.confirm
               }
+              walletBrowserDialogTitle={
+                dictionary.pages.wallet.modals.connect_wallet_browser.title
+              }
+              walletBrowserDialogDescription={
+                dictionary.pages.wallet.modals.connect_wallet_browser.description
+              }
+              walletBrowserDialogButtonLabel={
+                dictionary.pages.wallet.modals.connect_wallet_browser.copy_link
+              }
+              copiedToastTitle={dictionary.toasts.copied}
+              copyErrorToastTitle={dictionary.toasts.generic_error}
               lang={lang}
               size="sm"
             />

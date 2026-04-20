@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Dit zal je account permanent verwijderen en alle gegevens van onze servers verwijderen. Deze actie kan niet ongedaan worden gemaakt — ga voorzichtig te werk.",
           "deleting": "Verwijderen..."
+        },
+        "connect_wallet_browser": {
+          "title": "Openen in portemonnee-app",
+          "description": "Om te verbinden, kopieer deze link en open hem in de ingebouwde browser van een portemonnee-app.",
+          "copy_link": "Link kopiëren"
         }
       },
       "sections": {

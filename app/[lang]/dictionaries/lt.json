@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių. Šio veiksmo negalima atšaukti — tęskite atsargiai.",
           "deleting": "Ištrinama..."
+        },
+        "connect_wallet_browser": {
+          "title": "Atidaryti piniginės programėlėje",
+          "description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją piniginės programėlės integruotoje naršyklėje.",
+          "copy_link": "Kopijuoti nuorodą"
         }
       },
       "sections": {

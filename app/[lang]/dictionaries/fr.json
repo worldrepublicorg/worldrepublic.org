@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Cela supprimera définitivement votre compte et supprimera toutes vos données de nos serveurs. Cette action ne peut pas être annulée — veuillez continuer avec précaution.",
           "deleting": "Suppression..."
+        },
+        "connect_wallet_browser": {
+          "title": "Ouvrir dans l'application de portefeuille",
+          "description": "Pour vous connecter, copiez ce lien et ouvrez-le dans le navigateur intégré d'une application de portefeuille.",
+          "copy_link": "Copier le lien"
         }
       },
       "sections": {

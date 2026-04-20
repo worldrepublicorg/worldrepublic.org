@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Ito ay permanenteng mag-delete ng inyong account at mag-aalis ng lahat ng inyong data sa aming mga server. Ang aksyon na ito ay hindi maaaring ma-undo — magpatuloy nang may pag-iingat.",
           "deleting": "Ina-delete..."
+        },
+        "connect_wallet_browser": {
+          "title": "Buksan sa app ng pitaka",
+          "description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng isang app ng pitaka.",
+          "copy_link": "Kopyahin ang link"
         }
       },
       "sections": {

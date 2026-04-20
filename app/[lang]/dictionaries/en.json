@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "This will permanently delete your account and remove all your data from our servers. This action cannot be undone — please continue with caution.",
           "deleting": "Deleting..."
+        },
+        "connect_wallet_browser": {
+          "title": "Open in wallet app",
+          "description": "To connect, copy this link and open it in a wallet app's built-in browser.",
+          "copy_link": "Copy link"
         }
       },
       "sections": {

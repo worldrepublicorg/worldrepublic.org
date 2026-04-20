@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",
           "deleting": "Inafutwa..."
+        },
+        "connect_wallet_browser": {
+          "title": "Fungua kwenye programu ya pochi",
+          "description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya programu ya pochi.",
+          "copy_link": "Nakili kiungo"
         }
       },
       "sections": {

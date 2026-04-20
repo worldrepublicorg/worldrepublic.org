@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Ini akan menghapus akun Anda secara permanen dan menghapus semua data Anda dari server kami. Tindakan ini tidak dapat dibatalkan — silakan lanjutkan dengan hati-hati.",
           "deleting": "Menghapus..."
+        },
+        "connect_wallet_browser": {
+          "title": "Buka di aplikasi dompet",
+          "description": "Untuk terhubung, salin tautan ini lalu buka di browser bawaan aplikasi dompet.",
+          "copy_link": "Salin tautan"
         }
       },
       "sections": {

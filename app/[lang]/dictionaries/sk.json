@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Toto permanentne vymaže váš účet a odstráni všetky vaše dáta z našich serverov. Túto akciu nemožno vrátiť späť — pokračujte opatrne.",
           "deleting": "Mažem..."
+        },
+        "connect_wallet_browser": {
+          "title": "Otvoriť v aplikácii peňaženky",
+          "description": "Na pripojenie skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači peňaženkovej aplikácie.",
+          "copy_link": "Kopírovať odkaz"
         }
       },
       "sections": {

@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Eyi yoo pa iroyin rẹ lailai ati yọ awọn data rẹ kuro ni awọn server wa. Iṣẹ yii ko le yipada — tẹsiwaju pẹlu iṣọra.",
           "deleting": "Npa..."
+        },
+        "connect_wallet_browser": {
+          "title": "Ṣí i nínú app wọọlẹẹti",
+          "description": "Lati sopọ, daakọ ọna asopọ yii ki o ṣí i nínú aṣàwákiri tí a kọ sínú app apamọwọ.",
+          "copy_link": "Daakọ ọna asopọ"
         }
       },
       "sections": {

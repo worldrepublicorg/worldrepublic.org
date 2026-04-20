@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",
           "deleting": "Ana share..."
+        },
+        "connect_wallet_browser": {
+          "title": "Buɗe a manhajar walat",
+          "description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a burauzar da aka gina a cikin manhajar walat.",
+          "copy_link": "Kwafi mahaɗi"
         }
       },
       "sections": {

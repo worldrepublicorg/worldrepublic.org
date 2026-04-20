@@ -235,6 +235,11 @@
         "delete_account": {
           "description": "Ibi bizasiba konti yawe byuzuye kandi bizakuramo amakuru yawe yose ku maseriveri yacu. Iki gikorwa ntikishobora guhindurwa — komeza ufatanya.",
           "deleting": "Gusiba..."
+        },
+        "connect_wallet_browser": {
+          "title": "Fungura muri porogaramu y'ikofi",
+          "description": "Kugira ngo uhuze, kopira iyi linki maze uyifungure muri browser yubatswe muri porogaramu y'ikofi.",
+          "copy_link": "Kopira linki"
         }
       },
       "sections": {
