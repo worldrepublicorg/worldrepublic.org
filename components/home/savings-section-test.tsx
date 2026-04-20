@@ -482,16 +482,6 @@ export function SavingsSection({
               lang={lang}
             />
           ) : showWorldChainSwitchCta ? (
-            <div className="flex w-full flex-col gap-3">
-              <Typography
-                as="p"
-                variant="body"
-                level={3}
-                className="text-center text-gray-500"
-              >
-                You're connected to the wrong network. Switch to World Chain to
-                continue.
-              </Typography>
               <Button
                 fullWidth
                 className={raisedButtonShadowClass}
@@ -502,7 +492,6 @@ export function SavingsSection({
               >
                 {isSwitching ? "Switching..." : "Switch to World Chain"}
               </Button>
-            </div>
           ) : !isAuthenticated && isOffchainAccountSelected ? (
             <Button
               fullWidth

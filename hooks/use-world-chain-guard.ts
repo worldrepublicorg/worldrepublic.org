@@ -14,6 +14,7 @@ const WORLD_CHAIN_ADD_PARAMS = {
   chainName: "World Chain",
   nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
   rpcUrls: [
+    "https://worldchain.drpc.org",
     "https://worldchain-mainnet.g.alchemy.com/public",
     "https://480.rpc.thirdweb.com",
   ],
@@ -55,37 +56,55 @@ function looksLikeUnknownChain(err: unknown): boolean {
   return (
     code === 4902 ||
     code === -32603 ||
-    /Unrecognized chain|not (been )?added|unknown chain|add the chain/i.test(
+    /Unrecognized chain|not (been )?added|unknown chain|add the chain|attempting to switch chain/i.test(
       message,
     )
   );
 }
 
-async function switchOrAddWorldChain(connector: Connector): Promise<void> {
+async function addWorldChain(connector: Connector): Promise<void> {
   const provider = (await connector.getProvider()) as EthereumProvider;
-
-  try {
-    await provider.request({
-      method: "wallet_switchEthereumChain",
-      params: [{ chainId: WORLD_CHAIN_ID_HEX }],
-    });
-    return;
-  } catch (err) {
-    if (!looksLikeUnknownChain(err)) {
-      throw err;
-    }
-  }
-
   await provider.request({
     method: "wallet_addEthereumChain",
     params: [WORLD_CHAIN_ADD_PARAMS],
   });
+}
 
-  // Some wallets add without switching; retry.
+async function switchWorldChain(connector: Connector): Promise<void> {
+  const provider = (await connector.getProvider()) as EthereumProvider;
   await provider.request({
     method: "wallet_switchEthereumChain",
     params: [{ chainId: WORLD_CHAIN_ID_HEX }],
   });
+}
+
+async function switchOrAddWorldChain(connector: Connector): Promise<void> {
+  try {
+    await switchWorldChain(connector);
+    return;
+  } catch (switchErr) {
+    if (isUserRejection(switchErr)) {
+      throw switchErr;
+    }
+
+    // Trust Wallet often throws generic switch errors when the chain is missing.
+    // Try adding the chain even when the error isn't a clean 4902.
+    if (!looksLikeUnknownChain(switchErr)) {
+      try {
+        await addWorldChain(connector);
+        await switchWorldChain(connector);
+        return;
+      } catch {
+        // Fall through to original error handling below.
+      }
+      throw switchErr;
+    }
+  }
+
+  await addWorldChain(connector);
+
+  // Some wallets add without switching; retry.
+  await switchWorldChain(connector);
 }
 
 export function useWorldChainGuard() {
