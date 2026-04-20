@@ -53,7 +53,7 @@ export function ConnectWalletButton({
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
   copiedToastTitle = "Copied",
-  copyErrorToastTitle = "No browser wallet found.",
+  copyErrorToastTitle = "An error occurred",
   lang = "en",
 }: ConnectWalletButtonProps = {}) {
   const { isConnected } = useAccount();
@@ -99,7 +99,7 @@ export function ConnectWalletButton({
     }
 
     toast.error({
-      title: copyErrorToastTitle,
+      title: "No browser wallet found",
     });
   };
 
