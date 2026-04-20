@@ -14,7 +14,7 @@ const WORLD_CHAIN_ADD_PARAMS = {
   chainName: "World Chain",
   nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
   rpcUrls: [
-    "https://480.rpc.thirdweb.com"
+    "https://worldchain.drpc.org"
   ],
   blockExplorerUrls: ["https://worldscan.org"],
 } as const;
