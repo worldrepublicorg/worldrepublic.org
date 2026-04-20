@@ -15,28 +15,9 @@ import {
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { PiPowerFill, PiWalletFill } from "react-icons/pi";
-import { formatUnits } from "viem";
-import { useAccount, useConnect, useDisconnect, useReadContract } from "wagmi";
+import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { getBalancePrecision, truncateToPrecision } from "@/lib/utils";
-
-const WORLD_CHAIN_ID = 480;
-const WDD_TOKEN_ADDRESS = "0xEdE54d9c024ee80C85ec0a75eD2d8774c7Fbac9B" as const;
-const erc20BalanceAbi = [
-  {
-    type: "function",
-    name: "balanceOf",
-    stateMutability: "view",
-    inputs: [{ name: "account", type: "address" }],
-    outputs: [{ name: "", type: "uint256" }],
-  },
-  {
-    type: "function",
-    name: "decimals",
-    stateMutability: "view",
-    inputs: [],
-    outputs: [{ name: "", type: "uint8" }],
-  },
-] as const;
 
 interface WalletConnectButtonProps {
   variant?: ComponentProps<typeof Button>["variant"];
@@ -61,36 +42,14 @@ export function WalletConnectButton({
   confirmLabel = "Confirm",
   lang = "en",
 }: WalletConnectButtonProps = {}) {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const { openConnectModal } = useConnectModal();
   const { connectors, connect, isPending } = useConnect();
   const { disconnect } = useDisconnect();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
   const [disconnectDialogOpen, setDisconnectDialogOpen] = useState(false);
-
-  const { data: tokenDecimalsData } = useReadContract({
-    abi: erc20BalanceAbi,
-    address: WDD_TOKEN_ADDRESS,
-    functionName: "decimals",
-    chainId: WORLD_CHAIN_ID,
-  });
-
-  const { data: tokenBalanceData } = useReadContract({
-    abi: erc20BalanceAbi,
-    address: WDD_TOKEN_ADDRESS,
-    functionName: "balanceOf",
-    args: address ? [address] : undefined,
-    chainId: WORLD_CHAIN_ID,
-    query: {
-      enabled: Boolean(address),
-    },
-  });
-
-  const decimals = Number(tokenDecimalsData ?? 18);
-  const rawBalance =
-    tokenBalanceData !== undefined
-      ? Number(formatUnits(tokenBalanceData, decimals))
-      : 0;
+  const worldchainAccount = useWorldchainSavingsAccount();
+  const rawBalance = worldchainAccount.balances.wallet;
   const precision = getBalancePrecision(rawBalance);
   const truncatedBalance = truncateToPrecision(rawBalance, precision);
   const finalPrecision = truncatedBalance === 0 ? 2 : precision;
