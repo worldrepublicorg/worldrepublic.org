@@ -105,15 +105,20 @@ export function ConnectWalletButton({
         }),
       )
     ).filter((connector): connector is Connector => connector !== null);
+    const namedConnectors = connectorsWithProvider.filter(
+      (connector) => connector.id !== "injected",
+    );
+    const prioritizedConnectors =
+      namedConnectors.length > 0 ? namedConnectors : connectorsWithProvider;
 
-    if (connectorsWithProvider.length > 0) {
-      if (!isMobileDevice && connectorsWithProvider.length > 1) {
-        setAvailableDesktopConnectors(connectorsWithProvider);
+    if (prioritizedConnectors.length > 0) {
+      if (!isMobileDevice && prioritizedConnectors.length > 1) {
+        setAvailableDesktopConnectors(prioritizedConnectors);
         setWalletPickerDialogOpen(true);
         return;
       }
 
-      connect.mutate({ connector: connectorsWithProvider[0] });
+      connect.mutate({ connector: prioritizedConnectors[0] });
       return;
     }
 
