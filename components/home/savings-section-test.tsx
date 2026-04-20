@@ -130,6 +130,9 @@ export function SavingsSection({
     return formatFullAmount(safeAmount);
   }, [selectedAction, displayWalletBalance, displaySavingsBalance]);
   const rewardDecimals = getRewardDecimals(displaySavingsBalance);
+  const collectableAmountForUi = Number(
+    displayCollectableAmount.toFixed(rewardDecimals),
+  );
   const locale = getSafeLocale(lang);
   const savingsBalanceDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 4,
@@ -138,7 +141,7 @@ export function SavingsSection({
   const collectableAmountDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: rewardDecimals,
     maximumFractionDigits: rewardDecimals,
-  }).format(displayCollectableAmount);
+  }).format(collectableAmountForUi);
   const decimalSeparator =
     new Intl.NumberFormat(locale)
       .formatToParts(1.1)
@@ -374,7 +377,7 @@ export function SavingsSection({
                     disabled={
                       (isOffchainAccountSelected && !isAuthenticated) ||
                       isCurrentAccountLoading ||
-                      displayCollectableAmount <= 0
+                      collectableAmountForUi <= 0
                     }
                     variant="primary"
                     size="sm"
