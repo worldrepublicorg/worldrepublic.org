@@ -2,7 +2,7 @@
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { formatUnits, maxUint256, parseUnits } from "viem";
+import { formatUnits, parseUnits } from "viem";
 import {
   useAccount,
   useChainId,
@@ -239,7 +239,7 @@ export function useWorldchainSavingsAccount() {
             address: WDD_TOKEN_ADDRESS,
             abi: erc20Abi,
             functionName: "approve",
-            args: [WORLD_SAVINGS_CONTRACT_ADDRESS, maxUint256],
+            args: [WORLD_SAVINGS_CONTRACT_ADDRESS, amountWei],
             chainId: WORLD_CHAIN_ID,
           })) as `0x${string}`;
           await waitForSuccessReceipt(approveHash, client);
