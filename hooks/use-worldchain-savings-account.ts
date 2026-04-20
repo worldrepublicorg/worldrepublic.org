@@ -137,18 +137,22 @@ export function useWorldchainSavingsAccount() {
     },
   });
 
-  const walletBalance =
-    data?.[0]?.result !== undefined
+  const hasConnectedAddress = isConnected && Boolean(address);
+  const walletBalance = hasConnectedAddress
+    ? data?.[0]?.result !== undefined
       ? Number(formatUnits(data[0].result as bigint, WDD_DECIMALS))
-      : 0;
-  const savingsBalance =
-    data?.[1]?.result !== undefined
+      : 0
+    : 0;
+  const savingsBalance = hasConnectedAddress
+    ? data?.[1]?.result !== undefined
       ? Number(formatUnits(data[1].result as bigint, WDD_DECIMALS))
-      : 0;
-  const availableInterest =
-    data?.[2]?.result !== undefined
+      : 0
+    : 0;
+  const availableInterest = hasConnectedAddress
+    ? data?.[2]?.result !== undefined
       ? Number(formatUnits(data[2].result as bigint, WDD_DECIMALS))
-      : 0;
+      : 0
+    : 0;
 
   useEffect(() => {
     if (!isConnected || !address) {
