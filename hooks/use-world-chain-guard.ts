@@ -103,7 +103,7 @@ async function switchOrAddWorldChain(connector: Connector): Promise<void> {
 export function useWorldChainGuard() {
   const { isConnected, connector } = useAccount();
   const chainId = useChainId();
-  const { switchChainAsync } = useSwitchChain();
+  const switchChain = useSwitchChain();
   const { toast } = useToast();
   const [isSwitching, setIsSwitching] = useState(false);
   const [liveChainId, setLiveChainId] = useState<number | null>(null);
@@ -160,7 +160,7 @@ export function useWorldChainGuard() {
         await switchOrAddWorldChain(connector);
       } catch (manualErr) {
         if (isUserRejection(manualErr)) throw manualErr;
-        await switchChainAsync({
+        await switchChain.mutateAsync({
           chainId: WORLD_CHAIN_ID,
           addEthereumChainParameter: {
             chainName: WORLD_CHAIN_ADD_PARAMS.chainName,
@@ -190,7 +190,7 @@ export function useWorldChainGuard() {
     connector,
     isSwitching,
     chainId,
-    switchChainAsync,
+    switchChain,
     toast,
     refreshLiveChainId,
   ]);

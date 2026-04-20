@@ -15,7 +15,7 @@ import {
 import type { ComponentProps } from "react";
 import { useState } from "react";
 import { PiPowerFill, PiWalletFill } from "react-icons/pi";
-import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import {
   copyToClipboard,
@@ -56,10 +56,12 @@ export function ConnectWalletButton({
   copyErrorToastTitle = "An error occurred",
   lang = "en",
 }: ConnectWalletButtonProps = {}) {
-  const { isConnected } = useAccount();
+  const { status } = useConnection();
+  const isConnected = status === "connected";
   const { toast } = useToast();
-  const { connectors, connect, isPending } = useConnect();
-  const { disconnect } = useDisconnect();
+  const connect = useConnect();
+  const disconnect = useDisconnect();
+  const connectors = useConnectors();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
   const [disconnectDialogOpen, setDisconnectDialogOpen] = useState(false);
   const worldchainAccount = useWorldchainSavingsAccount();
@@ -88,7 +90,7 @@ export function ConnectWalletButton({
     if (injectedConnector) {
       const provider = await injectedConnector.getProvider();
       if (provider) {
-        connect({ connector: injectedConnector });
+        connect.mutate({ connector: injectedConnector });
         return;
       }
     }
@@ -154,7 +156,7 @@ export function ConnectWalletButton({
                 variant="primary"
                 fullWidth
                 onClick={() => {
-                  disconnect();
+                  disconnect.mutate();
                   setDisconnectDialogOpen(false);
                 }}
               >
@@ -168,7 +170,7 @@ export function ConnectWalletButton({
           variant={variant}
           size={size}
           onClick={() => void handleWalletButtonClick()}
-          disabled={isPending}
+          disabled={connect.isPending}
           fullWidth={fullWidth}
           className={`${compact ? "h-10 rounded-full px-4 text-sm font-semibold " : ""}${className ?? ""}`}
         >

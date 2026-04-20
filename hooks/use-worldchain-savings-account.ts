@@ -103,9 +103,9 @@ function parseHexChainId(raw: unknown): number | null {
 export function useWorldchainSavingsAccount() {
   const { toast } = useToast();
   const { address, isConnected, connector } = useAccount();
-  const { switchChainAsync } = useSwitchChain();
+  const switchChain = useSwitchChain();
   const publicClient = usePublicClient({ chainId: WORLD_CHAIN_ID });
-  const { writeContractAsync } = useWriteContract();
+  const writeContract = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [refreshNonce, setRefreshNonce] = useState(0);
@@ -223,7 +223,7 @@ export function useWorldchainSavingsAccount() {
     const preflightChainId = await getLiveChainId();
     if (preflightChainId !== WORLD_CHAIN_ID) {
       try {
-        await switchChainAsync({ chainId: WORLD_CHAIN_ID });
+        await switchChain.mutateAsync({ chainId: WORLD_CHAIN_ID });
       } catch {
         toast.error({ title: "Please switch to World Chain to continue." });
         throw new Error("Chain switch failed");
@@ -240,14 +240,7 @@ export function useWorldchainSavingsAccount() {
       throw new Error("World Chain client not available");
     }
     return { account: address as `0x${string}`, client: publicClient };
-  }, [
-    isConnected,
-    address,
-    getLiveChainId,
-    switchChainAsync,
-    toast,
-    publicClient,
-  ]);
+  }, [isConnected, address, getLiveChainId, switchChain, toast, publicClient]);
 
   const waitForSuccessReceipt = useCallback(
     async (hash: `0x${string}`, client: NonNullable<typeof publicClient>) => {
@@ -278,7 +271,7 @@ export function useWorldchainSavingsAccount() {
         })) as bigint;
 
         if (allowance < amountWei) {
-          const approveHash = (await writeContractAsync({
+          const approveHash = (await writeContract.mutateAsync({
             address: WDD_TOKEN_ADDRESS,
             abi: erc20Abi,
             functionName: "approve",
@@ -287,7 +280,7 @@ export function useWorldchainSavingsAccount() {
           await waitForSuccessReceipt(approveHash, client);
         }
 
-        const stakeHash = (await writeContractAsync({
+        const stakeHash = (await writeContract.mutateAsync({
           address: WORLD_SAVINGS_CONTRACT_ADDRESS,
           abi: tokenStakingPerTokenAbi,
           functionName: "stake",
@@ -303,7 +296,7 @@ export function useWorldchainSavingsAccount() {
         setIsSubmitting(false);
       }
     },
-    [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh],
+    [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh],
   );
 
   const withdraw = useCallback(
@@ -317,7 +310,7 @@ export function useWorldchainSavingsAccount() {
       setIsSubmitting(true);
       try {
         const { client } = await ensureReadyForWrite();
-        const withdrawHash = (await writeContractAsync({
+        const withdrawHash = (await writeContract.mutateAsync({
           address: WORLD_SAVINGS_CONTRACT_ADDRESS,
           abi: tokenStakingPerTokenAbi,
           functionName: "withdraw",
@@ -333,14 +326,14 @@ export function useWorldchainSavingsAccount() {
         setIsSubmitting(false);
       }
     },
-    [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh],
+    [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh],
   );
 
   const collect = useCallback(async () => {
     setIsSubmitting(true);
     try {
       const { client } = await ensureReadyForWrite();
-      const redeemHash = (await writeContractAsync({
+      const redeemHash = (await writeContract.mutateAsync({
         address: WORLD_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "redeem",
@@ -355,7 +348,7 @@ export function useWorldchainSavingsAccount() {
     } finally {
       setIsSubmitting(false);
     }
-  }, [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh]);
+  }, [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
