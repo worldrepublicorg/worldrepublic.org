@@ -98,6 +98,7 @@ export function useWorldchainSavingsAccount() {
   const { writeContractAsync } = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [refreshNonce, setRefreshNonce] = useState(0);
   const snapshotTimeRef = useRef<number | null>(null);
   const snapshotSavingsRef = useRef(0);
   const baseAvailableRef = useRef(0);
@@ -167,7 +168,7 @@ export function useWorldchainSavingsAccount() {
     snapshotSavingsRef.current = savingsBalance;
     baseAvailableRef.current = availableInterest;
     setDisplayAvailableInterest(availableInterest);
-  }, [isConnected, address, savingsBalance, availableInterest]);
+  }, [isConnected, address, savingsBalance, availableInterest, refreshNonce]);
 
   useEffect(() => {
     if (!isConnected || !address || snapshotTimeRef.current === null) return;
@@ -190,6 +191,7 @@ export function useWorldchainSavingsAccount() {
 
   const refresh = useCallback(async () => {
     await refetchContracts();
+    setRefreshNonce((current) => current + 1);
   }, [refetchContracts]);
 
   const ensureReadyForWrite = useCallback(async () => {
