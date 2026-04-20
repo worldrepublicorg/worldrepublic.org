@@ -107,7 +107,10 @@ export function SavingsSection({
   const worldchainSavingsBalance = worldchainAccount.balances.savings;
   const worldchainAvailableInterest = worldchainAccount.interest.available;
   const isWorldchainAccountSelected = selectedSavingsAccount === "worldchain";
-  const isWorldchainReadOnly = isWorldchainAccountSelected && isWalletConnected;
+  const isOffchainAccountSelected = !isWorldchainAccountSelected;
+  const isCurrentAccountLoading = isWorldchainAccountSelected
+    ? worldchainAccount.status.isLoading
+    : isSavingsLoading;
   const displayWalletBalance = isWorldchainAccountSelected
     ? worldchainWalletBalance
     : walletBalance;
@@ -212,7 +215,6 @@ export function SavingsSection({
   };
 
   const getActionButtonText = () => {
-    if (isWorldchainReadOnly) return dictionary.common.coming_soon;
     if (!amount || Number(amount) <= 0) {
       return selectedAction === "deposit"
         ? dictionary.pages.earn.savings.deposit
@@ -225,9 +227,8 @@ export function SavingsSection({
   };
 
   const isActionDisabled =
-    isWorldchainReadOnly ||
-    isSavingsLoading ||
-    !isAuthenticated ||
+    isCurrentAccountLoading ||
+    (isOffchainAccountSelected && !isAuthenticated) ||
     !amount ||
     Number(amount) <= 0 ||
     hasInsufficientBalance();
@@ -371,9 +372,8 @@ export function SavingsSection({
                 <AlertDialogTrigger asChild>
                   <Button
                     disabled={
-                      isWorldchainReadOnly ||
-                      !isAuthenticated ||
-                      isSavingsLoading ||
+                      (isOffchainAccountSelected && !isAuthenticated) ||
+                      isCurrentAccountLoading ||
                       displayCollectableAmount <= 0
                     }
                     variant="primary"
@@ -405,10 +405,14 @@ export function SavingsSection({
                     <AlertDialogClose asChild>
                       <Button
                         onClick={async () => {
-                          await handleCollectInterest();
+                          if (isWorldchainAccountSelected) {
+                            await worldchainAccount.actions.collect();
+                          } else {
+                            await handleCollectInterest();
+                          }
                           setCollectDialogOpen(false);
                         }}
-                        disabled={isSavingsLoading}
+                        disabled={isCurrentAccountLoading}
                         fullWidth
                       >
                         {dictionary.common.confirm}
@@ -438,7 +442,7 @@ export function SavingsSection({
               confirmLabel={dictionary.common.confirm}
               lang={lang}
             />
-          ) : !isAuthenticated ? (
+          ) : !isAuthenticated && isOffchainAccountSelected ? (
             <Button
               fullWidth
               className={raisedButtonShadowClass}
@@ -482,10 +486,15 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        await handleDeposit();
+                        if (isWorldchainAccountSelected) {
+                          await worldchainAccount.actions.deposit(amount);
+                          setAmount("");
+                        } else {
+                          await handleDeposit();
+                        }
                         setDepositDialogOpen(false);
                       }}
-                      disabled={isSavingsLoading}
+                      disabled={isCurrentAccountLoading}
                       fullWidth
                     >
                       {dictionary.common.confirm}
@@ -530,10 +539,15 @@ export function SavingsSection({
                   <AlertDialogClose asChild>
                     <Button
                       onClick={async () => {
-                        await handleWithdraw();
+                        if (isWorldchainAccountSelected) {
+                          await worldchainAccount.actions.withdraw(amount);
+                          setAmount("");
+                        } else {
+                          await handleWithdraw();
+                        }
                         setWithdrawDialogOpen(false);
                       }}
-                      disabled={isSavingsLoading}
+                      disabled={isCurrentAccountLoading}
                       fullWidth
                     >
                       {dictionary.common.confirm}

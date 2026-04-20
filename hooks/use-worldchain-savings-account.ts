@@ -1,8 +1,16 @@
 "use client";
 
+import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { formatUnits } from "viem";
-import { useAccount, useReadContracts } from "wagmi";
+import { formatUnits, maxUint256, parseUnits } from "viem";
+import {
+  useAccount,
+  useChainId,
+  usePublicClient,
+  useReadContracts,
+  useSwitchChain,
+  useWriteContract,
+} from "wagmi";
 
 const WORLD_CHAIN_ID = 480;
 const WDD_TOKEN_ADDRESS = "0xEdE54d9c024ee80C85ec0a75eD2d8774c7Fbac9B" as const;
@@ -21,6 +29,26 @@ const erc20Abi = [
     inputs: [{ name: "account", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
   },
+  {
+    type: "function",
+    name: "allowance",
+    stateMutability: "view",
+    inputs: [
+      { name: "owner", type: "address" },
+      { name: "spender", type: "address" },
+    ],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "approve",
+    stateMutability: "nonpayable",
+    inputs: [
+      { name: "spender", type: "address" },
+      { name: "amount", type: "uint256" },
+    ],
+    outputs: [{ name: "", type: "bool" }],
+  },
 ] as const;
 
 const tokenStakingPerTokenAbi = [
@@ -38,11 +66,38 @@ const tokenStakingPerTokenAbi = [
     inputs: [{ name: "account", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
   },
+  {
+    type: "function",
+    name: "stake",
+    stateMutability: "nonpayable",
+    inputs: [{ name: "amount", type: "uint256" }],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "withdraw",
+    stateMutability: "nonpayable",
+    inputs: [{ name: "amount", type: "uint256" }],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "redeem",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
 ] as const;
 
 export function useWorldchainSavingsAccount() {
+  const { toast } = useToast();
   const { address, isConnected } = useAccount();
+  const chainId = useChainId();
+  const { switchChainAsync } = useSwitchChain();
+  const publicClient = usePublicClient({ chainId: WORLD_CHAIN_ID });
+  const { writeContractAsync } = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const snapshotTimeRef = useRef<number | null>(null);
   const snapshotSavingsRef = useRef(0);
   const baseAvailableRef = useRef(0);
@@ -133,6 +188,136 @@ export function useWorldchainSavingsAccount() {
     await refetchContracts();
   }, [refetchContracts]);
 
+  const ensureReadyForWrite = useCallback(async () => {
+    if (!isConnected || !address) {
+      throw new Error("Wallet not connected");
+    }
+    if (chainId !== WORLD_CHAIN_ID) {
+      try {
+        await switchChainAsync({ chainId: WORLD_CHAIN_ID });
+      } catch {
+        toast.error({ title: "Please switch to World Chain to continue." });
+        throw new Error("Chain switch failed");
+      }
+    }
+    if (!publicClient) {
+      throw new Error("World Chain client not available");
+    }
+    return { account: address as `0x${string}`, client: publicClient };
+  }, [isConnected, address, chainId, switchChainAsync, toast, publicClient]);
+
+  const waitForSuccessReceipt = useCallback(
+    async (hash: `0x${string}`, client: NonNullable<typeof publicClient>) => {
+      const receipt = await client.waitForTransactionReceipt({ hash });
+      if (receipt.status !== "success") {
+        throw new Error("Transaction failed");
+      }
+    },
+    [],
+  );
+
+  const deposit = useCallback(
+    async (amount: string | number) => {
+      const normalizedAmount = String(amount).trim();
+      if (!normalizedAmount || Number(normalizedAmount) <= 0) {
+        throw new Error("Invalid amount");
+      }
+
+      const amountWei = parseUnits(normalizedAmount, WDD_DECIMALS);
+      setIsSubmitting(true);
+      try {
+        const { account, client } = await ensureReadyForWrite();
+        const allowance = (await client.readContract({
+          address: WDD_TOKEN_ADDRESS,
+          abi: erc20Abi,
+          functionName: "allowance",
+          args: [account, WORLD_SAVINGS_CONTRACT_ADDRESS],
+        })) as bigint;
+
+        if (allowance < amountWei) {
+          const approveHash = (await writeContractAsync({
+            address: WDD_TOKEN_ADDRESS,
+            abi: erc20Abi,
+            functionName: "approve",
+            args: [WORLD_SAVINGS_CONTRACT_ADDRESS, maxUint256],
+            chainId: WORLD_CHAIN_ID,
+          })) as `0x${string}`;
+          await waitForSuccessReceipt(approveHash, client);
+        }
+
+        const stakeHash = (await writeContractAsync({
+          address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+          abi: tokenStakingPerTokenAbi,
+          functionName: "stake",
+          args: [amountWei],
+          chainId: WORLD_CHAIN_ID,
+        })) as `0x${string}`;
+        await waitForSuccessReceipt(stakeHash, client);
+        await refresh();
+        if (typeof window !== "undefined") {
+          window.dispatchEvent(new Event("onchain-balance-refresh"));
+        }
+        return stakeHash;
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh],
+  );
+
+  const withdraw = useCallback(
+    async (amount: string | number) => {
+      const normalizedAmount = String(amount).trim();
+      if (!normalizedAmount || Number(normalizedAmount) <= 0) {
+        throw new Error("Invalid amount");
+      }
+
+      const amountWei = parseUnits(normalizedAmount, WDD_DECIMALS);
+      setIsSubmitting(true);
+      try {
+        const { client } = await ensureReadyForWrite();
+        const withdrawHash = (await writeContractAsync({
+          address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+          abi: tokenStakingPerTokenAbi,
+          functionName: "withdraw",
+          args: [amountWei],
+          chainId: WORLD_CHAIN_ID,
+        })) as `0x${string}`;
+        await waitForSuccessReceipt(withdrawHash, client);
+        await refresh();
+        if (typeof window !== "undefined") {
+          window.dispatchEvent(new Event("onchain-balance-refresh"));
+        }
+        return withdrawHash;
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh],
+  );
+
+  const collect = useCallback(async () => {
+    setIsSubmitting(true);
+    try {
+      const { client } = await ensureReadyForWrite();
+      const redeemHash = (await writeContractAsync({
+        address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+        abi: tokenStakingPerTokenAbi,
+        functionName: "redeem",
+        args: [],
+        chainId: WORLD_CHAIN_ID,
+      })) as `0x${string}`;
+      await waitForSuccessReceipt(redeemHash, client);
+      await refresh();
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("onchain-balance-refresh"));
+      }
+      return redeemHash;
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [ensureReadyForWrite, writeContractAsync, waitForSuccessReceipt, refresh]);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const handleRefresh = () => {
@@ -142,10 +327,6 @@ export function useWorldchainSavingsAccount() {
     return () =>
       window.removeEventListener("onchain-balance-refresh", handleRefresh);
   }, [refresh]);
-
-  const notImplementedAction = async () => {
-    throw new Error("Not implemented yet");
-  };
 
   return {
     balances: {
@@ -157,13 +338,14 @@ export function useWorldchainSavingsAccount() {
     },
     actions: {
       refresh,
-      deposit: notImplementedAction,
-      withdraw: notImplementedAction,
-      collect: notImplementedAction,
+      deposit,
+      withdraw,
+      collect,
     },
     status: {
       isConnected,
-      isLoading: isLoading || isFetching,
+      isLoading: isLoading || isFetching || isSubmitting,
+      isSubmitting,
       error: error?.message ?? null,
     },
   };
