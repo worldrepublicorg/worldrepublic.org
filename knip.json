@@ -9,6 +9,5 @@
     "types/**/*.{js,ts,tsx}",
     "scripts/**/*.{js,ts,tsx}",
     "*.{js,ts,tsx}"
-  ],
-  "ignore": ["node_modules/**", ".next/**", "out/**", "dist/**", "build/**"]
+  ]
 }
