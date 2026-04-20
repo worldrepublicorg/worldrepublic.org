@@ -176,7 +176,8 @@
             "title": "Confirm withdrawal",
             "description": "You are about to withdraw {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "View smart contract"
       }
     },
     "menu": {

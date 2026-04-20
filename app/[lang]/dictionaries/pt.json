@@ -176,7 +176,8 @@
             "title": "Confirmar saque",
             "description": "Você está prestes a sacar {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Ver contrato inteligente"
       }
     },
     "menu": {

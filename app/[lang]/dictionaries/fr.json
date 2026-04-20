@@ -176,7 +176,8 @@
             "title": "Confirmer le retrait",
             "description": "Vous êtes sur le point de retirer {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Voir le contrat intelligent"
       }
     },
     "menu": {

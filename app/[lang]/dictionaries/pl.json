@@ -176,7 +176,8 @@
             "title": "Potwierdź wypłatę",
             "description": "Zamierzasz wypłacić {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Zobacz smart kontrakt"
       }
     },
     "menu": {

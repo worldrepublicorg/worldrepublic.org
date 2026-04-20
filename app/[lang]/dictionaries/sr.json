@@ -176,7 +176,8 @@
             "title": "Потврди подизање",
             "description": "Ускоро ћете подићи {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Погледајте смарт уговор"
       }
     },
     "menu": {

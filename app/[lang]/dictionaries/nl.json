@@ -176,7 +176,8 @@
             "title": "Opname bevestigen",
             "description": "Je staat op het punt om {amount} WDD op te nemen."
           }
-        }
+        },
+        "smart_contract_link": "Bekijk smart contract"
       }
     },
     "menu": {

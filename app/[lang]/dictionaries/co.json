@@ -176,7 +176,8 @@
             "title": "Cunfirma u ritiru",
             "description": "Stai per ritirà {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Vede u cuntrattu intelligente"
       }
     },
     "menu": {

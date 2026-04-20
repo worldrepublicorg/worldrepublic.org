@@ -176,7 +176,8 @@
             "title": "ยืนยันการถอน",
             "description": "คุณกำลังจะถอน {amount} WDD"
           }
-        }
+        },
+        "smart_contract_link": "ดูสมาร์ตคอนแทรกต์"
       }
     },
     "menu": {

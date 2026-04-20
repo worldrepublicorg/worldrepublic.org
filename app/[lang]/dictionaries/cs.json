@@ -176,7 +176,8 @@
             "title": "Potvrdit výběr",
             "description": "Chystáte se vybrat {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Zobrazit chytrý kontrakt"
       }
     },
     "menu": {

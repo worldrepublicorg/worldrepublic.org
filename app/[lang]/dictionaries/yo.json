@@ -176,7 +176,8 @@
             "title": "Jẹrisi yiyọ jade",
             "description": "O nlo lati ya {amount} WDD jade."
           }
-        }
+        },
+        "smart_contract_link": "Wo smart contract"
       }
     },
     "menu": {

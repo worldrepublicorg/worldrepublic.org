@@ -176,7 +176,8 @@
             "title": "Apstiprināt izņemšanu",
             "description": "Jūs gatavojaties izņemt {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Skatīt viedo līgumu"
       }
     },
     "menu": {

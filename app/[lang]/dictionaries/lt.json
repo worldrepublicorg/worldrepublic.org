@@ -176,7 +176,8 @@
             "title": "Patvirtinti išėmimą",
             "description": "Ketinate išimti {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Peržiūrėti išmaniąją sutartį"
       }
     },
     "menu": {

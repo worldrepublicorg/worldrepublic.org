@@ -176,7 +176,8 @@
             "title": "ማውጣት ማረጋገጥ",
             "description": "እርስዎ {amount} WDD ይወጣሉ።"
           }
-        }
+        },
+        "smart_contract_link": "ስማርት ኮንትራትን ይመልከቱ"
       }
     },
     "menu": {

@@ -176,7 +176,8 @@
             "title": "ઉપાડની પુષ્ટિ કરો",
             "description": "તમે {amount} WDD ઉપાડવા જઈ રહ્યા છો."
           }
-        }
+        },
+        "smart_contract_link": "સ્માર્ટ કોન્ટ્રાક્ટ જુઓ"
       }
     },
     "menu": {

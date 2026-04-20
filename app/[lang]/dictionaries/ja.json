@@ -176,7 +176,8 @@
             "title": "出金の確認",
             "description": "{amount} WDD を出金します。"
           }
-        }
+        },
+        "smart_contract_link": "スマートコントラクトを見る"
       }
     },
     "menu": {

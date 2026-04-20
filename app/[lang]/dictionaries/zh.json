@@ -176,7 +176,8 @@
             "title": "确认提取",
             "description": "你将提取 {amount} WDD。"
           }
-        }
+        },
+        "smart_contract_link": "查看智能合约"
       }
     },
     "menu": {

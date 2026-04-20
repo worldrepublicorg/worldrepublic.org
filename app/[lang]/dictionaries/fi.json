@@ -176,7 +176,8 @@
             "title": "Vahvista nosto",
             "description": "Olet nostamassa {amount} WDD:tä."
           }
-        }
+        },
+        "smart_contract_link": "Näytä älysopimus"
       }
     },
     "menu": {

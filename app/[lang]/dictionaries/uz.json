@@ -176,7 +176,8 @@
             "title": "Yechib olishni tasdiqlang",
             "description": "Siz {amount} WDD yechib olmoqdasiz."
           }
-        }
+        },
+        "smart_contract_link": "Aqlli shartnomani ko‘rish"
       }
     },
     "menu": {

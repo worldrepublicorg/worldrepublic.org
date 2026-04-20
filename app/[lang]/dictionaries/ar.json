@@ -176,7 +176,8 @@
             "title": "تأكيد السحب",
             "description": "أنت على وشك سحب {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "اعرض العقد الذكي"
       }
     },
     "menu": {

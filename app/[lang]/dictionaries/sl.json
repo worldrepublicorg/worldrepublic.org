@@ -176,7 +176,8 @@
             "title": "Potrdi dvig",
             "description": "O dvigu {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Poglej smart pogodbo"
       }
     },
     "menu": {

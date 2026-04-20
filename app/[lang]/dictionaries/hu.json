@@ -176,7 +176,8 @@
             "title": "Kivonás megerősítése",
             "description": "Ön {amount} WDD-t fog kivonni."
           }
-        }
+        },
+        "smart_contract_link": "Okosszerződés megtekintése"
       }
     },
     "menu": {

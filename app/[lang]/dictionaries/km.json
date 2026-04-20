@@ -176,7 +176,8 @@
             "title": "បញ្ជាក់ការដកចេញ",
             "description": "អ្នកនឹងដកចេញ {amount} WDD។"
           }
-        }
+        },
+        "smart_contract_link": "មើល smart contract"
       }
     },
     "menu": {

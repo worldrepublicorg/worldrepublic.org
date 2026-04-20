@@ -176,7 +176,8 @@
             "title": "출금 확인",
             "description": "{amount} WDD를 출금하려고 합니다."
           }
-        }
+        },
+        "smart_contract_link": "스마트 컨트랙트 보기"
       }
     },
     "menu": {

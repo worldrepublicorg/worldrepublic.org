@@ -176,7 +176,8 @@
             "title": "Conferma prelievo",
             "description": "Stai per prelevare {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Visualizza contratto intelligente"
       }
     },
     "menu": {

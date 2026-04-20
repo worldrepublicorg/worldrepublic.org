@@ -176,7 +176,8 @@
             "title": "تأیید برداشت",
             "description": "شما در حال برداشت {amount} WDD هستید."
           }
-        }
+        },
+        "smart_contract_link": "قرارداد هوشمند را ببینید"
       }
     },
     "menu": {

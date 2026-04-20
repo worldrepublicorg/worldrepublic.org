@@ -176,7 +176,8 @@
             "title": "Sahkan pengeluaran",
             "description": "Anda akan mengeluarkan {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Lihat kontrak pintar"
       }
     },
     "menu": {

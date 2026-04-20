@@ -176,7 +176,8 @@
             "title": "Bevestig onttrekking",
             "description": "Jy is op die punt om {amount} WDD te onttrek."
           }
-        }
+        },
+        "smart_contract_link": "Bekyk slimkontrak"
       }
     },
     "menu": {

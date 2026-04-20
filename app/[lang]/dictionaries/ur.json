@@ -176,7 +176,8 @@
             "title": "نکالنے کی تصدیق کریں",
             "description": "آپ {amount} WDD نکالنے والے ہیں۔"
           }
-        }
+        },
+        "smart_contract_link": "سمارٹ معاہدہ دیکھیں"
       }
     },
     "menu": {

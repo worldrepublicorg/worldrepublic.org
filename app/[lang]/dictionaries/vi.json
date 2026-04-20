@@ -176,7 +176,8 @@
             "title": "Xác nhận rút tiền",
             "description": "Bạn sắp rút {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Xem hợp đồng thông minh"
       }
     },
     "menu": {

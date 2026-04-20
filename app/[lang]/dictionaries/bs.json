@@ -176,7 +176,8 @@
             "title": "Potvrda povlačenja",
             "description": "Povući ćete {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Pogledajte pametni ugovor"
       }
     },
     "menu": {

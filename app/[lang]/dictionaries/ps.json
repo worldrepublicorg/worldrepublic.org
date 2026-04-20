@@ -176,7 +176,8 @@
             "title": "د ووتلو تایید",
             "description": "تاسو {amount} WDD ووتلو."
           }
-        }
+        },
+        "smart_contract_link": "سمارټ قرارداد وګورئ"
       }
     },
     "menu": {

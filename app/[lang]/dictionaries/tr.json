@@ -176,7 +176,8 @@
             "title": "Çekmeyi onayla",
             "description": "{amount} WDD çekmek üzeresiniz."
           }
-        }
+        },
+        "smart_contract_link": "Akıllı sözleşmeyi görüntüle"
       }
     },
     "menu": {

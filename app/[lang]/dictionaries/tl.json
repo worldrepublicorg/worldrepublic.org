@@ -176,7 +176,8 @@
             "title": "Kumpirmahin ang pag-withdraw",
             "description": "Mag-withdraw ka ng {amount} WDD."
           }
-        }
+        },
+        "smart_contract_link": "Tingnan ang matalinong kontrata"
       }
     },
     "menu": {

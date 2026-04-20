@@ -275,6 +275,10 @@ export function SavingsSection({
             onOpenChange={setIsLearnMoreDrawerOpen}
             title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
+            externalLink={{
+              url: "https://worldscan.org/address/0x234302db10a54bdc11094a8ef816b0eaa5fce3f7#code",
+              label: dictionary.pages.earn.savings.smart_contract_link,
+            }}
           />
         </div>
 

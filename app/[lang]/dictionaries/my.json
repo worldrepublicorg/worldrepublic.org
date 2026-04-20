@@ -176,7 +176,8 @@
             "title": "ထုတ်ယူခြင်းကို အတည်ပြုပါ",
             "description": "သင်သည် {amount} WDD ထုတ်ယူတော့မည်။"
           }
-        }
+        },
+        "smart_contract_link": "smart contract ကိုကြည့်ပါ"
       }
     },
     "menu": {
