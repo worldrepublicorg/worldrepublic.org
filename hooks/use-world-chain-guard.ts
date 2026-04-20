@@ -1,7 +1,7 @@
 "use client";
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { Connector } from "wagmi";
 import { useAccount, useChainId, useSwitchChain } from "wagmi";
 import { formatTxError } from "@/lib/format-tx-error";
@@ -26,6 +26,14 @@ type EthereumProvider = {
     params?: unknown[];
   }) => Promise<unknown>;
 };
+
+function parseHexChainId(raw: unknown): number | null {
+  if (typeof raw !== "string") return null;
+  const normalized = raw.trim().toLowerCase();
+  if (!normalized.startsWith("0x")) return null;
+  const parsed = Number.parseInt(normalized, 16);
+  return Number.isFinite(parsed) ? parsed : null;
+}
 
 function getErrorCode(err: unknown): number | undefined {
   const code = (err as { code?: number })?.code;
@@ -86,6 +94,29 @@ export function useWorldChainGuard() {
   const { switchChainAsync } = useSwitchChain();
   const { toast } = useToast();
   const [isSwitching, setIsSwitching] = useState(false);
+  const [liveChainId, setLiveChainId] = useState<number | null>(null);
+
+  const refreshLiveChainId = useCallback(async () => {
+    if (!isConnected || !connector) {
+      setLiveChainId(null);
+      return null;
+    }
+
+    try {
+      const provider = (await connector.getProvider()) as EthereumProvider;
+      const rawChainId = await provider.request({ method: "eth_chainId" });
+      const parsedChainId = parseHexChainId(rawChainId);
+      setLiveChainId(parsedChainId);
+      return parsedChainId;
+    } catch {
+      setLiveChainId(null);
+      return null;
+    }
+  }, [isConnected, connector]);
+
+  useEffect(() => {
+    void refreshLiveChainId();
+  }, [refreshLiveChainId, chainId]);
 
   const switchToWorldChain = useCallback(async () => {
     if (!isConnected || !connector) {
@@ -112,17 +143,36 @@ export function useWorldChainGuard() {
           },
         });
       }
-      return true;
+      const currentLiveChainId = await refreshLiveChainId();
+      if (
+        currentLiveChainId !== null &&
+        currentLiveChainId !== WORLD_CHAIN_ID
+      ) {
+        toast.error({ title: "Please switch to World Chain to continue." });
+        return false;
+      }
+      return currentLiveChainId === null ? chainId === WORLD_CHAIN_ID : true;
     } catch (err) {
       toast.error({ title: formatTxError(err) });
       return false;
     } finally {
       setIsSwitching(false);
     }
-  }, [isConnected, connector, isSwitching, chainId, switchChainAsync, toast]);
+  }, [
+    isConnected,
+    connector,
+    isSwitching,
+    chainId,
+    switchChainAsync,
+    toast,
+    refreshLiveChainId,
+  ]);
+
+  const isOnWorldChain = (liveChainId ?? chainId) === WORLD_CHAIN_ID;
 
   return {
-    isOnWorldChain: chainId === WORLD_CHAIN_ID,
+    isOnWorldChain,
+    liveChainId,
     isSwitching,
     switchToWorldChain,
   };

@@ -89,9 +89,24 @@ const tokenStakingPerTokenAbi = [
   },
 ] as const;
 
+type EthereumProvider = {
+  request: (args: {
+    method: string;
+    params?: unknown[];
+  }) => Promise<unknown>;
+};
+
+function parseHexChainId(raw: unknown): number | null {
+  if (typeof raw !== "string") return null;
+  const normalized = raw.trim().toLowerCase();
+  if (!normalized.startsWith("0x")) return null;
+  const parsed = Number.parseInt(normalized, 16);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 export function useWorldchainSavingsAccount() {
   const { toast } = useToast();
-  const { address, isConnected } = useAccount();
+  const { address, isConnected, connector } = useAccount();
   const chainId = useChainId();
   const { switchChainAsync } = useSwitchChain();
   const publicClient = usePublicClient({ chainId: WORLD_CHAIN_ID });
@@ -194,11 +209,24 @@ export function useWorldchainSavingsAccount() {
     setRefreshNonce((current) => current + 1);
   }, [refetchContracts]);
 
+  const getLiveChainId = useCallback(async (): Promise<number | null> => {
+    if (!connector) return null;
+    try {
+      const provider = (await connector.getProvider()) as EthereumProvider;
+      const rawChainId = await provider.request({ method: "eth_chainId" });
+      return parseHexChainId(rawChainId);
+    } catch {
+      return null;
+    }
+  }, [connector]);
+
   const ensureReadyForWrite = useCallback(async () => {
     if (!isConnected || !address) {
       throw new Error("Wallet not connected");
     }
-    if (chainId !== WORLD_CHAIN_ID) {
+
+    const preflightChainId = (await getLiveChainId()) ?? chainId;
+    if (preflightChainId !== WORLD_CHAIN_ID) {
       try {
         await switchChainAsync({ chainId: WORLD_CHAIN_ID });
       } catch {
@@ -206,11 +234,26 @@ export function useWorldchainSavingsAccount() {
         throw new Error("Chain switch failed");
       }
     }
+
+    const postSwitchChainId = (await getLiveChainId()) ?? chainId;
+    if (postSwitchChainId !== WORLD_CHAIN_ID) {
+      toast.error({ title: "Please switch to World Chain to continue." });
+      throw new Error("Chain switch failed");
+    }
+
     if (!publicClient) {
       throw new Error("World Chain client not available");
     }
     return { account: address as `0x${string}`, client: publicClient };
-  }, [isConnected, address, chainId, switchChainAsync, toast, publicClient]);
+  }, [
+    isConnected,
+    address,
+    chainId,
+    getLiveChainId,
+    switchChainAsync,
+    toast,
+    publicClient,
+  ]);
 
   const waitForSuccessReceipt = useCallback(
     async (hash: `0x${string}`, client: NonNullable<typeof publicClient>) => {

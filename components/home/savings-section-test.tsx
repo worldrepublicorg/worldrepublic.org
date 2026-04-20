@@ -23,13 +23,13 @@ import {
   PiInfoFill,
   PiPiggyBankFill,
 } from "react-icons/pi";
-import { useAccount, useChainId } from "wagmi";
+import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
-import { WORLD_CHAIN_ID, useWorldChainGuard } from "@/hooks/use-world-chain-guard";
+import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
@@ -71,9 +71,9 @@ export function SavingsSection({
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
   const { isConnected: isWalletConnected } = useAccount();
-  const chainId = useChainId();
   const { toast } = useToast();
-  const { isSwitching, switchToWorldChain } = useWorldChainGuard();
+  const { isOnWorldChain, isSwitching, switchToWorldChain } =
+    useWorldChainGuard();
   const savingsAccountOptions = [
     { value: "offchain", label: "Offchain" },
     { value: "worldchain", label: "World Chain" },
@@ -239,7 +239,7 @@ export function SavingsSection({
     isCurrentAccountLoading ||
     (isWorldchainAccountSelected &&
       isWalletConnected &&
-      chainId !== WORLD_CHAIN_ID) ||
+      !isOnWorldChain) ||
     (isOffchainAccountSelected && !isAuthenticated) ||
     !amount ||
     Number(amount) <= 0 ||
@@ -253,7 +253,7 @@ export function SavingsSection({
   const showWorldChainSwitchCta =
     isWorldchainAccountSelected &&
     isWalletConnected &&
-    chainId !== WORLD_CHAIN_ID;
+    !isOnWorldChain;
 
   return (
     <div className="flex grow items-center justify-center">
