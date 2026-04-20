@@ -1,12 +1,12 @@
 "use client";
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
-import { useEffect, useRef } from "react";
+import { useCallback, useState } from "react";
 import type { Connector } from "wagmi";
-import { useAccount, useChainId, useDisconnect, useSwitchChain } from "wagmi";
+import { useAccount, useChainId, useSwitchChain } from "wagmi";
 import { formatTxError } from "@/lib/format-tx-error";
 
-const WORLD_CHAIN_ID = 480;
+export const WORLD_CHAIN_ID = 480;
 const WORLD_CHAIN_ID_HEX = "0x1e0";
 
 const WORLD_CHAIN_ADD_PARAMS = {
@@ -84,51 +84,46 @@ export function useWorldChainGuard() {
   const { isConnected, connector } = useAccount();
   const chainId = useChainId();
   const { switchChainAsync } = useSwitchChain();
-  const { disconnect } = useDisconnect();
   const { toast } = useToast();
-  const inFlightRef = useRef(false);
+  const [isSwitching, setIsSwitching] = useState(false);
 
-  useEffect(() => {
-    if (
-      !isConnected ||
-      !connector ||
-      chainId === WORLD_CHAIN_ID ||
-      inFlightRef.current
-    ) {
-      return;
+  const switchToWorldChain = useCallback(async () => {
+    if (!isConnected || !connector) {
+      toast.error({ title: "Connect your wallet first." });
+      return false;
     }
+    if (isSwitching) return false;
+    if (chainId === WORLD_CHAIN_ID) return true;
 
-    inFlightRef.current = true;
+    setIsSwitching(true);
 
-    void (async () => {
+    try {
       try {
-        try {
-          await switchOrAddWorldChain(connector);
-        } catch (manualErr) {
-          if (isUserRejection(manualErr)) throw manualErr;
-          await switchChainAsync({
-            chainId: WORLD_CHAIN_ID,
-            addEthereumChainParameter: {
-              chainName: WORLD_CHAIN_ADD_PARAMS.chainName,
-              nativeCurrency: WORLD_CHAIN_ADD_PARAMS.nativeCurrency,
-              rpcUrls: [...WORLD_CHAIN_ADD_PARAMS.rpcUrls],
-              blockExplorerUrls: [...WORLD_CHAIN_ADD_PARAMS.blockExplorerUrls],
-            },
-          });
-        }
-      } catch (err) {
-        toast.error({ title: formatTxError(err) });
-        disconnect();
-      } finally {
-        inFlightRef.current = false;
+        await switchOrAddWorldChain(connector);
+      } catch (manualErr) {
+        if (isUserRejection(manualErr)) throw manualErr;
+        await switchChainAsync({
+          chainId: WORLD_CHAIN_ID,
+          addEthereumChainParameter: {
+            chainName: WORLD_CHAIN_ADD_PARAMS.chainName,
+            nativeCurrency: WORLD_CHAIN_ADD_PARAMS.nativeCurrency,
+            rpcUrls: [...WORLD_CHAIN_ADD_PARAMS.rpcUrls],
+            blockExplorerUrls: [...WORLD_CHAIN_ADD_PARAMS.blockExplorerUrls],
+          },
+        });
       }
-    })();
-  }, [
-    isConnected,
-    connector,
-    chainId,
-    switchChainAsync,
-    disconnect,
-    toast,
-  ]);
+      return true;
+    } catch (err) {
+      toast.error({ title: formatTxError(err) });
+      return false;
+    } finally {
+      setIsSwitching(false);
+    }
+  }, [isConnected, connector, isSwitching, chainId, switchChainAsync, toast]);
+
+  return {
+    isOnWorldChain: chainId === WORLD_CHAIN_ID,
+    isSwitching,
+    switchToWorldChain,
+  };
 }

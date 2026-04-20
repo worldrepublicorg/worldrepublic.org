@@ -23,12 +23,13 @@ import {
   PiInfoFill,
   PiPiggyBankFill,
 } from "react-icons/pi";
-import { useAccount } from "wagmi";
+import { useAccount, useChainId } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
+import { WORLD_CHAIN_ID, useWorldChainGuard } from "@/hooks/use-world-chain-guard";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
@@ -70,7 +71,9 @@ export function SavingsSection({
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
   const { isConnected: isWalletConnected } = useAccount();
+  const chainId = useChainId();
   const { toast } = useToast();
+  const { isSwitching, switchToWorldChain } = useWorldChainGuard();
   const savingsAccountOptions = [
     { value: "offchain", label: "Offchain" },
     { value: "worldchain", label: "World Chain" },
@@ -234,6 +237,9 @@ export function SavingsSection({
 
   const isActionDisabled =
     isCurrentAccountLoading ||
+    (isWorldchainAccountSelected &&
+      isWalletConnected &&
+      chainId !== WORLD_CHAIN_ID) ||
     (isOffchainAccountSelected && !isAuthenticated) ||
     !amount ||
     Number(amount) <= 0 ||
@@ -244,6 +250,10 @@ export function SavingsSection({
     )?.label ?? savingsAccountOptions[0].label;
   const showWorldChainConnectCta =
     isWorldchainAccountSelected && !isWalletConnected;
+  const showWorldChainSwitchCta =
+    isWorldchainAccountSelected &&
+    isWalletConnected &&
+    chainId !== WORLD_CHAIN_ID;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -383,6 +393,7 @@ export function SavingsSection({
                   <Button
                     disabled={
                       (isOffchainAccountSelected && !isAuthenticated) ||
+                      showWorldChainSwitchCta ||
                       isCurrentAccountLoading ||
                       collectableAmountForUi <= 0
                     }
@@ -470,6 +481,28 @@ export function SavingsSection({
               copyErrorToastTitle={dictionary.toasts.generic_error}
               lang={lang}
             />
+          ) : showWorldChainSwitchCta ? (
+            <div className="flex w-full flex-col gap-3">
+              <Typography
+                as="p"
+                variant="body"
+                level={3}
+                className="text-center text-gray-500"
+              >
+                You're connected to the wrong network. Switch to World Chain to
+                continue.
+              </Typography>
+              <Button
+                fullWidth
+                className={raisedButtonShadowClass}
+                disabled={isSwitching}
+                onClick={async () => {
+                  await switchToWorldChain();
+                }}
+              >
+                {isSwitching ? "Switching..." : "Switch to World Chain"}
+              </Button>
+            </div>
           ) : !isAuthenticated && isOffchainAccountSelected ? (
             <Button
               fullWidth
