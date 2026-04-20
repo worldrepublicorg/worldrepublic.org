@@ -7,6 +7,7 @@ import { fallback, http } from "viem";
 import { createConfig, createStorage, WagmiProvider } from "wagmi";
 import { worldchain } from "wagmi/chains";
 import { injected } from "wagmi/connectors";
+import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
 
 const WORLD_CHAIN_RPC_URLS = [
   "https://worldchain-mainnet.g.alchemy.com/public",
@@ -28,6 +29,11 @@ const wagmiConfig = createConfig({
   },
 });
 
+function WorldChainGuardMount() {
+  useWorldChainGuard();
+  return null;
+}
+
 export function RainbowKitWalletProvider({
   children,
 }: {
@@ -38,7 +44,10 @@ export function RainbowKitWalletProvider({
   return (
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>{children}</RainbowKitProvider>
+        <RainbowKitProvider>
+          <WorldChainGuardMount />
+          {children}
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );
