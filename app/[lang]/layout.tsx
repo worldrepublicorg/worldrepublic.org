@@ -2,6 +2,7 @@
 
 import { SessionProvider } from "next-auth/react";
 import { WalletAuthCacheSync } from "@/components/wallet/wallet-auth-cache-sync";
+import { OnchainWalletProvider } from "@/components/wallet/onchain-wallet-provider";
 
 export default function AuthLayout({
   children,
@@ -10,8 +11,10 @@ export default function AuthLayout({
 }) {
   return (
     <SessionProvider refetchOnWindowFocus={true}>
-      <WalletAuthCacheSync />
-      {children}
+      <OnchainWalletProvider>
+        <WalletAuthCacheSync />
+        {children}
+      </OnchainWalletProvider>
     </SessionProvider>
   );
 }
