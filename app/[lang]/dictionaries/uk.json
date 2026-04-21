@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Знайдено кілька гаманців. Виберіть один для підключення."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Немає гаманця?",
+          "find_wallet_link": "Знайдіть один на WalletGuide"
         }
       },
       "sections": {

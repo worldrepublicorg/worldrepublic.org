@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "ပိုက်ဆံအိတ်များစွာကို တွေ့ရှိခဲ့သည်။ ချိတ်ဆက်ရန် တစ်ခုကို ရွေးပါ။"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ပိုက်ဆံအိတ် မရှိသေးဘူးလား?",
+          "find_wallet_link": "WalletGuide တွင် တစ်ခုကို ရှာပါ"
         }
       },
       "sections": {

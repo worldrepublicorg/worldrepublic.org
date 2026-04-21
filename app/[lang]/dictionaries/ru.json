@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Найдено несколько кошельков. Выберите один для подключения."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Нет кошелька?",
+          "find_wallet_link": "Найдите его на WalletGuide"
         }
       },
       "sections": {

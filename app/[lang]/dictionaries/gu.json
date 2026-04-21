@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "ઘણા વૉલેટ મળ્યા. કનેક્ટ કરવા માટે એક પસંદ કરો."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "તમારી પાસે વૉલેટ નથી?",
+          "find_wallet_link": "WalletGuide પર એક શોધો"
         }
       },
       "sections": {

@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Znaleziono wiele portfeli. Wybierz jeden, aby się połączyć."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nie masz portfela?",
+          "find_wallet_link": "Znajdź jeden na WalletGuide"
         }
       },
       "sections": {

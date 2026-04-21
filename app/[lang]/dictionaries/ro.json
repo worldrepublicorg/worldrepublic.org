@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Au fost găsite mai multe portofele. Selectează unul pentru conectare."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nu ai un portofel?",
+          "find_wallet_link": "Găsește unul pe WalletGuide"
         }
       },
       "sections": {

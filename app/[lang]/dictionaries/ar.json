@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "تم العثور على عدة محافظ. اختر واحدة للاتصال."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ليس لديك محفظة؟",
+          "find_wallet_link": "اعثر على واحدة في WalletGuide"
         }
       },
       "sections": {

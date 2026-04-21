@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "พบกระเป๋าเงินหลายรายการ เลือกหนึ่งรายการเพื่อเชื่อมต่อ"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ยังไม่มีกระเป๋าเงินใช่ไหม?",
+          "find_wallet_link": "ค้นหาหนึ่งรายการบน WalletGuide"
         }
       },
       "sections": {

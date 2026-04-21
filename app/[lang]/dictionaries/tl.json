@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Maraming wallet ang natagpuan. Pumili ng isa para kumonekta."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Wala ka pang wallet?",
+          "find_wallet_link": "Maghanap ng isa sa WalletGuide"
         }
       },
       "sections": {

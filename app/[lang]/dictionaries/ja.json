@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "複数のウォレットが見つかりました。接続するものを1つ選択してください。"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ウォレットをお持ちではありませんか？",
+          "find_wallet_link": "WalletGuideで探す"
         }
       },
       "sections": {

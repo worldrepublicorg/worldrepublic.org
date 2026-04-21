@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Walleti nyingi zimepatikana. Chagua moja ili kuunganisha."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Huna wallet?",
+          "find_wallet_link": "Pata moja kwenye WalletGuide"
         }
       },
       "sections": {

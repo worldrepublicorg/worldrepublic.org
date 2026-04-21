@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Βρέθηκαν πολλαπλά πορτοφόλια. Επιλέξτε ένα για σύνδεση."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Δεν έχετε πορτοφόλι;",
+          "find_wallet_link": "Βρείτε ένα στο WalletGuide"
         }
       },
       "sections": {

@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "An gano walat da dama. Zaɓi ɗaya don haɗawa."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Ba ku da wallet?",
+          "find_wallet_link": "Nemo ɗaya a WalletGuide"
         }
       },
       "sections": {

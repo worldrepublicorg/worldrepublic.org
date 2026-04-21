@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Plusieurs portefeuilles ont été trouvés. Sélectionnez-en un pour vous connecter."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Vous n'avez pas de portefeuille ?",
+          "find_wallet_link": "Trouvez-en un sur WalletGuide"
         }
       },
       "sections": {

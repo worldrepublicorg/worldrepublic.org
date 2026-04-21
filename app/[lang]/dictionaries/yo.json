@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "A ri ọpọlọpọ awọn apamọwọ. Yan ọkan lati sopọ."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Ṣe o ko ni apamọwọ?",
+          "find_wallet_link": "Wa ọkan lori WalletGuide"
         }
       },
       "sections": {

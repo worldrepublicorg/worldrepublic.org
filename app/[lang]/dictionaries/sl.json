@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Najdenih je bilo več denarnic. Izberite eno za povezavo."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nimate denarnice?",
+          "find_wallet_link": "Najdite eno na WalletGuide"
         }
       },
       "sections": {

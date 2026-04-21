@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Bolo nájdených viac peňaženiek. Vyberte jednu na pripojenie."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nemáte peňaženku?",
+          "find_wallet_link": "Nájdite jednu na WalletGuide"
         }
       },
       "sections": {

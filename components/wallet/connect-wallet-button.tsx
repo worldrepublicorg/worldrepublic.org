@@ -38,6 +38,8 @@ interface ConnectWalletButtonProps {
   walletBrowserDialogDescription?: string;
   walletBrowserDialogButtonLabel?: string;
   walletPickerDialogDescription?: string;
+  noWalletDialogDescription?: string;
+  noWalletDialogLinkLabel?: string;
   copiedToastTitle?: string;
   copyErrorToastTitle?: string;
   lang?: string;
@@ -56,6 +58,8 @@ export function ConnectWalletButton({
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
   walletPickerDialogDescription = "Multiple wallets were found. Select one to connect.",
+  noWalletDialogDescription = "Haven't got a wallet?",
+  noWalletDialogLinkLabel = "Find one on WalletGuide",
   copiedToastTitle = "Copied",
   copyErrorToastTitle = "An error occurred",
   lang = "en",
@@ -275,7 +279,7 @@ export function ConnectWalletButton({
           >
             <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
           </AlertDialogHeader>
-          <AlertDialogDescription>Haven&apos;t got a wallet?</AlertDialogDescription>
+          <AlertDialogDescription>{noWalletDialogDescription}</AlertDialogDescription>
           <AlertDialogFooter>
             <div className="flex w-full flex-col gap-2">
               <a
@@ -285,7 +289,7 @@ export function ConnectWalletButton({
                 className="block w-full"
               >
                 <CustomListItem
-                  label="Find one on WalletGuide"
+                  label={noWalletDialogLinkLabel}
                   endAdornment={
                     <PiArrowSquareOut className="size-4 text-gray-400" />
                   }

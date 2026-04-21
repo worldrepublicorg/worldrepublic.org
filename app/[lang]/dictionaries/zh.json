@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "发现多个钱包。请选择一个进行连接。"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "还没有钱包？",
+          "find_wallet_link": "在 WalletGuide 上找一个"
         }
       },
       "sections": {

@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Đã tìm thấy nhiều ví. Hãy chọn một ví để kết nối."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Chưa có ví?",
+          "find_wallet_link": "Tìm một ví trên WalletGuide"
         }
       },
       "sections": {

@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "څو والټونه وموندل شول. د نښلولو لپاره یو انتخاب کړئ."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "والټ نه لرئ؟",
+          "find_wallet_link": "په WalletGuide کې یو ومومئ"
         }
       },
       "sections": {

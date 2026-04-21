@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "ብዙ ዋሌቶች ተገኝተዋል። ለመገናኘት አንዱን ይምረጡ።"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ዋሌት የለዎትም?",
+          "find_wallet_link": "በWalletGuide ላይ አንዱን ያግኙ"
         }
       },
       "sections": {

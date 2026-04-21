@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Пронађено је више новчаника. Изаберите један за повезивање."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Немате новчаник?",
+          "find_wallet_link": "Пронађите један на WalletGuide"
         }
       },
       "sections": {

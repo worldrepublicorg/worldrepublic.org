@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "چند کیف پول پیدا شد. یکی را برای اتصال انتخاب کنید."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "کیف پول ندارید؟",
+          "find_wallet_link": "یکی را در WalletGuide پیدا کنید"
         }
       },
       "sections": {

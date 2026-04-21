@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Rasta kelios piniginės. Pasirinkite vieną prisijungimui."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Neturite piniginės?",
+          "find_wallet_link": "Raskite vieną WalletGuide"
         }
       },
       "sections": {

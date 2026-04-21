@@ -432,6 +432,13 @@ export default function HomePageClient({
               walletPickerDialogDescription={
                 dictionary.pages.wallet.modals.connect_wallet_picker.description
               }
+              noWalletDialogDescription={
+                dictionary.pages.wallet.modals.connect_wallet_no_wallet.description
+              }
+              noWalletDialogLinkLabel={
+                dictionary.pages.wallet.modals.connect_wallet_no_wallet
+                  .find_wallet_link
+              }
               copiedToastTitle={dictionary.toasts.copied}
               copyErrorToastTitle={dictionary.toasts.generic_error}
               lang={lang}

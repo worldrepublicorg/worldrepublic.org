@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Tika atrasti vairāki maki. Izvēlieties vienu, lai izveidotu savienojumu."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Jums nav maka?",
+          "find_wallet_link": "Atrodiet vienu WalletGuide"
         }
       },
       "sections": {

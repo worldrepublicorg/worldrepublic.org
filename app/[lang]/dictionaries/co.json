@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Parechji portafogli sò stati trovati. Scegliene unu per cunnette."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Ùn avete micca un portafogliu?",
+          "find_wallet_link": "Trovene unu nant'à WalletGuide"
         }
       },
       "sections": {

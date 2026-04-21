@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "متعدد والیٹس ملے ہیں۔ کنیکٹ کرنے کے لیے ایک منتخب کریں۔"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "کیا آپ کے پاس والیٹ نہیں ہے؟",
+          "find_wallet_link": "WalletGuide پر ایک تلاش کریں"
         }
       },
       "sections": {

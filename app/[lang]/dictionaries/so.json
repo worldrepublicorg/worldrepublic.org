@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Waxaa la helay boorsooyin badan. Mid dooro si aad ugu xirmato."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Wallet ma lihid?",
+          "find_wallet_link": "Mid ka hel WalletGuide"
         }
       },
       "sections": {

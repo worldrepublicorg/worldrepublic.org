@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Verskeie wallets is gevind. Kies een om te koppel."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Het jy nie 'n wallet nie?",
+          "find_wallet_link": "Vind een op WalletGuide"
         }
       },
       "sections": {

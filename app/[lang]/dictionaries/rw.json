@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Habonetsemo amakarita menshi. Hitamo rimwe kugira ngo wihuze."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nta karita ufite?",
+          "find_wallet_link": "Shaka imwe kuri WalletGuide"
         }
       },
       "sections": {

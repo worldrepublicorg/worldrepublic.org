@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "একাধিক ওয়ালেট পাওয়া গেছে। সংযোগ করতে একটি নির্বাচন করুন।"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "ওয়ালেট নেই?",
+          "find_wallet_link": "WalletGuide-এ একটি খুঁজুন"
         }
       },
       "sections": {

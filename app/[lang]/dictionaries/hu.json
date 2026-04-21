@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Több tárca található. Válassz egyet a csatlakozáshoz."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Nincs tárcád?",
+          "find_wallet_link": "Találj egyet a WalletGuide-on"
         }
       },
       "sections": {

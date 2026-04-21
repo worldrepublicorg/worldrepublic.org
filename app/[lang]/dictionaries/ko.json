@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "여러 지갑이 발견되었습니다. 연결할 지갑 하나를 선택하세요."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "지갑이 없으신가요?",
+          "find_wallet_link": "WalletGuide에서 찾아보세요"
         }
       },
       "sections": {

@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "បានរកឃើញកាបូបជាច្រើន។ សូមជ្រើសរើសមួយដើម្បីភ្ជាប់។"
+        },
+        "connect_wallet_no_wallet": {
+          "description": "មិនទាន់មានកាបូបទេ?",
+          "find_wallet_link": "ស្វែងរកមួយនៅលើ WalletGuide"
         }
       },
       "sections": {

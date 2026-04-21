@@ -243,6 +243,10 @@
         },
         "connect_wallet_picker": {
           "description": "Beberapa dompet ditemui. Pilih satu untuk disambungkan."
+        },
+        "connect_wallet_no_wallet": {
+          "description": "Belum ada dompet?",
+          "find_wallet_link": "Cari satu di WalletGuide"
         }
       },
       "sections": {
