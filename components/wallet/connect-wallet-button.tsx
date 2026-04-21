@@ -18,7 +18,7 @@ import { PiArrowSquareOut, PiPowerFill, PiWalletFill } from "react-icons/pi";
 import type { Connector } from "wagmi";
 import { CustomListItem } from "@/components/custom-list-item";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
-import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
+import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
 import {
   copyToClipboard,
   getBalancePrecision,

@@ -31,7 +31,7 @@ import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
 import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
-import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
+import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
