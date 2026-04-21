@@ -20,7 +20,6 @@ const WDD_DECIMALS = 18;
 const SECONDS_IN_529_DAYS = 529 * 86400;
 const SAVINGS_PER_SECOND_RATE = 1 / SECONDS_IN_529_DAYS;
 const BALANCE_SYNC_TOLERANCE = 1e-6;
-const AVAILABLE_SYNC_TOLERANCE = 1e-4;
 
 const erc20Abi = [
   {
@@ -243,14 +242,11 @@ export function useWorldchainSavingsAccount() {
     const savingsSynced =
       Math.abs(savingsBalance - optimisticBalances.savings) <=
       BALANCE_SYNC_TOLERANCE;
-    const availableSynced =
-      Math.abs(availableInterest - optimisticBalances.available) <=
-      AVAILABLE_SYNC_TOLERANCE;
 
-    if (walletSynced && savingsSynced && availableSynced) {
+    if (walletSynced && savingsSynced) {
       setOptimisticBalances(null);
     }
-  }, [walletBalance, savingsBalance, availableInterest, optimisticBalances]);
+  }, [walletBalance, savingsBalance, optimisticBalances]);
 
   const getLiveChainId = useCallback(async (): Promise<number | null> => {
     if (!connector) return null;
