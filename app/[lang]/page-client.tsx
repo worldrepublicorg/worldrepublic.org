@@ -490,7 +490,9 @@ export default function HomePageClient({
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
             lastBasicIncomeClaimAt={profileData?.lastBasicIncomeClaimAt ?? null}
-            basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
+            basicIncomeAndInterestClaimedTotal={
+              profileData?.basicIncomeAndInterestClaimedTotal ?? 0
+            }
             onSignIn={() => setShowSignInDialog(true)}
             onSuccess={fetchData}
           />
@@ -507,7 +509,9 @@ export default function HomePageClient({
             unclaimedSavingsInterest={
               profileData?.unclaimedSavingsInterest ?? 0
             }
-            basicIncomeClaimedTotal={profileData?.basicIncomeClaimedTotal ?? 0}
+            basicIncomeAndInterestClaimedTotal={
+              profileData?.basicIncomeAndInterestClaimedTotal ?? 0
+            }
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
             onSuccess={fetchData}

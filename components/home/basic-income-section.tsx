@@ -27,7 +27,7 @@ interface BasicIncomeSectionProps {
   isSelfVerified: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
-  basicIncomeClaimedTotal: number | null;
+  basicIncomeAndInterestClaimedTotal: number | null;
   onSignIn: () => void;
   onSuccess: () => void;
 }
@@ -40,7 +40,7 @@ export function BasicIncomeSection({
   isSelfVerified,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
-  basicIncomeClaimedTotal,
+  basicIncomeAndInterestClaimedTotal,
   onSignIn,
   onSuccess,
 }: BasicIncomeSectionProps) {
@@ -77,7 +77,7 @@ export function BasicIncomeSection({
     dictionary,
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
-    basicIncomeClaimedTotal,
+    basicIncomeAndInterestClaimedTotal,
     isSelfVerified,
     isActive,
     onSuccess,

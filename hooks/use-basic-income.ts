@@ -11,7 +11,7 @@ export function useBasicIncome(
   dictionary: Dictionary,
   basicIncomeActivatedAt: number | null,
   lastBasicIncomeClaimAt: number | null,
-  basicIncomeClaimedTotal: number | null,
+  basicIncomeAndInterestClaimedTotal: number | null,
   isSelfVerified: boolean,
   isActive: boolean,
   onSuccess: () => void,
@@ -34,7 +34,7 @@ export function useBasicIncome(
 
       const maxCanClaim = isSelfVerified
         ? claimable
-        : Math.max(0, BALANCE_CAP - (basicIncomeClaimedTotal ?? 0));
+        : Math.max(0, BALANCE_CAP - (basicIncomeAndInterestClaimedTotal ?? 0));
       setMaxClaimableAmount(Math.min(claimable, maxCanClaim));
     };
 
@@ -45,7 +45,7 @@ export function useBasicIncome(
     isActive,
     basicIncomeActivatedAt,
     lastBasicIncomeClaimAt,
-    basicIncomeClaimedTotal,
+    basicIncomeAndInterestClaimedTotal,
     isSelfVerified,
   ]);
 

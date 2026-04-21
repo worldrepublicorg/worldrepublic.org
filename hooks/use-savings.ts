@@ -23,7 +23,7 @@ export function useSavings(
   savingsBalance: number,
   unclaimedSavingsInterest: number,
   savingsLastUpdatedAt: number | null,
-  basicIncomeClaimedTotal: number,
+  basicIncomeAndInterestClaimedTotal: number,
   isSelfVerified: boolean,
   isActive: boolean,
   onSuccess: () => Promise<void> | void,
@@ -42,7 +42,11 @@ export function useSavings(
         const base = Math.max(0, unclaimedSavingsInterest);
         const maxCanCollect = isSelfVerified
           ? base
-          : Math.max(0, BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal);
+          : Math.max(
+              0,
+              BASIC_INCOME_AND_SAVINGS_CAP -
+                basicIncomeAndInterestClaimedTotal,
+            );
         setDisplayAvailableInterest(base);
         setMaxCollectableAmount(Math.min(base, maxCanCollect));
         return;
@@ -54,7 +58,10 @@ export function useSavings(
       const total = Math.max(0, unclaimedSavingsInterest + accrued);
       const maxCanCollect = isSelfVerified
         ? total
-        : Math.max(0, BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeClaimedTotal);
+        : Math.max(
+            0,
+            BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeAndInterestClaimedTotal,
+          );
       setDisplayAvailableInterest(total);
       setMaxCollectableAmount(Math.min(total, maxCanCollect));
     };
@@ -67,7 +74,7 @@ export function useSavings(
     savingsBalance,
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
-    basicIncomeClaimedTotal,
+    basicIncomeAndInterestClaimedTotal,
     isSelfVerified,
   ]);
 

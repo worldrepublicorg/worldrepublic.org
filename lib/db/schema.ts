@@ -196,10 +196,13 @@ export const userProfiles = pgTable(
       .notNull()
       .default("0"),
     savingsLastUpdatedAt: timestamp("savings_last_updated_at"),
-    basicIncomeClaimedTotal: decimal("basic_income_claimed_total", {
+    basicIncomeAndInterestClaimedTotal: decimal(
+      "basic_income_and_interest_claimed_total",
+      {
       precision: 36,
       scale: 18,
-    })
+      },
+    )
       .notNull()
       .default("0"),
     username: varchar("username", { length: 30 }).notNull(), // Required username, auto-generated on profile creation

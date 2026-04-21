@@ -339,7 +339,7 @@ export type GetWalletAuthAndDataProfileData = {
   savingsBalance: number;
   unclaimedSavingsInterest: number;
   savingsLastUpdatedAt: number | null;
-  basicIncomeClaimedTotal: number;
+  basicIncomeAndInterestClaimedTotal: number;
   selfVerifiedAt: number | null;
   username: string | null;
   referralCode: string | null;
@@ -481,7 +481,8 @@ export async function getWalletAuthAndData(
       savingsBalance: userProfiles.savingsBalance,
       unclaimedSavingsInterest: userProfiles.unclaimedSavingsInterest,
       savingsLastUpdatedAt: userProfiles.savingsLastUpdatedAt,
-      basicIncomeClaimedTotal: userProfiles.basicIncomeClaimedTotal,
+      basicIncomeAndInterestClaimedTotal:
+        userProfiles.basicIncomeAndInterestClaimedTotal,
       basicIncomeActivatedAt: userProfiles.basicIncomeActivatedAt,
       lastBasicIncomeClaimAt: userProfiles.lastBasicIncomeClaimAt,
     })
@@ -516,8 +517,9 @@ export async function getWalletAuthAndData(
       ? parseFloat(profileRow.unclaimedSavingsInterest)
       : 0,
     savingsLastUpdatedAt: profileRow?.savingsLastUpdatedAt?.getTime() ?? null,
-    basicIncomeClaimedTotal: profileRow?.basicIncomeClaimedTotal
-      ? parseFloat(profileRow.basicIncomeClaimedTotal)
+    basicIncomeAndInterestClaimedTotal:
+      profileRow?.basicIncomeAndInterestClaimedTotal
+        ? parseFloat(profileRow.basicIncomeAndInterestClaimedTotal)
       : 0,
     selfVerifiedAt: selfVerificationRow?.selfVerifiedAt?.getTime() ?? null,
     username: null,
@@ -725,7 +727,7 @@ export async function withdrawTokens(
 
       // Lock the user profile row too (for walletBalance debit)
       const profileRows = await tx.execute(
-        sql`SELECT wallet_balance, savings_balance, basic_income_claimed_total
+        sql`SELECT wallet_balance, savings_balance, basic_income_and_interest_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
       const selfVerificationRows = await tx.execute(
@@ -736,7 +738,7 @@ export async function withdrawTokens(
       ) as Array<{
         wallet_balance: string;
         savings_balance: string;
-        basic_income_claimed_total: string;
+        basic_income_and_interest_claimed_total: string;
       }>;
       const verificationRow = (
         "rows" in selfVerificationRows
@@ -748,7 +750,7 @@ export async function withdrawTokens(
       );
       const savingsBalance = parseFloat(profileRow[0]?.savings_balance ?? "0");
       const restrictedClaimedTotal = parseFloat(
-        profileRow[0]?.basic_income_claimed_total ?? "0",
+        profileRow[0]?.basic_income_and_interest_claimed_total ?? "0",
       );
       const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
@@ -1025,7 +1027,7 @@ export async function claimBasicIncome(): Promise<{
         sql`SELECT self_verified_at FROM user_self_verifications WHERE user_id = ${userUuid} LIMIT 1`,
       );
       const profileRows = await tx.execute(
-        sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance, basic_income_claimed_total
+        sql`SELECT basic_income_activated_at, last_basic_income_claim_at, wallet_balance, basic_income_and_interest_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
       const verificationRow = (
@@ -1039,7 +1041,7 @@ export async function claimBasicIncome(): Promise<{
         basic_income_activated_at: string | Date | null;
         last_basic_income_claim_at: string | Date | null;
         wallet_balance: string;
-        basic_income_claimed_total: string;
+        basic_income_and_interest_claimed_total: string;
       }>;
 
       const profile = rows[0];
@@ -1052,8 +1054,8 @@ export async function claimBasicIncome(): Promise<{
         ? new Date(profile.last_basic_income_claim_at).getTime()
         : activatedAt;
       const currentBalance = parseFloat(profile.wallet_balance || "0");
-      const basicIncomeClaimedTotal = parseFloat(
-        profile.basic_income_claimed_total || "0",
+      const basicIncomeAndInterestClaimedTotal = parseFloat(
+        profile.basic_income_and_interest_claimed_total || "0",
       );
       const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
@@ -1062,7 +1064,10 @@ export async function claimBasicIncome(): Promise<{
       const claimable = Math.min(elapsedDays, 1);
       const maxCanClaim = isSelfVerified
         ? claimable
-        : Math.max(0, BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal);
+        : Math.max(
+            0,
+            BASIC_INCOME_BALANCE_CAP - basicIncomeAndInterestClaimedTotal,
+          );
       const finalClaimable = Math.min(claimable, maxCanClaim);
 
       if (finalClaimable <= 1e-12) {
@@ -1073,13 +1078,14 @@ export async function claimBasicIncome(): Promise<{
       }
 
       const newBalance = currentBalance + finalClaimable;
-      const newBasicIncomeClaimedTotal =
-        basicIncomeClaimedTotal + finalClaimable;
+      const newBasicIncomeAndInterestClaimedTotal =
+        basicIncomeAndInterestClaimedTotal + finalClaimable;
       await tx
         .update(userProfiles)
         .set({
           walletBalance: newBalance.toFixed(18),
-          basicIncomeClaimedTotal: newBasicIncomeClaimedTotal.toFixed(18),
+          basicIncomeAndInterestClaimedTotal:
+            newBasicIncomeAndInterestClaimedTotal.toFixed(18),
           lastBasicIncomeClaimAt: new Date(now),
           updatedAt: new Date(now),
         })
@@ -1385,7 +1391,7 @@ export async function claimSavingsInterest(): Promise<{
         sql`SELECT self_verified_at FROM user_self_verifications WHERE user_id = ${userUuid} LIMIT 1`,
       );
       const profileRows = await tx.execute(
-        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at, basic_income_claimed_total
+        sql`SELECT wallet_balance, savings_balance, unclaimed_savings_interest, savings_last_updated_at, basic_income_and_interest_claimed_total
             FROM user_profiles WHERE id = ${userUuid} FOR UPDATE`,
       );
       const verificationRow = (
@@ -1400,7 +1406,7 @@ export async function claimSavingsInterest(): Promise<{
         savings_balance: string;
         unclaimed_savings_interest: string;
         savings_last_updated_at: string | Date | null;
-        basic_income_claimed_total: string;
+        basic_income_and_interest_claimed_total: string;
       }>;
 
       const profile = rows[0];
@@ -1416,8 +1422,8 @@ export async function claimSavingsInterest(): Promise<{
       const currentLastUpdatedAt = profile.savings_last_updated_at
         ? new Date(profile.savings_last_updated_at)
         : null;
-      const basicIncomeClaimedTotal = parseFloat(
-        profile.basic_income_claimed_total || "0",
+      const basicIncomeAndInterestClaimedTotal = parseFloat(
+        profile.basic_income_and_interest_claimed_total || "0",
       );
       const isSelfVerified = Boolean(verificationRow[0]?.self_verified_at);
 
@@ -1437,7 +1443,10 @@ export async function claimSavingsInterest(): Promise<{
 
       const maxCanClaim = isSelfVerified
         ? totalInterestToClaim
-        : Math.max(0, BASIC_INCOME_BALANCE_CAP - basicIncomeClaimedTotal);
+        : Math.max(
+            0,
+            BASIC_INCOME_BALANCE_CAP - basicIncomeAndInterestClaimedTotal,
+          );
       const finalClaimable = Math.min(totalInterestToClaim, maxCanClaim);
 
       if (finalClaimable <= 1e-12) {
@@ -1448,8 +1457,8 @@ export async function claimSavingsInterest(): Promise<{
         .update(userProfiles)
         .set({
           walletBalance: (currentWalletBalance + finalClaimable).toFixed(18),
-          basicIncomeClaimedTotal: (
-            basicIncomeClaimedTotal + finalClaimable
+          basicIncomeAndInterestClaimedTotal: (
+            basicIncomeAndInterestClaimedTotal + finalClaimable
           ).toFixed(18),
           unclaimedSavingsInterest: (
             totalInterestToClaim - finalClaimable

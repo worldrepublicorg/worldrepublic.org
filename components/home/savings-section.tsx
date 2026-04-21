@@ -45,7 +45,7 @@ interface SavingsSectionProps {
   walletBalance: number;
   savingsBalance: number;
   unclaimedSavingsInterest: number;
-  basicIncomeClaimedTotal: number;
+  basicIncomeAndInterestClaimedTotal: number;
   isSelfVerified: boolean;
   savingsLastUpdatedAt: number | null;
   onSuccess: () => Promise<void> | void;
@@ -62,7 +62,7 @@ export function SavingsSection({
   walletBalance,
   savingsBalance,
   unclaimedSavingsInterest,
-  basicIncomeClaimedTotal,
+  basicIncomeAndInterestClaimedTotal,
   isSelfVerified,
   savingsLastUpdatedAt,
   onSuccess,
@@ -103,7 +103,7 @@ export function SavingsSection({
     savingsBalance,
     unclaimedSavingsInterest,
     savingsLastUpdatedAt,
-    basicIncomeClaimedTotal,
+    basicIncomeAndInterestClaimedTotal,
     isSelfVerified,
     isActive,
     onSuccess,
