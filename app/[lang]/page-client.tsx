@@ -487,6 +487,7 @@ export default function HomePageClient({
             dictionary={dictionary}
             isActive={activeTab === "basic_income"}
             isAuthenticated={isAuthenticated}
+            userId={profileData?.userId ?? null}
             isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
             basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
             lastBasicIncomeClaimAt={profileData?.lastBasicIncomeClaimAt ?? null}
@@ -504,6 +505,7 @@ export default function HomePageClient({
             dictionary={dictionary}
             isActive={activeTab === "savings"}
             isAuthenticated={isAuthenticated}
+            userId={profileData?.userId ?? null}
             walletBalance={profileData?.walletBalance ?? 0}
             savingsBalance={profileData?.savingsBalance ?? 0}
             unclaimedSavingsInterest={

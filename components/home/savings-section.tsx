@@ -27,12 +27,14 @@ import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
+import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useSavings } from "@/hooks/use-savings";
 import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
+import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 
 export type SavingsAccountType = "offchain" | "worldchain";
@@ -42,6 +44,7 @@ interface SavingsSectionProps {
   dictionary: Dictionary;
   isActive?: boolean;
   isAuthenticated: boolean;
+  userId: string | null;
   walletBalance: number;
   savingsBalance: number;
   unclaimedSavingsInterest: number;
@@ -59,6 +62,7 @@ export function SavingsSection({
   dictionary,
   isActive = true,
   isAuthenticated,
+  userId,
   walletBalance,
   savingsBalance,
   unclaimedSavingsInterest,
@@ -89,6 +93,7 @@ export function SavingsSection({
   const [collectDialogOpen, setCollectDialogOpen] = useState(false);
   const [depositDialogOpen, setDepositDialogOpen] = useState(false);
   const [withdrawDialogOpen, setWithdrawDialogOpen] = useState(false);
+  const [isSelfVerificationOpen, setIsSelfVerificationOpen] = useState(false);
 
   const {
     amount,
@@ -250,6 +255,15 @@ export function SavingsSection({
     isWorldchainAccountSelected && !isWalletConnected;
   const showWorldChainSwitchCta =
     isWorldchainAccountSelected && isWalletConnected && !isOnWorldChain;
+  const nonWithdrawableBalanceBuffer = 0.01;
+  const capAmount = Math.max(
+    0,
+    getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
+  );
+  const isCapReached =
+    isOffchainAccountSelected &&
+    !isSelfVerified &&
+    basicIncomeAndInterestClaimedTotal >= capAmount - 1e-9;
 
   return (
     <div className="flex grow items-center justify-center">
@@ -381,68 +395,85 @@ export function SavingsSection({
               {dictionary.pages.earn.savings.interest}
             </Typography>
             <div className="flex items-center gap-2">
-              <AlertDialog
-                open={collectDialogOpen}
-                onOpenChange={setCollectDialogOpen}
-              >
-                <AlertDialogTrigger asChild>
-                  <Button
-                    disabled={
-                      (isOffchainAccountSelected && !isAuthenticated) ||
-                      showWorldChainSwitchCta ||
-                      isCurrentAccountLoading ||
-                      collectableAmountForUi <= 0
+              {isCapReached ? (
+                <Button
+                  variant="primary"
+                  size="sm"
+                  className={`mr-2 h-9 min-w-20 rounded-full px-4 font-sans ${raisedButtonShadowClass}`}
+                  onClick={() => {
+                    if (!isAuthenticated || !userId) {
+                      onSignIn();
+                      return;
                     }
-                    variant="primary"
-                    size="sm"
-                    className={`mr-2 h-9 min-w-20 rounded-full px-4 font-sans ${raisedButtonShadowClass}`}
-                  >
-                    {dictionary.pages.earn.savings.collect}
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader
-                    icon={
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                        <PiCoinsFill className="h-[30px] w-[30px] text-gray-400" />
-                      </div>
-                    }
-                  >
-                    <AlertDialogTitle>
-                      {dictionary.pages.earn.savings.alert.collect.title}
-                    </AlertDialogTitle>
-                  </AlertDialogHeader>
-                  <AlertDialogDescription>
-                    {dictionary.pages.earn.savings.alert.collect.description.replace(
-                      "{amount}",
-                      collectableAmountDisplay,
-                    )}
-                  </AlertDialogDescription>
-                  <AlertDialogFooter>
-                    <AlertDialogClose asChild>
-                      <Button
-                        onClick={async () => {
-                          try {
-                            if (isWorldchainAccountSelected) {
-                              await worldchainAccount.actions.collect();
-                            } else {
-                              await handleCollectInterest();
+                    setIsSelfVerificationOpen(true);
+                  }}
+                >
+                  Verify
+                </Button>
+              ) : (
+                <AlertDialog
+                  open={collectDialogOpen}
+                  onOpenChange={setCollectDialogOpen}
+                >
+                  <AlertDialogTrigger asChild>
+                    <Button
+                      disabled={
+                        (isOffchainAccountSelected && !isAuthenticated) ||
+                        showWorldChainSwitchCta ||
+                        isCurrentAccountLoading ||
+                        collectableAmountForUi <= 0
+                      }
+                      variant="primary"
+                      size="sm"
+                      className={`mr-2 h-9 min-w-20 rounded-full px-4 font-sans ${raisedButtonShadowClass}`}
+                    >
+                      {dictionary.pages.earn.savings.collect}
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader
+                      icon={
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                          <PiCoinsFill className="h-[30px] w-[30px] text-gray-400" />
+                        </div>
+                      }
+                    >
+                      <AlertDialogTitle>
+                        {dictionary.pages.earn.savings.alert.collect.title}
+                      </AlertDialogTitle>
+                    </AlertDialogHeader>
+                    <AlertDialogDescription>
+                      {dictionary.pages.earn.savings.alert.collect.description.replace(
+                        "{amount}",
+                        collectableAmountDisplay,
+                      )}
+                    </AlertDialogDescription>
+                    <AlertDialogFooter>
+                      <AlertDialogClose asChild>
+                        <Button
+                          onClick={async () => {
+                            try {
+                              if (isWorldchainAccountSelected) {
+                                await worldchainAccount.actions.collect();
+                              } else {
+                                await handleCollectInterest();
+                              }
+                            } catch (err) {
+                              toast.error({ title: formatTxError(err) });
+                            } finally {
+                              setCollectDialogOpen(false);
                             }
-                          } catch (err) {
-                            toast.error({ title: formatTxError(err) });
-                          } finally {
-                            setCollectDialogOpen(false);
-                          }
-                        }}
-                        disabled={isCurrentAccountLoading}
-                        fullWidth
-                      >
-                        {dictionary.common.confirm}
-                      </Button>
-                    </AlertDialogClose>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
+                          }}
+                          disabled={isCurrentAccountLoading}
+                          fullWidth
+                        >
+                          {dictionary.common.confirm}
+                        </Button>
+                      </AlertDialogClose>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              )}
               <Typography
                 variant="number"
                 level={5}
@@ -663,6 +694,14 @@ export function SavingsSection({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      <SelfVerificationDialog
+        open={isSelfVerificationOpen}
+        onOpenChange={setIsSelfVerificationOpen}
+        onSuccess={onSuccess}
+        userId={userId}
+        dictionary={dictionary}
+        mode="account"
+      />
     </div>
   );
 }

@@ -16,14 +16,17 @@ import { useState } from "react";
 import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
+import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { useBasicIncome } from "@/hooks/use-basic-income";
 import { getSafeLocale } from "@/lib/locale";
+import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 interface BasicIncomeSectionProps {
   lang: string;
   dictionary: Dictionary;
   isActive?: boolean;
   isAuthenticated: boolean;
+  userId: string | null;
   isSelfVerified: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
@@ -37,6 +40,7 @@ export function BasicIncomeSection({
   dictionary,
   isActive = true,
   isAuthenticated,
+  userId,
   isSelfVerified,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
@@ -44,9 +48,15 @@ export function BasicIncomeSection({
   onSignIn,
   onSuccess,
 }: BasicIncomeSectionProps) {
+  const nonWithdrawableBalanceBuffer = 0.01;
+  const capAmount = Math.max(
+    0,
+    getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
+  );
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
+  const [isSelfVerificationOpen, setIsSelfVerificationOpen] = useState(false);
   const renderInfoSubtitle = (text: string) => (
     <Typography
       variant="subtitle"
@@ -88,6 +98,9 @@ export function BasicIncomeSection({
     minimumFractionDigits: 6,
     maximumFractionDigits: 6,
   }).format(maxClaimableAmount);
+  const isCapReached =
+    !isSelfVerified &&
+    (basicIncomeAndInterestClaimedTotal ?? 0) >= capAmount - 1e-9;
 
   if (!isAuthenticated) {
     return (
@@ -194,45 +207,69 @@ export function BasicIncomeSection({
           <div className="mt-5 mb-1 font-mono text-7xl font-semibold">
             {amountString}
           </div>
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button
-                fullWidth
-                className={`mt-6! ${raisedButtonShadowClass}`}
-                disabled={isClaiming || maxClaimableAmount <= 0}
-              >
-                {dictionary.pages.earn.basic_income.claim_button}
-              </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader
-                icon={
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                    <PiHandCoinsFill className="h-[30px] w-[30px] text-gray-400" />
-                  </div>
+          {isCapReached ? (
+            <Button
+              fullWidth
+              className={`mt-6! ${raisedButtonShadowClass}`}
+              onClick={() => {
+                if (!isAuthenticated || !userId) {
+                  onSignIn();
+                  return;
                 }
-              >
-                <AlertDialogTitle>
-                  {dictionary.pages.earn.basic_income.alert.claim.title}
-                </AlertDialogTitle>
-              </AlertDialogHeader>
-              <AlertDialogDescription>
-                {dictionary.pages.earn.basic_income.alert.claim.description.replace(
-                  "{amount}",
-                  amountString,
-                )}
-              </AlertDialogDescription>
-              <AlertDialogFooter>
-                <AlertDialogClose asChild>
-                  <Button onClick={handleClaim} fullWidth>
-                    {dictionary.common.confirm}
-                  </Button>
-                </AlertDialogClose>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+                setIsSelfVerificationOpen(true);
+              }}
+            >
+              Get verified
+            </Button>
+          ) : (
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button
+                  fullWidth
+                  className={`mt-6! ${raisedButtonShadowClass}`}
+                  disabled={isClaiming || maxClaimableAmount <= 0}
+                >
+                  {dictionary.pages.earn.basic_income.claim_button}
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader
+                  icon={
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                      <PiHandCoinsFill className="h-[30px] w-[30px] text-gray-400" />
+                    </div>
+                  }
+                >
+                  <AlertDialogTitle>
+                    {dictionary.pages.earn.basic_income.alert.claim.title}
+                  </AlertDialogTitle>
+                </AlertDialogHeader>
+                <AlertDialogDescription>
+                  {dictionary.pages.earn.basic_income.alert.claim.description.replace(
+                    "{amount}",
+                    amountString,
+                  )}
+                </AlertDialogDescription>
+                <AlertDialogFooter>
+                  <AlertDialogClose asChild>
+                    <Button onClick={handleClaim} fullWidth>
+                      {dictionary.common.confirm}
+                    </Button>
+                  </AlertDialogClose>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          )}
         </div>
       </div>
+      <SelfVerificationDialog
+        open={isSelfVerificationOpen}
+        onOpenChange={setIsSelfVerificationOpen}
+        onSuccess={onSuccess}
+        userId={userId}
+        dictionary={dictionary}
+        mode="account"
+      />
     </div>
   );
 }
