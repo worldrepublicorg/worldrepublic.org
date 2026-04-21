@@ -23,6 +23,7 @@ import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
+import { OnchainWalletProvider } from "@/components/wallet/onchain-wallet-provider";
 import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
@@ -408,7 +409,8 @@ export default function HomePageClient({
   }
 
   return (
-    <div className="pb-safe flex min-h-dvh flex-col">
+    <OnchainWalletProvider>
+      <div className="pb-safe flex min-h-dvh flex-col">
       <TopBar
         title={dictionary.nav.earn}
         endAdornment={
@@ -844,10 +846,11 @@ export default function HomePageClient({
         dictionary={dictionary}
       />
 
-      <ScrollToTopButton
-        show={showLeaderboardScrollToTop && showScrollToTop}
-        onClick={scrollToTop}
-      />
-    </div>
+        <ScrollToTopButton
+          show={showLeaderboardScrollToTop && showScrollToTop}
+          onClick={scrollToTop}
+        />
+      </div>
+    </OnchainWalletProvider>
   );
 }
