@@ -14,8 +14,9 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import type { ComponentProps } from "react";
 import { useState } from "react";
-import { PiPowerFill, PiWalletFill } from "react-icons/pi";
+import { PiArrowSquareOut, PiPowerFill, PiWalletFill } from "react-icons/pi";
 import type { Connector } from "wagmi";
+import { CustomListItem } from "@/components/custom-list-item";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
 import { useWorldchainSavingsAccount } from "@/hooks/use-worldchain-savings-account";
 import {
@@ -67,6 +68,7 @@ export function ConnectWalletButton({
   const connectors = useConnectors();
   const [walletBrowserDialogOpen, setWalletBrowserDialogOpen] = useState(false);
   const [walletPickerDialogOpen, setWalletPickerDialogOpen] = useState(false);
+  const [noWalletDialogOpen, setNoWalletDialogOpen] = useState(false);
   const [availableDesktopConnectors, setAvailableDesktopConnectors] = useState<
     Connector[]
   >([]);
@@ -125,9 +127,7 @@ export function ConnectWalletButton({
       return;
     }
 
-    toast.error({
-      title: "No browser wallet found",
-    });
+    setNoWalletDialogOpen(true);
   };
 
   const handleCopyLink = async () => {
@@ -260,6 +260,38 @@ export function ConnectWalletButton({
             <Button onClick={() => void handleCopyLink()} fullWidth>
               {walletBrowserDialogButtonLabel}
             </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <AlertDialog open={noWalletDialogOpen} onOpenChange={setNoWalletDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader
+            icon={
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                <PiWalletFill className="h-[30px] w-[30px] text-gray-400" />
+              </div>
+            }
+          >
+            <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
+          </AlertDialogHeader>
+          <AlertDialogDescription>Haven&apos;t got a wallet?</AlertDialogDescription>
+          <AlertDialogFooter>
+            <div className="flex w-full flex-col gap-2">
+              <a
+                href="https://walletguide.walletconnect.network/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <CustomListItem
+                  label="Find one on WalletGuide"
+                  endAdornment={
+                    <PiArrowSquareOut className="size-4 text-gray-400" />
+                  }
+                />
+              </a>
+            </div>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
