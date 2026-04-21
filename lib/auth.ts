@@ -1,5 +1,5 @@
 import "server-only";
-import { and, eq, isNull } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
@@ -7,7 +7,7 @@ import Passkey from "next-auth/providers/passkey";
 import { cache } from "react";
 import { createNeonAdapterWithWebAuthn } from "./auth/adapter";
 import { getDbReadOnly, pool } from "./db/connection";
-import { accounts, users } from "./db/schema";
+import { accounts } from "./db/schema";
 
 const authSecret = process.env.NEXTAUTH_SECRET;
 if (!authSecret) {
@@ -41,6 +41,15 @@ const { handlers, auth: uncachedAuth } = NextAuth({
     GoogleProvider({
       clientId: googleClientId,
       clientSecret: googleClientSecret,
+      profile(profile) {
+        // Do not persist Google profile fields in users table.
+        return {
+          id: profile.sub,
+          email: null,
+          name: null,
+          image: null,
+        };
+      },
     }),
     // biome-ignore lint/suspicious/noExplicitAny: Type compatibility issue with next-auth@5.0.0-beta.30
     (Passkey as any)({
@@ -89,7 +98,6 @@ const { handlers, auth: uncachedAuth } = NextAuth({
           }
 
           if (!existingAccount && adapter.linkAccount) {
-            const readDbWrite = getDbReadOnly();
             await adapter.linkAccount({
               userId: String(targetUserId),
               type: account.type as "oauth",
@@ -103,13 +111,6 @@ const { handlers, auth: uncachedAuth } = NextAuth({
               session_state: account.session_state as string | undefined,
               token_type: account.token_type ?? undefined,
             });
-
-            if (user.email) {
-              await readDbWrite
-                .update(users)
-                .set({ email: user.email })
-                .where(and(eq(users.id, targetUserId), isNull(users.email)));
-            }
           }
 
           return "/en/menu/account?link=google";
