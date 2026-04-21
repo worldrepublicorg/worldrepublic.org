@@ -177,7 +177,8 @@
             "description": "你将提取 {amount} WDD。"
           }
         },
-        "smart_contract_link": "查看智能合约"
+        "smart_contract_link": "查看智能合约",
+        "verify": "验证"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "Povući ćete {amount} WDD."
           }
         },
-        "smart_contract_link": "Pogledajte pametni ugovor"
+        "smart_contract_link": "Pogledajte pametni ugovor",
+        "verify": "Potvrdi"
       }
     },
     "menu": {

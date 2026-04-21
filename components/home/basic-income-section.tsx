@@ -219,7 +219,7 @@ export function BasicIncomeSection({
                 setIsSelfVerificationOpen(true);
               }}
             >
-              Get verified
+              {dictionary.components.identity.verification_warning.title}
             </Button>
           ) : (
             <AlertDialog>

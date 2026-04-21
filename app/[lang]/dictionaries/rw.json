@@ -177,7 +177,8 @@
             "description": "Ugiye gukuramo {amount} WDD."
           }
         },
-        "smart_contract_link": "Reba smart contract"
+        "smart_contract_link": "Reba smart contract",
+        "verify": "Emeza"
       }
     },
     "menu": {

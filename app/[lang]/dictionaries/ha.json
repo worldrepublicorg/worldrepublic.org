@@ -177,7 +177,8 @@
             "description": "Kuna shirin cire {amount} WDD."
           }
         },
-        "smart_contract_link": "Duba smart contract"
+        "smart_contract_link": "Duba smart contract",
+        "verify": "Tabbatar"
       }
     },
     "menu": {

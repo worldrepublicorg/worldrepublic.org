@@ -177,7 +177,8 @@
             "description": "သင်သည် {amount} WDD ထုတ်ယူတော့မည်။"
           }
         },
-        "smart_contract_link": "smart contract ကိုကြည့်ပါ"
+        "smart_contract_link": "smart contract ကိုကြည့်ပါ",
+        "verify": "အတည်ပြု"
       }
     },
     "menu": {

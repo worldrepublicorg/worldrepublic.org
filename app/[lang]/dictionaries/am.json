@@ -177,7 +177,8 @@
             "description": "እርስዎ {amount} WDD ይወጣሉ።"
           }
         },
-        "smart_contract_link": "ስማርት ኮንትራትን ይመልከቱ"
+        "smart_contract_link": "ስማርት ኮንትራትን ይመልከቱ",
+        "verify": "አረጋግጥ"
       }
     },
     "menu": {

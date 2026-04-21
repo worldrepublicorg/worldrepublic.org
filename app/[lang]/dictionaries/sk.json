@@ -177,7 +177,8 @@
             "description": "Chystáte sa vybrať {amount} WDD."
           }
         },
-        "smart_contract_link": "Zobraziť inteligentný kontrakt"
+        "smart_contract_link": "Zobraziť inteligentný kontrakt",
+        "verify": "Overiť"
       }
     },
     "menu": {

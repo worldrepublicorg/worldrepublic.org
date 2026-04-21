@@ -177,7 +177,8 @@
             "description": "{amount} WDD를 출금하려고 합니다."
           }
         },
-        "smart_contract_link": "스마트 컨트랙트 보기"
+        "smart_contract_link": "스마트 컨트랙트 보기",
+        "verify": "인증"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "Πρόκειται να αναλάβετε {amount} WDD."
           }
         },
-        "smart_contract_link": "Δείτε το έξυπνο συμβόλαιο"
+        "smart_contract_link": "Δείτε το έξυπνο συμβόλαιο",
+        "verify": "Επαλήθευση"
       }
     },
     "menu": {

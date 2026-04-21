@@ -177,7 +177,8 @@
             "description": "أنت على وشك سحب {amount} WDD."
           }
         },
-        "smart_contract_link": "اعرض العقد الذكي"
+        "smart_contract_link": "اعرض العقد الذكي",
+        "verify": "تحقّق"
       }
     },
     "menu": {

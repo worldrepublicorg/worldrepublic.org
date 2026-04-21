@@ -177,7 +177,8 @@
             "description": "आप {amount} WDD निकालने वाले हैं।"
           }
         },
-        "smart_contract_link": "स्मार्ट कॉन्ट्रैक्ट देखें"
+        "smart_contract_link": "स्मार्ट कॉन्ट्रैक्ट देखें",
+        "verify": "सत्यापित करें"
       }
     },
     "menu": {

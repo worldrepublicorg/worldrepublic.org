@@ -177,7 +177,8 @@
             "description": "{amount} WDD çekmek üzeresiniz."
           }
         },
-        "smart_contract_link": "Akıllı sözleşmeyi görüntüle"
+        "smart_contract_link": "Akıllı sözleşmeyi görüntüle",
+        "verify": "Doğrula"
       }
     },
     "menu": {

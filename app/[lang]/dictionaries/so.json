@@ -177,7 +177,8 @@
             "description": "Waxaad ka soo qaadan doontaa {amount} WDD."
           }
         },
-        "smart_contract_link": "Eeg smart contract"
+        "smart_contract_link": "Eeg smart contract",
+        "verify": "Xaqiiji"
       }
     },
     "menu": {

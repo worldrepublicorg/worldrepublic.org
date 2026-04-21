@@ -177,7 +177,8 @@
             "description": "Unakaribia kutoa {amount} WDD."
           }
         },
-        "smart_contract_link": "Tazama mkataba mahiri"
+        "smart_contract_link": "Tazama mkataba mahiri",
+        "verify": "Thibitisha"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "Ще изтеглите {amount} WDD."
           }
         },
-        "smart_contract_link": "Вижте интелигентния договор"
+        "smart_contract_link": "Вижте интелигентния договор",
+        "verify": "Потвърди"
       }
     },
     "menu": {

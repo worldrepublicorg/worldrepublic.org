@@ -177,7 +177,8 @@
             "description": "Jūs gatavojaties izņemt {amount} WDD."
           }
         },
-        "smart_contract_link": "Skatīt viedo līgumu"
+        "smart_contract_link": "Skatīt viedo līgumu",
+        "verify": "Pārbaudīt"
       }
     },
     "menu": {

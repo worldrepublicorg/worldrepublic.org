@@ -177,7 +177,8 @@
             "description": "আপনি {amount} WDD উত্তোলন করতে যাচ্ছেন।"
           }
         },
-        "smart_contract_link": "স্মার্ট চুক্তি দেখুন"
+        "smart_contract_link": "স্মার্ট চুক্তি দেখুন",
+        "verify": "যাচাই করুন"
       }
     },
     "menu": {

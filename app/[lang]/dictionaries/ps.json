@@ -177,7 +177,8 @@
             "description": "تاسو {amount} WDD ووتلو."
           }
         },
-        "smart_contract_link": "سمارټ قرارداد وګورئ"
+        "smart_contract_link": "سمارټ قرارداد وګورئ",
+        "verify": "تایید"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "Estás a punto de retirar {amount} WDD."
           }
         },
-        "smart_contract_link": "Ver contrato inteligente"
+        "smart_contract_link": "Ver contrato inteligente",
+        "verify": "Verificar"
       }
     },
     "menu": {

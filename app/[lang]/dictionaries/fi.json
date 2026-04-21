@@ -177,7 +177,8 @@
             "description": "Olet nostamassa {amount} WDD:tä."
           }
         },
-        "smart_contract_link": "Näytä älysopimus"
+        "smart_contract_link": "Näytä älysopimus",
+        "verify": "Vahvista"
       }
     },
     "menu": {

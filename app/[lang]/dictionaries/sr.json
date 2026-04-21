@@ -177,7 +177,8 @@
             "description": "Ускоро ћете подићи {amount} WDD."
           }
         },
-        "smart_contract_link": "Погледајте смарт уговор"
+        "smart_contract_link": "Погледајте смарт уговор",
+        "verify": "Potvrdi"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "Je staat op het punt om {amount} WDD op te nemen."
           }
         },
-        "smart_contract_link": "Bekijk smart contract"
+        "smart_contract_link": "Bekijk smart contract",
+        "verify": "Verifiëren"
       }
     },
     "menu": {

@@ -177,7 +177,8 @@
             "description": "O nlo lati ya {amount} WDD jade."
           }
         },
-        "smart_contract_link": "Wo smart contract"
+        "smart_contract_link": "Wo smart contract",
+        "verify": "Jẹrisi"
       }
     },
     "menu": {

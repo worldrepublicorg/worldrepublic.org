@@ -177,7 +177,8 @@
             "description": "Ești pe cale să retragi {amount} WDD."
           }
         },
-        "smart_contract_link": "Vezi contract inteligent"
+        "smart_contract_link": "Vezi contract inteligent",
+        "verify": "Verifică"
       }
     },
     "menu": {

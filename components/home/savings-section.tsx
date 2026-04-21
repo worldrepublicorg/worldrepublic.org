@@ -408,7 +408,7 @@ export function SavingsSection({
                     setIsSelfVerificationOpen(true);
                   }}
                 >
-                  Verify
+                  {dictionary.pages.earn.savings.verify}
                 </Button>
               ) : (
                 <AlertDialog

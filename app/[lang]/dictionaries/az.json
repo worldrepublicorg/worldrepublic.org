@@ -177,7 +177,8 @@
             "description": "{amount} WDD çıxaracaqsınız."
           }
         },
-        "smart_contract_link": "Ağıllı müqaviləyə baxın"
+        "smart_contract_link": "Ağıllı müqaviləyə baxın",
+        "verify": "Təsdiqlə"
       }
     },
     "menu": {

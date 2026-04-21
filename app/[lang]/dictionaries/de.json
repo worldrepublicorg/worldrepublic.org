@@ -177,7 +177,8 @@
             "description": "Du bist dabei, {amount} WDD abzuheben."
           }
         },
-        "smart_contract_link": "Smart Contract ansehen"
+        "smart_contract_link": "Smart Contract ansehen",
+        "verify": "Verifizieren"
       }
     },
     "menu": {

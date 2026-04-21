@@ -177,7 +177,8 @@
             "description": "Anda akan menarik {amount} WDD."
           }
         },
-        "smart_contract_link": "Lihat kontrak pintar"
+        "smart_contract_link": "Lihat kontrak pintar",
+        "verify": "Verifikasi"
       }
     },
     "menu": {

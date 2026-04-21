@@ -177,7 +177,8 @@
             "description": "{amount} WDD を出金します。"
           }
         },
-        "smart_contract_link": "スマートコントラクトを見る"
+        "smart_contract_link": "スマートコントラクトを見る",
+        "verify": "認証"
       }
     },
     "menu": {
