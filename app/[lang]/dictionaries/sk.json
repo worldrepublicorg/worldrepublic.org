@@ -242,7 +242,7 @@
           "copy_link": "Kopírovať odkaz"
         },
         "connect_wallet_picker": {
-          "description": "Bolo nájdených viac peňaženiek v prehliadači. Vyberte jednu na pripojenie."
+          "description": "Bolo nájdených viac peňaženiek. Vyberte jednu na pripojenie."
         }
       },
       "sections": {

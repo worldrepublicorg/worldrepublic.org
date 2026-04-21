@@ -242,7 +242,7 @@
           "copy_link": "Kopiraj link"
         },
         "connect_wallet_picker": {
-          "description": "Pronađeno je više novčanika u pregledniku. Odaberite jedan za povezivanje."
+          "description": "Pronađeno je više novčanika. Odaberite jedan za povezivanje."
         }
       },
       "sections": {

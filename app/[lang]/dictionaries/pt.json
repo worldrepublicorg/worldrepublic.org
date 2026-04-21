@@ -242,7 +242,7 @@
           "copy_link": "Copiar link"
         },
         "connect_wallet_picker": {
-          "description": "Foram encontradas várias carteiras do navegador. Selecione uma para conectar."
+          "description": "Foram encontradas várias carteiras. Selecione uma para conectar."
         }
       },
       "sections": {

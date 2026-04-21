@@ -242,7 +242,7 @@
           "copy_link": "Kopioi linkki"
         },
         "connect_wallet_picker": {
-          "description": "Useita selainlompakoita löytyi. Valitse yksi yhdistääksesi."
+          "description": "Useita lompakoita löytyi. Valitse yksi yhdistääksesi."
         }
       },
       "sections": {

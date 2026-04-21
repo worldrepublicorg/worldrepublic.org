@@ -242,7 +242,7 @@
           "copy_link": "Bağlantıyı kopyala"
         },
         "connect_wallet_picker": {
-          "description": "Birden fazla tarayıcı cüzdanı bulundu. Bağlanmak için birini seçin."
+          "description": "Birden fazla cüzdan bulundu. Bağlanmak için birini seçin."
         }
       },
       "sections": {

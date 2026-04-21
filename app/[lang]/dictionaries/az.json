@@ -242,7 +242,7 @@
           "copy_link": "Linki kopyala"
         },
         "connect_wallet_picker": {
-          "description": "Bir neçə brauzer pulqabısı tapıldı. Qoşulmaq üçün birini seçin."
+          "description": "Bir neçə pulqabı tapıldı. Qoşulmaq üçün birini seçin."
         }
       },
       "sections": {

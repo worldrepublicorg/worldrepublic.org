@@ -242,7 +242,7 @@
           "copy_link": "Kopira linki"
         },
         "connect_wallet_picker": {
-          "description": "Habonetsemo amakarita menshi ya browser. Hitamo rimwe kugira ngo wihuze."
+          "description": "Habonetsemo amakarita menshi. Hitamo rimwe kugira ngo wihuze."
         }
       },
       "sections": {

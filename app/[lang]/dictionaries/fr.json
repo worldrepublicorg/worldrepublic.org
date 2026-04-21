@@ -242,7 +242,7 @@
           "copy_link": "Copier le lien"
         },
         "connect_wallet_picker": {
-          "description": "Plusieurs portefeuilles de navigateur ont été trouvés. Sélectionnez-en un pour vous connecter."
+          "description": "Plusieurs portefeuilles ont été trouvés. Sélectionnez-en un pour vous connecter."
         }
       },
       "sections": {

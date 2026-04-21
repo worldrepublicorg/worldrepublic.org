@@ -242,7 +242,7 @@
           "copy_link": "Copiar enlace"
         },
         "connect_wallet_picker": {
-          "description": "Se encontraron varias billeteras del navegador. Selecciona una para conectar."
+          "description": "Se encontraron varias billeteras. Selecciona una para conectar."
         }
       },
       "sections": {

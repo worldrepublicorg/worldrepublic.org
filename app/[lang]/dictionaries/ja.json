@@ -242,7 +242,7 @@
           "copy_link": "リンクをコピー"
         },
         "connect_wallet_picker": {
-          "description": "複数のブラウザウォレットが見つかりました。接続するものを1つ選択してください。"
+          "description": "複数のウォレットが見つかりました。接続するものを1つ選択してください。"
         }
       },
       "sections": {

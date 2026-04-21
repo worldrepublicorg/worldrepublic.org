@@ -54,7 +54,7 @@ export function ConnectWalletButton({
   walletBrowserDialogTitle = "Open in wallet app",
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
-  walletPickerDialogDescription = "Multiple browser wallets were found. Select one to connect.",
+  walletPickerDialogDescription = "Multiple wallets were found. Select one to connect.",
   copiedToastTitle = "Copied",
   copyErrorToastTitle = "An error occurred",
   lang = "en",

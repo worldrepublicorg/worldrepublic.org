@@ -242,7 +242,7 @@
           "copy_link": "Kopijuoti nuorodą"
         },
         "connect_wallet_picker": {
-          "description": "Rasta kelios naršyklės piniginės. Pasirinkite vieną prisijungimui."
+          "description": "Rasta kelios piniginės. Pasirinkite vieną prisijungimui."
         }
       },
       "sections": {

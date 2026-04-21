@@ -242,7 +242,7 @@
           "copy_link": "Link másolása"
         },
         "connect_wallet_picker": {
-          "description": "Több böngészős tárca található. Válassz egyet a csatlakozáshoz."
+          "description": "Több tárca található. Válassz egyet a csatlakozáshoz."
         }
       },
       "sections": {

@@ -242,7 +242,7 @@
           "copy_link": "Copy link"
         },
         "connect_wallet_picker": {
-          "description": "Multiple browser wallets were found. Select one to connect."
+          "description": "Multiple wallets were found. Select one to connect."
         }
       },
       "sections": {

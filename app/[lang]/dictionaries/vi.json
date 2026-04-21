@@ -242,7 +242,7 @@
           "copy_link": "Sao chép liên kết"
         },
         "connect_wallet_picker": {
-          "description": "Đã tìm thấy nhiều ví trình duyệt. Hãy chọn một ví để kết nối."
+          "description": "Đã tìm thấy nhiều ví. Hãy chọn một ví để kết nối."
         }
       },
       "sections": {

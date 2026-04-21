@@ -242,7 +242,7 @@
           "copy_link": "Kopiraj povezavo"
         },
         "connect_wallet_picker": {
-          "description": "Najdenih je bilo več brskalniških denarnic. Izberite eno za povezavo."
+          "description": "Najdenih je bilo več denarnic. Izberite eno za povezavo."
         }
       },
       "sections": {

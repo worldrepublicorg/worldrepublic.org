@@ -242,7 +242,7 @@
           "copy_link": "Kopiuj link"
         },
         "connect_wallet_picker": {
-          "description": "Znaleziono wiele portfeli przeglądarkowych. Wybierz jeden, aby się połączyć."
+          "description": "Znaleziono wiele portfeli. Wybierz jeden, aby się połączyć."
         }
       },
       "sections": {

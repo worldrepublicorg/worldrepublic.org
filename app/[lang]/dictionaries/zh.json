@@ -242,7 +242,7 @@
           "copy_link": "复制链接"
         },
         "connect_wallet_picker": {
-          "description": "发现多个浏览器钱包。请选择一个进行连接。"
+          "description": "发现多个钱包。请选择一个进行连接。"
         }
       },
       "sections": {

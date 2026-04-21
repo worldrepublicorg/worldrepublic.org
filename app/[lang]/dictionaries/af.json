@@ -242,7 +242,7 @@
           "copy_link": "Kopieer skakel"
         },
         "connect_wallet_picker": {
-          "description": "Verskeie blaaierbeursies is gevind. Kies een om te koppel."
+          "description": "Verskeie wallets is gevind. Kies een om te koppel."
         }
       },
       "sections": {

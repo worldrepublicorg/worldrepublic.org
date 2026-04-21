@@ -242,7 +242,7 @@
           "copy_link": "Salin tautan"
         },
         "connect_wallet_picker": {
-          "description": "Beberapa dompet browser ditemukan. Pilih satu untuk terhubung."
+          "description": "Beberapa dompet ditemukan. Pilih satu untuk terhubung."
         }
       },
       "sections": {

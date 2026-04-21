@@ -242,7 +242,7 @@
           "copy_link": "Kopēt saiti"
         },
         "connect_wallet_picker": {
-          "description": "Tika atrasti vairāki pārlūka maki. Izvēlieties vienu, lai izveidotu savienojumu."
+          "description": "Tika atrasti vairāki maki. Izvēlieties vienu, lai izveidotu savienojumu."
         }
       },
       "sections": {

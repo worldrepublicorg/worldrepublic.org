@@ -242,7 +242,7 @@
           "copy_link": "Link kopiëren"
         },
         "connect_wallet_picker": {
-          "description": "Er zijn meerdere browserwallets gevonden. Selecteer er één om te verbinden."
+          "description": "Er zijn meerdere wallets gevonden. Selecteer er één om te verbinden."
         }
       },
       "sections": {

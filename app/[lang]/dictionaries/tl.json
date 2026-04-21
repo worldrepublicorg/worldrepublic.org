@@ -242,7 +242,7 @@
           "copy_link": "Kopyahin ang link"
         },
         "connect_wallet_picker": {
-          "description": "Maraming browser wallet ang natagpuan. Pumili ng isa para kumonekta."
+          "description": "Maraming wallet ang natagpuan. Pumili ng isa para kumonekta."
         }
       },
       "sections": {

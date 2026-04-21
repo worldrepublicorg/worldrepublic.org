@@ -242,7 +242,7 @@
           "copy_link": "Copiază linkul"
         },
         "connect_wallet_picker": {
-          "description": "Au fost găsite mai multe portofele de browser. Selectează unul pentru conectare."
+          "description": "Au fost găsite mai multe portofele. Selectează unul pentru conectare."
         }
       },
       "sections": {
