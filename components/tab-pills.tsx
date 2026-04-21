@@ -20,7 +20,7 @@ export function TabPills({
   const router = useRouter();
   const path = basePath ?? `/${lang}`;
   return (
-    <div className="flex gap-1 overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <div className="flex overflow-x-auto scroll-smooth scroll-snap-type-x-mandatory px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {tabs.map((tab, index) => (
         <div
           key={tab.key}
