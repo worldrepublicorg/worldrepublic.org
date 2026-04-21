@@ -240,6 +240,9 @@
           "title": "Maak oop in MetaMask",
           "description": "Om te koppel, kopieer hierdie skakel en maak dit in MetaMask se ingeboude blaaier oop.",
           "copy_link": "Kopieer skakel"
+        },
+        "connect_wallet_picker": {
+          "description": "Verskeie blaaierbeursies is gevind. Kies een om te koppel."
         }
       },
       "sections": {

@@ -240,6 +240,9 @@
           "title": "Apri in MetaMask",
           "description": "Per cunnette, copia stu ligame è aprilu in u navigatore integratu di MetaMask.",
           "copy_link": "Copia ligame"
+        },
+        "connect_wallet_picker": {
+          "description": "Parechji portafogli di navigatore sò stati trovati. Scegliene unu per cunnette."
         }
       },
       "sections": {

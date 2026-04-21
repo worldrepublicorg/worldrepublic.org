@@ -240,6 +240,9 @@
           "title": "MetaMask'da oching",
           "description": "Ulanish uchun ushbu havolani nusxalang va uni MetaMask'ning ichki brauzerida oching.",
           "copy_link": "Havolani nusxalash"
+        },
+        "connect_wallet_picker": {
+          "description": "Bir nechta brauzer hamyoni topildi. Ulanish uchun bittasini tanlang."
         }
       },
       "sections": {

@@ -240,6 +240,9 @@
           "title": "در MetaMask باز کنید",
           "description": "برای اتصال، این لینک را کپی کنید و آن را در مرورگر داخلی MetaMask باز کنید.",
           "copy_link": "کپی لینک"
+        },
+        "connect_wallet_picker": {
+          "description": "چند کیف پول مرورگر پیدا شد. یکی را برای اتصال انتخاب کنید."
         }
       },
       "sections": {

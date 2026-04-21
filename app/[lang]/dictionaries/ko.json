@@ -240,6 +240,9 @@
           "title": "MetaMask에서 열기",
           "description": "연결하려면 이 링크를 복사한 다음 MetaMask의 내장 브라우저에서 여세요.",
           "copy_link": "링크 복사"
+        },
+        "connect_wallet_picker": {
+          "description": "여러 브라우저 지갑이 발견되었습니다. 연결할 지갑 하나를 선택하세요."
         }
       },
       "sections": {

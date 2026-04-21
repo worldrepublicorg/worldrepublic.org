@@ -240,6 +240,9 @@
           "title": "MetaMask တွင်ဖွင့်ပါ",
           "description": "ချိတ်ဆက်ရန် ဤလင့်ခ်ကို ကူးယူပြီး MetaMask ၏ built-in browser တွင် ဖွင့်ပါ။",
           "copy_link": "လင့် ကူးယူရန်"
+        },
+        "connect_wallet_picker": {
+          "description": "ဘရောက်ဇာပိုက်ဆံအိတ်များစွာကို တွေ့ရှိခဲ့သည်။ ချိတ်ဆက်ရန် တစ်ခုကို ရွေးပါ။"
         }
       },
       "sections": {

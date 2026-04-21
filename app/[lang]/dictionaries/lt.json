@@ -240,6 +240,9 @@
           "title": "Atidaryti MetaMask",
           "description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją MetaMask integruotoje naršyklėje.",
           "copy_link": "Kopijuoti nuorodą"
+        },
+        "connect_wallet_picker": {
+          "description": "Rasta kelios naršyklės piniginės. Pasirinkite vieną prisijungimui."
         }
       },
       "sections": {

@@ -240,6 +240,9 @@
           "title": "Otvoriť v MetaMask",
           "description": "Ak sa chcete pripojiť, skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači MetaMask.",
           "copy_link": "Kopírovať odkaz"
+        },
+        "connect_wallet_picker": {
+          "description": "Bolo nájdených viac peňaženiek v prehliadači. Vyberte jednu na pripojenie."
         }
       },
       "sections": {

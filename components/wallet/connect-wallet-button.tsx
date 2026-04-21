@@ -36,7 +36,6 @@ interface ConnectWalletButtonProps {
   walletBrowserDialogTitle?: string;
   walletBrowserDialogDescription?: string;
   walletBrowserDialogButtonLabel?: string;
-  walletPickerDialogTitle?: string;
   walletPickerDialogDescription?: string;
   copiedToastTitle?: string;
   copyErrorToastTitle?: string;
@@ -55,7 +54,6 @@ export function ConnectWalletButton({
   walletBrowserDialogTitle = "Open in wallet app",
   walletBrowserDialogDescription = "To connect, copy this link and open it in a wallet app's built-in browser.",
   walletBrowserDialogButtonLabel = "Copy link",
-  walletPickerDialogTitle = "Choose a wallet",
   walletPickerDialogDescription = "Multiple browser wallets were found. Select one to connect.",
   copiedToastTitle = "Copied",
   copyErrorToastTitle = "An error occurred",
@@ -217,7 +215,7 @@ export function ConnectWalletButton({
               </div>
             }
           >
-            <AlertDialogTitle>{walletPickerDialogTitle}</AlertDialogTitle>
+            <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
           </AlertDialogHeader>
           <AlertDialogDescription>
             {walletPickerDialogDescription}

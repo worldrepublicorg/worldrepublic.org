@@ -240,6 +240,9 @@
           "title": "MetaMask-də aç",
           "description": "Qoşulmaq üçün bu linki kopyalayın və MetaMask-ın daxili brauzerində açın.",
           "copy_link": "Linki kopyala"
+        },
+        "connect_wallet_picker": {
+          "description": "Bir neçə brauzer pulqabısı tapıldı. Qoşulmaq üçün birini seçin."
         }
       },
       "sections": {

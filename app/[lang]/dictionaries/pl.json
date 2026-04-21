@@ -240,6 +240,9 @@
           "title": "Otwórz w MetaMask",
           "description": "Aby się połączyć, skopiuj ten link i otwórz go w wbudowanej przeglądarce MetaMask.",
           "copy_link": "Kopiuj link"
+        },
+        "connect_wallet_picker": {
+          "description": "Znaleziono wiele portfeli przeglądarkowych. Wybierz jeden, aby się połączyć."
         }
       },
       "sections": {

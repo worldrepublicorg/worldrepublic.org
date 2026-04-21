@@ -240,6 +240,9 @@
           "title": "Buɗe a MetaMask",
           "description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a cikin burauzar da aka gina a MetaMask.",
           "copy_link": "Kwafi mahaɗi"
+        },
+        "connect_wallet_picker": {
+          "description": "An gano walat na burauza da dama. Zaɓi ɗaya don haɗawa."
         }
       },
       "sections": {

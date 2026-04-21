@@ -240,6 +240,9 @@
           "title": "Fungua kwenye MetaMask",
           "description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya MetaMask.",
           "copy_link": "Nakili kiungo"
+        },
+        "connect_wallet_picker": {
+          "description": "Walleti nyingi za kivinjari zimepatikana. Chagua moja ili kuunganisha."
         }
       },
       "sections": {

@@ -240,6 +240,9 @@
           "title": "Avaa MetaMaskissa",
           "description": "Yhdistääksesi kopioi tämä linkki ja avaa se MetaMaskin sisäänrakennetussa selaimessa.",
           "copy_link": "Kopioi linkki"
+        },
+        "connect_wallet_picker": {
+          "description": "Useita selainlompakoita löytyi. Valitse yksi yhdistääksesi."
         }
       },
       "sections": {

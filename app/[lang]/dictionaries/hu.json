@@ -240,6 +240,9 @@
           "title": "Megnyitás MetaMaskban",
           "description": "A csatlakozáshoz másold ki ezt a linket, és nyisd meg a MetaMask beépített böngészőjében.",
           "copy_link": "Link másolása"
+        },
+        "connect_wallet_picker": {
+          "description": "Több böngészős tárca található. Válassz egyet a csatlakozáshoz."
         }
       },
       "sections": {

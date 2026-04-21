@@ -240,6 +240,9 @@
           "title": "在 MetaMask 中打开",
           "description": "要连接，请复制此链接并在 MetaMask 的内置浏览器中打开。",
           "copy_link": "复制链接"
+        },
+        "connect_wallet_picker": {
+          "description": "发现多个浏览器钱包。请选择一个进行连接。"
         }
       },
       "sections": {

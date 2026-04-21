@@ -240,6 +240,9 @@
           "title": "Atvērt MetaMask",
           "description": "Lai pieslēgtos, nokopējiet šo saiti un atveriet to MetaMask iebūvētajā pārlūkā.",
           "copy_link": "Kopēt saiti"
+        },
+        "connect_wallet_picker": {
+          "description": "Tika atrasti vairāki pārlūka maki. Izvēlieties vienu, lai izveidotu savienojumu."
         }
       },
       "sections": {

@@ -474,6 +474,9 @@ export function SavingsSection({
               walletBrowserDialogButtonLabel={
                 dictionary.pages.wallet.modals.connect_wallet_browser.copy_link
               }
+              walletPickerDialogDescription={
+                dictionary.pages.wallet.modals.connect_wallet_picker.description
+              }
               copiedToastTitle={dictionary.toasts.copied}
               copyErrorToastTitle={dictionary.toasts.generic_error}
               lang={lang}

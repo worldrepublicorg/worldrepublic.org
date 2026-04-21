@@ -240,6 +240,9 @@
           "title": "Buksan sa MetaMask",
           "description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng MetaMask.",
           "copy_link": "Kopyahin ang link"
+        },
+        "connect_wallet_picker": {
+          "description": "Maraming browser wallet ang natagpuan. Pumili ng isa para kumonekta."
         }
       },
       "sections": {

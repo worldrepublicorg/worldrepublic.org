@@ -240,6 +240,9 @@
           "title": "Fungura muri MetaMask",
           "description": "Kugira ngo uhuze, kopira iyi linki hanyuma uyifungure muri browser yubatswe muri MetaMask.",
           "copy_link": "Kopira linki"
+        },
+        "connect_wallet_picker": {
+          "description": "Habonetsemo amakarita menshi ya browser. Hitamo rimwe kugira ngo wihuze."
         }
       },
       "sections": {

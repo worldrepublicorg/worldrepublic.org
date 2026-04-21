@@ -240,6 +240,9 @@
           "title": "በMetaMask ክፈት",
           "description": "ለመገናኘት ይህን አገናኝ ቅዳ እና በMetaMask አብሮ በተሰራ አሳሽ ውስጥ ክፈት።",
           "copy_link": "አገናኝ ቅዳ"
+        },
+        "connect_wallet_picker": {
+          "description": "ብዙ የአሳሽ ዋሌቶች ተገኝተዋል። ለመገናኘት አንዱን ይምረጡ።"
         }
       },
       "sections": {

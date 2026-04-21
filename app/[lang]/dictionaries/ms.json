@@ -240,6 +240,9 @@
           "title": "Buka dalam MetaMask",
           "description": "Untuk sambung, salin pautan ini dan buka dalam pelayar terbina dalam MetaMask.",
           "copy_link": "Salin pautan"
+        },
+        "connect_wallet_picker": {
+          "description": "Beberapa dompet pelayar ditemui. Pilih satu untuk disambungkan."
         }
       },
       "sections": {

@@ -240,6 +240,9 @@
           "title": "MetaMask માં ખોલો",
           "description": "કનેક્ટ કરવા માટે, આ લિંક કૉપિ કરો અને તેને MetaMask ના બિલ્ટ-ઇન બ્રાઉઝરમાં ખોલો.",
           "copy_link": "લિંક કૉપી કરો"
+        },
+        "connect_wallet_picker": {
+          "description": "ઘણા બ્રાઉઝર વૉલેટ મળ્યા. કનેક્ટ કરવા માટે એક પસંદ કરો."
         }
       },
       "sections": {

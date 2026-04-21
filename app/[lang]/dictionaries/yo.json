@@ -240,6 +240,9 @@
           "title": "Ṣii ninu MetaMask",
           "description": "Lati sopọ, daakọ ọna asopọ yii ki o ṣii ninu aṣàwákiri tí a kọ sínú MetaMask.",
           "copy_link": "Daakọ ọna asopọ"
+        },
+        "connect_wallet_picker": {
+          "description": "A ri ọpọlọpọ awọn apamọwọ aṣàwákiri. Yan ọkan lati sopọ."
         }
       },
       "sections": {

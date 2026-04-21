@@ -240,6 +240,9 @@
           "title": "Odpri v MetaMask",
           "description": "Za povezavo kopirajte to povezavo in jo odprite v vgrajenem brskalniku MetaMask.",
           "copy_link": "Kopiraj povezavo"
+        },
+        "connect_wallet_picker": {
+          "description": "Najdenih je bilo več brskalniških denarnic. Izberite eno za povezavo."
         }
       },
       "sections": {

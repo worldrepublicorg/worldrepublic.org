@@ -240,6 +240,9 @@
           "title": "Apri in MetaMask",
           "description": "Per connetterti, copia questo link e aprilo nel browser integrato di MetaMask.",
           "copy_link": "Copia link"
+        },
+        "connect_wallet_picker": {
+          "description": "Sono stati trovati più wallet del browser. Selezionane uno per connetterti."
         }
       },
       "sections": {

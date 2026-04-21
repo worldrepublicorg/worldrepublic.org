@@ -240,6 +240,9 @@
           "title": "Ku fur MetaMask",
           "description": "Si aad u xirto, nuqul xiriirkan oo ku fur browser-ka ku dhex-jira MetaMask.",
           "copy_link": "Nuqul ka samee linkiga"
+        },
+        "connect_wallet_picker": {
+          "description": "Waxaa la helay boorsooyin biraawsar badan. Mid dooro si aad ugu xirmato."
         }
       },
       "sections": {
