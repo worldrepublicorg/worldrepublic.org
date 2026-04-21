@@ -200,7 +200,6 @@ export async function verifyPasskeyAuthentication(
       .select({
         id: users.id,
         email: users.email,
-        name: users.name,
         emailVerified: users.emailVerified,
         image: users.image,
       })
@@ -360,7 +359,6 @@ export async function verifyPasskeyRegistration(
       .insert(users)
       .values({
         email: tempEmail || null,
-        name: name || tempEmail || "Anonymous User",
       })
       .returning();
 
