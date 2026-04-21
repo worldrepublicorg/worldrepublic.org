@@ -27,7 +27,11 @@ const wagmiConfig = createConfig({
   },
 });
 
-export function WalletProvider({ children }: { children: React.ReactNode }) {
+export function OnchainWalletProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
