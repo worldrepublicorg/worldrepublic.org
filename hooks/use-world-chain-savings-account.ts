@@ -19,6 +19,8 @@ const WDD_DECIMALS = 18;
 // Match on-chain linear savings growth: balance doubles in 529 days.
 const SECONDS_IN_529_DAYS = 529 * 86400;
 const SAVINGS_PER_SECOND_RATE = 1 / SECONDS_IN_529_DAYS;
+const BALANCE_SYNC_TOLERANCE = 1e-6;
+const AVAILABLE_SYNC_TOLERANCE = 1e-8;
 
 const erc20Abi = [
   {
@@ -109,6 +111,11 @@ export function useWorldchainSavingsAccount() {
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [refreshNonce, setRefreshNonce] = useState(0);
+  const [optimisticBalances, setOptimisticBalances] = useState<{
+    wallet: number;
+    savings: number;
+    available: number;
+  } | null>(null);
   const snapshotTimeRef = useRef<number | null>(null);
   const snapshotSavingsRef = useRef(0);
   const baseAvailableRef = useRef(0);
@@ -164,6 +171,10 @@ export function useWorldchainSavingsAccount() {
       ? Number(formatUnits(data[2].result as bigint, WDD_DECIMALS))
       : 0
     : 0;
+  const effectiveWalletBalance = optimisticBalances?.wallet ?? walletBalance;
+  const effectiveSavingsBalance = optimisticBalances?.savings ?? savingsBalance;
+  const effectiveAvailableInterest =
+    optimisticBalances?.available ?? availableInterest;
 
   useEffect(() => {
     if (!isConnected || !address) {
@@ -171,14 +182,21 @@ export function useWorldchainSavingsAccount() {
       snapshotSavingsRef.current = 0;
       baseAvailableRef.current = 0;
       setDisplayAvailableInterest(0);
+      setOptimisticBalances(null);
       return;
     }
 
     snapshotTimeRef.current = Date.now();
-    snapshotSavingsRef.current = savingsBalance;
-    baseAvailableRef.current = availableInterest;
-    setDisplayAvailableInterest(availableInterest);
-  }, [isConnected, address, savingsBalance, availableInterest, refreshNonce]);
+    snapshotSavingsRef.current = effectiveSavingsBalance;
+    baseAvailableRef.current = effectiveAvailableInterest;
+    setDisplayAvailableInterest(effectiveAvailableInterest);
+  }, [
+    isConnected,
+    address,
+    effectiveSavingsBalance,
+    effectiveAvailableInterest,
+    refreshNonce,
+  ]);
 
   useEffect(() => {
     if (!isConnected || !address || snapshotTimeRef.current === null) return;
@@ -203,6 +221,36 @@ export function useWorldchainSavingsAccount() {
     await refetchContracts();
     setRefreshNonce((current) => current + 1);
   }, [refetchContracts]);
+
+  const refreshWithRetries = useCallback(
+    async (attempts: number = 3, delayMs: number = 1200) => {
+      for (let attempt = 0; attempt < attempts; attempt++) {
+        await refresh();
+        if (attempt < attempts - 1) {
+          await new Promise((resolve) => window.setTimeout(resolve, delayMs));
+        }
+      }
+    },
+    [refresh],
+  );
+
+  useEffect(() => {
+    if (!optimisticBalances) return;
+
+    const walletSynced =
+      Math.abs(walletBalance - optimisticBalances.wallet) <=
+      BALANCE_SYNC_TOLERANCE;
+    const savingsSynced =
+      Math.abs(savingsBalance - optimisticBalances.savings) <=
+      BALANCE_SYNC_TOLERANCE;
+    const availableSynced =
+      Math.abs(availableInterest - optimisticBalances.available) <=
+      AVAILABLE_SYNC_TOLERANCE;
+
+    if (walletSynced && savingsSynced && availableSynced) {
+      setOptimisticBalances(null);
+    }
+  }, [walletBalance, savingsBalance, availableInterest, optimisticBalances]);
 
   const getLiveChainId = useCallback(async (): Promise<number | null> => {
     if (!connector) return null;
@@ -287,7 +335,20 @@ export function useWorldchainSavingsAccount() {
           args: [amountWei],
         })) as `0x${string}`;
         await waitForSuccessReceipt(stakeHash, client);
-        await refresh();
+        const amountValue = Number(normalizedAmount);
+        setOptimisticBalances((current) => {
+          const base = current ?? {
+            wallet: walletBalance,
+            savings: savingsBalance,
+            available: displayAvailableInterest,
+          };
+          return {
+            wallet: Math.max(0, base.wallet - amountValue),
+            savings: base.savings + amountValue,
+            available: base.available,
+          };
+        });
+        await refreshWithRetries();
         if (typeof window !== "undefined") {
           window.dispatchEvent(new Event("onchain-balance-refresh"));
         }
@@ -296,7 +357,15 @@ export function useWorldchainSavingsAccount() {
         setIsSubmitting(false);
       }
     },
-    [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh],
+    [
+      ensureReadyForWrite,
+      writeContract,
+      waitForSuccessReceipt,
+      refreshWithRetries,
+      walletBalance,
+      savingsBalance,
+      displayAvailableInterest,
+    ],
   );
 
   const withdraw = useCallback(
@@ -317,7 +386,20 @@ export function useWorldchainSavingsAccount() {
           args: [amountWei],
         })) as `0x${string}`;
         await waitForSuccessReceipt(withdrawHash, client);
-        await refresh();
+        const amountValue = Number(normalizedAmount);
+        setOptimisticBalances((current) => {
+          const base = current ?? {
+            wallet: walletBalance,
+            savings: savingsBalance,
+            available: displayAvailableInterest,
+          };
+          return {
+            wallet: base.wallet + amountValue,
+            savings: Math.max(0, base.savings - amountValue),
+            available: base.available,
+          };
+        });
+        await refreshWithRetries();
         if (typeof window !== "undefined") {
           window.dispatchEvent(new Event("onchain-balance-refresh"));
         }
@@ -326,7 +408,15 @@ export function useWorldchainSavingsAccount() {
         setIsSubmitting(false);
       }
     },
-    [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh],
+    [
+      ensureReadyForWrite,
+      writeContract,
+      waitForSuccessReceipt,
+      refreshWithRetries,
+      walletBalance,
+      savingsBalance,
+      displayAvailableInterest,
+    ],
   );
 
   const collect = useCallback(async () => {
@@ -340,7 +430,19 @@ export function useWorldchainSavingsAccount() {
         args: [],
       })) as `0x${string}`;
       await waitForSuccessReceipt(redeemHash, client);
-      await refresh();
+      setOptimisticBalances((current) => {
+        const base = current ?? {
+          wallet: walletBalance,
+          savings: savingsBalance,
+          available: displayAvailableInterest,
+        };
+        return {
+          wallet: base.wallet + base.available,
+          savings: base.savings,
+          available: 0,
+        };
+      });
+      await refreshWithRetries();
       if (typeof window !== "undefined") {
         window.dispatchEvent(new Event("onchain-balance-refresh"));
       }
@@ -348,7 +450,15 @@ export function useWorldchainSavingsAccount() {
     } finally {
       setIsSubmitting(false);
     }
-  }, [ensureReadyForWrite, writeContract, waitForSuccessReceipt, refresh]);
+  }, [
+    ensureReadyForWrite,
+    writeContract,
+    waitForSuccessReceipt,
+    refreshWithRetries,
+    walletBalance,
+    savingsBalance,
+    displayAvailableInterest,
+  ]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -362,8 +472,8 @@ export function useWorldchainSavingsAccount() {
 
   return {
     balances: {
-      wallet: walletBalance,
-      savings: savingsBalance,
+      wallet: effectiveWalletBalance,
+      savings: effectiveSavingsBalance,
     },
     interest: {
       available: displayAvailableInterest,
