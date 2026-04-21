@@ -1,6 +1,5 @@
 ---
 description: "Localize UI-visible numeric values from lang/locale."
-globs: "**/*.tsx"
 alwaysApply: false
 ---
 
