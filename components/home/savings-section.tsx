@@ -44,7 +44,7 @@ interface SavingsSectionProps {
   dictionary: Dictionary;
   isActive?: boolean;
   isAuthenticated: boolean;
-  userId: string | null;
+  userUuid: string | null;
   walletBalance: number;
   savingsBalance: number;
   unclaimedSavingsInterest: number;
@@ -62,7 +62,7 @@ export function SavingsSection({
   dictionary,
   isActive = true,
   isAuthenticated,
-  userId,
+  userUuid,
   walletBalance,
   savingsBalance,
   unclaimedSavingsInterest,
@@ -401,7 +401,7 @@ export function SavingsSection({
                   size="sm"
                   className={`mr-2 h-9 min-w-20 rounded-full px-4 font-sans ${raisedButtonShadowClass}`}
                   onClick={() => {
-                    if (!isAuthenticated || !userId) {
+                    if (!isAuthenticated || !userUuid) {
                       onSignIn();
                       return;
                     }
@@ -698,7 +698,7 @@ export function SavingsSection({
         open={isSelfVerificationOpen}
         onOpenChange={setIsSelfVerificationOpen}
         onSuccess={onSuccess}
-        userId={userId}
+        userId={userUuid}
         dictionary={dictionary}
         mode="account"
       />

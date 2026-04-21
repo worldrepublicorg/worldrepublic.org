@@ -26,7 +26,7 @@ interface BasicIncomeSectionProps {
   dictionary: Dictionary;
   isActive?: boolean;
   isAuthenticated: boolean;
-  userId: string | null;
+  userUuid: string | null;
   isSelfVerified: boolean;
   basicIncomeActivatedAt: number | null;
   lastBasicIncomeClaimAt: number | null;
@@ -40,7 +40,7 @@ export function BasicIncomeSection({
   dictionary,
   isActive = true,
   isAuthenticated,
-  userId,
+  userUuid,
   isSelfVerified,
   basicIncomeActivatedAt,
   lastBasicIncomeClaimAt,
@@ -212,7 +212,7 @@ export function BasicIncomeSection({
               fullWidth
               className={`mt-6! ${raisedButtonShadowClass}`}
               onClick={() => {
-                if (!isAuthenticated || !userId) {
+                if (!isAuthenticated || !userUuid) {
                   onSignIn();
                   return;
                 }
@@ -266,7 +266,7 @@ export function BasicIncomeSection({
         open={isSelfVerificationOpen}
         onOpenChange={setIsSelfVerificationOpen}
         onSuccess={onSuccess}
-        userId={userId}
+        userId={userUuid}
         dictionary={dictionary}
         mode="account"
       />
