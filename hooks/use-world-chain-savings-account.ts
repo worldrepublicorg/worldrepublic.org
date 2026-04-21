@@ -118,6 +118,7 @@ export function useWorldchainSavingsAccount() {
     savings: number;
     available: number;
   } | null>(null);
+  const displayAvailableInterestRef = useRef(0);
   const snapshotTimeRef = useRef<number | null>(null);
   const snapshotSavingsRef = useRef(0);
   const baseAvailableRef = useRef(0);
@@ -177,6 +178,10 @@ export function useWorldchainSavingsAccount() {
   const effectiveSavingsBalance = optimisticBalances?.savings ?? savingsBalance;
   const effectiveAvailableInterest =
     optimisticAvailableInterest ?? optimisticBalances?.available ?? availableInterest;
+
+  useEffect(() => {
+    displayAvailableInterestRef.current = displayAvailableInterest;
+  }, [displayAvailableInterest]);
 
   useEffect(() => {
     if (!isConnected || !address) {
@@ -338,7 +343,9 @@ export function useWorldchainSavingsAccount() {
         const amountValue = Number(normalizedAmount);
         setOptimisticBalances((current) => {
           const baseAvailable =
-            optimisticAvailableInterest ?? current?.available ?? displayAvailableInterest;
+            optimisticAvailableInterest ??
+            current?.available ??
+            displayAvailableInterestRef.current;
           const base = current ?? {
             wallet: walletBalance,
             savings: savingsBalance,
@@ -351,7 +358,7 @@ export function useWorldchainSavingsAccount() {
           };
         });
         setOptimisticAvailableInterest((current) =>
-          current ?? displayAvailableInterest,
+          current ?? displayAvailableInterestRef.current,
         );
         await refreshWithRetries();
         if (typeof window !== "undefined") {
@@ -395,7 +402,9 @@ export function useWorldchainSavingsAccount() {
         const amountValue = Number(normalizedAmount);
         setOptimisticBalances((current) => {
           const baseAvailable =
-            optimisticAvailableInterest ?? current?.available ?? displayAvailableInterest;
+            optimisticAvailableInterest ??
+            current?.available ??
+            displayAvailableInterestRef.current;
           const base = current ?? {
             wallet: walletBalance,
             savings: savingsBalance,
@@ -408,7 +417,7 @@ export function useWorldchainSavingsAccount() {
           };
         });
         setOptimisticAvailableInterest((current) =>
-          current ?? displayAvailableInterest,
+          current ?? displayAvailableInterestRef.current,
         );
         await refreshWithRetries();
         if (typeof window !== "undefined") {
@@ -444,7 +453,9 @@ export function useWorldchainSavingsAccount() {
       await waitForSuccessReceipt(redeemHash, client);
       setOptimisticBalances((current) => {
         const baseAvailable =
-          optimisticAvailableInterest ?? current?.available ?? displayAvailableInterest;
+          optimisticAvailableInterest ??
+          current?.available ??
+          displayAvailableInterestRef.current;
         const base = current ?? {
           wallet: walletBalance,
           savings: savingsBalance,
