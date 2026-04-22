@@ -111,7 +111,6 @@ export default function AccountPageClient({
 
   const data = serverData ?? cachedData;
   const showSkeleton = data === null;
-  const email = data?.email ?? null;
   const username = data?.profileData?.username ?? null;
   const referralCode = data?.profileData?.referralCode ?? null;
   const referredByUsername = data?.profileData?.referredByUsername ?? null;
@@ -267,7 +266,7 @@ export default function AccountPageClient({
     try {
       const optionsResult = await getPasskeyRegistrationOptions(
         null,
-        username || email || undefined,
+        username || undefined,
       );
 
       if (optionsResult.error) {
@@ -374,16 +373,6 @@ export default function AccountPageClient({
                 </Typography>
               </div>
               <div className="flex flex-col gap-2">
-                {email && (
-                  <div>
-                    <CustomListItem
-                      label={
-                        dictionary.pages.menu.sections.account.account_info
-                      }
-                      description={email}
-                    />
-                  </div>
-                )}
                 {username && (
                   <div
                     onClick={(e) => {

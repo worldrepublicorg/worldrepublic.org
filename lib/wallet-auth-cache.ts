@@ -40,7 +40,6 @@ export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
         streams: (obj.streams as StreamData[]) ?? null,
         streamRatesById:
           (obj.streamRatesById as Record<string, number> | null) ?? null,
-        email: (obj.email as string) ?? null,
         linkedProviders:
           (obj.linkedProviders as GetWalletAuthAndDataResult["linkedProviders"]) ??
           null,

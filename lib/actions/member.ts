@@ -369,7 +369,6 @@ export type GetWalletAuthAndDataResult = {
   transactions: GetWalletAuthAndDataTransaction[] | null;
   streams: StreamData[] | null;
   streamRatesById?: Record<string, number> | null;
-  email: string | null;
   linkedProviders: {
     hasGoogle: boolean;
     googleEmail: string | null;
@@ -422,7 +421,6 @@ export async function getWalletAuthAndData(
       transactions: null,
       streams: null,
       streamRatesById: null,
-      email: null,
       linkedProviders: null,
     };
   }
@@ -450,7 +448,6 @@ export async function getWalletAuthAndData(
       transactions: null,
       streams: null,
       streamRatesById: null,
-      email: session.user?.email ?? null,
       linkedProviders,
     };
   }
@@ -520,7 +517,7 @@ export async function getWalletAuthAndData(
     basicIncomeAndInterestClaimedTotal:
       profileRow?.basicIncomeAndInterestClaimedTotal
         ? parseFloat(profileRow.basicIncomeAndInterestClaimedTotal)
-      : 0,
+        : 0,
     selfVerifiedAt: selfVerificationRow?.selfVerifiedAt?.getTime() ?? null,
     username: null,
     referralCode: null,
@@ -576,7 +573,6 @@ export async function getWalletAuthAndData(
     transactions: transactionsData,
     streams: userStreams.length > 0 ? userStreams : null,
     streamRatesById,
-    email: session.user?.email ?? null,
     linkedProviders,
   };
 }

@@ -30,7 +30,6 @@ export function useAuth() {
           profileData: null,
           transactions: null,
           streams: null,
-          email: null,
           linkedProviders: null,
         });
       } catch {
