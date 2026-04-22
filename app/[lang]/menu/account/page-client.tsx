@@ -90,7 +90,14 @@ export default function AccountPageClient({
     }
 
     router.replace(`/${lang}/menu/account`);
-  }, [lang, router, searchParams, toast]);
+  }, [
+    lang,
+    router,
+    searchParams,
+    toast,
+    dictionary.toasts.wallet.google_already_linked,
+    dictionary.toasts.wallet.google_linked,
+  ]);
 
   useEffect(() => {
     let cancelled = false;

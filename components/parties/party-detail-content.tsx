@@ -65,8 +65,7 @@ export function PartyDetailContent({
     };
 
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [partyId]);
+  }, [partyId, dictionary.pages.govern.parties.detail.failed_to_load, toast]);
 
   // Copy leader address to clipboard
   const handleCopyLeaderAddress = async () => {

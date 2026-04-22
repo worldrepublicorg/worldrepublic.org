@@ -167,8 +167,11 @@ export function TransactionHistoryContent({
     };
 
     fetchTransactions();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [transactionsProp]); // Only fetch if transactions prop is not provided
+  }, [
+    transactionsProp,
+    dictionary.pages.wallet.transactions.failed_to_load,
+    toast,
+  ]); // Only fetch if transactions prop is not provided
 
   // Infinite scroll setup for transaction history
   useEffect(() => {
