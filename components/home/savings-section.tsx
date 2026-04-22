@@ -22,8 +22,8 @@ import {
   PiHandArrowUpFill,
   PiInfoFill,
   PiPiggyBankFill,
+  PiWarningCircleFill,
   PiWarningFill,
-  PiWarningOctagonFill,
 } from "react-icons/pi";
 import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -305,9 +305,9 @@ export function SavingsSection({
                 aria-label={dictionary.pages.govern.parties.learn_more}
               >
                 {isRedCapWarning ? (
-                  <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
+                  <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
                 ) : isYellowCapWarning ? (
-                  <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
+                  <PiWarningCircleFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
                 ) : (
                   <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
                 )}

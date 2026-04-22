@@ -16,8 +16,8 @@ import { useState } from "react";
 import {
   PiHandCoinsFill,
   PiInfoFill,
+  PiWarningCircleFill,
   PiWarningFill,
-  PiWarningOctagonFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
@@ -89,9 +89,9 @@ export function BasicIncomeSection({
           aria-label={dictionary.pages.govern.parties.learn_more}
         >
           {isRedCapWarning ? (
-            <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
+            <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
           ) : isYellowCapWarning ? (
-            <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
+            <PiWarningCircleFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
           ) : (
             <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
           )}
