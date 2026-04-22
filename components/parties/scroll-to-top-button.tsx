@@ -42,7 +42,9 @@ export function ScrollToTopButton({ show, onClick }: ScrollToTopButtonProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
           className="text-gray-500 pointer-events-none"
+          aria-hidden
         >
+          <title>Scroll to top</title>
           <path d="m18 15-6-6-6 6" />
         </svg>
       </button>
