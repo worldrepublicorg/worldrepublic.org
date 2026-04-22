@@ -44,8 +44,7 @@ export function useSavings(
           ? base
           : Math.max(
               0,
-              BASIC_INCOME_AND_SAVINGS_CAP -
-                basicIncomeAndInterestClaimedTotal,
+              BASIC_INCOME_AND_SAVINGS_CAP - basicIncomeAndInterestClaimedTotal,
             );
         setDisplayAvailableInterest(base);
         setMaxCollectableAmount(Math.min(base, maxCanCollect));

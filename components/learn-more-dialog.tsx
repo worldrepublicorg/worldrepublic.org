@@ -11,8 +11,8 @@ import {
 import {
   PiArrowSquareOut,
   PiInfoFill,
-  PiWarningCircle,
   PiWarning,
+  PiWarningCircle,
 } from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 
@@ -51,7 +51,9 @@ export function LearnMoreDialog({
   const warningBannerClassName =
     warningLevel === "red" ? "bg-red-50" : "bg-yellow-50";
   const warningIconClassName =
-    warningLevel === "red" ? "size-5 shrink-0 text-red-500" : "size-5 shrink-0 text-yellow-500";
+    warningLevel === "red"
+      ? "size-5 shrink-0 text-red-500"
+      : "size-5 shrink-0 text-yellow-500";
   const warningTextClassName =
     warningLevel === "red" ? "text-red-500" : "text-yellow-500";
 
@@ -81,30 +83,9 @@ export function LearnMoreDialog({
             <Typography className="text-gray-500">{info}</Typography>
           ))}
 
-        {warningLevel && warningBannerText && (
-          <div
-            className={`mb-6 flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
-          >
-            <div className="flex items-start gap-3">
-              {warningLevel === "red" ? (
-                <PiWarning className={warningIconClassName} />
-              ) : (
-                <PiWarningCircle className={warningIconClassName} />
-              )}
-              <Typography
-                variant="body"
-                level={4}
-                className={`text-left text-[14px] font-medium ${warningTextClassName}`}
-              >
-                {warningBannerText}
-              </Typography>
-            </div>
-          </div>
-        )}
-
         {externalLink && (
           <AlertDialogFooter>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-4 w-full">
               <a
                 href={externalLink.url}
                 target="_blank"
@@ -118,6 +99,27 @@ export function LearnMoreDialog({
                   }
                 />
               </a>
+
+              {warningLevel && warningBannerText && (
+                <div
+                  className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+                >
+                  <div className="flex items-start gap-3">
+                    {warningLevel === "red" ? (
+                      <PiWarning className={warningIconClassName} />
+                    ) : (
+                      <PiWarningCircle className={warningIconClassName} />
+                    )}
+                    <Typography
+                      variant="body"
+                      level={4}
+                      className={`text-left text-[14px] font-medium ${warningTextClassName}`}
+                    >
+                      {warningBannerText}
+                    </Typography>
+                  </div>
+                </div>
+              )}
             </div>
           </AlertDialogFooter>
         )}

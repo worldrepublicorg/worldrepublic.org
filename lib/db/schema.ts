@@ -199,8 +199,8 @@ export const userProfiles = pgTable(
     basicIncomeAndInterestClaimedTotal: decimal(
       "basic_income_and_interest_claimed_total",
       {
-      precision: 36,
-      scale: 18,
+        precision: 36,
+        scale: 18,
       },
     )
       .notNull()

@@ -36,8 +36,8 @@ import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
 import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
-import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
+import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
 export type SavingsAccountType = "offchain" | "worldchain";
 
@@ -538,7 +538,8 @@ export function SavingsSection({
                 dictionary.pages.wallet.modals.connect_wallet_picker.description
               }
               noWalletDialogDescription={
-                dictionary.pages.wallet.modals.connect_wallet_no_wallet.description
+                dictionary.pages.wallet.modals.connect_wallet_no_wallet
+                  .description
               }
               noWalletDialogLinkLabel={
                 dictionary.pages.wallet.modals.connect_wallet_no_wallet

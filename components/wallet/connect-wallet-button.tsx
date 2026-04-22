@@ -16,8 +16,8 @@ import type { ComponentProps } from "react";
 import { useState } from "react";
 import { PiArrowSquareOut, PiPowerFill, PiWalletFill } from "react-icons/pi";
 import type { Connector } from "wagmi";
-import { CustomListItem } from "@/components/custom-list-item";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
+import { CustomListItem } from "@/components/custom-list-item";
 import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
 import {
   copyToClipboard,
@@ -268,7 +268,10 @@ export function ConnectWalletButton({
         </AlertDialogContent>
       </AlertDialog>
 
-      <AlertDialog open={noWalletDialogOpen} onOpenChange={setNoWalletDialogOpen}>
+      <AlertDialog
+        open={noWalletDialogOpen}
+        onOpenChange={setNoWalletDialogOpen}
+      >
         <AlertDialogContent>
           <AlertDialogHeader
             icon={
@@ -279,7 +282,9 @@ export function ConnectWalletButton({
           >
             <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
           </AlertDialogHeader>
-          <AlertDialogDescription>{noWalletDialogDescription}</AlertDialogDescription>
+          <AlertDialogDescription>
+            {noWalletDialogDescription}
+          </AlertDialogDescription>
           <AlertDialogFooter>
             <div className="flex w-full flex-col gap-2">
               <a

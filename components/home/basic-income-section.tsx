@@ -62,8 +62,7 @@ export function BasicIncomeSection({
   const yellowWarningThreshold = capAmount * 0.7;
   const redWarningThreshold = capAmount * 0.9;
   const isRedCapWarning =
-    !isSelfVerified &&
-    claimedTotal >= redWarningThreshold;
+    !isSelfVerified && claimedTotal >= redWarningThreshold;
   const isYellowCapWarning =
     !isSelfVerified &&
     claimedTotal >= yellowWarningThreshold &&
@@ -124,9 +123,7 @@ export function BasicIncomeSection({
     minimumFractionDigits: 6,
     maximumFractionDigits: 6,
   }).format(maxClaimableAmount);
-  const isCapReached =
-    !isSelfVerified &&
-    claimedTotal >= capAmount - 1e-9;
+  const isCapReached = !isSelfVerified && claimedTotal >= capAmount - 1e-9;
 
   if (!isAuthenticated) {
     return (

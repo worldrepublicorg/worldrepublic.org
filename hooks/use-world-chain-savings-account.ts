@@ -110,9 +110,8 @@ export function useWorldchainSavingsAccount() {
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [refreshNonce, setRefreshNonce] = useState(0);
-  const [optimisticAvailableInterest, setOptimisticAvailableInterest] = useState<
-    number | null
-  >(null);
+  const [optimisticAvailableInterest, setOptimisticAvailableInterest] =
+    useState<number | null>(null);
   const [optimisticBalances, setOptimisticBalances] = useState<{
     wallet: number;
     savings: number;
@@ -177,7 +176,9 @@ export function useWorldchainSavingsAccount() {
   const effectiveWalletBalance = optimisticBalances?.wallet ?? walletBalance;
   const effectiveSavingsBalance = optimisticBalances?.savings ?? savingsBalance;
   const effectiveAvailableInterest =
-    optimisticAvailableInterest ?? optimisticBalances?.available ?? availableInterest;
+    optimisticAvailableInterest ??
+    optimisticBalances?.available ??
+    availableInterest;
 
   useEffect(() => {
     displayAvailableInterestRef.current = displayAvailableInterest;
@@ -357,8 +358,8 @@ export function useWorldchainSavingsAccount() {
             available: base.available,
           };
         });
-        setOptimisticAvailableInterest((current) =>
-          current ?? displayAvailableInterestRef.current,
+        setOptimisticAvailableInterest(
+          (current) => current ?? displayAvailableInterestRef.current,
         );
         await refreshWithRetries();
         if (typeof window !== "undefined") {
@@ -416,8 +417,8 @@ export function useWorldchainSavingsAccount() {
             available: base.available,
           };
         });
-        setOptimisticAvailableInterest((current) =>
-          current ?? displayAvailableInterestRef.current,
+        setOptimisticAvailableInterest(
+          (current) => current ?? displayAvailableInterestRef.current,
         );
         await refreshWithRetries();
         if (typeof window !== "undefined") {

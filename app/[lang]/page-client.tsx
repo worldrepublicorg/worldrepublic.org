@@ -411,440 +411,453 @@ export default function HomePageClient({
   return (
     <OnchainWalletProvider>
       <div className="pb-safe flex min-h-dvh flex-col">
-      <TopBar
-        title={dictionary.nav.earn}
-        endAdornment={
-          activeTab === "savings" && selectedSavingsAccount === "worldchain" ? (
-            <ConnectWalletButton
-              connectLabel={dictionary.common.connect}
-              disconnectLabel={dictionary.common.disconnect}
-              disconnectDescription={
-                dictionary.pages.wallet.modals.disconnect.confirm
-              }
-              walletBrowserDialogTitle={
-                dictionary.pages.wallet.modals.connect_wallet_browser.title
-              }
-              walletBrowserDialogDescription={
-                dictionary.pages.wallet.modals.connect_wallet_browser
-                  .description
-              }
-              walletBrowserDialogButtonLabel={
-                dictionary.pages.wallet.modals.connect_wallet_browser.copy_link
-              }
-              walletPickerDialogDescription={
-                dictionary.pages.wallet.modals.connect_wallet_picker.description
-              }
-              noWalletDialogDescription={
-                dictionary.pages.wallet.modals.connect_wallet_no_wallet.description
-              }
-              noWalletDialogLinkLabel={
-                dictionary.pages.wallet.modals.connect_wallet_no_wallet
-                  .find_wallet_link
-              }
-              copiedToastTitle={dictionary.toasts.copied}
-              copyErrorToastTitle={dictionary.toasts.generic_error}
+        <TopBar
+          title={dictionary.nav.earn}
+          endAdornment={
+            activeTab === "savings" &&
+            selectedSavingsAccount === "worldchain" ? (
+              <ConnectWalletButton
+                connectLabel={dictionary.common.connect}
+                disconnectLabel={dictionary.common.disconnect}
+                disconnectDescription={
+                  dictionary.pages.wallet.modals.disconnect.confirm
+                }
+                walletBrowserDialogTitle={
+                  dictionary.pages.wallet.modals.connect_wallet_browser.title
+                }
+                walletBrowserDialogDescription={
+                  dictionary.pages.wallet.modals.connect_wallet_browser
+                    .description
+                }
+                walletBrowserDialogButtonLabel={
+                  dictionary.pages.wallet.modals.connect_wallet_browser
+                    .copy_link
+                }
+                walletPickerDialogDescription={
+                  dictionary.pages.wallet.modals.connect_wallet_picker
+                    .description
+                }
+                noWalletDialogDescription={
+                  dictionary.pages.wallet.modals.connect_wallet_no_wallet
+                    .description
+                }
+                noWalletDialogLinkLabel={
+                  dictionary.pages.wallet.modals.connect_wallet_no_wallet
+                    .find_wallet_link
+                }
+                copiedToastTitle={dictionary.toasts.copied}
+                copyErrorToastTitle={dictionary.toasts.generic_error}
+                lang={lang}
+                size="sm"
+              />
+            ) : (
+              <TopbarWalletBalanceDisplay
+                lang={lang}
+                streams={data?.streams ?? undefined}
+                storedWalletBalance={profileData?.storedWalletBalance ?? 0}
+                snapshotBalance={profileData?.walletBalance ?? null}
+              />
+            )
+          }
+        />
+
+        <TabPills
+          activeTab={activeTab}
+          lang={lang}
+          basePath={`/${lang}`}
+          onTabChange={handleTabChange}
+          tabs={[
+            {
+              key: "basic_income",
+              label: dictionary.pages.earn.tabs.basic_income,
+            },
+            {
+              key: "savings",
+              label: dictionary.pages.earn.tabs.savings,
+            },
+            {
+              key: "ambassadors",
+              label: dictionary.pages.govern.parties.tabs.ambassadors,
+            },
+            {
+              key: "subsidies",
+              label: dictionary.pages.govern.parties.tabs.subsidies,
+            },
+          ]}
+        />
+
+        <main className="flex grow flex-col">
+          <div
+            className={activeTab === "basic_income" ? "flex grow" : "hidden"}
+          >
+            <BasicIncomeSection
               lang={lang}
-              size="sm"
+              dictionary={dictionary}
+              isActive={activeTab === "basic_income"}
+              isAuthenticated={isAuthenticated}
+              userUuid={profileData?.userUuid ?? null}
+              isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
+              basicIncomeActivatedAt={
+                profileData?.basicIncomeActivatedAt ?? null
+              }
+              lastBasicIncomeClaimAt={
+                profileData?.lastBasicIncomeClaimAt ?? null
+              }
+              basicIncomeAndInterestClaimedTotal={
+                profileData?.basicIncomeAndInterestClaimedTotal ?? 0
+              }
+              onSignIn={() => setShowSignInDialog(true)}
+              onSuccess={fetchData}
             />
-          ) : (
-            <TopbarWalletBalanceDisplay
+          </div>
+
+          <div className={activeTab === "savings" ? "flex grow" : "hidden"}>
+            <SavingsSection
               lang={lang}
-              streams={data?.streams ?? undefined}
-              storedWalletBalance={profileData?.storedWalletBalance ?? 0}
-              snapshotBalance={profileData?.walletBalance ?? null}
+              dictionary={dictionary}
+              isActive={activeTab === "savings"}
+              isAuthenticated={isAuthenticated}
+              userUuid={profileData?.userUuid ?? null}
+              walletBalance={profileData?.walletBalance ?? 0}
+              savingsBalance={profileData?.savingsBalance ?? 0}
+              unclaimedSavingsInterest={
+                profileData?.unclaimedSavingsInterest ?? 0
+              }
+              basicIncomeAndInterestClaimedTotal={
+                profileData?.basicIncomeAndInterestClaimedTotal ?? 0
+              }
+              isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
+              savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
+              onSuccess={fetchData}
+              onSignIn={() => setShowSignInDialog(true)}
+              selectedSavingsAccount={selectedSavingsAccount}
+              onSelectedSavingsAccountChange={handleSavingsAccountChange}
             />
-          )
-        }
-      />
+          </div>
 
-      <TabPills
-        activeTab={activeTab}
-        lang={lang}
-        basePath={`/${lang}`}
-        onTabChange={handleTabChange}
-        tabs={[
-          {
-            key: "basic_income",
-            label: dictionary.pages.earn.tabs.basic_income,
-          },
-          {
-            key: "savings",
-            label: dictionary.pages.earn.tabs.savings,
-          },
-          {
-            key: "ambassadors",
-            label: dictionary.pages.govern.parties.tabs.ambassadors,
-          },
-          {
-            key: "subsidies",
-            label: dictionary.pages.govern.parties.tabs.subsidies,
-          },
-        ]}
-      />
+          {activeTab === "ambassadors" ? (
+            <div className="flex flex-col items-start w-full p-6">
+              <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center">
+                <Typography
+                  variant="subtitle"
+                  level={1}
+                  className="mb-[10px]! text-[22px] font-semibold"
+                >
+                  {dictionary.pages.govern.parties.ambassadors.title}
+                </Typography>
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="text-center text-gray-500"
+                >
+                  {dictionary.pages.govern.parties.ambassadors.description}
+                  <span className="inline-flex shrink-0 items-center">
+                    <button
+                      type="button"
+                      onClick={() => setIsLearnMoreDialogOpen(true)}
+                      className="inline-flex shrink-0 items-center justify-center text-gray-400"
+                      aria-label="Learn more"
+                    >
+                      <PiInfoFill className="mx-1 size-4 translate-y-[2px]!" />
+                    </button>
+                  </span>
+                </Typography>
+                <div className="mt-5 flex items-center gap-2 w-full">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={handleCopyReferralLink}
+                    fullWidth
+                  >
+                    {
+                      dictionary.pages.govern.parties.ambassadors
+                        .share_referral_link
+                    }
+                  </Button>
+                </div>
+              </div>
 
-      <main className="flex grow flex-col">
-        <div className={activeTab === "basic_income" ? "flex grow" : "hidden"}>
-          <BasicIncomeSection
-            lang={lang}
-            dictionary={dictionary}
-            isActive={activeTab === "basic_income"}
-            isAuthenticated={isAuthenticated}
-            userUuid={profileData?.userUuid ?? null}
-            isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
-            basicIncomeActivatedAt={profileData?.basicIncomeActivatedAt ?? null}
-            lastBasicIncomeClaimAt={profileData?.lastBasicIncomeClaimAt ?? null}
-            basicIncomeAndInterestClaimedTotal={
-              profileData?.basicIncomeAndInterestClaimedTotal ?? 0
-            }
-            onSignIn={() => setShowSignInDialog(true)}
-            onSuccess={fetchData}
-          />
-        </div>
+              <LearnMoreDialog
+                open={isLearnMoreDialogOpen}
+                onOpenChange={setIsLearnMoreDialogOpen}
+                title={dictionary.pages.govern.parties.learn_more}
+                externalLink={{
+                  url: "https://wiki.worldrepublic.org/building-blocks/ambassador-program",
+                  label: dictionary.pages.govern.parties.ambassadors.title,
+                }}
+              />
 
-        <div className={activeTab === "savings" ? "flex grow" : "hidden"}>
-          <SavingsSection
-            lang={lang}
-            dictionary={dictionary}
-            isActive={activeTab === "savings"}
-            isAuthenticated={isAuthenticated}
-            userUuid={profileData?.userUuid ?? null}
-            walletBalance={profileData?.walletBalance ?? 0}
-            savingsBalance={profileData?.savingsBalance ?? 0}
-            unclaimedSavingsInterest={
-              profileData?.unclaimedSavingsInterest ?? 0
-            }
-            basicIncomeAndInterestClaimedTotal={
-              profileData?.basicIncomeAndInterestClaimedTotal ?? 0
-            }
-            isSelfVerified={Boolean(profileData?.selfVerifiedAt)}
-            savingsLastUpdatedAt={profileData?.savingsLastUpdatedAt ?? null}
-            onSuccess={fetchData}
-            onSignIn={() => setShowSignInDialog(true)}
-            selectedSavingsAccount={selectedSavingsAccount}
-            onSelectedSavingsAccountChange={handleSavingsAccountChange}
-          />
-        </div>
-
-        {activeTab === "ambassadors" ? (
-          <div className="flex flex-col items-start w-full p-6">
-            <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center">
               <Typography
                 variant="subtitle"
                 level={1}
-                className="mb-[10px]! text-[22px] font-semibold"
+                className="mb-3! text-[19px] font-semibold"
               >
-                {dictionary.pages.govern.parties.ambassadors.title}
+                {dictionary.pages.govern.parties.ambassadors.leaderboard}
               </Typography>
-              <Typography
-                variant="body"
-                level={3}
-                className="text-center text-gray-500"
-              >
-                {dictionary.pages.govern.parties.ambassadors.description}
-                <span className="inline-flex shrink-0 items-center">
-                  <button
-                    type="button"
-                    onClick={() => setIsLearnMoreDialogOpen(true)}
-                    className="inline-flex shrink-0 items-center justify-center text-gray-400"
-                    aria-label="Learn more"
-                  >
-                    <PiInfoFill className="mx-1 size-4 translate-y-[2px]!" />
-                  </button>
-                </span>
-              </Typography>
-              <div className="mt-5 flex items-center gap-2 w-full">
-                <Button
-                  variant="primary"
-                  size="sm"
-                  onClick={handleCopyReferralLink}
-                  fullWidth
-                >
-                  {
-                    dictionary.pages.govern.parties.ambassadors
-                      .share_referral_link
-                  }
-                </Button>
-              </div>
-            </div>
 
-            <LearnMoreDialog
-              open={isLearnMoreDialogOpen}
-              onOpenChange={setIsLearnMoreDialogOpen}
-              title={dictionary.pages.govern.parties.learn_more}
-              externalLink={{
-                url: "https://wiki.worldrepublic.org/building-blocks/ambassador-program",
-                label: dictionary.pages.govern.parties.ambassadors.title,
-              }}
-            />
-
-            <Typography
-              variant="subtitle"
-              level={1}
-              className="mb-3! text-[19px] font-semibold"
-            >
-              {dictionary.pages.govern.parties.ambassadors.leaderboard}
-            </Typography>
-
-            {leaderboardLoading ? (
-              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
-                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
-                  <Skeleton height={20} width={100} className="rounded" />
+              {leaderboardLoading ? (
+                <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                  <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
+                    <Skeleton height={20} width={100} className="rounded" />
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    {[0, 1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="flex items-center justify-between px-4 py-3 gap-4"
+                      >
+                        <Skeleton height={16} width="40%" className="rounded" />
+                        <Skeleton height={16} width="20%" className="rounded" />
+                        <Skeleton height={16} width="20%" className="rounded" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="divide-y divide-gray-100">
-                  {[0, 1, 2].map((i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between px-4 py-3 gap-4"
-                    >
-                      <Skeleton height={16} width="40%" className="rounded" />
-                      <Skeleton height={16} width="20%" className="rounded" />
-                      <Skeleton height={16} width="20%" className="rounded" />
-                    </div>
-                  ))}
+              ) : leaderboardError ? (
+                <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                  {dictionary.toasts.generic_error}
                 </div>
-              </div>
-            ) : leaderboardError ? (
-              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-                {dictionary.toasts.generic_error}
-              </div>
-            ) : leaderboard && leaderboard.length > 0 ? (
-              <div className="rounded-xl border border-gray-200 overflow-hidden w-full min-w-0">
-                <div
-                  className="grid min-w-0"
-                  style={{
-                    gridTemplateColumns:
-                      "minmax(0, 1fr) max-content max-content",
-                  }}
-                >
+              ) : leaderboard && leaderboard.length > 0 ? (
+                <div className="rounded-xl border border-gray-200 overflow-hidden w-full min-w-0">
                   <div
-                    className="col-span-full row-start-1 min-h-10 border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0"
-                    aria-hidden
-                  />
-                  <div className="col-start-1 row-start-1 px-4 py-3 flex items-center">
-                    <Typography
-                      variant="subtitle"
-                      level={3}
-                      className="text-gray-500 leading-tight truncate min-w-0"
-                    >
-                      {
-                        dictionary.pages.govern.parties.ambassadors
-                          .col_ambassador
-                      }
-                    </Typography>
+                    className="grid min-w-0"
+                    style={{
+                      gridTemplateColumns:
+                        "minmax(0, 1fr) max-content max-content",
+                    }}
+                  >
+                    <div
+                      className="col-span-full row-start-1 min-h-10 border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0"
+                      aria-hidden
+                    />
+                    <div className="col-start-1 row-start-1 px-4 py-3 flex items-center">
+                      <Typography
+                        variant="subtitle"
+                        level={3}
+                        className="text-gray-500 leading-tight truncate min-w-0"
+                      >
+                        {
+                          dictionary.pages.govern.parties.ambassadors
+                            .col_ambassador
+                        }
+                      </Typography>
+                    </div>
+                    <div className="col-start-2 row-start-1 relative px-6 py-3 min-w-0">
+                      <Typography
+                        variant="subtitle"
+                        level={3}
+                        className="text-gray-500 whitespace-nowrap leading-tight absolute right-6 top-1/2 -translate-y-1/2!"
+                      >
+                        {
+                          dictionary.pages.govern.parties.ambassadors
+                            .col_invited
+                        }
+                      </Typography>
+                    </div>
+                    <div className="col-start-3 row-start-1 relative px-4 py-3 min-w-0">
+                      <Typography
+                        variant="subtitle"
+                        level={3}
+                        className="text-gray-500 whitespace-nowrap leading-tight absolute right-4 top-1/2 -translate-y-1/2!"
+                      >
+                        {dictionary.pages.govern.parties.ambassadors.col_reward}
+                      </Typography>
+                    </div>
+                    {ambassadorWithRank.map(({ entry, rank }) => (
+                      <Fragment key={entry.username}>
+                        <div className="flex items-center gap-2 min-w-0 pl-4 py-3">
+                          <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
+                            {rank}
+                          </span>
+                          <Typography
+                            variant="body"
+                            level={3}
+                            className="font-medium text-gray-900 truncate min-w-0"
+                            title={entry.username}
+                          >
+                            {entry.username}
+                          </Typography>
+                        </div>
+                        <div className="flex items-center justify-end px-6 py-3 whitespace-nowrap">
+                          <Typography
+                            variant="body"
+                            level={3}
+                            className="text-gray-400 tabular-nums"
+                          >
+                            {formatInteger(entry.totalInvited)}
+                          </Typography>
+                        </div>
+                        <div className="flex items-center justify-end pr-4 py-3 whitespace-nowrap">
+                          <Typography
+                            variant="body"
+                            level={3}
+                            className="text-gray-900 tabular-nums"
+                          >
+                            {entry.reward > 0
+                              ? `${formatTokenAmount(entry.reward)} WDD`
+                              : "0 WDD"}
+                          </Typography>
+                        </div>
+                      </Fragment>
+                    ))}
                   </div>
-                  <div className="col-start-2 row-start-1 relative px-6 py-3 min-w-0">
-                    <Typography
-                      variant="subtitle"
-                      level={3}
-                      className="text-gray-500 whitespace-nowrap leading-tight absolute right-6 top-1/2 -translate-y-1/2!"
-                    >
-                      {dictionary.pages.govern.parties.ambassadors.col_invited}
-                    </Typography>
+                </div>
+              ) : (
+                <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                  {dictionary.pages.govern.parties.ambassadors.no_rewards_yet}
+                </div>
+              )}
+            </div>
+          ) : activeTab === "subsidies" ? (
+            <div className="flex flex-col items-start w-full p-6">
+              <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center">
+                <Typography
+                  variant="subtitle"
+                  level={1}
+                  className="mb-[10px]! text-[22px] font-semibold"
+                >
+                  {dictionary.pages.govern.parties.subsidies.title}
+                </Typography>
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="text-center text-gray-500 mt-px!"
+                >
+                  {dictionary.pages.govern.parties.subsidies.description}
+                </Typography>
+                <div className="mt-5 w-full">
+                  <Button
+                    size="sm"
+                    onClick={() => setIsLearnMoreDialogOpen(true)}
+                    fullWidth
+                  >
+                    {dictionary.pages.govern.parties.learn_more}
+                  </Button>
+                </div>
+              </div>
+
+              <LearnMoreDialog
+                open={isLearnMoreDialogOpen}
+                onOpenChange={setIsLearnMoreDialogOpen}
+                title={dictionary.pages.govern.parties.learn_more}
+                externalLink={{
+                  url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",
+                  label: dictionary.pages.govern.parties.subsidies.title,
+                }}
+              />
+
+              <Typography
+                variant="subtitle"
+                level={1}
+                className="mb-3! text-[19px] font-semibold"
+              >
+                {dictionary.pages.govern.parties.ambassadors.leaderboard}
+              </Typography>
+
+              {subsidyLeaderboardLoading ? (
+                <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                  <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
+                    <Skeleton height={20} width={100} className="rounded" />
                   </div>
-                  <div className="col-start-3 row-start-1 relative px-4 py-3 min-w-0">
-                    <Typography
-                      variant="subtitle"
-                      level={3}
-                      className="text-gray-500 whitespace-nowrap leading-tight absolute right-4 top-1/2 -translate-y-1/2!"
-                    >
-                      {dictionary.pages.govern.parties.ambassadors.col_reward}
-                    </Typography>
-                  </div>
-                  {ambassadorWithRank.map(({ entry, rank }) => (
-                    <Fragment key={entry.username}>
-                      <div className="flex items-center gap-2 min-w-0 pl-4 py-3">
-                        <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
-                          {rank}
-                        </span>
-                        <Typography
-                          variant="body"
-                          level={3}
-                          className="font-medium text-gray-900 truncate min-w-0"
-                          title={entry.username}
-                        >
-                          {entry.username}
-                        </Typography>
+                  <div className="divide-y divide-gray-100">
+                    {[0, 1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="flex items-center justify-between px-4 py-3 gap-4"
+                      >
+                        <Skeleton height={16} width="60%" className="rounded" />
+                        <Skeleton height={16} width="20%" className="rounded" />
                       </div>
-                      <div className="flex items-center justify-end px-6 py-3 whitespace-nowrap">
+                    ))}
+                  </div>
+                </div>
+              ) : subsidyLeaderboardError ? (
+                <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                  {dictionary.toasts.generic_error}
+                </div>
+              ) : subsidyLeaderboard && subsidyLeaderboard.length > 0 ? (
+                <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
+                  <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto] gap-4">
+                    <Typography
+                      variant="subtitle"
+                      level={3}
+                      className="text-gray-500"
+                    >
+                      {dictionary.pages.govern.parties.detail.leader}
+                    </Typography>
+                    <Typography
+                      variant="subtitle"
+                      level={3}
+                      className="text-gray-500 text-right"
+                    >
+                      {dictionary.pages.govern.parties.subsidies.col_subsidy}
+                    </Typography>
+                  </div>
+                  <div className="divide-y divide-gray-100">
+                    {subsidyWithRank.map(({ entry, rank }) => (
+                      <div
+                        key={entry.partyId}
+                        onClick={() => {
+                          setSelectedPartyForDrawer({
+                            id: entry.partyId,
+                            name: entry.partyName,
+                          } as Party);
+                          setIsPartyDrawerOpen(true);
+                        }}
+                        className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3 cursor-pointer"
+                      >
+                        <div className="flex items-center gap-2 min-w-0">
+                          <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
+                            {rank}
+                          </span>
+                          <Typography
+                            variant="body"
+                            level={3}
+                            className="font-medium text-gray-900 truncate"
+                            title={`${entry.leaderUsername} (${entry.partyName})`}
+                          >
+                            {entry.leaderUsername}
+                            <span className="text-gray-400">
+                              {" "}
+                              ({entry.partyName})
+                            </span>
+                          </Typography>
+                        </div>
                         <Typography
                           variant="body"
                           level={3}
-                          className="text-gray-400 tabular-nums"
+                          className="text-gray-900 tabular-nums text-right"
                         >
-                          {formatInteger(entry.totalInvited)}
-                        </Typography>
-                      </div>
-                      <div className="flex items-center justify-end pr-4 py-3 whitespace-nowrap">
-                        <Typography
-                          variant="body"
-                          level={3}
-                          className="text-gray-900 tabular-nums"
-                        >
-                          {entry.reward > 0
-                            ? `${formatTokenAmount(entry.reward)} WDD`
+                          {entry.totalSubsidy > 0
+                            ? `${formatTokenAmount(entry.totalSubsidy)} WDD`
                             : "0 WDD"}
                         </Typography>
                       </div>
-                    </Fragment>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-                {dictionary.pages.govern.parties.ambassadors.no_rewards_yet}
-              </div>
-            )}
-          </div>
-        ) : activeTab === "subsidies" ? (
-          <div className="flex flex-col items-start w-full p-6">
-            <div className="w-full rounded-2xl border border-gray-200 bg-linear-to-br from-gray-50 to-white p-6 mb-6 flex flex-col items-center text-center">
-              <Typography
-                variant="subtitle"
-                level={1}
-                className="mb-[10px]! text-[22px] font-semibold"
-              >
-                {dictionary.pages.govern.parties.subsidies.title}
-              </Typography>
-              <Typography
-                variant="body"
-                level={3}
-                className="text-center text-gray-500 mt-px!"
-              >
-                {dictionary.pages.govern.parties.subsidies.description}
-              </Typography>
-              <div className="mt-5 w-full">
-                <Button
-                  size="sm"
-                  onClick={() => setIsLearnMoreDialogOpen(true)}
-                  fullWidth
-                >
-                  {dictionary.pages.govern.parties.learn_more}
-                </Button>
-              </div>
+              ) : (
+                <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
+                  {dictionary.pages.govern.parties.subsidies.no_subsidies_yet}
+                </div>
+              )}
             </div>
+          ) : null}
+        </main>
 
-            <LearnMoreDialog
-              open={isLearnMoreDialogOpen}
-              onOpenChange={setIsLearnMoreDialogOpen}
-              title={dictionary.pages.govern.parties.learn_more}
-              externalLink={{
-                url: "https://wiki.worldrepublic.org/building-blocks/party-subsidies",
-                label: dictionary.pages.govern.parties.subsidies.title,
-              }}
-            />
+        <PartyDetailDrawer
+          open={isPartyDrawerOpen}
+          onOpenChange={setIsPartyDrawerOpen}
+          party={selectedPartyForDrawer}
+          dictionary={dictionary}
+          lang={lang}
+        />
 
-            <Typography
-              variant="subtitle"
-              level={1}
-              className="mb-3! text-[19px] font-semibold"
-            >
-              {dictionary.pages.govern.parties.ambassadors.leaderboard}
-            </Typography>
-
-            {subsidyLeaderboardLoading ? (
-              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
-                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3">
-                  <Skeleton height={20} width={100} className="rounded" />
-                </div>
-                <div className="divide-y divide-gray-100">
-                  {[0, 1, 2].map((i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between px-4 py-3 gap-4"
-                    >
-                      <Skeleton height={16} width="60%" className="rounded" />
-                      <Skeleton height={16} width="20%" className="rounded" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : subsidyLeaderboardError ? (
-              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-                {dictionary.toasts.generic_error}
-              </div>
-            ) : subsidyLeaderboard && subsidyLeaderboard.length > 0 ? (
-              <div className="rounded-xl border border-gray-200 overflow-hidden w-full">
-                <div className="border-b border-gray-200 bg-linear-to-r from-gray-50 to-gray-0 px-4 py-3 grid grid-cols-[1fr_auto] gap-4">
-                  <Typography
-                    variant="subtitle"
-                    level={3}
-                    className="text-gray-500"
-                  >
-                    {dictionary.pages.govern.parties.detail.leader}
-                  </Typography>
-                  <Typography
-                    variant="subtitle"
-                    level={3}
-                    className="text-gray-500 text-right"
-                  >
-                    {dictionary.pages.govern.parties.subsidies.col_subsidy}
-                  </Typography>
-                </div>
-                <div className="divide-y divide-gray-100">
-                  {subsidyWithRank.map(({ entry, rank }) => (
-                    <div
-                      key={entry.partyId}
-                      onClick={() => {
-                        setSelectedPartyForDrawer({
-                          id: entry.partyId,
-                          name: entry.partyName,
-                        } as Party);
-                        setIsPartyDrawerOpen(true);
-                      }}
-                      className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3 cursor-pointer"
-                    >
-                      <div className="flex items-center gap-2 min-w-0">
-                        <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
-                          {rank}
-                        </span>
-                        <Typography
-                          variant="body"
-                          level={3}
-                          className="font-medium text-gray-900 truncate"
-                          title={`${entry.leaderUsername} (${entry.partyName})`}
-                        >
-                          {entry.leaderUsername}
-                          <span className="text-gray-400">
-                            {" "}
-                            ({entry.partyName})
-                          </span>
-                        </Typography>
-                      </div>
-                      <Typography
-                        variant="body"
-                        level={3}
-                        className="text-gray-900 tabular-nums text-right"
-                      >
-                        {entry.totalSubsidy > 0
-                          ? `${formatTokenAmount(entry.totalSubsidy)} WDD`
-                          : "0 WDD"}
-                      </Typography>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div className="flex flex-1 items-center justify-center text-sm text-gray-500 w-full mt-4 mb-8">
-                {dictionary.pages.govern.parties.subsidies.no_subsidies_yet}
-              </div>
-            )}
-          </div>
-        ) : null}
-      </main>
-
-      <PartyDetailDrawer
-        open={isPartyDrawerOpen}
-        onOpenChange={setIsPartyDrawerOpen}
-        party={selectedPartyForDrawer}
-        dictionary={dictionary}
-        lang={lang}
-      />
-
-      <SignInDialog
-        open={showSignInDialog}
-        onOpenChange={setShowSignInDialog}
-        dictionary={dictionary}
-      />
+        <SignInDialog
+          open={showSignInDialog}
+          onOpenChange={setShowSignInDialog}
+          dictionary={dictionary}
+        />
 
         <ScrollToTopButton
           show={showLeaderboardScrollToTop && showScrollToTop}
