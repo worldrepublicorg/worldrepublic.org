@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Pastāvīgi noņemiet visus savus datus"
         },
-        "verification": "VERIFIKĀCIJA"
+        "verification": "VERIFIKĀCIJA",
+        "google_linked": "Saistīts"
       },
       "username": {
         "label": "Lietotājvārds",

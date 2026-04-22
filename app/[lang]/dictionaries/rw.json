@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Kuraho byose byawe byose ubudahoraho"
         },
-        "verification": "IGENZURA"
+        "verification": "IGENZURA",
+        "google_linked": "Yahujwe"
       },
       "username": {
         "label": "Izina ry'ukoresha",

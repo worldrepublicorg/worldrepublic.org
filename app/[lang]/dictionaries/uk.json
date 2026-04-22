@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Назавжди видалити всі ваші дані"
         },
-        "verification": "ВЕРИФІКАЦІЯ"
+        "verification": "ВЕРИФІКАЦІЯ",
+        "google_linked": "Підключено"
       },
       "username": {
         "label": "Ім'я користувача",

@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Навсегда удалить все ваши данные"
         },
-        "verification": "ВЕРИФИКАЦИЯ"
+        "verification": "ВЕРИФИКАЦИЯ",
+        "google_linked": "Подключён"
       },
       "username": {
         "label": "Имя пользователя",

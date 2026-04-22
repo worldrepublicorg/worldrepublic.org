@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
         },
-        "verification": "تایید"
+        "verification": "تایید",
+        "google_linked": "تړلی"
       },
       "username": {
         "label": "د کارونکي نوم",

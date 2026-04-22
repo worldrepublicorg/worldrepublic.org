@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "તમારા બધા ડેટાને કાયમી રીતે દૂર કરો"
         },
-        "verification": "ચકાસણી"
+        "verification": "ચકાસણી",
+        "google_linked": "જોડાયેલ"
       },
       "username": {
         "label": "વપરાશકર્તા નામ",

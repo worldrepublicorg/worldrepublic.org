@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Eliminar permanentemente todos tus datos"
         },
-        "verification": "VERIFICACIÓN"
+        "verification": "VERIFICACIÓN",
+        "google_linked": "Vinculada"
       },
       "username": {
         "label": "Nombre de usuario",

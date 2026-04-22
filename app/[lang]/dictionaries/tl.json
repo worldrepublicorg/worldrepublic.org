@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Permanenteng alisin ang lahat ng iyong data"
         },
-        "verification": "BERIPIKASYON"
+        "verification": "BERIPIKASYON",
+        "google_linked": "Naka-link"
       },
       "username": {
         "label": "Pangalan ng gumagamit",

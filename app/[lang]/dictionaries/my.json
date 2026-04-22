@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
         },
-        "verification": "အတည်ပြုခြင်း"
+        "verification": "အတည်ပြုခြင်း",
+        "google_linked": "ချိတ်ဆက်ထားသည်"
       },
       "username": {
         "label": "အသုံးပြုသူအမည်",

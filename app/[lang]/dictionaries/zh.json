@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "永久删除您的所有数据"
         },
-        "verification": "验证"
+        "verification": "验证",
+        "google_linked": "已链接"
       },
       "username": {
         "label": "用户名",

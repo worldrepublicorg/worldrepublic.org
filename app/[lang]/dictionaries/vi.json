@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
         },
-        "verification": "XÁC MINH"
+        "verification": "XÁC MINH",
+        "google_linked": "Đã liên kết"
       },
       "username": {
         "label": "Tên người dùng",

@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Poista pysyvästi kaikki tietosi"
         },
-        "verification": "VAHVISTUS"
+        "verification": "VAHVISTUS",
+        "google_linked": "Linkitetty"
       },
       "username": {
         "label": "Käyttäjänimi",

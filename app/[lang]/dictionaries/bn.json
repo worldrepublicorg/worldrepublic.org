@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
         },
-        "verification": "যাচাইকরণ"
+        "verification": "যাচাইকরণ",
+        "google_linked": "সংযুক্ত"
       },
       "username": {
         "label": "ব্যবহারকারীর নাম",

@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
         },
-        "verification": "تأیید"
+        "verification": "تأیید",
+        "google_linked": "متصل"
       },
       "username": {
         "label": "نام کاربری",

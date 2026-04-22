@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
         },
-        "verification": "ማረጋገጫ"
+        "verification": "ማረጋገጫ",
+        "google_linked": "ተገናኝቷል"
       },
       "username": {
         "label": "የተጠቃሚ ስም",

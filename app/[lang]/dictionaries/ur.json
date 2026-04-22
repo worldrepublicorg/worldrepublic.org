@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "اپنا تمام ڈیٹا مستقل طور پر ہٹائیں"
         },
-        "verification": "تصدیق"
+        "verification": "تصدیق",
+        "google_linked": "منسلک"
       },
       "username": {
         "label": "صارف نام",

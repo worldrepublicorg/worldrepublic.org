@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Permanentiškai pašalinkite visus savo duomenis"
         },
-        "verification": "PATVIRTINIMAS"
+        "verification": "PATVIRTINIMAS",
+        "google_linked": "Prijungta"
       },
       "username": {
         "label": "Vartotojo vardas",

@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Buang semua data anda secara kekal"
         },
-        "verification": "PENGESAHAN"
+        "verification": "PENGESAHAN",
+        "google_linked": "Disambungkan"
       },
       "username": {
         "label": "Nama pengguna",

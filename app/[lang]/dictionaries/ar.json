@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "إزالة جميع بياناتك بشكل دائم"
         },
-        "verification": "التحقق"
+        "verification": "التحقق",
+        "google_linked": "مرتبط"
       },
       "username": {
         "label": "اسم المستخدم",

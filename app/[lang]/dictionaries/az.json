@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Bütün məlumatlarınızı daimi olaraq silin"
         },
-        "verification": "DOĞRULAMA"
+        "verification": "DOĞRULAMA",
+        "google_linked": "Bağlı"
       },
       "username": {
         "label": "İstifadəçi adı",

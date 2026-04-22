@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Si toos ah ka saar dhammaan xogtaada"
         },
-        "verification": "XAQIIJIN"
+        "verification": "XAQIIJIN",
+        "google_linked": "Xiriirsan"
       },
       "username": {
         "label": "Magaca isticmaalaha",

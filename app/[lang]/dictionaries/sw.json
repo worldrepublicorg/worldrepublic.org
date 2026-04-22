@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Ondoa data zako zote kwa kudumu"
         },
-        "verification": "UTHIBITISHAJI"
+        "verification": "UTHIBITISHAJI",
+        "google_linked": "Imeunganishwa"
       },
       "username": {
         "label": "Jina la mtumiaji",

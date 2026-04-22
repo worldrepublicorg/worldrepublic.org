@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Véglegesen távolítsa el az összes adatát"
         },
-        "verification": "ELLENŐRZÉS"
+        "verification": "ELLENŐRZÉS",
+        "google_linked": "Összekapcsolva"
       },
       "username": {
         "label": "Felhasználónév",

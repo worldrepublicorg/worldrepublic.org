@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
         },
-        "verification": "ΕΠΑΛΗΘΕΥΣΗ"
+        "verification": "ΕΠΑΛΗΘΕΥΣΗ",
+        "google_linked": "Συνδεδεμένος"
       },
       "username": {
         "label": "Όνομα χρήστη",

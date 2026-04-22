@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
         },
-        "verification": "TASDIQLASH"
+        "verification": "TASDIQLASH",
+        "google_linked": "Ulangan"
       },
       "username": {
         "label": "Foydalanuvchi nomi",

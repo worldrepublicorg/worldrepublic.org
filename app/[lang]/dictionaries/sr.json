@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Трајно уклоните све своје податке"
         },
-        "verification": "VERIFIKACIJA"
+        "verification": "VERIFIKACIJA",
+        "google_linked": "Повезан"
       },
       "username": {
         "label": "Корисничко име",

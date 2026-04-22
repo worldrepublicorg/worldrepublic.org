@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Rimuove permanentemente tutti i vostri dati"
         },
-        "verification": "VERIFICAZIONE"
+        "verification": "VERIFICAZIONE",
+        "google_linked": "Ligatu"
       },
       "username": {
         "label": "Nome d'utilizatore",

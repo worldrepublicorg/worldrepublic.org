@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
         },
-        "verification": "การยืนยัน"
+        "verification": "การยืนยัน",
+        "google_linked": "เชื่อมต่อแล้ว"
       },
       "username": {
         "label": "ชื่อผู้ใช้",

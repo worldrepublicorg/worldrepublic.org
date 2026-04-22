@@ -441,7 +441,17 @@ export default function AccountPageClient({
                 </Typography>
               </div>
               <div className="flex flex-col gap-2">
-                {!googleLinked && (
+                {googleLinked ? (
+                  <div>
+                    <CustomListItem
+                      label={dictionary.pages.wallet.sections.google_account}
+                      description={
+                        dictionary.pages.wallet.sections.google_linked
+                      }
+                      noPointer
+                    />
+                  </div>
+                ) : (
                   <div
                     onClick={(e) => {
                       e.stopPropagation();

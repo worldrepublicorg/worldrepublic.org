@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Trvale odstraňte všechna vaše data"
         },
-        "verification": "OVĚŘENÍ"
+        "verification": "OVĚŘENÍ",
+        "google_linked": "Připojeno"
       },
       "username": {
         "label": "Uživatelské jméno",

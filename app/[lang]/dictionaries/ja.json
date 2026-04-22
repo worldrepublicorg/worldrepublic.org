@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "すべてのデータを永続的に削除"
         },
-        "verification": "検証"
+        "verification": "検証",
+        "google_linked": "リンク済み"
       },
       "username": {
         "label": "ユーザー名",

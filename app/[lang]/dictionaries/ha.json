@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Cire duk bayanan ku na dindindin"
         },
-        "verification": "TABBATARWA"
+        "verification": "TABBATARWA",
+        "google_linked": "An haɗa"
       },
       "username": {
         "label": "Sunan mai amfani",

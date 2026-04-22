@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Tüm verilerinizi kalıcı olarak kaldırın"
         },
-        "verification": "DOĞRULAMA"
+        "verification": "DOĞRULAMA",
+        "google_linked": "Bağlı"
       },
       "username": {
         "label": "Kullanıcı adı",

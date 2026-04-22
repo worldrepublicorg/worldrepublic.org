@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Verwijder permanent al uw gegevens"
         },
-        "verification": "VERIFICATIE"
+        "verification": "VERIFICATIE",
+        "google_linked": "Gekoppeld"
       },
       "username": {
         "label": "Gebruikersnaam",

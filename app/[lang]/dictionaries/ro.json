@@ -261,7 +261,8 @@
         "delete_account": {
           "description": "Eliminați permanent toate datele dvs."
         },
-        "verification": "VERIFICARE"
+        "verification": "VERIFICARE",
+        "google_linked": "Linkuit"
       },
       "username": {
         "label": "Nume de utilizator",
