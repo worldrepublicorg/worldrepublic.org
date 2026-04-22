@@ -8,7 +8,7 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PiCopy, PiInfoFill, PiLinkSimple, PiUserFocus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { VoteButton } from "@/components/vote/vote-button";
@@ -27,6 +27,8 @@ export function PartyDetailContent({
 }: PartyDetailContentProps) {
   const { lang } = useParams<{ lang: string }>();
   const { toast } = useToast();
+  const toastRef = useRef(toast);
+  toastRef.current = toast;
 
   const [party, setParty] = useState<Party | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +36,8 @@ export function PartyDetailContent({
 
   // Fetch party data
   useEffect(() => {
+    let cancelled = false;
+
     const fetchData = async () => {
       if (!partyId || typeof partyId !== "string") {
         return;
@@ -45,25 +49,32 @@ export function PartyDetailContent({
 
         // Fetch party details
         const partyData = await getParty(partyId);
+        if (cancelled) return;
         if (!partyData) {
           throw new Error("Party not found");
         }
         setParty(partyData);
       } catch (error) {
+        if (cancelled) return;
         console.error("[PartyDetailContent] Error fetching data:", error);
         setError(
           error instanceof Error ? error.message : "Failed to load party data",
         );
-        toast.error({
+        toastRef.current.error({
           title: dictionary.pages.govern.parties.detail.failed_to_load,
         });
       } finally {
-        setIsLoading(false);
+        if (!cancelled) {
+          setIsLoading(false);
+        }
       }
     };
 
-    fetchData();
-  }, [partyId, dictionary.pages.govern.parties.detail.failed_to_load, toast]);
+    void fetchData();
+    return () => {
+      cancelled = true;
+    };
+  }, [partyId, dictionary.pages.govern.parties.detail.failed_to_load]);
 
   // Copy leader address to clipboard
   const handleCopyLeaderAddress = async () => {
