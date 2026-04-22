@@ -225,9 +225,9 @@ export function ConnectWalletButton({
             {walletPickerDialogDescription}
           </AlertDialogDescription>
           <div className="flex flex-col gap-2">
-            {availableDesktopConnectors.map((connector, index) => (
+            {availableDesktopConnectors.map((connector) => (
               <Button
-                key={`${connector.id}-${connector.name}-${index}`}
+                key={connector.id}
                 variant="tertiary"
                 fullWidth
                 disabled={connect.isPending}
