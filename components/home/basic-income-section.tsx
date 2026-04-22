@@ -63,13 +63,11 @@ export function BasicIncomeSection({
   const redWarningThreshold = capAmount * 0.9;
   const isRedCapWarning =
     !isSelfVerified &&
-    claimedTotal >= redWarningThreshold &&
-    claimedTotal < capAmount - 1e-9;
+    claimedTotal >= redWarningThreshold;
   const isYellowCapWarning =
     !isSelfVerified &&
     claimedTotal >= yellowWarningThreshold &&
-    claimedTotal < redWarningThreshold &&
-    claimedTotal < capAmount - 1e-9;
+    claimedTotal < redWarningThreshold;
   const learnMoreWarningLevel = isRedCapWarning
     ? "red"
     : isYellowCapWarning

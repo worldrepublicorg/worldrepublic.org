@@ -267,14 +267,12 @@ export function SavingsSection({
   const isRedCapWarning =
     isOffchainAccountSelected &&
     !isSelfVerified &&
-    basicIncomeAndInterestClaimedTotal >= redWarningThreshold &&
-    basicIncomeAndInterestClaimedTotal < capAmount - 1e-9;
+    basicIncomeAndInterestClaimedTotal >= redWarningThreshold;
   const isYellowCapWarning =
     isOffchainAccountSelected &&
     !isSelfVerified &&
     basicIncomeAndInterestClaimedTotal >= yellowWarningThreshold &&
-    basicIncomeAndInterestClaimedTotal < redWarningThreshold &&
-    basicIncomeAndInterestClaimedTotal < capAmount - 1e-9;
+    basicIncomeAndInterestClaimedTotal < redWarningThreshold;
   const learnMoreWarningLevel = isRedCapWarning
     ? "red"
     : isYellowCapWarning
