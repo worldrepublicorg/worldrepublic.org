@@ -9,7 +9,7 @@ import {
   transactions,
   votes,
 } from "../db/schema";
-import { computeStreamAccrued, STREAM_DURATION_S } from "../streams";
+import { STREAM_DURATION_S } from "../streams";
 
 type Schema = typeof schemaImport;
 // biome-ignore lint/suspicious/noExplicitAny: Supports both postgres-js, neon-serverless, and neon-http drivers

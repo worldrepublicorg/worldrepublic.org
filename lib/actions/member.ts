@@ -1,6 +1,6 @@
 "use server";
 
-import { and, asc, desc, eq, gt, inArray, not, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, inArray, or, sql } from "drizzle-orm";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { auth } from "@/lib/auth";
 import { db, getDbReadOnly } from "@/lib/db/connection";

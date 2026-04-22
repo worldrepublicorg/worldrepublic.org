@@ -1,5 +1,4 @@
 import { Skeleton } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiCaretLeft } from "react-icons/pi";
 import { TopBar } from "@/components/topbar";
 
 /**

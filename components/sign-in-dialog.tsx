@@ -14,7 +14,6 @@ import {
   Input,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { useRef, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
