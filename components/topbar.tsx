@@ -1,5 +1,5 @@
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
-import React from "react";
+import type React from "react";
 import { cn } from "@/lib/utils";
 
 interface TopBarProps {

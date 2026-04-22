@@ -68,7 +68,7 @@ export const getBalancePrecision = (balance: number): number => {
  * @returns The truncated number
  */
 export const truncateToPrecision = (num: number, precision: number): number => {
-  const multiplier = Math.pow(10, precision);
+  const multiplier = 10 ** precision;
   return Math.floor(num * multiplier) / multiplier;
 };
 

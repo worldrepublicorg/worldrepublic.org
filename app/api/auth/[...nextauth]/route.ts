@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { handlers } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {

@@ -1,5 +1,5 @@
 import { unstable_cache } from "next/cache";
-import en from "./en.json";
+import type en from "./en.json";
 
 export type Dictionary = typeof en;
 

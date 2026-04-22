@@ -1,5 +1,9 @@
 import { Suspense } from "react";
-import { Dictionary, getDictionary, locales } from "@/app/[lang]/dictionaries";
+import {
+  type Dictionary,
+  getDictionary,
+  locales,
+} from "@/app/[lang]/dictionaries";
 import { LanguagePageSkeleton } from "@/components/menu/language-page-skeleton";
 import LanguagePageClient from "./page-client";
 

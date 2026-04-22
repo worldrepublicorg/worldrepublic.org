@@ -1,7 +1,7 @@
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
 import { forwardRef } from "react";
-import { CustomListItemProps } from "@/lib/types";
+import type { CustomListItemProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const CustomListItem = forwardRef<HTMLButtonElement, CustomListItemProps>(
