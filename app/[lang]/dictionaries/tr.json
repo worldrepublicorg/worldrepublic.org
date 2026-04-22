@@ -319,7 +319,8 @@
         "learn_about_self": "Self hakkında bilgi edinin"
       },
       "verification_warning": {
-        "title": "Doğrulama al"
+        "title": "Doğrulama al",
+        "reward_cap_banner": "Temel gelir ve birikim ödülleri, doğrulanmamış vatandaşlar için sınırlandırılmıştır. Sınırsız kazanmak için hesabınızı doğrulayın."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Pelajari tentang Self"
       },
       "verification_warning": {
-        "title": "Dapatkan verifikasi"
+        "title": "Dapatkan verifikasi",
+        "reward_cap_banner": "Reward pendapatan dasar dan tabungan dibatasi untuk warga yang belum terverifikasi. Verifikasi akun Anda untuk memperoleh tanpa batas."
       }
     },
     "wdd_import_info": {

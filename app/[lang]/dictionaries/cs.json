@@ -319,7 +319,8 @@
         "learn_about_self": "Zjistěte více o Self"
       },
       "verification_warning": {
-        "title": "Získejte ověření"
+        "title": "Získejte ověření",
+        "reward_cap_banner": "Odměny za základní příjem a spoření jsou pro neověřené občany omezené. Ověřte svůj účet a vydělávejte bez omezení."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Baro wax ku saabsan Self"
       },
       "verification_warning": {
-        "title": "Heli xaqiijinta"
+        "title": "Heli xaqiijinta",
+        "reward_cap_banner": "Abaalmarinnada dakhliga aasaasiga ah iyo kaydka waxaa xadidan muwaadiniinta aan la xaqiijin. Xaqiiji akoonkaaga si aad u kasbato adigoon xad lahayn."
       }
     },
     "wdd_import_info": {

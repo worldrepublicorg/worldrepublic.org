@@ -319,7 +319,8 @@
         "learn_about_self": "Spoznajte Self"
       },
       "verification_warning": {
-        "title": "Pridobite preverjanje"
+        "title": "Pridobite preverjanje",
+        "reward_cap_banner": "Nagrade za osnovni dohodek in varčevanje so omejene za nepreverjene državljane. Potrdite svoj račun, da boste zaslužili brez omejitev."
       }
     },
     "wdd_import_info": {

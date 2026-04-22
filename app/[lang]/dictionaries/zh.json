@@ -319,7 +319,8 @@
         "learn_about_self": "了解 Self"
       },
       "verification_warning": {
-        "title": "获取验证"
+        "title": "获取验证",
+        "reward_cap_banner": "未验证公民的基础收入和储蓄奖励设有上限。请验证您的账户以无限制获取奖励。"
       }
     },
     "wdd_import_info": {

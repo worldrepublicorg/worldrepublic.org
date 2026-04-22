@@ -319,7 +319,8 @@
         "learn_about_self": "Jifunze kuhusu Self"
       },
       "verification_warning": {
-        "title": "Pata uthibitisho"
+        "title": "Pata uthibitisho",
+        "reward_cap_banner": "Zawadi za mapato ya msingi na akiba zina kikomo kwa raia ambao hawajathibitishwa. Thibitisha akaunti yako ili upate bila kikomo."
       }
     },
     "wdd_import_info": {

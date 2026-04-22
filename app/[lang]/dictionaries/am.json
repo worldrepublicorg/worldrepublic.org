@@ -319,7 +319,8 @@
         "learn_about_self": "ስለ Self ይማሩ"
       },
       "verification_warning": {
-        "title": "ማረጋገጫ ያግኙ"
+        "title": "ማረጋገጫ ያግኙ",
+        "reward_cap_banner": "የመሠረታዊ ገቢ እና የቁጠባ ሽልማቶች ለማረጋገጫ ያልተደረጉ ዜጎች ገደብ አላቸው። ያለ ገደብ ለማግኘት መለያዎን ያረጋግጡ።"
       }
     },
     "wdd_import_info": {

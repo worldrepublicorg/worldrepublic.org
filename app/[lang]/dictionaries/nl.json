@@ -319,7 +319,8 @@
         "learn_about_self": "Meer over Self"
       },
       "verification_warning": {
-        "title": "Verificatie krijgen"
+        "title": "Verificatie krijgen",
+        "reward_cap_banner": "Beloningen voor basisinkomen en sparen zijn begrensd voor niet-geverifieerde burgers. Verifieer je account om zonder limieten te verdienen."
       }
     },
     "wdd_import_info": {

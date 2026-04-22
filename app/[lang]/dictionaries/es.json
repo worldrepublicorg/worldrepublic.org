@@ -319,7 +319,8 @@
         "learn_about_self": "Más información sobre Self"
       },
       "verification_warning": {
-        "title": "Obtener verificación"
+        "title": "Obtener verificación",
+        "reward_cap_banner": "Las recompensas de ingreso básico y ahorros están limitadas para ciudadanos no verificados. Verifica tu cuenta para ganar sin límites."
       }
     },
     "wdd_import_info": {

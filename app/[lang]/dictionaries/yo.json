@@ -319,7 +319,8 @@
         "learn_about_self": "Kọ ẹkọ nípa Self"
       },
       "verification_warning": {
-        "title": "Gba ijẹrisi"
+        "title": "Gba ijẹrisi",
+        "reward_cap_banner": "Ere owo-wiwọle ipilẹ ati ifowopamọ ni opin fun awọn ara ilu ti a ko tii jẹrisi. Jẹrisi àkọọlẹ rẹ lati maa rí èrè lai sí opin."
       }
     },
     "wdd_import_info": {

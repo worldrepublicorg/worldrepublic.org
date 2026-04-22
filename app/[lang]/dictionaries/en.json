@@ -319,7 +319,8 @@
         "status_not_completed": "Not verified"
       },
       "verification_warning": {
-        "title": "Get verified"
+        "title": "Get verified",
+        "reward_cap_banner": "Basic income and savings rewards are capped for unverified citizens. Verify your account to earn without limits."
       }
     },
     "wdd_import_info": {

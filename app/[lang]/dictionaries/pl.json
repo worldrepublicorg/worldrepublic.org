@@ -319,7 +319,8 @@
         "learn_about_self": "Dowiedz się o Self"
       },
       "verification_warning": {
-        "title": "Uzyskaj weryfikację"
+        "title": "Uzyskaj weryfikację",
+        "reward_cap_banner": "Nagrody z dochodu podstawowego i oszczędności są ograniczone dla niezweryfikowanych obywateli. Zweryfikuj konto, aby zarabiać bez limitów."
       }
     },
     "wdd_import_info": {

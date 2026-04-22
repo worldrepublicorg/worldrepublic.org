@@ -319,7 +319,8 @@
         "learn_about_self": "Scopri di più su Self"
       },
       "verification_warning": {
-        "title": "Ottieni verifica"
+        "title": "Ottieni verifica",
+        "reward_cap_banner": "Le ricompense di reddito di base e risparmio sono limitate per i cittadini non verificati. Verifica il tuo account per guadagnare senza limiti."
       }
     },
     "wdd_import_info": {

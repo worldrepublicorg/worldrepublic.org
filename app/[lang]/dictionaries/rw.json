@@ -319,7 +319,8 @@
         "learn_about_self": "Menya Self"
       },
       "verification_warning": {
-        "title": "Bona kwemeza"
+        "title": "Bona kwemeza",
+        "reward_cap_banner": "Ibihembo by’umushahara fatizo n’inyungu zo kwizigamira bigirirwa imipaka ku baturage bataragenzurwa. Emeza konti yawe kugira ngo winjize nta mipaka."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Aflați despre Self"
       },
       "verification_warning": {
-        "title": "Obțineți verificarea"
+        "title": "Obțineți verificarea",
+        "reward_cap_banner": "Recompensele pentru venitul de bază și economii sunt limitate pentru cetățenii neverificați. Verifică-ți contul pentru a câștiga fără limite."
       }
     },
     "wdd_import_info": {

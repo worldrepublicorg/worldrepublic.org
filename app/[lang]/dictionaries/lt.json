@@ -319,7 +319,8 @@
         "learn_about_self": "Sužinokite apie Self"
       },
       "verification_warning": {
-        "title": "Gaukite patvirtinimą"
+        "title": "Gaukite patvirtinimą",
+        "reward_cap_banner": "Pagrindinių pajamų ir taupymo atlygiams nepatvirtintiems piliečiams taikomas limitas. Patvirtinkite paskyrą, kad gautumėte be apribojimų."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Self haqida bilib oling"
       },
       "verification_warning": {
-        "title": "Tasdiqlash"
+        "title": "Tasdiqlash",
+        "reward_cap_banner": "Tasdiqlanmagan fuqarolar uchun asosiy daromad va jamg‘arma mukofotlari cheklangan. Cheklovsiz daromad olish uchun hisobingizni tasdiqlang."
       }
     },
     "wdd_import_info": {

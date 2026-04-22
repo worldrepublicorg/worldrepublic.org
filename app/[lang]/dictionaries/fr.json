@@ -319,7 +319,8 @@
         "learn_about_self": "En savoir plus sur Self"
       },
       "verification_warning": {
-        "title": "Se faire vérifier"
+        "title": "Se faire vérifier",
+        "reward_cap_banner": "Les récompenses de revenu de base et d’épargne sont plafonnées pour les citoyens non vérifiés. Vérifiez votre compte pour gagner sans limites."
       }
     },
     "wdd_import_info": {

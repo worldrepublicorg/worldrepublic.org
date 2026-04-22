@@ -325,6 +325,10 @@ export function SavingsSection({
             title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
             warningLevel={learnMoreWarningLevel}
+            warningText={
+              dictionary.components.identity.verification_warning
+                .reward_cap_banner
+            }
             externalLink={{
               url: "https://worldscan.org/address/0x234302db10a54bdc11094a8ef816b0eaa5fce3f7#code",
               label: dictionary.pages.earn.savings.smart_contract_link,

@@ -319,7 +319,8 @@
         "learn_about_self": "Mehr über Self erfahren"
       },
       "verification_warning": {
-        "title": "Verifizierung erhalten"
+        "title": "Verifizierung erhalten",
+        "reward_cap_banner": "Belohnungen aus Grundeinkommen und Sparen sind für nicht verifizierte Bürger begrenzt. Verifiziere dein Konto, um ohne Limits zu verdienen."
       }
     },
     "wdd_import_info": {

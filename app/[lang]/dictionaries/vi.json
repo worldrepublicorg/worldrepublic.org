@@ -319,7 +319,8 @@
         "learn_about_self": "Tìm hiểu về Self"
       },
       "verification_warning": {
-        "title": "Nhận xác minh"
+        "title": "Nhận xác minh",
+        "reward_cap_banner": "Phần thưởng thu nhập cơ bản và tiết kiệm bị giới hạn đối với công dân chưa xác minh. Hãy xác minh tài khoản để nhận không giới hạn."
       }
     },
     "wdd_import_info": {

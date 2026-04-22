@@ -319,7 +319,8 @@
         "learn_about_self": "Zistite viac o Self"
       },
       "verification_warning": {
-        "title": "Získajte overenie"
+        "title": "Získajte overenie",
+        "reward_cap_banner": "Odmeny za základný príjem a sporenie sú pre neoverených občanov obmedzené. Overte si účet, aby ste zarábali bez obmedzení."
       }
     },
     "wdd_import_info": {

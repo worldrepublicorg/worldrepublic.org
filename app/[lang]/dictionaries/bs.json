@@ -319,7 +319,8 @@
         "learn_about_self": "Saznajte više o Self"
       },
       "verification_warning": {
-        "title": "Dobijte verifikaciju"
+        "title": "Dobijte verifikaciju",
+        "reward_cap_banner": "Nagrade za osnovni prihod i štednju su ograničene za neverifikovane građane. Verifikujte svoj račun da zarađujete bez ograničenja."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Self について学ぶ"
       },
       "verification_warning": {
-        "title": "認証を取得"
+        "title": "認証を取得",
+        "reward_cap_banner": "未認証の市民には、ベーシックインカムと貯蓄の報酬に上限があります。制限なく受け取るにはアカウントを認証してください。"
       }
     },
     "wdd_import_info": {

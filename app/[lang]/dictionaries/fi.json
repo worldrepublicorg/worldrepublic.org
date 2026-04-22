@@ -319,7 +319,8 @@
         "learn_about_self": "Lue lisää Self"
       },
       "verification_warning": {
-        "title": "Hanki vahvistus"
+        "title": "Hanki vahvistus",
+        "reward_cap_banner": "Perustulon ja säästöjen palkkiot ovat rajoitettuja vahvistamattomille kansalaisille. Vahvista tilisi ansaitaksesi ilman rajoituksia."
       }
     },
     "wdd_import_info": {

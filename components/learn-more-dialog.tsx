@@ -28,6 +28,8 @@ interface LearnMoreDialogProps {
   externalLink?: { url: string; label: string };
   /** Optional warning banner shown before the external link */
   warningLevel?: LearnMoreWarningLevel;
+  /** Optional warning copy shown when warningLevel is provided */
+  warningText?: string;
 }
 
 /**
@@ -42,14 +44,10 @@ export function LearnMoreDialog({
   info,
   externalLink,
   warningLevel,
+  warningText,
 }: LearnMoreDialogProps) {
-  const hasContent = info || externalLink || warningLevel;
-  const warningBannerText =
-    warningLevel === "red"
-      ? "You are very close to the unverified cap. Verify your account now to avoid interruptions."
-      : warningLevel === "yellow"
-        ? "You are approaching the unverified cap. Verify your account soon to keep earning without limits."
-        : null;
+  const warningBannerText = warningLevel ? warningText : null;
+  const hasContent = info || externalLink || Boolean(warningBannerText);
   const warningBannerClassName =
     warningLevel === "red" ? "bg-red-50" : "bg-yellow-50";
   const warningIconClassName =
@@ -75,7 +73,7 @@ export function LearnMoreDialog({
         {info &&
           (externalLink ? (
             <AlertDialogDescription
-              className={`text-gray-500 ${warningLevel ? "mb-4" : ""}`}
+              className={`text-gray-500 ${warningBannerText ? "mb-4" : ""}`}
             >
               {info}
             </AlertDialogDescription>

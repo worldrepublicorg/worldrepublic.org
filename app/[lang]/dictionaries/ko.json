@@ -319,7 +319,8 @@
         "learn_about_self": "Self 알아보기"
       },
       "verification_warning": {
-        "title": "인증 받기"
+        "title": "인증 받기",
+        "reward_cap_banner": "미인증 시민의 기본소득 및 저축 보상에는 한도가 있습니다. 제한 없이 받으려면 계정을 인증하세요."
       }
     },
     "wdd_import_info": {

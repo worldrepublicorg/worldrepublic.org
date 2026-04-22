@@ -319,7 +319,8 @@
         "learn_about_self": "Alamin ang tungkol sa Self"
       },
       "verification_warning": {
-        "title": "Kumuha ng pagpapatunay"
+        "title": "Kumuha ng pagpapatunay",
+        "reward_cap_banner": "May limit ang mga reward sa basic income at savings para sa mga hindi beripikadong mamamayan. I-verify ang iyong account para kumita nang walang limitasyon."
       }
     },
     "wdd_import_info": {

@@ -319,7 +319,8 @@
         "learn_about_self": "Self haqqında öyrənin"
       },
       "verification_warning": {
-        "title": "Təsdiqlə"
+        "title": "Təsdiqlə",
+        "reward_cap_banner": "Əsas gəlir və yığım mükafatları təsdiqlənməmiş vətəndaşlar üçün məhdudlaşdırılıb. Limitsiz qazanmaq üçün hesabınızı təsdiqləyin."
       }
     },
     "wdd_import_info": {

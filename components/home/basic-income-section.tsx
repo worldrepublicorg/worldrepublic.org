@@ -150,6 +150,10 @@ export function BasicIncomeSection({
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               warningLevel={learnMoreWarningLevel}
+              warningText={
+                dictionary.components.identity.verification_warning
+                  .reward_cap_banner
+              }
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -190,6 +194,10 @@ export function BasicIncomeSection({
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
               warningLevel={learnMoreWarningLevel}
+              warningText={
+                dictionary.components.identity.verification_warning
+                  .reward_cap_banner
+              }
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -230,6 +238,10 @@ export function BasicIncomeSection({
             title={dictionary.pages.earn.tabs.basic_income}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
             warningLevel={learnMoreWarningLevel}
+            warningText={
+              dictionary.components.identity.verification_warning
+                .reward_cap_banner
+            }
             externalLink={{
               url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
               label: dictionary.pages.earn.basic_income.world_drachma,

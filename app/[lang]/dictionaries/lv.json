@@ -319,7 +319,8 @@
         "learn_about_self": "Uzziniet par Self"
       },
       "verification_warning": {
-        "title": "Iegūstiet apstiprinājumu"
+        "title": "Iegūstiet apstiprinājumu",
+        "reward_cap_banner": "Pamatienākumu un uzkrājumu atlīdzības neverificētiem pilsoņiem ir ierobežotas. Verificējiet savu kontu, lai pelnītu bez ierobežojumiem."
       }
     },
     "wdd_import_info": {

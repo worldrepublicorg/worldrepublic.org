@@ -319,7 +319,8 @@
         "learn_about_self": "Tudjon meg többet a Self-ről"
       },
       "verification_warning": {
-        "title": "Igazolás kérése"
+        "title": "Igazolás kérése",
+        "reward_cap_banner": "Az alapjövedelem- és megtakarítási jutalmak a nem ellenőrzött állampolgárok számára korlátozottak. Az korlátlan keresethez igazold a fiókodat."
       }
     },
     "wdd_import_info": {
