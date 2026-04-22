@@ -196,7 +196,6 @@ export function ElectionDetailContent({
         onOpenChange={setIsDrawerOpen}
         party={selectedPartyForDrawer}
         dictionary={dictionary}
-        lang={lang}
       />
     </div>
   );

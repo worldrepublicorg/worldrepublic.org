@@ -94,7 +94,7 @@ const BottomNav = () => {
 
                 touchStartRef.current = null;
               }}
-              onClick={(e) => {
+              onClick={() => {
                 // Fallback for desktop/mouse clicks
                 // This ensures navigation works even if touch events were intercepted
                 if (touchStartRef.current?.path === path) {

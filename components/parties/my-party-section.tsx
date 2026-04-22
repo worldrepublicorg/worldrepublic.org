@@ -18,7 +18,6 @@ interface MyPartySectionProps {
   isUserLeader: (party: Party) => boolean;
   shortenUrl: (url: string, maxLength?: number) => string;
   dictionary: Dictionary;
-  lang: string;
   onCreateParty: () => void;
   onOpenDrawer: (party: Party) => void;
   onEditParty: (party: Party) => void;
@@ -31,7 +30,6 @@ export function MyPartySection({
   isUserLeader,
   shortenUrl,
   dictionary,
-  lang,
   onCreateParty,
   onOpenDrawer,
   onEditParty,

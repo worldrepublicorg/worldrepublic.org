@@ -128,7 +128,6 @@ export default function GovernPageClient({
           <PoliticalPartyList
             initialParties={parties}
             dictionary={dictionary}
-            lang={lang}
           />
         ) : (
           <div className="flex grow items-center justify-center">

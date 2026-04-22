@@ -143,11 +143,7 @@ export default function PartyDetailPageClient({
 
       {partyId && (
         <div className="flex flex-1 flex-col p-6">
-          <PartyDetailContent
-            partyId={partyId}
-            dictionary={dictionary}
-            featuredElectionId={featuredElectionId}
-          />
+          <PartyDetailContent partyId={partyId} dictionary={dictionary} />
         </div>
       )}
     </div>

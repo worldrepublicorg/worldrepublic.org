@@ -850,7 +850,6 @@ export default function HomePageClient({
           onOpenChange={setIsPartyDrawerOpen}
           party={selectedPartyForDrawer}
           dictionary={dictionary}
-          lang={lang}
         />
 
         <SignInDialog

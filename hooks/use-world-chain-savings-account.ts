@@ -109,7 +109,6 @@ export function useWorldchainSavingsAccount() {
   const writeContract = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [refreshNonce, setRefreshNonce] = useState(0);
   const [optimisticAvailableInterest, setOptimisticAvailableInterest] =
     useState<number | null>(null);
   const [optimisticBalances, setOptimisticBalances] = useState<{
@@ -204,7 +203,6 @@ export function useWorldchainSavingsAccount() {
     address,
     effectiveSavingsBalance,
     effectiveAvailableInterest,
-    refreshNonce,
   ]);
 
   useEffect(() => {
@@ -228,7 +226,6 @@ export function useWorldchainSavingsAccount() {
 
   const refresh = useCallback(async () => {
     await refetchContracts();
-    setRefreshNonce((current) => current + 1);
   }, [refetchContracts]);
 
   const refreshWithRetries = useCallback(
@@ -378,7 +375,6 @@ export function useWorldchainSavingsAccount() {
       optimisticAvailableInterest,
       walletBalance,
       savingsBalance,
-      displayAvailableInterest,
     ],
   );
 
@@ -437,7 +433,6 @@ export function useWorldchainSavingsAccount() {
       optimisticAvailableInterest,
       walletBalance,
       savingsBalance,
-      displayAvailableInterest,
     ],
   );
 
@@ -485,7 +480,6 @@ export function useWorldchainSavingsAccount() {
     optimisticAvailableInterest,
     walletBalance,
     savingsBalance,
-    displayAvailableInterest,
   ]);
 
   useEffect(() => {

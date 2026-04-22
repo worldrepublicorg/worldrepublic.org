@@ -38,7 +38,6 @@ import type { CreatePartyData, Party } from "@/lib/types/parties";
 interface PoliticalPartyListProps {
   initialParties: Party[] | null; // Parties fetched at page level (null = error)
   dictionary: Dictionary; // All translations passed from server
-  lang: string; // Language code from URL
 }
 
 const PENDING_PARTY_AUTH_STATE_KEY = "pendingPartyAuthState";
@@ -52,7 +51,6 @@ interface PendingPartyAuthState {
 export function PoliticalPartyList({
   initialParties,
   dictionary,
-  lang,
 }: PoliticalPartyListProps) {
   const router = useRouter();
   const [isRefreshing, startTransition] = useTransition();
@@ -657,7 +655,6 @@ export function PoliticalPartyList({
         isUserLeader={(party) => Boolean(isUserLeader(party))}
         shortenUrl={shortenUrl}
         dictionary={dictionary}
-        lang={lang}
         onCreateParty={() => setIsCreateDialogOpen(true)}
         onOpenDrawer={(party) => {
           setSelectedPartyForDrawer(party);
@@ -830,7 +827,6 @@ export function PoliticalPartyList({
         onOpenChange={setIsDrawerOpen}
         party={selectedPartyForDrawer}
         dictionary={dictionary}
-        lang={lang}
       />
     </div>
   );

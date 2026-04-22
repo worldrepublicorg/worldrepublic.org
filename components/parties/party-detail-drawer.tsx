@@ -19,7 +19,6 @@ interface PartyDetailDrawerProps {
   onOpenChange: (open: boolean) => void;
   party: Party | null;
   dictionary: Dictionary;
-  lang?: string;
 }
 
 export function PartyDetailDrawer({
@@ -27,7 +26,6 @@ export function PartyDetailDrawer({
   onOpenChange,
   party,
   dictionary,
-  lang,
 }: PartyDetailDrawerProps) {
   const { toast } = useToast();
   const drawerStatePushedRef = useRef(false);

@@ -120,12 +120,7 @@ export function TransactionHistoryContent({
     } finally {
       setIsLoadingMore(false);
     }
-  }, [
-    transactionsProp,
-    isLoadingMore,
-    hasMoreTransactions,
-    transactions.length,
-  ]);
+  }, [isLoadingMore, hasMoreTransactions, transactions.length]);
 
   // Fetch transactions only if not provided as prop
   useEffect(() => {
