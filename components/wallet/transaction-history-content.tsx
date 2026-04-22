@@ -608,6 +608,7 @@ export function TransactionHistoryContent({
         <div className="flex flex-1 flex-col">
           {/* Filter button - show actual text and icon */}
           <button
+            type="button"
             onClick={() => setIsFilterDialogOpen(true)}
             className="mb-8! flex items-center gap-1 self-start"
             disabled
@@ -650,6 +651,7 @@ export function TransactionHistoryContent({
         <div className="flex flex-1 flex-col">
           {/* Filter button - show even when empty for consistency with skeleton */}
           <button
+            type="button"
             onClick={() => setIsFilterDialogOpen(true)}
             className="mb-8! flex items-center gap-1 self-start"
           >
@@ -672,6 +674,7 @@ export function TransactionHistoryContent({
         <div className="flex flex-1 flex-col">
           {/* Filter button */}
           <button
+            type="button"
             onClick={() => setIsFilterDialogOpen(true)}
             className="mb-8! flex items-center gap-1 self-start"
           >
@@ -744,6 +747,7 @@ export function TransactionHistoryContent({
                             {walletAddress && (
                               <>
                                 <button
+                                  type="button"
                                   onClick={() =>
                                     handleCopyWalletAddress(walletAddress)
                                   }

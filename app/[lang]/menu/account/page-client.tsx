@@ -347,6 +347,7 @@ export default function AccountPageClient({
           title={dictionary.pages.menu.sections.account.account_info}
           startAdornment={
             <button
+              type="button"
               onClick={() => router.push(`/${lang}/menu`)}
               className="flex size-10 items-center justify-center rounded-full bg-gray-100"
             >
@@ -360,6 +361,7 @@ export default function AccountPageClient({
             title={dictionary.pages.menu.sections.account.account_info}
             startAdornment={
               <button
+                type="button"
                 onClick={() => router.push(`/${lang}/menu`)}
                 className="flex size-10 items-center justify-center rounded-full bg-gray-100"
               >

@@ -48,6 +48,7 @@ export function MyPartySection({
           {dictionary.pages.govern.parties.my_party}
         </Typography>
         <button
+          type="button"
           className="flex size-10 items-center justify-center rounded-full bg-gray-100 text-gray-900"
           onClick={onCreateParty}
           disabled={isLoading}

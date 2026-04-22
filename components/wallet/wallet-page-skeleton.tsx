@@ -58,6 +58,7 @@ export function WalletPageSkeleton() {
           </div>
           <div className="flex flex-1 flex-col">
             <button
+              type="button"
               className="mb-8! flex items-center gap-1 self-start"
               disabled
             >

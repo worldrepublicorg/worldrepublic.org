@@ -95,6 +95,7 @@ export default function ElectionDetailPageClient({
         title={dictionary.pages.govern.elections.detail.topbar_title}
         startAdornment={
           <button
+            type="button"
             onClick={handleBack}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >

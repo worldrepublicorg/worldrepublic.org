@@ -96,6 +96,7 @@ export function PartyCard({
             >
               <AlertDialogTrigger asChild>
                 <button
+                  type="button"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200"
                   title={partyManagementTitle}
                   onClick={(e) => e.stopPropagation()}

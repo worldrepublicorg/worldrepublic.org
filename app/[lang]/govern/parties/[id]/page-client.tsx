@@ -93,6 +93,7 @@ export default function PartyDetailPageClient({
         title={dictionary.pages.govern.parties.party_details}
         startAdornment={
           <button
+            type="button"
             onClick={handleBack}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >
@@ -102,6 +103,7 @@ export default function PartyDetailPageClient({
         endAdornment={
           party && (
             <button
+              type="button"
               onClick={async () => {
                 const shareUrl = await getShareUrl();
                 const shareTitle = party.name;

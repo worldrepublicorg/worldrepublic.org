@@ -100,6 +100,7 @@ export default function MenuPageClient({
 
   const menuSections = [
     {
+      id: "account",
       title: dictionary.pages.menu.sections.account.title,
       links: [
         ...(isAuthenticated
@@ -137,6 +138,7 @@ export default function MenuPageClient({
       ],
     },
     {
+      id: "help",
       title: dictionary.pages.menu.sections.help.title,
       links: [
         {
@@ -160,6 +162,7 @@ export default function MenuPageClient({
       ],
     },
     {
+      id: "source_code",
       title: dictionary.pages.menu.sections.source_code.title,
       links: [
         {
@@ -171,6 +174,7 @@ export default function MenuPageClient({
       ],
     },
     {
+      id: "legal",
       title: dictionary.pages.menu.sections.legal.title,
       links: [
         {
@@ -199,8 +203,8 @@ export default function MenuPageClient({
 
       <div className="flex-1 overflow-y-auto px-6 pb-6 pt-4">
         <div className="flex flex-col gap-8">
-          {menuSections.map((section, index) => (
-            <div key={index}>
+          {menuSections.map((section) => (
+            <div key={section.id}>
               <div className="mb-4 flex">
                 <Typography
                   variant="subtitle"

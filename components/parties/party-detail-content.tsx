@@ -205,6 +205,7 @@ export function PartyDetailContent({
                     </Typography>
                   </div>
                   <button
+                    type="button"
                     onClick={handleCopyLeaderAddress}
                     className="min-w-0 flex-1 flex items-center justify-end gap-1 cursor-pointer text-right overflow-hidden"
                   >

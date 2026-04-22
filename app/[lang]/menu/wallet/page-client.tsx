@@ -120,7 +120,7 @@ export default function WalletPageClient({
 
   useEffect(() => {
     preloadTradeIcons();
-  }, []);
+  }, [preloadTradeIcons]);
 
   // Re-fetch wallet data when auth state flips to authenticated without navigation
   // (e.g. passkey sign-in on the same page).
@@ -329,6 +329,7 @@ export default function WalletPageClient({
         title={dictionary.pages.wallet.topbar.title}
         startAdornment={
           <button
+            type="button"
             onClick={handleClose}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >

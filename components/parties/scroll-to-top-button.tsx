@@ -16,6 +16,7 @@ export function ScrollToTopButton({ show, onClick }: ScrollToTopButtonProps) {
       onTouchEnd={(e) => e.stopPropagation()}
     >
       <button
+        type="button"
         onClick={onClick}
         onTouchStart={(e) => {
           // Prevent scroll interference and stop propagation to prevent BottomNav from capturing this touch

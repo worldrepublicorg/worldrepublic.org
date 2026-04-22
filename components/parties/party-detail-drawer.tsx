@@ -104,6 +104,7 @@ export function PartyDetailDrawer({
             icon={
               party ? (
                 <button
+                  type="button"
                   onClick={handleShare}
                   className="flex size-10 items-center justify-center rounded-full bg-gray-100"
                   aria-label={dictionary.pages.govern.parties.share_party}
