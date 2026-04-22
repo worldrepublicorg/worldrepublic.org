@@ -287,7 +287,7 @@ export default function AccountPageClient({
       }
 
       const { challenge, tempUserId } = optionsResult;
-      let registrationResponse;
+      let registrationResponse: Awaited<ReturnType<typeof startRegistration>>;
       try {
         registrationResponse = await startRegistration(optionsResult);
       } catch (error) {
