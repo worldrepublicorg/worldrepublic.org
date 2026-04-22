@@ -22,6 +22,8 @@ import {
   PiHandArrowUpFill,
   PiInfoFill,
   PiPiggyBankFill,
+  PiWarningFill,
+  PiWarningOctagonFill,
 } from "react-icons/pi";
 import { useAccount } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -260,6 +262,19 @@ export function SavingsSection({
     0,
     getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
   );
+  const yellowWarningThreshold = capAmount * 0.7;
+  const redWarningThreshold = capAmount * 0.9;
+  const isRedCapWarning =
+    isOffchainAccountSelected &&
+    !isSelfVerified &&
+    basicIncomeAndInterestClaimedTotal >= redWarningThreshold &&
+    basicIncomeAndInterestClaimedTotal < capAmount - 1e-9;
+  const isYellowCapWarning =
+    isOffchainAccountSelected &&
+    !isSelfVerified &&
+    basicIncomeAndInterestClaimedTotal >= yellowWarningThreshold &&
+    basicIncomeAndInterestClaimedTotal < redWarningThreshold &&
+    basicIncomeAndInterestClaimedTotal < capAmount - 1e-9;
   const isCapReached =
     isOffchainAccountSelected &&
     !isSelfVerified &&
@@ -289,7 +304,13 @@ export function SavingsSection({
                 className="inline-flex shrink-0 items-center justify-center text-gray-400"
                 aria-label={dictionary.pages.govern.parties.learn_more}
               >
-                <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+                {isRedCapWarning ? (
+                  <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
+                ) : isYellowCapWarning ? (
+                  <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
+                ) : (
+                  <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+                )}
               </button>
             </span>
           </Typography>

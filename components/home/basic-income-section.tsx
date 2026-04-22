@@ -13,7 +13,12 @@ import {
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { useState } from "react";
-import { PiHandCoinsFill, PiInfoFill } from "react-icons/pi";
+import {
+  PiHandCoinsFill,
+  PiInfoFill,
+  PiWarningFill,
+  PiWarningOctagonFill,
+} from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { SelfVerificationDialog } from "@/components/self-verification-dialog";
@@ -53,6 +58,18 @@ export function BasicIncomeSection({
     0,
     getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
   );
+  const claimedTotal = basicIncomeAndInterestClaimedTotal ?? 0;
+  const yellowWarningThreshold = capAmount * 0.7;
+  const redWarningThreshold = capAmount * 0.9;
+  const isRedCapWarning =
+    !isSelfVerified &&
+    claimedTotal >= redWarningThreshold &&
+    claimedTotal < capAmount - 1e-9;
+  const isYellowCapWarning =
+    !isSelfVerified &&
+    claimedTotal >= yellowWarningThreshold &&
+    claimedTotal < redWarningThreshold &&
+    claimedTotal < capAmount - 1e-9;
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
@@ -71,7 +88,13 @@ export function BasicIncomeSection({
           className="inline-flex shrink-0 items-center justify-center text-gray-400"
           aria-label={dictionary.pages.govern.parties.learn_more}
         >
-          <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+          {isRedCapWarning ? (
+            <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
+          ) : isYellowCapWarning ? (
+            <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
+          ) : (
+            <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
+          )}
         </button>
       </span>
     </Typography>
@@ -100,7 +123,7 @@ export function BasicIncomeSection({
   }).format(maxClaimableAmount);
   const isCapReached =
     !isSelfVerified &&
-    (basicIncomeAndInterestClaimedTotal ?? 0) >= capAmount - 1e-9;
+    claimedTotal >= capAmount - 1e-9;
 
   if (!isAuthenticated) {
     return (
