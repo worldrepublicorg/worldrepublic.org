@@ -9,7 +9,16 @@ import { Suspense } from "react";
 import BottomNav from "@/components/bottom-nav";
 import { ReferralCapture } from "@/components/referral-capture";
 import { getBrandingForHost } from "@/lib/branding";
+import { DOCUMENT_LANG_HEADER, defaultLocale, locales } from "@/lib/locales";
 import { cn } from "@/lib/utils";
+
+function resolveDocumentLang(requestHeaders: Headers): string {
+  const value = requestHeaders.get(DOCUMENT_LANG_HEADER);
+  if (value && (locales as readonly string[]).includes(value)) {
+    return value;
+  }
+  return defaultLocale;
+}
 
 const rubik = localFont({
   src: "../public/fonts/Rubik.woff2",
@@ -95,8 +104,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const requestHeaders = await headers();
+  const htmlLang = resolveDocumentLang(requestHeaders);
+
   return (
-    <html dir="ltr">
+    <html dir="ltr" lang={htmlLang}>
       <head>
         <meta name="format-detection" content="telephone=no" />
         <meta

@@ -54,3 +54,6 @@ export const locales = [
 type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
+
+/** Set on the incoming request in `proxy.ts`; read in `app/layout.tsx` for `<html lang>`. */
+export const DOCUMENT_LANG_HEADER = "x-world-republic-document-lang" as const;

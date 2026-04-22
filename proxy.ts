@@ -3,7 +3,15 @@ import Negotiator from "negotiator";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { trackUnsupportedLanguage } from "./lib/actions/analytics";
-import { defaultLocale, locales } from "./lib/locales";
+import { DOCUMENT_LANG_HEADER, defaultLocale, locales } from "./lib/locales";
+
+function documentLocaleFromPathname(pathname: string): string {
+  const segment = pathname.split("/").filter(Boolean)[0];
+  if (segment && (locales as readonly string[]).includes(segment)) {
+    return segment;
+  }
+  return defaultLocale;
+}
 
 // Helper function to validate if a string is a valid BCP 47 locale
 function isValidLocale(locale: string): boolean {
@@ -35,7 +43,9 @@ function getLocale(request: NextRequest): string {
   }
 
   const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+  request.headers.forEach((value, key) => {
+    negotiatorHeaders[key] = value;
+  });
 
   try {
     const languages = new Negotiator({
@@ -137,6 +147,15 @@ export function proxy(request: NextRequest) {
 
     return NextResponse.redirect(newUrl);
   }
+
+  const documentLocale = documentLocaleFromPathname(pathname);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(DOCUMENT_LANG_HEADER, documentLocale);
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }
 
 export const config = {
