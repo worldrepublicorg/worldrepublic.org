@@ -128,7 +128,7 @@ export function useWorldChainGuard() {
 
   useEffect(() => {
     void refreshLiveChainId();
-  }, [refreshLiveChainId, chainId]);
+  }, [refreshLiveChainId]);
 
   useEffect(() => {
     if (typeof window === "undefined" || !isConnected) return;
@@ -189,7 +189,6 @@ export function useWorldChainGuard() {
     isConnected,
     connector,
     isSwitching,
-    chainId,
     switchChain,
     toast,
     refreshLiveChainId,
