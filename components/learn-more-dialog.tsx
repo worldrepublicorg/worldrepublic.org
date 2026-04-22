@@ -8,8 +8,15 @@ import {
   AlertDialogHeader,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { PiArrowSquareOut, PiInfoFill } from "react-icons/pi";
+import {
+  PiArrowSquareOut,
+  PiInfoFill,
+  PiWarningCircleFill,
+  PiWarningFill,
+} from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
+
+type LearnMoreWarningLevel = "yellow" | "red";
 
 interface LearnMoreDialogProps {
   open: boolean;
@@ -19,6 +26,8 @@ interface LearnMoreDialogProps {
   info?: string;
   /** Optional external link - renders like Menu page links (PiArrowSquareOut) without start icon */
   externalLink?: { url: string; label: string };
+  /** Optional warning banner shown before the external link */
+  warningLevel?: LearnMoreWarningLevel;
 }
 
 /**
@@ -32,8 +41,19 @@ export function LearnMoreDialog({
   title,
   info,
   externalLink,
+  warningLevel,
 }: LearnMoreDialogProps) {
-  const hasContent = info || externalLink;
+  const hasContent = info || externalLink || warningLevel;
+  const warningBannerText =
+    warningLevel === "red"
+      ? "You are very close to the unverified cap. Verify your account now to avoid interruptions."
+      : warningLevel === "yellow"
+        ? "You are approaching the unverified cap. Verify your account soon to keep earning without limits."
+        : null;
+  const warningBannerClassName =
+    warningLevel === "red"
+      ? "bg-red-50 text-red-900"
+      : "bg-yellow-50 text-yellow-900";
 
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
@@ -58,6 +78,27 @@ export function LearnMoreDialog({
           ) : (
             <Typography className="text-gray-500">{info}</Typography>
           ))}
+
+        {warningLevel && warningBannerText && (
+          <div
+            className={`mt-3 flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+          >
+            <div className="flex items-start gap-3">
+              {warningLevel === "red" ? (
+                <PiWarningFill className="size-5 shrink-0" />
+              ) : (
+                <PiWarningCircleFill className="size-5 shrink-0" />
+              )}
+              <Typography
+                variant="body"
+                level={4}
+                className="text-left text-[14px] font-medium"
+              >
+                {warningBannerText}
+              </Typography>
+            </div>
+          </div>
+        )}
 
         {externalLink && (
           <AlertDialogFooter>

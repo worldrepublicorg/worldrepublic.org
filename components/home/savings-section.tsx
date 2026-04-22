@@ -275,6 +275,11 @@ export function SavingsSection({
     basicIncomeAndInterestClaimedTotal >= yellowWarningThreshold &&
     basicIncomeAndInterestClaimedTotal < redWarningThreshold &&
     basicIncomeAndInterestClaimedTotal < capAmount - 1e-9;
+  const learnMoreWarningLevel = isRedCapWarning
+    ? "red"
+    : isYellowCapWarning
+      ? "yellow"
+      : undefined;
   const isCapReached =
     isOffchainAccountSelected &&
     !isSelfVerified &&
@@ -319,6 +324,7 @@ export function SavingsSection({
             onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.earn.savings.title}
             info={dictionary.pages.earn.savings.tooltip}
+            warningLevel={learnMoreWarningLevel}
             externalLink={{
               url: "https://worldscan.org/address/0x234302db10a54bdc11094a8ef816b0eaa5fce3f7#code",
               label: dictionary.pages.earn.savings.smart_contract_link,

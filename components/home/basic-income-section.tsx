@@ -70,6 +70,11 @@ export function BasicIncomeSection({
     claimedTotal >= yellowWarningThreshold &&
     claimedTotal < redWarningThreshold &&
     claimedTotal < capAmount - 1e-9;
+  const learnMoreWarningLevel = isRedCapWarning
+    ? "red"
+    : isYellowCapWarning
+      ? "yellow"
+      : undefined;
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
   const [isLearnMoreDialogOpen, setIsLearnMoreDialogOpen] = useState(false);
@@ -144,6 +149,7 @@ export function BasicIncomeSection({
               onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
+              warningLevel={learnMoreWarningLevel}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -183,6 +189,7 @@ export function BasicIncomeSection({
               onOpenChange={setIsLearnMoreDialogOpen}
               title={dictionary.pages.earn.tabs.basic_income}
               info={dictionary.pages.earn.basic_income.tooltip_claim}
+              warningLevel={learnMoreWarningLevel}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -222,6 +229,7 @@ export function BasicIncomeSection({
             onOpenChange={setIsLearnMoreDialogOpen}
             title={dictionary.pages.earn.tabs.basic_income}
             info={dictionary.pages.earn.basic_income.tooltip_claim}
+            warningLevel={learnMoreWarningLevel}
             externalLink={{
               url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
               label: dictionary.pages.earn.basic_income.world_drachma,
