@@ -74,9 +74,7 @@ export function LearnMoreDialog({
 
         {info &&
           (externalLink ? (
-            <AlertDialogDescription
-              className={`text-gray-500 ${warningBannerText ? "mb-4" : ""}`}
-            >
+            <AlertDialogDescription className="text-gray-500">
               {info}
             </AlertDialogDescription>
           ) : (
