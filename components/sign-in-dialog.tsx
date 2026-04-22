@@ -100,7 +100,9 @@ export function SignInDialog({
       const { challenge } = optionsResult;
 
       // Step 2: Start WebAuthn authentication in the browser
-      let authenticationResponse;
+      let authenticationResponse: Awaited<
+        ReturnType<typeof startAuthentication>
+      >;
       try {
         authenticationResponse = await startAuthentication(optionsResult);
       } catch (error) {
@@ -178,7 +180,7 @@ export function SignInDialog({
       const { challenge, tempUserId, tempEmail } = optionsResult;
 
       // Step 2: Start WebAuthn registration in the browser
-      let registrationResponse;
+      let registrationResponse: Awaited<ReturnType<typeof startRegistration>>;
       try {
         registrationResponse = await startRegistration(optionsResult);
       } catch (error) {
