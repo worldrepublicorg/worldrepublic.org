@@ -53,7 +53,7 @@ export function LearnMoreDialog({
   const warningBannerClassName =
     warningLevel === "red" ? "bg-red-50" : "bg-yellow-50";
   const warningIconClassName =
-    warningLevel === "red" ? "size-5 shrink-0 text-red-900" : "size-5 shrink-0 text-yellow-900";
+    warningLevel === "red" ? "size-5 shrink-0 text-red-500" : "size-5 shrink-0 text-yellow-500";
   const warningTextClassName =
     warningLevel === "red" ? "text-red-500" : "text-yellow-500";
 
@@ -83,7 +83,7 @@ export function LearnMoreDialog({
 
         {warningLevel && warningBannerText && (
           <div
-            className={`mt-3 flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+            className={`mb-6 flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
           >
             <div className="flex items-start gap-3">
               {warningLevel === "red" ? (
