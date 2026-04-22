@@ -3,7 +3,7 @@
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useState } from "react";
 import type { Connector } from "wagmi";
-import { useAccount, useChainId, useSwitchChain } from "wagmi";
+import { useAccount, useSwitchChain } from "wagmi";
 import { formatTxError } from "@/lib/format-tx-error";
 
 export const WORLD_CHAIN_ID = 480;
@@ -102,7 +102,6 @@ async function switchOrAddWorldChain(connector: Connector): Promise<void> {
 
 export function useWorldChainGuard() {
   const { isConnected, connector } = useAccount();
-  const chainId = useChainId();
   const switchChain = useSwitchChain();
   const { toast } = useToast();
   const [isSwitching, setIsSwitching] = useState(false);
