@@ -55,6 +55,8 @@ export function TransactionHistoryContent({
   lang,
 }: TransactionHistoryContentProps) {
   const { toast } = useToast();
+  const toastRef = useRef(toast);
+  toastRef.current = toast;
 
   const [transactions, setTransactions] = useState<Transaction[]>(
     transactionsProp || [],
@@ -153,7 +155,7 @@ export function TransactionHistoryContent({
             ? error.message
             : dictionary.pages.wallet.transactions.failed_to_load;
         setError(errorMessage);
-        toast.error({
+        toastRef.current.error({
           title: dictionary.pages.wallet.transactions.failed_to_load,
         });
       } finally {
@@ -162,11 +164,7 @@ export function TransactionHistoryContent({
     };
 
     fetchTransactions();
-  }, [
-    transactionsProp,
-    dictionary.pages.wallet.transactions.failed_to_load,
-    toast,
-  ]); // Only fetch if transactions prop is not provided
+  }, [transactionsProp, dictionary.pages.wallet.transactions.failed_to_load]); // Only fetch if transactions prop is not provided
 
   // Infinite scroll setup for transaction history
   useEffect(() => {

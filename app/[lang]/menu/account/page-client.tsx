@@ -61,6 +61,8 @@ export default function AccountPageClient({
   const router = useRouter();
   const searchParams = useSearchParams();
   const { toast } = useToast();
+  const toastRef = useRef(toast);
+  toastRef.current = toast;
   const { isAuthenticated: clientIsAuthenticated } = useAuth();
 
   const cachedData = useWalletAuthCache();
@@ -80,11 +82,11 @@ export default function AccountPageClient({
       error === "account_already_linked" ||
       error === "OAuthAccountNotLinked"
     ) {
-      toast.error({
+      toastRef.current.error({
         title: dictionary.toasts.wallet.google_already_linked,
       });
     } else {
-      toast.success({
+      toastRef.current.success({
         title: dictionary.toasts.wallet.google_linked,
       });
     }
@@ -94,7 +96,6 @@ export default function AccountPageClient({
     lang,
     router,
     searchParams,
-    toast,
     dictionary.toasts.wallet.google_already_linked,
     dictionary.toasts.wallet.google_linked,
   ]);
