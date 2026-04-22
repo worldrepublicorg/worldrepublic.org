@@ -23,22 +23,20 @@ export default function WddImportInfoBanner({
 
   return (
     <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gray-50 p-4 text-center">
-      <div className="flex min-w-0 flex-1 items-start gap-3">
+      <div className="flex items-start gap-3">
         <PiInfo className="size-5 shrink-0 text-gray-500" />
         <Typography
           variant="body"
           level={4}
-          className="min-w-0 flex-1 text-left text-[14px] font-medium text-gray-500"
+          className="text-left text-[14px] font-medium text-gray-500"
         >
           {dictionary.components.wdd_import_info.message_prefix}
-          <button
-            type="button"
-            onClick={() => void handleCopyContractAddress()}
-            className="inline max-w-full cursor-pointer border-0 bg-transparent p-0 text-left font-inherit text-inherit whitespace-normal wrap-break-word underline align-baseline"
-            aria-label={dictionary.components.wdd_import_info.contract_address}
+          <span
+            onClick={handleCopyContractAddress}
+            className="cursor-pointer underline"
           >
             {dictionary.components.wdd_import_info.contract_address}
-          </button>
+          </span>
         </Typography>
       </div>
     </div>
