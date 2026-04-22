@@ -276,9 +276,14 @@ export async function distributeElectionSubsidies(
   try {
     for (const write of pendingWrites) {
       if (write.freezeStreamId) {
+        if (!write.freezeEndsAt) {
+          throw new Error(
+            `Missing freezeEndsAt for stream ${write.freezeStreamId}`,
+          );
+        }
         await db
           .update(streams)
-          .set({ endsAt: write.freezeEndsAt! })
+          .set({ endsAt: write.freezeEndsAt })
           .where(eq(streams.id, write.freezeStreamId));
       }
 

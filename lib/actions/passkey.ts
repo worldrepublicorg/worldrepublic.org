@@ -305,7 +305,6 @@ export async function verifyPasskeyRegistration(
   challenge: string,
   tempUserId: string,
   tempEmail: string | null,
-  name?: string,
   pendingReferralCode?: string,
 ) {
   try {

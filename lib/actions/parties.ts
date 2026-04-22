@@ -502,14 +502,18 @@ export async function getParties(
     // Add search filter if provided
     if (filters?.search) {
       const searchPattern = `%${filters.search}%`;
-      whereCondition = and(
-        whereCondition,
-        or(
-          ilike(parties.name, searchPattern),
-          ilike(parties.description, searchPattern),
-          ilike(parties.leaderUsername, searchPattern),
-        )!,
-      )!;
+      const searchClause = or(
+        ilike(parties.name, searchPattern),
+        ilike(parties.description, searchPattern),
+        ilike(parties.leaderUsername, searchPattern),
+      );
+      if (searchClause) {
+        const combined = and(whereCondition, searchClause);
+        if (combined === undefined) {
+          throw new Error("Failed to build party search filter");
+        }
+        whereCondition = combined;
+      }
     }
 
     const orderClause =

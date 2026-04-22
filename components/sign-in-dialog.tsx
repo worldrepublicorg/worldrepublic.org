@@ -205,7 +205,6 @@ export function SignInDialog({
         challenge,
         tempUserId,
         tempEmail,
-        name || passkeyName || undefined,
         pendingReferral,
       );
 

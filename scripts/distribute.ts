@@ -15,14 +15,16 @@ if (!connectionString) {
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
-const electionId = args.find((a) => !a.startsWith("--"));
+const electionIdArg = args.find((a) => !a.startsWith("--"));
 
-if (!electionId) {
+if (!electionIdArg) {
   console.error(
     "Usage: pnpm tsx scripts/distribute.ts <electionId> [--dry-run]",
   );
   process.exit(1);
 }
+
+const electionId: string = electionIdArg;
 
 const sql = neon(connectionString);
 const db = drizzle(sql, { schema });
@@ -62,7 +64,7 @@ function printSummary(summary: {
 async function main() {
   try {
     console.log("Connecting via Neon HTTP (IPv4)...");
-    const summary = await distributeElectionSubsidies(db, electionId!, {
+    const summary = await distributeElectionSubsidies(db, electionId, {
       dryRun,
     });
     printSummary(summary);

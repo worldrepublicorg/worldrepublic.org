@@ -837,6 +837,10 @@ export async function withdrawTokens(
     }
 
     const amountWei = BigInt(Math.floor(flooredAmount * 1e18)).toString();
+    const thirdwebSecretKey = process.env.THIRDWEB_SECRET_KEY;
+    if (!thirdwebSecretKey) {
+      return { success: false, error: "Missing THIRDWEB_SECRET_KEY" };
+    }
 
     const response = await fetch(
       "https://engine.thirdweb.com/v1/write/contract",
@@ -844,7 +848,7 @@ export async function withdrawTokens(
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-secret-key": process.env.THIRDWEB_SECRET_KEY!,
+          "x-secret-key": thirdwebSecretKey,
         },
         body: JSON.stringify({
           executionOptions: {
