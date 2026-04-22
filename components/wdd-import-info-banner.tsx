@@ -24,7 +24,7 @@ export default function WddImportInfoBanner({
   return (
     <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gray-50 p-4 text-center">
       <div className="flex items-start gap-3">
-        <PiInfo className="size-5 shrink-0" />
+        <PiInfo className="size-5 shrink-0 text-gray-500" />
         <Typography
           variant="body"
           level={4}
