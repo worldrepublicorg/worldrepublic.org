@@ -11,7 +11,9 @@ let cachedRawWalletAuthData: string | null | undefined;
 let cachedParsedWalletAuthData: GetWalletAuthAndDataResult | null = null;
 
 function emitWalletAuthCacheChange() {
-  walletAuthCacheListeners.forEach((listener) => listener());
+  walletAuthCacheListeners.forEach((listener) => {
+    listener();
+  });
 }
 
 export function getCachedWalletData(): GetWalletAuthAndDataResult | null {
