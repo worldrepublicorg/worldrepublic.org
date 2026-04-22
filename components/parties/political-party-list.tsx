@@ -394,7 +394,7 @@ export function PoliticalPartyList({
       cleanUrl = cleanUrl.replace(/^www\./, "");
       cleanUrl = cleanUrl.replace(/\/$/, "");
       if (cleanUrl.length <= maxLength) return cleanUrl;
-      return cleanUrl.substring(0, maxLength - 3) + "...";
+      return `${cleanUrl.substring(0, maxLength - 3)}...`;
     } catch {
       return url;
     }

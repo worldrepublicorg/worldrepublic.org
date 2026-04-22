@@ -1,12 +1,12 @@
 "use server";
 
+import { Buffer } from "node:buffer";
 import {
   generateAuthenticationOptions,
   generateRegistrationOptions,
   verifyAuthenticationResponse,
   verifyRegistrationResponse,
 } from "@simplewebauthn/server";
-import { Buffer } from "buffer";
 import { eq } from "drizzle-orm";
 import { cookies, headers } from "next/headers";
 import { createUserProfile } from "@/lib/actions/member";
