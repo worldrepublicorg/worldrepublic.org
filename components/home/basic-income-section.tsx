@@ -89,9 +89,9 @@ export function BasicIncomeSection({
           aria-label={dictionary.pages.govern.parties.learn_more}
         >
           {isRedCapWarning ? (
-            <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-500" />
+            <PiWarningOctagonFill className="ml-1 size-4 translate-y-[2px]! text-red-400" />
           ) : isYellowCapWarning ? (
-            <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-500" />
+            <PiWarningFill className="ml-1 size-4 translate-y-[2px]! text-yellow-400" />
           ) : (
             <PiInfoFill className="ml-1 size-4 translate-y-[2px]!" />
           )}
