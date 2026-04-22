@@ -663,7 +663,7 @@ export async function withdrawTokens(
     }
 
     const amountNumber = parseFloat(amount);
-    if (isNaN(amountNumber) || amountNumber <= 0) {
+    if (Number.isNaN(amountNumber) || amountNumber <= 0) {
       return { success: false, error: "Invalid amount" };
     }
 

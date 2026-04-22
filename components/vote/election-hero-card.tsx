@@ -70,7 +70,7 @@ export function ElectionHeroCard({
             <Typography variant="body" level={3} className="text-[13px]">
               {t.reward_pool.replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(locale),
+                Number.parseInt(election.rewardPool, 10).toLocaleString(locale),
               )}
             </Typography>
           </div>

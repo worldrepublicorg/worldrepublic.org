@@ -281,7 +281,7 @@ export default function WalletPageClient({
 
     const amountNum = parseFloat(amount);
 
-    if (!amount || isNaN(amountNum)) {
+    if (!amount || Number.isNaN(amountNum)) {
       return { disabled: true, text: dictionary.common.withdraw };
     }
 

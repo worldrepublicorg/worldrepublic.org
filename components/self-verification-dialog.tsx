@@ -9,6 +9,7 @@ import {
   Button,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useRef } from "react";
 import {
@@ -222,7 +223,7 @@ export function SelfVerificationDialog({
                 </div>
               ) : universalLink ? (
                 <div className="rounded-2xl p-4">
-                  <img
+                  <Image
                     alt={dictionary.components.identity.self.qr_alt}
                     src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
                       universalLink,

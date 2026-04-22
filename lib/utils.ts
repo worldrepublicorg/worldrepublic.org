@@ -14,7 +14,7 @@ export function cn(...inputs: ClassValue[]) {
  * @returns A string representation of the number with up to 18 decimal places
  */
 export const formatFullAmount = (num: number): string => {
-  if (!isFinite(num) || num === 0) return "0";
+  if (!Number.isFinite(num) || num === 0) return "0";
   let s = num.toFixed(50);
   const dotIndex = s.indexOf(".");
   if (dotIndex !== -1) {

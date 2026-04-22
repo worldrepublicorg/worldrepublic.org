@@ -126,7 +126,7 @@ export function ElectionDetailContent({
             >
               {t.reward_pool.replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(locale),
+                Number.parseInt(election.rewardPool, 10).toLocaleString(locale),
               )}
             </Typography>
           </div>

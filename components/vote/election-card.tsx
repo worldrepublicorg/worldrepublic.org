@@ -79,7 +79,7 @@ export function ElectionCard({
             <Typography variant="body" level={2} className="text-[13px]">
               {t[isUpcoming ? "reward_pool_minimum" : "reward_pool"].replace(
                 "{amount}",
-                Number.parseInt(election.rewardPool).toLocaleString(locale),
+                Number.parseInt(election.rewardPool, 10).toLocaleString(locale),
               )}
             </Typography>
           </div>
