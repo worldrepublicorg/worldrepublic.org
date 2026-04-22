@@ -17,14 +17,12 @@ interface PartyDetailPageClientProps {
   partyId: string;
   lang: string;
   dictionary: Dictionary;
-  featuredElectionId?: string;
 }
 
 export default function PartyDetailPageClient({
   partyId,
   lang,
   dictionary,
-  featuredElectionId,
 }: PartyDetailPageClientProps) {
   const { toast } = useToast();
   const router = useRouter();

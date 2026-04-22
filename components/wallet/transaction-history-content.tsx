@@ -689,14 +689,14 @@ export function TransactionHistoryContent({
             {filteredTransactions.map((transaction) => {
               const IconComponent = getTransactionIcon(transaction);
               const streamEventLabel = getStreamEventLabel(transaction);
+              const chainLogoPath = getChainLogoPath(transaction.selectedChain);
               return (
                 <div key={transaction.id} className="flex items-center gap-4">
                   {/* Transaction icon */}
                   <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gray-100">
-                    {transaction.type === "WITHDRAWAL" &&
-                    getChainLogoPath(transaction.selectedChain) ? (
+                    {transaction.type === "WITHDRAWAL" && chainLogoPath ? (
                       <Image
-                        src={getChainLogoPath(transaction.selectedChain)!}
+                        src={chainLogoPath}
                         alt={getChainDisplayName(transaction.selectedChain)}
                         width={30}
                         height={30}
@@ -729,11 +729,11 @@ export function TransactionHistoryContent({
                     </div>
                     {/* Details + Date (one line: withdrawal info or stream event, then date; stream rows add WDD/day on the right) */}
                     {(() => {
+                      const walletAddress = transaction.walletAddress;
                       const hasWithdrawalDetails =
-                        transaction.walletAddress ||
-                        transaction.recipientUserId;
+                        walletAddress || transaction.recipientUserId;
                       const hasDetailsBeforeDate =
-                        transaction.walletAddress ||
+                        walletAddress ||
                         transaction.selectedChain ||
                         streamEventLabel;
                       const streamRateFormatted =
@@ -741,18 +741,16 @@ export function TransactionHistoryContent({
                       return (
                         <div className="flex items-center justify-between gap-2 text-[12px] text-gray-500 mt-0.5">
                           <div className="flex flex-wrap items-center gap-x-0 min-w-0">
-                            {transaction.walletAddress && (
+                            {walletAddress && (
                               <>
                                 <button
                                   onClick={() =>
-                                    handleCopyWalletAddress(
-                                      transaction.walletAddress!,
-                                    )
+                                    handleCopyWalletAddress(walletAddress)
                                   }
                                   className="flex items-center gap-1"
                                 >
                                   <span className="line-clamp-1">
-                                    {`${transaction.walletAddress.slice(0, 6)}...${transaction.walletAddress.slice(-4)}`}
+                                    {`${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`}
                                   </span>
                                   <PiCopy className="h-3 w-3" />
                                 </button>

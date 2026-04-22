@@ -1,5 +1,4 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { getFeaturedElectionId } from "@/lib/actions/elections";
 import PartyDetailPageClient from "./page-client";
 
 export default async function PartyDetailPage({
@@ -9,14 +8,8 @@ export default async function PartyDetailPage({
 }) {
   const { lang, id } = await params;
   const dictionary = await getDictionary(lang);
-  const featuredElectionId = (await getFeaturedElectionId()) ?? undefined;
 
   return (
-    <PartyDetailPageClient
-      partyId={id}
-      lang={lang}
-      dictionary={dictionary}
-      featuredElectionId={featuredElectionId}
-    />
+    <PartyDetailPageClient partyId={id} lang={lang} dictionary={dictionary} />
   );
 }

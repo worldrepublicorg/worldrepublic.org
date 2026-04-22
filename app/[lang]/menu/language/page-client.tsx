@@ -18,6 +18,19 @@ interface LanguagePageClientProps {
   languages: Language[];
 }
 
+const PREFERRED_LANGUAGE_COOKIE_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+
+async function setPreferredLanguageCookie(code: string) {
+  if (typeof window === "undefined") return;
+  if (!("cookieStore" in window) || !window.cookieStore) return;
+  await window.cookieStore.set({
+    name: "preferredLanguage",
+    value: code,
+    path: "/",
+    expires: Date.now() + PREFERRED_LANGUAGE_COOKIE_MAX_AGE_MS,
+  });
+}
+
 export default function LanguagePageClient({
   lang,
   dictionary,
@@ -31,6 +44,7 @@ export default function LanguagePageClient({
         title={dictionary.pages.menu.sections.account.language}
         startAdornment={
           <button
+            type="button"
             onClick={() => router.back()}
             className="flex size-10 items-center justify-center rounded-full bg-gray-100"
           >
@@ -42,15 +56,14 @@ export default function LanguagePageClient({
       <div className="flex flex-col gap-2 p-6">
         {languages.map((language) => (
           <button
+            type="button"
             key={language.code}
-            onClick={() => {
+            onClick={async () => {
               const targetPath = `/${language.code}`;
 
               // Save language preference
               localStorage.setItem("preferredLanguage", language.code);
-              document.cookie = `preferredLanguage=${
-                language.code
-              };path=/;max-age=${365 * 24 * 60 * 60}`;
+              await setPreferredLanguageCookie(language.code);
 
               // Navigate directly to the original page with new language
               router.push(targetPath);
