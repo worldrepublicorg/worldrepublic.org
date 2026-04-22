@@ -11,8 +11,8 @@ import {
 import {
   PiArrowSquareOut,
   PiInfoFill,
-  PiWarningCircleFill,
-  PiWarningFill,
+  PiWarningCircle,
+  PiWarning,
 } from "react-icons/pi";
 import { CustomListItem } from "@/components/custom-list-item";
 
@@ -51,9 +51,11 @@ export function LearnMoreDialog({
         ? "You are approaching the unverified cap. Verify your account soon to keep earning without limits."
         : null;
   const warningBannerClassName =
-    warningLevel === "red"
-      ? "bg-red-50 text-red-900"
-      : "bg-yellow-50 text-yellow-900";
+    warningLevel === "red" ? "bg-red-50" : "bg-yellow-50";
+  const warningIconClassName =
+    warningLevel === "red" ? "size-5 shrink-0 text-red-900" : "size-5 shrink-0 text-yellow-900";
+  const warningTextClassName =
+    warningLevel === "red" ? "text-red-500" : "text-yellow-500";
 
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
@@ -85,14 +87,14 @@ export function LearnMoreDialog({
           >
             <div className="flex items-start gap-3">
               {warningLevel === "red" ? (
-                <PiWarningFill className="size-5 shrink-0" />
+                <PiWarning className={warningIconClassName} />
               ) : (
-                <PiWarningCircleFill className="size-5 shrink-0" />
+                <PiWarningCircle className={warningIconClassName} />
               )}
               <Typography
                 variant="body"
                 level={4}
-                className="text-left text-[14px] font-medium"
+                className={`text-left text-[14px] font-medium ${warningTextClassName}`}
               >
                 {warningBannerText}
               </Typography>
