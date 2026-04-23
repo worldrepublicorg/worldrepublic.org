@@ -546,6 +546,7 @@ export function SavingsSection({
               }
               copiedToastTitle={dictionary.toasts.copied}
               copyErrorToastTitle={dictionary.toasts.generic_error}
+              menuTitle={dictionary.nav.menu}
               lang={lang}
             />
           ) : showBaseChainSwitchCta ? (
