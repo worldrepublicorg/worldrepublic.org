@@ -430,7 +430,7 @@ export default function WalletPageClient({
                         .network_label
                     }
                     options={[
-                      // { label: "Ethereum", value: "1" },
+                      { label: "Base", value: "8453" },
                       { label: "World Chain", value: "480" },
                     ]}
                   />

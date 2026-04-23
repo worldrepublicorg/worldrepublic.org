@@ -651,13 +651,7 @@ export async function withdrawTokens(
       return { success: false, error: "Invalid wallet address" };
     }
 
-    const allowedChains = [
-      // "1", // temporarily disabled
-      // "56", // temporarily disabled
-      // "143", // temporarily disabled
-      "480",
-      // "8453", // temporarily disabled
-    ];
+    const allowedChains = ["480", "8453"];
     if (!allowedChains.includes(selectedChain)) {
       return { success: false, error: "Invalid chain" };
     }
@@ -831,8 +825,9 @@ export async function withdrawTokens(
     let fromAddress: string;
     if (selectedChain === "480") {
       fromAddress = "0x7aCA7AFDa78884fE0a58fb8B3988B9f93F963950";
+    } else if (selectedChain === "8453") {
+      fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac";
     } else {
-      // fromAddress = "0x55F6020eCA3B523A027596c9a542110302FEC0ac"; // Ethereum (temporarily disabled)
       return { success: false, error: "Invalid chain" };
     }
 
