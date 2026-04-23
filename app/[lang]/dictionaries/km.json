@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD នៅលើ Jumper",
           "ethereum_uniswap": "Ethereum WDD នៅលើ Uniswap",
-          "base_jumper": "Base WDD នៅលើ Jumper",
-          "base_uniswap": "Base WDD នៅលើ Uniswap",
+          "base_jumper": "Base Chain WDD នៅលើ Jumper",
+          "base_uniswap": "Base Chain WDD នៅលើ Uniswap",
           "worldchain_jumper": "World Chain WDD នៅលើ Jumper",
           "worldchain_uniswap": "World Chain WDD នៅលើ Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
     "save": "រក្សាទុក",
     "vote": "បោះឆ្នោត",
-    "switch_to_world_chain": "ប្តូរទៅ World Chain"
+    "switch_to_base_chain": "ប្តូរទៅ Base Chain"
   },
   "auth": {
     "choose_method": "ជ្រើសរើសវិធីសាស្ត្រដែលអ្នកចូលចិត្ត.",

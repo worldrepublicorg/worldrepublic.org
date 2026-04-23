@@ -11,10 +11,10 @@ import {
   useWriteContract,
 } from "wagmi";
 
-const WORLD_CHAIN_ID = 480;
+const BASE_CHAIN_ID = 8453;
 const WDD_TOKEN_ADDRESS = "0xEdE54d9c024ee80C85ec0a75eD2d8774c7Fbac9B" as const;
-const WORLD_SAVINGS_CONTRACT_ADDRESS =
-  "0x234302Db10A54BDc11094A8Ef816B0Eaa5FCE3f7" as const;
+const BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS =
+  "0xeFE5a120c2787ee53FbebAE8902bdDe1edE416Fc" as const;
 const WDD_DECIMALS = 18;
 // Match on-chain linear savings growth: balance doubles in 529 days.
 const SECONDS_IN_529_DAYS = 529 * 86400;
@@ -101,11 +101,11 @@ function parseHexChainId(raw: unknown): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function useWorldchainSavingsAccount() {
+export function useBaseChainSavingsAccount() {
   const { toast } = useToast();
   const { address, isConnected, connector } = useAccount();
   const switchChain = useSwitchChain();
-  const publicClient = usePublicClient({ chainId: WORLD_CHAIN_ID });
+  const publicClient = usePublicClient({ chainId: BASE_CHAIN_ID });
   const writeContract = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -119,7 +119,7 @@ export function useWorldchainSavingsAccount() {
   const displayAvailableInterestRef = useRef(0);
   const snapshotTimeRef = useRef<number | null>(null);
   const snapshotSavingsRef = useRef(0);
-  const baseAvailableRef = useRef(0);
+  const snapshotAvailableRef = useRef(0);
 
   const {
     data,
@@ -134,21 +134,21 @@ export function useWorldchainSavingsAccount() {
         abi: erc20Abi,
         functionName: "balanceOf",
         args: address ? [address] : undefined,
-        chainId: WORLD_CHAIN_ID,
+        chainId: BASE_CHAIN_ID,
       },
       {
-        address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+        address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "balanceOf",
         args: address ? [address] : undefined,
-        chainId: WORLD_CHAIN_ID,
+        chainId: BASE_CHAIN_ID,
       },
       {
-        address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+        address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "available",
         args: address ? [address] : undefined,
-        chainId: WORLD_CHAIN_ID,
+        chainId: BASE_CHAIN_ID,
       },
     ],
     query: {
@@ -187,7 +187,7 @@ export function useWorldchainSavingsAccount() {
     if (!isConnected || !address) {
       snapshotTimeRef.current = null;
       snapshotSavingsRef.current = 0;
-      baseAvailableRef.current = 0;
+      snapshotAvailableRef.current = 0;
       setDisplayAvailableInterest(0);
       setOptimisticAvailableInterest(null);
       setOptimisticBalances(null);
@@ -196,7 +196,7 @@ export function useWorldchainSavingsAccount() {
 
     snapshotTimeRef.current = Date.now();
     snapshotSavingsRef.current = effectiveSavingsBalance;
-    baseAvailableRef.current = effectiveAvailableInterest;
+    snapshotAvailableRef.current = effectiveAvailableInterest;
     setDisplayAvailableInterest(effectiveAvailableInterest);
   }, [
     isConnected,
@@ -218,7 +218,7 @@ export function useWorldchainSavingsAccount() {
       );
       const accrued =
         snapshotSavingsRef.current * SAVINGS_PER_SECOND_RATE * elapsedSeconds;
-      setDisplayAvailableInterest(baseAvailableRef.current + accrued);
+      setDisplayAvailableInterest(snapshotAvailableRef.current + accrued);
     }, 1000);
 
     return () => window.clearInterval(intervalId);
@@ -272,23 +272,23 @@ export function useWorldchainSavingsAccount() {
     }
 
     const preflightChainId = await getLiveChainId();
-    if (preflightChainId !== WORLD_CHAIN_ID) {
+    if (preflightChainId !== BASE_CHAIN_ID) {
       try {
-        await switchChain.mutateAsync({ chainId: WORLD_CHAIN_ID });
+        await switchChain.mutateAsync({ chainId: BASE_CHAIN_ID });
       } catch {
-        toast.error({ title: "Please switch to World Chain to continue." });
+        toast.error({ title: "Please switch to Base Chain to continue." });
         throw new Error("Chain switch failed");
       }
     }
 
     const postSwitchChainId = await getLiveChainId();
-    if (postSwitchChainId !== WORLD_CHAIN_ID) {
-      toast.error({ title: "Please switch to World Chain to continue." });
+    if (postSwitchChainId !== BASE_CHAIN_ID) {
+      toast.error({ title: "Please switch to Base Chain to continue." });
       throw new Error("Chain switch failed");
     }
 
     if (!publicClient) {
-      throw new Error("World Chain client not available");
+      throw new Error("Base Chain client not available");
     }
     return { account: address as `0x${string}`, client: publicClient };
   }, [isConnected, address, getLiveChainId, switchChain, toast, publicClient]);
@@ -318,7 +318,7 @@ export function useWorldchainSavingsAccount() {
           address: WDD_TOKEN_ADDRESS,
           abi: erc20Abi,
           functionName: "allowance",
-          args: [account, WORLD_SAVINGS_CONTRACT_ADDRESS],
+          args: [account, BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS],
         })) as bigint;
 
         if (allowance < amountWei) {
@@ -326,13 +326,13 @@ export function useWorldchainSavingsAccount() {
             address: WDD_TOKEN_ADDRESS,
             abi: erc20Abi,
             functionName: "approve",
-            args: [WORLD_SAVINGS_CONTRACT_ADDRESS, amountWei],
+            args: [BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS, amountWei],
           })) as `0x${string}`;
           await waitForSuccessReceipt(approveHash, client);
         }
 
         const stakeHash = (await writeContract.mutateAsync({
-          address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+          address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
           abi: tokenStakingPerTokenAbi,
           functionName: "stake",
           args: [amountWei],
@@ -340,19 +340,19 @@ export function useWorldchainSavingsAccount() {
         await waitForSuccessReceipt(stakeHash, client);
         const amountValue = Number(normalizedAmount);
         setOptimisticBalances((current) => {
-          const baseAvailable =
+          const snapshotAvailable =
             optimisticAvailableInterest ??
             current?.available ??
             displayAvailableInterestRef.current;
-          const base = current ?? {
+          const prev = current ?? {
             wallet: walletBalance,
             savings: savingsBalance,
-            available: baseAvailable,
+            available: snapshotAvailable,
           };
           return {
-            wallet: Math.max(0, base.wallet - amountValue),
-            savings: base.savings + amountValue,
-            available: base.available,
+            wallet: Math.max(0, prev.wallet - amountValue),
+            savings: prev.savings + amountValue,
+            available: prev.available,
           };
         });
         setOptimisticAvailableInterest(
@@ -390,7 +390,7 @@ export function useWorldchainSavingsAccount() {
       try {
         const { client } = await ensureReadyForWrite();
         const withdrawHash = (await writeContract.mutateAsync({
-          address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+          address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
           abi: tokenStakingPerTokenAbi,
           functionName: "withdraw",
           args: [amountWei],
@@ -398,19 +398,19 @@ export function useWorldchainSavingsAccount() {
         await waitForSuccessReceipt(withdrawHash, client);
         const amountValue = Number(normalizedAmount);
         setOptimisticBalances((current) => {
-          const baseAvailable =
+          const snapshotAvailable =
             optimisticAvailableInterest ??
             current?.available ??
             displayAvailableInterestRef.current;
-          const base = current ?? {
+          const prev = current ?? {
             wallet: walletBalance,
             savings: savingsBalance,
-            available: baseAvailable,
+            available: snapshotAvailable,
           };
           return {
-            wallet: base.wallet + amountValue,
-            savings: Math.max(0, base.savings - amountValue),
-            available: base.available,
+            wallet: prev.wallet + amountValue,
+            savings: Math.max(0, prev.savings - amountValue),
+            available: prev.available,
           };
         });
         setOptimisticAvailableInterest(
@@ -441,25 +441,25 @@ export function useWorldchainSavingsAccount() {
     try {
       const { client } = await ensureReadyForWrite();
       const redeemHash = (await writeContract.mutateAsync({
-        address: WORLD_SAVINGS_CONTRACT_ADDRESS,
+        address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "redeem",
         args: [],
       })) as `0x${string}`;
       await waitForSuccessReceipt(redeemHash, client);
       setOptimisticBalances((current) => {
-        const baseAvailable =
+        const snapshotAvailable =
           optimisticAvailableInterest ??
           current?.available ??
           displayAvailableInterestRef.current;
-        const base = current ?? {
+        const prev = current ?? {
           wallet: walletBalance,
           savings: savingsBalance,
-          available: baseAvailable,
+          available: snapshotAvailable,
         };
         return {
-          wallet: base.wallet + base.available,
-          savings: base.savings,
+          wallet: prev.wallet + prev.available,
+          savings: prev.savings,
           available: 0,
         };
       });

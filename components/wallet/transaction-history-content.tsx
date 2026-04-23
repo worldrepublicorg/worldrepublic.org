@@ -476,7 +476,7 @@ export function TransactionHistoryContent({
     if (selectedChain === "1") return "Ethereum";
     if (selectedChain === "143") return "Monad";
     if (selectedChain === "480") return "World Chain";
-    if (selectedChain === "8453") return "Base";
+    if (selectedChain === "8453") return "Base Chain";
     return selectedChain || "";
   };
 

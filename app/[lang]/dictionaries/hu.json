@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper-en",
           "ethereum_uniswap": "Ethereum WDD Uniswap-on",
-          "base_jumper": "Base WDD Jumper-en",
-          "base_uniswap": "Base WDD Uniswap-on",
+          "base_jumper": "Base Chain WDD Jumper-en",
+          "base_uniswap": "Base Chain WDD Uniswap-on",
           "worldchain_jumper": "World Chain WDD Jumper-en",
           "worldchain_uniswap": "World Chain WDD Uniswap-on"
         },
@@ -394,7 +394,7 @@
     "updating": "Frissítés...",
     "save": "Mentés",
     "vote": "Szavazás",
-    "switch_to_world_chain": "Váltás World Chainre"
+    "switch_to_base_chain": "Váltás Base Chainre"
   },
   "auth": {
     "choose_method": "Válassza ki az előnyben részesített módszert.",

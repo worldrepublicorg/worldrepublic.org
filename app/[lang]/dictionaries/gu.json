@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper પર",
           "ethereum_uniswap": "Ethereum WDD Uniswap પર",
-          "base_jumper": "Base WDD Jumper પર",
-          "base_uniswap": "Base WDD Uniswap પર",
+          "base_jumper": "Base Chain WDD Jumper પર",
+          "base_uniswap": "Base Chain WDD Uniswap પર",
           "worldchain_jumper": "World Chain WDD Jumper પર",
           "worldchain_uniswap": "World Chain WDD Uniswap પર"
         },
@@ -394,7 +394,7 @@
     "updating": "અપડેટ કરી રહ્યા છીએ...",
     "save": "સાચવો",
     "vote": "મત આપો",
-    "switch_to_world_chain": "World Chain પર સ્વિચ કરો"
+    "switch_to_base_chain": "Base Chain પર સ્વિચ કરો"
   },
   "auth": {
     "choose_method": "તમારી પસંદગીની પદ્ધતિ પસંદ કરો।",

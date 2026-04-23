@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper의",
           "ethereum_uniswap": "Ethereum WDD Uniswap의",
-          "base_jumper": "Base WDD Jumper의",
-          "base_uniswap": "Base WDD Uniswap의",
+          "base_jumper": "Base Chain WDD Jumper의",
+          "base_uniswap": "Base Chain WDD Uniswap의",
           "worldchain_jumper": "World Chain WDD Jumper의",
           "worldchain_uniswap": "World Chain WDD Uniswap의"
         },
@@ -394,7 +394,7 @@
     "updating": "업데이트 중...",
     "save": "저장",
     "vote": "투표",
-    "switch_to_world_chain": "World Chain으로 전환"
+    "switch_to_base_chain": "Base Chain으로 전환"
   },
   "auth": {
     "choose_method": "선호하는 방법을 선택하세요.",

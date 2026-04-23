@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD lori Jumper",
           "ethereum_uniswap": "Ethereum WDD lori Uniswap",
-          "base_jumper": "Base WDD lori Jumper",
-          "base_uniswap": "Base WDD lori Uniswap",
+          "base_jumper": "Base Chain WDD lori Jumper",
+          "base_uniswap": "Base Chain WDD lori Uniswap",
           "worldchain_jumper": "World Chain WDD lori Jumper",
           "worldchain_uniswap": "World Chain WDD lori Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "N ṣe imudojuiwọn...",
     "save": "Fi pamọ",
     "vote": "Dibò",
-    "switch_to_world_chain": "Yipada si World Chain"
+    "switch_to_base_chain": "Yipada si Base Chain"
   },
   "auth": {
     "choose_method": "Yan ọna ti o fẹ.",

@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD sa Jumper",
           "ethereum_uniswap": "Ethereum WDD sa Uniswap",
-          "base_jumper": "Base WDD sa Jumper",
-          "base_uniswap": "Base WDD sa Uniswap",
+          "base_jumper": "Base Chain WDD sa Jumper",
+          "base_uniswap": "Base Chain WDD sa Uniswap",
           "worldchain_jumper": "World Chain WDD sa Jumper",
           "worldchain_uniswap": "World Chain WDD sa Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Nag-a-update...",
     "save": "I-save",
     "vote": "Bumoto",
-    "switch_to_world_chain": "Lumipat sa World Chain"
+    "switch_to_base_chain": "Lumipat sa Base Chain"
   },
   "auth": {
     "choose_method": "Pumili ng iyong ginustong paraan.",

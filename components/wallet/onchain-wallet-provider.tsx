@@ -4,26 +4,30 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { fallback, http } from "viem";
 import { createConfig, createStorage, WagmiProvider } from "wagmi";
-import { worldchain } from "wagmi/chains";
+import { base } from "wagmi/chains";
 import { injected } from "wagmi/connectors";
 
-const WORLD_CHAIN_RPC_URLS = [
-  "https://worldchain-mainnet.g.alchemy.com/public",
-  "https://480.rpc.thirdweb.com",
-  "https://worldchain.drpc.org",
-  "https://sparkling-autumn-dinghy.worldchain-mainnet.quiknode.pro",
-  "https://worldchain-mainnet.gateway.tenderly.co",
+const BASE_CHAIN_RPC_URLS = [
+  "https://mainnet.base.org",
+  "https://base.drpc.org",
+  "https://1rpc.io/base",
+  "https://base.llamarpc.com",
+  "https://base-rpc.publicnode.com",
+  "https://base.public.blockpi.network/v1/rpc/public",
+  "https://base.meowrpc.com",
+  "https://base-public.nodies.app",
+  "https://base-mainnet.public.blastapi.io",
 ] as const;
 
 const wagmiConfig = createConfig({
-  chains: [worldchain],
+  chains: [base],
   connectors: [injected()],
   ssr: true,
   storage: createStorage({
     storage: typeof window !== "undefined" ? window.localStorage : undefined,
   }),
   transports: {
-    [worldchain.id]: fallback(WORLD_CHAIN_RPC_URLS.map((url) => http(url))),
+    [base.id]: fallback(BASE_CHAIN_RPC_URLS.map((url) => http(url))),
   },
 });
 

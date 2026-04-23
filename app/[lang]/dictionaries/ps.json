@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD په Jumper کې",
           "ethereum_uniswap": "Ethereum WDD په Uniswap کې",
-          "base_jumper": "Base WDD په Jumper کې",
-          "base_uniswap": "Base WDD په Uniswap کې",
+          "base_jumper": "Base Chain WDD په Jumper کې",
+          "base_uniswap": "Base Chain WDD په Uniswap کې",
           "worldchain_jumper": "World Chain WDD په Jumper کې",
           "worldchain_uniswap": "World Chain WDD په Uniswap کې"
         },
@@ -394,7 +394,7 @@
     "updating": "تازه کول...",
     "save": "خوندي کړئ",
     "vote": "رايه ورکړه",
-    "switch_to_world_chain": "World Chain ته واړوئ"
+    "switch_to_base_chain": "Base Chain ته واړوئ"
   },
   "auth": {
     "choose_method": "خپل غوره میتود غوره کړئ.",

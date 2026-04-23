@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD 在 Jumper 上",
           "ethereum_uniswap": "Ethereum WDD 在 Uniswap 上",
-          "base_jumper": "Base WDD 在 Jumper 上",
-          "base_uniswap": "Base WDD 在 Uniswap 上",
+          "base_jumper": "Base Chain WDD 在 Jumper 上",
+          "base_uniswap": "Base Chain WDD 在 Uniswap 上",
           "worldchain_jumper": "World Chain WDD 在 Jumper 上",
           "worldchain_uniswap": "World Chain WDD 在 Uniswap 上"
         },
@@ -394,7 +394,7 @@
     "updating": "更新中...",
     "save": "保存",
     "vote": "投票",
-    "switch_to_world_chain": "切换到 World Chain"
+    "switch_to_base_chain": "切换到 Base Chain"
   },
   "auth": {
     "choose_method": "选择您喜欢的方法。",

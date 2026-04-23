@@ -928,7 +928,7 @@ const NON_WITHDRAWABLE_BALANCE_BUFFER = 0.01;
 // This cap is intended to cover the combined BI wallet + BI savings ceiling.
 const BASIC_INCOME_BALANCE_CAP = Math.max(
   0,
-  getMinWithdrawalAmount("480") - NON_WITHDRAWABLE_BALANCE_BUFFER,
+  getMinWithdrawalAmount("8453") - NON_WITHDRAWABLE_BALANCE_BUFFER,
 );
 const SAVINGS_ANNUAL_INTEREST_RATE = 0.69;
 const SAVINGS_DAILY_INTEREST_RATE = SAVINGS_ANNUAL_INTEREST_RATE / 365;

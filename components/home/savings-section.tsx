@@ -31,15 +31,15 @@ import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { SelfVerificationDialog } from "@/components/self-verification-dialog";
 import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
+import { useBaseChainGuard } from "@/hooks/use-base-chain-guard";
+import { useBaseChainSavingsAccount } from "@/hooks/use-base-chain-savings-account";
 import { useSavings } from "@/hooks/use-savings";
-import { useWorldChainGuard } from "@/hooks/use-world-chain-guard";
-import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
 import { formatTxError } from "@/lib/format-tx-error";
 import { getSafeLocale } from "@/lib/locale";
 import { cn, formatFullAmount, getRewardDecimals } from "@/lib/utils";
 import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 
-export type SavingsAccountType = "offchain" | "worldchain";
+export type SavingsAccountType = "offchain" | "base_chain";
 
 interface SavingsSectionProps {
   lang: string;
@@ -78,11 +78,10 @@ export function SavingsSection({
 }: SavingsSectionProps) {
   const { isConnected: isWalletConnected } = useAccount();
   const { toast } = useToast();
-  const { isOnWorldChain, isSwitching, switchToWorldChain } =
-    useWorldChainGuard();
+  const { isOnBaseChain, isSwitching, switchToBaseChain } = useBaseChainGuard();
   const savingsAccountOptions = [
     { value: "offchain", label: "Offchain" },
-    { value: "worldchain", label: "World Chain" },
+    { value: "base_chain", label: "Base Chain" },
   ] as const;
   const raisedButtonShadowClass =
     "shadow-[0_4px_10px_rgba(0,0,0,0.19)]! disabled:shadow-none! transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow]!";
@@ -115,23 +114,23 @@ export function SavingsSection({
     isActive,
     onSuccess,
   );
-  const worldchainAccount = useWorldchainSavingsAccount();
-  const worldchainWalletBalance = worldchainAccount.balances.wallet;
-  const worldchainSavingsBalance = worldchainAccount.balances.savings;
-  const worldchainAvailableInterest = worldchainAccount.interest.available;
-  const isWorldchainAccountSelected = selectedSavingsAccount === "worldchain";
-  const isOffchainAccountSelected = !isWorldchainAccountSelected;
-  const isCurrentAccountLoading = isWorldchainAccountSelected
-    ? worldchainAccount.status.isLoading
+  const baseChainAccount = useBaseChainSavingsAccount();
+  const baseChainWalletBalance = baseChainAccount.balances.wallet;
+  const baseChainSavingsBalance = baseChainAccount.balances.savings;
+  const baseChainAvailableInterest = baseChainAccount.interest.available;
+  const isBaseChainAccountSelected = selectedSavingsAccount === "base_chain";
+  const isOffchainAccountSelected = !isBaseChainAccountSelected;
+  const isCurrentAccountLoading = isBaseChainAccountSelected
+    ? baseChainAccount.status.isLoading
     : isSavingsLoading;
-  const displayWalletBalance = isWorldchainAccountSelected
-    ? worldchainWalletBalance
+  const displayWalletBalance = isBaseChainAccountSelected
+    ? baseChainWalletBalance
     : walletBalance;
-  const displaySavingsBalance = isWorldchainAccountSelected
-    ? worldchainSavingsBalance
+  const displaySavingsBalance = isBaseChainAccountSelected
+    ? baseChainSavingsBalance
     : savingsBalance;
-  const displayCollectableAmount = isWorldchainAccountSelected
-    ? worldchainAvailableInterest
+  const displayCollectableAmount = isBaseChainAccountSelected
+    ? baseChainAvailableInterest
     : maxCollectableAmount;
 
   const maxButtonAmount = useMemo(() => {
@@ -244,7 +243,7 @@ export function SavingsSection({
 
   const isActionDisabled =
     isCurrentAccountLoading ||
-    (isWorldchainAccountSelected && isWalletConnected && !isOnWorldChain) ||
+    (isBaseChainAccountSelected && isWalletConnected && !isOnBaseChain) ||
     (isOffchainAccountSelected && !isAuthenticated) ||
     !amount ||
     Number(amount) <= 0 ||
@@ -253,14 +252,14 @@ export function SavingsSection({
     savingsAccountOptions.find(
       (option) => option.value === selectedSavingsAccount,
     )?.label ?? savingsAccountOptions[0].label;
-  const showWorldChainConnectCta =
-    isWorldchainAccountSelected && !isWalletConnected;
-  const showWorldChainSwitchCta =
-    isWorldchainAccountSelected && isWalletConnected && !isOnWorldChain;
+  const showBaseChainConnectCta =
+    isBaseChainAccountSelected && !isWalletConnected;
+  const showBaseChainSwitchCta =
+    isBaseChainAccountSelected && isWalletConnected && !isOnBaseChain;
   const nonWithdrawableBalanceBuffer = 0.01;
   const capAmount = Math.max(
     0,
-    getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
+    getMinWithdrawalAmount("8453") - nonWithdrawableBalanceBuffer,
   );
   const yellowWarningThreshold = capAmount * 0.7;
   const redWarningThreshold = capAmount * 0.9;
@@ -328,7 +327,7 @@ export function SavingsSection({
                 .reward_cap_banner
             }
             externalLink={{
-              url: "https://worldscan.org/address/0x234302db10a54bdc11094a8ef816b0eaa5fce3f7#code",
+              url: "https://basescan.org/address/0xeFE5a120c2787ee53FbebAE8902bdDe1edE416Fc#code",
               label: dictionary.pages.earn.savings.smart_contract_link,
             }}
           />
@@ -448,7 +447,7 @@ export function SavingsSection({
                     <Button
                       disabled={
                         (isOffchainAccountSelected && !isAuthenticated) ||
-                        showWorldChainSwitchCta ||
+                        showBaseChainSwitchCta ||
                         isCurrentAccountLoading ||
                         collectableAmountForUi <= 0
                       }
@@ -482,8 +481,8 @@ export function SavingsSection({
                         <Button
                           onClick={async () => {
                             try {
-                              if (isWorldchainAccountSelected) {
-                                await worldchainAccount.actions.collect();
+                              if (isBaseChainAccountSelected) {
+                                await baseChainAccount.actions.collect();
                               } else {
                                 await handleCollectInterest();
                               }
@@ -513,7 +512,7 @@ export function SavingsSection({
             </div>
           </div>
 
-          {showWorldChainConnectCta ? (
+          {showBaseChainConnectCta ? (
             <ConnectWalletButton
               variant="primary"
               fullWidth
@@ -549,18 +548,18 @@ export function SavingsSection({
               copyErrorToastTitle={dictionary.toasts.generic_error}
               lang={lang}
             />
-          ) : showWorldChainSwitchCta ? (
+          ) : showBaseChainSwitchCta ? (
             <Button
               fullWidth
               className={raisedButtonShadowClass}
               disabled={isSwitching}
               onClick={async () => {
-                await switchToWorldChain();
+                await switchToBaseChain();
               }}
             >
               {isSwitching
                 ? dictionary.common.loading
-                : dictionary.common.switch_to_world_chain}
+                : dictionary.common.switch_to_base_chain}
             </Button>
           ) : !isAuthenticated && isOffchainAccountSelected ? (
             <Button
@@ -607,8 +606,8 @@ export function SavingsSection({
                     <Button
                       onClick={async () => {
                         try {
-                          if (isWorldchainAccountSelected) {
-                            await worldchainAccount.actions.deposit(amount);
+                          if (isBaseChainAccountSelected) {
+                            await baseChainAccount.actions.deposit(amount);
                             setAmount("");
                           } else {
                             await handleDeposit();
@@ -665,8 +664,8 @@ export function SavingsSection({
                     <Button
                       onClick={async () => {
                         try {
-                          if (isWorldchainAccountSelected) {
-                            await worldchainAccount.actions.withdraw(amount);
+                          if (isBaseChainAccountSelected) {
+                            await baseChainAccount.actions.withdraw(amount);
                             setAmount("");
                           } else {
                             await handleWithdraw();

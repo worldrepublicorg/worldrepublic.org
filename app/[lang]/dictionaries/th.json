@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD บน Jumper",
           "ethereum_uniswap": "Ethereum WDD บน Uniswap",
-          "base_jumper": "Base WDD บน Jumper",
-          "base_uniswap": "Base WDD บน Uniswap",
+          "base_jumper": "Base Chain WDD บน Jumper",
+          "base_uniswap": "Base Chain WDD บน Uniswap",
           "worldchain_jumper": "World Chain WDD บน Jumper",
           "worldchain_uniswap": "World Chain WDD บน Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "กำลังอัปเดต...",
     "save": "บันทึก",
     "vote": "ลงคะแนน",
-    "switch_to_world_chain": "สลับไปยัง World Chain"
+    "switch_to_base_chain": "สลับไปยัง Base Chain"
   },
   "auth": {
     "choose_method": "เลือกวิธีการที่คุณต้องการ.",

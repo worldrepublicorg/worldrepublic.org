@@ -56,7 +56,7 @@ export function BasicIncomeSection({
   const nonWithdrawableBalanceBuffer = 0.01;
   const capAmount = Math.max(
     0,
-    getMinWithdrawalAmount("480") - nonWithdrawableBalanceBuffer,
+    getMinWithdrawalAmount("8453") - nonWithdrawableBalanceBuffer,
   );
   const claimedTotal = basicIncomeAndInterestClaimedTotal ?? 0;
   const yellowWarningThreshold = capAmount * 0.7;

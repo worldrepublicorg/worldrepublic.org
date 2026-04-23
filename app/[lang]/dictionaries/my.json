@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper တွင်",
           "ethereum_uniswap": "Ethereum WDD Uniswap တွင်",
-          "base_jumper": "Base WDD Jumper တွင်",
-          "base_uniswap": "Base WDD Uniswap တွင်",
+          "base_jumper": "Base Chain WDD Jumper တွင်",
+          "base_uniswap": "Base Chain WDD Uniswap တွင်",
           "worldchain_jumper": "World Chain WDD Jumper တွင်",
           "worldchain_uniswap": "World Chain WDD Uniswap တွင်"
         },
@@ -394,7 +394,7 @@
     "updating": "မွမ်းမံနေသည်...",
     "save": "သိမ်းဆည်းပါ",
     "vote": "မဲပေးရန်",
-    "switch_to_world_chain": "World Chain သို့ ပြောင်းပါ"
+    "switch_to_base_chain": "Base Chain သို့ ပြောင်းပါ"
   },
   "auth": {
     "choose_method": "သင်နှစ်သက်သောနည်းလမ်းကို ရွေးချယ်ပါ.",

@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper پر",
           "ethereum_uniswap": "Ethereum WDD Uniswap پر",
-          "base_jumper": "Base WDD Jumper پر",
-          "base_uniswap": "Base WDD Uniswap پر",
+          "base_jumper": "Base Chain WDD Jumper پر",
+          "base_uniswap": "Base Chain WDD Uniswap پر",
           "worldchain_jumper": "World Chain WDD Jumper پر",
           "worldchain_uniswap": "World Chain WDD Uniswap پر"
         },
@@ -394,7 +394,7 @@
     "updating": "اپڈیٹ ہو رہا ہے...",
     "save": "محفوظ کریں",
     "vote": "ووٹ دیں",
-    "switch_to_world_chain": "World Chain پر سوئچ کریں"
+    "switch_to_base_chain": "Base Chain پر سوئچ کریں"
   },
   "auth": {
     "choose_method": "اپنی پسندیدہ طریقہ منتخب کریں.",

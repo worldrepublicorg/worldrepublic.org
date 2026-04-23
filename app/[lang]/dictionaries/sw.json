@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD kwenye Jumper",
           "ethereum_uniswap": "Ethereum WDD kwenye Uniswap",
-          "base_jumper": "Base WDD kwenye Jumper",
-          "base_uniswap": "Base WDD kwenye Uniswap",
+          "base_jumper": "Base Chain WDD kwenye Jumper",
+          "base_uniswap": "Base Chain WDD kwenye Uniswap",
           "worldchain_jumper": "World Chain WDD kwenye Jumper",
           "worldchain_uniswap": "World Chain WDD kwenye Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Inasasisha...",
     "save": "Hifadhi",
     "vote": "Piga kura",
-    "switch_to_world_chain": "Badilisha kwenda World Chain"
+    "switch_to_base_chain": "Badilisha kwenda Base Chain"
   },
   "auth": {
     "choose_method": "Chagua njia unayopenda.",

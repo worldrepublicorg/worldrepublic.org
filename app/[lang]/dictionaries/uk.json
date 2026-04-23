@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD на Jumper",
           "ethereum_uniswap": "Ethereum WDD на Uniswap",
-          "base_jumper": "Base WDD на Jumper",
-          "base_uniswap": "Base WDD на Uniswap",
+          "base_jumper": "Base Chain WDD на Jumper",
+          "base_uniswap": "Base Chain WDD на Uniswap",
           "worldchain_jumper": "World Chain WDD на Jumper",
           "worldchain_uniswap": "World Chain WDD на Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Оновлення...",
     "save": "Зберегти",
     "vote": "Голосувати",
-    "switch_to_world_chain": "Перемкнутися на World Chain"
+    "switch_to_base_chain": "Перемкнутися на Base Chain"
   },
   "auth": {
     "choose_method": "Виберіть бажаний метод.",

@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD στο Jumper",
           "ethereum_uniswap": "Ethereum WDD στο Uniswap",
-          "base_jumper": "Base WDD στο Jumper",
-          "base_uniswap": "Base WDD στο Uniswap",
+          "base_jumper": "Base Chain WDD στο Jumper",
+          "base_uniswap": "Base Chain WDD στο Uniswap",
           "worldchain_jumper": "World Chain WDD στο Jumper",
           "worldchain_uniswap": "World Chain WDD στο Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Ενημέρωση...",
     "save": "Αποθήκευση",
     "vote": "Ψηφίστε",
-    "switch_to_world_chain": "Μετάβαση σε World Chain"
+    "switch_to_base_chain": "Μετάβαση σε Base Chain"
   },
   "auth": {
     "choose_method": "Επιλέξτε την προτιμώμενη μέθοδο.",

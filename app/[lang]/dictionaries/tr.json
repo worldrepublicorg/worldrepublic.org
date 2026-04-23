@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper'da",
           "ethereum_uniswap": "Ethereum WDD Uniswap'ta",
-          "base_jumper": "Base WDD Jumper'da",
-          "base_uniswap": "Base WDD Uniswap'ta",
+          "base_jumper": "Base Chain WDD Jumper'da",
+          "base_uniswap": "Base Chain WDD Uniswap'ta",
           "worldchain_jumper": "World Chain WDD Jumper'da",
           "worldchain_uniswap": "World Chain WDD Uniswap'ta"
         },
@@ -394,7 +394,7 @@
     "updating": "Güncelleniyor...",
     "save": "Kaydet",
     "vote": "Oy ver",
-    "switch_to_world_chain": "World Chain'e geç"
+    "switch_to_base_chain": "Base Chain'e geç"
   },
   "auth": {
     "choose_method": "Tercih ettiğiniz yöntemi seçin.",

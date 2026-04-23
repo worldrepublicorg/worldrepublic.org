@@ -18,7 +18,7 @@ import { PiArrowSquareOut, PiPowerFill, PiWalletFill } from "react-icons/pi";
 import type { Connector } from "wagmi";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
 import { CustomListItem } from "@/components/custom-list-item";
-import { useWorldchainSavingsAccount } from "@/hooks/use-world-chain-savings-account";
+import { useBaseChainSavingsAccount } from "@/hooks/use-base-chain-savings-account";
 import {
   copyToClipboard,
   getBalancePrecision,
@@ -77,8 +77,8 @@ export function ConnectWalletButton({
     Connector[]
   >([]);
   const [disconnectDialogOpen, setDisconnectDialogOpen] = useState(false);
-  const worldchainAccount = useWorldchainSavingsAccount();
-  const rawBalance = worldchainAccount.balances.wallet;
+  const baseChainAccount = useBaseChainSavingsAccount();
+  const rawBalance = baseChainAccount.balances.wallet;
   const precision = getBalancePrecision(rawBalance);
   const truncatedBalance = truncateToPrecision(rawBalance, precision);
   const finalPrecision = truncatedBalance === 0 ? 2 : precision;
@@ -88,7 +88,7 @@ export function ConnectWalletButton({
     maximumFractionDigits: finalPrecision,
   });
   const walletSavingsUrl =
-    "https://www.worldrepublic.org/?tab=savings&savings_account=worldchain";
+    "https://www.worldrepublic.org/?tab=savings&savings_account=base_chain";
 
   const handleWalletButtonClick = async () => {
     const userAgent =

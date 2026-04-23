@@ -4,17 +4,20 @@ import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useState } from "react";
 import type { Connector } from "wagmi";
 import { useAccount, useSwitchChain } from "wagmi";
+import { base } from "wagmi/chains";
 import { formatTxError } from "@/lib/format-tx-error";
 
-export const WORLD_CHAIN_ID = 480;
-const WORLD_CHAIN_ID_HEX = "0x1e0";
+export const BASE_CHAIN_ID = base.id;
+const BASE_CHAIN_ID_HEX = `0x${base.id.toString(16)}` as const;
 
-const WORLD_CHAIN_ADD_PARAMS = {
-  chainId: WORLD_CHAIN_ID_HEX,
-  chainName: "World Chain",
-  nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
-  rpcUrls: ["https://worldchain-mainnet.g.alchemy.com/public"],
-  blockExplorerUrls: ["https://worldscan.org"],
+const BASE_CHAIN_ADD_PARAMS = {
+  chainId: BASE_CHAIN_ID_HEX,
+  chainName: "Base Chain",
+  nativeCurrency: base.nativeCurrency,
+  rpcUrls: [...base.rpcUrls.default.http],
+  blockExplorerUrls: base.blockExplorers?.default?.url
+    ? [base.blockExplorers.default.url]
+    : [],
 } as const;
 
 type EthereumProvider = {
@@ -55,37 +58,35 @@ function looksLikeUnknownChain(err: unknown): boolean {
   );
 }
 
-async function addWorldChain(connector: Connector): Promise<void> {
+async function addBaseChain(connector: Connector): Promise<void> {
   const provider = (await connector.getProvider()) as EthereumProvider;
   await provider.request({
     method: "wallet_addEthereumChain",
-    params: [WORLD_CHAIN_ADD_PARAMS],
+    params: [BASE_CHAIN_ADD_PARAMS],
   });
 }
 
-async function switchWorldChain(connector: Connector): Promise<void> {
+async function switchBaseChain(connector: Connector): Promise<void> {
   const provider = (await connector.getProvider()) as EthereumProvider;
   await provider.request({
     method: "wallet_switchEthereumChain",
-    params: [{ chainId: WORLD_CHAIN_ID_HEX }],
+    params: [{ chainId: BASE_CHAIN_ID_HEX }],
   });
 }
 
-async function switchOrAddWorldChain(connector: Connector): Promise<void> {
+async function switchOrAddBaseChain(connector: Connector): Promise<void> {
   try {
-    await switchWorldChain(connector);
+    await switchBaseChain(connector);
     return;
   } catch (switchErr) {
     if (isUserRejection(switchErr)) {
       throw switchErr;
     }
 
-    // Trust Wallet often throws generic switch errors when the chain is missing.
-    // Try adding the chain even when the error isn't a clean 4902.
     if (!looksLikeUnknownChain(switchErr)) {
       try {
-        await addWorldChain(connector);
-        await switchWorldChain(connector);
+        await addBaseChain(connector);
+        await switchBaseChain(connector);
         return;
       } catch {
         // Fall through to original error handling below.
@@ -94,13 +95,11 @@ async function switchOrAddWorldChain(connector: Connector): Promise<void> {
     }
   }
 
-  await addWorldChain(connector);
-
-  // Some wallets add without switching; retry.
-  await switchWorldChain(connector);
+  await addBaseChain(connector);
+  await switchBaseChain(connector);
 }
 
-export function useWorldChainGuard() {
+export function useBaseChainGuard() {
   const { isConnected, connector } = useAccount();
   const switchChain = useSwitchChain();
   const { toast } = useToast();
@@ -142,7 +141,7 @@ export function useWorldChainGuard() {
     };
   }, [isConnected, refreshLiveChainId]);
 
-  const switchToWorldChain = useCallback(async () => {
+  const switchToBaseChain = useCallback(async () => {
     if (!isConnected || !connector) {
       toast.error({ title: "Connect your wallet first." });
       return false;
@@ -150,30 +149,30 @@ export function useWorldChainGuard() {
     if (isSwitching) return false;
 
     const preflightChainId = await refreshLiveChainId();
-    if (preflightChainId === WORLD_CHAIN_ID) return true;
+    if (preflightChainId === BASE_CHAIN_ID) return true;
 
     setIsSwitching(true);
 
     try {
       try {
-        await switchOrAddWorldChain(connector);
+        await switchOrAddBaseChain(connector);
       } catch (manualErr) {
         if (isUserRejection(manualErr)) throw manualErr;
         await switchChain.mutateAsync({
-          chainId: WORLD_CHAIN_ID,
+          chainId: BASE_CHAIN_ID,
           addEthereumChainParameter: {
-            chainName: WORLD_CHAIN_ADD_PARAMS.chainName,
-            nativeCurrency: WORLD_CHAIN_ADD_PARAMS.nativeCurrency,
-            rpcUrls: [...WORLD_CHAIN_ADD_PARAMS.rpcUrls],
-            blockExplorerUrls: [...WORLD_CHAIN_ADD_PARAMS.blockExplorerUrls],
+            chainName: BASE_CHAIN_ADD_PARAMS.chainName,
+            nativeCurrency: BASE_CHAIN_ADD_PARAMS.nativeCurrency,
+            rpcUrls: [...BASE_CHAIN_ADD_PARAMS.rpcUrls],
+            blockExplorerUrls: [...BASE_CHAIN_ADD_PARAMS.blockExplorerUrls],
           },
         });
       }
       const currentLiveChainId = await refreshLiveChainId();
-      if (currentLiveChainId !== WORLD_CHAIN_ID) {
+      if (currentLiveChainId !== BASE_CHAIN_ID) {
         toast.error({
           title:
-            "Couldn't switch to World Chain. Please switch networks in your wallet.",
+            "Couldn't switch to Base Chain. Please switch networks in your wallet.",
         });
         return false;
       }
@@ -193,12 +192,12 @@ export function useWorldChainGuard() {
     refreshLiveChainId,
   ]);
 
-  const isOnWorldChain = isConnected && liveChainId === WORLD_CHAIN_ID;
+  const isOnBaseChain = isConnected && liveChainId === BASE_CHAIN_ID;
 
   return {
-    isOnWorldChain,
+    isOnBaseChain,
     liveChainId,
     isSwitching,
-    switchToWorldChain,
+    switchToBaseChain,
   };
 }

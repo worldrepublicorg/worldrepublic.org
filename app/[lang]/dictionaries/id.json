@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD di Jumper",
           "ethereum_uniswap": "Ethereum WDD di Uniswap",
-          "base_jumper": "Base WDD di Jumper",
-          "base_uniswap": "Base WDD di Uniswap",
+          "base_jumper": "Base Chain WDD di Jumper",
+          "base_uniswap": "Base Chain WDD di Uniswap",
           "worldchain_jumper": "World Chain WDD di Jumper",
           "worldchain_uniswap": "World Chain WDD di Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Memperbarui...",
     "save": "Simpan",
     "vote": "Pilih",
-    "switch_to_world_chain": "Beralih ke World Chain"
+    "switch_to_base_chain": "Beralih ke Base Chain"
   },
   "auth": {
     "choose_method": "Pilih metode pilihan Anda.",

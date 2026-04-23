@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD akan Jumper",
           "ethereum_uniswap": "Ethereum WDD akan Uniswap",
-          "base_jumper": "Base WDD akan Jumper",
-          "base_uniswap": "Base WDD akan Uniswap",
+          "base_jumper": "Base Chain WDD akan Jumper",
+          "base_uniswap": "Base Chain WDD akan Uniswap",
           "worldchain_jumper": "World Chain WDD akan Jumper",
           "worldchain_uniswap": "World Chain WDD akan Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Ana sabuntawa...",
     "save": "Ajiye",
     "vote": "Ka zabe",
-    "switch_to_world_chain": "Canza zuwa World Chain"
+    "switch_to_base_chain": "Canza zuwa Base Chain"
   },
   "auth": {
     "choose_method": "Zaɓi hanyar da kuka fi so.",

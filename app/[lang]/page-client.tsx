@@ -48,7 +48,7 @@ const SignInDialog = dynamic(
 
 const TABS = ["basic_income", "savings", "ambassadors", "subsidies"] as const;
 type TabKey = (typeof TABS)[number];
-const SAVINGS_ACCOUNTS = ["offchain", "worldchain"] as const;
+const SAVINGS_ACCOUNTS = ["offchain", "base_chain"] as const;
 const SAVINGS_ACCOUNT_QUERY_KEY = "savings_account";
 
 interface HomePageClientProps {
@@ -66,6 +66,9 @@ export default function HomePageClient({
   }, []);
   const getSavingsAccountFromQuery = useCallback(
     (value: string | null): SavingsAccountType => {
+      if (value === "worldchain") {
+        return "base_chain";
+      }
       return SAVINGS_ACCOUNTS.includes(value as SavingsAccountType)
         ? (value as SavingsAccountType)
         : SAVINGS_ACCOUNTS[0];
@@ -415,7 +418,7 @@ export default function HomePageClient({
           title={dictionary.nav.earn}
           endAdornment={
             activeTab === "savings" &&
-            selectedSavingsAccount === "worldchain" ? (
+            selectedSavingsAccount === "base_chain" ? (
               <ConnectWalletButton
                 connectLabel={dictionary.common.connect}
                 disconnectLabel={dictionary.common.disconnect}

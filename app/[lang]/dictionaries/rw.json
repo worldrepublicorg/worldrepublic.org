@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD kuri Jumper",
           "ethereum_uniswap": "Ethereum WDD kuri Uniswap",
-          "base_jumper": "Base WDD kuri Jumper",
-          "base_uniswap": "Base WDD kuri Uniswap",
+          "base_jumper": "Base Chain WDD kuri Jumper",
+          "base_uniswap": "Base Chain WDD kuri Uniswap",
           "worldchain_jumper": "World Chain WDD kuri Jumper",
           "worldchain_uniswap": "World Chain WDD kuri Uniswap"
         },
@@ -394,7 +394,7 @@
     "updating": "Gusubiramo...",
     "save": "Bika",
     "vote": "Vota",
-    "switch_to_world_chain": "Hindukira kuri World Chain"
+    "switch_to_base_chain": "Hindukira kuri Base Chain"
   },
   "auth": {
     "choose_method": "Hitamo uburyo wifuza.",

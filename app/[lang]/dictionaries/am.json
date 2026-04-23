@@ -230,8 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD በJumper ላይ",
           "ethereum_uniswap": "Ethereum WDD በUniswap ላይ",
-          "base_jumper": "Base WDD በJumper ላይ",
-          "base_uniswap": "Base WDD በUniswap ላይ",
+          "base_jumper": "Base Chain WDD በJumper ላይ",
+          "base_uniswap": "Base Chain WDD በUniswap ላይ",
           "worldchain_jumper": "World Chain WDD በJumper ላይ",
           "worldchain_uniswap": "World Chain WDD በUniswap ላይ"
         },
@@ -394,7 +394,7 @@
     "updating": "በመቅረጽ ላይ...",
     "save": "አስቀምጥ",
     "vote": "መጥየት",
-    "switch_to_world_chain": "ወደ World Chain ቀይር"
+    "switch_to_base_chain": "ወደ Base Chain ቀይር"
   },
   "auth": {
     "choose_method": "የሚመርጡትን ዘዴ ይምረጡ.",
