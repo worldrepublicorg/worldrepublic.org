@@ -14,7 +14,12 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import type { ComponentProps } from "react";
 import { useState } from "react";
-import { PiArrowSquareOut, PiPowerFill, PiWalletFill } from "react-icons/pi";
+import {
+  PiArrowSquareOut,
+  PiPower,
+  PiPowerFill,
+  PiWalletFill,
+} from "react-icons/pi";
 import type { Connector } from "wagmi";
 import { useConnect, useConnection, useConnectors, useDisconnect } from "wagmi";
 import { CustomListItem } from "@/components/custom-list-item";
@@ -188,7 +193,7 @@ export function ConnectWalletButton({
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
+                    <AlertDialogTitle>Base Account</AlertDialogTitle>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <div className="flex w-full flex-col gap-2">
@@ -211,6 +216,9 @@ export function ConnectWalletButton({
                           setBaseAccountChooserDialogOpen(false);
                           setDisconnectDialogOpen(true);
                         }}
+                        endAdornment={
+                          <PiPower className="size-4 text-gray-400" />
+                        }
                       />
                     </div>
                   </AlertDialogFooter>
