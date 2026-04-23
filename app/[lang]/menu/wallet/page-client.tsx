@@ -575,6 +575,54 @@ export default function WalletPageClient({
                       />
                     </a> */}
                     <a
+                      href="https://jumper.exchange/?toChain=8453&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CustomListItem
+                        label={dictionary.pages.wallet.modals.trade.base_jumper}
+                        startAdornment={
+                          <Image
+                            src="/icons/exchanges/jumper.svg"
+                            alt="Jumper"
+                            width={24}
+                            height={24}
+                            className="size-6 rounded-full"
+                            priority
+                          />
+                        }
+                        endAdornment={
+                          <PiArrowSquareOut className="size-4 text-gray-400" />
+                        }
+                      />
+                    </a>
+                    <a
+                      href="https://app.uniswap.org/explore/tokens/base/0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CustomListItem
+                        label={
+                          dictionary.pages.wallet.modals.trade.base_uniswap
+                        }
+                        startAdornment={
+                          <Image
+                            src="/icons/exchanges/uniswap.svg"
+                            alt="Uniswap"
+                            width={24}
+                            height={24}
+                            className="size-6 rounded-full"
+                            priority
+                          />
+                        }
+                        endAdornment={
+                          <PiArrowSquareOut className="size-4 text-gray-400" />
+                        }
+                      />
+                    </a>
+                    <a
                       href="https://jumper.exchange/?toChain=480&toToken=0xede54d9c024ee80c85ec0a75ed2d8774c7fbac9b"
                       target="_blank"
                       rel="noopener noreferrer"

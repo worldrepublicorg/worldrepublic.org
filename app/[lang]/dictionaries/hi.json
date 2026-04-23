@@ -230,6 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper पर",
           "ethereum_uniswap": "Ethereum WDD Uniswap पर",
+          "base_jumper": "Base WDD Jumper पर",
+          "base_uniswap": "Base WDD Uniswap पर",
           "worldchain_jumper": "World Chain WDD Jumper पर",
           "worldchain_uniswap": "World Chain WDD Uniswap पर"
         },

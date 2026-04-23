@@ -230,6 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumper의",
           "ethereum_uniswap": "Ethereum WDD Uniswap의",
+          "base_jumper": "Base WDD Jumper의",
+          "base_uniswap": "Base WDD Uniswap의",
           "worldchain_jumper": "World Chain WDD Jumper의",
           "worldchain_uniswap": "World Chain WDD Uniswap의"
         },

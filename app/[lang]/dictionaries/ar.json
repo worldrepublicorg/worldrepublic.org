@@ -230,6 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD على Jumper",
           "ethereum_uniswap": "Ethereum WDD على Uniswap",
+          "base_jumper": "Base WDD على Jumper",
+          "base_uniswap": "Base WDD على Uniswap",
           "worldchain_jumper": "World Chain WDD على Jumper",
           "worldchain_uniswap": "World Chain WDD على Uniswap"
         },

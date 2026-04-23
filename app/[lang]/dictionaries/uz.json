@@ -230,6 +230,8 @@
         "trade": {
           "ethereum_jumper": "Ethereum WDD Jumperda",
           "ethereum_uniswap": "Ethereum WDD Uniswapda",
+          "base_jumper": "Base WDD Jumperda",
+          "base_uniswap": "Base WDD Uniswapda",
           "worldchain_jumper": "World Chain WDD Jumperda",
           "worldchain_uniswap": "World Chain WDD Uniswapda"
         },
