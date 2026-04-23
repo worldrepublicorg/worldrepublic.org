@@ -25,7 +25,7 @@ import {
   PiWarningCircleFill,
   PiWarningFill,
 } from "react-icons/pi";
-import { useAccount } from "wagmi";
+import { useConnection } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
@@ -76,7 +76,7 @@ export function SavingsSection({
   selectedSavingsAccount,
   onSelectedSavingsAccountChange,
 }: SavingsSectionProps) {
-  const { isConnected: isWalletConnected } = useAccount();
+  const { isConnected: isWalletConnected } = useConnection();
   const { toast } = useToast();
   const { isOnBaseChain, isSwitching, switchToBaseChain } = useBaseChainGuard();
   const savingsAccountOptions = [

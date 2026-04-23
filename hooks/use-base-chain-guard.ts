@@ -3,7 +3,7 @@
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useState } from "react";
 import type { Connector } from "wagmi";
-import { useAccount, useSwitchChain } from "wagmi";
+import { useConnection, useSwitchChain } from "wagmi";
 import { base } from "wagmi/chains";
 import { formatTxError } from "@/lib/format-tx-error";
 
@@ -100,7 +100,7 @@ async function switchOrAddBaseChain(connector: Connector): Promise<void> {
 }
 
 export function useBaseChainGuard() {
-  const { isConnected, connector } = useAccount();
+  const { isConnected, connector } = useConnection();
   const switchChain = useSwitchChain();
   const { toast } = useToast();
   const [isSwitching, setIsSwitching] = useState(false);

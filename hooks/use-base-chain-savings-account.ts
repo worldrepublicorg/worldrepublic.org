@@ -4,7 +4,7 @@ import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { formatUnits, parseUnits } from "viem";
 import {
-  useAccount,
+  useConnection,
   usePublicClient,
   useReadContracts,
   useSwitchChain,
@@ -103,7 +103,7 @@ function parseHexChainId(raw: unknown): number | null {
 
 export function useBaseChainSavingsAccount() {
   const { toast } = useToast();
-  const { address, isConnected, connector } = useAccount();
+  const { address, isConnected, connector } = useConnection();
   const switchChain = useSwitchChain();
   const publicClient = usePublicClient({ chainId: BASE_CHAIN_ID });
   const writeContract = useWriteContract();
