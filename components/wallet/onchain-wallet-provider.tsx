@@ -8,6 +8,7 @@ import { base } from "wagmi/chains";
 import { injected } from "wagmi/connectors";
 
 const BASE_CHAIN_RPC_URLS = [
+  "https://lb.drpc.live/base/AgobUm8RhkrUlOLZyf0lrdQFo2ndAh8R8ICcfhHoK236",
   "https://mainnet.base.org",
   "https://base.drpc.org",
   "https://1rpc.io/base",
