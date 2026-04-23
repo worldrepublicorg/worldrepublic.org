@@ -5,7 +5,7 @@ import { useState } from "react";
 import { fallback, http } from "viem";
 import { createConfig, createStorage, WagmiProvider } from "wagmi";
 import { base } from "wagmi/chains";
-import { injected } from "wagmi/connectors";
+import { baseAccount, injected } from "wagmi/connectors";
 
 const BASE_CHAIN_RPC_URLS = [
   "https://lb.drpc.live/base/AgobUm8RhkrUlOLZyf0lrdR8c2tmPtMR8ZnbtiKh6MJI",
@@ -22,7 +22,12 @@ const BASE_CHAIN_RPC_URLS = [
 
 const wagmiConfig = createConfig({
   chains: [base],
-  connectors: [injected()],
+  connectors: [
+    baseAccount({
+      appName: "World Republic",
+    }),
+    injected(),
+  ],
   ssr: true,
   storage: createStorage({
     storage: typeof window !== "undefined" ? window.localStorage : undefined,

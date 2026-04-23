@@ -109,11 +109,24 @@ export function ConnectWalletButton({
         }),
       )
     ).filter((connector): connector is Connector => connector !== null);
-    const namedConnectors = connectorsWithProvider.filter(
+    const baseAccountConnector =
+      connectorsWithProvider.find(
+        (connector) => connector.id === "baseAccount",
+      ) ?? null;
+    const connectorsWithoutInjected = connectorsWithProvider.filter(
       (connector) => connector.id !== "injected",
     );
     const prioritizedConnectors =
-      namedConnectors.length > 0 ? namedConnectors : connectorsWithProvider;
+      connectorsWithoutInjected.length > 0
+        ? connectorsWithoutInjected
+        : connectorsWithProvider;
+
+    // Mobile in-app wallet browsers can expose unstable injected providers.
+    // Prefer Base Account only on mobile when available.
+    if (isMobileDevice && baseAccountConnector) {
+      connect.mutate({ connector: baseAccountConnector });
+      return;
+    }
 
     if (prioritizedConnectors.length > 0) {
       if (!isMobileDevice && prioritizedConnectors.length > 1) {
