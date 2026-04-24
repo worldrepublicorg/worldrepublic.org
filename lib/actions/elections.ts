@@ -13,14 +13,18 @@ import type { Party } from "@/lib/types/parties";
  */
 const EXCLUDED_FEATURED_IDS = new Set(["b488f0f7-3e50-4f2d-bc29-ee6ab35a90a1"]);
 
+function isElectionActive(election: Election, now: number): boolean {
+  return now >= election.startsAt && now < election.endsAt;
+}
+
 function pickFeaturedElection(elections: Election[]): Election | null {
   const candidates = elections.filter((e) => !EXCLUDED_FEATURED_IDS.has(e.id));
   if (candidates.length === 0) return null;
 
   const now = Date.now();
 
-  const active = candidates.filter(
-    (election) => now >= election.startsAt && now <= election.endsAt,
+  const active = candidates.filter((election) =>
+    isElectionActive(election, now),
   );
   if (active.length > 0) {
     // Pick the one ending soonest
@@ -171,6 +175,25 @@ export async function getFeaturedElectionId(): Promise<string | null> {
     return featured?.id ?? null;
   } catch (error) {
     console.error("Error fetching featured election ID:", error);
+    return null;
+  }
+}
+
+/**
+ * Get the ID of the active election ending soonest.
+ * Returns null when there is no active election.
+ */
+export async function getActiveElectionId(): Promise<string | null> {
+  try {
+    const elections = await getElections();
+    const now = Date.now();
+    const activeElection = elections.find((election) =>
+      isElectionActive(election, now),
+    );
+
+    return activeElection?.id ?? null;
+  } catch (error) {
+    console.error("Error fetching active election ID:", error);
     return null;
   }
 }

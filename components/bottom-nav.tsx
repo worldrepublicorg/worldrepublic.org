@@ -2,8 +2,14 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaDollarSign, FaLandmark } from "react-icons/fa";
+import { getActiveElectionId } from "@/lib/actions/elections";
+import {
+  getGovernReminderStorageKey,
+  hasUnseenActiveElection,
+  markActiveElectionSeen,
+} from "@/lib/govern-reminder";
 import { cn } from "@/lib/utils";
 
 const BottomNav = () => {
@@ -11,6 +17,8 @@ const BottomNav = () => {
   const router = useRouter();
   const lang = pathname.split("/")[1]; // Get language from URL
   const [pressedItem, setPressedItem] = useState<string | null>(null);
+  const [activeElectionId, setActiveElectionId] = useState<string | null>(null);
+  const [showGovernIndicator, setShowGovernIndicator] = useState(false);
   const touchStartRef = useRef<{
     x: number;
     y: number;
@@ -33,12 +41,48 @@ const BottomNav = () => {
     return sectionSegment === targetPath;
   };
 
+  useEffect(() => {
+    let cancelled = false;
+
+    getActiveElectionId().then((id) => {
+      if (cancelled) return;
+      setActiveElectionId(id);
+      setShowGovernIndicator(hasUnseenActiveElection(id));
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    const onGovernPage = pathname.split("/")[2] === "govern";
+    if (!onGovernPage || !activeElectionId) return;
+
+    markActiveElectionSeen(activeElectionId);
+    setShowGovernIndicator(false);
+  }, [activeElectionId, pathname]);
+
+  useEffect(() => {
+    const storageKey = getGovernReminderStorageKey();
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key !== storageKey) return;
+      setShowGovernIndicator(hasUnseenActiveElection(activeElectionId));
+    };
+
+    window.addEventListener("storage", handleStorage);
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+    };
+  }, [activeElectionId]);
+
   return (
     <nav className="bg-gray-0 fixed bottom-0 left-1/2 z-40 w-full max-w-xl -translate-x-1/2!">
       <div className="flex h-14 items-center justify-around">
         {navItems.map(({ path, icon: Icon }) => {
           const href = `/${lang}${path}`;
           const isPressed = pressedItem === path;
+          const showIndicator = path === "/govern" && showGovernIndicator;
           return (
             <Link
               key={path}
@@ -108,14 +152,19 @@ const BottomNav = () => {
               {isPressed && (
                 <span className="absolute top-1/2 left-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 animate-[ripple_1s_ease-out] rounded-full bg-gray-400/50" />
               )}
-              <Icon
-                className={cn(
-                  "relative block transition-transform duration-200 group-active:scale-95 pointer-events-none",
-                  Icon === FaDollarSign || Icon === FaLandmark
-                    ? "h-6 w-6"
-                    : "h-[22px] w-[22px]",
+              <div className="relative inline-flex items-center justify-center">
+                <Icon
+                  className={cn(
+                    "relative block transition-transform duration-200 group-active:scale-95 pointer-events-none",
+                    Icon === FaDollarSign || Icon === FaLandmark
+                      ? "h-6 w-6"
+                      : "h-[22px] w-[22px]",
+                  )}
+                />
+                {showIndicator && (
+                  <span className="absolute -right-[5px] -top-[5px] h-[7px] w-[7px] rounded-full bg-red-500" />
                 )}
-              />
+              </div>
             </Link>
           );
         })}
