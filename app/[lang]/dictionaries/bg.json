@@ -150,7 +150,8 @@
         "setup_subtitle": "Настройте вашия основен доход",
         "activate_loading": "Активирам...",
         "activate_button": "Активирайте основния доход",
-        "world_drachma": "Какво е световната драхма (WDD)?"
+        "world_drachma": "Какво е световната драхма (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Вземи своя дивидент от богатството, създадено от ИИ"
       },
       "savings": {
         "title": "Спестовна сметка",

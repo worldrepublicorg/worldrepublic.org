@@ -150,7 +150,8 @@
         "setup_subtitle": "আপনার মৌলিক আয় সেটআপ করুন",
         "activate_loading": "সক্রিয় করা হচ্ছে...",
         "activate_button": "মৌলিক আয় সক্রিয় করুন",
-        "world_drachma": "বিশ্ব দ্রাখমা (WDD) কী?"
+        "world_drachma": "বিশ্ব দ্রাখমা (WDD) কী?",
+        "subtitle_unauth_raised_by_humanity": "এআই-সৃষ্ট সম্পদ থেকে আপনার লভ্যাংশ দাবি করুন"
       },
       "savings": {
         "title": "সঞ্চয় অ্যাকাউন্ট",

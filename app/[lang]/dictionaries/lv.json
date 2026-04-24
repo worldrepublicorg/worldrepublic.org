@@ -150,7 +150,8 @@
         "setup_subtitle": "Iestatiet savus pamata ienākumus",
         "activate_loading": "Aktivizē...",
         "activate_button": "Aktivizēt pamata ienākumus",
-        "world_drachma": "Kas ir pasaules drahma (WDD)?"
+        "world_drachma": "Kas ir pasaules drahma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Pieprasi savu dividendi no AI radītās bagātības"
       },
       "savings": {
         "title": "Uzkrājumu konts",

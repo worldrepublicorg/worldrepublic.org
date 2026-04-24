@@ -150,7 +150,8 @@
         "setup_subtitle": "Deji dakhligaaga aasaasiga ah",
         "activate_loading": "Firfircoonaya...",
         "activate_button": "Firfircooni dakhliga aasaasiga ah",
-        "world_drachma": "Waa maxay Drachma-da Adduunka (WDD)?"
+        "world_drachma": "Waa maxay Drachma-da Adduunka (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Dalbo saamigaaga ka imanaya hantida ay AI abuurto"
       },
       "savings": {
         "title": "Akoonka kaydinta",

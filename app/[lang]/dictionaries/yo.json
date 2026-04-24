@@ -150,7 +150,8 @@
         "setup_subtitle": "Ṣeto owo ibẹrẹ rẹ",
         "activate_loading": "Nṣiṣẹ...",
         "activate_button": "Mu owo ibẹrẹ ṣiṣẹ",
-        "world_drachma": "Kini Drachma agbaye (WDD)?"
+        "world_drachma": "Kini Drachma agbaye (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Gba ipin ere rẹ ninu ọrọ ti AI n ṣẹda"
       },
       "savings": {
         "title": "Iroyin ifipamọ",

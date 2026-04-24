@@ -150,7 +150,8 @@
         "setup_subtitle": "Nustatykite savo bazinius pajamas",
         "activate_loading": "Aktyvuojama...",
         "activate_button": "Aktyvuoti bazinius pajamas",
-        "world_drachma": "Kas yra pasaulio drachma (WDD)?"
+        "world_drachma": "Kas yra pasaulio drachma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Atsiimkite savo dividendus iš AI sukuriamo turto"
       },
       "savings": {
         "title": "Sąskaita santaupoms",

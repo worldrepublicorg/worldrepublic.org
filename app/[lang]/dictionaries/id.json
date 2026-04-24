@@ -150,7 +150,8 @@
         "setup_subtitle": "Siapkan pendapatan dasar Anda",
         "activate_loading": "Mengaktifkan...",
         "activate_button": "Aktifkan pendapatan dasar",
-        "world_drachma": "Apa itu Drachma dunia (WDD)?"
+        "world_drachma": "Apa itu Drachma dunia (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Klaim dividen Anda dari kekayaan yang dihasilkan AI"
       },
       "savings": {
         "title": "Rekening tabungan",

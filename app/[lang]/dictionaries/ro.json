@@ -150,7 +150,8 @@
         "setup_subtitle": "Configurează-ți venitul de bază",
         "activate_loading": "Se activează...",
         "activate_button": "Activează venitul de bază",
-        "world_drachma": "Ce este drahma mondială (WDD)?"
+        "world_drachma": "Ce este drahma mondială (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Revendică-ți dividendul din bogăția generată de AI"
       },
       "savings": {
         "title": "Cont de economii",

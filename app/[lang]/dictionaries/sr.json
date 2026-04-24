@@ -150,7 +150,8 @@
         "setup_subtitle": "Подесите свој основни приход",
         "activate_loading": "Активира се...",
         "activate_button": "Активирај основни приход",
-        "world_drachma": "Шта је светска драхма (WDD)?"
+        "world_drachma": "Шта је светска драхма (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Preuzmi svoju dividendu iz bogatstva koje stvara AI"
       },
       "savings": {
         "title": "Штедни рачун",

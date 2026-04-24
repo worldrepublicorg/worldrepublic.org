@@ -150,7 +150,8 @@
         "setup_subtitle": "Configura tu renta básica",
         "activate_loading": "Activando...",
         "activate_button": "Activar renta básica",
-        "world_drachma": "¿Qué es la dracma mundial (WDD)?"
+        "world_drachma": "¿Qué es la dracma mundial (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Reclama tu dividendo de la riqueza generada por la IA"
       },
       "savings": {
         "title": "Cuenta de ahorros",

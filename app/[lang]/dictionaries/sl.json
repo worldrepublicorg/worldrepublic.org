@@ -150,7 +150,8 @@
         "setup_subtitle": "Nastavi svoj osnovni dohodek",
         "activate_loading": "Aktiviranje...",
         "activate_button": "Aktiviraj osnovni dohodek",
-        "world_drachma": "Kaj je svetovna drahma (WDD)?"
+        "world_drachma": "Kaj je svetovna drahma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Zahtevajte svojo dividendo iz bogastva, ki ga ustvarja AI"
       },
       "savings": {
         "title": "Varčevalni račun",

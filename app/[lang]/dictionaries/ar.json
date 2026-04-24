@@ -150,7 +150,8 @@
         "setup_subtitle": "أعد إعداد دخلك الأساسي",
         "activate_loading": "جاري التفعيل...",
         "activate_button": "تفعيل الدخل الأساسي",
-        "world_drachma": "ما هي الدراخما العالمية (WDD)؟"
+        "world_drachma": "ما هي الدراخما العالمية (WDD)؟",
+        "subtitle_unauth_raised_by_humanity": "طالب بحصتك من الثروة التي يولدها الذكاء الاصطناعي"
       },
       "savings": {
         "title": "حساب التوفير",

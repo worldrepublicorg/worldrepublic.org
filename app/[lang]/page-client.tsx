@@ -54,11 +54,13 @@ const SAVINGS_ACCOUNT_QUERY_KEY = "savings_account";
 interface HomePageClientProps {
   lang: string;
   dictionary: Dictionary;
+  isRaisedByHumanityBrand: boolean;
 }
 
 export default function HomePageClient({
   lang,
   dictionary,
+  isRaisedByHumanityBrand,
 }: HomePageClientProps) {
   const searchParams = useSearchParams();
   const getTabFromQuery = useCallback((value: string | null): TabKey => {
@@ -497,6 +499,7 @@ export default function HomePageClient({
             <BasicIncomeSection
               lang={lang}
               dictionary={dictionary}
+              isRaisedByHumanityBrand={isRaisedByHumanityBrand}
               isActive={activeTab === "basic_income"}
               isAuthenticated={isAuthenticated}
               userUuid={profileData?.userUuid ?? null}

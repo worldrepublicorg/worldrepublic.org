@@ -150,7 +150,8 @@
         "setup_subtitle": "ตั้งค่ารายได้พื้นฐานของคุณ",
         "activate_loading": "กำลังเปิดใช้งาน...",
         "activate_button": "เปิดใช้งานรายได้พื้นฐาน",
-        "world_drachma": "ดรักมาของโลก (WDD) คืออะไร?"
+        "world_drachma": "ดรักมาของโลก (WDD) คืออะไร?",
+        "subtitle_unauth_raised_by_humanity": "รับเงินปันผลของคุณจากความมั่งคั่งที่สร้างโดย AI"
       },
       "savings": {
         "title": "บัญชีออมทรัพย์",

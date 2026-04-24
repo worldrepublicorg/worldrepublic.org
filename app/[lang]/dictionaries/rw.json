@@ -150,7 +150,8 @@
         "setup_subtitle": "Shiraho amafaranga yawe y'ibanze",
         "activate_loading": "Gukora...",
         "activate_button": "Kora amafaranga y'ibanze",
-        "world_drachma": "Darakima y’Isi (WDD) ni iki?"
+        "world_drachma": "Darakima y’Isi (WDD) ni iki?",
+        "subtitle_unauth_raised_by_humanity": "Saba umwungu wawe mu bukungu butangwa na AI"
       },
       "savings": {
         "title": "Konti y'ubwibiko",

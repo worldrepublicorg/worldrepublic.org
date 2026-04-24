@@ -150,7 +150,8 @@
         "setup_subtitle": "Saita kuɗin shiga na asali ɗinku",
         "activate_loading": "Ana kunna...",
         "activate_button": "Kunna kuɗin shiga na asali",
-        "world_drachma": "Menene Drachma ta duniya (WDD)?"
+        "world_drachma": "Menene Drachma ta duniya (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Nemi rabon dividend dinka daga arzikin da AI ke samarwa"
       },
       "savings": {
         "title": "Asusun ajiya",

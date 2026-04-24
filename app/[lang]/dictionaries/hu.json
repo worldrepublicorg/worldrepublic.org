@@ -150,7 +150,8 @@
         "setup_subtitle": "Állítsa be az alapjövedelmét",
         "activate_loading": "Aktiválás...",
         "activate_button": "Alapjövedelem aktiválása",
-        "world_drachma": "Mi az a világdrachma (WDD)?"
+        "world_drachma": "Mi az a világdrachma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Igényeld az AI által termelt vagyonból járó osztalékod"
       },
       "savings": {
         "title": "Megtakarítási számla",

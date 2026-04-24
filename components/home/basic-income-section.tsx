@@ -29,6 +29,7 @@ import { getMinWithdrawalAmount } from "@/lib/withdrawal-limits";
 interface BasicIncomeSectionProps {
   lang: string;
   dictionary: Dictionary;
+  isRaisedByHumanityBrand: boolean;
   isActive?: boolean;
   isAuthenticated: boolean;
   userUuid: string | null;
@@ -43,6 +44,7 @@ interface BasicIncomeSectionProps {
 export function BasicIncomeSection({
   lang,
   dictionary,
+  isRaisedByHumanityBrand,
   isActive = true,
   isAuthenticated,
   userUuid,
@@ -124,6 +126,9 @@ export function BasicIncomeSection({
     maximumFractionDigits: 6,
   }).format(maxClaimableAmount);
   const isCapReached = !isSelfVerified && claimedTotal >= capAmount - 1e-9;
+  const unauthSubtitle = isRaisedByHumanityBrand
+    ? dictionary.pages.earn.basic_income.subtitle_unauth_raised_by_humanity
+    : dictionary.pages.earn.basic_income.subtitle_unauth;
 
   if (!isAuthenticated) {
     return (
@@ -136,9 +141,7 @@ export function BasicIncomeSection({
             <Typography variant="heading" level={2}>
               {dictionary.pages.earn.tabs.basic_income}
             </Typography>
-            {renderInfoSubtitle(
-              dictionary.pages.earn.basic_income.subtitle_unauth,
-            )}
+            {renderInfoSubtitle(unauthSubtitle)}
             <LearnMoreDialog
               open={isLearnMoreDialogOpen}
               onOpenChange={setIsLearnMoreDialogOpen}

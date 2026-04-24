@@ -150,7 +150,8 @@
         "setup_subtitle": "Ρυθμίστε το βασικό σας εισόδημα",
         "activate_loading": "Ενεργοποίηση...",
         "activate_button": "Ενεργοποιήστε το βασικό εισόδημα",
-        "world_drachma": "Τι είναι η παγκόσμια δραχμή (WDD);"
+        "world_drachma": "Τι είναι η παγκόσμια δραχμή (WDD);",
+        "subtitle_unauth_raised_by_humanity": "Διεκδίκησε το μέρισμά σου από τον πλούτο που δημιουργεί η AI"
       },
       "savings": {
         "title": "Λογαριασμός οικονομιών",

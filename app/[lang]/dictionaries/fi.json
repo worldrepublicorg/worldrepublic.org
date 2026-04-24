@@ -150,7 +150,8 @@
         "setup_subtitle": "Aseta perustulosi",
         "activate_loading": "Aktivoidaan...",
         "activate_button": "Aktivoi perustulo",
-        "world_drachma": "Mikä on maailman drakhma (WDD)?"
+        "world_drachma": "Mikä on maailman drakhma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Lunasta osinkosi tekoälyn tuottamasta vauraudesta"
       },
       "savings": {
         "title": "Säästötili",

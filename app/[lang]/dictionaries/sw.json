@@ -150,7 +150,8 @@
         "setup_subtitle": "Sanidi mapato yako ya msingi",
         "activate_loading": "Inamilikiwa...",
         "activate_button": "Amilisha mapato ya msingi",
-        "world_drachma": "World Drachma (WDD) ni nini?"
+        "world_drachma": "World Drachma (WDD) ni nini?",
+        "subtitle_unauth_raised_by_humanity": "Dai gawio lako kutoka utajiri unaozalishwa na AI"
       },
       "savings": {
         "title": "Akaunti ya akiba",

@@ -150,7 +150,8 @@
         "setup_subtitle": "Stel je basisinkomen in",
         "activate_loading": "Activeren...",
         "activate_button": "Basisinkomen activeren",
-        "world_drachma": "Wat is werelddrachme (WDD)?"
+        "world_drachma": "Wat is werelddrachme (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Claim je dividend uit door AI gegenereerde welvaart"
       },
       "savings": {
         "title": "Spaarrekening",

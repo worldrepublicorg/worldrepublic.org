@@ -150,7 +150,8 @@
         "setup_subtitle": "Configurez votre revenu de base",
         "activate_loading": "Activation...",
         "activate_button": "Activer le revenu de base",
-        "world_drachma": "Qu'est-ce que la drachme mondiale (WDD) ?"
+        "world_drachma": "Qu'est-ce que la drachme mondiale (WDD) ?",
+        "subtitle_unauth_raised_by_humanity": "Réclamez votre dividende de la richesse générée par l'IA"
       },
       "savings": {
         "title": "Compte d'épargne",

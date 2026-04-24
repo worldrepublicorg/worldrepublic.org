@@ -150,7 +150,8 @@
         "setup_subtitle": "Set up your basic income",
         "activate_loading": "Activating...",
         "activate_button": "Activate basic income",
-        "world_drachma": "What is world drachma (WDD)?"
+        "world_drachma": "What is world drachma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Claim your dividend from AI-generated wealth"
       },
       "savings": {
         "title": "Savings account",

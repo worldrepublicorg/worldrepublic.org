@@ -150,7 +150,8 @@
         "setup_subtitle": "Nastavte si základní příjem",
         "activate_loading": "Aktivuji...",
         "activate_button": "Aktivovat základní příjem",
-        "world_drachma": "Co je světová drachma (WDD)?"
+        "world_drachma": "Co je světová drachma (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Ziskejte svou dividendu z bohatství vytvářeného AI"
       },
       "savings": {
         "title": "Spořicí účet",

@@ -150,7 +150,8 @@
         "setup_subtitle": "设置你的基本收入",
         "activate_loading": "正在激活...",
         "activate_button": "激活基本收入",
-        "world_drachma": "世界德拉克马 (WDD) 是什么？"
+        "world_drachma": "世界德拉克马 (WDD) 是什么？",
+        "subtitle_unauth_raised_by_humanity": "领取你在 AI 生成财富中的分红"
       },
       "savings": {
         "title": "储蓄账户",

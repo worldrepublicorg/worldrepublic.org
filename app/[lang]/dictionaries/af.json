@@ -150,7 +150,8 @@
         "setup_subtitle": "Stel jou basiese inkomste op",
         "activate_loading": "Aktiveer...",
         "activate_button": "Aktiveer basiese inkomste",
-        "world_drachma": "Wat is wêrelddrachme (WDD)?"
+        "world_drachma": "Wat is wêrelddrachme (WDD)?",
+        "subtitle_unauth_raised_by_humanity": "Eis jou dividend uit AI-gegenereerde welvaart"
       },
       "savings": {
         "title": "Spaarrekening",
