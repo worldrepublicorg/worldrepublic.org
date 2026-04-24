@@ -45,7 +45,7 @@ export function DeletePartyDialog({
             {dictionary.pages.govern.parties.delete_party}
           </Typography>
         </AlertDialogHeader>
-        <AlertDialogDescription>
+        <AlertDialogDescription className="mb-6">
           {party && (
             <p>
               {dictionary.pages.govern.parties.dialogs.about_to_delete.replace(

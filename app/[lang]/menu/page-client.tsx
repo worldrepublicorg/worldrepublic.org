@@ -298,7 +298,7 @@ export default function MenuPageClient({
                         {dictionary.common.sign_out}
                       </Typography>
                     </AlertDialogHeader>
-                    <AlertDialogDescription>
+                    <AlertDialogDescription className="mb-6">
                       {dictionary.pages.wallet.modals.sign_out.confirm}
                     </AlertDialogDescription>
                     <AlertDialogFooter>

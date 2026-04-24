@@ -291,7 +291,7 @@ export function SignInDialog({
           </Typography>
         </AlertDialogHeader>
         {!showNameInput && !showPasskeyOptions && (
-          <AlertDialogDescription>
+          <AlertDialogDescription className="mb-6">
             <Typography variant="body" className="text-gray-500">
               {dictionary.auth.choose_method}
             </Typography>
@@ -299,7 +299,7 @@ export function SignInDialog({
         )}
         {showNameInput ? (
           <>
-            <AlertDialogDescription>
+            <AlertDialogDescription className="mb-6">
               <Typography variant="body" className="text-gray-500 mb-4">
                 {dictionary.auth.passkey_name_description}
               </Typography>
@@ -350,7 +350,7 @@ export function SignInDialog({
             </AlertDialogFooter>
           </>
         ) : showPasskeyOptions ? (
-          <AlertDialogDescription>
+          <AlertDialogDescription className="mb-6">
             <Typography variant="body" className="text-gray-500">
               {dictionary.auth.sign_in_or_create}
             </Typography>

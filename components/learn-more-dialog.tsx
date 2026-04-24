@@ -74,7 +74,7 @@ export function LearnMoreDialog({
 
         {info &&
           (externalLink ? (
-            <AlertDialogDescription className="text-gray-500">
+            <AlertDialogDescription className="mb-6 text-gray-500">
               {info}
             </AlertDialogDescription>
           ) : (
@@ -123,7 +123,7 @@ export function LearnMoreDialog({
         )}
 
         {!hasContent && (
-          <AlertDialogDescription className="text-gray-500">
+          <AlertDialogDescription className="mb-6 text-gray-500">
             —
           </AlertDialogDescription>
         )}

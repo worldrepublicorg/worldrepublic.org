@@ -111,7 +111,7 @@ export function VoteButton({
                 {dictionary.pages.govern.vote.no_active_election}
               </Typography>
             </AlertDialogHeader>
-            <AlertDialogDescription>
+            <AlertDialogDescription className="mb-6">
               <Typography>
                 {dictionary.pages.govern.vote.test_verification.description}
               </Typography>

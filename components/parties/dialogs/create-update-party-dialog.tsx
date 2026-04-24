@@ -79,7 +79,7 @@ export function CreateUpdatePartyDialog({
           </Typography>
         </AlertDialogHeader>
         <Form.Root onSubmit={handleSubmit}>
-          <AlertDialogDescription>
+          <AlertDialogDescription className="mb-6">
             <Form.Field name="name">
               <Form.Control asChild>
                 <Input
