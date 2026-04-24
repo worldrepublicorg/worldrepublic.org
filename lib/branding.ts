@@ -6,7 +6,13 @@ type AppBranding = {
   metadataBase: string;
 };
 
-const DEFAULT_BRANDING: AppBranding = {
+/**
+ * Primary public host for user-generated links (referral, party share).
+ * Always this origin, including when the app is opened on worldrepublic.org.
+ */
+export const CANONICAL_SHARE_ORIGIN = "https://www.raisedbyhumanity.org";
+
+const WORLD_REPUBLIC_BRANDING: AppBranding = {
   appName: "World Republic",
   appDefaultTitle: "World Republic",
   appTitleTemplate: "%s - World Republic",
@@ -19,7 +25,7 @@ const RAISED_BY_HUMANITY_BRANDING: AppBranding = {
   appDefaultTitle: "Raised by Humanity",
   appTitleTemplate: "%s - Raised by Humanity",
   description: "AI governance by a world parliament",
-  metadataBase: "https://www.raisedbyhumanity.org",
+  metadataBase: CANONICAL_SHARE_ORIGIN,
 };
 
 function normalizeHost(host: string | null | undefined): string {
@@ -41,11 +47,11 @@ export function getBrandingForHost(
   const normalizedHost = normalizeHost(host);
 
   if (
-    normalizedHost === "raisedbyhumanity.org" ||
-    normalizedHost === "www.raisedbyhumanity.org"
+    normalizedHost === "worldrepublic.org" ||
+    normalizedHost === "www.worldrepublic.org"
   ) {
-    return RAISED_BY_HUMANITY_BRANDING;
+    return WORLD_REPUBLIC_BRANDING;
   }
 
-  return DEFAULT_BRANDING;
+  return RAISED_BY_HUMANITY_BRANDING;
 }

@@ -10,6 +10,7 @@ import { PartyDetailPageSkeleton } from "@/components/parties/party-detail-page-
 import { TopBar } from "@/components/topbar";
 import { getWalletAuthAndData } from "@/lib/actions/member";
 import { getParty } from "@/lib/actions/parties";
+import { CANONICAL_SHARE_ORIGIN } from "@/lib/branding";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
 
@@ -52,7 +53,7 @@ export default function PartyDetailPageClient({
   const getShareUrl = async () => {
     if (typeof window === "undefined") return "";
     const shareUrl = new URL(
-      `${window.location.origin}/${lang}/govern/parties/${party?.id || partyId}`,
+      `${CANONICAL_SHARE_ORIGIN}/${lang}/govern/parties/${party?.id || partyId}`,
     );
 
     try {

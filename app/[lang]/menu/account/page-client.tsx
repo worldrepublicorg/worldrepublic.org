@@ -45,6 +45,7 @@ import {
   linkPasskeyToAccount,
   setLinkingIntent,
 } from "@/lib/actions/passkey";
+import { CANONICAL_SHARE_ORIGIN } from "@/lib/branding";
 import { copyToClipboard } from "@/lib/utils";
 import { setCachedWalletData } from "@/lib/wallet-auth-cache";
 
@@ -204,7 +205,7 @@ export default function AccountPageClient({
       });
       return;
     }
-    const link = `${window.location.origin}/?ref=${code}`;
+    const link = `${CANONICAL_SHARE_ORIGIN}/?ref=${code}`;
     if (navigator.share) {
       try {
         await navigator.share({ url: link });

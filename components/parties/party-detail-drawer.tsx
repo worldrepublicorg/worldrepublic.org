@@ -6,12 +6,15 @@ import {
   DrawerTitle,
   useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
+import { useParams } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomDrawerHeader } from "@/components/parties/custom-drawer-header";
 import { PartyDetailContent } from "@/components/parties/party-detail-content";
 import { getWalletAuthAndData } from "@/lib/actions/member";
+import { CANONICAL_SHARE_ORIGIN } from "@/lib/branding";
+import { defaultLocale } from "@/lib/locales";
 import type { Party } from "@/lib/types/parties";
 
 interface PartyDetailDrawerProps {
@@ -27,6 +30,8 @@ export function PartyDetailDrawer({
   party,
   dictionary,
 }: PartyDetailDrawerProps) {
+  const params = useParams<{ lang?: string }>();
+  const lang = params.lang ?? defaultLocale;
   const { toast } = useToast();
   const drawerStatePushedRef = useRef(false);
 
@@ -60,7 +65,7 @@ export function PartyDetailDrawer({
   const handleShare = async () => {
     if (!party) return;
     const shareUrl = new URL(
-      `${window.location.origin}/govern/parties/${party.id}`,
+      `${CANONICAL_SHARE_ORIGIN}/${lang}/govern/parties/${party.id}`,
     );
     const shareTitle = party.name;
 

@@ -37,6 +37,7 @@ import {
   getSubsidyLeaderboard,
   type SubsidyLeaderboardEntry,
 } from "@/lib/actions/referrals";
+import { CANONICAL_SHARE_ORIGIN } from "@/lib/branding";
 import type { Party } from "@/lib/types/parties";
 import { copyToClipboard } from "@/lib/utils";
 import { setCachedWalletData } from "@/lib/wallet-auth-cache";
@@ -381,7 +382,7 @@ export default function HomePageClient({
       return;
     }
 
-    const link = `${window.location.origin}/?ref=${code}`;
+    const link = `${CANONICAL_SHARE_ORIGIN}/?ref=${code}`;
 
     if (navigator.share) {
       try {
