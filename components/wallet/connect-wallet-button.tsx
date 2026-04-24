@@ -240,7 +240,7 @@ export function ConnectWalletButton({
                   >
                     <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
                   </AlertDialogHeader>
-                  <AlertDialogDescription className="mb-6">
+                  <AlertDialogDescription>
                     {disconnectDescription}
                   </AlertDialogDescription>
                   <AlertDialogFooter>
@@ -288,7 +288,7 @@ export function ConnectWalletButton({
                 >
                   <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
                 </AlertDialogHeader>
-                <AlertDialogDescription className="mb-6">
+                <AlertDialogDescription>
                   {disconnectDescription}
                 </AlertDialogDescription>
                 <AlertDialogFooter>
@@ -334,7 +334,7 @@ export function ConnectWalletButton({
           >
             <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
           </AlertDialogHeader>
-          <AlertDialogDescription className="mb-6">
+          <AlertDialogDescription>
             {walletPickerDialogDescription}
           </AlertDialogDescription>
           <div className="flex flex-col gap-2">
@@ -370,7 +370,7 @@ export function ConnectWalletButton({
           >
             <AlertDialogTitle>{walletBrowserDialogTitle}</AlertDialogTitle>
           </AlertDialogHeader>
-          <AlertDialogDescription className="mb-6">
+          <AlertDialogDescription>
             {walletBrowserDialogDescription}
           </AlertDialogDescription>
           <AlertDialogFooter>
@@ -395,7 +395,7 @@ export function ConnectWalletButton({
           >
             <AlertDialogTitle>{connectLabel}</AlertDialogTitle>
           </AlertDialogHeader>
-          <AlertDialogDescription className="mb-6">
+          <AlertDialogDescription>
             {noWalletDialogDescription}
           </AlertDialogDescription>
           <AlertDialogFooter>

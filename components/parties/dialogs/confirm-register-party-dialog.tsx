@@ -45,7 +45,7 @@ export function ConfirmRegisterPartyDialog({
             {dictionary.pages.govern.parties.dialogs.register_party}
           </Typography>
         </AlertDialogHeader>
-        <AlertDialogDescription className="mb-6">
+        <AlertDialogDescription>
           <div>
             <p>{dictionary.pages.govern.parties.dialogs.about_to_register}</p>
             {userParty && (

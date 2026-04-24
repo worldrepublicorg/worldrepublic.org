@@ -556,7 +556,7 @@ export default function AccountPageClient({
                       </Typography>
                     </AlertDialogHeader>
 
-                    <AlertDialogDescription className="mb-6">
+                    <AlertDialogDescription>
                       {
                         dictionary.pages.wallet.modals.delete_account
                           .description
@@ -602,7 +602,7 @@ export default function AccountPageClient({
               {dictionary.pages.wallet.username.edit_title}
             </Typography>
           </AlertDialogHeader>
-          <AlertDialogDescription className="mb-6">
+          <AlertDialogDescription>
             <div className="space-y-4">
               <div>
                 <Input

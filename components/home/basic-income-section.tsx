@@ -285,7 +285,7 @@ export function BasicIncomeSection({
                     {dictionary.pages.earn.basic_income.alert.claim.title}
                   </AlertDialogTitle>
                 </AlertDialogHeader>
-                <AlertDialogDescription className="mb-6">
+                <AlertDialogDescription>
                   {dictionary.pages.earn.basic_income.alert.claim.description.replace(
                     "{amount}",
                     amountString,

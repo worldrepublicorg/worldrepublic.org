@@ -470,7 +470,7 @@ export function SavingsSection({
                         {dictionary.pages.earn.savings.alert.collect.title}
                       </AlertDialogTitle>
                     </AlertDialogHeader>
-                    <AlertDialogDescription className="mb-6">
+                    <AlertDialogDescription>
                       {dictionary.pages.earn.savings.alert.collect.description.replace(
                         "{amount}",
                         collectableAmountDisplay,
@@ -596,7 +596,7 @@ export function SavingsSection({
                     {dictionary.pages.earn.savings.alert.deposit.title}
                   </AlertDialogTitle>
                 </AlertDialogHeader>
-                <AlertDialogDescription className="mb-6">
+                <AlertDialogDescription>
                   {dictionary.pages.earn.savings.alert.deposit.description.replace(
                     "{amount}",
                     amountDisplay,
@@ -654,7 +654,7 @@ export function SavingsSection({
                     {dictionary.pages.earn.savings.alert.withdraw.title}
                   </AlertDialogTitle>
                 </AlertDialogHeader>
-                <AlertDialogDescription className="mb-6">
+                <AlertDialogDescription>
                   {dictionary.pages.earn.savings.alert.withdraw.description.replace(
                     "{amount}",
                     amountDisplay,
