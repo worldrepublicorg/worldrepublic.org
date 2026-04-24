@@ -47,7 +47,7 @@ interface ConnectWalletButtonProps {
   noWalletDialogLinkLabel?: string;
   copiedToastTitle?: string;
   copyErrorToastTitle?: string;
-  menuTitle?: string;
+  accountTitle?: string;
   lang?: string;
 }
 
@@ -68,7 +68,7 @@ export function ConnectWalletButton({
   noWalletDialogLinkLabel = "Find one on WalletGuide",
   copiedToastTitle = "Copied",
   copyErrorToastTitle = "An error occurred",
-  menuTitle = "Menu",
+  accountTitle = "Account",
   lang = "en",
 }: ConnectWalletButtonProps = {}) {
   const { status, connector } = useConnection();
@@ -195,7 +195,7 @@ export function ConnectWalletButton({
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>{menuTitle}</AlertDialogTitle>
+                    <AlertDialogTitle>{accountTitle}</AlertDialogTitle>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <div className="flex w-full flex-col gap-2">

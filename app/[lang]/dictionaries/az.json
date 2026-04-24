@@ -264,7 +264,8 @@
           "description": "Bütün məlumatlarınızı daimi olaraq silin"
         },
         "verification": "DOĞRULAMA",
-        "google_linked": "Bağlı"
+        "google_linked": "Bağlı",
+        "account_label": "Hesab"
       },
       "username": {
         "label": "İstifadəçi adı",

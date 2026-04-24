@@ -264,7 +264,8 @@
           "description": "Назавжди видалити всі ваші дані"
         },
         "verification": "ВЕРИФІКАЦІЯ",
-        "google_linked": "Підключено"
+        "google_linked": "Підключено",
+        "account_label": "Обліковий запис"
       },
       "username": {
         "label": "Ім'я користувача",

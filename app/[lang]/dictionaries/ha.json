@@ -264,7 +264,8 @@
           "description": "Cire duk bayanan ku na dindindin"
         },
         "verification": "TABBATARWA",
-        "google_linked": "An haɗa"
+        "google_linked": "An haɗa",
+        "account_label": "Asusu"
       },
       "username": {
         "label": "Sunan mai amfani",

@@ -264,7 +264,8 @@
           "description": "Verwijder permanent al uw gegevens"
         },
         "verification": "VERIFICATIE",
-        "google_linked": "Gekoppeld"
+        "google_linked": "Gekoppeld",
+        "account_label": "Rekening"
       },
       "username": {
         "label": "Gebruikersnaam",

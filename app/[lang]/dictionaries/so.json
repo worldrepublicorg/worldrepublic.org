@@ -264,7 +264,8 @@
           "description": "Si toos ah ka saar dhammaan xogtaada"
         },
         "verification": "XAQIIJIN",
-        "google_linked": "Xiriirsan"
+        "google_linked": "Xiriirsan",
+        "account_label": "Akoonka"
       },
       "username": {
         "label": "Magaca isticmaalaha",

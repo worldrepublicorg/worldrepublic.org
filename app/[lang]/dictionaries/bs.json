@@ -264,7 +264,8 @@
           "description": "Trajno uklonite sve svoje podatke"
         },
         "verification": "VERIFIKACIJA",
-        "google_linked": "Povezan"
+        "google_linked": "Povezan",
+        "account_label": "Račun"
       },
       "username": {
         "label": "Korisničko ime",

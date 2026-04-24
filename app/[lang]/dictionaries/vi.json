@@ -264,7 +264,8 @@
           "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
         },
         "verification": "XÁC MINH",
-        "google_linked": "Đã liên kết"
+        "google_linked": "Đã liên kết",
+        "account_label": "Tài khoản"
       },
       "username": {
         "label": "Tên người dùng",

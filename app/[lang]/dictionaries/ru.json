@@ -264,7 +264,8 @@
           "description": "Навсегда удалить все ваши данные"
         },
         "verification": "ВЕРИФИКАЦИЯ",
-        "google_linked": "Подключён"
+        "google_linked": "Подключён",
+        "account_label": "Аккаунт"
       },
       "username": {
         "label": "Имя пользователя",

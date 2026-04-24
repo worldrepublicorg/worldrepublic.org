@@ -264,7 +264,8 @@
           "description": "اپنا تمام ڈیٹا مستقل طور پر ہٹائیں"
         },
         "verification": "تصدیق",
-        "google_linked": "منسلک"
+        "google_linked": "منسلک",
+        "account_label": "اکاؤنٹ"
       },
       "username": {
         "label": "صارف نام",

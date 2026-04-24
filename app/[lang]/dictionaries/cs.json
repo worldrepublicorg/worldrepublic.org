@@ -264,7 +264,8 @@
           "description": "Trvale odstraňte všechna vaše data"
         },
         "verification": "OVĚŘENÍ",
-        "google_linked": "Připojeno"
+        "google_linked": "Připojeno",
+        "account_label": "Účet"
       },
       "username": {
         "label": "Uživatelské jméno",

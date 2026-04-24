@@ -264,7 +264,8 @@
           "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
         },
         "verification": "যাচাইকরণ",
-        "google_linked": "সংযুক্ত"
+        "google_linked": "সংযুক্ত",
+        "account_label": "অ্যাকাউন্ট"
       },
       "username": {
         "label": "ব্যবহারকারীর নাম",

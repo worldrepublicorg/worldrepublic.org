@@ -264,7 +264,8 @@
           "description": "Eliminați permanent toate datele dvs."
         },
         "verification": "VERIFICARE",
-        "google_linked": "Linkuit"
+        "google_linked": "Linkuit",
+        "account_label": "Cont"
       },
       "username": {
         "label": "Nume de utilizator",

@@ -264,7 +264,8 @@
           "description": "모든 데이터를 영구적으로 제거"
         },
         "verification": "검증",
-        "google_linked": "연결됨"
+        "google_linked": "연결됨",
+        "account_label": "계정"
       },
       "username": {
         "label": "사용자 이름",

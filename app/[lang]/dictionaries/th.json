@@ -264,7 +264,8 @@
           "description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
         },
         "verification": "การยืนยัน",
-        "google_linked": "เชื่อมต่อแล้ว"
+        "google_linked": "เชื่อมต่อแล้ว",
+        "account_label": "บัญชี"
       },
       "username": {
         "label": "ชื่อผู้ใช้",

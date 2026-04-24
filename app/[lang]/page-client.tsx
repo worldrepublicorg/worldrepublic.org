@@ -450,7 +450,7 @@ export default function HomePageClient({
                 }
                 copiedToastTitle={dictionary.toasts.copied}
                 copyErrorToastTitle={dictionary.toasts.generic_error}
-                menuTitle={dictionary.nav.menu}
+                accountTitle={dictionary.pages.wallet.sections.account_label}
                 lang={lang}
                 size="sm"
               />

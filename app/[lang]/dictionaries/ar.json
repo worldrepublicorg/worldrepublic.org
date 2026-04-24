@@ -264,7 +264,8 @@
           "description": "إزالة جميع بياناتك بشكل دائم"
         },
         "verification": "التحقق",
-        "google_linked": "مرتبط"
+        "google_linked": "مرتبط",
+        "account_label": "الحساب"
       },
       "username": {
         "label": "اسم المستخدم",

@@ -264,7 +264,8 @@
           "description": "Verwyder permanent al jou data"
         },
         "verification": "VERIFIKASIE",
-        "google_linked": "Gekoppel"
+        "google_linked": "Gekoppel",
+        "account_label": "Rekening"
       },
       "username": {
         "label": "Gebruikersnaam",

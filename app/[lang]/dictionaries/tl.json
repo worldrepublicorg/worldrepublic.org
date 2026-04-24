@@ -264,7 +264,8 @@
           "description": "Permanenteng alisin ang lahat ng iyong data"
         },
         "verification": "BERIPIKASYON",
-        "google_linked": "Naka-link"
+        "google_linked": "Naka-link",
+        "account_label": "Akaunto"
       },
       "username": {
         "label": "Pangalan ng gumagamit",

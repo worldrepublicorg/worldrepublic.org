@@ -264,7 +264,8 @@
           "description": "Supprimer définitivement toutes vos données"
         },
         "verification": "VÉRIFICATION",
-        "google_linked": "Lié"
+        "google_linked": "Lié",
+        "account_label": "Compte"
       },
       "username": {
         "label": "Nom d'utilisateur",

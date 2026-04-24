@@ -264,7 +264,8 @@
           "description": "Alle Ihre Daten dauerhaft entfernen"
         },
         "verification": "VERIFIZIERUNG",
-        "google_linked": "Verknüpft"
+        "google_linked": "Verknüpft",
+        "account_label": "Konto"
       },
       "username": {
         "label": "Benutzername",

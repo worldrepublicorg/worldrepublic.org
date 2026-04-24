@@ -264,7 +264,8 @@
           "description": "Eliminar permanentemente todos tus datos"
         },
         "verification": "VERIFICACIÓN",
-        "google_linked": "Vinculada"
+        "google_linked": "Vinculada",
+        "account_label": "Cuenta"
       },
       "username": {
         "label": "Nombre de usuario",

@@ -264,7 +264,8 @@
           "description": "Kuraho byose byawe byose ubudahoraho"
         },
         "verification": "IGENZURA",
-        "google_linked": "Yahujwe"
+        "google_linked": "Yahujwe",
+        "account_label": "Konti"
       },
       "username": {
         "label": "Izina ry'ukoresha",

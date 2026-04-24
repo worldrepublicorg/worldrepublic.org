@@ -264,7 +264,8 @@
           "description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
         },
         "verification": "အတည်ပြုခြင်း",
-        "google_linked": "ချိတ်ဆက်ထားသည်"
+        "google_linked": "ချိတ်ဆက်ထားသည်",
+        "account_label": "အကောင့်"
       },
       "username": {
         "label": "အသုံးပြုသူအမည်",

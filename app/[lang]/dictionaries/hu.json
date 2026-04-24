@@ -264,7 +264,8 @@
           "description": "Véglegesen távolítsa el az összes adatát"
         },
         "verification": "ELLENŐRZÉS",
-        "google_linked": "Összekapcsolva"
+        "google_linked": "Összekapcsolva",
+        "account_label": "Fiók"
       },
       "username": {
         "label": "Felhasználónév",

@@ -264,7 +264,8 @@
           "description": "Permanently remove all your data"
         },
         "verification": "VERIFICATION",
-        "google_linked": "Linked"
+        "google_linked": "Linked",
+        "account_label": "Account"
       },
       "username": {
         "label": "Username",

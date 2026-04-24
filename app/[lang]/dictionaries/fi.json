@@ -264,7 +264,8 @@
           "description": "Poista pysyvästi kaikki tietosi"
         },
         "verification": "VAHVISTUS",
-        "google_linked": "Linkitetty"
+        "google_linked": "Linkitetty",
+        "account_label": "Tili"
       },
       "username": {
         "label": "Käyttäjänimi",

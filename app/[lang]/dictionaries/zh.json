@@ -264,7 +264,8 @@
           "description": "永久删除您的所有数据"
         },
         "verification": "验证",
-        "google_linked": "已链接"
+        "google_linked": "已链接",
+        "account_label": "账户"
       },
       "username": {
         "label": "用户名",

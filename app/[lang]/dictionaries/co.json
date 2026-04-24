@@ -264,7 +264,8 @@
           "description": "Rimuove permanentemente tutti i vostri dati"
         },
         "verification": "VERIFICAZIONE",
-        "google_linked": "Ligatu"
+        "google_linked": "Ligatu",
+        "account_label": "Cuntu"
       },
       "username": {
         "label": "Nome d'utilizatore",

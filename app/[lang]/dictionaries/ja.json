@@ -264,7 +264,8 @@
           "description": "すべてのデータを永続的に削除"
         },
         "verification": "検証",
-        "google_linked": "リンク済み"
+        "google_linked": "リンク済み",
+        "account_label": "アカウント"
       },
       "username": {
         "label": "ユーザー名",

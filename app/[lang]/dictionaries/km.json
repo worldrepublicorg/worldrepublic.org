@@ -264,7 +264,8 @@
           "description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
         },
         "verification": "ការផ្ទៀងផ្ទាត់",
-        "google_linked": "បានភ្ជាប់"
+        "google_linked": "បានភ្ជាប់",
+        "account_label": "គណនី"
       },
       "username": {
         "label": "ឈ្មោះអ្នកប្រើប្រាស់",

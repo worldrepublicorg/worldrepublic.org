@@ -264,7 +264,8 @@
           "description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
         },
         "verification": "ማረጋገጫ",
-        "google_linked": "ተገናኝቷል"
+        "google_linked": "ተገናኝቷል",
+        "account_label": "መለያ"
       },
       "username": {
         "label": "የተጠቃሚ ስም",

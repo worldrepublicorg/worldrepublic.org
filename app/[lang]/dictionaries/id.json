@@ -264,7 +264,8 @@
           "description": "Hapus permanen semua data Anda"
         },
         "verification": "VERIFIKASI",
-        "google_linked": "Ditautkan"
+        "google_linked": "Ditautkan",
+        "account_label": "Akun"
       },
       "username": {
         "label": "Nama pengguna",

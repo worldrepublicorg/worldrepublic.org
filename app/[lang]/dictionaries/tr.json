@@ -264,7 +264,8 @@
           "description": "Tüm verilerinizi kalıcı olarak kaldırın"
         },
         "verification": "DOĞRULAMA",
-        "google_linked": "Bağlı"
+        "google_linked": "Bağlı",
+        "account_label": "Hesap"
       },
       "username": {
         "label": "Kullanıcı adı",

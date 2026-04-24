@@ -264,7 +264,8 @@
           "description": "अपना सभी डेटा स्थायी रूप से हटाएं"
         },
         "verification": "सत्यापन",
-        "google_linked": "लिंक है"
+        "google_linked": "लिंक है",
+        "account_label": "खाता"
       },
       "username": {
         "label": "उपयोगकर्ता नाम",

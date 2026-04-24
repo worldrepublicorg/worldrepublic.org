@@ -264,7 +264,8 @@
           "description": "Ondoa data zako zote kwa kudumu"
         },
         "verification": "UTHIBITISHAJI",
-        "google_linked": "Imeunganishwa"
+        "google_linked": "Imeunganishwa",
+        "account_label": "Akaunti"
       },
       "username": {
         "label": "Jina la mtumiaji",

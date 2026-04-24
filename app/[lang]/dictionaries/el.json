@@ -264,7 +264,8 @@
           "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
         },
         "verification": "ΕΠΑΛΗΘΕΥΣΗ",
-        "google_linked": "Συνδεδεμένος"
+        "google_linked": "Συνδεδεμένος",
+        "account_label": "Λογαριασμός"
       },
       "username": {
         "label": "Όνομα χρήστη",

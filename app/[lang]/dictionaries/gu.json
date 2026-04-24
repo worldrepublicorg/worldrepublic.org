@@ -264,7 +264,8 @@
           "description": "તમારા બધા ડેટાને કાયમી રીતે દૂર કરો"
         },
         "verification": "ચકાસણી",
-        "google_linked": "જોડાયેલ"
+        "google_linked": "જોડાયેલ",
+        "account_label": "ખાતું"
       },
       "username": {
         "label": "વપરાશકર્તા નામ",

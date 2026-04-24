@@ -264,7 +264,8 @@
           "description": "Permanentiškai pašalinkite visus savo duomenis"
         },
         "verification": "PATVIRTINIMAS",
-        "google_linked": "Prijungta"
+        "google_linked": "Prijungta",
+        "account_label": "Paskyra"
       },
       "username": {
         "label": "Vartotojo vardas",

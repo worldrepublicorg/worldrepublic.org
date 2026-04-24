@@ -264,7 +264,8 @@
           "description": "Yọ gbogbo data rẹ lailai"
         },
         "verification": "ÌMÚDÁJÚ",
-        "google_linked": "Ti sopọ"
+        "google_linked": "Ti sopọ",
+        "account_label": "Akaunnti"
       },
       "username": {
         "label": "Orukọ olumulo",

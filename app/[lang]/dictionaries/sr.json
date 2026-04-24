@@ -264,7 +264,8 @@
           "description": "Трајно уклоните све своје податке"
         },
         "verification": "VERIFIKACIJA",
-        "google_linked": "Повезан"
+        "google_linked": "Повезан",
+        "account_label": "Рачун"
       },
       "username": {
         "label": "Корисничко име",

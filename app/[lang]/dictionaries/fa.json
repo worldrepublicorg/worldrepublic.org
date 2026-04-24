@@ -264,7 +264,8 @@
           "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
         },
         "verification": "تأیید",
-        "google_linked": "متصل"
+        "google_linked": "متصل",
+        "account_label": "حساب کاربری"
       },
       "username": {
         "label": "نام کاربری",

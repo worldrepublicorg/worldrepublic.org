@@ -264,7 +264,8 @@
           "description": "Премахнете постоянно всички ваши данни"
         },
         "verification": "ПРОВЕРКА",
-        "google_linked": "Свързан"
+        "google_linked": "Свързан",
+        "account_label": "Акаунт"
       },
       "username": {
         "label": "Потребителско име",

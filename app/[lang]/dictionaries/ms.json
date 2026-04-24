@@ -264,7 +264,8 @@
           "description": "Buang semua data anda secara kekal"
         },
         "verification": "PENGESAHAN",
-        "google_linked": "Disambungkan"
+        "google_linked": "Disambungkan",
+        "account_label": "Akaun"
       },
       "username": {
         "label": "Nama pengguna",

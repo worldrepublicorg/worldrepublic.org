@@ -264,7 +264,8 @@
           "description": "Pastāvīgi noņemiet visus savus datus"
         },
         "verification": "VERIFIKĀCIJA",
-        "google_linked": "Saistīts"
+        "google_linked": "Saistīts",
+        "account_label": "Konts"
       },
       "username": {
         "label": "Lietotājvārds",

@@ -264,7 +264,8 @@
           "description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
         },
         "verification": "TASDIQLASH",
-        "google_linked": "Ulangan"
+        "google_linked": "Ulangan",
+        "account_label": "Hisob"
       },
       "username": {
         "label": "Foydalanuvchi nomi",

@@ -264,7 +264,8 @@
           "description": "Trwale usuń wszystkie swoje dane"
         },
         "verification": "WERYFIKACJA",
-        "google_linked": "Połączono"
+        "google_linked": "Połączono",
+        "account_label": "Konto"
       },
       "username": {
         "label": "Nazwa użytkownika",
