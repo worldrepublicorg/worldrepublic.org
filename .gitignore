@@ -24,6 +24,11 @@
 .DS_Store
 *.pem
 
+# agents
+AGENTS.md
+.cursor/hooks/state/continual-learning-index.json
+.cursor/hooks/state/continual-learning.json
+
 # debug
 npm-debug.log*
 yarn-debug.log*
