@@ -57,7 +57,6 @@ export function LearnMoreDialog({
   onVerifyClick,
 }: LearnMoreDialogProps) {
   const warningBannerText = warningLevel ? warningText : null;
-  const hasContent = info || externalLink || Boolean(warningBannerText);
   const warningBannerClassName =
     warningLevel === "red" ? "bg-red-50" : "bg-yellow-50";
   const warningIconClassName =
@@ -94,7 +93,7 @@ export function LearnMoreDialog({
           ))}
 
         {externalLink && (
-          <div className="w-full space-y-4">
+          <div className="w-full">
             <a
               href={externalLink.url}
               target="_blank"
@@ -108,27 +107,27 @@ export function LearnMoreDialog({
                 }
               />
             </a>
+          </div>
+        )}
 
-            {warningLevel && warningBannerText && (
-              <div
-                className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+        {warningLevel && warningBannerText && (
+          <div
+            className={`${externalLink ? "mt-4 " : ""}flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+          >
+            <div className="flex items-start gap-3">
+              {warningLevel === "red" ? (
+                <PiWarning className={warningIconClassName} />
+              ) : (
+                <PiWarningCircle className={warningIconClassName} />
+              )}
+              <Typography
+                variant="body"
+                level={4}
+                className={`text-left text-[14px] font-medium ${warningTextClassName}`}
               >
-                <div className="flex items-start gap-3">
-                  {warningLevel === "red" ? (
-                    <PiWarning className={warningIconClassName} />
-                  ) : (
-                    <PiWarningCircle className={warningIconClassName} />
-                  )}
-                  <Typography
-                    variant="body"
-                    level={4}
-                    className={`text-left text-[14px] font-medium ${warningTextClassName}`}
-                  >
-                    {warningBannerText}
-                  </Typography>
-                </div>
-              </div>
-            )}
+                {warningBannerText}
+              </Typography>
+            </div>
           </div>
         )}
 
@@ -140,12 +139,6 @@ export function LearnMoreDialog({
               </Button>
             </AlertDialogFooter>
           </div>
-        )}
-
-        {!hasContent && (
-          <AlertDialogDescription className="text-gray-500">
-            —
-          </AlertDialogDescription>
         )}
       </AlertDialogContent>
     </AlertDialog>
