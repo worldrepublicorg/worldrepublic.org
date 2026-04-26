@@ -84,7 +84,9 @@ export function LearnMoreDialog({
 
         {info &&
           (externalLink ? (
-            <AlertDialogDescription className="text-gray-500 mb-6!">
+            <AlertDialogDescription
+              className={`text-gray-500 ${warningLevel ? "mb-4!" : "mb-6!"}`}
+            >
               {info}
             </AlertDialogDescription>
           ) : (
