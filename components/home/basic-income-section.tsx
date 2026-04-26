@@ -152,6 +152,11 @@ export function BasicIncomeSection({
                 dictionary.components.identity.verification_warning
                   .reward_cap_banner
               }
+              showVerifyCta={Boolean(learnMoreWarningLevel)}
+              verifyCtaLabel={
+                dictionary.components.identity.verification_warning.title
+              }
+              onVerifyClick={() => setIsSelfVerificationOpen(true)}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -196,6 +201,11 @@ export function BasicIncomeSection({
                 dictionary.components.identity.verification_warning
                   .reward_cap_banner
               }
+              showVerifyCta={Boolean(learnMoreWarningLevel)}
+              verifyCtaLabel={
+                dictionary.components.identity.verification_warning.title
+              }
+              onVerifyClick={() => setIsSelfVerificationOpen(true)}
               externalLink={{
                 url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
                 label: dictionary.pages.earn.basic_income.world_drachma,
@@ -240,6 +250,11 @@ export function BasicIncomeSection({
               dictionary.components.identity.verification_warning
                 .reward_cap_banner
             }
+            showVerifyCta={Boolean(learnMoreWarningLevel)}
+            verifyCtaLabel={
+              dictionary.components.identity.verification_warning.title
+            }
+            onVerifyClick={() => setIsSelfVerificationOpen(true)}
             externalLink={{
               url: "https://wiki.worldrepublic.org/building-blocks/world-drachma",
               label: dictionary.pages.earn.basic_income.world_drachma,

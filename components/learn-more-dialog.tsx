@@ -6,6 +6,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  Button,
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import {
@@ -30,6 +31,12 @@ interface LearnMoreDialogProps {
   warningLevel?: LearnMoreWarningLevel;
   /** Optional warning copy shown when warningLevel is provided */
   warningText?: string;
+  /** Optional CTA shown alongside warning banner */
+  showVerifyCta?: boolean;
+  /** Optional CTA label */
+  verifyCtaLabel?: string;
+  /** Optional CTA click handler */
+  onVerifyClick?: () => void;
 }
 
 /**
@@ -45,6 +52,9 @@ export function LearnMoreDialog({
   externalLink,
   warningLevel,
   warningText,
+  showVerifyCta = false,
+  verifyCtaLabel,
+  onVerifyClick,
 }: LearnMoreDialogProps) {
   const warningBannerText = warningLevel ? warningText : null;
   const hasContent = info || externalLink || Boolean(warningBannerText);
@@ -99,24 +109,31 @@ export function LearnMoreDialog({
               </a>
 
               {warningLevel && warningBannerText && (
-                <div
-                  className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
-                >
-                  <div className="flex items-start gap-3">
-                    {warningLevel === "red" ? (
-                      <PiWarning className={warningIconClassName} />
-                    ) : (
-                      <PiWarningCircle className={warningIconClassName} />
-                    )}
-                    <Typography
-                      variant="body"
-                      level={4}
-                      className={`text-left text-[14px] font-medium ${warningTextClassName}`}
-                    >
-                      {warningBannerText}
-                    </Typography>
+                <>
+                  <div
+                    className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+                  >
+                    <div className="flex items-start gap-3">
+                      {warningLevel === "red" ? (
+                        <PiWarning className={warningIconClassName} />
+                      ) : (
+                        <PiWarningCircle className={warningIconClassName} />
+                      )}
+                      <Typography
+                        variant="body"
+                        level={4}
+                        className={`text-left text-[14px] font-medium ${warningTextClassName}`}
+                      >
+                        {warningBannerText}
+                      </Typography>
+                    </div>
                   </div>
-                </div>
+                  {showVerifyCta && onVerifyClick && (
+                    <Button fullWidth onClick={onVerifyClick}>
+                      {verifyCtaLabel}
+                    </Button>
+                  )}
+                </>
               )}
             </div>
           </AlertDialogFooter>
