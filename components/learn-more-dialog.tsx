@@ -110,7 +110,7 @@ export function LearnMoreDialog({
 
         {warningLevel && warningBannerText && (
           <div
-            className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+            className={`${externalLink ? "mt-4! " : ""}flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
           >
             <div className="flex items-start gap-3">
               {warningLevel === "red" ? (
