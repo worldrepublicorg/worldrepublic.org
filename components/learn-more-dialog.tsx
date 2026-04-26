@@ -92,56 +92,52 @@ export function LearnMoreDialog({
           ))}
 
         {externalLink && (
-          <AlertDialogFooter>
-            <div className="flex flex-col gap-4 w-full">
-              <a
-                href={externalLink.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
-                <CustomListItem
-                  label={externalLink.label}
-                  endAdornment={
-                    <PiArrowSquareOut className="size-4 text-gray-400" />
-                  }
-                />
-              </a>
+          <div className="w-full space-y-4">
+            <a
+              href={externalLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
+            >
+              <CustomListItem
+                label={externalLink.label}
+                endAdornment={
+                  <PiArrowSquareOut className="size-4 text-gray-400" />
+                }
+              />
+            </a>
 
-              {warningLevel && warningBannerText && (
-                <>
-                  <div
-                    className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
-                  >
-                    <div className="flex items-start gap-3">
-                      {warningLevel === "red" ? (
-                        <PiWarning className={warningIconClassName} />
-                      ) : (
-                        <PiWarningCircle className={warningIconClassName} />
-                      )}
-                      <Typography
-                        variant="body"
-                        level={4}
-                        className={`text-left text-[14px] font-medium ${warningTextClassName}`}
-                      >
-                        {warningBannerText}
-                      </Typography>
-                    </div>
-                  </div>
-                  {showVerifyCta && onVerifyClick && (
-                    <Button
-                      fullWidth
-                      onClick={onVerifyClick}
-                      className="mt-2!"
-                      size="lg"
-                    >
-                      {verifyCtaLabel}
-                    </Button>
+            {warningLevel && warningBannerText && (
+              <div
+                className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+              >
+                <div className="flex items-start gap-3">
+                  {warningLevel === "red" ? (
+                    <PiWarning className={warningIconClassName} />
+                  ) : (
+                    <PiWarningCircle className={warningIconClassName} />
                   )}
-                </>
-              )}
-            </div>
-          </AlertDialogFooter>
+                  <Typography
+                    variant="body"
+                    level={4}
+                    className={`text-left text-[14px] font-medium ${warningTextClassName}`}
+                  >
+                    {warningBannerText}
+                  </Typography>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {showVerifyCta && onVerifyClick && (
+          <div className="mt-4">
+            <AlertDialogFooter>
+              <Button fullWidth onClick={onVerifyClick}>
+                {verifyCtaLabel}
+              </Button>
+            </AlertDialogFooter>
+          </div>
         )}
 
         {!hasContent && (
