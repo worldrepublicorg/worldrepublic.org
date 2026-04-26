@@ -129,7 +129,12 @@ export function LearnMoreDialog({
                     </div>
                   </div>
                   {showVerifyCta && onVerifyClick && (
-                    <Button fullWidth onClick={onVerifyClick} className="mt-6!">
+                    <Button
+                      fullWidth
+                      onClick={onVerifyClick}
+                      className="mt-6!"
+                      size="lg"
+                    >
                       {verifyCtaLabel}
                     </Button>
                   )}
