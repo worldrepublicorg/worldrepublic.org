@@ -84,7 +84,7 @@ export function LearnMoreDialog({
         {info &&
           (externalLink ? (
             <AlertDialogDescription
-              className={`text-gray-500 ${warningLevel ? "mb-4!" : "mb-6!"}`}
+              className={`text-gray-500 ${warningLevel || externalLink ? "mb-4!" : "mb-6!"}`}
             >
               {info}
             </AlertDialogDescription>
@@ -112,7 +112,7 @@ export function LearnMoreDialog({
 
         {warningLevel && warningBannerText && (
           <div
-            className={`${externalLink ? "mt-4! " : ""}flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
+            className={`flex h-full w-full items-center justify-center rounded-2xl p-4 text-center ${warningBannerClassName}`}
           >
             <div className="flex items-start gap-3">
               {warningLevel === "red" ? (
