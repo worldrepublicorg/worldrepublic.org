@@ -84,7 +84,7 @@ export function LearnMoreDialog({
 
         {info &&
           (externalLink ? (
-            <AlertDialogDescription className="text-gray-500 mb-6">
+            <AlertDialogDescription className="text-gray-500 mb-6!">
               {info}
             </AlertDialogDescription>
           ) : (
@@ -129,7 +129,7 @@ export function LearnMoreDialog({
                     </div>
                   </div>
                   {showVerifyCta && onVerifyClick && (
-                    <Button fullWidth onClick={onVerifyClick} className="mt-2">
+                    <Button fullWidth onClick={onVerifyClick} className="mt-6!">
                       {verifyCtaLabel}
                     </Button>
                   )}
