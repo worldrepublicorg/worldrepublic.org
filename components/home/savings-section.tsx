@@ -329,10 +329,14 @@ export function SavingsSection({
             showVerifyCta={Boolean(learnMoreWarningLevel)}
             verifyCtaLabel={dictionary.components.identity.verification_warning.title}
             onVerifyClick={() => setIsSelfVerificationOpen(true)}
-            externalLink={{
-              url: "https://basescan.org/address/0xeFE5a120c2787ee53FbebAE8902bdDe1edE416Fc#code",
-              label: dictionary.pages.earn.savings.smart_contract_link,
-            }}
+            externalLink={
+              isBaseChainAccountSelected
+                ? {
+                    url: "https://basescan.org/address/0xeFE5a120c2787ee53FbebAE8902bdDe1edE416Fc#code",
+                    label: dictionary.pages.earn.savings.smart_contract_link,
+                  }
+                : undefined
+            }
           />
         </div>
 
