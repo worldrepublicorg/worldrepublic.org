@@ -131,7 +131,7 @@ export function LearnMoreDialog({
         )}
 
         {showVerifyCta && onVerifyClick && (
-          <div className="mt-4">
+          <div className="mt-6">
             <AlertDialogFooter>
               <Button fullWidth onClick={onVerifyClick}>
                 {verifyCtaLabel}
