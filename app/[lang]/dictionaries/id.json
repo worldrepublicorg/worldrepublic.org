@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Terverifikasi",
         "status_not_completed": "Belum terverifikasi",
-        "learn_about_self": "Pelajari tentang Self"
+        "learn_about_self": "Pelajari tentang Self",
+        "primer": {
+          "title": "Verifikasi yang mengutamakan privasi",
+          "description": "Buktikan bahwa Anda manusia asli tanpa mengungkapkan identitas Anda.",
+          "feature_device_data": "Data tidak pernah meninggalkan perangkat Anda",
+          "feature_invisible_identity": "Identitas Anda tetap tidak terlihat",
+          "feature_prevents_fakes": "Mencegah duplikat dan akun palsu"
+        }
       },
       "verification_warning": {
         "title": "Dapatkan verifikasi",

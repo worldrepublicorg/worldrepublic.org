@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "ยืนยันแล้ว",
         "status_not_completed": "ยังไม่ยืนยัน",
-        "learn_about_self": "เรียนรู้เกี่ยวกับ Self"
+        "learn_about_self": "เรียนรู้เกี่ยวกับ Self",
+        "primer": {
+          "title": "การยืนยันที่เน้นความเป็นส่วนตัว",
+          "description": "พิสูจน์ว่าคุณเป็นมนุษย์จริงๆ โดยไม่ต้องเปิดเผยตัวตน",
+          "feature_device_data": "ข้อมูลจะไม่ถูกส่งออกจากอุปกรณ์ของคุณ",
+          "feature_invisible_identity": "ตัวตนของคุณยังคงถูกปิดบัง",
+          "feature_prevents_fakes": "ป้องกันบัญชีซ้ำและบัญชีปลอม"
+        }
       },
       "verification_warning": {
         "title": "รับการยืนยันตัวตน",

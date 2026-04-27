@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Επαληθευμένο",
         "status_not_completed": "Δεν επαληθεύτηκε",
-        "learn_about_self": "Μάθετε για το Self"
+        "learn_about_self": "Μάθετε για το Self",
+        "primer": {
+          "title": "Επαλήθευση με προτεραιότητα το απόρρητο",
+          "description": "Αποδείξτε ότι είστε πραγματικός άνθρωπος χωρίς να αποκαλύψετε ποιος είστε.",
+          "feature_device_data": "Τα δεδομένα δεν εγκαταλείπουν ποτέ τη συσκευή σας",
+          "feature_invisible_identity": "Η ταυτότητά σας παραμένει αόρατη",
+          "feature_prevents_fakes": "Αποτρέπει τα διπλότυπα και τους ψεύτικους λογαριασμούς"
+        }
       },
       "verification_warning": {
         "title": "Λάβετε επιβεβαίωση",

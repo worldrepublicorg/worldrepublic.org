@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Verifiziert",
         "status_not_completed": "Nicht verifiziert",
-        "learn_about_self": "Mehr über Self erfahren"
+        "learn_about_self": "Mehr über Self erfahren",
+        "primer": {
+          "title": "Datenschutzorientierte Verifizierung",
+          "description": "Beweisen Sie, dass Sie ein echter Mensch sind, ohne Ihre Identität preiszugeben.",
+          "feature_device_data": "Daten verlassen niemals Ihr Gerät",
+          "feature_invisible_identity": "Ihre Identität bleibt unsichtbar",
+          "feature_prevents_fakes": "Verhindert Duplikate und gefälschte Konten"
+        }
       },
       "verification_warning": {
         "title": "Verifizierung erhalten",

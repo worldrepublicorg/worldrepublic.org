@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Pārbaudīts",
         "status_not_completed": "Nav pārbaudīts",
-        "learn_about_self": "Uzziniet par Self"
+        "learn_about_self": "Uzziniet par Self",
+        "primer": {
+          "title": "Privātuma prioritātes pārbaude",
+          "description": "Pierādiet, ka esat īsts cilvēks, neatklājot savu identitāti.",
+          "feature_device_data": "Dati nekad neatstāj jūsu ierīci",
+          "feature_invisible_identity": "Jūsu identitāte paliek neredzama",
+          "feature_prevents_fakes": "Novērš dublikātus un viltotus kontus"
+        }
       },
       "verification_warning": {
         "title": "Iegūstiet apstiprinājumu",

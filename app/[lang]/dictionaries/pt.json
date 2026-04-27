@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Verificada",
         "status_not_completed": "Não verificada",
-        "learn_about_self": "Saiba mais sobre Self"
+        "learn_about_self": "Saiba mais sobre Self",
+        "primer": {
+          "title": "Verificação com foco na privacidade",
+          "description": "Prove que você é um humano real sem revelar quem você é.",
+          "feature_device_data": "Os dados nunca saem do seu dispositivo",
+          "feature_invisible_identity": "Sua identidade permanece invisível",
+          "feature_prevents_fakes": "Previne duplicatas e contas falsas"
+        }
       },
       "verification_warning": {
         "title": "Obter verificação",

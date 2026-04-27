@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Disahkan",
         "status_not_completed": "Belum disahkan",
-        "learn_about_self": "Ketahui tentang Self"
+        "learn_about_self": "Ketahui tentang Self",
+        "primer": {
+          "title": "Pengesahan mengutamakan privasi",
+          "description": "Buktikan anda manusia sebenar tanpa mendedahkan identiti anda.",
+          "feature_device_data": "Data tidak pernah meninggalkan peranti anda",
+          "feature_invisible_identity": "Identiti anda kekal tidak kelihatan",
+          "feature_prevents_fakes": "Mencegah pendua dan akaun palsu"
+        }
       },
       "verification_warning": {
         "title": "Dapatkan pengesahan",

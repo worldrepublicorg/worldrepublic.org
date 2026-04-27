@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "បានផ្ទៀងផ្ទាត់",
         "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់",
-        "learn_about_self": "ស្វែងយល់អំពី Self"
+        "learn_about_self": "ស្វែងយល់អំពី Self",
+        "primer": {
+          "title": "ការផ្ទៀងផ្ទាត់ដោយផ្តោតលើភាពឯកជន",
+          "description": "បង្ហាញថាអ្នកជាមនុស្សពិតដោយមិនចាំបាច់បង្ហាញថាអ្នកជានរណា។",
+          "feature_device_data": "ទិន្នន័យមិនដែលចាកចេញពីឧបករណ៍របស់អ្នកទេ",
+          "feature_invisible_identity": "អត្តសញ្ញាណរបស់អ្នកនៅតែមើលមិនឃើញ",
+          "feature_prevents_fakes": "ការពារគណនីស្ទួន និងគណនីក្លែងក្លាយ"
+        }
       },
       "verification_warning": {
         "title": "ទទួលបានការផ្ទៀងផ្ទាត់",

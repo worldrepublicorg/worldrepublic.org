@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "تصدیق شدہ",
         "status_not_completed": "تصدیق نہیں ہوئی",
-        "learn_about_self": "Self کے بارے میں جانیں"
+        "learn_about_self": "Self کے بارے میں جانیں",
+        "primer": {
+          "title": "رازداری-اول تصدیق",
+          "description": "اپنی شناخت ظاہر کیے بغیر ثابت کریں کہ آپ ایک حقیقی انسان ہیں۔",
+          "feature_device_data": "ڈیٹا کبھی بھی آپ کے آلے کو نہیں چھوڑتا",
+          "feature_invisible_identity": "آپ کی شناخت پوشیدہ رہتی ہے",
+          "feature_prevents_fakes": "ڈپلیکیٹس اور جعلی اکاؤنٹس کو روکتا ہے"
+        }
       },
       "verification_warning": {
         "title": "تصدیق حاصل کریں",

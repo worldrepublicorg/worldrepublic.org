@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "အတည်ပြုပြီး",
         "status_not_completed": "အတည်မပြုရသေး",
-        "learn_about_self": "Self အကြောင်းလေ့လာပါ"
+        "learn_about_self": "Self အကြောင်းလေ့လာပါ",
+        "primer": {
+          "title": "ကိုယ်ရေးကိုယ်တာ-ပထမ အတည်ပြုခြင်း",
+          "description": "သင်ဘယ်သူလဲဆိုတာကို မဖော်ပြဘဲ သင်ဟာ အစစ်အမှန်လူသားတစ်ယောက်ဖြစ်ကြောင်း သက်သေပြပါ။",
+          "feature_device_data": "ဒေတာသည် သင့်စက်မှ ဘယ်တော့မှ မထွက်ပါ",
+          "feature_invisible_identity": "သင့်ကိုယ်ပိုင်လက္ခဏာသည် မမြင်ရဘဲ ကျန်နေပါသည်။",
+          "feature_prevents_fakes": "ပွားနေသော နှင့် အတုအယောင် အကောင့်များကို တားဆီးသည်။"
+        }
       },
       "verification_warning": {
         "title": "အတည်ပြုချက်ရယူပါ",

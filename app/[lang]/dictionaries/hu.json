@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Ellenőrizve",
         "status_not_completed": "Nincs ellenőrizve",
-        "learn_about_self": "Tudjon meg többet a Self-ről"
+        "learn_about_self": "Tudjon meg többet a Self-ről",
+        "primer": {
+          "title": "Adatvédelem-központú ellenőrzés",
+          "description": "Bizonyítsa be, hogy valódi ember, anélkül, hogy felfedné kilétét.",
+          "feature_device_data": "Az adatok soha nem hagyják el az eszközét",
+          "feature_invisible_identity": "Személyazonossága láthatatlan marad",
+          "feature_prevents_fakes": "Megakadályozza a duplikált és hamis fiókokat"
+        }
       },
       "verification_warning": {
         "title": "Igazolás kérése",

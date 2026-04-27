@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "متحقق",
         "status_not_completed": "غير متحقق",
-        "learn_about_self": "تعرّف على Self"
+        "learn_about_self": "تعرّف على Self",
+        "primer": {
+          "title": "التحقق مع إعطاء الأولوية للخصوصية",
+          "description": "أثبت أنك إنسان حقيقي دون الكشف عن هويتك.",
+          "feature_device_data": "البيانات لا تغادر جهازك أبداً",
+          "feature_invisible_identity": "هويتك تبقى غير مرئية",
+          "feature_prevents_fakes": "يمنع التكرار والحسابات الوهمية"
+        }
       },
       "verification_warning": {
         "title": "احصل على التحقق",

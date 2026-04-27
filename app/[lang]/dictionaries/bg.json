@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Проверено",
         "status_not_completed": "Не е проверено",
-        "learn_about_self": "Научете за Self"
+        "learn_about_self": "Научете за Self",
+        "primer": {
+          "title": "Проверка с приоритет на поверителността",
+          "description": "Докажете, че сте истински човек, без да разкривате кой сте.",
+          "feature_device_data": "Данните никога не напускат вашето устройство",
+          "feature_invisible_identity": "Вашата самоличност остава невидима",
+          "feature_prevents_fakes": "Предотвратява дубликати и фалшиви акаунти"
+        }
       },
       "verification_warning": {
         "title": "Получете потвърждение",

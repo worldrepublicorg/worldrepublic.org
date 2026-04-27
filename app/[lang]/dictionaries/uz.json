@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Tasdiqlangan",
         "status_not_completed": "Tasdiqlanmagan",
-        "learn_about_self": "Self haqida bilib oling"
+        "learn_about_self": "Self haqida bilib oling",
+        "primer": {
+          "title": "Maxfiylikni birinchi o'ringa qo'yuvchi tekshiruv",
+          "description": "Kimligingizni oshkor qilmasdan haqiqiy inson ekanligingizni isbotlang.",
+          "feature_device_data": "Ma'lumotlar hech qachon qurilmangizni tark etmaydi",
+          "feature_invisible_identity": "Shaxsingiz ko'rinmas bo'lib qoladi",
+          "feature_prevents_fakes": "Dublikatlar va soxta hisoblarning oldini oladi"
+        }
       },
       "verification_warning": {
         "title": "Tasdiqlash",

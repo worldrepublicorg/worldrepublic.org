@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Verificatu",
         "status_not_completed": "Micca verificatu",
-        "learn_about_self": "Amparate nantu à Self"
+        "learn_about_self": "Amparate nantu à Self",
+        "primer": {
+          "title": "Verificazione prima di privacy",
+          "description": "Pruvate chì site un veru umanu senza revelà quale site.",
+          "feature_device_data": "I dati ùn lascianu mai u vostru dispositivu",
+          "feature_invisible_identity": "A vostra identità ferma invisibile",
+          "feature_prevents_fakes": "Impedisce i duplicati è i cunti falsi"
+        }
       },
       "verification_warning": {
         "title": "Obtener verificación",

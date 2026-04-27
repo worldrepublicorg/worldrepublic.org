@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "已验证",
         "status_not_completed": "未验证",
-        "learn_about_self": "了解 Self"
+        "learn_about_self": "了解 Self",
+        "primer": {
+          "title": "隐私优先的验证",
+          "description": "证明您是真实的人类，而无需透露您的身份。",
+          "feature_device_data": "数据永远不会离开您的设备",
+          "feature_invisible_identity": "您的身份保持隐形",
+          "feature_prevents_fakes": "防止重复和虚假帐户"
+        }
       },
       "verification_warning": {
         "title": "获取验证",

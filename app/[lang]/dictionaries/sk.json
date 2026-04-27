@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Overené",
         "status_not_completed": "Neoverené",
-        "learn_about_self": "Zistite viac o Self"
+        "learn_about_self": "Zistite viac o Self",
+        "primer": {
+          "title": "Overenie s dôrazom na súkromie",
+          "description": "Dokážte, že ste skutočný človek, bez toho, aby ste odhalili svoju identitu.",
+          "feature_device_data": "Dáta nikdy neopustia vaše zariadenie",
+          "feature_invisible_identity": "Vaša identita zostáva neviditeľná",
+          "feature_prevents_fakes": "Zabraňuje duplicitám a falošným účtom"
+        }
       },
       "verification_warning": {
         "title": "Získajte overenie",

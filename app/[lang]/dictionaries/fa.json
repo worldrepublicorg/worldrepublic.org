@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "تأیید شده",
         "status_not_completed": "تأیید نشده",
-        "learn_about_self": "درباره Self بیشتر بدانید"
+        "learn_about_self": "درباره Self بیشتر بدانید",
+        "primer": {
+          "title": "تأیید با اولویت حریم خصوصی",
+          "description": "بدون فاش کردن هویت خود، ثابت کنید که یک انسان واقعی هستید.",
+          "feature_device_data": "داده‌ها هرگز از دستگاه شما خارج نمی‌شوند",
+          "feature_invisible_identity": "هویت شما نامرئی باقی می‌ماند",
+          "feature_prevents_fakes": "از حساب‌های تکراری و جعلی جلوگیری می‌کند"
+        }
       },
       "verification_warning": {
         "title": "دریافت تأیید",

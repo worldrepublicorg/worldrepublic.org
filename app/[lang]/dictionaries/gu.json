@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "ચકાસાયેલ",
         "status_not_completed": "ચકાસેલ નથી",
-        "learn_about_self": "Self વિશે જાણો"
+        "learn_about_self": "Self વિશે જાણો",
+        "primer": {
+          "title": "ગોપનીયતા-પ્રથમ ચકાસણી",
+          "description": "તમે કોણ છો તે જાહેર કર્યા વિના સાબિત કરો કે તમે વાસ્તવિક માનવ છો.",
+          "feature_device_data": "ડેટા ક્યારેય તમારું ઉપકરણ છોડતો નથી",
+          "feature_invisible_identity": "તમારી ઓળખ અદ્રશ્ય રહે છે",
+          "feature_prevents_fakes": "ડુપ્લિકેટ્સ અને નકલી એકાઉન્ટ્સ અટકાવે છે"
+        }
       },
       "verification_warning": {
         "title": "ચકાસો",

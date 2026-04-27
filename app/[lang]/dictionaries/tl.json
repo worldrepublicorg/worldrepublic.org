@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Na-verify",
         "status_not_completed": "Hindi na-verify",
-        "learn_about_self": "Alamin ang tungkol sa Self"
+        "learn_about_self": "Alamin ang tungkol sa Self",
+        "primer": {
+          "title": "Pag-verify na inuuna ang privacy",
+          "description": "Patunayan na isa kang tunay na tao nang hindi inilalantad kung sino ka.",
+          "feature_device_data": "Hindi kailanman umaalis ang data sa iyong device",
+          "feature_invisible_identity": "Nananatiling hindi nakikita ang iyong pagkakakilanlan",
+          "feature_prevents_fakes": "Pinipigilan ang mga duplicate at pekeng account"
+        }
       },
       "verification_warning": {
         "title": "Kumuha ng pagpapatunay",

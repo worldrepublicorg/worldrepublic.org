@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "La xaqiijiyay",
         "status_not_completed": "Lama xaqiijin",
-        "learn_about_self": "Baro wax ku saabsan Self"
+        "learn_about_self": "Baro wax ku saabsan Self",
+        "primer": {
+          "title": "Xaqiijinta mudnaanta gaarka ah",
+          "description": "Caddee inaad tahay qof dhab ah adigoon shaacin cidda aad tahay.",
+          "feature_device_data": "Xogta waligeed kama baxdo qalabkaaga",
+          "feature_invisible_identity": "Aqoonsigaaga wuxuu ahaanayaa mid aan muuqan",
+          "feature_prevents_fakes": "Wuxuu ka hortagaa koontooyin laba jibaaran iyo kuwa been abuur ah"
+        }
       },
       "verification_warning": {
         "title": "Heli xaqiijinta",

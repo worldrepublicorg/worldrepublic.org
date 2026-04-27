@@ -199,12 +199,12 @@ export function SelfVerificationDialog({
             }
           >
             <Typography variant="heading" level={3}>
-              Privacy-first verification
+              {dictionary.components.identity.self.primer.title}
             </Typography>
           </AlertDialogHeader>
 
           <AlertDialogDescription className="mb-4">
-            Prove you're a real human without revealing who you are.
+            {dictionary.components.identity.self.primer.description}
           </AlertDialogDescription>
 
           <div className="mb-8 w-full">
@@ -214,7 +214,10 @@ export function SelfVerificationDialog({
                   <PiLockKeyFill className="h-3.5 w-3.5 text-gray-400" />
                 </div>
                 <Typography variant="body" level={3} className="mt-[3px]">
-                  Data never leaves your device
+                  {
+                    dictionary.components.identity.self.primer
+                      .feature_device_data
+                  }
                 </Typography>
               </li>
               <li className="flex items-center">
@@ -222,7 +225,10 @@ export function SelfVerificationDialog({
                   <PiMaskHappyFill className="h-3.5 w-3.5 text-gray-400" />
                 </div>
                 <Typography variant="body" level={3} className="mt-[3px]">
-                  Your identity remains invisible
+                  {
+                    dictionary.components.identity.self.primer
+                      .feature_invisible_identity
+                  }
                 </Typography>
               </li>
               <li className="flex items-center">
@@ -230,7 +236,10 @@ export function SelfVerificationDialog({
                   <PiUserCheckFill className="h-3.5 w-3.5 text-gray-400" />
                 </div>
                 <Typography variant="body" level={3} className="mt-[3px]">
-                  Prevents duplicates and fake accounts
+                  {
+                    dictionary.components.identity.self.primer
+                      .feature_prevents_fakes
+                  }
                 </Typography>
               </li>
             </ul>

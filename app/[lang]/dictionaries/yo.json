@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Ti a jẹrisi",
         "status_not_completed": "Ko jẹrisi",
-        "learn_about_self": "Kọ ẹkọ nípa Self"
+        "learn_about_self": "Kọ ẹkọ nípa Self",
+        "primer": {
+          "title": "Ìmúdájú tí ó fi àṣírí síwájú",
+          "description": "Ṣe afihan pe o jẹ eniyan gidi laisi ṣiṣafihan ẹniti o jẹ.",
+          "feature_device_data": "Data ko kuro lori ẹrọ rẹ",
+          "feature_invisible_identity": "Idanimọ rẹ wa ni ifarahan",
+          "feature_prevents_fakes": "Ṣe idiwọ awọn ẹda meji ati awọn iroyin iro"
+        }
       },
       "verification_warning": {
         "title": "Gba ijẹrisi",

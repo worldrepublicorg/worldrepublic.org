@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Preverjeno",
         "status_not_completed": "Ni preverjeno",
-        "learn_about_self": "Spoznajte Self"
+        "learn_about_self": "Spoznajte Self",
+        "primer": {
+          "title": "Preverjanje s prednostjo zasebnosti",
+          "description": "Dokažite, da ste resničen človek, ne da bi razkrili svojo identiteto.",
+          "feature_device_data": "Podatki nikoli ne zapustijo vaše naprave",
+          "feature_invisible_identity": "Vaša identiteta ostane nevidna",
+          "feature_prevents_fakes": "Preprečuje dvojnike in lažne račune"
+        }
       },
       "verification_warning": {
         "title": "Pridobite preverjanje",

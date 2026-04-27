@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "認証済み",
         "status_not_completed": "未認証",
-        "learn_about_self": "Self について学ぶ"
+        "learn_about_self": "Self について学ぶ",
+        "primer": {
+          "title": "プライバシー重視の認証",
+          "description": "自分が誰であるかを明かすことなく、本物の人間であることを証明します。",
+          "feature_device_data": "データがデバイスから離れることはありません",
+          "feature_invisible_identity": "あなたの身元は目に見えないままです",
+          "feature_prevents_fakes": "重複や偽のアカウントを防ぎます"
+        }
       },
       "verification_warning": {
         "title": "認証を取得",

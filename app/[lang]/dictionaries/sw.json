@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Imethibitishwa",
         "status_not_completed": "Haijathibitishwa",
-        "learn_about_self": "Jifunze kuhusu Self"
+        "learn_about_self": "Jifunze kuhusu Self",
+        "primer": {
+          "title": "Uthibitishaji unaozingatia faragha",
+          "description": "Thibitisha kuwa wewe ni binadamu halisi bila kufichua wewe ni nani.",
+          "feature_device_data": "Data haiondoki kwenye kifaa chako",
+          "feature_invisible_identity": "Utambulisho wako unabaki kutoonekana",
+          "feature_prevents_fakes": "Huzuia nakala na akaunti feki"
+        }
       },
       "verification_warning": {
         "title": "Pata uthibitisho",

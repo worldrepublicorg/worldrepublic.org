@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Geverifieer",
         "status_not_completed": "Nie geverifieer nie",
-        "learn_about_self": "Leer oor Self"
+        "learn_about_self": "Leer oor Self",
+        "primer": {
+          "title": "Privaatheid-eerste verifikasie",
+          "description": "Bewys jy is 'n regte mens sonder om te openbaar wie jy is.",
+          "feature_device_data": "Data verlaat nooit jou toestel nie",
+          "feature_invisible_identity": "Jou identiteit bly onsigbaar",
+          "feature_prevents_fakes": "Voorkom duplikate en vals rekeninge"
+        }
       },
       "verification_warning": {
         "title": "Kry verifikasie",

@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Doğrulandı",
         "status_not_completed": "Doğrulanmadı",
-        "learn_about_self": "Self hakkında bilgi edinin"
+        "learn_about_self": "Self hakkında bilgi edinin",
+        "primer": {
+          "title": "Gizlilik odaklı doğrulama",
+          "description": "Kim olduğunuzu ifşa etmeden gerçek bir insan olduğunuzu kanıtlayın.",
+          "feature_device_data": "Veriler cihazınızdan asla ayrılmaz",
+          "feature_invisible_identity": "Kimliğiniz görünmez kalır",
+          "feature_prevents_fakes": "Kopyaları ve sahte hesapları önler"
+        }
       },
       "verification_warning": {
         "title": "Doğrulama al",

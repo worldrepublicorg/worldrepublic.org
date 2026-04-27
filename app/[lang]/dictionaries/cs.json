@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Ověřeno",
         "status_not_completed": "Neověřeno",
-        "learn_about_self": "Zjistěte více o Self"
+        "learn_about_self": "Zjistěte více o Self",
+        "primer": {
+          "title": "Ověření s důrazem na soukromí",
+          "description": "Dokažte, že jste skutečný člověk, aniž byste odhalili svou identitu.",
+          "feature_device_data": "Data nikdy neopustí vaše zařízení",
+          "feature_invisible_identity": "Vaše identita zůstává neviditelná",
+          "feature_prevents_fakes": "Zabraňuje duplicitám a falešným účtům"
+        }
       },
       "verification_warning": {
         "title": "Získejte ověření",

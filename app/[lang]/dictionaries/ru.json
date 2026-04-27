@@ -320,7 +320,14 @@
         "label": "Self",
         "status_completed": "Подтверждено",
         "status_not_completed": "Не подтверждено",
-        "learn_about_self": "Узнайте о Self"
+        "learn_about_self": "Узнайте о Self",
+        "primer": {
+          "title": "Проверка с приоритетом конфиденциальности",
+          "description": "Докажите, что вы настоящий человек, не раскрывая свою личность.",
+          "feature_device_data": "Данные никогда не покидают ваше устройство",
+          "feature_invisible_identity": "Ваша личность остается невидимой",
+          "feature_prevents_fakes": "Предотвращает создание дубликатов и фейковых аккаунтов"
+        }
       },
       "verification_warning": {
         "title": "Получить верификацию",
