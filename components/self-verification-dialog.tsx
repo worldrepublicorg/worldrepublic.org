@@ -11,11 +11,14 @@ import {
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   PiArrowSquareOut,
   PiHeadset,
+  PiIdentificationCardFill,
   PiInfo,
+  PiLockKeyFill,
+  PiMaskHappyFill,
   PiRocketLaunch,
   PiUserCheckFill,
 } from "react-icons/pi";
@@ -47,6 +50,7 @@ export function SelfVerificationDialog({
   electionId,
   mode = "vote",
 }: SelfVerificationDialogProps) {
+  const [step, setStep] = useState<"primer" | "verification">("primer");
   const { lang } = useParams<{ lang: string }>();
   const {
     selfApp,
@@ -58,6 +62,16 @@ export function SelfVerificationDialog({
     isMobile,
   } = useSelfVerification(userId, lang, partyId, electionId, { mode });
   const completionHandledRef = useRef(false);
+  const primerOpen = open && step === "primer";
+  const verificationOpen = open && step === "verification";
+
+  const closeDialog = useCallback(() => {
+    onOpenChange(false);
+  }, [onOpenChange]);
+
+  const openVerificationStep = useCallback(() => {
+    setStep("verification");
+  }, []);
 
   const handleSuccess = useCallback(async () => {
     if (completionHandledRef.current) return;
@@ -65,18 +79,19 @@ export function SelfVerificationDialog({
     if (onSuccess) {
       await onSuccess();
     }
-    onOpenChange(false);
-  }, [onSuccess, onOpenChange]);
+    closeDialog();
+  }, [onSuccess, closeDialog]);
 
   useEffect(() => {
     if (!open) {
       completionHandledRef.current = false;
+      setStep("primer");
     }
   }, [open]);
 
   useEffect(() => {
     if (
-      !open ||
+      !verificationOpen ||
       mode !== "account" ||
       !accountVerificationSessionId ||
       !userId
@@ -113,7 +128,13 @@ export function SelfVerificationDialog({
       isCancelled = true;
       window.clearInterval(interval);
     };
-  }, [open, mode, accountVerificationSessionId, userId, handleSuccess]);
+  }, [
+    verificationOpen,
+    mode,
+    accountVerificationSessionId,
+    userId,
+    handleSuccess,
+  ]);
 
   const handleContinue = () => {
     if (!universalLink) return;
@@ -164,81 +185,159 @@ export function SelfVerificationDialog({
   );
 
   return (
-    <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent>
-        <AlertDialogHeader
-          icon={
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-              <PiUserCheckFill className="h-[30px] w-[30px] text-gray-400" />
-            </div>
-          }
-        >
-          <Typography variant="heading" level={3}>
-            {dictionary.components.identity.verification_warning.title}
-          </Typography>
-        </AlertDialogHeader>
+    <>
+      <AlertDialog
+        open={primerOpen}
+        onOpenChange={(nextOpen) => !nextOpen && closeDialog()}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader
+            icon={
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                <PiIdentificationCardFill className="h-[30px] w-[30px] text-gray-400" />
+              </div>
+            }
+          >
+            <Typography variant="heading" level={3}>
+              Privacy-first verification
+            </Typography>
+          </AlertDialogHeader>
 
-        {!callbackReachable ? (
-          <div className="mb-6 rounded-2xl bg-yellow-50 p-4 text-yellow-900">
-            <Typography variant="subtitle" level={4} className="mb-2">
-              {dictionary.components.identity.self.callback_warning}
-            </Typography>
-            <Typography>
-              {dictionary.components.identity.self.callback_warning_description}
-            </Typography>
+          <AlertDialogDescription className="mb-4">
+            Prove you're a real human without revealing who you are.
+          </AlertDialogDescription>
+
+          <div className="mb-6 w-full">
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
+                  <PiLockKeyFill className="h-3.5 w-3.5 text-gray-400" />
+                </div>
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mt-[3px] text-gray-600"
+                >
+                  Data never leaves your device
+                </Typography>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
+                  <PiMaskHappyFill className="h-3.5 w-3.5 text-gray-400" />
+                </div>
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mt-[3px] text-gray-600"
+                >
+                  Your identity remains invisible
+                </Typography>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
+                  <PiUserCheckFill className="h-3.5 w-3.5 text-gray-400" />
+                </div>
+                <Typography
+                  variant="body"
+                  level={3}
+                  className="mt-[3px] text-gray-600"
+                >
+                  Prevents duplicates and fake accounts
+                </Typography>
+              </li>
+            </ul>
           </div>
-        ) : isMobile ? (
-          <>
-            <AlertDialogDescription className="mb-4">
-              {dictionary.components.identity.self.mobile_dialog_description}
-            </AlertDialogDescription>
 
-            {supportLinks}
+          <AlertDialogFooter>
+            <Button onClick={openVerificationStep} className="w-full">
+              {dictionary.common.continue}
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
-            <AlertDialogFooter>
-              <Button
-                onClick={handleContinue}
-                disabled={isLoading || !universalLink}
-                className="w-full"
-              >
-                {dictionary.common.continue}
-              </Button>
-            </AlertDialogFooter>
-          </>
-        ) : (
-          <>
-            <AlertDialogDescription className="mb-4">
-              {dictionary.components.identity.self.dialog_description}
-            </AlertDialogDescription>
+      <AlertDialog
+        open={verificationOpen}
+        onOpenChange={(nextOpen) => !nextOpen && closeDialog()}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader
+            icon={
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                <PiUserCheckFill className="h-[30px] w-[30px] text-gray-400" />
+              </div>
+            }
+          >
+            <Typography variant="heading" level={3}>
+              {dictionary.components.identity.verification_warning.title}
+            </Typography>
+          </AlertDialogHeader>
 
-            <div className="mb-4 flex w-full justify-center">
-              {isLoading ? (
-                <div className="h-[300px] w-[300px] p-4 animate-pulse rounded-2xl bg-gray-100" />
-              ) : SelfQRcodeWrapperCmp && selfApp ? (
-                <div className="rounded-2xl p-4">
-                  <SelfQRcodeWrapperCmp
-                    selfApp={selfApp}
-                    onSuccess={handleSuccess}
-                  />
-                </div>
-              ) : universalLink ? (
-                <div className="rounded-2xl p-4">
-                  <Image
-                    alt={dictionary.components.identity.self.qr_alt}
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
-                      universalLink,
-                    )}`}
-                    width={200}
-                    height={200}
-                  />
-                </div>
-              ) : null}
+          {!callbackReachable ? (
+            <div className="mb-6 rounded-2xl bg-yellow-50 p-4 text-yellow-900">
+              <Typography variant="subtitle" level={4} className="mb-2">
+                {dictionary.components.identity.self.callback_warning}
+              </Typography>
+              <Typography>
+                {
+                  dictionary.components.identity.self
+                    .callback_warning_description
+                }
+              </Typography>
             </div>
+          ) : isMobile ? (
+            <>
+              <AlertDialogDescription className="mb-4">
+                {dictionary.components.identity.self.mobile_dialog_description}
+              </AlertDialogDescription>
 
-            {supportLinks}
-          </>
-        )}
-      </AlertDialogContent>
-    </AlertDialog>
+              {supportLinks}
+
+              <AlertDialogFooter>
+                <Button
+                  onClick={handleContinue}
+                  disabled={isLoading || !universalLink}
+                  className="w-full"
+                >
+                  {dictionary.common.continue}
+                </Button>
+              </AlertDialogFooter>
+            </>
+          ) : (
+            <>
+              <AlertDialogDescription className="mb-4">
+                {dictionary.components.identity.self.dialog_description}
+              </AlertDialogDescription>
+
+              <div className="mb-4 flex w-full justify-center">
+                {isLoading ? (
+                  <div className="h-[300px] w-[300px] p-4 animate-pulse rounded-2xl bg-gray-100" />
+                ) : SelfQRcodeWrapperCmp && selfApp ? (
+                  <div className="rounded-2xl p-4">
+                    <SelfQRcodeWrapperCmp
+                      selfApp={selfApp}
+                      onSuccess={handleSuccess}
+                    />
+                  </div>
+                ) : universalLink ? (
+                  <div className="rounded-2xl p-4">
+                    <Image
+                      alt={dictionary.components.identity.self.qr_alt}
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
+                        universalLink,
+                      )}`}
+                      width={200}
+                      height={200}
+                    />
+                  </div>
+                ) : null}
+              </div>
+
+              {supportLinks}
+            </>
+          )}
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
   );
 }
