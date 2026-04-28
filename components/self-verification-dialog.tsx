@@ -190,11 +190,11 @@ export function SelfVerificationDialog({
             </Typography>
           </AlertDialogHeader>
 
-          <AlertDialogDescription className="mb-6!">
+          <AlertDialogDescription className="mb-5!">
             {dictionary.components.identity.self.primer.description}
           </AlertDialogDescription>
 
-          <div className="mb-4 w-full">
+          <div className="mb-5 w-full">
             <ul className="space-y-3">
               <li className="flex items-center">
                 <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
