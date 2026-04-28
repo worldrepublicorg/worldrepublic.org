@@ -236,7 +236,7 @@ export function SelfVerificationDialog({
             href="https://self.xyz/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full mb-8"
+            className="block w-full mb-6"
           >
             <CustomListItem
               startAdornment={<PiInfo className="size-5 text-gray-400" />}
@@ -296,7 +296,7 @@ export function SelfVerificationDialog({
                 <Button
                   onClick={handleContinue}
                   disabled={isLoading || !universalLink}
-                  className="w-full mt-4!"
+                  className="w-full mt-6!"
                 >
                   {dictionary.common.continue}
                 </Button>
