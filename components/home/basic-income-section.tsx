@@ -107,6 +107,7 @@ export function BasicIncomeSection({
   const {
     isActivating,
     isClaiming,
+    claimableAmount,
     maxClaimableAmount,
     handleActivate,
     handleClaim,
@@ -121,11 +122,12 @@ export function BasicIncomeSection({
   );
 
   const locale = getSafeLocale(lang);
+  const isCapReached = !isSelfVerified && claimedTotal >= capAmount - 1e-9;
+  const displayAmount = isCapReached ? claimableAmount : maxClaimableAmount;
   const amountString = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 6,
     maximumFractionDigits: 6,
-  }).format(maxClaimableAmount);
-  const isCapReached = !isSelfVerified && claimedTotal >= capAmount - 1e-9;
+  }).format(displayAmount);
   const unauthSubtitle = isRaisedByHumanityBrand
     ? dictionary.pages.earn.basic_income.subtitle_unauth_raised_by_humanity
     : dictionary.pages.earn.basic_income.subtitle_unauth;

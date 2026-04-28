@@ -100,6 +100,7 @@ export function SavingsSection({
     amount,
     setAmount,
     isSavingsLoading,
+    displayAvailableInterest,
     maxCollectableAmount,
     handleDeposit,
     handleWithdraw,
@@ -142,18 +143,11 @@ export function SavingsSection({
     return formatFullAmount(safeAmount);
   }, [selectedAction, displayWalletBalance, displaySavingsBalance]);
   const rewardDecimals = getRewardDecimals(displaySavingsBalance);
-  const collectableAmountForUi = Number(
-    displayCollectableAmount.toFixed(rewardDecimals),
-  );
   const locale = getSafeLocale(lang);
   const savingsBalanceDisplay = new Intl.NumberFormat(locale, {
     minimumFractionDigits: 4,
     maximumFractionDigits: 4,
   }).format(Math.floor(displaySavingsBalance * 10000) / 10000);
-  const collectableAmountDisplay = new Intl.NumberFormat(locale, {
-    minimumFractionDigits: rewardDecimals,
-    maximumFractionDigits: rewardDecimals,
-  }).format(collectableAmountForUi);
   const decimalSeparator =
     new Intl.NumberFormat(locale)
       .formatToParts(1.1)
@@ -281,6 +275,17 @@ export function SavingsSection({
     isOffchainAccountSelected &&
     !isSelfVerified &&
     basicIncomeAndInterestClaimedTotal >= capAmount - 1e-9;
+  const displayCollectableAmountRaw =
+    isCapReached && isOffchainAccountSelected
+      ? displayAvailableInterest
+      : displayCollectableAmount;
+  const collectableAmountForUi = Number(
+    displayCollectableAmountRaw.toFixed(rewardDecimals),
+  );
+  const collectableAmountDisplay = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: rewardDecimals,
+    maximumFractionDigits: rewardDecimals,
+  }).format(collectableAmountForUi);
 
   return (
     <div className="flex grow items-center justify-center">
