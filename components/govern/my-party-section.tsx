@@ -8,8 +8,8 @@ import {
 import { useState } from "react";
 import { PiPlus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { PartyCard } from "@/components/govern/party-card";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
-import { PartyCard } from "@/components/parties/party-card";
 import type { Party } from "@/lib/types/parties";
 
 interface MyPartySectionProps {

@@ -1,4 +1,4 @@
-import { GovernPageSkeleton } from "@/components/vote/govern-page-skeleton";
+import { GovernPageSkeleton } from "@/components/govern/govern-page-skeleton";
 
 export default function GovernPageLoading() {
   return <GovernPageSkeleton />;

@@ -5,12 +5,12 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiScrollFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { PoliticalPartyList } from "@/components/parties/political-party-list";
-import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
+import { ElectionsList } from "@/components/govern/elections-list";
+import { PoliticalPartyList } from "@/components/govern/political-party-list";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
-import { ElectionsList } from "@/components/vote/elections-list";
-import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
+import { TopbarWalletBalanceDisplay } from "@/components/topbar-wallet-balance-display";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {
   type GetWalletAuthAndDataResult,

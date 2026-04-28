@@ -29,9 +29,9 @@ import {
   PiTrashFill,
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
-import { AccountVerificationSection } from "@/components/account-verification-section";
 import { CustomListItem } from "@/components/custom-list-item";
+import { AccountPageSkeleton } from "@/components/menu/account/account-page-skeleton";
+import { AccountVerificationSection } from "@/components/menu/account-verification-section";
 import { TopBar } from "@/components/topbar";
 import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";

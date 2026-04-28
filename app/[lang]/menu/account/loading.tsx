@@ -1,4 +1,4 @@
-import { AccountPageSkeleton } from "@/components/account/account-page-skeleton";
+import { AccountPageSkeleton } from "@/components/menu/account/account-page-skeleton";
 
 export default function AccountPageLoading() {
   return <AccountPageSkeleton />;

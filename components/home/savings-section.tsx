@@ -28,9 +28,9 @@ import {
 import { useConnection } from "wagmi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
+import { ConnectWalletButton } from "@/components/home/connect-wallet-button";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
 import { SelfVerificationDialog } from "@/components/self-verification-dialog";
-import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
 import { useBaseChainGuard } from "@/hooks/use-base-chain-guard";
 import { useBaseChainSavingsAccount } from "@/hooks/use-base-chain-savings-account";
 import { useSavings } from "@/hooks/use-savings";
@@ -332,7 +332,9 @@ export function SavingsSection({
                 .reward_cap_banner
             }
             showVerifyCta={Boolean(learnMoreWarningLevel)}
-            verifyCtaLabel={dictionary.components.identity.verification_warning.title}
+            verifyCtaLabel={
+              dictionary.components.identity.verification_warning.title
+            }
             onVerifyClick={() => setIsSelfVerificationOpen(true)}
             externalLink={
               isBaseChainAccountSelected

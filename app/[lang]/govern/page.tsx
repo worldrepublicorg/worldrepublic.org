@@ -5,7 +5,7 @@ import {
   getDictionary,
   locales,
 } from "@/app/[lang]/dictionaries";
-import { GovernPageSkeleton } from "@/components/vote/govern-page-skeleton";
+import { GovernPageSkeleton } from "@/components/govern/govern-page-skeleton";
 import { getElections } from "@/lib/actions/elections";
 import { getParties } from "@/lib/actions/parties";
 import type { Election } from "@/lib/types/elections";

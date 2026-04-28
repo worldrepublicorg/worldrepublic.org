@@ -34,13 +34,13 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
-import { AccountVerificationSection } from "@/components/account-verification-section";
 import { CustomListItem } from "@/components/custom-list-item";
-import { CustomSelect } from "@/components/custom-select";
+import { AccountVerificationSection } from "@/components/menu/account-verification-section";
+import { CustomSelect } from "@/components/menu/wallet/custom-select";
+import { TransactionHistoryContent } from "@/components/menu/wallet/transaction-history-content";
+import { WalletPageSkeleton } from "@/components/menu/wallet/wallet-page-skeleton";
+import WddImportInfoBanner from "@/components/menu/wallet/wdd-import-info-banner";
 import { TopBar } from "@/components/topbar";
-import { TransactionHistoryContent } from "@/components/wallet/transaction-history-content";
-import { WalletPageSkeleton } from "@/components/wallet/wallet-page-skeleton";
-import WddImportInfoBanner from "@/components/wdd-import-info-banner";
 import { useAuth } from "@/hooks/use-auth";
 import {
   EMPTY_STREAMS,

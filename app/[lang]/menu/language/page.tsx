@@ -4,7 +4,7 @@ import {
   getDictionary,
   locales,
 } from "@/app/[lang]/dictionaries";
-import { LanguagePageSkeleton } from "@/components/menu/language-page-skeleton";
+import { LanguagePageSkeleton } from "@/components/menu/language/language-page-skeleton";
 import LanguagePageClient from "./page-client";
 
 interface LanguagePageProps {

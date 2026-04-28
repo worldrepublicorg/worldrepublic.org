@@ -12,19 +12,19 @@ import { Fragment, useCallback, useEffect, useState } from "react";
 import { PiInfoFill } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { BasicIncomeSection } from "@/components/home/basic-income-section";
+import { ConnectWalletButton } from "@/components/home/connect-wallet-button";
 import { HomePageSkeleton } from "@/components/home/home-page-skeleton";
+import { OnchainWalletProvider } from "@/components/home/onchain-wallet-provider";
 import {
   type SavingsAccountType,
   SavingsSection,
 } from "@/components/home/savings-section";
 import { LearnMoreDialog } from "@/components/learn-more-dialog";
-import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
-import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
+import { PartyDetailDrawer } from "@/components/party-detail-drawer";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { TabPills } from "@/components/tab-pills";
 import { TopBar } from "@/components/topbar";
-import { ConnectWalletButton } from "@/components/wallet/connect-wallet-button";
-import { OnchainWalletProvider } from "@/components/wallet/onchain-wallet-provider";
-import { TopbarWalletBalanceDisplay } from "@/components/wallet/topbar-wallet-balance-display";
+import { TopbarWalletBalanceDisplay } from "@/components/topbar-wallet-balance-display";
 import { useAuth } from "@/hooks/use-auth";
 import { useWalletAuthCache } from "@/hooks/use-wallet-auth-cache";
 import {

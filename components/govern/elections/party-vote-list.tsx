@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { PiUserFocus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { VoteButton } from "@/components/vote/vote-button";
+import { VoteButton } from "@/components/vote-button";
 import { getParties } from "@/lib/actions/parties";
 import type { Party } from "@/lib/types/parties";
 

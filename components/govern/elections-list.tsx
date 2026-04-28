@@ -2,8 +2,8 @@
 
 import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { ElectionCard } from "@/components/vote/election-card";
-import { ElectionHeroCard } from "@/components/vote/election-hero-card";
+import { ElectionCard } from "@/components/govern/election-card";
+import { ElectionHeroCard } from "@/components/govern/election-hero-card";
 import type { Election } from "@/lib/types/elections";
 
 interface ElectionsListProps {

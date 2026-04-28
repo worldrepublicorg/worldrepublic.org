@@ -18,13 +18,13 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
-import { ConfirmRegisterPartyDialog } from "@/components/parties/dialogs/confirm-register-party-dialog";
-import { CreateUpdatePartyDialog } from "@/components/parties/dialogs/create-update-party-dialog";
-import { DeletePartyDialog } from "@/components/parties/dialogs/delete-party-dialog";
-import { MyPartySection } from "@/components/parties/my-party-section";
-import { PartyCard } from "@/components/parties/party-card";
-import { PartyDetailDrawer } from "@/components/parties/party-detail-drawer";
-import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
+import { ConfirmRegisterPartyDialog } from "@/components/govern/confirm-register-party-dialog";
+import { CreateUpdatePartyDialog } from "@/components/govern/create-update-party-dialog";
+import { DeletePartyDialog } from "@/components/govern/delete-party-dialog";
+import { MyPartySection } from "@/components/govern/my-party-section";
+import { PartyCard } from "@/components/govern/party-card";
+import { PartyDetailDrawer } from "@/components/party-detail-drawer";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { useAuth } from "@/hooks/use-auth";
 import {
   createParty as createPartyAction,

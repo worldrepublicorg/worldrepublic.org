@@ -19,7 +19,7 @@ import {
 } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { CustomListItem } from "@/components/custom-list-item";
-import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { getTransactions } from "@/lib/actions/member";
 import type { StreamData } from "@/lib/streams";
 import { cn, copyToClipboard } from "@/lib/utils";

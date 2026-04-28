@@ -4,10 +4,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
-import { ScrollToTopButton } from "@/components/parties/scroll-to-top-button";
+import { ElectionDetailContent } from "@/components/govern/elections/election-detail-content";
+import { ElectionDetailPageSkeleton } from "@/components/govern/elections/election-detail-page-skeleton";
+import { ScrollToTopButton } from "@/components/scroll-to-top-button";
 import { TopBar } from "@/components/topbar";
-import { ElectionDetailContent } from "@/components/vote/election-detail-content";
-import { ElectionDetailPageSkeleton } from "@/components/vote/election-detail-page-skeleton";
 import { getElectionDetail } from "@/lib/actions/elections";
 import {
   getCachedElectionDetail,
