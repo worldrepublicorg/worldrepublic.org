@@ -142,7 +142,7 @@ export function SelfVerificationDialog({
   };
 
   const supportLinks = (
-    <div className="mb-4 flex flex-col gap-2">
+    <div className="flex flex-col gap-2">
       <a
         href="https://wiki.worldrepublic.org/quickstart/get-verified"
         target="_blank"
@@ -296,7 +296,7 @@ export function SelfVerificationDialog({
                 <Button
                   onClick={handleContinue}
                   disabled={isLoading || !universalLink}
-                  className="w-full"
+                  className="w-full mt-4"
                 >
                   {dictionary.common.continue}
                 </Button>
