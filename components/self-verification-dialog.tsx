@@ -144,19 +144,6 @@ export function SelfVerificationDialog({
   const supportLinks = (
     <div className="mb-4 flex flex-col gap-2">
       <a
-        href="https://self.xyz/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full"
-      >
-        <CustomListItem
-          startAdornment={<PiInfo className="size-5 text-gray-400" />}
-          label={dictionary.components.identity.self.learn_about_self}
-          endAdornment={<PiArrowSquareOut className="size-4 text-gray-400" />}
-        />
-      </a>
-
-      <a
         href="https://wiki.worldrepublic.org/quickstart/get-verified"
         target="_blank"
         rel="noopener noreferrer"
@@ -207,7 +194,7 @@ export function SelfVerificationDialog({
             {dictionary.components.identity.self.primer.description}
           </AlertDialogDescription>
 
-          <div className="mb-8 w-full">
+          <div className="mb-4 w-full">
             <ul className="space-y-3">
               <li className="flex items-center">
                 <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
@@ -244,6 +231,21 @@ export function SelfVerificationDialog({
               </li>
             </ul>
           </div>
+
+          <a
+            href="https://self.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full mb-8"
+          >
+            <CustomListItem
+              startAdornment={<PiInfo className="size-5 text-gray-400" />}
+              label={dictionary.components.identity.self.learn_about_self}
+              endAdornment={
+                <PiArrowSquareOut className="size-4 text-gray-400" />
+              }
+            />
+          </a>
 
           <AlertDialogFooter>
             <Button onClick={openVerificationStep} className="w-full">
