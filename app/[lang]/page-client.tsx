@@ -47,7 +47,7 @@ const SignInDialog = dynamic(
   { ssr: false },
 );
 
-const TABS = ["basic_income", "savings", "ambassadors", "subsidies"] as const;
+const TABS = ["basic_income", "savings", "subsidies", "ambassadors"] as const;
 type TabKey = (typeof TABS)[number];
 const SAVINGS_ACCOUNTS = ["offchain", "base_chain"] as const;
 const SAVINGS_ACCOUNT_QUERY_KEY = "savings_account";
@@ -483,12 +483,12 @@ export default function HomePageClient({
               label: dictionary.pages.earn.tabs.savings,
             },
             {
-              key: "ambassadors",
-              label: dictionary.pages.govern.parties.tabs.ambassadors,
-            },
-            {
               key: "subsidies",
               label: dictionary.pages.govern.parties.tabs.subsidies,
+            },
+            {
+              key: "ambassadors",
+              label: dictionary.pages.govern.parties.tabs.ambassadors,
             },
           ]}
         />
