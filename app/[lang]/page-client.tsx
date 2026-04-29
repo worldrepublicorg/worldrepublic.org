@@ -803,8 +803,9 @@ export default function HomePageClient({
                   </div>
                   <div className="divide-y divide-gray-100">
                     {subsidyWithRank.map(({ entry, rank }) => (
-                      <div
+                      <button
                         key={entry.partyId}
+                        type="button"
                         onClick={() => {
                           setSelectedPartyForDrawer({
                             id: entry.partyId,
@@ -812,7 +813,7 @@ export default function HomePageClient({
                           } as Party);
                           setIsPartyDrawerOpen(true);
                         }}
-                        className="grid grid-cols-[1fr_auto] gap-4 items-center px-4 py-3 cursor-pointer"
+                        className="grid w-full grid-cols-[1fr_auto] gap-4 items-center border-0 bg-transparent px-4 py-3 text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
                       >
                         <div className="flex items-center gap-2 min-w-0">
                           <span className="text-xs text-gray-400 tabular-nums w-4 shrink-0">
@@ -840,7 +841,7 @@ export default function HomePageClient({
                             ? `${formatTokenAmount(entry.totalSubsidy)} WDD`
                             : "0 WDD"}
                         </Typography>
-                      </div>
+                      </button>
                     ))}
                   </div>
                 </div>
