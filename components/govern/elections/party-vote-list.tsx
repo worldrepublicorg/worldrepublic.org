@@ -2,7 +2,7 @@
 
 import { Input, Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PiUserFocus } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { VoteButton } from "@/components/vote-button";
@@ -57,7 +57,7 @@ export function PartyVoteList({
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
-  async function loadMoreParties() {
+  const loadMoreParties = useCallback(async () => {
     if (isLoadingMore) return;
     setIsLoadingMore(true);
     try {
@@ -83,7 +83,7 @@ export function PartyVoteList({
     } finally {
       setIsLoadingMore(false);
     }
-  }
+  }, [isLoadingMore, parties, partiesOffset]);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
