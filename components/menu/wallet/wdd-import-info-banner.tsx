@@ -31,12 +31,13 @@ export default function WddImportInfoBanner({
           className="text-left text-[14px] font-medium text-gray-500"
         >
           {dictionary.components.wdd_import_info.message_prefix}
-          <span
+          <button
+            type="button"
             onClick={handleCopyContractAddress}
-            className="cursor-pointer underline"
+            className="inline cursor-pointer underline text-left"
           >
             {dictionary.components.wdd_import_info.contract_address}
-          </span>
+          </button>
         </Typography>
       </div>
     </div>
