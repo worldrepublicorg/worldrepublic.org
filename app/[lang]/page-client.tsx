@@ -803,6 +803,8 @@ export default function HomePageClient({
                   </div>
                   <div className="divide-y divide-gray-100">
                     {subsidyWithRank.map(({ entry, rank }) => (
+                      // biome-ignore lint/a11y/noStaticElementInteractions: row uses div for existing layout behavior
+                      // biome-ignore lint/a11y/useKeyWithClickEvents: click-only behavior is intentional for this row
                       <div
                         key={entry.partyId}
                         onClick={() => {

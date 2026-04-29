@@ -42,12 +42,14 @@ body {
 .custom-select-wrapper select,
 .custom-select-wrapper button,
 .custom-select-wrapper span {
+  /* biome-ignore lint/complexity/noImportantStyles: required to override UI kit select typography */
   font-size: 15px !important;
 }
 
 /* Hide browser's native progress indicator (backup if navigation preload fix doesn't work) */
 html::-webkit-progress-bar,
 html::-webkit-progress-value {
+  /* biome-ignore lint/complexity/noImportantStyles: required to suppress native progress indicator */
   display: none !important;
 }
 
@@ -70,9 +72,12 @@ html::-webkit-progress-value {
 @media (min-width: 768px) {
   /* Scope to Worldcoin UI Kit AlertDialog (Vaul drawer) only */
   [data-vaul-drawer][data-vaul-drawer-direction="bottom"] {
+    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
     width: 36rem !important; /* Fixed width: max-w-xl = 576px, matches main content */
     max-width: 36rem;
+    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
     left: 50% !important;
+    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
     right: auto !important;
     margin-left: -18rem; /* Center: negative half of fixed width (36rem / 2 = 18rem) */
   }

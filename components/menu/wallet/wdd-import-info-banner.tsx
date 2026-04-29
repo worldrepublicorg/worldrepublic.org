@@ -31,6 +31,8 @@ export default function WddImportInfoBanner({
           className="text-left text-[14px] font-medium text-gray-500"
         >
           {dictionary.components.wdd_import_info.message_prefix}
+          {/* biome-ignore lint/a11y/noStaticElementInteractions: clickable span kept to preserve mobile wrapping behavior */}
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: intentionally mouse-only interaction for this inline text */}
           <span
             onClick={handleCopyContractAddress}
             className="cursor-pointer underline"
