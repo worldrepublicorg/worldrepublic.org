@@ -385,37 +385,30 @@ export default function AccountPageClient({
               </div>
               <div className="flex flex-col gap-2">
                 {username && (
-                  <div
+                  <CustomListItem
+                    label={dictionary.pages.wallet.username.label}
+                    description={username}
+                    endAdornment={
+                      <PiPencilSimple className="size-4 text-gray-400" />
+                    }
                     onClick={(e) => {
                       e.stopPropagation();
                       setEditUsernameValue(username);
                       setEditUsernameDialogOpen(true);
                     }}
-                  >
-                    <CustomListItem
-                      label={dictionary.pages.wallet.username.label}
-                      description={username}
-                      endAdornment={
-                        <PiPencilSimple className="size-4 text-gray-400" />
-                      }
-                    />
-                  </div>
+                  />
                 )}
-                <div
+                <CustomListItem
+                  label={dictionary.pages.menu.sections.account.referral_code}
+                  description={referralCode ?? ""}
+                  endAdornment={
+                    <PiShareNetwork className="size-4 text-gray-400" />
+                  }
                   onClick={(e) => {
                     e.stopPropagation();
                     void handleShareReferralLink();
                   }}
-                  className="cursor-pointer"
-                >
-                  <CustomListItem
-                    label={dictionary.pages.menu.sections.account.referral_code}
-                    description={referralCode ?? ""}
-                    endAdornment={
-                      <PiShareNetwork className="size-4 text-gray-400" />
-                    }
-                  />
-                </div>
+                />
                 {referredByUsername && (
                   <div>
                     <CustomListItem
@@ -463,58 +456,50 @@ export default function AccountPageClient({
                     />
                   </div>
                 ) : (
-                  <div
+                  <CustomListItem
+                    label={dictionary.pages.wallet.sections.google_account}
+                    description={
+                      dictionary.pages.wallet.sections.google_not_linked
+                    }
+                    endAdornment={
+                      <div className="flex items-center text-gray-500">
+                        {isLinkingGoogle ? (
+                          <PiCircleNotch className="size-4 animate-spin" />
+                        ) : (
+                          <PiLinkSimple className="size-4" />
+                        )}
+                      </div>
+                    }
                     onClick={(e) => {
                       e.stopPropagation();
                       if (!isLinkingGoogle) {
                         void handleLinkGoogle();
                       }
                     }}
-                    className="cursor-pointer"
-                  >
-                    <CustomListItem
-                      label={dictionary.pages.wallet.sections.google_account}
-                      description={
-                        dictionary.pages.wallet.sections.google_not_linked
-                      }
-                      endAdornment={
-                        <div className="flex items-center text-gray-500">
-                          {isLinkingGoogle ? (
-                            <PiCircleNotch className="size-4 animate-spin" />
-                          ) : (
-                            <PiLinkSimple className="size-4" />
-                          )}
-                        </div>
-                      }
-                    />
-                  </div>
+                  />
                 )}
-                <div
+                <CustomListItem
+                  label={dictionary.pages.wallet.sections.passkeys}
+                  description={dictionary.pages.wallet.sections.passkeys_linked.replace(
+                    "{count}",
+                    String(passkeyCount),
+                  )}
+                  endAdornment={
+                    <div className="flex items-center text-gray-500">
+                      {isAddingPasskey ? (
+                        <PiCircleNotch className="size-4 animate-spin" />
+                      ) : (
+                        <PiPlus className="size-4" />
+                      )}
+                    </div>
+                  }
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!isAddingPasskey) {
                       void handleAddPasskey();
                     }
                   }}
-                  className="cursor-pointer"
-                >
-                  <CustomListItem
-                    label={dictionary.pages.wallet.sections.passkeys}
-                    description={dictionary.pages.wallet.sections.passkeys_linked.replace(
-                      "{count}",
-                      String(passkeyCount),
-                    )}
-                    endAdornment={
-                      <div className="flex items-center text-gray-500">
-                        {isAddingPasskey ? (
-                          <PiCircleNotch className="size-4 animate-spin" />
-                        ) : (
-                          <PiPlus className="size-4" />
-                        )}
-                      </div>
-                    }
-                  />
-                </div>
+                />
               </div>
             </div>
 
@@ -531,18 +516,16 @@ export default function AccountPageClient({
               <div className="flex flex-col gap-2">
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <div className="cursor-pointer">
-                      <CustomListItem
-                        label={dictionary.common.delete_account}
-                        description={
-                          dictionary.pages.wallet.sections.delete_account
-                            .description
-                        }
-                        endAdornment={
-                          <PiTrash className="size-4 text-gray-400" />
-                        }
-                      />
-                    </div>
+                    <CustomListItem
+                      label={dictionary.common.delete_account}
+                      description={
+                        dictionary.pages.wallet.sections.delete_account
+                          .description
+                      }
+                      endAdornment={
+                        <PiTrash className="size-4 text-gray-400" />
+                      }
+                    />
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader
