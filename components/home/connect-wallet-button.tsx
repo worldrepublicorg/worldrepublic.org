@@ -171,97 +171,11 @@ export function ConnectWalletButton({
   return (
     <>
       {isConnected ? (
-        <>
-          {isBaseAccountConnected ? (
-            <>
-              <AlertDialog
-                open={baseAccountChooserDialogOpen}
-                onOpenChange={setBaseAccountChooserDialogOpen}
-              >
-                <AlertDialogTrigger asChild>
-                  <button
-                    type="button"
-                    className="flex h-10 cursor-pointer items-center rounded-full bg-gray-100 px-4"
-                  >
-                    <PiWalletFill className="mr-2 h-5 w-5 text-gray-900" />
-                    <Typography
-                      variant="number"
-                      level={5}
-                      className="mr-1! font-mono"
-                    >
-                      {displayBalance}
-                    </Typography>
-                  </button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>{accountTitle}</AlertDialogTitle>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <div className="flex w-full flex-col gap-2">
-                      <a
-                        href="https://account.base.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full"
-                      >
-                        <CustomListItem
-                          label="Base Account"
-                          endAdornment={
-                            <PiArrowSquareOut className="size-4 text-gray-400" />
-                          }
-                        />
-                      </a>
-                      <CustomListItem
-                        label={disconnectLabel}
-                        onClick={() => {
-                          setBaseAccountChooserDialogOpen(false);
-                          setDisconnectDialogOpen(true);
-                        }}
-                        endAdornment={
-                          <PiPower className="size-4 text-gray-400" />
-                        }
-                      />
-                    </div>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-              <AlertDialog
-                open={disconnectDialogOpen}
-                onOpenChange={setDisconnectDialogOpen}
-              >
-                <AlertDialogContent>
-                  <AlertDialogHeader
-                    icon={
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-                        <PiPowerFill className="h-[30px] w-[30px] text-gray-400" />
-                      </div>
-                    }
-                  >
-                    <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
-                  </AlertDialogHeader>
-                  <AlertDialogDescription>
-                    {disconnectDescription}
-                  </AlertDialogDescription>
-                  <AlertDialogFooter>
-                    <Button
-                      variant="primary"
-                      fullWidth
-                      onClick={() => {
-                        disconnect.mutate();
-                        setDisconnectDialogOpen(false);
-                      }}
-                    >
-                      {disconnectLabel}
-                    </Button>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-            </>
-          ) : (
+        isBaseAccountConnected ? (
+          <>
             <AlertDialog
-              open={disconnectDialogOpen}
-              onOpenChange={setDisconnectDialogOpen}
+              open={baseAccountChooserDialogOpen}
+              onOpenChange={setBaseAccountChooserDialogOpen}
             >
               <AlertDialogTrigger asChild>
                 <button
@@ -278,6 +192,43 @@ export function ConnectWalletButton({
                   </Typography>
                 </button>
               </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>{accountTitle}</AlertDialogTitle>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <div className="flex w-full flex-col gap-2">
+                    <a
+                      href="https://account.base.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
+                      <CustomListItem
+                        label="Base Account"
+                        endAdornment={
+                          <PiArrowSquareOut className="size-4 text-gray-400" />
+                        }
+                      />
+                    </a>
+                    <CustomListItem
+                      label={disconnectLabel}
+                      onClick={() => {
+                        setBaseAccountChooserDialogOpen(false);
+                        setDisconnectDialogOpen(true);
+                      }}
+                      endAdornment={
+                        <PiPower className="size-4 text-gray-400" />
+                      }
+                    />
+                  </div>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+            <AlertDialog
+              open={disconnectDialogOpen}
+              onOpenChange={setDisconnectDialogOpen}
+            >
               <AlertDialogContent>
                 <AlertDialogHeader
                   icon={
@@ -305,8 +256,55 @@ export function ConnectWalletButton({
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-          )}
-        </>
+          </>
+        ) : (
+          <AlertDialog
+            open={disconnectDialogOpen}
+            onOpenChange={setDisconnectDialogOpen}
+          >
+            <AlertDialogTrigger asChild>
+              <button
+                type="button"
+                className="flex h-10 cursor-pointer items-center rounded-full bg-gray-100 px-4"
+              >
+                <PiWalletFill className="mr-2 h-5 w-5 text-gray-900" />
+                <Typography
+                  variant="number"
+                  level={5}
+                  className="mr-1! font-mono"
+                >
+                  {displayBalance}
+                </Typography>
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader
+                icon={
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+                    <PiPowerFill className="h-[30px] w-[30px] text-gray-400" />
+                  </div>
+                }
+              >
+                <AlertDialogTitle>{disconnectLabel}</AlertDialogTitle>
+              </AlertDialogHeader>
+              <AlertDialogDescription>
+                {disconnectDescription}
+              </AlertDialogDescription>
+              <AlertDialogFooter>
+                <Button
+                  variant="primary"
+                  fullWidth
+                  onClick={() => {
+                    disconnect.mutate();
+                    setDisconnectDialogOpen(false);
+                  }}
+                >
+                  {disconnectLabel}
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        )
       ) : (
         <Button
           variant={variant}
