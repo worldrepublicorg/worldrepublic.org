@@ -7,8 +7,8 @@ import type { ElectionResult } from "@/lib/types/elections";
 interface ElectionResultsProps {
   results: ElectionResult[];
   dictionary: Dictionary;
-  /** When set, the whole row is clickable and opens the party detail drawer. */
-  onResultClick?: (result: ElectionResult) => void;
+  /** Called when a result row is activated; use to open party detail, etc. */
+  onResultClick: (result: ElectionResult) => void;
 }
 
 export function ElectionResults({
@@ -66,10 +66,11 @@ export function ElectionResults({
                 : 0;
 
             return (
-              <div
+              <button
                 key={result.partyId}
-                onClick={() => onResultClick?.(result)}
-                className="cursor-pointer"
+                type="button"
+                onClick={() => onResultClick(result)}
+                className="w-full cursor-pointer border-0 bg-transparent p-0 text-left font-inherit"
               >
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <div className="flex min-w-0 flex-1 items-center gap-2">
@@ -101,7 +102,7 @@ export function ElectionResults({
                     style={{ width: `${percentage}%` }}
                   />
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
