@@ -17,7 +17,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   PiArrowCircleUpFill,
   PiArrowSquareOut,
@@ -88,7 +88,7 @@ export default function WalletPageClient({
   const previousClientAuthRef = useRef(clientIsAuthenticated);
   const hasPreloadedTradeIconsRef = useRef(false);
 
-  const preloadTradeIcons = () => {
+  const preloadTradeIcons = useCallback(() => {
     if (hasPreloadedTradeIconsRef.current || typeof window === "undefined") {
       return;
     }
@@ -99,7 +99,7 @@ export default function WalletPageClient({
       const image = new window.Image();
       image.src = src;
     }
-  };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
