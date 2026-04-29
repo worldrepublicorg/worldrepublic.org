@@ -219,15 +219,11 @@ export default function MenuPageClient({
                 {section.links.map((link) => (
                   <div key={link.url} className="flex">
                     {"onClick" in link && link.onClick ? (
-                      <div
+                      <CustomListItem
+                        startAdornment={link.startAdornment}
+                        label={link.label}
                         onClick={link.onClick}
-                        className="block w-full cursor-pointer"
-                      >
-                        <CustomListItem
-                          startAdornment={link.startAdornment}
-                          label={link.label}
-                        />
-                      </div>
+                      />
                     ) : link.isExternal ? (
                       <a
                         href={link.url}
@@ -277,14 +273,12 @@ export default function MenuPageClient({
               <div className="flex flex-col gap-2">
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <div className="cursor-pointer">
-                      <CustomListItem
-                        label={dictionary.common.sign_out}
-                        startAdornment={
-                          <PiSignOut className="size-5 text-gray-400" />
-                        }
-                      />
-                    </div>
+                    <CustomListItem
+                      label={dictionary.common.sign_out}
+                      startAdornment={
+                        <PiSignOut className="size-5 text-gray-400" />
+                      }
+                    />
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader
