@@ -9,7 +9,7 @@ import {
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import type { FocusEvent as ReactFocusEvent } from "react";
-import { useEffect, useRef, useState, useTransition } from "react";
+import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
 // Lazy load heavy dialog component
@@ -98,10 +98,10 @@ export function PoliticalPartyList({
   });
 
   // Helper to update userParty state and localStorage cache
-  const setUserParty = (party: Party | null) => {
+  const setUserParty = useCallback((party: Party | null) => {
     setUserPartyState(party);
     localStorage.setItem("userParty", JSON.stringify({ checked: true, party }));
-  };
+  }, []);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Party[] | null>(null);
   const [isSearching, setIsSearching] = useState(false);
@@ -167,7 +167,7 @@ export function PoliticalPartyList({
     }
   };
 
-  const clearPendingPartyAuthState = () => {
+  const clearPendingPartyAuthState = useCallback(() => {
     setPendingPartyForm(null);
     setShouldOpenRegisterDialogAfterAuth(false);
     try {
@@ -175,7 +175,7 @@ export function PoliticalPartyList({
     } catch {
       // ignore sessionStorage failures
     }
-  };
+  }, []);
 
   // Sync parties from props when they change
   useEffect(() => {
@@ -251,10 +251,10 @@ export function PoliticalPartyList({
     };
 
     fetchUserPartyData();
-  }, [isAuthenticated, authLoading]);
+  }, [isAuthenticated, authLoading, setUserParty]);
 
   // Load more parties when scrolling near bottom
-  const loadMoreParties = async () => {
+  const loadMoreParties = useCallback(async () => {
     if (isLoadingMore) return;
 
     setIsLoadingMore(true);
@@ -287,7 +287,7 @@ export function PoliticalPartyList({
     } finally {
       setIsLoadingMore(false);
     }
-  };
+  }, [isLoadingMore, hasMoreParties, partiesOffset]);
 
   // Infinite scroll setup
   useEffect(() => {
@@ -424,56 +424,67 @@ export function PoliticalPartyList({
   };
 
   // Internal function to actually create the party (without auth check)
-  const performCreateParty = async (formData: CreatePartyData) => {
-    if (!user?.id) return;
+  const performCreateParty = useCallback(
+    async (formData: CreatePartyData) => {
+      if (!user?.id) return;
 
-    try {
-      setIsCreating(true);
-      const pendingReferral =
-        localStorage.getItem("pending_referral") || undefined;
-      const result = await createPartyAction(formData, pendingReferral);
-      if (result.success) {
-        if (pendingReferral) localStorage.removeItem("pending_referral");
-        toast.success({
-          title: dictionary.toasts.parties.registered,
-        });
-        setIsCreateDialogOpen(false);
-        setIsRegisterPartyDialogOpen(false);
-        setCreatePartyForm({
-          name: "",
-          description: "",
-          websiteUrl: "",
-        });
-        // Clear pending state
-        setPendingPartyForm(null);
-        setShouldOpenRegisterDialogAfterAuth(false);
-        // Refresh data
-        const allParties = await getParties({ limit: 100 });
-        if (allParties !== null) {
-          setParties(allParties);
-          setPartiesOffset(allParties.length);
-          setHasMoreParties(allParties.length >= 100);
+      try {
+        setIsCreating(true);
+        const pendingReferral =
+          localStorage.getItem("pending_referral") || undefined;
+        const result = await createPartyAction(formData, pendingReferral);
+        if (result.success) {
+          if (pendingReferral) localStorage.removeItem("pending_referral");
+          toast.success({
+            title: dictionary.toasts.parties.registered,
+          });
+          setIsCreateDialogOpen(false);
+          setIsRegisterPartyDialogOpen(false);
+          setCreatePartyForm({
+            name: "",
+            description: "",
+            websiteUrl: "",
+          });
+          // Clear pending state
+          setPendingPartyForm(null);
+          setShouldOpenRegisterDialogAfterAuth(false);
+          // Refresh data
+          const allParties = await getParties({ limit: 100 });
+          if (allParties !== null) {
+            setParties(allParties);
+            setPartiesOffset(allParties.length);
+            setHasMoreParties(allParties.length >= 100);
+          }
+          if (user?.id) {
+            const party = await getUserParty();
+            setUserParty(party);
+          }
+          // Refresh profile to update partyId
+          router.refresh();
+        } else {
+          toast.error({
+            title: result.error || dictionary.toasts.parties.register_failed,
+          });
         }
-        if (user?.id) {
-          const party = await getUserParty();
-          setUserParty(party);
-        }
-        // Refresh profile to update partyId
-        router.refresh();
-      } else {
+      } catch (error) {
+        console.error("Error creating party:", error);
         toast.error({
-          title: result.error || dictionary.toasts.parties.register_failed,
+          title: dictionary.toasts.parties.register_error,
         });
+      } finally {
+        setIsCreating(false);
       }
-    } catch (error) {
-      console.error("Error creating party:", error);
-      toast.error({
-        title: dictionary.toasts.parties.register_error,
-      });
-    } finally {
-      setIsCreating(false);
-    }
-  };
+    },
+    [
+      user?.id,
+      toast,
+      dictionary.toasts.parties.registered,
+      dictionary.toasts.parties.register_failed,
+      dictionary.toasts.parties.register_error,
+      router,
+      setUserParty,
+    ],
+  );
 
   const executeCreateParty = async () => {
     // Check if user is authenticated
@@ -526,6 +537,8 @@ export function PoliticalPartyList({
     shouldOpenRegisterDialogAfterAuth,
     user?.id,
     performCreateParty,
+    clearPendingPartyAuthState,
+    setUserParty,
   ]);
 
   const handleUpdatePartyAll = async () => {
