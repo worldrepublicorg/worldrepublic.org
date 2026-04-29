@@ -28,15 +28,16 @@ export default function WddImportInfoBanner({
         <Typography
           variant="body"
           level={4}
-          className="text-left text-[14px] font-medium text-gray-500"
+          className="min-w-0 text-left text-[14px] font-medium text-gray-500 whitespace-normal wrap-break-words"
         >
           {dictionary.components.wdd_import_info.message_prefix}
-          <span
+          <button
+            type="button"
             onClick={handleCopyContractAddress}
-            className="cursor-pointer underline"
+            className="inline p-0 m-0 border-0 bg-transparent align-baseline font-inherit text-inherit underline whitespace-normal break-all"
           >
             {dictionary.components.wdd_import_info.contract_address}
-          </span>
+          </button>
         </Typography>
       </div>
     </div>
