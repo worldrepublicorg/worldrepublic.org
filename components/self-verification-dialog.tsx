@@ -8,7 +8,6 @@ import {
   AlertDialogHeader,
   Button,
   Typography,
-  useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -29,7 +28,6 @@ import {
   type SelfVerificationMode,
   useSelfVerification,
 } from "@/hooks/use-self-verification";
-import { mapSelfVerificationToast } from "@/lib/self/verification-toast-message";
 
 interface SelfVerificationDialogProps {
   open: boolean;
@@ -52,7 +50,6 @@ export function SelfVerificationDialog({
   electionId,
   mode = "vote",
 }: SelfVerificationDialogProps) {
-  const { toast } = useToast();
   const [step, setStep] = useState<"primer" | "verification">("primer");
   const { lang } = useParams<{ lang: string }>();
   const {
@@ -111,52 +108,13 @@ export function SelfVerificationDialog({
             cache: "no-store",
           },
         );
+        if (!res.ok || isCancelled) return;
         const data = (await res.json()) as {
           result?: boolean;
-          reason?: string;
-          verificationSession?: {
-            status?: string;
-            lastError?: string | null;
-          };
+          verificationSession?: { status?: string };
         };
-
-        if (isCancelled) return;
-
-        if (!res.ok) {
-          if (!completionHandledRef.current) {
-            completionHandledRef.current = true;
-            toast.error({
-              title: mapSelfVerificationToast(
-                typeof data.reason === "string" ? data.reason : null,
-                "failed",
-              ),
-            });
-            closeDialog();
-          }
-          return;
-        }
-
-        const vs = data.verificationSession;
-        const status = vs?.status;
-
-        if (data?.result && status === "verified") {
+        if (data?.result && data.verificationSession?.status === "verified") {
           await handleSuccess();
-          return;
-        }
-
-        if (
-          data?.result &&
-          (status === "failed" || status === "expired") &&
-          !completionHandledRef.current
-        ) {
-          completionHandledRef.current = true;
-          toast.error({
-            title: mapSelfVerificationToast(
-              vs?.lastError ?? null,
-              status ?? "",
-            ),
-          });
-          closeDialog();
         }
       } catch {
         // Best-effort polling; user can still complete on same-device callback.
@@ -176,8 +134,6 @@ export function SelfVerificationDialog({
     accountVerificationSessionId,
     userId,
     handleSuccess,
-    closeDialog,
-    toast,
   ]);
 
   const handleContinue = () => {

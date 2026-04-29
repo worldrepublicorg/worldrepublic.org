@@ -39,7 +39,7 @@ export async function GET(
     }
 
     const { sessionId } = await context.params;
-    const session = await getAccountVerificationSession(sessionId);
+    const session = getAccountVerificationSession(sessionId);
 
     if (!session) {
       return NextResponse.json(

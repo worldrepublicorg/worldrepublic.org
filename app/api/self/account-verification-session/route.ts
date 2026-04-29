@@ -35,8 +35,7 @@ export async function POST() {
       );
     }
 
-    const verificationSession =
-      await createAccountVerificationSession(userUuid);
+    const verificationSession = createAccountVerificationSession(userUuid);
 
     return NextResponse.json(
       {

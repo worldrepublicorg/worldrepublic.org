@@ -264,39 +264,6 @@ export const userSelfVerificationsRelations = relations(
   }),
 );
 
-/** Ephemeral Self account-verification attempts (QR/session polling); replaces process-local Map storage */
-export const selfVerificationSessions = pgTable(
-  "self_verification_sessions",
-  {
-    sessionId: uuid("session_id").primaryKey(),
-    userId: uuid("user_id")
-      .notNull()
-      .references(() => users.uuid, { onDelete: "cascade" }),
-    status: varchar("status", { length: 16 }).notNull(),
-    expiresAt: timestamp("expires_at", { mode: "date" }).notNull(),
-    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
-    verifiedAt: timestamp("verified_at", { mode: "date" }),
-    lastError: text("last_error"),
-  },
-  (table) => [
-    index("self_verification_sessions_user_idx").on(
-      table.userId,
-      table.createdAt,
-    ),
-    index("self_verification_sessions_expires_idx").on(table.expiresAt),
-  ],
-);
-
-export const selfVerificationSessionsRelations = relations(
-  selfVerificationSessions,
-  ({ one }) => ({
-    user: one(users, {
-      fields: [selfVerificationSessions.userId],
-      references: [users.uuid],
-    }),
-  }),
-);
-
 // Referrals table - tracks ambassador referral relationships
 export const referrals = pgTable(
   "referrals",

@@ -89,13 +89,13 @@ export async function POST(req: Request) {
     }
 
     const { sessionToken } = parseAccountContextData(userContextData);
-    const sessionValidation = await validateAccountVerificationSessionToken(
+    const sessionValidation = validateAccountVerificationSessionToken(
       sessionToken ?? "",
     );
     if (!sessionValidation.ok) {
       if (sessionValidation.sessionId) {
         parsedSessionId = sessionValidation.sessionId;
-        await markAccountVerificationSessionFailed(
+        markAccountVerificationSessionFailed(
           sessionValidation.sessionId,
           sessionValidation.reason,
         );
@@ -122,7 +122,7 @@ export async function POST(req: Request) {
 
     const { isValid } = result.isValidDetails;
     if (!isValid) {
-      await markAccountVerificationSessionFailed(
+      markAccountVerificationSessionFailed(
         parsedSessionId,
         "Verification failed",
       );
@@ -141,7 +141,7 @@ export async function POST(req: Request) {
     const verifiedUserIdentifier = result.userData?.userIdentifier;
 
     if (!nullifier || !verifiedUserIdentifier) {
-      await markAccountVerificationSessionFailed(
+      markAccountVerificationSessionFailed(
         parsedSessionId,
         "Nullifier or user identifier missing in verification result",
       );
@@ -156,7 +156,7 @@ export async function POST(req: Request) {
     }
 
     if (verifiedUserIdentifier.toLowerCase() !== userUuid.toLowerCase()) {
-      await markAccountVerificationSessionFailed(
+      markAccountVerificationSessionFailed(
         parsedSessionId,
         "Verified identity does not match authenticated account",
       );
@@ -185,7 +185,7 @@ export async function POST(req: Request) {
       existingNullifierBinding &&
       existingNullifierBinding.userId.toLowerCase() !== userUuid.toLowerCase()
     ) {
-      await markAccountVerificationSessionFailed(
+      markAccountVerificationSessionFailed(
         parsedSessionId,
         "Self ID already linked to another account",
       );
@@ -289,7 +289,7 @@ export async function POST(req: Request) {
       );
     }
 
-    await markAccountVerificationSessionVerified(parsedSessionId);
+    markAccountVerificationSessionVerified(parsedSessionId);
 
     return NextResponse.json(
       {
@@ -302,7 +302,7 @@ export async function POST(req: Request) {
   } catch (error) {
     if (parsedSessionId) {
       const message = error instanceof Error ? error.message : String(error);
-      await markAccountVerificationSessionFailed(parsedSessionId, message);
+      markAccountVerificationSessionFailed(parsedSessionId, message);
     }
     const errorMessage = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
