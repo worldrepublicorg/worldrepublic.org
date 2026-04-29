@@ -4,6 +4,8 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
 
+const VOTE_SELF_ENDPOINT_ORIGIN = "https://www.worldrepublic.org";
+
 function createVerifier(origin: string) {
   const scope = "world-republic";
   const endpoint = `${origin}/api/self/verify`;
@@ -106,9 +108,7 @@ function isDuplicateVoteError(error: unknown): boolean {
 
 export async function POST(req: Request) {
   try {
-    const url = new URL(req.url);
-    const origin = `${url.protocol}//${url.host}`;
-    const verifier = createVerifier(origin);
+    const verifier = createVerifier(VOTE_SELF_ENDPOINT_ORIGIN);
 
     const { attestationId, proof, publicSignals, userContextData } =
       await req.json();

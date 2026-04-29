@@ -16,6 +16,7 @@ import {
 } from "@/lib/self/account-verification-session";
 
 const ACCOUNT_SELF_SCOPE = "world-republic-account";
+const ACCOUNT_SELF_ENDPOINT_ORIGIN = "https://www.worldrepublic.org";
 const VERIFIED_REFERRAL_REWARD_TYPE = "INVITE_VERIFIED_USER";
 const VERIFIED_REFERRAL_TRANSACTION_TYPE = "REFERRAL_VERIFIED_BONUS";
 const VERIFIED_REFERRAL_REWARD_AMOUNT = "10.000000000000000000";
@@ -69,9 +70,7 @@ export async function POST(req: Request) {
   let parsedSessionId: string | undefined;
 
   try {
-    const url = new URL(req.url);
-    const origin = `${url.protocol}//${url.host}`;
-    const verifier = createVerifier(origin);
+    const verifier = createVerifier(ACCOUNT_SELF_ENDPOINT_ORIGIN);
 
     const { attestationId, proof, publicSignals, userContextData } =
       await req.json();

@@ -20,6 +20,9 @@ interface UseSelfVerificationOptions {
   mode?: SelfVerificationMode;
 }
 
+const ACCOUNT_VERIFICATION_ORIGIN = "https://www.worldrepublic.org";
+const VOTE_VERIFICATION_ORIGIN = "https://www.worldrepublic.org";
+
 const resolveCallbackUrl = (lang: string | undefined): string | null => {
   if (typeof window === "undefined") return null;
   const envCallback = process.env.NEXT_PUBLIC_SELF_CALLBACK;
@@ -137,9 +140,9 @@ export function useSelfVerification(
 
         const endpoint =
           mode === "account"
-            ? `${window.location.origin}/api/self/verify-account`
+            ? `${ACCOUNT_VERIFICATION_ORIGIN}/api/self/verify-account`
             : process.env.NEXT_PUBLIC_SELF_ENDPOINT ||
-              `${window.location.origin}/api/self/verify`;
+              `${VOTE_VERIFICATION_ORIGIN}/api/self/verify`;
         const scope =
           mode === "account" ? "world-republic-account" : "world-republic";
         const userIdType = "uuid";
