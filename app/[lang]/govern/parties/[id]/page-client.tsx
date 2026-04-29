@@ -2,7 +2,7 @@
 
 import { useToast } from "@worldcoin/mini-apps-ui-kit-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PiCaretLeft, PiShareNetwork } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { PartyDetailPageSkeleton } from "@/components/govern/parties/party-detail-page-skeleton";
@@ -30,7 +30,7 @@ export default function PartyDetailPageClient({
   const [party, setParty] = useState<Party | null | undefined>(undefined);
 
   // Fetch party for TopBar share button and to know when to show content
-  const fetchPartyForShare = async () => {
+  const fetchPartyForShare = useCallback(async () => {
     if (!partyId || typeof partyId !== "string") return;
     try {
       const partyData = await getParty(partyId);
@@ -39,7 +39,7 @@ export default function PartyDetailPageClient({
       console.error("Error fetching party for share:", error);
       setParty(null);
     }
-  };
+  }, [partyId]);
 
   // Fetch party when id changes
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function PartyDetailPageClient({
       return;
     }
     fetchPartyForShare();
-  }, [partyId]);
+  }, [partyId, fetchPartyForShare]);
 
   const getShareUrl = async () => {
     if (typeof window === "undefined") return "";
