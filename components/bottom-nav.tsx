@@ -53,7 +53,7 @@ const BottomNav = () => {
     return () => {
       cancelled = true;
     };
-  }, [pathname]);
+  }, []);
 
   useEffect(() => {
     const onGovernPage = pathname.split("/")[2] === "govern";
