@@ -34,7 +34,7 @@ export default function WddImportInfoBanner({
           <button
             type="button"
             onClick={handleCopyContractAddress}
-            className="inline cursor-pointer underline text-left whitespace-normal wrap-break-words"
+            className="inline! cursor-pointer underline text-left"
           >
             {dictionary.components.wdd_import_info.contract_address}
           </button>
