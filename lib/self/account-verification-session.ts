@@ -1,8 +1,17 @@
+import "server-only";
+
 import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
+import { and, eq } from "drizzle-orm";
+import { db } from "@/lib/db/connection";
+import { selfVerificationSessions } from "@/lib/db/schema";
 
-type VerificationSessionStatus = "pending" | "verified" | "failed" | "expired";
+export type VerificationSessionStatus =
+  | "pending"
+  | "verified"
+  | "failed"
+  | "expired";
 
-type VerificationSessionRecord = {
+export type VerificationSessionRecord = {
   sessionId: string;
   userUuid: string;
   expiresAt: number;
@@ -19,7 +28,7 @@ type VerificationSessionTokenPayload = {
   exp: number;
 };
 
-type ValidationResult =
+export type ValidationResult =
   | {
       ok: true;
       payload: VerificationSessionTokenPayload;
@@ -31,7 +40,7 @@ type ValidationResult =
       sessionId?: string;
     };
 
-const SESSION_TTL_MS = 10 * 60 * 1000;
+const SESSION_TTL_MS = 30 * 60 * 1000;
 
 const asBase64Url = (input: string): string =>
   Buffer.from(input, "utf8").toString("base64url");
@@ -66,61 +75,92 @@ function safeJsonParse<T>(input: string): T | null {
   }
 }
 
-function getStore(): Map<string, VerificationSessionRecord> {
-  const globalRef = globalThis as typeof globalThis & {
-    __wrSelfVerificationSessionStore?: Map<string, VerificationSessionRecord>;
+function rowToRecord(
+  row: typeof selfVerificationSessions.$inferSelect,
+): VerificationSessionRecord {
+  return {
+    sessionId: row.sessionId,
+    userUuid: row.userId,
+    expiresAt: row.expiresAt.getTime(),
+    status: row.status as VerificationSessionStatus,
+    createdAt: row.createdAt.getTime(),
+    verifiedAt: row.verifiedAt?.getTime() ?? null,
+    lastError: row.lastError,
   };
-  if (!globalRef.__wrSelfVerificationSessionStore) {
-    globalRef.__wrSelfVerificationSessionStore = new Map();
-  }
-  return globalRef.__wrSelfVerificationSessionStore;
 }
 
-function markExpiredIfNeeded(
-  record: VerificationSessionRecord,
-): VerificationSessionRecord {
+async function expirePendingSessionIfStale(
+  sessionId: string,
+  lastError: string,
+): Promise<void> {
+  await db
+    .update(selfVerificationSessions)
+    .set({
+      status: "expired",
+      lastError,
+    })
+    .where(
+      and(
+        eq(selfVerificationSessions.sessionId, sessionId),
+        eq(selfVerificationSessions.status, "pending"),
+      ),
+    );
+}
+
+async function normalizeExpiredRecord(
+  row: typeof selfVerificationSessions.$inferSelect,
+): Promise<VerificationSessionRecord> {
+  const record = rowToRecord(row);
   if (record.status === "pending" && record.expiresAt <= Date.now()) {
-    record.status = "expired";
-    record.lastError = "Session expired";
+    await expirePendingSessionIfStale(
+      record.sessionId,
+      "Verification session expired",
+    );
+    return {
+      ...record,
+      status: "expired",
+      lastError: "Verification session expired",
+    };
   }
   return record;
 }
 
-export function createAccountVerificationSession(userUuid: string): {
+export async function createAccountVerificationSession(
+  userUuid: string,
+): Promise<{
   sessionId: string;
   token: string;
   expiresAt: number;
-} {
+}> {
   const sessionId = randomUUID();
-  const expiresAt = Date.now() + SESSION_TTL_MS;
+  const expiresAtMs = Date.now() + SESSION_TTL_MS;
+  const expiresAtDate = new Date(expiresAtMs);
   const payload: VerificationSessionTokenPayload = {
     v: 1,
     sessionId,
     userUuid,
-    exp: expiresAt,
+    exp: expiresAtMs,
   };
 
   const encodedPayload = asBase64Url(JSON.stringify(payload));
   const signature = signPayload(encodedPayload);
   const token = `${encodedPayload}.${signature}`;
 
-  const store = getStore();
-  store.set(sessionId, {
+  await db.insert(selfVerificationSessions).values({
     sessionId,
-    userUuid,
-    expiresAt,
+    userId: userUuid,
     status: "pending",
-    createdAt: Date.now(),
+    expiresAt: expiresAtDate,
     verifiedAt: null,
     lastError: null,
   });
 
-  return { sessionId, token, expiresAt };
+  return { sessionId, token, expiresAt: expiresAtMs };
 }
 
-export function validateAccountVerificationSessionToken(
+export async function validateAccountVerificationSessionToken(
   token: string,
-): ValidationResult {
+): Promise<ValidationResult> {
   if (!token || typeof token !== "string") {
     return { ok: false, reason: "Missing session token" };
   }
@@ -147,12 +187,13 @@ export function validateAccountVerificationSessionToken(
     return { ok: false, reason: "Invalid session token payload" };
   }
 
-  if (payload.exp <= Date.now()) {
-    const maybeSession = getStore().get(payload.sessionId);
-    if (maybeSession) {
-      maybeSession.status = "expired";
-      maybeSession.lastError = "Session expired";
-    }
+  const now = Date.now();
+
+  if (payload.exp <= now) {
+    await expirePendingSessionIfStale(
+      payload.sessionId,
+      "Session token expired",
+    );
     return {
       ok: false,
       reason: "Session token expired",
@@ -160,8 +201,13 @@ export function validateAccountVerificationSessionToken(
     };
   }
 
-  const session = getStore().get(payload.sessionId);
-  if (!session) {
+  const [row] = await db
+    .select()
+    .from(selfVerificationSessions)
+    .where(eq(selfVerificationSessions.sessionId, payload.sessionId))
+    .limit(1);
+
+  if (!row) {
     return {
       ok: false,
       reason: "Verification session not found",
@@ -169,7 +215,8 @@ export function validateAccountVerificationSessionToken(
     };
   }
 
-  markExpiredIfNeeded(session);
+  const session = await normalizeExpiredRecord(row);
+
   if (session.status === "expired") {
     return {
       ok: false,
@@ -196,32 +243,48 @@ export function validateAccountVerificationSessionToken(
   return { ok: true, payload, session };
 }
 
-export function markAccountVerificationSessionVerified(
+export async function markAccountVerificationSessionVerified(
   sessionId: string | undefined,
-): void {
+): Promise<void> {
   if (!sessionId) return;
-  const session = getStore().get(sessionId);
-  if (!session) return;
-  session.status = "verified";
-  session.verifiedAt = Date.now();
-  session.lastError = null;
+  await db
+    .update(selfVerificationSessions)
+    .set({
+      status: "verified",
+      verifiedAt: new Date(),
+      lastError: null,
+    })
+    .where(eq(selfVerificationSessions.sessionId, sessionId));
 }
 
-export function markAccountVerificationSessionFailed(
+export async function markAccountVerificationSessionFailed(
   sessionId: string | undefined,
   reason: string,
-): void {
+): Promise<void> {
   if (!sessionId) return;
-  const session = getStore().get(sessionId);
-  if (!session || session.status !== "pending") return;
-  session.status = "failed";
-  session.lastError = reason;
+  await db
+    .update(selfVerificationSessions)
+    .set({
+      status: "failed",
+      lastError: reason,
+    })
+    .where(
+      and(
+        eq(selfVerificationSessions.sessionId, sessionId),
+        eq(selfVerificationSessions.status, "pending"),
+      ),
+    );
 }
 
-export function getAccountVerificationSession(
+export async function getAccountVerificationSession(
   sessionId: string,
-): VerificationSessionRecord | null {
-  const session = getStore().get(sessionId);
-  if (!session) return null;
-  return markExpiredIfNeeded(session);
+): Promise<VerificationSessionRecord | null> {
+  const [row] = await db
+    .select()
+    .from(selfVerificationSessions)
+    .where(eq(selfVerificationSessions.sessionId, sessionId))
+    .limit(1);
+
+  if (!row) return null;
+  return normalizeExpiredRecord(row);
 }

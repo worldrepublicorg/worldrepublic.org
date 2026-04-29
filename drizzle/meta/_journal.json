@@ -43,6 +43,13 @@
       "when": 1764388964118,
       "tag": "0005_add_streams",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1764388964119,
+      "tag": "0013_add_self_verification_sessions",
+      "breakpoints": true
     }
   ]
 }
