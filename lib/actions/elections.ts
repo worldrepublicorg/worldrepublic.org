@@ -4,10 +4,7 @@ import { count, desc, eq, getTableColumns, inArray, not } from "drizzle-orm";
 import { getParties } from "@/lib/actions/parties";
 import { getDbReadOnly } from "@/lib/db/connection";
 import { elections, parties, votes } from "@/lib/db/schema";
-import {
-  isElectionActive,
-  pickFeaturedElection,
-} from "@/lib/featured-election";
+import { isElectionActive } from "@/lib/featured-election";
 import type { Election, ElectionResult } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 
