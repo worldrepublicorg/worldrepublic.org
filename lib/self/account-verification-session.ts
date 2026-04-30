@@ -5,13 +5,9 @@ import { and, eq } from "drizzle-orm";
 import { db } from "@/lib/db/connection";
 import { selfVerificationSessions } from "@/lib/db/schema";
 
-export type VerificationSessionStatus =
-  | "pending"
-  | "verified"
-  | "failed"
-  | "expired";
+type VerificationSessionStatus = "pending" | "verified" | "failed" | "expired";
 
-export type VerificationSessionRecord = {
+type VerificationSessionRecord = {
   sessionId: string;
   userUuid: string;
   expiresAt: number;
@@ -28,7 +24,7 @@ type VerificationSessionTokenPayload = {
   exp: number;
 };
 
-export type ValidationResult =
+type ValidationResult =
   | {
       ok: true;
       payload: VerificationSessionTokenPayload;
