@@ -7,7 +7,6 @@ import { useConnection, useSwitchChain } from "wagmi";
 import { base } from "wagmi/chains";
 import { formatTxError } from "@/lib/format-tx-error";
 
-export const BASE_CHAIN_ID = base.id;
 const BASE_CHAIN_ID_HEX = `0x${base.id.toString(16)}` as const;
 
 const BASE_CHAIN_ADD_PARAMS = {
@@ -149,7 +148,7 @@ export function useBaseChainGuard() {
     if (isSwitching) return false;
 
     const preflightChainId = await refreshLiveChainId();
-    if (preflightChainId === BASE_CHAIN_ID) return true;
+    if (preflightChainId === base.id) return true;
 
     setIsSwitching(true);
 
@@ -159,7 +158,7 @@ export function useBaseChainGuard() {
       } catch (manualErr) {
         if (isUserRejection(manualErr)) throw manualErr;
         await switchChain.mutateAsync({
-          chainId: BASE_CHAIN_ID,
+          chainId: base.id,
           addEthereumChainParameter: {
             chainName: BASE_CHAIN_ADD_PARAMS.chainName,
             nativeCurrency: BASE_CHAIN_ADD_PARAMS.nativeCurrency,
@@ -169,7 +168,7 @@ export function useBaseChainGuard() {
         });
       }
       const currentLiveChainId = await refreshLiveChainId();
-      if (currentLiveChainId !== BASE_CHAIN_ID) {
+      if (currentLiveChainId !== base.id) {
         toast.error({
           title:
             "Couldn't switch to Base Chain. Please switch networks in your wallet.",
@@ -192,7 +191,7 @@ export function useBaseChainGuard() {
     refreshLiveChainId,
   ]);
 
-  const isOnBaseChain = isConnected && liveChainId === BASE_CHAIN_ID;
+  const isOnBaseChain = isConnected && liveChainId === base.id;
 
   return {
     isOnBaseChain,

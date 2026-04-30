@@ -10,8 +10,8 @@ import {
   useSwitchChain,
   useWriteContract,
 } from "wagmi";
+import { base } from "wagmi/chains";
 
-const BASE_CHAIN_ID = 8453;
 const WDD_TOKEN_ADDRESS = "0xEdE54d9c024ee80C85ec0a75eD2d8774c7Fbac9B" as const;
 const BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS =
   "0xeFE5a120c2787ee53FbebAE8902bdDe1edE416Fc" as const;
@@ -105,7 +105,7 @@ export function useBaseChainSavingsAccount() {
   const { toast } = useToast();
   const { address, isConnected, connector } = useConnection();
   const switchChain = useSwitchChain();
-  const publicClient = usePublicClient({ chainId: BASE_CHAIN_ID });
+  const publicClient = usePublicClient({ chainId: base.id });
   const writeContract = useWriteContract();
   const [displayAvailableInterest, setDisplayAvailableInterest] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -134,21 +134,21 @@ export function useBaseChainSavingsAccount() {
         abi: erc20Abi,
         functionName: "balanceOf",
         args: address ? [address] : undefined,
-        chainId: BASE_CHAIN_ID,
+        chainId: base.id,
       },
       {
         address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "balanceOf",
         args: address ? [address] : undefined,
-        chainId: BASE_CHAIN_ID,
+        chainId: base.id,
       },
       {
         address: BASE_CHAIN_SAVINGS_CONTRACT_ADDRESS,
         abi: tokenStakingPerTokenAbi,
         functionName: "available",
         args: address ? [address] : undefined,
-        chainId: BASE_CHAIN_ID,
+        chainId: base.id,
       },
     ],
     query: {
@@ -272,9 +272,9 @@ export function useBaseChainSavingsAccount() {
     }
 
     const preflightChainId = await getLiveChainId();
-    if (preflightChainId !== BASE_CHAIN_ID) {
+    if (preflightChainId !== base.id) {
       try {
-        await switchChain.mutateAsync({ chainId: BASE_CHAIN_ID });
+        await switchChain.mutateAsync({ chainId: base.id });
       } catch {
         toast.error({ title: "Please switch to Base Chain to continue." });
         throw new Error("Chain switch failed");
@@ -282,7 +282,7 @@ export function useBaseChainSavingsAccount() {
     }
 
     const postSwitchChainId = await getLiveChainId();
-    if (postSwitchChainId !== BASE_CHAIN_ID) {
+    if (postSwitchChainId !== base.id) {
       toast.error({ title: "Please switch to Base Chain to continue." });
       throw new Error("Chain switch failed");
     }
