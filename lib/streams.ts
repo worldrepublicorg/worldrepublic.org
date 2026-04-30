@@ -11,6 +11,8 @@ export interface StreamData {
   electionId: string | null;
 }
 
+export const STREAM_DURATION_S = 365 * 24 * 3600;
+
 export function computeStreamAccrued(
   stream: StreamData,
   nowMs: number,
