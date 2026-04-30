@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Světová republika",
     "earn": "Vydělat",
     "govern": "Vláda",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Rejstřík",
           "subsidies": "Dotace",
           "ambassadors": "Ambasadoři"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nebyly nalezeny žádné strany",
         "error_loading": "Nepodařilo se načíst strany",
         "refresh": "Obnovit",
-        "loading_more": "Načítání dalších stran...",
         "party_details": "Detaily strany",
         "share_party": "Sdílet stranu",
         "my_party": "Moje strana",
@@ -106,8 +103,6 @@
           "election_info": "Informace o volbách",
           "reward_pool": "Fond odměn: {amount} WDD",
           "reward_pool_minimum": "Fond odměn: minimálně {amount} WDD",
-          "voting_opens": "Hlasování se otevírá {date}",
-          "check_back": "Vraťte se, až volby začnou, abyste mohli hlasovat",
           "choose_a_party": "Vyberte stranu",
           "no_parties_for_election": "Pro tyto volby nejsou k dispozici žádné strany.",
           "results_title": "Výsledky",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Naskenujte tento QR kód pro ověření přes Self.",
         "mobile_dialog_description": "Budete přesměrováni do aplikace Self k provedení ověření.",
-        "supported_countries": "Podporované země",
         "support_telegram": "Podpora Self",
-        "confirm_eligibility": "Potvrďte svou způsobilost",
         "verification_guide": "Průvodce ověřením",
         "qr_alt": "QR kód pro ověření Self",
         "callback_warning": "Varování",

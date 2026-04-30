@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "বিশ্ব প্রজাতন্ত্র",
     "earn": "আয় করুন",
     "govern": "শাসন করুন",
     "menu": "মেনু"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "রেজিস্ট্রি",
           "subsidies": "ভর্তুকি",
           "ambassadors": "অ্যাম্বাসেডর"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "কোনো দল পাওয়া যায়নি",
         "error_loading": "দলগুলি লোড করতে ব্যর্থ",
         "refresh": "রিফ্রেশ",
-        "loading_more": "আরও দল লোড হচ্ছে...",
         "party_details": "দলের বিবরণ",
         "share_party": "দল শেয়ার করুন",
         "my_party": "আমার দল",
@@ -106,8 +103,6 @@
           "election_info": "নির্বাচনের তথ্য",
           "reward_pool": "পুরস্কার পুল: {amount} WDD",
           "reward_pool_minimum": "পুরস্কার পুল: সর্বনিম্ন {amount} WDD",
-          "voting_opens": "ভোটদান শুরু হবে {date}",
-          "check_back": "আপনার ভোট দিতে নির্বাচন শুরু হলে ফিরে আসুন",
           "choose_a_party": "একটি দল বেছে নিন",
           "no_parties_for_election": "এই নির্বাচনের জন্য কোনো দল উপলব্ধ নেই।",
           "results_title": "ফলাফল",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self দিয়ে যাচাই করতে এই কিউআর কোডটি স্ক্যান করুন।",
         "mobile_dialog_description": "যাচাইকরণ সম্পূর্ণ করতে আপনাকে Self অ্যাপে পাঠানো হবে।",
-        "supported_countries": "সমর্থিত দেশসমূহ",
         "support_telegram": "Self সাপোর্ট",
-        "confirm_eligibility": "আপনার যোগ্যতা নিশ্চিত করুন",
         "verification_guide": "যাচাইকরণ নির্দেশিকা",
         "qr_alt": "Self যাচাইকরণ QR",
         "callback_warning": "সতর্কতা",

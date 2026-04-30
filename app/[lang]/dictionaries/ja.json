@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "世界共和国",
     "earn": "収益",
     "govern": "ガバナンス",
     "menu": "メニュー"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "登録簿",
           "subsidies": "助成金",
           "ambassadors": "アンバサダー"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "政党が見つかりません",
         "error_loading": "政党を読み込めませんでした",
         "refresh": "更新",
-        "loading_more": "さらに政党を読み込み中...",
         "party_details": "政党の詳細",
         "share_party": "政党を共有",
         "my_party": "私の政党",
@@ -106,8 +103,6 @@
           "election_info": "選挙情報",
           "reward_pool": "報酬プール: {amount} WDD",
           "reward_pool_minimum": "報酬プール: 最小 {amount} WDD",
-          "voting_opens": "投票開始 {date}",
-          "check_back": "選挙が始まったら投票するために戻ってきてください",
           "choose_a_party": "政党を選択",
           "no_parties_for_election": "この選挙に利用可能な政党はありません。",
           "results_title": "結果",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "このQRコードをスキャンしてSelfで本人確認を行ってください。",
         "mobile_dialog_description": "確認を完了するためにSelfアプリへリダイレクトされます。",
-        "supported_countries": "対応国",
         "support_telegram": "Selfサポート",
-        "confirm_eligibility": "資格を確認してください",
         "verification_guide": "認証ガイド",
         "qr_alt": "Self認証QR",
         "callback_warning": "警告",

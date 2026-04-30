@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "World Republic",
     "earn": "Earn",
     "govern": "Govern",
     "menu": "Menu"
@@ -50,8 +49,6 @@
           "election_info": "Election info",
           "reward_pool": "Reward pool: {amount} WDD",
           "reward_pool_minimum": "Reward pool: minimum {amount} WDD",
-          "voting_opens": "Voting opens {date}",
-          "check_back": "Check back when the election starts to cast your vote",
           "choose_a_party": "Choose a party",
           "no_parties_for_election": "No parties available for this election.",
           "results_title": "Results",
@@ -63,7 +60,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registry",
           "subsidies": "Subsidies",
           "ambassadors": "Ambassadors"
         },
@@ -88,7 +84,6 @@
         "no_parties_found": "No parties found",
         "error_loading": "Failed to load parties",
         "refresh": "Refresh",
-        "loading_more": "Loading more parties...",
         "party_details": "Party details",
         "share_party": "Share party",
         "my_party": "My party",
@@ -307,7 +302,6 @@
   "components": {
     "identity": {
       "self": {
-        "confirm_eligibility": "Confirm your eligibility",
         "dialog_description": "Scan this QR code to verify with Self.",
         "mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
         "learn_about_self": "Learn about Self",
@@ -315,7 +309,6 @@
         "qr_alt": "Self verification QR",
         "callback_warning": "Warning",
         "callback_warning_description": "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).",
-        "supported_countries": "Supported countries",
         "support_telegram": "Self Support",
         "label": "Self",
         "status_completed": "Verified",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "世界共和国",
     "earn": "赚取",
     "govern": "治理",
     "menu": "菜单"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "名册",
           "subsidies": "补贴",
           "ambassadors": "大使"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "未找到政党",
         "error_loading": "无法加载政党",
         "refresh": "刷新",
-        "loading_more": "加载更多政党...",
         "party_details": "政党详情",
         "share_party": "分享政党",
         "my_party": "我的政党",
@@ -106,8 +103,6 @@
           "election_info": "选举信息",
           "reward_pool": "奖池: {amount} WDD",
           "reward_pool_minimum": "奖池：最低 {amount} WDD",
-          "voting_opens": "投票开放 {date}",
-          "check_back": "选举开始后回来投票",
           "choose_a_party": "选择一个政党",
           "no_parties_for_election": "本次选举没有可用的政党。",
           "results_title": "结果",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "扫描此二维码以在 Self 完成验证。",
         "mobile_dialog_description": "您将被重定向到 Self 应用以完成验证。",
-        "supported_countries": "支持的国家/地区",
         "support_telegram": "Self 支持",
-        "confirm_eligibility": "确认您的资格",
         "verification_guide": "验证指南",
         "qr_alt": "Self 验证二维码",
         "callback_warning": "警告",

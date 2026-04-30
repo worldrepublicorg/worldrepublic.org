@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "ကမ္ဘာ့သမ္မတနိုင်ငံ",
     "earn": "ရှာဖွေပါ",
     "govern": "အုပ်ချုပ်ပါ",
     "menu": "မီနူး"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "မှတ်ပုံတင်",
           "subsidies": "ထောက်ပံ့ကြေး",
           "ambassadors": "သံအမတ်များ"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "ပါတီများ မတွေ့ရှိပါ",
         "error_loading": "ပါတီများ ဖွင့်၍မရပါ",
         "refresh": "Refresh",
-        "loading_more": "ပိုမိုများသော ပါတီများ ဖွင့်နေသည်...",
         "party_details": "ပါတီ အသေးစိတ်",
         "share_party": "ပါတီ မျှဝေပါ",
         "my_party": "ကျွန်ုပ်၏ ပါတီ",
@@ -106,8 +103,6 @@
           "election_info": "ရွေးကောက်ပွဲ အချက်အလက်",
           "reward_pool": "ဆုလာဘ်ရန်ပုံငွေ: {amount} WDD",
           "reward_pool_minimum": "ဆုလာဘ်ရန်ပုံငွေ: အနည်းဆုံး {amount} WDD",
-          "voting_opens": "မဲပေးခြင်း စတင်သည် {date}",
-          "check_back": "သင့်မဲပေးရန် ရွေးကောက်ပွဲ စတင်သည့်အခါ ပြန်လာပါ",
           "choose_a_party": "ပါတီတစ်ခု ရွေးချယ်ပါ",
           "no_parties_for_election": "ဤရွေးကောက်ပွဲအတွက် ပါတီမရှိပါ။",
           "results_title": "ရလဒ်များ",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self ဖြင့် အတည်ပြုရန် ဤ QR ကုဒ်ကို စကင်န်လုပ်ပါ။",
         "mobile_dialog_description": "အတည်ပြုမှုကို ပြီးစီးရန် Self အက်ပ်သို့ လွှဲပြောင်းပေးပါမည်။",
-        "supported_countries": "ပံ့ပိုးထားသည့်နိုင်ငံများ",
         "support_telegram": "Self ပံ့ပိုးမှု",
-        "confirm_eligibility": "သင့်အရည်အချင်းကို အတည်ပြုပါ",
         "verification_guide": "အတည်ပြုခြင်း လမ်းညွှန်",
         "qr_alt": "Self အတည်ပြုခြင်း QR",
         "callback_warning": "သတိပေးချက်",

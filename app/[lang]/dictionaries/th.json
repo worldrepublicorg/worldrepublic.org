@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "สาธารณรัฐโลก",
     "earn": "รายได้",
     "govern": "ธรรมาภิบาล",
     "menu": "เมนู"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "ทะเบียน",
           "subsidies": "เงินอุดหนุน",
           "ambassadors": "ทูต"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "ไม่พบพรรค",
         "error_loading": "ไม่สามารถโหลดพรรคได้",
         "refresh": "รีเฟรช",
-        "loading_more": "กำลังโหลดพรรคเพิ่มเติม...",
         "party_details": "รายละเอียดพรรค",
         "share_party": "แชร์พรรค",
         "my_party": "พรรคของฉัน",
@@ -106,8 +103,6 @@
           "election_info": "ข้อมูลการเลือกตั้ง",
           "reward_pool": "กองทุนรางวัล: {amount} WDD",
           "reward_pool_minimum": "กองทุนรางวัล: ขั้นต่ำ {amount} WDD",
-          "voting_opens": "การลงคะแนนเปิด {date}",
-          "check_back": "กลับมาเมื่อการเลือกตั้งเริ่มต้นเพื่อลงคะแนนของคุณ",
           "choose_a_party": "เลือกพรรค",
           "no_parties_for_election": "ไม่มีพรรคที่พร้อมสำหรับการเลือกตั้งนี้",
           "results_title": "ผลลัพธ์",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "สแกนคิวอาร์โค้ดนี้เพื่อยืนยันตัวตนกับ Self",
         "mobile_dialog_description": "คุณจะถูกเปลี่ยนเส้นทางไปยังแอป Self เพื่อทำการยืนยันให้เสร็จสิ้น",
-        "supported_countries": "ประเทศที่รองรับ",
         "support_telegram": "ฝ่ายสนับสนุน Self",
-        "confirm_eligibility": "ยืนยันสิทธิ์ของคุณ",
         "verification_guide": "คู่มือการยืนยัน",
         "qr_alt": "QR การยืนยัน Self",
         "callback_warning": "คำเตือน",

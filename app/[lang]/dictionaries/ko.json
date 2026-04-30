@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "세계 공화국",
     "earn": "적립",
     "govern": "거버넌스",
     "menu": "메뉴"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "등록부",
           "subsidies": "보조금",
           "ambassadors": "홍보대사"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "정당을 찾을 수 없습니다",
         "error_loading": "정당을 불러오는데 실패했습니다",
         "refresh": "새로고침",
-        "loading_more": "더 많은 정당 로딩 중...",
         "party_details": "정당 세부정보",
         "share_party": "정당 공유",
         "my_party": "내 정당",
@@ -106,8 +103,6 @@
           "election_info": "선거 정보",
           "reward_pool": "보상 풀: {amount} WDD",
           "reward_pool_minimum": "보상 풀: 최소 {amount} WDD",
-          "voting_opens": "투표 시작 {date}",
-          "check_back": "선거가 시작되면 투표하러 다시 방문해 주세요",
           "choose_a_party": "정당을 선택하세요",
           "no_parties_for_election": "이 선거에 참여 가능한 정당이 없습니다.",
           "results_title": "결과",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "이 QR 코드를 스캔하여 Self에서 인증하세요.",
         "mobile_dialog_description": "본인 인증을 완료하려면 Self 앱으로 이동합니다.",
-        "supported_countries": "지원되는 국가",
         "support_telegram": "Self 지원",
-        "confirm_eligibility": "자격을 확인하세요",
         "verification_guide": "인증 가이드",
         "qr_alt": "Self 인증 QR",
         "callback_warning": "경고",

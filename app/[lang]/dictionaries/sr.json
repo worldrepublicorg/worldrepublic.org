@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Светска Република",
     "earn": "Заради",
     "govern": "Управљај",
     "menu": "Мени"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Регистар",
           "subsidies": "Субвенције",
           "ambassadors": "Амбасадори"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Странке нису пронађене",
         "error_loading": "Није успело учитавање странака",
         "refresh": "Освежи",
-        "loading_more": "Учитавање више странака...",
         "party_details": "Детаљи странке",
         "share_party": "Подели странку",
         "my_party": "Моја странка",
@@ -106,8 +103,6 @@
           "election_info": "Информације о изборима",
           "reward_pool": "Наградни фонд: {amount} WDD",
           "reward_pool_minimum": "Наградни фонд: минимум {amount} WDD",
-          "voting_opens": "Гласање се отвара {date}",
-          "check_back": "Вратите се када избори почну како бисте гласали",
           "choose_a_party": "Изаберите странку",
           "no_parties_for_election": "Нема доступних странака за ове изборе.",
           "results_title": "Резултати",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Скенирајте овај QR код да бисте се верификовали преко Self.",
         "mobile_dialog_description": "Бићете преусмерени у Self апликацију да довршите верификацију.",
-        "supported_countries": "Подржане земље",
         "support_telegram": "Подршка Self",
-        "confirm_eligibility": "Потврдите своју подобност",
         "verification_guide": "Водич за верификацију",
         "qr_alt": "QR за Self верификацију",
         "callback_warning": "Упозорење",

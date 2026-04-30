@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Jahon Respublikasi",
     "earn": "Daromad",
     "govern": "Boshqaruv",
     "menu": "Menyu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Reyestr",
           "subsidies": "Subsidiyalar",
           "ambassadors": "Elchilar"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Partiyalar topilmadi",
         "error_loading": "Partiyalarni yuklab bo‘lmadi",
         "refresh": "Yangilash",
-        "loading_more": "Ko'proq partiyalar yuklanmoqda...",
         "party_details": "Partiya tafsilotlari",
         "share_party": "Partiyani ulashish",
         "my_party": "Mening partiyam",
@@ -106,8 +103,6 @@
           "election_info": "Saylov ma'lumotlari",
           "reward_pool": "Mukofot jamg'armasi: {amount} WDD",
           "reward_pool_minimum": "Mukofot jamg'armasi: minimal {amount} WDD",
-          "voting_opens": "Ovoz berish ochiladi {date}",
-          "check_back": "Ovoz berish uchun saylov boshlanganda qaytib keling",
           "choose_a_party": "Partiyani tanlang",
           "no_parties_for_election": "Bu saylov uchun partiyalar mavjud emas.",
           "results_title": "Natijalar",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self bilan tasdiqlash uchun ushbu QR kodni skaner qiling.",
         "mobile_dialog_description": "Tasdiqlashni yakunlash uchun Self ilovasiga yo‘naltirilasiz.",
-        "supported_countries": "Qo‘llab-quvvatlanadigan mamlakatlar",
         "support_telegram": "Self yordami",
-        "confirm_eligibility": "Muvofiqligingizni tasdiqlang",
         "verification_guide": "Tasdiqlash qo'llanmasi",
         "qr_alt": "Self tasdiqlash QR",
         "callback_warning": "Ogohlantirish",

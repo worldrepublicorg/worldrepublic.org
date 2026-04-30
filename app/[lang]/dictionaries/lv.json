@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Pasaules Republika",
     "earn": "Nopelnīt",
     "govern": "Pārvaldīt",
     "menu": "Izvēlne"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Reģistrs",
           "subsidies": "Subsīdijas",
           "ambassadors": "Vēstnieki"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Partijas nav atrastas",
         "error_loading": "Neizdevās ielādēt partijas",
         "refresh": "Atsvaidzināt",
-        "loading_more": "Ielādē vairāk partiju...",
         "party_details": "Partijas detaļas",
         "share_party": "Dalīties ar partiju",
         "my_party": "Mana partija",
@@ -106,8 +103,6 @@
           "election_info": "Vēlēšanu informācija",
           "reward_pool": "Atlīdzības fonds: {amount} WDD",
           "reward_pool_minimum": "Atlīdzības fonds: vismaz {amount} WDD",
-          "voting_opens": "Balsošana sākas {date}",
-          "check_back": "Atgriezieties, kad vēlēšanas sāksies, lai balsotu",
           "choose_a_party": "Izvēlieties partiju",
           "no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju.",
           "results_title": "Rezultāti",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Skenējiet šo QR kodu, lai verificētos ar Self.",
         "mobile_dialog_description": "Jūs tiksiet novirzīts uz Self lietotni, lai pabeigtu verifikāciju.",
-        "supported_countries": "Atbalstītās valstis",
         "support_telegram": "Self atbalsts",
-        "confirm_eligibility": "Apstipriniet savu atbilstību",
         "verification_guide": "Verifikācijas ceļvedis",
         "qr_alt": "Self verifikācijas QR",
         "callback_warning": "Brīdinājums",

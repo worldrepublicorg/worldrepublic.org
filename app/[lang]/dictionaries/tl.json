@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Republika ng Daigdig",
     "earn": "Kumita",
     "govern": "Pamahalaan",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Rehistro",
           "subsidies": "Subsidiya",
           "ambassadors": "Mga Embahador"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Walang nahanap na partido",
         "error_loading": "Nabigong i-load ang mga partido",
         "refresh": "I-refresh",
-        "loading_more": "Naglo-load ng mas maraming partido...",
         "party_details": "Mga detalye ng partido",
         "share_party": "Ibahagi ang partido",
         "my_party": "Aking partido",
@@ -106,8 +103,6 @@
           "election_info": "Impormasyon ng halalan",
           "reward_pool": "Premyong pool: {amount} WDD",
           "reward_pool_minimum": "Premyong pool: minimum {amount} WDD",
-          "voting_opens": "Magbubukas ang botohan {date}",
-          "check_back": "Bumalik kapag nagsimula na ang halalan para bumoto",
           "choose_a_party": "Pumili ng partido",
           "no_parties_for_election": "Walang partidong magagamit para sa halalang ito.",
           "results_title": "Mga Resulta",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "I-scan ang QR code na ito para mag-verify sa Self.",
         "mobile_dialog_description": "Ire-redirect ka sa Self app upang tapusin ang beripikasyon.",
-        "supported_countries": "Mga suportadong bansa",
         "support_telegram": "Self Support",
-        "confirm_eligibility": "Kumpirmahin ang iyong pagiging kwalipikado",
         "verification_guide": "Gabay sa pagpapatunay",
         "qr_alt": "QR ng pagpapatunay ng Self",
         "callback_warning": "Babala",

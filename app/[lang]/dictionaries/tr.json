@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Dünya Cumhuriyeti",
     "earn": "Kazan",
     "govern": "Yönet",
     "menu": "Menü"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Sicil",
           "subsidies": "Ödenekler",
           "ambassadors": "Elçiler"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Parti bulunamadı",
         "error_loading": "Partiler yüklenemedi",
         "refresh": "Yenile",
-        "loading_more": "Daha fazla parti yükleniyor...",
         "party_details": "Parti detayları",
         "share_party": "Partiyi paylaş",
         "my_party": "Partim",
@@ -106,8 +103,6 @@
           "election_info": "Seçim bilgileri",
           "reward_pool": "Ödül havuzu: {amount} WDD",
           "reward_pool_minimum": "Ödül havuzu: minimum {amount} WDD",
-          "voting_opens": "Oylama açılıyor {date}",
-          "check_back": "Oyunuzu kullanmak için seçim başladığında geri dönün",
           "choose_a_party": "Bir parti seçin",
           "no_parties_for_election": "Bu seçim için uygun parti bulunmuyor.",
           "results_title": "Sonuçlar",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self ile doğrulamak için bu QR kodunu tarayın.",
         "mobile_dialog_description": "Doğrulamayı gerçekleştirmek için Self uygulamasına yönlendirileceksiniz.",
-        "supported_countries": "Desteklenen ülkeler",
         "support_telegram": "Self Desteği",
-        "confirm_eligibility": "Uygunluğunuzu onaylayın",
         "verification_guide": "Doğrulama kılavuzu",
         "qr_alt": "Self doğrulama QR",
         "callback_warning": "Uyarı",

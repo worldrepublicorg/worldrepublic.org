@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "República Mundial",
     "earn": "Ganar",
     "govern": "Gobernanza",
     "menu": "Menú"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registro",
           "subsidies": "Subsidios",
           "ambassadors": "Embajadores"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "No se encontraron partidos",
         "error_loading": "Error al cargar los partidos",
         "refresh": "Actualizar",
-        "loading_more": "Cargando más partidos...",
         "party_details": "Detalles del partido",
         "share_party": "Compartir partido",
         "my_party": "Mi partido",
@@ -106,8 +103,6 @@
           "election_info": "Información de la elección",
           "reward_pool": "Fondo de recompensas: {amount} WDD",
           "reward_pool_minimum": "Fondo de recompensas: mínimo {amount} WDD",
-          "voting_opens": "La votación abre {date}",
-          "check_back": "Vuelve cuando la elección comience para emitir tu voto",
           "choose_a_party": "Elige un partido",
           "no_parties_for_election": "No hay partidos disponibles para esta elección.",
           "results_title": "Resultados",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Escanea este código QR para verificarte con Self.",
         "mobile_dialog_description": "Se te redirigirá a la app Self para realizar la verificación.",
-        "supported_countries": "Países admitidos",
         "support_telegram": "Soporte de Self",
-        "confirm_eligibility": "Confirma tu elegibilidad",
         "verification_guide": "Guía de verificación",
         "qr_alt": "QR de verificación de Self",
         "callback_warning": "Advertencia",

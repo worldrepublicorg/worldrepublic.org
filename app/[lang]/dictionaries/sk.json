@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Svetová republika",
     "earn": "Zarábať",
     "govern": "Vládať",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Register",
           "subsidies": "Dotácie",
           "ambassadors": "Ambasádori"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nenašli sa žiadne strany",
         "error_loading": "Nepodarilo sa načítať strany",
         "refresh": "Obnoviť",
-        "loading_more": "Načítavanie ďalších strán...",
         "party_details": "Detaily strany",
         "share_party": "Zdieľať stranu",
         "my_party": "Moja strana",
@@ -106,8 +103,6 @@
           "election_info": "Informácie o voľbách",
           "reward_pool": "Fond odmien: {amount} WDD",
           "reward_pool_minimum": "Fond odmien: minimálne {amount} WDD",
-          "voting_opens": "Hlasovanie sa otvára {date}",
-          "check_back": "Vráťte sa, keď voľby začnú, aby ste mohli hlasovať",
           "choose_a_party": "Vyberte stranu",
           "no_parties_for_election": "Pre tieto voľby nie sú k dispozícii žiadne strany.",
           "results_title": "Výsledky",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
         "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na vykonanie overenia.",
-        "supported_countries": "Podporované krajiny",
         "support_telegram": "Podpora Self",
-        "confirm_eligibility": "Potvrďte svoju oprávnenosť",
         "verification_guide": "Sprievodca overením",
         "qr_alt": "QR kód overenia Self",
         "callback_warning": "Upozornenie",

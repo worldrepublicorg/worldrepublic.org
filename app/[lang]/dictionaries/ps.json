@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "نړۍ جمهوریت",
     "earn": "کسب",
     "govern": "حکومت",
     "menu": "مینو"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "راجستر",
           "subsidies": "سبسىډي",
           "ambassadors": "سفیران"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "هیڅ ګوند ونه موندل شو",
         "error_loading": "ګوندونه بارولو کې پاتې راغلي",
         "refresh": "تازہ کول",
-        "loading_more": "نور ګوندونه پورته کېږي...",
         "party_details": "د ګوند جزئیات",
         "share_party": "ګوند شریک کړئ",
         "my_party": "زما ګوند",
@@ -106,8 +103,6 @@
           "election_info": "د ټاکنو معلومات",
           "reward_pool": "د انعام ذخیره: {amount} WDD",
           "reward_pool_minimum": "د انعام ذخیره: لږترلږه {amount} WDD",
-          "voting_opens": "رایه ورکول پرانیستل کیږي {date}",
-          "check_back": "خپله رایه ورکولو لپاره کله چې ټاکنې پیل شي بیرته راشئ",
           "choose_a_party": "یوه ګوند غوره کړئ",
           "no_parties_for_election": "د دې ټاکنو لپاره هیڅ ګوند شتون نلري.",
           "results_title": "پایلې",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "د Self سره د تایید لپاره دا QR کوډ سکین کړئ.",
         "mobile_dialog_description": "د تصدیق بشپړولو لپاره به تاسو Self اپ ته ولېږدول شئ.",
-        "supported_countries": "ملاتړ شوي هېوادونه",
         "support_telegram": "د Self ملاتړ",
-        "confirm_eligibility": "خپل وړتیا تایید کړئ",
         "verification_guide": "د تایید لارښود",
         "qr_alt": "د Self تایید QR",
         "callback_warning": "خبرداری",

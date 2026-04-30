@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Cộng hòa Thế giới",
     "earn": "Kiếm tiền",
     "govern": "Quản trị",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Sổ đăng ký",
           "subsidies": "Trợ cấp",
           "ambassadors": "Đại sứ"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Không tìm thấy đảng phái",
         "error_loading": "Không thể tải danh sách đảng",
         "refresh": "Làm mới",
-        "loading_more": "Đang tải thêm đảng phái...",
         "party_details": "Chi tiết đảng phái",
         "share_party": "Chia sẻ đảng phái",
         "my_party": "Đảng phái của tôi",
@@ -106,8 +103,6 @@
           "election_info": "Thông tin bầu cử",
           "reward_pool": "Quỹ giải thưởng: {amount} WDD",
           "reward_pool_minimum": "Quỹ giải thưởng: tối thiểu {amount} WDD",
-          "voting_opens": "Bỏ phiếu mở {date}",
-          "check_back": "Quay lại khi cuộc bầu cử bắt đầu để bỏ phiếu",
           "choose_a_party": "Chọn một đảng",
           "no_parties_for_election": "Không có đảng nào cho cuộc bầu cử này.",
           "results_title": "Kết quả",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Quét mã QR này để xác minh với Self.",
         "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để thực hiện xác minh.",
-        "supported_countries": "Các quốc gia được hỗ trợ",
         "support_telegram": "Hỗ trợ Self",
-        "confirm_eligibility": "Xác nhận tư cách của bạn",
         "verification_guide": "Hướng dẫn xác minh",
         "qr_alt": "Mã QR xác minh Self",
         "callback_warning": "Cảnh báo",

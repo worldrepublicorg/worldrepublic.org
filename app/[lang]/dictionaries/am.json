@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "የዓለም ሪፓብሊክ",
     "earn": "መገኘት",
     "govern": "መመራት",
     "menu": "ሜኑ"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "መዝገብ",
           "subsidies": "ድጎማዎች",
           "ambassadors": "አምባሳደሮች"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "ፓርቲ አልተገኘም",
         "error_loading": "ፓርቲዎችን መጫን አልተቻለም",
         "refresh": "አድስ",
-        "loading_more": "ተጨማሪ ፓርቲዎች በመጫን ላይ...",
         "party_details": "የፓርቲ ዝርዝሮች",
         "share_party": "ፓርቲ ያጋሩ",
         "my_party": "የእኔ ፓርቲ",
@@ -106,8 +103,6 @@
           "election_info": "የምርጫ መረጃ",
           "reward_pool": "የሽልማት ገንዳ: {amount} WDD",
           "reward_pool_minimum": "የሽልማት ገንዳ: ቢያንስ {amount} WDD",
-          "voting_opens": "ድምጽ መስጫ ይከፈታል {date}",
-          "check_back": "ድምጽዎን ለመስጠት ምርጫው ሲጀምር ተመልሰው ይምጡ",
           "choose_a_party": "ፓርቲ ይምረጡ",
           "no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።",
           "results_title": "ውጤቶች",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "ይህን ኪዩአር ኮድ ይስካኑ በ Self ለማረጋገጥ።",
         "mobile_dialog_description": "በራስ መተግበሪያ ማረጋገጫን ለማጠናቀቅ ተዘልቆ ይሄዳል።",
-        "supported_countries": "የሚደገፉ አገሮች",
         "support_telegram": "Self ድጋፍ",
-        "confirm_eligibility": "ብቁነትዎን ያረጋግጡ",
         "verification_guide": "የማረጋገጫ መመሪያ",
         "qr_alt": "Self ማረጋገጫ QR",
         "callback_warning": "ማስጠንቀቂያ",

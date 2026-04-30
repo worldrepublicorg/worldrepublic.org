@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Dünya Respublikası",
     "earn": "Qazan",
     "govern": "İdarə et",
     "menu": "Menyu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Reyestr",
           "subsidies": "Subsidiyalar",
           "ambassadors": "Səfirlər"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Partiya tapılmadı",
         "error_loading": "Partiyaları yükləmək mümkün olmadı",
         "refresh": "Yenilə",
-        "loading_more": "Daha çox partiya yüklənir...",
         "party_details": "Partiya detalları",
         "share_party": "Partiyanı paylaş",
         "my_party": "Partiyam",
@@ -106,8 +103,6 @@
           "election_info": "Seçki məlumatı",
           "reward_pool": "Mükafat hovuzu: {amount} WDD",
           "reward_pool_minimum": "Mükafat hovuzu: minimum {amount} WDD",
-          "voting_opens": "Səsvermə açılır {date}",
-          "check_back": "Səsinizi vermək üçün seçki başlayanda geri qayıdın",
           "choose_a_party": "Partiya seçin",
           "no_parties_for_election": "Bu seçki üçün partiya yoxdur.",
           "results_title": "Nəticələr",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self ilə təsdiqləmək üçün bu QR kodu skan et.",
         "mobile_dialog_description": "Təsdiqi tamamlamak üçün Self tətbiqinə yönləndiriləcəksiniz.",
-        "supported_countries": "Dəstəklənən ölkələr",
         "support_telegram": "Self dəstəyi",
-        "confirm_eligibility": "Uyğunluğunuzu təsdiqləyin",
         "verification_guide": "Doğrulama təlimatı",
         "qr_alt": "Self doğrulama QR",
         "callback_warning": "Xəbərdarlıq",

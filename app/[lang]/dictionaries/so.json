@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Jamhuuriyadda Adduunka",
     "earn": "Hel",
     "govern": "Maamul",
     "menu": "Liiska"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Diiwaanka",
           "subsidies": "Kaalmada",
           "ambassadors": "Safiirrada"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Ma laha xisbiyo",
         "error_loading": "Ku guuldareystay in la soo raro xisbiyada",
         "refresh": "Cusbooneysii",
-        "loading_more": "Soo dejinaya xisbiyo dheeraad ah...",
         "party_details": "Faahfaahinta xisbiga",
         "share_party": "Wadaag xisbiga",
         "my_party": "Xisbigayga",
@@ -106,8 +103,6 @@
           "election_info": "Macluumaadka doorashada",
           "reward_pool": "Kaydka abaalmarinta: {amount} WDD",
           "reward_pool_minimum": "Kaydka abaalmarinta: ugu yaraan {amount} WDD",
-          "voting_opens": "Codayntu way furantahay {date}",
-          "check_back": "Ka soo noqo marka doorashadu bilaabato si aad u codayso",
           "choose_a_party": "Dooro xisbi",
           "no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan.",
           "results_title": "Natiijoyin",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Sawir QR-kan si aad isaga xaqiijiso adigoo adeegsanaya Self.",
         "mobile_dialog_description": "Waxaa lagu geyn doonaa app-ka Self si aad u dhammaystirto xaqiijinta.",
-        "supported_countries": "Dalalka la taageeray",
         "support_telegram": "Taageerada Self",
-        "confirm_eligibility": "Xaqiiji xaqa aad u leedahay",
         "verification_guide": "Hagaha xaqiijinta",
         "qr_alt": "QR xaqiijinta Self",
         "callback_warning": "Digniin",

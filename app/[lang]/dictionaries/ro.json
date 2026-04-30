@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Republica Mondială",
     "earn": "Câştigă",
     "govern": "Guvernează",
     "menu": "Meniu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registru",
           "subsidies": "Subvenții",
           "ambassadors": "Ambasadori"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nu s-au găsit partide",
         "error_loading": "Nu s-a reușit încărcarea partidelor",
         "refresh": "Actualizează",
-        "loading_more": "Se încarcă mai multe partide...",
         "party_details": "Detalii partid",
         "share_party": "Distribuie partidul",
         "my_party": "Partidul meu",
@@ -106,8 +103,6 @@
           "election_info": "Informații despre alegeri",
           "reward_pool": "Fond de recompense: {amount} WDD",
           "reward_pool_minimum": "Fond de recompense: minim {amount} WDD",
-          "voting_opens": "Votarea se deschide {date}",
-          "check_back": "Reveniți când alegerile încep pentru a vota",
           "choose_a_party": "Alegeți un partid",
           "no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri.",
           "results_title": "Rezultate",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
         "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a efectua verificarea.",
-        "supported_countries": "Țări acceptate",
         "support_telegram": "Suport Self",
-        "confirm_eligibility": "Confirmă-ți eligibilitatea",
         "verification_guide": "Ghid de verificare",
         "qr_alt": "QR de verificare Self",
         "callback_warning": "Avertisment",

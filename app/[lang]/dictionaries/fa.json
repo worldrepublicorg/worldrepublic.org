@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "جمهوری جهانی",
     "earn": "درآمد",
     "govern": "حکومت",
     "menu": "منو"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "دفتر ثبت",
           "subsidies": "یارانه‌ها",
           "ambassadors": "سفیران"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "حزبی یافت نشد",
         "error_loading": "بارگذاری احزاب ناموفق بود",
         "refresh": "تازه کردن",
-        "loading_more": "در حال بارگذاری احزاب بیشتر...",
         "party_details": "جزئیات حزب",
         "share_party": "اشتراک‌گذاری حزب",
         "my_party": "حزب من",
@@ -106,8 +103,6 @@
           "election_info": "اطلاعات انتخابات",
           "reward_pool": "مخزن پاداش: {amount} WDD",
           "reward_pool_minimum": "مخزن پاداش: حداقل {amount} WDD",
-          "voting_opens": "رأی‌گیری باز می‌شود {date}",
-          "check_back": "برای رأی دادن، زمانی که انتخابات شروع شد بازگردید",
           "choose_a_party": "یک حزب انتخاب کنید",
           "no_parties_for_election": "هیچ حزبی برای این انتخابات موجود نیست.",
           "results_title": "نتایج",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "برای تأیید با Self این کد QR را اسکن کنید.",
         "mobile_dialog_description": "برای تکمیل تأیید، به اپلیکیشن Self هدایت می‌شوید.",
-        "supported_countries": "کشورهای پشتیبانی‌شده",
         "support_telegram": "پشتیبانی Self",
-        "confirm_eligibility": "واجد شرایط بودن خود را تأیید کنید",
         "verification_guide": "راهنمای تأیید هویت",
         "qr_alt": "QR تأیید Self",
         "callback_warning": "هشدار",

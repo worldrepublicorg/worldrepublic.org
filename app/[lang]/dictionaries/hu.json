@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Világköztársaság",
     "earn": "Keresés",
     "govern": "Kormányzás",
     "menu": "Menü"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Nyilvántartás",
           "subsidies": "Támogatások",
           "ambassadors": "Nagykövetek"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nem található párt",
         "error_loading": "Hiba történt a pártok betöltésekor",
         "refresh": "Frissítés",
-        "loading_more": "Több párt betöltése...",
         "party_details": "Párt részletei",
         "share_party": "Párt megosztása",
         "my_party": "Pártom",
@@ -106,8 +103,6 @@
           "election_info": "Választási információk",
           "reward_pool": "Jutalmazási alap: {amount} WDD",
           "reward_pool_minimum": "Jutalmazási alap: minimum {amount} WDD",
-          "voting_opens": "Szavazás megnyílik {date}",
-          "check_back": "Térjen vissza, amikor a választás elkezdődik, hogy leadhassa szavazatát",
           "choose_a_party": "Válasszon pártot",
           "no_parties_for_election": "Nincsenek elérhető pártok ehhez a választáshoz.",
           "results_title": "Eredmények",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Olvasd be ezt a QR‑kódot a Selfes ellenőrzéshez.",
         "mobile_dialog_description": "Átirányítunk a Self appba a hitelesítés elvégzéséhez.",
-        "supported_countries": "Támogatott országok",
         "support_telegram": "Self ügyfélszolgálat",
-        "confirm_eligibility": "Erősítsd meg a jogosultságodat",
         "verification_guide": "Hitelesítési útmutató",
         "qr_alt": "Self hitelesítési QR",
         "callback_warning": "Figyelmeztetés",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Repubulika y'Isi",
     "earn": "Kongera",
     "govern": "Genzura",
     "menu": "Ibikubiye"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Igitabo",
           "subsidies": "Inkunga",
           "ambassadors": "Intumwa"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Ntacyo amashyirahamwe babonewe",
         "error_loading": "Kunanirwa gushyira amashyaka",
         "refresh": "Kuvugurura",
-        "loading_more": "Kuzana amashyirahamwe menshi...",
         "party_details": "Incamake y'amashyirahamwe",
         "share_party": "Gusangira amashyirahamwe",
         "my_party": "Amashyirahamwe yanjye",
@@ -106,8 +103,6 @@
           "election_info": "Amakuru y'amatora",
           "reward_pool": "Ikigega cy'ibihembo: {amount} WDD",
           "reward_pool_minimum": "Ikigega cy'ibihembo: byibura {amount} WDD",
-          "voting_opens": "Itora rifungura {date}",
-          "check_back": "Garuka iyo amatora atangiye kugira ngo utore",
           "choose_a_party": "Hitamo ishyaka",
           "no_parties_for_election": "Nta mashyaka aboneka kuri aya matora.",
           "results_title": "Ibisubizo",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Scan uyu kode ya QR kugira ngo wemezwe ukoresheje Self.",
         "mobile_dialog_description": "Uzasubizwa kuri porogaramu ya Self kugira ngo urangize kwemezwa.",
-        "supported_countries": "Ibihugu bishyigikiwe",
         "support_telegram": "Ubafasha bwa Self",
-        "confirm_eligibility": "Emeza ubufite uburenganzira",
         "verification_guide": "Umuyobozi wo kwemeza",
         "qr_alt": "QR yo kwemeza Self",
         "callback_warning": "Umuburo",

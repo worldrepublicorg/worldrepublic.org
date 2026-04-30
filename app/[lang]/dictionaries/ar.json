@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "الجمهورية العالمية",
     "earn": "كسب",
     "govern": "حكم",
     "menu": "القائمة"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "السجل",
           "subsidies": "الإعانات",
           "ambassadors": "السفراء"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "لم يتم العثور على أحزاب",
         "error_loading": "فشل تحميل الأحزاب",
         "refresh": "تحديث",
-        "loading_more": "جاري تحميل المزيد من الأحزاب...",
         "party_details": "تفاصيل الحزب",
         "share_party": "مشاركة الحزب",
         "my_party": "حزبي",
@@ -106,8 +103,6 @@
           "election_info": "معلومات الانتخاب",
           "reward_pool": "مجمع المكافآت: {amount} WDD",
           "reward_pool_minimum": "مجمع المكافآت: بحد أدنى {amount} WDD",
-          "voting_opens": "يفتح التصويت {date}",
-          "check_back": "عد لاحقاً عندما يبدأ الانتخاب للإدلاء بصوتك",
           "choose_a_party": "اختر حزباً",
           "no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب.",
           "results_title": "النتائج",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "امسح رمز الاستجابة السريعة هذا للتحقق عبر Self.",
         "mobile_dialog_description": "سيتم إعادة توجيهك إلى تطبيق Self لإكمال التحقق.",
-        "supported_countries": "الدول المدعومة",
         "support_telegram": "دعم Self",
-        "confirm_eligibility": "أكّد أهليتك",
         "verification_guide": "دليل التحقق",
         "qr_alt": "رمز QR للتحقق من Self",
         "callback_warning": "تحذير",

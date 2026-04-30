@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "សាធារណរដ្ឋពិភពលោក",
     "earn": "រកប្រាក់",
     "govern": "គ្រប់គ្រង",
     "menu": "ម៉ឺនុយ"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "បញ្ជី",
           "subsidies": "ប្រាក់ឧបត្ថម្ភ",
           "ambassadors": "អ្នកតំណាង"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "រកមិនឃើញគណបក្ស",
         "error_loading": "បរាជ័យក្នុងការផ្ទុកគណបក្ស",
         "refresh": "Refresh",
-        "loading_more": "កំពុងផ្ទុកគណបក្សបន្ថែម...",
         "party_details": "ព័ត៌មានលម្អិតគណបក្ស",
         "share_party": "ចែករំលែកគណបក្ស",
         "my_party": "គណបក្សរបស់ខ្ញុំ",
@@ -106,8 +103,6 @@
           "election_info": "ព័ត៌មានការបោះឆ្នោត",
           "reward_pool": "មូលនិធិរង្វាន់: {amount} WDD",
           "reward_pool_minimum": "មូលនិធិរង្វាន់: អប្បបរមា {amount} WDD",
-          "voting_opens": "ការបោះឆ្នោតបើក {date}",
-          "check_back": "សូមត្រឡប់មកវិញពេលការបោះឆ្នោតចាប់ផ្តើមដើម្បីបោះឆ្នោតរបស់អ្នក",
           "choose_a_party": "ជ្រើសរើសគណបក្ស",
           "no_parties_for_election": "មិនមានគណបក្សសម្រាប់ការបោះឆ្នោតនេះទេ។",
           "results_title": "លត្ឋផល",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "ស្កេនកូដ QR នេះ ដើម្បីផ្ទៀងផ្ទាត់ដោយ Self។",
         "mobile_dialog_description": "អ្នកនឹងត្រូវប្តូរទិសទៅកាន់កម្មវិធី Self ដើម្បីបញ្ចប់ការផ្ទៀងផ្ទាត់។",
-        "supported_countries": "ប្រទេសដែលគាំទ្រ",
         "support_telegram": "ការគាំទ្រ Self",
-        "confirm_eligibility": "បញ្ជាក់សិទ្ធិរបស់អ្នក",
         "verification_guide": "មគ្គុទ្ទេសក៍ការផ្ទៀងផ្ទាត់",
         "qr_alt": "QR ផ្ទៀងផ្ទាត់ Self",
         "callback_warning": "ការព្រមាន",

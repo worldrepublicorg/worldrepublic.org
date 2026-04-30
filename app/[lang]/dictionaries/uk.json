@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Світова Республіка",
     "earn": "Заробляти",
     "govern": "Керувати",
     "menu": "Меню"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Реєстр",
           "subsidies": "Субсидії",
           "ambassadors": "Амбасадори"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Партії не знайдено",
         "error_loading": "Не вдалося завантажити партії",
         "refresh": "Оновити",
-        "loading_more": "Завантаження додаткових партій...",
         "party_details": "Деталі партії",
         "share_party": "Поділитися партією",
         "my_party": "Моя партія",
@@ -106,8 +103,6 @@
           "election_info": "Інформація про вибори",
           "reward_pool": "Призовий фонд: {amount} WDD",
           "reward_pool_minimum": "Призовий фонд: мінімум {amount} WDD",
-          "voting_opens": "Голосування відкривається {date}",
-          "check_back": "Поверніться, коли вибори розпочнуться, щоб проголосувати",
           "choose_a_party": "Оберіть партію",
           "no_parties_for_election": "Для цих виборів немає доступних партій.",
           "results_title": "Результати",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Скануйте цей QR‑код, щоб пройти верифікацію через Self.",
         "mobile_dialog_description": "Вас буде перенаправлено до застосунку Self, щоб пройти верифікацію.",
-        "supported_countries": "Підтримувані країни",
         "support_telegram": "Підтримка Self",
-        "confirm_eligibility": "Підтвердіть свою правомочність",
         "verification_guide": "Посібник з верифікації",
         "qr_alt": "QR-код верифікації Self",
         "callback_warning": "Попередження",

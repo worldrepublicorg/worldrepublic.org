@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Световна република",
     "earn": "Печелете",
     "govern": "Управлявайте",
     "menu": "Меню"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Регистър",
           "subsidies": "Субсидии",
           "ambassadors": "Посланици"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Не са намерени партии",
         "error_loading": "Неуспешно зареждане на партиите",
         "refresh": "Обнови",
-        "loading_more": "Зареждане на още партии...",
         "party_details": "Детайли на партията",
         "share_party": "Сподели партия",
         "my_party": "Моята партия",
@@ -106,8 +103,6 @@
           "election_info": "Информация за изборите",
           "reward_pool": "Награден фонд: {amount} WDD",
           "reward_pool_minimum": "Награден фонд: минимум {amount} WDD",
-          "voting_opens": "Гласуването отваря {date}",
-          "check_back": "Върнете се, когато изборите започнат, за да гласувате",
           "choose_a_party": "Изберете партия",
           "no_parties_for_election": "Няма налични партии за тези избори.",
           "results_title": "Резултати",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Сканирайте този QR код, за да се верифицирате чрез Self.",
         "mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да извършите верификацията.",
-        "supported_countries": "Поддържани държави",
         "support_telegram": "Поддръжка на Self",
-        "confirm_eligibility": "Потвърдете допустимостта си",
         "verification_guide": "Ръководство за проверка",
         "qr_alt": "QR код за Self проверка",
         "callback_warning": "Предупреждение",

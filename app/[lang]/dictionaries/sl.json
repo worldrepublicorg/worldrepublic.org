@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Svetovna republika",
     "earn": "Zasluži",
     "govern": "Upravljaj",
     "menu": "Meni"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Register",
           "subsidies": "Subvencije",
           "ambassadors": "Ambasadorji"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Stranke niso najdene",
         "error_loading": "Ni bilo mogoče naložiti strank",
         "refresh": "Osveži",
-        "loading_more": "Nalaganje več strank...",
         "party_details": "Podrobnosti stranke",
         "share_party": "Deli stranko",
         "my_party": "Moja stranka",
@@ -106,8 +103,6 @@
           "election_info": "Informacije o volitvah",
           "reward_pool": "Sklad nagrad: {amount} WDD",
           "reward_pool_minimum": "Sklad nagrad: najmanj {amount} WDD",
-          "voting_opens": "Glasovanje se odpre {date}",
-          "check_back": "Vrnite se, ko se volitve začnejo, da oddate svoj glas",
           "choose_a_party": "Izberite stranko",
           "no_parties_for_election": "Za te volitve ni na voljo nobena stranka.",
           "results_title": "Rezultati",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Skenirajte to kodo QR za preverjanje s Self.",
         "mobile_dialog_description": "Preusmerjeni boste v aplikacijo Self, da opravite preverjanje.",
-        "supported_countries": "Podprte države",
         "support_telegram": "Podpora Self",
-        "confirm_eligibility": "Potrdite svojo upravičenost",
         "verification_guide": "Vodnik za preverjanje",
         "qr_alt": "QR za preverjanje Self",
         "callback_warning": "Opozorilo",

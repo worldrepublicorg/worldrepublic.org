@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Ìjọba Àpapọ̀ Ayé",
     "earn": "Gba owo",
     "govern": "Ṣakoso",
     "menu": "Akojọ"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Iwe Iforukosile",
           "subsidies": "Owo Iranlowo",
           "ambassadors": "Aṣojú"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Ko ri awọn ẹgbẹ",
         "error_loading": "Ikuna lati gbe awọn ẹgbẹ",
         "refresh": "Sọ dọtun",
-        "loading_more": "N gbe awọn ẹgbẹ siwaju sii...",
         "party_details": "Awọn alaye ẹgbẹ",
         "share_party": "Pin ẹgbẹ",
         "my_party": "Ẹgbẹ mi",
@@ -106,8 +103,6 @@
           "election_info": "Àlàyé ìdìbò",
           "reward_pool": "Adágún ẹ̀bùn: {amount} WDD",
           "reward_pool_minimum": "Adágún ẹ̀bùn: o kere ju {amount} WDD",
-          "voting_opens": "Ìdìbò ń ṣí {date}",
-          "check_back": "Padà wá nígbà tí ìdìbò bá bẹ̀rẹ̀ láti dìbò",
           "choose_a_party": "Yan ẹgbẹ́ kan",
           "no_parties_for_election": "Kò sí ẹgbẹ́ tó wà fún ìdìbò yìí.",
           "results_title": "Àwọn àbájáde",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Ṣàyẹ̀wò kóòdù QR yìí láti fọwọsi pẹ̀lú Self.",
         "mobile_dialog_description": "A ó yí ọ lọ sí app Self láti parí ìfọwọsi.",
-        "supported_countries": "Àwọn orílẹ̀-èdè tí a ń ṣe àtìlẹ́yìn",
         "support_telegram": "Ìtìlẹ́yìn Self",
-        "confirm_eligibility": "Jẹ́rìísí ẹ̀tọ́ rẹ",
         "verification_guide": "Ìtọ́sọ́nà ìjẹ́rìísí",
         "qr_alt": "QR ìjẹ́rìísí Self",
         "callback_warning": "Ìkìlọ̀",

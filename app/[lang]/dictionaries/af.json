@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Wêreldrepubliek",
     "earn": "Verdien",
     "govern": "Bestuur",
     "menu": "Spyskaart"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Register",
           "subsidies": "Subsidies",
           "ambassadors": "Ambassadeurs"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Geen partye gevind nie",
         "error_loading": "Kon nie partye laai nie",
         "refresh": "Verfris",
-        "loading_more": "Laai meer partye...",
         "party_details": "Party besonderhede",
         "share_party": "Deel party",
         "my_party": "My party",
@@ -106,8 +103,6 @@
           "election_info": "Verkiesingsinligting",
           "reward_pool": "Beloningspoel: {amount} WDD",
           "reward_pool_minimum": "Beloningspoel: minimum {amount} WDD",
-          "voting_opens": "Stemming open {date}",
-          "check_back": "Kom terug wanneer die verkiesing begin om jou stem uit te bring",
           "choose_a_party": "Kies 'n party",
           "no_parties_for_election": "Geen partye beskikbaar vir hierdie verkiesing nie.",
           "results_title": "Resultate",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Skandeer hierdie QR-kode om met Self te verifieer.",
         "mobile_dialog_description": "Jy sal na die Self-app herlei word om verifikasie te voltooi.",
-        "supported_countries": "Ondersteunde lande",
         "support_telegram": "Self Ondersteuning",
-        "confirm_eligibility": "Bevestig jou geskiktheid",
         "verification_guide": "Verifikasiegids",
         "qr_alt": "Self-verifikasie QR",
         "callback_warning": "Waarskuwing",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "विश्व गणराज्य",
     "earn": "कमाएं",
     "govern": "शासन",
     "menu": "मेनू"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "पंजी",
           "subsidies": "अनुदान",
           "ambassadors": "राजदूत"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "कोई दल नहीं मिला",
         "error_loading": "पार्टियां लोड करने में विफल",
         "refresh": "ताज़ा करें",
-        "loading_more": "अधिक दल लोड हो रहे हैं...",
         "party_details": "दल विवरण",
         "share_party": "दल साझा करें",
         "my_party": "मेरा दल",
@@ -106,8 +103,6 @@
           "election_info": "चुनाव जानकारी",
           "reward_pool": "इनाम पूल: {amount} WDD",
           "reward_pool_minimum": "इनाम पूल: न्यूनतम {amount} WDD",
-          "voting_opens": "मतदान खुलता है {date}",
-          "check_back": "अपना वोट डालने के लिए चुनाव शुरू होने पर वापस आएँ",
           "choose_a_party": "एक पार्टी चुनें",
           "no_parties_for_election": "इस चुनाव के लिए कोई पार्टी उपलब्ध नहीं है।",
           "results_title": "परिणाम",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "इस क्यूआर कोड को स्कैन करके Self पर वेरिफाई करें।",
         "mobile_dialog_description": "सत्यापन पूरा करने के लिए आपको Self ऐप पर भेजा जाएगा।",
-        "supported_countries": "समर्थित देश",
         "support_telegram": "Self सहायता",
-        "confirm_eligibility": "अपनी पात्रता की पुष्टि करें",
         "verification_guide": "सत्यापन गाइड",
         "qr_alt": "Self सत्यापन QR",
         "callback_warning": "चेतावनी",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "વિશ્વ ગણરાજ્ય",
     "earn": "કમાવો",
     "govern": "શાસન કરો",
     "menu": "મેનુ"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "રજિસ્ટ્રી",
           "subsidies": "સબસિડી",
           "ambassadors": "રાજદૂત"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "કોઈ પક્ષ મળ્યા નથી",
         "error_loading": "પક્ષો લોડ કરવામાં નિષ્ફળ",
         "refresh": "રીફ્રેશ",
-        "loading_more": "વધુ પક્ષો લોડ થઈ રહ્યા છે...",
         "party_details": "પક્ષ વિગતો",
         "share_party": "પક્ષ શેર કરો",
         "my_party": "મારો પક્ષ",
@@ -106,8 +103,6 @@
           "election_info": "ચૂંટણી માહિતી",
           "reward_pool": "ઈનામ પૂલ: {amount} WDD",
           "reward_pool_minimum": "ઈનામ પૂલ: લઘુત્તમ {amount} WDD",
-          "voting_opens": "મતદાન ખુલશે {date}",
-          "check_back": "તમારો મત આપવા માટે ચૂંટણી શરૂ થાય ત્યારે પાછા આવો",
           "choose_a_party": "પક્ષ પસંદ કરો",
           "no_parties_for_election": "આ ચૂંટણી માટે કોઈ પક્ષ ઉપલબ્ધ નથી.",
           "results_title": "પરિણામો",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Self સાથે ચકાસવા માટે આ QR કોડ સ્કેન કરો.",
         "mobile_dialog_description": "ચકાસણી પૂર્ણ કરવા તમને Self એપ પર મોકલવામાં આવશે.",
-        "supported_countries": "સમર્થિત દેશો",
         "support_telegram": "Self સપોર્ટ",
-        "confirm_eligibility": "તમારી પાત્રતાની પુષ્ટિ કરો",
         "verification_guide": "ચકાસણી માર્ગદર્શિકા",
         "qr_alt": "Self ચકાસણી QR",
         "callback_warning": "ચેતવણી",

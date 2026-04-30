@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Republik Dunia",
     "earn": "Pendapatan",
     "govern": "Tata kelola",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registri",
           "subsidies": "Subsidi",
           "ambassadors": "Duta"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Tidak ada partai ditemukan",
         "error_loading": "Gagal memuat partai",
         "refresh": "Segarkan",
-        "loading_more": "Memuat lebih banyak partai...",
         "party_details": "Detail partai",
         "share_party": "Bagikan partai",
         "my_party": "Partai saya",
@@ -106,8 +103,6 @@
           "election_info": "Info pemilihan",
           "reward_pool": "Kumpulan hadiah: {amount} WDD",
           "reward_pool_minimum": "Kumpulan hadiah: minimal {amount} WDD",
-          "voting_opens": "Pemungutan suara dibuka {date}",
-          "check_back": "Kembali saat pemilihan dimulai untuk memberikan suara Anda",
           "choose_a_party": "Pilih partai",
           "no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini.",
           "results_title": "Hasil",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Pindai kode QR ini untuk verifikasi dengan Self.",
         "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melakukan verifikasi.",
-        "supported_countries": "Negara yang didukung",
         "support_telegram": "Dukungan Self",
-        "confirm_eligibility": "Konfirmasi kelayakan Anda",
         "verification_guide": "Panduan verifikasi",
         "qr_alt": "QR verifikasi Self",
         "callback_warning": "Peringatan",

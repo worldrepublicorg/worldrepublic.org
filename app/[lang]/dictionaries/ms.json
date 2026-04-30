@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Republik Dunia",
     "earn": "Pendapatan",
     "govern": "Tadbir urus",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Daftar",
           "subsidies": "Subsidi",
           "ambassadors": "Duta"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Tiada parti ditemui",
         "error_loading": "Gagal memuatkan parti",
         "refresh": "Muat semula",
-        "loading_more": "Memuatkan lebih banyak parti...",
         "party_details": "Butiran parti",
         "share_party": "Kongsi parti",
         "my_party": "Parti saya",
@@ -106,8 +103,6 @@
           "election_info": "Maklumat pilihan raya",
           "reward_pool": "Kumpulan ganjaran: {amount} WDD",
           "reward_pool_minimum": "Kumpulan ganjaran: minimum {amount} WDD",
-          "voting_opens": "Pengundian dibuka {date}",
-          "check_back": "Kembali apabila pilihan raya bermula untuk mengundi",
           "choose_a_party": "Pilih parti",
           "no_parties_for_election": "Tiada parti tersedia untuk pilihan raya ini.",
           "results_title": "Keputusan",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Imbas kod QR ini untuk mengesahkan dengan Self.",
         "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melengkapkan pengesahan.",
-        "supported_countries": "Negara yang disokong",
         "support_telegram": "Sokongan Self",
-        "confirm_eligibility": "Sahkan kelayakan anda",
         "verification_guide": "Panduan pengesahan",
         "qr_alt": "QR pengesahan Self",
         "callback_warning": "Amaran",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Jamhuriyar Duniya",
     "earn": "Samu",
     "govern": "Mulki",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Rijista",
           "subsidies": "Tallafi",
           "ambassadors": "Jakadu"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Ba a sami jam'iyyu ba",
         "error_loading": "An kasa loda jam'iyyu",
         "refresh": "Sabunta",
-        "loading_more": "Ana lodawa ƙarin jam'iyyu...",
         "party_details": "Cikakkun bayanai na jam'iyya",
         "share_party": "Raba jam'iyya",
         "my_party": "Jam'iyyata",
@@ -106,8 +103,6 @@
           "election_info": "Bayanan zaɓe",
           "reward_pool": "Tafkin lada: {amount} WDD",
           "reward_pool_minimum": "Tafkin lada: mafi karanci {amount} WDD",
-          "voting_opens": "Jefa ƙuri'a ya buɗe {date}",
-          "check_back": "Ku dawo lokacin da zaɓe ya fara don jefa ƙuri'arku",
           "choose_a_party": "Zaɓi jam'iyya",
           "no_parties_for_election": "Babu jam'iyyun da ke samuwa don wannan zaɓe.",
           "results_title": "Sakamako",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Duba wannan lambar QR don tabbatarwa ta Self.",
         "mobile_dialog_description": "Za a mayar da kai zuwa manhajar Self don kammala tantancewa.",
-        "supported_countries": "Kasashen da ake tallafawa",
         "support_telegram": "Tallafin Self",
-        "confirm_eligibility": "Tabbatar da cancantarku",
         "verification_guide": "Jagorar tabbatarwa",
         "qr_alt": "QR na tabbatar da Self",
         "callback_warning": "Gargadi",

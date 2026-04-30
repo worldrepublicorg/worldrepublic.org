@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Ripùblica Mundiale",
     "earn": "Guadagnà",
     "govern": "Guvernà",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registru",
           "subsidies": "Sannzi",
           "ambassadors": "Ambasciatori"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nisun partitu truvatu",
         "error_loading": "Fiascu in u caricamentu di i partiti",
         "refresh": "Agghjurnà",
-        "loading_more": "Caricamentu di più partiti...",
         "party_details": "Dettagli di u partitu",
         "share_party": "Cundivide u partitu",
         "my_party": "U mo partitu",
@@ -106,8 +103,6 @@
           "election_info": "Infurmazione nant'à l'elezzione",
           "reward_pool": "Fondu di ricumpensa: {amount} WDD",
           "reward_pool_minimum": "Fondu di ricumpensa: minimu {amount} WDD",
-          "voting_opens": "U votu s'apre {date}",
-          "check_back": "Tornate quandu l'elezzione cumencia per vutà",
           "choose_a_party": "Sceglie un partitu",
           "no_parties_for_election": "Nisun partitu dispunibule per questa elezzione.",
           "results_title": "Risultati",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Scansate stu codice QR per verificà cù Self.",
         "mobile_dialog_description": "Sarete reindirizzatu à l’app Self per compie a verificazione.",
-        "supported_countries": "Paesi supportati",
         "support_telegram": "Supportu Self",
-        "confirm_eligibility": "Cunfirmate a vostra eligibilità",
         "verification_guide": "Guida di verificazione",
         "qr_alt": "QR di verificazione Self",
         "callback_warning": "Avvertimentu",

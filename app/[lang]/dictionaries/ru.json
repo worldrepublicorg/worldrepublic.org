@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Всемирная Республика",
     "earn": "Зарабатывать",
     "govern": "Управление",
     "menu": "Меню"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Реестр",
           "subsidies": "Субсидии",
           "ambassadors": "Амбассадоры"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Партии не найдены",
         "error_loading": "Не удалось загрузить партии",
         "refresh": "Обновить",
-        "loading_more": "Загрузка дополнительных партий...",
         "party_details": "Детали партии",
         "share_party": "Поделиться партией",
         "my_party": "Моя партия",
@@ -106,8 +103,6 @@
           "election_info": "Информация о выборах",
           "reward_pool": "Призовой фонд: {amount} WDD",
           "reward_pool_minimum": "Призовой фонд: минимум {amount} WDD",
-          "voting_opens": "Голосование открывается {date}",
-          "check_back": "Вернитесь, когда выборы начнутся, чтобы проголосовать",
           "choose_a_party": "Выберите партию",
           "no_parties_for_election": "Нет доступных партий для этих выборов.",
           "results_title": "Результаты",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Отсканируйте этот QR‑код, чтобы пройти проверку через Self.",
         "mobile_dialog_description": "Вы будете перенаправлены в приложение Self, чтобы пройти проверку.",
-        "supported_countries": "Поддерживаемые страны",
         "support_telegram": "Поддержка Self",
-        "confirm_eligibility": "Подтвердите вашу правомочность",
         "verification_guide": "Руководство по верификации",
         "qr_alt": "QR-код верификации Self",
         "callback_warning": "Предупреждение",

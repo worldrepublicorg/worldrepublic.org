@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Republika Światowa",
     "earn": "Zarabiaj",
     "govern": "Rządzenie",
     "menu": "Menu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Rejestr",
           "subsidies": "Dotacje",
           "ambassadors": "Ambasadorzy"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Nie znaleziono partii",
         "error_loading": "Nie udało się załadować partii",
         "refresh": "Odśwież",
-        "loading_more": "Ładowanie więcej partii...",
         "party_details": "Szczegóły partii",
         "share_party": "Udostępnij partię",
         "my_party": "Moja partia",
@@ -106,8 +103,6 @@
           "election_info": "Informacje o wyborach",
           "reward_pool": "Pula nagród: {amount} WDD",
           "reward_pool_minimum": "Pula nagród: minimum {amount} WDD",
-          "voting_opens": "Głosowanie otwiera się {date}",
-          "check_back": "Wróć, gdy wybory się rozpoczną, aby oddać głos",
           "choose_a_party": "Wybierz partię",
           "no_parties_for_election": "Brak dostępnych partii dla tych wyborów.",
           "results_title": "Wyniki",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Zeskanuj ten kod QR, aby zweryfikować się w Self.",
         "mobile_dialog_description": "Zostaniesz przekierowany do aplikacji Self, aby przejść weryfikację.",
-        "supported_countries": "Obsługiwane kraje",
         "support_telegram": "Wsparcie Self",
-        "confirm_eligibility": "Potwierdź swoją kwalifikowalność",
         "verification_guide": "Przewodnik weryfikacji",
         "qr_alt": "QR weryfikacji Self",
         "callback_warning": "Ostrzeżenie",

@@ -1,6 +1,5 @@
 {
   "nav": {
-    "world_republic": "Pasaulio Respublika",
     "earn": "Uždirbti",
     "govern": "Valdyti",
     "menu": "Meniu"
@@ -34,7 +33,6 @@
       },
       "parties": {
         "tabs": {
-          "registry": "Registras",
           "subsidies": "Subsidijos",
           "ambassadors": "Ambasadoriai"
         },
@@ -43,7 +41,6 @@
         "no_parties_found": "Partijų nerasta",
         "error_loading": "Nepavyko įkelti partijų",
         "refresh": "Atnaujinti",
-        "loading_more": "Įkeliama daugiau partijų...",
         "party_details": "Partijos detalės",
         "share_party": "Dalintis partija",
         "my_party": "Mano partija",
@@ -106,8 +103,6 @@
           "election_info": "Rinkimų informacija",
           "reward_pool": "Atlygio fondas: {amount} WDD",
           "reward_pool_minimum": "Atlygio fondas: mažiausiai {amount} WDD",
-          "voting_opens": "Balsavimas prasideda {date}",
-          "check_back": "Grįžkite, kai rinkimai prasidės, kad galėtumėte balsuoti",
           "choose_a_party": "Pasirinkite partiją",
           "no_parties_for_election": "Šiems rinkimams nėra prieinamų partijų.",
           "results_title": "Rezultatai",
@@ -309,9 +304,7 @@
       "self": {
         "dialog_description": "Nuskenuokite šį QR kodą, kad patvirtintumėte su Self.",
         "mobile_dialog_description": "Būsite nukreipti į Self programėlę, kad užbaigtumėte patvirtinimą.",
-        "supported_countries": "Palaikomos šalys",
         "support_telegram": "Self palaikymas",
-        "confirm_eligibility": "Patvirtinkite savo tinkamumą",
         "verification_guide": "Patvirtinimo vadovas",
         "qr_alt": "Self patvirtinimo QR",
         "callback_warning": "Įspėjimas",
