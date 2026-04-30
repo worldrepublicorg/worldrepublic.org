@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "L'elezione inizia presto",
         "test_verification": {
-          "description": "Prova subito il nostro sistema di verifica dell'identità per essere pronto al voto",
+          "description": "Prova subito il nostro sistema di verifica per essere pronto al voto",
           "button": "Test"
         }
       },

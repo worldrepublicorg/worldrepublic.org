@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "Seçim yakında başlıyor",
         "test_verification": {
-          "description": "Oylamaya hazır olmak için kimlik doğrulama sistemimizi şimdi deneyin",
+          "description": "Oylamaya hazır olmak için doğrulama sistemimizi şimdi deneyin",
           "button": "Test"
         }
       },

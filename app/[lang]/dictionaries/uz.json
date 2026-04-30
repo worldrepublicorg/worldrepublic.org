@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "Saylov tez orada boshlanadi",
         "test_verification": {
-          "description": "Ovoz berishga tayyor bo'lish uchun shaxsni tasdiqlash tizimimizni hoziroq sinab ko'ring",
+          "description": "Ovoz berishga tayyor bo'lish uchun tasdiqlash tizimimizni hoziroq sinab ko'ring",
           "button": "Sinov"
         }
       },

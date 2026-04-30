@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "Vēlēšanas drīz sāksies",
         "test_verification": {
-          "description": "Izmēģiniet mūsu identitātes pārbaudes sistēmu tagad, lai būtu gatavi balsošanai",
+          "description": "Izmēģiniet mūsu pārbaudes sistēmu tagad, lai būtu gatavi balsošanai",
           "button": "Tests"
         }
       },

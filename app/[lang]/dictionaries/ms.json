@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "Pilihan raya bermula tidak lama lagi",
         "test_verification": {
-          "description": "Cuba sistem pengesahan identiti kami sekarang untuk bersedia untuk mengundi",
+          "description": "Cuba sistem pengesahan kami sekarang untuk bersedia untuk mengundi",
           "button": "Uji"
         }
       },

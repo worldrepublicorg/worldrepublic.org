@@ -28,7 +28,7 @@
       "vote": {
         "no_active_election": "Voľby čoskoro začnú",
         "test_verification": {
-          "description": "Vyskúšajte náš systém overovania totožnosti už teraz, aby ste boli pripravení na hlasovanie",
+          "description": "Vyskúšajte náš systém overovania už teraz, aby ste boli pripravení na hlasovanie",
           "button": "Test"
         }
       },
