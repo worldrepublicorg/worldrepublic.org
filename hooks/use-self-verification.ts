@@ -23,27 +23,8 @@ interface UseSelfVerificationOptions {
 const ACCOUNT_VERIFICATION_ORIGIN = "https://www.worldrepublic.org";
 const VOTE_VERIFICATION_ORIGIN = "https://www.worldrepublic.org";
 
-const resolveCallbackUrl = (lang: string | undefined): string | null => {
-  if (typeof window === "undefined") return null;
-
-  const hostname = window.location.hostname;
-  const isLocal =
-    hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
-
-  if (isLocal) {
-    const publicBase = process.env.NEXT_PUBLIC_PUBLIC_BASE_URL; // e.g. https://your-tunnel-domain
-    if (publicBase) return `${publicBase.replace(/\/$/, "")}/self/callback`;
-    return null; // cannot produce a reachable callback from a phone without a tunnel
-  }
-
-  // Prefer locale-scoped callback to avoid redirection by i18n middleware
-  const locale = lang || "en";
-  return `${window.location.origin}/${locale}/self/callback`;
-};
-
 export function useSelfVerification(
   userId: string | null,
-  lang: string | undefined,
   partyId?: string,
   electionId?: string,
   options?: UseSelfVerificationOptions,
@@ -70,16 +51,8 @@ export function useSelfVerification(
         setIsLoading(false);
         return;
       }
-      const callback = resolveCallbackUrl(lang);
+      const deeplinkCallback = window.location.href;
       const mode = options?.mode ?? "vote";
-      const nextTarget = `/${lang || "en"}/menu/wallet`;
-
-      if (!callback) {
-        setCallbackReachable(false);
-        setUniversalLink(null);
-        setIsLoading(false);
-        return;
-      }
 
       setCallbackReachable(true);
 
@@ -141,10 +114,6 @@ export function useSelfVerification(
         const scope =
           mode === "account" ? "world-republic-account" : "world-republic";
         const userIdType = "uuid";
-        const deeplinkCallback =
-          mode === "account"
-            ? `${callback}?next=${encodeURIComponent(nextTarget)}`
-            : callback;
 
         type SelfAppCtor = new (
           config: Record<string, unknown>,
@@ -185,7 +154,7 @@ export function useSelfVerification(
       }
     };
     init();
-  }, [userId, lang, partyId, electionId, options?.mode]);
+  }, [userId, partyId, electionId, options?.mode]);
 
   useEffect(() => {
     if (typeof navigator === "undefined") return;

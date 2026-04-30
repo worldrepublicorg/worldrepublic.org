@@ -10,7 +10,6 @@ import {
   Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   PiArrowSquareOut,
@@ -51,7 +50,6 @@ export function SelfVerificationDialog({
   mode = "vote",
 }: SelfVerificationDialogProps) {
   const [step, setStep] = useState<"primer" | "verification">("primer");
-  const { lang } = useParams<{ lang: string }>();
   const {
     selfApp,
     SelfQRcodeWrapperCmp,
@@ -60,7 +58,7 @@ export function SelfVerificationDialog({
     callbackReachable,
     isLoading,
     isMobile,
-  } = useSelfVerification(userId, lang, partyId, electionId, { mode });
+  } = useSelfVerification(userId, partyId, electionId, { mode });
   const completionHandledRef = useRef(false);
   const primerOpen = open && step === "primer";
   const verificationOpen = open && step === "verification";
