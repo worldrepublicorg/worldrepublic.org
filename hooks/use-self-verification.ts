@@ -25,11 +25,6 @@ const VOTE_VERIFICATION_ORIGIN = "https://www.worldrepublic.org";
 
 const resolveCallbackUrl = (lang: string | undefined): string | null => {
   if (typeof window === "undefined") return null;
-  const envCallback = process.env.NEXT_PUBLIC_SELF_CALLBACK;
-  if (envCallback) {
-    const locale = lang || "en";
-    return envCallback.replace("{lang}", locale);
-  }
 
   const hostname = window.location.hostname;
   const isLocal =
