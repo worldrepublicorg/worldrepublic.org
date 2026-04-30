@@ -9,7 +9,8 @@ import {
   transactions,
   votes,
 } from "../db/schema";
-import { STREAM_DURATION_S } from "../streams";
+
+const STREAM_DURATION_S = 365 * 24 * 3600;
 
 type Schema = typeof schemaImport;
 // biome-ignore lint/suspicious/noExplicitAny: Supports both postgres-js, neon-serverless, and neon-http drivers
