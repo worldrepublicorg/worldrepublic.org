@@ -4,37 +4,16 @@ import { Typography } from "@worldcoin/mini-apps-ui-kit-react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionCard } from "@/components/govern/election-card";
 import { ElectionHeroCard } from "@/components/govern/election-hero-card";
+import {
+  isElectionActive,
+  pickFeaturedElection,
+} from "@/lib/featured-election";
 import type { Election } from "@/lib/types/elections";
 
 interface ElectionsListProps {
   elections: Election[];
   lang: string;
   dictionary: Dictionary;
-}
-
-/**
- * Pick the most important election for the hero card.
- * Priority: active > soonest upcoming > most recently ended.
- */
-function pickHeroElection(elections: Election[]): Election | null {
-  if (elections.length === 0) return null;
-
-  const now = Date.now();
-
-  const active = elections.filter((e) => now >= e.startsAt && now <= e.endsAt);
-  if (active.length > 0) {
-    // Pick the one ending soonest
-    return active.sort((a, b) => a.endsAt - b.endsAt)[0];
-  }
-
-  const upcoming = elections.filter((e) => now < e.startsAt);
-  if (upcoming.length > 0) {
-    // Pick the one starting soonest
-    return upcoming.sort((a, b) => a.startsAt - b.startsAt)[0];
-  }
-
-  // All ended — pick the most recently ended
-  return elections.sort((a, b) => b.endsAt - a.endsAt)[0];
 }
 
 export function ElectionsList({
@@ -54,7 +33,7 @@ export function ElectionsList({
   }
 
   // Hero card layout for all cases
-  const heroElection = pickHeroElection(elections);
+  const heroElection = pickFeaturedElection(elections);
   const remaining = heroElection
     ? elections.filter((e) => e.id !== heroElection.id)
     : [];
@@ -63,9 +42,7 @@ export function ElectionsList({
   const upcomingElections = remaining
     .filter((e) => now < e.startsAt)
     .sort((a, b) => a.startsAt - b.startsAt);
-  const activeElections = remaining.filter(
-    (e) => now >= e.startsAt && now <= e.endsAt,
-  );
+  const activeElections = remaining.filter((e) => isElectionActive(e, now));
   const endedElections = remaining.filter((e) => now > e.endsAt);
 
   return (
