@@ -33,19 +33,6 @@ export function markActiveElectionSeen(activeElectionId: string | null) {
   }
 }
 
-export function getLastSeenActiveElectionId(): string | null {
-  return readLastSeenActiveElectionId();
-}
-
 export function getGovernReminderStorageKey(): string {
   return GOVERN_LAST_SEEN_ACTIVE_ELECTION_KEY;
-}
-
-export function clearSeenActiveElection() {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.removeItem(GOVERN_LAST_SEEN_ACTIVE_ELECTION_KEY);
-  } catch {
-    // ignore localStorage failures
-  }
 }

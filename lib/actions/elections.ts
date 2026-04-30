@@ -137,21 +137,6 @@ export async function getElectionDetail(
 }
 
 /**
- * Get the ID of the featured election (most important one).
- * Priority: active > soonest upcoming > most recently ended.
- */
-export async function getFeaturedElectionId(): Promise<string | null> {
-  try {
-    const elections = await getElections();
-    const featured = pickFeaturedElection(elections);
-    return featured?.id ?? null;
-  } catch (error) {
-    console.error("Error fetching featured election ID:", error);
-    return null;
-  }
-}
-
-/**
  * Get the ID of the active election ending soonest.
  * Returns null when there is no active election.
  */
