@@ -114,8 +114,7 @@
           "vote_singular": "voto",
           "vote_plural": "voti",
           "no_votes": "Nessun voto è stato espresso in questa elezione.",
-          "test_election_name": "Elezione di prova {n}",
-          "try_verification": "Prova la verifica"
+          "test_election_name": "Elezione di prova {n}"
         },
         "list": {
           "empty_state": "Nessuna elezione trovata",

@@ -114,8 +114,7 @@
           "vote_singular": "票",
           "vote_plural": "票",
           "no_votes": "この選挙では投票がありませんでした。",
-          "test_election_name": "テスト選挙 {n}",
-          "try_verification": "認証を試す"
+          "test_election_name": "テスト選挙 {n}"
         },
         "list": {
           "empty_state": "選挙が見つかりませんでした",

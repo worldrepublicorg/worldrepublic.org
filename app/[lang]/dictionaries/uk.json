@@ -114,8 +114,7 @@
           "vote_singular": "голос",
           "vote_plural": "голосів",
           "no_votes": "У цих виборах не було подано голосів.",
-          "test_election_name": "Тестові вибори {n}",
-          "try_verification": "Спробувати верифікацію"
+          "test_election_name": "Тестові вибори {n}"
         },
         "list": {
           "empty_state": "Виборів не знайдено",

@@ -114,8 +114,7 @@
           "vote_singular": "ድምፅ",
           "vote_plural": "ድምፆች",
           "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
-          "test_election_name": "የሙከራ ምርጫ {n}",
-          "try_verification": "ማረጋገጫ ሞክር"
+          "test_election_name": "የሙከራ ምርጫ {n}"
         },
         "list": {
           "empty_state": "ምንም ምርጫዎች አልተገኙም",

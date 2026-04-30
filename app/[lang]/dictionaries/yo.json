@@ -114,8 +114,7 @@
           "vote_singular": "ìbò",
           "vote_plural": "ìbò",
           "no_votes": "Kò sí ìbò tí a dìbò nínú ìdìbò yìí.",
-          "test_election_name": "Ìdìbò ìdànwò {n}",
-          "try_verification": "Gbiyanju ìjẹ́rìísí"
+          "test_election_name": "Ìdìbò ìdànwò {n}"
         },
         "list": {
           "empty_state": "Ko si idibo ti a ri",

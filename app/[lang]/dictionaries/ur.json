@@ -114,8 +114,7 @@
           "vote_singular": "ووٹ",
           "vote_plural": "ووٹ",
           "no_votes": "اس الیکشن میں کوئی ووٹ نہیں ڈالا گیا۔",
-          "test_election_name": "ٹیسٹ انتخابات {n}",
-          "try_verification": "تصدیق آزمائیں"
+          "test_election_name": "ٹیسٹ انتخابات {n}"
         },
         "list": {
           "empty_state": "کوئی انتخابات نہیں ملے",

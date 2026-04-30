@@ -114,8 +114,7 @@
           "vote_singular": "səs",
           "vote_plural": "səs",
           "no_votes": "Bu seçimdə heç bir səs verilmədi.",
-          "test_election_name": "Sınaq seçkisi {n}",
-          "try_verification": "Doğrulamanı sına"
+          "test_election_name": "Sınaq seçkisi {n}"
         },
         "list": {
           "empty_state": "Seçki tapılmadı",

@@ -114,8 +114,7 @@
           "vote_singular": "stem",
           "vote_plural": "stemmen",
           "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
-          "test_election_name": "Testverkiezing {n}",
-          "try_verification": "Verificatie proberen"
+          "test_election_name": "Testverkiezing {n}"
         },
         "list": {
           "empty_state": "Geen verkiezingen gevonden",

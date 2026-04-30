@@ -114,8 +114,7 @@
           "vote_singular": "undi",
           "vote_plural": "undi",
           "no_votes": "Tiada undi diberikan dalam pilihan raya ini.",
-          "test_election_name": "Pilihan raya ujian {n}",
-          "try_verification": "Cuba pengesahan"
+          "test_election_name": "Pilihan raya ujian {n}"
         },
         "list": {
           "empty_state": "Tiada pilihan raya ditemui",

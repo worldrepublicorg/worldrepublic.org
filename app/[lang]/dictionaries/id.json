@@ -114,8 +114,7 @@
           "vote_singular": "suara",
           "vote_plural": "suara",
           "no_votes": "Tidak ada suara yang diberikan dalam pemilihan ini.",
-          "test_election_name": "Pemilu uji coba {n}",
-          "try_verification": "Coba verifikasi"
+          "test_election_name": "Pemilu uji coba {n}"
         },
         "list": {
           "empty_state": "Tidak ada pemilihan ditemukan",

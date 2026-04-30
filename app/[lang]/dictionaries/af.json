@@ -114,8 +114,7 @@
           "vote_singular": "stem",
           "vote_plural": "stemme",
           "no_votes": "Geen stemme is in hierdie verkiesing uitgebring nie.",
-          "test_election_name": "Toetsverkiesing {n}",
-          "try_verification": "Probeer verifikasie"
+          "test_election_name": "Toetsverkiesing {n}"
         },
         "list": {
           "empty_state": "Geen verkiesings gevind nie",

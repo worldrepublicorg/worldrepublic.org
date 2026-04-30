@@ -114,8 +114,7 @@
           "vote_singular": "oy",
           "vote_plural": "oy",
           "no_votes": "Bu seçimde hiç oy kullanılmadı.",
-          "test_election_name": "Test seçimi {n}",
-          "try_verification": "Doğrulamayı dene"
+          "test_election_name": "Test seçimi {n}"
         },
         "list": {
           "empty_state": "Seçim bulunamadı",

@@ -114,8 +114,7 @@
           "vote_singular": "hlas",
           "vote_plural": "hlasů",
           "no_votes": "V těchto volbách nebyly odevzdány žádné hlasy.",
-          "test_election_name": "Testovací volba {n}",
-          "try_verification": "Vyzkoušet ověření"
+          "test_election_name": "Testovací volba {n}"
         },
         "list": {
           "empty_state": "Nebyly nalezeny žádné volby",

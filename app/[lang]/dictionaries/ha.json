@@ -114,8 +114,7 @@
           "vote_singular": "ƙuri’a",
           "vote_plural": "ƙuri’u",
           "no_votes": "Ba a jefa ƙuri’a a wannan zaɓen ba.",
-          "test_election_name": "Zaɓen gwaji {n}",
-          "try_verification": "Gwada tabbatarwa"
+          "test_election_name": "Zaɓen gwaji {n}"
         },
         "list": {
           "empty_state": "Ba a sami zabe ba",

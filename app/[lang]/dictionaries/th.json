@@ -114,8 +114,7 @@
           "vote_singular": "เสียง",
           "vote_plural": "เสียง",
           "no_votes": "ไม่มีการลงคะแนนในการเลือกตั้งนี้",
-          "test_election_name": "การเลือกตั้งทดสอบ {n}",
-          "try_verification": "ลองยืนยันตัวตน"
+          "test_election_name": "การเลือกตั้งทดสอบ {n}"
         },
         "list": {
           "empty_state": "ไม่พบการเลือกตั้ง",

@@ -114,8 +114,7 @@
           "vote_singular": "મત",
           "vote_plural": "મતો",
           "no_votes": "આ ચૂંટણીમાં કોઈ મત આપવામાં આવ્યા નથી.",
-          "test_election_name": "પરિક્ષણ ચૂંટણી {n}",
-          "try_verification": "ચકાસણી અજમાવો"
+          "test_election_name": "પરિક્ષણ ચૂંટણી {n}"
         },
         "list": {
           "empty_state": "કોઈ ચૂંટણી મળી નથી",

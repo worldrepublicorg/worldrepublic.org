@@ -114,8 +114,7 @@
           "vote_singular": "ψήφος",
           "vote_plural": "ψήφοι",
           "no_votes": "Δεν δόθηκαν ψήφοι σε αυτές τις εκλογές.",
-          "test_election_name": "Δοκιμαστική εκλογή {n}",
-          "try_verification": "Δοκιμάστε την επαλήθευση"
+          "test_election_name": "Δοκιμαστική εκλογή {n}"
         },
         "list": {
           "empty_state": "Δεν βρέθηκαν εκλογές",

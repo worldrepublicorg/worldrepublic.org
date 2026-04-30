@@ -114,8 +114,7 @@
           "vote_singular": "Stimme",
           "vote_plural": "Stimmen",
           "no_votes": "Bei dieser Wahl wurden keine Stimmen abgegeben.",
-          "test_election_name": "Testwahl {n}",
-          "try_verification": "Verifizierung testen"
+          "test_election_name": "Testwahl {n}"
         },
         "list": {
           "empty_state": "Keine Wahlen gefunden",

@@ -114,8 +114,7 @@
           "vote_singular": "رأی",
           "vote_plural": "رأی",
           "no_votes": "هیچ رأیی در این انتخابات داده نشد.",
-          "test_election_name": "انتخابات آزمایشی {n}",
-          "try_verification": "تأیید هویت را امتحان کنید"
+          "test_election_name": "انتخابات آزمایشی {n}"
         },
         "list": {
           "empty_state": "هیچ انتخاباتی یافت نشد",

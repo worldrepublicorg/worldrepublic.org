@@ -114,8 +114,7 @@
           "vote_singular": "ääni",
           "vote_plural": "ääntä",
           "no_votes": "Tässä vaalissa ei annettu ääniä.",
-          "test_election_name": "Testivaali {n}",
-          "try_verification": "Kokeile vahvistusta"
+          "test_election_name": "Testivaali {n}"
         },
         "list": {
           "empty_state": "Vaaleja ei löytynyt",

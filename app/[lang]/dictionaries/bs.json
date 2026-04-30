@@ -114,8 +114,7 @@
           "vote_singular": "glas",
           "vote_plural": "glasova",
           "no_votes": "U ovim izborima nije bilo glasova.",
-          "test_election_name": "Test izbor {n}",
-          "try_verification": "Isprobajte verifikaciju"
+          "test_election_name": "Test izbor {n}"
         },
         "list": {
           "empty_state": "Nije pronađeno izbora",

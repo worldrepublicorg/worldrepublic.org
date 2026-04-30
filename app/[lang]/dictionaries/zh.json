@@ -114,8 +114,7 @@
           "vote_singular": "票",
           "vote_plural": "票",
           "no_votes": "本次选举没有投票。",
-          "test_election_name": "测试选举 {n}",
-          "try_verification": "尝试验证"
+          "test_election_name": "测试选举 {n}"
         },
         "list": {
           "empty_state": "未找到选举",

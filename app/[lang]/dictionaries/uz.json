@@ -114,8 +114,7 @@
           "vote_singular": "ovoz",
           "vote_plural": "ovoz",
           "no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
-          "test_election_name": "Sinov saylovi {n}",
-          "try_verification": "Tekshiruvni sinab ko'ring"
+          "test_election_name": "Sinov saylovi {n}"
         },
         "list": {
           "empty_state": "Saylovlar topilmadi",

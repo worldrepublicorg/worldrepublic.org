@@ -114,8 +114,7 @@
           "vote_singular": "phiếu",
           "vote_plural": "phiếu",
           "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
-          "test_election_name": "Bầu cử thử nghiệm {n}",
-          "try_verification": "Thử xác minh"
+          "test_election_name": "Bầu cử thử nghiệm {n}"
         },
         "list": {
           "empty_state": "Không tìm thấy cuộc bầu cử nào",

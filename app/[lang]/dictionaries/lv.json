@@ -114,8 +114,7 @@
           "vote_singular": "balss",
           "vote_plural": "balsis",
           "no_votes": "Šajās vēlēšanās neviena balss netika nodota.",
-          "test_election_name": "Testa vēlēšanas {n}",
-          "try_verification": "Izmēģināt verifikāciju"
+          "test_election_name": "Testa vēlēšanas {n}"
         },
         "list": {
           "empty_state": "Vēlēšanas nav atrastas",

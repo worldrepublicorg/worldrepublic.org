@@ -114,8 +114,7 @@
           "vote_singular": "szavazat",
           "vote_plural": "szavazat",
           "no_votes": "Ebben a választásban nem adtak le szavazatot.",
-          "test_election_name": "Tesztválasztás {n}",
-          "try_verification": "Ellenőrzés kipróbálása"
+          "test_election_name": "Tesztválasztás {n}"
         },
         "list": {
           "empty_state": "Nem található választás",

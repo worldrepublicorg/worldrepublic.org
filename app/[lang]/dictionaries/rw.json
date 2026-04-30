@@ -114,8 +114,7 @@
           "vote_singular": "amajwi",
           "vote_plural": "amajwi",
           "no_votes": "Nta majwi yatanzwe muri iyi matora.",
-          "test_election_name": "Itora ry'igerageza {n}",
-          "try_verification": "Gerageza kwemeza"
+          "test_election_name": "Itora ry'igerageza {n}"
         },
         "list": {
           "empty_state": "Nta matora yabonetse",

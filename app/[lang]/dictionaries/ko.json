@@ -114,8 +114,7 @@
           "vote_singular": "표",
           "vote_plural": "표",
           "no_votes": "이 선거에서 투표가 없었습니다.",
-          "test_election_name": "테스트 선거 {n}",
-          "try_verification": "인증 체험하기"
+          "test_election_name": "테스트 선거 {n}"
         },
         "list": {
           "empty_state": "선거를 찾을 수 없습니다",

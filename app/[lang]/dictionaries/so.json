@@ -114,8 +114,7 @@
           "vote_singular": "cod",
           "vote_plural": "codad",
           "no_votes": "Doorashadaan lama codin.",
-          "test_election_name": "Doorasho tijaabo {n}",
-          "try_verification": "Tijaabi xaqiijinta"
+          "test_election_name": "Doorasho tijaabo {n}"
         },
         "list": {
           "empty_state": "Doorasho lama helin",

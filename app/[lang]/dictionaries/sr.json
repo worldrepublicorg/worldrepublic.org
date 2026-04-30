@@ -114,8 +114,7 @@
           "vote_singular": "глас",
           "vote_plural": "гласова",
           "no_votes": "У овим изборима није било гласова.",
-          "test_election_name": "Тест избори {n}",
-          "try_verification": "Испробајте верификацију"
+          "test_election_name": "Тест избори {n}"
         },
         "list": {
           "empty_state": "Нису пронађени избори",

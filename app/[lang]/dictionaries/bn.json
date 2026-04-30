@@ -114,8 +114,7 @@
           "vote_singular": "ভোট",
           "vote_plural": "ভোট",
           "no_votes": "এই নির্বাচনে কোনো ভোট পড়েনি।",
-          "test_election_name": "পরীক্ষামূলক নির্বাচন {n}",
-          "try_verification": "যাচাইকরণ চেষ্টা করুন"
+          "test_election_name": "পরীক্ষামূলক নির্বাচন {n}"
         },
         "list": {
           "empty_state": "কোন নির্বাচন পাওয়া যায়নি",

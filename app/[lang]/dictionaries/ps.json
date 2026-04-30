@@ -114,8 +114,7 @@
           "vote_singular": "رای",
           "vote_plural": "رایې",
           "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
-          "test_election_name": "آزمایښتي ټاکنه {n}",
-          "try_verification": "تصدیق آزمایښت وکړئ"
+          "test_election_name": "آزمایښتي ټاکنه {n}"
         },
         "list": {
           "empty_state": "هیڅ ټاکنې ونه موندل شوې",

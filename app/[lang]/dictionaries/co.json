@@ -114,8 +114,7 @@
           "vote_singular": "votu",
           "vote_plural": "voti",
           "no_votes": "Ùn ci sò stati voti in questa elezzione.",
-          "test_election_name": "Elezione di prova {n}",
-          "try_verification": "Pruvate a verificazione"
+          "test_election_name": "Elezione di prova {n}"
         },
         "list": {
           "empty_state": "Nisuna elezzione trovata",

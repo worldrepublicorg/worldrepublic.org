@@ -58,8 +58,7 @@
           "vote_singular": "vote",
           "vote_plural": "votes",
           "no_votes": "No votes were cast in this election.",
-          "test_election_name": "Test election {n}",
-          "try_verification": "Try verification"
+          "test_election_name": "Test election {n}"
         }
       },
       "parties": {

@@ -114,8 +114,7 @@
           "vote_singular": "សម្លេង",
           "vote_plural": "សម្លេង",
           "no_votes": "គ្មានសម្លេងបោះឆ្នោតក្នុងការបោះឆ្នោតនេះទេ។",
-          "test_election_name": "ការបោះឆ្នោតធ្វើតេស្ត {n}",
-          "try_verification": "សាកល្បងការផ្ទៀងផ្ទាត់"
+          "test_election_name": "ការបោះឆ្នោតធ្វើតេស្ត {n}"
         },
         "list": {
           "empty_state": "រកមិនឃើញការបោះឆ្នោតទេ",

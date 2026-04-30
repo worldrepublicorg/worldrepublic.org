@@ -114,8 +114,7 @@
           "vote_singular": "वोट",
           "vote_plural": "वोट",
           "no_votes": "इस चुनाव में कोई वोट नहीं डाला गया।",
-          "test_election_name": "परीक्षण चुनाव {n}",
-          "try_verification": "सत्यापन आज़माएँ"
+          "test_election_name": "परीक्षण चुनाव {n}"
         },
         "list": {
           "empty_state": "कोई चुनाव नहीं मिला",

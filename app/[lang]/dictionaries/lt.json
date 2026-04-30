@@ -114,8 +114,7 @@
           "vote_singular": "balsas",
           "vote_plural": "balsų",
           "no_votes": "Šiuose rinkimuose nebuvo balsuota.",
-          "test_election_name": "Testiniai rinkimai {n}",
-          "try_verification": "Išbandyti patvirtinimą"
+          "test_election_name": "Testiniai rinkimai {n}"
         },
         "list": {
           "empty_state": "Rinkimų nerasta",
