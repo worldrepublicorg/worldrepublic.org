@@ -8,7 +8,6 @@ import {
   AlertDialogHeader,
   Button,
   Typography,
-  useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -29,7 +28,6 @@ import {
   type SelfVerificationMode,
   useSelfVerification,
 } from "@/hooks/use-self-verification";
-import { mapSelfVerificationToast } from "@/lib/self/verification-toast-message";
 
 interface SelfVerificationDialogProps {
   open: boolean;
@@ -52,7 +50,6 @@ export function SelfVerificationDialog({
   electionId,
   mode = "vote",
 }: SelfVerificationDialogProps) {
-  const { toast } = useToast();
   const [step, setStep] = useState<"primer" | "verification">("primer");
   const { lang } = useParams<{ lang: string }>();
   const {
@@ -125,12 +122,6 @@ export function SelfVerificationDialog({
         if (!res.ok) {
           if (!completionHandledRef.current) {
             completionHandledRef.current = true;
-            toast.error({
-              title: mapSelfVerificationToast(
-                typeof data.reason === "string" ? data.reason : null,
-                "failed",
-              ),
-            });
             closeDialog();
           }
           return;
@@ -150,12 +141,6 @@ export function SelfVerificationDialog({
           !completionHandledRef.current
         ) {
           completionHandledRef.current = true;
-          toast.error({
-            title: mapSelfVerificationToast(
-              vs?.lastError ?? null,
-              status ?? "",
-            ),
-          });
           closeDialog();
         }
       } catch {
@@ -177,7 +162,6 @@ export function SelfVerificationDialog({
     userId,
     handleSuccess,
     closeDialog,
-    toast,
   ]);
 
   const handleContinue = () => {
