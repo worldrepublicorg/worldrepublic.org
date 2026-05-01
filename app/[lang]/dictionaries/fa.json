@@ -315,10 +315,7 @@
         "learn_about_self": "درباره Self بیشتر بدانید",
         "primer": {
           "title": "Self پروتکل",
-          "description": "بدون افشای هیچ دادهٔ شخصی، تأیید هویت دریافت کنید.",
-          "feature_device_data": "داده‌ها هرگز از دستگاه شما خارج نمی‌شوند",
-          "feature_invisible_identity": "هویت شما نامرئی باقی می‌ماند",
-          "feature_prevents_fakes": "از حساب‌های تکراری و جعلی جلوگیری می‌کند"
+          "description": "بدون افشای هیچ دادهٔ شخصی، تأیید هویت دریافت کنید."
         }
       },
       "verification_warning": {

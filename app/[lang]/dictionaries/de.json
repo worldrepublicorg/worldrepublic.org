@@ -315,10 +315,7 @@
         "learn_about_self": "Mehr über Self erfahren",
         "primer": {
           "title": "Self Protokoll",
-          "description": "Lassen Sie sich verifizieren, ohne persönliche Daten preiszugeben.",
-          "feature_device_data": "Daten verlassen niemals Ihr Gerät",
-          "feature_invisible_identity": "Ihre Identität bleibt unsichtbar",
-          "feature_prevents_fakes": "Verhindert Duplikate und gefälschte Konten"
+          "description": "Lassen Sie sich verifizieren, ohne persönliche Daten preiszugeben."
         }
       },
       "verification_warning": {

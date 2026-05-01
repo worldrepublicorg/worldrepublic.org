@@ -315,10 +315,7 @@
         "learn_about_self": "Self کے بارے میں جانیں",
         "primer": {
           "title": "Self پروٹوکول",
-          "description": "بغیر کسی ذاتی ڈیٹا کے ظاہر کیے تصدیق کرائیں۔",
-          "feature_device_data": "ڈیٹا کبھی بھی آپ کے آلے کو نہیں چھوڑتا",
-          "feature_invisible_identity": "آپ کی شناخت پوشیدہ رہتی ہے",
-          "feature_prevents_fakes": "ڈپلیکیٹس اور جعلی اکاؤنٹس کو روکتا ہے"
+          "description": "بغیر کسی ذاتی ڈیٹا کے ظاہر کیے تصدیق کرائیں۔"
         }
       },
       "verification_warning": {

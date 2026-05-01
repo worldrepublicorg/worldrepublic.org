@@ -315,10 +315,7 @@
         "learn_about_self": "Tìm hiểu về Self",
         "primer": {
           "title": "Self Giao thức",
-          "description": "Xác minh mà không tiết lộ bất kỳ dữ liệu cá nhân nào.",
-          "feature_device_data": "Dữ liệu không bao giờ rời khỏi thiết bị của bạn",
-          "feature_invisible_identity": "Danh tính của bạn vẫn vô hình",
-          "feature_prevents_fakes": "Ngăn chặn tài khoản trùng lặp và giả mạo"
+          "description": "Xác minh mà không tiết lộ bất kỳ dữ liệu cá nhân nào."
         }
       },
       "verification_warning": {

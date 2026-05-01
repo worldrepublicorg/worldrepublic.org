@@ -315,10 +315,7 @@
         "learn_about_self": "Baro wax ku saabsan Self",
         "primer": {
           "title": "Self Protokool",
-          "description": "Hubin hel isagoo aan shaacin xog gaar ah.",
-          "feature_device_data": "Xogta waligeed kama baxdo qalabkaaga",
-          "feature_invisible_identity": "Aqoonsigaaga wuxuu ahaanayaa mid aan muuqan",
-          "feature_prevents_fakes": "Wuxuu ka hortagaa koontooyin laba jibaaran iyo kuwa been abuur ah"
+          "description": "Hubin hel isagoo aan shaacin xog gaar ah."
         }
       },
       "verification_warning": {

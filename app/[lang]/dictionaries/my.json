@@ -315,10 +315,7 @@
         "learn_about_self": "Self အကြောင်းလေ့လာပါ",
         "primer": {
           "title": "Self ပရိုတိုကော",
-          "description": "ကိုယ်ရေးကိုယ်တာ ဒေတာမဖော်ပြဘဲ အတည်ပြုပါ။",
-          "feature_device_data": "ဒေတာသည် သင့်စက်မှ ဘယ်တော့မှ မထွက်ပါ",
-          "feature_invisible_identity": "သင့်ကိုယ်ပိုင်လက္ခဏာသည် မမြင်ရဘဲ ကျန်နေပါသည်။",
-          "feature_prevents_fakes": "ပွားနေသော နှင့် အတုအယောင် အကောင့်များကို တားဆီးသည်။"
+          "description": "ကိုယ်ရေးကိုယ်တာ ဒေတာမဖော်ပြဘဲ အတည်ပြုပါ။"
         }
       },
       "verification_warning": {

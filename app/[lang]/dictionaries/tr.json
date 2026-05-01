@@ -315,10 +315,7 @@
         "learn_about_self": "Self hakkında bilgi edinin",
         "primer": {
           "title": "Self Protokol",
-          "description": "Kişisel verilerinizi açığa çıkarmadan doğrulanın.",
-          "feature_device_data": "Veriler cihazınızdan asla ayrılmaz",
-          "feature_invisible_identity": "Kimliğiniz görünmez kalır",
-          "feature_prevents_fakes": "Kopyaları ve sahte hesapları önler"
+          "description": "Kişisel verilerinizi açığa çıkarmadan doğrulanın."
         }
       },
       "verification_warning": {

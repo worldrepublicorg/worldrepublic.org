@@ -315,10 +315,7 @@
         "learn_about_self": "Sužinokite apie Self",
         "primer": {
           "title": "Self Protokolas",
-          "description": "Tapkite patvirtintu(-a) neatskleisdami jokių asmeninių duomenų.",
-          "feature_device_data": "Duomenys niekada nepalieka jūsų įrenginio",
-          "feature_invisible_identity": "Jūsų tapatybė lieka nematoma",
-          "feature_prevents_fakes": "Apsaugo nuo dublikatų ir netikrų paskyrų"
+          "description": "Tapkite patvirtintu(-a) neatskleisdami jokių asmeninių duomenų."
         }
       },
       "verification_warning": {

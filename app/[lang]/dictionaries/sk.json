@@ -315,10 +315,7 @@
         "learn_about_self": "Zistite viac o Self",
         "primer": {
           "title": "Self Protokol",
-          "description": "Overte sa bez odhalenia akýchkoľvek osobných údajov.",
-          "feature_device_data": "Dáta nikdy neopustia vaše zariadenie",
-          "feature_invisible_identity": "Vaša identita zostáva neviditeľná",
-          "feature_prevents_fakes": "Zabraňuje duplicitám a falošným účtom"
+          "description": "Overte sa bez odhalenia akýchkoľvek osobných údajov."
         }
       },
       "verification_warning": {

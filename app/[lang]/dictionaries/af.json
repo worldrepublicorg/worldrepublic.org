@@ -315,10 +315,7 @@
         "learn_about_self": "Leer oor Self",
         "primer": {
           "title": "Self Protokol",
-          "description": "Kry verifikasie sonder om enige persoonlike data te onthul.",
-          "feature_device_data": "Data verlaat nooit jou toestel nie",
-          "feature_invisible_identity": "Jou identiteit bly onsigbaar",
-          "feature_prevents_fakes": "Voorkom duplikate en vals rekeninge"
+          "description": "Kry verifikasie sonder om enige persoonlike data te onthul."
         }
       },
       "verification_warning": {

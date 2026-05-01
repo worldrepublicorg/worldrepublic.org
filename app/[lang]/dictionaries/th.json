@@ -315,10 +315,7 @@
         "learn_about_self": "เรียนรู้เกี่ยวกับ Self",
         "primer": {
           "title": "Self โพรโทคอล",
-          "description": "ยืนยันตัวตนโดยไม่ต้องเปิดเผยข้อมูลส่วนตัวใด ๆ",
-          "feature_device_data": "ข้อมูลจะไม่ถูกส่งออกจากอุปกรณ์ของคุณ",
-          "feature_invisible_identity": "ตัวตนของคุณยังคงถูกปิดบัง",
-          "feature_prevents_fakes": "ป้องกันบัญชีซ้ำและบัญชีปลอม"
+          "description": "ยืนยันตัวตนโดยไม่ต้องเปิดเผยข้อมูลส่วนตัวใด ๆ"
         }
       },
       "verification_warning": {

@@ -315,10 +315,7 @@
         "learn_about_self": "了解 Self",
         "primer": {
           "title": "Self 协议",
-          "description": "在不透露任何个人数据的情况下完成验证。",
-          "feature_device_data": "数据永远不会离开您的设备",
-          "feature_invisible_identity": "您的身份保持隐形",
-          "feature_prevents_fakes": "防止重复和虚假帐户"
+          "description": "在不透露任何个人数据的情况下完成验证。"
         }
       },
       "verification_warning": {

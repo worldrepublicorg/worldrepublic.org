@@ -315,10 +315,7 @@
         "learn_about_self": "Meer over Self",
         "primer": {
           "title": "Self Protocol",
-          "description": "Laat u verifiëren zonder persoonlijke gegevens prijs te geven.",
-          "feature_device_data": "Gegevens verlaten nooit uw apparaat",
-          "feature_invisible_identity": "Uw identiteit blijft onzichtbaar",
-          "feature_prevents_fakes": "Voorkomt duplicaten en nepaccounts"
+          "description": "Laat u verifiëren zonder persoonlijke gegevens prijs te geven."
         }
       },
       "verification_warning": {

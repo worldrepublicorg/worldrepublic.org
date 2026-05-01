@@ -315,10 +315,7 @@
         "learn_about_self": "تعرّف على Self",
         "primer": {
           "title": "Self البروتوكول",
-          "description": "احصل على التحقق دون الكشف عن أي بيانات شخصية.",
-          "feature_device_data": "البيانات لا تغادر جهازك أبداً",
-          "feature_invisible_identity": "هويتك تبقى غير مرئية",
-          "feature_prevents_fakes": "يمنع التكرار والحسابات الوهمية"
+          "description": "احصل على التحقق دون الكشف عن أي بيانات شخصية."
         }
       },
       "verification_warning": {

@@ -315,10 +315,7 @@
         "learn_about_self": "Jifunze kuhusu Self",
         "primer": {
           "title": "Self Itifaki",
-          "description": "Thibitishwa bila kufichua data yoyote ya kibinafsi.",
-          "feature_device_data": "Data haiondoki kwenye kifaa chako",
-          "feature_invisible_identity": "Utambulisho wako unabaki kutoonekana",
-          "feature_prevents_fakes": "Huzuia nakala na akaunti feki"
+          "description": "Thibitishwa bila kufichua data yoyote ya kibinafsi."
         }
       },
       "verification_warning": {

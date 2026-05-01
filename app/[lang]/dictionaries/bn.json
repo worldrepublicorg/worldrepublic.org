@@ -315,10 +315,7 @@
         "learn_about_self": "Self সম্পর্কে জানুন",
         "primer": {
           "title": "Self প্রোটোকল",
-          "description": "কোনো ব্যক্তিগত তথ্য প্রকাশ না করেই যাচাই করুন।",
-          "feature_device_data": "ডেটা কখনই আপনার ডিভাইস ছেড়ে যায় না",
-          "feature_invisible_identity": "আপনার পরিচয় অদৃশ্য থাকে",
-          "feature_prevents_fakes": "ডুপ্লিকেট এবং জাল অ্যাকাউন্ট প্রতিরোধ করে"
+          "description": "কোনো ব্যক্তিগত তথ্য প্রকাশ না করেই যাচাই করুন।"
         }
       },
       "verification_warning": {

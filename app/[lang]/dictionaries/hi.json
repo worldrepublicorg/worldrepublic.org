@@ -315,10 +315,7 @@
         "learn_about_self": "Self के बारे में जानें",
         "primer": {
           "title": "Self प्रोटोकॉल",
-          "description": "बिना किसी व्यक्तिगत डेटा के खुलासे के सत्यापन प्राप्त करें।",
-          "feature_device_data": "डेटा कभी भी आपके डिवाइस को नहीं छोड़ता",
-          "feature_invisible_identity": "आपकी पहचान अदृश्य रहती है",
-          "feature_prevents_fakes": "डुप्लिकेट और फर्जी खातों को रोकता है"
+          "description": "बिना किसी व्यक्तिगत डेटा के खुलासे के सत्यापन प्राप्त करें।"
         }
       },
       "verification_warning": {

@@ -315,10 +315,7 @@
         "learn_about_self": "Aflați despre Self",
         "primer": {
           "title": "Self Protocol",
-          "description": "Obțineți verificare fără a dezvălui date personale.",
-          "feature_device_data": "Datele nu părăsesc niciodată dispozitivul dvs.",
-          "feature_invisible_identity": "Identitatea dvs. rămâne invizibilă",
-          "feature_prevents_fakes": "Previne duplicatele și conturile false"
+          "description": "Obțineți verificare fără a dezvălui date personale."
         }
       },
       "verification_warning": {

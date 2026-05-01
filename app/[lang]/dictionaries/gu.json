@@ -315,10 +315,7 @@
         "learn_about_self": "Self વિશે જાણો",
         "primer": {
           "title": "Self પ્રોટોકોલ",
-          "description": "કોઈ વ્યક્તિગત ડેટા ખુલાવ્યા વગર ચકાસણી મેળવો.",
-          "feature_device_data": "ડેટા ક્યારેય તમારું ઉપકરણ છોડતો નથી",
-          "feature_invisible_identity": "તમારી ઓળખ અદ્રશ્ય રહે છે",
-          "feature_prevents_fakes": "ડુપ્લિકેટ્સ અને નકલી એકાઉન્ટ્સ અટકાવે છે"
+          "description": "કોઈ વ્યક્તિગત ડેટા ખુલાવ્યા વગર ચકાસણી મેળવો."
         }
       },
       "verification_warning": {

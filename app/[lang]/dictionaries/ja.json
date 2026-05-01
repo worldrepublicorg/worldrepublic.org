@@ -315,10 +315,7 @@
         "learn_about_self": "Self について学ぶ",
         "primer": {
           "title": "Self プロトコル",
-          "description": "個人データを一切開示せずに本人確認できます。",
-          "feature_device_data": "データがデバイスから離れることはありません",
-          "feature_invisible_identity": "あなたの身元は目に見えないままです",
-          "feature_prevents_fakes": "重複や偽のアカウントを防ぎます"
+          "description": "個人データを一切開示せずに本人確認できます。"
         }
       },
       "verification_warning": {

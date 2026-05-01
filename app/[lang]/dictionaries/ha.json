@@ -315,10 +315,7 @@
         "learn_about_self": "Koyi game da Self",
         "primer": {
           "title": "Self Protokol",
-          "description": "Samu tabbatarwa ba tare da bayyana wasu bayanan sirri ba.",
-          "feature_device_data": "Bayanai ba sa barin na'urarka",
-          "feature_invisible_identity": "Asirinka yana nan a ɓoye",
-          "feature_prevents_fakes": "Yana hana asusu biyu da na bogi"
+          "description": "Samu tabbatarwa ba tare da bayyana wasu bayanan sirri ba."
         }
       },
       "verification_warning": {

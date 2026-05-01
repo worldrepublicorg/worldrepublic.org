@@ -315,10 +315,7 @@
         "learn_about_self": "Узнайте о Self",
         "primer": {
           "title": "Self Протокол",
-          "description": "Пройдите верификацию, не раскрывая личные данные.",
-          "feature_device_data": "Данные никогда не покидают ваше устройство",
-          "feature_invisible_identity": "Ваша личность остается невидимой",
-          "feature_prevents_fakes": "Предотвращает создание дубликатов и фейковых аккаунтов"
+          "description": "Пройдите верификацию, не раскрывая личные данные."
         }
       },
       "verification_warning": {

@@ -315,10 +315,7 @@
         "status_not_completed": "Not verified",
         "primer": {
           "title": "Self Protocol",
-          "description": "Get verified without revealing any personal data.",
-          "feature_device_data": "Data never leaves your device",
-          "feature_invisible_identity": "Your identity remains invisible",
-          "feature_prevents_fakes": "Prevents duplicates and fake accounts"
+          "description": "Get verified without revealing any personal data."
         }
       },
       "verification_warning": {

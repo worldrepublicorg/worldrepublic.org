@@ -315,10 +315,7 @@
         "learn_about_self": "Tudjon meg többet a Self-ről",
         "primer": {
           "title": "Self Protokoll",
-          "description": "Igazolja magát anélkül, hogy személyes adatokat fedne fel.",
-          "feature_device_data": "Az adatok soha nem hagyják el az eszközét",
-          "feature_invisible_identity": "Személyazonossága láthatatlan marad",
-          "feature_prevents_fakes": "Megakadályozza a duplikált és hamis fiókokat"
+          "description": "Igazolja magát anélkül, hogy személyes adatokat fedne fel."
         }
       },
       "verification_warning": {

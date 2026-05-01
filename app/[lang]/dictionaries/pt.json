@@ -315,10 +315,7 @@
         "learn_about_self": "Saiba mais sobre Self",
         "primer": {
           "title": "Self Protocolo",
-          "description": "Seja verificado sem revelar nenhum dado pessoal.",
-          "feature_device_data": "Os dados nunca saem do seu dispositivo",
-          "feature_invisible_identity": "Sua identidade permanece invisível",
-          "feature_prevents_fakes": "Previne duplicatas e contas falsas"
+          "description": "Seja verificado sem revelar nenhum dado pessoal."
         }
       },
       "verification_warning": {

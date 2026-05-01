@@ -315,10 +315,7 @@
         "learn_about_self": "Lue lisää Self",
         "primer": {
           "title": "Self Protokolla",
-          "description": "Vahvista identiteettisi ilman henkilötietojen paljastamista.",
-          "feature_device_data": "Tiedot eivät koskaan poistu laitteeltasi",
-          "feature_invisible_identity": "Henkilöllisyytesi pysyy näkymättömänä",
-          "feature_prevents_fakes": "Estää kaksoiskappaleet ja väärennetyt tilit"
+          "description": "Vahvista identiteettisi ilman henkilötietojen paljastamista."
         }
       },
       "verification_warning": {

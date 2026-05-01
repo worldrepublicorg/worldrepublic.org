@@ -315,10 +315,7 @@
         "learn_about_self": "Self haqqında öyrənin",
         "primer": {
           "title": "Self Protokol",
-          "description": "Heç bir şəxsi məlumatı açmadan təsdiqlənmə əldə edin.",
-          "feature_device_data": "Məlumat heç vaxt cihazınızı tərk etmir",
-          "feature_invisible_identity": "Kimliyiniz görünməz qalır",
-          "feature_prevents_fakes": "Dublikatların və saxta hesabların qarşısını alır"
+          "description": "Heç bir şəxsi məlumatı açmadan təsdiqlənmə əldə edin."
         }
       },
       "verification_warning": {
