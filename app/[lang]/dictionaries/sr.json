@@ -314,8 +314,8 @@
         "status_not_completed": "Није проверено",
         "learn_about_self": "Saznajte više o Self",
         "primer": {
-          "title": "Verifikacija sa prioritetom privatnosti",
-          "description": "Dokažite da ste pravi čovek bez otkrivanja svog identiteta.",
+          "title": "Self Протокол",
+          "description": "Verifikujte se bez otkrivanja ličnih podataka.",
           "feature_device_data": "Podaci nikada ne napuštaju vaš uređaj",
           "feature_invisible_identity": "Vaš identitet ostaje nevidljiv",
           "feature_prevents_fakes": "Sprečava duplikate i lažne račune"

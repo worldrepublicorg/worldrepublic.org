@@ -16,8 +16,6 @@ import {
   PiHeadset,
   PiIdentificationCardFill,
   PiInfo,
-  PiLockKeyFill,
-  PiMaskHappyFill,
   PiRocketLaunch,
   PiUserCheckFill,
 } from "react-icons/pi";
@@ -216,47 +214,9 @@ export function SelfVerificationDialog({
             </Typography>
           </AlertDialogHeader>
 
-          <AlertDialogDescription className="mb-6!">
+          <AlertDialogDescription className="mb-4!">
             {dictionary.components.identity.self.primer.description}
           </AlertDialogDescription>
-
-          <div className="mb-6 w-full">
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
-                  <PiLockKeyFill className="h-3.5 w-3.5 text-gray-400" />
-                </div>
-                <Typography variant="body" level={3} className="mt-[3px]">
-                  {
-                    dictionary.components.identity.self.primer
-                      .feature_device_data
-                  }
-                </Typography>
-              </li>
-              <li className="flex items-center">
-                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
-                  <PiMaskHappyFill className="h-3.5 w-3.5 text-gray-400" />
-                </div>
-                <Typography variant="body" level={3} className="mt-[3px]">
-                  {
-                    dictionary.components.identity.self.primer
-                      .feature_invisible_identity
-                  }
-                </Typography>
-              </li>
-              <li className="flex items-center">
-                <div className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100">
-                  <PiUserCheckFill className="h-3.5 w-3.5 text-gray-400" />
-                </div>
-                <Typography variant="body" level={3} className="mt-[3px]">
-                  {
-                    dictionary.components.identity.self.primer
-                      .feature_prevents_fakes
-                  }
-                </Typography>
-              </li>
-            </ul>
-          </div>
 
           <a
             href="https://self.xyz/"

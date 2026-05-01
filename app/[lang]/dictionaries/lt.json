@@ -314,8 +314,8 @@
         "status_not_completed": "Nepatvirtinta",
         "learn_about_self": "Sužinokite apie Self",
         "primer": {
-          "title": "Privatumą užtikrinantis patvirtinimas",
-          "description": "Įrodykite, kad esate tikras žmogus, neatskleisdami savo tapatybės.",
+          "title": "Self Protokolas",
+          "description": "Tapkite patvirtintu(-a) neatskleisdami jokių asmeninių duomenų.",
           "feature_device_data": "Duomenys niekada nepalieka jūsų įrenginio",
           "feature_invisible_identity": "Jūsų tapatybė lieka nematoma",
           "feature_prevents_fakes": "Apsaugo nuo dublikatų ir netikrų paskyrų"

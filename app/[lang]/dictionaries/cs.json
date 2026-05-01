@@ -314,8 +314,8 @@
         "status_not_completed": "Neověřeno",
         "learn_about_self": "Zjistěte více o Self",
         "primer": {
-          "title": "Ověření s důrazem na soukromí",
-          "description": "Dokažte, že jste skutečný člověk, aniž byste odhalili svou identitu.",
+          "title": "Self Protokol",
+          "description": "Ověřte se bez odhalení jakýchkoli osobních údajů.",
           "feature_device_data": "Data nikdy neopustí vaše zařízení",
           "feature_invisible_identity": "Vaše identita zůstává neviditelná",
           "feature_prevents_fakes": "Zabraňuje duplicitám a falešným účtům"

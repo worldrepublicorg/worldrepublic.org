@@ -314,8 +314,8 @@
         "status_not_completed": "Haijathibitishwa",
         "learn_about_self": "Jifunze kuhusu Self",
         "primer": {
-          "title": "Uthibitishaji unaozingatia faragha",
-          "description": "Thibitisha kuwa wewe ni binadamu halisi bila kufichua wewe ni nani.",
+          "title": "Self Itifaki",
+          "description": "Thibitishwa bila kufichua data yoyote ya kibinafsi.",
           "feature_device_data": "Data haiondoki kwenye kifaa chako",
           "feature_invisible_identity": "Utambulisho wako unabaki kutoonekana",
           "feature_prevents_fakes": "Huzuia nakala na akaunti feki"

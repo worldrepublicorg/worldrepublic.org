@@ -314,8 +314,8 @@
         "status_not_completed": "미인증",
         "learn_about_self": "Self 알아보기",
         "primer": {
-          "title": "개인정보 보호 우선 인증",
-          "description": "자신이 누구인지 밝히지 않고 실제 사람임을 증명하세요.",
+          "title": "Self 프로토콜",
+          "description": "개인 데이터를 공개하지 않고 인증을 받으세요.",
           "feature_device_data": "데이터는 기기를 벗어나지 않습니다",
           "feature_invisible_identity": "귀하의 신원은 보이지 않게 유지됩니다",
           "feature_prevents_fakes": "중복 및 가짜 계정을 방지합니다"

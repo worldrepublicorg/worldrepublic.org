@@ -314,8 +314,8 @@
         "status_not_completed": "አልተረጋገጠም",
         "learn_about_self": "ስለ Self ይማሩ",
         "primer": {
-          "title": "የግላዊነት-ቅድሚያ ማረጋገጫ",
-          "description": "ማንነትዎን ሳያሳውቁ እውነተኛ ሰው መሆንዎን ያረጋግጡ።",
+          "title": "Self ፕሮቶኮል",
+          "description": "ማረጋገጫ እያገኙ የግል መረጃ ሳያሳዩ።",
           "feature_device_data": "ውሂብ መቼም ቢሆን ಸಾಧንዎን አይለቅም",
           "feature_invisible_identity": "ማንነትዎ የማይታይ ሆኖ ይቆያል",
           "feature_prevents_fakes": "ብዜቶችን እና የውሸት መለያዎችን ይከላከላል"

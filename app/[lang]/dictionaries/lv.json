@@ -314,8 +314,8 @@
         "status_not_completed": "Nav pārbaudīts",
         "learn_about_self": "Uzziniet par Self",
         "primer": {
-          "title": "Privātuma prioritātes pārbaude",
-          "description": "Pierādiet, ka esat īsts cilvēks, neatklājot savu identitāti.",
+          "title": "Self Protokols",
+          "description": "Iegūstiet verifikāciju, neapdodot nekādus personas datus.",
           "feature_device_data": "Dati nekad neatstāj jūsu ierīci",
           "feature_invisible_identity": "Jūsu identitāte paliek neredzama",
           "feature_prevents_fakes": "Novērš dublikātus un viltotus kontus"

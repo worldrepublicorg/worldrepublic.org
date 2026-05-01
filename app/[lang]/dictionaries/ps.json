@@ -314,8 +314,8 @@
         "status_not_completed": "تایید شوی نه دی",
         "learn_about_self": "د Self په اړه زده کړئ",
         "primer": {
-          "title": "د محرمیت-لومړی تایید",
-          "description": "ثابته کړئ چې تاسو یو ریښتینی انسان یاست پرته لدې چې څرګنده کړئ چې تاسو څوک یاست.",
+          "title": "Self پروتوکول",
+          "description": "پرته له دې چې کوم شخصي ډاټا ښکاره کړئ تصدیق واخلئ.",
           "feature_device_data": "ډاټا هیڅکله ستاسو وسیله نه پریږدي",
           "feature_invisible_identity": "ستاسو هویت پټ پاتې کیږي",
           "feature_prevents_fakes": "د نقلونو او جعلي حسابونو مخه نیسي"

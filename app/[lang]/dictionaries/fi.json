@@ -314,8 +314,8 @@
         "status_not_completed": "Ei vahvistettu",
         "learn_about_self": "Lue lisää Self",
         "primer": {
-          "title": "Yksityisyys edellä -vahvistus",
-          "description": "Todista olevasi aito ihminen paljastamatta henkilöllisyyttäsi.",
+          "title": "Self Protokolla",
+          "description": "Vahvista identiteettisi ilman henkilötietojen paljastamista.",
           "feature_device_data": "Tiedot eivät koskaan poistu laitteeltasi",
           "feature_invisible_identity": "Henkilöllisyytesi pysyy näkymättömänä",
           "feature_prevents_fakes": "Estää kaksoiskappaleet ja väärennetyt tilit"

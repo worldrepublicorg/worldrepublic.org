@@ -314,8 +314,8 @@
         "status_completed": "Verified",
         "status_not_completed": "Not verified",
         "primer": {
-          "title": "Privacy-first verification",
-          "description": "Prove you're a real human without revealing who you are.",
+          "title": "Self Protocol",
+          "description": "Get verified without revealing any personal data.",
           "feature_device_data": "Data never leaves your device",
           "feature_invisible_identity": "Your identity remains invisible",
           "feature_prevents_fakes": "Prevents duplicates and fake accounts"

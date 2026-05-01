@@ -314,8 +314,8 @@
         "status_not_completed": "Nie zweryfikowano",
         "learn_about_self": "Dowiedz się o Self",
         "primer": {
-          "title": "Weryfikacja z priorytetem prywatności",
-          "description": "Udowodnij, że jesteś prawdziwym człowiekiem, nie ujawniając swojej tożsamości.",
+          "title": "Self Protokół",
+          "description": "Zweryfikuj się bez ujawniania jakichkolwiek danych osobowych.",
           "feature_device_data": "Dane nigdy nie opuszczają Twojego urządzenia",
           "feature_invisible_identity": "Twoja tożsamość pozostaje niewidoczna",
           "feature_prevents_fakes": "Zapobiega duplikatom i fałszywym kontom"

@@ -314,8 +314,8 @@
         "status_not_completed": "Təsdiqlənməyib",
         "learn_about_self": "Self haqqında öyrənin",
         "primer": {
-          "title": "Məxfilik əsaslı yoxlama",
-          "description": "Kimliyinizi açıqlamadan əsl insan olduğunuzu sübut edin.",
+          "title": "Self Protokol",
+          "description": "Heç bir şəxsi məlumatı açmadan təsdiqlənmə əldə edin.",
           "feature_device_data": "Məlumat heç vaxt cihazınızı tərk etmir",
           "feature_invisible_identity": "Kimliyiniz görünməz qalır",
           "feature_prevents_fakes": "Dublikatların və saxta hesabların qarşısını alır"
