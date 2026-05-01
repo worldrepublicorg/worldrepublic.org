@@ -29,7 +29,6 @@ export function ElectionHeroCard({
   return (
     <Link
       href={`/${lang}/govern/elections?id=${election.id}`}
-      scroll
       className="block mb-6"
     >
       <div className="rounded-2xl border border-gray-200 p-6 shadow-sm! shadow-gray-100">
