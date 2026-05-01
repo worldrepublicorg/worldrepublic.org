@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { PiCaretLeft } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { ElectionDetailContent } from "@/components/govern/elections/election-detail-content";
@@ -46,6 +46,11 @@ export default function ElectionDetailPageClient({
     return () => {
       cancelled = true;
     };
+  }, [id]);
+
+  useLayoutEffect(() => {
+    if (!id || typeof id !== "string") return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [id]);
 
   useEffect(() => {
