@@ -1,16 +1,36 @@
 # World Republic
 
-Open-source Next.js app for the World Republic platform—discover and found parties, prep for elections and referendums, and verify identity with Self before voting. Includes server actions and UI; wire up your own auth, database, and deploy stack to get started.
+**The World Republic is an open-source platform for global representative democracy.**
+
+It provides the building blocks for political party formation, secure voting, and a self-sustaining economic engine at a planetary scale. This repository contains the core Next.js implementation used to power the platform and the [Raised by Humanity](https://www.raisedbyhumanity.org) campaign.
 
 ## Features
 
 - **Political parties** — Discover and create global political parties
-- **Voting** — Participate in test elections and referendums
-- **Identity verification** — Zero-knowledge proof verification via Self
-- **Digital wallet** — Manage WDD (world drachma) transactions
+- **Citizen verification** — Get verified privately via Self
+- **Voting** — Participate in test elections
+- **Digital wallet** — Monitor and manage internal rewards and onchain transfers
 - **Internationalization** — 50+ languages supported
 
-## Tech Stack
+## Economic engine: world drachma (WDD)
+
+The platform uses a hybrid setup to align incentives through its digital currency, the **world drachma (WDD)**.
+
+- **Centralized database**: Internal rewards are tracked offchain (PostgreSQL).
+- **Onchain transfers**: Citizens can withdraw their WDD to a crypto account and interact with the savings account onchain.
+
+### Core incentives
+- **Party subsidies**: Funding political parties in proportion to their electoral performance.
+- **Savings account**: Citizens earn real-time interest on their deposited WDD with no lock-up period.
+- **Ambassador Program**: Rewarding community members for inviting successful party leaders.
+
+### For developers & forks
+This repository contains the UI and server logic to interact with the WDD ecosystem. If you are forking this project:
+- **Token contract**: You must deploy your own ERC-20 contract (the production app uses Base and World Chain).
+- **Treasury**: You will need to fund a treasury wallet to fulfill onchain withdrawal requests.
+- **Configuration**: Ensure you update the contract addresses and chain IDs in the server actions and UI components.
+
+## Tech stack
 
 - **Framework:** Next.js 16 (App Router), React 19
 - **Database:** PostgreSQL (Neon) with Drizzle ORM
@@ -70,3 +90,7 @@ Open-source Next.js app for the World Republic platform—discover and found par
 ## License
 
 AGPL-3.0 — See [LICENSE](./LICENSE) file for details.
+
+## Community
+
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more details.
