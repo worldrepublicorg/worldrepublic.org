@@ -43,13 +43,7 @@ Open-source Next.js app for the World Republic platform—discover and found par
    - `AUTH_WEBAUTHN_ALLOWED_HOSTS` — comma-separated hosts allowed for custom passkey auth (for multi-domain passkey support)
    - `THIRDWEB_SECRET_KEY` — thirdweb secret key — https://thirdweb.com/dashboard
 
-4. **Set up database**  
-   ```bash
-   pnpm tsx scripts/reset-database.ts  # Reset and apply schema
-   pnpm tsx scripts/seed-parties.ts     # Optional: seed sample parties
-   ```
-
-5. **Run the app**  
+4. **Run the app**  
    ```bash
    pnpm dev
    ```
@@ -67,8 +61,6 @@ Open-source Next.js app for the World Republic platform—discover and found par
 ## Database
 
 - **Migrations:** Schema is managed with Drizzle ORM (see `drizzle/` directory)
-- **Reset:** `pnpm tsx scripts/reset-database.ts` — drops all tables and applies fresh schema
-- **Seed:** `pnpm tsx scripts/seed-parties.ts` — populates sample parties
 - **Distribute election subsidies (admin):** Run directly when needed:
   ```bash
   pnpm tsx scripts/distribute.ts <electionId> [--dry-run]
