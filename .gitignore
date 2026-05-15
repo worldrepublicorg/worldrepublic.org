@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules/
 
 # Next.js
 .next/
@@ -24,4 +24,4 @@ npm-debug.log*
 .DS_Store
 
 # local org files
-/org
+org/
