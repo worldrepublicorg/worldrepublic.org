@@ -1,0 +1,2 @@
+# Unignore org files for Cursor indexing even though they are gitignored
+!/org/
