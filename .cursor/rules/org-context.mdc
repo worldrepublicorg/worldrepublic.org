@@ -1,0 +1,13 @@
+---
+description: Management of private organizational files in the org/ folder
+globs: org/**/*
+alwaysApply: false
+---
+
+# Organizational Context
+
+The `/org/` folder contains sensitive, non-public organizational information. 
+
+- **Privacy First**: Never suggest moving files from `/org/` to public directories.
+- **Separate Lifecycle**: This folder is a separate private Git repository. 
+- **Commit Reminder**: After making changes to files in this directory, always remind the user to commit and push to the private `org` repository.
