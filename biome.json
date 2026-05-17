@@ -1,10 +1,6 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true
-	},
+	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
 	"files": {
 		"ignoreUnknown": false
 	},
@@ -23,12 +19,13 @@
 			"quoteStyle": "double"
 		}
 	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
 	"assist": {
 		"enabled": true,
-		"actions": {
-			"source": {
-				"organizeImports": "on"
-			}
-		}
+		"actions": { "source": { "organizeImports": "on" } }
 	}
 }
