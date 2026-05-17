@@ -6,8 +6,8 @@
 		"components/**/*.{js,ts,tsx}",
 		"hooks/**/*.{js,ts,tsx}",
 		"lib/**/*.{js,ts,tsx}",
-		"types/**/*.{js,ts,tsx}",
 		"scripts/**/*.{js,ts,tsx}",
+		"types/**/*.{js,ts,tsx}",
 		"*.{js,ts,tsx}"
 	]
 }
