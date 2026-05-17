@@ -2,13 +2,7 @@ import { AllIds, DefaultConfigStore, SelfBackendVerifier } from "@selfxyz/core";
 import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
-import {
-	referrals,
-	referralVerificationRewards,
-	transactions,
-	userProfiles,
-	userSelfVerifications,
-} from "@/lib/db/schema";
+import { userSelfVerifications } from "@/lib/db/schema";
 import {
 	markAccountVerificationSessionFailed,
 	markAccountVerificationSessionVerified,
@@ -17,9 +11,6 @@ import {
 
 const ACCOUNT_SELF_SCOPE = "world-republic-account";
 const ACCOUNT_SELF_ENDPOINT_ORIGIN = "https://www.worldrepublic.org";
-const VERIFIED_REFERRAL_REWARD_TYPE = "INVITE_VERIFIED_USER";
-const VERIFIED_REFERRAL_TRANSACTION_TYPE = "REFERRAL_VERIFIED_BONUS";
-const VERIFIED_REFERRAL_REWARD_AMOUNT = "10.000000000000000000";
 
 function createVerifier(origin: string) {
 	const endpoint = `${origin}/api/self/verify-account`;
@@ -218,75 +209,6 @@ export async function POST(req: Request) {
 					updatedAt: now,
 				},
 			});
-
-		try {
-			await db.transaction(async (tx) => {
-				const [referral] = await tx
-					.select({ referrerId: referrals.referrerId })
-					.from(referrals)
-					.where(eq(referrals.referredId, userUuid))
-					.limit(1);
-
-				if (!referral) return;
-				if (referral.referrerId.toLowerCase() === userUuid.toLowerCase())
-					return;
-
-				const [rewardInsert] = await tx
-					.insert(referralVerificationRewards)
-					.values({
-						referrerId: referral.referrerId,
-						referredUserId: userUuid,
-						scope: ACCOUNT_SELF_SCOPE,
-						selfNullifier: String(nullifier),
-						rewardType: VERIFIED_REFERRAL_REWARD_TYPE,
-						amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
-					})
-					.onConflictDoNothing({
-						target: [
-							referralVerificationRewards.scope,
-							referralVerificationRewards.selfNullifier,
-							referralVerificationRewards.rewardType,
-						],
-					})
-					.returning();
-
-				if (!rewardInsert) return;
-
-				const [referrerProfile] = await tx
-					.select({ walletBalance: userProfiles.walletBalance })
-					.from(userProfiles)
-					.where(eq(userProfiles.id, referral.referrerId))
-					.limit(1);
-
-				if (!referrerProfile) return;
-
-				const currentBalance = Number.parseFloat(
-					referrerProfile.walletBalance ?? "0",
-				);
-				const rewardAmount = Number.parseFloat(VERIFIED_REFERRAL_REWARD_AMOUNT);
-				const nextBalance = currentBalance + rewardAmount;
-
-				await tx
-					.update(userProfiles)
-					.set({
-						walletBalance: nextBalance.toFixed(18),
-						updatedAt: new Date(),
-					})
-					.where(eq(userProfiles.id, referral.referrerId));
-
-				await tx.insert(transactions).values({
-					userId: referral.referrerId,
-					type: VERIFIED_REFERRAL_TRANSACTION_TYPE,
-					amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
-				});
-			});
-		} catch (rewardError) {
-			// Keep verification successful even if reward handling fails.
-			console.error(
-				"[Self Verify Account] Referral reward error:",
-				rewardError,
-			);
-		}
 
 		await markAccountVerificationSessionVerified(parsedSessionId);
 
