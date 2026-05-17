@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Kumita",
-    "govern": "Pamahalaan",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Mga partido",
-        "elections": "Mga eleksyon",
-        "referendums": "Mga referendum"
-      },
-      "sections": {
-        "parties": {
-          "title": "Mga political party"
-        },
-        "elections": {
-          "title": "Test elections",
-          "subtitle": "Mag-experiment sa global democracy"
-        },
-        "referendums": {
-          "title": "World Constitutional Referendum",
-          "subtitle": "Bumoto sa aming foundational principles"
-        }
-      },
-      "vote": {
-        "no_active_election": "Malapit nang magsimula ang halalan",
-        "test_verification": {
-          "description": "Subukan ang aming sistema ng pag-verify ngayon upang maging handa sa pagboto",
-          "button": "Subukan"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidiya",
-          "ambassadors": "Mga Embahador"
-        },
-        "discover": "Tuklasin",
-        "search_placeholder": "Maghanap ng partido...",
-        "no_parties_found": "Walang nahanap na partido",
-        "error_loading": "Nabigong i-load ang mga partido",
-        "refresh": "I-refresh",
-        "party_details": "Mga detalye ng partido",
-        "share_party": "Ibahagi ang partido",
-        "my_party": "Aking partido",
-        "learn_more": "Matuto pa",
-        "party_management": "Pamamahala ng partido",
-        "edit_party_info": "I-edit ang impormasyon ng partido",
-        "dialogs": {
-          "party_name": "Pangalan ng partido",
-          "description_optional": "Paglalarawan (opsyonal)",
-          "official_link_optional": "Opisyal na link (opsyonal)",
-          "updating": "Nag-u-update...",
-          "save": "I-save",
-          "register_party": "Magparehistro ng partido",
-          "register": "Magparehistro",
-          "registering": "Nagrerehistro...",
-          "leader_warning_register": "Kasalukuyan kang pinuno ng {partyName}. Ang pagpaparehistro ng bagong partido ay tatanggalin ang iyong kasalukuyang partido.",
-          "deleting": "Tinatanggal...",
-          "about_to_delete": "Malapit mo nang tanggalin ang {partyName}. Ang aksyon na ito ay hindi na mababawi.",
-          "about_to_register": "Malapit ka nang magtatag ng bagong partido."
-        },
-        "detail": {
-          "failed_to_load": "Nabigo sa pag-load ng data ng partido",
-          "party_not_found": "Hindi nahanap ang partido",
-          "error_loading": "Error sa pag-load ng partido",
-          "back_to_parties": "Bumalik sa mga partido",
-          "description": "Paglalarawan",
-          "party_info": "Impormasyon ng partido",
-          "leader": "Pinuno",
-          "website": "Website",
-          "not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
-        },
-        "delete_party": "Tanggalin ang partido",
-        "run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy",
-        "ambassadors": {
-          "title": "Programang Embahador",
-          "description": "Mag-imbita ng mga kaibigan at kumita ng mga gantimpala kapag na-verify sila at kapag nakakakuha ng subsidy ang kanilang partido",
-          "leaderboard": "Leaderboard",
-          "no_rewards_yet": "Wala pang gantimpala",
-          "col_ambassador": "Mga Embahador",
-          "col_invited": "Inimbitahan",
-          "col_reward": "Gantimpala",
-          "share_referral_link": "Ibahagi ang referral link"
-        },
-        "subsidies": {
-          "title": "Programa ng Subsidiya sa Partido",
-          "no_subsidies_yet": "Wala pang subsidiya",
-          "description": "Pondo batay sa pagganap sa halalan",
-          "col_subsidy": "Subsidiya"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Halalan",
-          "not_found": "Hindi natagpuan ang halalan",
-          "not_found_description": "Ang halalan na hinahanap mo ay hindi umiiral.",
-          "back_to_elections": "Bumalik sa mga halalan",
-          "status_active": "Aktibo",
-          "status_upcoming": "Paparating",
-          "status_ended": "Natapos",
-          "election_info": "Impormasyon ng halalan",
-          "reward_pool": "Premyong pool: {amount} WDD",
-          "reward_pool_minimum": "Premyong pool: minimum {amount} WDD",
-          "choose_a_party": "Pumili ng partido",
-          "no_parties_for_election": "Walang partidong magagamit para sa halalang ito.",
-          "results_title": "Mga Resulta",
-          "vote_singular": "boto",
-          "vote_plural": "boto",
-          "no_votes": "Walang bumoto sa halalang ito.",
-          "test_election_name": "Test election {n}"
-        },
-        "list": {
-          "empty_state": "Walang natagpuang halalan",
-          "active_section": "Aktibong halalan",
-          "upcoming_section": "Paparating na halalan",
-          "previous_section": "Nakaraang halalan"
-        }
-      }
-    },
-    "error": {
-      "title": "May nangyaring mali",
-      "description": "Naganap ang isang hindi inaasahang error. Pakisubukang muli.",
-      "error_id": "Error ID: {digest}",
-      "try_again": "Subukang muli"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Pangunahing kita",
-        "savings": "Pagtitipid"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Kumuha ng pera dahil ikaw ay tao",
-        "subtitle_claim": "Kunin ang inyong drachma",
-        "tooltip_claim": "1 WDD/araw, limitado sa 1 WDD. Bumalik sa loob ng 24 oras para mapakinabangan ang kita.",
-        "claim_button": "Kunin",
-        "alert": {
-          "claim": {
-            "title": "Kumpirmahin ang pag-claim",
-            "description": "Kukunin mo ang {amount} WDD. Ito ay idadagdag sa balanse ng inyong wallet."
-          }
-        },
-        "setup_subtitle": "I-setup ang inyong pangunahing kita",
-        "activate_loading": "Ina-activate...",
-        "activate_button": "I-activate ang pangunahing kita",
-        "world_drachma": "Ano ang Drachma ng Mundo (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Kunin ang inyong pandaigdig na dibidendo ng AI"
-      },
-      "savings": {
-        "title": "Savings account",
-        "subtitle": "Kumita ng interes bawat segundo",
-        "tooltip": "69% taunang base rate. Mag-collect at mag-reinvest nang regular para makamit ang halos 100% effective returns. Mag-withdraw kahit kailan.",
-        "deposit": "Mag-deposit",
-        "withdraw": "Mag-withdraw",
-        "balance": "Balanse",
-        "amount_deposit": "Halaga para i-deposit",
-        "amount_withdraw": "Halaga para i-withdraw",
-        "interest": "Interes",
-        "collect": "Mag-collect",
-        "alert": {
-          "collect": {
-            "title": "Kumpirmahin ang pag-collect",
-            "description": "Mag-collect ka ng {amount} WDD na interes."
-          },
-          "deposit": {
-            "title": "Kumpirmahin ang pag-deposit",
-            "description": "Mag-deposit ka ng {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Kumpirmahin ang pag-withdraw",
-            "description": "Mag-withdraw ka ng {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Tingnan ang matalinong kontrata",
-        "verify": "Beripika"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ACCOUNT",
-          "account_info": "Account information",
-          "referral_code": "Referral code",
-          "referred_by": "Inirekomenda ni",
-          "language": "Wika"
-        },
-        "help": {
-          "title": "TULONG",
-          "quickstart": "Mabilis na Pagsisimula",
-          "docs": "Wiki",
-          "help_center": "Sentro ng Tulong"
-        },
-        "source_code": {
-          "title": "SOURCE CODE"
-        },
-        "legal": {
-          "title": "LEGAL",
-          "terms": "Terms of Use",
-          "privacy": "Privacy Policy"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Wallet"
-      },
-      "balance": "Balanse",
-      "modals": {
-        "sign_out": {
-          "confirm": "Sigurado ba kayong gusto mag-sign out?"
-        },
-        "disconnect": {
-          "confirm": "Sigurado ka bang gusto mong idiskonekta ang iyong wallet?"
-        },
-        "send": {
-          "button": "Ipadala",
-          "withdraw_to_crypto": {
-            "description": "Bawasan ang WDD sa isang crypto account.",
-            "amount_label": "Halaga",
-            "address_label": "Wallet address",
-            "network_label": "Network"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD sa Jumper",
-          "ethereum_uniswap": "Ethereum WDD sa Uniswap",
-          "base_jumper": "Base Chain WDD sa Jumper",
-          "base_uniswap": "Base Chain WDD sa Uniswap",
-          "worldchain_jumper": "World Chain WDD sa Jumper",
-          "worldchain_uniswap": "World Chain WDD sa Uniswap"
-        },
-        "delete_account": {
-          "description": "Ito ay permanenteng mag-delete ng inyong account at mag-aalis ng lahat ng inyong data sa aming mga server. Ang aksyon na ito ay hindi maaaring ma-undo — magpatuloy nang may pag-iingat.",
-          "deleting": "Ina-delete..."
-        },
-        "connect_wallet_browser": {
-          "title": "Buksan sa MetaMask",
-          "description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng MetaMask.",
-          "copy_link": "Kopyahin ang link"
-        },
-        "connect_wallet_picker": {
-          "description": "Maraming wallet ang natagpuan. Pumili ng isa para kumonekta."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Wala ka pang wallet?",
-          "find_wallet_link": "Maghanap ng isa sa WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ACCOUNT",
-        "security": "SEGURIDAD",
-        "google_account": "Account sa Google",
-        "google_not_linked": "Hindi naka-link",
-        "passkeys": "Mga passkey",
-        "passkeys_linked": "{count} naka-link",
-        "danger_zone": "DANGER ZONE",
-        "delete_account": {
-          "description": "Permanenteng alisin ang lahat ng iyong data"
-        },
-        "verification": "BERIPIKASYON",
-        "google_linked": "Naka-link",
-        "account_label": "Akaunto"
-      },
-      "username": {
-        "label": "Pangalan ng gumagamit",
-        "edit_title": "I-edit ang pangalan ng gumagamit",
-        "description": "3-30 karakter, alphanumeric, underscore at hyphen"
-      },
-      "history": {
-        "title": "KASAYSAYAN"
-      },
-      "transactions": {
-        "failed_to_load": "Nabigo sa pag-load",
-        "no_transactions": "Walang mga transaksyon pa",
-        "wdd_per_day": "WDD/araw",
-        "just_now": "Ngayon lang",
-        "minutes_ago": "{minutes}m ang nakalipas",
-        "hours_ago": "{hours}o ang nakalipas",
-        "days_ago": "{days}a ang nakalipas",
-        "filter": {
-          "all_types": "Lahat ng uri",
-          "select_type": "Pumili ng uri",
-          "rewards": "Mga Gantimpala"
-        },
-        "types": {
-          "withdrawal": "Pag-withdraw",
-          "received": "Natanggap",
-          "sent": "Naipadala",
-          "ambassador_reward": "Gantimpala ng embahador",
-          "party_subsidy": "Subsidiya ng partido",
-          "stream_created": "Nilikha ang stream",
-          "stream_updated": "Na-update ang stream",
-          "savings_deposit": "Pagtitipid mag-deposit",
-          "savings_withdrawal": "Pagtitipid mag-withdraw",
-          "savings_interest": "Pagtitipid interes",
-          "referral_reward": "Gantimpala sa referral"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "I-scan ang QR code na ito para mag-verify sa Self.",
-        "mobile_dialog_description": "Ire-redirect ka sa Self app upang tapusin ang beripikasyon.",
-        "support_telegram": "Self Support",
-        "verification_guide": "Gabay sa pagpapatunay",
-        "qr_alt": "QR ng pagpapatunay ng Self",
-        "callback_warning": "Babala",
-        "callback_warning_description": "Ang URL ng callback ng pagpapatunay ay hindi maabot mula sa iyong telepono. Itakda ang NEXT_PUBLIC_SELF_CALLBACK sa isang pampublikong URL (o itakda ang NEXT_PUBLIC_PUBLIC_BASE_URL sa isang tunnel/preview na domain).",
-        "label": "Self",
-        "status_completed": "Na-verify",
-        "status_not_completed": "Hindi na-verify",
-        "learn_about_self": "Alamin ang tungkol sa Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Magpapatunay nang hindi inilalantad ang anumang personal na data."
-        }
-      },
-      "verification_warning": {
-        "title": "Kumuha ng pagpapatunay",
-        "reward_cap_banner": "May limit ang mga reward sa basic income at savings para sa mga hindi beripikadong mamamayan. I-verify ang iyong account para kumita nang walang limitasyon."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Karamihan sa mga wallet ay nagpapakita lamang ng WDD pagkatapos itong i-import nang manu-mano sa napiling chain gamit ang ",
-      "contract_address": "address ng kontrata"
-    }
-  },
-  "toasts": {
-    "generic_error": "May naganap na error",
-    "copied": "Na-copy",
-    "wallet": {
-      "no_wallet": "Walang wallet address",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Na-send",
-      "account_deleted": "Na-delete ang account",
-      "delete_failed": "Nabigo ang pag-delete ng account",
-      "contract_address_error": "Hindi maaaring mag-withdraw sa contract address",
-      "sign_out_failed": "Nabigo ang pag-sign out",
-      "google_linked": "Naka-link ang account sa Google",
-      "google_already_linked": "Ang account sa Google ay naka-link na sa ibang account",
-      "google_link_failed": "Hindi masimulan ang pag-link sa Google",
-      "passkey_added": "Naidagdag ang passkey",
-      "passkey_add_failed": "Hindi maidagdag ang passkey"
-    },
-    "parties": {
-      "updated": "Na-update",
-      "update_failed": "Nabigo ang pag-update",
-      "update_error": "Error sa pag-update ng partido",
-      "registered": "Nakarehistro na ang partido",
-      "register_failed": "Nabigong irehistro ang partido",
-      "register_error": "Error sa pagpaparehistro ng partido",
-      "deleted": "Tinanggal",
-      "delete_failed": "Nabigong tanggalin",
-      "delete_error": "Error sa pagtanggal"
-    },
-    "basic_income": {
-      "activated": "Na-activate ang basic income",
-      "activate_failed": "Nabigo ang pag-activate",
-      "claimed": "Na-claim",
-      "claim_failed": "Nabigo ang pag-claim"
-    },
-    "savings": {
-      "collected": "Na-collect",
-      "collect_failed": "Nabigo ang pag-collect",
-      "deposited": "Na-deposit",
-      "deposit_failed": "Nabigo ang pag-deposit",
-      "withdrawn": "Na-withdraw",
-      "withdraw_failed": "Nabigo ang pag-withdraw"
-    }
-  },
-  "common": {
-    "confirm": "Kumpirmahin",
-    "sign_in": "Mag-sign in",
-    "connect": "Ikonekta",
-    "disconnect": "Idiskonekta",
-    "connect_wallet": "Ikonekta ang wallet",
-    "max": "Max",
-    "loading": "Naglo-load...",
-    "processing": "Pinoproseso...",
-    "insufficient_balance": "Hindi sapat na WDD",
-    "delete_account": "Tanggalin ang account",
-    "sign_out": "Mag-sign out",
-    "invalid_address": "Hindi wastong address",
-    "coming_soon": "Malapit na",
-    "withdraw": "Mag-withdraw",
-    "trade": "Mag-trade",
-    "continue": "Magpatuloy",
-    "close": "Isara",
-    "updating": "Nag-a-update...",
-    "save": "I-save",
-    "vote": "Bumoto",
-    "switch_to_base_chain": "Lumipat sa Base Chain"
-  },
-  "auth": {
-    "choose_method": "Pumili ng iyong ginustong paraan.",
-    "sign_in_with_google": "Magpatuloy sa Google",
-    "sign_in_with_passkey": "Gumamit ng biometrics",
-    "sign_in_or_create": "I-access ang iyong account gamit ang isang passkey, gamit ang iyong fingerprint, face scan o screen lock.",
-    "create_account": "Lumikha ng account",
-    "create_passkey_name": "Lumikha ng pangalan ng passkey",
-    "passkey_name_description": "Pangalanan ang iyong passkey upang makilala ito sa iyong password manager.",
-    "passkey_name": "Pangalan ng passkey"
-  }
+	"nav": {
+		"earn": "Kumita",
+		"govern": "Pamahalaan",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Mga partido",
+				"elections": "Mga eleksyon",
+				"referendums": "Mga referendum"
+			},
+			"sections": {
+				"parties": {
+					"title": "Mga political party"
+				},
+				"elections": {
+					"title": "Test elections",
+					"subtitle": "Mag-experiment sa global democracy"
+				},
+				"referendums": {
+					"title": "World Constitutional Referendum",
+					"subtitle": "Bumoto sa aming foundational principles"
+				}
+			},
+			"vote": {
+				"no_active_election": "Malapit nang magsimula ang halalan",
+				"test_verification": {
+					"description": "Subukan ang aming sistema ng pag-verify ngayon upang maging handa sa pagboto",
+					"button": "Subukan"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidiya",
+					"ambassadors": "Mga Embahador"
+				},
+				"discover": "Tuklasin",
+				"search_placeholder": "Maghanap ng partido...",
+				"no_parties_found": "Walang nahanap na partido",
+				"error_loading": "Nabigong i-load ang mga partido",
+				"refresh": "I-refresh",
+				"party_details": "Mga detalye ng partido",
+				"share_party": "Ibahagi ang partido",
+				"my_party": "Aking partido",
+				"learn_more": "Matuto pa",
+				"party_management": "Pamamahala ng partido",
+				"edit_party_info": "I-edit ang impormasyon ng partido",
+				"dialogs": {
+					"party_name": "Pangalan ng partido",
+					"description_optional": "Paglalarawan (opsyonal)",
+					"official_link_optional": "Opisyal na link (opsyonal)",
+					"updating": "Nag-u-update...",
+					"save": "I-save",
+					"register_party": "Magparehistro ng partido",
+					"register": "Magparehistro",
+					"registering": "Nagrerehistro...",
+					"leader_warning_register": "Kasalukuyan kang pinuno ng {partyName}. Ang pagpaparehistro ng bagong partido ay tatanggalin ang iyong kasalukuyang partido.",
+					"deleting": "Tinatanggal...",
+					"about_to_delete": "Malapit mo nang tanggalin ang {partyName}. Ang aksyon na ito ay hindi na mababawi.",
+					"about_to_register": "Malapit ka nang magtatag ng bagong partido."
+				},
+				"detail": {
+					"failed_to_load": "Nabigo sa pag-load ng data ng partido",
+					"party_not_found": "Hindi nahanap ang partido",
+					"error_loading": "Error sa pag-load ng partido",
+					"back_to_parties": "Bumalik sa mga partido",
+					"description": "Paglalarawan",
+					"party_info": "Impormasyon ng partido",
+					"leader": "Pinuno",
+					"website": "Website",
+					"not_found_description": "Ang partidong hinahanap mo ay hindi umiiral o natunaw na."
+				},
+				"delete_party": "Tanggalin ang partido",
+				"run_on_elections_and_earn": "Tumakbo sa eleksyon at makakuha ng subsidy",
+				"ambassadors": {
+					"title": "Programang Embahador",
+					"description": "Mag-imbita ng mga kaibigan at kumita ng mga gantimpala kapag na-verify sila at kapag nakakakuha ng subsidy ang kanilang partido",
+					"leaderboard": "Leaderboard",
+					"no_rewards_yet": "Wala pang gantimpala",
+					"col_ambassador": "Mga Embahador",
+					"col_invited": "Inimbitahan",
+					"col_reward": "Gantimpala",
+					"share_referral_link": "Ibahagi ang referral link"
+				},
+				"subsidies": {
+					"title": "Programa ng Subsidiya sa Partido",
+					"no_subsidies_yet": "Wala pang subsidiya",
+					"description": "Pondo batay sa pagganap sa halalan",
+					"col_subsidy": "Subsidiya"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Halalan",
+					"not_found": "Hindi natagpuan ang halalan",
+					"not_found_description": "Ang halalan na hinahanap mo ay hindi umiiral.",
+					"back_to_elections": "Bumalik sa mga halalan",
+					"status_active": "Aktibo",
+					"status_upcoming": "Paparating",
+					"status_ended": "Natapos",
+					"election_info": "Impormasyon ng halalan",
+					"reward_pool": "Premyong pool: {amount} WDD",
+					"reward_pool_minimum": "Premyong pool: minimum {amount} WDD",
+					"choose_a_party": "Pumili ng partido",
+					"no_parties_for_election": "Walang partidong magagamit para sa halalang ito.",
+					"results_title": "Mga Resulta",
+					"vote_singular": "boto",
+					"vote_plural": "boto",
+					"no_votes": "Walang bumoto sa halalang ito.",
+					"test_election_name": "Test election {n}"
+				},
+				"list": {
+					"empty_state": "Walang natagpuang halalan",
+					"active_section": "Aktibong halalan",
+					"upcoming_section": "Paparating na halalan",
+					"previous_section": "Nakaraang halalan"
+				}
+			}
+		},
+		"error": {
+			"title": "May nangyaring mali",
+			"description": "Naganap ang isang hindi inaasahang error. Pakisubukang muli.",
+			"error_id": "Error ID: {digest}",
+			"try_again": "Subukang muli"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Pangunahing kita",
+				"savings": "Pagtitipid"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Kumuha ng pera dahil ikaw ay tao",
+				"subtitle_claim": "Kunin ang inyong drachma",
+				"tooltip_claim": "1 WDD/araw, limitado sa 1 WDD. Bumalik sa loob ng 24 oras para mapakinabangan ang kita.",
+				"claim_button": "Kunin",
+				"alert": {
+					"claim": {
+						"title": "Kumpirmahin ang pag-claim",
+						"description": "Kukunin mo ang {amount} WDD. Ito ay idadagdag sa balanse ng inyong wallet."
+					}
+				},
+				"setup_subtitle": "I-setup ang inyong pangunahing kita",
+				"activate_loading": "Ina-activate...",
+				"activate_button": "I-activate ang pangunahing kita",
+				"world_drachma": "Ano ang Drachma ng Mundo (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Kunin ang inyong pandaigdig na dibidendo ng AI"
+			},
+			"savings": {
+				"title": "Savings account",
+				"subtitle": "Kumita ng interes bawat segundo",
+				"tooltip": "69% taunang base rate. Mag-collect at mag-reinvest nang regular para makamit ang halos 100% effective returns. Mag-withdraw kahit kailan.",
+				"deposit": "Mag-deposit",
+				"withdraw": "Mag-withdraw",
+				"balance": "Balanse",
+				"amount_deposit": "Halaga para i-deposit",
+				"amount_withdraw": "Halaga para i-withdraw",
+				"interest": "Interes",
+				"collect": "Mag-collect",
+				"alert": {
+					"collect": {
+						"title": "Kumpirmahin ang pag-collect",
+						"description": "Mag-collect ka ng {amount} WDD na interes."
+					},
+					"deposit": {
+						"title": "Kumpirmahin ang pag-deposit",
+						"description": "Mag-deposit ka ng {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Kumpirmahin ang pag-withdraw",
+						"description": "Mag-withdraw ka ng {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Tingnan ang matalinong kontrata",
+				"verify": "Beripika"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ACCOUNT",
+					"account_info": "Account information",
+					"referral_code": "Referral code",
+					"referred_by": "Inirekomenda ni",
+					"language": "Wika"
+				},
+				"help": {
+					"title": "TULONG",
+					"quickstart": "Mabilis na Pagsisimula",
+					"docs": "Wiki",
+					"help_center": "Sentro ng Tulong"
+				},
+				"source_code": {
+					"title": "SOURCE CODE"
+				},
+				"legal": {
+					"title": "LEGAL",
+					"terms": "Terms of Use",
+					"privacy": "Privacy Policy"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Wallet"
+			},
+			"balance": "Balanse",
+			"modals": {
+				"sign_out": {
+					"confirm": "Sigurado ba kayong gusto mag-sign out?"
+				},
+				"disconnect": {
+					"confirm": "Sigurado ka bang gusto mong idiskonekta ang iyong wallet?"
+				},
+				"send": {
+					"button": "Ipadala",
+					"withdraw_to_crypto": {
+						"description": "Bawasan ang WDD sa isang crypto account.",
+						"amount_label": "Halaga",
+						"address_label": "Wallet address",
+						"network_label": "Network"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD sa Jumper",
+					"ethereum_uniswap": "Ethereum WDD sa Uniswap",
+					"base_jumper": "Base Chain WDD sa Jumper",
+					"base_uniswap": "Base Chain WDD sa Uniswap",
+					"worldchain_jumper": "World Chain WDD sa Jumper",
+					"worldchain_uniswap": "World Chain WDD sa Uniswap"
+				},
+				"delete_account": {
+					"description": "Ito ay permanenteng mag-delete ng inyong account at mag-aalis ng lahat ng inyong data sa aming mga server. Ang aksyon na ito ay hindi maaaring ma-undo — magpatuloy nang may pag-iingat.",
+					"deleting": "Ina-delete..."
+				},
+				"connect_wallet_browser": {
+					"title": "Buksan sa MetaMask",
+					"description": "Para kumonekta, kopyahin ang link na ito at buksan ito sa built-in browser ng MetaMask.",
+					"copy_link": "Kopyahin ang link"
+				},
+				"connect_wallet_picker": {
+					"description": "Maraming wallet ang natagpuan. Pumili ng isa para kumonekta."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Wala ka pang wallet?",
+					"find_wallet_link": "Maghanap ng isa sa WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ACCOUNT",
+				"security": "SEGURIDAD",
+				"google_account": "Account sa Google",
+				"google_not_linked": "Hindi naka-link",
+				"passkeys": "Mga passkey",
+				"passkeys_linked": "{count} naka-link",
+				"danger_zone": "DANGER ZONE",
+				"delete_account": {
+					"description": "Permanenteng alisin ang lahat ng iyong data"
+				},
+				"verification": "BERIPIKASYON",
+				"google_linked": "Naka-link",
+				"account_label": "Akaunto"
+			},
+			"username": {
+				"label": "Pangalan ng gumagamit",
+				"edit_title": "I-edit ang pangalan ng gumagamit",
+				"description": "3-30 karakter, alphanumeric, underscore at hyphen"
+			},
+			"history": {
+				"title": "KASAYSAYAN"
+			},
+			"transactions": {
+				"failed_to_load": "Nabigo sa pag-load",
+				"no_transactions": "Walang mga transaksyon pa",
+				"wdd_per_day": "WDD/araw",
+				"just_now": "Ngayon lang",
+				"minutes_ago": "{minutes}m ang nakalipas",
+				"hours_ago": "{hours}o ang nakalipas",
+				"days_ago": "{days}a ang nakalipas",
+				"filter": {
+					"all_types": "Lahat ng uri",
+					"select_type": "Pumili ng uri",
+					"rewards": "Mga Gantimpala"
+				},
+				"types": {
+					"withdrawal": "Pag-withdraw",
+					"received": "Natanggap",
+					"sent": "Naipadala",
+					"ambassador_reward": "Gantimpala ng embahador",
+					"party_subsidy": "Subsidiya ng partido",
+					"stream_created": "Nilikha ang stream",
+					"stream_updated": "Na-update ang stream",
+					"savings_deposit": "Pagtitipid mag-deposit",
+					"savings_withdrawal": "Pagtitipid mag-withdraw",
+					"savings_interest": "Pagtitipid interes",
+					"referral_reward": "Gantimpala sa referral"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "I-scan ang QR code na ito para mag-verify sa Self.",
+				"mobile_dialog_description": "Ire-redirect ka sa Self app upang tapusin ang beripikasyon.",
+				"support_telegram": "Self Support",
+				"verification_guide": "Gabay sa pagpapatunay",
+				"qr_alt": "QR ng pagpapatunay ng Self",
+				"callback_warning": "Babala",
+				"callback_warning_description": "Ang URL ng callback ng pagpapatunay ay hindi maabot mula sa iyong telepono. Itakda ang NEXT_PUBLIC_SELF_CALLBACK sa isang pampublikong URL (o itakda ang NEXT_PUBLIC_PUBLIC_BASE_URL sa isang tunnel/preview na domain).",
+				"label": "Self",
+				"status_completed": "Na-verify",
+				"status_not_completed": "Hindi na-verify",
+				"learn_about_self": "Alamin ang tungkol sa Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Magpapatunay nang hindi inilalantad ang anumang personal na data."
+				}
+			},
+			"verification_warning": {
+				"title": "Kumuha ng pagpapatunay",
+				"reward_cap_banner": "May limit ang mga reward sa basic income at savings para sa mga hindi beripikadong mamamayan. I-verify ang iyong account para kumita nang walang limitasyon."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Karamihan sa mga wallet ay nagpapakita lamang ng WDD pagkatapos itong i-import nang manu-mano sa napiling chain gamit ang ",
+			"contract_address": "address ng kontrata"
+		}
+	},
+	"toasts": {
+		"generic_error": "May naganap na error",
+		"copied": "Na-copy",
+		"wallet": {
+			"no_wallet": "Walang wallet address",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Na-send",
+			"account_deleted": "Na-delete ang account",
+			"delete_failed": "Nabigo ang pag-delete ng account",
+			"contract_address_error": "Hindi maaaring mag-withdraw sa contract address",
+			"sign_out_failed": "Nabigo ang pag-sign out",
+			"google_linked": "Naka-link ang account sa Google",
+			"google_already_linked": "Ang account sa Google ay naka-link na sa ibang account",
+			"google_link_failed": "Hindi masimulan ang pag-link sa Google",
+			"passkey_added": "Naidagdag ang passkey",
+			"passkey_add_failed": "Hindi maidagdag ang passkey"
+		},
+		"parties": {
+			"updated": "Na-update",
+			"update_failed": "Nabigo ang pag-update",
+			"update_error": "Error sa pag-update ng partido",
+			"registered": "Nakarehistro na ang partido",
+			"register_failed": "Nabigong irehistro ang partido",
+			"register_error": "Error sa pagpaparehistro ng partido",
+			"deleted": "Tinanggal",
+			"delete_failed": "Nabigong tanggalin",
+			"delete_error": "Error sa pagtanggal"
+		},
+		"basic_income": {
+			"activated": "Na-activate ang basic income",
+			"activate_failed": "Nabigo ang pag-activate",
+			"claimed": "Na-claim",
+			"claim_failed": "Nabigo ang pag-claim"
+		},
+		"savings": {
+			"collected": "Na-collect",
+			"collect_failed": "Nabigo ang pag-collect",
+			"deposited": "Na-deposit",
+			"deposit_failed": "Nabigo ang pag-deposit",
+			"withdrawn": "Na-withdraw",
+			"withdraw_failed": "Nabigo ang pag-withdraw"
+		}
+	},
+	"common": {
+		"confirm": "Kumpirmahin",
+		"sign_in": "Mag-sign in",
+		"connect": "Ikonekta",
+		"disconnect": "Idiskonekta",
+		"connect_wallet": "Ikonekta ang wallet",
+		"max": "Max",
+		"loading": "Naglo-load...",
+		"processing": "Pinoproseso...",
+		"insufficient_balance": "Hindi sapat na WDD",
+		"delete_account": "Tanggalin ang account",
+		"sign_out": "Mag-sign out",
+		"invalid_address": "Hindi wastong address",
+		"coming_soon": "Malapit na",
+		"withdraw": "Mag-withdraw",
+		"trade": "Mag-trade",
+		"continue": "Magpatuloy",
+		"close": "Isara",
+		"updating": "Nag-a-update...",
+		"save": "I-save",
+		"vote": "Bumoto",
+		"switch_to_base_chain": "Lumipat sa Base Chain"
+	},
+	"auth": {
+		"choose_method": "Pumili ng iyong ginustong paraan.",
+		"sign_in_with_google": "Magpatuloy sa Google",
+		"sign_in_with_passkey": "Gumamit ng biometrics",
+		"sign_in_or_create": "I-access ang iyong account gamit ang isang passkey, gamit ang iyong fingerprint, face scan o screen lock.",
+		"create_account": "Lumikha ng account",
+		"create_passkey_name": "Lumikha ng pangalan ng passkey",
+		"passkey_name_description": "Pangalanan ang iyong passkey upang makilala ito sa iyong password manager.",
+		"passkey_name": "Pangalan ng passkey"
+	}
 }

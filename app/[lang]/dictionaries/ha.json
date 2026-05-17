@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Samu",
-    "govern": "Mulki",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Jam'iyyu",
-        "elections": "Zaɓe",
-        "referendums": "Zaɓen raba gardama"
-      },
-      "sections": {
-        "parties": {
-          "title": "Jam'iyyun siyasa"
-        },
-        "elections": {
-          "title": "Zaɓen gwaji",
-          "subtitle": "Gwada da dimokuradiyya ta duniya"
-        },
-        "referendums": {
-          "title": "Zaɓen Raba Gardama na Tsarin Mulki na Duniya",
-          "subtitle": "Yi zaɓe a kan ƙa'idodin mu na asali"
-        }
-      },
-      "vote": {
-        "no_active_election": "Zaɓe yana farawa nan ba da jimawa ba",
-        "test_verification": {
-          "description": "Gwada tsarin tantancewar mu yanzu don kasancewa cikin shiri don jefa ƙuri'a",
-          "button": "Gwaji"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Tallafi",
-          "ambassadors": "Jakadu"
-        },
-        "discover": "Gano",
-        "search_placeholder": "Nemo jam'iyyu...",
-        "no_parties_found": "Ba a sami jam'iyyu ba",
-        "error_loading": "An kasa loda jam'iyyu",
-        "refresh": "Sabunta",
-        "party_details": "Cikakkun bayanai na jam'iyya",
-        "share_party": "Raba jam'iyya",
-        "my_party": "Jam'iyyata",
-        "learn_more": "Ƙari koyo",
-        "party_management": "Gudanar da jam'iyya",
-        "edit_party_info": "Gyara bayanan jam'iyya",
-        "dialogs": {
-          "party_name": "Sunan jam'iyya",
-          "description_optional": "Bayani (na zaɓi)",
-          "official_link_optional": "Hanyar haɗi ta hukuma (na zaɓi)",
-          "updating": "Ana sabuntawa...",
-          "save": "Ajiye",
-          "register_party": "Yi rijistar jam'iyya",
-          "register": "Yi rijista",
-          "registering": "Ana rijista...",
-          "leader_warning_register": "A halin yanzu kai ne shugaban {partyName}. Yin rijistar sabuwar jam'iyya zai share jam'iyyarka ta yanzu.",
-          "deleting": "Ana sharewa...",
-          "about_to_delete": "Kana shirin share {partyName}. Wannan aikin ba za a iya juyar da shi ba.",
-          "about_to_register": "Kana shirin ƙirƙirar sabuwar jam'iyya."
-        },
-        "detail": {
-          "failed_to_load": "An kasa lodawa bayanan jam'iyya",
-          "party_not_found": "Ba a sami jam'iyya ba",
-          "error_loading": "Kuskure yayin lodawa jam'iyya",
-          "back_to_parties": "Koma zuwa jam'iyyu",
-          "description": "Bayani",
-          "party_info": "Bayanin jam'iyya",
-          "leader": "Shugaba",
-          "website": "Gidan yanar gizo",
-          "not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
-        },
-        "delete_party": "Share jam'iyya",
-        "run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi",
-        "ambassadors": {
-          "title": "Shirin Jakadu",
-          "description": "Gayyaci abokai kuma ka samu lada idan sun tabbatar da kansu da kuma idan jam’iyyarsu ta samu tallafi",
-          "leaderboard": "Jerin masu jagoranci",
-          "no_rewards_yet": "Babu lada da aka samu tukuna",
-          "col_ambassador": "Jakadu",
-          "col_invited": "Waɗanda aka gayyata",
-          "col_reward": "Lada",
-          "share_referral_link": "Raba hanyar haɗin gwiwa"
-        },
-        "subsidies": {
-          "title": "Shirin Tallafin Jam'iyya",
-          "no_subsidies_yet": "Babu tallafi tukuna",
-          "description": "Tallafi bisa ga yadda aka yi a zabe",
-          "col_subsidy": "Tallafi"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Zaɓe",
-          "not_found": "Ba a sami zaɓe ba",
-          "not_found_description": "Zaɓen da kuke nema ba ya wanzu.",
-          "back_to_elections": "Komawa zuwa zaɓe",
-          "status_active": "Mai aiki",
-          "status_upcoming": "Mai zuwa",
-          "status_ended": "Ya ƙare",
-          "election_info": "Bayanan zaɓe",
-          "reward_pool": "Tafkin lada: {amount} WDD",
-          "reward_pool_minimum": "Tafkin lada: mafi karanci {amount} WDD",
-          "choose_a_party": "Zaɓi jam'iyya",
-          "no_parties_for_election": "Babu jam'iyyun da ke samuwa don wannan zaɓe.",
-          "results_title": "Sakamako",
-          "vote_singular": "ƙuri’a",
-          "vote_plural": "ƙuri’u",
-          "no_votes": "Ba a jefa ƙuri’a a wannan zaɓen ba.",
-          "test_election_name": "Zaɓen gwaji {n}"
-        },
-        "list": {
-          "empty_state": "Ba a sami zabe ba",
-          "active_section": "Zabe masu gudana",
-          "upcoming_section": "Zabe masu zuwa",
-          "previous_section": "Zabe da suka gabata"
-        }
-      }
-    },
-    "error": {
-      "title": "Wani abu ya tashi kuskure",
-      "description": "Kuskure da ba a zata ba ya faru. Da fatan za a sake gwadawa.",
-      "error_id": "ID na kuskure: {digest}",
-      "try_again": "Sake gwadawa"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Kudin shiga na asali",
-        "savings": "Ajiya"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Samu kuɗi don kasancewar ɗan adam",
-        "subtitle_claim": "Nemi drachma ɗinku",
-        "tooltip_claim": "1 WDD/rana, an iyakance zuwa 1 WDD. Komo cikin sa'o'i 24 don haɓaka ribar.",
-        "claim_button": "Nemi",
-        "alert": {
-          "claim": {
-            "title": "Tabbatar da nema",
-            "description": "Kuna shirin neman {amount} WDD. Wannan zai ƙara zuwa ma'aunin jakar kuɗinku."
-          }
-        },
-        "setup_subtitle": "Saita kuɗin shiga na asali ɗinku",
-        "activate_loading": "Ana kunna...",
-        "activate_button": "Kunna kuɗin shiga na asali",
-        "world_drachma": "Menene Drachma ta duniya (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Nemi rabon AI na duniya"
-      },
-      "savings": {
-        "title": "Asusun ajiya",
-        "subtitle": "Samu riba a kowane dakika",
-        "tooltip": "69% yawan riba na shekara. Tattara kuma sake saka jari akai-akai don samun kusan 100% riba mai tasiri. Cire kowane lokaci.",
-        "deposit": "Saka",
-        "withdraw": "Cire",
-        "balance": "Ma'auni",
-        "amount_deposit": "Adadin da za a saka",
-        "amount_withdraw": "Adadin da za a cire",
-        "interest": "Riba",
-        "collect": "Tattara",
-        "alert": {
-          "collect": {
-            "title": "Tabbatar da tattarawa",
-            "description": "Kuna shirin tattara {amount} WDD a riba."
-          },
-          "deposit": {
-            "title": "Tabbatar da saka",
-            "description": "Kuna shirin saka {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Tabbatar da cirewa",
-            "description": "Kuna shirin cire {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Duba smart contract",
-        "verify": "Tabbatar"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ASUSU",
-          "account_info": "Bayanin asusu",
-          "referral_code": "Lambar turo",
-          "referred_by": "Wanda ya gayyace ka",
-          "language": "Harshe"
-        },
-        "help": {
-          "title": "Taimako",
-          "quickstart": "Farawa Mai Sauri",
-          "docs": "Wiki",
-          "help_center": "Cibiyar Taimako"
-        },
-        "source_code": {
-          "title": "LAMBAN TUSHE"
-        },
-        "legal": {
-          "title": "DOKA",
-          "terms": "Sharuɗɗan Amfani",
-          "privacy": "Manufar Keɓancewa"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Jakar kuɗi"
-      },
-      "balance": "Ma'auni",
-      "modals": {
-        "sign_out": {
-          "confirm": "Kuna da tabbacin cewa kuna son fita?"
-        },
-        "disconnect": {
-          "confirm": "Ka tabbata kana son cire haɗin walat ɗinka?"
-        },
-        "send": {
-          "button": "Aika",
-          "withdraw_to_crypto": {
-            "description": "Cire WDD zuwa asusun crypto.",
-            "amount_label": "Adadi",
-            "address_label": "Adireshin jakar kuɗi",
-            "network_label": "Cibiyar sadarwa"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD akan Jumper",
-          "ethereum_uniswap": "Ethereum WDD akan Uniswap",
-          "base_jumper": "Base Chain WDD akan Jumper",
-          "base_uniswap": "Base Chain WDD akan Uniswap",
-          "worldchain_jumper": "World Chain WDD akan Jumper",
-          "worldchain_uniswap": "World Chain WDD akan Uniswap"
-        },
-        "delete_account": {
-          "description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",
-          "deleting": "Ana share..."
-        },
-        "connect_wallet_browser": {
-          "title": "Buɗe a MetaMask",
-          "description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a cikin burauzar da aka gina a MetaMask.",
-          "copy_link": "Kwafi mahaɗi"
-        },
-        "connect_wallet_picker": {
-          "description": "An gano walat da dama. Zaɓi ɗaya don haɗawa."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Ba ku da wallet?",
-          "find_wallet_link": "Nemo ɗaya a WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ASUSU",
-        "security": "TSARO",
-        "google_account": "Asusun Google",
-        "google_not_linked": "Babu haɗi",
-        "passkeys": "Mabuɗin shiga",
-        "passkeys_linked": "{count} an haɗa",
-        "danger_zone": "YANKIN HADARI",
-        "delete_account": {
-          "description": "Cire duk bayanan ku na dindindin"
-        },
-        "verification": "TABBATARWA",
-        "google_linked": "An haɗa",
-        "account_label": "Asusu"
-      },
-      "username": {
-        "label": "Sunan mai amfani",
-        "edit_title": "Gyara sunan mai amfani",
-        "description": "Haruffa 3-30, alfanumerik, ƙasa da layukan"
-      },
-      "history": {
-        "title": "TARIHI"
-      },
-      "transactions": {
-        "failed_to_load": "An kasa lodawa",
-        "no_transactions": "Babu ma'amaloli tukuna",
-        "wdd_per_day": "WDD/rana",
-        "just_now": "Yanzu",
-        "minutes_ago": "da {minutes}m",
-        "hours_ago": "da {hours}h",
-        "days_ago": "da {days}k",
-        "filter": {
-          "all_types": "Duk nau'ukan",
-          "select_type": "Zaɓi nau'i",
-          "rewards": "Kyaututtuka"
-        },
-        "types": {
-          "withdrawal": "Cirewa",
-          "received": "An karɓa",
-          "sent": "An aika",
-          "ambassador_reward": "Kyautar jakada",
-          "party_subsidy": "Tallafin jam'iyya",
-          "stream_created": "An ƙirƙiri riba",
-          "stream_updated": "An sabunta riba",
-          "savings_deposit": "Ajiya saka",
-          "savings_withdrawal": "Ajiya cire",
-          "savings_interest": "Ajiya riba",
-          "referral_reward": "Kyautar gayyata"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Duba wannan lambar QR don tabbatarwa ta Self.",
-        "mobile_dialog_description": "Za a mayar da kai zuwa manhajar Self don kammala tantancewa.",
-        "support_telegram": "Tallafin Self",
-        "verification_guide": "Jagorar tabbatarwa",
-        "qr_alt": "QR na tabbatar da Self",
-        "callback_warning": "Gargadi",
-        "callback_warning_description": "URL ɗin mayar da tabbatarwa ba za a iya samun shi daga wayarku ba. Saita NEXT_PUBLIC_SELF_CALLBACK zuwa URL na jama'a (ko saita NEXT_PUBLIC_PUBLIC_BASE_URL zuwa yankin rami/dubawa).",
-        "label": "Self",
-        "status_completed": "An tabbatar",
-        "status_not_completed": "Ba a tabbatar ba",
-        "learn_about_self": "Koyi game da Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Samu tabbatarwa ba tare da bayyana wasu bayanan sirri ba."
-        }
-      },
-      "verification_warning": {
-        "title": "Samu tabbatarwa",
-        "reward_cap_banner": "Kyaututtukan kudin shiga na asali da ajiyar kudi suna da iyaka ga ’yan ƙasa da ba a tabbatar da su ba. Tabbatar da asusunka don samun riba ba tare da iyaka ba."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Yawancin walat ɗin suna nuna WDD ne kawai bayan an shigo da shi da hannu a kan zaɓaɓɓen sarkar ta ",
-      "contract_address": "adireshin kwangila"
-    }
-  },
-  "toasts": {
-    "generic_error": "An sami kuskure",
-    "copied": "An kwafi",
-    "wallet": {
-      "no_wallet": "Babu adireshin jakar kuɗi",
-      "min_amount": "Mafi ƙanƙani 10 WDD",
-      "sent": "An aika",
-      "account_deleted": "An share asusu",
-      "delete_failed": "Ya gaza share asusu",
-      "contract_address_error": "Ba za a iya cire zuwa adireshin kwangilar ba",
-      "sign_out_failed": "Fita bai yi nasara ba",
-      "google_linked": "An haɗa asusun Google",
-      "google_already_linked": "Asusun Google yana da haɗi da wani asusu",
-      "google_link_failed": "Ba a iya fara haɗin Google",
-      "passkey_added": "An ƙara mabuɗin shiga",
-      "passkey_add_failed": "Ba a iya ƙara mabuɗin shiga"
-    },
-    "parties": {
-      "updated": "An sabunta",
-      "update_failed": "Sabuntawa ta gaza",
-      "update_error": "Kuskure yayin sabunta jam'iyya",
-      "registered": "An yi rijistar jam'iyya",
-      "register_failed": "Gaza yin rijistar jam'iyya",
-      "register_error": "Kuskure wajen yin rijistar jam'iyya",
-      "deleted": "An share",
-      "delete_failed": "Gaza sharewa",
-      "delete_error": "Kuskure wajen sharewa"
-    },
-    "basic_income": {
-      "activated": "An kunna kuɗin shiga na asali",
-      "activate_failed": "Ya gaza kunna",
-      "claimed": "An nemi",
-      "claim_failed": "Ya gaza nema"
-    },
-    "savings": {
-      "collected": "An tattara",
-      "collect_failed": "Ya gaza tattarawa",
-      "deposited": "An saka",
-      "deposit_failed": "Saka ya gaza",
-      "withdrawn": "An cire",
-      "withdraw_failed": "Cirewa ta gaza"
-    }
-  },
-  "common": {
-    "confirm": "Tabbatar",
-    "sign_in": "Shiga",
-    "connect": "Haɗa",
-    "disconnect": "Cire haɗin",
-    "connect_wallet": "Haɗa walat",
-    "max": "Mafi girma",
-    "loading": "Ana loda...",
-    "processing": "Ana aiki...",
-    "insufficient_balance": "WDD mara isa",
-    "delete_account": "Share asusu",
-    "sign_out": "Fita",
-    "invalid_address": "Adireshin da ba a yarda da shi ba",
-    "coming_soon": "Nan da nan",
-    "withdraw": "Cire",
-    "trade": "Kasuwanci",
-    "continue": "Ci gaba",
-    "close": "Rufe",
-    "updating": "Ana sabuntawa...",
-    "save": "Ajiye",
-    "vote": "Ka zabe",
-    "switch_to_base_chain": "Canza zuwa Base Chain"
-  },
-  "auth": {
-    "choose_method": "Zaɓi hanyar da kuka fi so.",
-    "sign_in_with_google": "Ci gaba da Google",
-    "sign_in_with_passkey": "Yi amfani da biometrics",
-    "sign_in_or_create": "Shiga asusunka tare da passkey, ta amfani da yatsa, binciken fuska ko kulle allon.",
-    "create_account": "Ƙirƙiri asusu",
-    "create_passkey_name": "Ƙirƙiri sunan passkey",
-    "passkey_name_description": "Suna passkey ɗinka don gane shi a cikin mai sarrafa kalmar sirri.",
-    "passkey_name": "Sunan passkey"
-  }
+	"nav": {
+		"earn": "Samu",
+		"govern": "Mulki",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Jam'iyyu",
+				"elections": "Zaɓe",
+				"referendums": "Zaɓen raba gardama"
+			},
+			"sections": {
+				"parties": {
+					"title": "Jam'iyyun siyasa"
+				},
+				"elections": {
+					"title": "Zaɓen gwaji",
+					"subtitle": "Gwada da dimokuradiyya ta duniya"
+				},
+				"referendums": {
+					"title": "Zaɓen Raba Gardama na Tsarin Mulki na Duniya",
+					"subtitle": "Yi zaɓe a kan ƙa'idodin mu na asali"
+				}
+			},
+			"vote": {
+				"no_active_election": "Zaɓe yana farawa nan ba da jimawa ba",
+				"test_verification": {
+					"description": "Gwada tsarin tantancewar mu yanzu don kasancewa cikin shiri don jefa ƙuri'a",
+					"button": "Gwaji"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Tallafi",
+					"ambassadors": "Jakadu"
+				},
+				"discover": "Gano",
+				"search_placeholder": "Nemo jam'iyyu...",
+				"no_parties_found": "Ba a sami jam'iyyu ba",
+				"error_loading": "An kasa loda jam'iyyu",
+				"refresh": "Sabunta",
+				"party_details": "Cikakkun bayanai na jam'iyya",
+				"share_party": "Raba jam'iyya",
+				"my_party": "Jam'iyyata",
+				"learn_more": "Ƙari koyo",
+				"party_management": "Gudanar da jam'iyya",
+				"edit_party_info": "Gyara bayanan jam'iyya",
+				"dialogs": {
+					"party_name": "Sunan jam'iyya",
+					"description_optional": "Bayani (na zaɓi)",
+					"official_link_optional": "Hanyar haɗi ta hukuma (na zaɓi)",
+					"updating": "Ana sabuntawa...",
+					"save": "Ajiye",
+					"register_party": "Yi rijistar jam'iyya",
+					"register": "Yi rijista",
+					"registering": "Ana rijista...",
+					"leader_warning_register": "A halin yanzu kai ne shugaban {partyName}. Yin rijistar sabuwar jam'iyya zai share jam'iyyarka ta yanzu.",
+					"deleting": "Ana sharewa...",
+					"about_to_delete": "Kana shirin share {partyName}. Wannan aikin ba za a iya juyar da shi ba.",
+					"about_to_register": "Kana shirin ƙirƙirar sabuwar jam'iyya."
+				},
+				"detail": {
+					"failed_to_load": "An kasa lodawa bayanan jam'iyya",
+					"party_not_found": "Ba a sami jam'iyya ba",
+					"error_loading": "Kuskure yayin lodawa jam'iyya",
+					"back_to_parties": "Koma zuwa jam'iyyu",
+					"description": "Bayani",
+					"party_info": "Bayanin jam'iyya",
+					"leader": "Shugaba",
+					"website": "Gidan yanar gizo",
+					"not_found_description": "Jam'iyyar da kake nema ba ta wanzu ba ko kuma an rusa ta."
+				},
+				"delete_party": "Share jam'iyya",
+				"run_on_elections_and_earn": "Shiga zaɓe kuma ku sami tallafi",
+				"ambassadors": {
+					"title": "Shirin Jakadu",
+					"description": "Gayyaci abokai kuma ka samu lada idan sun tabbatar da kansu da kuma idan jam’iyyarsu ta samu tallafi",
+					"leaderboard": "Jerin masu jagoranci",
+					"no_rewards_yet": "Babu lada da aka samu tukuna",
+					"col_ambassador": "Jakadu",
+					"col_invited": "Waɗanda aka gayyata",
+					"col_reward": "Lada",
+					"share_referral_link": "Raba hanyar haɗin gwiwa"
+				},
+				"subsidies": {
+					"title": "Shirin Tallafin Jam'iyya",
+					"no_subsidies_yet": "Babu tallafi tukuna",
+					"description": "Tallafi bisa ga yadda aka yi a zabe",
+					"col_subsidy": "Tallafi"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Zaɓe",
+					"not_found": "Ba a sami zaɓe ba",
+					"not_found_description": "Zaɓen da kuke nema ba ya wanzu.",
+					"back_to_elections": "Komawa zuwa zaɓe",
+					"status_active": "Mai aiki",
+					"status_upcoming": "Mai zuwa",
+					"status_ended": "Ya ƙare",
+					"election_info": "Bayanan zaɓe",
+					"reward_pool": "Tafkin lada: {amount} WDD",
+					"reward_pool_minimum": "Tafkin lada: mafi karanci {amount} WDD",
+					"choose_a_party": "Zaɓi jam'iyya",
+					"no_parties_for_election": "Babu jam'iyyun da ke samuwa don wannan zaɓe.",
+					"results_title": "Sakamako",
+					"vote_singular": "ƙuri’a",
+					"vote_plural": "ƙuri’u",
+					"no_votes": "Ba a jefa ƙuri’a a wannan zaɓen ba.",
+					"test_election_name": "Zaɓen gwaji {n}"
+				},
+				"list": {
+					"empty_state": "Ba a sami zabe ba",
+					"active_section": "Zabe masu gudana",
+					"upcoming_section": "Zabe masu zuwa",
+					"previous_section": "Zabe da suka gabata"
+				}
+			}
+		},
+		"error": {
+			"title": "Wani abu ya tashi kuskure",
+			"description": "Kuskure da ba a zata ba ya faru. Da fatan za a sake gwadawa.",
+			"error_id": "ID na kuskure: {digest}",
+			"try_again": "Sake gwadawa"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Kudin shiga na asali",
+				"savings": "Ajiya"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Samu kuɗi don kasancewar ɗan adam",
+				"subtitle_claim": "Nemi drachma ɗinku",
+				"tooltip_claim": "1 WDD/rana, an iyakance zuwa 1 WDD. Komo cikin sa'o'i 24 don haɓaka ribar.",
+				"claim_button": "Nemi",
+				"alert": {
+					"claim": {
+						"title": "Tabbatar da nema",
+						"description": "Kuna shirin neman {amount} WDD. Wannan zai ƙara zuwa ma'aunin jakar kuɗinku."
+					}
+				},
+				"setup_subtitle": "Saita kuɗin shiga na asali ɗinku",
+				"activate_loading": "Ana kunna...",
+				"activate_button": "Kunna kuɗin shiga na asali",
+				"world_drachma": "Menene Drachma ta duniya (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Nemi rabon AI na duniya"
+			},
+			"savings": {
+				"title": "Asusun ajiya",
+				"subtitle": "Samu riba a kowane dakika",
+				"tooltip": "69% yawan riba na shekara. Tattara kuma sake saka jari akai-akai don samun kusan 100% riba mai tasiri. Cire kowane lokaci.",
+				"deposit": "Saka",
+				"withdraw": "Cire",
+				"balance": "Ma'auni",
+				"amount_deposit": "Adadin da za a saka",
+				"amount_withdraw": "Adadin da za a cire",
+				"interest": "Riba",
+				"collect": "Tattara",
+				"alert": {
+					"collect": {
+						"title": "Tabbatar da tattarawa",
+						"description": "Kuna shirin tattara {amount} WDD a riba."
+					},
+					"deposit": {
+						"title": "Tabbatar da saka",
+						"description": "Kuna shirin saka {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Tabbatar da cirewa",
+						"description": "Kuna shirin cire {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Duba smart contract",
+				"verify": "Tabbatar"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ASUSU",
+					"account_info": "Bayanin asusu",
+					"referral_code": "Lambar turo",
+					"referred_by": "Wanda ya gayyace ka",
+					"language": "Harshe"
+				},
+				"help": {
+					"title": "Taimako",
+					"quickstart": "Farawa Mai Sauri",
+					"docs": "Wiki",
+					"help_center": "Cibiyar Taimako"
+				},
+				"source_code": {
+					"title": "LAMBAN TUSHE"
+				},
+				"legal": {
+					"title": "DOKA",
+					"terms": "Sharuɗɗan Amfani",
+					"privacy": "Manufar Keɓancewa"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Jakar kuɗi"
+			},
+			"balance": "Ma'auni",
+			"modals": {
+				"sign_out": {
+					"confirm": "Kuna da tabbacin cewa kuna son fita?"
+				},
+				"disconnect": {
+					"confirm": "Ka tabbata kana son cire haɗin walat ɗinka?"
+				},
+				"send": {
+					"button": "Aika",
+					"withdraw_to_crypto": {
+						"description": "Cire WDD zuwa asusun crypto.",
+						"amount_label": "Adadi",
+						"address_label": "Adireshin jakar kuɗi",
+						"network_label": "Cibiyar sadarwa"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD akan Jumper",
+					"ethereum_uniswap": "Ethereum WDD akan Uniswap",
+					"base_jumper": "Base Chain WDD akan Jumper",
+					"base_uniswap": "Base Chain WDD akan Uniswap",
+					"worldchain_jumper": "World Chain WDD akan Jumper",
+					"worldchain_uniswap": "World Chain WDD akan Uniswap"
+				},
+				"delete_account": {
+					"description": "Wannan zai share asusu ɗinku na dindindin kuma ya cire duk bayananku daga sabobin mu. Wannan aikin ba za a iya juyar da shi ba — don Allah ku ci gaba da hankali.",
+					"deleting": "Ana share..."
+				},
+				"connect_wallet_browser": {
+					"title": "Buɗe a MetaMask",
+					"description": "Don haɗawa, kwafi wannan mahaɗin sannan ka buɗe shi a cikin burauzar da aka gina a MetaMask.",
+					"copy_link": "Kwafi mahaɗi"
+				},
+				"connect_wallet_picker": {
+					"description": "An gano walat da dama. Zaɓi ɗaya don haɗawa."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Ba ku da wallet?",
+					"find_wallet_link": "Nemo ɗaya a WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ASUSU",
+				"security": "TSARO",
+				"google_account": "Asusun Google",
+				"google_not_linked": "Babu haɗi",
+				"passkeys": "Mabuɗin shiga",
+				"passkeys_linked": "{count} an haɗa",
+				"danger_zone": "YANKIN HADARI",
+				"delete_account": {
+					"description": "Cire duk bayanan ku na dindindin"
+				},
+				"verification": "TABBATARWA",
+				"google_linked": "An haɗa",
+				"account_label": "Asusu"
+			},
+			"username": {
+				"label": "Sunan mai amfani",
+				"edit_title": "Gyara sunan mai amfani",
+				"description": "Haruffa 3-30, alfanumerik, ƙasa da layukan"
+			},
+			"history": {
+				"title": "TARIHI"
+			},
+			"transactions": {
+				"failed_to_load": "An kasa lodawa",
+				"no_transactions": "Babu ma'amaloli tukuna",
+				"wdd_per_day": "WDD/rana",
+				"just_now": "Yanzu",
+				"minutes_ago": "da {minutes}m",
+				"hours_ago": "da {hours}h",
+				"days_ago": "da {days}k",
+				"filter": {
+					"all_types": "Duk nau'ukan",
+					"select_type": "Zaɓi nau'i",
+					"rewards": "Kyaututtuka"
+				},
+				"types": {
+					"withdrawal": "Cirewa",
+					"received": "An karɓa",
+					"sent": "An aika",
+					"ambassador_reward": "Kyautar jakada",
+					"party_subsidy": "Tallafin jam'iyya",
+					"stream_created": "An ƙirƙiri riba",
+					"stream_updated": "An sabunta riba",
+					"savings_deposit": "Ajiya saka",
+					"savings_withdrawal": "Ajiya cire",
+					"savings_interest": "Ajiya riba",
+					"referral_reward": "Kyautar gayyata"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Duba wannan lambar QR don tabbatarwa ta Self.",
+				"mobile_dialog_description": "Za a mayar da kai zuwa manhajar Self don kammala tantancewa.",
+				"support_telegram": "Tallafin Self",
+				"verification_guide": "Jagorar tabbatarwa",
+				"qr_alt": "QR na tabbatar da Self",
+				"callback_warning": "Gargadi",
+				"callback_warning_description": "URL ɗin mayar da tabbatarwa ba za a iya samun shi daga wayarku ba. Saita NEXT_PUBLIC_SELF_CALLBACK zuwa URL na jama'a (ko saita NEXT_PUBLIC_PUBLIC_BASE_URL zuwa yankin rami/dubawa).",
+				"label": "Self",
+				"status_completed": "An tabbatar",
+				"status_not_completed": "Ba a tabbatar ba",
+				"learn_about_self": "Koyi game da Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Samu tabbatarwa ba tare da bayyana wasu bayanan sirri ba."
+				}
+			},
+			"verification_warning": {
+				"title": "Samu tabbatarwa",
+				"reward_cap_banner": "Kyaututtukan kudin shiga na asali da ajiyar kudi suna da iyaka ga ’yan ƙasa da ba a tabbatar da su ba. Tabbatar da asusunka don samun riba ba tare da iyaka ba."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Yawancin walat ɗin suna nuna WDD ne kawai bayan an shigo da shi da hannu a kan zaɓaɓɓen sarkar ta ",
+			"contract_address": "adireshin kwangila"
+		}
+	},
+	"toasts": {
+		"generic_error": "An sami kuskure",
+		"copied": "An kwafi",
+		"wallet": {
+			"no_wallet": "Babu adireshin jakar kuɗi",
+			"min_amount": "Mafi ƙanƙani 10 WDD",
+			"sent": "An aika",
+			"account_deleted": "An share asusu",
+			"delete_failed": "Ya gaza share asusu",
+			"contract_address_error": "Ba za a iya cire zuwa adireshin kwangilar ba",
+			"sign_out_failed": "Fita bai yi nasara ba",
+			"google_linked": "An haɗa asusun Google",
+			"google_already_linked": "Asusun Google yana da haɗi da wani asusu",
+			"google_link_failed": "Ba a iya fara haɗin Google",
+			"passkey_added": "An ƙara mabuɗin shiga",
+			"passkey_add_failed": "Ba a iya ƙara mabuɗin shiga"
+		},
+		"parties": {
+			"updated": "An sabunta",
+			"update_failed": "Sabuntawa ta gaza",
+			"update_error": "Kuskure yayin sabunta jam'iyya",
+			"registered": "An yi rijistar jam'iyya",
+			"register_failed": "Gaza yin rijistar jam'iyya",
+			"register_error": "Kuskure wajen yin rijistar jam'iyya",
+			"deleted": "An share",
+			"delete_failed": "Gaza sharewa",
+			"delete_error": "Kuskure wajen sharewa"
+		},
+		"basic_income": {
+			"activated": "An kunna kuɗin shiga na asali",
+			"activate_failed": "Ya gaza kunna",
+			"claimed": "An nemi",
+			"claim_failed": "Ya gaza nema"
+		},
+		"savings": {
+			"collected": "An tattara",
+			"collect_failed": "Ya gaza tattarawa",
+			"deposited": "An saka",
+			"deposit_failed": "Saka ya gaza",
+			"withdrawn": "An cire",
+			"withdraw_failed": "Cirewa ta gaza"
+		}
+	},
+	"common": {
+		"confirm": "Tabbatar",
+		"sign_in": "Shiga",
+		"connect": "Haɗa",
+		"disconnect": "Cire haɗin",
+		"connect_wallet": "Haɗa walat",
+		"max": "Mafi girma",
+		"loading": "Ana loda...",
+		"processing": "Ana aiki...",
+		"insufficient_balance": "WDD mara isa",
+		"delete_account": "Share asusu",
+		"sign_out": "Fita",
+		"invalid_address": "Adireshin da ba a yarda da shi ba",
+		"coming_soon": "Nan da nan",
+		"withdraw": "Cire",
+		"trade": "Kasuwanci",
+		"continue": "Ci gaba",
+		"close": "Rufe",
+		"updating": "Ana sabuntawa...",
+		"save": "Ajiye",
+		"vote": "Ka zabe",
+		"switch_to_base_chain": "Canza zuwa Base Chain"
+	},
+	"auth": {
+		"choose_method": "Zaɓi hanyar da kuka fi so.",
+		"sign_in_with_google": "Ci gaba da Google",
+		"sign_in_with_passkey": "Yi amfani da biometrics",
+		"sign_in_or_create": "Shiga asusunka tare da passkey, ta amfani da yatsa, binciken fuska ko kulle allon.",
+		"create_account": "Ƙirƙiri asusu",
+		"create_passkey_name": "Ƙirƙiri sunan passkey",
+		"passkey_name_description": "Suna passkey ɗinka don gane shi a cikin mai sarrafa kalmar sirri.",
+		"passkey_name": "Sunan passkey"
+	}
 }

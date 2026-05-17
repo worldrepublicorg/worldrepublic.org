@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "درآمد",
-    "govern": "حکومت",
-    "menu": "منو"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "احزاب",
-        "elections": "انتخابات",
-        "referendums": "همه‌پرسی"
-      },
-      "sections": {
-        "parties": {
-          "title": "احزاب سیاسی"
-        },
-        "elections": {
-          "title": "انتخابات آزمایشی",
-          "subtitle": "با دموکراسی جهانی تجربه کنید"
-        },
-        "referendums": {
-          "title": "همه‌پرسی قانون اساسی جهان",
-          "subtitle": "بر اصول بنیادین ما رأی دهید"
-        }
-      },
-      "vote": {
-        "no_active_election": "انتخابات به‌زودی آغاز می‌شود",
-        "test_verification": {
-          "description": "سیستم تأیید ما را اکنون امتحان کنید تا برای رأی‌گیری آماده باشید",
-          "button": "آزمایش"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "یارانه‌ها",
-          "ambassadors": "سفیران"
-        },
-        "discover": "کشف کنید",
-        "search_placeholder": "جستجوی احزاب...",
-        "no_parties_found": "حزبی یافت نشد",
-        "error_loading": "بارگذاری احزاب ناموفق بود",
-        "refresh": "تازه کردن",
-        "party_details": "جزئیات حزب",
-        "share_party": "اشتراک‌گذاری حزب",
-        "my_party": "حزب من",
-        "learn_more": "بیشتر بدانید",
-        "party_management": "مدیریت حزب",
-        "edit_party_info": "ویرایش اطلاعات حزب",
-        "dialogs": {
-          "party_name": "نام حزب",
-          "description_optional": "توضیحات (اختیاری)",
-          "official_link_optional": "لینک رسمی (اختیاری)",
-          "updating": "در حال به‌روزرسانی...",
-          "save": "ذخیره",
-          "register_party": "ثبت حزب",
-          "register": "ثبت",
-          "registering": "در حال ثبت...",
-          "leader_warning_register": "شما در حال حاضر رهبر {partyName} هستید. ثبت حزب جدید باعث حذف حزب فعلی شما خواهد شد.",
-          "deleting": "در حال حذف...",
-          "about_to_delete": "شما در حال حذف {partyName} هستید. این عمل قابل بازگشت نیست.",
-          "about_to_register": "شما در حال تأسیس یک حزب جدید هستید."
-        },
-        "detail": {
-          "failed_to_load": "بارگذاری اطلاعات حزب ناموفق بود",
-          "party_not_found": "حزب یافت نشد",
-          "error_loading": "خطا در بارگذاری حزب",
-          "back_to_parties": "بازگشت به احزاب",
-          "description": "توضیحات",
-          "party_info": "اطلاعات حزب",
-          "leader": "رهبر",
-          "website": "وب‌سایت",
-          "not_found_description": "حزبی که به دنبال آن هستید وجود ندارد یا منحل شده است."
-        },
-        "delete_party": "حذف حزب",
-        "run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید",
-        "ambassadors": {
-          "title": "برنامه سفیران",
-          "description": "دوستان خود را دعوت کنید و وقتی تأیید می‌شوند و وقتی حزبشان یارانه می‌گیرد پاداش بگیرید",
-          "leaderboard": "جدول رده‌بندی",
-          "no_rewards_yet": "هنوز حقوقی وجود ندارد",
-          "col_ambassador": "سفیران",
-          "col_invited": "دعوت‌شدگان",
-          "col_reward": "حقوق",
-          "share_referral_link": "اشتراک‌گذاری لینک معرفی"
-        },
-        "subsidies": {
-          "title": "برنامه یارانه احزاب",
-          "no_subsidies_yet": "هنوز یارانه‌ای وجود ندارد",
-          "description": "تأمین مالی بر اساس عملکرد انتخاباتی",
-          "col_subsidy": "یارانه"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "انتخابات",
-          "not_found": "انتخابات یافت نشد",
-          "not_found_description": "انتخاباتی که به دنبال آن هستید وجود ندارد.",
-          "back_to_elections": "بازگشت به انتخابات",
-          "status_active": "فعال",
-          "status_upcoming": "آینده",
-          "status_ended": "پایان‌یافته",
-          "election_info": "اطلاعات انتخابات",
-          "reward_pool": "مخزن پاداش: {amount} WDD",
-          "reward_pool_minimum": "مخزن پاداش: حداقل {amount} WDD",
-          "choose_a_party": "یک حزب انتخاب کنید",
-          "no_parties_for_election": "هیچ حزبی برای این انتخابات موجود نیست.",
-          "results_title": "نتایج",
-          "vote_singular": "رأی",
-          "vote_plural": "رأی",
-          "no_votes": "هیچ رأیی در این انتخابات داده نشد.",
-          "test_election_name": "انتخابات آزمایشی {n}"
-        },
-        "list": {
-          "empty_state": "هیچ انتخاباتی یافت نشد",
-          "active_section": "انتخابات فعال",
-          "upcoming_section": "انتخابات آینده",
-          "previous_section": "انتخابات قبلی"
-        }
-      }
-    },
-    "error": {
-      "title": "مشکلی پیش آمد",
-      "description": "یک خطای غیرمنتظره رخ داد. لطفاً دوباره تلاش کنید.",
-      "error_id": "شناسه خطا: {digest}",
-      "try_again": "تلاش مجدد"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "درآمد پایه",
-        "savings": "پس‌انداز"
-      },
-      "basic_income": {
-        "subtitle_unauth": "برای انسان بودن پول دریافت کنید",
-        "subtitle_claim": "دراخمای خود را دریافت کنید",
-        "tooltip_claim": "۱ WDD در روز، حداکثر ۱ WDD. برای حداکثر درآمد ظرف ۲۴ ساعت بازگردید.",
-        "claim_button": "دریافت",
-        "alert": {
-          "claim": {
-            "title": "تأیید دریافت",
-            "description": "شما در حال دریافت {amount} WDD هستید. این مبلغ به موجودی کیف پول شما اضافه خواهد شد."
-          }
-        },
-        "setup_subtitle": "درآمد پایه خود را تنظیم کنید",
-        "activate_loading": "در حال فعال‌سازی...",
-        "activate_button": "فعال‌سازی درآمد پایه",
-        "world_drachma": "دراخمای جهانی (WDD) چیست؟",
-        "subtitle_unauth_raised_by_humanity": "سود جهانی هوش مصنوعی خود را دریافت کنید"
-      },
-      "savings": {
-        "title": "حساب پس‌انداز",
-        "subtitle": "هر ثانیه سود دریافت کنید",
-        "tooltip": "نرخ پایه سالانه ۶۹٪. به طور منظم جمع‌آوری و سرمایه‌گذاری مجدد کنید تا به بازده مؤثر نزدیک به ۱۰۰٪ دست یابید. هر زمان برداشت کنید.",
-        "deposit": "واریز",
-        "withdraw": "برداشت",
-        "balance": "موجودی",
-        "amount_deposit": "مبلغ واریز",
-        "amount_withdraw": "مبلغ برداشت",
-        "interest": "سود",
-        "collect": "جمع‌آوری",
-        "alert": {
-          "collect": {
-            "title": "تأیید جمع‌آوری",
-            "description": "شما در حال جمع‌آوری {amount} WDD سود هستید."
-          },
-          "deposit": {
-            "title": "تأیید واریز",
-            "description": "شما در حال واریز {amount} WDD هستید."
-          },
-          "withdraw": {
-            "title": "تأیید برداشت",
-            "description": "شما در حال برداشت {amount} WDD هستید."
-          }
-        },
-        "smart_contract_link": "قرارداد هوشمند را ببینید",
-        "verify": "تأیید"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "حساب کاربری",
-          "account_info": "اطلاعات حساب",
-          "referral_code": "کد معرف",
-          "referred_by": "معرفی‌شده توسط",
-          "language": "زبان"
-        },
-        "help": {
-          "title": "راهنما",
-          "quickstart": "شروع سریع",
-          "docs": "ویکی",
-          "help_center": "مرکز راهنمایی"
-        },
-        "source_code": {
-          "title": "کد منبع"
-        },
-        "legal": {
-          "title": "قانونی",
-          "terms": "شرایط استفاده",
-          "privacy": "حریم خصوصی"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "کیف پول"
-      },
-      "balance": "موجودی",
-      "modals": {
-        "sign_out": {
-          "confirm": "آیا مطمئن هستید که می‌خواهید خارج شوید؟"
-        },
-        "disconnect": {
-          "confirm": "آیا مطمئن هستید که می‌خواهید کیف پول خود را قطع اتصال کنید؟"
-        },
-        "send": {
-          "button": "ارسال",
-          "withdraw_to_crypto": {
-            "description": "برداشت WDD به یک حساب کریپتو.",
-            "amount_label": "مبلغ",
-            "address_label": "آدرس کیف پول",
-            "network_label": "شبکه"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD در Jumper",
-          "ethereum_uniswap": "Ethereum WDD در Uniswap",
-          "base_jumper": "Base Chain WDD در Jumper",
-          "base_uniswap": "Base Chain WDD در Uniswap",
-          "worldchain_jumper": "World Chain WDD در Jumper",
-          "worldchain_uniswap": "World Chain WDD در Uniswap"
-        },
-        "delete_account": {
-          "description": "این کار حساب شما را به طور دائمی حذف کرده و تمام داده‌های شما را از سرورهای ما حذف خواهد کرد. این عمل قابل بازگشت نیست — لطفاً با احتیاط ادامه دهید.",
-          "deleting": "در حال حذف..."
-        },
-        "connect_wallet_browser": {
-          "title": "در MetaMask باز کنید",
-          "description": "برای اتصال، این لینک را کپی کنید و آن را در مرورگر داخلی MetaMask باز کنید.",
-          "copy_link": "کپی لینک"
-        },
-        "connect_wallet_picker": {
-          "description": "چند کیف پول پیدا شد. یکی را برای اتصال انتخاب کنید."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "کیف پول ندارید؟",
-          "find_wallet_link": "یکی را در WalletGuide پیدا کنید"
-        }
-      },
-      "sections": {
-        "account": "حساب کاربری",
-        "security": "امنیت",
-        "google_account": "حساب گوگل",
-        "google_not_linked": "متصل نشده",
-        "passkeys": "گذرکلیدها",
-        "passkeys_linked": "{count} متصل",
-        "danger_zone": "منطقه خطر",
-        "delete_account": {
-          "description": "تمام داده‌های خود را به طور دائمی حذف کنید"
-        },
-        "verification": "تأیید",
-        "google_linked": "متصل",
-        "account_label": "حساب کاربری"
-      },
-      "username": {
-        "label": "نام کاربری",
-        "edit_title": "ویرایش نام کاربری",
-        "description": "3-30 کاراکتر، الفبایی-عددی، زیرخط و خط تیره"
-      },
-      "history": {
-        "title": "تاریخچه"
-      },
-      "transactions": {
-        "failed_to_load": "بارگذاری ناموفق",
-        "no_transactions": "هنوز تراکنشی وجود ندارد",
-        "wdd_per_day": "WDD/روز",
-        "just_now": "همین الان",
-        "minutes_ago": "{minutes}دقیقه پیش",
-        "hours_ago": "{hours}ساعت پیش",
-        "days_ago": "{days}روز پیش",
-        "filter": {
-          "all_types": "همه انواع",
-          "select_type": "نوع را انتخاب کنید",
-          "rewards": "پاداش‌ها"
-        },
-        "types": {
-          "withdrawal": "برداشت",
-          "received": "دریافت شده",
-          "sent": "ارسال شده",
-          "ambassador_reward": "پاداش سفیر",
-          "party_subsidy": "یارانه حزب",
-          "stream_created": "جریان ایجاد شد",
-          "stream_updated": "جریان به‌روزرسانی شد",
-          "savings_deposit": "پس‌انداز واریز",
-          "savings_withdrawal": "پس‌انداز برداشت",
-          "savings_interest": "پس‌انداز سود",
-          "referral_reward": "پاداش معرفی"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "برای تأیید با Self این کد QR را اسکن کنید.",
-        "mobile_dialog_description": "برای تکمیل تأیید، به اپلیکیشن Self هدایت می‌شوید.",
-        "support_telegram": "پشتیبانی Self",
-        "verification_guide": "راهنمای تأیید هویت",
-        "qr_alt": "QR تأیید Self",
-        "callback_warning": "هشدار",
-        "callback_warning_description": "آدرس URL بازگشت تأیید از تلفن شما قابل دسترسی نیست. NEXT_PUBLIC_SELF_CALLBACK را روی یک URL عمومی تنظیم کنید (یا NEXT_PUBLIC_PUBLIC_BASE_URL را روی یک دامنه تونل/پیش‌نمایش تنظیم کنید).",
-        "label": "Self",
-        "status_completed": "تأیید شده",
-        "status_not_completed": "تأیید نشده",
-        "learn_about_self": "درباره Self بیشتر بدانید",
-        "primer": {
-          "title": "Self پروتکل",
-          "description": "بدون افشای هیچ دادهٔ شخصی، تأیید هویت دریافت کنید."
-        }
-      },
-      "verification_warning": {
-        "title": "دریافت تأیید",
-        "reward_cap_banner": "پاداش‌های درآمد پایه و پس‌انداز برای شهروندان تأییدنشده محدود است. برای کسب درآمد بدون محدودیت، حساب خود را تأیید کنید."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "اکثر کیف پول‌ها فقط پس از وارد کردن دستی WDD در زنجیره انتخاب شده با ",
-      "contract_address": "آدرس قرارداد"
-    }
-  },
-  "toasts": {
-    "generic_error": "خطایی رخ داد",
-    "copied": "کپی شد",
-    "wallet": {
-      "no_wallet": "آدرس کیف پول موجود نیست",
-      "min_amount": "حداقل ۱۰ WDD",
-      "sent": "ارسال شد",
-      "account_deleted": "حساب کاربری حذف شد",
-      "delete_failed": "حذف حساب کاربری ناموفق بود",
-      "contract_address_error": "نمی‌توان به آدرس قرارداد برداشت کرد",
-      "sign_out_failed": "خروج ناموفق",
-      "google_linked": "حساب گوگل متصل شد",
-      "google_already_linked": "حساب گوگل قبلاً به حساب دیگری متصل است",
-      "google_link_failed": "اتصال گوگل آغاز نشد",
-      "passkey_added": "گذرکلید اضافه شد",
-      "passkey_add_failed": "افزودن گذرکلید امکان‌پذیر نبود"
-    },
-    "parties": {
-      "updated": "به‌روزرسانی شد",
-      "update_failed": "به‌روزرسانی ناموفق بود",
-      "update_error": "خطا در به‌روزرسانی حزب",
-      "registered": "حزب ثبت شد",
-      "register_failed": "ثبت حزب ناموفق بود",
-      "register_error": "خطا در ثبت حزب",
-      "deleted": "حذف شد",
-      "delete_failed": "حذف ناموفق بود",
-      "delete_error": "خطا در حذف"
-    },
-    "basic_income": {
-      "activated": "درآمد پایه فعال شد",
-      "activate_failed": "فعال‌سازی ناموفق بود",
-      "claimed": "دریافت شد",
-      "claim_failed": "دریافت ناموفق بود"
-    },
-    "savings": {
-      "collected": "جمع‌آوری شد",
-      "collect_failed": "جمع‌آوری ناموفق بود",
-      "deposited": "واریز شد",
-      "deposit_failed": "واریز ناموفق بود",
-      "withdrawn": "برداشت شد",
-      "withdraw_failed": "برداشت ناموفق بود"
-    }
-  },
-  "common": {
-    "confirm": "تأیید",
-    "sign_in": "ورود",
-    "connect": "اتصال",
-    "disconnect": "قطع اتصال",
-    "connect_wallet": "اتصال کیف پول",
-    "max": "حداکثر",
-    "loading": "در حال بارگذاری...",
-    "processing": "در حال پردازش...",
-    "insufficient_balance": "WDD کافی نیست",
-    "delete_account": "حذف حساب",
-    "sign_out": "خروج",
-    "invalid_address": "آدرس نامعتبر",
-    "coming_soon": "به زودی",
-    "withdraw": "برداشت",
-    "trade": "معامله",
-    "continue": "ادامه",
-    "close": "بستن",
-    "updating": "در حال به‌روزرسانی...",
-    "save": "ذخیره",
-    "vote": "رای دهید",
-    "switch_to_base_chain": "تغییر به Base Chain"
-  },
-  "auth": {
-    "choose_method": "روش مورد نظر خود را انتخاب کنید.",
-    "sign_in_with_google": "ادامه با Google",
-    "sign_in_with_passkey": "استفاده از بیومتریک",
-    "sign_in_or_create": "با استفاده از passkey، با استفاده از اثر انگشت، اسکن صورت یا قفل صفحه، به حساب خود دسترسی پیدا کنید.",
-    "create_account": "ایجاد حساب کاربری",
-    "create_passkey_name": "ایجاد نام passkey",
-    "passkey_name_description": "passkey خود را نامگذاری کنید تا در مدیر رمز عبور شناسایی شود.",
-    "passkey_name": "نام passkey"
-  }
+	"nav": {
+		"earn": "درآمد",
+		"govern": "حکومت",
+		"menu": "منو"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "احزاب",
+				"elections": "انتخابات",
+				"referendums": "همه‌پرسی"
+			},
+			"sections": {
+				"parties": {
+					"title": "احزاب سیاسی"
+				},
+				"elections": {
+					"title": "انتخابات آزمایشی",
+					"subtitle": "با دموکراسی جهانی تجربه کنید"
+				},
+				"referendums": {
+					"title": "همه‌پرسی قانون اساسی جهان",
+					"subtitle": "بر اصول بنیادین ما رأی دهید"
+				}
+			},
+			"vote": {
+				"no_active_election": "انتخابات به‌زودی آغاز می‌شود",
+				"test_verification": {
+					"description": "سیستم تأیید ما را اکنون امتحان کنید تا برای رأی‌گیری آماده باشید",
+					"button": "آزمایش"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "یارانه‌ها",
+					"ambassadors": "سفیران"
+				},
+				"discover": "کشف کنید",
+				"search_placeholder": "جستجوی احزاب...",
+				"no_parties_found": "حزبی یافت نشد",
+				"error_loading": "بارگذاری احزاب ناموفق بود",
+				"refresh": "تازه کردن",
+				"party_details": "جزئیات حزب",
+				"share_party": "اشتراک‌گذاری حزب",
+				"my_party": "حزب من",
+				"learn_more": "بیشتر بدانید",
+				"party_management": "مدیریت حزب",
+				"edit_party_info": "ویرایش اطلاعات حزب",
+				"dialogs": {
+					"party_name": "نام حزب",
+					"description_optional": "توضیحات (اختیاری)",
+					"official_link_optional": "لینک رسمی (اختیاری)",
+					"updating": "در حال به‌روزرسانی...",
+					"save": "ذخیره",
+					"register_party": "ثبت حزب",
+					"register": "ثبت",
+					"registering": "در حال ثبت...",
+					"leader_warning_register": "شما در حال حاضر رهبر {partyName} هستید. ثبت حزب جدید باعث حذف حزب فعلی شما خواهد شد.",
+					"deleting": "در حال حذف...",
+					"about_to_delete": "شما در حال حذف {partyName} هستید. این عمل قابل بازگشت نیست.",
+					"about_to_register": "شما در حال تأسیس یک حزب جدید هستید."
+				},
+				"detail": {
+					"failed_to_load": "بارگذاری اطلاعات حزب ناموفق بود",
+					"party_not_found": "حزب یافت نشد",
+					"error_loading": "خطا در بارگذاری حزب",
+					"back_to_parties": "بازگشت به احزاب",
+					"description": "توضیحات",
+					"party_info": "اطلاعات حزب",
+					"leader": "رهبر",
+					"website": "وب‌سایت",
+					"not_found_description": "حزبی که به دنبال آن هستید وجود ندارد یا منحل شده است."
+				},
+				"delete_party": "حذف حزب",
+				"run_on_elections_and_earn": "در انتخابات شرکت کنید و یارانه دریافت کنید",
+				"ambassadors": {
+					"title": "برنامه سفیران",
+					"description": "دوستان خود را دعوت کنید و وقتی تأیید می‌شوند و وقتی حزبشان یارانه می‌گیرد پاداش بگیرید",
+					"leaderboard": "جدول رده‌بندی",
+					"no_rewards_yet": "هنوز حقوقی وجود ندارد",
+					"col_ambassador": "سفیران",
+					"col_invited": "دعوت‌شدگان",
+					"col_reward": "حقوق",
+					"share_referral_link": "اشتراک‌گذاری لینک معرفی"
+				},
+				"subsidies": {
+					"title": "برنامه یارانه احزاب",
+					"no_subsidies_yet": "هنوز یارانه‌ای وجود ندارد",
+					"description": "تأمین مالی بر اساس عملکرد انتخاباتی",
+					"col_subsidy": "یارانه"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "انتخابات",
+					"not_found": "انتخابات یافت نشد",
+					"not_found_description": "انتخاباتی که به دنبال آن هستید وجود ندارد.",
+					"back_to_elections": "بازگشت به انتخابات",
+					"status_active": "فعال",
+					"status_upcoming": "آینده",
+					"status_ended": "پایان‌یافته",
+					"election_info": "اطلاعات انتخابات",
+					"reward_pool": "مخزن پاداش: {amount} WDD",
+					"reward_pool_minimum": "مخزن پاداش: حداقل {amount} WDD",
+					"choose_a_party": "یک حزب انتخاب کنید",
+					"no_parties_for_election": "هیچ حزبی برای این انتخابات موجود نیست.",
+					"results_title": "نتایج",
+					"vote_singular": "رأی",
+					"vote_plural": "رأی",
+					"no_votes": "هیچ رأیی در این انتخابات داده نشد.",
+					"test_election_name": "انتخابات آزمایشی {n}"
+				},
+				"list": {
+					"empty_state": "هیچ انتخاباتی یافت نشد",
+					"active_section": "انتخابات فعال",
+					"upcoming_section": "انتخابات آینده",
+					"previous_section": "انتخابات قبلی"
+				}
+			}
+		},
+		"error": {
+			"title": "مشکلی پیش آمد",
+			"description": "یک خطای غیرمنتظره رخ داد. لطفاً دوباره تلاش کنید.",
+			"error_id": "شناسه خطا: {digest}",
+			"try_again": "تلاش مجدد"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "درآمد پایه",
+				"savings": "پس‌انداز"
+			},
+			"basic_income": {
+				"subtitle_unauth": "برای انسان بودن پول دریافت کنید",
+				"subtitle_claim": "دراخمای خود را دریافت کنید",
+				"tooltip_claim": "۱ WDD در روز، حداکثر ۱ WDD. برای حداکثر درآمد ظرف ۲۴ ساعت بازگردید.",
+				"claim_button": "دریافت",
+				"alert": {
+					"claim": {
+						"title": "تأیید دریافت",
+						"description": "شما در حال دریافت {amount} WDD هستید. این مبلغ به موجودی کیف پول شما اضافه خواهد شد."
+					}
+				},
+				"setup_subtitle": "درآمد پایه خود را تنظیم کنید",
+				"activate_loading": "در حال فعال‌سازی...",
+				"activate_button": "فعال‌سازی درآمد پایه",
+				"world_drachma": "دراخمای جهانی (WDD) چیست؟",
+				"subtitle_unauth_raised_by_humanity": "سود جهانی هوش مصنوعی خود را دریافت کنید"
+			},
+			"savings": {
+				"title": "حساب پس‌انداز",
+				"subtitle": "هر ثانیه سود دریافت کنید",
+				"tooltip": "نرخ پایه سالانه ۶۹٪. به طور منظم جمع‌آوری و سرمایه‌گذاری مجدد کنید تا به بازده مؤثر نزدیک به ۱۰۰٪ دست یابید. هر زمان برداشت کنید.",
+				"deposit": "واریز",
+				"withdraw": "برداشت",
+				"balance": "موجودی",
+				"amount_deposit": "مبلغ واریز",
+				"amount_withdraw": "مبلغ برداشت",
+				"interest": "سود",
+				"collect": "جمع‌آوری",
+				"alert": {
+					"collect": {
+						"title": "تأیید جمع‌آوری",
+						"description": "شما در حال جمع‌آوری {amount} WDD سود هستید."
+					},
+					"deposit": {
+						"title": "تأیید واریز",
+						"description": "شما در حال واریز {amount} WDD هستید."
+					},
+					"withdraw": {
+						"title": "تأیید برداشت",
+						"description": "شما در حال برداشت {amount} WDD هستید."
+					}
+				},
+				"smart_contract_link": "قرارداد هوشمند را ببینید",
+				"verify": "تأیید"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "حساب کاربری",
+					"account_info": "اطلاعات حساب",
+					"referral_code": "کد معرف",
+					"referred_by": "معرفی‌شده توسط",
+					"language": "زبان"
+				},
+				"help": {
+					"title": "راهنما",
+					"quickstart": "شروع سریع",
+					"docs": "ویکی",
+					"help_center": "مرکز راهنمایی"
+				},
+				"source_code": {
+					"title": "کد منبع"
+				},
+				"legal": {
+					"title": "قانونی",
+					"terms": "شرایط استفاده",
+					"privacy": "حریم خصوصی"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "کیف پول"
+			},
+			"balance": "موجودی",
+			"modals": {
+				"sign_out": {
+					"confirm": "آیا مطمئن هستید که می‌خواهید خارج شوید؟"
+				},
+				"disconnect": {
+					"confirm": "آیا مطمئن هستید که می‌خواهید کیف پول خود را قطع اتصال کنید؟"
+				},
+				"send": {
+					"button": "ارسال",
+					"withdraw_to_crypto": {
+						"description": "برداشت WDD به یک حساب کریپتو.",
+						"amount_label": "مبلغ",
+						"address_label": "آدرس کیف پول",
+						"network_label": "شبکه"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD در Jumper",
+					"ethereum_uniswap": "Ethereum WDD در Uniswap",
+					"base_jumper": "Base Chain WDD در Jumper",
+					"base_uniswap": "Base Chain WDD در Uniswap",
+					"worldchain_jumper": "World Chain WDD در Jumper",
+					"worldchain_uniswap": "World Chain WDD در Uniswap"
+				},
+				"delete_account": {
+					"description": "این کار حساب شما را به طور دائمی حذف کرده و تمام داده‌های شما را از سرورهای ما حذف خواهد کرد. این عمل قابل بازگشت نیست — لطفاً با احتیاط ادامه دهید.",
+					"deleting": "در حال حذف..."
+				},
+				"connect_wallet_browser": {
+					"title": "در MetaMask باز کنید",
+					"description": "برای اتصال، این لینک را کپی کنید و آن را در مرورگر داخلی MetaMask باز کنید.",
+					"copy_link": "کپی لینک"
+				},
+				"connect_wallet_picker": {
+					"description": "چند کیف پول پیدا شد. یکی را برای اتصال انتخاب کنید."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "کیف پول ندارید؟",
+					"find_wallet_link": "یکی را در WalletGuide پیدا کنید"
+				}
+			},
+			"sections": {
+				"account": "حساب کاربری",
+				"security": "امنیت",
+				"google_account": "حساب گوگل",
+				"google_not_linked": "متصل نشده",
+				"passkeys": "گذرکلیدها",
+				"passkeys_linked": "{count} متصل",
+				"danger_zone": "منطقه خطر",
+				"delete_account": {
+					"description": "تمام داده‌های خود را به طور دائمی حذف کنید"
+				},
+				"verification": "تأیید",
+				"google_linked": "متصل",
+				"account_label": "حساب کاربری"
+			},
+			"username": {
+				"label": "نام کاربری",
+				"edit_title": "ویرایش نام کاربری",
+				"description": "3-30 کاراکتر، الفبایی-عددی، زیرخط و خط تیره"
+			},
+			"history": {
+				"title": "تاریخچه"
+			},
+			"transactions": {
+				"failed_to_load": "بارگذاری ناموفق",
+				"no_transactions": "هنوز تراکنشی وجود ندارد",
+				"wdd_per_day": "WDD/روز",
+				"just_now": "همین الان",
+				"minutes_ago": "{minutes}دقیقه پیش",
+				"hours_ago": "{hours}ساعت پیش",
+				"days_ago": "{days}روز پیش",
+				"filter": {
+					"all_types": "همه انواع",
+					"select_type": "نوع را انتخاب کنید",
+					"rewards": "پاداش‌ها"
+				},
+				"types": {
+					"withdrawal": "برداشت",
+					"received": "دریافت شده",
+					"sent": "ارسال شده",
+					"ambassador_reward": "پاداش سفیر",
+					"party_subsidy": "یارانه حزب",
+					"stream_created": "جریان ایجاد شد",
+					"stream_updated": "جریان به‌روزرسانی شد",
+					"savings_deposit": "پس‌انداز واریز",
+					"savings_withdrawal": "پس‌انداز برداشت",
+					"savings_interest": "پس‌انداز سود",
+					"referral_reward": "پاداش معرفی"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "برای تأیید با Self این کد QR را اسکن کنید.",
+				"mobile_dialog_description": "برای تکمیل تأیید، به اپلیکیشن Self هدایت می‌شوید.",
+				"support_telegram": "پشتیبانی Self",
+				"verification_guide": "راهنمای تأیید هویت",
+				"qr_alt": "QR تأیید Self",
+				"callback_warning": "هشدار",
+				"callback_warning_description": "آدرس URL بازگشت تأیید از تلفن شما قابل دسترسی نیست. NEXT_PUBLIC_SELF_CALLBACK را روی یک URL عمومی تنظیم کنید (یا NEXT_PUBLIC_PUBLIC_BASE_URL را روی یک دامنه تونل/پیش‌نمایش تنظیم کنید).",
+				"label": "Self",
+				"status_completed": "تأیید شده",
+				"status_not_completed": "تأیید نشده",
+				"learn_about_self": "درباره Self بیشتر بدانید",
+				"primer": {
+					"title": "Self پروتکل",
+					"description": "بدون افشای هیچ دادهٔ شخصی، تأیید هویت دریافت کنید."
+				}
+			},
+			"verification_warning": {
+				"title": "دریافت تأیید",
+				"reward_cap_banner": "پاداش‌های درآمد پایه و پس‌انداز برای شهروندان تأییدنشده محدود است. برای کسب درآمد بدون محدودیت، حساب خود را تأیید کنید."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "اکثر کیف پول‌ها فقط پس از وارد کردن دستی WDD در زنجیره انتخاب شده با ",
+			"contract_address": "آدرس قرارداد"
+		}
+	},
+	"toasts": {
+		"generic_error": "خطایی رخ داد",
+		"copied": "کپی شد",
+		"wallet": {
+			"no_wallet": "آدرس کیف پول موجود نیست",
+			"min_amount": "حداقل ۱۰ WDD",
+			"sent": "ارسال شد",
+			"account_deleted": "حساب کاربری حذف شد",
+			"delete_failed": "حذف حساب کاربری ناموفق بود",
+			"contract_address_error": "نمی‌توان به آدرس قرارداد برداشت کرد",
+			"sign_out_failed": "خروج ناموفق",
+			"google_linked": "حساب گوگل متصل شد",
+			"google_already_linked": "حساب گوگل قبلاً به حساب دیگری متصل است",
+			"google_link_failed": "اتصال گوگل آغاز نشد",
+			"passkey_added": "گذرکلید اضافه شد",
+			"passkey_add_failed": "افزودن گذرکلید امکان‌پذیر نبود"
+		},
+		"parties": {
+			"updated": "به‌روزرسانی شد",
+			"update_failed": "به‌روزرسانی ناموفق بود",
+			"update_error": "خطا در به‌روزرسانی حزب",
+			"registered": "حزب ثبت شد",
+			"register_failed": "ثبت حزب ناموفق بود",
+			"register_error": "خطا در ثبت حزب",
+			"deleted": "حذف شد",
+			"delete_failed": "حذف ناموفق بود",
+			"delete_error": "خطا در حذف"
+		},
+		"basic_income": {
+			"activated": "درآمد پایه فعال شد",
+			"activate_failed": "فعال‌سازی ناموفق بود",
+			"claimed": "دریافت شد",
+			"claim_failed": "دریافت ناموفق بود"
+		},
+		"savings": {
+			"collected": "جمع‌آوری شد",
+			"collect_failed": "جمع‌آوری ناموفق بود",
+			"deposited": "واریز شد",
+			"deposit_failed": "واریز ناموفق بود",
+			"withdrawn": "برداشت شد",
+			"withdraw_failed": "برداشت ناموفق بود"
+		}
+	},
+	"common": {
+		"confirm": "تأیید",
+		"sign_in": "ورود",
+		"connect": "اتصال",
+		"disconnect": "قطع اتصال",
+		"connect_wallet": "اتصال کیف پول",
+		"max": "حداکثر",
+		"loading": "در حال بارگذاری...",
+		"processing": "در حال پردازش...",
+		"insufficient_balance": "WDD کافی نیست",
+		"delete_account": "حذف حساب",
+		"sign_out": "خروج",
+		"invalid_address": "آدرس نامعتبر",
+		"coming_soon": "به زودی",
+		"withdraw": "برداشت",
+		"trade": "معامله",
+		"continue": "ادامه",
+		"close": "بستن",
+		"updating": "در حال به‌روزرسانی...",
+		"save": "ذخیره",
+		"vote": "رای دهید",
+		"switch_to_base_chain": "تغییر به Base Chain"
+	},
+	"auth": {
+		"choose_method": "روش مورد نظر خود را انتخاب کنید.",
+		"sign_in_with_google": "ادامه با Google",
+		"sign_in_with_passkey": "استفاده از بیومتریک",
+		"sign_in_or_create": "با استفاده از passkey، با استفاده از اثر انگشت، اسکن صورت یا قفل صفحه، به حساب خود دسترسی پیدا کنید.",
+		"create_account": "ایجاد حساب کاربری",
+		"create_passkey_name": "ایجاد نام passkey",
+		"passkey_name_description": "passkey خود را نامگذاری کنید تا در مدیر رمز عبور شناسایی شود.",
+		"passkey_name": "نام passkey"
+	}
 }

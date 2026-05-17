@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "収益",
-    "govern": "ガバナンス",
-    "menu": "メニュー"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "政党",
-        "elections": "選挙",
-        "referendums": "国民投票"
-      },
-      "sections": {
-        "parties": {
-          "title": "政治政党"
-        },
-        "elections": {
-          "title": "テスト選挙",
-          "subtitle": "グローバル民主主義を実験"
-        },
-        "referendums": {
-          "title": "世界憲法国民投票",
-          "subtitle": "私たちの基本原則に投票"
-        }
-      },
-      "vote": {
-        "no_active_election": "選挙がまもなく始まります",
-        "test_verification": {
-          "description": "投票の準備をするために、今すぐ確認システムをお試しください",
-          "button": "テスト"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "助成金",
-          "ambassadors": "アンバサダー"
-        },
-        "discover": "発見",
-        "search_placeholder": "政党を検索...",
-        "no_parties_found": "政党が見つかりません",
-        "error_loading": "政党を読み込めませんでした",
-        "refresh": "更新",
-        "party_details": "政党の詳細",
-        "share_party": "政党を共有",
-        "my_party": "私の政党",
-        "learn_more": "詳細を見る",
-        "party_management": "政党管理",
-        "edit_party_info": "政党情報を編集",
-        "dialogs": {
-          "party_name": "政党名",
-          "description_optional": "説明（オプション）",
-          "official_link_optional": "公式リンク（オプション）",
-          "updating": "更新中...",
-          "save": "保存",
-          "register_party": "政党を登録",
-          "register": "登録",
-          "registering": "登録中...",
-          "leader_warning_register": "あなたは現在 {partyName} のリーダーです。新しい政党を登録すると、現在の政党は削除されます。",
-          "deleting": "削除中...",
-          "about_to_delete": "あなたは {partyName} を削除しようとしています。この操作は元に戻せません。",
-          "about_to_register": "新しい政党を設立しようとしています。"
-        },
-        "detail": {
-          "failed_to_load": "政党データの読み込みに失敗しました",
-          "party_not_found": "政党が見つかりません",
-          "error_loading": "政党の読み込みエラー",
-          "back_to_parties": "政党に戻る",
-          "description": "説明",
-          "party_info": "政党情報",
-          "leader": "リーダー",
-          "website": "ウェブサイト",
-          "not_found_description": "お探しの政党は存在しないか、解散されました。"
-        },
-        "delete_party": "政党を削除",
-        "run_on_elections_and_earn": "選挙に立候補して補助金を受け取る",
-        "ambassadors": {
-          "title": "アンバサダープログラム",
-          "description": "友だちを招待して、本人確認が完了したときと、その友だちの政党が補助金を受け取ったときに報酬を獲得しましょう",
-          "leaderboard": "リーダーボード",
-          "no_rewards_yet": "まだ報酬はありません",
-          "col_ambassador": "アンバサダー",
-          "col_invited": "招待数",
-          "col_reward": "報酬",
-          "share_referral_link": "紹介リンクを共有"
-        },
-        "subsidies": {
-          "title": "政党助成金プログラム",
-          "no_subsidies_yet": "まだ助成金はありません",
-          "description": "選挙での実績に基づく資金提供",
-          "col_subsidy": "補助金"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "選挙",
-          "not_found": "選挙が見つかりません",
-          "not_found_description": "お探しの選挙は存在しません。",
-          "back_to_elections": "選挙一覧に戻る",
-          "status_active": "投票中",
-          "status_upcoming": "予定",
-          "status_ended": "終了",
-          "election_info": "選挙情報",
-          "reward_pool": "報酬プール: {amount} WDD",
-          "reward_pool_minimum": "報酬プール: 最小 {amount} WDD",
-          "choose_a_party": "政党を選択",
-          "no_parties_for_election": "この選挙に利用可能な政党はありません。",
-          "results_title": "結果",
-          "vote_singular": "票",
-          "vote_plural": "票",
-          "no_votes": "この選挙では投票がありませんでした。",
-          "test_election_name": "テスト選挙 {n}"
-        },
-        "list": {
-          "empty_state": "選挙が見つかりませんでした",
-          "active_section": "現在の選挙",
-          "upcoming_section": "今後の選挙",
-          "previous_section": "過去の選挙"
-        }
-      }
-    },
-    "error": {
-      "title": "問題が発生しました",
-      "description": "予期しないエラーが発生しました。もう一度お試しください。",
-      "error_id": "エラーID: {digest}",
-      "try_again": "もう一度試す"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "基本所得",
-        "savings": "貯蓄"
-      },
-      "basic_income": {
-        "subtitle_unauth": "人間であることへの報酬を受け取る",
-        "subtitle_claim": "ドラクマを受け取る",
-        "tooltip_claim": "1 WDD/日（上限 1 WDD）。24 時間以内に戻ると収益を最大化できます。",
-        "claim_button": "受け取る",
-        "alert": {
-          "claim": {
-            "title": "受け取りの確認",
-            "description": "{amount} WDD を受け取ります。ウォレット残高に追加されます。"
-          }
-        },
-        "setup_subtitle": "基本所得を設定",
-        "activate_loading": "有効化中...",
-        "activate_button": "基本所得を有効化",
-        "world_drachma": "ワールドドラフマ（WDD）とは？",
-        "subtitle_unauth_raised_by_humanity": "グローバルAI配当を受け取る"
-      },
-      "savings": {
-        "title": "貯蓄口座",
-        "subtitle": "毎秒利息が発生",
-        "tooltip": "年率 69% のベースレート。定期的に受け取りと再投資を行うことで実効利回りを 100% 近くまで高められます。いつでも出金可能。",
-        "deposit": "入金",
-        "withdraw": "出金",
-        "balance": "残高",
-        "amount_deposit": "入金額",
-        "amount_withdraw": "出金額",
-        "interest": "利息",
-        "collect": "利息を受け取る",
-        "alert": {
-          "collect": {
-            "title": "利息受け取りの確認",
-            "description": "利息として {amount} WDD を受け取ります。"
-          },
-          "deposit": {
-            "title": "入金の確認",
-            "description": "{amount} WDD を入金します。"
-          },
-          "withdraw": {
-            "title": "出金の確認",
-            "description": "{amount} WDD を出金します。"
-          }
-        },
-        "smart_contract_link": "スマートコントラクトを見る",
-        "verify": "認証"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "アカウント",
-          "account_info": "アカウント情報",
-          "referral_code": "紹介コード",
-          "referred_by": "紹介者",
-          "language": "言語"
-        },
-        "help": {
-          "title": "ヘルプ",
-          "quickstart": "クイックスタート",
-          "docs": "ウィキ",
-          "help_center": "ヘルプセンター"
-        },
-        "source_code": {
-          "title": "ソースコード"
-        },
-        "legal": {
-          "title": "リーガル",
-          "terms": "利用規約",
-          "privacy": "プライバシーポリシー"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "ウォレット"
-      },
-      "balance": "残高",
-      "modals": {
-        "sign_out": {
-          "confirm": "サインアウトしてもよろしいですか？"
-        },
-        "disconnect": {
-          "confirm": "ウォレットの接続を解除してもよろしいですか？"
-        },
-        "send": {
-          "button": "送信",
-          "withdraw_to_crypto": {
-            "description": "WDD を暗号アカウントに出金。",
-            "amount_label": "金額",
-            "address_label": "ウォレットアドレス",
-            "network_label": "ネットワーク"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD を Jumper で",
-          "ethereum_uniswap": "Ethereum WDD を Uniswap で",
-          "base_jumper": "Base Chain WDD を Jumper で",
-          "base_uniswap": "Base Chain WDD を Uniswap で",
-          "worldchain_jumper": "World Chain WDD を Jumper で",
-          "worldchain_uniswap": "World Chain WDD を Uniswap で"
-        },
-        "delete_account": {
-          "description": "これにより、アカウントが永続的に削除され、すべてのデータがサーバーから削除されます。この操作は元に戻せません — 慎重に続行してください。",
-          "deleting": "削除中..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMaskで開く",
-          "description": "接続するには、このリンクをコピーしてMetaMask内蔵ブラウザで開いてください。",
-          "copy_link": "リンクをコピー"
-        },
-        "connect_wallet_picker": {
-          "description": "複数のウォレットが見つかりました。接続するものを1つ選択してください。"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ウォレットをお持ちではありませんか？",
-          "find_wallet_link": "WalletGuideで探す"
-        }
-      },
-      "sections": {
-        "account": "アカウント",
-        "security": "セキュリティ",
-        "google_account": "Googleアカウント",
-        "google_not_linked": "未リンク",
-        "passkeys": "パスキー",
-        "passkeys_linked": "{count}件リンク済み",
-        "danger_zone": "危険区域",
-        "delete_account": {
-          "description": "すべてのデータを永続的に削除"
-        },
-        "verification": "検証",
-        "google_linked": "リンク済み",
-        "account_label": "アカウント"
-      },
-      "username": {
-        "label": "ユーザー名",
-        "edit_title": "ユーザー名を編集",
-        "description": "3-30文字、英数字、アンダースコア、ハイフン"
-      },
-      "history": {
-        "title": "履歴"
-      },
-      "transactions": {
-        "failed_to_load": "読み込みに失敗しました",
-        "no_transactions": "まだ取引がありません",
-        "wdd_per_day": "WDD/日",
-        "just_now": "たった今",
-        "minutes_ago": "{minutes}分前",
-        "hours_ago": "{hours}時間前",
-        "days_ago": "{days}日前",
-        "filter": {
-          "all_types": "すべてのタイプ",
-          "select_type": "タイプを選択",
-          "rewards": "報酬"
-        },
-        "types": {
-          "withdrawal": "引き出し",
-          "received": "受信済み",
-          "sent": "送信済み",
-          "ambassador_reward": "アンバサダー報酬",
-          "party_subsidy": "政党助成金",
-          "stream_created": "ストリーム作成",
-          "stream_updated": "ストリーム更新",
-          "savings_deposit": "貯蓄 入金",
-          "savings_withdrawal": "貯蓄 出金",
-          "savings_interest": "貯蓄 利息",
-          "referral_reward": "紹介報酬"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "このQRコードをスキャンしてSelfで本人確認を行ってください。",
-        "mobile_dialog_description": "確認を完了するためにSelfアプリへリダイレクトされます。",
-        "support_telegram": "Selfサポート",
-        "verification_guide": "認証ガイド",
-        "qr_alt": "Self認証QR",
-        "callback_warning": "警告",
-        "callback_warning_description": "認証コールバックURLにお使いの電話からアクセスできません。NEXT_PUBLIC_SELF_CALLBACKをパブリックURLに設定してください（またはNEXT_PUBLIC_PUBLIC_BASE_URLをトンネル/プレビュードメインに設定してください）。",
-        "label": "Self",
-        "status_completed": "認証済み",
-        "status_not_completed": "未認証",
-        "learn_about_self": "Self について学ぶ",
-        "primer": {
-          "title": "Self プロトコル",
-          "description": "個人データを一切開示せずに本人確認できます。"
-        }
-      },
-      "verification_warning": {
-        "title": "認証を取得",
-        "reward_cap_banner": "未認証の市民には、ベーシックインカムと貯蓄の報酬に上限があります。制限なく受け取るにはアカウントを認証してください。"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "ほとんどのウォレットは、選択したチェーンに手動でインポートされた後にのみWDDを表示します。その ",
-      "contract_address": "コントラクトアドレス"
-    }
-  },
-  "toasts": {
-    "generic_error": "エラーが発生しました",
-    "copied": "コピーしました",
-    "wallet": {
-      "no_wallet": "ウォレットアドレスがありません",
-      "min_amount": "最低 10 WDD",
-      "sent": "送信しました",
-      "account_deleted": "アカウントを削除しました",
-      "delete_failed": "アカウントの削除に失敗しました",
-      "contract_address_error": "コントラクトアドレスへの出金はできません",
-      "sign_out_failed": "サインアウトに失敗しました",
-      "google_linked": "Googleアカウントをリンクしました",
-      "google_already_linked": "Googleアカウントは既に別のアカウントにリンクされています",
-      "google_link_failed": "Googleのリンクを開始できませんでした",
-      "passkey_added": "パスキーを追加しました",
-      "passkey_add_failed": "パスキーを追加できませんでした"
-    },
-    "parties": {
-      "updated": "更新しました",
-      "update_failed": "更新に失敗しました",
-      "update_error": "政党の更新中にエラーが発生しました",
-      "registered": "政党が登録されました",
-      "register_failed": "政党の登録に失敗しました",
-      "register_error": "政党の登録中にエラーが発生しました",
-      "deleted": "削除しました",
-      "delete_failed": "削除に失敗しました",
-      "delete_error": "削除エラー"
-    },
-    "basic_income": {
-      "activated": "基本所得を有効化しました",
-      "activate_failed": "有効化に失敗しました",
-      "claimed": "受け取り完了",
-      "claim_failed": "受け取りに失敗しました"
-    },
-    "savings": {
-      "collected": "利息を受け取りました",
-      "collect_failed": "利息の受け取りに失敗しました",
-      "deposited": "入金しました",
-      "deposit_failed": "入金に失敗しました",
-      "withdrawn": "出金しました",
-      "withdraw_failed": "出金に失敗しました"
-    }
-  },
-  "common": {
-    "confirm": "確認",
-    "sign_in": "サインイン",
-    "connect": "接続",
-    "disconnect": "切断",
-    "connect_wallet": "ウォレットを接続",
-    "max": "最大",
-    "loading": "読み込み中...",
-    "processing": "処理中...",
-    "insufficient_balance": "WDDが不足",
-    "delete_account": "アカウントを削除",
-    "sign_out": "サインアウト",
-    "invalid_address": "無効なアドレス",
-    "coming_soon": "近日公開",
-    "withdraw": "引き出す",
-    "trade": "取引",
-    "continue": "続ける",
-    "close": "閉じる",
-    "updating": "更新中...",
-    "save": "保存",
-    "vote": "投票",
-    "switch_to_base_chain": "Base Chainに切り替える"
-  },
-  "auth": {
-    "choose_method": "希望する方法を選択してください。",
-    "sign_in_with_google": "Googleで続ける",
-    "sign_in_with_passkey": "生体認証を使用",
-    "sign_in_or_create": "パスキーを使用してアカウントにアクセスします。指紋、顔スキャン、または画面ロックを使用します。",
-    "create_account": "アカウントを作成",
-    "create_passkey_name": "パスキー名を作成",
-    "passkey_name_description": "パスワードマネージャーで識別できるように、パスキーに名前を付けます。",
-    "passkey_name": "パスキー名"
-  }
+	"nav": {
+		"earn": "収益",
+		"govern": "ガバナンス",
+		"menu": "メニュー"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "政党",
+				"elections": "選挙",
+				"referendums": "国民投票"
+			},
+			"sections": {
+				"parties": {
+					"title": "政治政党"
+				},
+				"elections": {
+					"title": "テスト選挙",
+					"subtitle": "グローバル民主主義を実験"
+				},
+				"referendums": {
+					"title": "世界憲法国民投票",
+					"subtitle": "私たちの基本原則に投票"
+				}
+			},
+			"vote": {
+				"no_active_election": "選挙がまもなく始まります",
+				"test_verification": {
+					"description": "投票の準備をするために、今すぐ確認システムをお試しください",
+					"button": "テスト"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "助成金",
+					"ambassadors": "アンバサダー"
+				},
+				"discover": "発見",
+				"search_placeholder": "政党を検索...",
+				"no_parties_found": "政党が見つかりません",
+				"error_loading": "政党を読み込めませんでした",
+				"refresh": "更新",
+				"party_details": "政党の詳細",
+				"share_party": "政党を共有",
+				"my_party": "私の政党",
+				"learn_more": "詳細を見る",
+				"party_management": "政党管理",
+				"edit_party_info": "政党情報を編集",
+				"dialogs": {
+					"party_name": "政党名",
+					"description_optional": "説明（オプション）",
+					"official_link_optional": "公式リンク（オプション）",
+					"updating": "更新中...",
+					"save": "保存",
+					"register_party": "政党を登録",
+					"register": "登録",
+					"registering": "登録中...",
+					"leader_warning_register": "あなたは現在 {partyName} のリーダーです。新しい政党を登録すると、現在の政党は削除されます。",
+					"deleting": "削除中...",
+					"about_to_delete": "あなたは {partyName} を削除しようとしています。この操作は元に戻せません。",
+					"about_to_register": "新しい政党を設立しようとしています。"
+				},
+				"detail": {
+					"failed_to_load": "政党データの読み込みに失敗しました",
+					"party_not_found": "政党が見つかりません",
+					"error_loading": "政党の読み込みエラー",
+					"back_to_parties": "政党に戻る",
+					"description": "説明",
+					"party_info": "政党情報",
+					"leader": "リーダー",
+					"website": "ウェブサイト",
+					"not_found_description": "お探しの政党は存在しないか、解散されました。"
+				},
+				"delete_party": "政党を削除",
+				"run_on_elections_and_earn": "選挙に立候補して補助金を受け取る",
+				"ambassadors": {
+					"title": "アンバサダープログラム",
+					"description": "友だちを招待して、本人確認が完了したときと、その友だちの政党が補助金を受け取ったときに報酬を獲得しましょう",
+					"leaderboard": "リーダーボード",
+					"no_rewards_yet": "まだ報酬はありません",
+					"col_ambassador": "アンバサダー",
+					"col_invited": "招待数",
+					"col_reward": "報酬",
+					"share_referral_link": "紹介リンクを共有"
+				},
+				"subsidies": {
+					"title": "政党助成金プログラム",
+					"no_subsidies_yet": "まだ助成金はありません",
+					"description": "選挙での実績に基づく資金提供",
+					"col_subsidy": "補助金"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "選挙",
+					"not_found": "選挙が見つかりません",
+					"not_found_description": "お探しの選挙は存在しません。",
+					"back_to_elections": "選挙一覧に戻る",
+					"status_active": "投票中",
+					"status_upcoming": "予定",
+					"status_ended": "終了",
+					"election_info": "選挙情報",
+					"reward_pool": "報酬プール: {amount} WDD",
+					"reward_pool_minimum": "報酬プール: 最小 {amount} WDD",
+					"choose_a_party": "政党を選択",
+					"no_parties_for_election": "この選挙に利用可能な政党はありません。",
+					"results_title": "結果",
+					"vote_singular": "票",
+					"vote_plural": "票",
+					"no_votes": "この選挙では投票がありませんでした。",
+					"test_election_name": "テスト選挙 {n}"
+				},
+				"list": {
+					"empty_state": "選挙が見つかりませんでした",
+					"active_section": "現在の選挙",
+					"upcoming_section": "今後の選挙",
+					"previous_section": "過去の選挙"
+				}
+			}
+		},
+		"error": {
+			"title": "問題が発生しました",
+			"description": "予期しないエラーが発生しました。もう一度お試しください。",
+			"error_id": "エラーID: {digest}",
+			"try_again": "もう一度試す"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "基本所得",
+				"savings": "貯蓄"
+			},
+			"basic_income": {
+				"subtitle_unauth": "人間であることへの報酬を受け取る",
+				"subtitle_claim": "ドラクマを受け取る",
+				"tooltip_claim": "1 WDD/日（上限 1 WDD）。24 時間以内に戻ると収益を最大化できます。",
+				"claim_button": "受け取る",
+				"alert": {
+					"claim": {
+						"title": "受け取りの確認",
+						"description": "{amount} WDD を受け取ります。ウォレット残高に追加されます。"
+					}
+				},
+				"setup_subtitle": "基本所得を設定",
+				"activate_loading": "有効化中...",
+				"activate_button": "基本所得を有効化",
+				"world_drachma": "ワールドドラフマ（WDD）とは？",
+				"subtitle_unauth_raised_by_humanity": "グローバルAI配当を受け取る"
+			},
+			"savings": {
+				"title": "貯蓄口座",
+				"subtitle": "毎秒利息が発生",
+				"tooltip": "年率 69% のベースレート。定期的に受け取りと再投資を行うことで実効利回りを 100% 近くまで高められます。いつでも出金可能。",
+				"deposit": "入金",
+				"withdraw": "出金",
+				"balance": "残高",
+				"amount_deposit": "入金額",
+				"amount_withdraw": "出金額",
+				"interest": "利息",
+				"collect": "利息を受け取る",
+				"alert": {
+					"collect": {
+						"title": "利息受け取りの確認",
+						"description": "利息として {amount} WDD を受け取ります。"
+					},
+					"deposit": {
+						"title": "入金の確認",
+						"description": "{amount} WDD を入金します。"
+					},
+					"withdraw": {
+						"title": "出金の確認",
+						"description": "{amount} WDD を出金します。"
+					}
+				},
+				"smart_contract_link": "スマートコントラクトを見る",
+				"verify": "認証"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "アカウント",
+					"account_info": "アカウント情報",
+					"referral_code": "紹介コード",
+					"referred_by": "紹介者",
+					"language": "言語"
+				},
+				"help": {
+					"title": "ヘルプ",
+					"quickstart": "クイックスタート",
+					"docs": "ウィキ",
+					"help_center": "ヘルプセンター"
+				},
+				"source_code": {
+					"title": "ソースコード"
+				},
+				"legal": {
+					"title": "リーガル",
+					"terms": "利用規約",
+					"privacy": "プライバシーポリシー"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "ウォレット"
+			},
+			"balance": "残高",
+			"modals": {
+				"sign_out": {
+					"confirm": "サインアウトしてもよろしいですか？"
+				},
+				"disconnect": {
+					"confirm": "ウォレットの接続を解除してもよろしいですか？"
+				},
+				"send": {
+					"button": "送信",
+					"withdraw_to_crypto": {
+						"description": "WDD を暗号アカウントに出金。",
+						"amount_label": "金額",
+						"address_label": "ウォレットアドレス",
+						"network_label": "ネットワーク"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD を Jumper で",
+					"ethereum_uniswap": "Ethereum WDD を Uniswap で",
+					"base_jumper": "Base Chain WDD を Jumper で",
+					"base_uniswap": "Base Chain WDD を Uniswap で",
+					"worldchain_jumper": "World Chain WDD を Jumper で",
+					"worldchain_uniswap": "World Chain WDD を Uniswap で"
+				},
+				"delete_account": {
+					"description": "これにより、アカウントが永続的に削除され、すべてのデータがサーバーから削除されます。この操作は元に戻せません — 慎重に続行してください。",
+					"deleting": "削除中..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMaskで開く",
+					"description": "接続するには、このリンクをコピーしてMetaMask内蔵ブラウザで開いてください。",
+					"copy_link": "リンクをコピー"
+				},
+				"connect_wallet_picker": {
+					"description": "複数のウォレットが見つかりました。接続するものを1つ選択してください。"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ウォレットをお持ちではありませんか？",
+					"find_wallet_link": "WalletGuideで探す"
+				}
+			},
+			"sections": {
+				"account": "アカウント",
+				"security": "セキュリティ",
+				"google_account": "Googleアカウント",
+				"google_not_linked": "未リンク",
+				"passkeys": "パスキー",
+				"passkeys_linked": "{count}件リンク済み",
+				"danger_zone": "危険区域",
+				"delete_account": {
+					"description": "すべてのデータを永続的に削除"
+				},
+				"verification": "検証",
+				"google_linked": "リンク済み",
+				"account_label": "アカウント"
+			},
+			"username": {
+				"label": "ユーザー名",
+				"edit_title": "ユーザー名を編集",
+				"description": "3-30文字、英数字、アンダースコア、ハイフン"
+			},
+			"history": {
+				"title": "履歴"
+			},
+			"transactions": {
+				"failed_to_load": "読み込みに失敗しました",
+				"no_transactions": "まだ取引がありません",
+				"wdd_per_day": "WDD/日",
+				"just_now": "たった今",
+				"minutes_ago": "{minutes}分前",
+				"hours_ago": "{hours}時間前",
+				"days_ago": "{days}日前",
+				"filter": {
+					"all_types": "すべてのタイプ",
+					"select_type": "タイプを選択",
+					"rewards": "報酬"
+				},
+				"types": {
+					"withdrawal": "引き出し",
+					"received": "受信済み",
+					"sent": "送信済み",
+					"ambassador_reward": "アンバサダー報酬",
+					"party_subsidy": "政党助成金",
+					"stream_created": "ストリーム作成",
+					"stream_updated": "ストリーム更新",
+					"savings_deposit": "貯蓄 入金",
+					"savings_withdrawal": "貯蓄 出金",
+					"savings_interest": "貯蓄 利息",
+					"referral_reward": "紹介報酬"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "このQRコードをスキャンしてSelfで本人確認を行ってください。",
+				"mobile_dialog_description": "確認を完了するためにSelfアプリへリダイレクトされます。",
+				"support_telegram": "Selfサポート",
+				"verification_guide": "認証ガイド",
+				"qr_alt": "Self認証QR",
+				"callback_warning": "警告",
+				"callback_warning_description": "認証コールバックURLにお使いの電話からアクセスできません。NEXT_PUBLIC_SELF_CALLBACKをパブリックURLに設定してください（またはNEXT_PUBLIC_PUBLIC_BASE_URLをトンネル/プレビュードメインに設定してください）。",
+				"label": "Self",
+				"status_completed": "認証済み",
+				"status_not_completed": "未認証",
+				"learn_about_self": "Self について学ぶ",
+				"primer": {
+					"title": "Self プロトコル",
+					"description": "個人データを一切開示せずに本人確認できます。"
+				}
+			},
+			"verification_warning": {
+				"title": "認証を取得",
+				"reward_cap_banner": "未認証の市民には、ベーシックインカムと貯蓄の報酬に上限があります。制限なく受け取るにはアカウントを認証してください。"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "ほとんどのウォレットは、選択したチェーンに手動でインポートされた後にのみWDDを表示します。その ",
+			"contract_address": "コントラクトアドレス"
+		}
+	},
+	"toasts": {
+		"generic_error": "エラーが発生しました",
+		"copied": "コピーしました",
+		"wallet": {
+			"no_wallet": "ウォレットアドレスがありません",
+			"min_amount": "最低 10 WDD",
+			"sent": "送信しました",
+			"account_deleted": "アカウントを削除しました",
+			"delete_failed": "アカウントの削除に失敗しました",
+			"contract_address_error": "コントラクトアドレスへの出金はできません",
+			"sign_out_failed": "サインアウトに失敗しました",
+			"google_linked": "Googleアカウントをリンクしました",
+			"google_already_linked": "Googleアカウントは既に別のアカウントにリンクされています",
+			"google_link_failed": "Googleのリンクを開始できませんでした",
+			"passkey_added": "パスキーを追加しました",
+			"passkey_add_failed": "パスキーを追加できませんでした"
+		},
+		"parties": {
+			"updated": "更新しました",
+			"update_failed": "更新に失敗しました",
+			"update_error": "政党の更新中にエラーが発生しました",
+			"registered": "政党が登録されました",
+			"register_failed": "政党の登録に失敗しました",
+			"register_error": "政党の登録中にエラーが発生しました",
+			"deleted": "削除しました",
+			"delete_failed": "削除に失敗しました",
+			"delete_error": "削除エラー"
+		},
+		"basic_income": {
+			"activated": "基本所得を有効化しました",
+			"activate_failed": "有効化に失敗しました",
+			"claimed": "受け取り完了",
+			"claim_failed": "受け取りに失敗しました"
+		},
+		"savings": {
+			"collected": "利息を受け取りました",
+			"collect_failed": "利息の受け取りに失敗しました",
+			"deposited": "入金しました",
+			"deposit_failed": "入金に失敗しました",
+			"withdrawn": "出金しました",
+			"withdraw_failed": "出金に失敗しました"
+		}
+	},
+	"common": {
+		"confirm": "確認",
+		"sign_in": "サインイン",
+		"connect": "接続",
+		"disconnect": "切断",
+		"connect_wallet": "ウォレットを接続",
+		"max": "最大",
+		"loading": "読み込み中...",
+		"processing": "処理中...",
+		"insufficient_balance": "WDDが不足",
+		"delete_account": "アカウントを削除",
+		"sign_out": "サインアウト",
+		"invalid_address": "無効なアドレス",
+		"coming_soon": "近日公開",
+		"withdraw": "引き出す",
+		"trade": "取引",
+		"continue": "続ける",
+		"close": "閉じる",
+		"updating": "更新中...",
+		"save": "保存",
+		"vote": "投票",
+		"switch_to_base_chain": "Base Chainに切り替える"
+	},
+	"auth": {
+		"choose_method": "希望する方法を選択してください。",
+		"sign_in_with_google": "Googleで続ける",
+		"sign_in_with_passkey": "生体認証を使用",
+		"sign_in_or_create": "パスキーを使用してアカウントにアクセスします。指紋、顔スキャン、または画面ロックを使用します。",
+		"create_account": "アカウントを作成",
+		"create_passkey_name": "パスキー名を作成",
+		"passkey_name_description": "パスワードマネージャーで識別できるように、パスキーに名前を付けます。",
+		"passkey_name": "パスキー名"
+	}
 }

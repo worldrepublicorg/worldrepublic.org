@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Hel",
-    "govern": "Maamul",
-    "menu": "Liiska"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Xisbiyada",
-        "elections": "Doorashooyin",
-        "referendums": "Talooyin"
-      },
-      "sections": {
-        "parties": {
-          "title": "Xisbiyada siyaasadda"
-        },
-        "elections": {
-          "title": "Doorashooyin tijaabo",
-          "subtitle": "Tijaabi dimuqraadiyadda adduunka"
-        },
-        "referendums": {
-          "title": "Talooyin Dastuurka Adduunka",
-          "subtitle": "Codee qaabihii aasaasiga ah"
-        }
-      },
-      "vote": {
-        "no_active_election": "Doorashada dhowaan ayay bilaabmaysaa",
-        "test_verification": {
-          "description": "Isku day nidaamka xaqiijinta hadda si aad diyaar ugu noqoto codaynta",
-          "button": "Tijaabi"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Kaalmada",
-          "ambassadors": "Safiirrada"
-        },
-        "discover": "Hel",
-        "search_placeholder": "Raadi xisbiyada...",
-        "no_parties_found": "Ma laha xisbiyo",
-        "error_loading": "Ku guuldareystay in la soo raro xisbiyada",
-        "refresh": "Cusbooneysii",
-        "party_details": "Faahfaahinta xisbiga",
-        "share_party": "Wadaag xisbiga",
-        "my_party": "Xisbigayga",
-        "learn_more": "Wax badan baro",
-        "party_management": "Maamulka xisbiga",
-        "edit_party_info": "Wax ka beddel macluumaadka xisbiga",
-        "dialogs": {
-          "party_name": "Magaca xisbiga",
-          "description_optional": "Sharaxaad (ikhtiyaari ah)",
-          "official_link_optional": "Xiriirka rasmiga ah (ikhtiyaari ah)",
-          "updating": "Cusbooneysiina...",
-          "save": "Keydso",
-          "register_party": "Diiwaangeli xisbi",
-          "register": "Diiwaangeli",
-          "registering": "Diiwaangelinta...",
-          "leader_warning_register": "Hadda waxaad tahay hogaamiyaha {partyName}. Diiwaangelinta xisbi cusub waxay tirtiri doontaa xisbigaaga hadda.",
-          "deleting": "Tirtirayaa...",
-          "about_to_delete": "Waxaad doonaysaa inaad tirtirto {partyName}. Tani ma noqon karto.",
-          "about_to_register": "Waxaad aasaasaysaa xisbi cusub."
-        },
-        "detail": {
-          "failed_to_load": "Waxaa la guuldareystay in la soo dejiyo xogta xisbiga",
-          "party_not_found": "Ma laha xisbi",
-          "error_loading": "Qalad soo dejinta xisbiga",
-          "back_to_parties": "Ku noqo xisbiyada",
-          "description": "Sharaxaad",
-          "party_info": "Macluumaadka xisbiga",
-          "leader": "Hogaanka",
-          "website": "Website",
-          "not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
-        },
-        "delete_party": "Tirtir xisbiga",
-        "run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin",
-        "ambassadors": {
-          "title": "Barnaamijka Safiirrada",
-          "description": "Casuum saaxiibbo oo hel abaalmarin marka ay xaqiijiyaan iyo marka xisbigoodu helo kabitaan",
-          "leaderboard": "Liiska hogaamiyeyaasha",
-          "no_rewards_yet": "Wali ma jirto abaalmarin",
-          "col_ambassador": "Safiirrada",
-          "col_invited": "La martiyay",
-          "col_reward": "Abaalmarin",
-          "share_referral_link": "La wadaag xiriirka tixraacaha"
-        },
-        "subsidies": {
-          "title": "Barnaamijka Kabida Xisbiyada",
-          "no_subsidies_yet": "Wali ma jiro kabitaan",
-          "description": "Maalgelin ku salaysan waxqabadka doorashada",
-          "col_subsidy": "Kaalmo"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Doorasho",
-          "not_found": "Doorashada lama helin",
-          "not_found_description": "Doorashada aad raadinayso ma jirto.",
-          "back_to_elections": "Ku noqo doorashooyinka",
-          "status_active": "Firfircoon",
-          "status_upcoming": "Soo socda",
-          "status_ended": "Dhammaatay",
-          "election_info": "Macluumaadka doorashada",
-          "reward_pool": "Kaydka abaalmarinta: {amount} WDD",
-          "reward_pool_minimum": "Kaydka abaalmarinta: ugu yaraan {amount} WDD",
-          "choose_a_party": "Dooro xisbi",
-          "no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan.",
-          "results_title": "Natiijoyin",
-          "vote_singular": "cod",
-          "vote_plural": "codad",
-          "no_votes": "Doorashadaan lama codin.",
-          "test_election_name": "Doorasho tijaabo {n}"
-        },
-        "list": {
-          "empty_state": "Doorasho lama helin",
-          "active_section": "Doorashooyinka socda",
-          "upcoming_section": "Doorashooyinka soo socda",
-          "previous_section": "Doorashooyinkii hore"
-        }
-      }
-    },
-    "error": {
-      "title": "Wax baa qaldan",
-      "description": "Khalad aan la fileyn ayaa dhacay. Fadlan mar kale isku day.",
-      "error_id": "Aqoonsiga khaladka: {digest}",
-      "try_again": "Mar kale isku day"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Dakhliga aasaasiga ah",
-        "savings": "Kaydinta"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Hel lacag aad u ahaan lahayd aadanaha",
-        "subtitle_claim": "Qaad drachmaaga",
-        "tooltip_claim": "1 WDD/maalin, xadid 1 WDD. Ku noqo 24 saacadood si aad u aaddeysato dakhligaaga.",
-        "claim_button": "Qaad",
-        "alert": {
-          "claim": {
-            "title": "Xaqiiji qaadista",
-            "description": "Waxaad qaadan doontaa {amount} WDD. Tani waxay ku daraan doontaa dhammaan kisaskaga."
-          }
-        },
-        "setup_subtitle": "Deji dakhligaaga aasaasiga ah",
-        "activate_loading": "Firfircoonaya...",
-        "activate_button": "Firfircooni dakhliga aasaasiga ah",
-        "world_drachma": "Waa maxay Drachma-da Adduunka (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Qaad saamigaaga caalamiga ah ee AI"
-      },
-      "savings": {
-        "title": "Akoonka kaydinta",
-        "subtitle": "Hel faa'iido maalin kasta",
-        "tooltip": "69% heerka sannadka. Uruur oo dib u maalgelin si aad u gaarto 100% faa'iido. Ka soo qaad waqtiga aad rabto.",
-        "deposit": "Ku kaydi",
-        "withdraw": "Ka soo qaad",
-        "balance": "Dhammaan",
-        "amount_deposit": "Lacagta la kaydin doono",
-        "amount_withdraw": "Lacagta la soo qaadan doono",
-        "interest": "Faa'iido",
-        "collect": "Uruur",
-        "alert": {
-          "collect": {
-            "title": "Xaqiiji uruurinta",
-            "description": "Waxaad uruurin doontaa {amount} WDD faa'iido."
-          },
-          "deposit": {
-            "title": "Xaqiiji kaydinta",
-            "description": "Waxaad ku kaydin doontaa {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Xaqiiji soo qaadista",
-            "description": "Waxaad ka soo qaadan doontaa {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Eeg smart contract",
-        "verify": "Xaqiiji"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "AKOONKA",
-          "account_info": "Macluumaadka akoonka",
-          "referral_code": "Koodhka casumaada",
-          "referred_by": "Waxa kugu casuumay",
-          "language": "Luuqadda"
-        },
-        "help": {
-          "title": "CAWIMADA",
-          "quickstart": "Bilaabid Degdeg ah",
-          "docs": "Wiki",
-          "help_center": "Xarunta Caawinaada"
-        },
-        "source_code": {
-          "title": "KODKA ILADA"
-        },
-        "legal": {
-          "title": "SHARCI",
-          "terms": "Shuruudaha isticmaalka",
-          "privacy": "Siyaasadda sirta"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Kisaska"
-      },
-      "balance": "Dhammaan",
-      "modals": {
-        "sign_out": {
-          "confirm": "Ma hubtaa inaad rabto inaad ka bixito?"
-        },
-        "disconnect": {
-          "confirm": "Ma hubtaa inaad rabto inaad kala xirto boorsadaada?"
-        },
-        "send": {
-          "button": "Dir",
-          "withdraw_to_crypto": {
-            "description": "Bixi WDD koonto crypto ah.",
-            "amount_label": "Lacagta",
-            "address_label": "Cinwaanka kisaska",
-            "network_label": "Shabakada"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper",
-          "ethereum_uniswap": "Ethereum WDD Uniswap",
-          "base_jumper": "Base Chain WDD Jumper",
-          "base_uniswap": "Base Chain WDD Uniswap",
-          "worldchain_jumper": "World Chain WDD Jumper",
-          "worldchain_uniswap": "World Chain WDD Uniswap"
-        },
-        "delete_account": {
-          "description": "Tani waxay tirtiri doontaa akoonkaaga si joogto ah waxayna ka saari doontaa dhammaan xogtaaga serverkeena. Tallaaboobadan ma la soo celin karo — fadlan sii wad si taxadar leh.",
-          "deleting": "Tirtiraya..."
-        },
-        "connect_wallet_browser": {
-          "title": "Ku fur MetaMask",
-          "description": "Si aad u xirto, nuqul xiriirkan oo ku fur browser-ka ku dhex-jira MetaMask.",
-          "copy_link": "Nuqul ka samee linkiga"
-        },
-        "connect_wallet_picker": {
-          "description": "Waxaa la helay boorsooyin badan. Mid dooro si aad ugu xirmato."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Wallet ma lihid?",
-          "find_wallet_link": "Mid ka hel WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "AKOONKA",
-        "security": "AMMAAN",
-        "google_account": "Akoonka Google",
-        "google_not_linked": "Ma xiriirin",
-        "passkeys": "Furahaasha gelitaanka",
-        "passkeys_linked": "{count} xiriiriyey",
-        "danger_zone": "GOOBTA KHATARADA",
-        "delete_account": {
-          "description": "Si toos ah ka saar dhammaan xogtaada"
-        },
-        "verification": "XAQIIJIN",
-        "google_linked": "Xiriirsan",
-        "account_label": "Akoonka"
-      },
-      "username": {
-        "label": "Magaca isticmaalaha",
-        "edit_title": "Wax ka beddel magaca isticmaalaha",
-        "description": "3-30 xaraf, alfanumerik, hooska iyo xariiqyada"
-      },
-      "history": {
-        "title": "TAARIIKHDA"
-      },
-      "transactions": {
-        "failed_to_load": "Waxaa la guuldareystay in la soo dejiyo",
-        "no_transactions": "Wali ma jiraan wax ganacsi ah",
-        "wdd_per_day": "WDD/maalin",
-        "just_now": "Hadda",
-        "minutes_ago": "{minutes}daqiiqo kahor",
-        "hours_ago": "{hours}saac kahor",
-        "days_ago": "{days}maalin kahor",
-        "filter": {
-          "all_types": "Dhammaan noocyada",
-          "select_type": "Dooro nooca",
-          "rewards": "Abaalmarino"
-        },
-        "types": {
-          "withdrawal": "Bixinta",
-          "received": "La helay",
-          "sent": "La diray",
-          "ambassador_reward": "Abaalmarinta safiirka",
-          "party_subsidy": "Kaalmada xisbiga",
-          "stream_created": "Socodka la abuuray",
-          "stream_updated": "Socodka la cusbooneysiiyay",
-          "savings_deposit": "Kaydinta ku kaydi",
-          "savings_withdrawal": "Kaydinta ka soo qaad",
-          "savings_interest": "Kaydinta faa'iido",
-          "referral_reward": "Abaalmarinta tixraaca"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Sawir QR-kan si aad isaga xaqiijiso adigoo adeegsanaya Self.",
-        "mobile_dialog_description": "Waxaa lagu geyn doonaa app-ka Self si aad u dhammaystirto xaqiijinta.",
-        "support_telegram": "Taageerada Self",
-        "verification_guide": "Hagaha xaqiijinta",
-        "qr_alt": "QR xaqiijinta Self",
-        "callback_warning": "Digniin",
-        "callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah).",
-        "label": "Self",
-        "status_completed": "La xaqiijiyay",
-        "status_not_completed": "Lama xaqiijin",
-        "learn_about_self": "Baro wax ku saabsan Self",
-        "primer": {
-          "title": "Self Protokool",
-          "description": "Hubin hel isagoo aan shaacin xog gaar ah."
-        }
-      },
-      "verification_warning": {
-        "title": "Heli xaqiijinta",
-        "reward_cap_banner": "Abaalmarinnada dakhliga aasaasiga ah iyo kaydka waxaa xadidan muwaadiniinta aan la xaqiijin. Xaqiiji akoonkaaga si aad u kasbato adigoon xad lahayn."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Badhyada badan waxay muujiyaan WDD marka la isticmaalo gacanta ah ee la soo geliyay silsiladda la dooray adigoo adeegsanaya ",
-      "contract_address": "ciwaanka heerka"
-    }
-  },
-  "toasts": {
-    "generic_error": "Khalad ayaa dhacay",
-    "copied": "La koobiyey",
-    "wallet": {
-      "no_wallet": "Cinwaanka kisaska ma jiro",
-      "min_amount": "Ugu yaraan 10 WDD",
-      "sent": "La diriyay",
-      "account_deleted": "Akoonka waa la tirtiray",
-      "delete_failed": "Tirtirida akoonka way fashilantay",
-      "contract_address_error": "Lama soo qaadi karo cinwaanka heshiiska",
-      "sign_out_failed": "Ka baxid ku guuldareystay",
-      "google_linked": "Akoonka Google waa la xiriiriyey",
-      "google_already_linked": "Akoonka Google horeba waa la xiriiriyey akoon kale",
-      "google_link_failed": "Xiriirinta Google ma bilaabmin karin",
-      "passkey_added": "Furahaasha gelitaanka waa lagu daray",
-      "passkey_add_failed": "Furahaasha gelitaanka ma darin karin"
-    },
-    "parties": {
-      "updated": "Waa la cusbooneysiiyay",
-      "update_failed": "Cusbooneysiinta way fashilantay",
-      "update_error": "Qalad cusbooneysiinta xisbiga",
-      "registered": "Xisbiga waa la diiwaangeliyay",
-      "register_failed": "Waa lagu guuldareystay in la diiwaangeliyo xisbiga",
-      "register_error": "Khalad dhacay diiwaangelinta xisbiga",
-      "deleted": "La tirtiray",
-      "delete_failed": "Waa lagu guuldareystay in la tirtiro",
-      "delete_error": "Khalad tirtirida"
-    },
-    "basic_income": {
-      "activated": "Dakhliga aasaasiga ah waa la firfircooniyay",
-      "activate_failed": "Firfircoonida way fashilantay",
-      "claimed": "La qaaday",
-      "claim_failed": "Qaadista way fashilantay"
-    },
-    "savings": {
-      "collected": "La uruuriyay",
-      "collect_failed": "Uruurinta way fashilantay",
-      "deposited": "La kaydiyay",
-      "deposit_failed": "Kaydinta way fashilantay",
-      "withdrawn": "La soo qaaday",
-      "withdraw_failed": "Soo qaadista way fashilantay"
-    }
-  },
-  "common": {
-    "confirm": "Xaqiiji",
-    "sign_in": "Gal",
-    "connect": "Ku xir",
-    "disconnect": "Kala xir",
-    "connect_wallet": "Ku xir boorsada",
-    "max": "Guud",
-    "loading": "Soo dejinaya...",
-    "processing": "Waxaa la shaqeynayaa...",
-    "insufficient_balance": "WDD ma filna",
-    "delete_account": "Tirtir akoonka",
-    "sign_out": "Ka bax",
-    "invalid_address": "Cinwaan aan sax ahayn",
-    "coming_soon": "Dhawaan",
-    "withdraw": "Ka soo bixi",
-    "trade": "Ganacsiga",
-    "continue": "Sii wad",
-    "close": "Xidh",
-    "updating": "Cusbooneysiinta...",
-    "save": "Keydin",
-    "vote": "Codsi",
-    "switch_to_base_chain": "U beddel Base Chain"
-  },
-  "auth": {
-    "choose_method": "Dooro habka aad doorbidayso.",
-    "sign_in_with_google": "Sii wad Google",
-    "sign_in_with_passkey": "Isticmaal biometrics",
-    "sign_in_or_create": "Ka heli akoonkaaga passkey adeegsiga, farahaanka farahaankaaga, duubista wajiga ama qufulka shaashadda adeegsiga.",
-    "create_account": "Abuur akoon",
-    "create_passkey_name": "Abuur magaca passkey",
-    "passkey_name_description": "Magacaabi passkey-kaaga si aad u aqoonsato maamulaha erayga sirta ah.",
-    "passkey_name": "Magaca passkey"
-  }
+	"nav": {
+		"earn": "Hel",
+		"govern": "Maamul",
+		"menu": "Liiska"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Xisbiyada",
+				"elections": "Doorashooyin",
+				"referendums": "Talooyin"
+			},
+			"sections": {
+				"parties": {
+					"title": "Xisbiyada siyaasadda"
+				},
+				"elections": {
+					"title": "Doorashooyin tijaabo",
+					"subtitle": "Tijaabi dimuqraadiyadda adduunka"
+				},
+				"referendums": {
+					"title": "Talooyin Dastuurka Adduunka",
+					"subtitle": "Codee qaabihii aasaasiga ah"
+				}
+			},
+			"vote": {
+				"no_active_election": "Doorashada dhowaan ayay bilaabmaysaa",
+				"test_verification": {
+					"description": "Isku day nidaamka xaqiijinta hadda si aad diyaar ugu noqoto codaynta",
+					"button": "Tijaabi"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Kaalmada",
+					"ambassadors": "Safiirrada"
+				},
+				"discover": "Hel",
+				"search_placeholder": "Raadi xisbiyada...",
+				"no_parties_found": "Ma laha xisbiyo",
+				"error_loading": "Ku guuldareystay in la soo raro xisbiyada",
+				"refresh": "Cusbooneysii",
+				"party_details": "Faahfaahinta xisbiga",
+				"share_party": "Wadaag xisbiga",
+				"my_party": "Xisbigayga",
+				"learn_more": "Wax badan baro",
+				"party_management": "Maamulka xisbiga",
+				"edit_party_info": "Wax ka beddel macluumaadka xisbiga",
+				"dialogs": {
+					"party_name": "Magaca xisbiga",
+					"description_optional": "Sharaxaad (ikhtiyaari ah)",
+					"official_link_optional": "Xiriirka rasmiga ah (ikhtiyaari ah)",
+					"updating": "Cusbooneysiina...",
+					"save": "Keydso",
+					"register_party": "Diiwaangeli xisbi",
+					"register": "Diiwaangeli",
+					"registering": "Diiwaangelinta...",
+					"leader_warning_register": "Hadda waxaad tahay hogaamiyaha {partyName}. Diiwaangelinta xisbi cusub waxay tirtiri doontaa xisbigaaga hadda.",
+					"deleting": "Tirtirayaa...",
+					"about_to_delete": "Waxaad doonaysaa inaad tirtirto {partyName}. Tani ma noqon karto.",
+					"about_to_register": "Waxaad aasaasaysaa xisbi cusub."
+				},
+				"detail": {
+					"failed_to_load": "Waxaa la guuldareystay in la soo dejiyo xogta xisbiga",
+					"party_not_found": "Ma laha xisbi",
+					"error_loading": "Qalad soo dejinta xisbiga",
+					"back_to_parties": "Ku noqo xisbiyada",
+					"description": "Sharaxaad",
+					"party_info": "Macluumaadka xisbiga",
+					"leader": "Hogaanka",
+					"website": "Website",
+					"not_found_description": "Xisbiga aad raadinayso ma jiro ama waa la burburiyey."
+				},
+				"delete_party": "Tirtir xisbiga",
+				"run_on_elections_and_earn": "Ka qayb gal doorashooyinka oo hel maalgelin",
+				"ambassadors": {
+					"title": "Barnaamijka Safiirrada",
+					"description": "Casuum saaxiibbo oo hel abaalmarin marka ay xaqiijiyaan iyo marka xisbigoodu helo kabitaan",
+					"leaderboard": "Liiska hogaamiyeyaasha",
+					"no_rewards_yet": "Wali ma jirto abaalmarin",
+					"col_ambassador": "Safiirrada",
+					"col_invited": "La martiyay",
+					"col_reward": "Abaalmarin",
+					"share_referral_link": "La wadaag xiriirka tixraacaha"
+				},
+				"subsidies": {
+					"title": "Barnaamijka Kabida Xisbiyada",
+					"no_subsidies_yet": "Wali ma jiro kabitaan",
+					"description": "Maalgelin ku salaysan waxqabadka doorashada",
+					"col_subsidy": "Kaalmo"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Doorasho",
+					"not_found": "Doorashada lama helin",
+					"not_found_description": "Doorashada aad raadinayso ma jirto.",
+					"back_to_elections": "Ku noqo doorashooyinka",
+					"status_active": "Firfircoon",
+					"status_upcoming": "Soo socda",
+					"status_ended": "Dhammaatay",
+					"election_info": "Macluumaadka doorashada",
+					"reward_pool": "Kaydka abaalmarinta: {amount} WDD",
+					"reward_pool_minimum": "Kaydka abaalmarinta: ugu yaraan {amount} WDD",
+					"choose_a_party": "Dooro xisbi",
+					"no_parties_for_election": "Ma jiraan xisbiyo diyaar ah doorashadan.",
+					"results_title": "Natiijoyin",
+					"vote_singular": "cod",
+					"vote_plural": "codad",
+					"no_votes": "Doorashadaan lama codin.",
+					"test_election_name": "Doorasho tijaabo {n}"
+				},
+				"list": {
+					"empty_state": "Doorasho lama helin",
+					"active_section": "Doorashooyinka socda",
+					"upcoming_section": "Doorashooyinka soo socda",
+					"previous_section": "Doorashooyinkii hore"
+				}
+			}
+		},
+		"error": {
+			"title": "Wax baa qaldan",
+			"description": "Khalad aan la fileyn ayaa dhacay. Fadlan mar kale isku day.",
+			"error_id": "Aqoonsiga khaladka: {digest}",
+			"try_again": "Mar kale isku day"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Dakhliga aasaasiga ah",
+				"savings": "Kaydinta"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Hel lacag aad u ahaan lahayd aadanaha",
+				"subtitle_claim": "Qaad drachmaaga",
+				"tooltip_claim": "1 WDD/maalin, xadid 1 WDD. Ku noqo 24 saacadood si aad u aaddeysato dakhligaaga.",
+				"claim_button": "Qaad",
+				"alert": {
+					"claim": {
+						"title": "Xaqiiji qaadista",
+						"description": "Waxaad qaadan doontaa {amount} WDD. Tani waxay ku daraan doontaa dhammaan kisaskaga."
+					}
+				},
+				"setup_subtitle": "Deji dakhligaaga aasaasiga ah",
+				"activate_loading": "Firfircoonaya...",
+				"activate_button": "Firfircooni dakhliga aasaasiga ah",
+				"world_drachma": "Waa maxay Drachma-da Adduunka (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Qaad saamigaaga caalamiga ah ee AI"
+			},
+			"savings": {
+				"title": "Akoonka kaydinta",
+				"subtitle": "Hel faa'iido maalin kasta",
+				"tooltip": "69% heerka sannadka. Uruur oo dib u maalgelin si aad u gaarto 100% faa'iido. Ka soo qaad waqtiga aad rabto.",
+				"deposit": "Ku kaydi",
+				"withdraw": "Ka soo qaad",
+				"balance": "Dhammaan",
+				"amount_deposit": "Lacagta la kaydin doono",
+				"amount_withdraw": "Lacagta la soo qaadan doono",
+				"interest": "Faa'iido",
+				"collect": "Uruur",
+				"alert": {
+					"collect": {
+						"title": "Xaqiiji uruurinta",
+						"description": "Waxaad uruurin doontaa {amount} WDD faa'iido."
+					},
+					"deposit": {
+						"title": "Xaqiiji kaydinta",
+						"description": "Waxaad ku kaydin doontaa {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Xaqiiji soo qaadista",
+						"description": "Waxaad ka soo qaadan doontaa {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Eeg smart contract",
+				"verify": "Xaqiiji"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "AKOONKA",
+					"account_info": "Macluumaadka akoonka",
+					"referral_code": "Koodhka casumaada",
+					"referred_by": "Waxa kugu casuumay",
+					"language": "Luuqadda"
+				},
+				"help": {
+					"title": "CAWIMADA",
+					"quickstart": "Bilaabid Degdeg ah",
+					"docs": "Wiki",
+					"help_center": "Xarunta Caawinaada"
+				},
+				"source_code": {
+					"title": "KODKA ILADA"
+				},
+				"legal": {
+					"title": "SHARCI",
+					"terms": "Shuruudaha isticmaalka",
+					"privacy": "Siyaasadda sirta"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Kisaska"
+			},
+			"balance": "Dhammaan",
+			"modals": {
+				"sign_out": {
+					"confirm": "Ma hubtaa inaad rabto inaad ka bixito?"
+				},
+				"disconnect": {
+					"confirm": "Ma hubtaa inaad rabto inaad kala xirto boorsadaada?"
+				},
+				"send": {
+					"button": "Dir",
+					"withdraw_to_crypto": {
+						"description": "Bixi WDD koonto crypto ah.",
+						"amount_label": "Lacagta",
+						"address_label": "Cinwaanka kisaska",
+						"network_label": "Shabakada"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper",
+					"ethereum_uniswap": "Ethereum WDD Uniswap",
+					"base_jumper": "Base Chain WDD Jumper",
+					"base_uniswap": "Base Chain WDD Uniswap",
+					"worldchain_jumper": "World Chain WDD Jumper",
+					"worldchain_uniswap": "World Chain WDD Uniswap"
+				},
+				"delete_account": {
+					"description": "Tani waxay tirtiri doontaa akoonkaaga si joogto ah waxayna ka saari doontaa dhammaan xogtaaga serverkeena. Tallaaboobadan ma la soo celin karo — fadlan sii wad si taxadar leh.",
+					"deleting": "Tirtiraya..."
+				},
+				"connect_wallet_browser": {
+					"title": "Ku fur MetaMask",
+					"description": "Si aad u xirto, nuqul xiriirkan oo ku fur browser-ka ku dhex-jira MetaMask.",
+					"copy_link": "Nuqul ka samee linkiga"
+				},
+				"connect_wallet_picker": {
+					"description": "Waxaa la helay boorsooyin badan. Mid dooro si aad ugu xirmato."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Wallet ma lihid?",
+					"find_wallet_link": "Mid ka hel WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "AKOONKA",
+				"security": "AMMAAN",
+				"google_account": "Akoonka Google",
+				"google_not_linked": "Ma xiriirin",
+				"passkeys": "Furahaasha gelitaanka",
+				"passkeys_linked": "{count} xiriiriyey",
+				"danger_zone": "GOOBTA KHATARADA",
+				"delete_account": {
+					"description": "Si toos ah ka saar dhammaan xogtaada"
+				},
+				"verification": "XAQIIJIN",
+				"google_linked": "Xiriirsan",
+				"account_label": "Akoonka"
+			},
+			"username": {
+				"label": "Magaca isticmaalaha",
+				"edit_title": "Wax ka beddel magaca isticmaalaha",
+				"description": "3-30 xaraf, alfanumerik, hooska iyo xariiqyada"
+			},
+			"history": {
+				"title": "TAARIIKHDA"
+			},
+			"transactions": {
+				"failed_to_load": "Waxaa la guuldareystay in la soo dejiyo",
+				"no_transactions": "Wali ma jiraan wax ganacsi ah",
+				"wdd_per_day": "WDD/maalin",
+				"just_now": "Hadda",
+				"minutes_ago": "{minutes}daqiiqo kahor",
+				"hours_ago": "{hours}saac kahor",
+				"days_ago": "{days}maalin kahor",
+				"filter": {
+					"all_types": "Dhammaan noocyada",
+					"select_type": "Dooro nooca",
+					"rewards": "Abaalmarino"
+				},
+				"types": {
+					"withdrawal": "Bixinta",
+					"received": "La helay",
+					"sent": "La diray",
+					"ambassador_reward": "Abaalmarinta safiirka",
+					"party_subsidy": "Kaalmada xisbiga",
+					"stream_created": "Socodka la abuuray",
+					"stream_updated": "Socodka la cusbooneysiiyay",
+					"savings_deposit": "Kaydinta ku kaydi",
+					"savings_withdrawal": "Kaydinta ka soo qaad",
+					"savings_interest": "Kaydinta faa'iido",
+					"referral_reward": "Abaalmarinta tixraaca"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Sawir QR-kan si aad isaga xaqiijiso adigoo adeegsanaya Self.",
+				"mobile_dialog_description": "Waxaa lagu geyn doonaa app-ka Self si aad u dhammaystirto xaqiijinta.",
+				"support_telegram": "Taageerada Self",
+				"verification_guide": "Hagaha xaqiijinta",
+				"qr_alt": "QR xaqiijinta Self",
+				"callback_warning": "Digniin",
+				"callback_warning_description": "URL-ka dib u wacitaanka xaqiijinta lagama gaari karo taleefankaaga. U deji NEXT_PUBLIC_SELF_CALLBACK URL dadweyne ah (ama u deji NEXT_PUBLIC_PUBLIC_BASE_URL domain tunnel/preview ah).",
+				"label": "Self",
+				"status_completed": "La xaqiijiyay",
+				"status_not_completed": "Lama xaqiijin",
+				"learn_about_self": "Baro wax ku saabsan Self",
+				"primer": {
+					"title": "Self Protokool",
+					"description": "Hubin hel isagoo aan shaacin xog gaar ah."
+				}
+			},
+			"verification_warning": {
+				"title": "Heli xaqiijinta",
+				"reward_cap_banner": "Abaalmarinnada dakhliga aasaasiga ah iyo kaydka waxaa xadidan muwaadiniinta aan la xaqiijin. Xaqiiji akoonkaaga si aad u kasbato adigoon xad lahayn."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Badhyada badan waxay muujiyaan WDD marka la isticmaalo gacanta ah ee la soo geliyay silsiladda la dooray adigoo adeegsanaya ",
+			"contract_address": "ciwaanka heerka"
+		}
+	},
+	"toasts": {
+		"generic_error": "Khalad ayaa dhacay",
+		"copied": "La koobiyey",
+		"wallet": {
+			"no_wallet": "Cinwaanka kisaska ma jiro",
+			"min_amount": "Ugu yaraan 10 WDD",
+			"sent": "La diriyay",
+			"account_deleted": "Akoonka waa la tirtiray",
+			"delete_failed": "Tirtirida akoonka way fashilantay",
+			"contract_address_error": "Lama soo qaadi karo cinwaanka heshiiska",
+			"sign_out_failed": "Ka baxid ku guuldareystay",
+			"google_linked": "Akoonka Google waa la xiriiriyey",
+			"google_already_linked": "Akoonka Google horeba waa la xiriiriyey akoon kale",
+			"google_link_failed": "Xiriirinta Google ma bilaabmin karin",
+			"passkey_added": "Furahaasha gelitaanka waa lagu daray",
+			"passkey_add_failed": "Furahaasha gelitaanka ma darin karin"
+		},
+		"parties": {
+			"updated": "Waa la cusbooneysiiyay",
+			"update_failed": "Cusbooneysiinta way fashilantay",
+			"update_error": "Qalad cusbooneysiinta xisbiga",
+			"registered": "Xisbiga waa la diiwaangeliyay",
+			"register_failed": "Waa lagu guuldareystay in la diiwaangeliyo xisbiga",
+			"register_error": "Khalad dhacay diiwaangelinta xisbiga",
+			"deleted": "La tirtiray",
+			"delete_failed": "Waa lagu guuldareystay in la tirtiro",
+			"delete_error": "Khalad tirtirida"
+		},
+		"basic_income": {
+			"activated": "Dakhliga aasaasiga ah waa la firfircooniyay",
+			"activate_failed": "Firfircoonida way fashilantay",
+			"claimed": "La qaaday",
+			"claim_failed": "Qaadista way fashilantay"
+		},
+		"savings": {
+			"collected": "La uruuriyay",
+			"collect_failed": "Uruurinta way fashilantay",
+			"deposited": "La kaydiyay",
+			"deposit_failed": "Kaydinta way fashilantay",
+			"withdrawn": "La soo qaaday",
+			"withdraw_failed": "Soo qaadista way fashilantay"
+		}
+	},
+	"common": {
+		"confirm": "Xaqiiji",
+		"sign_in": "Gal",
+		"connect": "Ku xir",
+		"disconnect": "Kala xir",
+		"connect_wallet": "Ku xir boorsada",
+		"max": "Guud",
+		"loading": "Soo dejinaya...",
+		"processing": "Waxaa la shaqeynayaa...",
+		"insufficient_balance": "WDD ma filna",
+		"delete_account": "Tirtir akoonka",
+		"sign_out": "Ka bax",
+		"invalid_address": "Cinwaan aan sax ahayn",
+		"coming_soon": "Dhawaan",
+		"withdraw": "Ka soo bixi",
+		"trade": "Ganacsiga",
+		"continue": "Sii wad",
+		"close": "Xidh",
+		"updating": "Cusbooneysiinta...",
+		"save": "Keydin",
+		"vote": "Codsi",
+		"switch_to_base_chain": "U beddel Base Chain"
+	},
+	"auth": {
+		"choose_method": "Dooro habka aad doorbidayso.",
+		"sign_in_with_google": "Sii wad Google",
+		"sign_in_with_passkey": "Isticmaal biometrics",
+		"sign_in_or_create": "Ka heli akoonkaaga passkey adeegsiga, farahaanka farahaankaaga, duubista wajiga ama qufulka shaashadda adeegsiga.",
+		"create_account": "Abuur akoon",
+		"create_passkey_name": "Abuur magaca passkey",
+		"passkey_name_description": "Magacaabi passkey-kaaga si aad u aqoonsato maamulaha erayga sirta ah.",
+		"passkey_name": "Magaca passkey"
+	}
 }

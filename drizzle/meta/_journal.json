@@ -1,55 +1,55 @@
 {
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1764388964113,
-      "tag": "0000_thankful_madrox",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1764388964114,
-      "tag": "0001_add_elections_votes",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1764388964115,
-      "tag": "0002_add_reward_pool",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1764388964116,
-      "tag": "0003_drop_user_profiles_self_verification",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1764388964117,
-      "tag": "0004_add_referrals",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "7",
-      "when": 1764388964118,
-      "tag": "0005_add_streams",
-      "breakpoints": true
-    },
-    {
-      "idx": 6,
-      "version": "7",
-      "when": 1764388964119,
-      "tag": "0013_add_self_verification_sessions",
-      "breakpoints": true
-    }
-  ]
+	"version": "7",
+	"dialect": "postgresql",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "7",
+			"when": 1764388964113,
+			"tag": "0000_thankful_madrox",
+			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "7",
+			"when": 1764388964114,
+			"tag": "0001_add_elections_votes",
+			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "7",
+			"when": 1764388964115,
+			"tag": "0002_add_reward_pool",
+			"breakpoints": true
+		},
+		{
+			"idx": 3,
+			"version": "7",
+			"when": 1764388964116,
+			"tag": "0003_drop_user_profiles_self_verification",
+			"breakpoints": true
+		},
+		{
+			"idx": 4,
+			"version": "7",
+			"when": 1764388964117,
+			"tag": "0004_add_referrals",
+			"breakpoints": true
+		},
+		{
+			"idx": 5,
+			"version": "7",
+			"when": 1764388964118,
+			"tag": "0005_add_streams",
+			"breakpoints": true
+		},
+		{
+			"idx": 6,
+			"version": "7",
+			"when": 1764388964119,
+			"tag": "0013_add_self_verification_sessions",
+			"breakpoints": true
+		}
+	]
 }

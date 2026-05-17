@@ -3,16 +3,16 @@ import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db/connection";
 import {
-  referrals,
-  referralVerificationRewards,
-  transactions,
-  userProfiles,
-  userSelfVerifications,
+	referrals,
+	referralVerificationRewards,
+	transactions,
+	userProfiles,
+	userSelfVerifications,
 } from "@/lib/db/schema";
 import {
-  markAccountVerificationSessionFailed,
-  markAccountVerificationSessionVerified,
-  validateAccountVerificationSessionToken,
+	markAccountVerificationSessionFailed,
+	markAccountVerificationSessionVerified,
+	validateAccountVerificationSessionToken,
 } from "@/lib/self/account-verification-session";
 
 const ACCOUNT_SELF_SCOPE = "world-republic-account";
@@ -22,295 +22,295 @@ const VERIFIED_REFERRAL_TRANSACTION_TYPE = "REFERRAL_VERIFIED_BONUS";
 const VERIFIED_REFERRAL_REWARD_AMOUNT = "10.000000000000000000";
 
 function createVerifier(origin: string) {
-  const endpoint = `${origin}/api/self/verify-account`;
-  const mockPassport = false;
-  const allowedIds = AllIds;
-  const configStore = new DefaultConfigStore({
-    ofac: true,
-    excludedCountries: [],
-  });
-  const userIdentifierType = "uuid" as const;
-  return new SelfBackendVerifier(
-    ACCOUNT_SELF_SCOPE,
-    endpoint,
-    mockPassport,
-    allowedIds,
-    configStore,
-    userIdentifierType,
-  );
+	const endpoint = `${origin}/api/self/verify-account`;
+	const mockPassport = false;
+	const allowedIds = AllIds;
+	const configStore = new DefaultConfigStore({
+		ofac: true,
+		excludedCountries: [],
+	});
+	const userIdentifierType = "uuid" as const;
+	return new SelfBackendVerifier(
+		ACCOUNT_SELF_SCOPE,
+		endpoint,
+		mockPassport,
+		allowedIds,
+		configStore,
+		userIdentifierType,
+	);
 }
 
 function parseAccountContextData(userContextData: unknown): {
-  sessionToken: string | null;
+	sessionToken: string | null;
 } {
-  if (typeof userContextData !== "string") {
-    return { sessionToken: null };
-  }
+	if (typeof userContextData !== "string") {
+		return { sessionToken: null };
+	}
 
-  try {
-    const jsonStartPattern = "7b22";
-    const jsonStartIndex = userContextData
-      .toLowerCase()
-      .indexOf(jsonStartPattern);
-    if (jsonStartIndex !== -1) {
-      const hexJson = userContextData.slice(jsonStartIndex);
-      const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
-      const parsed = JSON.parse(jsonString) as { sessionToken?: string };
-      return { sessionToken: parsed.sessionToken ?? null };
-    }
+	try {
+		const jsonStartPattern = "7b22";
+		const jsonStartIndex = userContextData
+			.toLowerCase()
+			.indexOf(jsonStartPattern);
+		if (jsonStartIndex !== -1) {
+			const hexJson = userContextData.slice(jsonStartIndex);
+			const jsonString = Buffer.from(hexJson, "hex").toString("utf-8");
+			const parsed = JSON.parse(jsonString) as { sessionToken?: string };
+			return { sessionToken: parsed.sessionToken ?? null };
+		}
 
-    const parsed = JSON.parse(userContextData) as { sessionToken?: string };
-    return { sessionToken: parsed.sessionToken ?? null };
-  } catch {
-    return { sessionToken: null };
-  }
+		const parsed = JSON.parse(userContextData) as { sessionToken?: string };
+		return { sessionToken: parsed.sessionToken ?? null };
+	} catch {
+		return { sessionToken: null };
+	}
 }
 
 export async function POST(req: Request) {
-  let parsedSessionId: string | undefined;
+	let parsedSessionId: string | undefined;
 
-  try {
-    const verifier = createVerifier(ACCOUNT_SELF_ENDPOINT_ORIGIN);
+	try {
+		const verifier = createVerifier(ACCOUNT_SELF_ENDPOINT_ORIGIN);
 
-    const { attestationId, proof, publicSignals, userContextData } =
-      await req.json();
+		const { attestationId, proof, publicSignals, userContextData } =
+			await req.json();
 
-    if (!proof || !publicSignals || !attestationId || !userContextData) {
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason:
-            "Proof, publicSignals, attestationId and userContextData are required",
-        },
-        { status: 200 },
-      );
-    }
+		if (!proof || !publicSignals || !attestationId || !userContextData) {
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason:
+						"Proof, publicSignals, attestationId and userContextData are required",
+				},
+				{ status: 200 },
+			);
+		}
 
-    const { sessionToken } = parseAccountContextData(userContextData);
-    const sessionValidation = await validateAccountVerificationSessionToken(
-      sessionToken ?? "",
-    );
-    if (!sessionValidation.ok) {
-      if (sessionValidation.sessionId) {
-        parsedSessionId = sessionValidation.sessionId;
-        await markAccountVerificationSessionFailed(
-          sessionValidation.sessionId,
-          sessionValidation.reason,
-        );
-      }
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: sessionValidation.reason,
-        },
-        { status: 200 },
-      );
-    }
+		const { sessionToken } = parseAccountContextData(userContextData);
+		const sessionValidation = await validateAccountVerificationSessionToken(
+			sessionToken ?? "",
+		);
+		if (!sessionValidation.ok) {
+			if (sessionValidation.sessionId) {
+				parsedSessionId = sessionValidation.sessionId;
+				await markAccountVerificationSessionFailed(
+					sessionValidation.sessionId,
+					sessionValidation.reason,
+				);
+			}
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason: sessionValidation.reason,
+				},
+				{ status: 200 },
+			);
+		}
 
-    parsedSessionId = sessionValidation.payload.sessionId;
-    const userUuid = sessionValidation.payload.userUuid;
+		parsedSessionId = sessionValidation.payload.sessionId;
+		const userUuid = sessionValidation.payload.userUuid;
 
-    const result = await verifier.verify(
-      attestationId,
-      proof,
-      publicSignals,
-      userContextData,
-    );
+		const result = await verifier.verify(
+			attestationId,
+			proof,
+			publicSignals,
+			userContextData,
+		);
 
-    const { isValid } = result.isValidDetails;
-    if (!isValid) {
-      await markAccountVerificationSessionFailed(
-        parsedSessionId,
-        "Verification failed",
-      );
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Verification failed",
-          details: result.isValidDetails,
-        },
-        { status: 200 },
-      );
-    }
+		const { isValid } = result.isValidDetails;
+		if (!isValid) {
+			await markAccountVerificationSessionFailed(
+				parsedSessionId,
+				"Verification failed",
+			);
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason: "Verification failed",
+					details: result.isValidDetails,
+				},
+				{ status: 200 },
+			);
+		}
 
-    const nullifier = result.discloseOutput?.nullifier;
-    const verifiedUserIdentifier = result.userData?.userIdentifier;
+		const nullifier = result.discloseOutput?.nullifier;
+		const verifiedUserIdentifier = result.userData?.userIdentifier;
 
-    if (!nullifier || !verifiedUserIdentifier) {
-      await markAccountVerificationSessionFailed(
-        parsedSessionId,
-        "Nullifier or user identifier missing in verification result",
-      );
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Nullifier or user identifier missing in verification result",
-        },
-        { status: 200 },
-      );
-    }
+		if (!nullifier || !verifiedUserIdentifier) {
+			await markAccountVerificationSessionFailed(
+				parsedSessionId,
+				"Nullifier or user identifier missing in verification result",
+			);
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason: "Nullifier or user identifier missing in verification result",
+				},
+				{ status: 200 },
+			);
+		}
 
-    if (verifiedUserIdentifier.toLowerCase() !== userUuid.toLowerCase()) {
-      await markAccountVerificationSessionFailed(
-        parsedSessionId,
-        "Verified identity does not match authenticated account",
-      );
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Verified identity does not match authenticated account",
-        },
-        { status: 200 },
-      );
-    }
+		if (verifiedUserIdentifier.toLowerCase() !== userUuid.toLowerCase()) {
+			await markAccountVerificationSessionFailed(
+				parsedSessionId,
+				"Verified identity does not match authenticated account",
+			);
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason: "Verified identity does not match authenticated account",
+				},
+				{ status: 200 },
+			);
+		}
 
-    const [existingNullifierBinding] = await db
-      .select({ userId: userSelfVerifications.userId })
-      .from(userSelfVerifications)
-      .where(
-        and(
-          eq(userSelfVerifications.scope, ACCOUNT_SELF_SCOPE),
-          eq(userSelfVerifications.selfNullifier, String(nullifier)),
-        ),
-      )
-      .limit(1);
+		const [existingNullifierBinding] = await db
+			.select({ userId: userSelfVerifications.userId })
+			.from(userSelfVerifications)
+			.where(
+				and(
+					eq(userSelfVerifications.scope, ACCOUNT_SELF_SCOPE),
+					eq(userSelfVerifications.selfNullifier, String(nullifier)),
+				),
+			)
+			.limit(1);
 
-    if (
-      existingNullifierBinding &&
-      existingNullifierBinding.userId.toLowerCase() !== userUuid.toLowerCase()
-    ) {
-      await markAccountVerificationSessionFailed(
-        parsedSessionId,
-        "Self ID already linked to another account",
-      );
-      return NextResponse.json(
-        {
-          status: "error",
-          result: false,
-          reason: "Self ID already linked to another account",
-        },
-        { status: 200 },
-      );
-    }
+		if (
+			existingNullifierBinding &&
+			existingNullifierBinding.userId.toLowerCase() !== userUuid.toLowerCase()
+		) {
+			await markAccountVerificationSessionFailed(
+				parsedSessionId,
+				"Self ID already linked to another account",
+			);
+			return NextResponse.json(
+				{
+					status: "error",
+					result: false,
+					reason: "Self ID already linked to another account",
+				},
+				{ status: 200 },
+			);
+		}
 
-    const now = new Date();
-    await db
-      .insert(userSelfVerifications)
-      .values({
-        userId: userUuid,
-        scope: ACCOUNT_SELF_SCOPE,
-        selfNullifier: String(nullifier),
-        selfVerifiedAt: now,
-        createdAt: now,
-        updatedAt: now,
-      })
-      .onConflictDoUpdate({
-        target: userSelfVerifications.userId,
-        set: {
-          scope: ACCOUNT_SELF_SCOPE,
-          selfNullifier: String(nullifier),
-          selfVerifiedAt: now,
-          updatedAt: now,
-        },
-      });
+		const now = new Date();
+		await db
+			.insert(userSelfVerifications)
+			.values({
+				userId: userUuid,
+				scope: ACCOUNT_SELF_SCOPE,
+				selfNullifier: String(nullifier),
+				selfVerifiedAt: now,
+				createdAt: now,
+				updatedAt: now,
+			})
+			.onConflictDoUpdate({
+				target: userSelfVerifications.userId,
+				set: {
+					scope: ACCOUNT_SELF_SCOPE,
+					selfNullifier: String(nullifier),
+					selfVerifiedAt: now,
+					updatedAt: now,
+				},
+			});
 
-    try {
-      await db.transaction(async (tx) => {
-        const [referral] = await tx
-          .select({ referrerId: referrals.referrerId })
-          .from(referrals)
-          .where(eq(referrals.referredId, userUuid))
-          .limit(1);
+		try {
+			await db.transaction(async (tx) => {
+				const [referral] = await tx
+					.select({ referrerId: referrals.referrerId })
+					.from(referrals)
+					.where(eq(referrals.referredId, userUuid))
+					.limit(1);
 
-        if (!referral) return;
-        if (referral.referrerId.toLowerCase() === userUuid.toLowerCase())
-          return;
+				if (!referral) return;
+				if (referral.referrerId.toLowerCase() === userUuid.toLowerCase())
+					return;
 
-        const [rewardInsert] = await tx
-          .insert(referralVerificationRewards)
-          .values({
-            referrerId: referral.referrerId,
-            referredUserId: userUuid,
-            scope: ACCOUNT_SELF_SCOPE,
-            selfNullifier: String(nullifier),
-            rewardType: VERIFIED_REFERRAL_REWARD_TYPE,
-            amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
-          })
-          .onConflictDoNothing({
-            target: [
-              referralVerificationRewards.scope,
-              referralVerificationRewards.selfNullifier,
-              referralVerificationRewards.rewardType,
-            ],
-          })
-          .returning();
+				const [rewardInsert] = await tx
+					.insert(referralVerificationRewards)
+					.values({
+						referrerId: referral.referrerId,
+						referredUserId: userUuid,
+						scope: ACCOUNT_SELF_SCOPE,
+						selfNullifier: String(nullifier),
+						rewardType: VERIFIED_REFERRAL_REWARD_TYPE,
+						amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
+					})
+					.onConflictDoNothing({
+						target: [
+							referralVerificationRewards.scope,
+							referralVerificationRewards.selfNullifier,
+							referralVerificationRewards.rewardType,
+						],
+					})
+					.returning();
 
-        if (!rewardInsert) return;
+				if (!rewardInsert) return;
 
-        const [referrerProfile] = await tx
-          .select({ walletBalance: userProfiles.walletBalance })
-          .from(userProfiles)
-          .where(eq(userProfiles.id, referral.referrerId))
-          .limit(1);
+				const [referrerProfile] = await tx
+					.select({ walletBalance: userProfiles.walletBalance })
+					.from(userProfiles)
+					.where(eq(userProfiles.id, referral.referrerId))
+					.limit(1);
 
-        if (!referrerProfile) return;
+				if (!referrerProfile) return;
 
-        const currentBalance = Number.parseFloat(
-          referrerProfile.walletBalance ?? "0",
-        );
-        const rewardAmount = Number.parseFloat(VERIFIED_REFERRAL_REWARD_AMOUNT);
-        const nextBalance = currentBalance + rewardAmount;
+				const currentBalance = Number.parseFloat(
+					referrerProfile.walletBalance ?? "0",
+				);
+				const rewardAmount = Number.parseFloat(VERIFIED_REFERRAL_REWARD_AMOUNT);
+				const nextBalance = currentBalance + rewardAmount;
 
-        await tx
-          .update(userProfiles)
-          .set({
-            walletBalance: nextBalance.toFixed(18),
-            updatedAt: new Date(),
-          })
-          .where(eq(userProfiles.id, referral.referrerId));
+				await tx
+					.update(userProfiles)
+					.set({
+						walletBalance: nextBalance.toFixed(18),
+						updatedAt: new Date(),
+					})
+					.where(eq(userProfiles.id, referral.referrerId));
 
-        await tx.insert(transactions).values({
-          userId: referral.referrerId,
-          type: VERIFIED_REFERRAL_TRANSACTION_TYPE,
-          amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
-        });
-      });
-    } catch (rewardError) {
-      // Keep verification successful even if reward handling fails.
-      console.error(
-        "[Self Verify Account] Referral reward error:",
-        rewardError,
-      );
-    }
+				await tx.insert(transactions).values({
+					userId: referral.referrerId,
+					type: VERIFIED_REFERRAL_TRANSACTION_TYPE,
+					amount: VERIFIED_REFERRAL_REWARD_AMOUNT,
+				});
+			});
+		} catch (rewardError) {
+			// Keep verification successful even if reward handling fails.
+			console.error(
+				"[Self Verify Account] Referral reward error:",
+				rewardError,
+			);
+		}
 
-    await markAccountVerificationSessionVerified(parsedSessionId);
+		await markAccountVerificationSessionVerified(parsedSessionId);
 
-    return NextResponse.json(
-      {
-        status: "success",
-        result: true,
-        credentialSubject: result.discloseOutput,
-      },
-      { status: 200 },
-    );
-  } catch (error) {
-    if (parsedSessionId) {
-      const message = error instanceof Error ? error.message : String(error);
-      await markAccountVerificationSessionFailed(parsedSessionId, message);
-    }
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    return NextResponse.json(
-      {
-        status: "error",
-        result: false,
-        reason: errorMessage,
-      },
-      { status: 200 },
-    );
-  }
+		return NextResponse.json(
+			{
+				status: "success",
+				result: true,
+				credentialSubject: result.discloseOutput,
+			},
+			{ status: 200 },
+		);
+	} catch (error) {
+		if (parsedSessionId) {
+			const message = error instanceof Error ? error.message : String(error);
+			await markAccountVerificationSessionFailed(parsedSessionId, message);
+		}
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		return NextResponse.json(
+			{
+				status: "error",
+				result: false,
+				reason: errorMessage,
+			},
+			{ status: 200 },
+		);
+	}
 }

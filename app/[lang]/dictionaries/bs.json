@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Zaraditi",
-    "govern": "Vladati",
-    "menu": "Meni"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Stranke",
-        "elections": "Izbori",
-        "referendums": "Referendumi"
-      },
-      "sections": {
-        "parties": {
-          "title": "Političke stranke"
-        },
-        "elections": {
-          "title": "Test izbori",
-          "subtitle": "Eksperimentišite sa globalnom demokratijom"
-        },
-        "referendums": {
-          "title": "Svjetski ustavni referendum",
-          "subtitle": "Glasajte o našim temeljnim principima"
-        }
-      },
-      "vote": {
-        "no_active_election": "Izbori počinju uskoro",
-        "test_verification": {
-          "description": "Isprobajte naš sistem za verifikaciju sada da biste bili spremni za glasanje",
-          "button": "Test"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subvencije",
-          "ambassadors": "Ambasadori"
-        },
-        "discover": "Otkrijte",
-        "search_placeholder": "Pretraga stranaka...",
-        "no_parties_found": "Stranke nisu pronađene",
-        "error_loading": "Nije uspjelo učitavanje stranaka",
-        "refresh": "Osvježi",
-        "party_details": "Detalji stranke",
-        "share_party": "Podijelite stranku",
-        "my_party": "Moja stranka",
-        "learn_more": "Saznajte više",
-        "party_management": "Upravljanje strankom",
-        "edit_party_info": "Uredi informacije o stranci",
-        "dialogs": {
-          "party_name": "Ime stranke",
-          "description_optional": "Opis (opciono)",
-          "official_link_optional": "Zvanična veza (opciono)",
-          "updating": "Ažuriranje...",
-          "save": "Sačuvaj",
-          "register_party": "Registrujte stranku",
-          "register": "Registruj se",
-          "registering": "Registracija...",
-          "leader_warning_register": "Trenutno ste vođa {partyName}. Registracija nove stranke će obrisati vašu trenutnu stranku.",
-          "deleting": "Brisanje...",
-          "about_to_delete": "Upravo ćete obrisati {partyName}. Ova radnja se ne može poništiti.",
-          "about_to_register": "Uskoro ćete osnovati novu stranku."
-        },
-        "detail": {
-          "failed_to_load": "Neuspješno učitavanje podataka stranke",
-          "party_not_found": "Stranka nije pronađena",
-          "error_loading": "Greška pri učitavanju stranke",
-          "back_to_parties": "Nazad na stranke",
-          "description": "Opis",
-          "party_info": "Informacije o stranci",
-          "leader": "Vođa",
-          "website": "Web stranica",
-          "not_found_description": "Stranka koju tražite ne postoji ili je raspuštena."
-        },
-        "delete_party": "Obriši stranku",
-        "run_on_elections_and_earn": "Kandidujte se na izborima i dobijte subvencije",
-        "ambassadors": {
-          "title": "Ambasadorski Program",
-          "description": "Pozovite prijatelje i zaradite nagrade kada budu verifikovani i kada njihova stranka dobije subvencije",
-          "leaderboard": "Rang lista",
-          "no_rewards_yet": "Još nema nagrada",
-          "col_ambassador": "Ambasadori",
-          "col_invited": "Pozvani",
-          "col_reward": "Nagrada",
-          "share_referral_link": "Podijeli link za preporuku"
-        },
-        "subsidies": {
-          "title": "Program Subvencioniranja Stranaka",
-          "no_subsidies_yet": "Još nema subvencija",
-          "description": "Finansiranje zasnovano na izbornom učinku",
-          "col_subsidy": "Subvencija"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Izbori",
-          "not_found": "Izbori nisu pronađeni",
-          "not_found_description": "Izbori koje tražite ne postoje.",
-          "back_to_elections": "Nazad na izbore",
-          "status_active": "Aktivno",
-          "status_upcoming": "Predstojeće",
-          "status_ended": "Završeno",
-          "election_info": "Informacije o izborima",
-          "reward_pool": "Nagradni fond: {amount} WDD",
-          "reward_pool_minimum": "Nagradni fond: minimum {amount} WDD",
-          "choose_a_party": "Odaberite stranku",
-          "no_parties_for_election": "Nema dostupnih stranaka za ove izbore.",
-          "results_title": "Rezultati",
-          "vote_singular": "glas",
-          "vote_plural": "glasova",
-          "no_votes": "U ovim izborima nije bilo glasova.",
-          "test_election_name": "Test izbor {n}"
-        },
-        "list": {
-          "empty_state": "Nije pronađeno izbora",
-          "active_section": "Aktivni izbori",
-          "upcoming_section": "Predstojeći izbori",
-          "previous_section": "Prethodni izbori"
-        }
-      }
-    },
-    "error": {
-      "title": "Nešto je pošlo po krivu",
-      "description": "Došlo je do neočekivane greške. Molimo pokušajte ponovo.",
-      "error_id": "ID greške: {digest}",
-      "try_again": "Pokušaj ponovo"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Osnovni prihod",
-        "savings": "Štednja"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Zaradite novac jer ste čovjek",
-        "subtitle_claim": "Zatražite svoju drahmu",
-        "tooltip_claim": "1 WDD/dan, maksimalno 1 WDD. Vratite se u roku od 24 sata da maksimizirate prihod.",
-        "claim_button": "Zatraži",
-        "alert": {
-          "claim": {
-            "title": "Potvrda zahtjeva",
-            "description": "Zatražit ćete {amount} WDD. Ovo će se dodati na stanje vašeg novčanika."
-          }
-        },
-        "setup_subtitle": "Postavite svoj osnovni prihod",
-        "activate_loading": "Aktiviranje...",
-        "activate_button": "Aktiviraj osnovni prihod",
-        "world_drachma": "Šta je svjetska drahma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Zatražite svoju globalnu AI dividendu"
-      },
-      "savings": {
-        "title": "Štedni račun",
-        "subtitle": "Zaradite kamatu svake sekunde",
-        "tooltip": "69% godišnja osnovna kamata. Redovito skupljajte i reinvestirajte da postignete skoro 100% godišnji efektivni prinos. Povlačenje u bilo kom trenutku.",
-        "deposit": "Depozit",
-        "withdraw": "Povlačenje",
-        "balance": "Stanje",
-        "amount_deposit": "Iznos depozita",
-        "amount_withdraw": "Iznos za povlačenje",
-        "interest": "Kamate",
-        "collect": "Skupljanje",
-        "alert": {
-          "collect": {
-            "title": "Potvrda skupljanja",
-            "description": "Skupljat ćete {amount} WDD kamata."
-          },
-          "deposit": {
-            "title": "Potvrda depozita",
-            "description": "Deponirat ćete {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Potvrda povlačenja",
-            "description": "Povući ćete {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Pogledajte pametni ugovor",
-        "verify": "Potvrdi"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "RAČUN",
-          "account_info": "Informacije o računu",
-          "referral_code": "Referalni kod",
-          "referred_by": "Preporučio",
-          "language": "Jezik"
-        },
-        "help": {
-          "title": "POMOĆ",
-          "quickstart": "Brzi početak",
-          "docs": "Wiki",
-          "help_center": "Centar za pomoć"
-        },
-        "source_code": {
-          "title": "IZVORNI KOD"
-        },
-        "legal": {
-          "title": "PRAVNI",
-          "terms": "Uslovi korištenja",
-          "privacy": "Politika privatnosti"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Novčanik"
-      },
-      "balance": "Stanje",
-      "modals": {
-        "sign_out": {
-          "confirm": "Jeste li sigurni da se želite odjaviti?"
-        },
-        "disconnect": {
-          "confirm": "Jeste li sigurni da želite prekinuti vezu sa svojim novčanikom?"
-        },
-        "send": {
-          "button": "Pošaljite",
-          "withdraw_to_crypto": {
-            "description": "Povucite WDD na kripto račun.",
-            "amount_label": "Iznos",
-            "address_label": "Adresa novčanika",
-            "network_label": "Mreža"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD na Jumper",
-          "ethereum_uniswap": "Ethereum WDD na Uniswap",
-          "base_jumper": "Base Chain WDD na Jumper",
-          "base_uniswap": "Base Chain WDD na Uniswap",
-          "worldchain_jumper": "World Chain WDD na Jumper",
-          "worldchain_uniswap": "World Chain WDD na Uniswap"
-        },
-        "delete_account": {
-          "description": "Ovo će trajno obrisati vaš račun i ukloniti sve vaše podatke sa naših servera. Ova akcija se ne može poništiti — molimo budite oprezni.",
-          "deleting": "Brisanje..."
-        },
-        "connect_wallet_browser": {
-          "title": "Otvori u MetaMask-u",
-          "description": "Za povezivanje kopirajte ovaj link i otvorite ga u MetaMask ugrađenom pregledniku.",
-          "copy_link": "Kopiraj link"
-        },
-        "connect_wallet_picker": {
-          "description": "Pronađeno je više novčanika. Odaberite jedan za povezivanje."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Nemate novčanik?",
-          "find_wallet_link": "Pronađite jedan na WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "RAČUN",
-        "security": "SIGURNOST",
-        "google_account": "Google račun",
-        "google_not_linked": "Nije povezan",
-        "passkeys": "Pristupne ključeve",
-        "passkeys_linked": "{count} povezano",
-        "danger_zone": "OPASNA ZONA",
-        "delete_account": {
-          "description": "Trajno uklonite sve svoje podatke"
-        },
-        "verification": "VERIFIKACIJA",
-        "google_linked": "Povezan",
-        "account_label": "Račun"
-      },
-      "username": {
-        "label": "Korisničko ime",
-        "edit_title": "Uredi korisničko ime",
-        "description": "3-30 znakova, alfanumerički, podvlačenja i crtice"
-      },
-      "history": {
-        "title": "ISTORIJA"
-      },
-      "transactions": {
-        "failed_to_load": "Neuspješno učitavanje",
-        "no_transactions": "Još nema transakcija",
-        "wdd_per_day": "WDD/dan",
-        "just_now": "Upravo sada",
-        "minutes_ago": "prije {minutes}m",
-        "hours_ago": "prije {hours}h",
-        "days_ago": "prije {days}d",
-        "filter": {
-          "all_types": "Svi tipovi",
-          "select_type": "Odaberite vrstu",
-          "rewards": "Nagrade"
-        },
-        "types": {
-          "withdrawal": "Povlačenje",
-          "received": "Primljeno",
-          "sent": "Poslano",
-          "ambassador_reward": "Ambasadorska nagrada",
-          "party_subsidy": "Subvencija za stranku",
-          "stream_created": "Tok kreiran",
-          "stream_updated": "Tok ažuriran",
-          "savings_deposit": "Štednja depozit",
-          "savings_withdrawal": "Štednja povlačenje",
-          "savings_interest": "Štednja kamate",
-          "referral_reward": "Nagrada za preporuku"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Skenirajte ovaj QR kod da se verifikujete putem Self.",
-        "mobile_dialog_description": "Bićete preusmjereni u aplikaciju Self da dovršite verifikaciju.",
-        "support_telegram": "Self podrška",
-        "verification_guide": "Vodič za verifikaciju",
-        "qr_alt": "Self verifikacijski QR",
-        "callback_warning": "Upozorenje",
-        "callback_warning_description": "URL za povratni poziv verifikacije nije dostupan s vašeg telefona. Postavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ili postavite NEXT_PUBLIC_PUBLIC_BASE_URL na tunel/preview domenu).",
-        "label": "Self",
-        "status_completed": "Verificiran",
-        "status_not_completed": "Nije verificiran",
-        "learn_about_self": "Saznajte više o Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Potvrdite identitet bez otkrivanja bilo kojih ličnih podataka."
-        }
-      },
-      "verification_warning": {
-        "title": "Dobijte verifikaciju",
-        "reward_cap_banner": "Nagrade za osnovni prihod i štednju su ograničene za neverifikovane građane. Verifikujte svoj račun da zarađujete bez ograničenja."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Većina novčanika prikazuje WDD tek nakon što se ručno uveze na odabranom lanacu pomoću njegove ",
-      "contract_address": "adrese ugovora"
-    }
-  },
-  "toasts": {
-    "generic_error": "Dogodila se greška",
-    "copied": "Kopirano",
-    "wallet": {
-      "no_wallet": "Nema adrese novčanika",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Poslano",
-      "account_deleted": "Račun obrisan",
-      "delete_failed": "Brisanje računa neuspješno",
-      "contract_address_error": "Ne može se povući na adresu ugovora",
-      "sign_out_failed": "Odjava nije uspjela",
-      "google_linked": "Google račun povezan",
-      "google_already_linked": "Google račun je već povezan s drugim računom",
-      "google_link_failed": "Nije moguće pokrenuti povezivanje Googlea",
-      "passkey_added": "Pristupni ključ dodan",
-      "passkey_add_failed": "Nije moguće dodati pristupni ključ"
-    },
-    "parties": {
-      "updated": "Ažurirano",
-      "update_failed": "Ažuriranje nije uspjelo",
-      "update_error": "Greška prilikom ažuriranja stranke",
-      "registered": "Stranka registrovana",
-      "register_failed": "Registracija stranke nije uspjela",
-      "register_error": "Greška pri registraciji stranke",
-      "deleted": "Obrisano",
-      "delete_failed": "Brisanje nije uspjelo",
-      "delete_error": "Greška pri brisanju"
-    },
-    "basic_income": {
-      "activated": "Osnovni prihod aktiviran",
-      "activate_failed": "Aktivacija neuspješna",
-      "claimed": "Zatraženo",
-      "claim_failed": "Zahtjev neuspješan"
-    },
-    "savings": {
-      "collected": "Skupljeno",
-      "collect_failed": "Skupljanje neuspješno",
-      "deposited": "Deponirano",
-      "deposit_failed": "Depozit neuspješan",
-      "withdrawn": "Povučeno",
-      "withdraw_failed": "Povlačenje neuspješno"
-    }
-  },
-  "common": {
-    "confirm": "Potvrdi",
-    "sign_in": "Prijava",
-    "connect": "Poveži",
-    "disconnect": "Prekini vezu",
-    "connect_wallet": "Poveži novčanik",
-    "max": "Maks",
-    "loading": "Učitavanje...",
-    "processing": "Obrađuje se...",
-    "insufficient_balance": "Nedovoljno WDD",
-    "delete_account": "Obriši račun",
-    "sign_out": "Odjavi se",
-    "invalid_address": "Nevažeća adresa",
-    "coming_soon": "Uskoro",
-    "withdraw": "Povuci",
-    "trade": "Trgovina",
-    "continue": "Nastavi",
-    "close": "Zatvori",
-    "updating": "Ažuriranje...",
-    "save": "Sačuvaj",
-    "vote": "Glasaj",
-    "switch_to_base_chain": "Prebaci na Base Chain"
-  },
-  "auth": {
-    "choose_method": "Odaberite željeni način.",
-    "sign_in_with_google": "Nastavite s Google-om",
-    "sign_in_with_passkey": "Koristite biometriju",
-    "sign_in_or_create": "Pristupite svom računu pomoću passkey-a, koristeći otisak prsta, skeniranje lica ili zaključavanje ekrana.",
-    "create_account": "Kreiraj račun",
-    "create_passkey_name": "Kreiraj ime passkey-a",
-    "passkey_name_description": "Imenujte svoj passkey da biste ga identifikovali u upravitelju lozinki.",
-    "passkey_name": "Ime passkey-a"
-  }
+	"nav": {
+		"earn": "Zaraditi",
+		"govern": "Vladati",
+		"menu": "Meni"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Stranke",
+				"elections": "Izbori",
+				"referendums": "Referendumi"
+			},
+			"sections": {
+				"parties": {
+					"title": "Političke stranke"
+				},
+				"elections": {
+					"title": "Test izbori",
+					"subtitle": "Eksperimentišite sa globalnom demokratijom"
+				},
+				"referendums": {
+					"title": "Svjetski ustavni referendum",
+					"subtitle": "Glasajte o našim temeljnim principima"
+				}
+			},
+			"vote": {
+				"no_active_election": "Izbori počinju uskoro",
+				"test_verification": {
+					"description": "Isprobajte naš sistem za verifikaciju sada da biste bili spremni za glasanje",
+					"button": "Test"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subvencije",
+					"ambassadors": "Ambasadori"
+				},
+				"discover": "Otkrijte",
+				"search_placeholder": "Pretraga stranaka...",
+				"no_parties_found": "Stranke nisu pronađene",
+				"error_loading": "Nije uspjelo učitavanje stranaka",
+				"refresh": "Osvježi",
+				"party_details": "Detalji stranke",
+				"share_party": "Podijelite stranku",
+				"my_party": "Moja stranka",
+				"learn_more": "Saznajte više",
+				"party_management": "Upravljanje strankom",
+				"edit_party_info": "Uredi informacije o stranci",
+				"dialogs": {
+					"party_name": "Ime stranke",
+					"description_optional": "Opis (opciono)",
+					"official_link_optional": "Zvanična veza (opciono)",
+					"updating": "Ažuriranje...",
+					"save": "Sačuvaj",
+					"register_party": "Registrujte stranku",
+					"register": "Registruj se",
+					"registering": "Registracija...",
+					"leader_warning_register": "Trenutno ste vođa {partyName}. Registracija nove stranke će obrisati vašu trenutnu stranku.",
+					"deleting": "Brisanje...",
+					"about_to_delete": "Upravo ćete obrisati {partyName}. Ova radnja se ne može poništiti.",
+					"about_to_register": "Uskoro ćete osnovati novu stranku."
+				},
+				"detail": {
+					"failed_to_load": "Neuspješno učitavanje podataka stranke",
+					"party_not_found": "Stranka nije pronađena",
+					"error_loading": "Greška pri učitavanju stranke",
+					"back_to_parties": "Nazad na stranke",
+					"description": "Opis",
+					"party_info": "Informacije o stranci",
+					"leader": "Vođa",
+					"website": "Web stranica",
+					"not_found_description": "Stranka koju tražite ne postoji ili je raspuštena."
+				},
+				"delete_party": "Obriši stranku",
+				"run_on_elections_and_earn": "Kandidujte se na izborima i dobijte subvencije",
+				"ambassadors": {
+					"title": "Ambasadorski Program",
+					"description": "Pozovite prijatelje i zaradite nagrade kada budu verifikovani i kada njihova stranka dobije subvencije",
+					"leaderboard": "Rang lista",
+					"no_rewards_yet": "Još nema nagrada",
+					"col_ambassador": "Ambasadori",
+					"col_invited": "Pozvani",
+					"col_reward": "Nagrada",
+					"share_referral_link": "Podijeli link za preporuku"
+				},
+				"subsidies": {
+					"title": "Program Subvencioniranja Stranaka",
+					"no_subsidies_yet": "Još nema subvencija",
+					"description": "Finansiranje zasnovano na izbornom učinku",
+					"col_subsidy": "Subvencija"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Izbori",
+					"not_found": "Izbori nisu pronađeni",
+					"not_found_description": "Izbori koje tražite ne postoje.",
+					"back_to_elections": "Nazad na izbore",
+					"status_active": "Aktivno",
+					"status_upcoming": "Predstojeće",
+					"status_ended": "Završeno",
+					"election_info": "Informacije o izborima",
+					"reward_pool": "Nagradni fond: {amount} WDD",
+					"reward_pool_minimum": "Nagradni fond: minimum {amount} WDD",
+					"choose_a_party": "Odaberite stranku",
+					"no_parties_for_election": "Nema dostupnih stranaka za ove izbore.",
+					"results_title": "Rezultati",
+					"vote_singular": "glas",
+					"vote_plural": "glasova",
+					"no_votes": "U ovim izborima nije bilo glasova.",
+					"test_election_name": "Test izbor {n}"
+				},
+				"list": {
+					"empty_state": "Nije pronađeno izbora",
+					"active_section": "Aktivni izbori",
+					"upcoming_section": "Predstojeći izbori",
+					"previous_section": "Prethodni izbori"
+				}
+			}
+		},
+		"error": {
+			"title": "Nešto je pošlo po krivu",
+			"description": "Došlo je do neočekivane greške. Molimo pokušajte ponovo.",
+			"error_id": "ID greške: {digest}",
+			"try_again": "Pokušaj ponovo"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Osnovni prihod",
+				"savings": "Štednja"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Zaradite novac jer ste čovjek",
+				"subtitle_claim": "Zatražite svoju drahmu",
+				"tooltip_claim": "1 WDD/dan, maksimalno 1 WDD. Vratite se u roku od 24 sata da maksimizirate prihod.",
+				"claim_button": "Zatraži",
+				"alert": {
+					"claim": {
+						"title": "Potvrda zahtjeva",
+						"description": "Zatražit ćete {amount} WDD. Ovo će se dodati na stanje vašeg novčanika."
+					}
+				},
+				"setup_subtitle": "Postavite svoj osnovni prihod",
+				"activate_loading": "Aktiviranje...",
+				"activate_button": "Aktiviraj osnovni prihod",
+				"world_drachma": "Šta je svjetska drahma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Zatražite svoju globalnu AI dividendu"
+			},
+			"savings": {
+				"title": "Štedni račun",
+				"subtitle": "Zaradite kamatu svake sekunde",
+				"tooltip": "69% godišnja osnovna kamata. Redovito skupljajte i reinvestirajte da postignete skoro 100% godišnji efektivni prinos. Povlačenje u bilo kom trenutku.",
+				"deposit": "Depozit",
+				"withdraw": "Povlačenje",
+				"balance": "Stanje",
+				"amount_deposit": "Iznos depozita",
+				"amount_withdraw": "Iznos za povlačenje",
+				"interest": "Kamate",
+				"collect": "Skupljanje",
+				"alert": {
+					"collect": {
+						"title": "Potvrda skupljanja",
+						"description": "Skupljat ćete {amount} WDD kamata."
+					},
+					"deposit": {
+						"title": "Potvrda depozita",
+						"description": "Deponirat ćete {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Potvrda povlačenja",
+						"description": "Povući ćete {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Pogledajte pametni ugovor",
+				"verify": "Potvrdi"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "RAČUN",
+					"account_info": "Informacije o računu",
+					"referral_code": "Referalni kod",
+					"referred_by": "Preporučio",
+					"language": "Jezik"
+				},
+				"help": {
+					"title": "POMOĆ",
+					"quickstart": "Brzi početak",
+					"docs": "Wiki",
+					"help_center": "Centar za pomoć"
+				},
+				"source_code": {
+					"title": "IZVORNI KOD"
+				},
+				"legal": {
+					"title": "PRAVNI",
+					"terms": "Uslovi korištenja",
+					"privacy": "Politika privatnosti"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Novčanik"
+			},
+			"balance": "Stanje",
+			"modals": {
+				"sign_out": {
+					"confirm": "Jeste li sigurni da se želite odjaviti?"
+				},
+				"disconnect": {
+					"confirm": "Jeste li sigurni da želite prekinuti vezu sa svojim novčanikom?"
+				},
+				"send": {
+					"button": "Pošaljite",
+					"withdraw_to_crypto": {
+						"description": "Povucite WDD na kripto račun.",
+						"amount_label": "Iznos",
+						"address_label": "Adresa novčanika",
+						"network_label": "Mreža"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD na Jumper",
+					"ethereum_uniswap": "Ethereum WDD na Uniswap",
+					"base_jumper": "Base Chain WDD na Jumper",
+					"base_uniswap": "Base Chain WDD na Uniswap",
+					"worldchain_jumper": "World Chain WDD na Jumper",
+					"worldchain_uniswap": "World Chain WDD na Uniswap"
+				},
+				"delete_account": {
+					"description": "Ovo će trajno obrisati vaš račun i ukloniti sve vaše podatke sa naših servera. Ova akcija se ne može poništiti — molimo budite oprezni.",
+					"deleting": "Brisanje..."
+				},
+				"connect_wallet_browser": {
+					"title": "Otvori u MetaMask-u",
+					"description": "Za povezivanje kopirajte ovaj link i otvorite ga u MetaMask ugrađenom pregledniku.",
+					"copy_link": "Kopiraj link"
+				},
+				"connect_wallet_picker": {
+					"description": "Pronađeno je više novčanika. Odaberite jedan za povezivanje."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Nemate novčanik?",
+					"find_wallet_link": "Pronađite jedan na WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "RAČUN",
+				"security": "SIGURNOST",
+				"google_account": "Google račun",
+				"google_not_linked": "Nije povezan",
+				"passkeys": "Pristupne ključeve",
+				"passkeys_linked": "{count} povezano",
+				"danger_zone": "OPASNA ZONA",
+				"delete_account": {
+					"description": "Trajno uklonite sve svoje podatke"
+				},
+				"verification": "VERIFIKACIJA",
+				"google_linked": "Povezan",
+				"account_label": "Račun"
+			},
+			"username": {
+				"label": "Korisničko ime",
+				"edit_title": "Uredi korisničko ime",
+				"description": "3-30 znakova, alfanumerički, podvlačenja i crtice"
+			},
+			"history": {
+				"title": "ISTORIJA"
+			},
+			"transactions": {
+				"failed_to_load": "Neuspješno učitavanje",
+				"no_transactions": "Još nema transakcija",
+				"wdd_per_day": "WDD/dan",
+				"just_now": "Upravo sada",
+				"minutes_ago": "prije {minutes}m",
+				"hours_ago": "prije {hours}h",
+				"days_ago": "prije {days}d",
+				"filter": {
+					"all_types": "Svi tipovi",
+					"select_type": "Odaberite vrstu",
+					"rewards": "Nagrade"
+				},
+				"types": {
+					"withdrawal": "Povlačenje",
+					"received": "Primljeno",
+					"sent": "Poslano",
+					"ambassador_reward": "Ambasadorska nagrada",
+					"party_subsidy": "Subvencija za stranku",
+					"stream_created": "Tok kreiran",
+					"stream_updated": "Tok ažuriran",
+					"savings_deposit": "Štednja depozit",
+					"savings_withdrawal": "Štednja povlačenje",
+					"savings_interest": "Štednja kamate",
+					"referral_reward": "Nagrada za preporuku"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Skenirajte ovaj QR kod da se verifikujete putem Self.",
+				"mobile_dialog_description": "Bićete preusmjereni u aplikaciju Self da dovršite verifikaciju.",
+				"support_telegram": "Self podrška",
+				"verification_guide": "Vodič za verifikaciju",
+				"qr_alt": "Self verifikacijski QR",
+				"callback_warning": "Upozorenje",
+				"callback_warning_description": "URL za povratni poziv verifikacije nije dostupan s vašeg telefona. Postavite NEXT_PUBLIC_SELF_CALLBACK na javni URL (ili postavite NEXT_PUBLIC_PUBLIC_BASE_URL na tunel/preview domenu).",
+				"label": "Self",
+				"status_completed": "Verificiran",
+				"status_not_completed": "Nije verificiran",
+				"learn_about_self": "Saznajte više o Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Potvrdite identitet bez otkrivanja bilo kojih ličnih podataka."
+				}
+			},
+			"verification_warning": {
+				"title": "Dobijte verifikaciju",
+				"reward_cap_banner": "Nagrade za osnovni prihod i štednju su ograničene za neverifikovane građane. Verifikujte svoj račun da zarađujete bez ograničenja."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Većina novčanika prikazuje WDD tek nakon što se ručno uveze na odabranom lanacu pomoću njegove ",
+			"contract_address": "adrese ugovora"
+		}
+	},
+	"toasts": {
+		"generic_error": "Dogodila se greška",
+		"copied": "Kopirano",
+		"wallet": {
+			"no_wallet": "Nema adrese novčanika",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Poslano",
+			"account_deleted": "Račun obrisan",
+			"delete_failed": "Brisanje računa neuspješno",
+			"contract_address_error": "Ne može se povući na adresu ugovora",
+			"sign_out_failed": "Odjava nije uspjela",
+			"google_linked": "Google račun povezan",
+			"google_already_linked": "Google račun je već povezan s drugim računom",
+			"google_link_failed": "Nije moguće pokrenuti povezivanje Googlea",
+			"passkey_added": "Pristupni ključ dodan",
+			"passkey_add_failed": "Nije moguće dodati pristupni ključ"
+		},
+		"parties": {
+			"updated": "Ažurirano",
+			"update_failed": "Ažuriranje nije uspjelo",
+			"update_error": "Greška prilikom ažuriranja stranke",
+			"registered": "Stranka registrovana",
+			"register_failed": "Registracija stranke nije uspjela",
+			"register_error": "Greška pri registraciji stranke",
+			"deleted": "Obrisano",
+			"delete_failed": "Brisanje nije uspjelo",
+			"delete_error": "Greška pri brisanju"
+		},
+		"basic_income": {
+			"activated": "Osnovni prihod aktiviran",
+			"activate_failed": "Aktivacija neuspješna",
+			"claimed": "Zatraženo",
+			"claim_failed": "Zahtjev neuspješan"
+		},
+		"savings": {
+			"collected": "Skupljeno",
+			"collect_failed": "Skupljanje neuspješno",
+			"deposited": "Deponirano",
+			"deposit_failed": "Depozit neuspješan",
+			"withdrawn": "Povučeno",
+			"withdraw_failed": "Povlačenje neuspješno"
+		}
+	},
+	"common": {
+		"confirm": "Potvrdi",
+		"sign_in": "Prijava",
+		"connect": "Poveži",
+		"disconnect": "Prekini vezu",
+		"connect_wallet": "Poveži novčanik",
+		"max": "Maks",
+		"loading": "Učitavanje...",
+		"processing": "Obrađuje se...",
+		"insufficient_balance": "Nedovoljno WDD",
+		"delete_account": "Obriši račun",
+		"sign_out": "Odjavi se",
+		"invalid_address": "Nevažeća adresa",
+		"coming_soon": "Uskoro",
+		"withdraw": "Povuci",
+		"trade": "Trgovina",
+		"continue": "Nastavi",
+		"close": "Zatvori",
+		"updating": "Ažuriranje...",
+		"save": "Sačuvaj",
+		"vote": "Glasaj",
+		"switch_to_base_chain": "Prebaci na Base Chain"
+	},
+	"auth": {
+		"choose_method": "Odaberite željeni način.",
+		"sign_in_with_google": "Nastavite s Google-om",
+		"sign_in_with_passkey": "Koristite biometriju",
+		"sign_in_or_create": "Pristupite svom računu pomoću passkey-a, koristeći otisak prsta, skeniranje lica ili zaključavanje ekrana.",
+		"create_account": "Kreiraj račun",
+		"create_passkey_name": "Kreiraj ime passkey-a",
+		"passkey_name_description": "Imenujte svoj passkey da biste ga identifikovali u upravitelju lozinki.",
+		"passkey_name": "Ime passkey-a"
+	}
 }

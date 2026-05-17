@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Nopelnīt",
-    "govern": "Pārvaldīt",
-    "menu": "Izvēlne"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partijas",
-        "elections": "Vēlēšanas",
-        "referendums": "Referendumi"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politiskās partijas"
-        },
-        "elections": {
-          "title": "Testa vēlēšanas",
-          "subtitle": "Eksperimentējiet ar globālu demokrātiju"
-        },
-        "referendums": {
-          "title": "Pasaules konstitucionālais referendums",
-          "subtitle": "Balsojiet par mūsu pamatprincipiem"
-        }
-      },
-      "vote": {
-        "no_active_election": "Vēlēšanas drīz sāksies",
-        "test_verification": {
-          "description": "Izmēģiniet mūsu pārbaudes sistēmu tagad, lai būtu gatavi balsošanai",
-          "button": "Tests"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsīdijas",
-          "ambassadors": "Vēstnieki"
-        },
-        "discover": "Atklāt",
-        "search_placeholder": "Meklēt partijas...",
-        "no_parties_found": "Partijas nav atrastas",
-        "error_loading": "Neizdevās ielādēt partijas",
-        "refresh": "Atsvaidzināt",
-        "party_details": "Partijas detaļas",
-        "share_party": "Dalīties ar partiju",
-        "my_party": "Mana partija",
-        "learn_more": "Uzzināt vairāk",
-        "party_management": "Partijas pārvalde",
-        "edit_party_info": "Rediģēt partijas informāciju",
-        "dialogs": {
-          "party_name": "Partijas nosaukums",
-          "description_optional": "Apraksts (nav obligāts)",
-          "official_link_optional": "Oficiālā saite (nav obligāta)",
-          "updating": "Atjaunina...",
-          "save": "Saglabāt",
-          "register_party": "Reģistrēt partiju",
-          "register": "Reģistrēties",
-          "registering": "Reģistrēšana...",
-          "leader_warning_register": "Jūs pašlaik esat {partyName} līderis. Jaunas partijas reģistrēšana dzēsīs jūsu pašreizējo partiju.",
-          "deleting": "Dzēšana...",
-          "about_to_delete": "Jūs gatavojaties dzēst {partyName}. Šo darbību nevar atsaukt.",
-          "about_to_register": "Jūs gatavojaties izveidot jaunu partiju."
-        },
-        "detail": {
-          "failed_to_load": "Neizdevās ielādēt partijas datus",
-          "party_not_found": "Partija nav atrasta",
-          "error_loading": "Kļūda ielādējot partiju",
-          "back_to_parties": "Atpakaļ uz partijām",
-          "description": "Apraksts",
-          "party_info": "Partijas informācija",
-          "leader": "Līderis",
-          "website": "Tīmekļa vietne",
-          "not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
-        },
-        "delete_party": "Dzēst partiju",
-        "run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas",
-        "ambassadors": {
-          "title": "Vēstnieku Programma",
-          "description": "Aicini draugus un saņem atlīdzību, kad viņi verificējas un kad viņu partija saņem subsīdijas",
-          "leaderboard": "Līderu tabula",
-          "no_rewards_yet": "Vēl nav atlīdzību",
-          "col_ambassador": "Vēstnieki",
-          "col_invited": "Uzaicināti",
-          "col_reward": "Atlīdzība",
-          "share_referral_link": "Kopīgot atsauces saiti"
-        },
-        "subsidies": {
-          "title": "Partiju Subsīdiju Programma",
-          "no_subsidies_yet": "Vēl nav subsīdiju",
-          "description": "Finansējums, kas balstīts uz vēlēšanu sniegumu",
-          "col_subsidy": "Subsīdija"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Vēlēšanas",
-          "not_found": "Vēlēšanas nav atrastas",
-          "not_found_description": "Jūsu meklētās vēlēšanas nepastāv.",
-          "back_to_elections": "Atpakaļ uz vēlēšanām",
-          "status_active": "Aktīvas",
-          "status_upcoming": "Gaidāmas",
-          "status_ended": "Beigušās",
-          "election_info": "Vēlēšanu informācija",
-          "reward_pool": "Atlīdzības fonds: {amount} WDD",
-          "reward_pool_minimum": "Atlīdzības fonds: vismaz {amount} WDD",
-          "choose_a_party": "Izvēlieties partiju",
-          "no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju.",
-          "results_title": "Rezultāti",
-          "vote_singular": "balss",
-          "vote_plural": "balsis",
-          "no_votes": "Šajās vēlēšanās neviena balss netika nodota.",
-          "test_election_name": "Testa vēlēšanas {n}"
-        },
-        "list": {
-          "empty_state": "Vēlēšanas nav atrastas",
-          "active_section": "Aktīvās vēlēšanas",
-          "upcoming_section": "Gaidāmās vēlēšanas",
-          "previous_section": "Iepriekšējās vēlēšanas"
-        }
-      }
-    },
-    "error": {
-      "title": "Kaut kas nogāja greizi",
-      "description": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz.",
-      "error_id": "Kļūdas ID: {digest}",
-      "try_again": "Mēģināt vēlreiz"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Pamata ienākumi",
-        "savings": "Uzkrājumi"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Saņemiet naudu par to, ka esat cilvēks",
-        "subtitle_claim": "Pieprasiet savu drahmu",
-        "tooltip_claim": "1 WDD/dienā, ierobežots līdz 1 WDD. Atgriezieties 24 stundu laikā, lai maksimāli palielinātu ienākumus.",
-        "claim_button": "Pieprasīt",
-        "alert": {
-          "claim": {
-            "title": "Apstiprināt pieprasījumu",
-            "description": "Jūs gatavojaties pieprasīt {amount} WDD. Tas tiks pievienots jūsu maku bilancei."
-          }
-        },
-        "setup_subtitle": "Iestatiet savus pamata ienākumus",
-        "activate_loading": "Aktivizē...",
-        "activate_button": "Aktivizēt pamata ienākumus",
-        "world_drachma": "Kas ir pasaules drahma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Pieprasiet savu globālo AI dividendi"
-      },
-      "savings": {
-        "title": "Uzkrājumu konts",
-        "subtitle": "Nopelniet procentus katru sekundi",
-        "tooltip": "69% gada bāzes likme. Vāciet un reinvestējiet regulāri, lai sasniegtu gandrīz 100% efektīvu atdevi. Izņemiet jebkurā laikā.",
-        "deposit": "Iemaksāt",
-        "withdraw": "Izņemt",
-        "balance": "Bilance",
-        "amount_deposit": "Iemaksājamā summa",
-        "amount_withdraw": "Izņemamā summa",
-        "interest": "Procenti",
-        "collect": "Vākt",
-        "alert": {
-          "collect": {
-            "title": "Apstiprināt vākšanu",
-            "description": "Jūs gatavojaties vākt {amount} WDD procentus."
-          },
-          "deposit": {
-            "title": "Apstiprināt iemaksu",
-            "description": "Jūs gatavojaties iemaksāt {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Apstiprināt izņemšanu",
-            "description": "Jūs gatavojaties izņemt {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Skatīt viedo līgumu",
-        "verify": "Pārbaudīt"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "KONTS",
-          "account_info": "Konta informācija",
-          "referral_code": "Ieteikuma kods",
-          "referred_by": "Ieteica",
-          "language": "Valoda"
-        },
-        "help": {
-          "title": "PALĪDZĪBA",
-          "quickstart": "Ātrais sākums",
-          "docs": "Wiki",
-          "help_center": "Palīdzības centrs"
-        },
-        "source_code": {
-          "title": "AVOTA KODS"
-        },
-        "legal": {
-          "title": "JURIDISKAIS",
-          "terms": "Lietošanas noteikumi",
-          "privacy": "Privātuma politika"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Maks"
-      },
-      "balance": "Atlikums",
-      "modals": {
-        "sign_out": {
-          "confirm": "Vai tiešām vēlaties iziet?"
-        },
-        "disconnect": {
-          "confirm": "Vai tiešām vēlaties atvienot savu maku?"
-        },
-        "send": {
-          "button": "Nosūtīt",
-          "withdraw_to_crypto": {
-            "description": "Izņemt WDD uz kripto kontu.",
-            "amount_label": "Summa",
-            "address_label": "Maka adrese",
-            "network_label": "Tīkls"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper",
-          "ethereum_uniswap": "Ethereum WDD Uniswap",
-          "base_jumper": "Base Chain WDD Jumper",
-          "base_uniswap": "Base Chain WDD Uniswap",
-          "worldchain_jumper": "World Chain WDD Jumper",
-          "worldchain_uniswap": "World Chain WDD Uniswap"
-        },
-        "delete_account": {
-          "description": "Tas neatgriezeniski dzēsīs jūsu kontu un noņems visus jūsu datus no mūsu serveriem. Šo darbību nevar atsaukt — lūdzu, turpiniet uzmanīgi.",
-          "deleting": "Dzēš..."
-        },
-        "connect_wallet_browser": {
-          "title": "Atvērt MetaMask",
-          "description": "Lai pieslēgtos, nokopējiet šo saiti un atveriet to MetaMask iebūvētajā pārlūkā.",
-          "copy_link": "Kopēt saiti"
-        },
-        "connect_wallet_picker": {
-          "description": "Tika atrasti vairāki maki. Izvēlieties vienu, lai izveidotu savienojumu."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Jums nav maka?",
-          "find_wallet_link": "Atrodiet vienu WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "KONTS",
-        "security": "DROŠĪBA",
-        "google_account": "Google konts",
-        "google_not_linked": "Nav saistīts",
-        "passkeys": "Pieejas atslēgas",
-        "passkeys_linked": "{count} saistīts",
-        "danger_zone": "BĪSTAMĀ ZONA",
-        "delete_account": {
-          "description": "Pastāvīgi noņemiet visus savus datus"
-        },
-        "verification": "VERIFIKĀCIJA",
-        "google_linked": "Saistīts",
-        "account_label": "Konts"
-      },
-      "username": {
-        "label": "Lietotājvārds",
-        "edit_title": "Rediģēt lietotājvārdu",
-        "description": "3-30 rakstzīmes, alfanumeriskas, pasvītrojumi un domuzīmes"
-      },
-      "history": {
-        "title": "VĒSTURE"
-      },
-      "transactions": {
-        "failed_to_load": "Neizdevās ielādēt",
-        "no_transactions": "Vēl nav darījumu",
-        "wdd_per_day": "WDD/diena",
-        "just_now": "Tikko",
-        "minutes_ago": "pirms {minutes}min",
-        "hours_ago": "pirms {hours}h",
-        "days_ago": "pirms {days}d",
-        "filter": {
-          "all_types": "Visi veidi",
-          "select_type": "Izvēlieties veidu",
-          "rewards": "Atlīdzības"
-        },
-        "types": {
-          "withdrawal": "Izņemšana",
-          "received": "Saņemts",
-          "sent": "Nosūtīts",
-          "ambassador_reward": "Vēstnieka atlīdzība",
-          "party_subsidy": "Partijas subsīdija",
-          "stream_created": "Straume izveidota",
-          "stream_updated": "Straume atjaunināta",
-          "savings_deposit": "Uzkrājumi iemaksāt",
-          "savings_withdrawal": "Uzkrājumi izņemt",
-          "savings_interest": "Uzkrājumi procenti",
-          "referral_reward": "Ieteikuma atlīdzība"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Skenējiet šo QR kodu, lai verificētos ar Self.",
-        "mobile_dialog_description": "Jūs tiksiet novirzīts uz Self lietotni, lai pabeigtu verifikāciju.",
-        "support_telegram": "Self atbalsts",
-        "verification_guide": "Verifikācijas ceļvedis",
-        "qr_alt": "Self verifikācijas QR",
-        "callback_warning": "Brīdinājums",
-        "callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu).",
-        "label": "Self",
-        "status_completed": "Pārbaudīts",
-        "status_not_completed": "Nav pārbaudīts",
-        "learn_about_self": "Uzziniet par Self",
-        "primer": {
-          "title": "Self Protokols",
-          "description": "Iegūstiet verifikāciju, neapdodot nekādus personas datus."
-        }
-      },
-      "verification_warning": {
-        "title": "Iegūstiet apstiprinājumu",
-        "reward_cap_banner": "Pamatienākumu un uzkrājumu atlīdzības neverificētiem pilsoņiem ir ierobežotas. Verificējiet savu kontu, lai pelnītu bez ierobežojumiem."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Lielākā daļa makiem parāda WDD tikai pēc tam, kad tas ir manuāli importēts izvēlētajā ķēdē pēc tā ",
-      "contract_address": "līguma adreses"
-    }
-  },
-  "toasts": {
-    "generic_error": "Radās kļūda",
-    "copied": "Nokopēts",
-    "wallet": {
-      "no_wallet": "Nav maka adreses",
-      "min_amount": "Minimums 10 WDD",
-      "sent": "Nosūtīts",
-      "account_deleted": "Konts dzēsts",
-      "delete_failed": "Konta dzēšana neizdevās",
-      "contract_address_error": "Nevar izņemt uz līguma adresi",
-      "sign_out_failed": "Izrakstīšanās neizdevās",
-      "google_linked": "Google konts ir saistīts",
-      "google_already_linked": "Google konts jau ir saistīts ar citu kontu",
-      "google_link_failed": "Neizdevās sākt Google saistīšanu",
-      "passkey_added": "Pieejas atslēga pievienota",
-      "passkey_add_failed": "Neizdevās pievienot pieejas atslēgu"
-    },
-    "parties": {
-      "updated": "Atjaunināts",
-      "update_failed": "Atjaunināšana neizdevās",
-      "update_error": "Kļūda atjauninot partiju",
-      "registered": "Partija reģistrēta",
-      "register_failed": "Neizdevās reģistrēt partiju",
-      "register_error": "Kļūda partijas reģistrācijā",
-      "deleted": "Dzēsts",
-      "delete_failed": "Neizdevās dzēst",
-      "delete_error": "Kļūda dzēšot"
-    },
-    "basic_income": {
-      "activated": "Pamata ienākumi aktivizēti",
-      "activate_failed": "Aktivizēšana neizdevās",
-      "claimed": "Pieprasīts",
-      "claim_failed": "Pieprasījums neizdevās"
-    },
-    "savings": {
-      "collected": "Vākts",
-      "collect_failed": "Vākšana neizdevās",
-      "deposited": "Iemaksāts",
-      "deposit_failed": "Iemaksa neizdevās",
-      "withdrawn": "Izņemts",
-      "withdraw_failed": "Izņemšana neizdevās"
-    }
-  },
-  "common": {
-    "confirm": "Apstiprināt",
-    "sign_in": "Pieteikties",
-    "connect": "Savienot",
-    "disconnect": "Atvienot",
-    "connect_wallet": "Savienot maku",
-    "max": "Maksimums",
-    "loading": "Ielādē...",
-    "processing": "Apstrādā...",
-    "insufficient_balance": "Nepietiek WDD",
-    "delete_account": "Dzēst kontu",
-    "sign_out": "Iziet",
-    "invalid_address": "Nederīga adrese",
-    "coming_soon": "Drīzumā",
-    "withdraw": "Izņemt",
-    "trade": "Tirdzniecība",
-    "continue": "Turpināt",
-    "close": "Aizvērt",
-    "updating": "Atjaunina...",
-    "save": "Saglabāt",
-    "vote": "Balsot",
-    "switch_to_base_chain": "Pārslēgties uz Base Chain"
-  },
-  "auth": {
-    "choose_method": "Izvēlieties vēlamo metodi.",
-    "sign_in_with_google": "Turpināt ar Google",
-    "sign_in_with_passkey": "Izmantot biometriju",
-    "sign_in_or_create": "Piekļūstiet savam kontam, izmantojot passkey, izmantojot pirkstu nospiedumu, sejas skenēšanu vai ekrāna bloķēšanu.",
-    "create_account": "Izveidot kontu",
-    "create_passkey_name": "Izveidot passkey nosaukumu",
-    "passkey_name_description": "Nosauciet savu passkey, lai to identificētu paroļu pārvaldniekā.",
-    "passkey_name": "Passkey nosaukums"
-  }
+	"nav": {
+		"earn": "Nopelnīt",
+		"govern": "Pārvaldīt",
+		"menu": "Izvēlne"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partijas",
+				"elections": "Vēlēšanas",
+				"referendums": "Referendumi"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politiskās partijas"
+				},
+				"elections": {
+					"title": "Testa vēlēšanas",
+					"subtitle": "Eksperimentējiet ar globālu demokrātiju"
+				},
+				"referendums": {
+					"title": "Pasaules konstitucionālais referendums",
+					"subtitle": "Balsojiet par mūsu pamatprincipiem"
+				}
+			},
+			"vote": {
+				"no_active_election": "Vēlēšanas drīz sāksies",
+				"test_verification": {
+					"description": "Izmēģiniet mūsu pārbaudes sistēmu tagad, lai būtu gatavi balsošanai",
+					"button": "Tests"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsīdijas",
+					"ambassadors": "Vēstnieki"
+				},
+				"discover": "Atklāt",
+				"search_placeholder": "Meklēt partijas...",
+				"no_parties_found": "Partijas nav atrastas",
+				"error_loading": "Neizdevās ielādēt partijas",
+				"refresh": "Atsvaidzināt",
+				"party_details": "Partijas detaļas",
+				"share_party": "Dalīties ar partiju",
+				"my_party": "Mana partija",
+				"learn_more": "Uzzināt vairāk",
+				"party_management": "Partijas pārvalde",
+				"edit_party_info": "Rediģēt partijas informāciju",
+				"dialogs": {
+					"party_name": "Partijas nosaukums",
+					"description_optional": "Apraksts (nav obligāts)",
+					"official_link_optional": "Oficiālā saite (nav obligāta)",
+					"updating": "Atjaunina...",
+					"save": "Saglabāt",
+					"register_party": "Reģistrēt partiju",
+					"register": "Reģistrēties",
+					"registering": "Reģistrēšana...",
+					"leader_warning_register": "Jūs pašlaik esat {partyName} līderis. Jaunas partijas reģistrēšana dzēsīs jūsu pašreizējo partiju.",
+					"deleting": "Dzēšana...",
+					"about_to_delete": "Jūs gatavojaties dzēst {partyName}. Šo darbību nevar atsaukt.",
+					"about_to_register": "Jūs gatavojaties izveidot jaunu partiju."
+				},
+				"detail": {
+					"failed_to_load": "Neizdevās ielādēt partijas datus",
+					"party_not_found": "Partija nav atrasta",
+					"error_loading": "Kļūda ielādējot partiju",
+					"back_to_parties": "Atpakaļ uz partijām",
+					"description": "Apraksts",
+					"party_info": "Partijas informācija",
+					"leader": "Līderis",
+					"website": "Tīmekļa vietne",
+					"not_found_description": "Partija, kuru meklējat, neeksistē vai ir izformēta."
+				},
+				"delete_party": "Dzēst partiju",
+				"run_on_elections_and_earn": "Kandidējiet vēlēšanās un saņemiet subsīdijas",
+				"ambassadors": {
+					"title": "Vēstnieku Programma",
+					"description": "Aicini draugus un saņem atlīdzību, kad viņi verificējas un kad viņu partija saņem subsīdijas",
+					"leaderboard": "Līderu tabula",
+					"no_rewards_yet": "Vēl nav atlīdzību",
+					"col_ambassador": "Vēstnieki",
+					"col_invited": "Uzaicināti",
+					"col_reward": "Atlīdzība",
+					"share_referral_link": "Kopīgot atsauces saiti"
+				},
+				"subsidies": {
+					"title": "Partiju Subsīdiju Programma",
+					"no_subsidies_yet": "Vēl nav subsīdiju",
+					"description": "Finansējums, kas balstīts uz vēlēšanu sniegumu",
+					"col_subsidy": "Subsīdija"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Vēlēšanas",
+					"not_found": "Vēlēšanas nav atrastas",
+					"not_found_description": "Jūsu meklētās vēlēšanas nepastāv.",
+					"back_to_elections": "Atpakaļ uz vēlēšanām",
+					"status_active": "Aktīvas",
+					"status_upcoming": "Gaidāmas",
+					"status_ended": "Beigušās",
+					"election_info": "Vēlēšanu informācija",
+					"reward_pool": "Atlīdzības fonds: {amount} WDD",
+					"reward_pool_minimum": "Atlīdzības fonds: vismaz {amount} WDD",
+					"choose_a_party": "Izvēlieties partiju",
+					"no_parties_for_election": "Šīm vēlēšanām nav pieejamu partiju.",
+					"results_title": "Rezultāti",
+					"vote_singular": "balss",
+					"vote_plural": "balsis",
+					"no_votes": "Šajās vēlēšanās neviena balss netika nodota.",
+					"test_election_name": "Testa vēlēšanas {n}"
+				},
+				"list": {
+					"empty_state": "Vēlēšanas nav atrastas",
+					"active_section": "Aktīvās vēlēšanas",
+					"upcoming_section": "Gaidāmās vēlēšanas",
+					"previous_section": "Iepriekšējās vēlēšanas"
+				}
+			}
+		},
+		"error": {
+			"title": "Kaut kas nogāja greizi",
+			"description": "Radās neparedzēta kļūda. Lūdzu, mēģiniet vēlreiz.",
+			"error_id": "Kļūdas ID: {digest}",
+			"try_again": "Mēģināt vēlreiz"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Pamata ienākumi",
+				"savings": "Uzkrājumi"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Saņemiet naudu par to, ka esat cilvēks",
+				"subtitle_claim": "Pieprasiet savu drahmu",
+				"tooltip_claim": "1 WDD/dienā, ierobežots līdz 1 WDD. Atgriezieties 24 stundu laikā, lai maksimāli palielinātu ienākumus.",
+				"claim_button": "Pieprasīt",
+				"alert": {
+					"claim": {
+						"title": "Apstiprināt pieprasījumu",
+						"description": "Jūs gatavojaties pieprasīt {amount} WDD. Tas tiks pievienots jūsu maku bilancei."
+					}
+				},
+				"setup_subtitle": "Iestatiet savus pamata ienākumus",
+				"activate_loading": "Aktivizē...",
+				"activate_button": "Aktivizēt pamata ienākumus",
+				"world_drachma": "Kas ir pasaules drahma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Pieprasiet savu globālo AI dividendi"
+			},
+			"savings": {
+				"title": "Uzkrājumu konts",
+				"subtitle": "Nopelniet procentus katru sekundi",
+				"tooltip": "69% gada bāzes likme. Vāciet un reinvestējiet regulāri, lai sasniegtu gandrīz 100% efektīvu atdevi. Izņemiet jebkurā laikā.",
+				"deposit": "Iemaksāt",
+				"withdraw": "Izņemt",
+				"balance": "Bilance",
+				"amount_deposit": "Iemaksājamā summa",
+				"amount_withdraw": "Izņemamā summa",
+				"interest": "Procenti",
+				"collect": "Vākt",
+				"alert": {
+					"collect": {
+						"title": "Apstiprināt vākšanu",
+						"description": "Jūs gatavojaties vākt {amount} WDD procentus."
+					},
+					"deposit": {
+						"title": "Apstiprināt iemaksu",
+						"description": "Jūs gatavojaties iemaksāt {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Apstiprināt izņemšanu",
+						"description": "Jūs gatavojaties izņemt {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Skatīt viedo līgumu",
+				"verify": "Pārbaudīt"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "KONTS",
+					"account_info": "Konta informācija",
+					"referral_code": "Ieteikuma kods",
+					"referred_by": "Ieteica",
+					"language": "Valoda"
+				},
+				"help": {
+					"title": "PALĪDZĪBA",
+					"quickstart": "Ātrais sākums",
+					"docs": "Wiki",
+					"help_center": "Palīdzības centrs"
+				},
+				"source_code": {
+					"title": "AVOTA KODS"
+				},
+				"legal": {
+					"title": "JURIDISKAIS",
+					"terms": "Lietošanas noteikumi",
+					"privacy": "Privātuma politika"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Maks"
+			},
+			"balance": "Atlikums",
+			"modals": {
+				"sign_out": {
+					"confirm": "Vai tiešām vēlaties iziet?"
+				},
+				"disconnect": {
+					"confirm": "Vai tiešām vēlaties atvienot savu maku?"
+				},
+				"send": {
+					"button": "Nosūtīt",
+					"withdraw_to_crypto": {
+						"description": "Izņemt WDD uz kripto kontu.",
+						"amount_label": "Summa",
+						"address_label": "Maka adrese",
+						"network_label": "Tīkls"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper",
+					"ethereum_uniswap": "Ethereum WDD Uniswap",
+					"base_jumper": "Base Chain WDD Jumper",
+					"base_uniswap": "Base Chain WDD Uniswap",
+					"worldchain_jumper": "World Chain WDD Jumper",
+					"worldchain_uniswap": "World Chain WDD Uniswap"
+				},
+				"delete_account": {
+					"description": "Tas neatgriezeniski dzēsīs jūsu kontu un noņems visus jūsu datus no mūsu serveriem. Šo darbību nevar atsaukt — lūdzu, turpiniet uzmanīgi.",
+					"deleting": "Dzēš..."
+				},
+				"connect_wallet_browser": {
+					"title": "Atvērt MetaMask",
+					"description": "Lai pieslēgtos, nokopējiet šo saiti un atveriet to MetaMask iebūvētajā pārlūkā.",
+					"copy_link": "Kopēt saiti"
+				},
+				"connect_wallet_picker": {
+					"description": "Tika atrasti vairāki maki. Izvēlieties vienu, lai izveidotu savienojumu."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Jums nav maka?",
+					"find_wallet_link": "Atrodiet vienu WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "KONTS",
+				"security": "DROŠĪBA",
+				"google_account": "Google konts",
+				"google_not_linked": "Nav saistīts",
+				"passkeys": "Pieejas atslēgas",
+				"passkeys_linked": "{count} saistīts",
+				"danger_zone": "BĪSTAMĀ ZONA",
+				"delete_account": {
+					"description": "Pastāvīgi noņemiet visus savus datus"
+				},
+				"verification": "VERIFIKĀCIJA",
+				"google_linked": "Saistīts",
+				"account_label": "Konts"
+			},
+			"username": {
+				"label": "Lietotājvārds",
+				"edit_title": "Rediģēt lietotājvārdu",
+				"description": "3-30 rakstzīmes, alfanumeriskas, pasvītrojumi un domuzīmes"
+			},
+			"history": {
+				"title": "VĒSTURE"
+			},
+			"transactions": {
+				"failed_to_load": "Neizdevās ielādēt",
+				"no_transactions": "Vēl nav darījumu",
+				"wdd_per_day": "WDD/diena",
+				"just_now": "Tikko",
+				"minutes_ago": "pirms {minutes}min",
+				"hours_ago": "pirms {hours}h",
+				"days_ago": "pirms {days}d",
+				"filter": {
+					"all_types": "Visi veidi",
+					"select_type": "Izvēlieties veidu",
+					"rewards": "Atlīdzības"
+				},
+				"types": {
+					"withdrawal": "Izņemšana",
+					"received": "Saņemts",
+					"sent": "Nosūtīts",
+					"ambassador_reward": "Vēstnieka atlīdzība",
+					"party_subsidy": "Partijas subsīdija",
+					"stream_created": "Straume izveidota",
+					"stream_updated": "Straume atjaunināta",
+					"savings_deposit": "Uzkrājumi iemaksāt",
+					"savings_withdrawal": "Uzkrājumi izņemt",
+					"savings_interest": "Uzkrājumi procenti",
+					"referral_reward": "Ieteikuma atlīdzība"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Skenējiet šo QR kodu, lai verificētos ar Self.",
+				"mobile_dialog_description": "Jūs tiksiet novirzīts uz Self lietotni, lai pabeigtu verifikāciju.",
+				"support_telegram": "Self atbalsts",
+				"verification_guide": "Verifikācijas ceļvedis",
+				"qr_alt": "Self verifikācijas QR",
+				"callback_warning": "Brīdinājums",
+				"callback_warning_description": "Verifikācijas atzvanīšanas URL nav sasniedzams no jūsu tālruņa. Iestatiet NEXT_PUBLIC_SELF_CALLBACK uz publisku URL (vai iestatiet NEXT_PUBLIC_PUBLIC_BASE_URL uz tuneļa/priekšskatījuma domēnu).",
+				"label": "Self",
+				"status_completed": "Pārbaudīts",
+				"status_not_completed": "Nav pārbaudīts",
+				"learn_about_self": "Uzziniet par Self",
+				"primer": {
+					"title": "Self Protokols",
+					"description": "Iegūstiet verifikāciju, neapdodot nekādus personas datus."
+				}
+			},
+			"verification_warning": {
+				"title": "Iegūstiet apstiprinājumu",
+				"reward_cap_banner": "Pamatienākumu un uzkrājumu atlīdzības neverificētiem pilsoņiem ir ierobežotas. Verificējiet savu kontu, lai pelnītu bez ierobežojumiem."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Lielākā daļa makiem parāda WDD tikai pēc tam, kad tas ir manuāli importēts izvēlētajā ķēdē pēc tā ",
+			"contract_address": "līguma adreses"
+		}
+	},
+	"toasts": {
+		"generic_error": "Radās kļūda",
+		"copied": "Nokopēts",
+		"wallet": {
+			"no_wallet": "Nav maka adreses",
+			"min_amount": "Minimums 10 WDD",
+			"sent": "Nosūtīts",
+			"account_deleted": "Konts dzēsts",
+			"delete_failed": "Konta dzēšana neizdevās",
+			"contract_address_error": "Nevar izņemt uz līguma adresi",
+			"sign_out_failed": "Izrakstīšanās neizdevās",
+			"google_linked": "Google konts ir saistīts",
+			"google_already_linked": "Google konts jau ir saistīts ar citu kontu",
+			"google_link_failed": "Neizdevās sākt Google saistīšanu",
+			"passkey_added": "Pieejas atslēga pievienota",
+			"passkey_add_failed": "Neizdevās pievienot pieejas atslēgu"
+		},
+		"parties": {
+			"updated": "Atjaunināts",
+			"update_failed": "Atjaunināšana neizdevās",
+			"update_error": "Kļūda atjauninot partiju",
+			"registered": "Partija reģistrēta",
+			"register_failed": "Neizdevās reģistrēt partiju",
+			"register_error": "Kļūda partijas reģistrācijā",
+			"deleted": "Dzēsts",
+			"delete_failed": "Neizdevās dzēst",
+			"delete_error": "Kļūda dzēšot"
+		},
+		"basic_income": {
+			"activated": "Pamata ienākumi aktivizēti",
+			"activate_failed": "Aktivizēšana neizdevās",
+			"claimed": "Pieprasīts",
+			"claim_failed": "Pieprasījums neizdevās"
+		},
+		"savings": {
+			"collected": "Vākts",
+			"collect_failed": "Vākšana neizdevās",
+			"deposited": "Iemaksāts",
+			"deposit_failed": "Iemaksa neizdevās",
+			"withdrawn": "Izņemts",
+			"withdraw_failed": "Izņemšana neizdevās"
+		}
+	},
+	"common": {
+		"confirm": "Apstiprināt",
+		"sign_in": "Pieteikties",
+		"connect": "Savienot",
+		"disconnect": "Atvienot",
+		"connect_wallet": "Savienot maku",
+		"max": "Maksimums",
+		"loading": "Ielādē...",
+		"processing": "Apstrādā...",
+		"insufficient_balance": "Nepietiek WDD",
+		"delete_account": "Dzēst kontu",
+		"sign_out": "Iziet",
+		"invalid_address": "Nederīga adrese",
+		"coming_soon": "Drīzumā",
+		"withdraw": "Izņemt",
+		"trade": "Tirdzniecība",
+		"continue": "Turpināt",
+		"close": "Aizvērt",
+		"updating": "Atjaunina...",
+		"save": "Saglabāt",
+		"vote": "Balsot",
+		"switch_to_base_chain": "Pārslēgties uz Base Chain"
+	},
+	"auth": {
+		"choose_method": "Izvēlieties vēlamo metodi.",
+		"sign_in_with_google": "Turpināt ar Google",
+		"sign_in_with_passkey": "Izmantot biometriju",
+		"sign_in_or_create": "Piekļūstiet savam kontam, izmantojot passkey, izmantojot pirkstu nospiedumu, sejas skenēšanu vai ekrāna bloķēšanu.",
+		"create_account": "Izveidot kontu",
+		"create_passkey_name": "Izveidot passkey nosaukumu",
+		"passkey_name_description": "Nosauciet savu passkey, lai to identificētu paroļu pārvaldniekā.",
+		"passkey_name": "Passkey nosaukums"
+	}
 }

@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "รายได้",
-    "govern": "ธรรมาภิบาล",
-    "menu": "เมนู"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "พรรค",
-        "elections": "การเลือกตั้ง",
-        "referendums": "ประชามติ"
-      },
-      "sections": {
-        "parties": {
-          "title": "พรรคการเมือง"
-        },
-        "elections": {
-          "title": "การเลือกตั้งทดสอบ",
-          "subtitle": "ทดลองประชาธิปไตยระดับโลก"
-        },
-        "referendums": {
-          "title": "ประชามติรัฐธรรมนูญโลก",
-          "subtitle": "โหวตตามหลักการพื้นฐานของเรา"
-        }
-      },
-      "vote": {
-        "no_active_election": "การเลือกตั้งจะเริ่มเร็วๆ นี้",
-        "test_verification": {
-          "description": "ลองใช้ระบบยืนยันของเราตอนนี้เพื่อเตรียมพร้อมสำหรับการลงคะแนน",
-          "button": "ทดสอบ"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "เงินอุดหนุน",
-          "ambassadors": "ทูต"
-        },
-        "discover": "ค้นพบ",
-        "search_placeholder": "ค้นหาพรรค...",
-        "no_parties_found": "ไม่พบพรรค",
-        "error_loading": "ไม่สามารถโหลดพรรคได้",
-        "refresh": "รีเฟรช",
-        "party_details": "รายละเอียดพรรค",
-        "share_party": "แชร์พรรค",
-        "my_party": "พรรคของฉัน",
-        "learn_more": "เรียนรู้เพิ่มเติม",
-        "party_management": "การจัดการพรรค",
-        "edit_party_info": "แก้ไขข้อมูลพรรค",
-        "dialogs": {
-          "party_name": "ชื่อพรรค",
-          "description_optional": "คำอธิบาย (ไม่บังคับ)",
-          "official_link_optional": "ลิงก์อย่างเป็นทางการ (ไม่บังคับ)",
-          "updating": "กำลังอัปเดต...",
-          "save": "บันทึก",
-          "register_party": "ลงทะเบียนพรรค",
-          "register": "ลงทะเบียน",
-          "registering": "กำลังลงทะเบียน...",
-          "leader_warning_register": "ขณะนี้คุณเป็นผู้นำของ {partyName} การลงทะเบียนพรรคใหม่จะทำให้พรรคปัจจุบันของคุณถูกลบ",
-          "deleting": "กำลังลบ...",
-          "about_to_delete": "คุณกำลังจะลบ {partyName} การกระทำนี้ไม่สามารถยกเลิกได้",
-          "about_to_register": "คุณกำลังจะก่อตั้งพรรคใหม่"
-        },
-        "detail": {
-          "failed_to_load": "โหลดข้อมูลพรรคล้มเหลว",
-          "party_not_found": "ไม่พบพรรค",
-          "error_loading": "เกิดข้อผิดพลาดในการโหลดพรรค",
-          "back_to_parties": "กลับไปที่พรรค",
-          "description": "คำอธิบาย",
-          "party_info": "ข้อมูลพรรค",
-          "leader": "ผู้นำ",
-          "website": "เว็บไซต์",
-          "not_found_description": "พรรคที่คุณกำลังมองหาไม่มีอยู่หรือถูกยุบแล้ว"
-        },
-        "delete_party": "ลบพรรค",
-        "run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน",
-        "ambassadors": {
-          "title": "โปรแกรมทูต",
-          "description": "เชิญเพื่อนและรับรางวัลเมื่อพวกเขายืนยันตัวตน และเมื่อพรรคของพวกเขาได้รับเงินอุดหนุน",
-          "leaderboard": "กระดานผู้นำ",
-          "no_rewards_yet": "ยังไม่มีรางวัล",
-          "col_ambassador": "ทูต",
-          "col_invited": "ที่ถูกเชิญ",
-          "col_reward": "รางวัล",
-          "share_referral_link": "แชร์ลิงก์แนะนำ"
-        },
-        "subsidies": {
-          "title": "โครงการเงินอุดหนุนพรรคการเมือง",
-          "no_subsidies_yet": "ยังไม่มีเงินอุดหนุน",
-          "description": "เงินสนับสนุนตามผลงานในการเลือกตั้ง",
-          "col_subsidy": "เงินอุดหนุน"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "การเลือกตั้ง",
-          "not_found": "ไม่พบการเลือกตั้ง",
-          "not_found_description": "การเลือกตั้งที่คุณกำลังมองหาไม่มีอยู่",
-          "back_to_elections": "กลับไปที่การเลือกตั้ง",
-          "status_active": "กำลังดำเนินการ",
-          "status_upcoming": "กำลังจะมาถึง",
-          "status_ended": "สิ้นสุดแล้ว",
-          "election_info": "ข้อมูลการเลือกตั้ง",
-          "reward_pool": "กองทุนรางวัล: {amount} WDD",
-          "reward_pool_minimum": "กองทุนรางวัล: ขั้นต่ำ {amount} WDD",
-          "choose_a_party": "เลือกพรรค",
-          "no_parties_for_election": "ไม่มีพรรคที่พร้อมสำหรับการเลือกตั้งนี้",
-          "results_title": "ผลลัพธ์",
-          "vote_singular": "เสียง",
-          "vote_plural": "เสียง",
-          "no_votes": "ไม่มีการลงคะแนนในการเลือกตั้งนี้",
-          "test_election_name": "การเลือกตั้งทดสอบ {n}"
-        },
-        "list": {
-          "empty_state": "ไม่พบการเลือกตั้ง",
-          "active_section": "การเลือกตั้งที่กำลังดำเนินอยู่",
-          "upcoming_section": "การเลือกตั้งที่กำลังจะมาถึง",
-          "previous_section": "การเลือกตั้งที่ผ่านมา"
-        }
-      }
-    },
-    "error": {
-      "title": "เกิดข้อผิดพลาดบางอย่าง",
-      "description": "เกิดข้อผิดพลาดที่ไม่คาดคิด กรุณาลองใหม่อีกครั้ง",
-      "error_id": "รหัสข้อผิดพลาด: {digest}",
-      "try_again": "ลองอีกครั้ง"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "รายได้พื้นฐาน",
-        "savings": "ออมทรัพย์"
-      },
-      "basic_income": {
-        "subtitle_unauth": "รับเงินเพราะคุณเป็นมนุษย์",
-        "subtitle_claim": "ขอรับดรักมาของคุณ",
-        "tooltip_claim": "1 WDD/วัน จำกัดที่ 1 WDD กลับมาภายใน 24 ชั่วโมงเพื่อเพิ่มผลตอบแทนสูงสุด",
-        "claim_button": "ขอรับ",
-        "alert": {
-          "claim": {
-            "title": "ยืนยันการขอรับ",
-            "description": "คุณกำลังจะขอรับ {amount} WDD ซึ่งจะถูกเพิ่มในยอดคงเหลือกระเป๋าเงินของคุณ"
-          }
-        },
-        "setup_subtitle": "ตั้งค่ารายได้พื้นฐานของคุณ",
-        "activate_loading": "กำลังเปิดใช้งาน...",
-        "activate_button": "เปิดใช้งานรายได้พื้นฐาน",
-        "world_drachma": "ดรักมาของโลก (WDD) คืออะไร?",
-        "subtitle_unauth_raised_by_humanity": "ขอรับเงินปันผล AI ระดับโลกของคุณ"
-      },
-      "savings": {
-        "title": "บัญชีออมทรัพย์",
-        "subtitle": "รับดอกเบี้ยทุกวินาที",
-        "tooltip": "อัตราฐานต่อปี 69% ถอนและนำกลับไปลงทุนสม่ำเสมอเพื่อให้ได้ผลตอบแทนที่มีประสิทธิภาพใกล้ 100% ถอนเมื่อใดก็ได้",
-        "deposit": "ฝาก",
-        "withdraw": "ถอน",
-        "balance": "ยอดคงเหลือ",
-        "amount_deposit": "จำนวนที่ต้องการฝาก",
-        "amount_withdraw": "จำนวนที่ต้องการถอน",
-        "interest": "ดอกเบี้ย",
-        "collect": "ถอนดอกเบี้ย",
-        "alert": {
-          "collect": {
-            "title": "ยืนยันการถอนดอกเบี้ย",
-            "description": "คุณกำลังจะถอนดอกเบี้ยจำนวน {amount} WDD"
-          },
-          "deposit": {
-            "title": "ยืนยันการฝาก",
-            "description": "คุณกำลังจะฝาก {amount} WDD"
-          },
-          "withdraw": {
-            "title": "ยืนยันการถอน",
-            "description": "คุณกำลังจะถอน {amount} WDD"
-          }
-        },
-        "smart_contract_link": "ดูสมาร์ตคอนแทรกต์",
-        "verify": "ยืนยัน"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "บัญชี",
-          "account_info": "ข้อมูลบัญชี",
-          "referral_code": "รหัสแนะนำ",
-          "referred_by": "แนะนำโดย",
-          "language": "ภาษา"
-        },
-        "help": {
-          "title": "ช่วยเหลือ",
-          "quickstart": "เริ่มต้นด่วน",
-          "docs": "วิกิ",
-          "help_center": "ศูนย์ช่วยเหลือ"
-        },
-        "source_code": {
-          "title": "ซอร์สโค้ด"
-        },
-        "legal": {
-          "title": "กฎหมาย",
-          "terms": "เงื่อนไขการใช้งาน",
-          "privacy": "นโยบายความเป็นส่วนตัว"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "กระเป๋าเงิน"
-      },
-      "balance": "ยอด",
-      "modals": {
-        "sign_out": {
-          "confirm": "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?"
-        },
-        "disconnect": {
-          "confirm": "คุณแน่ใจหรือไม่ว่าต้องการตัดการเชื่อมต่อวอลเล็ตของคุณ?"
-        },
-        "send": {
-          "button": "ส่ง",
-          "withdraw_to_crypto": {
-            "description": "ถอน WDD ไปยังบัญชี crypto.",
-            "amount_label": "จำนวน",
-            "address_label": "ที่อยู่กระเป๋าเงิน",
-            "network_label": "เครือข่าย"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD บน Jumper",
-          "ethereum_uniswap": "Ethereum WDD บน Uniswap",
-          "base_jumper": "Base Chain WDD บน Jumper",
-          "base_uniswap": "Base Chain WDD บน Uniswap",
-          "worldchain_jumper": "World Chain WDD บน Jumper",
-          "worldchain_uniswap": "World Chain WDD บน Uniswap"
-        },
-        "delete_account": {
-          "description": "การดำเนินการนี้จะลบบัญชีของคุณอย่างถาวรและลบข้อมูลทั้งหมดของคุณจากเซิร์ฟเวอร์ของเรา การดำเนินการนี้ไม่สามารถยกเลิกได้ — กรุณาดำเนินการต่อด้วยความระมัดระวัง",
-          "deleting": "กำลังลบ..."
-        },
-        "connect_wallet_browser": {
-          "title": "เปิดใน MetaMask",
-          "description": "หากต้องการเชื่อมต่อ ให้คัดลอกลิงก์นี้แล้วเปิดในเบราว์เซอร์ที่มีอยู่ใน MetaMask",
-          "copy_link": "คัดลอกลิงก์"
-        },
-        "connect_wallet_picker": {
-          "description": "พบกระเป๋าเงินหลายรายการ เลือกหนึ่งรายการเพื่อเชื่อมต่อ"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ยังไม่มีกระเป๋าเงินใช่ไหม?",
-          "find_wallet_link": "ค้นหาหนึ่งรายการบน WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "บัญชี",
-        "security": "ความปลอดภัย",
-        "google_account": "บัญชี Google",
-        "google_not_linked": "ยังไม่ได้เชื่อมต่อ",
-        "passkeys": "พาสคีย์",
-        "passkeys_linked": "{count} เชื่อมต่อแล้ว",
-        "danger_zone": "เขตอันตราย",
-        "delete_account": {
-          "description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
-        },
-        "verification": "การยืนยัน",
-        "google_linked": "เชื่อมต่อแล้ว",
-        "account_label": "บัญชี"
-      },
-      "username": {
-        "label": "ชื่อผู้ใช้",
-        "edit_title": "แก้ไขชื่อผู้ใช้",
-        "description": "3-30 ตัวอักษร ตัวอักษร-ตัวเลข ขีดเส้นใต้ และยัติภังค์"
-      },
-      "history": {
-        "title": "ประวัติ"
-      },
-      "transactions": {
-        "failed_to_load": "โหลดล้มเหลว",
-        "no_transactions": "ยังไม่มีธุรกรรม",
-        "wdd_per_day": "WDD/วัน",
-        "just_now": "เมื่อสักครู่",
-        "minutes_ago": "{minutes}นาทีที่แล้ว",
-        "hours_ago": "{hours}ชั่วโมงที่แล้ว",
-        "days_ago": "{days}วันที่แล้ว",
-        "filter": {
-          "all_types": "ทุกประเภท",
-          "select_type": "เลือกประเภท",
-          "rewards": "รางวัล"
-        },
-        "types": {
-          "withdrawal": "ถอน",
-          "received": "รับแล้ว",
-          "sent": "ส่งแล้ว",
-          "ambassador_reward": "รางวัลทูต",
-          "party_subsidy": "เงินอุดหนุนพรรค",
-          "stream_created": "สร้างสตรีมแล้ว",
-          "stream_updated": "อัปเดตสตรีมแล้ว",
-          "savings_deposit": "ออมทรัพย์ ฝาก",
-          "savings_withdrawal": "ออมทรัพย์ ถอน",
-          "savings_interest": "ออมทรัพย์ ดอกเบี้ย",
-          "referral_reward": "รางวัลการแนะนำ"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "สแกนคิวอาร์โค้ดนี้เพื่อยืนยันตัวตนกับ Self",
-        "mobile_dialog_description": "คุณจะถูกเปลี่ยนเส้นทางไปยังแอป Self เพื่อทำการยืนยันให้เสร็จสิ้น",
-        "support_telegram": "ฝ่ายสนับสนุน Self",
-        "verification_guide": "คู่มือการยืนยัน",
-        "qr_alt": "QR การยืนยัน Self",
-        "callback_warning": "คำเตือน",
-        "callback_warning_description": "URL callback การยืนยันไม่สามารถเข้าถึงได้จากโทรศัพท์ของคุณ ตั้งค่า NEXT_PUBLIC_SELF_CALLBACK เป็น URL สาธารณะ (หรือตั้งค่า NEXT_PUBLIC_PUBLIC_BASE_URL เป็นโดเมน tunnel/preview)",
-        "label": "Self",
-        "status_completed": "ยืนยันแล้ว",
-        "status_not_completed": "ยังไม่ยืนยัน",
-        "learn_about_self": "เรียนรู้เกี่ยวกับ Self",
-        "primer": {
-          "title": "Self โพรโทคอล",
-          "description": "ยืนยันตัวตนโดยไม่ต้องเปิดเผยข้อมูลส่วนตัวใด ๆ"
-        }
-      },
-      "verification_warning": {
-        "title": "รับการยืนยันตัวตน",
-        "reward_cap_banner": "รางวัลรายได้พื้นฐานและเงินออมมีขีดจำกัดสำหรับพลเมืองที่ยังไม่ยืนยันตัวตน ยืนยันบัญชีของคุณเพื่อรับรายได้แบบไม่จำกัด"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "กระเป๋าสตางค์ส่วนใหญ่จะแสดง WDD เฉพาะหลังจากนำเข้าแบบแมนนวลบนเชนที่เลือกโดย ",
-      "contract_address": "ที่อยู่สัญญา"
-    }
-  },
-  "toasts": {
-    "generic_error": "เกิดข้อผิดพลาด",
-    "copied": "คัดลอกแล้ว",
-    "wallet": {
-      "no_wallet": "ไม่มีที่อยู่กระเป๋าเงิน",
-      "min_amount": "อย่างน้อย 10 WDD",
-      "sent": "ส่งแล้ว",
-      "account_deleted": "ลบบัญชีแล้ว",
-      "delete_failed": "ลบบัญชีไม่สำเร็จ",
-      "contract_address_error": "ไม่สามารถถอนไปยังที่อยู่สัญญาได้",
-      "sign_out_failed": "ออกจากระบบไม่สำเร็จ",
-      "google_linked": "เชื่อมต่อบัญชี Google แล้ว",
-      "google_already_linked": "บัญชี Google เชื่อมต่อกับบัญชีอื่นอยู่แล้ว",
-      "google_link_failed": "ไม่สามารถเริ่มการเชื่อมต่อ Google ได้",
-      "passkey_added": "เพิ่มพาสคีย์แล้ว",
-      "passkey_add_failed": "ไม่สามารถเพิ่มพาสคีย์ได้"
-    },
-    "parties": {
-      "updated": "อัปเดตแล้ว",
-      "update_failed": "อัปเดตล้มเหลว",
-      "update_error": "เกิดข้อผิดพลาดในการอัปเดตพรรค",
-      "registered": "ลงทะเบียนพรรคแล้ว",
-      "register_failed": "ไม่สามารถลงทะเบียนพรรคได้",
-      "register_error": "ข้อผิดพลาดในการลงทะเบียนพรรค",
-      "deleted": "ลบแล้ว",
-      "delete_failed": "ลบไม่สำเร็จ",
-      "delete_error": "ข้อผิดพลาดในการลบ"
-    },
-    "basic_income": {
-      "activated": "เปิดใช้งานรายได้พื้นฐานแล้ว",
-      "activate_failed": "เปิดใช้งานไม่สำเร็จ",
-      "claimed": "ขอรับแล้ว",
-      "claim_failed": "ขอรับไม่สำเร็จ"
-    },
-    "savings": {
-      "collected": "ถอนดอกเบี้ยแล้ว",
-      "collect_failed": "ถอนไม่สำเร็จ",
-      "deposited": "ฝากแล้ว",
-      "deposit_failed": "ฝากไม่สำเร็จ",
-      "withdrawn": "ถอนไปแล้ว",
-      "withdraw_failed": "ถอนเงินไม่สำเร็จ"
-    }
-  },
-  "common": {
-    "confirm": "ยืนยัน",
-    "sign_in": "เข้าสู่ระบบ",
-    "connect": "เชื่อมต่อ",
-    "disconnect": "ตัดการเชื่อมต่อ",
-    "connect_wallet": "เชื่อมต่อวอลเล็ต",
-    "max": "สูงสุด",
-    "loading": "กำลังโหลด...",
-    "processing": "กำลังประมวลผล...",
-    "insufficient_balance": "WDD ไม่เพียงพอ",
-    "delete_account": "ลบบัญชี",
-    "sign_out": "ออกจากระบบ",
-    "invalid_address": "ที่อยู่ไม่ถูกต้อง",
-    "coming_soon": "เร็วๆ นี้",
-    "withdraw": "ถอน",
-    "trade": "ซื้อขาย",
-    "continue": "ดำเนินการต่อ",
-    "close": "ปิด",
-    "updating": "กำลังอัปเดต...",
-    "save": "บันทึก",
-    "vote": "ลงคะแนน",
-    "switch_to_base_chain": "สลับไปยัง Base Chain"
-  },
-  "auth": {
-    "choose_method": "เลือกวิธีการที่คุณต้องการ.",
-    "sign_in_with_google": "ดำเนินการต่อด้วย Google",
-    "sign_in_with_passkey": "ใช้ชีวมาตร",
-    "sign_in_or_create": "เข้าถึงบัญชีของคุณด้วย passkey โดยใช้ลายนิ้วมือ การสแกนใบหน้าหรือการล็อกหน้าจอ",
-    "create_account": "สร้างบัญชี",
-    "create_passkey_name": "สร้างชื่อ passkey",
-    "passkey_name_description": "ตั้งชื่อ passkey ของคุณเพื่อระบุในตัวจัดการรหัสผ่าน",
-    "passkey_name": "ชื่อ passkey"
-  }
+	"nav": {
+		"earn": "รายได้",
+		"govern": "ธรรมาภิบาล",
+		"menu": "เมนู"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "พรรค",
+				"elections": "การเลือกตั้ง",
+				"referendums": "ประชามติ"
+			},
+			"sections": {
+				"parties": {
+					"title": "พรรคการเมือง"
+				},
+				"elections": {
+					"title": "การเลือกตั้งทดสอบ",
+					"subtitle": "ทดลองประชาธิปไตยระดับโลก"
+				},
+				"referendums": {
+					"title": "ประชามติรัฐธรรมนูญโลก",
+					"subtitle": "โหวตตามหลักการพื้นฐานของเรา"
+				}
+			},
+			"vote": {
+				"no_active_election": "การเลือกตั้งจะเริ่มเร็วๆ นี้",
+				"test_verification": {
+					"description": "ลองใช้ระบบยืนยันของเราตอนนี้เพื่อเตรียมพร้อมสำหรับการลงคะแนน",
+					"button": "ทดสอบ"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "เงินอุดหนุน",
+					"ambassadors": "ทูต"
+				},
+				"discover": "ค้นพบ",
+				"search_placeholder": "ค้นหาพรรค...",
+				"no_parties_found": "ไม่พบพรรค",
+				"error_loading": "ไม่สามารถโหลดพรรคได้",
+				"refresh": "รีเฟรช",
+				"party_details": "รายละเอียดพรรค",
+				"share_party": "แชร์พรรค",
+				"my_party": "พรรคของฉัน",
+				"learn_more": "เรียนรู้เพิ่มเติม",
+				"party_management": "การจัดการพรรค",
+				"edit_party_info": "แก้ไขข้อมูลพรรค",
+				"dialogs": {
+					"party_name": "ชื่อพรรค",
+					"description_optional": "คำอธิบาย (ไม่บังคับ)",
+					"official_link_optional": "ลิงก์อย่างเป็นทางการ (ไม่บังคับ)",
+					"updating": "กำลังอัปเดต...",
+					"save": "บันทึก",
+					"register_party": "ลงทะเบียนพรรค",
+					"register": "ลงทะเบียน",
+					"registering": "กำลังลงทะเบียน...",
+					"leader_warning_register": "ขณะนี้คุณเป็นผู้นำของ {partyName} การลงทะเบียนพรรคใหม่จะทำให้พรรคปัจจุบันของคุณถูกลบ",
+					"deleting": "กำลังลบ...",
+					"about_to_delete": "คุณกำลังจะลบ {partyName} การกระทำนี้ไม่สามารถยกเลิกได้",
+					"about_to_register": "คุณกำลังจะก่อตั้งพรรคใหม่"
+				},
+				"detail": {
+					"failed_to_load": "โหลดข้อมูลพรรคล้มเหลว",
+					"party_not_found": "ไม่พบพรรค",
+					"error_loading": "เกิดข้อผิดพลาดในการโหลดพรรค",
+					"back_to_parties": "กลับไปที่พรรค",
+					"description": "คำอธิบาย",
+					"party_info": "ข้อมูลพรรค",
+					"leader": "ผู้นำ",
+					"website": "เว็บไซต์",
+					"not_found_description": "พรรคที่คุณกำลังมองหาไม่มีอยู่หรือถูกยุบแล้ว"
+				},
+				"delete_party": "ลบพรรค",
+				"run_on_elections_and_earn": "ลงสมัครรับเลือกตั้งและรับเงินอุดหนุน",
+				"ambassadors": {
+					"title": "โปรแกรมทูต",
+					"description": "เชิญเพื่อนและรับรางวัลเมื่อพวกเขายืนยันตัวตน และเมื่อพรรคของพวกเขาได้รับเงินอุดหนุน",
+					"leaderboard": "กระดานผู้นำ",
+					"no_rewards_yet": "ยังไม่มีรางวัล",
+					"col_ambassador": "ทูต",
+					"col_invited": "ที่ถูกเชิญ",
+					"col_reward": "รางวัล",
+					"share_referral_link": "แชร์ลิงก์แนะนำ"
+				},
+				"subsidies": {
+					"title": "โครงการเงินอุดหนุนพรรคการเมือง",
+					"no_subsidies_yet": "ยังไม่มีเงินอุดหนุน",
+					"description": "เงินสนับสนุนตามผลงานในการเลือกตั้ง",
+					"col_subsidy": "เงินอุดหนุน"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "การเลือกตั้ง",
+					"not_found": "ไม่พบการเลือกตั้ง",
+					"not_found_description": "การเลือกตั้งที่คุณกำลังมองหาไม่มีอยู่",
+					"back_to_elections": "กลับไปที่การเลือกตั้ง",
+					"status_active": "กำลังดำเนินการ",
+					"status_upcoming": "กำลังจะมาถึง",
+					"status_ended": "สิ้นสุดแล้ว",
+					"election_info": "ข้อมูลการเลือกตั้ง",
+					"reward_pool": "กองทุนรางวัล: {amount} WDD",
+					"reward_pool_minimum": "กองทุนรางวัล: ขั้นต่ำ {amount} WDD",
+					"choose_a_party": "เลือกพรรค",
+					"no_parties_for_election": "ไม่มีพรรคที่พร้อมสำหรับการเลือกตั้งนี้",
+					"results_title": "ผลลัพธ์",
+					"vote_singular": "เสียง",
+					"vote_plural": "เสียง",
+					"no_votes": "ไม่มีการลงคะแนนในการเลือกตั้งนี้",
+					"test_election_name": "การเลือกตั้งทดสอบ {n}"
+				},
+				"list": {
+					"empty_state": "ไม่พบการเลือกตั้ง",
+					"active_section": "การเลือกตั้งที่กำลังดำเนินอยู่",
+					"upcoming_section": "การเลือกตั้งที่กำลังจะมาถึง",
+					"previous_section": "การเลือกตั้งที่ผ่านมา"
+				}
+			}
+		},
+		"error": {
+			"title": "เกิดข้อผิดพลาดบางอย่าง",
+			"description": "เกิดข้อผิดพลาดที่ไม่คาดคิด กรุณาลองใหม่อีกครั้ง",
+			"error_id": "รหัสข้อผิดพลาด: {digest}",
+			"try_again": "ลองอีกครั้ง"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "รายได้พื้นฐาน",
+				"savings": "ออมทรัพย์"
+			},
+			"basic_income": {
+				"subtitle_unauth": "รับเงินเพราะคุณเป็นมนุษย์",
+				"subtitle_claim": "ขอรับดรักมาของคุณ",
+				"tooltip_claim": "1 WDD/วัน จำกัดที่ 1 WDD กลับมาภายใน 24 ชั่วโมงเพื่อเพิ่มผลตอบแทนสูงสุด",
+				"claim_button": "ขอรับ",
+				"alert": {
+					"claim": {
+						"title": "ยืนยันการขอรับ",
+						"description": "คุณกำลังจะขอรับ {amount} WDD ซึ่งจะถูกเพิ่มในยอดคงเหลือกระเป๋าเงินของคุณ"
+					}
+				},
+				"setup_subtitle": "ตั้งค่ารายได้พื้นฐานของคุณ",
+				"activate_loading": "กำลังเปิดใช้งาน...",
+				"activate_button": "เปิดใช้งานรายได้พื้นฐาน",
+				"world_drachma": "ดรักมาของโลก (WDD) คืออะไร?",
+				"subtitle_unauth_raised_by_humanity": "ขอรับเงินปันผล AI ระดับโลกของคุณ"
+			},
+			"savings": {
+				"title": "บัญชีออมทรัพย์",
+				"subtitle": "รับดอกเบี้ยทุกวินาที",
+				"tooltip": "อัตราฐานต่อปี 69% ถอนและนำกลับไปลงทุนสม่ำเสมอเพื่อให้ได้ผลตอบแทนที่มีประสิทธิภาพใกล้ 100% ถอนเมื่อใดก็ได้",
+				"deposit": "ฝาก",
+				"withdraw": "ถอน",
+				"balance": "ยอดคงเหลือ",
+				"amount_deposit": "จำนวนที่ต้องการฝาก",
+				"amount_withdraw": "จำนวนที่ต้องการถอน",
+				"interest": "ดอกเบี้ย",
+				"collect": "ถอนดอกเบี้ย",
+				"alert": {
+					"collect": {
+						"title": "ยืนยันการถอนดอกเบี้ย",
+						"description": "คุณกำลังจะถอนดอกเบี้ยจำนวน {amount} WDD"
+					},
+					"deposit": {
+						"title": "ยืนยันการฝาก",
+						"description": "คุณกำลังจะฝาก {amount} WDD"
+					},
+					"withdraw": {
+						"title": "ยืนยันการถอน",
+						"description": "คุณกำลังจะถอน {amount} WDD"
+					}
+				},
+				"smart_contract_link": "ดูสมาร์ตคอนแทรกต์",
+				"verify": "ยืนยัน"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "บัญชี",
+					"account_info": "ข้อมูลบัญชี",
+					"referral_code": "รหัสแนะนำ",
+					"referred_by": "แนะนำโดย",
+					"language": "ภาษา"
+				},
+				"help": {
+					"title": "ช่วยเหลือ",
+					"quickstart": "เริ่มต้นด่วน",
+					"docs": "วิกิ",
+					"help_center": "ศูนย์ช่วยเหลือ"
+				},
+				"source_code": {
+					"title": "ซอร์สโค้ด"
+				},
+				"legal": {
+					"title": "กฎหมาย",
+					"terms": "เงื่อนไขการใช้งาน",
+					"privacy": "นโยบายความเป็นส่วนตัว"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "กระเป๋าเงิน"
+			},
+			"balance": "ยอด",
+			"modals": {
+				"sign_out": {
+					"confirm": "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?"
+				},
+				"disconnect": {
+					"confirm": "คุณแน่ใจหรือไม่ว่าต้องการตัดการเชื่อมต่อวอลเล็ตของคุณ?"
+				},
+				"send": {
+					"button": "ส่ง",
+					"withdraw_to_crypto": {
+						"description": "ถอน WDD ไปยังบัญชี crypto.",
+						"amount_label": "จำนวน",
+						"address_label": "ที่อยู่กระเป๋าเงิน",
+						"network_label": "เครือข่าย"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD บน Jumper",
+					"ethereum_uniswap": "Ethereum WDD บน Uniswap",
+					"base_jumper": "Base Chain WDD บน Jumper",
+					"base_uniswap": "Base Chain WDD บน Uniswap",
+					"worldchain_jumper": "World Chain WDD บน Jumper",
+					"worldchain_uniswap": "World Chain WDD บน Uniswap"
+				},
+				"delete_account": {
+					"description": "การดำเนินการนี้จะลบบัญชีของคุณอย่างถาวรและลบข้อมูลทั้งหมดของคุณจากเซิร์ฟเวอร์ของเรา การดำเนินการนี้ไม่สามารถยกเลิกได้ — กรุณาดำเนินการต่อด้วยความระมัดระวัง",
+					"deleting": "กำลังลบ..."
+				},
+				"connect_wallet_browser": {
+					"title": "เปิดใน MetaMask",
+					"description": "หากต้องการเชื่อมต่อ ให้คัดลอกลิงก์นี้แล้วเปิดในเบราว์เซอร์ที่มีอยู่ใน MetaMask",
+					"copy_link": "คัดลอกลิงก์"
+				},
+				"connect_wallet_picker": {
+					"description": "พบกระเป๋าเงินหลายรายการ เลือกหนึ่งรายการเพื่อเชื่อมต่อ"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ยังไม่มีกระเป๋าเงินใช่ไหม?",
+					"find_wallet_link": "ค้นหาหนึ่งรายการบน WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "บัญชี",
+				"security": "ความปลอดภัย",
+				"google_account": "บัญชี Google",
+				"google_not_linked": "ยังไม่ได้เชื่อมต่อ",
+				"passkeys": "พาสคีย์",
+				"passkeys_linked": "{count} เชื่อมต่อแล้ว",
+				"danger_zone": "เขตอันตราย",
+				"delete_account": {
+					"description": "ลบข้อมูลทั้งหมดของคุณอย่างถาวร"
+				},
+				"verification": "การยืนยัน",
+				"google_linked": "เชื่อมต่อแล้ว",
+				"account_label": "บัญชี"
+			},
+			"username": {
+				"label": "ชื่อผู้ใช้",
+				"edit_title": "แก้ไขชื่อผู้ใช้",
+				"description": "3-30 ตัวอักษร ตัวอักษร-ตัวเลข ขีดเส้นใต้ และยัติภังค์"
+			},
+			"history": {
+				"title": "ประวัติ"
+			},
+			"transactions": {
+				"failed_to_load": "โหลดล้มเหลว",
+				"no_transactions": "ยังไม่มีธุรกรรม",
+				"wdd_per_day": "WDD/วัน",
+				"just_now": "เมื่อสักครู่",
+				"minutes_ago": "{minutes}นาทีที่แล้ว",
+				"hours_ago": "{hours}ชั่วโมงที่แล้ว",
+				"days_ago": "{days}วันที่แล้ว",
+				"filter": {
+					"all_types": "ทุกประเภท",
+					"select_type": "เลือกประเภท",
+					"rewards": "รางวัล"
+				},
+				"types": {
+					"withdrawal": "ถอน",
+					"received": "รับแล้ว",
+					"sent": "ส่งแล้ว",
+					"ambassador_reward": "รางวัลทูต",
+					"party_subsidy": "เงินอุดหนุนพรรค",
+					"stream_created": "สร้างสตรีมแล้ว",
+					"stream_updated": "อัปเดตสตรีมแล้ว",
+					"savings_deposit": "ออมทรัพย์ ฝาก",
+					"savings_withdrawal": "ออมทรัพย์ ถอน",
+					"savings_interest": "ออมทรัพย์ ดอกเบี้ย",
+					"referral_reward": "รางวัลการแนะนำ"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "สแกนคิวอาร์โค้ดนี้เพื่อยืนยันตัวตนกับ Self",
+				"mobile_dialog_description": "คุณจะถูกเปลี่ยนเส้นทางไปยังแอป Self เพื่อทำการยืนยันให้เสร็จสิ้น",
+				"support_telegram": "ฝ่ายสนับสนุน Self",
+				"verification_guide": "คู่มือการยืนยัน",
+				"qr_alt": "QR การยืนยัน Self",
+				"callback_warning": "คำเตือน",
+				"callback_warning_description": "URL callback การยืนยันไม่สามารถเข้าถึงได้จากโทรศัพท์ของคุณ ตั้งค่า NEXT_PUBLIC_SELF_CALLBACK เป็น URL สาธารณะ (หรือตั้งค่า NEXT_PUBLIC_PUBLIC_BASE_URL เป็นโดเมน tunnel/preview)",
+				"label": "Self",
+				"status_completed": "ยืนยันแล้ว",
+				"status_not_completed": "ยังไม่ยืนยัน",
+				"learn_about_self": "เรียนรู้เกี่ยวกับ Self",
+				"primer": {
+					"title": "Self โพรโทคอล",
+					"description": "ยืนยันตัวตนโดยไม่ต้องเปิดเผยข้อมูลส่วนตัวใด ๆ"
+				}
+			},
+			"verification_warning": {
+				"title": "รับการยืนยันตัวตน",
+				"reward_cap_banner": "รางวัลรายได้พื้นฐานและเงินออมมีขีดจำกัดสำหรับพลเมืองที่ยังไม่ยืนยันตัวตน ยืนยันบัญชีของคุณเพื่อรับรายได้แบบไม่จำกัด"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "กระเป๋าสตางค์ส่วนใหญ่จะแสดง WDD เฉพาะหลังจากนำเข้าแบบแมนนวลบนเชนที่เลือกโดย ",
+			"contract_address": "ที่อยู่สัญญา"
+		}
+	},
+	"toasts": {
+		"generic_error": "เกิดข้อผิดพลาด",
+		"copied": "คัดลอกแล้ว",
+		"wallet": {
+			"no_wallet": "ไม่มีที่อยู่กระเป๋าเงิน",
+			"min_amount": "อย่างน้อย 10 WDD",
+			"sent": "ส่งแล้ว",
+			"account_deleted": "ลบบัญชีแล้ว",
+			"delete_failed": "ลบบัญชีไม่สำเร็จ",
+			"contract_address_error": "ไม่สามารถถอนไปยังที่อยู่สัญญาได้",
+			"sign_out_failed": "ออกจากระบบไม่สำเร็จ",
+			"google_linked": "เชื่อมต่อบัญชี Google แล้ว",
+			"google_already_linked": "บัญชี Google เชื่อมต่อกับบัญชีอื่นอยู่แล้ว",
+			"google_link_failed": "ไม่สามารถเริ่มการเชื่อมต่อ Google ได้",
+			"passkey_added": "เพิ่มพาสคีย์แล้ว",
+			"passkey_add_failed": "ไม่สามารถเพิ่มพาสคีย์ได้"
+		},
+		"parties": {
+			"updated": "อัปเดตแล้ว",
+			"update_failed": "อัปเดตล้มเหลว",
+			"update_error": "เกิดข้อผิดพลาดในการอัปเดตพรรค",
+			"registered": "ลงทะเบียนพรรคแล้ว",
+			"register_failed": "ไม่สามารถลงทะเบียนพรรคได้",
+			"register_error": "ข้อผิดพลาดในการลงทะเบียนพรรค",
+			"deleted": "ลบแล้ว",
+			"delete_failed": "ลบไม่สำเร็จ",
+			"delete_error": "ข้อผิดพลาดในการลบ"
+		},
+		"basic_income": {
+			"activated": "เปิดใช้งานรายได้พื้นฐานแล้ว",
+			"activate_failed": "เปิดใช้งานไม่สำเร็จ",
+			"claimed": "ขอรับแล้ว",
+			"claim_failed": "ขอรับไม่สำเร็จ"
+		},
+		"savings": {
+			"collected": "ถอนดอกเบี้ยแล้ว",
+			"collect_failed": "ถอนไม่สำเร็จ",
+			"deposited": "ฝากแล้ว",
+			"deposit_failed": "ฝากไม่สำเร็จ",
+			"withdrawn": "ถอนไปแล้ว",
+			"withdraw_failed": "ถอนเงินไม่สำเร็จ"
+		}
+	},
+	"common": {
+		"confirm": "ยืนยัน",
+		"sign_in": "เข้าสู่ระบบ",
+		"connect": "เชื่อมต่อ",
+		"disconnect": "ตัดการเชื่อมต่อ",
+		"connect_wallet": "เชื่อมต่อวอลเล็ต",
+		"max": "สูงสุด",
+		"loading": "กำลังโหลด...",
+		"processing": "กำลังประมวลผล...",
+		"insufficient_balance": "WDD ไม่เพียงพอ",
+		"delete_account": "ลบบัญชี",
+		"sign_out": "ออกจากระบบ",
+		"invalid_address": "ที่อยู่ไม่ถูกต้อง",
+		"coming_soon": "เร็วๆ นี้",
+		"withdraw": "ถอน",
+		"trade": "ซื้อขาย",
+		"continue": "ดำเนินการต่อ",
+		"close": "ปิด",
+		"updating": "กำลังอัปเดต...",
+		"save": "บันทึก",
+		"vote": "ลงคะแนน",
+		"switch_to_base_chain": "สลับไปยัง Base Chain"
+	},
+	"auth": {
+		"choose_method": "เลือกวิธีการที่คุณต้องการ.",
+		"sign_in_with_google": "ดำเนินการต่อด้วย Google",
+		"sign_in_with_passkey": "ใช้ชีวมาตร",
+		"sign_in_or_create": "เข้าถึงบัญชีของคุณด้วย passkey โดยใช้ลายนิ้วมือ การสแกนใบหน้าหรือการล็อกหน้าจอ",
+		"create_account": "สร้างบัญชี",
+		"create_passkey_name": "สร้างชื่อ passkey",
+		"passkey_name_description": "ตั้งชื่อ passkey ของคุณเพื่อระบุในตัวจัดการรหัสผ่าน",
+		"passkey_name": "ชื่อ passkey"
+	}
 }

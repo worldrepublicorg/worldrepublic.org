@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "કમાવો",
-    "govern": "શાસન કરો",
-    "menu": "મેનુ"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "પાર્ટીઓ",
-        "elections": "ચૂંટણીઓ",
-        "referendums": "જનમત સંહિતાઓ"
-      },
-      "sections": {
-        "parties": {
-          "title": "રાજકીય પાર્ટીઓ"
-        },
-        "elections": {
-          "title": "પરિક્ષણ ચૂંટણી",
-          "subtitle": "વૈશ્વિક લોકશાહી સાથે પ્રયોગ કરો"
-        },
-        "referendums": {
-          "title": "વર્લ્ડ બંધારણીય જનમત",
-          "subtitle": "અમારા મૂળભૂત સિદ્ધાંતો પર મત આપો"
-        }
-      },
-      "vote": {
-        "no_active_election": "ચૂંટણી ટૂંક સમયમાં શરૂ થાય છે",
-        "test_verification": {
-          "description": "મતદાન માટે તૈયાર રહેવા માટે અત્યારે જ અમારી ચકાસણી સિસ્ટમનો પ્રયાસ કરો",
-          "button": "પરીક્ષણ"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "સબસિડી",
-          "ambassadors": "રાજદૂત"
-        },
-        "discover": "શોધો",
-        "search_placeholder": "પક્ષો શોધો...",
-        "no_parties_found": "કોઈ પક્ષ મળ્યા નથી",
-        "error_loading": "પક્ષો લોડ કરવામાં નિષ્ફળ",
-        "refresh": "રીફ્રેશ",
-        "party_details": "પક્ષ વિગતો",
-        "share_party": "પક્ષ શેર કરો",
-        "my_party": "મારો પક્ષ",
-        "learn_more": "વધુ જાણો",
-        "party_management": "પક્ષ વ્યવસ્થાપન",
-        "edit_party_info": "પક્ષ માહિતી સંપાદિત કરો",
-        "dialogs": {
-          "party_name": "પક્ષનું નામ",
-          "description_optional": "વર્ણન (વૈકલ્પિક)",
-          "official_link_optional": "અધિકૃત લિંક (વૈકલ્પિક)",
-          "updating": "અપડેટ થઈ રહ્યું છે...",
-          "save": "સાચવો",
-          "register_party": "પક્ષ રજીસ્ટર કરો",
-          "register": "રજીસ્ટર",
-          "registering": "રજીસ્ટર કરી રહ્યું છે...",
-          "leader_warning_register": "તમે હાલમાં {partyName} ના નેતા છો. નવો પક્ષ રજીસ્ટર કરવાથી તમારો વર્તમાન પક્ષ કાઢી નાખવામાં આવશે.",
-          "deleting": "કાઢી રહ્યું છે...",
-          "about_to_delete": "તમે {partyName} કાઢી નાખવાના છો. આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.",
-          "about_to_register": "તમે નવો પક્ષ સ્થાપિત કરવાના છો."
-        },
-        "detail": {
-          "failed_to_load": "પક્ષ ડેટા લોડ કરવામાં નિષ્ફળ",
-          "party_not_found": "પક્ષ મળ્યો નથી",
-          "error_loading": "પક્ષ લોડ કરવામાં ભૂલ",
-          "back_to_parties": "પક્ષો પર પાછા જાઓ",
-          "description": "વર્ણન",
-          "party_info": "પક્ષ માહિતી",
-          "leader": "નેતા",
-          "website": "વેબસાઇટ",
-          "not_found_description": "તમે જે પક્ષ શોધી રહ્યા છો તે અસ્તિત્વમાં નથી અથવા વિસર્જન થયો છે."
-        },
-        "delete_party": "પક્ષ કાઢી નાખો",
-        "run_on_elections_and_earn": "ચૂંટણીમાં ભાગ લો અને સબસિડી મેળવો",
-        "ambassadors": {
-          "title": "રાજદૂત કાર્યક્રમ",
-          "description": "મિત્રોને આમંત્રિત કરો અને તેઓ ચકાસણી પૂર્ણ કરે ત્યારે અને તેમની પાર્ટીને સબસિડી મળે ત્યારે ઇનામ મેળવો",
-          "leaderboard": "લીડરબોર્ડ",
-          "no_rewards_yet": "હજુ સુધી કોઈ ઇનામ નથી",
-          "col_ambassador": "રાજદૂત",
-          "col_invited": "આમંત્રિત",
-          "col_reward": "ઇનામ",
-          "share_referral_link": "રેફરલ લિંક શેર કરો"
-        },
-        "subsidies": {
-          "title": "પક્ષ સબસિડી કાર્યક્રમ",
-          "no_subsidies_yet": "હજુ સુધી કોઈ સબસિડી નથી",
-          "description": "ચૂંટણી પ્રદર્શનના આધારે નાણાકીય સહાય",
-          "col_subsidy": "સબસિડી"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "ચૂંટણી",
-          "not_found": "ચૂંટણી મળી નથી",
-          "not_found_description": "તમે જે ચૂંટણી શોધી રહ્યા છો તે અસ્તિત્વમાં નથી.",
-          "back_to_elections": "ચૂંટણીઓ પર પાછા જાઓ",
-          "status_active": "સક્રિય",
-          "status_upcoming": "આગામી",
-          "status_ended": "સમાપ્ત",
-          "election_info": "ચૂંટણી માહિતી",
-          "reward_pool": "ઈનામ પૂલ: {amount} WDD",
-          "reward_pool_minimum": "ઈનામ પૂલ: લઘુત્તમ {amount} WDD",
-          "choose_a_party": "પક્ષ પસંદ કરો",
-          "no_parties_for_election": "આ ચૂંટણી માટે કોઈ પક્ષ ઉપલબ્ધ નથી.",
-          "results_title": "પરિણામો",
-          "vote_singular": "મત",
-          "vote_plural": "મતો",
-          "no_votes": "આ ચૂંટણીમાં કોઈ મત આપવામાં આવ્યા નથી.",
-          "test_election_name": "પરિક્ષણ ચૂંટણી {n}"
-        },
-        "list": {
-          "empty_state": "કોઈ ચૂંટણી મળી નથી",
-          "active_section": "સક્રિય ચૂંટણીઓ",
-          "upcoming_section": "આગામી ચૂંટણીઓ",
-          "previous_section": "અગાઉની ચૂંટણીઓ"
-        }
-      }
-    },
-    "error": {
-      "title": "કંઈક ખોટું થયું",
-      "description": "એક અણધારી ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
-      "error_id": "ભૂલ ID: {digest}",
-      "try_again": "ફરી પ્રયાસ કરો"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "મૂળભૂત આવક",
-        "savings": "બચત"
-      },
-      "basic_income": {
-        "subtitle_unauth": "માનવ હોવાના બદલામાં પૈસા મેળવો",
-        "subtitle_claim": "તમારો ડ્રક્મા ક્લેમ કરો",
-        "tooltip_claim": "દિવસે 1 WDD, 1 WDD પર કેપ. કમાણી વધારવા માટે 24 કલાકમાં પાછા આવો.",
-        "claim_button": "ક્લેમ કરો",
-        "alert": {
-          "claim": {
-            "title": "ક્લેમની પુષ્ટિ કરો",
-            "description": "તમે {amount} WDD ક્લેમ કરવા જઈ રહ્યા છો. આ તમારા વૉલેટ બેલેન્સમાં ઉમેરાશે."
-          }
-        },
-        "setup_subtitle": "તમારી મૂળભૂત આવક સેટ કરો",
-        "activate_loading": "સક્રિય કરી રહ્યા છીએ...",
-        "activate_button": "મૂળભૂત આવક સક્રિય કરો",
-        "world_drachma": "વિશ્વ દ્રાક્મા (WDD) શું છે?",
-        "subtitle_unauth_raised_by_humanity": "તમારો વૈશ્વિક AI ડિવિડન્ડ મેળવો"
-      },
-      "savings": {
-        "title": "બચત ખાતું",
-        "subtitle": "દરેક સેકન્ડે વ્યાજ કમાવો",
-        "tooltip": "વાર્ષિક 69% આધાર દર. નિયમિત રીતે એકત્ર કરીને અને પુનઃનિવેશ કરીને 100% નજીક અસરકારક પરત મેળવો. ક્યારેય પણ ઉપાડો.",
-        "deposit": "જમા કરો",
-        "withdraw": "ઉપાડો",
-        "balance": "બેલેન્સ",
-        "amount_deposit": "જમા કરવાની રકમ",
-        "amount_withdraw": "ઉપાડવાની રકમ",
-        "interest": "વ્યાજ",
-        "collect": "એકત્ર કરો",
-        "alert": {
-          "collect": {
-            "title": "એકત્ર કરવાની પુષ્ટિ કરો",
-            "description": "તમે {amount} WDD વ્યાજ તરીકે એકત્ર કરવા જઈ રહ્યા છો."
-          },
-          "deposit": {
-            "title": "જમાની પુષ્ટિ કરો",
-            "description": "તમે {amount} WDD જમા કરવા જઈ રહ્યા છો."
-          },
-          "withdraw": {
-            "title": "ઉપાડની પુષ્ટિ કરો",
-            "description": "તમે {amount} WDD ઉપાડવા જઈ રહ્યા છો."
-          }
-        },
-        "smart_contract_link": "સ્માર્ટ કોન્ટ્રાક્ટ જુઓ",
-        "verify": "ચકાસો"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ખાતું",
-          "account_info": "ખાતાની માહિતી",
-          "referral_code": "રેફરલ કોડ",
-          "referred_by": "દ્વારા રેફર કરેલ",
-          "language": "ભાષા"
-        },
-        "help": {
-          "title": "મદદ",
-          "quickstart": "ઝડપી શરૂઆત",
-          "docs": "વિકિ",
-          "help_center": "સહાય કેન્દ્ર"
-        },
-        "source_code": {
-          "title": "સોર્સ કોડ"
-        },
-        "legal": {
-          "title": "કાનૂની",
-          "terms": "વપરાશની શરતો",
-          "privacy": "ગોપનીયતા નીતિ"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "વૉલેટ"
-      },
-      "balance": "બેલેન્સ",
-      "modals": {
-        "sign_out": {
-          "confirm": "શું તમે ચોક્કસ સાઇન આઉટ કરવા માંગો છો?"
-        },
-        "disconnect": {
-          "confirm": "શું તમે ખાતરી કરો છો કે તમે તમારું વૉલેટ ડિસ્કનેક્ટ કરવા માંગો છો?"
-        },
-        "send": {
-          "button": "મોકલો",
-          "withdraw_to_crypto": {
-            "description": "WDD ક્રિપ્ટો એકાઉન્ટમાં ઉપાડો।",
-            "amount_label": "રકમ",
-            "address_label": "વૉલેટ સરનામું",
-            "network_label": "નેટવર્ક"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper પર",
-          "ethereum_uniswap": "Ethereum WDD Uniswap પર",
-          "base_jumper": "Base Chain WDD Jumper પર",
-          "base_uniswap": "Base Chain WDD Uniswap પર",
-          "worldchain_jumper": "World Chain WDD Jumper પર",
-          "worldchain_uniswap": "World Chain WDD Uniswap પર"
-        },
-        "delete_account": {
-          "description": "આ તમારા ખાતાને સ્થાયી રીતે કાઢી નાખશે અને અમારા સર્વર્સમાંથી તમારા તમામ ડેટા દૂર કરશે. આ ક્રિયા પાછી ફેરવી શકાતી નથી — કૃપા કરીને સાવધાનીથી આગળ વધો.",
-          "deleting": "કાઢી રહ્યા છીએ..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMask માં ખોલો",
-          "description": "કનેક્ટ કરવા માટે, આ લિંક કૉપિ કરો અને તેને MetaMask ના બિલ્ટ-ઇન બ્રાઉઝરમાં ખોલો.",
-          "copy_link": "લિંક કૉપી કરો"
-        },
-        "connect_wallet_picker": {
-          "description": "ઘણા વૉલેટ મળ્યા. કનેક્ટ કરવા માટે એક પસંદ કરો."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "તમારી પાસે વૉલેટ નથી?",
-          "find_wallet_link": "WalletGuide પર એક શોધો"
-        }
-      },
-      "sections": {
-        "account": "ખાતું",
-        "security": "સુરક્ષા",
-        "google_account": "Google એકાઉન્ટ",
-        "google_not_linked": "જોડાયેલ નથી",
-        "passkeys": "પાસકી",
-        "passkeys_linked": "{count} જોડાયેલ",
-        "danger_zone": "જોખમ ક્ષેત્ર",
-        "delete_account": {
-          "description": "તમારા બધા ડેટાને કાયમી રીતે દૂર કરો"
-        },
-        "verification": "ચકાસણી",
-        "google_linked": "જોડાયેલ",
-        "account_label": "ખાતું"
-      },
-      "username": {
-        "label": "વપરાશકર્તા નામ",
-        "edit_title": "વપરાશકર્તા નામ સંપાદિત કરો",
-        "description": "3-30 અક્ષરો, આલ્ફાન્યૂમેરિક, અન્ડરસ્કોર અને હાઇફન"
-      },
-      "history": {
-        "title": "ઇતિહાસ"
-      },
-      "transactions": {
-        "failed_to_load": "લોડ કરવામાં નિષ્ફળ",
-        "no_transactions": "હજુ સુધી કોઈ લેનદેન નથી",
-        "wdd_per_day": "WDD/દિવસ",
-        "just_now": "હમણાં",
-        "minutes_ago": "{minutes}મિ પહેલાં",
-        "hours_ago": "{hours}ક સમય પહેલાં",
-        "days_ago": "{days}દિવસ પહેલાં",
-        "filter": {
-          "all_types": "બધા પ્રકારો",
-          "select_type": "પ્રકાર પસંદ કરો",
-          "rewards": "ઇનામો"
-        },
-        "types": {
-          "withdrawal": "નિકાસ",
-          "received": "પ્રાપ્ત",
-          "sent": "મોકલ્યું",
-          "ambassador_reward": "એમ્બેસેડર ઇનામ",
-          "party_subsidy": "પાર્ટી સબસિડી",
-          "stream_created": "સ્ટ્રીમ બનાવ્યું",
-          "stream_updated": "સ્ટ્રીમ અપડેટ કર્યું",
-          "savings_deposit": "બચત જમા કરો",
-          "savings_withdrawal": "બચત ઉપાડો",
-          "savings_interest": "બચત વ્યાજ",
-          "referral_reward": "રેફરલ ઇનામ"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Self સાથે ચકાસવા માટે આ QR કોડ સ્કેન કરો.",
-        "mobile_dialog_description": "ચકાસણી પૂર્ણ કરવા તમને Self એપ પર મોકલવામાં આવશે.",
-        "support_telegram": "Self સપોર્ટ",
-        "verification_guide": "ચકાસણી માર્ગદર્શિકા",
-        "qr_alt": "Self ચકાસણી QR",
-        "callback_warning": "ચેતવણી",
-        "callback_warning_description": "ચકાસણી કૉલબૅક URL તમારા ફોનથી ઍક્સેસ કરી શકાતું નથી. NEXT_PUBLIC_SELF_CALLBACK ને જાહેર URL પર સેટ કરો (અથવા NEXT_PUBLIC_PUBLIC_BASE_URL ને ટનલ/પ્રિવ્યૂ ડોમેન પર સેટ કરો).",
-        "label": "Self",
-        "status_completed": "ચકાસાયેલ",
-        "status_not_completed": "ચકાસેલ નથી",
-        "learn_about_self": "Self વિશે જાણો",
-        "primer": {
-          "title": "Self પ્રોટોકોલ",
-          "description": "કોઈ વ્યક્તિગત ડેટા ખુલાવ્યા વગર ચકાસણી મેળવો."
-        }
-      },
-      "verification_warning": {
-        "title": "ચકાસો",
-        "reward_cap_banner": "અચકાસાયેલા નાગરિકો માટે બેસિક ઇન્કમ અને સેવિંગ્સ રિવોર્ડ્સ મર્યાદિત છે. મર્યાદા વિના કમાવવા માટે તમારું એકાઉન્ટ ચકાસો."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "મોટાભાગના વૉલેટ WDD ને ફક્ત ત્યારે જ પ્રદર્શિત કરે છે જ્યારે તેને પસંદ કરેલી ચેઇન પર તેના ",
-      "contract_address": "કોન્ટ્રાક્ટ સરનામા"
-    }
-  },
-  "toasts": {
-    "generic_error": "ભૂલ આવી",
-    "copied": "કોપી થયું",
-    "wallet": {
-      "no_wallet": "વૉલેટ સરનામું નથી",
-      "min_amount": "ન્યૂનતમ 10 WDD",
-      "sent": "મોકલ્યું",
-      "account_deleted": "ખાતું કાઢી નાંખ્યું",
-      "delete_failed": "ખાતું કાઢવામાં નિષ્ફળ",
-      "contract_address_error": "કોન્ટ્રાક્ટ સરનામે ઉપાડ કરી શકાતું નથી",
-      "sign_out_failed": "સાઇન આઉટ નિષ્ફળ થયું",
-      "google_linked": "Google એકાઉન્ટ જોડાયો",
-      "google_already_linked": "Google એકાઉન્ટ પહેલેથી જ બીજા એકાઉન્ટ સાથે જોડાયેલ છે",
-      "google_link_failed": "Google લિંક શરૂ કરી શકાયું નહીં",
-      "passkey_added": "પાસકી ઉમેરાઈ",
-      "passkey_add_failed": "પાસકી ઉમેરી શકાયું નહીં"
-    },
-    "parties": {
-      "updated": "અપડેટ થયું",
-      "update_failed": "અપડેટ કરવામાં નિષ્ફળ",
-      "update_error": "પક્ષ અપડેટ કરવામાં ભૂલ",
-      "registered": "પક્ષ રજીસ્ટર થયો",
-      "register_failed": "પક્ષ રજીસ્ટર કરવામાં નિષ્ફળ",
-      "register_error": "પક્ષ રજીસ્ટ્રેશનમાં ભૂલ",
-      "deleted": "કાઢી નાખ્યું",
-      "delete_failed": "કાઢી નાખવામાં નિષ્ફળ",
-      "delete_error": "કાઢી નાખવામાં ભૂલ"
-    },
-    "basic_income": {
-      "activated": "મૂળભૂત આવક સક્રિય થઈ",
-      "activate_failed": "સક્રિય કરવામાં નિષ્ફળ",
-      "claimed": "ક્લેમ થયું",
-      "claim_failed": "ક્લેમ નિષ્ફળ થયું"
-    },
-    "savings": {
-      "collected": "એકત્ર કર્યું",
-      "collect_failed": "એકત્ર કરવામાં નિષ્ફળ",
-      "deposited": "જમા થયું",
-      "deposit_failed": "જમા નિષ્ફળ થયું",
-      "withdrawn": "ઉપાડ્યું",
-      "withdraw_failed": "ઉપાડ નિષ્ફળ થયું"
-    }
-  },
-  "common": {
-    "confirm": "પુષ્ટિ કરો",
-    "sign_in": "સાઇન ઇન",
-    "connect": "કનેક્ટ કરો",
-    "disconnect": "ડિસ્કનેક્ટ કરો",
-    "connect_wallet": "વૉલેટ કનેક્ટ કરો",
-    "max": "મૅક્સ",
-    "loading": "લોડ થઈ રહ્યું છે...",
-    "processing": "પ્રક્રિયા કરી રહ્યા છીએ...",
-    "insufficient_balance": "પૂરતું WDD નથી",
-    "delete_account": "એકાઉન્ટ કાઢી નાખો",
-    "sign_out": "સાઇન આઉટ",
-    "invalid_address": "અમાન્ય સરનામું",
-    "coming_soon": "ટૂંક સમયમાં",
-    "withdraw": "નિકાલ",
-    "trade": "વેપાર",
-    "continue": "ચાલુ રાખો",
-    "close": "બંધ કરો",
-    "updating": "અપડેટ કરી રહ્યા છીએ...",
-    "save": "સાચવો",
-    "vote": "મત આપો",
-    "switch_to_base_chain": "Base Chain પર સ્વિચ કરો"
-  },
-  "auth": {
-    "choose_method": "તમારી પસંદગીની પદ્ધતિ પસંદ કરો।",
-    "sign_in_with_google": "Google સાથે ચાલુ રાખો",
-    "sign_in_with_passkey": "બાયોમેટ્રિક્સનો ઉપયોગ કરો",
-    "sign_in_or_create": "તમારા પાસકીનો ઉપયોગ કરીને તમારા એકાઉન્ટમાં પ્રવેશ કરો, તમારી આંગળીની છાપ, ચહેરાની સ્કેન અથવા સ્ક્રીન લૉકનો ઉપયોગ કરીને.",
-    "create_account": "એકાઉન્ટ બનાવો",
-    "create_passkey_name": "પાસકી નામ બનાવો",
-    "passkey_name_description": "તમારા પાસવર્ડ મેનેજરમાં તેને ઓળખવા માટે તમારા પાસકીને નામ આપો.",
-    "passkey_name": "પાસકી નામ"
-  }
+	"nav": {
+		"earn": "કમાવો",
+		"govern": "શાસન કરો",
+		"menu": "મેનુ"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "પાર્ટીઓ",
+				"elections": "ચૂંટણીઓ",
+				"referendums": "જનમત સંહિતાઓ"
+			},
+			"sections": {
+				"parties": {
+					"title": "રાજકીય પાર્ટીઓ"
+				},
+				"elections": {
+					"title": "પરિક્ષણ ચૂંટણી",
+					"subtitle": "વૈશ્વિક લોકશાહી સાથે પ્રયોગ કરો"
+				},
+				"referendums": {
+					"title": "વર્લ્ડ બંધારણીય જનમત",
+					"subtitle": "અમારા મૂળભૂત સિદ્ધાંતો પર મત આપો"
+				}
+			},
+			"vote": {
+				"no_active_election": "ચૂંટણી ટૂંક સમયમાં શરૂ થાય છે",
+				"test_verification": {
+					"description": "મતદાન માટે તૈયાર રહેવા માટે અત્યારે જ અમારી ચકાસણી સિસ્ટમનો પ્રયાસ કરો",
+					"button": "પરીક્ષણ"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "સબસિડી",
+					"ambassadors": "રાજદૂત"
+				},
+				"discover": "શોધો",
+				"search_placeholder": "પક્ષો શોધો...",
+				"no_parties_found": "કોઈ પક્ષ મળ્યા નથી",
+				"error_loading": "પક્ષો લોડ કરવામાં નિષ્ફળ",
+				"refresh": "રીફ્રેશ",
+				"party_details": "પક્ષ વિગતો",
+				"share_party": "પક્ષ શેર કરો",
+				"my_party": "મારો પક્ષ",
+				"learn_more": "વધુ જાણો",
+				"party_management": "પક્ષ વ્યવસ્થાપન",
+				"edit_party_info": "પક્ષ માહિતી સંપાદિત કરો",
+				"dialogs": {
+					"party_name": "પક્ષનું નામ",
+					"description_optional": "વર્ણન (વૈકલ્પિક)",
+					"official_link_optional": "અધિકૃત લિંક (વૈકલ્પિક)",
+					"updating": "અપડેટ થઈ રહ્યું છે...",
+					"save": "સાચવો",
+					"register_party": "પક્ષ રજીસ્ટર કરો",
+					"register": "રજીસ્ટર",
+					"registering": "રજીસ્ટર કરી રહ્યું છે...",
+					"leader_warning_register": "તમે હાલમાં {partyName} ના નેતા છો. નવો પક્ષ રજીસ્ટર કરવાથી તમારો વર્તમાન પક્ષ કાઢી નાખવામાં આવશે.",
+					"deleting": "કાઢી રહ્યું છે...",
+					"about_to_delete": "તમે {partyName} કાઢી નાખવાના છો. આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.",
+					"about_to_register": "તમે નવો પક્ષ સ્થાપિત કરવાના છો."
+				},
+				"detail": {
+					"failed_to_load": "પક્ષ ડેટા લોડ કરવામાં નિષ્ફળ",
+					"party_not_found": "પક્ષ મળ્યો નથી",
+					"error_loading": "પક્ષ લોડ કરવામાં ભૂલ",
+					"back_to_parties": "પક્ષો પર પાછા જાઓ",
+					"description": "વર્ણન",
+					"party_info": "પક્ષ માહિતી",
+					"leader": "નેતા",
+					"website": "વેબસાઇટ",
+					"not_found_description": "તમે જે પક્ષ શોધી રહ્યા છો તે અસ્તિત્વમાં નથી અથવા વિસર્જન થયો છે."
+				},
+				"delete_party": "પક્ષ કાઢી નાખો",
+				"run_on_elections_and_earn": "ચૂંટણીમાં ભાગ લો અને સબસિડી મેળવો",
+				"ambassadors": {
+					"title": "રાજદૂત કાર્યક્રમ",
+					"description": "મિત્રોને આમંત્રિત કરો અને તેઓ ચકાસણી પૂર્ણ કરે ત્યારે અને તેમની પાર્ટીને સબસિડી મળે ત્યારે ઇનામ મેળવો",
+					"leaderboard": "લીડરબોર્ડ",
+					"no_rewards_yet": "હજુ સુધી કોઈ ઇનામ નથી",
+					"col_ambassador": "રાજદૂત",
+					"col_invited": "આમંત્રિત",
+					"col_reward": "ઇનામ",
+					"share_referral_link": "રેફરલ લિંક શેર કરો"
+				},
+				"subsidies": {
+					"title": "પક્ષ સબસિડી કાર્યક્રમ",
+					"no_subsidies_yet": "હજુ સુધી કોઈ સબસિડી નથી",
+					"description": "ચૂંટણી પ્રદર્શનના આધારે નાણાકીય સહાય",
+					"col_subsidy": "સબસિડી"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "ચૂંટણી",
+					"not_found": "ચૂંટણી મળી નથી",
+					"not_found_description": "તમે જે ચૂંટણી શોધી રહ્યા છો તે અસ્તિત્વમાં નથી.",
+					"back_to_elections": "ચૂંટણીઓ પર પાછા જાઓ",
+					"status_active": "સક્રિય",
+					"status_upcoming": "આગામી",
+					"status_ended": "સમાપ્ત",
+					"election_info": "ચૂંટણી માહિતી",
+					"reward_pool": "ઈનામ પૂલ: {amount} WDD",
+					"reward_pool_minimum": "ઈનામ પૂલ: લઘુત્તમ {amount} WDD",
+					"choose_a_party": "પક્ષ પસંદ કરો",
+					"no_parties_for_election": "આ ચૂંટણી માટે કોઈ પક્ષ ઉપલબ્ધ નથી.",
+					"results_title": "પરિણામો",
+					"vote_singular": "મત",
+					"vote_plural": "મતો",
+					"no_votes": "આ ચૂંટણીમાં કોઈ મત આપવામાં આવ્યા નથી.",
+					"test_election_name": "પરિક્ષણ ચૂંટણી {n}"
+				},
+				"list": {
+					"empty_state": "કોઈ ચૂંટણી મળી નથી",
+					"active_section": "સક્રિય ચૂંટણીઓ",
+					"upcoming_section": "આગામી ચૂંટણીઓ",
+					"previous_section": "અગાઉની ચૂંટણીઓ"
+				}
+			}
+		},
+		"error": {
+			"title": "કંઈક ખોટું થયું",
+			"description": "એક અણધારી ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+			"error_id": "ભૂલ ID: {digest}",
+			"try_again": "ફરી પ્રયાસ કરો"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "મૂળભૂત આવક",
+				"savings": "બચત"
+			},
+			"basic_income": {
+				"subtitle_unauth": "માનવ હોવાના બદલામાં પૈસા મેળવો",
+				"subtitle_claim": "તમારો ડ્રક્મા ક્લેમ કરો",
+				"tooltip_claim": "દિવસે 1 WDD, 1 WDD પર કેપ. કમાણી વધારવા માટે 24 કલાકમાં પાછા આવો.",
+				"claim_button": "ક્લેમ કરો",
+				"alert": {
+					"claim": {
+						"title": "ક્લેમની પુષ્ટિ કરો",
+						"description": "તમે {amount} WDD ક્લેમ કરવા જઈ રહ્યા છો. આ તમારા વૉલેટ બેલેન્સમાં ઉમેરાશે."
+					}
+				},
+				"setup_subtitle": "તમારી મૂળભૂત આવક સેટ કરો",
+				"activate_loading": "સક્રિય કરી રહ્યા છીએ...",
+				"activate_button": "મૂળભૂત આવક સક્રિય કરો",
+				"world_drachma": "વિશ્વ દ્રાક્મા (WDD) શું છે?",
+				"subtitle_unauth_raised_by_humanity": "તમારો વૈશ્વિક AI ડિવિડન્ડ મેળવો"
+			},
+			"savings": {
+				"title": "બચત ખાતું",
+				"subtitle": "દરેક સેકન્ડે વ્યાજ કમાવો",
+				"tooltip": "વાર્ષિક 69% આધાર દર. નિયમિત રીતે એકત્ર કરીને અને પુનઃનિવેશ કરીને 100% નજીક અસરકારક પરત મેળવો. ક્યારેય પણ ઉપાડો.",
+				"deposit": "જમા કરો",
+				"withdraw": "ઉપાડો",
+				"balance": "બેલેન્સ",
+				"amount_deposit": "જમા કરવાની રકમ",
+				"amount_withdraw": "ઉપાડવાની રકમ",
+				"interest": "વ્યાજ",
+				"collect": "એકત્ર કરો",
+				"alert": {
+					"collect": {
+						"title": "એકત્ર કરવાની પુષ્ટિ કરો",
+						"description": "તમે {amount} WDD વ્યાજ તરીકે એકત્ર કરવા જઈ રહ્યા છો."
+					},
+					"deposit": {
+						"title": "જમાની પુષ્ટિ કરો",
+						"description": "તમે {amount} WDD જમા કરવા જઈ રહ્યા છો."
+					},
+					"withdraw": {
+						"title": "ઉપાડની પુષ્ટિ કરો",
+						"description": "તમે {amount} WDD ઉપાડવા જઈ રહ્યા છો."
+					}
+				},
+				"smart_contract_link": "સ્માર્ટ કોન્ટ્રાક્ટ જુઓ",
+				"verify": "ચકાસો"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ખાતું",
+					"account_info": "ખાતાની માહિતી",
+					"referral_code": "રેફરલ કોડ",
+					"referred_by": "દ્વારા રેફર કરેલ",
+					"language": "ભાષા"
+				},
+				"help": {
+					"title": "મદદ",
+					"quickstart": "ઝડપી શરૂઆત",
+					"docs": "વિકિ",
+					"help_center": "સહાય કેન્દ્ર"
+				},
+				"source_code": {
+					"title": "સોર્સ કોડ"
+				},
+				"legal": {
+					"title": "કાનૂની",
+					"terms": "વપરાશની શરતો",
+					"privacy": "ગોપનીયતા નીતિ"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "વૉલેટ"
+			},
+			"balance": "બેલેન્સ",
+			"modals": {
+				"sign_out": {
+					"confirm": "શું તમે ચોક્કસ સાઇન આઉટ કરવા માંગો છો?"
+				},
+				"disconnect": {
+					"confirm": "શું તમે ખાતરી કરો છો કે તમે તમારું વૉલેટ ડિસ્કનેક્ટ કરવા માંગો છો?"
+				},
+				"send": {
+					"button": "મોકલો",
+					"withdraw_to_crypto": {
+						"description": "WDD ક્રિપ્ટો એકાઉન્ટમાં ઉપાડો।",
+						"amount_label": "રકમ",
+						"address_label": "વૉલેટ સરનામું",
+						"network_label": "નેટવર્ક"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper પર",
+					"ethereum_uniswap": "Ethereum WDD Uniswap પર",
+					"base_jumper": "Base Chain WDD Jumper પર",
+					"base_uniswap": "Base Chain WDD Uniswap પર",
+					"worldchain_jumper": "World Chain WDD Jumper પર",
+					"worldchain_uniswap": "World Chain WDD Uniswap પર"
+				},
+				"delete_account": {
+					"description": "આ તમારા ખાતાને સ્થાયી રીતે કાઢી નાખશે અને અમારા સર્વર્સમાંથી તમારા તમામ ડેટા દૂર કરશે. આ ક્રિયા પાછી ફેરવી શકાતી નથી — કૃપા કરીને સાવધાનીથી આગળ વધો.",
+					"deleting": "કાઢી રહ્યા છીએ..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMask માં ખોલો",
+					"description": "કનેક્ટ કરવા માટે, આ લિંક કૉપિ કરો અને તેને MetaMask ના બિલ્ટ-ઇન બ્રાઉઝરમાં ખોલો.",
+					"copy_link": "લિંક કૉપી કરો"
+				},
+				"connect_wallet_picker": {
+					"description": "ઘણા વૉલેટ મળ્યા. કનેક્ટ કરવા માટે એક પસંદ કરો."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "તમારી પાસે વૉલેટ નથી?",
+					"find_wallet_link": "WalletGuide પર એક શોધો"
+				}
+			},
+			"sections": {
+				"account": "ખાતું",
+				"security": "સુરક્ષા",
+				"google_account": "Google એકાઉન્ટ",
+				"google_not_linked": "જોડાયેલ નથી",
+				"passkeys": "પાસકી",
+				"passkeys_linked": "{count} જોડાયેલ",
+				"danger_zone": "જોખમ ક્ષેત્ર",
+				"delete_account": {
+					"description": "તમારા બધા ડેટાને કાયમી રીતે દૂર કરો"
+				},
+				"verification": "ચકાસણી",
+				"google_linked": "જોડાયેલ",
+				"account_label": "ખાતું"
+			},
+			"username": {
+				"label": "વપરાશકર્તા નામ",
+				"edit_title": "વપરાશકર્તા નામ સંપાદિત કરો",
+				"description": "3-30 અક્ષરો, આલ્ફાન્યૂમેરિક, અન્ડરસ્કોર અને હાઇફન"
+			},
+			"history": {
+				"title": "ઇતિહાસ"
+			},
+			"transactions": {
+				"failed_to_load": "લોડ કરવામાં નિષ્ફળ",
+				"no_transactions": "હજુ સુધી કોઈ લેનદેન નથી",
+				"wdd_per_day": "WDD/દિવસ",
+				"just_now": "હમણાં",
+				"minutes_ago": "{minutes}મિ પહેલાં",
+				"hours_ago": "{hours}ક સમય પહેલાં",
+				"days_ago": "{days}દિવસ પહેલાં",
+				"filter": {
+					"all_types": "બધા પ્રકારો",
+					"select_type": "પ્રકાર પસંદ કરો",
+					"rewards": "ઇનામો"
+				},
+				"types": {
+					"withdrawal": "નિકાસ",
+					"received": "પ્રાપ્ત",
+					"sent": "મોકલ્યું",
+					"ambassador_reward": "એમ્બેસેડર ઇનામ",
+					"party_subsidy": "પાર્ટી સબસિડી",
+					"stream_created": "સ્ટ્રીમ બનાવ્યું",
+					"stream_updated": "સ્ટ્રીમ અપડેટ કર્યું",
+					"savings_deposit": "બચત જમા કરો",
+					"savings_withdrawal": "બચત ઉપાડો",
+					"savings_interest": "બચત વ્યાજ",
+					"referral_reward": "રેફરલ ઇનામ"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Self સાથે ચકાસવા માટે આ QR કોડ સ્કેન કરો.",
+				"mobile_dialog_description": "ચકાસણી પૂર્ણ કરવા તમને Self એપ પર મોકલવામાં આવશે.",
+				"support_telegram": "Self સપોર્ટ",
+				"verification_guide": "ચકાસણી માર્ગદર્શિકા",
+				"qr_alt": "Self ચકાસણી QR",
+				"callback_warning": "ચેતવણી",
+				"callback_warning_description": "ચકાસણી કૉલબૅક URL તમારા ફોનથી ઍક્સેસ કરી શકાતું નથી. NEXT_PUBLIC_SELF_CALLBACK ને જાહેર URL પર સેટ કરો (અથવા NEXT_PUBLIC_PUBLIC_BASE_URL ને ટનલ/પ્રિવ્યૂ ડોમેન પર સેટ કરો).",
+				"label": "Self",
+				"status_completed": "ચકાસાયેલ",
+				"status_not_completed": "ચકાસેલ નથી",
+				"learn_about_self": "Self વિશે જાણો",
+				"primer": {
+					"title": "Self પ્રોટોકોલ",
+					"description": "કોઈ વ્યક્તિગત ડેટા ખુલાવ્યા વગર ચકાસણી મેળવો."
+				}
+			},
+			"verification_warning": {
+				"title": "ચકાસો",
+				"reward_cap_banner": "અચકાસાયેલા નાગરિકો માટે બેસિક ઇન્કમ અને સેવિંગ્સ રિવોર્ડ્સ મર્યાદિત છે. મર્યાદા વિના કમાવવા માટે તમારું એકાઉન્ટ ચકાસો."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "મોટાભાગના વૉલેટ WDD ને ફક્ત ત્યારે જ પ્રદર્શિત કરે છે જ્યારે તેને પસંદ કરેલી ચેઇન પર તેના ",
+			"contract_address": "કોન્ટ્રાક્ટ સરનામા"
+		}
+	},
+	"toasts": {
+		"generic_error": "ભૂલ આવી",
+		"copied": "કોપી થયું",
+		"wallet": {
+			"no_wallet": "વૉલેટ સરનામું નથી",
+			"min_amount": "ન્યૂનતમ 10 WDD",
+			"sent": "મોકલ્યું",
+			"account_deleted": "ખાતું કાઢી નાંખ્યું",
+			"delete_failed": "ખાતું કાઢવામાં નિષ્ફળ",
+			"contract_address_error": "કોન્ટ્રાક્ટ સરનામે ઉપાડ કરી શકાતું નથી",
+			"sign_out_failed": "સાઇન આઉટ નિષ્ફળ થયું",
+			"google_linked": "Google એકાઉન્ટ જોડાયો",
+			"google_already_linked": "Google એકાઉન્ટ પહેલેથી જ બીજા એકાઉન્ટ સાથે જોડાયેલ છે",
+			"google_link_failed": "Google લિંક શરૂ કરી શકાયું નહીં",
+			"passkey_added": "પાસકી ઉમેરાઈ",
+			"passkey_add_failed": "પાસકી ઉમેરી શકાયું નહીં"
+		},
+		"parties": {
+			"updated": "અપડેટ થયું",
+			"update_failed": "અપડેટ કરવામાં નિષ્ફળ",
+			"update_error": "પક્ષ અપડેટ કરવામાં ભૂલ",
+			"registered": "પક્ષ રજીસ્ટર થયો",
+			"register_failed": "પક્ષ રજીસ્ટર કરવામાં નિષ્ફળ",
+			"register_error": "પક્ષ રજીસ્ટ્રેશનમાં ભૂલ",
+			"deleted": "કાઢી નાખ્યું",
+			"delete_failed": "કાઢી નાખવામાં નિષ્ફળ",
+			"delete_error": "કાઢી નાખવામાં ભૂલ"
+		},
+		"basic_income": {
+			"activated": "મૂળભૂત આવક સક્રિય થઈ",
+			"activate_failed": "સક્રિય કરવામાં નિષ્ફળ",
+			"claimed": "ક્લેમ થયું",
+			"claim_failed": "ક્લેમ નિષ્ફળ થયું"
+		},
+		"savings": {
+			"collected": "એકત્ર કર્યું",
+			"collect_failed": "એકત્ર કરવામાં નિષ્ફળ",
+			"deposited": "જમા થયું",
+			"deposit_failed": "જમા નિષ્ફળ થયું",
+			"withdrawn": "ઉપાડ્યું",
+			"withdraw_failed": "ઉપાડ નિષ્ફળ થયું"
+		}
+	},
+	"common": {
+		"confirm": "પુષ્ટિ કરો",
+		"sign_in": "સાઇન ઇન",
+		"connect": "કનેક્ટ કરો",
+		"disconnect": "ડિસ્કનેક્ટ કરો",
+		"connect_wallet": "વૉલેટ કનેક્ટ કરો",
+		"max": "મૅક્સ",
+		"loading": "લોડ થઈ રહ્યું છે...",
+		"processing": "પ્રક્રિયા કરી રહ્યા છીએ...",
+		"insufficient_balance": "પૂરતું WDD નથી",
+		"delete_account": "એકાઉન્ટ કાઢી નાખો",
+		"sign_out": "સાઇન આઉટ",
+		"invalid_address": "અમાન્ય સરનામું",
+		"coming_soon": "ટૂંક સમયમાં",
+		"withdraw": "નિકાલ",
+		"trade": "વેપાર",
+		"continue": "ચાલુ રાખો",
+		"close": "બંધ કરો",
+		"updating": "અપડેટ કરી રહ્યા છીએ...",
+		"save": "સાચવો",
+		"vote": "મત આપો",
+		"switch_to_base_chain": "Base Chain પર સ્વિચ કરો"
+	},
+	"auth": {
+		"choose_method": "તમારી પસંદગીની પદ્ધતિ પસંદ કરો।",
+		"sign_in_with_google": "Google સાથે ચાલુ રાખો",
+		"sign_in_with_passkey": "બાયોમેટ્રિક્સનો ઉપયોગ કરો",
+		"sign_in_or_create": "તમારા પાસકીનો ઉપયોગ કરીને તમારા એકાઉન્ટમાં પ્રવેશ કરો, તમારી આંગળીની છાપ, ચહેરાની સ્કેન અથવા સ્ક્રીન લૉકનો ઉપયોગ કરીને.",
+		"create_account": "એકાઉન્ટ બનાવો",
+		"create_passkey_name": "પાસકી નામ બનાવો",
+		"passkey_name_description": "તમારા પાસવર્ડ મેનેજરમાં તેને ઓળખવા માટે તમારા પાસકીને નામ આપો.",
+		"passkey_name": "પાસકી નામ"
+	}
 }

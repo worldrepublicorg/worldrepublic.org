@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Verdienen",
-    "govern": "Besturen",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partijen",
-        "elections": "Verkiezingen",
-        "referendums": "Referenda"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politieke partijen"
-        },
-        "elections": {
-          "title": "Testverkiezingen",
-          "subtitle": "Experimenteer met wereldwijde democratie"
-        },
-        "referendums": {
-          "title": "Wereld Grondwettelijk Referendum",
-          "subtitle": "Stem over onze fundamentele principes"
-        }
-      },
-      "vote": {
-        "no_active_election": "Verkiezing begint binnenkort",
-        "test_verification": {
-          "description": "Probeer nu ons verificatiesysteem om klaar te zijn voor de stemming",
-          "button": "Test"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidies",
-          "ambassadors": "Ambassadeurs"
-        },
-        "discover": "Ontdekken",
-        "search_placeholder": "Zoek partijen...",
-        "no_parties_found": "Geen partijen gevonden",
-        "error_loading": "Kon partijen niet laden",
-        "refresh": "Verversen",
-        "party_details": "Partijdetails",
-        "share_party": "Partij delen",
-        "my_party": "Mijn partij",
-        "learn_more": "Meer informatie",
-        "party_management": "Partijbeheer",
-        "edit_party_info": "Partijinformatie bewerken",
-        "dialogs": {
-          "party_name": "Partijnaam",
-          "description_optional": "Beschrijving (optioneel)",
-          "official_link_optional": "Officiële link (optioneel)",
-          "updating": "Bijwerken...",
-          "save": "Opslaan",
-          "register_party": "Registreer een partij",
-          "register": "Registreren",
-          "registering": "Registreren...",
-          "leader_warning_register": "U bent momenteel de leider van {partyName}. Het registreren van een nieuwe partij zal uw huidige partij verwijderen.",
-          "deleting": "Verwijderen...",
-          "about_to_delete": "Je staat op het punt {partyName} te verwijderen. Deze actie kan niet ongedaan worden gemaakt.",
-          "about_to_register": "U staat op het punt een nieuwe partij op te richten."
-        },
-        "detail": {
-          "failed_to_load": "Fout bij het laden van partijgegevens",
-          "party_not_found": "Partij niet gevonden",
-          "error_loading": "Fout bij het laden van de partij",
-          "back_to_parties": "Terug naar partijen",
-          "description": "Beschrijving",
-          "party_info": "Partijinformatie",
-          "leader": "Leider",
-          "website": "Website",
-          "not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
-        },
-        "delete_party": "Partij verwijderen",
-        "run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies",
-        "ambassadors": {
-          "title": "Ambassadeursprogramma",
-          "description": "Nodig vrienden uit en verdien beloningen wanneer zij geverifieerd worden en wanneer hun partij subsidies ontvangt",
-          "leaderboard": "Ranglijst",
-          "no_rewards_yet": "Nog geen beloningen",
-          "col_ambassador": "Ambassadeurs",
-          "col_invited": "Uitgenodigd",
-          "col_reward": "Beloning",
-          "share_referral_link": "Deel verwijzingslink"
-        },
-        "subsidies": {
-          "title": "Partijsubsidieprogramma",
-          "no_subsidies_yet": "Nog geen subsidies",
-          "description": "Financiering op basis van electorale prestaties",
-          "col_subsidy": "Subsidie"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Verkiezing",
-          "not_found": "Verkiezing niet gevonden",
-          "not_found_description": "De verkiezing die je zoekt bestaat niet.",
-          "back_to_elections": "Terug naar verkiezingen",
-          "status_active": "Actief",
-          "status_upcoming": "Aankomend",
-          "status_ended": "Beëindigd",
-          "election_info": "Verkiezingsinformatie",
-          "reward_pool": "Beloningspool: {amount} WDD",
-          "reward_pool_minimum": "Beloningspool: minimaal {amount} WDD",
-          "choose_a_party": "Kies een partij",
-          "no_parties_for_election": "Geen partijen beschikbaar voor deze verkiezing.",
-          "results_title": "Resultaten",
-          "vote_singular": "stem",
-          "vote_plural": "stemmen",
-          "no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
-          "test_election_name": "Testverkiezing {n}"
-        },
-        "list": {
-          "empty_state": "Geen verkiezingen gevonden",
-          "active_section": "Actieve verkiezingen",
-          "upcoming_section": "Komende verkiezingen",
-          "previous_section": "Vorige verkiezingen"
-        }
-      }
-    },
-    "error": {
-      "title": "Er ging iets mis",
-      "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
-      "error_id": "Fout-ID: {digest}",
-      "try_again": "Opnieuw proberen"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Basisinkomen",
-        "savings": "Sparen"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Krijg geld voor het mens zijn",
-        "subtitle_claim": "Claim je drachme",
-        "tooltip_claim": "1 WDD/dag, beperkt tot 1 WDD. Kom binnen 24 uur terug om je verdiensten te maximaliseren.",
-        "claim_button": "Claimen",
-        "alert": {
-          "claim": {
-            "title": "Claim bevestigen",
-            "description": "Je staat op het punt om {amount} WDD te claimen. Dit wordt toegevoegd aan je portemonnee saldo."
-          }
-        },
-        "setup_subtitle": "Stel je basisinkomen in",
-        "activate_loading": "Activeren...",
-        "activate_button": "Basisinkomen activeren",
-        "world_drachma": "Wat is werelddrachme (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Claim je wereldwijde AI-dividend"
-      },
-      "savings": {
-        "title": "Spaarrekening",
-        "subtitle": "Verdien elke seconde rente",
-        "tooltip": "69% jaarlijks basistarief. Verzamel en herinvesteer regelmatig om dicht bij 100% effectieve rendementen te komen. Op elk moment opnemen.",
-        "deposit": "Storten",
-        "withdraw": "Opnemen",
-        "balance": "Saldo",
-        "amount_deposit": "Bedrag om te storten",
-        "amount_withdraw": "Bedrag om op te nemen",
-        "interest": "Rente",
-        "collect": "Verzamelen",
-        "alert": {
-          "collect": {
-            "title": "Verzameling bevestigen",
-            "description": "Je staat op het punt om {amount} WDD aan rente te verzamelen."
-          },
-          "deposit": {
-            "title": "Storting bevestigen",
-            "description": "Je staat op het punt om {amount} WDD te storten."
-          },
-          "withdraw": {
-            "title": "Opname bevestigen",
-            "description": "Je staat op het punt om {amount} WDD op te nemen."
-          }
-        },
-        "smart_contract_link": "Bekijk smart contract",
-        "verify": "Verifiëren"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ACCOUNT",
-          "account_info": "Accountinformatie",
-          "referral_code": "Verwijzingscode",
-          "referred_by": "Verwezen door",
-          "language": "Taal"
-        },
-        "help": {
-          "title": "HELP",
-          "quickstart": "Snelstart",
-          "docs": "Wiki",
-          "help_center": "Helpcentrum"
-        },
-        "source_code": {
-          "title": "BRONCODE"
-        },
-        "legal": {
-          "title": "JURIDISCH",
-          "terms": "Gebruiksvoorwaarden",
-          "privacy": "Privacybeleid"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Portemonnee"
-      },
-      "balance": "Saldo",
-      "modals": {
-        "sign_out": {
-          "confirm": "Weet je zeker dat je wilt uitloggen?"
-        },
-        "disconnect": {
-          "confirm": "Weet je zeker dat je je wallet wilt ontkoppelen?"
-        },
-        "send": {
-          "button": "Versturen",
-          "withdraw_to_crypto": {
-            "description": "WDD opnemen naar een cryptorekening.",
-            "amount_label": "Bedrag",
-            "address_label": "Portemonnee adres",
-            "network_label": "Netwerk"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD op Jumper",
-          "ethereum_uniswap": "Ethereum WDD op Uniswap",
-          "base_jumper": "Base Chain WDD op Jumper",
-          "base_uniswap": "Base Chain WDD op Uniswap",
-          "worldchain_jumper": "World Chain WDD op Jumper",
-          "worldchain_uniswap": "World Chain WDD op Uniswap"
-        },
-        "delete_account": {
-          "description": "Dit zal je account permanent verwijderen en alle gegevens van onze servers verwijderen. Deze actie kan niet ongedaan worden gemaakt — ga voorzichtig te werk.",
-          "deleting": "Verwijderen..."
-        },
-        "connect_wallet_browser": {
-          "title": "Openen in MetaMask",
-          "description": "Om te verbinden, kopieer deze link en open hem in de ingebouwde browser van MetaMask.",
-          "copy_link": "Link kopiëren"
-        },
-        "connect_wallet_picker": {
-          "description": "Er zijn meerdere wallets gevonden. Selecteer er één om te verbinden."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Heb je geen wallet?",
-          "find_wallet_link": "Vind er een op WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ACCOUNT",
-        "security": "BEVEILIGING",
-        "google_account": "Google-account",
-        "google_not_linked": "Niet gekoppeld",
-        "passkeys": "Toegangssleutels",
-        "passkeys_linked": "{count} gekoppeld",
-        "danger_zone": "GEVAARZONE",
-        "delete_account": {
-          "description": "Verwijder permanent al uw gegevens"
-        },
-        "verification": "VERIFICATIE",
-        "google_linked": "Gekoppeld",
-        "account_label": "Rekening"
-      },
-      "username": {
-        "label": "Gebruikersnaam",
-        "edit_title": "Gebruikersnaam bewerken",
-        "description": "3-30 tekens, alfanumeriek, underscores en koppeltekens"
-      },
-      "history": {
-        "title": "GESCHIEDENIS"
-      },
-      "transactions": {
-        "failed_to_load": "Laden mislukt",
-        "no_transactions": "Nog geen transacties",
-        "wdd_per_day": "WDD/dag",
-        "just_now": "Zojuist",
-        "minutes_ago": "{minutes}min geleden",
-        "hours_ago": "{hours}u geleden",
-        "days_ago": "{days}d geleden",
-        "filter": {
-          "all_types": "Alle typen",
-          "select_type": "Type selecteren",
-          "rewards": "Beloningen"
-        },
-        "types": {
-          "withdrawal": "Opname",
-          "received": "Ontvangen",
-          "sent": "Verzonden",
-          "ambassador_reward": "Ambassadeursbeloning",
-          "party_subsidy": "Partijsubsidie",
-          "stream_created": "Stroom aangemaakt",
-          "stream_updated": "Stroom bijgewerkt",
-          "savings_deposit": "Sparen storten",
-          "savings_withdrawal": "Sparen opnemen",
-          "savings_interest": "Sparen rente",
-          "referral_reward": "Verwijzingsbeloning"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Scan deze QR-code om je te verifiëren met Self.",
-        "mobile_dialog_description": "Je wordt doorgestuurd naar de Self-app om de verificatie uit te voeren.",
-        "support_telegram": "Self-support",
-        "verification_guide": "Verificatiegids",
-        "qr_alt": "Self-verificatie QR",
-        "callback_warning": "Waarschuwing",
-        "callback_warning_description": "De verificatie callback-URL is niet bereikbaar vanaf uw telefoon. Stel NEXT_PUBLIC_SELF_CALLBACK in op een openbare URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op een tunnel-/voorbeelddomein).",
-        "label": "Self",
-        "status_completed": "Geverifieerd",
-        "status_not_completed": "Niet geverifieerd",
-        "learn_about_self": "Meer over Self",
-        "primer": {
-          "title": "Self Protocol",
-          "description": "Laat u verifiëren zonder persoonlijke gegevens prijs te geven."
-        }
-      },
-      "verification_warning": {
-        "title": "Verificatie krijgen",
-        "reward_cap_banner": "Beloningen voor basisinkomen en sparen zijn begrensd voor niet-geverifieerde burgers. Verifieer je account om zonder limieten te verdienen."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "De meeste portemonnees tonen WDD alleen nadat het handmatig is geïmporteerd op de geselecteerde keten via het ",
-      "contract_address": "contractadres"
-    }
-  },
-  "toasts": {
-    "generic_error": "Er is een fout opgetreden",
-    "copied": "Gekopieerd",
-    "wallet": {
-      "no_wallet": "Geen portemonnee adres",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Verzonden",
-      "account_deleted": "Account verwijderd",
-      "delete_failed": "Account verwijderen mislukt",
-      "contract_address_error": "Kan niet opnemen naar contract adres",
-      "sign_out_failed": "Uitloggen mislukt",
-      "google_linked": "Google-account gekoppeld",
-      "google_already_linked": "Google-account is al gekoppeld aan een ander account",
-      "google_link_failed": "Kon Google-koppeling niet starten",
-      "passkey_added": "Toegangssleutel toegevoegd",
-      "passkey_add_failed": "Kon toegangssleutel niet toevoegen"
-    },
-    "parties": {
-      "updated": "Bijgewerkt",
-      "update_failed": "Bijwerken mislukt",
-      "update_error": "Fout bij bijwerken van partij",
-      "registered": "Partij geregistreerd",
-      "register_failed": "Kon partij niet registreren",
-      "register_error": "Fout bij registreren partij",
-      "deleted": "Verwijderd",
-      "delete_failed": "Kon niet verwijderen",
-      "delete_error": "Fout bij verwijderen"
-    },
-    "basic_income": {
-      "activated": "Basisinkomen geactiveerd",
-      "activate_failed": "Activeren mislukt",
-      "claimed": "Geclaimd",
-      "claim_failed": "Claimen mislukt"
-    },
-    "savings": {
-      "collected": "Verzameld",
-      "collect_failed": "Verzamelen mislukt",
-      "deposited": "Gestort",
-      "deposit_failed": "Storten mislukt",
-      "withdrawn": "Opgenomen",
-      "withdraw_failed": "Opname mislukt"
-    }
-  },
-  "common": {
-    "confirm": "Bevestigen",
-    "sign_in": "Inloggen",
-    "connect": "Verbinden",
-    "disconnect": "Verbinding verbreken",
-    "connect_wallet": "Wallet verbinden",
-    "max": "Max",
-    "loading": "Laden...",
-    "processing": "Verwerken...",
-    "insufficient_balance": "Niet genoeg WDD",
-    "delete_account": "Account verwijderen",
-    "sign_out": "Uitloggen",
-    "invalid_address": "Ongeldig adres",
-    "coming_soon": "Binnenkort",
-    "withdraw": "Opnemen",
-    "trade": "Handelen",
-    "continue": "Doorgaan",
-    "close": "Sluiten",
-    "updating": "Bijwerken...",
-    "save": "Opslaan",
-    "vote": "Stemmen",
-    "switch_to_base_chain": "Schakel over naar Base Chain"
-  },
-  "auth": {
-    "choose_method": "Kies uw voorkeursmethode.",
-    "sign_in_with_google": "Doorgaan met Google",
-    "sign_in_with_passkey": "Biometrie gebruiken",
-    "sign_in_or_create": "Toegang tot uw account met een passkey, met behulp van uw vingerafdruk, gezichtsscan of schermvergrendeling.",
-    "create_account": "Account aanmaken",
-    "create_passkey_name": "Passkey-naam aanmaken",
-    "passkey_name_description": "Geef uw passkey een naam om deze te identificeren in uw wachtwoordbeheerder.",
-    "passkey_name": "Passkey-naam"
-  }
+	"nav": {
+		"earn": "Verdienen",
+		"govern": "Besturen",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partijen",
+				"elections": "Verkiezingen",
+				"referendums": "Referenda"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politieke partijen"
+				},
+				"elections": {
+					"title": "Testverkiezingen",
+					"subtitle": "Experimenteer met wereldwijde democratie"
+				},
+				"referendums": {
+					"title": "Wereld Grondwettelijk Referendum",
+					"subtitle": "Stem over onze fundamentele principes"
+				}
+			},
+			"vote": {
+				"no_active_election": "Verkiezing begint binnenkort",
+				"test_verification": {
+					"description": "Probeer nu ons verificatiesysteem om klaar te zijn voor de stemming",
+					"button": "Test"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidies",
+					"ambassadors": "Ambassadeurs"
+				},
+				"discover": "Ontdekken",
+				"search_placeholder": "Zoek partijen...",
+				"no_parties_found": "Geen partijen gevonden",
+				"error_loading": "Kon partijen niet laden",
+				"refresh": "Verversen",
+				"party_details": "Partijdetails",
+				"share_party": "Partij delen",
+				"my_party": "Mijn partij",
+				"learn_more": "Meer informatie",
+				"party_management": "Partijbeheer",
+				"edit_party_info": "Partijinformatie bewerken",
+				"dialogs": {
+					"party_name": "Partijnaam",
+					"description_optional": "Beschrijving (optioneel)",
+					"official_link_optional": "Officiële link (optioneel)",
+					"updating": "Bijwerken...",
+					"save": "Opslaan",
+					"register_party": "Registreer een partij",
+					"register": "Registreren",
+					"registering": "Registreren...",
+					"leader_warning_register": "U bent momenteel de leider van {partyName}. Het registreren van een nieuwe partij zal uw huidige partij verwijderen.",
+					"deleting": "Verwijderen...",
+					"about_to_delete": "Je staat op het punt {partyName} te verwijderen. Deze actie kan niet ongedaan worden gemaakt.",
+					"about_to_register": "U staat op het punt een nieuwe partij op te richten."
+				},
+				"detail": {
+					"failed_to_load": "Fout bij het laden van partijgegevens",
+					"party_not_found": "Partij niet gevonden",
+					"error_loading": "Fout bij het laden van de partij",
+					"back_to_parties": "Terug naar partijen",
+					"description": "Beschrijving",
+					"party_info": "Partijinformatie",
+					"leader": "Leider",
+					"website": "Website",
+					"not_found_description": "De partij die u zoekt bestaat niet of is ontbonden."
+				},
+				"delete_party": "Partij verwijderen",
+				"run_on_elections_and_earn": "Doe mee aan verkiezingen en krijg subsidies",
+				"ambassadors": {
+					"title": "Ambassadeursprogramma",
+					"description": "Nodig vrienden uit en verdien beloningen wanneer zij geverifieerd worden en wanneer hun partij subsidies ontvangt",
+					"leaderboard": "Ranglijst",
+					"no_rewards_yet": "Nog geen beloningen",
+					"col_ambassador": "Ambassadeurs",
+					"col_invited": "Uitgenodigd",
+					"col_reward": "Beloning",
+					"share_referral_link": "Deel verwijzingslink"
+				},
+				"subsidies": {
+					"title": "Partijsubsidieprogramma",
+					"no_subsidies_yet": "Nog geen subsidies",
+					"description": "Financiering op basis van electorale prestaties",
+					"col_subsidy": "Subsidie"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Verkiezing",
+					"not_found": "Verkiezing niet gevonden",
+					"not_found_description": "De verkiezing die je zoekt bestaat niet.",
+					"back_to_elections": "Terug naar verkiezingen",
+					"status_active": "Actief",
+					"status_upcoming": "Aankomend",
+					"status_ended": "Beëindigd",
+					"election_info": "Verkiezingsinformatie",
+					"reward_pool": "Beloningspool: {amount} WDD",
+					"reward_pool_minimum": "Beloningspool: minimaal {amount} WDD",
+					"choose_a_party": "Kies een partij",
+					"no_parties_for_election": "Geen partijen beschikbaar voor deze verkiezing.",
+					"results_title": "Resultaten",
+					"vote_singular": "stem",
+					"vote_plural": "stemmen",
+					"no_votes": "Er zijn geen stemmen uitgebracht bij deze verkiezing.",
+					"test_election_name": "Testverkiezing {n}"
+				},
+				"list": {
+					"empty_state": "Geen verkiezingen gevonden",
+					"active_section": "Actieve verkiezingen",
+					"upcoming_section": "Komende verkiezingen",
+					"previous_section": "Vorige verkiezingen"
+				}
+			}
+		},
+		"error": {
+			"title": "Er ging iets mis",
+			"description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+			"error_id": "Fout-ID: {digest}",
+			"try_again": "Opnieuw proberen"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Basisinkomen",
+				"savings": "Sparen"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Krijg geld voor het mens zijn",
+				"subtitle_claim": "Claim je drachme",
+				"tooltip_claim": "1 WDD/dag, beperkt tot 1 WDD. Kom binnen 24 uur terug om je verdiensten te maximaliseren.",
+				"claim_button": "Claimen",
+				"alert": {
+					"claim": {
+						"title": "Claim bevestigen",
+						"description": "Je staat op het punt om {amount} WDD te claimen. Dit wordt toegevoegd aan je portemonnee saldo."
+					}
+				},
+				"setup_subtitle": "Stel je basisinkomen in",
+				"activate_loading": "Activeren...",
+				"activate_button": "Basisinkomen activeren",
+				"world_drachma": "Wat is werelddrachme (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Claim je wereldwijde AI-dividend"
+			},
+			"savings": {
+				"title": "Spaarrekening",
+				"subtitle": "Verdien elke seconde rente",
+				"tooltip": "69% jaarlijks basistarief. Verzamel en herinvesteer regelmatig om dicht bij 100% effectieve rendementen te komen. Op elk moment opnemen.",
+				"deposit": "Storten",
+				"withdraw": "Opnemen",
+				"balance": "Saldo",
+				"amount_deposit": "Bedrag om te storten",
+				"amount_withdraw": "Bedrag om op te nemen",
+				"interest": "Rente",
+				"collect": "Verzamelen",
+				"alert": {
+					"collect": {
+						"title": "Verzameling bevestigen",
+						"description": "Je staat op het punt om {amount} WDD aan rente te verzamelen."
+					},
+					"deposit": {
+						"title": "Storting bevestigen",
+						"description": "Je staat op het punt om {amount} WDD te storten."
+					},
+					"withdraw": {
+						"title": "Opname bevestigen",
+						"description": "Je staat op het punt om {amount} WDD op te nemen."
+					}
+				},
+				"smart_contract_link": "Bekijk smart contract",
+				"verify": "Verifiëren"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ACCOUNT",
+					"account_info": "Accountinformatie",
+					"referral_code": "Verwijzingscode",
+					"referred_by": "Verwezen door",
+					"language": "Taal"
+				},
+				"help": {
+					"title": "HELP",
+					"quickstart": "Snelstart",
+					"docs": "Wiki",
+					"help_center": "Helpcentrum"
+				},
+				"source_code": {
+					"title": "BRONCODE"
+				},
+				"legal": {
+					"title": "JURIDISCH",
+					"terms": "Gebruiksvoorwaarden",
+					"privacy": "Privacybeleid"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Portemonnee"
+			},
+			"balance": "Saldo",
+			"modals": {
+				"sign_out": {
+					"confirm": "Weet je zeker dat je wilt uitloggen?"
+				},
+				"disconnect": {
+					"confirm": "Weet je zeker dat je je wallet wilt ontkoppelen?"
+				},
+				"send": {
+					"button": "Versturen",
+					"withdraw_to_crypto": {
+						"description": "WDD opnemen naar een cryptorekening.",
+						"amount_label": "Bedrag",
+						"address_label": "Portemonnee adres",
+						"network_label": "Netwerk"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD op Jumper",
+					"ethereum_uniswap": "Ethereum WDD op Uniswap",
+					"base_jumper": "Base Chain WDD op Jumper",
+					"base_uniswap": "Base Chain WDD op Uniswap",
+					"worldchain_jumper": "World Chain WDD op Jumper",
+					"worldchain_uniswap": "World Chain WDD op Uniswap"
+				},
+				"delete_account": {
+					"description": "Dit zal je account permanent verwijderen en alle gegevens van onze servers verwijderen. Deze actie kan niet ongedaan worden gemaakt — ga voorzichtig te werk.",
+					"deleting": "Verwijderen..."
+				},
+				"connect_wallet_browser": {
+					"title": "Openen in MetaMask",
+					"description": "Om te verbinden, kopieer deze link en open hem in de ingebouwde browser van MetaMask.",
+					"copy_link": "Link kopiëren"
+				},
+				"connect_wallet_picker": {
+					"description": "Er zijn meerdere wallets gevonden. Selecteer er één om te verbinden."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Heb je geen wallet?",
+					"find_wallet_link": "Vind er een op WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ACCOUNT",
+				"security": "BEVEILIGING",
+				"google_account": "Google-account",
+				"google_not_linked": "Niet gekoppeld",
+				"passkeys": "Toegangssleutels",
+				"passkeys_linked": "{count} gekoppeld",
+				"danger_zone": "GEVAARZONE",
+				"delete_account": {
+					"description": "Verwijder permanent al uw gegevens"
+				},
+				"verification": "VERIFICATIE",
+				"google_linked": "Gekoppeld",
+				"account_label": "Rekening"
+			},
+			"username": {
+				"label": "Gebruikersnaam",
+				"edit_title": "Gebruikersnaam bewerken",
+				"description": "3-30 tekens, alfanumeriek, underscores en koppeltekens"
+			},
+			"history": {
+				"title": "GESCHIEDENIS"
+			},
+			"transactions": {
+				"failed_to_load": "Laden mislukt",
+				"no_transactions": "Nog geen transacties",
+				"wdd_per_day": "WDD/dag",
+				"just_now": "Zojuist",
+				"minutes_ago": "{minutes}min geleden",
+				"hours_ago": "{hours}u geleden",
+				"days_ago": "{days}d geleden",
+				"filter": {
+					"all_types": "Alle typen",
+					"select_type": "Type selecteren",
+					"rewards": "Beloningen"
+				},
+				"types": {
+					"withdrawal": "Opname",
+					"received": "Ontvangen",
+					"sent": "Verzonden",
+					"ambassador_reward": "Ambassadeursbeloning",
+					"party_subsidy": "Partijsubsidie",
+					"stream_created": "Stroom aangemaakt",
+					"stream_updated": "Stroom bijgewerkt",
+					"savings_deposit": "Sparen storten",
+					"savings_withdrawal": "Sparen opnemen",
+					"savings_interest": "Sparen rente",
+					"referral_reward": "Verwijzingsbeloning"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Scan deze QR-code om je te verifiëren met Self.",
+				"mobile_dialog_description": "Je wordt doorgestuurd naar de Self-app om de verificatie uit te voeren.",
+				"support_telegram": "Self-support",
+				"verification_guide": "Verificatiegids",
+				"qr_alt": "Self-verificatie QR",
+				"callback_warning": "Waarschuwing",
+				"callback_warning_description": "De verificatie callback-URL is niet bereikbaar vanaf uw telefoon. Stel NEXT_PUBLIC_SELF_CALLBACK in op een openbare URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op een tunnel-/voorbeelddomein).",
+				"label": "Self",
+				"status_completed": "Geverifieerd",
+				"status_not_completed": "Niet geverifieerd",
+				"learn_about_self": "Meer over Self",
+				"primer": {
+					"title": "Self Protocol",
+					"description": "Laat u verifiëren zonder persoonlijke gegevens prijs te geven."
+				}
+			},
+			"verification_warning": {
+				"title": "Verificatie krijgen",
+				"reward_cap_banner": "Beloningen voor basisinkomen en sparen zijn begrensd voor niet-geverifieerde burgers. Verifieer je account om zonder limieten te verdienen."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "De meeste portemonnees tonen WDD alleen nadat het handmatig is geïmporteerd op de geselecteerde keten via het ",
+			"contract_address": "contractadres"
+		}
+	},
+	"toasts": {
+		"generic_error": "Er is een fout opgetreden",
+		"copied": "Gekopieerd",
+		"wallet": {
+			"no_wallet": "Geen portemonnee adres",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Verzonden",
+			"account_deleted": "Account verwijderd",
+			"delete_failed": "Account verwijderen mislukt",
+			"contract_address_error": "Kan niet opnemen naar contract adres",
+			"sign_out_failed": "Uitloggen mislukt",
+			"google_linked": "Google-account gekoppeld",
+			"google_already_linked": "Google-account is al gekoppeld aan een ander account",
+			"google_link_failed": "Kon Google-koppeling niet starten",
+			"passkey_added": "Toegangssleutel toegevoegd",
+			"passkey_add_failed": "Kon toegangssleutel niet toevoegen"
+		},
+		"parties": {
+			"updated": "Bijgewerkt",
+			"update_failed": "Bijwerken mislukt",
+			"update_error": "Fout bij bijwerken van partij",
+			"registered": "Partij geregistreerd",
+			"register_failed": "Kon partij niet registreren",
+			"register_error": "Fout bij registreren partij",
+			"deleted": "Verwijderd",
+			"delete_failed": "Kon niet verwijderen",
+			"delete_error": "Fout bij verwijderen"
+		},
+		"basic_income": {
+			"activated": "Basisinkomen geactiveerd",
+			"activate_failed": "Activeren mislukt",
+			"claimed": "Geclaimd",
+			"claim_failed": "Claimen mislukt"
+		},
+		"savings": {
+			"collected": "Verzameld",
+			"collect_failed": "Verzamelen mislukt",
+			"deposited": "Gestort",
+			"deposit_failed": "Storten mislukt",
+			"withdrawn": "Opgenomen",
+			"withdraw_failed": "Opname mislukt"
+		}
+	},
+	"common": {
+		"confirm": "Bevestigen",
+		"sign_in": "Inloggen",
+		"connect": "Verbinden",
+		"disconnect": "Verbinding verbreken",
+		"connect_wallet": "Wallet verbinden",
+		"max": "Max",
+		"loading": "Laden...",
+		"processing": "Verwerken...",
+		"insufficient_balance": "Niet genoeg WDD",
+		"delete_account": "Account verwijderen",
+		"sign_out": "Uitloggen",
+		"invalid_address": "Ongeldig adres",
+		"coming_soon": "Binnenkort",
+		"withdraw": "Opnemen",
+		"trade": "Handelen",
+		"continue": "Doorgaan",
+		"close": "Sluiten",
+		"updating": "Bijwerken...",
+		"save": "Opslaan",
+		"vote": "Stemmen",
+		"switch_to_base_chain": "Schakel over naar Base Chain"
+	},
+	"auth": {
+		"choose_method": "Kies uw voorkeursmethode.",
+		"sign_in_with_google": "Doorgaan met Google",
+		"sign_in_with_passkey": "Biometrie gebruiken",
+		"sign_in_or_create": "Toegang tot uw account met een passkey, met behulp van uw vingerafdruk, gezichtsscan of schermvergrendeling.",
+		"create_account": "Account aanmaken",
+		"create_passkey_name": "Passkey-naam aanmaken",
+		"passkey_name_description": "Geef uw passkey een naam om deze te identificeren in uw wachtwoordbeheerder.",
+		"passkey_name": "Passkey-naam"
+	}
 }

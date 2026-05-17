@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Keresés",
-    "govern": "Kormányzás",
-    "menu": "Menü"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Pártok",
-        "elections": "Választások",
-        "referendums": "Népszavazások"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politikai pártok"
-        },
-        "elections": {
-          "title": "Tesztválasztások",
-          "subtitle": "Kísérletezzen a globális demokráciával"
-        },
-        "referendums": {
-          "title": "Alkotmányos Világnépszavazás",
-          "subtitle": "Szavazzon alapelveinkről"
-        }
-      },
-      "vote": {
-        "no_active_election": "A választás hamarosan kezdődik",
-        "test_verification": {
-          "description": "Próbálja ki ellenőrző rendszerünket most, hogy készen álljon a szavazásra",
-          "button": "Teszt"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Támogatások",
-          "ambassadors": "Nagykövetek"
-        },
-        "discover": "Felfedezés",
-        "search_placeholder": "Pártok keresése...",
-        "no_parties_found": "Nem található párt",
-        "error_loading": "Hiba történt a pártok betöltésekor",
-        "refresh": "Frissítés",
-        "party_details": "Párt részletei",
-        "share_party": "Párt megosztása",
-        "my_party": "Pártom",
-        "learn_more": "További információ",
-        "party_management": "Pártkezelés",
-        "edit_party_info": "Párt információk szerkesztése",
-        "dialogs": {
-          "party_name": "Párt neve",
-          "description_optional": "Leírás (opcionális)",
-          "official_link_optional": "Hivatalos link (opcionális)",
-          "updating": "Frissítés...",
-          "save": "Mentés",
-          "register_party": "Párt regisztrálása",
-          "register": "Regisztráció",
-          "registering": "Regisztráció...",
-          "leader_warning_register": "Jelenleg te vagy a(z) {partyName} vezetője. Új párt regisztrálása törli a jelenlegi pártodat.",
-          "deleting": "Törlés...",
-          "about_to_delete": "Éppen törölni készülsz a {partyName}-t. Ez a művelet nem vonható vissza.",
-          "about_to_register": "Új pártot fogsz alapítani."
-        },
-        "detail": {
-          "failed_to_load": "A párt adatok betöltése sikertelen",
-          "party_not_found": "Párt nem található",
-          "error_loading": "Hiba a párt betöltésekor",
-          "back_to_parties": "Vissza a pártokhoz",
-          "description": "Leírás",
-          "party_info": "Párt információk",
-          "leader": "Vezető",
-          "website": "Weboldal",
-          "not_found_description": "A keresett párt nem létezik vagy feloszlott."
-        },
-        "delete_party": "Párt törlése",
-        "run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat",
-        "ambassadors": {
-          "title": "Nagyköveti Program",
-          "description": "Hívd meg barátaidat, és szerezz jutalmat, amikor hitelesítik magukat, és amikor a pártjuk támogatást kap",
-          "leaderboard": "Ranglista",
-          "no_rewards_yet": "Még nincsenek jutalmak",
-          "col_ambassador": "Nagykövetek",
-          "col_invited": "Meghívottak",
-          "col_reward": "Jutalom",
-          "share_referral_link": "Ajánló link megosztása"
-        },
-        "subsidies": {
-          "title": "Párttámogatási Program",
-          "no_subsidies_yet": "Még nincsenek támogatások",
-          "description": "A választási teljesítményen alapuló finanszírozás",
-          "col_subsidy": "Támogatás"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Választás",
-          "not_found": "Választás nem található",
-          "not_found_description": "A keresett választás nem létezik.",
-          "back_to_elections": "Vissza a választásokhoz",
-          "status_active": "Aktív",
-          "status_upcoming": "Közelgő",
-          "status_ended": "Lezárult",
-          "election_info": "Választási információk",
-          "reward_pool": "Jutalmazási alap: {amount} WDD",
-          "reward_pool_minimum": "Jutalmazási alap: minimum {amount} WDD",
-          "choose_a_party": "Válasszon pártot",
-          "no_parties_for_election": "Nincsenek elérhető pártok ehhez a választáshoz.",
-          "results_title": "Eredmények",
-          "vote_singular": "szavazat",
-          "vote_plural": "szavazat",
-          "no_votes": "Ebben a választásban nem adtak le szavazatot.",
-          "test_election_name": "Tesztválasztás {n}"
-        },
-        "list": {
-          "empty_state": "Nem található választás",
-          "active_section": "Aktív választások",
-          "upcoming_section": "Következő választások",
-          "previous_section": "Korábbi választások"
-        }
-      }
-    },
-    "error": {
-      "title": "Valami hiba történt",
-      "description": "Váratlan hiba lépett fel. Kérjük, próbáld újra.",
-      "error_id": "Hiba azonosító: {digest}",
-      "try_again": "Próbáld újra"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Alapjövedelem",
-        "savings": "Megtakarítás"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Kapjon pénzt azért, mert ember",
-        "subtitle_claim": "Igényelje a drachmáját",
-        "tooltip_claim": "1 WDD/nap, maximum 1 WDD. Térjen vissza 24 órán belül a bevétel maximalizálásához.",
-        "claim_button": "Igényelés",
-        "alert": {
-          "claim": {
-            "title": "Igényelés megerősítése",
-            "description": "Ön {amount} WDD-t fog igényelni. Ez hozzáadódik a tárcaegyenlegéhez."
-          }
-        },
-        "setup_subtitle": "Állítsa be az alapjövedelmét",
-        "activate_loading": "Aktiválás...",
-        "activate_button": "Alapjövedelem aktiválása",
-        "world_drachma": "Mi az a világdrachma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Igényelje globális AI-osztalékát"
-      },
-      "savings": {
-        "title": "Megtakarítási számla",
-        "subtitle": "Keressen kamatot minden másodpercben",
-        "tooltip": "69% éves alapkamat. Gyűjtsön és újrabefektessen rendszeresen, hogy közel 100% éves hozamot érjen el. Bármikor kivonható.",
-        "deposit": "Betét",
-        "withdraw": "Kivonás",
-        "balance": "Egyenleg",
-        "amount_deposit": "Betéti összeg",
-        "amount_withdraw": "Kivonandó összeg",
-        "interest": "Kamat",
-        "collect": "Gyűjtés",
-        "alert": {
-          "collect": {
-            "title": "Gyűjtés megerősítése",
-            "description": "Ön {amount} WDD kamatot fog gyűjteni."
-          },
-          "deposit": {
-            "title": "Betét megerősítése",
-            "description": "Ön {amount} WDD-t fog betenni."
-          },
-          "withdraw": {
-            "title": "Kivonás megerősítése",
-            "description": "Ön {amount} WDD-t fog kivonni."
-          }
-        },
-        "smart_contract_link": "Okosszerződés megtekintése",
-        "verify": "Ellenőrzés"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "FIÓK",
-          "account_info": "Fiók információk",
-          "referral_code": "Ajánlókód",
-          "referred_by": "Meghívta",
-          "language": "Nyelv"
-        },
-        "help": {
-          "title": "SEGÍTSÉG",
-          "quickstart": "Gyorsindítás",
-          "docs": "Wiki",
-          "help_center": "Súgóközpont"
-        },
-        "source_code": {
-          "title": "FORRÁSKÓD"
-        },
-        "legal": {
-          "title": "JOGI",
-          "terms": "Használati feltételek",
-          "privacy": "Adatvédelmi irányelvek"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Tárca"
-      },
-      "balance": "Egyenleg",
-      "modals": {
-        "sign_out": {
-          "confirm": "Biztosan ki akar jelentkezni?"
-        },
-        "disconnect": {
-          "confirm": "Biztosan le szeretnéd választani a tárcádat?"
-        },
-        "send": {
-          "button": "Küldés",
-          "withdraw_to_crypto": {
-            "description": "WDD kivétele kripto számlára.",
-            "amount_label": "Összeg",
-            "address_label": "Számlacím",
-            "network_label": "Hálózat"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper-en",
-          "ethereum_uniswap": "Ethereum WDD Uniswap-on",
-          "base_jumper": "Base Chain WDD Jumper-en",
-          "base_uniswap": "Base Chain WDD Uniswap-on",
-          "worldchain_jumper": "World Chain WDD Jumper-en",
-          "worldchain_uniswap": "World Chain WDD Uniswap-on"
-        },
-        "delete_account": {
-          "description": "Ez véglegesen törölni fogja a fiókját és eltávolítja az összes adatát szervereinkről. Ez a művelet nem vonható vissza — kérjük, óvatosan járjon el.",
-          "deleting": "Törlés..."
-        },
-        "connect_wallet_browser": {
-          "title": "Megnyitás MetaMaskban",
-          "description": "A csatlakozáshoz másold ki ezt a linket, és nyisd meg a MetaMask beépített böngészőjében.",
-          "copy_link": "Link másolása"
-        },
-        "connect_wallet_picker": {
-          "description": "Több tárca található. Válassz egyet a csatlakozáshoz."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Nincs tárcád?",
-          "find_wallet_link": "Találj egyet a WalletGuide-on"
-        }
-      },
-      "sections": {
-        "account": "FIÓK",
-        "security": "BIZTONSÁG",
-        "google_account": "Google-fiók",
-        "google_not_linked": "Nincs összekapcsolva",
-        "passkeys": "Azonosítókulcsok",
-        "passkeys_linked": "{count} összekapcsolva",
-        "danger_zone": "VESZÉLYES ZÓNA",
-        "delete_account": {
-          "description": "Véglegesen távolítsa el az összes adatát"
-        },
-        "verification": "ELLENŐRZÉS",
-        "google_linked": "Összekapcsolva",
-        "account_label": "Fiók"
-      },
-      "username": {
-        "label": "Felhasználónév",
-        "edit_title": "Felhasználónév szerkesztése",
-        "description": "3-30 karakter, alfanumerikus, aláhúzás és kötőjelek"
-      },
-      "history": {
-        "title": "ELŐZMÉNYEK"
-      },
-      "transactions": {
-        "failed_to_load": "Betöltés sikertelen",
-        "no_transactions": "Még nincsenek tranzakciók",
-        "wdd_per_day": "WDD/nap",
-        "just_now": "Épp most",
-        "minutes_ago": "{minutes} perce",
-        "hours_ago": "{hours} órája",
-        "days_ago": "{days} napja",
-        "filter": {
-          "all_types": "Összes típus",
-          "select_type": "Típus kiválasztása",
-          "rewards": "Jutalmak"
-        },
-        "types": {
-          "withdrawal": "Kivétel",
-          "received": "Fogadva",
-          "sent": "Küldve",
-          "ambassador_reward": "Nagyköveti jutalom",
-          "party_subsidy": "Párttámogatás",
-          "stream_created": "Stream létrehozva",
-          "stream_updated": "Stream frissítve",
-          "savings_deposit": "Megtakarítás betét",
-          "savings_withdrawal": "Megtakarítás kivonás",
-          "savings_interest": "Megtakarítás kamat",
-          "referral_reward": "Ajánlási jutalom"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Olvasd be ezt a QR‑kódot a Selfes ellenőrzéshez.",
-        "mobile_dialog_description": "Átirányítunk a Self appba a hitelesítés elvégzéséhez.",
-        "support_telegram": "Self ügyfélszolgálat",
-        "verification_guide": "Hitelesítési útmutató",
-        "qr_alt": "Self hitelesítési QR",
-        "callback_warning": "Figyelmeztetés",
-        "callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre).",
-        "label": "Self",
-        "status_completed": "Ellenőrizve",
-        "status_not_completed": "Nincs ellenőrizve",
-        "learn_about_self": "Tudjon meg többet a Self-ről",
-        "primer": {
-          "title": "Self Protokoll",
-          "description": "Igazolja magát anélkül, hogy személyes adatokat fedne fel."
-        }
-      },
-      "verification_warning": {
-        "title": "Igazolás kérése",
-        "reward_cap_banner": "Az alapjövedelem- és megtakarítási jutalmak a nem ellenőrzött állampolgárok számára korlátozottak. A korlátlan keresethez igazold a fiókodat."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "A legtöbb pénztárca csak akkor jeleníti meg a WDD-t, miután azt manuálisan importálták a kiválasztott láncra a ",
-      "contract_address": "szerződési címével"
-    }
-  },
-  "toasts": {
-    "generic_error": "Hiba történt",
-    "copied": "Másolva",
-    "wallet": {
-      "no_wallet": "Nincs számlacím",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Elküldve",
-      "account_deleted": "Fiók törölve",
-      "delete_failed": "Fiók törlése sikertelen",
-      "contract_address_error": "Nem vonható ki szerződés címre",
-      "sign_out_failed": "A kijelentkezés sikertelen",
-      "google_linked": "Google-fiók összekapcsolva",
-      "google_already_linked": "A Google-fiók már össze van kapcsolva egy másik fiókkal",
-      "google_link_failed": "A Google összekapcsolás indítása sikertelen",
-      "passkey_added": "Azonosítókulcs hozzáadva",
-      "passkey_add_failed": "Azonosítókulcs hozzáadása sikertelen"
-    },
-    "parties": {
-      "updated": "Frissítve",
-      "update_failed": "Frissítés sikertelen",
-      "update_error": "Hiba a párt frissítésekor",
-      "registered": "Párt regisztrálva",
-      "register_failed": "Nem sikerült a párt regisztrációja",
-      "register_error": "Hiba a párt regisztrációjakor",
-      "deleted": "Törölve",
-      "delete_failed": "Sikertelen törlés",
-      "delete_error": "Hiba a törléskor"
-    },
-    "basic_income": {
-      "activated": "Alapjövedelem aktiválva",
-      "activate_failed": "Aktiválás sikertelen",
-      "claimed": "Igényelve",
-      "claim_failed": "Igényelés sikertelen"
-    },
-    "savings": {
-      "collected": "Összegyűjtve",
-      "collect_failed": "Gyűjtés sikertelen",
-      "deposited": "Betéve",
-      "deposit_failed": "Betét sikertelen",
-      "withdrawn": "Kivonva",
-      "withdraw_failed": "Kivonás sikertelen"
-    }
-  },
-  "common": {
-    "confirm": "Megerősítés",
-    "sign_in": "Bejelentkezés",
-    "connect": "Csatlakozás",
-    "disconnect": "Kapcsolat bontása",
-    "connect_wallet": "Tárca csatlakoztatása",
-    "max": "Max",
-    "loading": "Betöltés...",
-    "processing": "Feldolgozás...",
-    "insufficient_balance": "Elégtelen WDD",
-    "delete_account": "Fiók törlése",
-    "sign_out": "Kijelentkezés",
-    "invalid_address": "Érvénytelen cím",
-    "coming_soon": "Hamarosan",
-    "withdraw": "Kivonás",
-    "trade": "Kereskedés",
-    "continue": "Folytatás",
-    "close": "Bezárás",
-    "updating": "Frissítés...",
-    "save": "Mentés",
-    "vote": "Szavazás",
-    "switch_to_base_chain": "Váltás Base Chainre"
-  },
-  "auth": {
-    "choose_method": "Válassza ki az előnyben részesített módszert.",
-    "sign_in_with_google": "Folytatás Google-lal",
-    "sign_in_with_passkey": "Biometria használata",
-    "sign_in_or_create": "Hozzáférés a fiókjához passkey-vel, ujjlenyomat, arckép-szkennelés vagy képernyőzár használatával.",
-    "create_account": "Fiók létrehozása",
-    "create_passkey_name": "Passkey név létrehozása",
-    "passkey_name_description": "Nevezze el a passkey-t, hogy azonosítsa a jelszókezelőben.",
-    "passkey_name": "Passkey név"
-  }
+	"nav": {
+		"earn": "Keresés",
+		"govern": "Kormányzás",
+		"menu": "Menü"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Pártok",
+				"elections": "Választások",
+				"referendums": "Népszavazások"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politikai pártok"
+				},
+				"elections": {
+					"title": "Tesztválasztások",
+					"subtitle": "Kísérletezzen a globális demokráciával"
+				},
+				"referendums": {
+					"title": "Alkotmányos Világnépszavazás",
+					"subtitle": "Szavazzon alapelveinkről"
+				}
+			},
+			"vote": {
+				"no_active_election": "A választás hamarosan kezdődik",
+				"test_verification": {
+					"description": "Próbálja ki ellenőrző rendszerünket most, hogy készen álljon a szavazásra",
+					"button": "Teszt"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Támogatások",
+					"ambassadors": "Nagykövetek"
+				},
+				"discover": "Felfedezés",
+				"search_placeholder": "Pártok keresése...",
+				"no_parties_found": "Nem található párt",
+				"error_loading": "Hiba történt a pártok betöltésekor",
+				"refresh": "Frissítés",
+				"party_details": "Párt részletei",
+				"share_party": "Párt megosztása",
+				"my_party": "Pártom",
+				"learn_more": "További információ",
+				"party_management": "Pártkezelés",
+				"edit_party_info": "Párt információk szerkesztése",
+				"dialogs": {
+					"party_name": "Párt neve",
+					"description_optional": "Leírás (opcionális)",
+					"official_link_optional": "Hivatalos link (opcionális)",
+					"updating": "Frissítés...",
+					"save": "Mentés",
+					"register_party": "Párt regisztrálása",
+					"register": "Regisztráció",
+					"registering": "Regisztráció...",
+					"leader_warning_register": "Jelenleg te vagy a(z) {partyName} vezetője. Új párt regisztrálása törli a jelenlegi pártodat.",
+					"deleting": "Törlés...",
+					"about_to_delete": "Éppen törölni készülsz a {partyName}-t. Ez a művelet nem vonható vissza.",
+					"about_to_register": "Új pártot fogsz alapítani."
+				},
+				"detail": {
+					"failed_to_load": "A párt adatok betöltése sikertelen",
+					"party_not_found": "Párt nem található",
+					"error_loading": "Hiba a párt betöltésekor",
+					"back_to_parties": "Vissza a pártokhoz",
+					"description": "Leírás",
+					"party_info": "Párt információk",
+					"leader": "Vezető",
+					"website": "Weboldal",
+					"not_found_description": "A keresett párt nem létezik vagy feloszlott."
+				},
+				"delete_party": "Párt törlése",
+				"run_on_elections_and_earn": "Indulj választásokon és kapj támogatásokat",
+				"ambassadors": {
+					"title": "Nagyköveti Program",
+					"description": "Hívd meg barátaidat, és szerezz jutalmat, amikor hitelesítik magukat, és amikor a pártjuk támogatást kap",
+					"leaderboard": "Ranglista",
+					"no_rewards_yet": "Még nincsenek jutalmak",
+					"col_ambassador": "Nagykövetek",
+					"col_invited": "Meghívottak",
+					"col_reward": "Jutalom",
+					"share_referral_link": "Ajánló link megosztása"
+				},
+				"subsidies": {
+					"title": "Párttámogatási Program",
+					"no_subsidies_yet": "Még nincsenek támogatások",
+					"description": "A választási teljesítményen alapuló finanszírozás",
+					"col_subsidy": "Támogatás"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Választás",
+					"not_found": "Választás nem található",
+					"not_found_description": "A keresett választás nem létezik.",
+					"back_to_elections": "Vissza a választásokhoz",
+					"status_active": "Aktív",
+					"status_upcoming": "Közelgő",
+					"status_ended": "Lezárult",
+					"election_info": "Választási információk",
+					"reward_pool": "Jutalmazási alap: {amount} WDD",
+					"reward_pool_minimum": "Jutalmazási alap: minimum {amount} WDD",
+					"choose_a_party": "Válasszon pártot",
+					"no_parties_for_election": "Nincsenek elérhető pártok ehhez a választáshoz.",
+					"results_title": "Eredmények",
+					"vote_singular": "szavazat",
+					"vote_plural": "szavazat",
+					"no_votes": "Ebben a választásban nem adtak le szavazatot.",
+					"test_election_name": "Tesztválasztás {n}"
+				},
+				"list": {
+					"empty_state": "Nem található választás",
+					"active_section": "Aktív választások",
+					"upcoming_section": "Következő választások",
+					"previous_section": "Korábbi választások"
+				}
+			}
+		},
+		"error": {
+			"title": "Valami hiba történt",
+			"description": "Váratlan hiba lépett fel. Kérjük, próbáld újra.",
+			"error_id": "Hiba azonosító: {digest}",
+			"try_again": "Próbáld újra"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Alapjövedelem",
+				"savings": "Megtakarítás"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Kapjon pénzt azért, mert ember",
+				"subtitle_claim": "Igényelje a drachmáját",
+				"tooltip_claim": "1 WDD/nap, maximum 1 WDD. Térjen vissza 24 órán belül a bevétel maximalizálásához.",
+				"claim_button": "Igényelés",
+				"alert": {
+					"claim": {
+						"title": "Igényelés megerősítése",
+						"description": "Ön {amount} WDD-t fog igényelni. Ez hozzáadódik a tárcaegyenlegéhez."
+					}
+				},
+				"setup_subtitle": "Állítsa be az alapjövedelmét",
+				"activate_loading": "Aktiválás...",
+				"activate_button": "Alapjövedelem aktiválása",
+				"world_drachma": "Mi az a világdrachma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Igényelje globális AI-osztalékát"
+			},
+			"savings": {
+				"title": "Megtakarítási számla",
+				"subtitle": "Keressen kamatot minden másodpercben",
+				"tooltip": "69% éves alapkamat. Gyűjtsön és újrabefektessen rendszeresen, hogy közel 100% éves hozamot érjen el. Bármikor kivonható.",
+				"deposit": "Betét",
+				"withdraw": "Kivonás",
+				"balance": "Egyenleg",
+				"amount_deposit": "Betéti összeg",
+				"amount_withdraw": "Kivonandó összeg",
+				"interest": "Kamat",
+				"collect": "Gyűjtés",
+				"alert": {
+					"collect": {
+						"title": "Gyűjtés megerősítése",
+						"description": "Ön {amount} WDD kamatot fog gyűjteni."
+					},
+					"deposit": {
+						"title": "Betét megerősítése",
+						"description": "Ön {amount} WDD-t fog betenni."
+					},
+					"withdraw": {
+						"title": "Kivonás megerősítése",
+						"description": "Ön {amount} WDD-t fog kivonni."
+					}
+				},
+				"smart_contract_link": "Okosszerződés megtekintése",
+				"verify": "Ellenőrzés"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "FIÓK",
+					"account_info": "Fiók információk",
+					"referral_code": "Ajánlókód",
+					"referred_by": "Meghívta",
+					"language": "Nyelv"
+				},
+				"help": {
+					"title": "SEGÍTSÉG",
+					"quickstart": "Gyorsindítás",
+					"docs": "Wiki",
+					"help_center": "Súgóközpont"
+				},
+				"source_code": {
+					"title": "FORRÁSKÓD"
+				},
+				"legal": {
+					"title": "JOGI",
+					"terms": "Használati feltételek",
+					"privacy": "Adatvédelmi irányelvek"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Tárca"
+			},
+			"balance": "Egyenleg",
+			"modals": {
+				"sign_out": {
+					"confirm": "Biztosan ki akar jelentkezni?"
+				},
+				"disconnect": {
+					"confirm": "Biztosan le szeretnéd választani a tárcádat?"
+				},
+				"send": {
+					"button": "Küldés",
+					"withdraw_to_crypto": {
+						"description": "WDD kivétele kripto számlára.",
+						"amount_label": "Összeg",
+						"address_label": "Számlacím",
+						"network_label": "Hálózat"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper-en",
+					"ethereum_uniswap": "Ethereum WDD Uniswap-on",
+					"base_jumper": "Base Chain WDD Jumper-en",
+					"base_uniswap": "Base Chain WDD Uniswap-on",
+					"worldchain_jumper": "World Chain WDD Jumper-en",
+					"worldchain_uniswap": "World Chain WDD Uniswap-on"
+				},
+				"delete_account": {
+					"description": "Ez véglegesen törölni fogja a fiókját és eltávolítja az összes adatát szervereinkről. Ez a művelet nem vonható vissza — kérjük, óvatosan járjon el.",
+					"deleting": "Törlés..."
+				},
+				"connect_wallet_browser": {
+					"title": "Megnyitás MetaMaskban",
+					"description": "A csatlakozáshoz másold ki ezt a linket, és nyisd meg a MetaMask beépített böngészőjében.",
+					"copy_link": "Link másolása"
+				},
+				"connect_wallet_picker": {
+					"description": "Több tárca található. Válassz egyet a csatlakozáshoz."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Nincs tárcád?",
+					"find_wallet_link": "Találj egyet a WalletGuide-on"
+				}
+			},
+			"sections": {
+				"account": "FIÓK",
+				"security": "BIZTONSÁG",
+				"google_account": "Google-fiók",
+				"google_not_linked": "Nincs összekapcsolva",
+				"passkeys": "Azonosítókulcsok",
+				"passkeys_linked": "{count} összekapcsolva",
+				"danger_zone": "VESZÉLYES ZÓNA",
+				"delete_account": {
+					"description": "Véglegesen távolítsa el az összes adatát"
+				},
+				"verification": "ELLENŐRZÉS",
+				"google_linked": "Összekapcsolva",
+				"account_label": "Fiók"
+			},
+			"username": {
+				"label": "Felhasználónév",
+				"edit_title": "Felhasználónév szerkesztése",
+				"description": "3-30 karakter, alfanumerikus, aláhúzás és kötőjelek"
+			},
+			"history": {
+				"title": "ELŐZMÉNYEK"
+			},
+			"transactions": {
+				"failed_to_load": "Betöltés sikertelen",
+				"no_transactions": "Még nincsenek tranzakciók",
+				"wdd_per_day": "WDD/nap",
+				"just_now": "Épp most",
+				"minutes_ago": "{minutes} perce",
+				"hours_ago": "{hours} órája",
+				"days_ago": "{days} napja",
+				"filter": {
+					"all_types": "Összes típus",
+					"select_type": "Típus kiválasztása",
+					"rewards": "Jutalmak"
+				},
+				"types": {
+					"withdrawal": "Kivétel",
+					"received": "Fogadva",
+					"sent": "Küldve",
+					"ambassador_reward": "Nagyköveti jutalom",
+					"party_subsidy": "Párttámogatás",
+					"stream_created": "Stream létrehozva",
+					"stream_updated": "Stream frissítve",
+					"savings_deposit": "Megtakarítás betét",
+					"savings_withdrawal": "Megtakarítás kivonás",
+					"savings_interest": "Megtakarítás kamat",
+					"referral_reward": "Ajánlási jutalom"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Olvasd be ezt a QR‑kódot a Selfes ellenőrzéshez.",
+				"mobile_dialog_description": "Átirányítunk a Self appba a hitelesítés elvégzéséhez.",
+				"support_telegram": "Self ügyfélszolgálat",
+				"verification_guide": "Hitelesítési útmutató",
+				"qr_alt": "Self hitelesítési QR",
+				"callback_warning": "Figyelmeztetés",
+				"callback_warning_description": "A hitelesítési visszahívási URL nem elérhető a telefonodról. Állítsd a NEXT_PUBLIC_SELF_CALLBACK-et egy nyilvános URL-re (vagy állítsd a NEXT_PUBLIC_PUBLIC_BASE_URL-t egy tunnel/előnézeti domainre).",
+				"label": "Self",
+				"status_completed": "Ellenőrizve",
+				"status_not_completed": "Nincs ellenőrizve",
+				"learn_about_self": "Tudjon meg többet a Self-ről",
+				"primer": {
+					"title": "Self Protokoll",
+					"description": "Igazolja magát anélkül, hogy személyes adatokat fedne fel."
+				}
+			},
+			"verification_warning": {
+				"title": "Igazolás kérése",
+				"reward_cap_banner": "Az alapjövedelem- és megtakarítási jutalmak a nem ellenőrzött állampolgárok számára korlátozottak. A korlátlan keresethez igazold a fiókodat."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "A legtöbb pénztárca csak akkor jeleníti meg a WDD-t, miután azt manuálisan importálták a kiválasztott láncra a ",
+			"contract_address": "szerződési címével"
+		}
+	},
+	"toasts": {
+		"generic_error": "Hiba történt",
+		"copied": "Másolva",
+		"wallet": {
+			"no_wallet": "Nincs számlacím",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Elküldve",
+			"account_deleted": "Fiók törölve",
+			"delete_failed": "Fiók törlése sikertelen",
+			"contract_address_error": "Nem vonható ki szerződés címre",
+			"sign_out_failed": "A kijelentkezés sikertelen",
+			"google_linked": "Google-fiók összekapcsolva",
+			"google_already_linked": "A Google-fiók már össze van kapcsolva egy másik fiókkal",
+			"google_link_failed": "A Google összekapcsolás indítása sikertelen",
+			"passkey_added": "Azonosítókulcs hozzáadva",
+			"passkey_add_failed": "Azonosítókulcs hozzáadása sikertelen"
+		},
+		"parties": {
+			"updated": "Frissítve",
+			"update_failed": "Frissítés sikertelen",
+			"update_error": "Hiba a párt frissítésekor",
+			"registered": "Párt regisztrálva",
+			"register_failed": "Nem sikerült a párt regisztrációja",
+			"register_error": "Hiba a párt regisztrációjakor",
+			"deleted": "Törölve",
+			"delete_failed": "Sikertelen törlés",
+			"delete_error": "Hiba a törléskor"
+		},
+		"basic_income": {
+			"activated": "Alapjövedelem aktiválva",
+			"activate_failed": "Aktiválás sikertelen",
+			"claimed": "Igényelve",
+			"claim_failed": "Igényelés sikertelen"
+		},
+		"savings": {
+			"collected": "Összegyűjtve",
+			"collect_failed": "Gyűjtés sikertelen",
+			"deposited": "Betéve",
+			"deposit_failed": "Betét sikertelen",
+			"withdrawn": "Kivonva",
+			"withdraw_failed": "Kivonás sikertelen"
+		}
+	},
+	"common": {
+		"confirm": "Megerősítés",
+		"sign_in": "Bejelentkezés",
+		"connect": "Csatlakozás",
+		"disconnect": "Kapcsolat bontása",
+		"connect_wallet": "Tárca csatlakoztatása",
+		"max": "Max",
+		"loading": "Betöltés...",
+		"processing": "Feldolgozás...",
+		"insufficient_balance": "Elégtelen WDD",
+		"delete_account": "Fiók törlése",
+		"sign_out": "Kijelentkezés",
+		"invalid_address": "Érvénytelen cím",
+		"coming_soon": "Hamarosan",
+		"withdraw": "Kivonás",
+		"trade": "Kereskedés",
+		"continue": "Folytatás",
+		"close": "Bezárás",
+		"updating": "Frissítés...",
+		"save": "Mentés",
+		"vote": "Szavazás",
+		"switch_to_base_chain": "Váltás Base Chainre"
+	},
+	"auth": {
+		"choose_method": "Válassza ki az előnyben részesített módszert.",
+		"sign_in_with_google": "Folytatás Google-lal",
+		"sign_in_with_passkey": "Biometria használata",
+		"sign_in_or_create": "Hozzáférés a fiókjához passkey-vel, ujjlenyomat, arckép-szkennelés vagy képernyőzár használatával.",
+		"create_account": "Fiók létrehozása",
+		"create_passkey_name": "Passkey név létrehozása",
+		"passkey_name_description": "Nevezze el a passkey-t, hogy azonosítsa a jelszókezelőben.",
+		"passkey_name": "Passkey név"
+	}
 }

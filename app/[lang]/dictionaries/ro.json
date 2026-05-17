@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Câştigă",
-    "govern": "Guvernează",
-    "menu": "Meniu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partide",
-        "elections": "Alegeri",
-        "referendums": "Referendumuri"
-      },
-      "sections": {
-        "parties": {
-          "title": "Partide politice"
-        },
-        "elections": {
-          "title": "Alegeri de test",
-          "subtitle": "Experimentează cu democrația globală"
-        },
-        "referendums": {
-          "title": "Referendum Constituțional Mondial",
-          "subtitle": "Votează pentru principiile noastre fundamentale"
-        }
-      },
-      "vote": {
-        "no_active_election": "Alegerile încep în curând",
-        "test_verification": {
-          "description": "Încercați sistemul nostru de verificare acum pentru a fi pregătiți de vot",
-          "button": "Test"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subvenții",
-          "ambassadors": "Ambasadori"
-        },
-        "discover": "Descoperă",
-        "search_placeholder": "Caută partide...",
-        "no_parties_found": "Nu s-au găsit partide",
-        "error_loading": "Nu s-a reușit încărcarea partidelor",
-        "refresh": "Actualizează",
-        "party_details": "Detalii partid",
-        "share_party": "Distribuie partidul",
-        "my_party": "Partidul meu",
-        "learn_more": "Află mai multe",
-        "party_management": "Gestionarea partidului",
-        "edit_party_info": "Editează informațiile partidului",
-        "dialogs": {
-          "party_name": "Numele partidului",
-          "description_optional": "Descriere (opțional)",
-          "official_link_optional": "Link oficial (opțional)",
-          "updating": "Actualizare...",
-          "save": "Salvează",
-          "register_party": "Înregistrați un partid",
-          "register": "Înregistrare",
-          "registering": "Se înregistrează...",
-          "leader_warning_register": "Sunteți momentan liderul {partyName}. Înregistrarea unui partid nou va șterge partidul dvs. actual.",
-          "deleting": "Se șterge...",
-          "about_to_delete": "Ești pe cale să ștergi {partyName}. Această acțiune nu poate fi anulată.",
-          "about_to_register": "Ești pe punctul de a fonda un partid nou."
-        },
-        "detail": {
-          "failed_to_load": "Eșec la încărcarea datelor partidului",
-          "party_not_found": "Partid negăsit",
-          "error_loading": "Eroare la încărcarea partidului",
-          "back_to_parties": "Înapoi la partide",
-          "description": "Descriere",
-          "party_info": "Informații partid",
-          "leader": "Lider",
-          "website": "Site web",
-          "not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
-        },
-        "delete_party": "Șterge partidul",
-        "run_on_elections_and_earn": "Candidează la alegeri și primește subvenții",
-        "ambassadors": {
-          "title": "Programul Ambasadorilor",
-          "description": "Invită prieteni și câștigă recompense când sunt verificați și când partidul lor primește subvenții",
-          "leaderboard": "Clasament",
-          "no_rewards_yet": "Încă nu există recompense",
-          "col_ambassador": "Ambasadori",
-          "col_invited": "Invitați",
-          "col_reward": "Recompensă",
-          "share_referral_link": "Partajează linkul de recomandare"
-        },
-        "subsidies": {
-          "title": "Programul de Subvenții pentru Partide",
-          "no_subsidies_yet": "Încă nu există subvenții",
-          "description": "Finanțare bazată pe performanța electorală",
-          "col_subsidy": "Subvenție"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Alegeri",
-          "not_found": "Alegerile nu au fost găsite",
-          "not_found_description": "Alegerile pe care le căutați nu există.",
-          "back_to_elections": "Înapoi la alegeri",
-          "status_active": "Active",
-          "status_upcoming": "Viitoare",
-          "status_ended": "Încheiate",
-          "election_info": "Informații despre alegeri",
-          "reward_pool": "Fond de recompense: {amount} WDD",
-          "reward_pool_minimum": "Fond de recompense: minim {amount} WDD",
-          "choose_a_party": "Alegeți un partid",
-          "no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri.",
-          "results_title": "Rezultate",
-          "vote_singular": "vot",
-          "vote_plural": "voturi",
-          "no_votes": "Nu au fost exprimate voturi în această alegere.",
-          "test_election_name": "Alegere de test {n}"
-        },
-        "list": {
-          "empty_state": "Nu s-au găsit alegeri",
-          "active_section": "Alegeri active",
-          "upcoming_section": "Alegeri viitoare",
-          "previous_section": "Alegeri anterioare"
-        }
-      }
-    },
-    "error": {
-      "title": "Ceva nu a mers bine",
-      "description": "A apărut o eroare neașteptată. Te rugăm să încerci din nou.",
-      "error_id": "ID eroare: {digest}",
-      "try_again": "Încearcă din nou"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Venit de bază",
-        "savings": "Economii"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Primește bani pentru că ești om",
-        "subtitle_claim": "Încasează-ți drahma",
-        "tooltip_claim": "1 WDD/zi, limitat la 1 WDD. Revino în 24 de ore pentru a maximiza câştigurile.",
-        "claim_button": "Încasează",
-        "alert": {
-          "claim": {
-            "title": "Confirmă încasarea",
-            "description": "Ești pe cale să încasezi {amount} WDD. Aceasta va fi adăugată la soldul portofelului tău."
-          }
-        },
-        "setup_subtitle": "Configurează-ți venitul de bază",
-        "activate_loading": "Se activează...",
-        "activate_button": "Activează venitul de bază",
-        "world_drachma": "Ce este drahma mondială (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Încasează-ți dividendul AI global"
-      },
-      "savings": {
-        "title": "Cont de economii",
-        "subtitle": "Câştigă dobândă în fiecare secundă",
-        "tooltip": "Rata anuală de bază 69%. Colectează și reinvestește regulat pentru a obține randamente efective aproape de 100%. Retrage oricând.",
-        "deposit": "Depune",
-        "withdraw": "Retrage",
-        "balance": "Sold",
-        "amount_deposit": "Suma de depus",
-        "amount_withdraw": "Suma de retras",
-        "interest": "Dobândă",
-        "collect": "Colectează",
-        "alert": {
-          "collect": {
-            "title": "Confirmă colectarea",
-            "description": "Ești pe cale să colectezi {amount} WDD ca dobândă."
-          },
-          "deposit": {
-            "title": "Confirmă depunerea",
-            "description": "Ești pe cale să depui {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Confirmă retragerea",
-            "description": "Ești pe cale să retragi {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Vezi contract inteligent",
-        "verify": "Verifică"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "CONT",
-          "account_info": "Informații cont",
-          "referral_code": "Cod de recomandare",
-          "referred_by": "Recomandat de",
-          "language": "Limbă"
-        },
-        "help": {
-          "title": "AJUTOR",
-          "quickstart": "Start rapid",
-          "docs": "Wiki",
-          "help_center": "Centru de Ajutor"
-        },
-        "source_code": {
-          "title": "COD SURSĂ"
-        },
-        "legal": {
-          "title": "LEGAL",
-          "terms": "Termeni și condiții",
-          "privacy": "Politica de confidențialitate"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Portofel"
-      },
-      "balance": "Sold",
-      "modals": {
-        "sign_out": {
-          "confirm": "Ești sigur că vrei să te deconectezi?"
-        },
-        "disconnect": {
-          "confirm": "Sigur doriți să deconectați portofelul?"
-        },
-        "send": {
-          "button": "Trimite",
-          "withdraw_to_crypto": {
-            "description": "Retrageți WDD pe un cont crypto.",
-            "amount_label": "Suma",
-            "address_label": "Adresa portofel",
-            "network_label": "Rețea"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD pe Jumper",
-          "ethereum_uniswap": "Ethereum WDD pe Uniswap",
-          "base_jumper": "Base Chain WDD pe Jumper",
-          "base_uniswap": "Base Chain WDD pe Uniswap",
-          "worldchain_jumper": "World Chain WDD pe Jumper",
-          "worldchain_uniswap": "World Chain WDD pe Uniswap"
-        },
-        "delete_account": {
-          "description": "Aceasta va șterge definitiv contul tău și va elimina toate datele tale de pe serverele noastre. Această acțiune nu poate fi anulată — te rugăm să continui cu precauție.",
-          "deleting": "Se șterge..."
-        },
-        "connect_wallet_browser": {
-          "title": "Deschide în MetaMask",
-          "description": "Pentru conectare, copiază acest link și deschide-l în browserul integrat MetaMask.",
-          "copy_link": "Copiază linkul"
-        },
-        "connect_wallet_picker": {
-          "description": "Au fost găsite mai multe portofele. Selectează unul pentru conectare."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Nu ai un portofel?",
-          "find_wallet_link": "Găsește unul pe WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "CONT",
-        "security": "SECURITATE",
-        "google_account": "Cont Google",
-        "google_not_linked": "Nelinkuit",
-        "passkeys": "Chei de acces",
-        "passkeys_linked": "{count} linkuite",
-        "danger_zone": "ZONĂ DE PERICOL",
-        "delete_account": {
-          "description": "Eliminați permanent toate datele dvs."
-        },
-        "verification": "VERIFICARE",
-        "google_linked": "Linkuit",
-        "account_label": "Cont"
-      },
-      "username": {
-        "label": "Nume de utilizator",
-        "edit_title": "Editează numele de utilizator",
-        "description": "3-30 caractere, alfanumerice, subliniere și cratime"
-      },
-      "history": {
-        "title": "ISTORIC"
-      },
-      "transactions": {
-        "failed_to_load": "Încărcare eșuată",
-        "no_transactions": "Încă nu există tranzacții",
-        "wdd_per_day": "WDD/zi",
-        "just_now": "Chiar acum",
-        "minutes_ago": "acum {minutes}min",
-        "hours_ago": "acum {hours}ore",
-        "days_ago": "acum {days}zile",
-        "filter": {
-          "all_types": "Toate tipurile",
-          "select_type": "Selectați tipul",
-          "rewards": "Recompense"
-        },
-        "types": {
-          "withdrawal": "Retragere",
-          "received": "Primit",
-          "sent": "Trimis",
-          "ambassador_reward": "Recompensă ambasador",
-          "party_subsidy": "Subvenție partid",
-          "stream_created": "Flux creat",
-          "stream_updated": "Flux actualizat",
-          "savings_deposit": "Economii depune",
-          "savings_withdrawal": "Economii retrage",
-          "savings_interest": "Economii dobândă",
-          "referral_reward": "Recompensă de recomandare"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
-        "mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a efectua verificarea.",
-        "support_telegram": "Suport Self",
-        "verification_guide": "Ghid de verificare",
-        "qr_alt": "QR de verificare Self",
-        "callback_warning": "Avertisment",
-        "callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare).",
-        "label": "Self",
-        "status_completed": "Verificat",
-        "status_not_completed": "Neverificat",
-        "learn_about_self": "Aflați despre Self",
-        "primer": {
-          "title": "Self Protocol",
-          "description": "Obțineți verificare fără a dezvălui date personale."
-        }
-      },
-      "verification_warning": {
-        "title": "Obțineți verificarea",
-        "reward_cap_banner": "Recompensele pentru venitul de bază și economii sunt limitate pentru cetățenii neverificați. Verifică-ți contul pentru a câștiga fără limite."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Majoritatea portofelelor afișează WDD doar după ce este importat manual pe lanțul selectat prin ",
-      "contract_address": "adresa contractului"
-    }
-  },
-  "toasts": {
-    "generic_error": "A apărut o eroare",
-    "copied": "Copiat",
-    "wallet": {
-      "no_wallet": "Fără adresă de portofel",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Trimis",
-      "account_deleted": "Cont șters",
-      "delete_failed": "Ștergerea contului a eșuat",
-      "contract_address_error": "Nu se poate retrage către adresa de contract",
-      "sign_out_failed": "Deconectarea a eșuat",
-      "google_linked": "Contul Google a fost linkuit",
-      "google_already_linked": "Contul Google este deja linkuit la un alt cont",
-      "google_link_failed": "Nu s-a putut începe linkuirea Google",
-      "passkey_added": "Cheia de acces a fost adăugată",
-      "passkey_add_failed": "Nu s-a putut adăuga cheia de acces"
-    },
-    "parties": {
-      "updated": "Actualizat",
-      "update_failed": "Actualizarea a eșuat",
-      "update_error": "Eroare la actualizarea partidului",
-      "registered": "Partid înregistrat",
-      "register_failed": "Nu s-a putut înregistra partidul",
-      "register_error": "Eroare la înregistrarea partidului",
-      "deleted": "Șters",
-      "delete_failed": "Nu s-a putut șterge",
-      "delete_error": "Eroare la ștergere"
-    },
-    "basic_income": {
-      "activated": "Venitul de bază activat",
-      "activate_failed": "Activarea a eșuat",
-      "claimed": "Încasat",
-      "claim_failed": "Încasarea a eșuat"
-    },
-    "savings": {
-      "collected": "Colectat",
-      "collect_failed": "Colectarea a eșuat",
-      "deposited": "Depus",
-      "deposit_failed": "Depunerea a eșuat",
-      "withdrawn": "Retras",
-      "withdraw_failed": "Retragerea a eșuat"
-    }
-  },
-  "common": {
-    "confirm": "Confirmă",
-    "sign_in": "Conectare",
-    "connect": "Conectează",
-    "disconnect": "Deconectează",
-    "connect_wallet": "Conectează portofelul",
-    "max": "Max",
-    "loading": "Se încarcă...",
-    "processing": "Se procesează...",
-    "insufficient_balance": "WDD insuficient",
-    "delete_account": "Șterge contul",
-    "sign_out": "Deconectare",
-    "invalid_address": "Adresă invalidă",
-    "coming_soon": "În curând",
-    "withdraw": "Retragere",
-    "trade": "Tranzacționare",
-    "continue": "Continuă",
-    "close": "Închide",
-    "updating": "Actualizare...",
-    "save": "Salvează",
-    "vote": "Votează",
-    "switch_to_base_chain": "Comută la Base Chain"
-  },
-  "auth": {
-    "choose_method": "Alegeți metoda preferată.",
-    "sign_in_with_google": "Continuați cu Google",
-    "sign_in_with_passkey": "Folosiți biometria",
-    "sign_in_or_create": "Accesați contul dvs. cu o passkey, folosind amprenta, scanarea feței sau blocarea ecranului.",
-    "create_account": "Creează cont",
-    "create_passkey_name": "Creează un nume de passkey",
-    "passkey_name_description": "Denumiți-vă passkey-ul pentru a-l identifica în managerul de parole.",
-    "passkey_name": "Nume passkey"
-  }
+	"nav": {
+		"earn": "Câştigă",
+		"govern": "Guvernează",
+		"menu": "Meniu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partide",
+				"elections": "Alegeri",
+				"referendums": "Referendumuri"
+			},
+			"sections": {
+				"parties": {
+					"title": "Partide politice"
+				},
+				"elections": {
+					"title": "Alegeri de test",
+					"subtitle": "Experimentează cu democrația globală"
+				},
+				"referendums": {
+					"title": "Referendum Constituțional Mondial",
+					"subtitle": "Votează pentru principiile noastre fundamentale"
+				}
+			},
+			"vote": {
+				"no_active_election": "Alegerile încep în curând",
+				"test_verification": {
+					"description": "Încercați sistemul nostru de verificare acum pentru a fi pregătiți de vot",
+					"button": "Test"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subvenții",
+					"ambassadors": "Ambasadori"
+				},
+				"discover": "Descoperă",
+				"search_placeholder": "Caută partide...",
+				"no_parties_found": "Nu s-au găsit partide",
+				"error_loading": "Nu s-a reușit încărcarea partidelor",
+				"refresh": "Actualizează",
+				"party_details": "Detalii partid",
+				"share_party": "Distribuie partidul",
+				"my_party": "Partidul meu",
+				"learn_more": "Află mai multe",
+				"party_management": "Gestionarea partidului",
+				"edit_party_info": "Editează informațiile partidului",
+				"dialogs": {
+					"party_name": "Numele partidului",
+					"description_optional": "Descriere (opțional)",
+					"official_link_optional": "Link oficial (opțional)",
+					"updating": "Actualizare...",
+					"save": "Salvează",
+					"register_party": "Înregistrați un partid",
+					"register": "Înregistrare",
+					"registering": "Se înregistrează...",
+					"leader_warning_register": "Sunteți momentan liderul {partyName}. Înregistrarea unui partid nou va șterge partidul dvs. actual.",
+					"deleting": "Se șterge...",
+					"about_to_delete": "Ești pe cale să ștergi {partyName}. Această acțiune nu poate fi anulată.",
+					"about_to_register": "Ești pe punctul de a fonda un partid nou."
+				},
+				"detail": {
+					"failed_to_load": "Eșec la încărcarea datelor partidului",
+					"party_not_found": "Partid negăsit",
+					"error_loading": "Eroare la încărcarea partidului",
+					"back_to_parties": "Înapoi la partide",
+					"description": "Descriere",
+					"party_info": "Informații partid",
+					"leader": "Lider",
+					"website": "Site web",
+					"not_found_description": "Partidul pe care îl cauți nu există sau a fost desființat."
+				},
+				"delete_party": "Șterge partidul",
+				"run_on_elections_and_earn": "Candidează la alegeri și primește subvenții",
+				"ambassadors": {
+					"title": "Programul Ambasadorilor",
+					"description": "Invită prieteni și câștigă recompense când sunt verificați și când partidul lor primește subvenții",
+					"leaderboard": "Clasament",
+					"no_rewards_yet": "Încă nu există recompense",
+					"col_ambassador": "Ambasadori",
+					"col_invited": "Invitați",
+					"col_reward": "Recompensă",
+					"share_referral_link": "Partajează linkul de recomandare"
+				},
+				"subsidies": {
+					"title": "Programul de Subvenții pentru Partide",
+					"no_subsidies_yet": "Încă nu există subvenții",
+					"description": "Finanțare bazată pe performanța electorală",
+					"col_subsidy": "Subvenție"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Alegeri",
+					"not_found": "Alegerile nu au fost găsite",
+					"not_found_description": "Alegerile pe care le căutați nu există.",
+					"back_to_elections": "Înapoi la alegeri",
+					"status_active": "Active",
+					"status_upcoming": "Viitoare",
+					"status_ended": "Încheiate",
+					"election_info": "Informații despre alegeri",
+					"reward_pool": "Fond de recompense: {amount} WDD",
+					"reward_pool_minimum": "Fond de recompense: minim {amount} WDD",
+					"choose_a_party": "Alegeți un partid",
+					"no_parties_for_election": "Nu există partide disponibile pentru aceste alegeri.",
+					"results_title": "Rezultate",
+					"vote_singular": "vot",
+					"vote_plural": "voturi",
+					"no_votes": "Nu au fost exprimate voturi în această alegere.",
+					"test_election_name": "Alegere de test {n}"
+				},
+				"list": {
+					"empty_state": "Nu s-au găsit alegeri",
+					"active_section": "Alegeri active",
+					"upcoming_section": "Alegeri viitoare",
+					"previous_section": "Alegeri anterioare"
+				}
+			}
+		},
+		"error": {
+			"title": "Ceva nu a mers bine",
+			"description": "A apărut o eroare neașteptată. Te rugăm să încerci din nou.",
+			"error_id": "ID eroare: {digest}",
+			"try_again": "Încearcă din nou"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Venit de bază",
+				"savings": "Economii"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Primește bani pentru că ești om",
+				"subtitle_claim": "Încasează-ți drahma",
+				"tooltip_claim": "1 WDD/zi, limitat la 1 WDD. Revino în 24 de ore pentru a maximiza câştigurile.",
+				"claim_button": "Încasează",
+				"alert": {
+					"claim": {
+						"title": "Confirmă încasarea",
+						"description": "Ești pe cale să încasezi {amount} WDD. Aceasta va fi adăugată la soldul portofelului tău."
+					}
+				},
+				"setup_subtitle": "Configurează-ți venitul de bază",
+				"activate_loading": "Se activează...",
+				"activate_button": "Activează venitul de bază",
+				"world_drachma": "Ce este drahma mondială (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Încasează-ți dividendul AI global"
+			},
+			"savings": {
+				"title": "Cont de economii",
+				"subtitle": "Câştigă dobândă în fiecare secundă",
+				"tooltip": "Rata anuală de bază 69%. Colectează și reinvestește regulat pentru a obține randamente efective aproape de 100%. Retrage oricând.",
+				"deposit": "Depune",
+				"withdraw": "Retrage",
+				"balance": "Sold",
+				"amount_deposit": "Suma de depus",
+				"amount_withdraw": "Suma de retras",
+				"interest": "Dobândă",
+				"collect": "Colectează",
+				"alert": {
+					"collect": {
+						"title": "Confirmă colectarea",
+						"description": "Ești pe cale să colectezi {amount} WDD ca dobândă."
+					},
+					"deposit": {
+						"title": "Confirmă depunerea",
+						"description": "Ești pe cale să depui {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Confirmă retragerea",
+						"description": "Ești pe cale să retragi {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Vezi contract inteligent",
+				"verify": "Verifică"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "CONT",
+					"account_info": "Informații cont",
+					"referral_code": "Cod de recomandare",
+					"referred_by": "Recomandat de",
+					"language": "Limbă"
+				},
+				"help": {
+					"title": "AJUTOR",
+					"quickstart": "Start rapid",
+					"docs": "Wiki",
+					"help_center": "Centru de Ajutor"
+				},
+				"source_code": {
+					"title": "COD SURSĂ"
+				},
+				"legal": {
+					"title": "LEGAL",
+					"terms": "Termeni și condiții",
+					"privacy": "Politica de confidențialitate"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Portofel"
+			},
+			"balance": "Sold",
+			"modals": {
+				"sign_out": {
+					"confirm": "Ești sigur că vrei să te deconectezi?"
+				},
+				"disconnect": {
+					"confirm": "Sigur doriți să deconectați portofelul?"
+				},
+				"send": {
+					"button": "Trimite",
+					"withdraw_to_crypto": {
+						"description": "Retrageți WDD pe un cont crypto.",
+						"amount_label": "Suma",
+						"address_label": "Adresa portofel",
+						"network_label": "Rețea"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD pe Jumper",
+					"ethereum_uniswap": "Ethereum WDD pe Uniswap",
+					"base_jumper": "Base Chain WDD pe Jumper",
+					"base_uniswap": "Base Chain WDD pe Uniswap",
+					"worldchain_jumper": "World Chain WDD pe Jumper",
+					"worldchain_uniswap": "World Chain WDD pe Uniswap"
+				},
+				"delete_account": {
+					"description": "Aceasta va șterge definitiv contul tău și va elimina toate datele tale de pe serverele noastre. Această acțiune nu poate fi anulată — te rugăm să continui cu precauție.",
+					"deleting": "Se șterge..."
+				},
+				"connect_wallet_browser": {
+					"title": "Deschide în MetaMask",
+					"description": "Pentru conectare, copiază acest link și deschide-l în browserul integrat MetaMask.",
+					"copy_link": "Copiază linkul"
+				},
+				"connect_wallet_picker": {
+					"description": "Au fost găsite mai multe portofele. Selectează unul pentru conectare."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Nu ai un portofel?",
+					"find_wallet_link": "Găsește unul pe WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "CONT",
+				"security": "SECURITATE",
+				"google_account": "Cont Google",
+				"google_not_linked": "Nelinkuit",
+				"passkeys": "Chei de acces",
+				"passkeys_linked": "{count} linkuite",
+				"danger_zone": "ZONĂ DE PERICOL",
+				"delete_account": {
+					"description": "Eliminați permanent toate datele dvs."
+				},
+				"verification": "VERIFICARE",
+				"google_linked": "Linkuit",
+				"account_label": "Cont"
+			},
+			"username": {
+				"label": "Nume de utilizator",
+				"edit_title": "Editează numele de utilizator",
+				"description": "3-30 caractere, alfanumerice, subliniere și cratime"
+			},
+			"history": {
+				"title": "ISTORIC"
+			},
+			"transactions": {
+				"failed_to_load": "Încărcare eșuată",
+				"no_transactions": "Încă nu există tranzacții",
+				"wdd_per_day": "WDD/zi",
+				"just_now": "Chiar acum",
+				"minutes_ago": "acum {minutes}min",
+				"hours_ago": "acum {hours}ore",
+				"days_ago": "acum {days}zile",
+				"filter": {
+					"all_types": "Toate tipurile",
+					"select_type": "Selectați tipul",
+					"rewards": "Recompense"
+				},
+				"types": {
+					"withdrawal": "Retragere",
+					"received": "Primit",
+					"sent": "Trimis",
+					"ambassador_reward": "Recompensă ambasador",
+					"party_subsidy": "Subvenție partid",
+					"stream_created": "Flux creat",
+					"stream_updated": "Flux actualizat",
+					"savings_deposit": "Economii depune",
+					"savings_withdrawal": "Economii retrage",
+					"savings_interest": "Economii dobândă",
+					"referral_reward": "Recompensă de recomandare"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Scanează acest cod QR pentru a te verifica cu Self.",
+				"mobile_dialog_description": "Vei fi redirecționat către aplicația Self pentru a efectua verificarea.",
+				"support_telegram": "Suport Self",
+				"verification_guide": "Ghid de verificare",
+				"qr_alt": "QR de verificare Self",
+				"callback_warning": "Avertisment",
+				"callback_warning_description": "URL-ul de callback al verificării nu este accesibil de pe telefonul tău. Setează NEXT_PUBLIC_SELF_CALLBACK la un URL public (sau setează NEXT_PUBLIC_PUBLIC_BASE_URL la un domeniu de tunel/previzualizare).",
+				"label": "Self",
+				"status_completed": "Verificat",
+				"status_not_completed": "Neverificat",
+				"learn_about_self": "Aflați despre Self",
+				"primer": {
+					"title": "Self Protocol",
+					"description": "Obțineți verificare fără a dezvălui date personale."
+				}
+			},
+			"verification_warning": {
+				"title": "Obțineți verificarea",
+				"reward_cap_banner": "Recompensele pentru venitul de bază și economii sunt limitate pentru cetățenii neverificați. Verifică-ți contul pentru a câștiga fără limite."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Majoritatea portofelelor afișează WDD doar după ce este importat manual pe lanțul selectat prin ",
+			"contract_address": "adresa contractului"
+		}
+	},
+	"toasts": {
+		"generic_error": "A apărut o eroare",
+		"copied": "Copiat",
+		"wallet": {
+			"no_wallet": "Fără adresă de portofel",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Trimis",
+			"account_deleted": "Cont șters",
+			"delete_failed": "Ștergerea contului a eșuat",
+			"contract_address_error": "Nu se poate retrage către adresa de contract",
+			"sign_out_failed": "Deconectarea a eșuat",
+			"google_linked": "Contul Google a fost linkuit",
+			"google_already_linked": "Contul Google este deja linkuit la un alt cont",
+			"google_link_failed": "Nu s-a putut începe linkuirea Google",
+			"passkey_added": "Cheia de acces a fost adăugată",
+			"passkey_add_failed": "Nu s-a putut adăuga cheia de acces"
+		},
+		"parties": {
+			"updated": "Actualizat",
+			"update_failed": "Actualizarea a eșuat",
+			"update_error": "Eroare la actualizarea partidului",
+			"registered": "Partid înregistrat",
+			"register_failed": "Nu s-a putut înregistra partidul",
+			"register_error": "Eroare la înregistrarea partidului",
+			"deleted": "Șters",
+			"delete_failed": "Nu s-a putut șterge",
+			"delete_error": "Eroare la ștergere"
+		},
+		"basic_income": {
+			"activated": "Venitul de bază activat",
+			"activate_failed": "Activarea a eșuat",
+			"claimed": "Încasat",
+			"claim_failed": "Încasarea a eșuat"
+		},
+		"savings": {
+			"collected": "Colectat",
+			"collect_failed": "Colectarea a eșuat",
+			"deposited": "Depus",
+			"deposit_failed": "Depunerea a eșuat",
+			"withdrawn": "Retras",
+			"withdraw_failed": "Retragerea a eșuat"
+		}
+	},
+	"common": {
+		"confirm": "Confirmă",
+		"sign_in": "Conectare",
+		"connect": "Conectează",
+		"disconnect": "Deconectează",
+		"connect_wallet": "Conectează portofelul",
+		"max": "Max",
+		"loading": "Se încarcă...",
+		"processing": "Se procesează...",
+		"insufficient_balance": "WDD insuficient",
+		"delete_account": "Șterge contul",
+		"sign_out": "Deconectare",
+		"invalid_address": "Adresă invalidă",
+		"coming_soon": "În curând",
+		"withdraw": "Retragere",
+		"trade": "Tranzacționare",
+		"continue": "Continuă",
+		"close": "Închide",
+		"updating": "Actualizare...",
+		"save": "Salvează",
+		"vote": "Votează",
+		"switch_to_base_chain": "Comută la Base Chain"
+	},
+	"auth": {
+		"choose_method": "Alegeți metoda preferată.",
+		"sign_in_with_google": "Continuați cu Google",
+		"sign_in_with_passkey": "Folosiți biometria",
+		"sign_in_or_create": "Accesați contul dvs. cu o passkey, folosind amprenta, scanarea feței sau blocarea ecranului.",
+		"create_account": "Creează cont",
+		"create_passkey_name": "Creează un nume de passkey",
+		"passkey_name_description": "Denumiți-vă passkey-ul pentru a-l identifica în managerul de parole.",
+		"passkey_name": "Nume passkey"
+	}
 }

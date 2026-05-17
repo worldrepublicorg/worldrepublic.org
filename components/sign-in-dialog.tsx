@@ -1,18 +1,18 @@
 "use client";
 
 import {
-  startAuthentication,
-  startRegistration,
+	startAuthentication,
+	startRegistration,
 } from "@simplewebauthn/browser";
 import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  Button,
-  Input,
-  Typography,
+	AlertDialog,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	Button,
+	Input,
+	Typography,
 } from "@worldcoin/mini-apps-ui-kit-react";
 import { signIn, useSession } from "next-auth/react";
 import { useRef, useState } from "react";
@@ -20,395 +20,395 @@ import { FaGoogle } from "react-icons/fa";
 import { PiFingerprint, PiSignIn } from "react-icons/pi";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import {
-  getPasskeyOptions,
-  getPasskeyRegistrationOptions,
-  verifyPasskeyAuthentication,
-  verifyPasskeyRegistration,
+	getPasskeyOptions,
+	getPasskeyRegistrationOptions,
+	verifyPasskeyAuthentication,
+	verifyPasskeyRegistration,
 } from "@/lib/actions/passkey";
 import { AUTH_DISPLAY_CACHE_KEY } from "@/lib/wallet-auth-cache";
 
 interface SignInDialogProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  dictionary: Dictionary;
+	open: boolean;
+	onOpenChange: (open: boolean) => void;
+	dictionary: Dictionary;
 }
 
 export function SignInDialog({
-  open,
-  onOpenChange,
-  dictionary,
+	open,
+	onOpenChange,
+	dictionary,
 }: SignInDialogProps) {
-  const { update } = useSession();
-  const [loadingGoogle, setLoadingGoogle] = useState(false);
-  const [loadingPasskey, setLoadingPasskey] = useState(false);
-  const [showNameInput, setShowNameInput] = useState(false);
-  const [showPasskeyOptions, setShowPasskeyOptions] = useState(false);
-  const [passkeyName, setPasskeyName] = useState("");
-  const isGoogleSignInInFlightRef = useRef(false);
+	const { update } = useSession();
+	const [loadingGoogle, setLoadingGoogle] = useState(false);
+	const [loadingPasskey, setLoadingPasskey] = useState(false);
+	const [showNameInput, setShowNameInput] = useState(false);
+	const [showPasskeyOptions, setShowPasskeyOptions] = useState(false);
+	const [passkeyName, setPasskeyName] = useState("");
+	const isGoogleSignInInFlightRef = useRef(false);
 
-  const isBusy = loadingGoogle || loadingPasskey;
+	const isBusy = loadingGoogle || loadingPasskey;
 
-  const handleGoogleSignIn = async () => {
-    // Prevent duplicate OAuth starts, which can break PKCE checks.
-    if (isBusy || isGoogleSignInInFlightRef.current) return;
+	const handleGoogleSignIn = async () => {
+		// Prevent duplicate OAuth starts, which can break PKCE checks.
+		if (isBusy || isGoogleSignInInFlightRef.current) return;
 
-    setLoadingGoogle(true);
-    isGoogleSignInInFlightRef.current = true;
+		setLoadingGoogle(true);
+		isGoogleSignInInFlightRef.current = true;
 
-    try {
-      const callbackUrl = window.location.href;
-      await signIn("google", { callbackUrl });
-      resetDialogState();
-      onOpenChange(false);
-    } catch (error) {
-      console.error("Google sign-in error:", error);
-      isGoogleSignInInFlightRef.current = false;
-      setLoadingGoogle(false);
-    }
-  };
+		try {
+			const callbackUrl = window.location.href;
+			await signIn("google", { callbackUrl });
+			resetDialogState();
+			onOpenChange(false);
+		} catch (error) {
+			console.error("Google sign-in error:", error);
+			isGoogleSignInInFlightRef.current = false;
+			setLoadingGoogle(false);
+		}
+	};
 
-  const handleUseBiometrics = () => {
-    setShowPasskeyOptions(true);
-  };
+	const handleUseBiometrics = () => {
+		setShowPasskeyOptions(true);
+	};
 
-  const handlePasskeySignIn = async () => {
-    if (isBusy) return;
-    const callbackUrl = window.location.href;
-    setLoadingPasskey(true);
-    try {
-      // Step 1: Get authentication options from server
-      const optionsResult = await getPasskeyOptions();
+	const handlePasskeySignIn = async () => {
+		if (isBusy) return;
+		const callbackUrl = window.location.href;
+		setLoadingPasskey(true);
+		try {
+			// Step 1: Get authentication options from server
+			const optionsResult = await getPasskeyOptions();
 
-      if (optionsResult.error) {
-        throw new Error(
-          optionsResult.error || "Failed to get authentication options",
-        );
-      }
+			if (optionsResult.error) {
+				throw new Error(
+					optionsResult.error || "Failed to get authentication options",
+				);
+			}
 
-      // TypeScript narrowing: after error check, we know it's the success type
-      if (!("challenge" in optionsResult)) {
-        throw new Error("Invalid authentication options");
-      }
+			// TypeScript narrowing: after error check, we know it's the success type
+			if (!("challenge" in optionsResult)) {
+				throw new Error("Invalid authentication options");
+			}
 
-      // If no credentials exist, go straight to registration (create account flow)
-      if (optionsResult.passkeyCount === 0) {
-        setShowNameInput(true);
-        setLoadingPasskey(false);
-        return;
-      }
+			// If no credentials exist, go straight to registration (create account flow)
+			if (optionsResult.passkeyCount === 0) {
+				setShowNameInput(true);
+				setLoadingPasskey(false);
+				return;
+			}
 
-      const { challenge } = optionsResult;
+			const { challenge } = optionsResult;
 
-      // Step 2: Start WebAuthn authentication in the browser
-      let authenticationResponse: Awaited<
-        ReturnType<typeof startAuthentication>
-      >;
-      try {
-        authenticationResponse = await startAuthentication(optionsResult);
-      } catch (error) {
-        if (
-          error instanceof Error &&
-          (error.name === "NotAllowedError" ||
-            error.name === "AbortError" ||
-            error.message.includes("cancel") ||
-            error.message.includes("abort"))
-        ) {
-          setLoadingPasskey(false);
-          return;
-        }
-        throw error;
-      }
+			// Step 2: Start WebAuthn authentication in the browser
+			let authenticationResponse: Awaited<
+				ReturnType<typeof startAuthentication>
+			>;
+			try {
+				authenticationResponse = await startAuthentication(optionsResult);
+			} catch (error) {
+				if (
+					error instanceof Error &&
+					(error.name === "NotAllowedError" ||
+						error.name === "AbortError" ||
+						error.message.includes("cancel") ||
+						error.message.includes("abort"))
+				) {
+					setLoadingPasskey(false);
+					return;
+				}
+				throw error;
+			}
 
-      // Step 3: Verify the authentication response
-      const verifyResult = await verifyPasskeyAuthentication(
-        authenticationResponse,
-        challenge,
-      );
+			// Step 3: Verify the authentication response
+			const verifyResult = await verifyPasskeyAuthentication(
+				authenticationResponse,
+				challenge,
+			);
 
-      if (verifyResult.error) {
-        throw new Error(verifyResult.error || "Authentication failed");
-      }
+			if (verifyResult.error) {
+				throw new Error(verifyResult.error || "Authentication failed");
+			}
 
-      if (verifyResult.verified) {
-        await new Promise((resolve) => setTimeout(resolve, 100));
-        await update();
-        try {
-          localStorage.setItem(
-            AUTH_DISPLAY_CACHE_KEY,
-            JSON.stringify({ authenticated: true }),
-          );
-        } catch {
-          // ignore
-        }
-        resetDialogState();
-        onOpenChange(false);
-        if (window.location.href !== callbackUrl) {
-          window.location.href = callbackUrl;
-        }
-      } else {
-        throw new Error("Authentication verification failed");
-      }
-    } catch (error) {
-      console.error("Passkey sign-in error:", error);
-      setLoadingPasskey(false);
-    }
-  };
+			if (verifyResult.verified) {
+				await new Promise((resolve) => setTimeout(resolve, 100));
+				await update();
+				try {
+					localStorage.setItem(
+						AUTH_DISPLAY_CACHE_KEY,
+						JSON.stringify({ authenticated: true }),
+					);
+				} catch {
+					// ignore
+				}
+				resetDialogState();
+				onOpenChange(false);
+				if (window.location.href !== callbackUrl) {
+					window.location.href = callbackUrl;
+				}
+			} else {
+				throw new Error("Authentication verification failed");
+			}
+		} catch (error) {
+			console.error("Passkey sign-in error:", error);
+			setLoadingPasskey(false);
+		}
+	};
 
-  const handlePasskeyRegister = async (name?: string) => {
-    if (isBusy) return;
-    const callbackUrl = window.location.href;
-    setLoadingPasskey(true);
-    try {
-      // Step 1: Get registration options
-      // Always create a new account, even if user has existing credentials
-      const optionsResult = await getPasskeyRegistrationOptions(
-        null,
-        name || passkeyName || undefined,
-      );
+	const handlePasskeyRegister = async (name?: string) => {
+		if (isBusy) return;
+		const callbackUrl = window.location.href;
+		setLoadingPasskey(true);
+		try {
+			// Step 1: Get registration options
+			// Always create a new account, even if user has existing credentials
+			const optionsResult = await getPasskeyRegistrationOptions(
+				null,
+				name || passkeyName || undefined,
+			);
 
-      if (optionsResult.error) {
-        throw new Error(
-          optionsResult.error || "Failed to get registration options",
-        );
-      }
+			if (optionsResult.error) {
+				throw new Error(
+					optionsResult.error || "Failed to get registration options",
+				);
+			}
 
-      // TypeScript narrowing: after error check, we know it's the success type
-      if (!("challenge" in optionsResult)) {
-        throw new Error("Invalid registration options");
-      }
+			// TypeScript narrowing: after error check, we know it's the success type
+			if (!("challenge" in optionsResult)) {
+				throw new Error("Invalid registration options");
+			}
 
-      const { challenge, tempUserId, tempEmail } = optionsResult;
+			const { challenge, tempUserId, tempEmail } = optionsResult;
 
-      // Step 2: Start WebAuthn registration in the browser
-      let registrationResponse: Awaited<ReturnType<typeof startRegistration>>;
-      try {
-        registrationResponse = await startRegistration(optionsResult);
-      } catch (error) {
-        // Handle browser errors
-        if (
-          error instanceof Error &&
-          (error.message.includes("already registered") ||
-            error.message.includes("device") ||
-            error.name === "NotAllowedError")
-        ) {
-          // Browser is preventing registration - might be device restriction
-          // User can try again or use a different authenticator
-          setLoadingPasskey(false);
-          return;
-        }
-        throw error;
-      }
+			// Step 2: Start WebAuthn registration in the browser
+			let registrationResponse: Awaited<ReturnType<typeof startRegistration>>;
+			try {
+				registrationResponse = await startRegistration(optionsResult);
+			} catch (error) {
+				// Handle browser errors
+				if (
+					error instanceof Error &&
+					(error.message.includes("already registered") ||
+						error.message.includes("device") ||
+						error.name === "NotAllowedError")
+				) {
+					// Browser is preventing registration - might be device restriction
+					// User can try again or use a different authenticator
+					setLoadingPasskey(false);
+					return;
+				}
+				throw error;
+			}
 
-      // Step 3: Verify the registration response
-      const pendingReferral =
-        localStorage.getItem("pending_referral") || undefined;
-      const verifyResult = await verifyPasskeyRegistration(
-        registrationResponse,
-        challenge,
-        tempUserId,
-        tempEmail,
-        pendingReferral,
-      );
+			// Step 3: Verify the registration response
+			const pendingReferral =
+				localStorage.getItem("pending_referral") || undefined;
+			const verifyResult = await verifyPasskeyRegistration(
+				registrationResponse,
+				challenge,
+				tempUserId,
+				tempEmail,
+				pendingReferral,
+			);
 
-      if (verifyResult.error) {
-        throw new Error(verifyResult.error || "Registration failed");
-      }
+			if (verifyResult.error) {
+				throw new Error(verifyResult.error || "Registration failed");
+			}
 
-      if (verifyResult.verified) {
-        await new Promise((resolve) => setTimeout(resolve, 100));
-        await update();
-        try {
-          localStorage.setItem(
-            AUTH_DISPLAY_CACHE_KEY,
-            JSON.stringify({ authenticated: true }),
-          );
-          localStorage.removeItem("pending_referral");
-        } catch {
-          // ignore
-        }
-        resetDialogState();
-        onOpenChange(false);
-        if (window.location.href !== callbackUrl) {
-          window.location.href = callbackUrl;
-        }
-      } else {
-        throw new Error("Registration verification failed");
-      }
-    } catch (error) {
-      console.error("Passkey registration error:", error);
-      setLoadingPasskey(false);
-    }
-  };
+			if (verifyResult.verified) {
+				await new Promise((resolve) => setTimeout(resolve, 100));
+				await update();
+				try {
+					localStorage.setItem(
+						AUTH_DISPLAY_CACHE_KEY,
+						JSON.stringify({ authenticated: true }),
+					);
+					localStorage.removeItem("pending_referral");
+				} catch {
+					// ignore
+				}
+				resetDialogState();
+				onOpenChange(false);
+				if (window.location.href !== callbackUrl) {
+					window.location.href = callbackUrl;
+				}
+			} else {
+				throw new Error("Registration verification failed");
+			}
+		} catch (error) {
+			console.error("Passkey registration error:", error);
+			setLoadingPasskey(false);
+		}
+	};
 
-  const handleCreateAccount = () => {
-    setShowNameInput(true);
-    setPasskeyName("");
-  };
+	const handleCreateAccount = () => {
+		setShowNameInput(true);
+		setPasskeyName("");
+	};
 
-  const handleNameSubmit = () => {
-    if (passkeyName.trim()) {
-      handlePasskeyRegister(passkeyName.trim());
-    }
-  };
+	const handleNameSubmit = () => {
+		if (passkeyName.trim()) {
+			handlePasskeyRegister(passkeyName.trim());
+		}
+	};
 
-  const resetDialogState = () => {
-    setShowPasskeyOptions(false);
-    setShowNameInput(false);
-    setPasskeyName("");
-    setLoadingGoogle(false);
-    setLoadingPasskey(false);
-    isGoogleSignInInFlightRef.current = false;
-  };
+	const resetDialogState = () => {
+		setShowPasskeyOptions(false);
+		setShowNameInput(false);
+		setPasskeyName("");
+		setLoadingGoogle(false);
+		setLoadingPasskey(false);
+		isGoogleSignInInFlightRef.current = false;
+	};
 
-  // Reset state when dialog closes
-  const handleOpenChange = (newOpen: boolean) => {
-    if (!newOpen) {
-      resetDialogState();
-    }
-    onOpenChange(newOpen);
-  };
+	// Reset state when dialog closes
+	const handleOpenChange = (newOpen: boolean) => {
+		if (!newOpen) {
+			resetDialogState();
+		}
+		onOpenChange(newOpen);
+	};
 
-  return (
-    <AlertDialog open={open} onOpenChange={handleOpenChange}>
-      <AlertDialogContent>
-        <AlertDialogHeader
-          icon={
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
-              {showNameInput || showPasskeyOptions ? (
-                <PiFingerprint className="h-[30px] w-[30px] text-gray-400" />
-              ) : (
-                <PiSignIn className="h-[30px] w-[30px] text-gray-400" />
-              )}
-            </div>
-          }
-        >
-          <Typography variant="heading" level={3}>
-            {showNameInput
-              ? dictionary.auth.create_passkey_name
-              : showPasskeyOptions
-                ? dictionary.auth.sign_in_with_passkey
-                : dictionary.common.sign_in}
-          </Typography>
-        </AlertDialogHeader>
-        {!showNameInput && !showPasskeyOptions && (
-          <AlertDialogDescription>
-            <Typography variant="body" className="text-gray-500">
-              {dictionary.auth.choose_method}
-            </Typography>
-          </AlertDialogDescription>
-        )}
-        {showNameInput ? (
-          <>
-            <AlertDialogDescription>
-              <Typography variant="body" className="text-gray-500 mb-4">
-                {dictionary.auth.passkey_name_description}
-              </Typography>
-              <Input
-                variant="floating-label"
-                label={dictionary.auth.passkey_name}
-                value={passkeyName}
-                onChange={(e) => setPasskeyName(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && passkeyName.trim()) {
-                    handleNameSubmit();
-                  }
-                }}
-                onFocus={(e) => {
-                  // Scroll into view when focused to ensure it's not behind keyboard
-                  // Use multiple attempts to handle keyboard animation and layout shifts
-                  const scrollInput = () => {
-                    const input = e.target as HTMLInputElement;
-                    // Try scrolling the input itself
-                    input.scrollIntoView({
-                      behavior: "smooth",
-                      block: "center",
-                    });
-                  };
+	return (
+		<AlertDialog open={open} onOpenChange={handleOpenChange}>
+			<AlertDialogContent>
+				<AlertDialogHeader
+					icon={
+						<div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-100">
+							{showNameInput || showPasskeyOptions ? (
+								<PiFingerprint className="h-[30px] w-[30px] text-gray-400" />
+							) : (
+								<PiSignIn className="h-[30px] w-[30px] text-gray-400" />
+							)}
+						</div>
+					}
+				>
+					<Typography variant="heading" level={3}>
+						{showNameInput
+							? dictionary.auth.create_passkey_name
+							: showPasskeyOptions
+								? dictionary.auth.sign_in_with_passkey
+								: dictionary.common.sign_in}
+					</Typography>
+				</AlertDialogHeader>
+				{!showNameInput && !showPasskeyOptions && (
+					<AlertDialogDescription>
+						<Typography variant="body" className="text-gray-500">
+							{dictionary.auth.choose_method}
+						</Typography>
+					</AlertDialogDescription>
+				)}
+				{showNameInput ? (
+					<>
+						<AlertDialogDescription>
+							<Typography variant="body" className="text-gray-500 mb-4">
+								{dictionary.auth.passkey_name_description}
+							</Typography>
+							<Input
+								variant="floating-label"
+								label={dictionary.auth.passkey_name}
+								value={passkeyName}
+								onChange={(e) => setPasskeyName(e.target.value)}
+								onKeyDown={(e) => {
+									if (e.key === "Enter" && passkeyName.trim()) {
+										handleNameSubmit();
+									}
+								}}
+								onFocus={(e) => {
+									// Scroll into view when focused to ensure it's not behind keyboard
+									// Use multiple attempts to handle keyboard animation and layout shifts
+									const scrollInput = () => {
+										const input = e.target as HTMLInputElement;
+										// Try scrolling the input itself
+										input.scrollIntoView({
+											behavior: "smooth",
+											block: "center",
+										});
+									};
 
-                  // First attempt after a short delay
-                  setTimeout(scrollInput, 100);
+									// First attempt after a short delay
+									setTimeout(scrollInput, 100);
 
-                  // Second attempt after keyboard animation completes
-                  setTimeout(scrollInput, 400);
+									// Second attempt after keyboard animation completes
+									setTimeout(scrollInput, 400);
 
-                  // Final attempt after layout stabilizes
-                  setTimeout(scrollInput, 600);
-                }}
-                autoFocus
-              />
-            </AlertDialogDescription>
-            <AlertDialogFooter>
-              <Button
-                fullWidth
-                onClick={handleNameSubmit}
-                disabled={loadingPasskey || !passkeyName.trim()}
-              >
-                {loadingPasskey
-                  ? dictionary.common.processing
-                  : dictionary.common.continue}
-              </Button>
-            </AlertDialogFooter>
-          </>
-        ) : showPasskeyOptions ? (
-          <AlertDialogDescription>
-            <Typography variant="body" className="text-gray-500">
-              {dictionary.auth.sign_in_or_create}
-            </Typography>
-          </AlertDialogDescription>
-        ) : null}
-        {showNameInput ? null : showPasskeyOptions ? (
-          <AlertDialogFooter>
-            <div className="flex w-full flex-col gap-2 sm:flex-row">
-              <Button
-                fullWidth
-                onClick={handlePasskeySignIn}
-                disabled={isBusy}
-                className="flex items-center justify-center gap-2"
-              >
-                {loadingPasskey
-                  ? dictionary.common.processing
-                  : dictionary.common.sign_in}
-              </Button>
-              <Button
-                fullWidth
-                onClick={handleCreateAccount}
-                disabled={isBusy}
-                variant="tertiary"
-                className="flex items-center justify-center gap-2"
-              >
-                {dictionary.auth.create_account}
-              </Button>
-            </div>
-          </AlertDialogFooter>
-        ) : (
-          <AlertDialogFooter>
-            <div className="flex w-full flex-col gap-2 sm:flex-row">
-              <Button
-                fullWidth
-                onClick={handleUseBiometrics}
-                disabled={isBusy}
-                className="flex items-center justify-center gap-2"
-              >
-                <PiFingerprint className="size-5 text-white" />
-                {loadingPasskey
-                  ? dictionary.common.processing
-                  : dictionary.auth.sign_in_with_passkey}
-              </Button>
-              <Button
-                fullWidth
-                onClick={handleGoogleSignIn}
-                disabled={isBusy}
-                className="flex items-center justify-center gap-[9px]"
-              >
-                <FaGoogle className="size-4.5 mx-px text-white" />
-                {loadingGoogle
-                  ? dictionary.common.processing
-                  : dictionary.auth.sign_in_with_google}
-              </Button>
-            </div>
-          </AlertDialogFooter>
-        )}
-      </AlertDialogContent>
-    </AlertDialog>
-  );
+									// Final attempt after layout stabilizes
+									setTimeout(scrollInput, 600);
+								}}
+								autoFocus
+							/>
+						</AlertDialogDescription>
+						<AlertDialogFooter>
+							<Button
+								fullWidth
+								onClick={handleNameSubmit}
+								disabled={loadingPasskey || !passkeyName.trim()}
+							>
+								{loadingPasskey
+									? dictionary.common.processing
+									: dictionary.common.continue}
+							</Button>
+						</AlertDialogFooter>
+					</>
+				) : showPasskeyOptions ? (
+					<AlertDialogDescription>
+						<Typography variant="body" className="text-gray-500">
+							{dictionary.auth.sign_in_or_create}
+						</Typography>
+					</AlertDialogDescription>
+				) : null}
+				{showNameInput ? null : showPasskeyOptions ? (
+					<AlertDialogFooter>
+						<div className="flex w-full flex-col gap-2 sm:flex-row">
+							<Button
+								fullWidth
+								onClick={handlePasskeySignIn}
+								disabled={isBusy}
+								className="flex items-center justify-center gap-2"
+							>
+								{loadingPasskey
+									? dictionary.common.processing
+									: dictionary.common.sign_in}
+							</Button>
+							<Button
+								fullWidth
+								onClick={handleCreateAccount}
+								disabled={isBusy}
+								variant="tertiary"
+								className="flex items-center justify-center gap-2"
+							>
+								{dictionary.auth.create_account}
+							</Button>
+						</div>
+					</AlertDialogFooter>
+				) : (
+					<AlertDialogFooter>
+						<div className="flex w-full flex-col gap-2 sm:flex-row">
+							<Button
+								fullWidth
+								onClick={handleUseBiometrics}
+								disabled={isBusy}
+								className="flex items-center justify-center gap-2"
+							>
+								<PiFingerprint className="size-5 text-white" />
+								{loadingPasskey
+									? dictionary.common.processing
+									: dictionary.auth.sign_in_with_passkey}
+							</Button>
+							<Button
+								fullWidth
+								onClick={handleGoogleSignIn}
+								disabled={isBusy}
+								className="flex items-center justify-center gap-[9px]"
+							>
+								<FaGoogle className="size-4.5 mx-px text-white" />
+								{loadingGoogle
+									? dictionary.common.processing
+									: dictionary.auth.sign_in_with_google}
+							</Button>
+						</div>
+					</AlertDialogFooter>
+				)}
+			</AlertDialogContent>
+		</AlertDialog>
+	);
 }

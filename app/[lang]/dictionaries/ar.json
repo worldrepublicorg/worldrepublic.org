@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "كسب",
-    "govern": "حكم",
-    "menu": "القائمة"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "الأحزاب",
-        "elections": "الانتخابات",
-        "referendums": "الاستفتاءات"
-      },
-      "sections": {
-        "parties": {
-          "title": "الأحزاب السياسية"
-        },
-        "elections": {
-          "title": "انتخابات تجريبية",
-          "subtitle": "جرب الديمقراطية العالمية"
-        },
-        "referendums": {
-          "title": "الاستفتاء الدستوري العالمي",
-          "subtitle": "صوت على مبادئنا الأساسية"
-        }
-      },
-      "vote": {
-        "no_active_election": "الانتخاب سيبدأ قريباً",
-        "test_verification": {
-          "description": "جرب نظام التحقق الخاص بنا الآن لتكون مستعدًا للتصويت",
-          "button": "اختبار"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "الإعانات",
-          "ambassadors": "السفراء"
-        },
-        "discover": "اكتشف",
-        "search_placeholder": "البحث عن الأحزاب...",
-        "no_parties_found": "لم يتم العثور على أحزاب",
-        "error_loading": "فشل تحميل الأحزاب",
-        "refresh": "تحديث",
-        "party_details": "تفاصيل الحزب",
-        "share_party": "مشاركة الحزب",
-        "my_party": "حزبي",
-        "learn_more": "اعرف المزيد",
-        "party_management": "إدارة الحزب",
-        "edit_party_info": "تعديل معلومات الحزب",
-        "dialogs": {
-          "party_name": "اسم الحزب",
-          "description_optional": "الوصف (اختياري)",
-          "official_link_optional": "الرابط الرسمي (اختياري)",
-          "updating": "جاري التحديث...",
-          "save": "حفظ",
-          "register_party": "سجل حزبا",
-          "register": "تسجيل",
-          "registering": "جاري التسجيل...",
-          "leader_warning_register": "أنت حاليًا زعيم {partyName}. تسجيل حزب جديد سيؤدي إلى حذف حزبك الحالي.",
-          "deleting": "جارٍ الحذف...",
-          "about_to_delete": "أنت على وشك حذف {partyName}. لا يمكن التراجع عن هذا الإجراء.",
-          "about_to_register": "أنت على وشك تأسيس حزب جديد."
-        },
-        "detail": {
-          "failed_to_load": "فشل تحميل بيانات الحزب",
-          "party_not_found": "لم يتم العثور على الحزب",
-          "error_loading": "خطأ في تحميل الحزب",
-          "back_to_parties": "العودة إلى الأحزاب",
-          "description": "الوصف",
-          "party_info": "معلومات الحزب",
-          "leader": "القائد",
-          "website": "الموقع الإلكتروني",
-          "not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
-        },
-        "delete_party": "حذف الحزب",
-        "run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات",
-        "ambassadors": {
-          "title": "برنامج السفراء",
-          "description": "ادعُ الأصدقاء واكسب مكافآت عندما يُكملون التحقق وعندما يحصل حزبهم على الدعم",
-          "leaderboard": "لوحة المتصدرين",
-          "no_rewards_yet": "لا توجد مكافآت بعد",
-          "col_ambassador": "السفراء",
-          "col_invited": "مدعوون",
-          "col_reward": "مكافأة",
-          "share_referral_link": "مشاركة رابط الإحالة"
-        },
-        "subsidies": {
-          "title": "برنامج دعم الأحزاب",
-          "no_subsidies_yet": "لا توجد إعانات حتى الآن",
-          "description": "تمويل قائم على الأداء الانتخابي",
-          "col_subsidy": "دعم"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "انتخاب",
-          "not_found": "الانتخاب غير موجود",
-          "not_found_description": "الانتخاب الذي تبحث عنه غير موجود.",
-          "back_to_elections": "العودة إلى الانتخابات",
-          "status_active": "نشط",
-          "status_upcoming": "قادم",
-          "status_ended": "انتهى",
-          "election_info": "معلومات الانتخاب",
-          "reward_pool": "مجمع المكافآت: {amount} WDD",
-          "reward_pool_minimum": "مجمع المكافآت: بحد أدنى {amount} WDD",
-          "choose_a_party": "اختر حزباً",
-          "no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب.",
-          "results_title": "النتائج",
-          "vote_singular": "صوت",
-          "vote_plural": "أصوات",
-          "no_votes": "لم يتم الإدلاء بأي أصوات في هذا الانتخاب.",
-          "test_election_name": "انتخاب تجريبي {n}"
-        },
-        "list": {
-          "empty_state": "لم يتم العثور على انتخابات",
-          "active_section": "الانتخابات النشطة",
-          "upcoming_section": "الانتخابات القادمة",
-          "previous_section": "الانتخابات السابقة"
-        }
-      }
-    },
-    "error": {
-      "title": "حدث خطأ ما",
-      "description": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
-      "error_id": "معرّف الخطأ: {digest}",
-      "try_again": "حاول مرة أخرى"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "الدخل الأساسي",
-        "savings": "التوفير"
-      },
-      "basic_income": {
-        "subtitle_unauth": "احصل على المال لكونك إنساناً",
-        "subtitle_claim": "احصل على دراخمك",
-        "tooltip_claim": "1 WDD يومياً، بحد أقصى 1 WDD. عد خلال 24 ساعة لتعظيم أرباحك.",
-        "claim_button": "احصل",
-        "alert": {
-          "claim": {
-            "title": "تأكيد الحصول",
-            "description": "أنت على وشك الحصول على {amount} WDD. سيتم إضافة هذا المبلغ إلى رصيد محفظتك."
-          }
-        },
-        "setup_subtitle": "أعد إعداد دخلك الأساسي",
-        "activate_loading": "جاري التفعيل...",
-        "activate_button": "تفعيل الدخل الأساسي",
-        "world_drachma": "ما هي الدراخما العالمية (WDD)؟",
-        "subtitle_unauth_raised_by_humanity": "احصل على عائد الذكاء الاصطناعي العالمي"
-      },
-      "savings": {
-        "title": "حساب التوفير",
-        "subtitle": "اكسب فائدة كل ثانية",
-        "tooltip": "معدل أساسي سنوي 69%. اجمع وأعد استثمار بانتظام لتحقيق عوائد فعالة قريبة من 100%. اسحب في أي وقت.",
-        "deposit": "إيداع",
-        "withdraw": "سحب",
-        "balance": "الرصيد",
-        "amount_deposit": "المبلغ للإيداع",
-        "amount_withdraw": "المبلغ للسحب",
-        "interest": "الفائدة",
-        "collect": "جمع",
-        "alert": {
-          "collect": {
-            "title": "تأكيد الجمع",
-            "description": "أنت على وشك جمع {amount} WDD من الفائدة."
-          },
-          "deposit": {
-            "title": "تأكيد الإيداع",
-            "description": "أنت على وشك إيداع {amount} WDD."
-          },
-          "withdraw": {
-            "title": "تأكيد السحب",
-            "description": "أنت على وشك سحب {amount} WDD."
-          }
-        },
-        "smart_contract_link": "اعرض العقد الذكي",
-        "verify": "تحقّق"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "الحساب",
-          "account_info": "معلومات الحساب",
-          "referral_code": "رمز الإحالة",
-          "referred_by": "أحيل بواسطة",
-          "language": "اللغة"
-        },
-        "help": {
-          "title": "المساعدة",
-          "quickstart": "البدء السريع",
-          "docs": "ويكي",
-          "help_center": "مركز المساعدة"
-        },
-        "source_code": {
-          "title": "الكود المصدري"
-        },
-        "legal": {
-          "title": "القانونية",
-          "terms": "شروط الاستخدام",
-          "privacy": "سياسة الخصوصية"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "المحفظة"
-      },
-      "balance": "الرصيد",
-      "modals": {
-        "sign_out": {
-          "confirm": "هل أنت متأكد من أنك تريد تسجيل الخروج؟"
-        },
-        "disconnect": {
-          "confirm": "هل أنت متأكد أنك تريد قطع اتصال محفظتك؟"
-        },
-        "send": {
-          "button": "إرسال",
-          "withdraw_to_crypto": {
-            "description": "سحب WDD إلى حساب عملة مشفرة.",
-            "amount_label": "المبلغ",
-            "address_label": "عنوان المحفظة",
-            "network_label": "الشبكة"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD على Jumper",
-          "ethereum_uniswap": "Ethereum WDD على Uniswap",
-          "base_jumper": "Base Chain WDD على Jumper",
-          "base_uniswap": "Base Chain WDD على Uniswap",
-          "worldchain_jumper": "World Chain WDD على Jumper",
-          "worldchain_uniswap": "World Chain WDD على Uniswap"
-        },
-        "delete_account": {
-          "description": "سيؤدي هذا إلى حذف حسابك نهائياً وإزالة جميع بياناتك من خوادمنا. لا يمكن التراجع عن هذا الإجراء — يرجى المتابعة بحذر.",
-          "deleting": "جاري الحذف..."
-        },
-        "connect_wallet_browser": {
-          "title": "افتح في MetaMask",
-          "description": "للاتصال، انسخ هذا الرابط وافتحه في المتصفح المدمج داخل MetaMask.",
-          "copy_link": "نسخ الرابط"
-        },
-        "connect_wallet_picker": {
-          "description": "تم العثور على عدة محافظ. اختر واحدة للاتصال."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ليس لديك محفظة؟",
-          "find_wallet_link": "اعثر على واحدة في WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "الحساب",
-        "security": "الأمان",
-        "google_account": "حساب Google",
-        "google_not_linked": "غير مرتبط",
-        "passkeys": "مفاتيح المرور",
-        "passkeys_linked": "{count} مرتبط",
-        "danger_zone": "منطقة الخطر",
-        "delete_account": {
-          "description": "إزالة جميع بياناتك بشكل دائم"
-        },
-        "verification": "التحقق",
-        "google_linked": "مرتبط",
-        "account_label": "الحساب"
-      },
-      "username": {
-        "label": "اسم المستخدم",
-        "edit_title": "تعديل اسم المستخدم",
-        "description": "3-30 حرفًا، أبجدي رقمي، شرطات سفلية وشرطات"
-      },
-      "history": {
-        "title": "السجل"
-      },
-      "transactions": {
-        "failed_to_load": "فشل التحميل",
-        "no_transactions": "لا توجد معاملات بعد",
-        "wdd_per_day": "WDD/يوم",
-        "just_now": "الآن",
-        "minutes_ago": "منذ {minutes}د",
-        "hours_ago": "منذ {hours}س",
-        "days_ago": "منذ {days}ي",
-        "filter": {
-          "all_types": "جميع الأنواع",
-          "select_type": "اختر النوع",
-          "rewards": "مكافآت"
-        },
-        "types": {
-          "withdrawal": "سحب",
-          "received": "تم الاستلام",
-          "sent": "تم الإرسال",
-          "ambassador_reward": "مكافأة السفير",
-          "party_subsidy": "دعم الحزب",
-          "stream_created": "تم إنشاء التدفق",
-          "stream_updated": "تم تحديث التدفق",
-          "savings_deposit": "التوفير إيداع",
-          "savings_withdrawal": "التوفير سحب",
-          "savings_interest": "التوفير الفائدة",
-          "referral_reward": "مكافأة الإحالة"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "امسح رمز الاستجابة السريعة هذا للتحقق عبر Self.",
-        "mobile_dialog_description": "سيتم إعادة توجيهك إلى تطبيق Self لإكمال التحقق.",
-        "support_telegram": "دعم Self",
-        "verification_guide": "دليل التحقق",
-        "qr_alt": "رمز QR للتحقق من Self",
-        "callback_warning": "تحذير",
-        "callback_warning_description": "لا يمكن الوصول إلى عنوان URL الخاص بنداء التحقق من هاتفك. اضبط NEXT_PUBLIC_SELF_CALLBACK على عنوان URL عام (أو اضبط NEXT_PUBLIC_PUBLIC_BASE_URL على نطاق نفق/معاينة).",
-        "label": "Self",
-        "status_completed": "متحقق",
-        "status_not_completed": "غير متحقق",
-        "learn_about_self": "تعرّف على Self",
-        "primer": {
-          "title": "Self البروتوكول",
-          "description": "احصل على التحقق دون الكشف عن أي بيانات شخصية."
-        }
-      },
-      "verification_warning": {
-        "title": "احصل على التحقق",
-        "reward_cap_banner": "مكافآت الدخل الأساسي والادخار محدودة للمواطنين غير الموثقين. قم بتوثيق حسابك للكسب بدون حدود."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "معظم المحافظ تعرض WDD فقط بعد استيراده يدوياً على السلسلة المحددة باستخدام ",
-      "contract_address": "عنوان العقد"
-    }
-  },
-  "toasts": {
-    "generic_error": "حدث خطأ",
-    "copied": "تم النسخ",
-    "wallet": {
-      "no_wallet": "لا يوجد عنوان محفظة",
-      "min_amount": "الحد الأدنى 10 WDD",
-      "sent": "تم الإرسال",
-      "account_deleted": "تم حذف الحساب",
-      "delete_failed": "فشل في حذف الحساب",
-      "contract_address_error": "لا يمكن السحب إلى عنوان العقد",
-      "sign_out_failed": "فشل في تسجيل الخروج",
-      "google_linked": "تم ربط حساب Google",
-      "google_already_linked": "حساب Google مرتبط بالفعل بحساب آخر",
-      "google_link_failed": "تعذر بدء ربط Google",
-      "passkey_added": "تمت إضافة مفتاح المرور",
-      "passkey_add_failed": "تعذر إضافة مفتاح المرور"
-    },
-    "parties": {
-      "updated": "تم التحديث",
-      "update_failed": "فشل التحديث",
-      "update_error": "خطأ في تحديث الحزب",
-      "registered": "تم تسجيل الحزب",
-      "register_failed": "فشل تسجيل الحزب",
-      "register_error": "خطأ في تسجيل الحزب",
-      "deleted": "تم الحذف",
-      "delete_failed": "فشل الحذف",
-      "delete_error": "خطأ في الحذف"
-    },
-    "basic_income": {
-      "activated": "تم تفعيل الدخل الأساسي",
-      "activate_failed": "فشل التفعيل",
-      "claimed": "تم الحصول",
-      "claim_failed": "فشل الحصول"
-    },
-    "savings": {
-      "collected": "تم الجمع",
-      "collect_failed": "فشل الجمع",
-      "deposited": "تم الإيداع",
-      "deposit_failed": "فشل الإيداع",
-      "withdrawn": "تم السحب",
-      "withdraw_failed": "فشل السحب"
-    }
-  },
-  "common": {
-    "confirm": "تأكيد",
-    "sign_in": "تسجيل الدخول",
-    "connect": "اتصل",
-    "disconnect": "قطع الاتصال",
-    "connect_wallet": "اتصل بالمحفظة",
-    "max": "الحد الأقصى",
-    "loading": "جاري التحميل...",
-    "processing": "جاري المعالجة...",
-    "insufficient_balance": "WDD غير كافي",
-    "delete_account": "حذف الحساب",
-    "sign_out": "تسجيل الخروج",
-    "invalid_address": "عنوان غير صالح",
-    "coming_soon": "قريباً",
-    "withdraw": "سحب",
-    "trade": "تداول",
-    "continue": "متابعة",
-    "close": "إغلاق",
-    "updating": "جاري التحديث...",
-    "save": "حفظ",
-    "vote": "صوت",
-    "switch_to_base_chain": "التبديل إلى Base Chain"
-  },
-  "auth": {
-    "choose_method": "اختر الطريقة المفضلة لديك.",
-    "sign_in_with_google": "المتابعة مع Google",
-    "sign_in_with_passkey": "استخدم القياسات الحيوية",
-    "sign_in_or_create": "الوصول إلى حسابك باستخدام مفتاح المرور، باستخدام بصمة الإصبع أو مسح الوجه أو قفل الشاشة.",
-    "create_account": "إنشاء حساب",
-    "create_passkey_name": "إنشاء اسم مفتاح المرور",
-    "passkey_name_description": "قم بتسمية مفتاح المرور الخاص بك لتحديده في مدير كلمات المرور.",
-    "passkey_name": "اسم مفتاح المرور"
-  }
+	"nav": {
+		"earn": "كسب",
+		"govern": "حكم",
+		"menu": "القائمة"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "الأحزاب",
+				"elections": "الانتخابات",
+				"referendums": "الاستفتاءات"
+			},
+			"sections": {
+				"parties": {
+					"title": "الأحزاب السياسية"
+				},
+				"elections": {
+					"title": "انتخابات تجريبية",
+					"subtitle": "جرب الديمقراطية العالمية"
+				},
+				"referendums": {
+					"title": "الاستفتاء الدستوري العالمي",
+					"subtitle": "صوت على مبادئنا الأساسية"
+				}
+			},
+			"vote": {
+				"no_active_election": "الانتخاب سيبدأ قريباً",
+				"test_verification": {
+					"description": "جرب نظام التحقق الخاص بنا الآن لتكون مستعدًا للتصويت",
+					"button": "اختبار"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "الإعانات",
+					"ambassadors": "السفراء"
+				},
+				"discover": "اكتشف",
+				"search_placeholder": "البحث عن الأحزاب...",
+				"no_parties_found": "لم يتم العثور على أحزاب",
+				"error_loading": "فشل تحميل الأحزاب",
+				"refresh": "تحديث",
+				"party_details": "تفاصيل الحزب",
+				"share_party": "مشاركة الحزب",
+				"my_party": "حزبي",
+				"learn_more": "اعرف المزيد",
+				"party_management": "إدارة الحزب",
+				"edit_party_info": "تعديل معلومات الحزب",
+				"dialogs": {
+					"party_name": "اسم الحزب",
+					"description_optional": "الوصف (اختياري)",
+					"official_link_optional": "الرابط الرسمي (اختياري)",
+					"updating": "جاري التحديث...",
+					"save": "حفظ",
+					"register_party": "سجل حزبا",
+					"register": "تسجيل",
+					"registering": "جاري التسجيل...",
+					"leader_warning_register": "أنت حاليًا زعيم {partyName}. تسجيل حزب جديد سيؤدي إلى حذف حزبك الحالي.",
+					"deleting": "جارٍ الحذف...",
+					"about_to_delete": "أنت على وشك حذف {partyName}. لا يمكن التراجع عن هذا الإجراء.",
+					"about_to_register": "أنت على وشك تأسيس حزب جديد."
+				},
+				"detail": {
+					"failed_to_load": "فشل تحميل بيانات الحزب",
+					"party_not_found": "لم يتم العثور على الحزب",
+					"error_loading": "خطأ في تحميل الحزب",
+					"back_to_parties": "العودة إلى الأحزاب",
+					"description": "الوصف",
+					"party_info": "معلومات الحزب",
+					"leader": "القائد",
+					"website": "الموقع الإلكتروني",
+					"not_found_description": "الحزب الذي تبحث عنه غير موجود أو تم حله."
+				},
+				"delete_party": "حذف الحزب",
+				"run_on_elections_and_earn": "ترشح في الانتخابات واحصل على إعانات",
+				"ambassadors": {
+					"title": "برنامج السفراء",
+					"description": "ادعُ الأصدقاء واكسب مكافآت عندما يُكملون التحقق وعندما يحصل حزبهم على الدعم",
+					"leaderboard": "لوحة المتصدرين",
+					"no_rewards_yet": "لا توجد مكافآت بعد",
+					"col_ambassador": "السفراء",
+					"col_invited": "مدعوون",
+					"col_reward": "مكافأة",
+					"share_referral_link": "مشاركة رابط الإحالة"
+				},
+				"subsidies": {
+					"title": "برنامج دعم الأحزاب",
+					"no_subsidies_yet": "لا توجد إعانات حتى الآن",
+					"description": "تمويل قائم على الأداء الانتخابي",
+					"col_subsidy": "دعم"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "انتخاب",
+					"not_found": "الانتخاب غير موجود",
+					"not_found_description": "الانتخاب الذي تبحث عنه غير موجود.",
+					"back_to_elections": "العودة إلى الانتخابات",
+					"status_active": "نشط",
+					"status_upcoming": "قادم",
+					"status_ended": "انتهى",
+					"election_info": "معلومات الانتخاب",
+					"reward_pool": "مجمع المكافآت: {amount} WDD",
+					"reward_pool_minimum": "مجمع المكافآت: بحد أدنى {amount} WDD",
+					"choose_a_party": "اختر حزباً",
+					"no_parties_for_election": "لا توجد أحزاب متاحة لهذا الانتخاب.",
+					"results_title": "النتائج",
+					"vote_singular": "صوت",
+					"vote_plural": "أصوات",
+					"no_votes": "لم يتم الإدلاء بأي أصوات في هذا الانتخاب.",
+					"test_election_name": "انتخاب تجريبي {n}"
+				},
+				"list": {
+					"empty_state": "لم يتم العثور على انتخابات",
+					"active_section": "الانتخابات النشطة",
+					"upcoming_section": "الانتخابات القادمة",
+					"previous_section": "الانتخابات السابقة"
+				}
+			}
+		},
+		"error": {
+			"title": "حدث خطأ ما",
+			"description": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+			"error_id": "معرّف الخطأ: {digest}",
+			"try_again": "حاول مرة أخرى"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "الدخل الأساسي",
+				"savings": "التوفير"
+			},
+			"basic_income": {
+				"subtitle_unauth": "احصل على المال لكونك إنساناً",
+				"subtitle_claim": "احصل على دراخمك",
+				"tooltip_claim": "1 WDD يومياً، بحد أقصى 1 WDD. عد خلال 24 ساعة لتعظيم أرباحك.",
+				"claim_button": "احصل",
+				"alert": {
+					"claim": {
+						"title": "تأكيد الحصول",
+						"description": "أنت على وشك الحصول على {amount} WDD. سيتم إضافة هذا المبلغ إلى رصيد محفظتك."
+					}
+				},
+				"setup_subtitle": "أعد إعداد دخلك الأساسي",
+				"activate_loading": "جاري التفعيل...",
+				"activate_button": "تفعيل الدخل الأساسي",
+				"world_drachma": "ما هي الدراخما العالمية (WDD)؟",
+				"subtitle_unauth_raised_by_humanity": "احصل على عائد الذكاء الاصطناعي العالمي"
+			},
+			"savings": {
+				"title": "حساب التوفير",
+				"subtitle": "اكسب فائدة كل ثانية",
+				"tooltip": "معدل أساسي سنوي 69%. اجمع وأعد استثمار بانتظام لتحقيق عوائد فعالة قريبة من 100%. اسحب في أي وقت.",
+				"deposit": "إيداع",
+				"withdraw": "سحب",
+				"balance": "الرصيد",
+				"amount_deposit": "المبلغ للإيداع",
+				"amount_withdraw": "المبلغ للسحب",
+				"interest": "الفائدة",
+				"collect": "جمع",
+				"alert": {
+					"collect": {
+						"title": "تأكيد الجمع",
+						"description": "أنت على وشك جمع {amount} WDD من الفائدة."
+					},
+					"deposit": {
+						"title": "تأكيد الإيداع",
+						"description": "أنت على وشك إيداع {amount} WDD."
+					},
+					"withdraw": {
+						"title": "تأكيد السحب",
+						"description": "أنت على وشك سحب {amount} WDD."
+					}
+				},
+				"smart_contract_link": "اعرض العقد الذكي",
+				"verify": "تحقّق"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "الحساب",
+					"account_info": "معلومات الحساب",
+					"referral_code": "رمز الإحالة",
+					"referred_by": "أحيل بواسطة",
+					"language": "اللغة"
+				},
+				"help": {
+					"title": "المساعدة",
+					"quickstart": "البدء السريع",
+					"docs": "ويكي",
+					"help_center": "مركز المساعدة"
+				},
+				"source_code": {
+					"title": "الكود المصدري"
+				},
+				"legal": {
+					"title": "القانونية",
+					"terms": "شروط الاستخدام",
+					"privacy": "سياسة الخصوصية"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "المحفظة"
+			},
+			"balance": "الرصيد",
+			"modals": {
+				"sign_out": {
+					"confirm": "هل أنت متأكد من أنك تريد تسجيل الخروج؟"
+				},
+				"disconnect": {
+					"confirm": "هل أنت متأكد أنك تريد قطع اتصال محفظتك؟"
+				},
+				"send": {
+					"button": "إرسال",
+					"withdraw_to_crypto": {
+						"description": "سحب WDD إلى حساب عملة مشفرة.",
+						"amount_label": "المبلغ",
+						"address_label": "عنوان المحفظة",
+						"network_label": "الشبكة"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD على Jumper",
+					"ethereum_uniswap": "Ethereum WDD على Uniswap",
+					"base_jumper": "Base Chain WDD على Jumper",
+					"base_uniswap": "Base Chain WDD على Uniswap",
+					"worldchain_jumper": "World Chain WDD على Jumper",
+					"worldchain_uniswap": "World Chain WDD على Uniswap"
+				},
+				"delete_account": {
+					"description": "سيؤدي هذا إلى حذف حسابك نهائياً وإزالة جميع بياناتك من خوادمنا. لا يمكن التراجع عن هذا الإجراء — يرجى المتابعة بحذر.",
+					"deleting": "جاري الحذف..."
+				},
+				"connect_wallet_browser": {
+					"title": "افتح في MetaMask",
+					"description": "للاتصال، انسخ هذا الرابط وافتحه في المتصفح المدمج داخل MetaMask.",
+					"copy_link": "نسخ الرابط"
+				},
+				"connect_wallet_picker": {
+					"description": "تم العثور على عدة محافظ. اختر واحدة للاتصال."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ليس لديك محفظة؟",
+					"find_wallet_link": "اعثر على واحدة في WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "الحساب",
+				"security": "الأمان",
+				"google_account": "حساب Google",
+				"google_not_linked": "غير مرتبط",
+				"passkeys": "مفاتيح المرور",
+				"passkeys_linked": "{count} مرتبط",
+				"danger_zone": "منطقة الخطر",
+				"delete_account": {
+					"description": "إزالة جميع بياناتك بشكل دائم"
+				},
+				"verification": "التحقق",
+				"google_linked": "مرتبط",
+				"account_label": "الحساب"
+			},
+			"username": {
+				"label": "اسم المستخدم",
+				"edit_title": "تعديل اسم المستخدم",
+				"description": "3-30 حرفًا، أبجدي رقمي، شرطات سفلية وشرطات"
+			},
+			"history": {
+				"title": "السجل"
+			},
+			"transactions": {
+				"failed_to_load": "فشل التحميل",
+				"no_transactions": "لا توجد معاملات بعد",
+				"wdd_per_day": "WDD/يوم",
+				"just_now": "الآن",
+				"minutes_ago": "منذ {minutes}د",
+				"hours_ago": "منذ {hours}س",
+				"days_ago": "منذ {days}ي",
+				"filter": {
+					"all_types": "جميع الأنواع",
+					"select_type": "اختر النوع",
+					"rewards": "مكافآت"
+				},
+				"types": {
+					"withdrawal": "سحب",
+					"received": "تم الاستلام",
+					"sent": "تم الإرسال",
+					"ambassador_reward": "مكافأة السفير",
+					"party_subsidy": "دعم الحزب",
+					"stream_created": "تم إنشاء التدفق",
+					"stream_updated": "تم تحديث التدفق",
+					"savings_deposit": "التوفير إيداع",
+					"savings_withdrawal": "التوفير سحب",
+					"savings_interest": "التوفير الفائدة",
+					"referral_reward": "مكافأة الإحالة"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "امسح رمز الاستجابة السريعة هذا للتحقق عبر Self.",
+				"mobile_dialog_description": "سيتم إعادة توجيهك إلى تطبيق Self لإكمال التحقق.",
+				"support_telegram": "دعم Self",
+				"verification_guide": "دليل التحقق",
+				"qr_alt": "رمز QR للتحقق من Self",
+				"callback_warning": "تحذير",
+				"callback_warning_description": "لا يمكن الوصول إلى عنوان URL الخاص بنداء التحقق من هاتفك. اضبط NEXT_PUBLIC_SELF_CALLBACK على عنوان URL عام (أو اضبط NEXT_PUBLIC_PUBLIC_BASE_URL على نطاق نفق/معاينة).",
+				"label": "Self",
+				"status_completed": "متحقق",
+				"status_not_completed": "غير متحقق",
+				"learn_about_self": "تعرّف على Self",
+				"primer": {
+					"title": "Self البروتوكول",
+					"description": "احصل على التحقق دون الكشف عن أي بيانات شخصية."
+				}
+			},
+			"verification_warning": {
+				"title": "احصل على التحقق",
+				"reward_cap_banner": "مكافآت الدخل الأساسي والادخار محدودة للمواطنين غير الموثقين. قم بتوثيق حسابك للكسب بدون حدود."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "معظم المحافظ تعرض WDD فقط بعد استيراده يدوياً على السلسلة المحددة باستخدام ",
+			"contract_address": "عنوان العقد"
+		}
+	},
+	"toasts": {
+		"generic_error": "حدث خطأ",
+		"copied": "تم النسخ",
+		"wallet": {
+			"no_wallet": "لا يوجد عنوان محفظة",
+			"min_amount": "الحد الأدنى 10 WDD",
+			"sent": "تم الإرسال",
+			"account_deleted": "تم حذف الحساب",
+			"delete_failed": "فشل في حذف الحساب",
+			"contract_address_error": "لا يمكن السحب إلى عنوان العقد",
+			"sign_out_failed": "فشل في تسجيل الخروج",
+			"google_linked": "تم ربط حساب Google",
+			"google_already_linked": "حساب Google مرتبط بالفعل بحساب آخر",
+			"google_link_failed": "تعذر بدء ربط Google",
+			"passkey_added": "تمت إضافة مفتاح المرور",
+			"passkey_add_failed": "تعذر إضافة مفتاح المرور"
+		},
+		"parties": {
+			"updated": "تم التحديث",
+			"update_failed": "فشل التحديث",
+			"update_error": "خطأ في تحديث الحزب",
+			"registered": "تم تسجيل الحزب",
+			"register_failed": "فشل تسجيل الحزب",
+			"register_error": "خطأ في تسجيل الحزب",
+			"deleted": "تم الحذف",
+			"delete_failed": "فشل الحذف",
+			"delete_error": "خطأ في الحذف"
+		},
+		"basic_income": {
+			"activated": "تم تفعيل الدخل الأساسي",
+			"activate_failed": "فشل التفعيل",
+			"claimed": "تم الحصول",
+			"claim_failed": "فشل الحصول"
+		},
+		"savings": {
+			"collected": "تم الجمع",
+			"collect_failed": "فشل الجمع",
+			"deposited": "تم الإيداع",
+			"deposit_failed": "فشل الإيداع",
+			"withdrawn": "تم السحب",
+			"withdraw_failed": "فشل السحب"
+		}
+	},
+	"common": {
+		"confirm": "تأكيد",
+		"sign_in": "تسجيل الدخول",
+		"connect": "اتصل",
+		"disconnect": "قطع الاتصال",
+		"connect_wallet": "اتصل بالمحفظة",
+		"max": "الحد الأقصى",
+		"loading": "جاري التحميل...",
+		"processing": "جاري المعالجة...",
+		"insufficient_balance": "WDD غير كافي",
+		"delete_account": "حذف الحساب",
+		"sign_out": "تسجيل الخروج",
+		"invalid_address": "عنوان غير صالح",
+		"coming_soon": "قريباً",
+		"withdraw": "سحب",
+		"trade": "تداول",
+		"continue": "متابعة",
+		"close": "إغلاق",
+		"updating": "جاري التحديث...",
+		"save": "حفظ",
+		"vote": "صوت",
+		"switch_to_base_chain": "التبديل إلى Base Chain"
+	},
+	"auth": {
+		"choose_method": "اختر الطريقة المفضلة لديك.",
+		"sign_in_with_google": "المتابعة مع Google",
+		"sign_in_with_passkey": "استخدم القياسات الحيوية",
+		"sign_in_or_create": "الوصول إلى حسابك باستخدام مفتاح المرور، باستخدام بصمة الإصبع أو مسح الوجه أو قفل الشاشة.",
+		"create_account": "إنشاء حساب",
+		"create_passkey_name": "إنشاء اسم مفتاح المرور",
+		"passkey_name_description": "قم بتسمية مفتاح المرور الخاص بك لتحديده في مدير كلمات المرور.",
+		"passkey_name": "اسم مفتاح المرور"
+	}
 }

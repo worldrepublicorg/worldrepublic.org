@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Guadagnà",
-    "govern": "Guvernà",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partiti",
-        "elections": "Elezioni",
-        "referendums": "Referendum"
-      },
-      "sections": {
-        "parties": {
-          "title": "Partiti pulitichi"
-        },
-        "elections": {
-          "title": "Elezioni di prova",
-          "subtitle": "Sperimenta cù a dimucrazia glubale"
-        },
-        "referendums": {
-          "title": "Referendum Custituziunale Mundiale",
-          "subtitle": "Vota nantu à i nostri principii fundamentali"
-        }
-      },
-      "vote": {
-        "no_active_election": "L'elezzione principia prestu",
-        "test_verification": {
-          "description": "Pruvate u nostru sistema di verificazione avà per esse pronti à votà",
-          "button": "Prouva"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Sannzi",
-          "ambassadors": "Ambasciatori"
-        },
-        "discover": "Scopre",
-        "search_placeholder": "Ricerca partiti...",
-        "no_parties_found": "Nisun partitu truvatu",
-        "error_loading": "Fiascu in u caricamentu di i partiti",
-        "refresh": "Agghjurnà",
-        "party_details": "Dettagli di u partitu",
-        "share_party": "Cundivide u partitu",
-        "my_party": "U mo partitu",
-        "learn_more": "Imparate di più",
-        "party_management": "Gestione di u partitu",
-        "edit_party_info": "Modificà l'infurmazioni di u partitu",
-        "dialogs": {
-          "party_name": "Nome di u partitu",
-          "description_optional": "Descrizzione (opzionale)",
-          "official_link_optional": "Link ufficiale (opzionale)",
-          "updating": "Aghjurnamentu...",
-          "save": "Salvà",
-          "register_party": "Registrà un partitu",
-          "register": "Registrà",
-          "registering": "Registrazione...",
-          "leader_warning_register": "Sì attualmente u capu di {partyName}. A registrazione di un novu partitu sguasserà u vostru partitu attuale.",
-          "deleting": "Sguassà...",
-          "about_to_delete": "Sì à puntu di sguassà {partyName}. St'azzione ùn pò micca esse annullata.",
-          "about_to_register": "Sete per fundà un partitu novu."
-        },
-        "detail": {
-          "failed_to_load": "Impossibile à carricà i dati di u partitu",
-          "party_not_found": "Partitu micca truvatu",
-          "error_loading": "Errore durante u caricamentu di u partitu",
-          "back_to_parties": "Torna à i partiti",
-          "description": "Descrizzione",
-          "party_info": "Infurmazioni di u partitu",
-          "leader": "Capu",
-          "website": "Situ web",
-          "not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
-        },
-        "delete_party": "Sguassà u partitu",
-        "run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni",
-        "ambassadors": {
-          "title": "Prugramma d'Ambasciatori",
-          "description": "Invita amichi è guadagna ricumpense quandu si verificanu è quandu u so partitu riceve sussidi",
-          "leaderboard": "Classificazione",
-          "no_rewards_yet": "Ancu nisuna ricumpensa",
-          "col_ambassador": "Ambasciatori",
-          "col_invited": "Invitati",
-          "col_reward": "Ricumpensa",
-          "share_referral_link": "Sparte u ligame di riferimentu"
-        },
-        "subsidies": {
-          "title": "Prugramma di Subvenzione di Partitu",
-          "no_subsidies_yet": "Ùn ci hè ancu suvvenzioni",
-          "description": "Finanziamentu basatu nantu à u rendimentu eletturale",
-          "col_subsidy": "Sussidiu"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Elezzione",
-          "not_found": "Elezzione micca truvata",
-          "not_found_description": "L'elezzione chì cercate ùn esiste micca.",
-          "back_to_elections": "Torna à l'elezzioni",
-          "status_active": "Attiva",
-          "status_upcoming": "In arrivu",
-          "status_ended": "Finita",
-          "election_info": "Infurmazione nant'à l'elezzione",
-          "reward_pool": "Fondu di ricumpensa: {amount} WDD",
-          "reward_pool_minimum": "Fondu di ricumpensa: minimu {amount} WDD",
-          "choose_a_party": "Sceglie un partitu",
-          "no_parties_for_election": "Nisun partitu dispunibule per questa elezzione.",
-          "results_title": "Risultati",
-          "vote_singular": "votu",
-          "vote_plural": "voti",
-          "no_votes": "Ùn ci sò stati voti in questa elezzione.",
-          "test_election_name": "Elezione di prova {n}"
-        },
-        "list": {
-          "empty_state": "Nisuna elezzione trovata",
-          "active_section": "Elezzioni attive",
-          "upcoming_section": "Elezzioni à vene",
-          "previous_section": "Elezzioni passate"
-        }
-      }
-    },
-    "error": {
-      "title": "Qualcosa hè andatu male",
-      "description": "Un errore imprevisto hè accadutu. Per piacè pruvate di novu.",
-      "error_id": "ID di l'errore: {digest}",
-      "try_again": "Prova di novu"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Redditu di basa",
-        "savings": "Risparmi"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Ottene soldi per esse umanu",
-        "subtitle_claim": "Rivendica a to drachma",
-        "tooltip_claim": "1 WDD/ghjornu, limitatu à 1 WDD. Ritorna in 24 ore per massimizà i guadagni.",
-        "claim_button": "Rivendica",
-        "alert": {
-          "claim": {
-            "title": "Cunfirma a rivendicazione",
-            "description": "Stai per rivendicà {amount} WDD. Questu serà aghjuntu à u to saldu portafogliu."
-          }
-        },
-        "setup_subtitle": "Cunfigura u to redditu di basa",
-        "activate_loading": "Attivazione...",
-        "activate_button": "Attiva u redditu di basa",
-        "world_drachma": "Chì ghjè a drachma mundiale (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Rivendica u to dividendu globale di l'AI"
-      },
-      "savings": {
-        "title": "Contu di risparmi",
-        "subtitle": "Guadagna interessi ogni secunda",
-        "tooltip": "69% tassu annu di basa. Raccogli è reinvesti regolarmente per ottene rendimenti efficaci vicinu à 100% annu. Ritira quandu vogli.",
-        "deposit": "Deposita",
-        "withdraw": "Ritira",
-        "balance": "Saldu",
-        "amount_deposit": "Ammontu da deposità",
-        "amount_withdraw": "Ammontu da ritirà",
-        "interest": "Interessi",
-        "collect": "Raccogli",
-        "alert": {
-          "collect": {
-            "title": "Cunfirma a raccolta",
-            "description": "Stai per raccoglie {amount} WDD in interessi."
-          },
-          "deposit": {
-            "title": "Cunfirma u depositu",
-            "description": "Stai per deposità {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Cunfirma u ritiru",
-            "description": "Stai per ritirà {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Vede u cuntrattu intelligente",
-        "verify": "Verifica"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "CUNTU",
-          "account_info": "Infurmazioni di u cuntu",
-          "referral_code": "Codice di riferimentu",
-          "referred_by": "Riferitu da",
-          "language": "Lingua"
-        },
-        "help": {
-          "title": "AIUTU",
-          "quickstart": "Principià Prestu",
-          "docs": "Wiki",
-          "help_center": "Centru di Aiutu"
-        },
-        "source_code": {
-          "title": "CODICE SORGENTE"
-        },
-        "legal": {
-          "title": "LEGALE",
-          "terms": "Termini d'usu",
-          "privacy": "Pulitica di privacy"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Portafogliu"
-      },
-      "balance": "Saldo",
-      "modals": {
-        "sign_out": {
-          "confirm": "Sei sicuru chì vogli esce?"
-        },
-        "disconnect": {
-          "confirm": "Site sicuru di vulè disconnette u vostru wallet?"
-        },
-        "send": {
-          "button": "Manda",
-          "withdraw_to_crypto": {
-            "description": "Ritira WDD à un contu crypto.",
-            "amount_label": "Ammontu",
-            "address_label": "Indirizzu portafogliu",
-            "network_label": "Rete"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD nantu à Jumper",
-          "ethereum_uniswap": "Ethereum WDD nantu à Uniswap",
-          "base_jumper": "Base Chain WDD nantu à Jumper",
-          "base_uniswap": "Base Chain WDD nantu à Uniswap",
-          "worldchain_jumper": "World Chain WDD nantu à Jumper",
-          "worldchain_uniswap": "World Chain WDD nantu à Uniswap"
-        },
-        "delete_account": {
-          "description": "Questu sguasserà permanentemente u to cuntu è rimuverà tutti i to dati da i nostri serveri. Questa azione ùn pò esse annullata — per piacè cuntinue cù cura.",
-          "deleting": "Sguassendu..."
-        },
-        "connect_wallet_browser": {
-          "title": "Apri in MetaMask",
-          "description": "Per cunnette, copia stu ligame è aprilu in u navigatore integratu di MetaMask.",
-          "copy_link": "Copia ligame"
-        },
-        "connect_wallet_picker": {
-          "description": "Parechji portafogli sò stati trovati. Scegliene unu per cunnette."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Ùn avete micca un portafogliu?",
-          "find_wallet_link": "Trovene unu nant'à WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "CUNTU",
-        "security": "SICUREZZA",
-        "google_account": "Contu Google",
-        "google_not_linked": "Micca ligatu",
-        "passkeys": "Chjavi di passu",
-        "passkeys_linked": "{count} ligati",
-        "danger_zone": "ZONA DI PERICULU",
-        "delete_account": {
-          "description": "Rimuove permanentemente tutti i vostri dati"
-        },
-        "verification": "VERIFICAZIONE",
-        "google_linked": "Ligatu",
-        "account_label": "Cuntu"
-      },
-      "username": {
-        "label": "Nome d'utilizatore",
-        "edit_title": "Modificà u nome d'utilizatore",
-        "description": "3-30 caratteri, alfanumerici, sottoline è trattini"
-      },
-      "history": {
-        "title": "STORIA"
-      },
-      "transactions": {
-        "failed_to_load": "Impossibile à carricà",
-        "no_transactions": "Nisuna transazzione ancora",
-        "wdd_per_day": "WDD/ghjornu",
-        "just_now": "Avà",
-        "minutes_ago": "{minutes}m fà",
-        "hours_ago": "{hours}h fà",
-        "days_ago": "{days}g fà",
-        "filter": {
-          "all_types": "Tutti i tipi",
-          "select_type": "Selezziunate u tipu",
-          "rewards": "Ricumpense"
-        },
-        "types": {
-          "withdrawal": "Ritira",
-          "received": "Ricevutu",
-          "sent": "Inviatu",
-          "ambassador_reward": "Ricumpensa ambasciatore",
-          "party_subsidy": "Sussidiu di partitu",
-          "stream_created": "Flussu creatu",
-          "stream_updated": "Flussu aghjurnatu",
-          "savings_deposit": "Risparmi deposita",
-          "savings_withdrawal": "Risparmi ritira",
-          "savings_interest": "Risparmi interessi",
-          "referral_reward": "Ricumpensa di riferimentu"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Scansate stu codice QR per verificà cù Self.",
-        "mobile_dialog_description": "Sarete reindirizzatu à l’app Self per compie a verificazione.",
-        "support_telegram": "Supportu Self",
-        "verification_guide": "Guida di verificazione",
-        "qr_alt": "QR di verificazione Self",
-        "callback_warning": "Avvertimentu",
-        "callback_warning_description": "L'URL di callback di verificazione ùn hè micca accessibile da u vostru telefunu. Impostate NEXT_PUBLIC_SELF_CALLBACK à un URL publicu (o impostate NEXT_PUBLIC_PUBLIC_BASE_URL à un duminiu di tunnel/preview).",
-        "label": "Self",
-        "status_completed": "Verificatu",
-        "status_not_completed": "Micca verificatu",
-        "learn_about_self": "Amparate nantu à Self",
-        "primer": {
-          "title": "Self Pruticollu",
-          "description": "Utè verify senza rivelà dati persunali."
-        }
-      },
-      "verification_warning": {
-        "title": "Obtener verificación",
-        "reward_cap_banner": "I ricumpense di redditu di basa è risparmiu sò limitate per i citadini micca verificati. Verificate u vostru contu per guadagnà senza limiti."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "A maiò parte di i portafogli mostra solu WDD dopu chì hè statu importatu manualmente nantu à a catena scelta cù u so ",
-      "contract_address": "indirizzu di cuntrattu"
-    }
-  },
-  "toasts": {
-    "generic_error": "Hè accadutu un errore",
-    "copied": "Copiatu",
-    "wallet": {
-      "no_wallet": "Nisun indirizzu portafogliu",
-      "min_amount": "Minimu 10 WDD",
-      "sent": "Mandatu",
-      "account_deleted": "Cuntu sguassatu",
-      "delete_failed": "A sguassatura di u cuntu hà fallitu",
-      "contract_address_error": "Ùn si pò micca ritirà à un indirizzu di cuntrattu",
-      "sign_out_failed": "A disconnessione hà fallitu",
-      "google_linked": "Contu Google ligatu",
-      "google_already_linked": "U contu Google hè digià ligatu à un altru contu",
-      "google_link_failed": "Ùn si pò micca inizià a ligà Google",
-      "passkey_added": "Chjave di passu aghjunta",
-      "passkey_add_failed": "Ùn si pò micca aghjunghje a chjave di passu"
-    },
-    "parties": {
-      "updated": "Aghjurnatu",
-      "update_failed": "Aghjurnamentu hà fallitu",
-      "update_error": "Errore in l'aghjurnamentu di u partitu",
-      "registered": "Partitu registratu",
-      "register_failed": "Fiascu di a registrazione di u partitu",
-      "register_error": "Errore in a registrazione di u partitu",
-      "deleted": "Sguassatu",
-      "delete_failed": "Fiascu di a sguassà",
-      "delete_error": "Errore di sguassà"
-    },
-    "basic_income": {
-      "activated": "Redditu di basa attivatu",
-      "activate_failed": "L'attivazione hà fallitu",
-      "claimed": "Rivendicatu",
-      "claim_failed": "A rivendicazione hà fallitu"
-    },
-    "savings": {
-      "collected": "Raccoltu",
-      "collect_failed": "A raccolta hà fallitu",
-      "deposited": "Depositat",
-      "deposit_failed": "U depositu hà fallitu",
-      "withdrawn": "Ritiratu",
-      "withdraw_failed": "U ritiru hà fallitu"
-    }
-  },
-  "common": {
-    "confirm": "Cunfirma",
-    "sign_in": "Accedi",
-    "connect": "Cunnette",
-    "disconnect": "Disconnette",
-    "connect_wallet": "Cunnette u wallet",
-    "max": "Max",
-    "loading": "Caricamentu...",
-    "processing": "Trattamentu...",
-    "insufficient_balance": "WDD insufficiente",
-    "delete_account": "Sguassà u contu",
-    "sign_out": "Esce",
-    "invalid_address": "Indirizzu invalidu",
-    "coming_soon": "Prossimamente",
-    "withdraw": "Ritira",
-    "trade": "Scambià",
-    "continue": "Continua",
-    "close": "Chjude",
-    "updating": "Aghjurnamentu...",
-    "save": "Salvà",
-    "vote": "Votà",
-    "switch_to_base_chain": "Passa à Base Chain"
-  },
-  "auth": {
-    "choose_method": "Scegli u metudu preferitu.",
-    "sign_in_with_google": "Cuntinuà cù Google",
-    "sign_in_with_passkey": "Usà a biometria",
-    "sign_in_or_create": "Accedi al tuo account con una passkey, utilizzando l'impronta digitale, la scansione del volto o il blocco dello schermo.",
-    "create_account": "Crea un account",
-    "create_passkey_name": "Crea un nome passkey",
-    "passkey_name_description": "Nomina la tua passkey per identificarla nel gestore di password.",
-    "passkey_name": "Nome passkey"
-  }
+	"nav": {
+		"earn": "Guadagnà",
+		"govern": "Guvernà",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partiti",
+				"elections": "Elezioni",
+				"referendums": "Referendum"
+			},
+			"sections": {
+				"parties": {
+					"title": "Partiti pulitichi"
+				},
+				"elections": {
+					"title": "Elezioni di prova",
+					"subtitle": "Sperimenta cù a dimucrazia glubale"
+				},
+				"referendums": {
+					"title": "Referendum Custituziunale Mundiale",
+					"subtitle": "Vota nantu à i nostri principii fundamentali"
+				}
+			},
+			"vote": {
+				"no_active_election": "L'elezzione principia prestu",
+				"test_verification": {
+					"description": "Pruvate u nostru sistema di verificazione avà per esse pronti à votà",
+					"button": "Prouva"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Sannzi",
+					"ambassadors": "Ambasciatori"
+				},
+				"discover": "Scopre",
+				"search_placeholder": "Ricerca partiti...",
+				"no_parties_found": "Nisun partitu truvatu",
+				"error_loading": "Fiascu in u caricamentu di i partiti",
+				"refresh": "Agghjurnà",
+				"party_details": "Dettagli di u partitu",
+				"share_party": "Cundivide u partitu",
+				"my_party": "U mo partitu",
+				"learn_more": "Imparate di più",
+				"party_management": "Gestione di u partitu",
+				"edit_party_info": "Modificà l'infurmazioni di u partitu",
+				"dialogs": {
+					"party_name": "Nome di u partitu",
+					"description_optional": "Descrizzione (opzionale)",
+					"official_link_optional": "Link ufficiale (opzionale)",
+					"updating": "Aghjurnamentu...",
+					"save": "Salvà",
+					"register_party": "Registrà un partitu",
+					"register": "Registrà",
+					"registering": "Registrazione...",
+					"leader_warning_register": "Sì attualmente u capu di {partyName}. A registrazione di un novu partitu sguasserà u vostru partitu attuale.",
+					"deleting": "Sguassà...",
+					"about_to_delete": "Sì à puntu di sguassà {partyName}. St'azzione ùn pò micca esse annullata.",
+					"about_to_register": "Sete per fundà un partitu novu."
+				},
+				"detail": {
+					"failed_to_load": "Impossibile à carricà i dati di u partitu",
+					"party_not_found": "Partitu micca truvatu",
+					"error_loading": "Errore durante u caricamentu di u partitu",
+					"back_to_parties": "Torna à i partiti",
+					"description": "Descrizzione",
+					"party_info": "Infurmazioni di u partitu",
+					"leader": "Capu",
+					"website": "Situ web",
+					"not_found_description": "U partitu chì cercate ùn esiste micca o hè statu scioltu."
+				},
+				"delete_party": "Sguassà u partitu",
+				"run_on_elections_and_earn": "Candidati à l'elezzioni è ottene sovvenzioni",
+				"ambassadors": {
+					"title": "Prugramma d'Ambasciatori",
+					"description": "Invita amichi è guadagna ricumpense quandu si verificanu è quandu u so partitu riceve sussidi",
+					"leaderboard": "Classificazione",
+					"no_rewards_yet": "Ancu nisuna ricumpensa",
+					"col_ambassador": "Ambasciatori",
+					"col_invited": "Invitati",
+					"col_reward": "Ricumpensa",
+					"share_referral_link": "Sparte u ligame di riferimentu"
+				},
+				"subsidies": {
+					"title": "Prugramma di Subvenzione di Partitu",
+					"no_subsidies_yet": "Ùn ci hè ancu suvvenzioni",
+					"description": "Finanziamentu basatu nantu à u rendimentu eletturale",
+					"col_subsidy": "Sussidiu"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Elezzione",
+					"not_found": "Elezzione micca truvata",
+					"not_found_description": "L'elezzione chì cercate ùn esiste micca.",
+					"back_to_elections": "Torna à l'elezzioni",
+					"status_active": "Attiva",
+					"status_upcoming": "In arrivu",
+					"status_ended": "Finita",
+					"election_info": "Infurmazione nant'à l'elezzione",
+					"reward_pool": "Fondu di ricumpensa: {amount} WDD",
+					"reward_pool_minimum": "Fondu di ricumpensa: minimu {amount} WDD",
+					"choose_a_party": "Sceglie un partitu",
+					"no_parties_for_election": "Nisun partitu dispunibule per questa elezzione.",
+					"results_title": "Risultati",
+					"vote_singular": "votu",
+					"vote_plural": "voti",
+					"no_votes": "Ùn ci sò stati voti in questa elezzione.",
+					"test_election_name": "Elezione di prova {n}"
+				},
+				"list": {
+					"empty_state": "Nisuna elezzione trovata",
+					"active_section": "Elezzioni attive",
+					"upcoming_section": "Elezzioni à vene",
+					"previous_section": "Elezzioni passate"
+				}
+			}
+		},
+		"error": {
+			"title": "Qualcosa hè andatu male",
+			"description": "Un errore imprevisto hè accadutu. Per piacè pruvate di novu.",
+			"error_id": "ID di l'errore: {digest}",
+			"try_again": "Prova di novu"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Redditu di basa",
+				"savings": "Risparmi"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Ottene soldi per esse umanu",
+				"subtitle_claim": "Rivendica a to drachma",
+				"tooltip_claim": "1 WDD/ghjornu, limitatu à 1 WDD. Ritorna in 24 ore per massimizà i guadagni.",
+				"claim_button": "Rivendica",
+				"alert": {
+					"claim": {
+						"title": "Cunfirma a rivendicazione",
+						"description": "Stai per rivendicà {amount} WDD. Questu serà aghjuntu à u to saldu portafogliu."
+					}
+				},
+				"setup_subtitle": "Cunfigura u to redditu di basa",
+				"activate_loading": "Attivazione...",
+				"activate_button": "Attiva u redditu di basa",
+				"world_drachma": "Chì ghjè a drachma mundiale (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Rivendica u to dividendu globale di l'AI"
+			},
+			"savings": {
+				"title": "Contu di risparmi",
+				"subtitle": "Guadagna interessi ogni secunda",
+				"tooltip": "69% tassu annu di basa. Raccogli è reinvesti regolarmente per ottene rendimenti efficaci vicinu à 100% annu. Ritira quandu vogli.",
+				"deposit": "Deposita",
+				"withdraw": "Ritira",
+				"balance": "Saldu",
+				"amount_deposit": "Ammontu da deposità",
+				"amount_withdraw": "Ammontu da ritirà",
+				"interest": "Interessi",
+				"collect": "Raccogli",
+				"alert": {
+					"collect": {
+						"title": "Cunfirma a raccolta",
+						"description": "Stai per raccoglie {amount} WDD in interessi."
+					},
+					"deposit": {
+						"title": "Cunfirma u depositu",
+						"description": "Stai per deposità {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Cunfirma u ritiru",
+						"description": "Stai per ritirà {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Vede u cuntrattu intelligente",
+				"verify": "Verifica"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "CUNTU",
+					"account_info": "Infurmazioni di u cuntu",
+					"referral_code": "Codice di riferimentu",
+					"referred_by": "Riferitu da",
+					"language": "Lingua"
+				},
+				"help": {
+					"title": "AIUTU",
+					"quickstart": "Principià Prestu",
+					"docs": "Wiki",
+					"help_center": "Centru di Aiutu"
+				},
+				"source_code": {
+					"title": "CODICE SORGENTE"
+				},
+				"legal": {
+					"title": "LEGALE",
+					"terms": "Termini d'usu",
+					"privacy": "Pulitica di privacy"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Portafogliu"
+			},
+			"balance": "Saldo",
+			"modals": {
+				"sign_out": {
+					"confirm": "Sei sicuru chì vogli esce?"
+				},
+				"disconnect": {
+					"confirm": "Site sicuru di vulè disconnette u vostru wallet?"
+				},
+				"send": {
+					"button": "Manda",
+					"withdraw_to_crypto": {
+						"description": "Ritira WDD à un contu crypto.",
+						"amount_label": "Ammontu",
+						"address_label": "Indirizzu portafogliu",
+						"network_label": "Rete"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD nantu à Jumper",
+					"ethereum_uniswap": "Ethereum WDD nantu à Uniswap",
+					"base_jumper": "Base Chain WDD nantu à Jumper",
+					"base_uniswap": "Base Chain WDD nantu à Uniswap",
+					"worldchain_jumper": "World Chain WDD nantu à Jumper",
+					"worldchain_uniswap": "World Chain WDD nantu à Uniswap"
+				},
+				"delete_account": {
+					"description": "Questu sguasserà permanentemente u to cuntu è rimuverà tutti i to dati da i nostri serveri. Questa azione ùn pò esse annullata — per piacè cuntinue cù cura.",
+					"deleting": "Sguassendu..."
+				},
+				"connect_wallet_browser": {
+					"title": "Apri in MetaMask",
+					"description": "Per cunnette, copia stu ligame è aprilu in u navigatore integratu di MetaMask.",
+					"copy_link": "Copia ligame"
+				},
+				"connect_wallet_picker": {
+					"description": "Parechji portafogli sò stati trovati. Scegliene unu per cunnette."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Ùn avete micca un portafogliu?",
+					"find_wallet_link": "Trovene unu nant'à WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "CUNTU",
+				"security": "SICUREZZA",
+				"google_account": "Contu Google",
+				"google_not_linked": "Micca ligatu",
+				"passkeys": "Chjavi di passu",
+				"passkeys_linked": "{count} ligati",
+				"danger_zone": "ZONA DI PERICULU",
+				"delete_account": {
+					"description": "Rimuove permanentemente tutti i vostri dati"
+				},
+				"verification": "VERIFICAZIONE",
+				"google_linked": "Ligatu",
+				"account_label": "Cuntu"
+			},
+			"username": {
+				"label": "Nome d'utilizatore",
+				"edit_title": "Modificà u nome d'utilizatore",
+				"description": "3-30 caratteri, alfanumerici, sottoline è trattini"
+			},
+			"history": {
+				"title": "STORIA"
+			},
+			"transactions": {
+				"failed_to_load": "Impossibile à carricà",
+				"no_transactions": "Nisuna transazzione ancora",
+				"wdd_per_day": "WDD/ghjornu",
+				"just_now": "Avà",
+				"minutes_ago": "{minutes}m fà",
+				"hours_ago": "{hours}h fà",
+				"days_ago": "{days}g fà",
+				"filter": {
+					"all_types": "Tutti i tipi",
+					"select_type": "Selezziunate u tipu",
+					"rewards": "Ricumpense"
+				},
+				"types": {
+					"withdrawal": "Ritira",
+					"received": "Ricevutu",
+					"sent": "Inviatu",
+					"ambassador_reward": "Ricumpensa ambasciatore",
+					"party_subsidy": "Sussidiu di partitu",
+					"stream_created": "Flussu creatu",
+					"stream_updated": "Flussu aghjurnatu",
+					"savings_deposit": "Risparmi deposita",
+					"savings_withdrawal": "Risparmi ritira",
+					"savings_interest": "Risparmi interessi",
+					"referral_reward": "Ricumpensa di riferimentu"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Scansate stu codice QR per verificà cù Self.",
+				"mobile_dialog_description": "Sarete reindirizzatu à l’app Self per compie a verificazione.",
+				"support_telegram": "Supportu Self",
+				"verification_guide": "Guida di verificazione",
+				"qr_alt": "QR di verificazione Self",
+				"callback_warning": "Avvertimentu",
+				"callback_warning_description": "L'URL di callback di verificazione ùn hè micca accessibile da u vostru telefunu. Impostate NEXT_PUBLIC_SELF_CALLBACK à un URL publicu (o impostate NEXT_PUBLIC_PUBLIC_BASE_URL à un duminiu di tunnel/preview).",
+				"label": "Self",
+				"status_completed": "Verificatu",
+				"status_not_completed": "Micca verificatu",
+				"learn_about_self": "Amparate nantu à Self",
+				"primer": {
+					"title": "Self Pruticollu",
+					"description": "Utè verify senza rivelà dati persunali."
+				}
+			},
+			"verification_warning": {
+				"title": "Obtener verificación",
+				"reward_cap_banner": "I ricumpense di redditu di basa è risparmiu sò limitate per i citadini micca verificati. Verificate u vostru contu per guadagnà senza limiti."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "A maiò parte di i portafogli mostra solu WDD dopu chì hè statu importatu manualmente nantu à a catena scelta cù u so ",
+			"contract_address": "indirizzu di cuntrattu"
+		}
+	},
+	"toasts": {
+		"generic_error": "Hè accadutu un errore",
+		"copied": "Copiatu",
+		"wallet": {
+			"no_wallet": "Nisun indirizzu portafogliu",
+			"min_amount": "Minimu 10 WDD",
+			"sent": "Mandatu",
+			"account_deleted": "Cuntu sguassatu",
+			"delete_failed": "A sguassatura di u cuntu hà fallitu",
+			"contract_address_error": "Ùn si pò micca ritirà à un indirizzu di cuntrattu",
+			"sign_out_failed": "A disconnessione hà fallitu",
+			"google_linked": "Contu Google ligatu",
+			"google_already_linked": "U contu Google hè digià ligatu à un altru contu",
+			"google_link_failed": "Ùn si pò micca inizià a ligà Google",
+			"passkey_added": "Chjave di passu aghjunta",
+			"passkey_add_failed": "Ùn si pò micca aghjunghje a chjave di passu"
+		},
+		"parties": {
+			"updated": "Aghjurnatu",
+			"update_failed": "Aghjurnamentu hà fallitu",
+			"update_error": "Errore in l'aghjurnamentu di u partitu",
+			"registered": "Partitu registratu",
+			"register_failed": "Fiascu di a registrazione di u partitu",
+			"register_error": "Errore in a registrazione di u partitu",
+			"deleted": "Sguassatu",
+			"delete_failed": "Fiascu di a sguassà",
+			"delete_error": "Errore di sguassà"
+		},
+		"basic_income": {
+			"activated": "Redditu di basa attivatu",
+			"activate_failed": "L'attivazione hà fallitu",
+			"claimed": "Rivendicatu",
+			"claim_failed": "A rivendicazione hà fallitu"
+		},
+		"savings": {
+			"collected": "Raccoltu",
+			"collect_failed": "A raccolta hà fallitu",
+			"deposited": "Depositat",
+			"deposit_failed": "U depositu hà fallitu",
+			"withdrawn": "Ritiratu",
+			"withdraw_failed": "U ritiru hà fallitu"
+		}
+	},
+	"common": {
+		"confirm": "Cunfirma",
+		"sign_in": "Accedi",
+		"connect": "Cunnette",
+		"disconnect": "Disconnette",
+		"connect_wallet": "Cunnette u wallet",
+		"max": "Max",
+		"loading": "Caricamentu...",
+		"processing": "Trattamentu...",
+		"insufficient_balance": "WDD insufficiente",
+		"delete_account": "Sguassà u contu",
+		"sign_out": "Esce",
+		"invalid_address": "Indirizzu invalidu",
+		"coming_soon": "Prossimamente",
+		"withdraw": "Ritira",
+		"trade": "Scambià",
+		"continue": "Continua",
+		"close": "Chjude",
+		"updating": "Aghjurnamentu...",
+		"save": "Salvà",
+		"vote": "Votà",
+		"switch_to_base_chain": "Passa à Base Chain"
+	},
+	"auth": {
+		"choose_method": "Scegli u metudu preferitu.",
+		"sign_in_with_google": "Cuntinuà cù Google",
+		"sign_in_with_passkey": "Usà a biometria",
+		"sign_in_or_create": "Accedi al tuo account con una passkey, utilizzando l'impronta digitale, la scansione del volto o il blocco dello schermo.",
+		"create_account": "Crea un account",
+		"create_passkey_name": "Crea un nome passkey",
+		"passkey_name_description": "Nomina la tua passkey per identificarla nel gestore di password.",
+		"passkey_name": "Nome passkey"
+	}
 }

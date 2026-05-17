@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Κερδίστε",
-    "govern": "Διαχειριστείτε",
-    "menu": "Μενού"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Κόμματα",
-        "elections": "Εκλογές",
-        "referendums": "Δημοψηφίσματα"
-      },
-      "sections": {
-        "parties": {
-          "title": "Πολιτικά κόμματα"
-        },
-        "elections": {
-          "title": "Δοκιμαστικές εκλογές",
-          "subtitle": "Πειραματιστείτε με την παγκόσμια δημοκρατία"
-        },
-        "referendums": {
-          "title": "Παγκόσμιο Συνταγματικό Δημοψήφισμα",
-          "subtitle": "Ψηφίστε για τις θεμελιώδεις αρχές μας"
-        }
-      },
-      "vote": {
-        "no_active_election": "Η εκλογή ξεκινά σύντομα",
-        "test_verification": {
-          "description": "Δοκιμάστε το σύστημα επαλήθευσης τώρα για να είστε έτοιμοι για την ψηφοφορία",
-          "button": "Δοκιμή"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Επιδοτήσεις",
-          "ambassadors": "Πρεσβευτές"
-        },
-        "discover": "Ανακαλύψτε",
-        "search_placeholder": "Αναζήτηση κομμάτων...",
-        "no_parties_found": "Δεν βρέθηκαν κόμματα",
-        "error_loading": "Αποτυχία φόρτωσης κομμάτων",
-        "refresh": "Ανανέωση",
-        "party_details": "Λεπτομέρειες κόμματος",
-        "share_party": "Κοινοποίηση κόμματος",
-        "my_party": "Το κόμμα μου",
-        "learn_more": "Μάθετε περισσότερα",
-        "party_management": "Διαχείριση κόμματος",
-        "edit_party_info": "Επεξεργασία πληροφοριών κόμματος",
-        "dialogs": {
-          "party_name": "Όνομα κόμματος",
-          "description_optional": "Περιγραφή (προαιρετικό)",
-          "official_link_optional": "Επίσημος σύνδεσμος (προαιρετικό)",
-          "updating": "Ενημέρωση...",
-          "save": "Αποθήκευση",
-          "register_party": "Εγγραφή κόμματος",
-          "register": "Εγγραφή",
-          "registering": "Εγγραφή...",
-          "leader_warning_register": "Είστε επί του παρόντος ο ηγέτης του {partyName}. Η εγγραφή νέου κόμματος θα διαγράψει το τρέχον κόμμα σας.",
-          "deleting": "Διαγραφή...",
-          "about_to_delete": "Πρόκειται να διαγράψετε το {partyName}. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.",
-          "about_to_register": "Πρόκειται να ιδρύσετε ένα νέο κόμμα."
-        },
-        "detail": {
-          "failed_to_load": "Αποτυχία φόρτωσης δεδομένων κόμματος",
-          "party_not_found": "Κόμμα δεν βρέθηκε",
-          "error_loading": "Σφάλμα φόρτωσης κόμματος",
-          "back_to_parties": "Επιστροφή στα κόμματα",
-          "description": "Περιγραφή",
-          "party_info": "Πληροφορίες κόμματος",
-          "leader": "Ηγέτης",
-          "website": "Ιστοσελίδα",
-          "not_found_description": "Το κόμμα που αναζητάτε δεν υπάρχει ή έχει διαλυθεί."
-        },
-        "delete_party": "Διαγραφή κόμματος",
-        "run_on_elections_and_earn": "Καταθέστε υποψηφιότητα στις εκλογές και λάβετε επιδοτήσεις",
-        "ambassadors": {
-          "title": "Πρόγραμμα Πρεσβευτών",
-          "description": "Προσκαλέστε φίλους και κερδίστε ανταμοιβές όταν επαληθεύονται και όταν το κόμμα τους λαμβάνει επιδοτήσεις",
-          "leaderboard": "Κατάταξη",
-          "no_rewards_yet": "Δεν υπάρχουν αμοιβές ακόμα",
-          "col_ambassador": "Πρεσβευτές",
-          "col_invited": "Προσκεκλημένοι",
-          "col_reward": "Αμοιβή",
-          "share_referral_link": "Κοινοποίηση συνδέσμου παραπομπής"
-        },
-        "subsidies": {
-          "title": "Πρόγραμμα Επιδότησης Κομμάτων",
-          "no_subsidies_yet": "Καμία επιδότηση ακόμα",
-          "description": "Χρηματοδότηση με βάση την εκλογική επίδοση",
-          "col_subsidy": "Επιδότηση"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Εκλογή",
-          "not_found": "Η εκλογή δεν βρέθηκε",
-          "not_found_description": "Η εκλογή που αναζητάτε δεν υπάρχει.",
-          "back_to_elections": "Πίσω στις εκλογές",
-          "status_active": "Ενεργή",
-          "status_upcoming": "Επερχόμενη",
-          "status_ended": "Ολοκληρωμένη",
-          "election_info": "Πληροφορίες εκλογής",
-          "reward_pool": "Ταμείο ανταμοιβών: {amount} WDD",
-          "reward_pool_minimum": "Ταμείο ανταμοιβών: ελάχιστο {amount} WDD",
-          "choose_a_party": "Επιλέξτε κόμμα",
-          "no_parties_for_election": "Δεν υπάρχουν διαθέσιμα κόμματα για αυτήν την εκλογή.",
-          "results_title": "Αποτελέσματα",
-          "vote_singular": "ψήφος",
-          "vote_plural": "ψήφοι",
-          "no_votes": "Δεν δόθηκαν ψήφοι σε αυτές τις εκλογές.",
-          "test_election_name": "Δοκιμαστική εκλογή {n}"
-        },
-        "list": {
-          "empty_state": "Δεν βρέθηκαν εκλογές",
-          "active_section": "Ενεργές εκλογές",
-          "upcoming_section": "Επερχόμενες εκλογές",
-          "previous_section": "Προηγούμενες εκλογές"
-        }
-      }
-    },
-    "error": {
-      "title": "Κάτι πήγε στραβά",
-      "description": "Παρουσιάστηκε ένα απρόσμενο σφάλμα. Παρακαλώ δοκιμάστε ξανά.",
-      "error_id": "ID σφάλματος: {digest}",
-      "try_again": "Δοκιμάστε ξανά"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Βασικό εισόδημα",
-        "savings": "Οικονομίες"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Πάρτε χρήματα επειδή είστε άνθρωπος",
-        "subtitle_claim": "Διεκδικήστε τη δραχμή σας",
-        "tooltip_claim": "1 WDD/ημέρα, περιορισμένο σε 1 WDD. Επιστρέψτε εντός 24 ωρών για μεγιστοποίηση των κερδών.",
-        "claim_button": "Διεκδικήστε",
-        "alert": {
-          "claim": {
-            "title": "Επιβεβαιώστε την αξίωση",
-            "description": "Πρόκειται να διεκδικήσετε {amount} WDD. Αυτό θα προστεθεί στο υπόλοιπο του πορτοφολιού σας."
-          }
-        },
-        "setup_subtitle": "Ρυθμίστε το βασικό σας εισόδημα",
-        "activate_loading": "Ενεργοποίηση...",
-        "activate_button": "Ενεργοποιήστε το βασικό εισόδημα",
-        "world_drachma": "Τι είναι η παγκόσμια δραχμή (WDD);",
-        "subtitle_unauth_raised_by_humanity": "Διεκδικήστε το παγκόσμιο AI μέρισμά σας"
-      },
-      "savings": {
-        "title": "Λογαριασμός οικονομιών",
-        "subtitle": "Κερδίστε τόκους κάθε δευτερόλεπτο",
-        "tooltip": "69% ετήσιο βασικό επιτόκιο. Συλλέγεται και επανεπενδύεται τακτικά για επίτευξη σχεδόν 100% αποτελεσματικών αποδόσεων. Αναλήψη οποιαδήποτε στιγμή.",
-        "deposit": "Κατάθεση",
-        "withdraw": "Ανάληψη",
-        "balance": "Υπόλοιπο",
-        "amount_deposit": "Ποσό προς κατάθεση",
-        "amount_withdraw": "Ποσό προς ανάληψη",
-        "interest": "Τόκος",
-        "collect": "Συλλογή",
-        "alert": {
-          "collect": {
-            "title": "Επιβεβαιώστε τη συλλογή",
-            "description": "Πρόκειται να συλλέξετε {amount} WDD σε τόκους."
-          },
-          "deposit": {
-            "title": "Επιβεβαιώστε την κατάθεση",
-            "description": "Πρόκειται να καταθέσετε {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Επιβεβαιώστε την ανάληψη",
-            "description": "Πρόκειται να αναλάβετε {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Δείτε το έξυπνο συμβόλαιο",
-        "verify": "Επαλήθευση"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ΛΟΓΑΡΙΑΣΜΟΣ",
-          "account_info": "Πληροφορίες λογαριασμού",
-          "referral_code": "Κωδικός παραπομπής",
-          "referred_by": "Προτάθηκε από",
-          "language": "Γλώσσα"
-        },
-        "help": {
-          "title": "ΒΟΗΘΕΙΑ",
-          "quickstart": "Γρήγορη εκκίνηση",
-          "docs": "Βίκι",
-          "help_center": "Κέντρο Βοήθειας"
-        },
-        "source_code": {
-          "title": "ΠΗΓΑΙΟΣ ΚΩΔΙΚΑΣ"
-        },
-        "legal": {
-          "title": "ΝΟΜΙΚΑ",
-          "terms": "Όροι χρήσης",
-          "privacy": "Πολιτική απορρήτου"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Πορτοφόλι"
-      },
-      "balance": "Υπόλοιπο",
-      "modals": {
-        "sign_out": {
-          "confirm": "Είστε σίγουροι ότι θέλετε να αποσυνδεθείτε;"
-        },
-        "disconnect": {
-          "confirm": "Είστε βέβαιοι ότι θέλετε να αποσυνδέσετε το πορτοφόλι σας;"
-        },
-        "send": {
-          "button": "Στείλτε",
-          "withdraw_to_crypto": {
-            "description": "Ανάληψη WDD σε λογαριασμό crypto.",
-            "amount_label": "Ποσό",
-            "address_label": "Διεύθυνση πορτοφολιού",
-            "network_label": "Δίκτυο"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD στο Jumper",
-          "ethereum_uniswap": "Ethereum WDD στο Uniswap",
-          "base_jumper": "Base Chain WDD στο Jumper",
-          "base_uniswap": "Base Chain WDD στο Uniswap",
-          "worldchain_jumper": "World Chain WDD στο Jumper",
-          "worldchain_uniswap": "World Chain WDD στο Uniswap"
-        },
-        "delete_account": {
-          "description": "Αυτό θα διαγράψει μόνιμα τον λογαριασμό σας και θα αφαιρέσει όλα τα δεδομένα σας από τους διακομιστές μας. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί — συνεχίστε με προσοχή.",
-          "deleting": "Διαγραφή..."
-        },
-        "connect_wallet_browser": {
-          "title": "Άνοιγμα στο MetaMask",
-          "description": "Για να συνδεθείτε, αντιγράψτε αυτόν τον σύνδεσμο και ανοίξτε τον στο ενσωματωμένο πρόγραμμα περιήγησης του MetaMask.",
-          "copy_link": "Αντιγραφή συνδέσμου"
-        },
-        "connect_wallet_picker": {
-          "description": "Βρέθηκαν πολλαπλά πορτοφόλια. Επιλέξτε ένα για σύνδεση."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Δεν έχετε πορτοφόλι;",
-          "find_wallet_link": "Βρείτε ένα στο WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ΛΟΓΑΡΙΑΣΜΟΣ",
-        "security": "ΑΣΦΑΛΕΙΑ",
-        "google_account": "Λογαριασμός Google",
-        "google_not_linked": "Δεν είναι συνδεδεμένος",
-        "passkeys": "Κλειδιά πρόσβασης",
-        "passkeys_linked": "{count} συνδεδεμένα",
-        "danger_zone": "ΖΩΝΗ ΚΙΝΔΥΝΟΥ",
-        "delete_account": {
-          "description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
-        },
-        "verification": "ΕΠΑΛΗΘΕΥΣΗ",
-        "google_linked": "Συνδεδεμένος",
-        "account_label": "Λογαριασμός"
-      },
-      "username": {
-        "label": "Όνομα χρήστη",
-        "edit_title": "Επεξεργασία ονόματος χρήστη",
-        "description": "3-30 χαρακτήρες, αλφαριθμητικά, κάτω παύλες και παύλες"
-      },
-      "history": {
-        "title": "ΙΣΤΟΡΙΚΌ"
-      },
-      "transactions": {
-        "failed_to_load": "Αποτυχία φόρτωσης",
-        "no_transactions": "Δεν υπάρχουν ακόμα συναλλαγές",
-        "wdd_per_day": "WDD/ημέρα",
-        "just_now": "Μόλις τώρα",
-        "minutes_ago": "πριν {minutes}λ",
-        "hours_ago": "πριν {hours}ω",
-        "days_ago": "πριν {days}η",
-        "filter": {
-          "all_types": "Όλοι οι τύποι",
-          "select_type": "Επιλέξτε τύπο",
-          "rewards": "Ανταμοιβές"
-        },
-        "types": {
-          "withdrawal": "Ανάληψη",
-          "received": "Λήφθηκε",
-          "sent": "Απεστάλη",
-          "ambassador_reward": "Ανταμοιβή πρεσβευτή",
-          "party_subsidy": "Επιδότηση κόμματος",
-          "stream_created": "Η ροή δημιουργήθηκε",
-          "stream_updated": "Η ροή ενημερώθηκε",
-          "savings_deposit": "Οικονομίες κατάθεση",
-          "savings_withdrawal": "Οικονομίες ανάληψη",
-          "savings_interest": "Οικονομίες τόκος",
-          "referral_reward": "Ανταμοιβή παραπομπής"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Σαρώστε αυτό το QR για να επαληθευτείτε με το Self.",
-        "mobile_dialog_description": "Θα μεταφερθείτε στην εφαρμογή Self για να ολοκληρώσετε την επαλήθευση.",
-        "support_telegram": "Υποστήριξη Self",
-        "verification_guide": "Οδηγός επαλήθευσης",
-        "qr_alt": "QR επαλήθευσης Self",
-        "callback_warning": "Προειδοποίηση",
-        "callback_warning_description": "Η URL επανάκλησης επαλήθευσης δεν είναι προσβάσιμη από το τηλέφωνό σας. Ορίστε το NEXT_PUBLIC_SELF_CALLBACK σε δημόσια URL (ή ορίστε το NEXT_PUBLIC_PUBLIC_BASE_URL σε τομέα tunnel/preview).",
-        "label": "Self",
-        "status_completed": "Επαληθευμένο",
-        "status_not_completed": "Δεν επαληθεύτηκε",
-        "learn_about_self": "Μάθετε για το Self",
-        "primer": {
-          "title": "Self Πρωτόκολλο",
-          "description": "Αποκτήστε επαλήθευση χωρίς να αποκαλύψετε προσωπικά δεδομένα."
-        }
-      },
-      "verification_warning": {
-        "title": "Λάβετε επιβεβαίωση",
-        "reward_cap_banner": "Οι ανταμοιβές βασικού εισοδήματος και αποταμίευσης είναι περιορισμένες για μη επαληθευμένους πολίτες. Επαλήθευσε τον λογαριασμό σου για να κερδίζεις χωρίς όρια."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Οι περισσότερες πορτοφόλες εμφανίζουν WDD μόνο αφού εισαχθεί χειροκίνητα στην επιλεγμένη αλυσίδα με τη ",
-      "contract_address": "διεύθυνση συμβολαίου"
-    }
-  },
-  "toasts": {
-    "generic_error": "Παρουσιάστηκε σφάλμα",
-    "copied": "Αντιγράφηκε",
-    "wallet": {
-      "no_wallet": "Δεν υπάρχει διεύθυνση πορτοφολιού",
-      "min_amount": "Ελάχιστο 10 WDD",
-      "sent": "Απεστάλη",
-      "account_deleted": "Ο λογαριασμός διαγράφηκε",
-      "delete_failed": "Αποτυχία διαγραφής λογαριασμού",
-      "contract_address_error": "Δεν μπορεί να γίνει ανάληψη σε διεύθυνση συμβολαίου",
-      "sign_out_failed": "Η αποσύνδεση απέτυχε",
-      "google_linked": "Ο λογαριασμός Google συνδέθηκε",
-      "google_already_linked": "Ο λογαριασμός Google είναι ήδη συνδεδεμένος με άλλο λογαριασμό",
-      "google_link_failed": "Αποτυχία έναρξης σύνδεσης Google",
-      "passkey_added": "Προστέθηκε κλειδί πρόσβασης",
-      "passkey_add_failed": "Αποτυχία προσθήκης κλειδιού πρόσβασης"
-    },
-    "parties": {
-      "updated": "Ενημερώθηκε",
-      "update_failed": "Αποτυχία ενημέρωσης",
-      "update_error": "Σφάλμα κατά την ενημέρωση του κόμματος",
-      "registered": "Το κόμμα εγγράφηκε",
-      "register_failed": "Αποτυχία εγγραφής κόμματος",
-      "register_error": "Σφάλμα κατά την εγγραφή κόμματος",
-      "deleted": "Διαγράφηκε",
-      "delete_failed": "Αποτυχία διαγραφής",
-      "delete_error": "Σφάλμα κατά τη διαγραφή"
-    },
-    "basic_income": {
-      "activated": "Το βασικό εισόδημα ενεργοποιήθηκε",
-      "activate_failed": "Η ενεργοποίηση απέτυχε",
-      "claimed": "Διεκδικήθηκε",
-      "claim_failed": "Η αξίωση απέτυχε"
-    },
-    "savings": {
-      "collected": "Συλλέχθηκε",
-      "collect_failed": "Η συλλογή απέτυχε",
-      "deposited": "Κατατέθηκε",
-      "deposit_failed": "Η κατάθεση απέτυχε",
-      "withdrawn": "Αναλήφθηκε",
-      "withdraw_failed": "Η ανάληψη απέτυχε"
-    }
-  },
-  "common": {
-    "confirm": "Επιβεβαίωση",
-    "sign_in": "Σύνδεση",
-    "connect": "Σύνδεση",
-    "disconnect": "Αποσύνδεση",
-    "connect_wallet": "Σύνδεση πορτοφολιού",
-    "max": "Μέγιστο",
-    "loading": "Φόρτωση...",
-    "processing": "Επεξεργασία...",
-    "insufficient_balance": "Δεν υπάρχουν αρκετά WDD",
-    "delete_account": "Διαγραφή λογαριασμού",
-    "sign_out": "Αποσύνδεση",
-    "invalid_address": "Μη έγκυρη διεύθυνση",
-    "coming_soon": "Σύντομα",
-    "withdraw": "Ανάληψη",
-    "trade": "Συναλλαγή",
-    "continue": "Συνέχεια",
-    "close": "Κλείσιμο",
-    "updating": "Ενημέρωση...",
-    "save": "Αποθήκευση",
-    "vote": "Ψηφίστε",
-    "switch_to_base_chain": "Μετάβαση σε Base Chain"
-  },
-  "auth": {
-    "choose_method": "Επιλέξτε την προτιμώμενη μέθοδο.",
-    "sign_in_with_google": "Συνέχεια με Google",
-    "sign_in_with_passkey": "Χρήση βιομετρικών",
-    "sign_in_or_create": "Πρόσβαση στον λογαριασμό σας με ένα passkey, χρησιμοποιώντας το δακτυλικό αποτύπωμα, τη σάρωση προσώπου ή το κλείδωμα οθόνης.",
-    "create_account": "Δημιουργία λογαριασμού",
-    "create_passkey_name": "Δημιουργία ονόματος passkey",
-    "passkey_name_description": "Ονομάστε το passkey σας για να το αναγνωρίσετε στον διαχειριστή κωδικών πρόσβασης.",
-    "passkey_name": "Όνομα passkey"
-  }
+	"nav": {
+		"earn": "Κερδίστε",
+		"govern": "Διαχειριστείτε",
+		"menu": "Μενού"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Κόμματα",
+				"elections": "Εκλογές",
+				"referendums": "Δημοψηφίσματα"
+			},
+			"sections": {
+				"parties": {
+					"title": "Πολιτικά κόμματα"
+				},
+				"elections": {
+					"title": "Δοκιμαστικές εκλογές",
+					"subtitle": "Πειραματιστείτε με την παγκόσμια δημοκρατία"
+				},
+				"referendums": {
+					"title": "Παγκόσμιο Συνταγματικό Δημοψήφισμα",
+					"subtitle": "Ψηφίστε για τις θεμελιώδεις αρχές μας"
+				}
+			},
+			"vote": {
+				"no_active_election": "Η εκλογή ξεκινά σύντομα",
+				"test_verification": {
+					"description": "Δοκιμάστε το σύστημα επαλήθευσης τώρα για να είστε έτοιμοι για την ψηφοφορία",
+					"button": "Δοκιμή"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Επιδοτήσεις",
+					"ambassadors": "Πρεσβευτές"
+				},
+				"discover": "Ανακαλύψτε",
+				"search_placeholder": "Αναζήτηση κομμάτων...",
+				"no_parties_found": "Δεν βρέθηκαν κόμματα",
+				"error_loading": "Αποτυχία φόρτωσης κομμάτων",
+				"refresh": "Ανανέωση",
+				"party_details": "Λεπτομέρειες κόμματος",
+				"share_party": "Κοινοποίηση κόμματος",
+				"my_party": "Το κόμμα μου",
+				"learn_more": "Μάθετε περισσότερα",
+				"party_management": "Διαχείριση κόμματος",
+				"edit_party_info": "Επεξεργασία πληροφοριών κόμματος",
+				"dialogs": {
+					"party_name": "Όνομα κόμματος",
+					"description_optional": "Περιγραφή (προαιρετικό)",
+					"official_link_optional": "Επίσημος σύνδεσμος (προαιρετικό)",
+					"updating": "Ενημέρωση...",
+					"save": "Αποθήκευση",
+					"register_party": "Εγγραφή κόμματος",
+					"register": "Εγγραφή",
+					"registering": "Εγγραφή...",
+					"leader_warning_register": "Είστε επί του παρόντος ο ηγέτης του {partyName}. Η εγγραφή νέου κόμματος θα διαγράψει το τρέχον κόμμα σας.",
+					"deleting": "Διαγραφή...",
+					"about_to_delete": "Πρόκειται να διαγράψετε το {partyName}. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.",
+					"about_to_register": "Πρόκειται να ιδρύσετε ένα νέο κόμμα."
+				},
+				"detail": {
+					"failed_to_load": "Αποτυχία φόρτωσης δεδομένων κόμματος",
+					"party_not_found": "Κόμμα δεν βρέθηκε",
+					"error_loading": "Σφάλμα φόρτωσης κόμματος",
+					"back_to_parties": "Επιστροφή στα κόμματα",
+					"description": "Περιγραφή",
+					"party_info": "Πληροφορίες κόμματος",
+					"leader": "Ηγέτης",
+					"website": "Ιστοσελίδα",
+					"not_found_description": "Το κόμμα που αναζητάτε δεν υπάρχει ή έχει διαλυθεί."
+				},
+				"delete_party": "Διαγραφή κόμματος",
+				"run_on_elections_and_earn": "Καταθέστε υποψηφιότητα στις εκλογές και λάβετε επιδοτήσεις",
+				"ambassadors": {
+					"title": "Πρόγραμμα Πρεσβευτών",
+					"description": "Προσκαλέστε φίλους και κερδίστε ανταμοιβές όταν επαληθεύονται και όταν το κόμμα τους λαμβάνει επιδοτήσεις",
+					"leaderboard": "Κατάταξη",
+					"no_rewards_yet": "Δεν υπάρχουν αμοιβές ακόμα",
+					"col_ambassador": "Πρεσβευτές",
+					"col_invited": "Προσκεκλημένοι",
+					"col_reward": "Αμοιβή",
+					"share_referral_link": "Κοινοποίηση συνδέσμου παραπομπής"
+				},
+				"subsidies": {
+					"title": "Πρόγραμμα Επιδότησης Κομμάτων",
+					"no_subsidies_yet": "Καμία επιδότηση ακόμα",
+					"description": "Χρηματοδότηση με βάση την εκλογική επίδοση",
+					"col_subsidy": "Επιδότηση"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Εκλογή",
+					"not_found": "Η εκλογή δεν βρέθηκε",
+					"not_found_description": "Η εκλογή που αναζητάτε δεν υπάρχει.",
+					"back_to_elections": "Πίσω στις εκλογές",
+					"status_active": "Ενεργή",
+					"status_upcoming": "Επερχόμενη",
+					"status_ended": "Ολοκληρωμένη",
+					"election_info": "Πληροφορίες εκλογής",
+					"reward_pool": "Ταμείο ανταμοιβών: {amount} WDD",
+					"reward_pool_minimum": "Ταμείο ανταμοιβών: ελάχιστο {amount} WDD",
+					"choose_a_party": "Επιλέξτε κόμμα",
+					"no_parties_for_election": "Δεν υπάρχουν διαθέσιμα κόμματα για αυτήν την εκλογή.",
+					"results_title": "Αποτελέσματα",
+					"vote_singular": "ψήφος",
+					"vote_plural": "ψήφοι",
+					"no_votes": "Δεν δόθηκαν ψήφοι σε αυτές τις εκλογές.",
+					"test_election_name": "Δοκιμαστική εκλογή {n}"
+				},
+				"list": {
+					"empty_state": "Δεν βρέθηκαν εκλογές",
+					"active_section": "Ενεργές εκλογές",
+					"upcoming_section": "Επερχόμενες εκλογές",
+					"previous_section": "Προηγούμενες εκλογές"
+				}
+			}
+		},
+		"error": {
+			"title": "Κάτι πήγε στραβά",
+			"description": "Παρουσιάστηκε ένα απρόσμενο σφάλμα. Παρακαλώ δοκιμάστε ξανά.",
+			"error_id": "ID σφάλματος: {digest}",
+			"try_again": "Δοκιμάστε ξανά"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Βασικό εισόδημα",
+				"savings": "Οικονομίες"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Πάρτε χρήματα επειδή είστε άνθρωπος",
+				"subtitle_claim": "Διεκδικήστε τη δραχμή σας",
+				"tooltip_claim": "1 WDD/ημέρα, περιορισμένο σε 1 WDD. Επιστρέψτε εντός 24 ωρών για μεγιστοποίηση των κερδών.",
+				"claim_button": "Διεκδικήστε",
+				"alert": {
+					"claim": {
+						"title": "Επιβεβαιώστε την αξίωση",
+						"description": "Πρόκειται να διεκδικήσετε {amount} WDD. Αυτό θα προστεθεί στο υπόλοιπο του πορτοφολιού σας."
+					}
+				},
+				"setup_subtitle": "Ρυθμίστε το βασικό σας εισόδημα",
+				"activate_loading": "Ενεργοποίηση...",
+				"activate_button": "Ενεργοποιήστε το βασικό εισόδημα",
+				"world_drachma": "Τι είναι η παγκόσμια δραχμή (WDD);",
+				"subtitle_unauth_raised_by_humanity": "Διεκδικήστε το παγκόσμιο AI μέρισμά σας"
+			},
+			"savings": {
+				"title": "Λογαριασμός οικονομιών",
+				"subtitle": "Κερδίστε τόκους κάθε δευτερόλεπτο",
+				"tooltip": "69% ετήσιο βασικό επιτόκιο. Συλλέγεται και επανεπενδύεται τακτικά για επίτευξη σχεδόν 100% αποτελεσματικών αποδόσεων. Αναλήψη οποιαδήποτε στιγμή.",
+				"deposit": "Κατάθεση",
+				"withdraw": "Ανάληψη",
+				"balance": "Υπόλοιπο",
+				"amount_deposit": "Ποσό προς κατάθεση",
+				"amount_withdraw": "Ποσό προς ανάληψη",
+				"interest": "Τόκος",
+				"collect": "Συλλογή",
+				"alert": {
+					"collect": {
+						"title": "Επιβεβαιώστε τη συλλογή",
+						"description": "Πρόκειται να συλλέξετε {amount} WDD σε τόκους."
+					},
+					"deposit": {
+						"title": "Επιβεβαιώστε την κατάθεση",
+						"description": "Πρόκειται να καταθέσετε {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Επιβεβαιώστε την ανάληψη",
+						"description": "Πρόκειται να αναλάβετε {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Δείτε το έξυπνο συμβόλαιο",
+				"verify": "Επαλήθευση"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ΛΟΓΑΡΙΑΣΜΟΣ",
+					"account_info": "Πληροφορίες λογαριασμού",
+					"referral_code": "Κωδικός παραπομπής",
+					"referred_by": "Προτάθηκε από",
+					"language": "Γλώσσα"
+				},
+				"help": {
+					"title": "ΒΟΗΘΕΙΑ",
+					"quickstart": "Γρήγορη εκκίνηση",
+					"docs": "Βίκι",
+					"help_center": "Κέντρο Βοήθειας"
+				},
+				"source_code": {
+					"title": "ΠΗΓΑΙΟΣ ΚΩΔΙΚΑΣ"
+				},
+				"legal": {
+					"title": "ΝΟΜΙΚΑ",
+					"terms": "Όροι χρήσης",
+					"privacy": "Πολιτική απορρήτου"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Πορτοφόλι"
+			},
+			"balance": "Υπόλοιπο",
+			"modals": {
+				"sign_out": {
+					"confirm": "Είστε σίγουροι ότι θέλετε να αποσυνδεθείτε;"
+				},
+				"disconnect": {
+					"confirm": "Είστε βέβαιοι ότι θέλετε να αποσυνδέσετε το πορτοφόλι σας;"
+				},
+				"send": {
+					"button": "Στείλτε",
+					"withdraw_to_crypto": {
+						"description": "Ανάληψη WDD σε λογαριασμό crypto.",
+						"amount_label": "Ποσό",
+						"address_label": "Διεύθυνση πορτοφολιού",
+						"network_label": "Δίκτυο"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD στο Jumper",
+					"ethereum_uniswap": "Ethereum WDD στο Uniswap",
+					"base_jumper": "Base Chain WDD στο Jumper",
+					"base_uniswap": "Base Chain WDD στο Uniswap",
+					"worldchain_jumper": "World Chain WDD στο Jumper",
+					"worldchain_uniswap": "World Chain WDD στο Uniswap"
+				},
+				"delete_account": {
+					"description": "Αυτό θα διαγράψει μόνιμα τον λογαριασμό σας και θα αφαιρέσει όλα τα δεδομένα σας από τους διακομιστές μας. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί — συνεχίστε με προσοχή.",
+					"deleting": "Διαγραφή..."
+				},
+				"connect_wallet_browser": {
+					"title": "Άνοιγμα στο MetaMask",
+					"description": "Για να συνδεθείτε, αντιγράψτε αυτόν τον σύνδεσμο και ανοίξτε τον στο ενσωματωμένο πρόγραμμα περιήγησης του MetaMask.",
+					"copy_link": "Αντιγραφή συνδέσμου"
+				},
+				"connect_wallet_picker": {
+					"description": "Βρέθηκαν πολλαπλά πορτοφόλια. Επιλέξτε ένα για σύνδεση."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Δεν έχετε πορτοφόλι;",
+					"find_wallet_link": "Βρείτε ένα στο WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ΛΟΓΑΡΙΑΣΜΟΣ",
+				"security": "ΑΣΦΑΛΕΙΑ",
+				"google_account": "Λογαριασμός Google",
+				"google_not_linked": "Δεν είναι συνδεδεμένος",
+				"passkeys": "Κλειδιά πρόσβασης",
+				"passkeys_linked": "{count} συνδεδεμένα",
+				"danger_zone": "ΖΩΝΗ ΚΙΝΔΥΝΟΥ",
+				"delete_account": {
+					"description": "Αφαιρέστε μόνιμα όλα τα δεδομένα σας"
+				},
+				"verification": "ΕΠΑΛΗΘΕΥΣΗ",
+				"google_linked": "Συνδεδεμένος",
+				"account_label": "Λογαριασμός"
+			},
+			"username": {
+				"label": "Όνομα χρήστη",
+				"edit_title": "Επεξεργασία ονόματος χρήστη",
+				"description": "3-30 χαρακτήρες, αλφαριθμητικά, κάτω παύλες και παύλες"
+			},
+			"history": {
+				"title": "ΙΣΤΟΡΙΚΌ"
+			},
+			"transactions": {
+				"failed_to_load": "Αποτυχία φόρτωσης",
+				"no_transactions": "Δεν υπάρχουν ακόμα συναλλαγές",
+				"wdd_per_day": "WDD/ημέρα",
+				"just_now": "Μόλις τώρα",
+				"minutes_ago": "πριν {minutes}λ",
+				"hours_ago": "πριν {hours}ω",
+				"days_ago": "πριν {days}η",
+				"filter": {
+					"all_types": "Όλοι οι τύποι",
+					"select_type": "Επιλέξτε τύπο",
+					"rewards": "Ανταμοιβές"
+				},
+				"types": {
+					"withdrawal": "Ανάληψη",
+					"received": "Λήφθηκε",
+					"sent": "Απεστάλη",
+					"ambassador_reward": "Ανταμοιβή πρεσβευτή",
+					"party_subsidy": "Επιδότηση κόμματος",
+					"stream_created": "Η ροή δημιουργήθηκε",
+					"stream_updated": "Η ροή ενημερώθηκε",
+					"savings_deposit": "Οικονομίες κατάθεση",
+					"savings_withdrawal": "Οικονομίες ανάληψη",
+					"savings_interest": "Οικονομίες τόκος",
+					"referral_reward": "Ανταμοιβή παραπομπής"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Σαρώστε αυτό το QR για να επαληθευτείτε με το Self.",
+				"mobile_dialog_description": "Θα μεταφερθείτε στην εφαρμογή Self για να ολοκληρώσετε την επαλήθευση.",
+				"support_telegram": "Υποστήριξη Self",
+				"verification_guide": "Οδηγός επαλήθευσης",
+				"qr_alt": "QR επαλήθευσης Self",
+				"callback_warning": "Προειδοποίηση",
+				"callback_warning_description": "Η URL επανάκλησης επαλήθευσης δεν είναι προσβάσιμη από το τηλέφωνό σας. Ορίστε το NEXT_PUBLIC_SELF_CALLBACK σε δημόσια URL (ή ορίστε το NEXT_PUBLIC_PUBLIC_BASE_URL σε τομέα tunnel/preview).",
+				"label": "Self",
+				"status_completed": "Επαληθευμένο",
+				"status_not_completed": "Δεν επαληθεύτηκε",
+				"learn_about_self": "Μάθετε για το Self",
+				"primer": {
+					"title": "Self Πρωτόκολλο",
+					"description": "Αποκτήστε επαλήθευση χωρίς να αποκαλύψετε προσωπικά δεδομένα."
+				}
+			},
+			"verification_warning": {
+				"title": "Λάβετε επιβεβαίωση",
+				"reward_cap_banner": "Οι ανταμοιβές βασικού εισοδήματος και αποταμίευσης είναι περιορισμένες για μη επαληθευμένους πολίτες. Επαλήθευσε τον λογαριασμό σου για να κερδίζεις χωρίς όρια."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Οι περισσότερες πορτοφόλες εμφανίζουν WDD μόνο αφού εισαχθεί χειροκίνητα στην επιλεγμένη αλυσίδα με τη ",
+			"contract_address": "διεύθυνση συμβολαίου"
+		}
+	},
+	"toasts": {
+		"generic_error": "Παρουσιάστηκε σφάλμα",
+		"copied": "Αντιγράφηκε",
+		"wallet": {
+			"no_wallet": "Δεν υπάρχει διεύθυνση πορτοφολιού",
+			"min_amount": "Ελάχιστο 10 WDD",
+			"sent": "Απεστάλη",
+			"account_deleted": "Ο λογαριασμός διαγράφηκε",
+			"delete_failed": "Αποτυχία διαγραφής λογαριασμού",
+			"contract_address_error": "Δεν μπορεί να γίνει ανάληψη σε διεύθυνση συμβολαίου",
+			"sign_out_failed": "Η αποσύνδεση απέτυχε",
+			"google_linked": "Ο λογαριασμός Google συνδέθηκε",
+			"google_already_linked": "Ο λογαριασμός Google είναι ήδη συνδεδεμένος με άλλο λογαριασμό",
+			"google_link_failed": "Αποτυχία έναρξης σύνδεσης Google",
+			"passkey_added": "Προστέθηκε κλειδί πρόσβασης",
+			"passkey_add_failed": "Αποτυχία προσθήκης κλειδιού πρόσβασης"
+		},
+		"parties": {
+			"updated": "Ενημερώθηκε",
+			"update_failed": "Αποτυχία ενημέρωσης",
+			"update_error": "Σφάλμα κατά την ενημέρωση του κόμματος",
+			"registered": "Το κόμμα εγγράφηκε",
+			"register_failed": "Αποτυχία εγγραφής κόμματος",
+			"register_error": "Σφάλμα κατά την εγγραφή κόμματος",
+			"deleted": "Διαγράφηκε",
+			"delete_failed": "Αποτυχία διαγραφής",
+			"delete_error": "Σφάλμα κατά τη διαγραφή"
+		},
+		"basic_income": {
+			"activated": "Το βασικό εισόδημα ενεργοποιήθηκε",
+			"activate_failed": "Η ενεργοποίηση απέτυχε",
+			"claimed": "Διεκδικήθηκε",
+			"claim_failed": "Η αξίωση απέτυχε"
+		},
+		"savings": {
+			"collected": "Συλλέχθηκε",
+			"collect_failed": "Η συλλογή απέτυχε",
+			"deposited": "Κατατέθηκε",
+			"deposit_failed": "Η κατάθεση απέτυχε",
+			"withdrawn": "Αναλήφθηκε",
+			"withdraw_failed": "Η ανάληψη απέτυχε"
+		}
+	},
+	"common": {
+		"confirm": "Επιβεβαίωση",
+		"sign_in": "Σύνδεση",
+		"connect": "Σύνδεση",
+		"disconnect": "Αποσύνδεση",
+		"connect_wallet": "Σύνδεση πορτοφολιού",
+		"max": "Μέγιστο",
+		"loading": "Φόρτωση...",
+		"processing": "Επεξεργασία...",
+		"insufficient_balance": "Δεν υπάρχουν αρκετά WDD",
+		"delete_account": "Διαγραφή λογαριασμού",
+		"sign_out": "Αποσύνδεση",
+		"invalid_address": "Μη έγκυρη διεύθυνση",
+		"coming_soon": "Σύντομα",
+		"withdraw": "Ανάληψη",
+		"trade": "Συναλλαγή",
+		"continue": "Συνέχεια",
+		"close": "Κλείσιμο",
+		"updating": "Ενημέρωση...",
+		"save": "Αποθήκευση",
+		"vote": "Ψηφίστε",
+		"switch_to_base_chain": "Μετάβαση σε Base Chain"
+	},
+	"auth": {
+		"choose_method": "Επιλέξτε την προτιμώμενη μέθοδο.",
+		"sign_in_with_google": "Συνέχεια με Google",
+		"sign_in_with_passkey": "Χρήση βιομετρικών",
+		"sign_in_or_create": "Πρόσβαση στον λογαριασμό σας με ένα passkey, χρησιμοποιώντας το δακτυλικό αποτύπωμα, τη σάρωση προσώπου ή το κλείδωμα οθόνης.",
+		"create_account": "Δημιουργία λογαριασμού",
+		"create_passkey_name": "Δημιουργία ονόματος passkey",
+		"passkey_name_description": "Ονομάστε το passkey σας για να το αναγνωρίσετε στον διαχειριστή κωδικών πρόσβασης.",
+		"passkey_name": "Όνομα passkey"
+	}
 }

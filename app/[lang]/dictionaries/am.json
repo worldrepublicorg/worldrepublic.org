@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "መገኘት",
-    "govern": "መመራት",
-    "menu": "ሜኑ"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "ፓርቲዎች",
-        "elections": "ምርጫዎች",
-        "referendums": "የህዝብ ድምጽ"
-      },
-      "sections": {
-        "parties": {
-          "title": "የፖለቲካ ፓርቲዎች"
-        },
-        "elections": {
-          "title": "የሙከራ ምርጫዎች",
-          "subtitle": "በዓለም አቀፍ ዴሞክራሲ ይሙከሩ"
-        },
-        "referendums": {
-          "title": "የዓለም ሕገ መንግሥታዊ የህዝብ ድምጽ",
-          "subtitle": "በመሰረታዊ መርሆቻችን ድምጽ ይስጡ"
-        }
-      },
-      "vote": {
-        "no_active_election": "ምርጫው በቅርቡ ይጀምራል",
-        "test_verification": {
-          "description": "ለድምጽ መስጠት ዝግጁ ለመሆን የእኛን የማረጋገጫ ስርዓት አሁን ይሞክሩ",
-          "button": "ሙከራ"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "ድጎማዎች",
-          "ambassadors": "አምባሳደሮች"
-        },
-        "discover": "አግኝ",
-        "search_placeholder": "ፓርቲዎችን ፈልግ...",
-        "no_parties_found": "ፓርቲ አልተገኘም",
-        "error_loading": "ፓርቲዎችን መጫን አልተቻለም",
-        "refresh": "አድስ",
-        "party_details": "የፓርቲ ዝርዝሮች",
-        "share_party": "ፓርቲ ያጋሩ",
-        "my_party": "የእኔ ፓርቲ",
-        "learn_more": "ተጨማሪ ይማሩ",
-        "party_management": "የፓርቲ አስተዳደር",
-        "edit_party_info": "የፓርቲ መረጃ ያርትዑ",
-        "dialogs": {
-          "party_name": "የፓርቲ ስም",
-          "description_optional": "መግለጫ (አማራጭ)",
-          "official_link_optional": "ይፋዊ አገናኝ (አማራጭ)",
-          "updating": "በማዘመን ላይ...",
-          "save": "አስቀምጥ",
-          "register_party": "ፓርቲ ይመዝገቡ",
-          "register": "ይመዝገቡ",
-          "registering": "በመመዝገብ ላይ...",
-          "leader_warning_register": "አሁን የ{partyName} መሪ ነዎት። አዲስ ፓርቲ መመዝገብ የአሁኑን ፓርቲዎን ያሰርዳል።",
-          "deleting": "በመሰረዝ ላይ...",
-          "about_to_delete": "እርስዎ {partyName}ን ለመሰረዝ ነዎት። ይህ ተግባር ሊመለስ አይችልም።",
-          "about_to_register": "አዲስ ፓርቲ ለመፍጠር ነዎታል።"
-        },
-        "detail": {
-          "failed_to_load": "የፓርቲ ውሂብ መጫን አልተሳካም",
-          "party_not_found": "ፓርቲ አልተገኘም",
-          "error_loading": "ፓርቲ በመጫን ላይ ስህተት",
-          "back_to_parties": "ወደ ፓርቲዎች ተመለስ",
-          "description": "መግለጫ",
-          "party_info": "የፓርቲ መረጃ",
-          "leader": "አመራር",
-          "website": "ድህረ ገጽ",
-          "not_found_description": "የሚፈልጉት ፓርቲ የለም ወይም ተፈትቷል።"
-        },
-        "delete_party": "ፓርቲ ሰርዝ",
-        "run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ",
-        "ambassadors": {
-          "title": "የአምባሳደር ፕሮግራም",
-          "description": "ጓደኞችን ይጋብዙ እና ሲረጋገጡ እና ፓርቲያቸው ድጎማ ሲያገኝ ሽልማቶችን ያግኙ",
-          "leaderboard": "ደረጃ ሰንጠረዥ",
-          "no_rewards_yet": "እስካሁን ምንም ምርጥ ዋጋ የለም",
-          "col_ambassador": "አምባሳደሮች",
-          "col_invited": "የተጋበዙ",
-          "col_reward": "ምርጥ ዋጋ",
-          "share_referral_link": "የማጣቀሻ ማስፈንጠሪያ አጋራ"
-        },
-        "subsidies": {
-          "title": "የፓርቲ ድጎማ ፕሮግራም",
-          "no_subsidies_yet": "እስካሁን ምንም ድጎማ የለም",
-          "description": "በምርጫ አፈጻጸም ላይ የተመሠረተ ፋይናንስ",
-          "col_subsidy": "ድጎማ"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "ምርጫ",
-          "not_found": "ምርጫ አልተገኘም",
-          "not_found_description": "እየፈለጉት ያለው ምርጫ የለም።",
-          "back_to_elections": "ወደ ምርጫዎች ተመለስ",
-          "status_active": "ንቁ",
-          "status_upcoming": "መጪ",
-          "status_ended": "ያለቀ",
-          "election_info": "የምርጫ መረጃ",
-          "reward_pool": "የሽልማት ገንዳ: {amount} WDD",
-          "reward_pool_minimum": "የሽልማት ገንዳ: ቢያንስ {amount} WDD",
-          "choose_a_party": "ፓርቲ ይምረጡ",
-          "no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።",
-          "results_title": "ውጤቶች",
-          "vote_singular": "ድምፅ",
-          "vote_plural": "ድምፆች",
-          "no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
-          "test_election_name": "የሙከራ ምርጫ {n}"
-        },
-        "list": {
-          "empty_state": "ምንም ምርጫዎች አልተገኙም",
-          "active_section": "ንቁ ምርጫዎች",
-          "upcoming_section": "የሚመጡ ምርጫዎች",
-          "previous_section": "የቀድሞ ምርጫዎች"
-        }
-      }
-    },
-    "error": {
-      "title": "የሆነ ስህተት ተከስቷል",
-      "description": "ያልተጠበቀ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።",
-      "error_id": "የስህተት መለያ: {digest}",
-      "try_again": "እንደገና ሞክር"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "መሰረታዊ ገቢ",
-        "savings": "መቆጠብ"
-      },
-      "basic_income": {
-        "subtitle_unauth": "ሰው ስለሆኑ ገንዘብ ያግኙ",
-        "subtitle_claim": "የእርስዎን ድራክማ ይጠይቁ",
-        "tooltip_claim": "1 WDD/ቀን፣ ከፍተኛ 1 WDD። ገቢዎን ለማሳደግ በ24 ሰዓት ውስጥ ይመለሱ።",
-        "claim_button": "መጠየቅ",
-        "alert": {
-          "claim": {
-            "title": "መጠየቅ ማረጋገጥ",
-            "description": "እርስዎ {amount} WDD ይጠይቃሉ። ይህ ወደ የእርስዎ የባህር ዳር ሂሳብ ይጨመራል።"
-          }
-        },
-        "setup_subtitle": "መሰረታዊ ገቢዎን ያዋቅሩ",
-        "activate_loading": "እየተገበረ ነው...",
-        "activate_button": "መሰረታዊ ገቢ ያግብሩ",
-        "world_drachma": "የዓለም ድራክማ (WDD) ምንድነው?",
-        "subtitle_unauth_raised_by_humanity": "የእርስዎን አለም አቀፍ AI ክፍል ይጠይቁ"
-      },
-      "savings": {
-        "title": "የመቆጠቢያ ሂሳብ",
-        "subtitle": "በእያንዳንዱ ሰከንድ ወለድ ያግኙ",
-        "tooltip": "69% ዓመታዊ መሰረታዊ ወለድ። በየጊዜው ይሰብስቡ እና እንደገና ይወድቁ በዚህም ከ100% ቅርብ ዓመታዊ ውጤታማ ምላሽ ያገኛሉ። በማንኛውም ጊዜ ማውጣት ይቻላል።",
-        "deposit": "መዋስ",
-        "withdraw": "ማውጣት",
-        "balance": "ሂሳብ",
-        "amount_deposit": "የመዋሻ መጠን",
-        "amount_withdraw": "የማውጣት መጠን",
-        "interest": "ወለድ",
-        "collect": "ማሰብስብ",
-        "alert": {
-          "collect": {
-            "title": "ማሰብስብ ማረጋገጥ",
-            "description": "እርስዎ {amount} WDD ወለድ ይሰብስባሉ።"
-          },
-          "deposit": {
-            "title": "መዋስ ማረጋገጥ",
-            "description": "እርስዎ {amount} WDD ይዋሳሉ።"
-          },
-          "withdraw": {
-            "title": "ማውጣት ማረጋገጥ",
-            "description": "እርስዎ {amount} WDD ይወጣሉ።"
-          }
-        },
-        "smart_contract_link": "ስማርት ኮንትራትን ይመልከቱ",
-        "verify": "አረጋግጥ"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "መለያ",
-          "account_info": "የመለያ መረጃ",
-          "referral_code": "የማጣቀሻ ኮድ",
-          "referred_by": "የጠቀሰው",
-          "language": "ቋንቋ"
-        },
-        "help": {
-          "title": "እርዳታ",
-          "quickstart": "ፈጣን ጅምር",
-          "docs": "ዊኪ",
-          "help_center": "የእርዳታ ማዕከል"
-        },
-        "source_code": {
-          "title": "ሶርስ ኮድ"
-        },
-        "legal": {
-          "title": "ሕጋዊ",
-          "terms": "የአጠቃቀም ውሎች",
-          "privacy": "የግላዊነት መመሪያዎች"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "የባህር ዳር"
-      },
-      "balance": "ሂሳብ",
-      "modals": {
-        "sign_out": {
-          "confirm": "እርግጠኛ ነዎት መውጣት ይፈልጋሉ?"
-        },
-        "disconnect": {
-          "confirm": "የእርስዎን ቦርሳ ግንኙነት ማቋረጥ እርግጠኛ ነዎት?"
-        },
-        "send": {
-          "button": "ላክ",
-          "withdraw_to_crypto": {
-            "description": "WDDን ወደ ክሪፕቶ ሂሳብ ውጣ.",
-            "amount_label": "መጠን",
-            "address_label": "የባህር ዳር አድራሻ",
-            "network_label": "አውታረ መረብ"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD በJumper ላይ",
-          "ethereum_uniswap": "Ethereum WDD በUniswap ላይ",
-          "base_jumper": "Base Chain WDD በJumper ላይ",
-          "base_uniswap": "Base Chain WDD በUniswap ላይ",
-          "worldchain_jumper": "World Chain WDD በJumper ላይ",
-          "worldchain_uniswap": "World Chain WDD በUniswap ላይ"
-        },
-        "delete_account": {
-          "description": "ይህ የእርስዎን መለያ ለዘለዓለም ያጠፋል እና ሁሉንም ውሂቦችዎን ከሰርቨሮቻችን ያስወግዳል። ይህ እርምጃ ሊመለስ አይችልም — እባክዎ በጥንቃቄ ይሂዱ።",
-          "deleting": "እየተጠፋ ነው..."
-        },
-        "connect_wallet_browser": {
-          "title": "በMetaMask ክፈት",
-          "description": "ለመገናኘት ይህን አገናኝ ቅዳ እና በMetaMask አብሮ በተሰራ አሳሽ ውስጥ ክፈት።",
-          "copy_link": "አገናኝ ቅዳ"
-        },
-        "connect_wallet_picker": {
-          "description": "ብዙ ዋሌቶች ተገኝተዋል። ለመገናኘት አንዱን ይምረጡ።"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ዋሌት የለዎትም?",
-          "find_wallet_link": "በWalletGuide ላይ አንዱን ያግኙ"
-        }
-      },
-      "sections": {
-        "account": "መለያ",
-        "security": "ደህንነት",
-        "google_account": "የጉግል መለያ",
-        "google_not_linked": "አልተገናኘም",
-        "passkeys": "የይለፍ ቁልፎች",
-        "passkeys_linked": "{count} ተገናኝቷል",
-        "danger_zone": "አደጋ ዞን",
-        "delete_account": {
-          "description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
-        },
-        "verification": "ማረጋገጫ",
-        "google_linked": "ተገናኝቷል",
-        "account_label": "መለያ"
-      },
-      "username": {
-        "label": "የተጠቃሚ ስም",
-        "edit_title": "የተጠቃሚ ስም አርም",
-        "description": "3-30 ቁምፊዎች፣ አልፋ-አሃዝ፣ የታች መስመሮች እና ሰረዝ"
-      },
-      "history": {
-        "title": "ታሪክ"
-      },
-      "transactions": {
-        "failed_to_load": "መጫን አልተሳካም",
-        "no_transactions": "እስካሁን ምንም ግብይቶች የሉም",
-        "wdd_per_day": "WDD/ቀን",
-        "just_now": "አሁን",
-        "minutes_ago": "ከ{minutes}ደቂቃ በፊት",
-        "hours_ago": "ከ{hours}ሰዓት በፊት",
-        "days_ago": "ከ{days}ቀን በፊት",
-        "filter": {
-          "all_types": "ሁሉም አይነቶች",
-          "select_type": "አይነት ይምረጡ",
-          "rewards": "ሽልማቶች"
-        },
-        "types": {
-          "withdrawal": "መውጣት",
-          "received": "ተቀብሏል",
-          "sent": "ተልኳል",
-          "ambassador_reward": "የአምባሳደር ሽልማት",
-          "party_subsidy": "የፓርቲ ድጎማ",
-          "stream_created": "ዥረት ተፈጥሯል",
-          "stream_updated": "ዥረት ተዘumenaል",
-          "savings_deposit": "መቆጠብ መዋስ",
-          "savings_withdrawal": "መቆጠብ ማውጣት",
-          "savings_interest": "መቆጠብ ወለድ",
-          "referral_reward": "የማጣቀሻ ሽልማት"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "ይህን ኪዩአር ኮድ ይስካኑ በ Self ለማረጋገጥ።",
-        "mobile_dialog_description": "በራስ መተግበሪያ ማረጋገጫን ለማጠናቀቅ ተዘልቆ ይሄዳል።",
-        "support_telegram": "Self ድጋፍ",
-        "verification_guide": "የማረጋገጫ መመሪያ",
-        "qr_alt": "Self ማረጋገጫ QR",
-        "callback_warning": "ማስጠንቀቂያ",
-        "callback_warning_description": "የማረጋገጫ callback URL ከስልክዎ ሊደረስበት አይችልም። NEXT_PUBLIC_SELF_CALLBACK ን ወደ ይፋ URL ያዘጋጁ (ወይም NEXT_PUBLIC_PUBLIC_BASE_URL ን ወደ ቱነል/ቅድመ-ዕይታ ጎራ ያዘጋጁ)።",
-        "label": "Self",
-        "status_completed": "ተረጋግጧል",
-        "status_not_completed": "አልተረጋገጠም",
-        "learn_about_self": "ስለ Self ይማሩ",
-        "primer": {
-          "title": "Self ፕሮቶኮል",
-          "description": "ማረጋገጫ እያገኙ የግል መረጃ ሳያሳዩ።"
-        }
-      },
-      "verification_warning": {
-        "title": "ማረጋገጫ ያግኙ",
-        "reward_cap_banner": "የመሠረታዊ ገቢ እና የቁጠባ ሽልማቶች ለማረጋገጫ ያልተደረጉ ዜጎች ገደብ አላቸው። ያለ ገደብ ለማግኘት መለያዎን ያረጋግጡ።"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "አብዛኛዎቹ የገንዘብ ቦርሳዎች WDDን ከመረጡት ሰንሰለት ላይ በእጁ ከገቡ በኋላ ብቻ ያሳያሉ። በእሱ ",
-      "contract_address": "የኮንትራት አድራሻ"
-    }
-  },
-  "toasts": {
-    "generic_error": "ስህተት ተከስቷል",
-    "copied": "ተገልብጧል",
-    "wallet": {
-      "no_wallet": "የባህር ዳር አድራሻ የለም",
-      "min_amount": "ዝቅተኛ 10 WDD",
-      "sent": "ተላከ",
-      "account_deleted": "መለያ ተጠፍቷል",
-      "delete_failed": "መለያ ማጥፋት አልተሳካም",
-      "contract_address_error": "ወደ የስምምነት አድራሻ ማውጣት አይቻልም",
-      "sign_out_failed": "ውጣ አልተሳካም",
-      "google_linked": "የጉግል መለያ ተገናኝቷል",
-      "google_already_linked": "የጉግል መለያ ቀድሞውኑ ከሌላ መለያ ጋር ተገናኝቷል",
-      "google_link_failed": "የጉግል ማገናኛ መጀመር አልተሳካም",
-      "passkey_added": "የይለፍ ቁልፍ ታክሏል",
-      "passkey_add_failed": "የይለፍ ቁልፍ ማከል አልተሳካም"
-    },
-    "parties": {
-      "updated": "ተዘምኗል",
-      "update_failed": "ማዘመን አልተሳካም",
-      "update_error": "ፓርቲ ሲዘምን ስህተት",
-      "registered": "ፓርቲ ተመዝግቧል",
-      "register_failed": "ፓርቲ መመዝገብ አልተቻለም",
-      "register_error": "ፓርቲ በመመዝገብ ላይ ስህተት",
-      "deleted": "ተሰርዟል",
-      "delete_failed": "መሰረዝ አልተቻለም",
-      "delete_error": "በመሰረዝ ላይ ስህተት"
-    },
-    "basic_income": {
-      "activated": "መሰረታዊ ገቢ ተግብሯል",
-      "activate_failed": "መግባት አልተሳካም",
-      "claimed": "ተጠይቋል",
-      "claim_failed": "መጠየቅ አልተሳካም"
-    },
-    "savings": {
-      "collected": "ተሰብስቧል",
-      "collect_failed": "ማሰብስብ አልተሳካም",
-      "deposited": "ተዋሷል",
-      "deposit_failed": "መዋስ አልተሳካም",
-      "withdrawn": "ተወግዷል",
-      "withdraw_failed": "ማውጣት አልተሳካም"
-    }
-  },
-  "common": {
-    "confirm": "ማረጋገጥ",
-    "sign_in": "መግባት",
-    "connect": "አገናኝ",
-    "disconnect": "ግንኙነት አቋርጥ",
-    "connect_wallet": "የገንዘብ ቦርሳ አገናኝ",
-    "max": "ከፍተኛ",
-    "loading": "እየተጫነ ነው...",
-    "processing": "በማስተካከል ላይ...",
-    "insufficient_balance": "በቂ ያልሆነ WDD",
-    "delete_account": "መለያ ሰርዝ",
-    "sign_out": "ውጣ",
-    "invalid_address": "ልክ ያልሆነ አድራሻ",
-    "coming_soon": "በቅርብ ይመጣል",
-    "withdraw": "ማውጣት",
-    "trade": "ንግድ",
-    "continue": "ቀጥል",
-    "close": "ዝጋ",
-    "updating": "በመቅረጽ ላይ...",
-    "save": "አስቀምጥ",
-    "vote": "መጥየት",
-    "switch_to_base_chain": "ወደ Base Chain ቀይር"
-  },
-  "auth": {
-    "choose_method": "የሚመርጡትን ዘዴ ይምረጡ.",
-    "sign_in_with_google": "በGoogle ይቀጥሉ",
-    "sign_in_with_passkey": "ባዮሜትሪክ ይጠቀሙ",
-    "sign_in_or_create": "የይለፍ ቁልፍዎን፣ የጣት አሻሻድ፣ የፊት ስካን ወይም የስክሪን ማገድ በመጠቀም አካውንትዎን ይድረሱ።",
-    "create_account": "መለያ ፍጠር",
-    "create_passkey_name": "የይለፍ ቁልፍ ስም ፍጠር",
-    "passkey_name_description": "የይለፍ ቁልፍዎን በይለፍ ቃል አስተዳዳሪዎ ውስጥ ለመለየት ይሰይሙ።",
-    "passkey_name": "የይለፍ ቁልፍ ስም"
-  }
+	"nav": {
+		"earn": "መገኘት",
+		"govern": "መመራት",
+		"menu": "ሜኑ"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "ፓርቲዎች",
+				"elections": "ምርጫዎች",
+				"referendums": "የህዝብ ድምጽ"
+			},
+			"sections": {
+				"parties": {
+					"title": "የፖለቲካ ፓርቲዎች"
+				},
+				"elections": {
+					"title": "የሙከራ ምርጫዎች",
+					"subtitle": "በዓለም አቀፍ ዴሞክራሲ ይሙከሩ"
+				},
+				"referendums": {
+					"title": "የዓለም ሕገ መንግሥታዊ የህዝብ ድምጽ",
+					"subtitle": "በመሰረታዊ መርሆቻችን ድምጽ ይስጡ"
+				}
+			},
+			"vote": {
+				"no_active_election": "ምርጫው በቅርቡ ይጀምራል",
+				"test_verification": {
+					"description": "ለድምጽ መስጠት ዝግጁ ለመሆን የእኛን የማረጋገጫ ስርዓት አሁን ይሞክሩ",
+					"button": "ሙከራ"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "ድጎማዎች",
+					"ambassadors": "አምባሳደሮች"
+				},
+				"discover": "አግኝ",
+				"search_placeholder": "ፓርቲዎችን ፈልግ...",
+				"no_parties_found": "ፓርቲ አልተገኘም",
+				"error_loading": "ፓርቲዎችን መጫን አልተቻለም",
+				"refresh": "አድስ",
+				"party_details": "የፓርቲ ዝርዝሮች",
+				"share_party": "ፓርቲ ያጋሩ",
+				"my_party": "የእኔ ፓርቲ",
+				"learn_more": "ተጨማሪ ይማሩ",
+				"party_management": "የፓርቲ አስተዳደር",
+				"edit_party_info": "የፓርቲ መረጃ ያርትዑ",
+				"dialogs": {
+					"party_name": "የፓርቲ ስም",
+					"description_optional": "መግለጫ (አማራጭ)",
+					"official_link_optional": "ይፋዊ አገናኝ (አማራጭ)",
+					"updating": "በማዘመን ላይ...",
+					"save": "አስቀምጥ",
+					"register_party": "ፓርቲ ይመዝገቡ",
+					"register": "ይመዝገቡ",
+					"registering": "በመመዝገብ ላይ...",
+					"leader_warning_register": "አሁን የ{partyName} መሪ ነዎት። አዲስ ፓርቲ መመዝገብ የአሁኑን ፓርቲዎን ያሰርዳል።",
+					"deleting": "በመሰረዝ ላይ...",
+					"about_to_delete": "እርስዎ {partyName}ን ለመሰረዝ ነዎት። ይህ ተግባር ሊመለስ አይችልም።",
+					"about_to_register": "አዲስ ፓርቲ ለመፍጠር ነዎታል።"
+				},
+				"detail": {
+					"failed_to_load": "የፓርቲ ውሂብ መጫን አልተሳካም",
+					"party_not_found": "ፓርቲ አልተገኘም",
+					"error_loading": "ፓርቲ በመጫን ላይ ስህተት",
+					"back_to_parties": "ወደ ፓርቲዎች ተመለስ",
+					"description": "መግለጫ",
+					"party_info": "የፓርቲ መረጃ",
+					"leader": "አመራር",
+					"website": "ድህረ ገጽ",
+					"not_found_description": "የሚፈልጉት ፓርቲ የለም ወይም ተፈትቷል።"
+				},
+				"delete_party": "ፓርቲ ሰርዝ",
+				"run_on_elections_and_earn": "በመርጫ ምርጫዎች ላይ ይሳተፉ እና ድጎማዎች ያግኙ",
+				"ambassadors": {
+					"title": "የአምባሳደር ፕሮግራም",
+					"description": "ጓደኞችን ይጋብዙ እና ሲረጋገጡ እና ፓርቲያቸው ድጎማ ሲያገኝ ሽልማቶችን ያግኙ",
+					"leaderboard": "ደረጃ ሰንጠረዥ",
+					"no_rewards_yet": "እስካሁን ምንም ምርጥ ዋጋ የለም",
+					"col_ambassador": "አምባሳደሮች",
+					"col_invited": "የተጋበዙ",
+					"col_reward": "ምርጥ ዋጋ",
+					"share_referral_link": "የማጣቀሻ ማስፈንጠሪያ አጋራ"
+				},
+				"subsidies": {
+					"title": "የፓርቲ ድጎማ ፕሮግራም",
+					"no_subsidies_yet": "እስካሁን ምንም ድጎማ የለም",
+					"description": "በምርጫ አፈጻጸም ላይ የተመሠረተ ፋይናንስ",
+					"col_subsidy": "ድጎማ"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "ምርጫ",
+					"not_found": "ምርጫ አልተገኘም",
+					"not_found_description": "እየፈለጉት ያለው ምርጫ የለም።",
+					"back_to_elections": "ወደ ምርጫዎች ተመለስ",
+					"status_active": "ንቁ",
+					"status_upcoming": "መጪ",
+					"status_ended": "ያለቀ",
+					"election_info": "የምርጫ መረጃ",
+					"reward_pool": "የሽልማት ገንዳ: {amount} WDD",
+					"reward_pool_minimum": "የሽልማት ገንዳ: ቢያንስ {amount} WDD",
+					"choose_a_party": "ፓርቲ ይምረጡ",
+					"no_parties_for_election": "ለዚህ ምርጫ ምንም ፓርቲዎች የሉም።",
+					"results_title": "ውጤቶች",
+					"vote_singular": "ድምፅ",
+					"vote_plural": "ድምፆች",
+					"no_votes": "በዚህ ምርጫ ምንም ድምፅ አልተሰጠም።",
+					"test_election_name": "የሙከራ ምርጫ {n}"
+				},
+				"list": {
+					"empty_state": "ምንም ምርጫዎች አልተገኙም",
+					"active_section": "ንቁ ምርጫዎች",
+					"upcoming_section": "የሚመጡ ምርጫዎች",
+					"previous_section": "የቀድሞ ምርጫዎች"
+				}
+			}
+		},
+		"error": {
+			"title": "የሆነ ስህተት ተከስቷል",
+			"description": "ያልተጠበቀ ስህተት ተከስቷል። እባክዎ እንደገና ይሞክሩ።",
+			"error_id": "የስህተት መለያ: {digest}",
+			"try_again": "እንደገና ሞክር"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "መሰረታዊ ገቢ",
+				"savings": "መቆጠብ"
+			},
+			"basic_income": {
+				"subtitle_unauth": "ሰው ስለሆኑ ገንዘብ ያግኙ",
+				"subtitle_claim": "የእርስዎን ድራክማ ይጠይቁ",
+				"tooltip_claim": "1 WDD/ቀን፣ ከፍተኛ 1 WDD። ገቢዎን ለማሳደግ በ24 ሰዓት ውስጥ ይመለሱ።",
+				"claim_button": "መጠየቅ",
+				"alert": {
+					"claim": {
+						"title": "መጠየቅ ማረጋገጥ",
+						"description": "እርስዎ {amount} WDD ይጠይቃሉ። ይህ ወደ የእርስዎ የባህር ዳር ሂሳብ ይጨመራል።"
+					}
+				},
+				"setup_subtitle": "መሰረታዊ ገቢዎን ያዋቅሩ",
+				"activate_loading": "እየተገበረ ነው...",
+				"activate_button": "መሰረታዊ ገቢ ያግብሩ",
+				"world_drachma": "የዓለም ድራክማ (WDD) ምንድነው?",
+				"subtitle_unauth_raised_by_humanity": "የእርስዎን አለም አቀፍ AI ክፍል ይጠይቁ"
+			},
+			"savings": {
+				"title": "የመቆጠቢያ ሂሳብ",
+				"subtitle": "በእያንዳንዱ ሰከንድ ወለድ ያግኙ",
+				"tooltip": "69% ዓመታዊ መሰረታዊ ወለድ። በየጊዜው ይሰብስቡ እና እንደገና ይወድቁ በዚህም ከ100% ቅርብ ዓመታዊ ውጤታማ ምላሽ ያገኛሉ። በማንኛውም ጊዜ ማውጣት ይቻላል።",
+				"deposit": "መዋስ",
+				"withdraw": "ማውጣት",
+				"balance": "ሂሳብ",
+				"amount_deposit": "የመዋሻ መጠን",
+				"amount_withdraw": "የማውጣት መጠን",
+				"interest": "ወለድ",
+				"collect": "ማሰብስብ",
+				"alert": {
+					"collect": {
+						"title": "ማሰብስብ ማረጋገጥ",
+						"description": "እርስዎ {amount} WDD ወለድ ይሰብስባሉ።"
+					},
+					"deposit": {
+						"title": "መዋስ ማረጋገጥ",
+						"description": "እርስዎ {amount} WDD ይዋሳሉ።"
+					},
+					"withdraw": {
+						"title": "ማውጣት ማረጋገጥ",
+						"description": "እርስዎ {amount} WDD ይወጣሉ።"
+					}
+				},
+				"smart_contract_link": "ስማርት ኮንትራትን ይመልከቱ",
+				"verify": "አረጋግጥ"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "መለያ",
+					"account_info": "የመለያ መረጃ",
+					"referral_code": "የማጣቀሻ ኮድ",
+					"referred_by": "የጠቀሰው",
+					"language": "ቋንቋ"
+				},
+				"help": {
+					"title": "እርዳታ",
+					"quickstart": "ፈጣን ጅምር",
+					"docs": "ዊኪ",
+					"help_center": "የእርዳታ ማዕከል"
+				},
+				"source_code": {
+					"title": "ሶርስ ኮድ"
+				},
+				"legal": {
+					"title": "ሕጋዊ",
+					"terms": "የአጠቃቀም ውሎች",
+					"privacy": "የግላዊነት መመሪያዎች"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "የባህር ዳር"
+			},
+			"balance": "ሂሳብ",
+			"modals": {
+				"sign_out": {
+					"confirm": "እርግጠኛ ነዎት መውጣት ይፈልጋሉ?"
+				},
+				"disconnect": {
+					"confirm": "የእርስዎን ቦርሳ ግንኙነት ማቋረጥ እርግጠኛ ነዎት?"
+				},
+				"send": {
+					"button": "ላክ",
+					"withdraw_to_crypto": {
+						"description": "WDDን ወደ ክሪፕቶ ሂሳብ ውጣ.",
+						"amount_label": "መጠን",
+						"address_label": "የባህር ዳር አድራሻ",
+						"network_label": "አውታረ መረብ"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD በJumper ላይ",
+					"ethereum_uniswap": "Ethereum WDD በUniswap ላይ",
+					"base_jumper": "Base Chain WDD በJumper ላይ",
+					"base_uniswap": "Base Chain WDD በUniswap ላይ",
+					"worldchain_jumper": "World Chain WDD በJumper ላይ",
+					"worldchain_uniswap": "World Chain WDD በUniswap ላይ"
+				},
+				"delete_account": {
+					"description": "ይህ የእርስዎን መለያ ለዘለዓለም ያጠፋል እና ሁሉንም ውሂቦችዎን ከሰርቨሮቻችን ያስወግዳል። ይህ እርምጃ ሊመለስ አይችልም — እባክዎ በጥንቃቄ ይሂዱ።",
+					"deleting": "እየተጠፋ ነው..."
+				},
+				"connect_wallet_browser": {
+					"title": "በMetaMask ክፈት",
+					"description": "ለመገናኘት ይህን አገናኝ ቅዳ እና በMetaMask አብሮ በተሰራ አሳሽ ውስጥ ክፈት።",
+					"copy_link": "አገናኝ ቅዳ"
+				},
+				"connect_wallet_picker": {
+					"description": "ብዙ ዋሌቶች ተገኝተዋል። ለመገናኘት አንዱን ይምረጡ።"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ዋሌት የለዎትም?",
+					"find_wallet_link": "በWalletGuide ላይ አንዱን ያግኙ"
+				}
+			},
+			"sections": {
+				"account": "መለያ",
+				"security": "ደህንነት",
+				"google_account": "የጉግል መለያ",
+				"google_not_linked": "አልተገናኘም",
+				"passkeys": "የይለፍ ቁልፎች",
+				"passkeys_linked": "{count} ተገናኝቷል",
+				"danger_zone": "አደጋ ዞን",
+				"delete_account": {
+					"description": "ሁሉንም የእርስዎን ውሂብ ለዘለዓለም ያስወግዱ"
+				},
+				"verification": "ማረጋገጫ",
+				"google_linked": "ተገናኝቷል",
+				"account_label": "መለያ"
+			},
+			"username": {
+				"label": "የተጠቃሚ ስም",
+				"edit_title": "የተጠቃሚ ስም አርም",
+				"description": "3-30 ቁምፊዎች፣ አልፋ-አሃዝ፣ የታች መስመሮች እና ሰረዝ"
+			},
+			"history": {
+				"title": "ታሪክ"
+			},
+			"transactions": {
+				"failed_to_load": "መጫን አልተሳካም",
+				"no_transactions": "እስካሁን ምንም ግብይቶች የሉም",
+				"wdd_per_day": "WDD/ቀን",
+				"just_now": "አሁን",
+				"minutes_ago": "ከ{minutes}ደቂቃ በፊት",
+				"hours_ago": "ከ{hours}ሰዓት በፊት",
+				"days_ago": "ከ{days}ቀን በፊት",
+				"filter": {
+					"all_types": "ሁሉም አይነቶች",
+					"select_type": "አይነት ይምረጡ",
+					"rewards": "ሽልማቶች"
+				},
+				"types": {
+					"withdrawal": "መውጣት",
+					"received": "ተቀብሏል",
+					"sent": "ተልኳል",
+					"ambassador_reward": "የአምባሳደር ሽልማት",
+					"party_subsidy": "የፓርቲ ድጎማ",
+					"stream_created": "ዥረት ተፈጥሯል",
+					"stream_updated": "ዥረት ተዘumenaል",
+					"savings_deposit": "መቆጠብ መዋስ",
+					"savings_withdrawal": "መቆጠብ ማውጣት",
+					"savings_interest": "መቆጠብ ወለድ",
+					"referral_reward": "የማጣቀሻ ሽልማት"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "ይህን ኪዩአር ኮድ ይስካኑ በ Self ለማረጋገጥ።",
+				"mobile_dialog_description": "በራስ መተግበሪያ ማረጋገጫን ለማጠናቀቅ ተዘልቆ ይሄዳል።",
+				"support_telegram": "Self ድጋፍ",
+				"verification_guide": "የማረጋገጫ መመሪያ",
+				"qr_alt": "Self ማረጋገጫ QR",
+				"callback_warning": "ማስጠንቀቂያ",
+				"callback_warning_description": "የማረጋገጫ callback URL ከስልክዎ ሊደረስበት አይችልም። NEXT_PUBLIC_SELF_CALLBACK ን ወደ ይፋ URL ያዘጋጁ (ወይም NEXT_PUBLIC_PUBLIC_BASE_URL ን ወደ ቱነል/ቅድመ-ዕይታ ጎራ ያዘጋጁ)።",
+				"label": "Self",
+				"status_completed": "ተረጋግጧል",
+				"status_not_completed": "አልተረጋገጠም",
+				"learn_about_self": "ስለ Self ይማሩ",
+				"primer": {
+					"title": "Self ፕሮቶኮል",
+					"description": "ማረጋገጫ እያገኙ የግል መረጃ ሳያሳዩ።"
+				}
+			},
+			"verification_warning": {
+				"title": "ማረጋገጫ ያግኙ",
+				"reward_cap_banner": "የመሠረታዊ ገቢ እና የቁጠባ ሽልማቶች ለማረጋገጫ ያልተደረጉ ዜጎች ገደብ አላቸው። ያለ ገደብ ለማግኘት መለያዎን ያረጋግጡ።"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "አብዛኛዎቹ የገንዘብ ቦርሳዎች WDDን ከመረጡት ሰንሰለት ላይ በእጁ ከገቡ በኋላ ብቻ ያሳያሉ። በእሱ ",
+			"contract_address": "የኮንትራት አድራሻ"
+		}
+	},
+	"toasts": {
+		"generic_error": "ስህተት ተከስቷል",
+		"copied": "ተገልብጧል",
+		"wallet": {
+			"no_wallet": "የባህር ዳር አድራሻ የለም",
+			"min_amount": "ዝቅተኛ 10 WDD",
+			"sent": "ተላከ",
+			"account_deleted": "መለያ ተጠፍቷል",
+			"delete_failed": "መለያ ማጥፋት አልተሳካም",
+			"contract_address_error": "ወደ የስምምነት አድራሻ ማውጣት አይቻልም",
+			"sign_out_failed": "ውጣ አልተሳካም",
+			"google_linked": "የጉግል መለያ ተገናኝቷል",
+			"google_already_linked": "የጉግል መለያ ቀድሞውኑ ከሌላ መለያ ጋር ተገናኝቷል",
+			"google_link_failed": "የጉግል ማገናኛ መጀመር አልተሳካም",
+			"passkey_added": "የይለፍ ቁልፍ ታክሏል",
+			"passkey_add_failed": "የይለፍ ቁልፍ ማከል አልተሳካም"
+		},
+		"parties": {
+			"updated": "ተዘምኗል",
+			"update_failed": "ማዘመን አልተሳካም",
+			"update_error": "ፓርቲ ሲዘምን ስህተት",
+			"registered": "ፓርቲ ተመዝግቧል",
+			"register_failed": "ፓርቲ መመዝገብ አልተቻለም",
+			"register_error": "ፓርቲ በመመዝገብ ላይ ስህተት",
+			"deleted": "ተሰርዟል",
+			"delete_failed": "መሰረዝ አልተቻለም",
+			"delete_error": "በመሰረዝ ላይ ስህተት"
+		},
+		"basic_income": {
+			"activated": "መሰረታዊ ገቢ ተግብሯል",
+			"activate_failed": "መግባት አልተሳካም",
+			"claimed": "ተጠይቋል",
+			"claim_failed": "መጠየቅ አልተሳካም"
+		},
+		"savings": {
+			"collected": "ተሰብስቧል",
+			"collect_failed": "ማሰብስብ አልተሳካም",
+			"deposited": "ተዋሷል",
+			"deposit_failed": "መዋስ አልተሳካም",
+			"withdrawn": "ተወግዷል",
+			"withdraw_failed": "ማውጣት አልተሳካም"
+		}
+	},
+	"common": {
+		"confirm": "ማረጋገጥ",
+		"sign_in": "መግባት",
+		"connect": "አገናኝ",
+		"disconnect": "ግንኙነት አቋርጥ",
+		"connect_wallet": "የገንዘብ ቦርሳ አገናኝ",
+		"max": "ከፍተኛ",
+		"loading": "እየተጫነ ነው...",
+		"processing": "በማስተካከል ላይ...",
+		"insufficient_balance": "በቂ ያልሆነ WDD",
+		"delete_account": "መለያ ሰርዝ",
+		"sign_out": "ውጣ",
+		"invalid_address": "ልክ ያልሆነ አድራሻ",
+		"coming_soon": "በቅርብ ይመጣል",
+		"withdraw": "ማውጣት",
+		"trade": "ንግድ",
+		"continue": "ቀጥል",
+		"close": "ዝጋ",
+		"updating": "በመቅረጽ ላይ...",
+		"save": "አስቀምጥ",
+		"vote": "መጥየት",
+		"switch_to_base_chain": "ወደ Base Chain ቀይር"
+	},
+	"auth": {
+		"choose_method": "የሚመርጡትን ዘዴ ይምረጡ.",
+		"sign_in_with_google": "በGoogle ይቀጥሉ",
+		"sign_in_with_passkey": "ባዮሜትሪክ ይጠቀሙ",
+		"sign_in_or_create": "የይለፍ ቁልፍዎን፣ የጣት አሻሻድ፣ የፊት ስካን ወይም የስክሪን ማገድ በመጠቀም አካውንትዎን ይድረሱ።",
+		"create_account": "መለያ ፍጠር",
+		"create_passkey_name": "የይለፍ ቁልፍ ስም ፍጠር",
+		"passkey_name_description": "የይለፍ ቁልፍዎን በይለፍ ቃል አስተዳዳሪዎ ውስጥ ለመለየት ይሰይሙ።",
+		"passkey_name": "የይለፍ ቁልፍ ስም"
+	}
 }

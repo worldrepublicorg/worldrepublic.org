@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Pata",
-    "govern": "Tawala",
-    "menu": "Menyu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Vyakula",
-        "elections": "Uchaguzi",
-        "referendums": "Kura za maoni"
-      },
-      "sections": {
-        "parties": {
-          "title": "Vyakula vya kisiasa"
-        },
-        "elections": {
-          "title": "Uchaguzi wa majaribio",
-          "subtitle": "Jaribu demokrasia ya kimataifa"
-        },
-        "referendums": {
-          "title": "Kura ya Maoni ya Katiba ya Ulimwengu",
-          "subtitle": "Piga kura kuhusu kanuni zetu za msingi"
-        }
-      },
-      "vote": {
-        "no_active_election": "Uchaguzi unaanza hivi karibuni",
-        "test_verification": {
-          "description": "Jaribu mfumo wetu wa uthibitishaji sasa ili uwe tayari kupiga kura",
-          "button": "Jaribu"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Ruzuku",
-          "ambassadors": "Mabalozi"
-        },
-        "discover": "Gundua",
-        "search_placeholder": "Tafuta vyama...",
-        "no_parties_found": "Hakuna vyama vilivyopatikana",
-        "error_loading": "Imeshindwa kupakia vyama",
-        "refresh": "Ona upya",
-        "party_details": "Maelezo ya chama",
-        "share_party": "Shiriki chama",
-        "my_party": "Chama changu",
-        "learn_more": "Jifunze zaidi",
-        "party_management": "Usimamizi wa chama",
-        "edit_party_info": "Hariri taarifa za chama",
-        "dialogs": {
-          "party_name": "Jina la chama",
-          "description_optional": "Maelezo (si lazima)",
-          "official_link_optional": "Kiungo rasmi (si lazima)",
-          "updating": "Inasasisha...",
-          "save": "Hifadhi",
-          "register_party": "Sajili chama",
-          "register": "Sajili",
-          "registering": "Inasajili...",
-          "leader_warning_register": "Wewe ni kiongozi wa {partyName} sasa. Kusajili chama kipya kutafuta chama chako cha sasa.",
-          "deleting": "inafuta...",
-          "about_to_delete": "Uko karibu kufuta {partyName}. Kitendo hiki hakiwezi kufutwa.",
-          "about_to_register": "Uko karibu kuanzisha chama kipya."
-        },
-        "detail": {
-          "failed_to_load": "Imeshindwa kupakia data ya chama",
-          "party_not_found": "Chama hakijapatikana",
-          "error_loading": "Hitilafu wakati wa kupakia chama",
-          "back_to_parties": "Rudi kwenye vyama",
-          "description": "Maelezo",
-          "party_info": "Taarifa za chama",
-          "leader": "Kiongozi",
-          "website": "Tovuti",
-          "not_found_description": "Chama unachokitafuta hakipo au kimefutwa."
-        },
-        "delete_party": "Futa chama",
-        "run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku",
-        "ambassadors": {
-          "title": "Programu ya Mabalozi",
-          "description": "Alika marafiki na upate zawadi wanapothibitishwa na chama chao kinapopata ruzuku",
-          "leaderboard": "Ubao wa viongozi",
-          "no_rewards_yet": "Bado hakuna tuzo",
-          "col_ambassador": "Mabalozi",
-          "col_invited": "Waliokuwa Wageni",
-          "col_reward": "Tuzo",
-          "share_referral_link": "Shiriki kiungo cha rufaa"
-        },
-        "subsidies": {
-          "title": "Mpango wa Ruzuku kwa Vyama",
-          "no_subsidies_yet": "Hakuna ruzuku bado",
-          "description": "Ufadhili kulingana na utendaji wa uchaguzi",
-          "col_subsidy": "Ruzuku"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Uchaguzi",
-          "not_found": "Uchaguzi haujapatikana",
-          "not_found_description": "Uchaguzi unaoutafuta haupo.",
-          "back_to_elections": "Rudi kwa uchaguzi",
-          "status_active": "Inaendelea",
-          "status_upcoming": "Inakuja",
-          "status_ended": "Imemalizika",
-          "election_info": "Taarifa za uchaguzi",
-          "reward_pool": "Dimbwi la zawadi: {amount} WDD",
-          "reward_pool_minimum": "Dimbwi la zawadi: kima cha chini {amount} WDD",
-          "choose_a_party": "Chagua chama",
-          "no_parties_for_election": "Hakuna vyama vinavyopatikana kwa uchaguzi huu.",
-          "results_title": "Matokeo",
-          "vote_singular": "kura",
-          "vote_plural": "kura",
-          "no_votes": "Hakuna kura zilizopigwa katika uchaguzi huu.",
-          "test_election_name": "Uchaguzi wa majaribio {n}"
-        },
-        "list": {
-          "empty_state": "Hakuna uchaguzi uliopatikana",
-          "active_section": "Chaguzi zinazoendelea",
-          "upcoming_section": "Chaguzi zijazo",
-          "previous_section": "Chaguzi zilizopita"
-        }
-      }
-    },
-    "error": {
-      "title": "Kuna kitu kimekwenda vibaya",
-      "description": "Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena.",
-      "error_id": "Kitambulisho cha hitilafu: {digest}",
-      "try_again": "Jaribu tena"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Mapato ya msingi",
-        "savings": "Akiba"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Pata pesa kwa kuwa mtu",
-        "subtitle_claim": "Omba drachma yako",
-        "tooltip_claim": "1 WDD/siku, kikomo cha 1 WDD. Rudi ndani ya masaa 24 ili kuongeza mapato.",
-        "claim_button": "Omba",
-        "alert": {
-          "claim": {
-            "title": "Thibitisha ombi",
-            "description": "Unakaribia kuomba {amount} WDD. Hii itaongezwa kwenye salio la mkoba wako."
-          }
-        },
-        "setup_subtitle": "Sanidi mapato yako ya msingi",
-        "activate_loading": "Inamilikiwa...",
-        "activate_button": "Amilisha mapato ya msingi",
-        "world_drachma": "World Drachma (WDD) ni nini?",
-        "subtitle_unauth_raised_by_humanity": "Dai gawio lako la kimataifa la AI"
-      },
-      "savings": {
-        "title": "Akaunti ya akiba",
-        "subtitle": "Pata riba kila sekunde",
-        "tooltip": "Kiwango cha msingi cha 69% kwa mwaka. Kusanya na kuwekeza tena mara kwa mara ili kufikia karibu 100% ya faida ya ufanisi. Toa wakati wowote.",
-        "deposit": "Weka",
-        "withdraw": "Toa",
-        "balance": "Salio",
-        "amount_deposit": "Kiasi cha kuweka",
-        "amount_withdraw": "Kiasi cha kutoa",
-        "interest": "Riba",
-        "collect": "Kusanya",
-        "alert": {
-          "collect": {
-            "title": "Thibitisha ukusanyaji",
-            "description": "Unakaribia kukusanya {amount} WDD ya riba."
-          },
-          "deposit": {
-            "title": "Thibitisha amana",
-            "description": "Unakaribia kuweka {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Thibitisha kutoa",
-            "description": "Unakaribia kutoa {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Tazama mkataba mahiri",
-        "verify": "Thibitisha"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "AKAUNTI",
-          "account_info": "Taarifa za akaunti",
-          "referral_code": "Msimbo wa rufaa",
-          "referred_by": "Amealikwa na",
-          "language": "Lugha"
-        },
-        "help": {
-          "title": "MSAADA",
-          "quickstart": "Anza Haraka",
-          "docs": "Wiki",
-          "help_center": "Kituo cha Msaada"
-        },
-        "source_code": {
-          "title": "MSIMBO CHANZO"
-        },
-        "legal": {
-          "title": "KISHERIA",
-          "terms": "Masharti ya Matumizi",
-          "privacy": "Sera ya Faragha"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Mkoba"
-      },
-      "balance": "Salio",
-      "modals": {
-        "sign_out": {
-          "confirm": "Je, una uhakika unataka kuondoka?"
-        },
-        "disconnect": {
-          "confirm": "Una uhakika unataka kutenganisha pochi yako?"
-        },
-        "send": {
-          "button": "Tuma",
-          "withdraw_to_crypto": {
-            "description": "Toa WDD kwenye akaunti ya crypto.",
-            "amount_label": "Kiasi",
-            "address_label": "Anwani ya mkoba",
-            "network_label": "Mtandao"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD kwenye Jumper",
-          "ethereum_uniswap": "Ethereum WDD kwenye Uniswap",
-          "base_jumper": "Base Chain WDD kwenye Jumper",
-          "base_uniswap": "Base Chain WDD kwenye Uniswap",
-          "worldchain_jumper": "World Chain WDD kwenye Jumper",
-          "worldchain_uniswap": "World Chain WDD kwenye Uniswap"
-        },
-        "delete_account": {
-          "description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",
-          "deleting": "Inafutwa..."
-        },
-        "connect_wallet_browser": {
-          "title": "Fungua kwenye MetaMask",
-          "description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya MetaMask.",
-          "copy_link": "Nakili kiungo"
-        },
-        "connect_wallet_picker": {
-          "description": "Walleti nyingi zimepatikana. Chagua moja ili kuunganisha."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Huna wallet?",
-          "find_wallet_link": "Pata moja kwenye WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "AKAUNTI",
-        "security": "USALAMA",
-        "google_account": "Akaunti ya Google",
-        "google_not_linked": "Haijaunganishwa",
-        "passkeys": "Funguo za kuingia",
-        "passkeys_linked": "{count} imeunganishwa",
-        "danger_zone": "ENEO LA HATARI",
-        "delete_account": {
-          "description": "Ondoa data zako zote kwa kudumu"
-        },
-        "verification": "UTHIBITISHAJI",
-        "google_linked": "Imeunganishwa",
-        "account_label": "Akaunti"
-      },
-      "username": {
-        "label": "Jina la mtumiaji",
-        "edit_title": "Hariri jina la mtumiaji",
-        "description": "Herufi 3-30, alfanumeriki, chini na mstari"
-      },
-      "history": {
-        "title": "HISTORIA"
-      },
-      "transactions": {
-        "failed_to_load": "Imeshindwa kupakia",
-        "no_transactions": "Bado hakuna maambukizi",
-        "wdd_per_day": "WDD/siku",
-        "just_now": "Hivi sasa",
-        "minutes_ago": "dakika {minutes} zilizopita",
-        "hours_ago": "masaa {hours} yaliyopita",
-        "days_ago": "siku {days} zilizopita",
-        "filter": {
-          "all_types": "Aina zote",
-          "select_type": "Chagua aina",
-          "rewards": "Zawadi"
-        },
-        "types": {
-          "withdrawal": "Kutoa",
-          "received": "Imepokelewa",
-          "sent": "Imetumwa",
-          "ambassador_reward": "Zawadi ya balozi",
-          "party_subsidy": "Ruzuku ya chama",
-          "stream_created": "Mtiririko umetengenezwa",
-          "stream_updated": "Mtiririko umesasishwa",
-          "savings_deposit": "Akiba weka",
-          "savings_withdrawal": "Akiba toa",
-          "savings_interest": "Akiba riba",
-          "referral_reward": "Zawadi ya rufaa"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Changanua msimbo huu wa QR ili kuthibitisha kwa Self.",
-        "mobile_dialog_description": "Utaelekezwa kwenye app ya Self kukamilisha uthibitishaji.",
-        "support_telegram": "Msaada wa Self",
-        "verification_guide": "Mwongozo wa uthibitishaji",
-        "qr_alt": "QR ya uthibitishaji wa Self",
-        "callback_warning": "Onyo",
-        "callback_warning_description": "URL ya kupigiwa simu ya uthibitishaji haiwezi kufikiwa kutoka kwa simu yako. Weka NEXT_PUBLIC_SELF_CALLBACK kwa URL ya umma (au weka NEXT_PUBLIC_PUBLIC_BASE_URL kwa kikoa cha tunnel/hakiki).",
-        "label": "Self",
-        "status_completed": "Imethibitishwa",
-        "status_not_completed": "Haijathibitishwa",
-        "learn_about_self": "Jifunze kuhusu Self",
-        "primer": {
-          "title": "Self Itifaki",
-          "description": "Thibitishwa bila kufichua data yoyote ya kibinafsi."
-        }
-      },
-      "verification_warning": {
-        "title": "Pata uthibitisho",
-        "reward_cap_banner": "Zawadi za mapato ya msingi na akiba zina kikomo kwa raia ambao hawajathibitishwa. Thibitisha akaunti yako ili upate bila kikomo."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Pochi nyingi zinaonyesha WDD tu baada ya kuileta kwa mikono kwenye mnyororo uliochaguliwa kwa ",
-      "contract_address": "anwani ya kandarasi"
-    }
-  },
-  "toasts": {
-    "generic_error": "Hitilafu imetokea",
-    "copied": "Imenakiliwa",
-    "wallet": {
-      "no_wallet": "Hakuna anwani ya mkoba",
-      "min_amount": "Kiwango cha chini cha 10 WDD",
-      "sent": "Imetumwa",
-      "account_deleted": "Akaunti imefutwa",
-      "delete_failed": "Kufuta akaunti hakukufaulu",
-      "contract_address_error": "Haiwezi kutolewa kwenye anwani ya mkataba",
-      "sign_out_failed": "Kuondoka hakukufaulu",
-      "google_linked": "Akaunti ya Google imeunganishwa",
-      "google_already_linked": "Akaunti ya Google tayari imeunganishwa na akaunti nyingine",
-      "google_link_failed": "Haikuweza kuanza kuunganisha Google",
-      "passkey_added": "Ufunguo wa kuingia umeongezwa",
-      "passkey_add_failed": "Haikuweza kuongeza ufunguo wa kuingia"
-    },
-    "parties": {
-      "updated": "Imehakikiwa",
-      "update_failed": "Kuhakiki kumeshindwa",
-      "update_error": "Hitilafu wakati wa kuhakiki chama",
-      "registered": "Chama kimesajiliwa",
-      "register_failed": "Imeshindwa kusajili chama",
-      "register_error": "Hitilafu kusajili chama",
-      "deleted": "Imefutwa",
-      "delete_failed": "Imeshindwa kufuta",
-      "delete_error": "Hitilafu kufuta"
-    },
-    "basic_income": {
-      "activated": "Mapato ya msingi yameamilishwa",
-      "activate_failed": "Kumilisha hakukufaulu",
-      "claimed": "Yameombwa",
-      "claim_failed": "Kuomba hakukufaulu"
-    },
-    "savings": {
-      "collected": "Yamekusanywa",
-      "collect_failed": "Kukusanya hakukufaulu",
-      "deposited": "Imeingizwa",
-      "deposit_failed": "Kuweka hakukufaulu",
-      "withdrawn": "Imetolewa",
-      "withdraw_failed": "Kutoa hakukufaulu"
-    }
-  },
-  "common": {
-    "confirm": "Thibitisha",
-    "sign_in": "Ingia",
-    "connect": "Unganisha",
-    "disconnect": "Tenganisha",
-    "connect_wallet": "Unganisha pochi",
-    "max": "Kiwango cha juu",
-    "loading": "Inapakia...",
-    "processing": "Inachakata...",
-    "insufficient_balance": "Hakuna WDD ya kutosha",
-    "delete_account": "Futa akaunti",
-    "sign_out": "Toka nje",
-    "invalid_address": "Anwani batili",
-    "coming_soon": "Hivi karibuni",
-    "withdraw": "Toa",
-    "trade": "Biashara",
-    "continue": "Endelea",
-    "close": "Funga",
-    "updating": "Inasasisha...",
-    "save": "Hifadhi",
-    "vote": "Piga kura",
-    "switch_to_base_chain": "Badilisha kwenda Base Chain"
-  },
-  "auth": {
-    "choose_method": "Chagua njia unayopenda.",
-    "sign_in_with_google": "Endelea na Google",
-    "sign_in_with_passkey": "Tumia biometrics",
-    "sign_in_or_create": "Fikia akaunti yako kwa kutumia passkey, kwa kutumia alama ya kidole, skenio la uso au kufunga skrini.",
-    "create_account": "Unda akaunti",
-    "create_passkey_name": "Unda jina la passkey",
-    "passkey_name_description": "Taja passkey yako ili kuibainisha katika msimamizi wa nywila.",
-    "passkey_name": "Jina la passkey"
-  }
+	"nav": {
+		"earn": "Pata",
+		"govern": "Tawala",
+		"menu": "Menyu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Vyakula",
+				"elections": "Uchaguzi",
+				"referendums": "Kura za maoni"
+			},
+			"sections": {
+				"parties": {
+					"title": "Vyakula vya kisiasa"
+				},
+				"elections": {
+					"title": "Uchaguzi wa majaribio",
+					"subtitle": "Jaribu demokrasia ya kimataifa"
+				},
+				"referendums": {
+					"title": "Kura ya Maoni ya Katiba ya Ulimwengu",
+					"subtitle": "Piga kura kuhusu kanuni zetu za msingi"
+				}
+			},
+			"vote": {
+				"no_active_election": "Uchaguzi unaanza hivi karibuni",
+				"test_verification": {
+					"description": "Jaribu mfumo wetu wa uthibitishaji sasa ili uwe tayari kupiga kura",
+					"button": "Jaribu"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Ruzuku",
+					"ambassadors": "Mabalozi"
+				},
+				"discover": "Gundua",
+				"search_placeholder": "Tafuta vyama...",
+				"no_parties_found": "Hakuna vyama vilivyopatikana",
+				"error_loading": "Imeshindwa kupakia vyama",
+				"refresh": "Ona upya",
+				"party_details": "Maelezo ya chama",
+				"share_party": "Shiriki chama",
+				"my_party": "Chama changu",
+				"learn_more": "Jifunze zaidi",
+				"party_management": "Usimamizi wa chama",
+				"edit_party_info": "Hariri taarifa za chama",
+				"dialogs": {
+					"party_name": "Jina la chama",
+					"description_optional": "Maelezo (si lazima)",
+					"official_link_optional": "Kiungo rasmi (si lazima)",
+					"updating": "Inasasisha...",
+					"save": "Hifadhi",
+					"register_party": "Sajili chama",
+					"register": "Sajili",
+					"registering": "Inasajili...",
+					"leader_warning_register": "Wewe ni kiongozi wa {partyName} sasa. Kusajili chama kipya kutafuta chama chako cha sasa.",
+					"deleting": "inafuta...",
+					"about_to_delete": "Uko karibu kufuta {partyName}. Kitendo hiki hakiwezi kufutwa.",
+					"about_to_register": "Uko karibu kuanzisha chama kipya."
+				},
+				"detail": {
+					"failed_to_load": "Imeshindwa kupakia data ya chama",
+					"party_not_found": "Chama hakijapatikana",
+					"error_loading": "Hitilafu wakati wa kupakia chama",
+					"back_to_parties": "Rudi kwenye vyama",
+					"description": "Maelezo",
+					"party_info": "Taarifa za chama",
+					"leader": "Kiongozi",
+					"website": "Tovuti",
+					"not_found_description": "Chama unachokitafuta hakipo au kimefutwa."
+				},
+				"delete_party": "Futa chama",
+				"run_on_elections_and_earn": "Shiriki kwenye uchaguzi na upate ruzuku",
+				"ambassadors": {
+					"title": "Programu ya Mabalozi",
+					"description": "Alika marafiki na upate zawadi wanapothibitishwa na chama chao kinapopata ruzuku",
+					"leaderboard": "Ubao wa viongozi",
+					"no_rewards_yet": "Bado hakuna tuzo",
+					"col_ambassador": "Mabalozi",
+					"col_invited": "Waliokuwa Wageni",
+					"col_reward": "Tuzo",
+					"share_referral_link": "Shiriki kiungo cha rufaa"
+				},
+				"subsidies": {
+					"title": "Mpango wa Ruzuku kwa Vyama",
+					"no_subsidies_yet": "Hakuna ruzuku bado",
+					"description": "Ufadhili kulingana na utendaji wa uchaguzi",
+					"col_subsidy": "Ruzuku"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Uchaguzi",
+					"not_found": "Uchaguzi haujapatikana",
+					"not_found_description": "Uchaguzi unaoutafuta haupo.",
+					"back_to_elections": "Rudi kwa uchaguzi",
+					"status_active": "Inaendelea",
+					"status_upcoming": "Inakuja",
+					"status_ended": "Imemalizika",
+					"election_info": "Taarifa za uchaguzi",
+					"reward_pool": "Dimbwi la zawadi: {amount} WDD",
+					"reward_pool_minimum": "Dimbwi la zawadi: kima cha chini {amount} WDD",
+					"choose_a_party": "Chagua chama",
+					"no_parties_for_election": "Hakuna vyama vinavyopatikana kwa uchaguzi huu.",
+					"results_title": "Matokeo",
+					"vote_singular": "kura",
+					"vote_plural": "kura",
+					"no_votes": "Hakuna kura zilizopigwa katika uchaguzi huu.",
+					"test_election_name": "Uchaguzi wa majaribio {n}"
+				},
+				"list": {
+					"empty_state": "Hakuna uchaguzi uliopatikana",
+					"active_section": "Chaguzi zinazoendelea",
+					"upcoming_section": "Chaguzi zijazo",
+					"previous_section": "Chaguzi zilizopita"
+				}
+			}
+		},
+		"error": {
+			"title": "Kuna kitu kimekwenda vibaya",
+			"description": "Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena.",
+			"error_id": "Kitambulisho cha hitilafu: {digest}",
+			"try_again": "Jaribu tena"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Mapato ya msingi",
+				"savings": "Akiba"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Pata pesa kwa kuwa mtu",
+				"subtitle_claim": "Omba drachma yako",
+				"tooltip_claim": "1 WDD/siku, kikomo cha 1 WDD. Rudi ndani ya masaa 24 ili kuongeza mapato.",
+				"claim_button": "Omba",
+				"alert": {
+					"claim": {
+						"title": "Thibitisha ombi",
+						"description": "Unakaribia kuomba {amount} WDD. Hii itaongezwa kwenye salio la mkoba wako."
+					}
+				},
+				"setup_subtitle": "Sanidi mapato yako ya msingi",
+				"activate_loading": "Inamilikiwa...",
+				"activate_button": "Amilisha mapato ya msingi",
+				"world_drachma": "World Drachma (WDD) ni nini?",
+				"subtitle_unauth_raised_by_humanity": "Dai gawio lako la kimataifa la AI"
+			},
+			"savings": {
+				"title": "Akaunti ya akiba",
+				"subtitle": "Pata riba kila sekunde",
+				"tooltip": "Kiwango cha msingi cha 69% kwa mwaka. Kusanya na kuwekeza tena mara kwa mara ili kufikia karibu 100% ya faida ya ufanisi. Toa wakati wowote.",
+				"deposit": "Weka",
+				"withdraw": "Toa",
+				"balance": "Salio",
+				"amount_deposit": "Kiasi cha kuweka",
+				"amount_withdraw": "Kiasi cha kutoa",
+				"interest": "Riba",
+				"collect": "Kusanya",
+				"alert": {
+					"collect": {
+						"title": "Thibitisha ukusanyaji",
+						"description": "Unakaribia kukusanya {amount} WDD ya riba."
+					},
+					"deposit": {
+						"title": "Thibitisha amana",
+						"description": "Unakaribia kuweka {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Thibitisha kutoa",
+						"description": "Unakaribia kutoa {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Tazama mkataba mahiri",
+				"verify": "Thibitisha"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "AKAUNTI",
+					"account_info": "Taarifa za akaunti",
+					"referral_code": "Msimbo wa rufaa",
+					"referred_by": "Amealikwa na",
+					"language": "Lugha"
+				},
+				"help": {
+					"title": "MSAADA",
+					"quickstart": "Anza Haraka",
+					"docs": "Wiki",
+					"help_center": "Kituo cha Msaada"
+				},
+				"source_code": {
+					"title": "MSIMBO CHANZO"
+				},
+				"legal": {
+					"title": "KISHERIA",
+					"terms": "Masharti ya Matumizi",
+					"privacy": "Sera ya Faragha"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Mkoba"
+			},
+			"balance": "Salio",
+			"modals": {
+				"sign_out": {
+					"confirm": "Je, una uhakika unataka kuondoka?"
+				},
+				"disconnect": {
+					"confirm": "Una uhakika unataka kutenganisha pochi yako?"
+				},
+				"send": {
+					"button": "Tuma",
+					"withdraw_to_crypto": {
+						"description": "Toa WDD kwenye akaunti ya crypto.",
+						"amount_label": "Kiasi",
+						"address_label": "Anwani ya mkoba",
+						"network_label": "Mtandao"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD kwenye Jumper",
+					"ethereum_uniswap": "Ethereum WDD kwenye Uniswap",
+					"base_jumper": "Base Chain WDD kwenye Jumper",
+					"base_uniswap": "Base Chain WDD kwenye Uniswap",
+					"worldchain_jumper": "World Chain WDD kwenye Jumper",
+					"worldchain_uniswap": "World Chain WDD kwenye Uniswap"
+				},
+				"delete_account": {
+					"description": "Hii itafuta kabisa akaunti yako na kuondoa data yako yote kutoka kwa seva zetu. Kitendo hiki hakiwezi kubatilishwa — tafadhali endelea kwa uangalifu.",
+					"deleting": "Inafutwa..."
+				},
+				"connect_wallet_browser": {
+					"title": "Fungua kwenye MetaMask",
+					"description": "Ili kuunganisha, nakili kiungo hiki na ukifungue kwenye kivinjari kilichojengwa ndani ya MetaMask.",
+					"copy_link": "Nakili kiungo"
+				},
+				"connect_wallet_picker": {
+					"description": "Walleti nyingi zimepatikana. Chagua moja ili kuunganisha."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Huna wallet?",
+					"find_wallet_link": "Pata moja kwenye WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "AKAUNTI",
+				"security": "USALAMA",
+				"google_account": "Akaunti ya Google",
+				"google_not_linked": "Haijaunganishwa",
+				"passkeys": "Funguo za kuingia",
+				"passkeys_linked": "{count} imeunganishwa",
+				"danger_zone": "ENEO LA HATARI",
+				"delete_account": {
+					"description": "Ondoa data zako zote kwa kudumu"
+				},
+				"verification": "UTHIBITISHAJI",
+				"google_linked": "Imeunganishwa",
+				"account_label": "Akaunti"
+			},
+			"username": {
+				"label": "Jina la mtumiaji",
+				"edit_title": "Hariri jina la mtumiaji",
+				"description": "Herufi 3-30, alfanumeriki, chini na mstari"
+			},
+			"history": {
+				"title": "HISTORIA"
+			},
+			"transactions": {
+				"failed_to_load": "Imeshindwa kupakia",
+				"no_transactions": "Bado hakuna maambukizi",
+				"wdd_per_day": "WDD/siku",
+				"just_now": "Hivi sasa",
+				"minutes_ago": "dakika {minutes} zilizopita",
+				"hours_ago": "masaa {hours} yaliyopita",
+				"days_ago": "siku {days} zilizopita",
+				"filter": {
+					"all_types": "Aina zote",
+					"select_type": "Chagua aina",
+					"rewards": "Zawadi"
+				},
+				"types": {
+					"withdrawal": "Kutoa",
+					"received": "Imepokelewa",
+					"sent": "Imetumwa",
+					"ambassador_reward": "Zawadi ya balozi",
+					"party_subsidy": "Ruzuku ya chama",
+					"stream_created": "Mtiririko umetengenezwa",
+					"stream_updated": "Mtiririko umesasishwa",
+					"savings_deposit": "Akiba weka",
+					"savings_withdrawal": "Akiba toa",
+					"savings_interest": "Akiba riba",
+					"referral_reward": "Zawadi ya rufaa"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Changanua msimbo huu wa QR ili kuthibitisha kwa Self.",
+				"mobile_dialog_description": "Utaelekezwa kwenye app ya Self kukamilisha uthibitishaji.",
+				"support_telegram": "Msaada wa Self",
+				"verification_guide": "Mwongozo wa uthibitishaji",
+				"qr_alt": "QR ya uthibitishaji wa Self",
+				"callback_warning": "Onyo",
+				"callback_warning_description": "URL ya kupigiwa simu ya uthibitishaji haiwezi kufikiwa kutoka kwa simu yako. Weka NEXT_PUBLIC_SELF_CALLBACK kwa URL ya umma (au weka NEXT_PUBLIC_PUBLIC_BASE_URL kwa kikoa cha tunnel/hakiki).",
+				"label": "Self",
+				"status_completed": "Imethibitishwa",
+				"status_not_completed": "Haijathibitishwa",
+				"learn_about_self": "Jifunze kuhusu Self",
+				"primer": {
+					"title": "Self Itifaki",
+					"description": "Thibitishwa bila kufichua data yoyote ya kibinafsi."
+				}
+			},
+			"verification_warning": {
+				"title": "Pata uthibitisho",
+				"reward_cap_banner": "Zawadi za mapato ya msingi na akiba zina kikomo kwa raia ambao hawajathibitishwa. Thibitisha akaunti yako ili upate bila kikomo."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Pochi nyingi zinaonyesha WDD tu baada ya kuileta kwa mikono kwenye mnyororo uliochaguliwa kwa ",
+			"contract_address": "anwani ya kandarasi"
+		}
+	},
+	"toasts": {
+		"generic_error": "Hitilafu imetokea",
+		"copied": "Imenakiliwa",
+		"wallet": {
+			"no_wallet": "Hakuna anwani ya mkoba",
+			"min_amount": "Kiwango cha chini cha 10 WDD",
+			"sent": "Imetumwa",
+			"account_deleted": "Akaunti imefutwa",
+			"delete_failed": "Kufuta akaunti hakukufaulu",
+			"contract_address_error": "Haiwezi kutolewa kwenye anwani ya mkataba",
+			"sign_out_failed": "Kuondoka hakukufaulu",
+			"google_linked": "Akaunti ya Google imeunganishwa",
+			"google_already_linked": "Akaunti ya Google tayari imeunganishwa na akaunti nyingine",
+			"google_link_failed": "Haikuweza kuanza kuunganisha Google",
+			"passkey_added": "Ufunguo wa kuingia umeongezwa",
+			"passkey_add_failed": "Haikuweza kuongeza ufunguo wa kuingia"
+		},
+		"parties": {
+			"updated": "Imehakikiwa",
+			"update_failed": "Kuhakiki kumeshindwa",
+			"update_error": "Hitilafu wakati wa kuhakiki chama",
+			"registered": "Chama kimesajiliwa",
+			"register_failed": "Imeshindwa kusajili chama",
+			"register_error": "Hitilafu kusajili chama",
+			"deleted": "Imefutwa",
+			"delete_failed": "Imeshindwa kufuta",
+			"delete_error": "Hitilafu kufuta"
+		},
+		"basic_income": {
+			"activated": "Mapato ya msingi yameamilishwa",
+			"activate_failed": "Kumilisha hakukufaulu",
+			"claimed": "Yameombwa",
+			"claim_failed": "Kuomba hakukufaulu"
+		},
+		"savings": {
+			"collected": "Yamekusanywa",
+			"collect_failed": "Kukusanya hakukufaulu",
+			"deposited": "Imeingizwa",
+			"deposit_failed": "Kuweka hakukufaulu",
+			"withdrawn": "Imetolewa",
+			"withdraw_failed": "Kutoa hakukufaulu"
+		}
+	},
+	"common": {
+		"confirm": "Thibitisha",
+		"sign_in": "Ingia",
+		"connect": "Unganisha",
+		"disconnect": "Tenganisha",
+		"connect_wallet": "Unganisha pochi",
+		"max": "Kiwango cha juu",
+		"loading": "Inapakia...",
+		"processing": "Inachakata...",
+		"insufficient_balance": "Hakuna WDD ya kutosha",
+		"delete_account": "Futa akaunti",
+		"sign_out": "Toka nje",
+		"invalid_address": "Anwani batili",
+		"coming_soon": "Hivi karibuni",
+		"withdraw": "Toa",
+		"trade": "Biashara",
+		"continue": "Endelea",
+		"close": "Funga",
+		"updating": "Inasasisha...",
+		"save": "Hifadhi",
+		"vote": "Piga kura",
+		"switch_to_base_chain": "Badilisha kwenda Base Chain"
+	},
+	"auth": {
+		"choose_method": "Chagua njia unayopenda.",
+		"sign_in_with_google": "Endelea na Google",
+		"sign_in_with_passkey": "Tumia biometrics",
+		"sign_in_or_create": "Fikia akaunti yako kwa kutumia passkey, kwa kutumia alama ya kidole, skenio la uso au kufunga skrini.",
+		"create_account": "Unda akaunti",
+		"create_passkey_name": "Unda jina la passkey",
+		"passkey_name_description": "Taja passkey yako ili kuibainisha katika msimamizi wa nywila.",
+		"passkey_name": "Jina la passkey"
+	}
 }

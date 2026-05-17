@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Zarábať",
-    "govern": "Vládať",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Strany",
-        "elections": "Voľby",
-        "referendums": "Referendá"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politické strany"
-        },
-        "elections": {
-          "title": "Testovacie voľby",
-          "subtitle": "Experimentujte s globálnou demokraciou"
-        },
-        "referendums": {
-          "title": "Ústavné svetové referendum",
-          "subtitle": "Hlasujte o našich základných princípoch"
-        }
-      },
-      "vote": {
-        "no_active_election": "Voľby čoskoro začnú",
-        "test_verification": {
-          "description": "Vyskúšajte náš systém overovania už teraz, aby ste boli pripravení na hlasovanie",
-          "button": "Test"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Dotácie",
-          "ambassadors": "Ambasádori"
-        },
-        "discover": "Objaviť",
-        "search_placeholder": "Hľadať strany...",
-        "no_parties_found": "Nenašli sa žiadne strany",
-        "error_loading": "Nepodarilo sa načítať strany",
-        "refresh": "Obnoviť",
-        "party_details": "Detaily strany",
-        "share_party": "Zdieľať stranu",
-        "my_party": "Moja strana",
-        "learn_more": "Zistiť viac",
-        "party_management": "Správa strany",
-        "edit_party_info": "Upraviť informácie o strane",
-        "dialogs": {
-          "party_name": "Názov strany",
-          "description_optional": "Popis (voliteľné)",
-          "official_link_optional": "Oficiálny odkaz (voliteľné)",
-          "updating": "Aktualizácia...",
-          "save": "Uložiť",
-          "register_party": "Registrovať stranu",
-          "register": "Registrovať",
-          "registering": "Registrácia...",
-          "leader_warning_register": "Momentálne ste lídrom {partyName}. Registrácia novej strany vymaže vašu súčasnú stranu.",
-          "deleting": "Mazanie...",
-          "about_to_delete": "Chystáte sa vymazať {partyName}. Túto akciu nemožno vrátiť späť.",
-          "about_to_register": "Chystáte sa založiť novú stranu."
-        },
-        "detail": {
-          "failed_to_load": "Nepodarilo sa načítať dáta strany",
-          "party_not_found": "Strana sa nenašla",
-          "error_loading": "Chyba pri načítaní strany",
-          "back_to_parties": "Späť na strany",
-          "description": "Popis",
-          "party_info": "Informácie o strane",
-          "leader": "Vodca",
-          "website": "Webová stránka",
-          "not_found_description": "Strana, ktorú hľadáte, neexistuje alebo bola rozpustená."
-        },
-        "delete_party": "Vymazať stranu",
-        "run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie",
-        "ambassadors": {
-          "title": "Ambasádorský Program",
-          "description": "Pozvite priateľov a získavajte odmeny, keď sa overia a keď ich strana dostane dotácie",
-          "leaderboard": "Rebríček",
-          "no_rewards_yet": "Zatiaľ žiadne odmeny",
-          "col_ambassador": "Ambasádori",
-          "col_invited": "Pozvaní",
-          "col_reward": "Odmena",
-          "share_referral_link": "Zdieľať odkaz na odporúčanie"
-        },
-        "subsidies": {
-          "title": "Program Dotácií pre Strany",
-          "no_subsidies_yet": "Zatiaľ žiadne dotácie",
-          "description": "Financovanie na základe volebného výkonu",
-          "col_subsidy": "Dotácia"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Voľby",
-          "not_found": "Voľby nenájdené",
-          "not_found_description": "Voľby, ktoré hľadáte, neexistujú.",
-          "back_to_elections": "Späť na voľby",
-          "status_active": "Aktívne",
-          "status_upcoming": "Nadchádzajúce",
-          "status_ended": "Ukončené",
-          "election_info": "Informácie o voľbách",
-          "reward_pool": "Fond odmien: {amount} WDD",
-          "reward_pool_minimum": "Fond odmien: minimálne {amount} WDD",
-          "choose_a_party": "Vyberte stranu",
-          "no_parties_for_election": "Pre tieto voľby nie sú k dispozícii žiadne strany.",
-          "results_title": "Výsledky",
-          "vote_singular": "hlas",
-          "vote_plural": "hlasov",
-          "no_votes": "V týchto voľbách neboli odovzdané žiadne hlasy.",
-          "test_election_name": "Testovacie voľby {n}"
-        },
-        "list": {
-          "empty_state": "Nenašli sa žiadne voľby",
-          "active_section": "Aktívne voľby",
-          "upcoming_section": "Nadchádzajúce voľby",
-          "previous_section": "Predchádzajúce voľby"
-        }
-      }
-    },
-    "error": {
-      "title": "Niečo sa pokazilo",
-      "description": "Vyskytla sa neočakávaná chyba. Skúste to prosím znova.",
-      "error_id": "ID chyby: {digest}",
-      "try_again": "Skúsiť znova"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Základný príjem",
-        "savings": "Úspory"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Získajte peniaze za to, že ste človek",
-        "subtitle_claim": "Vyberte si svoju drachmu",
-        "tooltip_claim": "1 WDD/deň, limit 1 WDD. Vráťte sa do 24 hodín pre maximalizáciu zárobkov.",
-        "claim_button": "Vybrať",
-        "alert": {
-          "claim": {
-            "title": "Potvrdiť výber",
-            "description": "Chystáte sa vybrať {amount} WDD. Toto sa pridá do vášho peňaženky zostatku."
-          }
-        },
-        "setup_subtitle": "Nastavte si základný príjem",
-        "activate_loading": "Aktivujem...",
-        "activate_button": "Aktivovať základný príjem",
-        "world_drachma": "Čo je svetová drachma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Vyberte si svoju globálnu dividendu AI"
-      },
-      "savings": {
-        "title": "Sporiaci účet",
-        "subtitle": "Zarábajte úrok každú sekundu",
-        "tooltip": "69% ročná základná sadzba. Zbierajte a reinvestujte pravidelne pre dosiahnutie blízko 100% efektívnych výnosov. Vyberte kedykoľvek.",
-        "deposit": "Vložiť",
-        "withdraw": "Vybrať",
-        "balance": "Zostatok",
-        "amount_deposit": "Suma na vloženie",
-        "amount_withdraw": "Suma na výber",
-        "interest": "Úrok",
-        "collect": "Zobrať",
-        "alert": {
-          "collect": {
-            "title": "Potvrdiť zber",
-            "description": "Chystáte sa zobrať {amount} WDD v úroku."
-          },
-          "deposit": {
-            "title": "Potvrdiť vklad",
-            "description": "Chystáte sa vložiť {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Potvrdiť výber",
-            "description": "Chystáte sa vybrať {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Zobraziť inteligentný kontrakt",
-        "verify": "Overiť"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ÚČET",
-          "account_info": "Informácie o účte",
-          "referral_code": "Odporúčací kód",
-          "referred_by": "Odporučil",
-          "language": "Jazyk"
-        },
-        "help": {
-          "title": "POMOC",
-          "quickstart": "Rýchly štart",
-          "docs": "Wiki",
-          "help_center": "Centrum pomoci"
-        },
-        "source_code": {
-          "title": "ZDROJOVÝ KÓD"
-        },
-        "legal": {
-          "title": "PRÁVNE",
-          "terms": "Podmienky používania",
-          "privacy": "Zásady ochrany osobných údajov"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Peňaženka"
-      },
-      "balance": "Zostatok",
-      "modals": {
-        "sign_out": {
-          "confirm": "Ste si istí, že sa chcete odhlásiť?"
-        },
-        "disconnect": {
-          "confirm": "Naozaj chcete odpojiť svoju peňaženku?"
-        },
-        "send": {
-          "button": "Poslať",
-          "withdraw_to_crypto": {
-            "description": "Vybrať WDD na krypto účet.",
-            "amount_label": "Suma",
-            "address_label": "Adresa peňaženky",
-            "network_label": "Sieť"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD na Jumper",
-          "ethereum_uniswap": "Ethereum WDD na Uniswap",
-          "base_jumper": "Base Chain WDD na Jumper",
-          "base_uniswap": "Base Chain WDD na Uniswap",
-          "worldchain_jumper": "World Chain WDD na Jumper",
-          "worldchain_uniswap": "World Chain WDD na Uniswap"
-        },
-        "delete_account": {
-          "description": "Toto permanentne vymaže váš účet a odstráni všetky vaše dáta z našich serverov. Túto akciu nemožno vrátiť späť — pokračujte opatrne.",
-          "deleting": "Mažem..."
-        },
-        "connect_wallet_browser": {
-          "title": "Otvoriť v MetaMask",
-          "description": "Ak sa chcete pripojiť, skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači MetaMask.",
-          "copy_link": "Kopírovať odkaz"
-        },
-        "connect_wallet_picker": {
-          "description": "Bolo nájdených viac peňaženiek. Vyberte jednu na pripojenie."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Nemáte peňaženku?",
-          "find_wallet_link": "Nájdite jednu na WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ÚČET",
-        "security": "BEZPEČNOSŤ",
-        "google_account": "Účet Google",
-        "google_not_linked": "Nepripojené",
-        "passkeys": "Prístupové kľúče",
-        "passkeys_linked": "{count} pripojených",
-        "danger_zone": "NEBEZPEČNÁ ZÓNA",
-        "delete_account": {
-          "description": "Trvalo odstráňte všetky vaše údaje"
-        },
-        "verification": "OVERENIE",
-        "google_linked": "Pripojené",
-        "account_label": "Účet"
-      },
-      "username": {
-        "label": "Používateľské meno",
-        "edit_title": "Upraviť používateľské meno",
-        "description": "3-30 znakov, alfanumerické, podčiarknutia a pomlčky"
-      },
-      "history": {
-        "title": "HISTÓRIA"
-      },
-      "transactions": {
-        "failed_to_load": "Nepodarilo sa načítať",
-        "no_transactions": "Zatiaľ žiadne transakcie",
-        "wdd_per_day": "WDD/deň",
-        "just_now": "Práve teraz",
-        "minutes_ago": "pred {minutes}min",
-        "hours_ago": "pred {hours}h",
-        "days_ago": "pred {days}d",
-        "filter": {
-          "all_types": "Všetky typy",
-          "select_type": "Vyberte typ",
-          "rewards": "Odmeny"
-        },
-        "types": {
-          "withdrawal": "Výber",
-          "received": "Prijaté",
-          "sent": "Odoslané",
-          "ambassador_reward": "Odmena veľvyslanca",
-          "party_subsidy": "Stranícka dotácia",
-          "stream_created": "Prúd vytvorený",
-          "stream_updated": "Prúd aktualizovaný",
-          "savings_deposit": "Úspory vložiť",
-          "savings_withdrawal": "Úspory vybrať",
-          "savings_interest": "Úspory úrok",
-          "referral_reward": "Odmena za odporúčanie"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
-        "mobile_dialog_description": "Budete presmerovaní do aplikácie Self na vykonanie overenia.",
-        "support_telegram": "Podpora Self",
-        "verification_guide": "Sprievodca overením",
-        "qr_alt": "QR kód overenia Self",
-        "callback_warning": "Upozornenie",
-        "callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu).",
-        "label": "Self",
-        "status_completed": "Overené",
-        "status_not_completed": "Neoverené",
-        "learn_about_self": "Zistite viac o Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Overte sa bez odhalenia akýchkoľvek osobných údajov."
-        }
-      },
-      "verification_warning": {
-        "title": "Získajte overenie",
-        "reward_cap_banner": "Odmeny za základný príjem a sporenie sú pre neoverených občanov obmedzené. Overte si účet, aby ste zarábali bez obmedzení."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Väčšina peňaženiek zobrazí WDD až potom, čo je ručne importované na vybranom reťazci pomocou jeho ",
-      "contract_address": "adresy zmluvy"
-    }
-  },
-  "toasts": {
-    "generic_error": "Vyskytla sa chyba",
-    "copied": "Skopírované",
-    "wallet": {
-      "no_wallet": "Žiadna adresa peňaženky",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Odoslané",
-      "account_deleted": "Účet vymazaný",
-      "delete_failed": "Vymazanie účtu zlyhalo",
-      "contract_address_error": "Nemožno vybrať na kontraktovú adresu",
-      "sign_out_failed": "Odhlásenie sa nepodarilo",
-      "google_linked": "Účet Google bol pripojený",
-      "google_already_linked": "Účet Google je už pripojený k inému účtu",
-      "google_link_failed": "Nepodarilo sa spustiť prepojenie s Google",
-      "passkey_added": "Prístupový kľúč bol pridaný",
-      "passkey_add_failed": "Nepodarilo sa pridať prístupový kľúč"
-    },
-    "parties": {
-      "updated": "Aktualizované",
-      "update_failed": "Aktualizácia zlyhala",
-      "update_error": "Chyba pri aktualizácii strany",
-      "registered": "Strana registrovaná",
-      "register_failed": "Nepodarilo sa registrovať stranu",
-      "register_error": "Chyba pri registrácii strany",
-      "deleted": "Vymazané",
-      "delete_failed": "Nepodarilo sa vymazať",
-      "delete_error": "Chyba pri mazaní"
-    },
-    "basic_income": {
-      "activated": "Základný príjem aktivovaný",
-      "activate_failed": "Aktivácia zlyhala",
-      "claimed": "Vybraté",
-      "claim_failed": "Výber zlyhal"
-    },
-    "savings": {
-      "collected": "Zobrané",
-      "collect_failed": "Zber zlyhal",
-      "deposited": "Vložené",
-      "deposit_failed": "Vklad zlyhal",
-      "withdrawn": "Vybraté",
-      "withdraw_failed": "Výber zlyhal"
-    }
-  },
-  "common": {
-    "confirm": "Potvrdiť",
-    "sign_in": "Prihlásiť sa",
-    "connect": "Pripojiť",
-    "disconnect": "Odpojiť",
-    "connect_wallet": "Pripojiť peňaženku",
-    "max": "Max",
-    "loading": "Načítavam...",
-    "processing": "Spracovávanie...",
-    "insufficient_balance": "Nedostatok WDD",
-    "delete_account": "Zmazať účet",
-    "sign_out": "Odhlásiť sa",
-    "invalid_address": "Neplatná adresa",
-    "coming_soon": "Čoskoro",
-    "withdraw": "Vybrať",
-    "trade": "Obchodovať",
-    "continue": "Pokračovať",
-    "close": "Zavrieť",
-    "updating": "Aktualizácia...",
-    "save": "Uložiť",
-    "vote": "Hlasovať",
-    "switch_to_base_chain": "Prepnúť na Base Chain"
-  },
-  "auth": {
-    "choose_method": "Vyberte preferovanú metódu.",
-    "sign_in_with_google": "Pokračovať s Google",
-    "sign_in_with_passkey": "Použiť biometriu",
-    "sign_in_or_create": "Prístup k vášmu účtu pomocou passkey, pomocou odtlačku prsta, skenovania tváre alebo zámku obrazovky.",
-    "create_account": "Vytvoriť účet",
-    "create_passkey_name": "Vytvoriť názov passkey",
-    "passkey_name_description": "Pomenujte svoj passkey, aby ste ho identifikovali v správcovi hesiel.",
-    "passkey_name": "Názov passkey"
-  }
+	"nav": {
+		"earn": "Zarábať",
+		"govern": "Vládať",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Strany",
+				"elections": "Voľby",
+				"referendums": "Referendá"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politické strany"
+				},
+				"elections": {
+					"title": "Testovacie voľby",
+					"subtitle": "Experimentujte s globálnou demokraciou"
+				},
+				"referendums": {
+					"title": "Ústavné svetové referendum",
+					"subtitle": "Hlasujte o našich základných princípoch"
+				}
+			},
+			"vote": {
+				"no_active_election": "Voľby čoskoro začnú",
+				"test_verification": {
+					"description": "Vyskúšajte náš systém overovania už teraz, aby ste boli pripravení na hlasovanie",
+					"button": "Test"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Dotácie",
+					"ambassadors": "Ambasádori"
+				},
+				"discover": "Objaviť",
+				"search_placeholder": "Hľadať strany...",
+				"no_parties_found": "Nenašli sa žiadne strany",
+				"error_loading": "Nepodarilo sa načítať strany",
+				"refresh": "Obnoviť",
+				"party_details": "Detaily strany",
+				"share_party": "Zdieľať stranu",
+				"my_party": "Moja strana",
+				"learn_more": "Zistiť viac",
+				"party_management": "Správa strany",
+				"edit_party_info": "Upraviť informácie o strane",
+				"dialogs": {
+					"party_name": "Názov strany",
+					"description_optional": "Popis (voliteľné)",
+					"official_link_optional": "Oficiálny odkaz (voliteľné)",
+					"updating": "Aktualizácia...",
+					"save": "Uložiť",
+					"register_party": "Registrovať stranu",
+					"register": "Registrovať",
+					"registering": "Registrácia...",
+					"leader_warning_register": "Momentálne ste lídrom {partyName}. Registrácia novej strany vymaže vašu súčasnú stranu.",
+					"deleting": "Mazanie...",
+					"about_to_delete": "Chystáte sa vymazať {partyName}. Túto akciu nemožno vrátiť späť.",
+					"about_to_register": "Chystáte sa založiť novú stranu."
+				},
+				"detail": {
+					"failed_to_load": "Nepodarilo sa načítať dáta strany",
+					"party_not_found": "Strana sa nenašla",
+					"error_loading": "Chyba pri načítaní strany",
+					"back_to_parties": "Späť na strany",
+					"description": "Popis",
+					"party_info": "Informácie o strane",
+					"leader": "Vodca",
+					"website": "Webová stránka",
+					"not_found_description": "Strana, ktorú hľadáte, neexistuje alebo bola rozpustená."
+				},
+				"delete_party": "Vymazať stranu",
+				"run_on_elections_and_earn": "Kandidujte vo voľbách a získajte dotácie",
+				"ambassadors": {
+					"title": "Ambasádorský Program",
+					"description": "Pozvite priateľov a získavajte odmeny, keď sa overia a keď ich strana dostane dotácie",
+					"leaderboard": "Rebríček",
+					"no_rewards_yet": "Zatiaľ žiadne odmeny",
+					"col_ambassador": "Ambasádori",
+					"col_invited": "Pozvaní",
+					"col_reward": "Odmena",
+					"share_referral_link": "Zdieľať odkaz na odporúčanie"
+				},
+				"subsidies": {
+					"title": "Program Dotácií pre Strany",
+					"no_subsidies_yet": "Zatiaľ žiadne dotácie",
+					"description": "Financovanie na základe volebného výkonu",
+					"col_subsidy": "Dotácia"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Voľby",
+					"not_found": "Voľby nenájdené",
+					"not_found_description": "Voľby, ktoré hľadáte, neexistujú.",
+					"back_to_elections": "Späť na voľby",
+					"status_active": "Aktívne",
+					"status_upcoming": "Nadchádzajúce",
+					"status_ended": "Ukončené",
+					"election_info": "Informácie o voľbách",
+					"reward_pool": "Fond odmien: {amount} WDD",
+					"reward_pool_minimum": "Fond odmien: minimálne {amount} WDD",
+					"choose_a_party": "Vyberte stranu",
+					"no_parties_for_election": "Pre tieto voľby nie sú k dispozícii žiadne strany.",
+					"results_title": "Výsledky",
+					"vote_singular": "hlas",
+					"vote_plural": "hlasov",
+					"no_votes": "V týchto voľbách neboli odovzdané žiadne hlasy.",
+					"test_election_name": "Testovacie voľby {n}"
+				},
+				"list": {
+					"empty_state": "Nenašli sa žiadne voľby",
+					"active_section": "Aktívne voľby",
+					"upcoming_section": "Nadchádzajúce voľby",
+					"previous_section": "Predchádzajúce voľby"
+				}
+			}
+		},
+		"error": {
+			"title": "Niečo sa pokazilo",
+			"description": "Vyskytla sa neočakávaná chyba. Skúste to prosím znova.",
+			"error_id": "ID chyby: {digest}",
+			"try_again": "Skúsiť znova"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Základný príjem",
+				"savings": "Úspory"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Získajte peniaze za to, že ste človek",
+				"subtitle_claim": "Vyberte si svoju drachmu",
+				"tooltip_claim": "1 WDD/deň, limit 1 WDD. Vráťte sa do 24 hodín pre maximalizáciu zárobkov.",
+				"claim_button": "Vybrať",
+				"alert": {
+					"claim": {
+						"title": "Potvrdiť výber",
+						"description": "Chystáte sa vybrať {amount} WDD. Toto sa pridá do vášho peňaženky zostatku."
+					}
+				},
+				"setup_subtitle": "Nastavte si základný príjem",
+				"activate_loading": "Aktivujem...",
+				"activate_button": "Aktivovať základný príjem",
+				"world_drachma": "Čo je svetová drachma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Vyberte si svoju globálnu dividendu AI"
+			},
+			"savings": {
+				"title": "Sporiaci účet",
+				"subtitle": "Zarábajte úrok každú sekundu",
+				"tooltip": "69% ročná základná sadzba. Zbierajte a reinvestujte pravidelne pre dosiahnutie blízko 100% efektívnych výnosov. Vyberte kedykoľvek.",
+				"deposit": "Vložiť",
+				"withdraw": "Vybrať",
+				"balance": "Zostatok",
+				"amount_deposit": "Suma na vloženie",
+				"amount_withdraw": "Suma na výber",
+				"interest": "Úrok",
+				"collect": "Zobrať",
+				"alert": {
+					"collect": {
+						"title": "Potvrdiť zber",
+						"description": "Chystáte sa zobrať {amount} WDD v úroku."
+					},
+					"deposit": {
+						"title": "Potvrdiť vklad",
+						"description": "Chystáte sa vložiť {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Potvrdiť výber",
+						"description": "Chystáte sa vybrať {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Zobraziť inteligentný kontrakt",
+				"verify": "Overiť"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ÚČET",
+					"account_info": "Informácie o účte",
+					"referral_code": "Odporúčací kód",
+					"referred_by": "Odporučil",
+					"language": "Jazyk"
+				},
+				"help": {
+					"title": "POMOC",
+					"quickstart": "Rýchly štart",
+					"docs": "Wiki",
+					"help_center": "Centrum pomoci"
+				},
+				"source_code": {
+					"title": "ZDROJOVÝ KÓD"
+				},
+				"legal": {
+					"title": "PRÁVNE",
+					"terms": "Podmienky používania",
+					"privacy": "Zásady ochrany osobných údajov"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Peňaženka"
+			},
+			"balance": "Zostatok",
+			"modals": {
+				"sign_out": {
+					"confirm": "Ste si istí, že sa chcete odhlásiť?"
+				},
+				"disconnect": {
+					"confirm": "Naozaj chcete odpojiť svoju peňaženku?"
+				},
+				"send": {
+					"button": "Poslať",
+					"withdraw_to_crypto": {
+						"description": "Vybrať WDD na krypto účet.",
+						"amount_label": "Suma",
+						"address_label": "Adresa peňaženky",
+						"network_label": "Sieť"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD na Jumper",
+					"ethereum_uniswap": "Ethereum WDD na Uniswap",
+					"base_jumper": "Base Chain WDD na Jumper",
+					"base_uniswap": "Base Chain WDD na Uniswap",
+					"worldchain_jumper": "World Chain WDD na Jumper",
+					"worldchain_uniswap": "World Chain WDD na Uniswap"
+				},
+				"delete_account": {
+					"description": "Toto permanentne vymaže váš účet a odstráni všetky vaše dáta z našich serverov. Túto akciu nemožno vrátiť späť — pokračujte opatrne.",
+					"deleting": "Mažem..."
+				},
+				"connect_wallet_browser": {
+					"title": "Otvoriť v MetaMask",
+					"description": "Ak sa chcete pripojiť, skopírujte tento odkaz a otvorte ho vo vstavanom prehliadači MetaMask.",
+					"copy_link": "Kopírovať odkaz"
+				},
+				"connect_wallet_picker": {
+					"description": "Bolo nájdených viac peňaženiek. Vyberte jednu na pripojenie."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Nemáte peňaženku?",
+					"find_wallet_link": "Nájdite jednu na WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ÚČET",
+				"security": "BEZPEČNOSŤ",
+				"google_account": "Účet Google",
+				"google_not_linked": "Nepripojené",
+				"passkeys": "Prístupové kľúče",
+				"passkeys_linked": "{count} pripojených",
+				"danger_zone": "NEBEZPEČNÁ ZÓNA",
+				"delete_account": {
+					"description": "Trvalo odstráňte všetky vaše údaje"
+				},
+				"verification": "OVERENIE",
+				"google_linked": "Pripojené",
+				"account_label": "Účet"
+			},
+			"username": {
+				"label": "Používateľské meno",
+				"edit_title": "Upraviť používateľské meno",
+				"description": "3-30 znakov, alfanumerické, podčiarknutia a pomlčky"
+			},
+			"history": {
+				"title": "HISTÓRIA"
+			},
+			"transactions": {
+				"failed_to_load": "Nepodarilo sa načítať",
+				"no_transactions": "Zatiaľ žiadne transakcie",
+				"wdd_per_day": "WDD/deň",
+				"just_now": "Práve teraz",
+				"minutes_ago": "pred {minutes}min",
+				"hours_ago": "pred {hours}h",
+				"days_ago": "pred {days}d",
+				"filter": {
+					"all_types": "Všetky typy",
+					"select_type": "Vyberte typ",
+					"rewards": "Odmeny"
+				},
+				"types": {
+					"withdrawal": "Výber",
+					"received": "Prijaté",
+					"sent": "Odoslané",
+					"ambassador_reward": "Odmena veľvyslanca",
+					"party_subsidy": "Stranícka dotácia",
+					"stream_created": "Prúd vytvorený",
+					"stream_updated": "Prúd aktualizovaný",
+					"savings_deposit": "Úspory vložiť",
+					"savings_withdrawal": "Úspory vybrať",
+					"savings_interest": "Úspory úrok",
+					"referral_reward": "Odmena za odporúčanie"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Naskenujte tento QR kód na overenie cez Self.",
+				"mobile_dialog_description": "Budete presmerovaní do aplikácie Self na vykonanie overenia.",
+				"support_telegram": "Podpora Self",
+				"verification_guide": "Sprievodca overením",
+				"qr_alt": "QR kód overenia Self",
+				"callback_warning": "Upozornenie",
+				"callback_warning_description": "URL spätného volania overenia nie je dostupná z vášho telefónu. Nastavte NEXT_PUBLIC_SELF_CALLBACK na verejnú URL (alebo nastavte NEXT_PUBLIC_PUBLIC_BASE_URL na tunelovú/náhľadovú doménu).",
+				"label": "Self",
+				"status_completed": "Overené",
+				"status_not_completed": "Neoverené",
+				"learn_about_self": "Zistite viac o Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Overte sa bez odhalenia akýchkoľvek osobných údajov."
+				}
+			},
+			"verification_warning": {
+				"title": "Získajte overenie",
+				"reward_cap_banner": "Odmeny za základný príjem a sporenie sú pre neoverených občanov obmedzené. Overte si účet, aby ste zarábali bez obmedzení."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Väčšina peňaženiek zobrazí WDD až potom, čo je ručne importované na vybranom reťazci pomocou jeho ",
+			"contract_address": "adresy zmluvy"
+		}
+	},
+	"toasts": {
+		"generic_error": "Vyskytla sa chyba",
+		"copied": "Skopírované",
+		"wallet": {
+			"no_wallet": "Žiadna adresa peňaženky",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Odoslané",
+			"account_deleted": "Účet vymazaný",
+			"delete_failed": "Vymazanie účtu zlyhalo",
+			"contract_address_error": "Nemožno vybrať na kontraktovú adresu",
+			"sign_out_failed": "Odhlásenie sa nepodarilo",
+			"google_linked": "Účet Google bol pripojený",
+			"google_already_linked": "Účet Google je už pripojený k inému účtu",
+			"google_link_failed": "Nepodarilo sa spustiť prepojenie s Google",
+			"passkey_added": "Prístupový kľúč bol pridaný",
+			"passkey_add_failed": "Nepodarilo sa pridať prístupový kľúč"
+		},
+		"parties": {
+			"updated": "Aktualizované",
+			"update_failed": "Aktualizácia zlyhala",
+			"update_error": "Chyba pri aktualizácii strany",
+			"registered": "Strana registrovaná",
+			"register_failed": "Nepodarilo sa registrovať stranu",
+			"register_error": "Chyba pri registrácii strany",
+			"deleted": "Vymazané",
+			"delete_failed": "Nepodarilo sa vymazať",
+			"delete_error": "Chyba pri mazaní"
+		},
+		"basic_income": {
+			"activated": "Základný príjem aktivovaný",
+			"activate_failed": "Aktivácia zlyhala",
+			"claimed": "Vybraté",
+			"claim_failed": "Výber zlyhal"
+		},
+		"savings": {
+			"collected": "Zobrané",
+			"collect_failed": "Zber zlyhal",
+			"deposited": "Vložené",
+			"deposit_failed": "Vklad zlyhal",
+			"withdrawn": "Vybraté",
+			"withdraw_failed": "Výber zlyhal"
+		}
+	},
+	"common": {
+		"confirm": "Potvrdiť",
+		"sign_in": "Prihlásiť sa",
+		"connect": "Pripojiť",
+		"disconnect": "Odpojiť",
+		"connect_wallet": "Pripojiť peňaženku",
+		"max": "Max",
+		"loading": "Načítavam...",
+		"processing": "Spracovávanie...",
+		"insufficient_balance": "Nedostatok WDD",
+		"delete_account": "Zmazať účet",
+		"sign_out": "Odhlásiť sa",
+		"invalid_address": "Neplatná adresa",
+		"coming_soon": "Čoskoro",
+		"withdraw": "Vybrať",
+		"trade": "Obchodovať",
+		"continue": "Pokračovať",
+		"close": "Zavrieť",
+		"updating": "Aktualizácia...",
+		"save": "Uložiť",
+		"vote": "Hlasovať",
+		"switch_to_base_chain": "Prepnúť na Base Chain"
+	},
+	"auth": {
+		"choose_method": "Vyberte preferovanú metódu.",
+		"sign_in_with_google": "Pokračovať s Google",
+		"sign_in_with_passkey": "Použiť biometriu",
+		"sign_in_or_create": "Prístup k vášmu účtu pomocou passkey, pomocou odtlačku prsta, skenovania tváre alebo zámku obrazovky.",
+		"create_account": "Vytvoriť účet",
+		"create_passkey_name": "Vytvoriť názov passkey",
+		"passkey_name_description": "Pomenujte svoj passkey, aby ste ho identifikovali v správcovi hesiel.",
+		"passkey_name": "Názov passkey"
+	}
 }

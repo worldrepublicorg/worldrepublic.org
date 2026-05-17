@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Kiếm tiền",
-    "govern": "Quản trị",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Đảng phái",
-        "elections": "Bầu cử",
-        "referendums": "Trưng cầu dân ý"
-      },
-      "sections": {
-        "parties": {
-          "title": "Đảng phái chính trị"
-        },
-        "elections": {
-          "title": "Bầu cử thử nghiệm",
-          "subtitle": "Thử nghiệm dân chủ toàn cầu"
-        },
-        "referendums": {
-          "title": "Trưng cầu dân ý Hiến pháp Thế giới",
-          "subtitle": "Bỏ phiếu về các nguyên tắc nền tảng"
-        }
-      },
-      "vote": {
-        "no_active_election": "Cuộc bầu cử sắp bắt đầu",
-        "test_verification": {
-          "description": "Hãy thử hệ thống xác minh của chúng tôi ngay bây giờ để sẵn sàng bỏ phiếu",
-          "button": "Kiểm tra"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Trợ cấp",
-          "ambassadors": "Đại sứ"
-        },
-        "discover": "Khám phá",
-        "search_placeholder": "Tìm kiếm đảng phái...",
-        "no_parties_found": "Không tìm thấy đảng phái",
-        "error_loading": "Không thể tải danh sách đảng",
-        "refresh": "Làm mới",
-        "party_details": "Chi tiết đảng phái",
-        "share_party": "Chia sẻ đảng phái",
-        "my_party": "Đảng phái của tôi",
-        "learn_more": "Tìm hiểu thêm",
-        "party_management": "Quản lý đảng phái",
-        "edit_party_info": "Chỉnh sửa thông tin đảng phái",
-        "dialogs": {
-          "party_name": "Tên đảng phái",
-          "description_optional": "Mô tả (tùy chọn)",
-          "official_link_optional": "Liên kết chính thức (tùy chọn)",
-          "updating": "Đang cập nhật...",
-          "save": "Lưu",
-          "register_party": "Đăng ký đảng",
-          "register": "Đăng ký",
-          "registering": "Đang đăng ký...",
-          "leader_warning_register": "Bạn hiện là lãnh đạo của {partyName}. Đăng ký đảng mới sẽ xóa đảng hiện tại của bạn.",
-          "deleting": "Đang xóa...",
-          "about_to_delete": "Bạn sắp xóa {partyName}. Hành động này không thể hoàn tác.",
-          "about_to_register": "Bạn sắp thành lập một đảng phái mới."
-        },
-        "detail": {
-          "failed_to_load": "Không thể tải dữ liệu đảng phái",
-          "party_not_found": "Không tìm thấy đảng phái",
-          "error_loading": "Lỗi khi tải đảng phái",
-          "back_to_parties": "Quay lại đảng phái",
-          "description": "Mô tả",
-          "party_info": "Thông tin đảng phái",
-          "leader": "Lãnh đạo",
-          "website": "Trang web",
-          "not_found_description": "Đảng phái bạn đang tìm không tồn tại hoặc đã bị giải tán."
-        },
-        "delete_party": "Xóa đảng",
-        "run_on_elections_and_earn": "Tham gia bầu cử và nhận trợ cấp",
-        "ambassadors": {
-          "title": "Chương trình Đại sứ",
-          "description": "Mời bạn bè và nhận thưởng khi họ xác minh và khi đảng của họ nhận trợ cấp",
-          "leaderboard": "Bảng xếp hạng",
-          "no_rewards_yet": "Chưa có phần thưởng nào",
-          "col_ambassador": "Đại sứ",
-          "col_invited": "Người được mời",
-          "col_reward": "Phần thưởng",
-          "share_referral_link": "Chia sẻ liên kết giới thiệu"
-        },
-        "subsidies": {
-          "title": "Chương trình Trợ cấp Đảng",
-          "no_subsidies_yet": "Chưa có trợ cấp",
-          "description": "Nguồn tài trợ dựa trên thành tích bầu cử",
-          "col_subsidy": "Trợ cấp"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Bầu cử",
-          "not_found": "Không tìm thấy cuộc bầu cử",
-          "not_found_description": "Cuộc bầu cử bạn đang tìm kiếm không tồn tại.",
-          "back_to_elections": "Quay lại danh sách bầu cử",
-          "status_active": "Đang diễn ra",
-          "status_upcoming": "Sắp tới",
-          "status_ended": "Đã kết thúc",
-          "election_info": "Thông tin bầu cử",
-          "reward_pool": "Quỹ giải thưởng: {amount} WDD",
-          "reward_pool_minimum": "Quỹ giải thưởng: tối thiểu {amount} WDD",
-          "choose_a_party": "Chọn một đảng",
-          "no_parties_for_election": "Không có đảng nào cho cuộc bầu cử này.",
-          "results_title": "Kết quả",
-          "vote_singular": "phiếu",
-          "vote_plural": "phiếu",
-          "no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
-          "test_election_name": "Bầu cử thử nghiệm {n}"
-        },
-        "list": {
-          "empty_state": "Không tìm thấy cuộc bầu cử nào",
-          "active_section": "Các cuộc bầu cử đang diễn ra",
-          "upcoming_section": "Các cuộc bầu cử sắp tới",
-          "previous_section": "Các cuộc bầu cử trước đây"
-        }
-      }
-    },
-    "error": {
-      "title": "Đã xảy ra lỗi",
-      "description": "Đã xảy ra lỗi không mong đợi. Vui lòng thử lại.",
-      "error_id": "Mã lỗi: {digest}",
-      "try_again": "Thử lại"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Thu nhập cơ bản",
-        "savings": "Tiết kiệm"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Nhận tiền vì là con người",
-        "subtitle_claim": "Nhận drachma của bạn",
-        "tooltip_claim": "1 WDD/ngày, giới hạn 1 WDD. Quay lại trong vòng 24 giờ để tối đa hóa thu nhập.",
-        "claim_button": "Nhận",
-        "alert": {
-          "claim": {
-            "title": "Xác nhận nhận",
-            "description": "Bạn sắp nhận {amount} WDD. Số tiền này sẽ được thêm vào số dư ví của bạn."
-          }
-        },
-        "setup_subtitle": "Thiết lập thu nhập cơ bản",
-        "activate_loading": "Đang kích hoạt...",
-        "activate_button": "Kích hoạt thu nhập cơ bản",
-        "world_drachma": "Drachma thế giới (WDD) là gì?",
-        "subtitle_unauth_raised_by_humanity": "Nhận cổ tức AI toàn cầu của bạn"
-      },
-      "savings": {
-        "title": "Tài khoản tiết kiệm",
-        "subtitle": "Kiếm lãi mỗi giây",
-        "tooltip": "Lãi suất cơ bản 69% mỗi năm. Thu thập và tái đầu tư thường xuyên để đạt hiệu suất gần 100%. Rút tiền bất cứ lúc nào.",
-        "deposit": "Gửi tiền",
-        "withdraw": "Rút tiền",
-        "balance": "Số dư",
-        "amount_deposit": "Số tiền gửi",
-        "amount_withdraw": "Số tiền rút",
-        "interest": "Lãi suất",
-        "collect": "Thu lãi",
-        "alert": {
-          "collect": {
-            "title": "Xác nhận thu lãi",
-            "description": "Bạn sắp thu {amount} WDD tiền lãi."
-          },
-          "deposit": {
-            "title": "Xác nhận gửi tiền",
-            "description": "Bạn sắp gửi {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Xác nhận rút tiền",
-            "description": "Bạn sắp rút {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Xem hợp đồng thông minh",
-        "verify": "Xác minh"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "TÀI KHOẢN",
-          "account_info": "Thông tin tài khoản",
-          "referral_code": "Mã giới thiệu",
-          "referred_by": "Giới thiệu bởi",
-          "language": "Ngôn ngữ"
-        },
-        "help": {
-          "title": "TRỢ GIÚP",
-          "quickstart": "Bắt đầu nhanh",
-          "docs": "Wiki",
-          "help_center": "Trung tâm trợ giúp"
-        },
-        "source_code": {
-          "title": "MÃ NGUỒN"
-        },
-        "legal": {
-          "title": "PHÁP LÝ",
-          "terms": "Điều khoản sử dụng",
-          "privacy": "Chính sách bảo mật"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Ví"
-      },
-      "balance": "Số dư",
-      "modals": {
-        "sign_out": {
-          "confirm": "Bạn có chắc chắn muốn đăng xuất?"
-        },
-        "disconnect": {
-          "confirm": "Bạn có chắc chắn muốn ngắt kết nối ví của mình không?"
-        },
-        "send": {
-          "button": "Gửi",
-          "withdraw_to_crypto": {
-            "description": "Rút WDD vào tài khoản crypto.",
-            "amount_label": "Số tiền",
-            "address_label": "Địa chỉ ví",
-            "network_label": "Mạng"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD trên Jumper",
-          "ethereum_uniswap": "Ethereum WDD trên Uniswap",
-          "base_jumper": "Base Chain WDD trên Jumper",
-          "base_uniswap": "Base Chain WDD trên Uniswap",
-          "worldchain_jumper": "World Chain WDD trên Jumper",
-          "worldchain_uniswap": "World Chain WDD trên Uniswap"
-        },
-        "delete_account": {
-          "description": "Điều này sẽ xóa vĩnh viễn tài khoản của bạn và xóa tất cả dữ liệu khỏi máy chủ của chúng tôi. Hành động này không thể hoàn tác — vui lòng tiếp tục một cách thận trọng.",
-          "deleting": "Đang xóa..."
-        },
-        "connect_wallet_browser": {
-          "title": "Mở trong MetaMask",
-          "description": "Để kết nối, hãy sao chép liên kết này và mở nó trong trình duyệt tích hợp của MetaMask.",
-          "copy_link": "Sao chép liên kết"
-        },
-        "connect_wallet_picker": {
-          "description": "Đã tìm thấy nhiều ví. Hãy chọn một ví để kết nối."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Chưa có ví?",
-          "find_wallet_link": "Tìm một ví trên WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "TÀI KHOẢN",
-        "security": "BẢO MẬT",
-        "google_account": "Tài khoản Google",
-        "google_not_linked": "Chưa liên kết",
-        "passkeys": "Khóa truy cập",
-        "passkeys_linked": "{count} đã liên kết",
-        "danger_zone": "KHU VỰC NGUY HIỂM",
-        "delete_account": {
-          "description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
-        },
-        "verification": "XÁC MINH",
-        "google_linked": "Đã liên kết",
-        "account_label": "Tài khoản"
-      },
-      "username": {
-        "label": "Tên người dùng",
-        "edit_title": "Chỉnh sửa tên người dùng",
-        "description": "3-30 ký tự, chữ số, gạch dưới và dấu gạch ngang"
-      },
-      "history": {
-        "title": "LỊCH SỬ"
-      },
-      "transactions": {
-        "failed_to_load": "Không thể tải",
-        "no_transactions": "Chưa có giao dịch",
-        "wdd_per_day": "WDD/ngày",
-        "just_now": "Vừa xong",
-        "minutes_ago": "{minutes}phút trước",
-        "hours_ago": "{hours}giờ trước",
-        "days_ago": "{days}ngày trước",
-        "filter": {
-          "all_types": "Tất cả các loại",
-          "select_type": "Chọn loại",
-          "rewards": "Phần thưởng"
-        },
-        "types": {
-          "withdrawal": "Rút tiền",
-          "received": "Đã nhận",
-          "sent": "Đã gửi",
-          "ambassador_reward": "Phần thưởng đại sứ",
-          "party_subsidy": "Trợ cấp đảng",
-          "stream_created": "Luồng đã tạo",
-          "stream_updated": "Luồng đã cập nhật",
-          "savings_deposit": "Tiết kiệm gửi tiền",
-          "savings_withdrawal": "Tiết kiệm rút tiền",
-          "savings_interest": "Tiết kiệm lãi suất",
-          "referral_reward": "Phần thưởng giới thiệu"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Quét mã QR này để xác minh với Self.",
-        "mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để thực hiện xác minh.",
-        "support_telegram": "Hỗ trợ Self",
-        "verification_guide": "Hướng dẫn xác minh",
-        "qr_alt": "Mã QR xác minh Self",
-        "callback_warning": "Cảnh báo",
-        "callback_warning_description": "URL gọi lại xác minh không thể truy cập được từ điện thoại của bạn. Đặt NEXT_PUBLIC_SELF_CALLBACK thành URL công khai (hoặc đặt NEXT_PUBLIC_PUBLIC_BASE_URL thành tên miền đường hầm/xem trước).",
-        "label": "Self",
-        "status_completed": "Đã xác minh",
-        "status_not_completed": "Chưa xác minh",
-        "learn_about_self": "Tìm hiểu về Self",
-        "primer": {
-          "title": "Self Giao thức",
-          "description": "Xác minh mà không tiết lộ bất kỳ dữ liệu cá nhân nào."
-        }
-      },
-      "verification_warning": {
-        "title": "Nhận xác minh",
-        "reward_cap_banner": "Phần thưởng thu nhập cơ bản và tiết kiệm bị giới hạn đối với công dân chưa xác minh. Hãy xác minh tài khoản để nhận không giới hạn."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Hầu hết các ví chỉ hiển thị WDD sau khi được nhập thủ công vào chuỗi đã chọn bằng ",
-      "contract_address": "địa chỉ hợp đồng"
-    }
-  },
-  "toasts": {
-    "generic_error": "Đã xảy ra lỗi",
-    "copied": "Đã sao chép",
-    "wallet": {
-      "no_wallet": "Không có địa chỉ ví",
-      "min_amount": "Tối thiểu 10 WDD",
-      "sent": "Đã gửi",
-      "account_deleted": "Tài khoản đã được xóa",
-      "delete_failed": "Xóa tài khoản thất bại",
-      "contract_address_error": "Không thể rút tiền đến địa chỉ hợp đồng",
-      "sign_out_failed": "Đăng xuất thất bại",
-      "google_linked": "Đã liên kết tài khoản Google",
-      "google_already_linked": "Tài khoản Google đã được liên kết với tài khoản khác",
-      "google_link_failed": "Không thể bắt đầu liên kết Google",
-      "passkey_added": "Đã thêm khóa truy cập",
-      "passkey_add_failed": "Không thể thêm khóa truy cập"
-    },
-    "parties": {
-      "updated": "Đã cập nhật",
-      "update_failed": "Cập nhật thất bại",
-      "update_error": "Lỗi khi cập nhật đảng phái",
-      "registered": "Đảng đã được đăng ký",
-      "register_failed": "Không thể đăng ký đảng",
-      "register_error": "Lỗi đăng ký đảng",
-      "deleted": "Đã xóa",
-      "delete_failed": "Xóa thất bại",
-      "delete_error": "Lỗi khi xóa"
-    },
-    "basic_income": {
-      "activated": "Thu nhập cơ bản đã được kích hoạt",
-      "activate_failed": "Kích hoạt thất bại",
-      "claimed": "Đã nhận",
-      "claim_failed": "Nhận thất bại"
-    },
-    "savings": {
-      "collected": "Đã thu lãi",
-      "collect_failed": "Thu lãi thất bại",
-      "deposited": "Đã gửi tiền",
-      "deposit_failed": "Gửi tiền thất bại",
-      "withdrawn": "Đã rút tiền",
-      "withdraw_failed": "Rút tiền thất bại"
-    }
-  },
-  "common": {
-    "confirm": "Xác nhận",
-    "sign_in": "Đăng nhập",
-    "connect": "Kết nối",
-    "disconnect": "Ngắt kết nối",
-    "connect_wallet": "Kết nối ví",
-    "max": "Tối đa",
-    "loading": "Đang tải...",
-    "processing": "Đang xử lý...",
-    "insufficient_balance": "Không đủ WDD",
-    "delete_account": "Xóa tài khoản",
-    "sign_out": "Đăng xuất",
-    "invalid_address": "Địa chỉ không hợp lệ",
-    "coming_soon": "Sắp ra mắt",
-    "withdraw": "Rút tiền",
-    "trade": "Giao dịch",
-    "continue": "Tiếp tục",
-    "close": "Đóng",
-    "updating": "Đang cập nhật...",
-    "save": "Lưu",
-    "vote": "Bỏ phiếu",
-    "switch_to_base_chain": "Chuyển sang Base Chain"
-  },
-  "auth": {
-    "choose_method": "Chọn phương thức ưa thích của bạn.",
-    "sign_in_with_google": "Tiếp tục với Google",
-    "sign_in_with_passkey": "Sử dụng sinh trắc học",
-    "sign_in_or_create": "Truy cập tài khoản của bạn bằng passkey, sử dụng dấu vân tay, quét khuôn mặt hoặc khóa màn hình.",
-    "create_account": "Tạo tài khoản",
-    "create_passkey_name": "Tạo tên passkey",
-    "passkey_name_description": "Đặt tên cho passkey của bạn để xác định nó trong trình quản lý mật khẩu.",
-    "passkey_name": "Tên passkey"
-  }
+	"nav": {
+		"earn": "Kiếm tiền",
+		"govern": "Quản trị",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Đảng phái",
+				"elections": "Bầu cử",
+				"referendums": "Trưng cầu dân ý"
+			},
+			"sections": {
+				"parties": {
+					"title": "Đảng phái chính trị"
+				},
+				"elections": {
+					"title": "Bầu cử thử nghiệm",
+					"subtitle": "Thử nghiệm dân chủ toàn cầu"
+				},
+				"referendums": {
+					"title": "Trưng cầu dân ý Hiến pháp Thế giới",
+					"subtitle": "Bỏ phiếu về các nguyên tắc nền tảng"
+				}
+			},
+			"vote": {
+				"no_active_election": "Cuộc bầu cử sắp bắt đầu",
+				"test_verification": {
+					"description": "Hãy thử hệ thống xác minh của chúng tôi ngay bây giờ để sẵn sàng bỏ phiếu",
+					"button": "Kiểm tra"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Trợ cấp",
+					"ambassadors": "Đại sứ"
+				},
+				"discover": "Khám phá",
+				"search_placeholder": "Tìm kiếm đảng phái...",
+				"no_parties_found": "Không tìm thấy đảng phái",
+				"error_loading": "Không thể tải danh sách đảng",
+				"refresh": "Làm mới",
+				"party_details": "Chi tiết đảng phái",
+				"share_party": "Chia sẻ đảng phái",
+				"my_party": "Đảng phái của tôi",
+				"learn_more": "Tìm hiểu thêm",
+				"party_management": "Quản lý đảng phái",
+				"edit_party_info": "Chỉnh sửa thông tin đảng phái",
+				"dialogs": {
+					"party_name": "Tên đảng phái",
+					"description_optional": "Mô tả (tùy chọn)",
+					"official_link_optional": "Liên kết chính thức (tùy chọn)",
+					"updating": "Đang cập nhật...",
+					"save": "Lưu",
+					"register_party": "Đăng ký đảng",
+					"register": "Đăng ký",
+					"registering": "Đang đăng ký...",
+					"leader_warning_register": "Bạn hiện là lãnh đạo của {partyName}. Đăng ký đảng mới sẽ xóa đảng hiện tại của bạn.",
+					"deleting": "Đang xóa...",
+					"about_to_delete": "Bạn sắp xóa {partyName}. Hành động này không thể hoàn tác.",
+					"about_to_register": "Bạn sắp thành lập một đảng phái mới."
+				},
+				"detail": {
+					"failed_to_load": "Không thể tải dữ liệu đảng phái",
+					"party_not_found": "Không tìm thấy đảng phái",
+					"error_loading": "Lỗi khi tải đảng phái",
+					"back_to_parties": "Quay lại đảng phái",
+					"description": "Mô tả",
+					"party_info": "Thông tin đảng phái",
+					"leader": "Lãnh đạo",
+					"website": "Trang web",
+					"not_found_description": "Đảng phái bạn đang tìm không tồn tại hoặc đã bị giải tán."
+				},
+				"delete_party": "Xóa đảng",
+				"run_on_elections_and_earn": "Tham gia bầu cử và nhận trợ cấp",
+				"ambassadors": {
+					"title": "Chương trình Đại sứ",
+					"description": "Mời bạn bè và nhận thưởng khi họ xác minh và khi đảng của họ nhận trợ cấp",
+					"leaderboard": "Bảng xếp hạng",
+					"no_rewards_yet": "Chưa có phần thưởng nào",
+					"col_ambassador": "Đại sứ",
+					"col_invited": "Người được mời",
+					"col_reward": "Phần thưởng",
+					"share_referral_link": "Chia sẻ liên kết giới thiệu"
+				},
+				"subsidies": {
+					"title": "Chương trình Trợ cấp Đảng",
+					"no_subsidies_yet": "Chưa có trợ cấp",
+					"description": "Nguồn tài trợ dựa trên thành tích bầu cử",
+					"col_subsidy": "Trợ cấp"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Bầu cử",
+					"not_found": "Không tìm thấy cuộc bầu cử",
+					"not_found_description": "Cuộc bầu cử bạn đang tìm kiếm không tồn tại.",
+					"back_to_elections": "Quay lại danh sách bầu cử",
+					"status_active": "Đang diễn ra",
+					"status_upcoming": "Sắp tới",
+					"status_ended": "Đã kết thúc",
+					"election_info": "Thông tin bầu cử",
+					"reward_pool": "Quỹ giải thưởng: {amount} WDD",
+					"reward_pool_minimum": "Quỹ giải thưởng: tối thiểu {amount} WDD",
+					"choose_a_party": "Chọn một đảng",
+					"no_parties_for_election": "Không có đảng nào cho cuộc bầu cử này.",
+					"results_title": "Kết quả",
+					"vote_singular": "phiếu",
+					"vote_plural": "phiếu",
+					"no_votes": "Không có phiếu bầu nào được bỏ trong cuộc bầu cử này.",
+					"test_election_name": "Bầu cử thử nghiệm {n}"
+				},
+				"list": {
+					"empty_state": "Không tìm thấy cuộc bầu cử nào",
+					"active_section": "Các cuộc bầu cử đang diễn ra",
+					"upcoming_section": "Các cuộc bầu cử sắp tới",
+					"previous_section": "Các cuộc bầu cử trước đây"
+				}
+			}
+		},
+		"error": {
+			"title": "Đã xảy ra lỗi",
+			"description": "Đã xảy ra lỗi không mong đợi. Vui lòng thử lại.",
+			"error_id": "Mã lỗi: {digest}",
+			"try_again": "Thử lại"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Thu nhập cơ bản",
+				"savings": "Tiết kiệm"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Nhận tiền vì là con người",
+				"subtitle_claim": "Nhận drachma của bạn",
+				"tooltip_claim": "1 WDD/ngày, giới hạn 1 WDD. Quay lại trong vòng 24 giờ để tối đa hóa thu nhập.",
+				"claim_button": "Nhận",
+				"alert": {
+					"claim": {
+						"title": "Xác nhận nhận",
+						"description": "Bạn sắp nhận {amount} WDD. Số tiền này sẽ được thêm vào số dư ví của bạn."
+					}
+				},
+				"setup_subtitle": "Thiết lập thu nhập cơ bản",
+				"activate_loading": "Đang kích hoạt...",
+				"activate_button": "Kích hoạt thu nhập cơ bản",
+				"world_drachma": "Drachma thế giới (WDD) là gì?",
+				"subtitle_unauth_raised_by_humanity": "Nhận cổ tức AI toàn cầu của bạn"
+			},
+			"savings": {
+				"title": "Tài khoản tiết kiệm",
+				"subtitle": "Kiếm lãi mỗi giây",
+				"tooltip": "Lãi suất cơ bản 69% mỗi năm. Thu thập và tái đầu tư thường xuyên để đạt hiệu suất gần 100%. Rút tiền bất cứ lúc nào.",
+				"deposit": "Gửi tiền",
+				"withdraw": "Rút tiền",
+				"balance": "Số dư",
+				"amount_deposit": "Số tiền gửi",
+				"amount_withdraw": "Số tiền rút",
+				"interest": "Lãi suất",
+				"collect": "Thu lãi",
+				"alert": {
+					"collect": {
+						"title": "Xác nhận thu lãi",
+						"description": "Bạn sắp thu {amount} WDD tiền lãi."
+					},
+					"deposit": {
+						"title": "Xác nhận gửi tiền",
+						"description": "Bạn sắp gửi {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Xác nhận rút tiền",
+						"description": "Bạn sắp rút {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Xem hợp đồng thông minh",
+				"verify": "Xác minh"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "TÀI KHOẢN",
+					"account_info": "Thông tin tài khoản",
+					"referral_code": "Mã giới thiệu",
+					"referred_by": "Giới thiệu bởi",
+					"language": "Ngôn ngữ"
+				},
+				"help": {
+					"title": "TRỢ GIÚP",
+					"quickstart": "Bắt đầu nhanh",
+					"docs": "Wiki",
+					"help_center": "Trung tâm trợ giúp"
+				},
+				"source_code": {
+					"title": "MÃ NGUỒN"
+				},
+				"legal": {
+					"title": "PHÁP LÝ",
+					"terms": "Điều khoản sử dụng",
+					"privacy": "Chính sách bảo mật"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Ví"
+			},
+			"balance": "Số dư",
+			"modals": {
+				"sign_out": {
+					"confirm": "Bạn có chắc chắn muốn đăng xuất?"
+				},
+				"disconnect": {
+					"confirm": "Bạn có chắc chắn muốn ngắt kết nối ví của mình không?"
+				},
+				"send": {
+					"button": "Gửi",
+					"withdraw_to_crypto": {
+						"description": "Rút WDD vào tài khoản crypto.",
+						"amount_label": "Số tiền",
+						"address_label": "Địa chỉ ví",
+						"network_label": "Mạng"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD trên Jumper",
+					"ethereum_uniswap": "Ethereum WDD trên Uniswap",
+					"base_jumper": "Base Chain WDD trên Jumper",
+					"base_uniswap": "Base Chain WDD trên Uniswap",
+					"worldchain_jumper": "World Chain WDD trên Jumper",
+					"worldchain_uniswap": "World Chain WDD trên Uniswap"
+				},
+				"delete_account": {
+					"description": "Điều này sẽ xóa vĩnh viễn tài khoản của bạn và xóa tất cả dữ liệu khỏi máy chủ của chúng tôi. Hành động này không thể hoàn tác — vui lòng tiếp tục một cách thận trọng.",
+					"deleting": "Đang xóa..."
+				},
+				"connect_wallet_browser": {
+					"title": "Mở trong MetaMask",
+					"description": "Để kết nối, hãy sao chép liên kết này và mở nó trong trình duyệt tích hợp của MetaMask.",
+					"copy_link": "Sao chép liên kết"
+				},
+				"connect_wallet_picker": {
+					"description": "Đã tìm thấy nhiều ví. Hãy chọn một ví để kết nối."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Chưa có ví?",
+					"find_wallet_link": "Tìm một ví trên WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "TÀI KHOẢN",
+				"security": "BẢO MẬT",
+				"google_account": "Tài khoản Google",
+				"google_not_linked": "Chưa liên kết",
+				"passkeys": "Khóa truy cập",
+				"passkeys_linked": "{count} đã liên kết",
+				"danger_zone": "KHU VỰC NGUY HIỂM",
+				"delete_account": {
+					"description": "Xóa vĩnh viễn tất cả dữ liệu của bạn"
+				},
+				"verification": "XÁC MINH",
+				"google_linked": "Đã liên kết",
+				"account_label": "Tài khoản"
+			},
+			"username": {
+				"label": "Tên người dùng",
+				"edit_title": "Chỉnh sửa tên người dùng",
+				"description": "3-30 ký tự, chữ số, gạch dưới và dấu gạch ngang"
+			},
+			"history": {
+				"title": "LỊCH SỬ"
+			},
+			"transactions": {
+				"failed_to_load": "Không thể tải",
+				"no_transactions": "Chưa có giao dịch",
+				"wdd_per_day": "WDD/ngày",
+				"just_now": "Vừa xong",
+				"minutes_ago": "{minutes}phút trước",
+				"hours_ago": "{hours}giờ trước",
+				"days_ago": "{days}ngày trước",
+				"filter": {
+					"all_types": "Tất cả các loại",
+					"select_type": "Chọn loại",
+					"rewards": "Phần thưởng"
+				},
+				"types": {
+					"withdrawal": "Rút tiền",
+					"received": "Đã nhận",
+					"sent": "Đã gửi",
+					"ambassador_reward": "Phần thưởng đại sứ",
+					"party_subsidy": "Trợ cấp đảng",
+					"stream_created": "Luồng đã tạo",
+					"stream_updated": "Luồng đã cập nhật",
+					"savings_deposit": "Tiết kiệm gửi tiền",
+					"savings_withdrawal": "Tiết kiệm rút tiền",
+					"savings_interest": "Tiết kiệm lãi suất",
+					"referral_reward": "Phần thưởng giới thiệu"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Quét mã QR này để xác minh với Self.",
+				"mobile_dialog_description": "Bạn sẽ được chuyển đến ứng dụng Self để thực hiện xác minh.",
+				"support_telegram": "Hỗ trợ Self",
+				"verification_guide": "Hướng dẫn xác minh",
+				"qr_alt": "Mã QR xác minh Self",
+				"callback_warning": "Cảnh báo",
+				"callback_warning_description": "URL gọi lại xác minh không thể truy cập được từ điện thoại của bạn. Đặt NEXT_PUBLIC_SELF_CALLBACK thành URL công khai (hoặc đặt NEXT_PUBLIC_PUBLIC_BASE_URL thành tên miền đường hầm/xem trước).",
+				"label": "Self",
+				"status_completed": "Đã xác minh",
+				"status_not_completed": "Chưa xác minh",
+				"learn_about_self": "Tìm hiểu về Self",
+				"primer": {
+					"title": "Self Giao thức",
+					"description": "Xác minh mà không tiết lộ bất kỳ dữ liệu cá nhân nào."
+				}
+			},
+			"verification_warning": {
+				"title": "Nhận xác minh",
+				"reward_cap_banner": "Phần thưởng thu nhập cơ bản và tiết kiệm bị giới hạn đối với công dân chưa xác minh. Hãy xác minh tài khoản để nhận không giới hạn."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Hầu hết các ví chỉ hiển thị WDD sau khi được nhập thủ công vào chuỗi đã chọn bằng ",
+			"contract_address": "địa chỉ hợp đồng"
+		}
+	},
+	"toasts": {
+		"generic_error": "Đã xảy ra lỗi",
+		"copied": "Đã sao chép",
+		"wallet": {
+			"no_wallet": "Không có địa chỉ ví",
+			"min_amount": "Tối thiểu 10 WDD",
+			"sent": "Đã gửi",
+			"account_deleted": "Tài khoản đã được xóa",
+			"delete_failed": "Xóa tài khoản thất bại",
+			"contract_address_error": "Không thể rút tiền đến địa chỉ hợp đồng",
+			"sign_out_failed": "Đăng xuất thất bại",
+			"google_linked": "Đã liên kết tài khoản Google",
+			"google_already_linked": "Tài khoản Google đã được liên kết với tài khoản khác",
+			"google_link_failed": "Không thể bắt đầu liên kết Google",
+			"passkey_added": "Đã thêm khóa truy cập",
+			"passkey_add_failed": "Không thể thêm khóa truy cập"
+		},
+		"parties": {
+			"updated": "Đã cập nhật",
+			"update_failed": "Cập nhật thất bại",
+			"update_error": "Lỗi khi cập nhật đảng phái",
+			"registered": "Đảng đã được đăng ký",
+			"register_failed": "Không thể đăng ký đảng",
+			"register_error": "Lỗi đăng ký đảng",
+			"deleted": "Đã xóa",
+			"delete_failed": "Xóa thất bại",
+			"delete_error": "Lỗi khi xóa"
+		},
+		"basic_income": {
+			"activated": "Thu nhập cơ bản đã được kích hoạt",
+			"activate_failed": "Kích hoạt thất bại",
+			"claimed": "Đã nhận",
+			"claim_failed": "Nhận thất bại"
+		},
+		"savings": {
+			"collected": "Đã thu lãi",
+			"collect_failed": "Thu lãi thất bại",
+			"deposited": "Đã gửi tiền",
+			"deposit_failed": "Gửi tiền thất bại",
+			"withdrawn": "Đã rút tiền",
+			"withdraw_failed": "Rút tiền thất bại"
+		}
+	},
+	"common": {
+		"confirm": "Xác nhận",
+		"sign_in": "Đăng nhập",
+		"connect": "Kết nối",
+		"disconnect": "Ngắt kết nối",
+		"connect_wallet": "Kết nối ví",
+		"max": "Tối đa",
+		"loading": "Đang tải...",
+		"processing": "Đang xử lý...",
+		"insufficient_balance": "Không đủ WDD",
+		"delete_account": "Xóa tài khoản",
+		"sign_out": "Đăng xuất",
+		"invalid_address": "Địa chỉ không hợp lệ",
+		"coming_soon": "Sắp ra mắt",
+		"withdraw": "Rút tiền",
+		"trade": "Giao dịch",
+		"continue": "Tiếp tục",
+		"close": "Đóng",
+		"updating": "Đang cập nhật...",
+		"save": "Lưu",
+		"vote": "Bỏ phiếu",
+		"switch_to_base_chain": "Chuyển sang Base Chain"
+	},
+	"auth": {
+		"choose_method": "Chọn phương thức ưa thích của bạn.",
+		"sign_in_with_google": "Tiếp tục với Google",
+		"sign_in_with_passkey": "Sử dụng sinh trắc học",
+		"sign_in_or_create": "Truy cập tài khoản của bạn bằng passkey, sử dụng dấu vân tay, quét khuôn mặt hoặc khóa màn hình.",
+		"create_account": "Tạo tài khoản",
+		"create_passkey_name": "Tạo tên passkey",
+		"passkey_name_description": "Đặt tên cho passkey của bạn để xác định nó trong trình quản lý mật khẩu.",
+		"passkey_name": "Tên passkey"
+	}
 }

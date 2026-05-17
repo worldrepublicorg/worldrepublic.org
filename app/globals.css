@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #181818;
+	--background: #ffffff;
+	--foreground: #181818;
 }
 
 @theme inline {
@@ -15,70 +15,70 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family:
-    var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family:
+		var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif;
 }
 
 .safe-area-spacer {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+	padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .pb-safe {
-  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+	padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
 }
 
 .mb-safe {
-  margin-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+	margin-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
 }
 
 .scroll-to-top-bottom {
-  bottom: calc(56px + 16px + env(safe-area-inset-bottom, 0px));
+	bottom: calc(56px + 16px + env(safe-area-inset-bottom, 0px));
 }
 
 /* Custom Select styling - 15px text size */
 .custom-select-wrapper select,
 .custom-select-wrapper button,
 .custom-select-wrapper span {
-  /* biome-ignore lint/complexity/noImportantStyles: required to override UI kit select typography */
-  font-size: 15px !important;
+	/* biome-ignore lint/complexity/noImportantStyles: required to override UI kit select typography */
+	font-size: 15px !important;
 }
 
 /* Hide browser's native progress indicator (backup if navigation preload fix doesn't work) */
 html::-webkit-progress-bar,
 html::-webkit-progress-value {
-  /* biome-ignore lint/complexity/noImportantStyles: required to suppress native progress indicator */
-  display: none !important;
+	/* biome-ignore lint/complexity/noImportantStyles: required to suppress native progress indicator */
+	display: none !important;
 }
 
 /* Ripple animation for bottom nav - expands outward and fades */
 @keyframes ripple {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0.6;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2.5);
-    opacity: 0;
-  }
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0.6;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(2.5);
+		opacity: 0;
+	}
 }
 
 /* Match AlertDialog width to content width and center on desktop */
 @media (min-width: 768px) {
-  /* Scope to Worldcoin UI Kit AlertDialog (Vaul drawer) only */
-  [data-vaul-drawer][data-vaul-drawer-direction="bottom"] {
-    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
-    width: 36rem !important; /* Fixed width: max-w-xl = 576px, matches main content */
-    max-width: 36rem;
-    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
-    left: 50% !important;
-    /* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
-    right: auto !important;
-    margin-left: -18rem; /* Center: negative half of fixed width (36rem / 2 = 18rem) */
-  }
+	/* Scope to Worldcoin UI Kit AlertDialog (Vaul drawer) only */
+	[data-vaul-drawer][data-vaul-drawer-direction="bottom"] {
+		/* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
+		width: 36rem !important; /* Fixed width: max-w-xl = 576px, matches main content */
+		max-width: 36rem;
+		/* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
+		left: 50% !important;
+		/* biome-ignore lint/complexity/noImportantStyles: required to override Vaul inline positioning and width */
+		right: auto !important;
+		margin-left: -18rem; /* Center: negative half of fixed width (36rem / 2 = 18rem) */
+	}
 }

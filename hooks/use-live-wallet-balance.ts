@@ -11,34 +11,34 @@ export const EMPTY_STREAMS: StreamData[] = [];
  * recomputed every second when there are streams; otherwise the server snapshot.
  */
 export function useLiveWalletBalance(
-  streams: StreamData[] | null | undefined,
-  storedWalletBalance: number,
-  serverBalance: number | null,
+	streams: StreamData[] | null | undefined,
+	storedWalletBalance: number,
+	serverBalance: number | null,
 ): number | null {
-  const userStreams = streams ?? EMPTY_STREAMS;
-  const [liveBalance, setLiveBalance] = useState<number | null>(null);
-  const streamsRef = useRef(userStreams);
-  streamsRef.current = userStreams;
+	const userStreams = streams ?? EMPTY_STREAMS;
+	const [liveBalance, setLiveBalance] = useState<number | null>(null);
+	const streamsRef = useRef(userStreams);
+	streamsRef.current = userStreams;
 
-  const computeBalance = useCallback(() => {
-    const s = streamsRef.current;
-    if (s.length > 0) {
-      return computeWalletBalance(s, Date.now()) + storedWalletBalance;
-    }
-    return null;
-  }, [storedWalletBalance]);
+	const computeBalance = useCallback(() => {
+		const s = streamsRef.current;
+		if (s.length > 0) {
+			return computeWalletBalance(s, Date.now()) + storedWalletBalance;
+		}
+		return null;
+	}, [storedWalletBalance]);
 
-  useEffect(() => {
-    if (userStreams.length === 0) {
-      setLiveBalance(null);
-      return;
-    }
-    setLiveBalance(computeBalance());
-    const interval = setInterval(() => {
-      setLiveBalance(computeBalance());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [userStreams, computeBalance]);
+	useEffect(() => {
+		if (userStreams.length === 0) {
+			setLiveBalance(null);
+			return;
+		}
+		setLiveBalance(computeBalance());
+		const interval = setInterval(() => {
+			setLiveBalance(computeBalance());
+		}, 1000);
+		return () => clearInterval(interval);
+	}, [userStreams, computeBalance]);
 
-  return liveBalance ?? serverBalance;
+	return liveBalance ?? serverBalance;
 }

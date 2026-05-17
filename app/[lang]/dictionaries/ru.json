@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Зарабатывать",
-    "govern": "Управление",
-    "menu": "Меню"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Партии",
-        "elections": "Выборы",
-        "referendums": "Референдумы"
-      },
-      "sections": {
-        "parties": {
-          "title": "Политические партии"
-        },
-        "elections": {
-          "title": "Тестовые выборы",
-          "subtitle": "Экспериментируйте с глобальной демократией"
-        },
-        "referendums": {
-          "title": "Всемирный конституционный референдум",
-          "subtitle": "Голосуйте за наши основные принципы"
-        }
-      },
-      "vote": {
-        "no_active_election": "Выборы скоро начнутся",
-        "test_verification": {
-          "description": "Попробуйте нашу систему проверки сейчас, чтобы быть готовыми к голосованию",
-          "button": "Тест"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Субсидии",
-          "ambassadors": "Амбассадоры"
-        },
-        "discover": "Открыть",
-        "search_placeholder": "Поиск партий...",
-        "no_parties_found": "Партии не найдены",
-        "error_loading": "Не удалось загрузить партии",
-        "refresh": "Обновить",
-        "party_details": "Детали партии",
-        "share_party": "Поделиться партией",
-        "my_party": "Моя партия",
-        "learn_more": "Узнать больше",
-        "party_management": "Управление партией",
-        "edit_party_info": "Редактировать информацию о партии",
-        "dialogs": {
-          "party_name": "Название партии",
-          "description_optional": "Описание (необязательно)",
-          "official_link_optional": "Официальная ссылка (необязательно)",
-          "updating": "Обновление...",
-          "save": "Сохранить",
-          "register_party": "Зарегистрировать партию",
-          "register": "Регистрация",
-          "registering": "Регистрация...",
-          "leader_warning_register": "Вы в настоящее время являетесь лидером {partyName}. Регистрация новой партии удалит вашу текущую партию.",
-          "deleting": "Удаление...",
-          "about_to_delete": "Вы собираетесь удалить {partyName}. Это действие нельзя отменить.",
-          "about_to_register": "Вы собираетесь основать новую партию."
-        },
-        "detail": {
-          "failed_to_load": "Не удалось загрузить данные партии",
-          "party_not_found": "Партия не найдена",
-          "error_loading": "Ошибка загрузки партии",
-          "back_to_parties": "Вернуться к партиям",
-          "description": "Описание",
-          "party_info": "Информация о партии",
-          "leader": "Лидер",
-          "website": "Веб-сайт",
-          "not_found_description": "Партия, которую вы ищете, не существует или была распущена."
-        },
-        "delete_party": "Удалить партию",
-        "run_on_elections_and_earn": "Участвуйте в выборах и получайте субсидии",
-        "ambassadors": {
-          "title": "Программа Амбассадоров",
-          "description": "Приглашайте друзей и получайте награды, когда они проходят верификацию и когда их партия получает субсидии",
-          "leaderboard": "Таблица лидеров",
-          "no_rewards_yet": "Наград пока нет",
-          "col_ambassador": "Амбассадоры",
-          "col_invited": "Приглашённых",
-          "col_reward": "Награда",
-          "share_referral_link": "Поделиться реферальной ссылкой"
-        },
-        "subsidies": {
-          "title": "Программа Субсидирования Партий",
-          "no_subsidies_yet": "Субсидий пока нет",
-          "description": "Финансирование на основе результатов выборов",
-          "col_subsidy": "Субсидия"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Выборы",
-          "not_found": "Выборы не найдены",
-          "not_found_description": "Выборы, которые вы ищете, не существуют.",
-          "back_to_elections": "Назад к выборам",
-          "status_active": "Активные",
-          "status_upcoming": "Предстоящие",
-          "status_ended": "Завершённые",
-          "election_info": "Информация о выборах",
-          "reward_pool": "Призовой фонд: {amount} WDD",
-          "reward_pool_minimum": "Призовой фонд: минимум {amount} WDD",
-          "choose_a_party": "Выберите партию",
-          "no_parties_for_election": "Нет доступных партий для этих выборов.",
-          "results_title": "Результаты",
-          "vote_singular": "голос",
-          "vote_plural": "голосов",
-          "no_votes": "В этих выборах не было подано голосов.",
-          "test_election_name": "Тестовые выборы {n}"
-        },
-        "list": {
-          "empty_state": "Выборы не найдены",
-          "active_section": "Активные выборы",
-          "upcoming_section": "Предстоящие выборы",
-          "previous_section": "Прошедшие выборы"
-        }
-      }
-    },
-    "error": {
-      "title": "Что-то пошло не так",
-      "description": "Произошла непредвиденная ошибка. Пожалуйста, попробуйте снова.",
-      "error_id": "ID ошибки: {digest}",
-      "try_again": "Попробовать снова"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Базовый доход",
-        "savings": "Сбережения"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Получайте деньги за то, что вы человек",
-        "subtitle_claim": "Получите свои драхмы",
-        "tooltip_claim": "1 WDD/день, максимум 1 WDD. Возвращайтесь в течение 24 часов, чтобы максимизировать доход.",
-        "claim_button": "Получить",
-        "alert": {
-          "claim": {
-            "title": "Подтвердите получение",
-            "description": "Вы собираетесь получить {amount} WDD. Сумма будет добавлена к балансу вашего кошелька."
-          }
-        },
-        "setup_subtitle": "Настройте свой базовый доход",
-        "activate_loading": "Активация...",
-        "activate_button": "Активировать базовый доход",
-        "world_drachma": "Что такое мировая драхма (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Получите свой глобальный дивиденд от ИИ"
-      },
-      "savings": {
-        "title": "Сберегательный счёт",
-        "subtitle": "Проценты начисляются каждую секунду",
-        "tooltip": "69% годовой базовой ставки. Регулярно получайте и реинвестируйте проценты, чтобы достичь почти 100% эффективной доходности. Вывод в любое время.",
-        "deposit": "Пополнить",
-        "withdraw": "Вывести",
-        "balance": "Баланс",
-        "amount_deposit": "Сумма пополнения",
-        "amount_withdraw": "Сумма вывода",
-        "interest": "Проценты",
-        "collect": "Получить",
-        "alert": {
-          "collect": {
-            "title": "Подтвердите получение",
-            "description": "Вы собираетесь получить {amount} WDD процентов."
-          },
-          "deposit": {
-            "title": "Подтвердите пополнение",
-            "description": "Вы собираетесь пополнить на {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Подтвердите вывод",
-            "description": "Вы собираетесь вывести {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Посмотреть смарт-контракт",
-        "verify": "Проверить"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "АККАУНТ",
-          "account_info": "Информация об аккаунте",
-          "referral_code": "Реферальный код",
-          "referred_by": "Пригласил",
-          "language": "Язык"
-        },
-        "help": {
-          "title": "ПОМОЩЬ",
-          "quickstart": "Быстрый старт",
-          "docs": "Вики",
-          "help_center": "Справочный центр"
-        },
-        "source_code": {
-          "title": "ИСХОДНЫЙ КОД"
-        },
-        "legal": {
-          "title": "ПРАВО",
-          "terms": "Условия использования",
-          "privacy": "Политика конфиденциальности"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Кошелёк"
-      },
-      "balance": "Баланс",
-      "modals": {
-        "sign_out": {
-          "confirm": "Вы уверены, что хотите выйти?"
-        },
-        "disconnect": {
-          "confirm": "Вы уверены, что хотите отключить свой кошелек?"
-        },
-        "send": {
-          "button": "Отправить",
-          "withdraw_to_crypto": {
-            "description": "Вывести WDD на криптосчет.",
-            "amount_label": "Сумма",
-            "address_label": "Адрес кошелька",
-            "network_label": "Сеть"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD на Jumper",
-          "ethereum_uniswap": "Ethereum WDD на Uniswap",
-          "base_jumper": "Base Chain WDD на Jumper",
-          "base_uniswap": "Base Chain WDD на Uniswap",
-          "worldchain_jumper": "World Chain WDD на Jumper",
-          "worldchain_uniswap": "World Chain WDD на Uniswap"
-        },
-        "delete_account": {
-          "description": "Это навсегда удалит ваш аккаунт и все ваши данные с наших серверов. Это действие нельзя отменить — пожалуйста, действуйте осторожно.",
-          "deleting": "Удаление..."
-        },
-        "connect_wallet_browser": {
-          "title": "Открыть в MetaMask",
-          "description": "Чтобы подключиться, скопируйте эту ссылку и откройте её во встроенном браузере MetaMask.",
-          "copy_link": "Копировать ссылку"
-        },
-        "connect_wallet_picker": {
-          "description": "Найдено несколько кошельков. Выберите один для подключения."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Нет кошелька?",
-          "find_wallet_link": "Найдите его на WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "АККАУНТ",
-        "security": "БЕЗОПАСНОСТЬ",
-        "google_account": "Аккаунт Google",
-        "google_not_linked": "Не подключён",
-        "passkeys": "Ключи доступа",
-        "passkeys_linked": "{count} подключено",
-        "danger_zone": "ОПАСНАЯ ЗОНА",
-        "delete_account": {
-          "description": "Навсегда удалить все ваши данные"
-        },
-        "verification": "ВЕРИФИКАЦИЯ",
-        "google_linked": "Подключён",
-        "account_label": "Аккаунт"
-      },
-      "username": {
-        "label": "Имя пользователя",
-        "edit_title": "Редактировать имя пользователя",
-        "description": "3-30 символов, буквенно-цифровые, подчеркивания и дефисы"
-      },
-      "history": {
-        "title": "ИСТОРИЯ"
-      },
-      "transactions": {
-        "failed_to_load": "Не удалось загрузить",
-        "no_transactions": "Пока нет транзакций",
-        "wdd_per_day": "WDD/день",
-        "just_now": "Только что",
-        "minutes_ago": "{minutes}мин назад",
-        "hours_ago": "{hours}ч назад",
-        "days_ago": "{days}д назад",
-        "filter": {
-          "all_types": "Все типы",
-          "select_type": "Выберите тип",
-          "rewards": "Награды"
-        },
-        "types": {
-          "withdrawal": "Вывод",
-          "received": "Получено",
-          "sent": "Отправлено",
-          "ambassador_reward": "Награда посла",
-          "party_subsidy": "Партийная субсидия",
-          "stream_created": "Поток создан",
-          "stream_updated": "Поток обновлен",
-          "savings_deposit": "Сбережения пополнить",
-          "savings_withdrawal": "Сбережения вывести",
-          "savings_interest": "Сбережения проценты",
-          "referral_reward": "Реферальный бонус"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Отсканируйте этот QR‑код, чтобы пройти проверку через Self.",
-        "mobile_dialog_description": "Вы будете перенаправлены в приложение Self, чтобы пройти проверку.",
-        "support_telegram": "Поддержка Self",
-        "verification_guide": "Руководство по верификации",
-        "qr_alt": "QR-код верификации Self",
-        "callback_warning": "Предупреждение",
-        "callback_warning_description": "URL обратного вызова верификации недоступен с вашего телефона. Установите NEXT_PUBLIC_SELF_CALLBACK на публичный URL (или установите NEXT_PUBLIC_PUBLIC_BASE_URL на домен туннеля/предпросмотра).",
-        "label": "Self",
-        "status_completed": "Подтверждено",
-        "status_not_completed": "Не подтверждено",
-        "learn_about_self": "Узнайте о Self",
-        "primer": {
-          "title": "Self Протокол",
-          "description": "Пройдите верификацию, не раскрывая личные данные."
-        }
-      },
-      "verification_warning": {
-        "title": "Получить верификацию",
-        "reward_cap_banner": "Награды за базовый доход и сбережения ограничены для непроверенных граждан. Подтвердите свой аккаунт, чтобы зарабатывать без ограничений."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Большинство кошельков показывают WDD только после ручного импорта в выбранную сеть по её ",
-      "contract_address": "адресу контракта"
-    }
-  },
-  "toasts": {
-    "generic_error": "Произошла ошибка",
-    "copied": "Скопировано",
-    "wallet": {
-      "no_wallet": "Нет адреса кошелька",
-      "min_amount": "Минимум 10 WDD",
-      "sent": "Отправлено",
-      "account_deleted": "Аккаунт удалён",
-      "delete_failed": "Не удалось удалить аккаунт",
-      "contract_address_error": "Невозможно вывести на адрес контракта",
-      "sign_out_failed": "Выход не удался",
-      "google_linked": "Аккаунт Google подключён",
-      "google_already_linked": "Аккаунт Google уже подключён к другому аккаунту",
-      "google_link_failed": "Не удалось начать подключение Google",
-      "passkey_added": "Ключ доступа добавлен",
-      "passkey_add_failed": "Не удалось добавить ключ доступа"
-    },
-    "parties": {
-      "updated": "Обновлено",
-      "update_failed": "Не удалось обновить",
-      "update_error": "Ошибка при обновлении партии",
-      "registered": "Партия зарегистрирована",
-      "register_failed": "Не удалось зарегистрировать партию",
-      "register_error": "Ошибка регистрации партии",
-      "deleted": "Удалено",
-      "delete_failed": "Не удалось удалить",
-      "delete_error": "Ошибка удаления"
-    },
-    "basic_income": {
-      "activated": "Базовый доход активирован",
-      "activate_failed": "Не удалось активировать",
-      "claimed": "Получено",
-      "claim_failed": "Не удалось получить"
-    },
-    "savings": {
-      "collected": "Получено",
-      "collect_failed": "Не удалось получить",
-      "deposited": "Пополнено",
-      "deposit_failed": "Не удалось пополнить",
-      "withdrawn": "Выведено",
-      "withdraw_failed": "Не удалось вывести"
-    }
-  },
-  "common": {
-    "confirm": "Подтвердить",
-    "sign_in": "Войти",
-    "connect": "Подключить",
-    "disconnect": "Отключить",
-    "connect_wallet": "Подключить кошелек",
-    "max": "Макс",
-    "loading": "Загрузка...",
-    "processing": "Обработка...",
-    "insufficient_balance": "Недостаточно WDD",
-    "delete_account": "Удалить аккаунт",
-    "sign_out": "Выйти",
-    "invalid_address": "Неверный адрес",
-    "coming_soon": "Скоро",
-    "withdraw": "Вывести",
-    "trade": "Торговать",
-    "continue": "Продолжить",
-    "close": "Закрыть",
-    "updating": "Обновление...",
-    "save": "Сохранить",
-    "vote": "Голосовать",
-    "switch_to_base_chain": "Переключиться на Base Chain"
-  },
-  "auth": {
-    "choose_method": "Выберите предпочитаемый метод.",
-    "sign_in_with_google": "Продолжить с Google",
-    "sign_in_with_passkey": "Использовать биометрию",
-    "sign_in_or_create": "Доступ к вашему аккаунту с помощью passkey, используя отпечаток пальца, сканирование лица или блокировку экрана.",
-    "create_account": "Создать аккаунт",
-    "create_passkey_name": "Создать имя passkey",
-    "passkey_name_description": "Назовите свой passkey, чтобы идентифицировать его в менеджере паролей.",
-    "passkey_name": "Имя passkey"
-  }
+	"nav": {
+		"earn": "Зарабатывать",
+		"govern": "Управление",
+		"menu": "Меню"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Партии",
+				"elections": "Выборы",
+				"referendums": "Референдумы"
+			},
+			"sections": {
+				"parties": {
+					"title": "Политические партии"
+				},
+				"elections": {
+					"title": "Тестовые выборы",
+					"subtitle": "Экспериментируйте с глобальной демократией"
+				},
+				"referendums": {
+					"title": "Всемирный конституционный референдум",
+					"subtitle": "Голосуйте за наши основные принципы"
+				}
+			},
+			"vote": {
+				"no_active_election": "Выборы скоро начнутся",
+				"test_verification": {
+					"description": "Попробуйте нашу систему проверки сейчас, чтобы быть готовыми к голосованию",
+					"button": "Тест"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Субсидии",
+					"ambassadors": "Амбассадоры"
+				},
+				"discover": "Открыть",
+				"search_placeholder": "Поиск партий...",
+				"no_parties_found": "Партии не найдены",
+				"error_loading": "Не удалось загрузить партии",
+				"refresh": "Обновить",
+				"party_details": "Детали партии",
+				"share_party": "Поделиться партией",
+				"my_party": "Моя партия",
+				"learn_more": "Узнать больше",
+				"party_management": "Управление партией",
+				"edit_party_info": "Редактировать информацию о партии",
+				"dialogs": {
+					"party_name": "Название партии",
+					"description_optional": "Описание (необязательно)",
+					"official_link_optional": "Официальная ссылка (необязательно)",
+					"updating": "Обновление...",
+					"save": "Сохранить",
+					"register_party": "Зарегистрировать партию",
+					"register": "Регистрация",
+					"registering": "Регистрация...",
+					"leader_warning_register": "Вы в настоящее время являетесь лидером {partyName}. Регистрация новой партии удалит вашу текущую партию.",
+					"deleting": "Удаление...",
+					"about_to_delete": "Вы собираетесь удалить {partyName}. Это действие нельзя отменить.",
+					"about_to_register": "Вы собираетесь основать новую партию."
+				},
+				"detail": {
+					"failed_to_load": "Не удалось загрузить данные партии",
+					"party_not_found": "Партия не найдена",
+					"error_loading": "Ошибка загрузки партии",
+					"back_to_parties": "Вернуться к партиям",
+					"description": "Описание",
+					"party_info": "Информация о партии",
+					"leader": "Лидер",
+					"website": "Веб-сайт",
+					"not_found_description": "Партия, которую вы ищете, не существует или была распущена."
+				},
+				"delete_party": "Удалить партию",
+				"run_on_elections_and_earn": "Участвуйте в выборах и получайте субсидии",
+				"ambassadors": {
+					"title": "Программа Амбассадоров",
+					"description": "Приглашайте друзей и получайте награды, когда они проходят верификацию и когда их партия получает субсидии",
+					"leaderboard": "Таблица лидеров",
+					"no_rewards_yet": "Наград пока нет",
+					"col_ambassador": "Амбассадоры",
+					"col_invited": "Приглашённых",
+					"col_reward": "Награда",
+					"share_referral_link": "Поделиться реферальной ссылкой"
+				},
+				"subsidies": {
+					"title": "Программа Субсидирования Партий",
+					"no_subsidies_yet": "Субсидий пока нет",
+					"description": "Финансирование на основе результатов выборов",
+					"col_subsidy": "Субсидия"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Выборы",
+					"not_found": "Выборы не найдены",
+					"not_found_description": "Выборы, которые вы ищете, не существуют.",
+					"back_to_elections": "Назад к выборам",
+					"status_active": "Активные",
+					"status_upcoming": "Предстоящие",
+					"status_ended": "Завершённые",
+					"election_info": "Информация о выборах",
+					"reward_pool": "Призовой фонд: {amount} WDD",
+					"reward_pool_minimum": "Призовой фонд: минимум {amount} WDD",
+					"choose_a_party": "Выберите партию",
+					"no_parties_for_election": "Нет доступных партий для этих выборов.",
+					"results_title": "Результаты",
+					"vote_singular": "голос",
+					"vote_plural": "голосов",
+					"no_votes": "В этих выборах не было подано голосов.",
+					"test_election_name": "Тестовые выборы {n}"
+				},
+				"list": {
+					"empty_state": "Выборы не найдены",
+					"active_section": "Активные выборы",
+					"upcoming_section": "Предстоящие выборы",
+					"previous_section": "Прошедшие выборы"
+				}
+			}
+		},
+		"error": {
+			"title": "Что-то пошло не так",
+			"description": "Произошла непредвиденная ошибка. Пожалуйста, попробуйте снова.",
+			"error_id": "ID ошибки: {digest}",
+			"try_again": "Попробовать снова"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Базовый доход",
+				"savings": "Сбережения"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Получайте деньги за то, что вы человек",
+				"subtitle_claim": "Получите свои драхмы",
+				"tooltip_claim": "1 WDD/день, максимум 1 WDD. Возвращайтесь в течение 24 часов, чтобы максимизировать доход.",
+				"claim_button": "Получить",
+				"alert": {
+					"claim": {
+						"title": "Подтвердите получение",
+						"description": "Вы собираетесь получить {amount} WDD. Сумма будет добавлена к балансу вашего кошелька."
+					}
+				},
+				"setup_subtitle": "Настройте свой базовый доход",
+				"activate_loading": "Активация...",
+				"activate_button": "Активировать базовый доход",
+				"world_drachma": "Что такое мировая драхма (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Получите свой глобальный дивиденд от ИИ"
+			},
+			"savings": {
+				"title": "Сберегательный счёт",
+				"subtitle": "Проценты начисляются каждую секунду",
+				"tooltip": "69% годовой базовой ставки. Регулярно получайте и реинвестируйте проценты, чтобы достичь почти 100% эффективной доходности. Вывод в любое время.",
+				"deposit": "Пополнить",
+				"withdraw": "Вывести",
+				"balance": "Баланс",
+				"amount_deposit": "Сумма пополнения",
+				"amount_withdraw": "Сумма вывода",
+				"interest": "Проценты",
+				"collect": "Получить",
+				"alert": {
+					"collect": {
+						"title": "Подтвердите получение",
+						"description": "Вы собираетесь получить {amount} WDD процентов."
+					},
+					"deposit": {
+						"title": "Подтвердите пополнение",
+						"description": "Вы собираетесь пополнить на {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Подтвердите вывод",
+						"description": "Вы собираетесь вывести {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Посмотреть смарт-контракт",
+				"verify": "Проверить"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "АККАУНТ",
+					"account_info": "Информация об аккаунте",
+					"referral_code": "Реферальный код",
+					"referred_by": "Пригласил",
+					"language": "Язык"
+				},
+				"help": {
+					"title": "ПОМОЩЬ",
+					"quickstart": "Быстрый старт",
+					"docs": "Вики",
+					"help_center": "Справочный центр"
+				},
+				"source_code": {
+					"title": "ИСХОДНЫЙ КОД"
+				},
+				"legal": {
+					"title": "ПРАВО",
+					"terms": "Условия использования",
+					"privacy": "Политика конфиденциальности"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Кошелёк"
+			},
+			"balance": "Баланс",
+			"modals": {
+				"sign_out": {
+					"confirm": "Вы уверены, что хотите выйти?"
+				},
+				"disconnect": {
+					"confirm": "Вы уверены, что хотите отключить свой кошелек?"
+				},
+				"send": {
+					"button": "Отправить",
+					"withdraw_to_crypto": {
+						"description": "Вывести WDD на криптосчет.",
+						"amount_label": "Сумма",
+						"address_label": "Адрес кошелька",
+						"network_label": "Сеть"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD на Jumper",
+					"ethereum_uniswap": "Ethereum WDD на Uniswap",
+					"base_jumper": "Base Chain WDD на Jumper",
+					"base_uniswap": "Base Chain WDD на Uniswap",
+					"worldchain_jumper": "World Chain WDD на Jumper",
+					"worldchain_uniswap": "World Chain WDD на Uniswap"
+				},
+				"delete_account": {
+					"description": "Это навсегда удалит ваш аккаунт и все ваши данные с наших серверов. Это действие нельзя отменить — пожалуйста, действуйте осторожно.",
+					"deleting": "Удаление..."
+				},
+				"connect_wallet_browser": {
+					"title": "Открыть в MetaMask",
+					"description": "Чтобы подключиться, скопируйте эту ссылку и откройте её во встроенном браузере MetaMask.",
+					"copy_link": "Копировать ссылку"
+				},
+				"connect_wallet_picker": {
+					"description": "Найдено несколько кошельков. Выберите один для подключения."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Нет кошелька?",
+					"find_wallet_link": "Найдите его на WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "АККАУНТ",
+				"security": "БЕЗОПАСНОСТЬ",
+				"google_account": "Аккаунт Google",
+				"google_not_linked": "Не подключён",
+				"passkeys": "Ключи доступа",
+				"passkeys_linked": "{count} подключено",
+				"danger_zone": "ОПАСНАЯ ЗОНА",
+				"delete_account": {
+					"description": "Навсегда удалить все ваши данные"
+				},
+				"verification": "ВЕРИФИКАЦИЯ",
+				"google_linked": "Подключён",
+				"account_label": "Аккаунт"
+			},
+			"username": {
+				"label": "Имя пользователя",
+				"edit_title": "Редактировать имя пользователя",
+				"description": "3-30 символов, буквенно-цифровые, подчеркивания и дефисы"
+			},
+			"history": {
+				"title": "ИСТОРИЯ"
+			},
+			"transactions": {
+				"failed_to_load": "Не удалось загрузить",
+				"no_transactions": "Пока нет транзакций",
+				"wdd_per_day": "WDD/день",
+				"just_now": "Только что",
+				"minutes_ago": "{minutes}мин назад",
+				"hours_ago": "{hours}ч назад",
+				"days_ago": "{days}д назад",
+				"filter": {
+					"all_types": "Все типы",
+					"select_type": "Выберите тип",
+					"rewards": "Награды"
+				},
+				"types": {
+					"withdrawal": "Вывод",
+					"received": "Получено",
+					"sent": "Отправлено",
+					"ambassador_reward": "Награда посла",
+					"party_subsidy": "Партийная субсидия",
+					"stream_created": "Поток создан",
+					"stream_updated": "Поток обновлен",
+					"savings_deposit": "Сбережения пополнить",
+					"savings_withdrawal": "Сбережения вывести",
+					"savings_interest": "Сбережения проценты",
+					"referral_reward": "Реферальный бонус"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Отсканируйте этот QR‑код, чтобы пройти проверку через Self.",
+				"mobile_dialog_description": "Вы будете перенаправлены в приложение Self, чтобы пройти проверку.",
+				"support_telegram": "Поддержка Self",
+				"verification_guide": "Руководство по верификации",
+				"qr_alt": "QR-код верификации Self",
+				"callback_warning": "Предупреждение",
+				"callback_warning_description": "URL обратного вызова верификации недоступен с вашего телефона. Установите NEXT_PUBLIC_SELF_CALLBACK на публичный URL (или установите NEXT_PUBLIC_PUBLIC_BASE_URL на домен туннеля/предпросмотра).",
+				"label": "Self",
+				"status_completed": "Подтверждено",
+				"status_not_completed": "Не подтверждено",
+				"learn_about_self": "Узнайте о Self",
+				"primer": {
+					"title": "Self Протокол",
+					"description": "Пройдите верификацию, не раскрывая личные данные."
+				}
+			},
+			"verification_warning": {
+				"title": "Получить верификацию",
+				"reward_cap_banner": "Награды за базовый доход и сбережения ограничены для непроверенных граждан. Подтвердите свой аккаунт, чтобы зарабатывать без ограничений."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Большинство кошельков показывают WDD только после ручного импорта в выбранную сеть по её ",
+			"contract_address": "адресу контракта"
+		}
+	},
+	"toasts": {
+		"generic_error": "Произошла ошибка",
+		"copied": "Скопировано",
+		"wallet": {
+			"no_wallet": "Нет адреса кошелька",
+			"min_amount": "Минимум 10 WDD",
+			"sent": "Отправлено",
+			"account_deleted": "Аккаунт удалён",
+			"delete_failed": "Не удалось удалить аккаунт",
+			"contract_address_error": "Невозможно вывести на адрес контракта",
+			"sign_out_failed": "Выход не удался",
+			"google_linked": "Аккаунт Google подключён",
+			"google_already_linked": "Аккаунт Google уже подключён к другому аккаунту",
+			"google_link_failed": "Не удалось начать подключение Google",
+			"passkey_added": "Ключ доступа добавлен",
+			"passkey_add_failed": "Не удалось добавить ключ доступа"
+		},
+		"parties": {
+			"updated": "Обновлено",
+			"update_failed": "Не удалось обновить",
+			"update_error": "Ошибка при обновлении партии",
+			"registered": "Партия зарегистрирована",
+			"register_failed": "Не удалось зарегистрировать партию",
+			"register_error": "Ошибка регистрации партии",
+			"deleted": "Удалено",
+			"delete_failed": "Не удалось удалить",
+			"delete_error": "Ошибка удаления"
+		},
+		"basic_income": {
+			"activated": "Базовый доход активирован",
+			"activate_failed": "Не удалось активировать",
+			"claimed": "Получено",
+			"claim_failed": "Не удалось получить"
+		},
+		"savings": {
+			"collected": "Получено",
+			"collect_failed": "Не удалось получить",
+			"deposited": "Пополнено",
+			"deposit_failed": "Не удалось пополнить",
+			"withdrawn": "Выведено",
+			"withdraw_failed": "Не удалось вывести"
+		}
+	},
+	"common": {
+		"confirm": "Подтвердить",
+		"sign_in": "Войти",
+		"connect": "Подключить",
+		"disconnect": "Отключить",
+		"connect_wallet": "Подключить кошелек",
+		"max": "Макс",
+		"loading": "Загрузка...",
+		"processing": "Обработка...",
+		"insufficient_balance": "Недостаточно WDD",
+		"delete_account": "Удалить аккаунт",
+		"sign_out": "Выйти",
+		"invalid_address": "Неверный адрес",
+		"coming_soon": "Скоро",
+		"withdraw": "Вывести",
+		"trade": "Торговать",
+		"continue": "Продолжить",
+		"close": "Закрыть",
+		"updating": "Обновление...",
+		"save": "Сохранить",
+		"vote": "Голосовать",
+		"switch_to_base_chain": "Переключиться на Base Chain"
+	},
+	"auth": {
+		"choose_method": "Выберите предпочитаемый метод.",
+		"sign_in_with_google": "Продолжить с Google",
+		"sign_in_with_passkey": "Использовать биометрию",
+		"sign_in_or_create": "Доступ к вашему аккаунту с помощью passkey, используя отпечаток пальца, сканирование лица или блокировку экрана.",
+		"create_account": "Создать аккаунт",
+		"create_passkey_name": "Создать имя passkey",
+		"passkey_name_description": "Назовите свой passkey, чтобы идентифицировать его в менеджере паролей.",
+		"passkey_name": "Имя passkey"
+	}
 }

@@ -5,7 +5,7 @@ const TEST_ELECTION_RE = /^Test election (\d+)$/;
  * with {n} replaced by the number. Otherwise return `name` as-is.
  */
 export function localizeElectionName(name: string, template: string): string {
-  const match = name.match(TEST_ELECTION_RE);
-  if (!match) return name;
-  return template.replace("{n}", match[1]);
+	const match = name.match(TEST_ELECTION_RE);
+	if (!match) return name;
+	return template.replace("{n}", match[1]);
 }

@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "کسب",
-    "govern": "حکومت",
-    "menu": "مینو"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "ګوندونه",
-        "elections": "ټاکنې",
-        "referendums": "راټولیزې ټاکنې"
-      },
-      "sections": {
-        "parties": {
-          "title": "سیاسي ګوندونه"
-        },
-        "elections": {
-          "title": "ازمایښتي ټاکنې",
-          "subtitle": "د نړیوالې ډیموکراسۍ سره تجربه"
-        },
-        "referendums": {
-          "title": "نړیواله اساسي قانوني راټولیزه ټاکنه",
-          "subtitle": "زموږ د بنسټیزو اصولو پر سر رايه ورکړئ"
-        }
-      },
-      "vote": {
-        "no_active_election": "ټاکنې ډېر ژر پیلیږي",
-        "test_verification": {
-          "description": "زموږ د تایید سیسټم اوس هڅه وکړئ ترڅو رایې ورکولو ته چمتو اوسئ",
-          "button": "ازموینه"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "سبسىډي",
-          "ambassadors": "سفیران"
-        },
-        "discover": "موندل",
-        "search_placeholder": "ګوندونه لټون...",
-        "no_parties_found": "هیڅ ګوند ونه موندل شو",
-        "error_loading": "ګوندونه بارولو کې پاتې راغلي",
-        "refresh": "تازہ کول",
-        "party_details": "د ګوند جزئیات",
-        "share_party": "ګوند شریک کړئ",
-        "my_party": "زما ګوند",
-        "learn_more": "نور زده کړئ",
-        "party_management": "د ګوند مدیریت",
-        "edit_party_info": "د ګوند معلومات سمول",
-        "dialogs": {
-          "party_name": "د ګوند نوم",
-          "description_optional": "تفصیل (اختیاري)",
-          "official_link_optional": "رسمي لینک (اختیاري)",
-          "updating": "تازه کېږي...",
-          "save": "خوندي کړئ",
-          "register_party": "یو ګوند ثبت کړئ",
-          "register": "ثبت کړئ",
-          "registering": "ثبت کول...",
-          "leader_warning_register": "تاسو اوس د {partyName} مشر یاست. د نوي ګوند ثبت کول به ستاسو اوسنی ګوند ړنګ کړي.",
-          "deleting": "ړنګول...",
-          "about_to_delete": "تاسو د {partyName} د ړنګولو په حال کې یاست. دا عمل بیرته نشي کیدی.",
-          "about_to_register": "تاسو نوی ګوند جوړولو ته یاست."
-        },
-        "detail": {
-          "failed_to_load": "د ګوند معلومات پورته کول ناکام شول",
-          "party_not_found": "ګوند ونه موندل شو",
-          "error_loading": "د ګوند پورته کولو کې تېروتنه",
-          "back_to_parties": "ګوندونو ته بیرته",
-          "description": "تفصیل",
-          "party_info": "د ګوند معلومات",
-          "leader": "رهبر",
-          "website": "وېب پاڼه",
-          "not_found_description": "ګوند چې تاسو یې لټون کوئ شتون نلري یا منحل شوی دی."
-        },
-        "delete_party": "ګوند ړنګ کړئ",
-        "run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ",
-        "ambassadors": {
-          "title": "د سفیرانو پروګرام",
-          "description": "ملګري راوبلئ او هغه وخت انعامونه ترلاسه کړئ چې دوی تصدیق شي او د دوی ګوند سبسایډي ترلاسه کړي",
-          "leaderboard": "لیډربورډ",
-          "no_rewards_yet": "تر اوسه هیڅ جایزه نشته",
-          "col_ambassador": "سفیران",
-          "col_invited": "بلل شوي",
-          "col_reward": "جایزه",
-          "share_referral_link": "د راجع کولو لینک شریک کړئ"
-        },
-        "subsidies": {
-          "title": "د ګوند د سبسایډي پروګرام",
-          "no_subsidies_yet": "تر اوسه هیڅ سبسایډي نشته",
-          "description": "د ټاکنیز فعالیت پر بنسټ تمویل",
-          "col_subsidy": "سبسايډي"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "ټاکنې",
-          "not_found": "ټاکنې ونه موندل شوې",
-          "not_found_description": "هغه ټاکنې چې تاسو یې لټوئ شتون نلري.",
-          "back_to_elections": "ټاکنو ته بیرته",
-          "status_active": "فعال",
-          "status_upcoming": "راتلونکې",
-          "status_ended": "پای ته رسیدلې",
-          "election_info": "د ټاکنو معلومات",
-          "reward_pool": "د انعام ذخیره: {amount} WDD",
-          "reward_pool_minimum": "د انعام ذخیره: لږترلږه {amount} WDD",
-          "choose_a_party": "یوه ګوند غوره کړئ",
-          "no_parties_for_election": "د دې ټاکنو لپاره هیڅ ګوند شتون نلري.",
-          "results_title": "پایلې",
-          "vote_singular": "رای",
-          "vote_plural": "رایې",
-          "no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
-          "test_election_name": "آزمایښتي ټاکنه {n}"
-        },
-        "list": {
-          "empty_state": "هیڅ ټاکنې ونه موندل شوې",
-          "active_section": "فعالې ټاکنې",
-          "upcoming_section": "راتلونکې ټاکنې",
-          "previous_section": "پخوانۍ ټاکنې"
-        }
-      }
-    },
-    "error": {
-      "title": "یو څه غلطی وشوه",
-      "description": "یوه غیر متوقعه تېروتنه وشوه. مهرباني وکړئ بیا هڅه وکړئ.",
-      "error_id": "د تېروتنې ID: {digest}",
-      "try_again": "بیا هڅه وکړئ"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "اساسي عاید",
-        "savings": "پانګه"
-      },
-      "basic_income": {
-        "subtitle_unauth": "د انسانیت لپاره پیسې ترلاسه کړئ",
-        "subtitle_claim": "ستاسو دراخما غوښتنه وکړئ",
-        "tooltip_claim": "په ورځ کې 1 WDD، تر 1 WDD پورې محدود. د عایدونو زیاتولو لپاره په 24 ساعتونو کې بیرته راګرځئ.",
-        "claim_button": "غوښتنه",
-        "alert": {
-          "claim": {
-            "title": "غوښتنه تایید کړئ",
-            "description": "تاسو {amount} WDD غوښتنه کوئ. دا به ستاسو د والیټ بیټلانس سره اضافه شي."
-          }
-        },
-        "setup_subtitle": "ستاسو اساسي عاید تنظیم کړئ",
-        "activate_loading": "فعال کېږي...",
-        "activate_button": "اساسي عاید فعال کړئ",
-        "world_drachma": "نړيواله دراخمه (WDD) څه ده؟",
-        "subtitle_unauth_raised_by_humanity": "د نړیوال AI څخه خپله ونډه واخلئ"
-      },
-      "savings": {
-        "title": "پانګه حساب",
-        "subtitle": "په هره ثانیه کې سود ترلاسه کړئ",
-        "tooltip": "کلنۍ 69% اساسي نرخ. د ټول شوي سود منظم راټولول او بیا پانګه اچونه د 100% نږدې اغیزمن عاید ترلاسه کولو لپاره. هر وخت ووتل.",
-        "deposit": "ډیپوزټ",
-        "withdraw": "ووتل",
-        "balance": "بیټلانس",
-        "amount_deposit": "د ډیپوزټ کولو اندازه",
-        "amount_withdraw": "د ووتلو اندازه",
-        "interest": "سود",
-        "collect": "راټولول",
-        "alert": {
-          "collect": {
-            "title": "د راټولولو تایید",
-            "description": "تاسو {amount} WDD سود راټولوئ."
-          },
-          "deposit": {
-            "title": "د ډیپوزټ تایید",
-            "description": "تاسو {amount} WDD ډیپوزټ کوئ."
-          },
-          "withdraw": {
-            "title": "د ووتلو تایید",
-            "description": "تاسو {amount} WDD ووتلو."
-          }
-        },
-        "smart_contract_link": "سمارټ قرارداد وګورئ",
-        "verify": "تایید"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "حساب",
-          "account_info": "د حساب معلومات",
-          "referral_code": "د راجع کولو کوډ",
-          "referred_by": "د چا لخوا راجع شوی",
-          "language": "ژبه"
-        },
-        "help": {
-          "title": "مرسته",
-          "quickstart": "چټک پیل",
-          "docs": "ويکي",
-          "help_center": "د مرستې مرکز"
-        },
-        "source_code": {
-          "title": "سرچينه کوډ"
-        },
-        "legal": {
-          "title": "قانوني",
-          "terms": "د کارولو شرایط",
-          "privacy": "د محرمیت پالیسي"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "والیټ"
-      },
-      "balance": "بیټلانس",
-      "modals": {
-        "sign_out": {
-          "confirm": "ایا تاسو ډاډه یاست چې ووتل غواړئ؟"
-        },
-        "disconnect": {
-          "confirm": "ایا تاسو ډاډه یاست چې خپل والټ بېلول غواړئ؟"
-        },
-        "send": {
-          "button": "لېږل",
-          "withdraw_to_crypto": {
-            "description": "WDD کریپټو حساب ته ووتل.",
-            "amount_label": "اندازه",
-            "address_label": "د والیټ پته",
-            "network_label": "شبکه"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD په Jumper کې",
-          "ethereum_uniswap": "Ethereum WDD په Uniswap کې",
-          "base_jumper": "Base Chain WDD په Jumper کې",
-          "base_uniswap": "Base Chain WDD په Uniswap کې",
-          "worldchain_jumper": "World Chain WDD په Jumper کې",
-          "worldchain_uniswap": "World Chain WDD په Uniswap کې"
-        },
-        "delete_account": {
-          "description": "دا به ستاسو حساب د تل لپاره ړنګ کړي او ټول معلومات د زموږ سرورونو څخه لرې کړي. دا عمل بیرته راګرځول کیدی نشي — مهرباني وکړئ په احتیاط سره ادامه ورکړئ.",
-          "deleting": "ړنګ کېږي..."
-        },
-        "connect_wallet_browser": {
-          "title": "په MetaMask کې پرانیزئ",
-          "description": "د نښلولو لپاره دا لینک کاپي کړئ او د MetaMask په جوړ شوي براوزر کې یې خلاص کړئ.",
-          "copy_link": "لینک کاپي کړئ"
-        },
-        "connect_wallet_picker": {
-          "description": "څو والټونه وموندل شول. د نښلولو لپاره یو انتخاب کړئ."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "والټ نه لرئ؟",
-          "find_wallet_link": "په WalletGuide کې یو ومومئ"
-        }
-      },
-      "sections": {
-        "account": "حساب",
-        "security": "امنیت",
-        "google_account": "د ګوګل حساب",
-        "google_not_linked": "ناتړلی",
-        "passkeys": "د ننوتلو کلي",
-        "passkeys_linked": "{count} تړل شوی",
-        "danger_zone": "د خطر ساحه",
-        "delete_account": {
-          "description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
-        },
-        "verification": "تایید",
-        "google_linked": "تړلی",
-        "account_label": "حساب"
-      },
-      "username": {
-        "label": "د کارونکي نوم",
-        "edit_title": "د کارونکي نوم سمول",
-        "description": "3-30 حروف، الفبايي-شمېري، لاندې کرښې او هایفن"
-      },
-      "history": {
-        "title": "تاریخ"
-      },
-      "transactions": {
-        "failed_to_load": "پورته کول ناکام شول",
-        "no_transactions": "تراوسه کوم معاملات نشته",
-        "wdd_per_day": "WDD/ورځ",
-        "just_now": "همدا اوس",
-        "minutes_ago": "{minutes}دقیقې وړاندې",
-        "hours_ago": "{hours}ساعته وړاندې",
-        "days_ago": "{days}ورځې وړاندې",
-        "filter": {
-          "all_types": "ټول ډولونه",
-          "select_type": "ډول وټاکئ",
-          "rewards": "مکافات"
-        },
-        "types": {
-          "withdrawal": "وتل",
-          "received": "ترلېدل",
-          "sent": "لیږل شوي",
-          "ambassador_reward": "د سفیر مکافات",
-          "party_subsidy": "د ګوند سبسايډي",
-          "stream_created": "جریان جوړ شو",
-          "stream_updated": "جریان تازه شو",
-          "savings_deposit": "پانګه ډیپوزټ",
-          "savings_withdrawal": "پانګه ووتل",
-          "savings_interest": "پانګه سود",
-          "referral_reward": "د راجع کولو انعام"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "د Self سره د تایید لپاره دا QR کوډ سکین کړئ.",
-        "mobile_dialog_description": "د تصدیق بشپړولو لپاره به تاسو Self اپ ته ولېږدول شئ.",
-        "support_telegram": "د Self ملاتړ",
-        "verification_guide": "د تایید لارښود",
-        "qr_alt": "د Self تایید QR",
-        "callback_warning": "خبرداری",
-        "callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ).",
-        "label": "Self",
-        "status_completed": "تایید شوی",
-        "status_not_completed": "تایید شوی نه دی",
-        "learn_about_self": "د Self په اړه زده کړئ",
-        "primer": {
-          "title": "Self پروتوکول",
-          "description": "پرته له دې چې کوم شخصي ډاټا ښکاره کړئ تصدیق واخلئ."
-        }
-      },
-      "verification_warning": {
-        "title": "تایید ترلاسه کړئ",
-        "reward_cap_banner": "د نه تایید شوو اتباعو لپاره د بنسټیز عاید او سپما انعامونه محدود دي. د بې محدودې ګټې لپاره خپل حساب تایید کړئ."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "ډیری والیټونه یوازې هغه وخت WDD ښیي کله چې دا په لاسي توګه په غوره شوي زنځیر کې د دې ",
-      "contract_address": "تړون پته"
-    }
-  },
-  "toasts": {
-    "generic_error": "یوه تېروتنه رامنځته شوه",
-    "copied": "کاپي شو",
-    "wallet": {
-      "no_wallet": "د والیټ پته نشته",
-      "min_amount": "لږترلږه 10 WDD",
-      "sent": "لیږل شو",
-      "account_deleted": "حساب ړنګ شو",
-      "delete_failed": "د حساب ړنګول ناکام شو",
-      "contract_address_error": "د تړون پتې ته نشي ووتل کیدی",
-      "sign_out_failed": "د ووتلو ناکامه",
-      "google_linked": "د ګوګل حساب تړل شو",
-      "google_already_linked": "د ګوګل حساب دمخه له بل حساب سره تړل شوی",
-      "google_link_failed": "د ګوګل تړلو پیل نشو کولی",
-      "passkey_added": "د ننوتلو کلی اضافه شو",
-      "passkey_add_failed": "د ننوتلو کلی اضافه کول نشو کولی"
-    },
-    "parties": {
-      "updated": "تازه شو",
-      "update_failed": "تازه کول ناکام شول",
-      "update_error": "د ګوند تازه کولو کې تېروتنه",
-      "registered": "ګوند ثبت شو",
-      "register_failed": "د ګوند ثبتولو کې پاتې راغی",
-      "register_error": "د ګوند ثبتولو کې تېروتنه",
-      "deleted": "ړنګ شو",
-      "delete_failed": "د ړنګولو ناکامي",
-      "delete_error": "د ړنګولو تېروتنه"
-    },
-    "basic_income": {
-      "activated": "اساسي عاید فعال شو",
-      "activate_failed": "فعال کول ناکام شول",
-      "claimed": "غوښتل شو",
-      "claim_failed": "غوښتنه ناکامه شوه"
-    },
-    "savings": {
-      "collected": "راټول شو",
-      "collect_failed": "د راټولولو ناکامه",
-      "deposited": "ډیپوزټ شو",
-      "deposit_failed": "ډیپوزټ ناکام شو",
-      "withdrawn": "ووتل شو",
-      "withdraw_failed": "د ووتلو ناکامه"
-    }
-  },
-  "common": {
-    "confirm": "تایید کړئ",
-    "sign_in": "ننوتل",
-    "connect": "نښلول",
-    "disconnect": "بېلول",
-    "connect_wallet": "والټ ونښلوئ",
-    "max": "اعظمي",
-    "loading": "بار کېږي...",
-    "processing": "پروسس کول...",
-    "insufficient_balance": "کافي WDD نشته",
-    "delete_account": "حساب ړنګ کړئ",
-    "sign_out": "وتل",
-    "invalid_address": "ناسم پته",
-    "coming_soon": "ژر تر ژره",
-    "withdraw": "واخیستل",
-    "trade": "سوداګري",
-    "continue": "دوام ورکړئ",
-    "close": "تړل",
-    "updating": "تازه کول...",
-    "save": "خوندي کړئ",
-    "vote": "رايه ورکړه",
-    "switch_to_base_chain": "Base Chain ته واړوئ"
-  },
-  "auth": {
-    "choose_method": "خپل غوره میتود غوره کړئ.",
-    "sign_in_with_google": "د Google سره دوام ورکړئ",
-    "sign_in_with_passkey": "بیومتریک وکاروئ",
-    "sign_in_or_create": "د خپل حساب ته د passkey په کارولو سره لاسرسی ومومئ، د خپل ګوتو نښه، د مخ سکین یا د پردې قفل کارولو سره.",
-    "create_account": "حساب جوړ کړئ",
-    "create_passkey_name": "د passkey نوم جوړ کړئ",
-    "passkey_name_description": "ستاسو د passkey نوم وټاکئ ترڅو دا ستاسو د پټنوم مدیر کې پیژندل شي.",
-    "passkey_name": "د passkey نوم"
-  }
+	"nav": {
+		"earn": "کسب",
+		"govern": "حکومت",
+		"menu": "مینو"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "ګوندونه",
+				"elections": "ټاکنې",
+				"referendums": "راټولیزې ټاکنې"
+			},
+			"sections": {
+				"parties": {
+					"title": "سیاسي ګوندونه"
+				},
+				"elections": {
+					"title": "ازمایښتي ټاکنې",
+					"subtitle": "د نړیوالې ډیموکراسۍ سره تجربه"
+				},
+				"referendums": {
+					"title": "نړیواله اساسي قانوني راټولیزه ټاکنه",
+					"subtitle": "زموږ د بنسټیزو اصولو پر سر رايه ورکړئ"
+				}
+			},
+			"vote": {
+				"no_active_election": "ټاکنې ډېر ژر پیلیږي",
+				"test_verification": {
+					"description": "زموږ د تایید سیسټم اوس هڅه وکړئ ترڅو رایې ورکولو ته چمتو اوسئ",
+					"button": "ازموینه"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "سبسىډي",
+					"ambassadors": "سفیران"
+				},
+				"discover": "موندل",
+				"search_placeholder": "ګوندونه لټون...",
+				"no_parties_found": "هیڅ ګوند ونه موندل شو",
+				"error_loading": "ګوندونه بارولو کې پاتې راغلي",
+				"refresh": "تازہ کول",
+				"party_details": "د ګوند جزئیات",
+				"share_party": "ګوند شریک کړئ",
+				"my_party": "زما ګوند",
+				"learn_more": "نور زده کړئ",
+				"party_management": "د ګوند مدیریت",
+				"edit_party_info": "د ګوند معلومات سمول",
+				"dialogs": {
+					"party_name": "د ګوند نوم",
+					"description_optional": "تفصیل (اختیاري)",
+					"official_link_optional": "رسمي لینک (اختیاري)",
+					"updating": "تازه کېږي...",
+					"save": "خوندي کړئ",
+					"register_party": "یو ګوند ثبت کړئ",
+					"register": "ثبت کړئ",
+					"registering": "ثبت کول...",
+					"leader_warning_register": "تاسو اوس د {partyName} مشر یاست. د نوي ګوند ثبت کول به ستاسو اوسنی ګوند ړنګ کړي.",
+					"deleting": "ړنګول...",
+					"about_to_delete": "تاسو د {partyName} د ړنګولو په حال کې یاست. دا عمل بیرته نشي کیدی.",
+					"about_to_register": "تاسو نوی ګوند جوړولو ته یاست."
+				},
+				"detail": {
+					"failed_to_load": "د ګوند معلومات پورته کول ناکام شول",
+					"party_not_found": "ګوند ونه موندل شو",
+					"error_loading": "د ګوند پورته کولو کې تېروتنه",
+					"back_to_parties": "ګوندونو ته بیرته",
+					"description": "تفصیل",
+					"party_info": "د ګوند معلومات",
+					"leader": "رهبر",
+					"website": "وېب پاڼه",
+					"not_found_description": "ګوند چې تاسو یې لټون کوئ شتون نلري یا منحل شوی دی."
+				},
+				"delete_party": "ګوند ړنګ کړئ",
+				"run_on_elections_and_earn": "په ټاکنو کې برخه واخلئ او سوبسایډي ترلاسه کړئ",
+				"ambassadors": {
+					"title": "د سفیرانو پروګرام",
+					"description": "ملګري راوبلئ او هغه وخت انعامونه ترلاسه کړئ چې دوی تصدیق شي او د دوی ګوند سبسایډي ترلاسه کړي",
+					"leaderboard": "لیډربورډ",
+					"no_rewards_yet": "تر اوسه هیڅ جایزه نشته",
+					"col_ambassador": "سفیران",
+					"col_invited": "بلل شوي",
+					"col_reward": "جایزه",
+					"share_referral_link": "د راجع کولو لینک شریک کړئ"
+				},
+				"subsidies": {
+					"title": "د ګوند د سبسایډي پروګرام",
+					"no_subsidies_yet": "تر اوسه هیڅ سبسایډي نشته",
+					"description": "د ټاکنیز فعالیت پر بنسټ تمویل",
+					"col_subsidy": "سبسايډي"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "ټاکنې",
+					"not_found": "ټاکنې ونه موندل شوې",
+					"not_found_description": "هغه ټاکنې چې تاسو یې لټوئ شتون نلري.",
+					"back_to_elections": "ټاکنو ته بیرته",
+					"status_active": "فعال",
+					"status_upcoming": "راتلونکې",
+					"status_ended": "پای ته رسیدلې",
+					"election_info": "د ټاکنو معلومات",
+					"reward_pool": "د انعام ذخیره: {amount} WDD",
+					"reward_pool_minimum": "د انعام ذخیره: لږترلږه {amount} WDD",
+					"choose_a_party": "یوه ګوند غوره کړئ",
+					"no_parties_for_election": "د دې ټاکنو لپاره هیڅ ګوند شتون نلري.",
+					"results_title": "پایلې",
+					"vote_singular": "رای",
+					"vote_plural": "رایې",
+					"no_votes": "پدې ٹاکنې کې هیڅ رای نه وه ورکړل.",
+					"test_election_name": "آزمایښتي ټاکنه {n}"
+				},
+				"list": {
+					"empty_state": "هیڅ ټاکنې ونه موندل شوې",
+					"active_section": "فعالې ټاکنې",
+					"upcoming_section": "راتلونکې ټاکنې",
+					"previous_section": "پخوانۍ ټاکنې"
+				}
+			}
+		},
+		"error": {
+			"title": "یو څه غلطی وشوه",
+			"description": "یوه غیر متوقعه تېروتنه وشوه. مهرباني وکړئ بیا هڅه وکړئ.",
+			"error_id": "د تېروتنې ID: {digest}",
+			"try_again": "بیا هڅه وکړئ"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "اساسي عاید",
+				"savings": "پانګه"
+			},
+			"basic_income": {
+				"subtitle_unauth": "د انسانیت لپاره پیسې ترلاسه کړئ",
+				"subtitle_claim": "ستاسو دراخما غوښتنه وکړئ",
+				"tooltip_claim": "په ورځ کې 1 WDD، تر 1 WDD پورې محدود. د عایدونو زیاتولو لپاره په 24 ساعتونو کې بیرته راګرځئ.",
+				"claim_button": "غوښتنه",
+				"alert": {
+					"claim": {
+						"title": "غوښتنه تایید کړئ",
+						"description": "تاسو {amount} WDD غوښتنه کوئ. دا به ستاسو د والیټ بیټلانس سره اضافه شي."
+					}
+				},
+				"setup_subtitle": "ستاسو اساسي عاید تنظیم کړئ",
+				"activate_loading": "فعال کېږي...",
+				"activate_button": "اساسي عاید فعال کړئ",
+				"world_drachma": "نړيواله دراخمه (WDD) څه ده؟",
+				"subtitle_unauth_raised_by_humanity": "د نړیوال AI څخه خپله ونډه واخلئ"
+			},
+			"savings": {
+				"title": "پانګه حساب",
+				"subtitle": "په هره ثانیه کې سود ترلاسه کړئ",
+				"tooltip": "کلنۍ 69% اساسي نرخ. د ټول شوي سود منظم راټولول او بیا پانګه اچونه د 100% نږدې اغیزمن عاید ترلاسه کولو لپاره. هر وخت ووتل.",
+				"deposit": "ډیپوزټ",
+				"withdraw": "ووتل",
+				"balance": "بیټلانس",
+				"amount_deposit": "د ډیپوزټ کولو اندازه",
+				"amount_withdraw": "د ووتلو اندازه",
+				"interest": "سود",
+				"collect": "راټولول",
+				"alert": {
+					"collect": {
+						"title": "د راټولولو تایید",
+						"description": "تاسو {amount} WDD سود راټولوئ."
+					},
+					"deposit": {
+						"title": "د ډیپوزټ تایید",
+						"description": "تاسو {amount} WDD ډیپوزټ کوئ."
+					},
+					"withdraw": {
+						"title": "د ووتلو تایید",
+						"description": "تاسو {amount} WDD ووتلو."
+					}
+				},
+				"smart_contract_link": "سمارټ قرارداد وګورئ",
+				"verify": "تایید"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "حساب",
+					"account_info": "د حساب معلومات",
+					"referral_code": "د راجع کولو کوډ",
+					"referred_by": "د چا لخوا راجع شوی",
+					"language": "ژبه"
+				},
+				"help": {
+					"title": "مرسته",
+					"quickstart": "چټک پیل",
+					"docs": "ويکي",
+					"help_center": "د مرستې مرکز"
+				},
+				"source_code": {
+					"title": "سرچينه کوډ"
+				},
+				"legal": {
+					"title": "قانوني",
+					"terms": "د کارولو شرایط",
+					"privacy": "د محرمیت پالیسي"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "والیټ"
+			},
+			"balance": "بیټلانس",
+			"modals": {
+				"sign_out": {
+					"confirm": "ایا تاسو ډاډه یاست چې ووتل غواړئ؟"
+				},
+				"disconnect": {
+					"confirm": "ایا تاسو ډاډه یاست چې خپل والټ بېلول غواړئ؟"
+				},
+				"send": {
+					"button": "لېږل",
+					"withdraw_to_crypto": {
+						"description": "WDD کریپټو حساب ته ووتل.",
+						"amount_label": "اندازه",
+						"address_label": "د والیټ پته",
+						"network_label": "شبکه"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD په Jumper کې",
+					"ethereum_uniswap": "Ethereum WDD په Uniswap کې",
+					"base_jumper": "Base Chain WDD په Jumper کې",
+					"base_uniswap": "Base Chain WDD په Uniswap کې",
+					"worldchain_jumper": "World Chain WDD په Jumper کې",
+					"worldchain_uniswap": "World Chain WDD په Uniswap کې"
+				},
+				"delete_account": {
+					"description": "دا به ستاسو حساب د تل لپاره ړنګ کړي او ټول معلومات د زموږ سرورونو څخه لرې کړي. دا عمل بیرته راګرځول کیدی نشي — مهرباني وکړئ په احتیاط سره ادامه ورکړئ.",
+					"deleting": "ړنګ کېږي..."
+				},
+				"connect_wallet_browser": {
+					"title": "په MetaMask کې پرانیزئ",
+					"description": "د نښلولو لپاره دا لینک کاپي کړئ او د MetaMask په جوړ شوي براوزر کې یې خلاص کړئ.",
+					"copy_link": "لینک کاپي کړئ"
+				},
+				"connect_wallet_picker": {
+					"description": "څو والټونه وموندل شول. د نښلولو لپاره یو انتخاب کړئ."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "والټ نه لرئ؟",
+					"find_wallet_link": "په WalletGuide کې یو ومومئ"
+				}
+			},
+			"sections": {
+				"account": "حساب",
+				"security": "امنیت",
+				"google_account": "د ګوګل حساب",
+				"google_not_linked": "ناتړلی",
+				"passkeys": "د ننوتلو کلي",
+				"passkeys_linked": "{count} تړل شوی",
+				"danger_zone": "د خطر ساحه",
+				"delete_account": {
+					"description": "د خپلو ټولو ډیټا دایمي لرې کړئ"
+				},
+				"verification": "تایید",
+				"google_linked": "تړلی",
+				"account_label": "حساب"
+			},
+			"username": {
+				"label": "د کارونکي نوم",
+				"edit_title": "د کارونکي نوم سمول",
+				"description": "3-30 حروف، الفبايي-شمېري، لاندې کرښې او هایفن"
+			},
+			"history": {
+				"title": "تاریخ"
+			},
+			"transactions": {
+				"failed_to_load": "پورته کول ناکام شول",
+				"no_transactions": "تراوسه کوم معاملات نشته",
+				"wdd_per_day": "WDD/ورځ",
+				"just_now": "همدا اوس",
+				"minutes_ago": "{minutes}دقیقې وړاندې",
+				"hours_ago": "{hours}ساعته وړاندې",
+				"days_ago": "{days}ورځې وړاندې",
+				"filter": {
+					"all_types": "ټول ډولونه",
+					"select_type": "ډول وټاکئ",
+					"rewards": "مکافات"
+				},
+				"types": {
+					"withdrawal": "وتل",
+					"received": "ترلېدل",
+					"sent": "لیږل شوي",
+					"ambassador_reward": "د سفیر مکافات",
+					"party_subsidy": "د ګوند سبسايډي",
+					"stream_created": "جریان جوړ شو",
+					"stream_updated": "جریان تازه شو",
+					"savings_deposit": "پانګه ډیپوزټ",
+					"savings_withdrawal": "پانګه ووتل",
+					"savings_interest": "پانګه سود",
+					"referral_reward": "د راجع کولو انعام"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "د Self سره د تایید لپاره دا QR کوډ سکین کړئ.",
+				"mobile_dialog_description": "د تصدیق بشپړولو لپاره به تاسو Self اپ ته ولېږدول شئ.",
+				"support_telegram": "د Self ملاتړ",
+				"verification_guide": "د تایید لارښود",
+				"qr_alt": "د Self تایید QR",
+				"callback_warning": "خبرداری",
+				"callback_warning_description": "د تایید بیرته غوښتنه URL ستاسو له ګوتي څخه نه رسیږي. NEXT_PUBLIC_SELF_CALLBACK عامه URL ته وټاکئ (یا NEXT_PUBLIC_PUBLIC_BASE_URL تونل/مخکتنه ډومین ته وټاکئ).",
+				"label": "Self",
+				"status_completed": "تایید شوی",
+				"status_not_completed": "تایید شوی نه دی",
+				"learn_about_self": "د Self په اړه زده کړئ",
+				"primer": {
+					"title": "Self پروتوکول",
+					"description": "پرته له دې چې کوم شخصي ډاټا ښکاره کړئ تصدیق واخلئ."
+				}
+			},
+			"verification_warning": {
+				"title": "تایید ترلاسه کړئ",
+				"reward_cap_banner": "د نه تایید شوو اتباعو لپاره د بنسټیز عاید او سپما انعامونه محدود دي. د بې محدودې ګټې لپاره خپل حساب تایید کړئ."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "ډیری والیټونه یوازې هغه وخت WDD ښیي کله چې دا په لاسي توګه په غوره شوي زنځیر کې د دې ",
+			"contract_address": "تړون پته"
+		}
+	},
+	"toasts": {
+		"generic_error": "یوه تېروتنه رامنځته شوه",
+		"copied": "کاپي شو",
+		"wallet": {
+			"no_wallet": "د والیټ پته نشته",
+			"min_amount": "لږترلږه 10 WDD",
+			"sent": "لیږل شو",
+			"account_deleted": "حساب ړنګ شو",
+			"delete_failed": "د حساب ړنګول ناکام شو",
+			"contract_address_error": "د تړون پتې ته نشي ووتل کیدی",
+			"sign_out_failed": "د ووتلو ناکامه",
+			"google_linked": "د ګوګل حساب تړل شو",
+			"google_already_linked": "د ګوګل حساب دمخه له بل حساب سره تړل شوی",
+			"google_link_failed": "د ګوګل تړلو پیل نشو کولی",
+			"passkey_added": "د ننوتلو کلی اضافه شو",
+			"passkey_add_failed": "د ننوتلو کلی اضافه کول نشو کولی"
+		},
+		"parties": {
+			"updated": "تازه شو",
+			"update_failed": "تازه کول ناکام شول",
+			"update_error": "د ګوند تازه کولو کې تېروتنه",
+			"registered": "ګوند ثبت شو",
+			"register_failed": "د ګوند ثبتولو کې پاتې راغی",
+			"register_error": "د ګوند ثبتولو کې تېروتنه",
+			"deleted": "ړنګ شو",
+			"delete_failed": "د ړنګولو ناکامي",
+			"delete_error": "د ړنګولو تېروتنه"
+		},
+		"basic_income": {
+			"activated": "اساسي عاید فعال شو",
+			"activate_failed": "فعال کول ناکام شول",
+			"claimed": "غوښتل شو",
+			"claim_failed": "غوښتنه ناکامه شوه"
+		},
+		"savings": {
+			"collected": "راټول شو",
+			"collect_failed": "د راټولولو ناکامه",
+			"deposited": "ډیپوزټ شو",
+			"deposit_failed": "ډیپوزټ ناکام شو",
+			"withdrawn": "ووتل شو",
+			"withdraw_failed": "د ووتلو ناکامه"
+		}
+	},
+	"common": {
+		"confirm": "تایید کړئ",
+		"sign_in": "ننوتل",
+		"connect": "نښلول",
+		"disconnect": "بېلول",
+		"connect_wallet": "والټ ونښلوئ",
+		"max": "اعظمي",
+		"loading": "بار کېږي...",
+		"processing": "پروسس کول...",
+		"insufficient_balance": "کافي WDD نشته",
+		"delete_account": "حساب ړنګ کړئ",
+		"sign_out": "وتل",
+		"invalid_address": "ناسم پته",
+		"coming_soon": "ژر تر ژره",
+		"withdraw": "واخیستل",
+		"trade": "سوداګري",
+		"continue": "دوام ورکړئ",
+		"close": "تړل",
+		"updating": "تازه کول...",
+		"save": "خوندي کړئ",
+		"vote": "رايه ورکړه",
+		"switch_to_base_chain": "Base Chain ته واړوئ"
+	},
+	"auth": {
+		"choose_method": "خپل غوره میتود غوره کړئ.",
+		"sign_in_with_google": "د Google سره دوام ورکړئ",
+		"sign_in_with_passkey": "بیومتریک وکاروئ",
+		"sign_in_or_create": "د خپل حساب ته د passkey په کارولو سره لاسرسی ومومئ، د خپل ګوتو نښه، د مخ سکین یا د پردې قفل کارولو سره.",
+		"create_account": "حساب جوړ کړئ",
+		"create_passkey_name": "د passkey نوم جوړ کړئ",
+		"passkey_name_description": "ستاسو د passkey نوم وټاکئ ترڅو دا ستاسو د پټنوم مدیر کې پیژندل شي.",
+		"passkey_name": "د passkey نوم"
+	}
 }

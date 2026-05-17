@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "赚取",
-    "govern": "治理",
-    "menu": "菜单"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "政党",
-        "elections": "选举",
-        "referendums": "公投"
-      },
-      "sections": {
-        "parties": {
-          "title": "政党"
-        },
-        "elections": {
-          "title": "测试选举",
-          "subtitle": "在全球层面进行民主实验"
-        },
-        "referendums": {
-          "title": "世界宪法公投",
-          "subtitle": "就我们的基础原则进行投票"
-        }
-      },
-      "vote": {
-        "no_active_election": "选举即将开始",
-        "test_verification": {
-          "description": "立即尝试我们的验证系统，为投票做好准备",
-          "button": "测试"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "补贴",
-          "ambassadors": "大使"
-        },
-        "discover": "发现",
-        "search_placeholder": "搜索政党...",
-        "no_parties_found": "未找到政党",
-        "error_loading": "无法加载政党",
-        "refresh": "刷新",
-        "party_details": "政党详情",
-        "share_party": "分享政党",
-        "my_party": "我的政党",
-        "learn_more": "了解更多",
-        "party_management": "政党管理",
-        "edit_party_info": "编辑政党信息",
-        "dialogs": {
-          "party_name": "政党名称",
-          "description_optional": "描述（可选）",
-          "official_link_optional": "官方链接（可选）",
-          "updating": "更新中...",
-          "save": "保存",
-          "register_party": "注册政党",
-          "register": "注册",
-          "registering": "注册中...",
-          "leader_warning_register": "您目前是 {partyName} 的领导人。注册新政党将删除您当前的政党。",
-          "deleting": "删除中...",
-          "about_to_delete": "您即将删除 {partyName}。此操作无法撤销。",
-          "about_to_register": "您即将创建一个新政党。"
-        },
-        "detail": {
-          "failed_to_load": "加载政党数据失败",
-          "party_not_found": "未找到政党",
-          "error_loading": "加载政党时出错",
-          "back_to_parties": "返回政党",
-          "description": "描述",
-          "party_info": "政党信息",
-          "leader": "领导人",
-          "website": "网站",
-          "not_found_description": "您要查找的政党不存在或已被解散。"
-        },
-        "delete_party": "删除政党",
-        "run_on_elections_and_earn": "参加选举并获得补贴",
-        "ambassadors": {
-          "title": "大使计划",
-          "description": "邀请朋友并在他们完成验证以及其政党获得补贴时获得奖励",
-          "leaderboard": "排行榜",
-          "no_rewards_yet": "暂无奖励",
-          "col_ambassador": "大使",
-          "col_invited": "邀请数",
-          "col_reward": "奖励",
-          "share_referral_link": "分享推荐链接"
-        },
-        "subsidies": {
-          "title": "政党补贴计划",
-          "no_subsidies_yet": "暂无补贴",
-          "description": "基于选举表现的资金支持",
-          "col_subsidy": "补贴"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "选举",
-          "not_found": "未找到选举",
-          "not_found_description": "您查找的选举不存在。",
-          "back_to_elections": "返回选举列表",
-          "status_active": "进行中",
-          "status_upcoming": "即将开始",
-          "status_ended": "已结束",
-          "election_info": "选举信息",
-          "reward_pool": "奖池: {amount} WDD",
-          "reward_pool_minimum": "奖池：最低 {amount} WDD",
-          "choose_a_party": "选择一个政党",
-          "no_parties_for_election": "本次选举没有可用的政党。",
-          "results_title": "结果",
-          "vote_singular": "票",
-          "vote_plural": "票",
-          "no_votes": "本次选举没有投票。",
-          "test_election_name": "测试选举 {n}"
-        },
-        "list": {
-          "empty_state": "未找到选举",
-          "active_section": "进行中的选举",
-          "upcoming_section": "即将到来的选举",
-          "previous_section": "往届选举"
-        }
-      }
-    },
-    "error": {
-      "title": "出了点问题",
-      "description": "发生了意外错误。请重试。",
-      "error_id": "错误 ID: {digest}",
-      "try_again": "重试"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "基本收入",
-        "savings": "储蓄"
-      },
-      "basic_income": {
-        "subtitle_unauth": "因身为人而获得资金",
-        "subtitle_claim": "领取你的德拉克马",
-        "tooltip_claim": "1 WDD/天，上限 1 WDD。请在 24 小时内返回以最大化收益。",
-        "claim_button": "领取",
-        "alert": {
-          "claim": {
-            "title": "确认领取",
-            "description": "你将领取 {amount} WDD。该金额将加入你的钱包余额。"
-          }
-        },
-        "setup_subtitle": "设置你的基本收入",
-        "activate_loading": "正在激活...",
-        "activate_button": "激活基本收入",
-        "world_drachma": "世界德拉克马 (WDD) 是什么？",
-        "subtitle_unauth_raised_by_humanity": "领取你的全球AI分红"
-      },
-      "savings": {
-        "title": "储蓄账户",
-        "subtitle": "每秒产生利息",
-        "tooltip": "年化基准利率 69%。定期领取并再投资，以实现接近 100% 的有效回报。可随时提取。",
-        "deposit": "存入",
-        "withdraw": "提取",
-        "balance": "余额",
-        "amount_deposit": "存入金额",
-        "amount_withdraw": "提取金额",
-        "interest": "利息",
-        "collect": "领取",
-        "alert": {
-          "collect": {
-            "title": "确认领取",
-            "description": "你将领取 {amount} WDD 的利息。"
-          },
-          "deposit": {
-            "title": "确认存入",
-            "description": "你将存入 {amount} WDD。"
-          },
-          "withdraw": {
-            "title": "确认提取",
-            "description": "你将提取 {amount} WDD。"
-          }
-        },
-        "smart_contract_link": "查看智能合约",
-        "verify": "验证"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "账户",
-          "account_info": "账户信息",
-          "referral_code": "推荐码",
-          "referred_by": "推荐人",
-          "language": "语言"
-        },
-        "help": {
-          "title": "帮助",
-          "quickstart": "快速入门",
-          "docs": "维基",
-          "help_center": "帮助中心"
-        },
-        "source_code": {
-          "title": "源代码"
-        },
-        "legal": {
-          "title": "法律",
-          "terms": "使用条款",
-          "privacy": "隐私政策"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "钱包"
-      },
-      "balance": "余额",
-      "modals": {
-        "sign_out": {
-          "confirm": "确定要退出登录吗？"
-        },
-        "disconnect": {
-          "confirm": "您确定要断开您的钱包连接吗？"
-        },
-        "send": {
-          "button": "发送",
-          "withdraw_to_crypto": {
-            "description": "将 WDD 提取到加密账户。",
-            "amount_label": "金额",
-            "address_label": "钱包地址",
-            "network_label": "网络"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD 在 Jumper 上",
-          "ethereum_uniswap": "Ethereum WDD 在 Uniswap 上",
-          "base_jumper": "Base Chain WDD 在 Jumper 上",
-          "base_uniswap": "Base Chain WDD 在 Uniswap 上",
-          "worldchain_jumper": "World Chain WDD 在 Jumper 上",
-          "worldchain_uniswap": "World Chain WDD 在 Uniswap 上"
-        },
-        "delete_account": {
-          "description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",
-          "deleting": "删除中..."
-        },
-        "connect_wallet_browser": {
-          "title": "在 MetaMask 中打开",
-          "description": "要连接，请复制此链接并在 MetaMask 的内置浏览器中打开。",
-          "copy_link": "复制链接"
-        },
-        "connect_wallet_picker": {
-          "description": "发现多个钱包。请选择一个进行连接。"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "还没有钱包？",
-          "find_wallet_link": "在 WalletGuide 上找一个"
-        }
-      },
-      "sections": {
-        "account": "账户",
-        "security": "安全",
-        "google_account": "Google 账户",
-        "google_not_linked": "未链接",
-        "passkeys": "通行密钥",
-        "passkeys_linked": "已链接 {count} 个",
-        "danger_zone": "危险区域",
-        "delete_account": {
-          "description": "永久删除您的所有数据"
-        },
-        "verification": "验证",
-        "google_linked": "已链接",
-        "account_label": "账户"
-      },
-      "username": {
-        "label": "用户名",
-        "edit_title": "编辑用户名",
-        "description": "3-30个字符，字母数字，下划线和连字符"
-      },
-      "history": {
-        "title": "历史"
-      },
-      "transactions": {
-        "failed_to_load": "加载失败",
-        "no_transactions": "还没有交易",
-        "wdd_per_day": "WDD/天",
-        "just_now": "刚刚",
-        "minutes_ago": "{minutes}分钟前",
-        "hours_ago": "{hours}小时前",
-        "days_ago": "{days}天前",
-        "filter": {
-          "all_types": "所有类型",
-          "select_type": "选择类型",
-          "rewards": "奖励"
-        },
-        "types": {
-          "withdrawal": "提现",
-          "received": "已收到",
-          "sent": "已发送",
-          "ambassador_reward": "大使奖励",
-          "party_subsidy": "政党补贴",
-          "stream_created": "流已创建",
-          "stream_updated": "流已更新",
-          "savings_deposit": "储蓄 存入",
-          "savings_withdrawal": "储蓄 提取",
-          "savings_interest": "储蓄 利息",
-          "referral_reward": "推荐奖励"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "扫描此二维码以在 Self 完成验证。",
-        "mobile_dialog_description": "您将被重定向到 Self 应用以完成验证。",
-        "support_telegram": "Self 支持",
-        "verification_guide": "验证指南",
-        "qr_alt": "Self 验证二维码",
-        "callback_warning": "警告",
-        "callback_warning_description": "验证回调 URL 无法从您的手机访问。请将 NEXT_PUBLIC_SELF_CALLBACK 设置为公共 URL（或将 NEXT_PUBLIC_PUBLIC_BASE_URL 设置为隧道/预览域名）。",
-        "label": "Self",
-        "status_completed": "已验证",
-        "status_not_completed": "未验证",
-        "learn_about_self": "了解 Self",
-        "primer": {
-          "title": "Self 协议",
-          "description": "在不透露任何个人数据的情况下完成验证。"
-        }
-      },
-      "verification_warning": {
-        "title": "获取验证",
-        "reward_cap_banner": "未验证公民的基础收入和储蓄奖励设有上限。请验证您的账户以无限制获取奖励。"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "大多数钱包只有在手动导入到所选链后才会显示 WDD，通过其 ",
-      "contract_address": "合约地址"
-    }
-  },
-  "toasts": {
-    "generic_error": "发生错误",
-    "copied": "已复制",
-    "wallet": {
-      "no_wallet": "无钱包地址",
-      "min_amount": "最少 10 WDD",
-      "sent": "已发送",
-      "account_deleted": "账户已删除",
-      "delete_failed": "删除账户失败",
-      "contract_address_error": "无法提取到合约地址",
-      "sign_out_failed": "登出失败",
-      "google_linked": "Google 账户已链接",
-      "google_already_linked": "Google 账户已链接到其他账户",
-      "google_link_failed": "无法开始链接 Google",
-      "passkey_added": "已添加通行密钥",
-      "passkey_add_failed": "无法添加通行密钥"
-    },
-    "parties": {
-      "updated": "已更新",
-      "update_failed": "更新失败",
-      "update_error": "更新政党时出错",
-      "registered": "政党已注册",
-      "register_failed": "注册政党失败",
-      "register_error": "注册政党时出错",
-      "deleted": "已删除",
-      "delete_failed": "删除失败",
-      "delete_error": "删除出错"
-    },
-    "basic_income": {
-      "activated": "基本收入已激活",
-      "activate_failed": "激活失败",
-      "claimed": "已领取",
-      "claim_failed": "领取失败"
-    },
-    "savings": {
-      "collected": "已领取",
-      "collect_failed": "领取失败",
-      "deposited": "已存入",
-      "deposit_failed": "存入失败",
-      "withdrawn": "已提取",
-      "withdraw_failed": "提取失败"
-    }
-  },
-  "common": {
-    "confirm": "确认",
-    "sign_in": "登录",
-    "connect": "连接",
-    "disconnect": "断开连接",
-    "connect_wallet": "连接钱包",
-    "max": "最大",
-    "loading": "加载中...",
-    "processing": "处理中...",
-    "insufficient_balance": "WDD不足",
-    "delete_account": "删除账户",
-    "sign_out": "登出",
-    "invalid_address": "无效地址",
-    "coming_soon": "即将推出",
-    "withdraw": "提取",
-    "trade": "交易",
-    "continue": "继续",
-    "close": "关闭",
-    "updating": "更新中...",
-    "save": "保存",
-    "vote": "投票",
-    "switch_to_base_chain": "切换到 Base Chain"
-  },
-  "auth": {
-    "choose_method": "选择您喜欢的方法。",
-    "sign_in_with_google": "使用 Google 继续",
-    "sign_in_with_passkey": "使用生物识别",
-    "sign_in_or_create": "使用密码密钥访问您的帐户，使用您的指纹、面部扫描或屏幕锁定。",
-    "create_account": "创建账户",
-    "create_passkey_name": "创建密码密钥名称",
-    "passkey_name_description": "为您的密码密钥命名，以便在密码管理器中识别它。",
-    "passkey_name": "密码密钥名称"
-  }
+	"nav": {
+		"earn": "赚取",
+		"govern": "治理",
+		"menu": "菜单"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "政党",
+				"elections": "选举",
+				"referendums": "公投"
+			},
+			"sections": {
+				"parties": {
+					"title": "政党"
+				},
+				"elections": {
+					"title": "测试选举",
+					"subtitle": "在全球层面进行民主实验"
+				},
+				"referendums": {
+					"title": "世界宪法公投",
+					"subtitle": "就我们的基础原则进行投票"
+				}
+			},
+			"vote": {
+				"no_active_election": "选举即将开始",
+				"test_verification": {
+					"description": "立即尝试我们的验证系统，为投票做好准备",
+					"button": "测试"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "补贴",
+					"ambassadors": "大使"
+				},
+				"discover": "发现",
+				"search_placeholder": "搜索政党...",
+				"no_parties_found": "未找到政党",
+				"error_loading": "无法加载政党",
+				"refresh": "刷新",
+				"party_details": "政党详情",
+				"share_party": "分享政党",
+				"my_party": "我的政党",
+				"learn_more": "了解更多",
+				"party_management": "政党管理",
+				"edit_party_info": "编辑政党信息",
+				"dialogs": {
+					"party_name": "政党名称",
+					"description_optional": "描述（可选）",
+					"official_link_optional": "官方链接（可选）",
+					"updating": "更新中...",
+					"save": "保存",
+					"register_party": "注册政党",
+					"register": "注册",
+					"registering": "注册中...",
+					"leader_warning_register": "您目前是 {partyName} 的领导人。注册新政党将删除您当前的政党。",
+					"deleting": "删除中...",
+					"about_to_delete": "您即将删除 {partyName}。此操作无法撤销。",
+					"about_to_register": "您即将创建一个新政党。"
+				},
+				"detail": {
+					"failed_to_load": "加载政党数据失败",
+					"party_not_found": "未找到政党",
+					"error_loading": "加载政党时出错",
+					"back_to_parties": "返回政党",
+					"description": "描述",
+					"party_info": "政党信息",
+					"leader": "领导人",
+					"website": "网站",
+					"not_found_description": "您要查找的政党不存在或已被解散。"
+				},
+				"delete_party": "删除政党",
+				"run_on_elections_and_earn": "参加选举并获得补贴",
+				"ambassadors": {
+					"title": "大使计划",
+					"description": "邀请朋友并在他们完成验证以及其政党获得补贴时获得奖励",
+					"leaderboard": "排行榜",
+					"no_rewards_yet": "暂无奖励",
+					"col_ambassador": "大使",
+					"col_invited": "邀请数",
+					"col_reward": "奖励",
+					"share_referral_link": "分享推荐链接"
+				},
+				"subsidies": {
+					"title": "政党补贴计划",
+					"no_subsidies_yet": "暂无补贴",
+					"description": "基于选举表现的资金支持",
+					"col_subsidy": "补贴"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "选举",
+					"not_found": "未找到选举",
+					"not_found_description": "您查找的选举不存在。",
+					"back_to_elections": "返回选举列表",
+					"status_active": "进行中",
+					"status_upcoming": "即将开始",
+					"status_ended": "已结束",
+					"election_info": "选举信息",
+					"reward_pool": "奖池: {amount} WDD",
+					"reward_pool_minimum": "奖池：最低 {amount} WDD",
+					"choose_a_party": "选择一个政党",
+					"no_parties_for_election": "本次选举没有可用的政党。",
+					"results_title": "结果",
+					"vote_singular": "票",
+					"vote_plural": "票",
+					"no_votes": "本次选举没有投票。",
+					"test_election_name": "测试选举 {n}"
+				},
+				"list": {
+					"empty_state": "未找到选举",
+					"active_section": "进行中的选举",
+					"upcoming_section": "即将到来的选举",
+					"previous_section": "往届选举"
+				}
+			}
+		},
+		"error": {
+			"title": "出了点问题",
+			"description": "发生了意外错误。请重试。",
+			"error_id": "错误 ID: {digest}",
+			"try_again": "重试"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "基本收入",
+				"savings": "储蓄"
+			},
+			"basic_income": {
+				"subtitle_unauth": "因身为人而获得资金",
+				"subtitle_claim": "领取你的德拉克马",
+				"tooltip_claim": "1 WDD/天，上限 1 WDD。请在 24 小时内返回以最大化收益。",
+				"claim_button": "领取",
+				"alert": {
+					"claim": {
+						"title": "确认领取",
+						"description": "你将领取 {amount} WDD。该金额将加入你的钱包余额。"
+					}
+				},
+				"setup_subtitle": "设置你的基本收入",
+				"activate_loading": "正在激活...",
+				"activate_button": "激活基本收入",
+				"world_drachma": "世界德拉克马 (WDD) 是什么？",
+				"subtitle_unauth_raised_by_humanity": "领取你的全球AI分红"
+			},
+			"savings": {
+				"title": "储蓄账户",
+				"subtitle": "每秒产生利息",
+				"tooltip": "年化基准利率 69%。定期领取并再投资，以实现接近 100% 的有效回报。可随时提取。",
+				"deposit": "存入",
+				"withdraw": "提取",
+				"balance": "余额",
+				"amount_deposit": "存入金额",
+				"amount_withdraw": "提取金额",
+				"interest": "利息",
+				"collect": "领取",
+				"alert": {
+					"collect": {
+						"title": "确认领取",
+						"description": "你将领取 {amount} WDD 的利息。"
+					},
+					"deposit": {
+						"title": "确认存入",
+						"description": "你将存入 {amount} WDD。"
+					},
+					"withdraw": {
+						"title": "确认提取",
+						"description": "你将提取 {amount} WDD。"
+					}
+				},
+				"smart_contract_link": "查看智能合约",
+				"verify": "验证"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "账户",
+					"account_info": "账户信息",
+					"referral_code": "推荐码",
+					"referred_by": "推荐人",
+					"language": "语言"
+				},
+				"help": {
+					"title": "帮助",
+					"quickstart": "快速入门",
+					"docs": "维基",
+					"help_center": "帮助中心"
+				},
+				"source_code": {
+					"title": "源代码"
+				},
+				"legal": {
+					"title": "法律",
+					"terms": "使用条款",
+					"privacy": "隐私政策"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "钱包"
+			},
+			"balance": "余额",
+			"modals": {
+				"sign_out": {
+					"confirm": "确定要退出登录吗？"
+				},
+				"disconnect": {
+					"confirm": "您确定要断开您的钱包连接吗？"
+				},
+				"send": {
+					"button": "发送",
+					"withdraw_to_crypto": {
+						"description": "将 WDD 提取到加密账户。",
+						"amount_label": "金额",
+						"address_label": "钱包地址",
+						"network_label": "网络"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD 在 Jumper 上",
+					"ethereum_uniswap": "Ethereum WDD 在 Uniswap 上",
+					"base_jumper": "Base Chain WDD 在 Jumper 上",
+					"base_uniswap": "Base Chain WDD 在 Uniswap 上",
+					"worldchain_jumper": "World Chain WDD 在 Jumper 上",
+					"worldchain_uniswap": "World Chain WDD 在 Uniswap 上"
+				},
+				"delete_account": {
+					"description": "这将永久删除您的账户并从我们的服务器中删除所有数据。此操作无法撤销 — 请谨慎继续。",
+					"deleting": "删除中..."
+				},
+				"connect_wallet_browser": {
+					"title": "在 MetaMask 中打开",
+					"description": "要连接，请复制此链接并在 MetaMask 的内置浏览器中打开。",
+					"copy_link": "复制链接"
+				},
+				"connect_wallet_picker": {
+					"description": "发现多个钱包。请选择一个进行连接。"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "还没有钱包？",
+					"find_wallet_link": "在 WalletGuide 上找一个"
+				}
+			},
+			"sections": {
+				"account": "账户",
+				"security": "安全",
+				"google_account": "Google 账户",
+				"google_not_linked": "未链接",
+				"passkeys": "通行密钥",
+				"passkeys_linked": "已链接 {count} 个",
+				"danger_zone": "危险区域",
+				"delete_account": {
+					"description": "永久删除您的所有数据"
+				},
+				"verification": "验证",
+				"google_linked": "已链接",
+				"account_label": "账户"
+			},
+			"username": {
+				"label": "用户名",
+				"edit_title": "编辑用户名",
+				"description": "3-30个字符，字母数字，下划线和连字符"
+			},
+			"history": {
+				"title": "历史"
+			},
+			"transactions": {
+				"failed_to_load": "加载失败",
+				"no_transactions": "还没有交易",
+				"wdd_per_day": "WDD/天",
+				"just_now": "刚刚",
+				"minutes_ago": "{minutes}分钟前",
+				"hours_ago": "{hours}小时前",
+				"days_ago": "{days}天前",
+				"filter": {
+					"all_types": "所有类型",
+					"select_type": "选择类型",
+					"rewards": "奖励"
+				},
+				"types": {
+					"withdrawal": "提现",
+					"received": "已收到",
+					"sent": "已发送",
+					"ambassador_reward": "大使奖励",
+					"party_subsidy": "政党补贴",
+					"stream_created": "流已创建",
+					"stream_updated": "流已更新",
+					"savings_deposit": "储蓄 存入",
+					"savings_withdrawal": "储蓄 提取",
+					"savings_interest": "储蓄 利息",
+					"referral_reward": "推荐奖励"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "扫描此二维码以在 Self 完成验证。",
+				"mobile_dialog_description": "您将被重定向到 Self 应用以完成验证。",
+				"support_telegram": "Self 支持",
+				"verification_guide": "验证指南",
+				"qr_alt": "Self 验证二维码",
+				"callback_warning": "警告",
+				"callback_warning_description": "验证回调 URL 无法从您的手机访问。请将 NEXT_PUBLIC_SELF_CALLBACK 设置为公共 URL（或将 NEXT_PUBLIC_PUBLIC_BASE_URL 设置为隧道/预览域名）。",
+				"label": "Self",
+				"status_completed": "已验证",
+				"status_not_completed": "未验证",
+				"learn_about_self": "了解 Self",
+				"primer": {
+					"title": "Self 协议",
+					"description": "在不透露任何个人数据的情况下完成验证。"
+				}
+			},
+			"verification_warning": {
+				"title": "获取验证",
+				"reward_cap_banner": "未验证公民的基础收入和储蓄奖励设有上限。请验证您的账户以无限制获取奖励。"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "大多数钱包只有在手动导入到所选链后才会显示 WDD，通过其 ",
+			"contract_address": "合约地址"
+		}
+	},
+	"toasts": {
+		"generic_error": "发生错误",
+		"copied": "已复制",
+		"wallet": {
+			"no_wallet": "无钱包地址",
+			"min_amount": "最少 10 WDD",
+			"sent": "已发送",
+			"account_deleted": "账户已删除",
+			"delete_failed": "删除账户失败",
+			"contract_address_error": "无法提取到合约地址",
+			"sign_out_failed": "登出失败",
+			"google_linked": "Google 账户已链接",
+			"google_already_linked": "Google 账户已链接到其他账户",
+			"google_link_failed": "无法开始链接 Google",
+			"passkey_added": "已添加通行密钥",
+			"passkey_add_failed": "无法添加通行密钥"
+		},
+		"parties": {
+			"updated": "已更新",
+			"update_failed": "更新失败",
+			"update_error": "更新政党时出错",
+			"registered": "政党已注册",
+			"register_failed": "注册政党失败",
+			"register_error": "注册政党时出错",
+			"deleted": "已删除",
+			"delete_failed": "删除失败",
+			"delete_error": "删除出错"
+		},
+		"basic_income": {
+			"activated": "基本收入已激活",
+			"activate_failed": "激活失败",
+			"claimed": "已领取",
+			"claim_failed": "领取失败"
+		},
+		"savings": {
+			"collected": "已领取",
+			"collect_failed": "领取失败",
+			"deposited": "已存入",
+			"deposit_failed": "存入失败",
+			"withdrawn": "已提取",
+			"withdraw_failed": "提取失败"
+		}
+	},
+	"common": {
+		"confirm": "确认",
+		"sign_in": "登录",
+		"connect": "连接",
+		"disconnect": "断开连接",
+		"connect_wallet": "连接钱包",
+		"max": "最大",
+		"loading": "加载中...",
+		"processing": "处理中...",
+		"insufficient_balance": "WDD不足",
+		"delete_account": "删除账户",
+		"sign_out": "登出",
+		"invalid_address": "无效地址",
+		"coming_soon": "即将推出",
+		"withdraw": "提取",
+		"trade": "交易",
+		"continue": "继续",
+		"close": "关闭",
+		"updating": "更新中...",
+		"save": "保存",
+		"vote": "投票",
+		"switch_to_base_chain": "切换到 Base Chain"
+	},
+	"auth": {
+		"choose_method": "选择您喜欢的方法。",
+		"sign_in_with_google": "使用 Google 继续",
+		"sign_in_with_passkey": "使用生物识别",
+		"sign_in_or_create": "使用密码密钥访问您的帐户，使用您的指纹、面部扫描或屏幕锁定。",
+		"create_account": "创建账户",
+		"create_passkey_name": "创建密码密钥名称",
+		"passkey_name_description": "为您的密码密钥命名，以便在密码管理器中识别它。",
+		"passkey_name": "密码密钥名称"
+	}
 }

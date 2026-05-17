@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Ansaitse",
-    "govern": "Hallitse",
-    "menu": "Valikko"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Puolueet",
-        "elections": "Vaalit",
-        "referendums": "Kansanäänestykset"
-      },
-      "sections": {
-        "parties": {
-          "title": "Poliittiset puolueet"
-        },
-        "elections": {
-          "title": "Testivaalit",
-          "subtitle": "Kokeile globaalia demokratiaa"
-        },
-        "referendums": {
-          "title": "Maailman perustuslakikansanäänestys",
-          "subtitle": "Äänestä perustavista periaatteistamme"
-        }
-      },
-      "vote": {
-        "no_active_election": "Vaali alkaa pian",
-        "test_verification": {
-          "description": "Kokeile varmennusjärjestelmäämme nyt, jotta olet valmis äänestämään",
-          "button": "Testaa"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Tukiaiset",
-          "ambassadors": "Lähettiläät"
-        },
-        "discover": "Löydä",
-        "search_placeholder": "Etsi puolueita...",
-        "no_parties_found": "Puolueita ei löytynyt",
-        "error_loading": "Puolueiden lataaminen epäonnistui",
-        "refresh": "Päivitä",
-        "party_details": "Puolueen tiedot",
-        "share_party": "Jaa puolue",
-        "my_party": "Oma puolueeni",
-        "learn_more": "Lue lisää",
-        "party_management": "Puolueen hallinta",
-        "edit_party_info": "Muokkaa puolueen tietoja",
-        "dialogs": {
-          "party_name": "Puolueen nimi",
-          "description_optional": "Kuvaus (valinnainen)",
-          "official_link_optional": "Virallinen linkki (valinnainen)",
-          "updating": "Päivitetään...",
-          "save": "Tallenna",
-          "register_party": "Rekisteröi puolue",
-          "register": "Rekisteröidy",
-          "registering": "Rekisteröidään...",
-          "leader_warning_register": "Olet tällä hetkellä puolueen {partyName} johtaja. Uuden puolueen rekisteröinti poistaa nykyisen puolueesi.",
-          "deleting": "Poistetaan...",
-          "about_to_delete": "Olet poistamassa {partyName}:tä. Tätä toimintaa ei voi perua.",
-          "about_to_register": "Olet perustamassa uutta puoluetta."
-        },
-        "detail": {
-          "failed_to_load": "Puolueen tietojen lataaminen epäonnistui",
-          "party_not_found": "Puoluetta ei löytynyt",
-          "error_loading": "Virhe puolueen lataamisessa",
-          "back_to_parties": "Takaisin puolueisiin",
-          "description": "Kuvaus",
-          "party_info": "Puolueen tiedot",
-          "leader": "Johtaja",
-          "website": "Verkkosivusto",
-          "not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
-        },
-        "delete_party": "Poista puolue",
-        "run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea",
-        "ambassadors": {
-          "title": "Lähettiläsohjelma",
-          "description": "Kutsu ystäviä ja ansaitse palkintoja, kun he vahvistavat henkilöllisyytensä ja kun heidän puolueensa saa tukia",
-          "leaderboard": "Tulostaulukko",
-          "no_rewards_yet": "Ei vielä palkkioita",
-          "col_ambassador": "Lähettiläät",
-          "col_invited": "Kutsuttu",
-          "col_reward": "Palkkio",
-          "share_referral_link": "Jaa suosittelulinkki"
-        },
-        "subsidies": {
-          "title": "Puolueiden tukiohjelma",
-          "no_subsidies_yet": "Ei vielä tukia",
-          "description": "Rahoitus vaalimenestyksen perusteella",
-          "col_subsidy": "Tuki"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Vaali",
-          "not_found": "Vaalia ei löytynyt",
-          "not_found_description": "Etsimääsi vaalia ei ole olemassa.",
-          "back_to_elections": "Takaisin vaaleihin",
-          "status_active": "Aktiivinen",
-          "status_upcoming": "Tuleva",
-          "status_ended": "Päättynyt",
-          "election_info": "Vaalitiedot",
-          "reward_pool": "Palkintopooli: {amount} WDD",
-          "reward_pool_minimum": "Palkintopooli: vähintään {amount} WDD",
-          "choose_a_party": "Valitse puolue",
-          "no_parties_for_election": "Tähän vaaliin ei ole saatavilla puolueita.",
-          "results_title": "Tulokset",
-          "vote_singular": "ääni",
-          "vote_plural": "ääntä",
-          "no_votes": "Tässä vaalissa ei annettu ääniä.",
-          "test_election_name": "Testivaali {n}"
-        },
-        "list": {
-          "empty_state": "Vaaleja ei löytynyt",
-          "active_section": "Aktiiviset vaalit",
-          "upcoming_section": "Tulevat vaalit",
-          "previous_section": "Aiemmat vaalit"
-        }
-      }
-    },
-    "error": {
-      "title": "Jokin meni pieleen",
-      "description": "Odottamaton virhe tapahtui. Yritä uudelleen.",
-      "error_id": "Virhetunnus: {digest}",
-      "try_again": "Yritä uudelleen"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Perustulo",
-        "savings": "Säästöt"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Saa rahaa ihmisenä olemisesta",
-        "subtitle_claim": "Nosta drakmas",
-        "tooltip_claim": "1 WDD/päivä, enintään 1 WDD. Palaa 24 tunnin sisällä maksimoidaksesi tulot.",
-        "claim_button": "Nosta",
-        "alert": {
-          "claim": {
-            "title": "Vahvista nosto",
-            "description": "Olet nostamassa {amount} WDD:tä. Tämä lisätään lompakkosi saldoon."
-          }
-        },
-        "setup_subtitle": "Aseta perustulosi",
-        "activate_loading": "Aktivoidaan...",
-        "activate_button": "Aktivoi perustulo",
-        "world_drachma": "Mikä on maailman drakhma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Lunasta globaali tekoälyosinkosi"
-      },
-      "savings": {
-        "title": "Säästötili",
-        "subtitle": "Ansaitse korkoa joka sekunti",
-        "tooltip": "69% vuosikorko. Kerää ja sijoitusta uudelleen säännöllisesti saavuttaaksesi lähes 100% tehokkaat tuotot. Nosta milloin tahansa.",
-        "deposit": "Talleta",
-        "withdraw": "Nosta",
-        "balance": "Saldo",
-        "amount_deposit": "Talletettava määrä",
-        "amount_withdraw": "Nostettava määrä",
-        "interest": "Korko",
-        "collect": "Kerää",
-        "alert": {
-          "collect": {
-            "title": "Vahvista keräys",
-            "description": "Olet keräämässä {amount} WDD korkoa."
-          },
-          "deposit": {
-            "title": "Vahvista talletus",
-            "description": "Olet tallettamassa {amount} WDD:tä."
-          },
-          "withdraw": {
-            "title": "Vahvista nosto",
-            "description": "Olet nostamassa {amount} WDD:tä."
-          }
-        },
-        "smart_contract_link": "Näytä älysopimus",
-        "verify": "Vahvista"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "TILI",
-          "account_info": "Tilitiedot",
-          "referral_code": "Suosittelukoodi",
-          "referred_by": "Suosittelija",
-          "language": "Kieli"
-        },
-        "help": {
-          "title": "APUA",
-          "quickstart": "Pika-aloitus",
-          "docs": "Wiki",
-          "help_center": "Ohjekeskus"
-        },
-        "source_code": {
-          "title": "LÄHDEKOODI"
-        },
-        "legal": {
-          "title": "LAILLINEN",
-          "terms": "Käyttöehdot",
-          "privacy": "Tietosuojakäytäntö"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Lompakko"
-      },
-      "balance": "Saldo",
-      "modals": {
-        "sign_out": {
-          "confirm": "Oletko varma, että haluat kirjautua ulos?"
-        },
-        "disconnect": {
-          "confirm": "Haluatko varmasti katkaista lompakkosi yhteyden?"
-        },
-        "send": {
-          "button": "Lähetä",
-          "withdraw_to_crypto": {
-            "description": "Nosta WDD crypto-tilille.",
-            "amount_label": "Määrä",
-            "address_label": "Lompakko-osoite",
-            "network_label": "Verkko"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumperissa",
-          "ethereum_uniswap": "Ethereum WDD Uniswapissa",
-          "base_jumper": "Base Chain WDD Jumperissa",
-          "base_uniswap": "Base Chain WDD Uniswapissa",
-          "worldchain_jumper": "World Chain WDD Jumperissa",
-          "worldchain_uniswap": "World Chain WDD Uniswapissa"
-        },
-        "delete_account": {
-          "description": "Tämä poistaa pysyvästi tilisi ja poistaa kaikki tietosi palvelimiltamme. Tätä toimintoa ei voi perua — jatka varovasti.",
-          "deleting": "Poistetaan..."
-        },
-        "connect_wallet_browser": {
-          "title": "Avaa MetaMaskissa",
-          "description": "Yhdistääksesi kopioi tämä linkki ja avaa se MetaMaskin sisäänrakennetussa selaimessa.",
-          "copy_link": "Kopioi linkki"
-        },
-        "connect_wallet_picker": {
-          "description": "Useita lompakoita löytyi. Valitse yksi yhdistääksesi."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Eikö sinulla ole lompakkoa?",
-          "find_wallet_link": "Löydä yksi WalletGuidesta"
-        }
-      },
-      "sections": {
-        "account": "TILI",
-        "security": "TURVALLISUUS",
-        "google_account": "Google-tili",
-        "google_not_linked": "Ei linkitetty",
-        "passkeys": "Passkey",
-        "passkeys_linked": "{count} linkitetty",
-        "danger_zone": "VAARALLINEN ALUE",
-        "delete_account": {
-          "description": "Poista pysyvästi kaikki tietosi"
-        },
-        "verification": "VAHVISTUS",
-        "google_linked": "Linkitetty",
-        "account_label": "Tili"
-      },
-      "username": {
-        "label": "Käyttäjänimi",
-        "edit_title": "Muokkaa käyttäjänimeä",
-        "description": "3-30 merkkiä, aakkosnumeerinen, alaviivat ja viivat"
-      },
-      "history": {
-        "title": "HISTORIA"
-      },
-      "transactions": {
-        "failed_to_load": "Lataus epäonnistui",
-        "no_transactions": "Ei vielä tapahtumia",
-        "wdd_per_day": "WDD/päivä",
-        "just_now": "Juuri nyt",
-        "minutes_ago": "{minutes}min sitten",
-        "hours_ago": "{hours}t sitten",
-        "days_ago": "{days}pv sitten",
-        "filter": {
-          "all_types": "Kaikki tyypit",
-          "select_type": "Valitse tyyppi",
-          "rewards": "Palkinnot"
-        },
-        "types": {
-          "withdrawal": "Nosto",
-          "received": "Vastaanotettu",
-          "sent": "Lähetetty",
-          "ambassador_reward": "Suurlähettilään palkinto",
-          "party_subsidy": "Puoluetuki",
-          "stream_created": "Stream luotu",
-          "stream_updated": "Stream päivitetty",
-          "savings_deposit": "Säästöt talleta",
-          "savings_withdrawal": "Säästöt nosta",
-          "savings_interest": "Säästöt korko",
-          "referral_reward": "Suosittelupalkkio"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Skannaa tämä QR-koodi vahvistaaksesi Selfillä.",
-        "mobile_dialog_description": "Sinut ohjataan Self-sovellukseen suorittamaan vahvistus.",
-        "support_telegram": "Self-tuki",
-        "verification_guide": "Todennusopas",
-        "qr_alt": "Self-todennuksen QR",
-        "callback_warning": "Varoitus",
-        "callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen).",
-        "label": "Self",
-        "status_completed": "Vahvistettu",
-        "status_not_completed": "Ei vahvistettu",
-        "learn_about_self": "Lue lisää Self",
-        "primer": {
-          "title": "Self Protokolla",
-          "description": "Vahvista identiteettisi ilman henkilötietojen paljastamista."
-        }
-      },
-      "verification_warning": {
-        "title": "Hanki vahvistus",
-        "reward_cap_banner": "Perustulon ja säästöjen palkkiot ovat rajoitettuja vahvistamattomille kansalaisille. Vahvista tilisi ansaitaksesi ilman rajoituksia."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Useimmat lompakot näyttävät WDD:n vasta sen jälkeen, kun se on manuaalisesti tuotu valitulle ketjulle sen ",
-      "contract_address": "sopimusosoitteella"
-    }
-  },
-  "toasts": {
-    "generic_error": "Virhe tapahtui",
-    "copied": "Kopioitu",
-    "wallet": {
-      "no_wallet": "Ei lompakko-osoitetta",
-      "min_amount": "Vähintään 10 WDD",
-      "sent": "Lähetetty",
-      "account_deleted": "Tili poistettu",
-      "delete_failed": "Tilin poisto epäonnistui",
-      "contract_address_error": "Ei voi nostaa sopimusosoitteeseen",
-      "sign_out_failed": "Kirjautuminen ulos epäonnistui",
-      "google_linked": "Google-tili linkitetty",
-      "google_already_linked": "Google-tili on jo linkitetty toiseen tiliin",
-      "google_link_failed": "Google-linkitystä ei voitu aloittaa",
-      "passkey_added": "Passkey lisätty",
-      "passkey_add_failed": "Passkeyn lisääminen epäonnistui"
-    },
-    "parties": {
-      "updated": "Päivitetty",
-      "update_failed": "Päivitys epäonnistui",
-      "update_error": "Virhe päivittäessä puoluetta",
-      "registered": "Puolue rekisteröity",
-      "register_failed": "Puolueen rekisteröinti epäonnistui",
-      "register_error": "Virhe puolueen rekisteröinnissä",
-      "deleted": "Poistettu",
-      "delete_failed": "Poistaminen epäonnistui",
-      "delete_error": "Virhe poistettaessa"
-    },
-    "basic_income": {
-      "activated": "Perustulo aktivioitu",
-      "activate_failed": "Aktivointi epäonnistui",
-      "claimed": "Nostettu",
-      "claim_failed": "Nosto epäonnistui"
-    },
-    "savings": {
-      "collected": "Kerätty",
-      "collect_failed": "Keräys epäonnistui",
-      "deposited": "Talletettu",
-      "deposit_failed": "Talletus epäonnistui",
-      "withdrawn": "Nostettu",
-      "withdraw_failed": "Nosto epäonnistui"
-    }
-  },
-  "common": {
-    "confirm": "Vahvista",
-    "sign_in": "Kirjaudu sisään",
-    "connect": "Yhdistä",
-    "disconnect": "Katkaise yhteys",
-    "connect_wallet": "Yhdistä lompakko",
-    "max": "Maksimi",
-    "loading": "Ladataan...",
-    "processing": "Käsitellään...",
-    "insufficient_balance": "Ei tarpeeksi WDD:tä",
-    "delete_account": "Poista tili",
-    "sign_out": "Kirjaudu ulos",
-    "invalid_address": "Virheellinen osoite",
-    "coming_soon": "Tulossa pian",
-    "withdraw": "Nosta",
-    "trade": "Kauppa",
-    "continue": "Jatka",
-    "close": "Sulje",
-    "updating": "Päivitetään...",
-    "save": "Tallenna",
-    "vote": "Äänestä",
-    "switch_to_base_chain": "Vaihda Base Chainiin"
-  },
-  "auth": {
-    "choose_method": "Valitse haluamasi menetelmä.",
-    "sign_in_with_google": "Jatka Googlella",
-    "sign_in_with_passkey": "Käytä biometriaa",
-    "sign_in_or_create": "Pääsy tilillesi passkeyllä, käyttämällä sormenjälkeä, kasvonskannausta tai näytön lukitusta.",
-    "create_account": "Luo tili",
-    "create_passkey_name": "Luo passkey-nimi",
-    "passkey_name_description": "Nimeä passkey-tunnuksesi tunnistamaan se salasananhallinnassa.",
-    "passkey_name": "Passkey-nimi"
-  }
+	"nav": {
+		"earn": "Ansaitse",
+		"govern": "Hallitse",
+		"menu": "Valikko"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Puolueet",
+				"elections": "Vaalit",
+				"referendums": "Kansanäänestykset"
+			},
+			"sections": {
+				"parties": {
+					"title": "Poliittiset puolueet"
+				},
+				"elections": {
+					"title": "Testivaalit",
+					"subtitle": "Kokeile globaalia demokratiaa"
+				},
+				"referendums": {
+					"title": "Maailman perustuslakikansanäänestys",
+					"subtitle": "Äänestä perustavista periaatteistamme"
+				}
+			},
+			"vote": {
+				"no_active_election": "Vaali alkaa pian",
+				"test_verification": {
+					"description": "Kokeile varmennusjärjestelmäämme nyt, jotta olet valmis äänestämään",
+					"button": "Testaa"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Tukiaiset",
+					"ambassadors": "Lähettiläät"
+				},
+				"discover": "Löydä",
+				"search_placeholder": "Etsi puolueita...",
+				"no_parties_found": "Puolueita ei löytynyt",
+				"error_loading": "Puolueiden lataaminen epäonnistui",
+				"refresh": "Päivitä",
+				"party_details": "Puolueen tiedot",
+				"share_party": "Jaa puolue",
+				"my_party": "Oma puolueeni",
+				"learn_more": "Lue lisää",
+				"party_management": "Puolueen hallinta",
+				"edit_party_info": "Muokkaa puolueen tietoja",
+				"dialogs": {
+					"party_name": "Puolueen nimi",
+					"description_optional": "Kuvaus (valinnainen)",
+					"official_link_optional": "Virallinen linkki (valinnainen)",
+					"updating": "Päivitetään...",
+					"save": "Tallenna",
+					"register_party": "Rekisteröi puolue",
+					"register": "Rekisteröidy",
+					"registering": "Rekisteröidään...",
+					"leader_warning_register": "Olet tällä hetkellä puolueen {partyName} johtaja. Uuden puolueen rekisteröinti poistaa nykyisen puolueesi.",
+					"deleting": "Poistetaan...",
+					"about_to_delete": "Olet poistamassa {partyName}:tä. Tätä toimintaa ei voi perua.",
+					"about_to_register": "Olet perustamassa uutta puoluetta."
+				},
+				"detail": {
+					"failed_to_load": "Puolueen tietojen lataaminen epäonnistui",
+					"party_not_found": "Puoluetta ei löytynyt",
+					"error_loading": "Virhe puolueen lataamisessa",
+					"back_to_parties": "Takaisin puolueisiin",
+					"description": "Kuvaus",
+					"party_info": "Puolueen tiedot",
+					"leader": "Johtaja",
+					"website": "Verkkosivusto",
+					"not_found_description": "Etsimäsi puolue ei ole olemassa tai se on hajotettu."
+				},
+				"delete_party": "Poista puolue",
+				"run_on_elections_and_earn": "Osallistu vaaleihin ja saa tukea",
+				"ambassadors": {
+					"title": "Lähettiläsohjelma",
+					"description": "Kutsu ystäviä ja ansaitse palkintoja, kun he vahvistavat henkilöllisyytensä ja kun heidän puolueensa saa tukia",
+					"leaderboard": "Tulostaulukko",
+					"no_rewards_yet": "Ei vielä palkkioita",
+					"col_ambassador": "Lähettiläät",
+					"col_invited": "Kutsuttu",
+					"col_reward": "Palkkio",
+					"share_referral_link": "Jaa suosittelulinkki"
+				},
+				"subsidies": {
+					"title": "Puolueiden tukiohjelma",
+					"no_subsidies_yet": "Ei vielä tukia",
+					"description": "Rahoitus vaalimenestyksen perusteella",
+					"col_subsidy": "Tuki"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Vaali",
+					"not_found": "Vaalia ei löytynyt",
+					"not_found_description": "Etsimääsi vaalia ei ole olemassa.",
+					"back_to_elections": "Takaisin vaaleihin",
+					"status_active": "Aktiivinen",
+					"status_upcoming": "Tuleva",
+					"status_ended": "Päättynyt",
+					"election_info": "Vaalitiedot",
+					"reward_pool": "Palkintopooli: {amount} WDD",
+					"reward_pool_minimum": "Palkintopooli: vähintään {amount} WDD",
+					"choose_a_party": "Valitse puolue",
+					"no_parties_for_election": "Tähän vaaliin ei ole saatavilla puolueita.",
+					"results_title": "Tulokset",
+					"vote_singular": "ääni",
+					"vote_plural": "ääntä",
+					"no_votes": "Tässä vaalissa ei annettu ääniä.",
+					"test_election_name": "Testivaali {n}"
+				},
+				"list": {
+					"empty_state": "Vaaleja ei löytynyt",
+					"active_section": "Aktiiviset vaalit",
+					"upcoming_section": "Tulevat vaalit",
+					"previous_section": "Aiemmat vaalit"
+				}
+			}
+		},
+		"error": {
+			"title": "Jokin meni pieleen",
+			"description": "Odottamaton virhe tapahtui. Yritä uudelleen.",
+			"error_id": "Virhetunnus: {digest}",
+			"try_again": "Yritä uudelleen"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Perustulo",
+				"savings": "Säästöt"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Saa rahaa ihmisenä olemisesta",
+				"subtitle_claim": "Nosta drakmas",
+				"tooltip_claim": "1 WDD/päivä, enintään 1 WDD. Palaa 24 tunnin sisällä maksimoidaksesi tulot.",
+				"claim_button": "Nosta",
+				"alert": {
+					"claim": {
+						"title": "Vahvista nosto",
+						"description": "Olet nostamassa {amount} WDD:tä. Tämä lisätään lompakkosi saldoon."
+					}
+				},
+				"setup_subtitle": "Aseta perustulosi",
+				"activate_loading": "Aktivoidaan...",
+				"activate_button": "Aktivoi perustulo",
+				"world_drachma": "Mikä on maailman drakhma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Lunasta globaali tekoälyosinkosi"
+			},
+			"savings": {
+				"title": "Säästötili",
+				"subtitle": "Ansaitse korkoa joka sekunti",
+				"tooltip": "69% vuosikorko. Kerää ja sijoitusta uudelleen säännöllisesti saavuttaaksesi lähes 100% tehokkaat tuotot. Nosta milloin tahansa.",
+				"deposit": "Talleta",
+				"withdraw": "Nosta",
+				"balance": "Saldo",
+				"amount_deposit": "Talletettava määrä",
+				"amount_withdraw": "Nostettava määrä",
+				"interest": "Korko",
+				"collect": "Kerää",
+				"alert": {
+					"collect": {
+						"title": "Vahvista keräys",
+						"description": "Olet keräämässä {amount} WDD korkoa."
+					},
+					"deposit": {
+						"title": "Vahvista talletus",
+						"description": "Olet tallettamassa {amount} WDD:tä."
+					},
+					"withdraw": {
+						"title": "Vahvista nosto",
+						"description": "Olet nostamassa {amount} WDD:tä."
+					}
+				},
+				"smart_contract_link": "Näytä älysopimus",
+				"verify": "Vahvista"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "TILI",
+					"account_info": "Tilitiedot",
+					"referral_code": "Suosittelukoodi",
+					"referred_by": "Suosittelija",
+					"language": "Kieli"
+				},
+				"help": {
+					"title": "APUA",
+					"quickstart": "Pika-aloitus",
+					"docs": "Wiki",
+					"help_center": "Ohjekeskus"
+				},
+				"source_code": {
+					"title": "LÄHDEKOODI"
+				},
+				"legal": {
+					"title": "LAILLINEN",
+					"terms": "Käyttöehdot",
+					"privacy": "Tietosuojakäytäntö"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Lompakko"
+			},
+			"balance": "Saldo",
+			"modals": {
+				"sign_out": {
+					"confirm": "Oletko varma, että haluat kirjautua ulos?"
+				},
+				"disconnect": {
+					"confirm": "Haluatko varmasti katkaista lompakkosi yhteyden?"
+				},
+				"send": {
+					"button": "Lähetä",
+					"withdraw_to_crypto": {
+						"description": "Nosta WDD crypto-tilille.",
+						"amount_label": "Määrä",
+						"address_label": "Lompakko-osoite",
+						"network_label": "Verkko"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumperissa",
+					"ethereum_uniswap": "Ethereum WDD Uniswapissa",
+					"base_jumper": "Base Chain WDD Jumperissa",
+					"base_uniswap": "Base Chain WDD Uniswapissa",
+					"worldchain_jumper": "World Chain WDD Jumperissa",
+					"worldchain_uniswap": "World Chain WDD Uniswapissa"
+				},
+				"delete_account": {
+					"description": "Tämä poistaa pysyvästi tilisi ja poistaa kaikki tietosi palvelimiltamme. Tätä toimintoa ei voi perua — jatka varovasti.",
+					"deleting": "Poistetaan..."
+				},
+				"connect_wallet_browser": {
+					"title": "Avaa MetaMaskissa",
+					"description": "Yhdistääksesi kopioi tämä linkki ja avaa se MetaMaskin sisäänrakennetussa selaimessa.",
+					"copy_link": "Kopioi linkki"
+				},
+				"connect_wallet_picker": {
+					"description": "Useita lompakoita löytyi. Valitse yksi yhdistääksesi."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Eikö sinulla ole lompakkoa?",
+					"find_wallet_link": "Löydä yksi WalletGuidesta"
+				}
+			},
+			"sections": {
+				"account": "TILI",
+				"security": "TURVALLISUUS",
+				"google_account": "Google-tili",
+				"google_not_linked": "Ei linkitetty",
+				"passkeys": "Passkey",
+				"passkeys_linked": "{count} linkitetty",
+				"danger_zone": "VAARALLINEN ALUE",
+				"delete_account": {
+					"description": "Poista pysyvästi kaikki tietosi"
+				},
+				"verification": "VAHVISTUS",
+				"google_linked": "Linkitetty",
+				"account_label": "Tili"
+			},
+			"username": {
+				"label": "Käyttäjänimi",
+				"edit_title": "Muokkaa käyttäjänimeä",
+				"description": "3-30 merkkiä, aakkosnumeerinen, alaviivat ja viivat"
+			},
+			"history": {
+				"title": "HISTORIA"
+			},
+			"transactions": {
+				"failed_to_load": "Lataus epäonnistui",
+				"no_transactions": "Ei vielä tapahtumia",
+				"wdd_per_day": "WDD/päivä",
+				"just_now": "Juuri nyt",
+				"minutes_ago": "{minutes}min sitten",
+				"hours_ago": "{hours}t sitten",
+				"days_ago": "{days}pv sitten",
+				"filter": {
+					"all_types": "Kaikki tyypit",
+					"select_type": "Valitse tyyppi",
+					"rewards": "Palkinnot"
+				},
+				"types": {
+					"withdrawal": "Nosto",
+					"received": "Vastaanotettu",
+					"sent": "Lähetetty",
+					"ambassador_reward": "Suurlähettilään palkinto",
+					"party_subsidy": "Puoluetuki",
+					"stream_created": "Stream luotu",
+					"stream_updated": "Stream päivitetty",
+					"savings_deposit": "Säästöt talleta",
+					"savings_withdrawal": "Säästöt nosta",
+					"savings_interest": "Säästöt korko",
+					"referral_reward": "Suosittelupalkkio"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Skannaa tämä QR-koodi vahvistaaksesi Selfillä.",
+				"mobile_dialog_description": "Sinut ohjataan Self-sovellukseen suorittamaan vahvistus.",
+				"support_telegram": "Self-tuki",
+				"verification_guide": "Todennusopas",
+				"qr_alt": "Self-todennuksen QR",
+				"callback_warning": "Varoitus",
+				"callback_warning_description": "Todennuksen takaisinkutsu-URL ei ole saavutettavissa puhelimestasi. Aseta NEXT_PUBLIC_SELF_CALLBACK julkiseen URL-osoitteeseen (tai aseta NEXT_PUBLIC_PUBLIC_BASE_URL tunneli-/esikatseluverkkotunnukseen).",
+				"label": "Self",
+				"status_completed": "Vahvistettu",
+				"status_not_completed": "Ei vahvistettu",
+				"learn_about_self": "Lue lisää Self",
+				"primer": {
+					"title": "Self Protokolla",
+					"description": "Vahvista identiteettisi ilman henkilötietojen paljastamista."
+				}
+			},
+			"verification_warning": {
+				"title": "Hanki vahvistus",
+				"reward_cap_banner": "Perustulon ja säästöjen palkkiot ovat rajoitettuja vahvistamattomille kansalaisille. Vahvista tilisi ansaitaksesi ilman rajoituksia."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Useimmat lompakot näyttävät WDD:n vasta sen jälkeen, kun se on manuaalisesti tuotu valitulle ketjulle sen ",
+			"contract_address": "sopimusosoitteella"
+		}
+	},
+	"toasts": {
+		"generic_error": "Virhe tapahtui",
+		"copied": "Kopioitu",
+		"wallet": {
+			"no_wallet": "Ei lompakko-osoitetta",
+			"min_amount": "Vähintään 10 WDD",
+			"sent": "Lähetetty",
+			"account_deleted": "Tili poistettu",
+			"delete_failed": "Tilin poisto epäonnistui",
+			"contract_address_error": "Ei voi nostaa sopimusosoitteeseen",
+			"sign_out_failed": "Kirjautuminen ulos epäonnistui",
+			"google_linked": "Google-tili linkitetty",
+			"google_already_linked": "Google-tili on jo linkitetty toiseen tiliin",
+			"google_link_failed": "Google-linkitystä ei voitu aloittaa",
+			"passkey_added": "Passkey lisätty",
+			"passkey_add_failed": "Passkeyn lisääminen epäonnistui"
+		},
+		"parties": {
+			"updated": "Päivitetty",
+			"update_failed": "Päivitys epäonnistui",
+			"update_error": "Virhe päivittäessä puoluetta",
+			"registered": "Puolue rekisteröity",
+			"register_failed": "Puolueen rekisteröinti epäonnistui",
+			"register_error": "Virhe puolueen rekisteröinnissä",
+			"deleted": "Poistettu",
+			"delete_failed": "Poistaminen epäonnistui",
+			"delete_error": "Virhe poistettaessa"
+		},
+		"basic_income": {
+			"activated": "Perustulo aktivioitu",
+			"activate_failed": "Aktivointi epäonnistui",
+			"claimed": "Nostettu",
+			"claim_failed": "Nosto epäonnistui"
+		},
+		"savings": {
+			"collected": "Kerätty",
+			"collect_failed": "Keräys epäonnistui",
+			"deposited": "Talletettu",
+			"deposit_failed": "Talletus epäonnistui",
+			"withdrawn": "Nostettu",
+			"withdraw_failed": "Nosto epäonnistui"
+		}
+	},
+	"common": {
+		"confirm": "Vahvista",
+		"sign_in": "Kirjaudu sisään",
+		"connect": "Yhdistä",
+		"disconnect": "Katkaise yhteys",
+		"connect_wallet": "Yhdistä lompakko",
+		"max": "Maksimi",
+		"loading": "Ladataan...",
+		"processing": "Käsitellään...",
+		"insufficient_balance": "Ei tarpeeksi WDD:tä",
+		"delete_account": "Poista tili",
+		"sign_out": "Kirjaudu ulos",
+		"invalid_address": "Virheellinen osoite",
+		"coming_soon": "Tulossa pian",
+		"withdraw": "Nosta",
+		"trade": "Kauppa",
+		"continue": "Jatka",
+		"close": "Sulje",
+		"updating": "Päivitetään...",
+		"save": "Tallenna",
+		"vote": "Äänestä",
+		"switch_to_base_chain": "Vaihda Base Chainiin"
+	},
+	"auth": {
+		"choose_method": "Valitse haluamasi menetelmä.",
+		"sign_in_with_google": "Jatka Googlella",
+		"sign_in_with_passkey": "Käytä biometriaa",
+		"sign_in_or_create": "Pääsy tilillesi passkeyllä, käyttämällä sormenjälkeä, kasvonskannausta tai näytön lukitusta.",
+		"create_account": "Luo tili",
+		"create_passkey_name": "Luo passkey-nimi",
+		"passkey_name_description": "Nimeä passkey-tunnuksesi tunnistamaan se salasananhallinnassa.",
+		"passkey_name": "Passkey-nimi"
+	}
 }

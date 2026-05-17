@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Verdien",
-    "govern": "Bestuur",
-    "menu": "Spyskaart"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partye",
-        "elections": "Verkiesings",
-        "referendums": "Volksraadplegings"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politieke partye"
-        },
-        "elections": {
-          "title": "Toetsverkiesings",
-          "subtitle": "Eksperimenteer met wêreldwye demokrasie"
-        },
-        "referendums": {
-          "title": "Wêreld Grondwetlike Volksraadpleging",
-          "subtitle": "Stem oor ons grondliggende beginsels"
-        }
-      },
-      "vote": {
-        "no_active_election": "Verkiesing begin binnekort",
-        "test_verification": {
-          "description": "Probeer ons verifikasiestelsel nou om gereed te wees vir stemming",
-          "button": "Toets"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidies",
-          "ambassadors": "Ambassadeurs"
-        },
-        "discover": "Ontdek",
-        "search_placeholder": "Soek partye...",
-        "no_parties_found": "Geen partye gevind nie",
-        "error_loading": "Kon nie partye laai nie",
-        "refresh": "Verfris",
-        "party_details": "Party besonderhede",
-        "share_party": "Deel party",
-        "my_party": "My party",
-        "learn_more": "Leer meer",
-        "party_management": "Party bestuur",
-        "edit_party_info": "Wysig party inligting",
-        "dialogs": {
-          "party_name": "Party naam",
-          "description_optional": "Beskrywing (opsies)",
-          "official_link_optional": "Amptelike skakel (opsies)",
-          "updating": "Opdateer...",
-          "save": "Stoor",
-          "register_party": "Registreer 'n party",
-          "register": "Registreer",
-          "registering": "Registreer...",
-          "leader_warning_register": "Jy is tans die leier van {partyName}. Om 'n nuwe party te registreer sal jou huidige party skrap.",
-          "deleting": "Skrap...",
-          "about_to_delete": "Jy is op die punt om {partyName} te skrap. Hierdie aksie kan nie ongedaan gemaak word nie.",
-          "about_to_register": "Jy is op die punt om 'n nuwe party te stig."
-        },
-        "detail": {
-          "failed_to_load": "Kon nie party data laai nie",
-          "party_not_found": "Party nie gevind nie",
-          "error_loading": "Fout met laai van party",
-          "back_to_parties": "Terug na partye",
-          "description": "Beskrywing",
-          "party_info": "Party inligting",
-          "leader": "Leier",
-          "website": "Webwerf",
-          "not_found_description": "Die party wat jy soek bestaan nie of is ontbind."
-        },
-        "delete_party": "Skrap party",
-        "run_on_elections_and_earn": "Ding aan verkiesings en kry subsidies",
-        "ambassadors": {
-          "title": "Ambassadeursprogram",
-          "description": "Nooi vriende en verdien belonings wanneer hulle geverifieer word en wanneer hul party subsidies kry",
-          "leaderboard": "Ranglys",
-          "no_rewards_yet": "Nog geen belonings nie",
-          "col_ambassador": "Ambassadeurs",
-          "col_invited": "Genooi",
-          "col_reward": "Beloning",
-          "share_referral_link": "Deel verwysingskakel"
-        },
-        "subsidies": {
-          "title": "Party Subsidieprogram",
-          "no_subsidies_yet": "Nog geen subsidies nie",
-          "description": "Befondsing gebaseer op verkiesingsprestasie",
-          "col_subsidy": "Subsidie"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Verkiesing",
-          "not_found": "Verkiesing nie gevind nie",
-          "not_found_description": "Die verkiesing waarna jy soek, bestaan nie.",
-          "back_to_elections": "Terug na verkiesings",
-          "status_active": "Aktief",
-          "status_upcoming": "Komende",
-          "status_ended": "Beëindig",
-          "election_info": "Verkiesingsinligting",
-          "reward_pool": "Beloningspoel: {amount} WDD",
-          "reward_pool_minimum": "Beloningspoel: minimum {amount} WDD",
-          "choose_a_party": "Kies 'n party",
-          "no_parties_for_election": "Geen partye beskikbaar vir hierdie verkiesing nie.",
-          "results_title": "Resultate",
-          "vote_singular": "stem",
-          "vote_plural": "stemme",
-          "no_votes": "Geen stemme is in hierdie verkiesing uitgebring nie.",
-          "test_election_name": "Toetsverkiesing {n}"
-        },
-        "list": {
-          "empty_state": "Geen verkiesings gevind nie",
-          "active_section": "Aktiewe verkiesings",
-          "upcoming_section": "Komende verkiesings",
-          "previous_section": "Vorige verkiesings"
-        }
-      }
-    },
-    "error": {
-      "title": "Iets het fout gegaan",
-      "description": "'n Onverwagte fout het voorgekom. Probeer asseblief weer.",
-      "error_id": "Fout-ID: {digest}",
-      "try_again": "Probeer weer"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Basiese inkomste",
-        "savings": "Spaarrekening"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Kry geld omdat jy mens is",
-        "subtitle_claim": "Eis jou drachma op",
-        "tooltip_claim": "1 WDD/dag, beperk tot 1 WDD. Keer binne 24 uur terug om verdienste te maksimeer.",
-        "claim_button": "Eis op",
-        "alert": {
-          "claim": {
-            "title": "Bevestig eis",
-            "description": "Jy is op die punt om {amount} WDD op te eis. Dit sal by jou beursiebalans gevoeg word."
-          }
-        },
-        "setup_subtitle": "Stel jou basiese inkomste op",
-        "activate_loading": "Aktiveer...",
-        "activate_button": "Aktiveer basiese inkomste",
-        "world_drachma": "Wat is wêrelddrachme (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Eis jou wêreldwye AI-dividend"
-      },
-      "savings": {
-        "title": "Spaarrekening",
-        "subtitle": "Verdien rente elke sekonde",
-        "tooltip": "69% jaarlikse basiskoers. Versamel en herbeleeg gereeld om naby aan 100% effektiewe opbrengste te behaal. Onttrek enige tyd.",
-        "deposit": "Deponeer",
-        "withdraw": "Onttrek",
-        "balance": "Balans",
-        "amount_deposit": "Bedrag om te deponeer",
-        "amount_withdraw": "Bedrag om te onttrek",
-        "interest": "Rente",
-        "collect": "Versamel",
-        "alert": {
-          "collect": {
-            "title": "Bevestig versameling",
-            "description": "Jy is op die punt om {amount} WDD in rente te versamel."
-          },
-          "deposit": {
-            "title": "Bevestig deposito",
-            "description": "Jy is op die punt om {amount} WDD te deponeer."
-          },
-          "withdraw": {
-            "title": "Bevestig onttrekking",
-            "description": "Jy is op die punt om {amount} WDD te onttrek."
-          }
-        },
-        "smart_contract_link": "Bekyk slimkontrak",
-        "verify": "Verifieer"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "REKENING",
-          "account_info": "Rekeninginligting",
-          "referral_code": "Verwysingskode",
-          "referred_by": "Verwys deur",
-          "language": "Taal"
-        },
-        "help": {
-          "title": "HULP",
-          "quickstart": "Vinnige begin",
-          "docs": "Wiki",
-          "help_center": "Hulpsentrum"
-        },
-        "source_code": {
-          "title": "BRONKODE"
-        },
-        "legal": {
-          "title": "WETLIK",
-          "terms": "Gebruiksvoorwaardes",
-          "privacy": "Privaatheidsbeleid"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Beursie"
-      },
-      "balance": "Balans",
-      "modals": {
-        "sign_out": {
-          "confirm": "Is jy seker jy wil uitteken?"
-        },
-        "disconnect": {
-          "confirm": "Is jy seker jy wil jou beursie ontkoppel?"
-        },
-        "send": {
-          "button": "Stuur",
-          "withdraw_to_crypto": {
-            "description": "Trek WDD na 'n kripto-rekening.",
-            "amount_label": "Bedrag",
-            "address_label": "Beursieadres",
-            "network_label": "Netwerk"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD op Jumper",
-          "ethereum_uniswap": "Ethereum WDD op Uniswap",
-          "base_jumper": "Base Chain WDD op Jumper",
-          "base_uniswap": "Base Chain WDD op Uniswap",
-          "worldchain_jumper": "World Chain WDD op Jumper",
-          "worldchain_uniswap": "World Chain WDD op Uniswap"
-        },
-        "delete_account": {
-          "description": "Dit sal jou rekening permanent skrap en al jou data van ons bedieners verwyder. Hierdie aksie kan nie ongedaan gemaak word nie — gaan voort met omsigtigheid.",
-          "deleting": "Skrap..."
-        },
-        "connect_wallet_browser": {
-          "title": "Maak oop in MetaMask",
-          "description": "Om te koppel, kopieer hierdie skakel en maak dit in MetaMask se ingeboude blaaier oop.",
-          "copy_link": "Kopieer skakel"
-        },
-        "connect_wallet_picker": {
-          "description": "Verskeie wallets is gevind. Kies een om te koppel."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Het jy nie 'n wallet nie?",
-          "find_wallet_link": "Vind een op WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "REKENING",
-        "security": "SEKURITEIT",
-        "google_account": "Google-rekening",
-        "google_not_linked": "Nie gekoppel nie",
-        "passkeys": "Toegangsleutels",
-        "passkeys_linked": "{count} gekoppel",
-        "danger_zone": "GEVAARSONE",
-        "delete_account": {
-          "description": "Verwyder permanent al jou data"
-        },
-        "verification": "VERIFIKASIE",
-        "google_linked": "Gekoppel",
-        "account_label": "Rekening"
-      },
-      "username": {
-        "label": "Gebruikersnaam",
-        "edit_title": "Wysig gebruikersnaam",
-        "description": "3-30 karakters, alfanumeries, onderstrepe en koppeltekens"
-      },
-      "history": {
-        "title": "GESKIEDENIS"
-      },
-      "transactions": {
-        "failed_to_load": "Kon nie laai nie",
-        "no_transactions": "Nog geen transaksies nie",
-        "wdd_per_day": "WDD/dag",
-        "just_now": "Net nou",
-        "minutes_ago": "{minutes}m gelede",
-        "hours_ago": "{hours}u gelede",
-        "days_ago": "{days}d gelede",
-        "filter": {
-          "all_types": "Alle tipes",
-          "select_type": "Kies tipe",
-          "rewards": "Belonings"
-        },
-        "types": {
-          "withdrawal": "Onttrekking",
-          "received": "Ontvang",
-          "sent": "Gestuur",
-          "ambassador_reward": "Ambassadeur beloning",
-          "party_subsidy": "Party subsidie",
-          "stream_created": "Stroom geskep",
-          "stream_updated": "Stroom opgedateer",
-          "savings_deposit": "Spaarrekening deponeer",
-          "savings_withdrawal": "Spaarrekening onttrek",
-          "savings_interest": "Spaarrekening rente",
-          "referral_reward": "Verwysingsbeloning"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Skandeer hierdie QR-kode om met Self te verifieer.",
-        "mobile_dialog_description": "Jy sal na die Self-app herlei word om verifikasie te voltooi.",
-        "support_telegram": "Self Ondersteuning",
-        "verification_guide": "Verifikasiegids",
-        "qr_alt": "Self-verifikasie QR",
-        "callback_warning": "Waarskuwing",
-        "callback_warning_description": "Die verifikasie-terugbel-URL is nie bereikbaar vanaf jou foon nie. Stel NEXT_PUBLIC_SELF_CALLBACK in op 'n publieke URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op 'n tonnel-/voorskou-domein).",
-        "label": "Self",
-        "status_completed": "Geverifieer",
-        "status_not_completed": "Nie geverifieer nie",
-        "learn_about_self": "Leer oor Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Kry verifikasie sonder om enige persoonlike data te onthul."
-        }
-      },
-      "verification_warning": {
-        "title": "Kry verifikasie",
-        "reward_cap_banner": "Basiese inkomste- en spaargeldbelonings is beperk vir onverifieerde burgers. Verifieer jou rekening om sonder perke te verdien."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Die meeste beursies vertoon WDD slegs nadat dit handmatig op die gekose ketting ingevoer is deur sy ",
-      "contract_address": "kontrakadres"
-    }
-  },
-  "toasts": {
-    "generic_error": "'n Fout het voorgekom",
-    "copied": "Gekopieer",
-    "wallet": {
-      "no_wallet": "Geen beursieadres nie",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Gestuur",
-      "account_deleted": "Rekening geskrap",
-      "delete_failed": "Kon nie rekening skrap nie",
-      "contract_address_error": "Kan nie onttrek na kontrakadres nie",
-      "sign_out_failed": "Uitteken het misluk",
-      "google_linked": "Google-rekening gekoppel",
-      "google_already_linked": "Google-rekening reeds aan 'n ander rekening gekoppel",
-      "google_link_failed": "Kon nie Google-koppeling begin nie",
-      "passkey_added": "Toegangsleutel bygevoeg",
-      "passkey_add_failed": "Kon nie toegangsleutel byvoeg nie"
-    },
-    "parties": {
-      "updated": "Opgedateer",
-      "update_failed": "Opdatering het misluk",
-      "update_error": "Fout by opdatering van party",
-      "registered": "Party geregistreer",
-      "register_failed": "Kon nie party registreer nie",
-      "register_error": "Fout met partymregistrasie",
-      "deleted": "Geskrap",
-      "delete_failed": "Kon nie skrap nie",
-      "delete_error": "Fout met skrap"
-    },
-    "basic_income": {
-      "activated": "Basiese inkomste geaktiveer",
-      "activate_failed": "Aktivering het misluk",
-      "claimed": "Opgeëis",
-      "claim_failed": "Eis het misluk"
-    },
-    "savings": {
-      "collected": "Versamel",
-      "collect_failed": "Versameling het misluk",
-      "deposited": "Gedeponeer",
-      "deposit_failed": "Deposito het misluk",
-      "withdrawn": "Onttrek",
-      "withdraw_failed": "Onttrekking het misluk"
-    }
-  },
-  "common": {
-    "confirm": "Bevestig",
-    "sign_in": "Teken in",
-    "connect": "Koppel",
-    "disconnect": "Ontkoppel",
-    "connect_wallet": "Koppel beursie",
-    "max": "Maks",
-    "loading": "Laai...",
-    "processing": "Verwerk...",
-    "insufficient_balance": "Nie genoeg WDD nie",
-    "delete_account": "Verwyder rekening",
-    "sign_out": "Teken uit",
-    "invalid_address": "Ongeldige adres",
-    "coming_soon": "Binnekort beskikbaar",
-    "withdraw": "Onttrek",
-    "trade": "Handel",
-    "continue": "Gaan voort",
-    "close": "Sluit",
-    "updating": "Besig om op te dateer...",
-    "save": "Stoor",
-    "vote": "Stem",
-    "switch_to_base_chain": "Skakel oor na Base Chain"
-  },
-  "auth": {
-    "choose_method": "Kies jou voorkeurmetode.",
-    "sign_in_with_google": "Gaan voort met Google",
-    "sign_in_with_passkey": "Gebruik biometrie",
-    "sign_in_or_create": "Gebruik jou rekening met 'n passkey, met jou vingerafdruk, gesigskandeer of skermslot.",
-    "create_account": "Skep rekening",
-    "create_passkey_name": "Skep 'n passkey naam",
-    "passkey_name_description": "Noem jou passkey om dit in jou wagwoordbestuurder te identifiseer.",
-    "passkey_name": "Passkey naam"
-  }
+	"nav": {
+		"earn": "Verdien",
+		"govern": "Bestuur",
+		"menu": "Spyskaart"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partye",
+				"elections": "Verkiesings",
+				"referendums": "Volksraadplegings"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politieke partye"
+				},
+				"elections": {
+					"title": "Toetsverkiesings",
+					"subtitle": "Eksperimenteer met wêreldwye demokrasie"
+				},
+				"referendums": {
+					"title": "Wêreld Grondwetlike Volksraadpleging",
+					"subtitle": "Stem oor ons grondliggende beginsels"
+				}
+			},
+			"vote": {
+				"no_active_election": "Verkiesing begin binnekort",
+				"test_verification": {
+					"description": "Probeer ons verifikasiestelsel nou om gereed te wees vir stemming",
+					"button": "Toets"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidies",
+					"ambassadors": "Ambassadeurs"
+				},
+				"discover": "Ontdek",
+				"search_placeholder": "Soek partye...",
+				"no_parties_found": "Geen partye gevind nie",
+				"error_loading": "Kon nie partye laai nie",
+				"refresh": "Verfris",
+				"party_details": "Party besonderhede",
+				"share_party": "Deel party",
+				"my_party": "My party",
+				"learn_more": "Leer meer",
+				"party_management": "Party bestuur",
+				"edit_party_info": "Wysig party inligting",
+				"dialogs": {
+					"party_name": "Party naam",
+					"description_optional": "Beskrywing (opsies)",
+					"official_link_optional": "Amptelike skakel (opsies)",
+					"updating": "Opdateer...",
+					"save": "Stoor",
+					"register_party": "Registreer 'n party",
+					"register": "Registreer",
+					"registering": "Registreer...",
+					"leader_warning_register": "Jy is tans die leier van {partyName}. Om 'n nuwe party te registreer sal jou huidige party skrap.",
+					"deleting": "Skrap...",
+					"about_to_delete": "Jy is op die punt om {partyName} te skrap. Hierdie aksie kan nie ongedaan gemaak word nie.",
+					"about_to_register": "Jy is op die punt om 'n nuwe party te stig."
+				},
+				"detail": {
+					"failed_to_load": "Kon nie party data laai nie",
+					"party_not_found": "Party nie gevind nie",
+					"error_loading": "Fout met laai van party",
+					"back_to_parties": "Terug na partye",
+					"description": "Beskrywing",
+					"party_info": "Party inligting",
+					"leader": "Leier",
+					"website": "Webwerf",
+					"not_found_description": "Die party wat jy soek bestaan nie of is ontbind."
+				},
+				"delete_party": "Skrap party",
+				"run_on_elections_and_earn": "Ding aan verkiesings en kry subsidies",
+				"ambassadors": {
+					"title": "Ambassadeursprogram",
+					"description": "Nooi vriende en verdien belonings wanneer hulle geverifieer word en wanneer hul party subsidies kry",
+					"leaderboard": "Ranglys",
+					"no_rewards_yet": "Nog geen belonings nie",
+					"col_ambassador": "Ambassadeurs",
+					"col_invited": "Genooi",
+					"col_reward": "Beloning",
+					"share_referral_link": "Deel verwysingskakel"
+				},
+				"subsidies": {
+					"title": "Party Subsidieprogram",
+					"no_subsidies_yet": "Nog geen subsidies nie",
+					"description": "Befondsing gebaseer op verkiesingsprestasie",
+					"col_subsidy": "Subsidie"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Verkiesing",
+					"not_found": "Verkiesing nie gevind nie",
+					"not_found_description": "Die verkiesing waarna jy soek, bestaan nie.",
+					"back_to_elections": "Terug na verkiesings",
+					"status_active": "Aktief",
+					"status_upcoming": "Komende",
+					"status_ended": "Beëindig",
+					"election_info": "Verkiesingsinligting",
+					"reward_pool": "Beloningspoel: {amount} WDD",
+					"reward_pool_minimum": "Beloningspoel: minimum {amount} WDD",
+					"choose_a_party": "Kies 'n party",
+					"no_parties_for_election": "Geen partye beskikbaar vir hierdie verkiesing nie.",
+					"results_title": "Resultate",
+					"vote_singular": "stem",
+					"vote_plural": "stemme",
+					"no_votes": "Geen stemme is in hierdie verkiesing uitgebring nie.",
+					"test_election_name": "Toetsverkiesing {n}"
+				},
+				"list": {
+					"empty_state": "Geen verkiesings gevind nie",
+					"active_section": "Aktiewe verkiesings",
+					"upcoming_section": "Komende verkiesings",
+					"previous_section": "Vorige verkiesings"
+				}
+			}
+		},
+		"error": {
+			"title": "Iets het fout gegaan",
+			"description": "'n Onverwagte fout het voorgekom. Probeer asseblief weer.",
+			"error_id": "Fout-ID: {digest}",
+			"try_again": "Probeer weer"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Basiese inkomste",
+				"savings": "Spaarrekening"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Kry geld omdat jy mens is",
+				"subtitle_claim": "Eis jou drachma op",
+				"tooltip_claim": "1 WDD/dag, beperk tot 1 WDD. Keer binne 24 uur terug om verdienste te maksimeer.",
+				"claim_button": "Eis op",
+				"alert": {
+					"claim": {
+						"title": "Bevestig eis",
+						"description": "Jy is op die punt om {amount} WDD op te eis. Dit sal by jou beursiebalans gevoeg word."
+					}
+				},
+				"setup_subtitle": "Stel jou basiese inkomste op",
+				"activate_loading": "Aktiveer...",
+				"activate_button": "Aktiveer basiese inkomste",
+				"world_drachma": "Wat is wêrelddrachme (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Eis jou wêreldwye AI-dividend"
+			},
+			"savings": {
+				"title": "Spaarrekening",
+				"subtitle": "Verdien rente elke sekonde",
+				"tooltip": "69% jaarlikse basiskoers. Versamel en herbeleeg gereeld om naby aan 100% effektiewe opbrengste te behaal. Onttrek enige tyd.",
+				"deposit": "Deponeer",
+				"withdraw": "Onttrek",
+				"balance": "Balans",
+				"amount_deposit": "Bedrag om te deponeer",
+				"amount_withdraw": "Bedrag om te onttrek",
+				"interest": "Rente",
+				"collect": "Versamel",
+				"alert": {
+					"collect": {
+						"title": "Bevestig versameling",
+						"description": "Jy is op die punt om {amount} WDD in rente te versamel."
+					},
+					"deposit": {
+						"title": "Bevestig deposito",
+						"description": "Jy is op die punt om {amount} WDD te deponeer."
+					},
+					"withdraw": {
+						"title": "Bevestig onttrekking",
+						"description": "Jy is op die punt om {amount} WDD te onttrek."
+					}
+				},
+				"smart_contract_link": "Bekyk slimkontrak",
+				"verify": "Verifieer"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "REKENING",
+					"account_info": "Rekeninginligting",
+					"referral_code": "Verwysingskode",
+					"referred_by": "Verwys deur",
+					"language": "Taal"
+				},
+				"help": {
+					"title": "HULP",
+					"quickstart": "Vinnige begin",
+					"docs": "Wiki",
+					"help_center": "Hulpsentrum"
+				},
+				"source_code": {
+					"title": "BRONKODE"
+				},
+				"legal": {
+					"title": "WETLIK",
+					"terms": "Gebruiksvoorwaardes",
+					"privacy": "Privaatheidsbeleid"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Beursie"
+			},
+			"balance": "Balans",
+			"modals": {
+				"sign_out": {
+					"confirm": "Is jy seker jy wil uitteken?"
+				},
+				"disconnect": {
+					"confirm": "Is jy seker jy wil jou beursie ontkoppel?"
+				},
+				"send": {
+					"button": "Stuur",
+					"withdraw_to_crypto": {
+						"description": "Trek WDD na 'n kripto-rekening.",
+						"amount_label": "Bedrag",
+						"address_label": "Beursieadres",
+						"network_label": "Netwerk"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD op Jumper",
+					"ethereum_uniswap": "Ethereum WDD op Uniswap",
+					"base_jumper": "Base Chain WDD op Jumper",
+					"base_uniswap": "Base Chain WDD op Uniswap",
+					"worldchain_jumper": "World Chain WDD op Jumper",
+					"worldchain_uniswap": "World Chain WDD op Uniswap"
+				},
+				"delete_account": {
+					"description": "Dit sal jou rekening permanent skrap en al jou data van ons bedieners verwyder. Hierdie aksie kan nie ongedaan gemaak word nie — gaan voort met omsigtigheid.",
+					"deleting": "Skrap..."
+				},
+				"connect_wallet_browser": {
+					"title": "Maak oop in MetaMask",
+					"description": "Om te koppel, kopieer hierdie skakel en maak dit in MetaMask se ingeboude blaaier oop.",
+					"copy_link": "Kopieer skakel"
+				},
+				"connect_wallet_picker": {
+					"description": "Verskeie wallets is gevind. Kies een om te koppel."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Het jy nie 'n wallet nie?",
+					"find_wallet_link": "Vind een op WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "REKENING",
+				"security": "SEKURITEIT",
+				"google_account": "Google-rekening",
+				"google_not_linked": "Nie gekoppel nie",
+				"passkeys": "Toegangsleutels",
+				"passkeys_linked": "{count} gekoppel",
+				"danger_zone": "GEVAARSONE",
+				"delete_account": {
+					"description": "Verwyder permanent al jou data"
+				},
+				"verification": "VERIFIKASIE",
+				"google_linked": "Gekoppel",
+				"account_label": "Rekening"
+			},
+			"username": {
+				"label": "Gebruikersnaam",
+				"edit_title": "Wysig gebruikersnaam",
+				"description": "3-30 karakters, alfanumeries, onderstrepe en koppeltekens"
+			},
+			"history": {
+				"title": "GESKIEDENIS"
+			},
+			"transactions": {
+				"failed_to_load": "Kon nie laai nie",
+				"no_transactions": "Nog geen transaksies nie",
+				"wdd_per_day": "WDD/dag",
+				"just_now": "Net nou",
+				"minutes_ago": "{minutes}m gelede",
+				"hours_ago": "{hours}u gelede",
+				"days_ago": "{days}d gelede",
+				"filter": {
+					"all_types": "Alle tipes",
+					"select_type": "Kies tipe",
+					"rewards": "Belonings"
+				},
+				"types": {
+					"withdrawal": "Onttrekking",
+					"received": "Ontvang",
+					"sent": "Gestuur",
+					"ambassador_reward": "Ambassadeur beloning",
+					"party_subsidy": "Party subsidie",
+					"stream_created": "Stroom geskep",
+					"stream_updated": "Stroom opgedateer",
+					"savings_deposit": "Spaarrekening deponeer",
+					"savings_withdrawal": "Spaarrekening onttrek",
+					"savings_interest": "Spaarrekening rente",
+					"referral_reward": "Verwysingsbeloning"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Skandeer hierdie QR-kode om met Self te verifieer.",
+				"mobile_dialog_description": "Jy sal na die Self-app herlei word om verifikasie te voltooi.",
+				"support_telegram": "Self Ondersteuning",
+				"verification_guide": "Verifikasiegids",
+				"qr_alt": "Self-verifikasie QR",
+				"callback_warning": "Waarskuwing",
+				"callback_warning_description": "Die verifikasie-terugbel-URL is nie bereikbaar vanaf jou foon nie. Stel NEXT_PUBLIC_SELF_CALLBACK in op 'n publieke URL (of stel NEXT_PUBLIC_PUBLIC_BASE_URL in op 'n tonnel-/voorskou-domein).",
+				"label": "Self",
+				"status_completed": "Geverifieer",
+				"status_not_completed": "Nie geverifieer nie",
+				"learn_about_self": "Leer oor Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Kry verifikasie sonder om enige persoonlike data te onthul."
+				}
+			},
+			"verification_warning": {
+				"title": "Kry verifikasie",
+				"reward_cap_banner": "Basiese inkomste- en spaargeldbelonings is beperk vir onverifieerde burgers. Verifieer jou rekening om sonder perke te verdien."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Die meeste beursies vertoon WDD slegs nadat dit handmatig op die gekose ketting ingevoer is deur sy ",
+			"contract_address": "kontrakadres"
+		}
+	},
+	"toasts": {
+		"generic_error": "'n Fout het voorgekom",
+		"copied": "Gekopieer",
+		"wallet": {
+			"no_wallet": "Geen beursieadres nie",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Gestuur",
+			"account_deleted": "Rekening geskrap",
+			"delete_failed": "Kon nie rekening skrap nie",
+			"contract_address_error": "Kan nie onttrek na kontrakadres nie",
+			"sign_out_failed": "Uitteken het misluk",
+			"google_linked": "Google-rekening gekoppel",
+			"google_already_linked": "Google-rekening reeds aan 'n ander rekening gekoppel",
+			"google_link_failed": "Kon nie Google-koppeling begin nie",
+			"passkey_added": "Toegangsleutel bygevoeg",
+			"passkey_add_failed": "Kon nie toegangsleutel byvoeg nie"
+		},
+		"parties": {
+			"updated": "Opgedateer",
+			"update_failed": "Opdatering het misluk",
+			"update_error": "Fout by opdatering van party",
+			"registered": "Party geregistreer",
+			"register_failed": "Kon nie party registreer nie",
+			"register_error": "Fout met partymregistrasie",
+			"deleted": "Geskrap",
+			"delete_failed": "Kon nie skrap nie",
+			"delete_error": "Fout met skrap"
+		},
+		"basic_income": {
+			"activated": "Basiese inkomste geaktiveer",
+			"activate_failed": "Aktivering het misluk",
+			"claimed": "Opgeëis",
+			"claim_failed": "Eis het misluk"
+		},
+		"savings": {
+			"collected": "Versamel",
+			"collect_failed": "Versameling het misluk",
+			"deposited": "Gedeponeer",
+			"deposit_failed": "Deposito het misluk",
+			"withdrawn": "Onttrek",
+			"withdraw_failed": "Onttrekking het misluk"
+		}
+	},
+	"common": {
+		"confirm": "Bevestig",
+		"sign_in": "Teken in",
+		"connect": "Koppel",
+		"disconnect": "Ontkoppel",
+		"connect_wallet": "Koppel beursie",
+		"max": "Maks",
+		"loading": "Laai...",
+		"processing": "Verwerk...",
+		"insufficient_balance": "Nie genoeg WDD nie",
+		"delete_account": "Verwyder rekening",
+		"sign_out": "Teken uit",
+		"invalid_address": "Ongeldige adres",
+		"coming_soon": "Binnekort beskikbaar",
+		"withdraw": "Onttrek",
+		"trade": "Handel",
+		"continue": "Gaan voort",
+		"close": "Sluit",
+		"updating": "Besig om op te dateer...",
+		"save": "Stoor",
+		"vote": "Stem",
+		"switch_to_base_chain": "Skakel oor na Base Chain"
+	},
+	"auth": {
+		"choose_method": "Kies jou voorkeurmetode.",
+		"sign_in_with_google": "Gaan voort met Google",
+		"sign_in_with_passkey": "Gebruik biometrie",
+		"sign_in_or_create": "Gebruik jou rekening met 'n passkey, met jou vingerafdruk, gesigskandeer of skermslot.",
+		"create_account": "Skep rekening",
+		"create_passkey_name": "Skep 'n passkey naam",
+		"passkey_name_description": "Noem jou passkey om dit in jou wagwoordbestuurder te identifiseer.",
+		"passkey_name": "Passkey naam"
+	}
 }

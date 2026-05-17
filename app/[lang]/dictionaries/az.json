@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Qazan",
-    "govern": "İdarə et",
-    "menu": "Menyu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partiyalar",
-        "elections": "Seçkilər",
-        "referendums": "Referendumlar"
-      },
-      "sections": {
-        "parties": {
-          "title": "Siyasi partiyalar"
-        },
-        "elections": {
-          "title": "Sınaq seçkiləri",
-          "subtitle": "Qlobal demokratiya ilə təcrübə et"
-        },
-        "referendums": {
-          "title": "Dünya Konstitusiya Referendumu",
-          "subtitle": "Təməl prinsiplərimiz üçün səs ver"
-        }
-      },
-      "vote": {
-        "no_active_election": "Seçki tezliklə başlayacaq",
-        "test_verification": {
-          "description": "Səsverməyə hazır olmaq üçün indi təsdiqləmə sistemimizi sınayın",
-          "button": "Sınaq"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidiyalar",
-          "ambassadors": "Səfirlər"
-        },
-        "discover": "Kəşf edin",
-        "search_placeholder": "Partiyaları axtarın...",
-        "no_parties_found": "Partiya tapılmadı",
-        "error_loading": "Partiyaları yükləmək mümkün olmadı",
-        "refresh": "Yenilə",
-        "party_details": "Partiya detalları",
-        "share_party": "Partiyanı paylaş",
-        "my_party": "Partiyam",
-        "learn_more": "Ətraflı öyrənin",
-        "party_management": "Partiya idarəetməsi",
-        "edit_party_info": "Partiya məlumatlarını redaktə et",
-        "dialogs": {
-          "party_name": "Partiya adı",
-          "description_optional": "Təsvir (istəyə bağlı)",
-          "official_link_optional": "Rəsmi keçid (istəyə bağlı)",
-          "updating": "Yenilənir...",
-          "save": "Saxla",
-          "register_party": "Partiya qeydiyyatdan keçir",
-          "register": "Qeydiyyat",
-          "registering": "Qeydiyyatdan keçirilir...",
-          "leader_warning_register": "Siz hazırda {partyName} liderisiniz. Yeni partiya qeydiyyatdan keçirmək cari partiyanızı siləcək.",
-          "deleting": "Silinir...",
-          "about_to_delete": "Siz {partyName} partiyasını silmək üzrəsiniz. Bu hərəkət geri alına bilməz.",
-          "about_to_register": "Yeni partiya yaratmaq üzrəsiniz."
-        },
-        "detail": {
-          "failed_to_load": "Partiya məlumatlarını yükləmək mümkün olmadı",
-          "party_not_found": "Partiya tapılmadı",
-          "error_loading": "Partiyanı yükləyərkən xəta",
-          "back_to_parties": "Partiyalara qayıt",
-          "description": "Təsvir",
-          "party_info": "Partiya məlumatları",
-          "leader": "Rəhbər",
-          "website": "Veb sayt",
-          "not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
-        },
-        "delete_party": "Partiyanı sil",
-        "run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin",
-        "ambassadors": {
-          "title": "Səfir Proqramı",
-          "description": "Dostlarını dəvət et və onlar təsdiqlənəndə və partiyaları subsidiya alanda mükafat qazan",
-          "leaderboard": "Liderlik cədvəli",
-          "no_rewards_yet": "Hələ mükafat yoxdur",
-          "col_ambassador": "Səfirlər",
-          "col_invited": "Dəvət edilənlər",
-          "col_reward": "Mükafat",
-          "share_referral_link": "Tövsiyə linkini paylaşın"
-        },
-        "subsidies": {
-          "title": "Partiya Subsidiya Proqramı",
-          "no_subsidies_yet": "Hələ ki, subsidiya yoxdur",
-          "description": "Seçki performansına əsaslanan maliyyələşdirmə",
-          "col_subsidy": "Subsidiya"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Seçki",
-          "not_found": "Seçki tapılmadı",
-          "not_found_description": "Axtardığınız seçki mövcud deyil.",
-          "back_to_elections": "Seçkilərə qayıt",
-          "status_active": "Aktiv",
-          "status_upcoming": "Gələcək",
-          "status_ended": "Bitmiş",
-          "election_info": "Seçki məlumatı",
-          "reward_pool": "Mükafat hovuzu: {amount} WDD",
-          "reward_pool_minimum": "Mükafat hovuzu: minimum {amount} WDD",
-          "choose_a_party": "Partiya seçin",
-          "no_parties_for_election": "Bu seçki üçün partiya yoxdur.",
-          "results_title": "Nəticələr",
-          "vote_singular": "səs",
-          "vote_plural": "səs",
-          "no_votes": "Bu seçimdə heç bir səs verilmədi.",
-          "test_election_name": "Sınaq seçkisi {n}"
-        },
-        "list": {
-          "empty_state": "Seçki tapılmadı",
-          "active_section": "Aktiv seçkilər",
-          "upcoming_section": "Gələcək seçkilər",
-          "previous_section": "Əvvəlki seçkilər"
-        }
-      }
-    },
-    "error": {
-      "title": "Nəsə xəta baş verdi",
-      "description": "Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
-      "error_id": "Xəta ID: {digest}",
-      "try_again": "Yenidən cəhd et"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Əsas gəlir",
-        "savings": "Yığım"
-      },
-      "basic_income": {
-        "subtitle_unauth": "İnsan olduğun üçün pul al",
-        "subtitle_claim": "Drahmanı tələb et",
-        "tooltip_claim": "Gündə 1 WDD, maksimum 1 WDD. Qazancı artırmaq üçün 24 saat ərzində geri qayıdın.",
-        "claim_button": "Tələb et",
-        "alert": {
-          "claim": {
-            "title": "Tələbini təsdiqlə",
-            "description": "{amount} WDD tələb edəcəksiniz. Bu məbləğ cüzdan balansınıza əlavə ediləcək."
-          }
-        },
-        "setup_subtitle": "Əsas gəliri qur",
-        "activate_loading": "Aktivləşdirilir...",
-        "activate_button": "Əsas gəliri aktivləşdir",
-        "world_drachma": "Dünya draxması (WDD) nədir?",
-        "subtitle_unauth_raised_by_humanity": "Qlobal AI dividendini tələb et"
-      },
-      "savings": {
-        "title": "Yığım hesabı",
-        "subtitle": "Hər saniyə faiz qazan",
-        "tooltip": "İllik 69% baza dərəcəsi. Yığdığını mütəmadi toplayıb yenidən yatıraraq 100%-ə yaxın effektiv gəlir əldə et. İstənilən vaxt çıxar.",
-        "deposit": "Yatır",
-        "withdraw": "Çıxar",
-        "balance": "Balans",
-        "amount_deposit": "Yatırılacaq məbləğ",
-        "amount_withdraw": "Çıxarılacaq məbləğ",
-        "interest": "Faiz",
-        "collect": "Topla",
-        "alert": {
-          "collect": {
-            "title": "Toplanmanı təsdiqlə",
-            "description": "{amount} WDD faiz toplayacaqsınız."
-          },
-          "deposit": {
-            "title": "Yatırmanı təsdiqlə",
-            "description": "{amount} WDD yatıracaqsınız."
-          },
-          "withdraw": {
-            "title": "Çıxarmanı təsdiqlə",
-            "description": "{amount} WDD çıxaracaqsınız."
-          }
-        },
-        "smart_contract_link": "Ağıllı müqaviləyə baxın",
-        "verify": "Təsdiqlə"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "HESAB",
-          "account_info": "Hesab məlumatı",
-          "referral_code": "Tövsiyə kodu",
-          "referred_by": "Dəvət edən",
-          "language": "Dil"
-        },
-        "help": {
-          "title": "KÖMƏK",
-          "quickstart": "Tez Başlanğıc",
-          "docs": "Viki",
-          "help_center": "Yardım Mərkəzi"
-        },
-        "source_code": {
-          "title": "MƏNBƏ KODU"
-        },
-        "legal": {
-          "title": "HÜQUQİ",
-          "terms": "İstifadə Şərtləri",
-          "privacy": "Məxfilik Siyasəti"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Cüzdan"
-      },
-      "balance": "Balans",
-      "modals": {
-        "sign_out": {
-          "confirm": "Hesabdan çıxmaq istədiyinizə əminsiniz?"
-        },
-        "disconnect": {
-          "confirm": "Cüzdanınızı ayırmaq istədiyinizə əminsiniz?"
-        },
-        "send": {
-          "button": "Göndər",
-          "withdraw_to_crypto": {
-            "description": "WDD-ni kripto hesabına çıxar.",
-            "amount_label": "Məbləğ",
-            "address_label": "Cüzdan ünvanı",
-            "network_label": "Şəbəkə"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper-da",
-          "ethereum_uniswap": "Ethereum WDD Uniswap-da",
-          "base_jumper": "Base Chain WDD Jumper-da",
-          "base_uniswap": "Base Chain WDD Uniswap-da",
-          "worldchain_jumper": "World Chain WDD Jumper-da",
-          "worldchain_uniswap": "World Chain WDD Uniswap-da"
-        },
-        "delete_account": {
-          "description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",
-          "deleting": "Silinir..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMask-də aç",
-          "description": "Qoşulmaq üçün bu linki kopyalayın və MetaMask-ın daxili brauzerində açın.",
-          "copy_link": "Linki kopyala"
-        },
-        "connect_wallet_picker": {
-          "description": "Bir neçə pulqabı tapıldı. Qoşulmaq üçün birini seçin."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Pulqabınız yoxdur?",
-          "find_wallet_link": "WalletGuide-da birini tapın"
-        }
-      },
-      "sections": {
-        "account": "HESAB",
-        "security": "TƏHLÜKƏSİZLİK",
-        "google_account": "Google hesabı",
-        "google_not_linked": "Bağlı deyil",
-        "passkeys": "Giriş açarları",
-        "passkeys_linked": "{count} bağlı",
-        "danger_zone": "TƏHLÜKƏ ZONASI",
-        "delete_account": {
-          "description": "Bütün məlumatlarınızı daimi olaraq silin"
-        },
-        "verification": "DOĞRULAMA",
-        "google_linked": "Bağlı",
-        "account_label": "Hesab"
-      },
-      "username": {
-        "label": "İstifadəçi adı",
-        "edit_title": "İstifadəçi adını redaktə et",
-        "description": "3-30 simvol, alfanumerik, alt xətt və tire"
-      },
-      "history": {
-        "title": "TARIXÇƏ"
-      },
-      "transactions": {
-        "failed_to_load": "Yüklənmədi",
-        "no_transactions": "Hələ əməliyyat yoxdur",
-        "wdd_per_day": "WDD/gün",
-        "just_now": "İndi",
-        "minutes_ago": "{minutes}d əvvəl",
-        "hours_ago": "{hours}s əvvəl",
-        "days_ago": "{days}g əvvəl",
-        "filter": {
-          "all_types": "Bütün növlər",
-          "select_type": "Növü seçin",
-          "rewards": "Mükafatlar"
-        },
-        "types": {
-          "withdrawal": "Çıxarış",
-          "received": "Qəbul edildi",
-          "sent": "Göndərildi",
-          "ambassador_reward": "Səfir mükafatı",
-          "party_subsidy": "Partiya subsidiyası",
-          "stream_created": "Axın yaradıldı",
-          "stream_updated": "Axın yeniləndi",
-          "savings_deposit": "Yığım yatır",
-          "savings_withdrawal": "Yığım çıxar",
-          "savings_interest": "Yığım faiz",
-          "referral_reward": "Referal mükafatı"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Self ilə təsdiqləmək üçün bu QR kodu skan et.",
-        "mobile_dialog_description": "Təsdiqi tamamlamak üçün Self tətbiqinə yönləndiriləcəksiniz.",
-        "support_telegram": "Self dəstəyi",
-        "verification_guide": "Doğrulama təlimatı",
-        "qr_alt": "Self doğrulama QR",
-        "callback_warning": "Xəbərdarlıq",
-        "callback_warning_description": "Doğrulama geri çağırış URL-i telefonunuzdan əlçatan deyil. NEXT_PUBLIC_SELF_CALLBACK-i ictimai URL-ə təyin edin (və ya NEXT_PUBLIC_PUBLIC_BASE_URL-i tunel/önizləmə domeninə təyin edin).",
-        "label": "Self",
-        "status_completed": "Təsdiqləndi",
-        "status_not_completed": "Təsdiqlənməyib",
-        "learn_about_self": "Self haqqında öyrənin",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Heç bir şəxsi məlumatı açmadan təsdiqlənmə əldə edin."
-        }
-      },
-      "verification_warning": {
-        "title": "Təsdiqlə",
-        "reward_cap_banner": "Əsas gəlir və yığım mükafatları təsdiqlənməmiş vətəndaşlar üçün məhdudlaşdırılıb. Limitsiz qazanmaq üçün hesabınızı təsdiqləyin."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Əksər pulqabları WDD-ni yalnız seçilmiş zəncirdə əl ilə idxal edildikdən sonra onun ",
-      "contract_address": "müqavilə ünvanı"
-    }
-  },
-  "toasts": {
-    "generic_error": "Xəta baş verdi",
-    "copied": "Kopyalandı",
-    "wallet": {
-      "no_wallet": "Cüzdan ünvanı yoxdur",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Göndərildi",
-      "account_deleted": "Hesab silindi",
-      "delete_failed": "Hesabı silmək alınmadı",
-      "contract_address_error": "Müqavilə ünvanına çıxarmaq olmaz",
-      "sign_out_failed": "Hesabdan çıxmaq alınmadı",
-      "google_linked": "Google hesabı bağlandı",
-      "google_already_linked": "Google hesabı artıq başqa hesaba bağlıdır",
-      "google_link_failed": "Google bağlantısı başladıla bilmədi",
-      "passkey_added": "Giriş açarı əlavə edildi",
-      "passkey_add_failed": "Giriş açarı əlavə edilə bilmədi"
-    },
-    "parties": {
-      "updated": "Yeniləndi",
-      "update_failed": "Yeniləmə uğursuz oldu",
-      "update_error": "Partiyanı yeniləyərkən xəta",
-      "registered": "Partiya qeydiyyatdan keçdi",
-      "register_failed": "Partiyanı qeydiyyatdan keçirmək mümkün olmadı",
-      "register_error": "Partiya qeydiyyatında xəta",
-      "deleted": "Silindi",
-      "delete_failed": "Silmək mümkün olmadı",
-      "delete_error": "Silinmə xətası"
-    },
-    "basic_income": {
-      "activated": "Əsas gəlir aktivləşdirildi",
-      "activate_failed": "Aktivləşdirmək alınmadı",
-      "claimed": "Tələb olundu",
-      "claim_failed": "Tələb uğursuz oldu"
-    },
-    "savings": {
-      "collected": "Toplandı",
-      "collect_failed": "Toplama uğursuz oldu",
-      "deposited": "Yatırıldı",
-      "deposit_failed": "Yatırma uğursuz oldu",
-      "withdrawn": "Çıxarıldı",
-      "withdraw_failed": "Çıxarma uğursuz oldu"
-    }
-  },
-  "common": {
-    "confirm": "Təsdiqlə",
-    "sign_in": "Daxil ol",
-    "connect": "Qoşul",
-    "disconnect": "Bağlantını kəs",
-    "connect_wallet": "Cüzdanı qoş",
-    "max": "Maks",
-    "loading": "Yüklənir...",
-    "processing": "İşlənir...",
-    "insufficient_balance": "Kifayət qədər WDD yoxdur",
-    "delete_account": "Hesabı sil",
-    "sign_out": "Çıxış",
-    "invalid_address": "Yanlış ünvan",
-    "coming_soon": "Tezliklə",
-    "withdraw": "Çıxar",
-    "trade": "Ticarət",
-    "continue": "Davam et",
-    "close": "Bağla",
-    "updating": "Yenilənir...",
-    "save": "Saxla",
-    "vote": "Səs ver",
-    "switch_to_base_chain": "Base Chain-ə keç"
-  },
-  "auth": {
-    "choose_method": "Üstünlük verdiyiniz metodu seçin.",
-    "sign_in_with_google": "Google ilə davam edin",
-    "sign_in_with_passkey": "Biometrikadan istifadə edin",
-    "sign_in_or_create": "Hesabınıza parol açarı, barmaq izi, üz skanı və ya ekran kilidi ilə daxil olun.",
-    "create_account": "Hesab yarat",
-    "create_passkey_name": "Passkey adı yarat",
-    "passkey_name_description": "Passkey-nizi şifrə idarəçisində müəyyən etmək üçün adlandırın.",
-    "passkey_name": "Passkey adı"
-  }
+	"nav": {
+		"earn": "Qazan",
+		"govern": "İdarə et",
+		"menu": "Menyu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partiyalar",
+				"elections": "Seçkilər",
+				"referendums": "Referendumlar"
+			},
+			"sections": {
+				"parties": {
+					"title": "Siyasi partiyalar"
+				},
+				"elections": {
+					"title": "Sınaq seçkiləri",
+					"subtitle": "Qlobal demokratiya ilə təcrübə et"
+				},
+				"referendums": {
+					"title": "Dünya Konstitusiya Referendumu",
+					"subtitle": "Təməl prinsiplərimiz üçün səs ver"
+				}
+			},
+			"vote": {
+				"no_active_election": "Seçki tezliklə başlayacaq",
+				"test_verification": {
+					"description": "Səsverməyə hazır olmaq üçün indi təsdiqləmə sistemimizi sınayın",
+					"button": "Sınaq"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidiyalar",
+					"ambassadors": "Səfirlər"
+				},
+				"discover": "Kəşf edin",
+				"search_placeholder": "Partiyaları axtarın...",
+				"no_parties_found": "Partiya tapılmadı",
+				"error_loading": "Partiyaları yükləmək mümkün olmadı",
+				"refresh": "Yenilə",
+				"party_details": "Partiya detalları",
+				"share_party": "Partiyanı paylaş",
+				"my_party": "Partiyam",
+				"learn_more": "Ətraflı öyrənin",
+				"party_management": "Partiya idarəetməsi",
+				"edit_party_info": "Partiya məlumatlarını redaktə et",
+				"dialogs": {
+					"party_name": "Partiya adı",
+					"description_optional": "Təsvir (istəyə bağlı)",
+					"official_link_optional": "Rəsmi keçid (istəyə bağlı)",
+					"updating": "Yenilənir...",
+					"save": "Saxla",
+					"register_party": "Partiya qeydiyyatdan keçir",
+					"register": "Qeydiyyat",
+					"registering": "Qeydiyyatdan keçirilir...",
+					"leader_warning_register": "Siz hazırda {partyName} liderisiniz. Yeni partiya qeydiyyatdan keçirmək cari partiyanızı siləcək.",
+					"deleting": "Silinir...",
+					"about_to_delete": "Siz {partyName} partiyasını silmək üzrəsiniz. Bu hərəkət geri alına bilməz.",
+					"about_to_register": "Yeni partiya yaratmaq üzrəsiniz."
+				},
+				"detail": {
+					"failed_to_load": "Partiya məlumatlarını yükləmək mümkün olmadı",
+					"party_not_found": "Partiya tapılmadı",
+					"error_loading": "Partiyanı yükləyərkən xəta",
+					"back_to_parties": "Partiyalara qayıt",
+					"description": "Təsvir",
+					"party_info": "Partiya məlumatları",
+					"leader": "Rəhbər",
+					"website": "Veb sayt",
+					"not_found_description": "Axtardığınız partiya mövcud deyil və ya ləğv edilib."
+				},
+				"delete_party": "Partiyanı sil",
+				"run_on_elections_and_earn": "Seçkilərdə iştirak edin və subsidiyalar əldə edin",
+				"ambassadors": {
+					"title": "Səfir Proqramı",
+					"description": "Dostlarını dəvət et və onlar təsdiqlənəndə və partiyaları subsidiya alanda mükafat qazan",
+					"leaderboard": "Liderlik cədvəli",
+					"no_rewards_yet": "Hələ mükafat yoxdur",
+					"col_ambassador": "Səfirlər",
+					"col_invited": "Dəvət edilənlər",
+					"col_reward": "Mükafat",
+					"share_referral_link": "Tövsiyə linkini paylaşın"
+				},
+				"subsidies": {
+					"title": "Partiya Subsidiya Proqramı",
+					"no_subsidies_yet": "Hələ ki, subsidiya yoxdur",
+					"description": "Seçki performansına əsaslanan maliyyələşdirmə",
+					"col_subsidy": "Subsidiya"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Seçki",
+					"not_found": "Seçki tapılmadı",
+					"not_found_description": "Axtardığınız seçki mövcud deyil.",
+					"back_to_elections": "Seçkilərə qayıt",
+					"status_active": "Aktiv",
+					"status_upcoming": "Gələcək",
+					"status_ended": "Bitmiş",
+					"election_info": "Seçki məlumatı",
+					"reward_pool": "Mükafat hovuzu: {amount} WDD",
+					"reward_pool_minimum": "Mükafat hovuzu: minimum {amount} WDD",
+					"choose_a_party": "Partiya seçin",
+					"no_parties_for_election": "Bu seçki üçün partiya yoxdur.",
+					"results_title": "Nəticələr",
+					"vote_singular": "səs",
+					"vote_plural": "səs",
+					"no_votes": "Bu seçimdə heç bir səs verilmədi.",
+					"test_election_name": "Sınaq seçkisi {n}"
+				},
+				"list": {
+					"empty_state": "Seçki tapılmadı",
+					"active_section": "Aktiv seçkilər",
+					"upcoming_section": "Gələcək seçkilər",
+					"previous_section": "Əvvəlki seçkilər"
+				}
+			}
+		},
+		"error": {
+			"title": "Nəsə xəta baş verdi",
+			"description": "Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
+			"error_id": "Xəta ID: {digest}",
+			"try_again": "Yenidən cəhd et"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Əsas gəlir",
+				"savings": "Yığım"
+			},
+			"basic_income": {
+				"subtitle_unauth": "İnsan olduğun üçün pul al",
+				"subtitle_claim": "Drahmanı tələb et",
+				"tooltip_claim": "Gündə 1 WDD, maksimum 1 WDD. Qazancı artırmaq üçün 24 saat ərzində geri qayıdın.",
+				"claim_button": "Tələb et",
+				"alert": {
+					"claim": {
+						"title": "Tələbini təsdiqlə",
+						"description": "{amount} WDD tələb edəcəksiniz. Bu məbləğ cüzdan balansınıza əlavə ediləcək."
+					}
+				},
+				"setup_subtitle": "Əsas gəliri qur",
+				"activate_loading": "Aktivləşdirilir...",
+				"activate_button": "Əsas gəliri aktivləşdir",
+				"world_drachma": "Dünya draxması (WDD) nədir?",
+				"subtitle_unauth_raised_by_humanity": "Qlobal AI dividendini tələb et"
+			},
+			"savings": {
+				"title": "Yığım hesabı",
+				"subtitle": "Hər saniyə faiz qazan",
+				"tooltip": "İllik 69% baza dərəcəsi. Yığdığını mütəmadi toplayıb yenidən yatıraraq 100%-ə yaxın effektiv gəlir əldə et. İstənilən vaxt çıxar.",
+				"deposit": "Yatır",
+				"withdraw": "Çıxar",
+				"balance": "Balans",
+				"amount_deposit": "Yatırılacaq məbləğ",
+				"amount_withdraw": "Çıxarılacaq məbləğ",
+				"interest": "Faiz",
+				"collect": "Topla",
+				"alert": {
+					"collect": {
+						"title": "Toplanmanı təsdiqlə",
+						"description": "{amount} WDD faiz toplayacaqsınız."
+					},
+					"deposit": {
+						"title": "Yatırmanı təsdiqlə",
+						"description": "{amount} WDD yatıracaqsınız."
+					},
+					"withdraw": {
+						"title": "Çıxarmanı təsdiqlə",
+						"description": "{amount} WDD çıxaracaqsınız."
+					}
+				},
+				"smart_contract_link": "Ağıllı müqaviləyə baxın",
+				"verify": "Təsdiqlə"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "HESAB",
+					"account_info": "Hesab məlumatı",
+					"referral_code": "Tövsiyə kodu",
+					"referred_by": "Dəvət edən",
+					"language": "Dil"
+				},
+				"help": {
+					"title": "KÖMƏK",
+					"quickstart": "Tez Başlanğıc",
+					"docs": "Viki",
+					"help_center": "Yardım Mərkəzi"
+				},
+				"source_code": {
+					"title": "MƏNBƏ KODU"
+				},
+				"legal": {
+					"title": "HÜQUQİ",
+					"terms": "İstifadə Şərtləri",
+					"privacy": "Məxfilik Siyasəti"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Cüzdan"
+			},
+			"balance": "Balans",
+			"modals": {
+				"sign_out": {
+					"confirm": "Hesabdan çıxmaq istədiyinizə əminsiniz?"
+				},
+				"disconnect": {
+					"confirm": "Cüzdanınızı ayırmaq istədiyinizə əminsiniz?"
+				},
+				"send": {
+					"button": "Göndər",
+					"withdraw_to_crypto": {
+						"description": "WDD-ni kripto hesabına çıxar.",
+						"amount_label": "Məbləğ",
+						"address_label": "Cüzdan ünvanı",
+						"network_label": "Şəbəkə"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper-da",
+					"ethereum_uniswap": "Ethereum WDD Uniswap-da",
+					"base_jumper": "Base Chain WDD Jumper-da",
+					"base_uniswap": "Base Chain WDD Uniswap-da",
+					"worldchain_jumper": "World Chain WDD Jumper-da",
+					"worldchain_uniswap": "World Chain WDD Uniswap-da"
+				},
+				"delete_account": {
+					"description": "Bu, hesabınızı və bütün məlumatlarınızı serverlərimizdən daimi olaraq siləcək. Bu əməliyyatı geri qaytarmaq mümkün deyil — xahiş edirik ehtiyatla davam edin.",
+					"deleting": "Silinir..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMask-də aç",
+					"description": "Qoşulmaq üçün bu linki kopyalayın və MetaMask-ın daxili brauzerində açın.",
+					"copy_link": "Linki kopyala"
+				},
+				"connect_wallet_picker": {
+					"description": "Bir neçə pulqabı tapıldı. Qoşulmaq üçün birini seçin."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Pulqabınız yoxdur?",
+					"find_wallet_link": "WalletGuide-da birini tapın"
+				}
+			},
+			"sections": {
+				"account": "HESAB",
+				"security": "TƏHLÜKƏSİZLİK",
+				"google_account": "Google hesabı",
+				"google_not_linked": "Bağlı deyil",
+				"passkeys": "Giriş açarları",
+				"passkeys_linked": "{count} bağlı",
+				"danger_zone": "TƏHLÜKƏ ZONASI",
+				"delete_account": {
+					"description": "Bütün məlumatlarınızı daimi olaraq silin"
+				},
+				"verification": "DOĞRULAMA",
+				"google_linked": "Bağlı",
+				"account_label": "Hesab"
+			},
+			"username": {
+				"label": "İstifadəçi adı",
+				"edit_title": "İstifadəçi adını redaktə et",
+				"description": "3-30 simvol, alfanumerik, alt xətt və tire"
+			},
+			"history": {
+				"title": "TARIXÇƏ"
+			},
+			"transactions": {
+				"failed_to_load": "Yüklənmədi",
+				"no_transactions": "Hələ əməliyyat yoxdur",
+				"wdd_per_day": "WDD/gün",
+				"just_now": "İndi",
+				"minutes_ago": "{minutes}d əvvəl",
+				"hours_ago": "{hours}s əvvəl",
+				"days_ago": "{days}g əvvəl",
+				"filter": {
+					"all_types": "Bütün növlər",
+					"select_type": "Növü seçin",
+					"rewards": "Mükafatlar"
+				},
+				"types": {
+					"withdrawal": "Çıxarış",
+					"received": "Qəbul edildi",
+					"sent": "Göndərildi",
+					"ambassador_reward": "Səfir mükafatı",
+					"party_subsidy": "Partiya subsidiyası",
+					"stream_created": "Axın yaradıldı",
+					"stream_updated": "Axın yeniləndi",
+					"savings_deposit": "Yığım yatır",
+					"savings_withdrawal": "Yığım çıxar",
+					"savings_interest": "Yığım faiz",
+					"referral_reward": "Referal mükafatı"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Self ilə təsdiqləmək üçün bu QR kodu skan et.",
+				"mobile_dialog_description": "Təsdiqi tamamlamak üçün Self tətbiqinə yönləndiriləcəksiniz.",
+				"support_telegram": "Self dəstəyi",
+				"verification_guide": "Doğrulama təlimatı",
+				"qr_alt": "Self doğrulama QR",
+				"callback_warning": "Xəbərdarlıq",
+				"callback_warning_description": "Doğrulama geri çağırış URL-i telefonunuzdan əlçatan deyil. NEXT_PUBLIC_SELF_CALLBACK-i ictimai URL-ə təyin edin (və ya NEXT_PUBLIC_PUBLIC_BASE_URL-i tunel/önizləmə domeninə təyin edin).",
+				"label": "Self",
+				"status_completed": "Təsdiqləndi",
+				"status_not_completed": "Təsdiqlənməyib",
+				"learn_about_self": "Self haqqında öyrənin",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Heç bir şəxsi məlumatı açmadan təsdiqlənmə əldə edin."
+				}
+			},
+			"verification_warning": {
+				"title": "Təsdiqlə",
+				"reward_cap_banner": "Əsas gəlir və yığım mükafatları təsdiqlənməmiş vətəndaşlar üçün məhdudlaşdırılıb. Limitsiz qazanmaq üçün hesabınızı təsdiqləyin."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Əksər pulqabları WDD-ni yalnız seçilmiş zəncirdə əl ilə idxal edildikdən sonra onun ",
+			"contract_address": "müqavilə ünvanı"
+		}
+	},
+	"toasts": {
+		"generic_error": "Xəta baş verdi",
+		"copied": "Kopyalandı",
+		"wallet": {
+			"no_wallet": "Cüzdan ünvanı yoxdur",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Göndərildi",
+			"account_deleted": "Hesab silindi",
+			"delete_failed": "Hesabı silmək alınmadı",
+			"contract_address_error": "Müqavilə ünvanına çıxarmaq olmaz",
+			"sign_out_failed": "Hesabdan çıxmaq alınmadı",
+			"google_linked": "Google hesabı bağlandı",
+			"google_already_linked": "Google hesabı artıq başqa hesaba bağlıdır",
+			"google_link_failed": "Google bağlantısı başladıla bilmədi",
+			"passkey_added": "Giriş açarı əlavə edildi",
+			"passkey_add_failed": "Giriş açarı əlavə edilə bilmədi"
+		},
+		"parties": {
+			"updated": "Yeniləndi",
+			"update_failed": "Yeniləmə uğursuz oldu",
+			"update_error": "Partiyanı yeniləyərkən xəta",
+			"registered": "Partiya qeydiyyatdan keçdi",
+			"register_failed": "Partiyanı qeydiyyatdan keçirmək mümkün olmadı",
+			"register_error": "Partiya qeydiyyatında xəta",
+			"deleted": "Silindi",
+			"delete_failed": "Silmək mümkün olmadı",
+			"delete_error": "Silinmə xətası"
+		},
+		"basic_income": {
+			"activated": "Əsas gəlir aktivləşdirildi",
+			"activate_failed": "Aktivləşdirmək alınmadı",
+			"claimed": "Tələb olundu",
+			"claim_failed": "Tələb uğursuz oldu"
+		},
+		"savings": {
+			"collected": "Toplandı",
+			"collect_failed": "Toplama uğursuz oldu",
+			"deposited": "Yatırıldı",
+			"deposit_failed": "Yatırma uğursuz oldu",
+			"withdrawn": "Çıxarıldı",
+			"withdraw_failed": "Çıxarma uğursuz oldu"
+		}
+	},
+	"common": {
+		"confirm": "Təsdiqlə",
+		"sign_in": "Daxil ol",
+		"connect": "Qoşul",
+		"disconnect": "Bağlantını kəs",
+		"connect_wallet": "Cüzdanı qoş",
+		"max": "Maks",
+		"loading": "Yüklənir...",
+		"processing": "İşlənir...",
+		"insufficient_balance": "Kifayət qədər WDD yoxdur",
+		"delete_account": "Hesabı sil",
+		"sign_out": "Çıxış",
+		"invalid_address": "Yanlış ünvan",
+		"coming_soon": "Tezliklə",
+		"withdraw": "Çıxar",
+		"trade": "Ticarət",
+		"continue": "Davam et",
+		"close": "Bağla",
+		"updating": "Yenilənir...",
+		"save": "Saxla",
+		"vote": "Səs ver",
+		"switch_to_base_chain": "Base Chain-ə keç"
+	},
+	"auth": {
+		"choose_method": "Üstünlük verdiyiniz metodu seçin.",
+		"sign_in_with_google": "Google ilə davam edin",
+		"sign_in_with_passkey": "Biometrikadan istifadə edin",
+		"sign_in_or_create": "Hesabınıza parol açarı, barmaq izi, üz skanı və ya ekran kilidi ilə daxil olun.",
+		"create_account": "Hesab yarat",
+		"create_passkey_name": "Passkey adı yarat",
+		"passkey_name_description": "Passkey-nizi şifrə idarəçisində müəyyən etmək üçün adlandırın.",
+		"passkey_name": "Passkey adı"
+	}
 }

@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "আয় করুন",
-    "govern": "শাসন করুন",
-    "menu": "মেনু"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "দলসমূহ",
-        "elections": "নির্বাচন",
-        "referendums": "গণভোট"
-      },
-      "sections": {
-        "parties": {
-          "title": "রাজনৈতিক দলসমূহ"
-        },
-        "elections": {
-          "title": "পরীক্ষামূলক নির্বাচন",
-          "subtitle": "বিশ্বব্যাপী গণতন্ত্রের পরীক্ষা করুন"
-        },
-        "referendums": {
-          "title": "বিশ্ব সংবিধান গণভোট",
-          "subtitle": "আমাদের মৌলিক নীতিমালায় ভোট দিন"
-        }
-      },
-      "vote": {
-        "no_active_election": "নির্বাচন শীঘ্রই শুরু হচ্ছে",
-        "test_verification": {
-          "description": "ভোটের জন্য প্রস্তুত থাকতে এখনই আমাদের যাচাইকরণ সিস্টেম ব্যবহার করে দেখুন",
-          "button": "পরীক্ষা"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "ভর্তুকি",
-          "ambassadors": "অ্যাম্বাসেডর"
-        },
-        "discover": "খুঁজুন",
-        "search_placeholder": "দল খুঁজুন...",
-        "no_parties_found": "কোনো দল পাওয়া যায়নি",
-        "error_loading": "দলগুলি লোড করতে ব্যর্থ",
-        "refresh": "রিফ্রেশ",
-        "party_details": "দলের বিবরণ",
-        "share_party": "দল শেয়ার করুন",
-        "my_party": "আমার দল",
-        "learn_more": "আরও জানুন",
-        "party_management": "দল ব্যবস্থাপনা",
-        "edit_party_info": "দলের তথ্য সম্পাদনা করুন",
-        "dialogs": {
-          "party_name": "দলের নাম",
-          "description_optional": "বিবরণ (ঐচ্ছিক)",
-          "official_link_optional": "অফিসিয়াল লিঙ্ক (ঐচ্ছিক)",
-          "updating": "আপডেট করা হচ্ছে...",
-          "save": "সংরক্ষণ করুন",
-          "register_party": "একটি দল নিবন্ধন করুন",
-          "register": "নিবন্ধন",
-          "registering": "নিবন্ধন করা হচ্ছে...",
-          "leader_warning_register": "আপনি বর্তমানে {partyName} এর নেতা। একটি নতুন দল নিবন্ধন করলে আপনার বর্তমান দল মুছে যাবে।",
-          "deleting": "মুছে ফেলা হচ্ছে...",
-          "about_to_delete": "আপনি {partyName} মুছে ফেলতে চলেছেন। এই কাজটি পূর্বাবস্থায় ফিরিয়ে আনা যাবে না।",
-          "about_to_register": "আপনি একটি নতুন দল প্রতিষ্ঠা করতে যাচ্ছেন।"
-        },
-        "detail": {
-          "failed_to_load": "দলের ডেটা লোড করতে ব্যর্থ",
-          "party_not_found": "দল পাওয়া যায়নি",
-          "error_loading": "দল লোড করতে ত্রুটি",
-          "back_to_parties": "দলে ফিরে যান",
-          "description": "বিবরণ",
-          "party_info": "দলের তথ্য",
-          "leader": "নেতা",
-          "website": "ওয়েবসাইট",
-          "not_found_description": "আপনি যে দল খুঁজছেন তা বিদ্যমান নেই বা ভেঙে দেওয়া হয়েছে।"
-        },
-        "delete_party": "দল মুছে ফেলুন",
-        "run_on_elections_and_earn": "নির্বাচনে অংশ নিন এবং ভর্তুকি পান",
-        "ambassadors": {
-          "title": "অ্যাম্বাসেডর প্রোগ্রাম",
-          "description": "বন্ধুদের আমন্ত্রণ করুন এবং তারা যাচাই সম্পন্ন করলে ও তাদের দল ভর্তুকি পেলে পুরস্কার অর্জন করুন",
-          "leaderboard": "লিডারবোর্ড",
-          "no_rewards_yet": "এখনও কোনো পুরস্কার নেই",
-          "col_ambassador": "অ্যাম্বাসেডর",
-          "col_invited": "আমন্ত্রিত",
-          "col_reward": "পুরস্কার",
-          "share_referral_link": "রেফারেল লিংক শেয়ার করুন"
-        },
-        "subsidies": {
-          "title": "পার্টি ভর্তুকি প্রোগ্রাম",
-          "no_subsidies_yet": "এখনও কোনো ভর্তুকি নেই",
-          "description": "নির্বাচনী পারফরম্যান্সের ভিত্তিতে অর্থায়ন",
-          "col_subsidy": "ভর্তুকি"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "নির্বাচন",
-          "not_found": "নির্বাচন পাওয়া যায়নি",
-          "not_found_description": "আপনি যে নির্বাচনটি খুঁজছেন তা বিদ্যমান নেই।",
-          "back_to_elections": "নির্বাচনে ফিরে যান",
-          "status_active": "সক্রিয়",
-          "status_upcoming": "আসন্ন",
-          "status_ended": "সমাপ্ত",
-          "election_info": "নির্বাচনের তথ্য",
-          "reward_pool": "পুরস্কার পুল: {amount} WDD",
-          "reward_pool_minimum": "পুরস্কার পুল: সর্বনিম্ন {amount} WDD",
-          "choose_a_party": "একটি দল বেছে নিন",
-          "no_parties_for_election": "এই নির্বাচনের জন্য কোনো দল উপলব্ধ নেই।",
-          "results_title": "ফলাফল",
-          "vote_singular": "ভোট",
-          "vote_plural": "ভোট",
-          "no_votes": "এই নির্বাচনে কোনো ভোট পড়েনি।",
-          "test_election_name": "পরীক্ষামূলক নির্বাচন {n}"
-        },
-        "list": {
-          "empty_state": "কোন নির্বাচন পাওয়া যায়নি",
-          "active_section": "সক্রিয় নির্বাচন",
-          "upcoming_section": "আসন্ন নির্বাচন",
-          "previous_section": "পূর্ববর্তী নির্বাচন"
-        }
-      }
-    },
-    "error": {
-      "title": "কিছু ভুল হয়েছে",
-      "description": "একটি অপ্রত্যাশিত ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
-      "error_id": "ত্রুটি ID: {digest}",
-      "try_again": "আবার চেষ্টা করুন"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "মৌলিক আয়",
-        "savings": "সঞ্চয়"
-      },
-      "basic_income": {
-        "subtitle_unauth": "মানুষ হওয়ার জন্য অর্থ পান",
-        "subtitle_claim": "আপনার দ্রাখমা দাবি করুন",
-        "tooltip_claim": "১ WDD/দিন, সর্বোচ্চ ১ WDD পর্যন্ত। সর্বোচ্চ আয়ের জন্য ২৪ ঘণ্টার মধ্যে ফিরে আসুন।",
-        "claim_button": "দাবি করুন",
-        "alert": {
-          "claim": {
-            "title": "দাবি নিশ্চিত করুন",
-            "description": "আপনি {amount} WDD দাবি করতে যাচ্ছেন। এটি আপনার ওয়ালেট ব্যালেন্সে যোগ হবে।"
-          }
-        },
-        "setup_subtitle": "আপনার মৌলিক আয় সেটআপ করুন",
-        "activate_loading": "সক্রিয় করা হচ্ছে...",
-        "activate_button": "মৌলিক আয় সক্রিয় করুন",
-        "world_drachma": "বিশ্ব দ্রাখমা (WDD) কী?",
-        "subtitle_unauth_raised_by_humanity": "আপনার বৈশ্বিক এআই লভ্যাংশ দাবি করুন"
-      },
-      "savings": {
-        "title": "সঞ্চয় অ্যাকাউন্ট",
-        "subtitle": "প্রতি সেকেন্ডে সুদ আয় করুন",
-        "tooltip": "৬৯% বার্ষিক মৌলিক হার। নিয়মিত সংগ্রহ ও পুনর্বিনিয়োগ করে প্রায় ১০০% কার্যকর রিটার্ন অর্জন করুন। যেকোনো সময় উত্তোলন করুন।",
-        "deposit": "জমা দিন",
-        "withdraw": "উত্তোলন করুন",
-        "balance": "ব্যালেন্স",
-        "amount_deposit": "জমা করার পরিমাণ",
-        "amount_withdraw": "উত্তোলনের পরিমাণ",
-        "interest": "সুদ",
-        "collect": "সংগ্রহ করুন",
-        "alert": {
-          "collect": {
-            "title": "সংগ্রহ নিশ্চিত করুন",
-            "description": "আপনি {amount} WDD সুদ সংগ্রহ করতে যাচ্ছেন।"
-          },
-          "deposit": {
-            "title": "জমা নিশ্চিত করুন",
-            "description": "আপনি {amount} WDD জমা করতে যাচ্ছেন।"
-          },
-          "withdraw": {
-            "title": "উত্তোলন নিশ্চিত করুন",
-            "description": "আপনি {amount} WDD উত্তোলন করতে যাচ্ছেন।"
-          }
-        },
-        "smart_contract_link": "স্মার্ট চুক্তি দেখুন",
-        "verify": "যাচাই করুন"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "অ্যাকাউন্ট",
-          "account_info": "অ্যাকাউন্ট তথ্য",
-          "referral_code": "রেফারেল কোড",
-          "referred_by": "যিনি রেফার করেছেন",
-          "language": "ভাষা"
-        },
-        "help": {
-          "title": "সাহায্য",
-          "quickstart": "দ্রুত শুরু",
-          "docs": "উইকি",
-          "help_center": "সহায়তা কেন্দ্র"
-        },
-        "source_code": {
-          "title": "সোর্স কোড"
-        },
-        "legal": {
-          "title": "আইনি",
-          "terms": "ব্যবহারের শর্তাবলী",
-          "privacy": "গোপনীয়তা নীতি"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "ওয়ালেট"
-      },
-      "balance": "ব্যালেন্স",
-      "modals": {
-        "sign_out": {
-          "confirm": "আপনি কি নিশ্চিত যে আপনি সাইন আউট করতে চান?"
-        },
-        "disconnect": {
-          "confirm": "আপনি কি নিশ্চিত যে আপনি আপনার ওয়ালেট সংযোগ বিচ্ছিন্ন করতে চান?"
-        },
-        "send": {
-          "button": "পাঠান",
-          "withdraw_to_crypto": {
-            "description": "WDD একটি crypto অ্যাকাউন্টে প্রত্যাহার করুন।",
-            "amount_label": "পরিমাণ",
-            "address_label": "ওয়ালেট ঠিকানা",
-            "network_label": "নেটওয়ার্ক"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper-এ",
-          "ethereum_uniswap": "Ethereum WDD Uniswap-এ",
-          "base_jumper": "Base Chain WDD Jumper-এ",
-          "base_uniswap": "Base Chain WDD Uniswap-এ",
-          "worldchain_jumper": "World Chain WDD Jumper-এ",
-          "worldchain_uniswap": "World Chain WDD Uniswap-এ"
-        },
-        "delete_account": {
-          "description": "এটি আপনার অ্যাকাউন্ট স্থায়ীভাবে মুছে ফেলবে এবং আমাদের সার্ভার থেকে আপনার সমস্ত ডেটা সরিয়ে দেবে। এই কাজটি অসম্পন্ন করা যাবে না — অনুগ্রহ করে সাবধানে এগিয়ে যান।",
-          "deleting": "মুছে ফেলছে..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMask-এ খুলুন",
-          "description": "সংযোগ করতে, এই লিঙ্কটি কপি করুন এবং এটি MetaMask-এর বিল্ট-ইন ব্রাউজারে খুলুন।",
-          "copy_link": "লিংক কপি করুন"
-        },
-        "connect_wallet_picker": {
-          "description": "একাধিক ওয়ালেট পাওয়া গেছে। সংযোগ করতে একটি নির্বাচন করুন।"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ওয়ালেট নেই?",
-          "find_wallet_link": "WalletGuide-এ একটি খুঁজুন"
-        }
-      },
-      "sections": {
-        "account": "অ্যাকাউন্ট",
-        "security": "নিরাপত্তা",
-        "google_account": "Google অ্যাকাউন্ট",
-        "google_not_linked": "সংযুক্ত নেই",
-        "passkeys": "পাসকি",
-        "passkeys_linked": "{count} সংযুক্ত",
-        "danger_zone": "বিপজ্জনক অঞ্চল",
-        "delete_account": {
-          "description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
-        },
-        "verification": "যাচাইকরণ",
-        "google_linked": "সংযুক্ত",
-        "account_label": "অ্যাকাউন্ট"
-      },
-      "username": {
-        "label": "ব্যবহারকারীর নাম",
-        "edit_title": "ব্যবহারকারীর নাম সম্পাদনা করুন",
-        "description": "3-30 অক্ষর, বর্ণানুক্রমিক-সংখ্যাসূচক, আন্ডারস্কোর এবং হাইফেন"
-      },
-      "history": {
-        "title": "ইতিহাস"
-      },
-      "transactions": {
-        "failed_to_load": "লোড করতে ব্যর্থ",
-        "no_transactions": "এখনও কোনও লেনদেন নেই",
-        "wdd_per_day": "WDD/দিন",
-        "just_now": "এখনই",
-        "minutes_ago": "{minutes}মি আগে",
-        "hours_ago": "{hours}ঘ আগে",
-        "days_ago": "{days}দিন আগে",
-        "filter": {
-          "all_types": "সব ধরন",
-          "select_type": "ধরন নির্বাচন করুন",
-          "rewards": "পুরস্কার"
-        },
-        "types": {
-          "withdrawal": "উত্তোলন",
-          "received": "প্রাপ্ত",
-          "sent": "প্রেরিত",
-          "ambassador_reward": "রাষ্ট্রদূত পুরস্কার",
-          "party_subsidy": "পার্টি ভর্তুকি",
-          "stream_created": "স্ট্রিম তৈরি হয়েছে",
-          "stream_updated": "স্ট্রিম আপডেট হয়েছে",
-          "savings_deposit": "সঞ্চয় জমা দিন",
-          "savings_withdrawal": "সঞ্চয় উত্তোলন করুন",
-          "savings_interest": "সঞ্চয় সুদ",
-          "referral_reward": "রেফারেল পুরস্কার"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Self দিয়ে যাচাই করতে এই কিউআর কোডটি স্ক্যান করুন।",
-        "mobile_dialog_description": "যাচাইকরণ সম্পূর্ণ করতে আপনাকে Self অ্যাপে পাঠানো হবে।",
-        "support_telegram": "Self সাপোর্ট",
-        "verification_guide": "যাচাইকরণ নির্দেশিকা",
-        "qr_alt": "Self যাচাইকরণ QR",
-        "callback_warning": "সতর্কতা",
-        "callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।",
-        "label": "Self",
-        "status_completed": "যাচাইকৃত",
-        "status_not_completed": "যাচাইকৃত নয়",
-        "learn_about_self": "Self সম্পর্কে জানুন",
-        "primer": {
-          "title": "Self প্রোটোকল",
-          "description": "কোনো ব্যক্তিগত তথ্য প্রকাশ না করেই যাচাই করুন।"
-        }
-      },
-      "verification_warning": {
-        "title": "যাচাইকরণ পান",
-        "reward_cap_banner": "অযাচাইকৃত নাগরিকদের জন্য বেসিক ইনকাম ও সেভিংস পুরস্কারে সীমা আছে। সীমাহীনভাবে আয় করতে আপনার অ্যাকাউন্ট যাচাই করুন।"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "বেশিরভাগ ওয়ালেট শুধুমাত্র নির্বাচিত চেইনে এর ",
-      "contract_address": "কন্ট্রাক্ট ঠিকানা"
-    }
-  },
-  "toasts": {
-    "generic_error": "একটি ত্রুটি ঘটেছে",
-    "copied": "কপি করা হয়েছে",
-    "wallet": {
-      "no_wallet": "কোনো ওয়ালেট ঠিকানা নেই",
-      "min_amount": "ন্যূনতম ১০ WDD",
-      "sent": "পাঠানো হয়েছে",
-      "account_deleted": "অ্যাকাউন্ট মুছে ফেলা হয়েছে",
-      "delete_failed": "অ্যাকাউন্ট মুছে ফেলতে ব্যর্থ",
-      "contract_address_error": "চুক্তির ঠিকানায় উত্তোলন করা যাবে না",
-      "sign_out_failed": "সাইন আউট ব্যর্থ",
-      "google_linked": "Google অ্যাকাউন্ট সংযুক্ত হয়েছে",
-      "google_already_linked": "Google অ্যাকাউন্ট ইতিমধ্যে অন্য অ্যাকাউন্টের সাথে সংযুক্ত",
-      "google_link_failed": "Google সংযোগ শুরু করা যায়নি",
-      "passkey_added": "পাসকি যোগ করা হয়েছে",
-      "passkey_add_failed": "পাসকি যোগ করা যায়নি"
-    },
-    "parties": {
-      "updated": "আপডেট করা হয়েছে",
-      "update_failed": "আপডেট ব্যর্থ",
-      "update_error": "দল আপডেটে ত্রুটি",
-      "registered": "দল নিবন্ধিত হয়েছে",
-      "register_failed": "দল নিবন্ধন করতে ব্যর্থ",
-      "register_error": "দল নিবন্ধনে ত্রুটি",
-      "deleted": "মুছে ফেলা হয়েছে",
-      "delete_failed": "মুছে ফেলতে ব্যর্থ",
-      "delete_error": "মুছে ফেলার ত্রুটি"
-    },
-    "basic_income": {
-      "activated": "মৌলিক আয় সক্রিয় হয়েছে",
-      "activate_failed": "সক্রিয় করতে ব্যর্থ",
-      "claimed": "দাবি করা হয়েছে",
-      "claim_failed": "দাবি করতে ব্যর্থ"
-    },
-    "savings": {
-      "collected": "সংগৃহীত",
-      "collect_failed": "সংগ্রহ করতে ব্যর্থ",
-      "deposited": "জমা হয়েছে",
-      "deposit_failed": "জমা ব্যর্থ",
-      "withdrawn": "উত্তোলন করা হয়েছে",
-      "withdraw_failed": "উত্তোলন ব্যর্থ"
-    }
-  },
-  "common": {
-    "confirm": "নিশ্চিত করুন",
-    "sign_in": "সাইন ইন",
-    "connect": "সংযোগ করুন",
-    "disconnect": "বিচ্ছিন্ন করুন",
-    "connect_wallet": "ওয়ালেট সংযোগ করুন",
-    "max": "সর্বোচ্চ",
-    "loading": "লোড হচ্ছে...",
-    "processing": "প্রক্রিয়াকরণ...",
-    "insufficient_balance": "পর্যাপ্ত WDD নেই",
-    "delete_account": "অ্যাকাউন্ট মুছুন",
-    "sign_out": "সাইন আউট",
-    "invalid_address": "অবৈধ ঠিকানা",
-    "coming_soon": "শীঘ্রই আসছে",
-    "withdraw": "উত্তোলন",
-    "trade": "ট্রেড",
-    "continue": "চালিয়ে যান",
-    "close": "বন্ধ করুন",
-    "updating": "আপডেট করা হচ্ছে...",
-    "save": "সংরক্ষণ করুন",
-    "vote": "ভোট দিন",
-    "switch_to_base_chain": "Base Chain-এ স্যুইচ করুন"
-  },
-  "auth": {
-    "choose_method": "আপনার পছন্দের পদ্ধতি বেছে নিন।",
-    "sign_in_with_google": "Google দিয়ে চালিয়ে যান",
-    "sign_in_with_passkey": "বায়োমেট্রিক ব্যবহার করুন",
-    "sign_in_or_create": "আপনার পাসকি ব্যবহার করে আপনার অ্যাকাউন্টে অ্যাক্সেস করুন, আপনার আঙুলের ছাপ, মুখ স্ক্যান বা স্ক্রীন লক ব্যবহার করে।",
-    "create_account": "অ্যাকাউন্ট তৈরি করুন",
-    "create_passkey_name": "পাসকি নাম তৈরি করুন",
-    "passkey_name_description": "আপনার পাসওয়ার্ড ম্যানেজারে এটি সনাক্ত করতে আপনার পাসকি নাম দিন।",
-    "passkey_name": "পাসকি নাম"
-  }
+	"nav": {
+		"earn": "আয় করুন",
+		"govern": "শাসন করুন",
+		"menu": "মেনু"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "দলসমূহ",
+				"elections": "নির্বাচন",
+				"referendums": "গণভোট"
+			},
+			"sections": {
+				"parties": {
+					"title": "রাজনৈতিক দলসমূহ"
+				},
+				"elections": {
+					"title": "পরীক্ষামূলক নির্বাচন",
+					"subtitle": "বিশ্বব্যাপী গণতন্ত্রের পরীক্ষা করুন"
+				},
+				"referendums": {
+					"title": "বিশ্ব সংবিধান গণভোট",
+					"subtitle": "আমাদের মৌলিক নীতিমালায় ভোট দিন"
+				}
+			},
+			"vote": {
+				"no_active_election": "নির্বাচন শীঘ্রই শুরু হচ্ছে",
+				"test_verification": {
+					"description": "ভোটের জন্য প্রস্তুত থাকতে এখনই আমাদের যাচাইকরণ সিস্টেম ব্যবহার করে দেখুন",
+					"button": "পরীক্ষা"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "ভর্তুকি",
+					"ambassadors": "অ্যাম্বাসেডর"
+				},
+				"discover": "খুঁজুন",
+				"search_placeholder": "দল খুঁজুন...",
+				"no_parties_found": "কোনো দল পাওয়া যায়নি",
+				"error_loading": "দলগুলি লোড করতে ব্যর্থ",
+				"refresh": "রিফ্রেশ",
+				"party_details": "দলের বিবরণ",
+				"share_party": "দল শেয়ার করুন",
+				"my_party": "আমার দল",
+				"learn_more": "আরও জানুন",
+				"party_management": "দল ব্যবস্থাপনা",
+				"edit_party_info": "দলের তথ্য সম্পাদনা করুন",
+				"dialogs": {
+					"party_name": "দলের নাম",
+					"description_optional": "বিবরণ (ঐচ্ছিক)",
+					"official_link_optional": "অফিসিয়াল লিঙ্ক (ঐচ্ছিক)",
+					"updating": "আপডেট করা হচ্ছে...",
+					"save": "সংরক্ষণ করুন",
+					"register_party": "একটি দল নিবন্ধন করুন",
+					"register": "নিবন্ধন",
+					"registering": "নিবন্ধন করা হচ্ছে...",
+					"leader_warning_register": "আপনি বর্তমানে {partyName} এর নেতা। একটি নতুন দল নিবন্ধন করলে আপনার বর্তমান দল মুছে যাবে।",
+					"deleting": "মুছে ফেলা হচ্ছে...",
+					"about_to_delete": "আপনি {partyName} মুছে ফেলতে চলেছেন। এই কাজটি পূর্বাবস্থায় ফিরিয়ে আনা যাবে না।",
+					"about_to_register": "আপনি একটি নতুন দল প্রতিষ্ঠা করতে যাচ্ছেন।"
+				},
+				"detail": {
+					"failed_to_load": "দলের ডেটা লোড করতে ব্যর্থ",
+					"party_not_found": "দল পাওয়া যায়নি",
+					"error_loading": "দল লোড করতে ত্রুটি",
+					"back_to_parties": "দলে ফিরে যান",
+					"description": "বিবরণ",
+					"party_info": "দলের তথ্য",
+					"leader": "নেতা",
+					"website": "ওয়েবসাইট",
+					"not_found_description": "আপনি যে দল খুঁজছেন তা বিদ্যমান নেই বা ভেঙে দেওয়া হয়েছে।"
+				},
+				"delete_party": "দল মুছে ফেলুন",
+				"run_on_elections_and_earn": "নির্বাচনে অংশ নিন এবং ভর্তুকি পান",
+				"ambassadors": {
+					"title": "অ্যাম্বাসেডর প্রোগ্রাম",
+					"description": "বন্ধুদের আমন্ত্রণ করুন এবং তারা যাচাই সম্পন্ন করলে ও তাদের দল ভর্তুকি পেলে পুরস্কার অর্জন করুন",
+					"leaderboard": "লিডারবোর্ড",
+					"no_rewards_yet": "এখনও কোনো পুরস্কার নেই",
+					"col_ambassador": "অ্যাম্বাসেডর",
+					"col_invited": "আমন্ত্রিত",
+					"col_reward": "পুরস্কার",
+					"share_referral_link": "রেফারেল লিংক শেয়ার করুন"
+				},
+				"subsidies": {
+					"title": "পার্টি ভর্তুকি প্রোগ্রাম",
+					"no_subsidies_yet": "এখনও কোনো ভর্তুকি নেই",
+					"description": "নির্বাচনী পারফরম্যান্সের ভিত্তিতে অর্থায়ন",
+					"col_subsidy": "ভর্তুকি"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "নির্বাচন",
+					"not_found": "নির্বাচন পাওয়া যায়নি",
+					"not_found_description": "আপনি যে নির্বাচনটি খুঁজছেন তা বিদ্যমান নেই।",
+					"back_to_elections": "নির্বাচনে ফিরে যান",
+					"status_active": "সক্রিয়",
+					"status_upcoming": "আসন্ন",
+					"status_ended": "সমাপ্ত",
+					"election_info": "নির্বাচনের তথ্য",
+					"reward_pool": "পুরস্কার পুল: {amount} WDD",
+					"reward_pool_minimum": "পুরস্কার পুল: সর্বনিম্ন {amount} WDD",
+					"choose_a_party": "একটি দল বেছে নিন",
+					"no_parties_for_election": "এই নির্বাচনের জন্য কোনো দল উপলব্ধ নেই।",
+					"results_title": "ফলাফল",
+					"vote_singular": "ভোট",
+					"vote_plural": "ভোট",
+					"no_votes": "এই নির্বাচনে কোনো ভোট পড়েনি।",
+					"test_election_name": "পরীক্ষামূলক নির্বাচন {n}"
+				},
+				"list": {
+					"empty_state": "কোন নির্বাচন পাওয়া যায়নি",
+					"active_section": "সক্রিয় নির্বাচন",
+					"upcoming_section": "আসন্ন নির্বাচন",
+					"previous_section": "পূর্ববর্তী নির্বাচন"
+				}
+			}
+		},
+		"error": {
+			"title": "কিছু ভুল হয়েছে",
+			"description": "একটি অপ্রত্যাশিত ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+			"error_id": "ত্রুটি ID: {digest}",
+			"try_again": "আবার চেষ্টা করুন"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "মৌলিক আয়",
+				"savings": "সঞ্চয়"
+			},
+			"basic_income": {
+				"subtitle_unauth": "মানুষ হওয়ার জন্য অর্থ পান",
+				"subtitle_claim": "আপনার দ্রাখমা দাবি করুন",
+				"tooltip_claim": "১ WDD/দিন, সর্বোচ্চ ১ WDD পর্যন্ত। সর্বোচ্চ আয়ের জন্য ২৪ ঘণ্টার মধ্যে ফিরে আসুন।",
+				"claim_button": "দাবি করুন",
+				"alert": {
+					"claim": {
+						"title": "দাবি নিশ্চিত করুন",
+						"description": "আপনি {amount} WDD দাবি করতে যাচ্ছেন। এটি আপনার ওয়ালেট ব্যালেন্সে যোগ হবে।"
+					}
+				},
+				"setup_subtitle": "আপনার মৌলিক আয় সেটআপ করুন",
+				"activate_loading": "সক্রিয় করা হচ্ছে...",
+				"activate_button": "মৌলিক আয় সক্রিয় করুন",
+				"world_drachma": "বিশ্ব দ্রাখমা (WDD) কী?",
+				"subtitle_unauth_raised_by_humanity": "আপনার বৈশ্বিক এআই লভ্যাংশ দাবি করুন"
+			},
+			"savings": {
+				"title": "সঞ্চয় অ্যাকাউন্ট",
+				"subtitle": "প্রতি সেকেন্ডে সুদ আয় করুন",
+				"tooltip": "৬৯% বার্ষিক মৌলিক হার। নিয়মিত সংগ্রহ ও পুনর্বিনিয়োগ করে প্রায় ১০০% কার্যকর রিটার্ন অর্জন করুন। যেকোনো সময় উত্তোলন করুন।",
+				"deposit": "জমা দিন",
+				"withdraw": "উত্তোলন করুন",
+				"balance": "ব্যালেন্স",
+				"amount_deposit": "জমা করার পরিমাণ",
+				"amount_withdraw": "উত্তোলনের পরিমাণ",
+				"interest": "সুদ",
+				"collect": "সংগ্রহ করুন",
+				"alert": {
+					"collect": {
+						"title": "সংগ্রহ নিশ্চিত করুন",
+						"description": "আপনি {amount} WDD সুদ সংগ্রহ করতে যাচ্ছেন।"
+					},
+					"deposit": {
+						"title": "জমা নিশ্চিত করুন",
+						"description": "আপনি {amount} WDD জমা করতে যাচ্ছেন।"
+					},
+					"withdraw": {
+						"title": "উত্তোলন নিশ্চিত করুন",
+						"description": "আপনি {amount} WDD উত্তোলন করতে যাচ্ছেন।"
+					}
+				},
+				"smart_contract_link": "স্মার্ট চুক্তি দেখুন",
+				"verify": "যাচাই করুন"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "অ্যাকাউন্ট",
+					"account_info": "অ্যাকাউন্ট তথ্য",
+					"referral_code": "রেফারেল কোড",
+					"referred_by": "যিনি রেফার করেছেন",
+					"language": "ভাষা"
+				},
+				"help": {
+					"title": "সাহায্য",
+					"quickstart": "দ্রুত শুরু",
+					"docs": "উইকি",
+					"help_center": "সহায়তা কেন্দ্র"
+				},
+				"source_code": {
+					"title": "সোর্স কোড"
+				},
+				"legal": {
+					"title": "আইনি",
+					"terms": "ব্যবহারের শর্তাবলী",
+					"privacy": "গোপনীয়তা নীতি"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "ওয়ালেট"
+			},
+			"balance": "ব্যালেন্স",
+			"modals": {
+				"sign_out": {
+					"confirm": "আপনি কি নিশ্চিত যে আপনি সাইন আউট করতে চান?"
+				},
+				"disconnect": {
+					"confirm": "আপনি কি নিশ্চিত যে আপনি আপনার ওয়ালেট সংযোগ বিচ্ছিন্ন করতে চান?"
+				},
+				"send": {
+					"button": "পাঠান",
+					"withdraw_to_crypto": {
+						"description": "WDD একটি crypto অ্যাকাউন্টে প্রত্যাহার করুন।",
+						"amount_label": "পরিমাণ",
+						"address_label": "ওয়ালেট ঠিকানা",
+						"network_label": "নেটওয়ার্ক"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper-এ",
+					"ethereum_uniswap": "Ethereum WDD Uniswap-এ",
+					"base_jumper": "Base Chain WDD Jumper-এ",
+					"base_uniswap": "Base Chain WDD Uniswap-এ",
+					"worldchain_jumper": "World Chain WDD Jumper-এ",
+					"worldchain_uniswap": "World Chain WDD Uniswap-এ"
+				},
+				"delete_account": {
+					"description": "এটি আপনার অ্যাকাউন্ট স্থায়ীভাবে মুছে ফেলবে এবং আমাদের সার্ভার থেকে আপনার সমস্ত ডেটা সরিয়ে দেবে। এই কাজটি অসম্পন্ন করা যাবে না — অনুগ্রহ করে সাবধানে এগিয়ে যান।",
+					"deleting": "মুছে ফেলছে..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMask-এ খুলুন",
+					"description": "সংযোগ করতে, এই লিঙ্কটি কপি করুন এবং এটি MetaMask-এর বিল্ট-ইন ব্রাউজারে খুলুন।",
+					"copy_link": "লিংক কপি করুন"
+				},
+				"connect_wallet_picker": {
+					"description": "একাধিক ওয়ালেট পাওয়া গেছে। সংযোগ করতে একটি নির্বাচন করুন।"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ওয়ালেট নেই?",
+					"find_wallet_link": "WalletGuide-এ একটি খুঁজুন"
+				}
+			},
+			"sections": {
+				"account": "অ্যাকাউন্ট",
+				"security": "নিরাপত্তা",
+				"google_account": "Google অ্যাকাউন্ট",
+				"google_not_linked": "সংযুক্ত নেই",
+				"passkeys": "পাসকি",
+				"passkeys_linked": "{count} সংযুক্ত",
+				"danger_zone": "বিপজ্জনক অঞ্চল",
+				"delete_account": {
+					"description": "আপনার সমস্ত ডেটা স্থায়ীভাবে সরান"
+				},
+				"verification": "যাচাইকরণ",
+				"google_linked": "সংযুক্ত",
+				"account_label": "অ্যাকাউন্ট"
+			},
+			"username": {
+				"label": "ব্যবহারকারীর নাম",
+				"edit_title": "ব্যবহারকারীর নাম সম্পাদনা করুন",
+				"description": "3-30 অক্ষর, বর্ণানুক্রমিক-সংখ্যাসূচক, আন্ডারস্কোর এবং হাইফেন"
+			},
+			"history": {
+				"title": "ইতিহাস"
+			},
+			"transactions": {
+				"failed_to_load": "লোড করতে ব্যর্থ",
+				"no_transactions": "এখনও কোনও লেনদেন নেই",
+				"wdd_per_day": "WDD/দিন",
+				"just_now": "এখনই",
+				"minutes_ago": "{minutes}মি আগে",
+				"hours_ago": "{hours}ঘ আগে",
+				"days_ago": "{days}দিন আগে",
+				"filter": {
+					"all_types": "সব ধরন",
+					"select_type": "ধরন নির্বাচন করুন",
+					"rewards": "পুরস্কার"
+				},
+				"types": {
+					"withdrawal": "উত্তোলন",
+					"received": "প্রাপ্ত",
+					"sent": "প্রেরিত",
+					"ambassador_reward": "রাষ্ট্রদূত পুরস্কার",
+					"party_subsidy": "পার্টি ভর্তুকি",
+					"stream_created": "স্ট্রিম তৈরি হয়েছে",
+					"stream_updated": "স্ট্রিম আপডেট হয়েছে",
+					"savings_deposit": "সঞ্চয় জমা দিন",
+					"savings_withdrawal": "সঞ্চয় উত্তোলন করুন",
+					"savings_interest": "সঞ্চয় সুদ",
+					"referral_reward": "রেফারেল পুরস্কার"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Self দিয়ে যাচাই করতে এই কিউআর কোডটি স্ক্যান করুন।",
+				"mobile_dialog_description": "যাচাইকরণ সম্পূর্ণ করতে আপনাকে Self অ্যাপে পাঠানো হবে।",
+				"support_telegram": "Self সাপোর্ট",
+				"verification_guide": "যাচাইকরণ নির্দেশিকা",
+				"qr_alt": "Self যাচাইকরণ QR",
+				"callback_warning": "সতর্কতা",
+				"callback_warning_description": "যাচাইকরণ কলব্যাক URL আপনার ফোন থেকে অ্যাক্সেসযোগ্য নয়। NEXT_PUBLIC_SELF_CALLBACK একটি পাবলিক URL-এ সেট করুন (অথবা NEXT_PUBLIC_PUBLIC_BASE_URL একটি টানেল/প্রিভিউ ডোমেইনে সেট করুন)।",
+				"label": "Self",
+				"status_completed": "যাচাইকৃত",
+				"status_not_completed": "যাচাইকৃত নয়",
+				"learn_about_self": "Self সম্পর্কে জানুন",
+				"primer": {
+					"title": "Self প্রোটোকল",
+					"description": "কোনো ব্যক্তিগত তথ্য প্রকাশ না করেই যাচাই করুন।"
+				}
+			},
+			"verification_warning": {
+				"title": "যাচাইকরণ পান",
+				"reward_cap_banner": "অযাচাইকৃত নাগরিকদের জন্য বেসিক ইনকাম ও সেভিংস পুরস্কারে সীমা আছে। সীমাহীনভাবে আয় করতে আপনার অ্যাকাউন্ট যাচাই করুন।"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "বেশিরভাগ ওয়ালেট শুধুমাত্র নির্বাচিত চেইনে এর ",
+			"contract_address": "কন্ট্রাক্ট ঠিকানা"
+		}
+	},
+	"toasts": {
+		"generic_error": "একটি ত্রুটি ঘটেছে",
+		"copied": "কপি করা হয়েছে",
+		"wallet": {
+			"no_wallet": "কোনো ওয়ালেট ঠিকানা নেই",
+			"min_amount": "ন্যূনতম ১০ WDD",
+			"sent": "পাঠানো হয়েছে",
+			"account_deleted": "অ্যাকাউন্ট মুছে ফেলা হয়েছে",
+			"delete_failed": "অ্যাকাউন্ট মুছে ফেলতে ব্যর্থ",
+			"contract_address_error": "চুক্তির ঠিকানায় উত্তোলন করা যাবে না",
+			"sign_out_failed": "সাইন আউট ব্যর্থ",
+			"google_linked": "Google অ্যাকাউন্ট সংযুক্ত হয়েছে",
+			"google_already_linked": "Google অ্যাকাউন্ট ইতিমধ্যে অন্য অ্যাকাউন্টের সাথে সংযুক্ত",
+			"google_link_failed": "Google সংযোগ শুরু করা যায়নি",
+			"passkey_added": "পাসকি যোগ করা হয়েছে",
+			"passkey_add_failed": "পাসকি যোগ করা যায়নি"
+		},
+		"parties": {
+			"updated": "আপডেট করা হয়েছে",
+			"update_failed": "আপডেট ব্যর্থ",
+			"update_error": "দল আপডেটে ত্রুটি",
+			"registered": "দল নিবন্ধিত হয়েছে",
+			"register_failed": "দল নিবন্ধন করতে ব্যর্থ",
+			"register_error": "দল নিবন্ধনে ত্রুটি",
+			"deleted": "মুছে ফেলা হয়েছে",
+			"delete_failed": "মুছে ফেলতে ব্যর্থ",
+			"delete_error": "মুছে ফেলার ত্রুটি"
+		},
+		"basic_income": {
+			"activated": "মৌলিক আয় সক্রিয় হয়েছে",
+			"activate_failed": "সক্রিয় করতে ব্যর্থ",
+			"claimed": "দাবি করা হয়েছে",
+			"claim_failed": "দাবি করতে ব্যর্থ"
+		},
+		"savings": {
+			"collected": "সংগৃহীত",
+			"collect_failed": "সংগ্রহ করতে ব্যর্থ",
+			"deposited": "জমা হয়েছে",
+			"deposit_failed": "জমা ব্যর্থ",
+			"withdrawn": "উত্তোলন করা হয়েছে",
+			"withdraw_failed": "উত্তোলন ব্যর্থ"
+		}
+	},
+	"common": {
+		"confirm": "নিশ্চিত করুন",
+		"sign_in": "সাইন ইন",
+		"connect": "সংযোগ করুন",
+		"disconnect": "বিচ্ছিন্ন করুন",
+		"connect_wallet": "ওয়ালেট সংযোগ করুন",
+		"max": "সর্বোচ্চ",
+		"loading": "লোড হচ্ছে...",
+		"processing": "প্রক্রিয়াকরণ...",
+		"insufficient_balance": "পর্যাপ্ত WDD নেই",
+		"delete_account": "অ্যাকাউন্ট মুছুন",
+		"sign_out": "সাইন আউট",
+		"invalid_address": "অবৈধ ঠিকানা",
+		"coming_soon": "শীঘ্রই আসছে",
+		"withdraw": "উত্তোলন",
+		"trade": "ট্রেড",
+		"continue": "চালিয়ে যান",
+		"close": "বন্ধ করুন",
+		"updating": "আপডেট করা হচ্ছে...",
+		"save": "সংরক্ষণ করুন",
+		"vote": "ভোট দিন",
+		"switch_to_base_chain": "Base Chain-এ স্যুইচ করুন"
+	},
+	"auth": {
+		"choose_method": "আপনার পছন্দের পদ্ধতি বেছে নিন।",
+		"sign_in_with_google": "Google দিয়ে চালিয়ে যান",
+		"sign_in_with_passkey": "বায়োমেট্রিক ব্যবহার করুন",
+		"sign_in_or_create": "আপনার পাসকি ব্যবহার করে আপনার অ্যাকাউন্টে অ্যাক্সেস করুন, আপনার আঙুলের ছাপ, মুখ স্ক্যান বা স্ক্রীন লক ব্যবহার করে।",
+		"create_account": "অ্যাকাউন্ট তৈরি করুন",
+		"create_passkey_name": "পাসকি নাম তৈরি করুন",
+		"passkey_name_description": "আপনার পাসওয়ার্ড ম্যানেজারে এটি সনাক্ত করতে আপনার পাসকি নাম দিন।",
+		"passkey_name": "পাসকি নাম"
+	}
 }

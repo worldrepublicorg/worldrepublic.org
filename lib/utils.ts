@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
  * Utility function to merge Tailwind CSS classes
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+	return twMerge(clsx(inputs));
 }
 
 /**
@@ -14,15 +14,15 @@ export function cn(...inputs: ClassValue[]) {
  * @returns A string representation of the number with up to 18 decimal places
  */
 export const formatFullAmount = (num: number): string => {
-  if (!Number.isFinite(num) || num === 0) return "0";
-  let s = num.toFixed(50);
-  const dotIndex = s.indexOf(".");
-  if (dotIndex !== -1) {
-    s = s.substring(0, dotIndex + 1 + 18);
-  }
-  s = s.replace(/0+$/, "");
-  s = s.replace(/\.$/, "");
-  return s;
+	if (!Number.isFinite(num) || num === 0) return "0";
+	let s = num.toFixed(50);
+	const dotIndex = s.indexOf(".");
+	if (dotIndex !== -1) {
+		s = s.substring(0, dotIndex + 1 + 18);
+	}
+	s = s.replace(/0+$/, "");
+	s = s.replace(/\.$/, "");
+	return s;
 };
 
 /**
@@ -30,17 +30,17 @@ export const formatFullAmount = (num: number): string => {
  * based on the current savings balance.
  */
 export const getRewardDecimals = (balance: number | null): number => {
-  const bal = balance || 0;
-  if (bal >= 1000000) return 3;
-  if (bal >= 100000) return 4;
-  if (bal >= 10000) return 5;
-  if (bal >= 1000) return 6;
-  if (bal >= 100) return 7;
-  if (bal >= 10) return 8;
-  if (bal >= 1) return 9;
-  if (bal >= 0.1) return 10;
-  if (bal >= 0.01) return 11;
-  return 12;
+	const bal = balance || 0;
+	if (bal >= 1000000) return 3;
+	if (bal >= 100000) return 4;
+	if (bal >= 10000) return 5;
+	if (bal >= 1000) return 6;
+	if (bal >= 100) return 7;
+	if (bal >= 10) return 8;
+	if (bal >= 1) return 9;
+	if (bal >= 0.1) return 10;
+	if (bal >= 0.01) return 11;
+	return 12;
 };
 
 /**
@@ -50,15 +50,15 @@ export const getRewardDecimals = (balance: number | null): number => {
  * @returns The number of decimal places to display (2, 3, or 4)
  */
 export const getBalancePrecision = (balance: number): number => {
-  if (balance === 0) {
-    return 2; // Show 2 decimals for zero balance
-  } else if (balance < 0.01) {
-    return 4; // Show 4 decimals for very small amounts
-  } else if (balance < 0.1) {
-    return 3; // Show 3 decimals for small amounts
-  } else {
-    return 2; // Show 2 decimals for normal amounts
-  }
+	if (balance === 0) {
+		return 2; // Show 2 decimals for zero balance
+	} else if (balance < 0.01) {
+		return 4; // Show 4 decimals for very small amounts
+	} else if (balance < 0.1) {
+		return 3; // Show 3 decimals for small amounts
+	} else {
+		return 2; // Show 2 decimals for normal amounts
+	}
 };
 
 /**
@@ -68,8 +68,8 @@ export const getBalancePrecision = (balance: number): number => {
  * @returns The truncated number
  */
 export const truncateToPrecision = (num: number, precision: number): number => {
-  const multiplier = 10 ** precision;
-  return Math.floor(num * multiplier) / multiplier;
+	const multiplier = 10 ** precision;
+	return Math.floor(num * multiplier) / multiplier;
 };
 
 /**
@@ -80,53 +80,53 @@ export const truncateToPrecision = (num: number, precision: number): number => {
  * @returns Promise that resolves to true if successful, false otherwise
  */
 export const copyToClipboard = async (
-  text: string,
-  toast: {
-    success: (options: { title: string }) => void;
-    error: (options: { title: string }) => void;
-  },
-  messages?: { success?: string; error?: string },
+	text: string,
+	toast: {
+		success: (options: { title: string }) => void;
+		error: (options: { title: string }) => void;
+	},
+	messages?: { success?: string; error?: string },
 ): Promise<boolean> => {
-  // Check if clipboard API is available
-  if (!navigator.clipboard) {
-    toast.error({
-      title: messages?.error || "Clipboard not available",
-    });
-    return false;
-  }
+	// Check if clipboard API is available
+	if (!navigator.clipboard) {
+		toast.error({
+			title: messages?.error || "Clipboard not available",
+		});
+		return false;
+	}
 
-  try {
-    await navigator.clipboard.writeText(text);
-    toast.success({
-      title: messages?.success || "Copied",
-    });
-    return true;
-  } catch (error) {
-    console.error("Error copying to clipboard:", error);
-    toast.error({
-      title: messages?.error || "Clipboard not accessible",
-    });
-    return false;
-  }
+	try {
+		await navigator.clipboard.writeText(text);
+		toast.success({
+			title: messages?.success || "Copied",
+		});
+		return true;
+	} catch (error) {
+		console.error("Error copying to clipboard:", error);
+		toast.error({
+			title: messages?.error || "Clipboard not accessible",
+		});
+		return false;
+	}
 };
 
 /**
  * Reserved usernames that cannot be used
  */
 const RESERVED_USERNAMES = new Set([
-  "admin",
-  "administrator",
-  "system",
-  "support",
-  "help",
-  "api",
-  "www",
-  "mail",
-  "root",
-  "null",
-  "undefined",
-  "true",
-  "false",
+	"admin",
+	"administrator",
+	"system",
+	"support",
+	"help",
+	"api",
+	"www",
+	"mail",
+	"root",
+	"null",
+	"undefined",
+	"true",
+	"false",
 ]);
 
 /**
@@ -140,37 +140,37 @@ const RESERVED_USERNAMES = new Set([
  * @returns Object with isValid boolean and error message if invalid
  */
 export function validateUsername(username: string): {
-  isValid: boolean;
-  error?: string;
+	isValid: boolean;
+	error?: string;
 } {
-  if (!username) {
-    return { isValid: false, error: "Username is required" };
-  }
+	if (!username) {
+		return { isValid: false, error: "Username is required" };
+	}
 
-  const trimmed = username.trim();
+	const trimmed = username.trim();
 
-  if (trimmed.length < 3) {
-    return { isValid: false, error: "Username must be at least 3 characters" };
-  }
+	if (trimmed.length < 3) {
+		return { isValid: false, error: "Username must be at least 3 characters" };
+	}
 
-  if (trimmed.length > 30) {
-    return { isValid: false, error: "Username must be at most 30 characters" };
-  }
+	if (trimmed.length > 30) {
+		return { isValid: false, error: "Username must be at most 30 characters" };
+	}
 
-  // Only alphanumeric, underscore, and hyphen
-  const usernameRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/;
-  if (!usernameRegex.test(trimmed)) {
-    return {
-      isValid: false,
-      error:
-        "Username can only contain letters, numbers, underscores, and hyphens, and must start and end with a letter or number",
-    };
-  }
+	// Only alphanumeric, underscore, and hyphen
+	const usernameRegex = /^[a-zA-Z0-9][a-zA-Z0-9_-]*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/;
+	if (!usernameRegex.test(trimmed)) {
+		return {
+			isValid: false,
+			error:
+				"Username can only contain letters, numbers, underscores, and hyphens, and must start and end with a letter or number",
+		};
+	}
 
-  // Check reserved usernames (case-insensitive)
-  if (RESERVED_USERNAMES.has(trimmed.toLowerCase())) {
-    return { isValid: false, error: "This username is reserved" };
-  }
+	// Check reserved usernames (case-insensitive)
+	if (RESERVED_USERNAMES.has(trimmed.toLowerCase())) {
+		return { isValid: false, error: "This username is reserved" };
+	}
 
-  return { isValid: true };
+	return { isValid: true };
 }

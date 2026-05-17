@@ -1,11 +1,11 @@
 {
-  "version": 1,
-  "hooks": {
-    "subagentStop": [
-      {
-        "command": "bash .cursor/hooks/check-org-status.sh",
-        "description": "Check for uncommitted private notes"
-      }
-    ]
-  }
+	"version": 1,
+	"hooks": {
+		"subagentStop": [
+			{
+				"command": "bash .cursor/hooks/check-org-status.sh",
+				"description": "Check for uncommitted private notes"
+			}
+		]
+	}
 }

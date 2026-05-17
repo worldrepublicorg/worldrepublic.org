@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "ရှာဖွေပါ",
-    "govern": "အုပ်ချုပ်ပါ",
-    "menu": "မီနူး"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "ပါတီများ",
-        "elections": "ရွေးကောက်ပွဲများ",
-        "referendums": "ဆန္ဒခံယူပွဲများ"
-      },
-      "sections": {
-        "parties": {
-          "title": "နိုင်ငံရေးပါတီများ"
-        },
-        "elections": {
-          "title": "စမ်းသပ်ရွေးကောက်ပွဲများ",
-          "subtitle": "ကမ္ဘာလုံးဆိုင်ရာ ဒီမိုကရေစီကို စမ်းသပ်ပါ"
-        },
-        "referendums": {
-          "title": "ကမ္ဘာ့ဖွဲ့စည်းပုံအခြေခံဥပဒေ ဆန္ဒခံယူပွဲ",
-          "subtitle": "ကျွန်ုပ်တို့၏ အခြေခံမူများကို မဲပေးပါ"
-        }
-      },
-      "vote": {
-        "no_active_election": "ရွေးကောက်ပွဲ မကြာမီ စတင်ပါမည်",
-        "test_verification": {
-          "description": "မဲပေးရန် အဆင်သင့်ဖြစ်စေရန် ကျွန်ုပ်တို့၏ စိစစ်ခြင်းစနစ်ကို ယခုပင် စမ်းသုံးကြည့်ပါ",
-          "button": "စမ်းသပ်"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "ထောက်ပံ့ကြေး",
-          "ambassadors": "သံအမတ်များ"
-        },
-        "discover": "ရှာဖွေပါ",
-        "search_placeholder": "ပါတီများ ရှာဖွေပါ...",
-        "no_parties_found": "ပါတီများ မတွေ့ရှိပါ",
-        "error_loading": "ပါတီများ ဖွင့်၍မရပါ",
-        "refresh": "Refresh",
-        "party_details": "ပါတီ အသေးစိတ်",
-        "share_party": "ပါတီ မျှဝေပါ",
-        "my_party": "ကျွန်ုပ်၏ ပါတီ",
-        "learn_more": "ပိုမိုလေ့လာရန်",
-        "party_management": "ပါတီ စီမံခန့်ခွဲမှု",
-        "edit_party_info": "ပါတီ အချက်အလက် တည်းဖြတ်ပါ",
-        "dialogs": {
-          "party_name": "ပါတီ အမည်",
-          "description_optional": "ဖော်ပြချက် (ရွေးချယ်နိုင်သည်)",
-          "official_link_optional": "တရားဝင် လင့်ခ် (ရွေးချယ်နိုင်သည်)",
-          "updating": "အပ်ဒိတ်လုပ်နေသည်...",
-          "save": "သိမ်းဆည်းပါ",
-          "register_party": "ပါတီမှတ်ပုံတင်ပါ",
-          "register": "မှတ်ပုံတင်ပါ",
-          "registering": "မှတ်ပုံတင်နေသည်...",
-          "leader_warning_register": "သင်သည် လက်ရှိတွင် {partyName} ၏ခေါင်းဆောင်ဖြစ်သည်။ ပါတီသစ်မှတ်ပုံတင်ခြင်းသည် သင်၏လက်ရှိပါတီကို ဖျက်သိမ်းလိမ့်မည်။",
-          "deleting": "ဖျက်နေသည်...",
-          "about_to_delete": "သင်သည် {partyName} ကို ဖျက်တော့မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်နိုင်မည်မဟုတ်ပါ။",
-          "about_to_register": "သင်သည် ပါတီသစ် တစ်ခု တည်ထောင်တော့မည်။"
-        },
-        "detail": {
-          "failed_to_load": "ပါတီ ဒေတာ ဖွင့်ရန် မအောင်မြင်ပါ",
-          "party_not_found": "ပါတီ မတွေ့ရှိပါ",
-          "error_loading": "ပါတီ ဖွင့်ရာတွင် အမှားအယွင်း",
-          "back_to_parties": "ပါတီများသို့ ပြန်သွားပါ",
-          "description": "ဖော်ပြချက်",
-          "party_info": "ပါတီ အချက်အလက်",
-          "leader": "ခေါင်းဆောင်",
-          "website": "ဝက်ဘ်ဆိုဒ်",
-          "not_found_description": "သင်ရှာဖွေနေသော ပါတီသည် မရှိပါ သို့မဟုတ် ဖျက်သိမ်းလိုက်ပြီ ဖြစ်သည်။"
-        },
-        "delete_party": "ပါတီကို ဖျက်ပါ",
-        "run_on_elections_and_earn": "ရွေးကောက်ပွဲတွင် ဝင်ရောက်ယှဉ်ပြိုင်ပြီး ထောက်ပံ့ငွေရယူပါ",
-        "ambassadors": {
-          "title": "သံအမတ်အစီအစဉ်",
-          "description": "သူငယ်ချင်းများကို ဖိတ်ခေါ်ပြီး သူတို့အတည်ပြုပြီးချိန်နှင့် သူတို့ပါတီက ထောက်ပံ့ငွေ ရရှိချိန်တွင် ဆုလာဘ်များ ရယူပါ။",
-          "leaderboard": "ခေါင်းဆောင်ဘုတ်",
-          "no_rewards_yet": "ဆုလာဘ်မရှိသေးပါ",
-          "col_ambassador": "သံအမတ်များ",
-          "col_invited": "ဖိတ်ကြားသူများ",
-          "col_reward": "ဆုလာဘ်",
-          "share_referral_link": "ရည်ညွှန်းလင့်ခ်ကိုမျှဝေပါ"
-        },
-        "subsidies": {
-          "title": "ပါတီ ထောက်ပံ့ကြေး အစီအစဉ်",
-          "no_subsidies_yet": "ထောက်ပံ့ကြေး မရှိသေးပါ",
-          "description": "ရွေးကောက်ပွဲ စွမ်းဆောင်ရည်ပေါ် အခြေခံသော ရန်ပုံငွေ။",
-          "col_subsidy": "ထောက်ပံ့ကြေး"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "ရွေးကောက်ပွဲ",
-          "not_found": "ရွေးကောက်ပွဲ မတွေ့ပါ",
-          "not_found_description": "သင်ရှာဖွေနေသော ရွေးကောက်ပွဲ မရှိပါ။",
-          "back_to_elections": "ရွေးကောက်ပွဲများသို့ ပြန်သွားရန်",
-          "status_active": "လက်ရှိ",
-          "status_upcoming": "လာမည့်",
-          "status_ended": "ပြီးဆုံးပြီ",
-          "election_info": "ရွေးကောက်ပွဲ အချက်အလက်",
-          "reward_pool": "ဆုလာဘ်ရန်ပုံငွေ: {amount} WDD",
-          "reward_pool_minimum": "ဆုလာဘ်ရန်ပုံငွေ: အနည်းဆုံး {amount} WDD",
-          "choose_a_party": "ပါတီတစ်ခု ရွေးချယ်ပါ",
-          "no_parties_for_election": "ဤရွေးကောက်ပွဲအတွက် ပါတီမရှိပါ။",
-          "results_title": "ရလဒ်များ",
-          "vote_singular": "မဲ",
-          "vote_plural": "မဲ",
-          "no_votes": "ဤရွေးကောက်ပွဲတွင် မဲမပေးခဲ့ပါ။",
-          "test_election_name": "စမ်းသပ်ရွေးကောက်ပွဲ {n}"
-        },
-        "list": {
-          "empty_state": "ရွေးကောက်ပွဲ မတွေ့ပါ",
-          "active_section": "လက်ရှိ ရွေးကောက်ပွဲများ",
-          "upcoming_section": "လာမည့် ရွေးကောက်ပွဲများ",
-          "previous_section": "ယခင် ရွေးကောက်ပွဲများ"
-        }
-      }
-    },
-    "error": {
-      "title": "တစ်ခုခုမှားသွားသည်",
-      "description": "မမျှော်လင့်ထားသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ထပ်စမ်းကြည့်ပါ။",
-      "error_id": "အမှား ID: {digest}",
-      "try_again": "ထပ်စမ်းကြည့်ပါ"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "အခြေခံဝင်ငွေ",
-        "savings": "ငွေစု"
-      },
-      "basic_income": {
-        "subtitle_unauth": "လူသားဖြစ်ခြင်းအတွက် ငွေရယူပါ",
-        "subtitle_claim": "သင့်ဒရက်ခမာကို ရယူပါ",
-        "tooltip_claim": "1 WDD/နေ့၊ 1 WDD အထိ ကန့်သတ်ထားသည်။ ဝင်ငွေကို အမြင့်ဆုံးဖြစ်စေရန် 24 နာရီအတွင်း ပြန်လာပါ။",
-        "claim_button": "ရယူပါ",
-        "alert": {
-          "claim": {
-            "title": "ရယူခြင်းကို အတည်ပြုပါ",
-            "description": "သင်သည် {amount} WDD ရယူတော့မည်။ ဤငွေကို သင့်ပိုက်ဆံအိတ်လက်ကျန်တွင် ထည့်သွင်းမည်။"
-          }
-        },
-        "setup_subtitle": "သင့်အခြေခံဝင်ငွေကို စနစ်ထည့်သွင်းပါ",
-        "activate_loading": "ဖွင့်နေသည်...",
-        "activate_button": "အခြေခံဝင်ငွေကို ဖွင့်ပါ",
-        "world_drachma": "ကမ္ဘာ့ဒရက်မာ (WDD) ဆိုတာဘာလဲ?",
-        "subtitle_unauth_raised_by_humanity": "ကမ္ဘာ့ AI အမြတ်ဝေစုကို ရယူပါ"
-      },
-      "savings": {
-        "title": "ငွေစုငွေချေးအကောင့်",
-        "subtitle": "စက္ကန့်တိုင်း အတိုးရှာပါ",
-        "tooltip": "နှစ်စဉ် 69% အခြေခံနှုန်း။ ပုံမှန်စုဆောင်းပြီး ပြန်လည်ရင်းနှီးမြှုပ်နှံခြင်းဖြင့် 100% နီးပါး ထိရောက်သော အမြတ်ရယူပါ။ မည်သည့်အချိန်မဆို ထုတ်ယူနိုင်သည်။",
-        "deposit": "ထည့်သွင်းပါ",
-        "withdraw": "ထုတ်ယူပါ",
-        "balance": "လက်ကျန်",
-        "amount_deposit": "ထည့်သွင်းမည့်ပမာဏ",
-        "amount_withdraw": "ထုတ်ယူမည့်ပမာဏ",
-        "interest": "အတိုး",
-        "collect": "စုဆောင်းပါ",
-        "alert": {
-          "collect": {
-            "title": "စုဆောင်းခြင်းကို အတည်ပြုပါ",
-            "description": "သင်သည် {amount} WDD အတိုး စုဆောင်းတော့မည်။"
-          },
-          "deposit": {
-            "title": "ထည့်သွင်းခြင်းကို အတည်ပြုပါ",
-            "description": "သင်သည် {amount} WDD ထည့်သွင်းတော့မည်။"
-          },
-          "withdraw": {
-            "title": "ထုတ်ယူခြင်းကို အတည်ပြုပါ",
-            "description": "သင်သည် {amount} WDD ထုတ်ယူတော့မည်။"
-          }
-        },
-        "smart_contract_link": "smart contract ကိုကြည့်ပါ",
-        "verify": "အတည်ပြု"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "အကောင့်",
-          "account_info": "အကောင့်အချက်အလက်",
-          "referral_code": "အကြံပြုကုဒ်",
-          "referred_by": "ညွှန်းဆိုသူ",
-          "language": "ဘာသာစကား"
-        },
-        "help": {
-          "title": "အကူအညီ",
-          "quickstart": "အမြန်စတင်ရန်",
-          "docs": "ဝီကီ",
-          "help_center": "အကူအညီစင်တာ"
-        },
-        "source_code": {
-          "title": "မူရင်းကုဒ်"
-        },
-        "legal": {
-          "title": "ဥပဒေရေးရာ",
-          "terms": "အသုံးပြုမှုစည်းမျဉ်းများ",
-          "privacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "ပိုက်ဆံအိတ်"
-      },
-      "balance": "လက်ကျန်",
-      "modals": {
-        "sign_out": {
-          "confirm": "သင်သည် ထွက်ရန် သေချာပါသလား။"
-        },
-        "disconnect": {
-          "confirm": "သင့် wallet ကို ချိတ်ဆက်မှုဖြုတ်လိုသည်မှာ သေချာပါသလား?"
-        },
-        "send": {
-          "button": "ပို့ပါ",
-          "withdraw_to_crypto": {
-            "description": "WDD ကို crypto အကောင့်သို့ ထုတ်ယူပါ.",
-            "amount_label": "ပမာဏ",
-            "address_label": "ပိုက်ဆံအိတ်လိပ်စာ",
-            "network_label": "ကွန်ရက်"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper တွင်",
-          "ethereum_uniswap": "Ethereum WDD Uniswap တွင်",
-          "base_jumper": "Base Chain WDD Jumper တွင်",
-          "base_uniswap": "Base Chain WDD Uniswap တွင်",
-          "worldchain_jumper": "World Chain WDD Jumper တွင်",
-          "worldchain_uniswap": "World Chain WDD Uniswap တွင်"
-        },
-        "delete_account": {
-          "description": "ဤအရာသည် သင့်အကောင့်ကို အမြဲတမ်းဖျက်ပြီး သင့်ဒေတာအားလုံးကို ကျွန်ုပ်တို့၏ဆာဗာများမှ ဖယ်ရှားမည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြင်ဆင်မရပါ — ကျေးဇူးပြု၍ သတိဖြင့် ဆက်လက်ပါ။",
-          "deleting": "ဖျက်နေသည်..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMask တွင်ဖွင့်ပါ",
-          "description": "ချိတ်ဆက်ရန် ဤလင့်ခ်ကို ကူးယူပြီး MetaMask ၏ built-in browser တွင် ဖွင့်ပါ။",
-          "copy_link": "လင့် ကူးယူရန်"
-        },
-        "connect_wallet_picker": {
-          "description": "ပိုက်ဆံအိတ်များစွာကို တွေ့ရှိခဲ့သည်။ ချိတ်ဆက်ရန် တစ်ခုကို ရွေးပါ။"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "ပိုက်ဆံအိတ် မရှိသေးဘူးလား?",
-          "find_wallet_link": "WalletGuide တွင် တစ်ခုကို ရှာပါ"
-        }
-      },
-      "sections": {
-        "account": "အကောင့်",
-        "security": "လုံခြုံရေး",
-        "google_account": "Google အကောင့်",
-        "google_not_linked": "မချိတ်ဆက်ထား",
-        "passkeys": "အဝင်သော့များ",
-        "passkeys_linked": "{count} ချိတ်ဆက်ထား",
-        "danger_zone": "အန္တရာယ်ဇုံ",
-        "delete_account": {
-          "description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
-        },
-        "verification": "အတည်ပြုခြင်း",
-        "google_linked": "ချိတ်ဆက်ထားသည်",
-        "account_label": "အကောင့်"
-      },
-      "username": {
-        "label": "အသုံးပြုသူအမည်",
-        "edit_title": "အသုံးပြုသူအမည်ကို တည်းဖြတ်ပါ",
-        "description": "3-30 စာလုံး၊ အက္ခရာနံပါတ်၊ အောက်မျဉ်းနှင့် ဟိုင်ဖန်များ"
-      },
-      "history": {
-        "title": "မှတ်တမ်း"
-      },
-      "transactions": {
-        "failed_to_load": "ဖွင့်ရန် မအောင်မြင်ပါ",
-        "no_transactions": "အရောင်းအဝယ် မရှိသေးပါ",
-        "wdd_per_day": "WDD/ရက်",
-        "just_now": "ယခု",
-        "minutes_ago": "{minutes}မိနစ် က",
-        "hours_ago": "{hours}နာရီ က",
-        "days_ago": "{days}ရက် က",
-        "filter": {
-          "all_types": "အားလုံးသော အမျိုးအစားများ",
-          "select_type": "အမျိုးအစားကို ရွေးချယ်ပါ",
-          "rewards": "ဆုလာဘ်များ"
-        },
-        "types": {
-          "withdrawal": "ထုတ်ယူမှု",
-          "received": "လက်ခံရရှိသည်",
-          "sent": "ပို့ဆောင်သည်",
-          "ambassador_reward": "သံတမန်ဆု",
-          "party_subsidy": "ပါတီထောက်ပံ့ကြေး",
-          "stream_created": "စီးကြောင်း ဖန်တီးခဲ့သည်",
-          "stream_updated": "စီးကြောင်း မွမ်းမံခဲ့သည်",
-          "savings_deposit": "ငွေစု ထည့်သွင်းပါ",
-          "savings_withdrawal": "ငွေစု ထုတ်ယူပါ",
-          "savings_interest": "ငွေစု အတိုး",
-          "referral_reward": "ညွှန်းဆို ဆုကြေး"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Self ဖြင့် အတည်ပြုရန် ဤ QR ကုဒ်ကို စကင်န်လုပ်ပါ။",
-        "mobile_dialog_description": "အတည်ပြုမှုကို ပြီးစီးရန် Self အက်ပ်သို့ လွှဲပြောင်းပေးပါမည်။",
-        "support_telegram": "Self ပံ့ပိုးမှု",
-        "verification_guide": "အတည်ပြုခြင်း လမ်းညွှန်",
-        "qr_alt": "Self အတည်ပြုခြင်း QR",
-        "callback_warning": "သတိပေးချက်",
-        "callback_warning_description": "အတည်ပြုခြင်း callback URL ကို သင့်ဖုန်းမှ ဝင်ရောက်၍မရပါ။ NEXT_PUBLIC_SELF_CALLBACK ကို အများသုံး URL သို့ သတ်မှတ်ပါ (သို့မဟုတ် NEXT_PUBLIC_PUBLIC_BASE_URL ကို tunnel/preview domain သို့ သတ်မှတ်ပါ)။",
-        "label": "Self",
-        "status_completed": "အတည်ပြုပြီး",
-        "status_not_completed": "အတည်မပြုရသေး",
-        "learn_about_self": "Self အကြောင်းလေ့လာပါ",
-        "primer": {
-          "title": "Self ပရိုတိုကော",
-          "description": "ကိုယ်ရေးကိုယ်တာ ဒေတာမဖော်ပြဘဲ အတည်ပြုပါ။"
-        }
-      },
-      "verification_warning": {
-        "title": "အတည်ပြုချက်ရယူပါ",
-        "reward_cap_banner": "အတည်ပြုမထားသော နိုင်ငံသားများအတွက် အခြေခံဝင်ငွေ နှင့် စုဆောင်းငွေ ဆုလာဘ်များကို ကန့်သတ်ထားသည်။ ကန့်သတ်မရှိ ရရှိရန် သင့်အကောင့်ကို အတည်ပြုပါ။"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "ပိုက်ဆံအိတ်အများစုသည် WDD ကို ရွေးချယ်ထားသော ကွင်းဆက်တွင် ၎င်း၏ ",
-      "contract_address": "စာချုပ်လိပ်စာ"
-    }
-  },
-  "toasts": {
-    "generic_error": "အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်",
-    "copied": "ကူးယူပြီး",
-    "wallet": {
-      "no_wallet": "ပိုက်ဆံအိတ်လိပ်စာ မရှိ",
-      "min_amount": "အနည်းဆုံး 10 WDD",
-      "sent": "ပို့ပြီး",
-      "account_deleted": "အကောင့်ဖျက်ပြီး",
-      "delete_failed": "အကောင့်ဖျက်ရန် မအောင်မြင်",
-      "contract_address_error": "စာချုပ်လိပ်စာသို့ ထုတ်ယူ၍မရပါ",
-      "sign_out_failed": "ထွက်ခွာခြင်း မအောင်မြင်ပါ",
-      "google_linked": "Google အကောင့် ချိတ်ဆက်ပြီး",
-      "google_already_linked": "Google အကောင့်သည် အခြားအကောင့်နှင့် ချိတ်ဆက်ပြီးသား",
-      "google_link_failed": "Google ချိတ်ဆက်မှု စတင်မရ",
-      "passkey_added": "အဝင်သော့ ထည့်ပြီး",
-      "passkey_add_failed": "အဝင်သော့ ထည့်မရ"
-    },
-    "parties": {
-      "updated": "အပ်ဒိတ်လုပ်ခဲ့သည်",
-      "update_failed": "အပ်ဒိတ်လုပ်ရန် မအောင်မြင်",
-      "update_error": "ပါတီကို အပ်ဒိတ်လုပ်ရာတွင် အမှား",
-      "registered": "ပါတီ မှတ်ပုံတင်ပြီးပါပြီ",
-      "register_failed": "ပါတီ မှတ်ပုံတင်ရန် မအောင်မြင်ပါ",
-      "register_error": "ပါတီ မှတ်ပုံတင်ခြင်း အမှား",
-      "deleted": "ဖျက်ပြီးပါပြီ",
-      "delete_failed": "ဖျက်ရန် မအောင်မြင်ပါ",
-      "delete_error": "ဖျက်ရာတွင် အမှား"
-    },
-    "basic_income": {
-      "activated": "အခြေခံဝင်ငွေ ဖွင့်ပြီး",
-      "activate_failed": "ဖွင့်ရန် မအောင်မြင်",
-      "claimed": "ရယူပြီး",
-      "claim_failed": "ရယူရန် မအောင်မြင်"
-    },
-    "savings": {
-      "collected": "စုဆောင်းပြီး",
-      "collect_failed": "စုဆောင်းရန် မအောင်မြင်",
-      "deposited": "ထည့်သွင်းပြီး",
-      "deposit_failed": "ထည့်သွင်းရန် မအောင်မြင်",
-      "withdrawn": "ထုတ်ယူပြီး",
-      "withdraw_failed": "ထုတ်ယူရန် မအောင်မြင်"
-    }
-  },
-  "common": {
-    "confirm": "အတည်ပြုပါ",
-    "sign_in": "ဝင်ပါ",
-    "connect": "ချိတ်ဆက်",
-    "disconnect": "ချိတ်ဆက်မှုဖြုတ်",
-    "connect_wallet": "Wallet ချိတ်ဆက်",
-    "max": "အမြင့်ဆုံး",
-    "loading": "ဖွင့်နေသည်...",
-    "processing": "လုပ်ဆောင်နေသည်...",
-    "insufficient_balance": "WDD မလုံလောက်",
-    "delete_account": "အကောင့်ဖျက်ရန်",
-    "sign_out": "ထွက်ရန်",
-    "invalid_address": "မမှန်ကန်သောလိပ်စာ",
-    "coming_soon": "မကြာမီရောက်ရှိလာမည်",
-    "withdraw": "ထုတ်ယူရန်",
-    "trade": "ကုန်သွယ်ရန်",
-    "continue": "ဆက်လုပ်ရန်",
-    "close": "ပိတ်ပါ",
-    "updating": "မွမ်းမံနေသည်...",
-    "save": "သိမ်းဆည်းပါ",
-    "vote": "မဲပေးရန်",
-    "switch_to_base_chain": "Base Chain သို့ ပြောင်းပါ"
-  },
-  "auth": {
-    "choose_method": "သင်နှစ်သက်သောနည်းလမ်းကို ရွေးချယ်ပါ.",
-    "sign_in_with_google": "Google ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ",
-    "sign_in_with_passkey": "ဇီဝမှတ်တမ်းကို အသုံးပြုပါ",
-    "sign_in_or_create": "သင်၏ passkey ကို အသုံးပြု၍ သင်၏ အကောင့်သို့ ဝင်ရောက်ပါ၊ သင်၏ လက်ဗွေ၊ မျက်နှာ စကင်န် သို့မဟုတ် ဖန်သားပြင် သော့ခတ်ခြင်းကို အသုံးပြုပါ။",
-    "create_account": "အကောင့်ဖန်တီးရန်",
-    "create_passkey_name": "passkey အမည်ဖန်တီးရန်",
-    "passkey_name_description": "သင်၏ စကားဝှက်စီမံခန့်ခွဲသူတွင် ခွဲခြားသိမြင်နိုင်ရန် သင်၏ passkey ကို အမည်ပေးပါ။",
-    "passkey_name": "passkey အမည်"
-  }
+	"nav": {
+		"earn": "ရှာဖွေပါ",
+		"govern": "အုပ်ချုပ်ပါ",
+		"menu": "မီနူး"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "ပါတီများ",
+				"elections": "ရွေးကောက်ပွဲများ",
+				"referendums": "ဆန္ဒခံယူပွဲများ"
+			},
+			"sections": {
+				"parties": {
+					"title": "နိုင်ငံရေးပါတီများ"
+				},
+				"elections": {
+					"title": "စမ်းသပ်ရွေးကောက်ပွဲများ",
+					"subtitle": "ကမ္ဘာလုံးဆိုင်ရာ ဒီမိုကရေစီကို စမ်းသပ်ပါ"
+				},
+				"referendums": {
+					"title": "ကမ္ဘာ့ဖွဲ့စည်းပုံအခြေခံဥပဒေ ဆန္ဒခံယူပွဲ",
+					"subtitle": "ကျွန်ုပ်တို့၏ အခြေခံမူများကို မဲပေးပါ"
+				}
+			},
+			"vote": {
+				"no_active_election": "ရွေးကောက်ပွဲ မကြာမီ စတင်ပါမည်",
+				"test_verification": {
+					"description": "မဲပေးရန် အဆင်သင့်ဖြစ်စေရန် ကျွန်ုပ်တို့၏ စိစစ်ခြင်းစနစ်ကို ယခုပင် စမ်းသုံးကြည့်ပါ",
+					"button": "စမ်းသပ်"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "ထောက်ပံ့ကြေး",
+					"ambassadors": "သံအမတ်များ"
+				},
+				"discover": "ရှာဖွေပါ",
+				"search_placeholder": "ပါတီများ ရှာဖွေပါ...",
+				"no_parties_found": "ပါတီများ မတွေ့ရှိပါ",
+				"error_loading": "ပါတီများ ဖွင့်၍မရပါ",
+				"refresh": "Refresh",
+				"party_details": "ပါတီ အသေးစိတ်",
+				"share_party": "ပါတီ မျှဝေပါ",
+				"my_party": "ကျွန်ုပ်၏ ပါတီ",
+				"learn_more": "ပိုမိုလေ့လာရန်",
+				"party_management": "ပါတီ စီမံခန့်ခွဲမှု",
+				"edit_party_info": "ပါတီ အချက်အလက် တည်းဖြတ်ပါ",
+				"dialogs": {
+					"party_name": "ပါတီ အမည်",
+					"description_optional": "ဖော်ပြချက် (ရွေးချယ်နိုင်သည်)",
+					"official_link_optional": "တရားဝင် လင့်ခ် (ရွေးချယ်နိုင်သည်)",
+					"updating": "အပ်ဒိတ်လုပ်နေသည်...",
+					"save": "သိမ်းဆည်းပါ",
+					"register_party": "ပါတီမှတ်ပုံတင်ပါ",
+					"register": "မှတ်ပုံတင်ပါ",
+					"registering": "မှတ်ပုံတင်နေသည်...",
+					"leader_warning_register": "သင်သည် လက်ရှိတွင် {partyName} ၏ခေါင်းဆောင်ဖြစ်သည်။ ပါတီသစ်မှတ်ပုံတင်ခြင်းသည် သင်၏လက်ရှိပါတီကို ဖျက်သိမ်းလိမ့်မည်။",
+					"deleting": "ဖျက်နေသည်...",
+					"about_to_delete": "သင်သည် {partyName} ကို ဖျက်တော့မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်နိုင်မည်မဟုတ်ပါ။",
+					"about_to_register": "သင်သည် ပါတီသစ် တစ်ခု တည်ထောင်တော့မည်။"
+				},
+				"detail": {
+					"failed_to_load": "ပါတီ ဒေတာ ဖွင့်ရန် မအောင်မြင်ပါ",
+					"party_not_found": "ပါတီ မတွေ့ရှိပါ",
+					"error_loading": "ပါတီ ဖွင့်ရာတွင် အမှားအယွင်း",
+					"back_to_parties": "ပါတီများသို့ ပြန်သွားပါ",
+					"description": "ဖော်ပြချက်",
+					"party_info": "ပါတီ အချက်အလက်",
+					"leader": "ခေါင်းဆောင်",
+					"website": "ဝက်ဘ်ဆိုဒ်",
+					"not_found_description": "သင်ရှာဖွေနေသော ပါတီသည် မရှိပါ သို့မဟုတ် ဖျက်သိမ်းလိုက်ပြီ ဖြစ်သည်။"
+				},
+				"delete_party": "ပါတီကို ဖျက်ပါ",
+				"run_on_elections_and_earn": "ရွေးကောက်ပွဲတွင် ဝင်ရောက်ယှဉ်ပြိုင်ပြီး ထောက်ပံ့ငွေရယူပါ",
+				"ambassadors": {
+					"title": "သံအမတ်အစီအစဉ်",
+					"description": "သူငယ်ချင်းများကို ဖိတ်ခေါ်ပြီး သူတို့အတည်ပြုပြီးချိန်နှင့် သူတို့ပါတီက ထောက်ပံ့ငွေ ရရှိချိန်တွင် ဆုလာဘ်များ ရယူပါ။",
+					"leaderboard": "ခေါင်းဆောင်ဘုတ်",
+					"no_rewards_yet": "ဆုလာဘ်မရှိသေးပါ",
+					"col_ambassador": "သံအမတ်များ",
+					"col_invited": "ဖိတ်ကြားသူများ",
+					"col_reward": "ဆုလာဘ်",
+					"share_referral_link": "ရည်ညွှန်းလင့်ခ်ကိုမျှဝေပါ"
+				},
+				"subsidies": {
+					"title": "ပါတီ ထောက်ပံ့ကြေး အစီအစဉ်",
+					"no_subsidies_yet": "ထောက်ပံ့ကြေး မရှိသေးပါ",
+					"description": "ရွေးကောက်ပွဲ စွမ်းဆောင်ရည်ပေါ် အခြေခံသော ရန်ပုံငွေ။",
+					"col_subsidy": "ထောက်ပံ့ကြေး"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "ရွေးကောက်ပွဲ",
+					"not_found": "ရွေးကောက်ပွဲ မတွေ့ပါ",
+					"not_found_description": "သင်ရှာဖွေနေသော ရွေးကောက်ပွဲ မရှိပါ။",
+					"back_to_elections": "ရွေးကောက်ပွဲများသို့ ပြန်သွားရန်",
+					"status_active": "လက်ရှိ",
+					"status_upcoming": "လာမည့်",
+					"status_ended": "ပြီးဆုံးပြီ",
+					"election_info": "ရွေးကောက်ပွဲ အချက်အလက်",
+					"reward_pool": "ဆုလာဘ်ရန်ပုံငွေ: {amount} WDD",
+					"reward_pool_minimum": "ဆုလာဘ်ရန်ပုံငွေ: အနည်းဆုံး {amount} WDD",
+					"choose_a_party": "ပါတီတစ်ခု ရွေးချယ်ပါ",
+					"no_parties_for_election": "ဤရွေးကောက်ပွဲအတွက် ပါတီမရှိပါ။",
+					"results_title": "ရလဒ်များ",
+					"vote_singular": "မဲ",
+					"vote_plural": "မဲ",
+					"no_votes": "ဤရွေးကောက်ပွဲတွင် မဲမပေးခဲ့ပါ။",
+					"test_election_name": "စမ်းသပ်ရွေးကောက်ပွဲ {n}"
+				},
+				"list": {
+					"empty_state": "ရွေးကောက်ပွဲ မတွေ့ပါ",
+					"active_section": "လက်ရှိ ရွေးကောက်ပွဲများ",
+					"upcoming_section": "လာမည့် ရွေးကောက်ပွဲများ",
+					"previous_section": "ယခင် ရွေးကောက်ပွဲများ"
+				}
+			}
+		},
+		"error": {
+			"title": "တစ်ခုခုမှားသွားသည်",
+			"description": "မမျှော်လင့်ထားသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ထပ်စမ်းကြည့်ပါ။",
+			"error_id": "အမှား ID: {digest}",
+			"try_again": "ထပ်စမ်းကြည့်ပါ"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "အခြေခံဝင်ငွေ",
+				"savings": "ငွေစု"
+			},
+			"basic_income": {
+				"subtitle_unauth": "လူသားဖြစ်ခြင်းအတွက် ငွေရယူပါ",
+				"subtitle_claim": "သင့်ဒရက်ခမာကို ရယူပါ",
+				"tooltip_claim": "1 WDD/နေ့၊ 1 WDD အထိ ကန့်သတ်ထားသည်။ ဝင်ငွေကို အမြင့်ဆုံးဖြစ်စေရန် 24 နာရီအတွင်း ပြန်လာပါ။",
+				"claim_button": "ရယူပါ",
+				"alert": {
+					"claim": {
+						"title": "ရယူခြင်းကို အတည်ပြုပါ",
+						"description": "သင်သည် {amount} WDD ရယူတော့မည်။ ဤငွေကို သင့်ပိုက်ဆံအိတ်လက်ကျန်တွင် ထည့်သွင်းမည်။"
+					}
+				},
+				"setup_subtitle": "သင့်အခြေခံဝင်ငွေကို စနစ်ထည့်သွင်းပါ",
+				"activate_loading": "ဖွင့်နေသည်...",
+				"activate_button": "အခြေခံဝင်ငွေကို ဖွင့်ပါ",
+				"world_drachma": "ကမ္ဘာ့ဒရက်မာ (WDD) ဆိုတာဘာလဲ?",
+				"subtitle_unauth_raised_by_humanity": "ကမ္ဘာ့ AI အမြတ်ဝေစုကို ရယူပါ"
+			},
+			"savings": {
+				"title": "ငွေစုငွေချေးအကောင့်",
+				"subtitle": "စက္ကန့်တိုင်း အတိုးရှာပါ",
+				"tooltip": "နှစ်စဉ် 69% အခြေခံနှုန်း။ ပုံမှန်စုဆောင်းပြီး ပြန်လည်ရင်းနှီးမြှုပ်နှံခြင်းဖြင့် 100% နီးပါး ထိရောက်သော အမြတ်ရယူပါ။ မည်သည့်အချိန်မဆို ထုတ်ယူနိုင်သည်။",
+				"deposit": "ထည့်သွင်းပါ",
+				"withdraw": "ထုတ်ယူပါ",
+				"balance": "လက်ကျန်",
+				"amount_deposit": "ထည့်သွင်းမည့်ပမာဏ",
+				"amount_withdraw": "ထုတ်ယူမည့်ပမာဏ",
+				"interest": "အတိုး",
+				"collect": "စုဆောင်းပါ",
+				"alert": {
+					"collect": {
+						"title": "စုဆောင်းခြင်းကို အတည်ပြုပါ",
+						"description": "သင်သည် {amount} WDD အတိုး စုဆောင်းတော့မည်။"
+					},
+					"deposit": {
+						"title": "ထည့်သွင်းခြင်းကို အတည်ပြုပါ",
+						"description": "သင်သည် {amount} WDD ထည့်သွင်းတော့မည်။"
+					},
+					"withdraw": {
+						"title": "ထုတ်ယူခြင်းကို အတည်ပြုပါ",
+						"description": "သင်သည် {amount} WDD ထုတ်ယူတော့မည်။"
+					}
+				},
+				"smart_contract_link": "smart contract ကိုကြည့်ပါ",
+				"verify": "အတည်ပြု"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "အကောင့်",
+					"account_info": "အကောင့်အချက်အလက်",
+					"referral_code": "အကြံပြုကုဒ်",
+					"referred_by": "ညွှန်းဆိုသူ",
+					"language": "ဘာသာစကား"
+				},
+				"help": {
+					"title": "အကူအညီ",
+					"quickstart": "အမြန်စတင်ရန်",
+					"docs": "ဝီကီ",
+					"help_center": "အကူအညီစင်တာ"
+				},
+				"source_code": {
+					"title": "မူရင်းကုဒ်"
+				},
+				"legal": {
+					"title": "ဥပဒေရေးရာ",
+					"terms": "အသုံးပြုမှုစည်းမျဉ်းများ",
+					"privacy": "ကိုယ်ရေးကိုယ်တာမူဝါဒ"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "ပိုက်ဆံအိတ်"
+			},
+			"balance": "လက်ကျန်",
+			"modals": {
+				"sign_out": {
+					"confirm": "သင်သည် ထွက်ရန် သေချာပါသလား။"
+				},
+				"disconnect": {
+					"confirm": "သင့် wallet ကို ချိတ်ဆက်မှုဖြုတ်လိုသည်မှာ သေချာပါသလား?"
+				},
+				"send": {
+					"button": "ပို့ပါ",
+					"withdraw_to_crypto": {
+						"description": "WDD ကို crypto အကောင့်သို့ ထုတ်ယူပါ.",
+						"amount_label": "ပမာဏ",
+						"address_label": "ပိုက်ဆံအိတ်လိပ်စာ",
+						"network_label": "ကွန်ရက်"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper တွင်",
+					"ethereum_uniswap": "Ethereum WDD Uniswap တွင်",
+					"base_jumper": "Base Chain WDD Jumper တွင်",
+					"base_uniswap": "Base Chain WDD Uniswap တွင်",
+					"worldchain_jumper": "World Chain WDD Jumper တွင်",
+					"worldchain_uniswap": "World Chain WDD Uniswap တွင်"
+				},
+				"delete_account": {
+					"description": "ဤအရာသည် သင့်အကောင့်ကို အမြဲတမ်းဖျက်ပြီး သင့်ဒေတာအားလုံးကို ကျွန်ုပ်တို့၏ဆာဗာများမှ ဖယ်ရှားမည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြင်ဆင်မရပါ — ကျေးဇူးပြု၍ သတိဖြင့် ဆက်လက်ပါ။",
+					"deleting": "ဖျက်နေသည်..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMask တွင်ဖွင့်ပါ",
+					"description": "ချိတ်ဆက်ရန် ဤလင့်ခ်ကို ကူးယူပြီး MetaMask ၏ built-in browser တွင် ဖွင့်ပါ။",
+					"copy_link": "လင့် ကူးယူရန်"
+				},
+				"connect_wallet_picker": {
+					"description": "ပိုက်ဆံအိတ်များစွာကို တွေ့ရှိခဲ့သည်။ ချိတ်ဆက်ရန် တစ်ခုကို ရွေးပါ။"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "ပိုက်ဆံအိတ် မရှိသေးဘူးလား?",
+					"find_wallet_link": "WalletGuide တွင် တစ်ခုကို ရှာပါ"
+				}
+			},
+			"sections": {
+				"account": "အကောင့်",
+				"security": "လုံခြုံရေး",
+				"google_account": "Google အကောင့်",
+				"google_not_linked": "မချိတ်ဆက်ထား",
+				"passkeys": "အဝင်သော့များ",
+				"passkeys_linked": "{count} ချိတ်ဆက်ထား",
+				"danger_zone": "အန္တရာယ်ဇုံ",
+				"delete_account": {
+					"description": "သင်၏ဒေတာအားလုံးကို အမြဲတမ်းဖယ်ရှားပါ"
+				},
+				"verification": "အတည်ပြုခြင်း",
+				"google_linked": "ချိတ်ဆက်ထားသည်",
+				"account_label": "အကောင့်"
+			},
+			"username": {
+				"label": "အသုံးပြုသူအမည်",
+				"edit_title": "အသုံးပြုသူအမည်ကို တည်းဖြတ်ပါ",
+				"description": "3-30 စာလုံး၊ အက္ခရာနံပါတ်၊ အောက်မျဉ်းနှင့် ဟိုင်ဖန်များ"
+			},
+			"history": {
+				"title": "မှတ်တမ်း"
+			},
+			"transactions": {
+				"failed_to_load": "ဖွင့်ရန် မအောင်မြင်ပါ",
+				"no_transactions": "အရောင်းအဝယ် မရှိသေးပါ",
+				"wdd_per_day": "WDD/ရက်",
+				"just_now": "ယခု",
+				"minutes_ago": "{minutes}မိနစ် က",
+				"hours_ago": "{hours}နာရီ က",
+				"days_ago": "{days}ရက် က",
+				"filter": {
+					"all_types": "အားလုံးသော အမျိုးအစားများ",
+					"select_type": "အမျိုးအစားကို ရွေးချယ်ပါ",
+					"rewards": "ဆုလာဘ်များ"
+				},
+				"types": {
+					"withdrawal": "ထုတ်ယူမှု",
+					"received": "လက်ခံရရှိသည်",
+					"sent": "ပို့ဆောင်သည်",
+					"ambassador_reward": "သံတမန်ဆု",
+					"party_subsidy": "ပါတီထောက်ပံ့ကြေး",
+					"stream_created": "စီးကြောင်း ဖန်တီးခဲ့သည်",
+					"stream_updated": "စီးကြောင်း မွမ်းမံခဲ့သည်",
+					"savings_deposit": "ငွေစု ထည့်သွင်းပါ",
+					"savings_withdrawal": "ငွေစု ထုတ်ယူပါ",
+					"savings_interest": "ငွေစု အတိုး",
+					"referral_reward": "ညွှန်းဆို ဆုကြေး"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Self ဖြင့် အတည်ပြုရန် ဤ QR ကုဒ်ကို စကင်န်လုပ်ပါ။",
+				"mobile_dialog_description": "အတည်ပြုမှုကို ပြီးစီးရန် Self အက်ပ်သို့ လွှဲပြောင်းပေးပါမည်။",
+				"support_telegram": "Self ပံ့ပိုးမှု",
+				"verification_guide": "အတည်ပြုခြင်း လမ်းညွှန်",
+				"qr_alt": "Self အတည်ပြုခြင်း QR",
+				"callback_warning": "သတိပေးချက်",
+				"callback_warning_description": "အတည်ပြုခြင်း callback URL ကို သင့်ဖုန်းမှ ဝင်ရောက်၍မရပါ။ NEXT_PUBLIC_SELF_CALLBACK ကို အများသုံး URL သို့ သတ်မှတ်ပါ (သို့မဟုတ် NEXT_PUBLIC_PUBLIC_BASE_URL ကို tunnel/preview domain သို့ သတ်မှတ်ပါ)။",
+				"label": "Self",
+				"status_completed": "အတည်ပြုပြီး",
+				"status_not_completed": "အတည်မပြုရသေး",
+				"learn_about_self": "Self အကြောင်းလေ့လာပါ",
+				"primer": {
+					"title": "Self ပရိုတိုကော",
+					"description": "ကိုယ်ရေးကိုယ်တာ ဒေတာမဖော်ပြဘဲ အတည်ပြုပါ။"
+				}
+			},
+			"verification_warning": {
+				"title": "အတည်ပြုချက်ရယူပါ",
+				"reward_cap_banner": "အတည်ပြုမထားသော နိုင်ငံသားများအတွက် အခြေခံဝင်ငွေ နှင့် စုဆောင်းငွေ ဆုလာဘ်များကို ကန့်သတ်ထားသည်။ ကန့်သတ်မရှိ ရရှိရန် သင့်အကောင့်ကို အတည်ပြုပါ။"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "ပိုက်ဆံအိတ်အများစုသည် WDD ကို ရွေးချယ်ထားသော ကွင်းဆက်တွင် ၎င်း၏ ",
+			"contract_address": "စာချုပ်လိပ်စာ"
+		}
+	},
+	"toasts": {
+		"generic_error": "အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်",
+		"copied": "ကူးယူပြီး",
+		"wallet": {
+			"no_wallet": "ပိုက်ဆံအိတ်လိပ်စာ မရှိ",
+			"min_amount": "အနည်းဆုံး 10 WDD",
+			"sent": "ပို့ပြီး",
+			"account_deleted": "အကောင့်ဖျက်ပြီး",
+			"delete_failed": "အကောင့်ဖျက်ရန် မအောင်မြင်",
+			"contract_address_error": "စာချုပ်လိပ်စာသို့ ထုတ်ယူ၍မရပါ",
+			"sign_out_failed": "ထွက်ခွာခြင်း မအောင်မြင်ပါ",
+			"google_linked": "Google အကောင့် ချိတ်ဆက်ပြီး",
+			"google_already_linked": "Google အကောင့်သည် အခြားအကောင့်နှင့် ချိတ်ဆက်ပြီးသား",
+			"google_link_failed": "Google ချိတ်ဆက်မှု စတင်မရ",
+			"passkey_added": "အဝင်သော့ ထည့်ပြီး",
+			"passkey_add_failed": "အဝင်သော့ ထည့်မရ"
+		},
+		"parties": {
+			"updated": "အပ်ဒိတ်လုပ်ခဲ့သည်",
+			"update_failed": "အပ်ဒိတ်လုပ်ရန် မအောင်မြင်",
+			"update_error": "ပါတီကို အပ်ဒိတ်လုပ်ရာတွင် အမှား",
+			"registered": "ပါတီ မှတ်ပုံတင်ပြီးပါပြီ",
+			"register_failed": "ပါတီ မှတ်ပုံတင်ရန် မအောင်မြင်ပါ",
+			"register_error": "ပါတီ မှတ်ပုံတင်ခြင်း အမှား",
+			"deleted": "ဖျက်ပြီးပါပြီ",
+			"delete_failed": "ဖျက်ရန် မအောင်မြင်ပါ",
+			"delete_error": "ဖျက်ရာတွင် အမှား"
+		},
+		"basic_income": {
+			"activated": "အခြေခံဝင်ငွေ ဖွင့်ပြီး",
+			"activate_failed": "ဖွင့်ရန် မအောင်မြင်",
+			"claimed": "ရယူပြီး",
+			"claim_failed": "ရယူရန် မအောင်မြင်"
+		},
+		"savings": {
+			"collected": "စုဆောင်းပြီး",
+			"collect_failed": "စုဆောင်းရန် မအောင်မြင်",
+			"deposited": "ထည့်သွင်းပြီး",
+			"deposit_failed": "ထည့်သွင်းရန် မအောင်မြင်",
+			"withdrawn": "ထုတ်ယူပြီး",
+			"withdraw_failed": "ထုတ်ယူရန် မအောင်မြင်"
+		}
+	},
+	"common": {
+		"confirm": "အတည်ပြုပါ",
+		"sign_in": "ဝင်ပါ",
+		"connect": "ချိတ်ဆက်",
+		"disconnect": "ချိတ်ဆက်မှုဖြုတ်",
+		"connect_wallet": "Wallet ချိတ်ဆက်",
+		"max": "အမြင့်ဆုံး",
+		"loading": "ဖွင့်နေသည်...",
+		"processing": "လုပ်ဆောင်နေသည်...",
+		"insufficient_balance": "WDD မလုံလောက်",
+		"delete_account": "အကောင့်ဖျက်ရန်",
+		"sign_out": "ထွက်ရန်",
+		"invalid_address": "မမှန်ကန်သောလိပ်စာ",
+		"coming_soon": "မကြာမီရောက်ရှိလာမည်",
+		"withdraw": "ထုတ်ယူရန်",
+		"trade": "ကုန်သွယ်ရန်",
+		"continue": "ဆက်လုပ်ရန်",
+		"close": "ပိတ်ပါ",
+		"updating": "မွမ်းမံနေသည်...",
+		"save": "သိမ်းဆည်းပါ",
+		"vote": "မဲပေးရန်",
+		"switch_to_base_chain": "Base Chain သို့ ပြောင်းပါ"
+	},
+	"auth": {
+		"choose_method": "သင်နှစ်သက်သောနည်းလမ်းကို ရွေးချယ်ပါ.",
+		"sign_in_with_google": "Google ဖြင့် ဆက်လက်လုပ်ဆောင်ပါ",
+		"sign_in_with_passkey": "ဇီဝမှတ်တမ်းကို အသုံးပြုပါ",
+		"sign_in_or_create": "သင်၏ passkey ကို အသုံးပြု၍ သင်၏ အကောင့်သို့ ဝင်ရောက်ပါ၊ သင်၏ လက်ဗွေ၊ မျက်နှာ စကင်န် သို့မဟုတ် ဖန်သားပြင် သော့ခတ်ခြင်းကို အသုံးပြုပါ။",
+		"create_account": "အကောင့်ဖန်တီးရန်",
+		"create_passkey_name": "passkey အမည်ဖန်တီးရန်",
+		"passkey_name_description": "သင်၏ စကားဝှက်စီမံခန့်ခွဲသူတွင် ခွဲခြားသိမြင်နိုင်ရန် သင်၏ passkey ကို အမည်ပေးပါ။",
+		"passkey_name": "passkey အမည်"
+	}
 }

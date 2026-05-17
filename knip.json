@@ -1,13 +1,13 @@
 {
-  "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["app/**/*.{js,ts,tsx}"],
-  "project": [
-    "app/**/*.{js,ts,tsx}",
-    "components/**/*.{js,ts,tsx}",
-    "hooks/**/*.{js,ts,tsx}",
-    "lib/**/*.{js,ts,tsx}",
-    "types/**/*.{js,ts,tsx}",
-    "scripts/**/*.{js,ts,tsx}",
-    "*.{js,ts,tsx}"
-  ]
+	"$schema": "https://unpkg.com/knip@5/schema.json",
+	"entry": ["app/**/*.{js,ts,tsx}"],
+	"project": [
+		"app/**/*.{js,ts,tsx}",
+		"components/**/*.{js,ts,tsx}",
+		"hooks/**/*.{js,ts,tsx}",
+		"lib/**/*.{js,ts,tsx}",
+		"types/**/*.{js,ts,tsx}",
+		"scripts/**/*.{js,ts,tsx}",
+		"*.{js,ts,tsx}"
+	]
 }

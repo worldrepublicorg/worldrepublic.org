@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Печелете",
-    "govern": "Управлявайте",
-    "menu": "Меню"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Партии",
-        "elections": "Избори",
-        "referendums": "Референдуми"
-      },
-      "sections": {
-        "parties": {
-          "title": "Политически партии"
-        },
-        "elections": {
-          "title": "Тестови избори",
-          "subtitle": "Експериментирайте с глобална демокрация"
-        },
-        "referendums": {
-          "title": "Световен Конституционен Референдум",
-          "subtitle": "Гласувайте за нашите основополагащи принципи"
-        }
-      },
-      "vote": {
-        "no_active_election": "Изборът започва скоро",
-        "test_verification": {
-          "description": "Изпробвайте нашата система за проверка сега, за да сте готови за гласуване",
-          "button": "Тест"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Субсидии",
-          "ambassadors": "Посланици"
-        },
-        "discover": "Открийте",
-        "search_placeholder": "Търсене на партии...",
-        "no_parties_found": "Не са намерени партии",
-        "error_loading": "Неуспешно зареждане на партиите",
-        "refresh": "Обнови",
-        "party_details": "Детайли на партията",
-        "share_party": "Сподели партия",
-        "my_party": "Моята партия",
-        "learn_more": "Научете повече",
-        "party_management": "Управление на партията",
-        "edit_party_info": "Редактиране на информация за партията",
-        "dialogs": {
-          "party_name": "Име на партията",
-          "description_optional": "Описание (по избор)",
-          "official_link_optional": "Официална връзка (по избор)",
-          "updating": "Актуализиране...",
-          "save": "Запази",
-          "register_party": "Регистрирайте партия",
-          "register": "Регистрирам",
-          "registering": "Регистриране...",
-          "leader_warning_register": "В момента сте лидер на {partyName}. Регистрирането на нова партия ще изтрие настоящата ви партия.",
-          "deleting": "Изтриване...",
-          "about_to_delete": "На път сте да изтриете {partyName}. Това действие не може да бъде отменено.",
-          "about_to_register": "На път сте да основате нова партия."
-        },
-        "detail": {
-          "failed_to_load": "Неуспешно зареждане на данни за партията",
-          "party_not_found": "Партията не е намерена",
-          "error_loading": "Грешка при зареждане на партията",
-          "back_to_parties": "Обратно към партиите",
-          "description": "Описание",
-          "party_info": "Информация за партията",
-          "leader": "Лидер",
-          "website": "Уебсайт",
-          "not_found_description": "Партията, която търсите, не съществува или е била разпусната."
-        },
-        "delete_party": "Изтрий партия",
-        "run_on_elections_and_earn": "Участвайте в избори и получете субсидии",
-        "ambassadors": {
-          "title": "Програма за Посланици",
-          "description": "Поканете приятели и печелете награди, когато се верифицират и когато партията им получава субсидии",
-          "leaderboard": "Класация",
-          "no_rewards_yet": "Все още няма награди",
-          "col_ambassador": "Посланици",
-          "col_invited": "Поканени",
-          "col_reward": "Награда",
-          "share_referral_link": "Сподели линк за препоръка"
-        },
-        "subsidies": {
-          "title": "Програма за Субсидиране на Партии",
-          "no_subsidies_yet": "Все още няма субсидии",
-          "description": "Финансиране въз основа на изборното представяне",
-          "col_subsidy": "Субсидия"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Избори",
-          "not_found": "Изборите не са намерени",
-          "not_found_description": "Изборите, които търсите, не съществуват.",
-          "back_to_elections": "Назад към изборите",
-          "status_active": "Активни",
-          "status_upcoming": "Предстоящи",
-          "status_ended": "Приключили",
-          "election_info": "Информация за изборите",
-          "reward_pool": "Награден фонд: {amount} WDD",
-          "reward_pool_minimum": "Награден фонд: минимум {amount} WDD",
-          "choose_a_party": "Изберете партия",
-          "no_parties_for_election": "Няма налични партии за тези избори.",
-          "results_title": "Резултати",
-          "vote_singular": "глас",
-          "vote_plural": "гласа",
-          "no_votes": "В тези избори не бяха подадени гласове.",
-          "test_election_name": "Тестов избор {n}"
-        },
-        "list": {
-          "empty_state": "Няма намерени избори",
-          "active_section": "Активни избори",
-          "upcoming_section": "Предстоящи избори",
-          "previous_section": "Предишни избори"
-        }
-      }
-    },
-    "error": {
-      "title": "Нещо се обърка",
-      "description": "Възникна неочаквана грешка. Моля, опитайте отново.",
-      "error_id": "ID на грешката: {digest}",
-      "try_again": "Опитай отново"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Основен доход",
-        "savings": "Спестявания"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Получете пари за това, че сте човек",
-        "subtitle_claim": "Получете вашата драхма",
-        "tooltip_claim": "1 WDD/ден, ограничено до 1 WDD. Върнете се в рамките на 24 часа за максимализиране на приходите.",
-        "claim_button": "Получи",
-        "alert": {
-          "claim": {
-            "title": "Потвърдете получаването",
-            "description": "Ще получите {amount} WDD. Това ще бъде добавено към баланса на вашия портфейл."
-          }
-        },
-        "setup_subtitle": "Настройте вашия основен доход",
-        "activate_loading": "Активирам...",
-        "activate_button": "Активирайте основния доход",
-        "world_drachma": "Какво е световната драхма (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Получете вашия глобален дивидент от ИИ"
-      },
-      "savings": {
-        "title": "Спестовна сметка",
-        "subtitle": "Печелете лихва всяка секунда",
-        "tooltip": "69% годишна основна ставка. Събирайте и реинвестирайте редовно за постигане на близо 100% ефективна възвръщаемост. Изтеглете по всяко време.",
-        "deposit": "Депозирайте",
-        "withdraw": "Изтеглете",
-        "balance": "Баланс",
-        "amount_deposit": "Сума за депозиране",
-        "amount_withdraw": "Сума за изтегляне",
-        "interest": "Лихва",
-        "collect": "Съберете",
-        "alert": {
-          "collect": {
-            "title": "Потвърдете събирането",
-            "description": "Ще съберете {amount} WDD в лихва."
-          },
-          "deposit": {
-            "title": "Потвърдете депозита",
-            "description": "Ще депозирате {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Потвърдете изтеглянето",
-            "description": "Ще изтеглите {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Вижте интелигентния договор",
-        "verify": "Потвърди"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "АКАУНТ",
-          "account_info": "Информация за акаунта",
-          "referral_code": "Реферален код",
-          "referred_by": "Препоръчан от",
-          "language": "Език"
-        },
-        "help": {
-          "title": "ПОМОЩ",
-          "quickstart": "Бърз старт",
-          "docs": "Уики",
-          "help_center": "Помощен център"
-        },
-        "source_code": {
-          "title": "ИЗХОДЕН КОД"
-        },
-        "legal": {
-          "title": "ПРАВНИ",
-          "terms": "Условия за ползване",
-          "privacy": "Политика за поверителност"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Портфейл"
-      },
-      "balance": "Баланс",
-      "modals": {
-        "sign_out": {
-          "confirm": "Сигурни ли сте, че искате да излезете?"
-        },
-        "disconnect": {
-          "confirm": "Сигурни ли сте, че искате да прекъснете връзката с портфейла си?"
-        },
-        "send": {
-          "button": "Изпратете",
-          "withdraw_to_crypto": {
-            "description": "Теглете WDD към криптосметка.",
-            "amount_label": "Сума",
-            "address_label": "Адрес на портфейл",
-            "network_label": "Мрежа"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD на Jumper",
-          "ethereum_uniswap": "Ethereum WDD на Uniswap",
-          "base_jumper": "Base Chain WDD на Jumper",
-          "base_uniswap": "Base Chain WDD на Uniswap",
-          "worldchain_jumper": "World Chain WDD на Jumper",
-          "worldchain_uniswap": "World Chain WDD на Uniswap"
-        },
-        "delete_account": {
-          "description": "Това ще изтрие вашия акаунт завинаги и ще премахне всички ваши данни от нашите сървъри. Това действие не може да бъде отменено — моля, продължете внимателно.",
-          "deleting": "Изтривам..."
-        },
-        "connect_wallet_browser": {
-          "title": "Отвори в MetaMask",
-          "description": "За да се свържете, копирайте този линк и го отворете във вградения браузър на MetaMask.",
-          "copy_link": "Копирай линка"
-        },
-        "connect_wallet_picker": {
-          "description": "Открити са няколко портфейла. Изберете един за свързване."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Нямате портфейл?",
-          "find_wallet_link": "Намерете един в WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "АКАУНТ",
-        "security": "СИГУРНОСТ",
-        "google_account": "Google акаунт",
-        "google_not_linked": "Не е свързан",
-        "passkeys": "Ключове за достъп",
-        "passkeys_linked": "{count} свързани",
-        "danger_zone": "ЗОНА НА ОПАСНОСТ",
-        "delete_account": {
-          "description": "Премахнете постоянно всички ваши данни"
-        },
-        "verification": "ПРОВЕРКА",
-        "google_linked": "Свързан",
-        "account_label": "Акаунт"
-      },
-      "username": {
-        "label": "Потребителско име",
-        "edit_title": "Редактиране на потребителско име",
-        "description": "3-30 символа, буквено-цифрени, долни черти и тирета"
-      },
-      "history": {
-        "title": "ИСТОРИЯ"
-      },
-      "transactions": {
-        "failed_to_load": "Неуспешно зареждане",
-        "no_transactions": "Все още няма транзакции",
-        "wdd_per_day": "WDD/ден",
-        "just_now": "Току-що",
-        "minutes_ago": "преди {minutes}м",
-        "hours_ago": "преди {hours}ч",
-        "days_ago": "преди {days}д",
-        "filter": {
-          "all_types": "Всички типове",
-          "select_type": "Изберете тип",
-          "rewards": "Награди"
-        },
-        "types": {
-          "withdrawal": "Теглене",
-          "received": "Получено",
-          "sent": "Изпратено",
-          "ambassador_reward": "Награда за посланик",
-          "party_subsidy": "Партийна субсидия",
-          "stream_created": "Потокът е създаден",
-          "stream_updated": "Потокът е актуализиран",
-          "savings_deposit": "Спестявания депозирайте",
-          "savings_withdrawal": "Спестявания изтеглете",
-          "savings_interest": "Спестявания лихва",
-          "referral_reward": "Реферална награда"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Сканирайте този QR код, за да се верифицирате чрез Self.",
-        "mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да извършите верификацията.",
-        "support_telegram": "Поддръжка на Self",
-        "verification_guide": "Ръководство за проверка",
-        "qr_alt": "QR код за Self проверка",
-        "callback_warning": "Предупреждение",
-        "callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн).",
-        "label": "Self",
-        "status_completed": "Проверено",
-        "status_not_completed": "Не е проверено",
-        "learn_about_self": "Научете за Self",
-        "primer": {
-          "title": "Self Протокол",
-          "description": "Получете верификация, без да разкривате никакви лични данни."
-        }
-      },
-      "verification_warning": {
-        "title": "Получете потвърждение",
-        "reward_cap_banner": "Наградите от базов доход и спестявания са ограничени за непотвърдени граждани. Потвърдете акаунта си, за да печелите без ограничения."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Повечето портфейли показват WDD едва след ръчен импорт в избраната верига чрез неговия ",
-      "contract_address": "адрес на договора"
-    }
-  },
-  "toasts": {
-    "generic_error": "Възникна грешка",
-    "copied": "Копирано",
-    "wallet": {
-      "no_wallet": "Няма адрес на портфейл",
-      "min_amount": "Минимум 10 WDD",
-      "sent": "Изпратено",
-      "account_deleted": "Акаунтът е изтрит",
-      "delete_failed": "Изтриването на акаунта неуспешно",
-      "contract_address_error": "Не може да се изтегли към адрес на договор",
-      "sign_out_failed": "Излизането неуспешно",
-      "google_linked": "Google акаунтът е свързан",
-      "google_already_linked": "Google акаунтът вече е свързан с друг акаунт",
-      "google_link_failed": "Неуспешно свързване с Google",
-      "passkey_added": "Ключът за достъп е добавен",
-      "passkey_add_failed": "Неуспешно добавяне на ключ за достъп"
-    },
-    "parties": {
-      "updated": "Актуализирано",
-      "update_failed": "Актуализацията не бе успешна",
-      "update_error": "Грешка при актуализация на партията",
-      "registered": "Партията е регистрирана",
-      "register_failed": "Неуспешна регистрация на партия",
-      "register_error": "Грешка при регистрация на партия",
-      "deleted": "Изтрито",
-      "delete_failed": "Неуспешно изтриване",
-      "delete_error": "Грешка при изтриване"
-    },
-    "basic_income": {
-      "activated": "Основният доход е активиран",
-      "activate_failed": "Активирането неуспешно",
-      "claimed": "Получено",
-      "claim_failed": "Получаването неуспешно"
-    },
-    "savings": {
-      "collected": "Събрано",
-      "collect_failed": "Събирането неуспешно",
-      "deposited": "Депозирано",
-      "deposit_failed": "Депозитът неуспешен",
-      "withdrawn": "Изтеглено",
-      "withdraw_failed": "Изтеглянето неуспешно"
-    }
-  },
-  "common": {
-    "confirm": "Потвърдете",
-    "sign_in": "Влезте",
-    "connect": "Свържи",
-    "disconnect": "Прекъсни връзката",
-    "connect_wallet": "Свържи портфейл",
-    "max": "Макс",
-    "loading": "Зареждане...",
-    "processing": "Обработка...",
-    "insufficient_balance": "Недостатъчно WDD",
-    "delete_account": "Изтриване на акаунт",
-    "sign_out": "Изход",
-    "invalid_address": "Невалиден адрес",
-    "coming_soon": "Очаквайте скоро",
-    "withdraw": "Теглене",
-    "trade": "Търговия",
-    "continue": "Продължи",
-    "close": "Затвори",
-    "updating": "Актуализиране...",
-    "save": "Запази",
-    "vote": "Гласувай",
-    "switch_to_base_chain": "Превключи към Base Chain"
-  },
-  "auth": {
-    "choose_method": "Изберете предпочитания метод.",
-    "sign_in_with_google": "Продължете с Google",
-    "sign_in_with_passkey": "Използвайте биометрия",
-    "sign_in_or_create": "Достъп до вашия акаунт с парола, като използвате пръстов отпечатък, сканиране на лицето или заключване на екрана.",
-    "create_account": "Създаване на акаунт",
-    "create_passkey_name": "Създаване на име на парола",
-    "passkey_name_description": "Именувайте вашата парола, за да я идентифицирате в мениджъра на пароли.",
-    "passkey_name": "Име на парола"
-  }
+	"nav": {
+		"earn": "Печелете",
+		"govern": "Управлявайте",
+		"menu": "Меню"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Партии",
+				"elections": "Избори",
+				"referendums": "Референдуми"
+			},
+			"sections": {
+				"parties": {
+					"title": "Политически партии"
+				},
+				"elections": {
+					"title": "Тестови избори",
+					"subtitle": "Експериментирайте с глобална демокрация"
+				},
+				"referendums": {
+					"title": "Световен Конституционен Референдум",
+					"subtitle": "Гласувайте за нашите основополагащи принципи"
+				}
+			},
+			"vote": {
+				"no_active_election": "Изборът започва скоро",
+				"test_verification": {
+					"description": "Изпробвайте нашата система за проверка сега, за да сте готови за гласуване",
+					"button": "Тест"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Субсидии",
+					"ambassadors": "Посланици"
+				},
+				"discover": "Открийте",
+				"search_placeholder": "Търсене на партии...",
+				"no_parties_found": "Не са намерени партии",
+				"error_loading": "Неуспешно зареждане на партиите",
+				"refresh": "Обнови",
+				"party_details": "Детайли на партията",
+				"share_party": "Сподели партия",
+				"my_party": "Моята партия",
+				"learn_more": "Научете повече",
+				"party_management": "Управление на партията",
+				"edit_party_info": "Редактиране на информация за партията",
+				"dialogs": {
+					"party_name": "Име на партията",
+					"description_optional": "Описание (по избор)",
+					"official_link_optional": "Официална връзка (по избор)",
+					"updating": "Актуализиране...",
+					"save": "Запази",
+					"register_party": "Регистрирайте партия",
+					"register": "Регистрирам",
+					"registering": "Регистриране...",
+					"leader_warning_register": "В момента сте лидер на {partyName}. Регистрирането на нова партия ще изтрие настоящата ви партия.",
+					"deleting": "Изтриване...",
+					"about_to_delete": "На път сте да изтриете {partyName}. Това действие не може да бъде отменено.",
+					"about_to_register": "На път сте да основате нова партия."
+				},
+				"detail": {
+					"failed_to_load": "Неуспешно зареждане на данни за партията",
+					"party_not_found": "Партията не е намерена",
+					"error_loading": "Грешка при зареждане на партията",
+					"back_to_parties": "Обратно към партиите",
+					"description": "Описание",
+					"party_info": "Информация за партията",
+					"leader": "Лидер",
+					"website": "Уебсайт",
+					"not_found_description": "Партията, която търсите, не съществува или е била разпусната."
+				},
+				"delete_party": "Изтрий партия",
+				"run_on_elections_and_earn": "Участвайте в избори и получете субсидии",
+				"ambassadors": {
+					"title": "Програма за Посланици",
+					"description": "Поканете приятели и печелете награди, когато се верифицират и когато партията им получава субсидии",
+					"leaderboard": "Класация",
+					"no_rewards_yet": "Все още няма награди",
+					"col_ambassador": "Посланици",
+					"col_invited": "Поканени",
+					"col_reward": "Награда",
+					"share_referral_link": "Сподели линк за препоръка"
+				},
+				"subsidies": {
+					"title": "Програма за Субсидиране на Партии",
+					"no_subsidies_yet": "Все още няма субсидии",
+					"description": "Финансиране въз основа на изборното представяне",
+					"col_subsidy": "Субсидия"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Избори",
+					"not_found": "Изборите не са намерени",
+					"not_found_description": "Изборите, които търсите, не съществуват.",
+					"back_to_elections": "Назад към изборите",
+					"status_active": "Активни",
+					"status_upcoming": "Предстоящи",
+					"status_ended": "Приключили",
+					"election_info": "Информация за изборите",
+					"reward_pool": "Награден фонд: {amount} WDD",
+					"reward_pool_minimum": "Награден фонд: минимум {amount} WDD",
+					"choose_a_party": "Изберете партия",
+					"no_parties_for_election": "Няма налични партии за тези избори.",
+					"results_title": "Резултати",
+					"vote_singular": "глас",
+					"vote_plural": "гласа",
+					"no_votes": "В тези избори не бяха подадени гласове.",
+					"test_election_name": "Тестов избор {n}"
+				},
+				"list": {
+					"empty_state": "Няма намерени избори",
+					"active_section": "Активни избори",
+					"upcoming_section": "Предстоящи избори",
+					"previous_section": "Предишни избори"
+				}
+			}
+		},
+		"error": {
+			"title": "Нещо се обърка",
+			"description": "Възникна неочаквана грешка. Моля, опитайте отново.",
+			"error_id": "ID на грешката: {digest}",
+			"try_again": "Опитай отново"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Основен доход",
+				"savings": "Спестявания"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Получете пари за това, че сте човек",
+				"subtitle_claim": "Получете вашата драхма",
+				"tooltip_claim": "1 WDD/ден, ограничено до 1 WDD. Върнете се в рамките на 24 часа за максимализиране на приходите.",
+				"claim_button": "Получи",
+				"alert": {
+					"claim": {
+						"title": "Потвърдете получаването",
+						"description": "Ще получите {amount} WDD. Това ще бъде добавено към баланса на вашия портфейл."
+					}
+				},
+				"setup_subtitle": "Настройте вашия основен доход",
+				"activate_loading": "Активирам...",
+				"activate_button": "Активирайте основния доход",
+				"world_drachma": "Какво е световната драхма (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Получете вашия глобален дивидент от ИИ"
+			},
+			"savings": {
+				"title": "Спестовна сметка",
+				"subtitle": "Печелете лихва всяка секунда",
+				"tooltip": "69% годишна основна ставка. Събирайте и реинвестирайте редовно за постигане на близо 100% ефективна възвръщаемост. Изтеглете по всяко време.",
+				"deposit": "Депозирайте",
+				"withdraw": "Изтеглете",
+				"balance": "Баланс",
+				"amount_deposit": "Сума за депозиране",
+				"amount_withdraw": "Сума за изтегляне",
+				"interest": "Лихва",
+				"collect": "Съберете",
+				"alert": {
+					"collect": {
+						"title": "Потвърдете събирането",
+						"description": "Ще съберете {amount} WDD в лихва."
+					},
+					"deposit": {
+						"title": "Потвърдете депозита",
+						"description": "Ще депозирате {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Потвърдете изтеглянето",
+						"description": "Ще изтеглите {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Вижте интелигентния договор",
+				"verify": "Потвърди"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "АКАУНТ",
+					"account_info": "Информация за акаунта",
+					"referral_code": "Реферален код",
+					"referred_by": "Препоръчан от",
+					"language": "Език"
+				},
+				"help": {
+					"title": "ПОМОЩ",
+					"quickstart": "Бърз старт",
+					"docs": "Уики",
+					"help_center": "Помощен център"
+				},
+				"source_code": {
+					"title": "ИЗХОДЕН КОД"
+				},
+				"legal": {
+					"title": "ПРАВНИ",
+					"terms": "Условия за ползване",
+					"privacy": "Политика за поверителност"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Портфейл"
+			},
+			"balance": "Баланс",
+			"modals": {
+				"sign_out": {
+					"confirm": "Сигурни ли сте, че искате да излезете?"
+				},
+				"disconnect": {
+					"confirm": "Сигурни ли сте, че искате да прекъснете връзката с портфейла си?"
+				},
+				"send": {
+					"button": "Изпратете",
+					"withdraw_to_crypto": {
+						"description": "Теглете WDD към криптосметка.",
+						"amount_label": "Сума",
+						"address_label": "Адрес на портфейл",
+						"network_label": "Мрежа"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD на Jumper",
+					"ethereum_uniswap": "Ethereum WDD на Uniswap",
+					"base_jumper": "Base Chain WDD на Jumper",
+					"base_uniswap": "Base Chain WDD на Uniswap",
+					"worldchain_jumper": "World Chain WDD на Jumper",
+					"worldchain_uniswap": "World Chain WDD на Uniswap"
+				},
+				"delete_account": {
+					"description": "Това ще изтрие вашия акаунт завинаги и ще премахне всички ваши данни от нашите сървъри. Това действие не може да бъде отменено — моля, продължете внимателно.",
+					"deleting": "Изтривам..."
+				},
+				"connect_wallet_browser": {
+					"title": "Отвори в MetaMask",
+					"description": "За да се свържете, копирайте този линк и го отворете във вградения браузър на MetaMask.",
+					"copy_link": "Копирай линка"
+				},
+				"connect_wallet_picker": {
+					"description": "Открити са няколко портфейла. Изберете един за свързване."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Нямате портфейл?",
+					"find_wallet_link": "Намерете един в WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "АКАУНТ",
+				"security": "СИГУРНОСТ",
+				"google_account": "Google акаунт",
+				"google_not_linked": "Не е свързан",
+				"passkeys": "Ключове за достъп",
+				"passkeys_linked": "{count} свързани",
+				"danger_zone": "ЗОНА НА ОПАСНОСТ",
+				"delete_account": {
+					"description": "Премахнете постоянно всички ваши данни"
+				},
+				"verification": "ПРОВЕРКА",
+				"google_linked": "Свързан",
+				"account_label": "Акаунт"
+			},
+			"username": {
+				"label": "Потребителско име",
+				"edit_title": "Редактиране на потребителско име",
+				"description": "3-30 символа, буквено-цифрени, долни черти и тирета"
+			},
+			"history": {
+				"title": "ИСТОРИЯ"
+			},
+			"transactions": {
+				"failed_to_load": "Неуспешно зареждане",
+				"no_transactions": "Все още няма транзакции",
+				"wdd_per_day": "WDD/ден",
+				"just_now": "Току-що",
+				"minutes_ago": "преди {minutes}м",
+				"hours_ago": "преди {hours}ч",
+				"days_ago": "преди {days}д",
+				"filter": {
+					"all_types": "Всички типове",
+					"select_type": "Изберете тип",
+					"rewards": "Награди"
+				},
+				"types": {
+					"withdrawal": "Теглене",
+					"received": "Получено",
+					"sent": "Изпратено",
+					"ambassador_reward": "Награда за посланик",
+					"party_subsidy": "Партийна субсидия",
+					"stream_created": "Потокът е създаден",
+					"stream_updated": "Потокът е актуализиран",
+					"savings_deposit": "Спестявания депозирайте",
+					"savings_withdrawal": "Спестявания изтеглете",
+					"savings_interest": "Спестявания лихва",
+					"referral_reward": "Реферална награда"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Сканирайте този QR код, за да се верифицирате чрез Self.",
+				"mobile_dialog_description": "Ще бъдете пренасочени към приложението Self, за да извършите верификацията.",
+				"support_telegram": "Поддръжка на Self",
+				"verification_guide": "Ръководство за проверка",
+				"qr_alt": "QR код за Self проверка",
+				"callback_warning": "Предупреждение",
+				"callback_warning_description": "URL адресът за обратно извикване за проверка не е достъпен от телефона ви. Задайте NEXT_PUBLIC_SELF_CALLBACK на публичен URL (или задайте NEXT_PUBLIC_PUBLIC_BASE_URL на тунел/preview домейн).",
+				"label": "Self",
+				"status_completed": "Проверено",
+				"status_not_completed": "Не е проверено",
+				"learn_about_self": "Научете за Self",
+				"primer": {
+					"title": "Self Протокол",
+					"description": "Получете верификация, без да разкривате никакви лични данни."
+				}
+			},
+			"verification_warning": {
+				"title": "Получете потвърждение",
+				"reward_cap_banner": "Наградите от базов доход и спестявания са ограничени за непотвърдени граждани. Потвърдете акаунта си, за да печелите без ограничения."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Повечето портфейли показват WDD едва след ръчен импорт в избраната верига чрез неговия ",
+			"contract_address": "адрес на договора"
+		}
+	},
+	"toasts": {
+		"generic_error": "Възникна грешка",
+		"copied": "Копирано",
+		"wallet": {
+			"no_wallet": "Няма адрес на портфейл",
+			"min_amount": "Минимум 10 WDD",
+			"sent": "Изпратено",
+			"account_deleted": "Акаунтът е изтрит",
+			"delete_failed": "Изтриването на акаунта неуспешно",
+			"contract_address_error": "Не може да се изтегли към адрес на договор",
+			"sign_out_failed": "Излизането неуспешно",
+			"google_linked": "Google акаунтът е свързан",
+			"google_already_linked": "Google акаунтът вече е свързан с друг акаунт",
+			"google_link_failed": "Неуспешно свързване с Google",
+			"passkey_added": "Ключът за достъп е добавен",
+			"passkey_add_failed": "Неуспешно добавяне на ключ за достъп"
+		},
+		"parties": {
+			"updated": "Актуализирано",
+			"update_failed": "Актуализацията не бе успешна",
+			"update_error": "Грешка при актуализация на партията",
+			"registered": "Партията е регистрирана",
+			"register_failed": "Неуспешна регистрация на партия",
+			"register_error": "Грешка при регистрация на партия",
+			"deleted": "Изтрито",
+			"delete_failed": "Неуспешно изтриване",
+			"delete_error": "Грешка при изтриване"
+		},
+		"basic_income": {
+			"activated": "Основният доход е активиран",
+			"activate_failed": "Активирането неуспешно",
+			"claimed": "Получено",
+			"claim_failed": "Получаването неуспешно"
+		},
+		"savings": {
+			"collected": "Събрано",
+			"collect_failed": "Събирането неуспешно",
+			"deposited": "Депозирано",
+			"deposit_failed": "Депозитът неуспешен",
+			"withdrawn": "Изтеглено",
+			"withdraw_failed": "Изтеглянето неуспешно"
+		}
+	},
+	"common": {
+		"confirm": "Потвърдете",
+		"sign_in": "Влезте",
+		"connect": "Свържи",
+		"disconnect": "Прекъсни връзката",
+		"connect_wallet": "Свържи портфейл",
+		"max": "Макс",
+		"loading": "Зареждане...",
+		"processing": "Обработка...",
+		"insufficient_balance": "Недостатъчно WDD",
+		"delete_account": "Изтриване на акаунт",
+		"sign_out": "Изход",
+		"invalid_address": "Невалиден адрес",
+		"coming_soon": "Очаквайте скоро",
+		"withdraw": "Теглене",
+		"trade": "Търговия",
+		"continue": "Продължи",
+		"close": "Затвори",
+		"updating": "Актуализиране...",
+		"save": "Запази",
+		"vote": "Гласувай",
+		"switch_to_base_chain": "Превключи към Base Chain"
+	},
+	"auth": {
+		"choose_method": "Изберете предпочитания метод.",
+		"sign_in_with_google": "Продължете с Google",
+		"sign_in_with_passkey": "Използвайте биометрия",
+		"sign_in_or_create": "Достъп до вашия акаунт с парола, като използвате пръстов отпечатък, сканиране на лицето или заключване на екрана.",
+		"create_account": "Създаване на акаунт",
+		"create_passkey_name": "Създаване на име на парола",
+		"passkey_name_description": "Именувайте вашата парола, за да я идентифицирате в мениджъра на пароли.",
+		"passkey_name": "Име на парола"
+	}
 }

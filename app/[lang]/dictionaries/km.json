@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "រកប្រាក់",
-    "govern": "គ្រប់គ្រង",
-    "menu": "ម៉ឺនុយ"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "គណបក្ស",
-        "elections": "ការបោះឆ្នោត",
-        "referendums": "ការបោះឆ្នោតអនុម័ត"
-      },
-      "sections": {
-        "parties": {
-          "title": "គណបក្សនយោបាយ"
-        },
-        "elections": {
-          "title": "ការបោះឆ្នោតធ្វើតេស្ត",
-          "subtitle": "ពិសោធន៍ជាមួយនឹងប្រជាធិបតេយ្យសកល"
-        },
-        "referendums": {
-          "title": "ការបោះឆ្នោតអនុម័តរដ្ឋធម្មនុញ្ញសកល",
-          "subtitle": "បោះឆ្នោតលើគោលការណ៍មូលដ្ឋានរបស់យើង"
-        }
-      },
-      "vote": {
-        "no_active_election": "ការបោះឆ្នោតនឹងចាប់ផ្តើមឆាប់ៗនេះ",
-        "test_verification": {
-          "description": "សាកល្បងប្រព័ន្ធផ្ទៀងផ្ទាត់របស់យើងឥឡូវនេះ ដើម្បីត្រៀមខ្លួនសម្រាប់ការបោះឆ្នោត",
-          "button": "សាកល្បង"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "ប្រាក់ឧបត្ថម្ភ",
-          "ambassadors": "អ្នកតំណាង"
-        },
-        "discover": "រកឃើញ",
-        "search_placeholder": "ស្វែងរកគណបក្ស...",
-        "no_parties_found": "រកមិនឃើញគណបក្ស",
-        "error_loading": "បរាជ័យក្នុងការផ្ទុកគណបក្ស",
-        "refresh": "Refresh",
-        "party_details": "ព័ត៌មានលម្អិតគណបក្ស",
-        "share_party": "ចែករំលែកគណបក្ស",
-        "my_party": "គណបក្សរបស់ខ្ញុំ",
-        "learn_more": "ស្វែងយល់បន្ថែម",
-        "party_management": "ការគ្រប់គ្រងគណបក្ស",
-        "edit_party_info": "កែសម្រួលព័ត៌មានគណបក្ស",
-        "dialogs": {
-          "party_name": "ឈ្មោះគណបក្ស",
-          "description_optional": "ការពិពណ៌នា (ជម្រើស)",
-          "official_link_optional": "តំណភ្ជាប់ផ្លូវការ (ជម្រើស)",
-          "updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
-          "save": "រក្សាទុក",
-          "register_party": "ចុះឈ្មោះគណបក្ស",
-          "register": "ចុះឈ្មោះ",
-          "registering": "កំពុងចុះឈ្មោះ...",
-          "leader_warning_register": "បច្ចុប្បន្នអ្នកគឺជាមេដឹកនាំនៃ {partyName}។ ការចុះឈ្មោះគណបក្សថ្មីនឹងលុបគណបក្សបច្ចុប្បន្នរបស់អ្នក។",
-          "deleting": "កំពុងលុប...",
-          "about_to_delete": "អ្នកកំពុងតែនឹងលុប {partyName}។ សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។",
-          "about_to_register": "អ្នកនឹងបង្កើតគណបក្សថ្មី។"
-        },
-        "detail": {
-          "failed_to_load": "មិនអាចផ្ទុកទិន្នន័យគណបក្ស",
-          "party_not_found": "រកមិនឃើញគណបក្ស",
-          "error_loading": "កំហុសក្នុងការផ្ទុកគណបក្ស",
-          "back_to_parties": "ត្រលប់ទៅគណបក្ស",
-          "description": "ការពិពណ៌នា",
-          "party_info": "ព័ត៌មានគណបក្ស",
-          "leader": "អ្នកដឹកនាំ",
-          "website": "គេហទំព័រ",
-          "not_found_description": "គណបក្សដែលអ្នកកំពុងរកមិនមាន ឬត្រូវបានបំបែក។"
-        },
-        "delete_party": "លុបគណបក្ស",
-        "run_on_elections_and_earn": "ចូលរួមការបោះឆ្នោត និងទទួលបានការបញ្ចុះតម្លៃ",
-        "ambassadors": {
-          "title": "កម្មវិធីអ្នកតំណាង",
-          "description": "អញ្ជើញមិត្តភក្តិ ហើយទទួលបានរង្វាន់នៅពេលពួកគេបញ្ជាក់អត្តសញ្ញាណ និងនៅពេលគណបក្សរបស់ពួកគេទទួលបានជំនួយឧបត្ថម្ភ។",
-          "leaderboard": "តារាងចំណាត់ថ្នាក់",
-          "no_rewards_yet": "មិនទាន់មានរង្វាន់ទេ",
-          "col_ambassador": "អ្នកតំណាង",
-          "col_invited": "អ្នកត្រូវបានអញ្ជើញ",
-          "col_reward": "រង្វាន់",
-          "share_referral_link": "ចែករំលែកតំណភ្ជាប់យោង"
-        },
-        "subsidies": {
-          "title": "កម្មវិធីឧបត្ថម្ភគណបក្ស",
-          "no_subsidies_yet": "មិនទាន់មានប្រាក់ឧបត្ថម្ភនៅឡើយទេ",
-          "description": "មូលនិធិផ្អែកលើលទ្ធផលការបោះឆ្នោត។",
-          "col_subsidy": "ការឧបត្ថម្ភធន"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "ការបោះឆ្នោត",
-          "not_found": "រកមិនឃើញការបោះឆ្នោត",
-          "not_found_description": "ការបោះឆ្នោតដែលអ្នកកំពុងស្វែងរកមិនមានទេ។",
-          "back_to_elections": "ត្រឡប់ទៅការបោះឆ្នោត",
-          "status_active": "សកម្ម",
-          "status_upcoming": "នាពេលខាងមុខ",
-          "status_ended": "បានបញ្ចប់",
-          "election_info": "ព័ត៌មានការបោះឆ្នោត",
-          "reward_pool": "មូលនិធិរង្វាន់: {amount} WDD",
-          "reward_pool_minimum": "មូលនិធិរង្វាន់: អប្បបរមា {amount} WDD",
-          "choose_a_party": "ជ្រើសរើសគណបក្ស",
-          "no_parties_for_election": "មិនមានគណបក្សសម្រាប់ការបោះឆ្នោតនេះទេ។",
-          "results_title": "លត្ឋផល",
-          "vote_singular": "សម្លេង",
-          "vote_plural": "សម្លេង",
-          "no_votes": "គ្មានសម្លេងបោះឆ្នោតក្នុងការបោះឆ្នោតនេះទេ។",
-          "test_election_name": "ការបោះឆ្នោតធ្វើតេស្ត {n}"
-        },
-        "list": {
-          "empty_state": "រកមិនឃើញការបោះឆ្នោតទេ",
-          "active_section": "ការបោះឆ្នោតសកម្ម",
-          "upcoming_section": "ការបោះឆ្នោតខាងមុខ",
-          "previous_section": "ការបោះឆ្នោតមុន"
-        }
-      }
-    },
-    "error": {
-      "title": "មានអ្វីមួយមិនប្រក្រតី",
-      "description": "កំហុសដែលមិនរំពឹងទុកបានកើតឡើង។ សូមព្យាយាមម្តងទៀត។",
-      "error_id": "ID កំហុស: {digest}",
-      "try_again": "ព្យាយាមម្តងទៀត"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "ចំណូលមូលដ្ឋាន",
-        "savings": "ការសន្សំ"
-      },
-      "basic_income": {
-        "subtitle_unauth": "ទទួលប្រាក់សម្រាប់ការជាមនុស្ស",
-        "subtitle_claim": "ទាមទារដ្រាក់ម៉ារបស់អ្នក",
-        "tooltip_claim": "1 WDD/ថ្ងៃ កំណត់ចំនួន 1 WDD។ ត្រឡប់មកក្នុងរយៈពេល 24 ម៉ោងដើម្បីធ្វើឱ្យចំណូលអតិបរមា។",
-        "claim_button": "ទាមទារ",
-        "alert": {
-          "claim": {
-            "title": "បញ្ជាក់ការទាមទារ",
-            "description": "អ្នកនឹងទាមទារ {amount} WDD។ នេះនឹងត្រូវបានបន្ថែមទៅក្នុងសមតុល្យ កាបូប របស់អ្នក។"
-          }
-        },
-        "setup_subtitle": "រៀបចំចំណូលមូលដ្ឋានរបស់អ្នក",
-        "activate_loading": "កំពុងដំណើរការ...",
-        "activate_button": "ដំណើរការចំណូលមូលដ្ឋាន",
-        "world_drachma": "ដ្រាក់ម៉ាពិភពលោក (WDD) ជាអ្វី?",
-        "subtitle_unauth_raised_by_humanity": "ទាមទារភាគលាភ AI ពិភពលោករបស់អ្នក"
-      },
-      "savings": {
-        "title": "គណនីសន្សំ",
-        "subtitle": "រកប្រាក់ការប្រាក់រៀលរាល់វិនាទី",
-        "tooltip": "អត្រាប្រាក់គោល 69% ក្នុងមួយឆ្នាំ។ ប្រមូលនិងវិនិយោគម្តងទៀតជាប្រចាំដើម្បីសម្រេចបាននូវការត្រឡប់មកវិញជិត 100% ជាប្រចាំឆ្នាំ។ ដកចេញណាមួយពេលក៏បាន។",
-        "deposit": "ដាក់ប្រាក់",
-        "withdraw": "ដកចេញ",
-        "balance": "សមតុល្យ",
-        "amount_deposit": "ចំនួនទឹកប្រាក់ដើម្បីដាក់ប្រាក់",
-        "amount_withdraw": "ចំនួនទឹកប្រាក់ដើម្បីដកចេញ",
-        "interest": "ការប្រាក់",
-        "collect": "ប្រមូល",
-        "alert": {
-          "collect": {
-            "title": "បញ្ជាក់ការប្រមូល",
-            "description": "អ្នកនឹងប្រមូល {amount} WDD ក្នុងការប្រាក់។"
-          },
-          "deposit": {
-            "title": "បញ្ជាក់ការដាក់ប្រាក់",
-            "description": "អ្នកនឹងដាក់ប្រាក់ {amount} WDD។"
-          },
-          "withdraw": {
-            "title": "បញ្ជាក់ការដកចេញ",
-            "description": "អ្នកនឹងដកចេញ {amount} WDD។"
-          }
-        },
-        "smart_contract_link": "មើល smart contract",
-        "verify": "ផ្ទៀងផ្ទាត់"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "គណនី",
-          "account_info": "ព័ត៌មានគណនី",
-          "referral_code": "កូដយោង",
-          "referred_by": "ណែនាំដោយ",
-          "language": "ភាសា"
-        },
-        "help": {
-          "title": "ជំនួយ",
-          "quickstart": "ការចាប់ផ្តើមរហ័ស",
-          "docs": "វិគី",
-          "help_center": "មជ្ឈមណ្ឌលជំនួយ"
-        },
-        "source_code": {
-          "title": "កូដប្រភព"
-        },
-        "legal": {
-          "title": "ច្បាប់",
-          "terms": "លក្ខខណ្ឌនៃការប្រើប្រាស់",
-          "privacy": "គោលការណ៍ភាពឯកជន"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "កាបូប"
-      },
-      "balance": "សមតុល្យ",
-      "modals": {
-        "sign_out": {
-          "confirm": "តើអ្នកប្រាកដជាចង់ចុះចេញមែនទេ?"
-        },
-        "disconnect": {
-          "confirm": "តើអ្នកប្រាកដថាចង់ផ្តាច់កាបូបរបស់អ្នកមែនទេ?"
-        },
-        "send": {
-          "button": "ផ្ញើ",
-          "withdraw_to_crypto": {
-            "description": "ដក WDD ទៅកាន់គណនី crypto.",
-            "amount_label": "ចំនួនទឹកប្រាក់",
-            "address_label": "អាសយដ្ឋាន កាបូប",
-            "network_label": "បណ្តាញ"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD នៅលើ Jumper",
-          "ethereum_uniswap": "Ethereum WDD នៅលើ Uniswap",
-          "base_jumper": "Base Chain WDD នៅលើ Jumper",
-          "base_uniswap": "Base Chain WDD នៅលើ Uniswap",
-          "worldchain_jumper": "World Chain WDD នៅលើ Jumper",
-          "worldchain_uniswap": "World Chain WDD នៅលើ Uniswap"
-        },
-        "delete_account": {
-          "description": "នេះនឹងលុបគណនីរបស់អ្នកជាអចិន្ត្រៃយ៍និងដកចេញនូវទិន្នន័យទាំងអស់របស់អ្នកពីម៉ាស៊ីនមេរបស់យើង។ សកម្មភាពនេះមិនអាចត្រូវបានធ្វើឡើងវិញបានទេ — សូមបន្តដោយប្រុងប្រយ័ត្ន។",
-          "deleting": "កំពុងលុប..."
-        },
-        "connect_wallet_browser": {
-          "title": "បើកក្នុង MetaMask",
-          "description": "ដើម្បីភ្ជាប់ សូមចម្លងតំណនេះ ហើយបើកវានៅក្នុងកម្មវិធីរុករកដែលមានស្រាប់របស់ MetaMask។",
-          "copy_link": "ចម្លងតំណ"
-        },
-        "connect_wallet_picker": {
-          "description": "បានរកឃើញកាបូបជាច្រើន។ សូមជ្រើសរើសមួយដើម្បីភ្ជាប់។"
-        },
-        "connect_wallet_no_wallet": {
-          "description": "មិនទាន់មានកាបូបទេ?",
-          "find_wallet_link": "ស្វែងរកមួយនៅលើ WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "គណនី",
-        "security": "សន្តិសុខ",
-        "google_account": "គណនី Google",
-        "google_not_linked": "មិនបានភ្ជាប់",
-        "passkeys": "កូនសោចូល",
-        "passkeys_linked": "{count} ភ្ជាប់",
-        "danger_zone": "តំបន់គ្រោះថ្នាក់",
-        "delete_account": {
-          "description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
-        },
-        "verification": "ការផ្ទៀងផ្ទាត់",
-        "google_linked": "បានភ្ជាប់",
-        "account_label": "គណនី"
-      },
-      "username": {
-        "label": "ឈ្មោះអ្នកប្រើប្រាស់",
-        "edit_title": "កែសម្រួលឈ្មោះអ្នកប្រើប្រាស់",
-        "description": "3-30 តួអក្សរ អក្សរលេខ ខ្ទាស់ខាងក្រោម និងសហសញ្ញា"
-      },
-      "history": {
-        "title": "ប្រវត្តិ"
-      },
-      "transactions": {
-        "failed_to_load": "មិនអាចផ្ទុក",
-        "no_transactions": "មិនទាន់មានប្រតិបត្តិការទេ",
-        "wdd_per_day": "WDD/ថ្ងៃ",
-        "just_now": "ឥឡូវនេះ",
-        "minutes_ago": "{minutes}នាទីមុន",
-        "hours_ago": "{hours}ម៉ោងមុន",
-        "days_ago": "{days}ថ្ងៃមុន",
-        "filter": {
-          "all_types": "ប្រភេទទាំងអស់",
-          "select_type": "ជ្រើសរើសប្រភេទ",
-          "rewards": "រង្វាន់"
-        },
-        "types": {
-          "withdrawal": "ដកចេញ",
-          "received": "បានទទួល",
-          "sent": "បានផ្ញើ",
-          "ambassador_reward": "រង្វាន់ឯកអគ្គរដ្ឋទូត",
-          "party_subsidy": "ការឧបត្ថម្ភធនគណបក្ស",
-          "stream_created": "បានបង្កើតស្ទ្រីម",
-          "stream_updated": "បានធ្វើបច្ចុប្បន្នភាពស្ទ្រីម",
-          "savings_deposit": "ការសន្សំ ដាក់ប្រាក់",
-          "savings_withdrawal": "ការសន្សំ ដកចេញ",
-          "savings_interest": "ការសន្សំ ការប្រាក់",
-          "referral_reward": "រង្វាន់ការណែនាំ"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "ស្កេនកូដ QR នេះ ដើម្បីផ្ទៀងផ្ទាត់ដោយ Self។",
-        "mobile_dialog_description": "អ្នកនឹងត្រូវប្តូរទិសទៅកាន់កម្មវិធី Self ដើម្បីបញ្ចប់ការផ្ទៀងផ្ទាត់។",
-        "support_telegram": "ការគាំទ្រ Self",
-        "verification_guide": "មគ្គុទ្ទេសក៍ការផ្ទៀងផ្ទាត់",
-        "qr_alt": "QR ផ្ទៀងផ្ទាត់ Self",
-        "callback_warning": "ការព្រមាន",
-        "callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។",
-        "label": "Self",
-        "status_completed": "បានផ្ទៀងផ្ទាត់",
-        "status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់",
-        "learn_about_self": "ស្វែងយល់អំពី Self",
-        "primer": {
-          "title": "Self ព្រូតុកុល",
-          "description": "ទទួលបានការផ្ទៀងផ្ទាត់ដោយមិនបង្ហាញទិន្នន័យផ្ទាល់ខ្លួនណាមួយទេ។"
-        }
-      },
-      "verification_warning": {
-        "title": "ទទួលបានការផ្ទៀងផ្ទាត់",
-        "reward_cap_banner": "រង្វាន់ប្រាក់ចំណូលមូលដ្ឋាន និងប្រាក់សន្សំ ត្រូវបានកំណត់សម្រាប់ពលរដ្ឋដែលមិនទាន់ផ្ទៀងផ្ទាត់។ សូមផ្ទៀងផ្ទាត់គណនីរបស់អ្នក ដើម្បីរកបានដោយគ្មានដែនកំណត់។"
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "កាបូបភាគច្រើនបង្ហាញ WDD តែបន្ទាប់ពីវាត្រូវបាននាំចូលដោយដៃនៅលើខ្សែសង្វាក់ដែលបានជ្រើសរើសដោយ ",
-      "contract_address": "អាសយដ្ឋានកិច្ចសន្យា"
-    }
-  },
-  "toasts": {
-    "generic_error": "មានកំហុសកើតឡើង",
-    "copied": "បានចម្លង",
-    "wallet": {
-      "no_wallet": "គ្មានអាសយដ្ឋាន កាបូប",
-      "min_amount": "អប្បបរមា 10 WDD",
-      "sent": "បានផ្ញើ",
-      "account_deleted": "គណនីបានលុប",
-      "delete_failed": "ការលុបគណនីបានបរាជ័យ",
-      "contract_address_error": "មិនអាចដកចេញទៅអាសយដ្ឋានកិច្ចសន្យាបានទេ",
-      "sign_out_failed": "ការចេញពីប្រព័ន្ធបរាជ័យ",
-      "google_linked": "គណនី Google ត្រូវបានភ្ជាប់",
-      "google_already_linked": "គណនី Google ភ្ជាប់ជាមួយគណនីផ្សេងរួចហើយ",
-      "google_link_failed": "មិនអាចចាប់ផ្តើមភ្ជាប់ Google បានទេ",
-      "passkey_added": "កូនសោចូលត្រូវបានបន្ថែម",
-      "passkey_add_failed": "មិនអាចបន្ថែមកូនសោចូលបានទេ"
-    },
-    "parties": {
-      "updated": "បានធ្វើបច្ចុប្បន្នភាព",
-      "update_failed": "ការធ្វើបច្ចុប្បន្នភាពបានបរាជ័យ",
-      "update_error": "កំហុសក្នុងការធ្វើបច្ចុប្បន្នភាពគណបក្ស",
-      "registered": "គណបក្សត្រូវបានចុះឈ្មោះ",
-      "register_failed": "បរាជ័យក្នុងការចុះឈ្មោះគណបក្ស",
-      "register_error": "កំហុសក្នុងការចុះឈ្មោះគណបក្ស",
-      "deleted": "បានលុប",
-      "delete_failed": "បរាជ័យក្នុងការលុប",
-      "delete_error": "កំហុសក្នុងការលុប"
-    },
-    "basic_income": {
-      "activated": "ចំណូលមូលដ្ឋានបានដំណើរការ",
-      "activate_failed": "ការដំណើរការបានបរាជ័យ",
-      "claimed": "បានទាមទារ",
-      "claim_failed": "ការទាមទារបានបរាជ័យ"
-    },
-    "savings": {
-      "collected": "បានប្រមូល",
-      "collect_failed": "ការប្រមូលបានបរាជ័យ",
-      "deposited": "បានដាក់ប្រាក់",
-      "deposit_failed": "ការដាក់ប្រាក់បានបរាជ័យ",
-      "withdrawn": "បានដកចេញ",
-      "withdraw_failed": "ការដកចេញបានបរាជ័យ"
-    }
-  },
-  "common": {
-    "confirm": "បញ្ជាក់",
-    "sign_in": "ចូល",
-    "connect": "ភ្ជាប់",
-    "disconnect": "ផ្ដាច់",
-    "connect_wallet": "ភ្ជាប់កាបូប",
-    "max": "អតិបរមា",
-    "loading": "កំពុងផ្ទុក...",
-    "processing": "កំពុងដំណើរការ...",
-    "insufficient_balance": "WDD មិនគ្រប់គ្រាន់",
-    "delete_account": "លុបគណនី",
-    "sign_out": "ចេញ",
-    "invalid_address": "អាសយដ្ឋានមិនត្រឹមត្រូវ",
-    "coming_soon": "នឹងមកដល់ឆាប់ៗ",
-    "withdraw": "ដក",
-    "trade": "ពាណិជ្ជកម្ម",
-    "continue": "បន្ត",
-    "close": "បិទ",
-    "updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
-    "save": "រក្សាទុក",
-    "vote": "បោះឆ្នោត",
-    "switch_to_base_chain": "ប្តូរទៅ Base Chain"
-  },
-  "auth": {
-    "choose_method": "ជ្រើសរើសវិធីសាស្ត្រដែលអ្នកចូលចិត្ត.",
-    "sign_in_with_google": "បន្តជាមួយ Google",
-    "sign_in_with_passkey": "ប្រើប្រាស់ជីវមាត្រ",
-    "sign_in_or_create": "ចូលប្រើគណនីរបស់អ្នកដោយប្រើ passkey ដោយប្រើស្នាមម្រាមដៃ ការស្កេនមុខ ឬការចាក់សោអេក្រង់។",
-    "create_account": "បង្កើតគណនី",
-    "create_passkey_name": "បង្កើតឈ្មោះ passkey",
-    "passkey_name_description": "ដាក់ឈ្មោះ passkey របស់អ្នកដើម្បីកំណត់អត្តសញ្ញាណវានៅក្នុងកម្មវិធីគ្រប់គ្រងពាក្យសម្ងាត់របស់អ្នក។",
-    "passkey_name": "ឈ្មោះ passkey"
-  }
+	"nav": {
+		"earn": "រកប្រាក់",
+		"govern": "គ្រប់គ្រង",
+		"menu": "ម៉ឺនុយ"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "គណបក្ស",
+				"elections": "ការបោះឆ្នោត",
+				"referendums": "ការបោះឆ្នោតអនុម័ត"
+			},
+			"sections": {
+				"parties": {
+					"title": "គណបក្សនយោបាយ"
+				},
+				"elections": {
+					"title": "ការបោះឆ្នោតធ្វើតេស្ត",
+					"subtitle": "ពិសោធន៍ជាមួយនឹងប្រជាធិបតេយ្យសកល"
+				},
+				"referendums": {
+					"title": "ការបោះឆ្នោតអនុម័តរដ្ឋធម្មនុញ្ញសកល",
+					"subtitle": "បោះឆ្នោតលើគោលការណ៍មូលដ្ឋានរបស់យើង"
+				}
+			},
+			"vote": {
+				"no_active_election": "ការបោះឆ្នោតនឹងចាប់ផ្តើមឆាប់ៗនេះ",
+				"test_verification": {
+					"description": "សាកល្បងប្រព័ន្ធផ្ទៀងផ្ទាត់របស់យើងឥឡូវនេះ ដើម្បីត្រៀមខ្លួនសម្រាប់ការបោះឆ្នោត",
+					"button": "សាកល្បង"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "ប្រាក់ឧបត្ថម្ភ",
+					"ambassadors": "អ្នកតំណាង"
+				},
+				"discover": "រកឃើញ",
+				"search_placeholder": "ស្វែងរកគណបក្ស...",
+				"no_parties_found": "រកមិនឃើញគណបក្ស",
+				"error_loading": "បរាជ័យក្នុងការផ្ទុកគណបក្ស",
+				"refresh": "Refresh",
+				"party_details": "ព័ត៌មានលម្អិតគណបក្ស",
+				"share_party": "ចែករំលែកគណបក្ស",
+				"my_party": "គណបក្សរបស់ខ្ញុំ",
+				"learn_more": "ស្វែងយល់បន្ថែម",
+				"party_management": "ការគ្រប់គ្រងគណបក្ស",
+				"edit_party_info": "កែសម្រួលព័ត៌មានគណបក្ស",
+				"dialogs": {
+					"party_name": "ឈ្មោះគណបក្ស",
+					"description_optional": "ការពិពណ៌នា (ជម្រើស)",
+					"official_link_optional": "តំណភ្ជាប់ផ្លូវការ (ជម្រើស)",
+					"updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
+					"save": "រក្សាទុក",
+					"register_party": "ចុះឈ្មោះគណបក្ស",
+					"register": "ចុះឈ្មោះ",
+					"registering": "កំពុងចុះឈ្មោះ...",
+					"leader_warning_register": "បច្ចុប្បន្នអ្នកគឺជាមេដឹកនាំនៃ {partyName}។ ការចុះឈ្មោះគណបក្សថ្មីនឹងលុបគណបក្សបច្ចុប្បន្នរបស់អ្នក។",
+					"deleting": "កំពុងលុប...",
+					"about_to_delete": "អ្នកកំពុងតែនឹងលុប {partyName}។ សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។",
+					"about_to_register": "អ្នកនឹងបង្កើតគណបក្សថ្មី។"
+				},
+				"detail": {
+					"failed_to_load": "មិនអាចផ្ទុកទិន្នន័យគណបក្ស",
+					"party_not_found": "រកមិនឃើញគណបក្ស",
+					"error_loading": "កំហុសក្នុងការផ្ទុកគណបក្ស",
+					"back_to_parties": "ត្រលប់ទៅគណបក្ស",
+					"description": "ការពិពណ៌នា",
+					"party_info": "ព័ត៌មានគណបក្ស",
+					"leader": "អ្នកដឹកនាំ",
+					"website": "គេហទំព័រ",
+					"not_found_description": "គណបក្សដែលអ្នកកំពុងរកមិនមាន ឬត្រូវបានបំបែក។"
+				},
+				"delete_party": "លុបគណបក្ស",
+				"run_on_elections_and_earn": "ចូលរួមការបោះឆ្នោត និងទទួលបានការបញ្ចុះតម្លៃ",
+				"ambassadors": {
+					"title": "កម្មវិធីអ្នកតំណាង",
+					"description": "អញ្ជើញមិត្តភក្តិ ហើយទទួលបានរង្វាន់នៅពេលពួកគេបញ្ជាក់អត្តសញ្ញាណ និងនៅពេលគណបក្សរបស់ពួកគេទទួលបានជំនួយឧបត្ថម្ភ។",
+					"leaderboard": "តារាងចំណាត់ថ្នាក់",
+					"no_rewards_yet": "មិនទាន់មានរង្វាន់ទេ",
+					"col_ambassador": "អ្នកតំណាង",
+					"col_invited": "អ្នកត្រូវបានអញ្ជើញ",
+					"col_reward": "រង្វាន់",
+					"share_referral_link": "ចែករំលែកតំណភ្ជាប់យោង"
+				},
+				"subsidies": {
+					"title": "កម្មវិធីឧបត្ថម្ភគណបក្ស",
+					"no_subsidies_yet": "មិនទាន់មានប្រាក់ឧបត្ថម្ភនៅឡើយទេ",
+					"description": "មូលនិធិផ្អែកលើលទ្ធផលការបោះឆ្នោត។",
+					"col_subsidy": "ការឧបត្ថម្ភធន"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "ការបោះឆ្នោត",
+					"not_found": "រកមិនឃើញការបោះឆ្នោត",
+					"not_found_description": "ការបោះឆ្នោតដែលអ្នកកំពុងស្វែងរកមិនមានទេ។",
+					"back_to_elections": "ត្រឡប់ទៅការបោះឆ្នោត",
+					"status_active": "សកម្ម",
+					"status_upcoming": "នាពេលខាងមុខ",
+					"status_ended": "បានបញ្ចប់",
+					"election_info": "ព័ត៌មានការបោះឆ្នោត",
+					"reward_pool": "មូលនិធិរង្វាន់: {amount} WDD",
+					"reward_pool_minimum": "មូលនិធិរង្វាន់: អប្បបរមា {amount} WDD",
+					"choose_a_party": "ជ្រើសរើសគណបក្ស",
+					"no_parties_for_election": "មិនមានគណបក្សសម្រាប់ការបោះឆ្នោតនេះទេ។",
+					"results_title": "លត្ឋផល",
+					"vote_singular": "សម្លេង",
+					"vote_plural": "សម្លេង",
+					"no_votes": "គ្មានសម្លេងបោះឆ្នោតក្នុងការបោះឆ្នោតនេះទេ។",
+					"test_election_name": "ការបោះឆ្នោតធ្វើតេស្ត {n}"
+				},
+				"list": {
+					"empty_state": "រកមិនឃើញការបោះឆ្នោតទេ",
+					"active_section": "ការបោះឆ្នោតសកម្ម",
+					"upcoming_section": "ការបោះឆ្នោតខាងមុខ",
+					"previous_section": "ការបោះឆ្នោតមុន"
+				}
+			}
+		},
+		"error": {
+			"title": "មានអ្វីមួយមិនប្រក្រតី",
+			"description": "កំហុសដែលមិនរំពឹងទុកបានកើតឡើង។ សូមព្យាយាមម្តងទៀត។",
+			"error_id": "ID កំហុស: {digest}",
+			"try_again": "ព្យាយាមម្តងទៀត"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "ចំណូលមូលដ្ឋាន",
+				"savings": "ការសន្សំ"
+			},
+			"basic_income": {
+				"subtitle_unauth": "ទទួលប្រាក់សម្រាប់ការជាមនុស្ស",
+				"subtitle_claim": "ទាមទារដ្រាក់ម៉ារបស់អ្នក",
+				"tooltip_claim": "1 WDD/ថ្ងៃ កំណត់ចំនួន 1 WDD។ ត្រឡប់មកក្នុងរយៈពេល 24 ម៉ោងដើម្បីធ្វើឱ្យចំណូលអតិបរមា។",
+				"claim_button": "ទាមទារ",
+				"alert": {
+					"claim": {
+						"title": "បញ្ជាក់ការទាមទារ",
+						"description": "អ្នកនឹងទាមទារ {amount} WDD។ នេះនឹងត្រូវបានបន្ថែមទៅក្នុងសមតុល្យ កាបូប របស់អ្នក។"
+					}
+				},
+				"setup_subtitle": "រៀបចំចំណូលមូលដ្ឋានរបស់អ្នក",
+				"activate_loading": "កំពុងដំណើរការ...",
+				"activate_button": "ដំណើរការចំណូលមូលដ្ឋាន",
+				"world_drachma": "ដ្រាក់ម៉ាពិភពលោក (WDD) ជាអ្វី?",
+				"subtitle_unauth_raised_by_humanity": "ទាមទារភាគលាភ AI ពិភពលោករបស់អ្នក"
+			},
+			"savings": {
+				"title": "គណនីសន្សំ",
+				"subtitle": "រកប្រាក់ការប្រាក់រៀលរាល់វិនាទី",
+				"tooltip": "អត្រាប្រាក់គោល 69% ក្នុងមួយឆ្នាំ។ ប្រមូលនិងវិនិយោគម្តងទៀតជាប្រចាំដើម្បីសម្រេចបាននូវការត្រឡប់មកវិញជិត 100% ជាប្រចាំឆ្នាំ។ ដកចេញណាមួយពេលក៏បាន។",
+				"deposit": "ដាក់ប្រាក់",
+				"withdraw": "ដកចេញ",
+				"balance": "សមតុល្យ",
+				"amount_deposit": "ចំនួនទឹកប្រាក់ដើម្បីដាក់ប្រាក់",
+				"amount_withdraw": "ចំនួនទឹកប្រាក់ដើម្បីដកចេញ",
+				"interest": "ការប្រាក់",
+				"collect": "ប្រមូល",
+				"alert": {
+					"collect": {
+						"title": "បញ្ជាក់ការប្រមូល",
+						"description": "អ្នកនឹងប្រមូល {amount} WDD ក្នុងការប្រាក់។"
+					},
+					"deposit": {
+						"title": "បញ្ជាក់ការដាក់ប្រាក់",
+						"description": "អ្នកនឹងដាក់ប្រាក់ {amount} WDD។"
+					},
+					"withdraw": {
+						"title": "បញ្ជាក់ការដកចេញ",
+						"description": "អ្នកនឹងដកចេញ {amount} WDD។"
+					}
+				},
+				"smart_contract_link": "មើល smart contract",
+				"verify": "ផ្ទៀងផ្ទាត់"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "គណនី",
+					"account_info": "ព័ត៌មានគណនី",
+					"referral_code": "កូដយោង",
+					"referred_by": "ណែនាំដោយ",
+					"language": "ភាសា"
+				},
+				"help": {
+					"title": "ជំនួយ",
+					"quickstart": "ការចាប់ផ្តើមរហ័ស",
+					"docs": "វិគី",
+					"help_center": "មជ្ឈមណ្ឌលជំនួយ"
+				},
+				"source_code": {
+					"title": "កូដប្រភព"
+				},
+				"legal": {
+					"title": "ច្បាប់",
+					"terms": "លក្ខខណ្ឌនៃការប្រើប្រាស់",
+					"privacy": "គោលការណ៍ភាពឯកជន"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "កាបូប"
+			},
+			"balance": "សមតុល្យ",
+			"modals": {
+				"sign_out": {
+					"confirm": "តើអ្នកប្រាកដជាចង់ចុះចេញមែនទេ?"
+				},
+				"disconnect": {
+					"confirm": "តើអ្នកប្រាកដថាចង់ផ្តាច់កាបូបរបស់អ្នកមែនទេ?"
+				},
+				"send": {
+					"button": "ផ្ញើ",
+					"withdraw_to_crypto": {
+						"description": "ដក WDD ទៅកាន់គណនី crypto.",
+						"amount_label": "ចំនួនទឹកប្រាក់",
+						"address_label": "អាសយដ្ឋាន កាបូប",
+						"network_label": "បណ្តាញ"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD នៅលើ Jumper",
+					"ethereum_uniswap": "Ethereum WDD នៅលើ Uniswap",
+					"base_jumper": "Base Chain WDD នៅលើ Jumper",
+					"base_uniswap": "Base Chain WDD នៅលើ Uniswap",
+					"worldchain_jumper": "World Chain WDD នៅលើ Jumper",
+					"worldchain_uniswap": "World Chain WDD នៅលើ Uniswap"
+				},
+				"delete_account": {
+					"description": "នេះនឹងលុបគណនីរបស់អ្នកជាអចិន្ត្រៃយ៍និងដកចេញនូវទិន្នន័យទាំងអស់របស់អ្នកពីម៉ាស៊ីនមេរបស់យើង។ សកម្មភាពនេះមិនអាចត្រូវបានធ្វើឡើងវិញបានទេ — សូមបន្តដោយប្រុងប្រយ័ត្ន។",
+					"deleting": "កំពុងលុប..."
+				},
+				"connect_wallet_browser": {
+					"title": "បើកក្នុង MetaMask",
+					"description": "ដើម្បីភ្ជាប់ សូមចម្លងតំណនេះ ហើយបើកវានៅក្នុងកម្មវិធីរុករកដែលមានស្រាប់របស់ MetaMask។",
+					"copy_link": "ចម្លងតំណ"
+				},
+				"connect_wallet_picker": {
+					"description": "បានរកឃើញកាបូបជាច្រើន។ សូមជ្រើសរើសមួយដើម្បីភ្ជាប់។"
+				},
+				"connect_wallet_no_wallet": {
+					"description": "មិនទាន់មានកាបូបទេ?",
+					"find_wallet_link": "ស្វែងរកមួយនៅលើ WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "គណនី",
+				"security": "សន្តិសុខ",
+				"google_account": "គណនី Google",
+				"google_not_linked": "មិនបានភ្ជាប់",
+				"passkeys": "កូនសោចូល",
+				"passkeys_linked": "{count} ភ្ជាប់",
+				"danger_zone": "តំបន់គ្រោះថ្នាក់",
+				"delete_account": {
+					"description": "លុបទិន្នន័យទាំងអស់របស់អ្នកជាអចិន្ត្រៃយ៍"
+				},
+				"verification": "ការផ្ទៀងផ្ទាត់",
+				"google_linked": "បានភ្ជាប់",
+				"account_label": "គណនី"
+			},
+			"username": {
+				"label": "ឈ្មោះអ្នកប្រើប្រាស់",
+				"edit_title": "កែសម្រួលឈ្មោះអ្នកប្រើប្រាស់",
+				"description": "3-30 តួអក្សរ អក្សរលេខ ខ្ទាស់ខាងក្រោម និងសហសញ្ញា"
+			},
+			"history": {
+				"title": "ប្រវត្តិ"
+			},
+			"transactions": {
+				"failed_to_load": "មិនអាចផ្ទុក",
+				"no_transactions": "មិនទាន់មានប្រតិបត្តិការទេ",
+				"wdd_per_day": "WDD/ថ្ងៃ",
+				"just_now": "ឥឡូវនេះ",
+				"minutes_ago": "{minutes}នាទីមុន",
+				"hours_ago": "{hours}ម៉ោងមុន",
+				"days_ago": "{days}ថ្ងៃមុន",
+				"filter": {
+					"all_types": "ប្រភេទទាំងអស់",
+					"select_type": "ជ្រើសរើសប្រភេទ",
+					"rewards": "រង្វាន់"
+				},
+				"types": {
+					"withdrawal": "ដកចេញ",
+					"received": "បានទទួល",
+					"sent": "បានផ្ញើ",
+					"ambassador_reward": "រង្វាន់ឯកអគ្គរដ្ឋទូត",
+					"party_subsidy": "ការឧបត្ថម្ភធនគណបក្ស",
+					"stream_created": "បានបង្កើតស្ទ្រីម",
+					"stream_updated": "បានធ្វើបច្ចុប្បន្នភាពស្ទ្រីម",
+					"savings_deposit": "ការសន្សំ ដាក់ប្រាក់",
+					"savings_withdrawal": "ការសន្សំ ដកចេញ",
+					"savings_interest": "ការសន្សំ ការប្រាក់",
+					"referral_reward": "រង្វាន់ការណែនាំ"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "ស្កេនកូដ QR នេះ ដើម្បីផ្ទៀងផ្ទាត់ដោយ Self។",
+				"mobile_dialog_description": "អ្នកនឹងត្រូវប្តូរទិសទៅកាន់កម្មវិធី Self ដើម្បីបញ្ចប់ការផ្ទៀងផ្ទាត់។",
+				"support_telegram": "ការគាំទ្រ Self",
+				"verification_guide": "មគ្គុទ្ទេសក៍ការផ្ទៀងផ្ទាត់",
+				"qr_alt": "QR ផ្ទៀងផ្ទាត់ Self",
+				"callback_warning": "ការព្រមាន",
+				"callback_warning_description": "URL callback ផ្ទៀងផ្ទាត់មិនអាចចូលប្រើបានពីទូរសព្ទរបស់អ្នកទេ។ កំណត់ NEXT_PUBLIC_SELF_CALLBACK ទៅ URL សាធារណៈ (ឬកំណត់ NEXT_PUBLIC_PUBLIC_BASE_URL ទៅដែន tunnel/preview)។",
+				"label": "Self",
+				"status_completed": "បានផ្ទៀងផ្ទាត់",
+				"status_not_completed": "មិនទាន់បានផ្ទៀងផ្ទាត់",
+				"learn_about_self": "ស្វែងយល់អំពី Self",
+				"primer": {
+					"title": "Self ព្រូតុកុល",
+					"description": "ទទួលបានការផ្ទៀងផ្ទាត់ដោយមិនបង្ហាញទិន្នន័យផ្ទាល់ខ្លួនណាមួយទេ។"
+				}
+			},
+			"verification_warning": {
+				"title": "ទទួលបានការផ្ទៀងផ្ទាត់",
+				"reward_cap_banner": "រង្វាន់ប្រាក់ចំណូលមូលដ្ឋាន និងប្រាក់សន្សំ ត្រូវបានកំណត់សម្រាប់ពលរដ្ឋដែលមិនទាន់ផ្ទៀងផ្ទាត់។ សូមផ្ទៀងផ្ទាត់គណនីរបស់អ្នក ដើម្បីរកបានដោយគ្មានដែនកំណត់។"
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "កាបូបភាគច្រើនបង្ហាញ WDD តែបន្ទាប់ពីវាត្រូវបាននាំចូលដោយដៃនៅលើខ្សែសង្វាក់ដែលបានជ្រើសរើសដោយ ",
+			"contract_address": "អាសយដ្ឋានកិច្ចសន្យា"
+		}
+	},
+	"toasts": {
+		"generic_error": "មានកំហុសកើតឡើង",
+		"copied": "បានចម្លង",
+		"wallet": {
+			"no_wallet": "គ្មានអាសយដ្ឋាន កាបូប",
+			"min_amount": "អប្បបរមា 10 WDD",
+			"sent": "បានផ្ញើ",
+			"account_deleted": "គណនីបានលុប",
+			"delete_failed": "ការលុបគណនីបានបរាជ័យ",
+			"contract_address_error": "មិនអាចដកចេញទៅអាសយដ្ឋានកិច្ចសន្យាបានទេ",
+			"sign_out_failed": "ការចេញពីប្រព័ន្ធបរាជ័យ",
+			"google_linked": "គណនី Google ត្រូវបានភ្ជាប់",
+			"google_already_linked": "គណនី Google ភ្ជាប់ជាមួយគណនីផ្សេងរួចហើយ",
+			"google_link_failed": "មិនអាចចាប់ផ្តើមភ្ជាប់ Google បានទេ",
+			"passkey_added": "កូនសោចូលត្រូវបានបន្ថែម",
+			"passkey_add_failed": "មិនអាចបន្ថែមកូនសោចូលបានទេ"
+		},
+		"parties": {
+			"updated": "បានធ្វើបច្ចុប្បន្នភាព",
+			"update_failed": "ការធ្វើបច្ចុប្បន្នភាពបានបរាជ័យ",
+			"update_error": "កំហុសក្នុងការធ្វើបច្ចុប្បន្នភាពគណបក្ស",
+			"registered": "គណបក្សត្រូវបានចុះឈ្មោះ",
+			"register_failed": "បរាជ័យក្នុងការចុះឈ្មោះគណបក្ស",
+			"register_error": "កំហុសក្នុងការចុះឈ្មោះគណបក្ស",
+			"deleted": "បានលុប",
+			"delete_failed": "បរាជ័យក្នុងការលុប",
+			"delete_error": "កំហុសក្នុងការលុប"
+		},
+		"basic_income": {
+			"activated": "ចំណូលមូលដ្ឋានបានដំណើរការ",
+			"activate_failed": "ការដំណើរការបានបរាជ័យ",
+			"claimed": "បានទាមទារ",
+			"claim_failed": "ការទាមទារបានបរាជ័យ"
+		},
+		"savings": {
+			"collected": "បានប្រមូល",
+			"collect_failed": "ការប្រមូលបានបរាជ័យ",
+			"deposited": "បានដាក់ប្រាក់",
+			"deposit_failed": "ការដាក់ប្រាក់បានបរាជ័យ",
+			"withdrawn": "បានដកចេញ",
+			"withdraw_failed": "ការដកចេញបានបរាជ័យ"
+		}
+	},
+	"common": {
+		"confirm": "បញ្ជាក់",
+		"sign_in": "ចូល",
+		"connect": "ភ្ជាប់",
+		"disconnect": "ផ្ដាច់",
+		"connect_wallet": "ភ្ជាប់កាបូប",
+		"max": "អតិបរមា",
+		"loading": "កំពុងផ្ទុក...",
+		"processing": "កំពុងដំណើរការ...",
+		"insufficient_balance": "WDD មិនគ្រប់គ្រាន់",
+		"delete_account": "លុបគណនី",
+		"sign_out": "ចេញ",
+		"invalid_address": "អាសយដ្ឋានមិនត្រឹមត្រូវ",
+		"coming_soon": "នឹងមកដល់ឆាប់ៗ",
+		"withdraw": "ដក",
+		"trade": "ពាណិជ្ជកម្ម",
+		"continue": "បន្ត",
+		"close": "បិទ",
+		"updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
+		"save": "រក្សាទុក",
+		"vote": "បោះឆ្នោត",
+		"switch_to_base_chain": "ប្តូរទៅ Base Chain"
+	},
+	"auth": {
+		"choose_method": "ជ្រើសរើសវិធីសាស្ត្រដែលអ្នកចូលចិត្ត.",
+		"sign_in_with_google": "បន្តជាមួយ Google",
+		"sign_in_with_passkey": "ប្រើប្រាស់ជីវមាត្រ",
+		"sign_in_or_create": "ចូលប្រើគណនីរបស់អ្នកដោយប្រើ passkey ដោយប្រើស្នាមម្រាមដៃ ការស្កេនមុខ ឬការចាក់សោអេក្រង់។",
+		"create_account": "បង្កើតគណនី",
+		"create_passkey_name": "បង្កើតឈ្មោះ passkey",
+		"passkey_name_description": "ដាក់ឈ្មោះ passkey របស់អ្នកដើម្បីកំណត់អត្តសញ្ញាណវានៅក្នុងកម្មវិធីគ្រប់គ្រងពាក្យសម្ងាត់របស់អ្នក។",
+		"passkey_name": "ឈ្មោះ passkey"
+	}
 }

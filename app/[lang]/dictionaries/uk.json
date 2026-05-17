@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Заробляти",
-    "govern": "Керувати",
-    "menu": "Меню"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Партії",
-        "elections": "Вибори",
-        "referendums": "Референдуми"
-      },
-      "sections": {
-        "parties": {
-          "title": "Політичні партії"
-        },
-        "elections": {
-          "title": "Тестові вибори",
-          "subtitle": "Експериментуйте з глобальною демократією"
-        },
-        "referendums": {
-          "title": "Світовий конституційний референдум",
-          "subtitle": "Голосуйте за наші основоположні принципи"
-        }
-      },
-      "vote": {
-        "no_active_election": "Вибори скоро розпочнуться",
-        "test_verification": {
-          "description": "Спробуйте нашу систему перевірки зараз, щоб бути готовими до голосування",
-          "button": "Тест"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Субсидії",
-          "ambassadors": "Амбасадори"
-        },
-        "discover": "Відкрити",
-        "search_placeholder": "Пошук партій...",
-        "no_parties_found": "Партії не знайдено",
-        "error_loading": "Не вдалося завантажити партії",
-        "refresh": "Оновити",
-        "party_details": "Деталі партії",
-        "share_party": "Поділитися партією",
-        "my_party": "Моя партія",
-        "learn_more": "Дізнатися більше",
-        "party_management": "Управління партією",
-        "edit_party_info": "Редагувати інформацію про партію",
-        "dialogs": {
-          "party_name": "Назва партії",
-          "description_optional": "Опис (необов'язково)",
-          "official_link_optional": "Офіційне посилання (необов'язково)",
-          "updating": "Оновлення...",
-          "save": "Зберегти",
-          "register_party": "Зареєструвати партію",
-          "register": "Реєстрація",
-          "registering": "Реєстрація...",
-          "leader_warning_register": "Ви зараз є лідером {partyName}. Реєстрація нової партії видалить вашу поточну партію.",
-          "deleting": "Видалення...",
-          "about_to_delete": "Ви збираєтеся видалити {partyName}. Цю дію неможливо скасувати.",
-          "about_to_register": "Ви збираєтеся заснувати нову партію."
-        },
-        "detail": {
-          "failed_to_load": "Не вдалося завантажити дані партії",
-          "party_not_found": "Партію не знайдено",
-          "error_loading": "Помилка завантаження партії",
-          "back_to_parties": "Повернутися до партій",
-          "description": "Опис",
-          "party_info": "Інформація про партію",
-          "leader": "Лідер",
-          "website": "Веб-сайт",
-          "not_found_description": "Партія, яку ви шукаєте, не існує або була розпущена."
-        },
-        "delete_party": "Видалити партію",
-        "run_on_elections_and_earn": "Беріть участь у виборах і отримуйте субсидії",
-        "ambassadors": {
-          "title": "Програма Амбасадорів",
-          "description": "Запрошуйте друзів і отримуйте винагороди, коли вони проходять верифікацію та коли їхня партія отримує субсидії",
-          "leaderboard": "Таблиця лідерів",
-          "no_rewards_yet": "Винагород поки немає",
-          "col_ambassador": "Амбасадори",
-          "col_invited": "Запрошені",
-          "col_reward": "Винагорода",
-          "share_referral_link": "Поділитися реферальним посиланням"
-        },
-        "subsidies": {
-          "title": "Програма Субсидування Партій",
-          "no_subsidies_yet": "Субсидій поки немає",
-          "description": "Фінансування на основі виборчих результатів",
-          "col_subsidy": "Субсидія"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Вибори",
-          "not_found": "Вибори не знайдено",
-          "not_found_description": "Вибори, які ви шукаєте, не існують.",
-          "back_to_elections": "Повернутися до виборів",
-          "status_active": "Активні",
-          "status_upcoming": "Майбутні",
-          "status_ended": "Завершені",
-          "election_info": "Інформація про вибори",
-          "reward_pool": "Призовий фонд: {amount} WDD",
-          "reward_pool_minimum": "Призовий фонд: мінімум {amount} WDD",
-          "choose_a_party": "Оберіть партію",
-          "no_parties_for_election": "Для цих виборів немає доступних партій.",
-          "results_title": "Результати",
-          "vote_singular": "голос",
-          "vote_plural": "голосів",
-          "no_votes": "У цих виборах не було подано голосів.",
-          "test_election_name": "Тестові вибори {n}"
-        },
-        "list": {
-          "empty_state": "Виборів не знайдено",
-          "active_section": "Активні вибори",
-          "upcoming_section": "Майбутні вибори",
-          "previous_section": "Попередні вибори"
-        }
-      }
-    },
-    "error": {
-      "title": "Щось пішло не так",
-      "description": "Сталася непередбачена помилка. Будь ласка, спробуйте ще раз.",
-      "error_id": "ID помилки: {digest}",
-      "try_again": "Спробувати знову"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Базовий дохід",
-        "savings": "Заощадження"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Отримуйте гроші за те, що ви людина",
-        "subtitle_claim": "Заберіть свою драхму",
-        "tooltip_claim": "1 WDD/день, максимум 1 WDD. Повертайтеся протягом 24 годин, щоб максимізувати заробіток.",
-        "claim_button": "Забрати",
-        "alert": {
-          "claim": {
-            "title": "Підтвердити отримання",
-            "description": "Ви збираєтеся забрати {amount} WDD. Це буде додано до балансу вашого гаманця."
-          }
-        },
-        "setup_subtitle": "Налаштуйте свій базовий дохід",
-        "activate_loading": "Активується...",
-        "activate_button": "Активувати базовий дохід",
-        "world_drachma": "Що таке світова драхма (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Отримайте свій глобальний дивіденд від ШІ"
-      },
-      "savings": {
-        "title": "Ощадний рахунок",
-        "subtitle": "Заробляйте відсотки кожну секунду",
-        "tooltip": "69% річна базова ставка. Збирайте та реінвестуйте регулярно, щоб досягти майже 100% ефективної прибутковості. Знімайте в будь-який час.",
-        "deposit": "Покласти",
-        "withdraw": "Зняти",
-        "balance": "Баланс",
-        "amount_deposit": "Сума для покладання",
-        "amount_withdraw": "Сума для зняття",
-        "interest": "Відсотки",
-        "collect": "Зібрати",
-        "alert": {
-          "collect": {
-            "title": "Підтвердити збір",
-            "description": "Ви збираєтеся зібрати {amount} WDD у відсотках."
-          },
-          "deposit": {
-            "title": "Підтвердити покладання",
-            "description": "Ви збираєтеся покласти {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Підтвердити зняття",
-            "description": "Ви збираєтеся зняти {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Переглянути смартконтракт",
-        "verify": "Підтвердити"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ОБЛІКОВИЙ ЗАПИС",
-          "account_info": "Інформація про обліковий запис",
-          "referral_code": "Реферальний код",
-          "referred_by": "Запросив",
-          "language": "Мова"
-        },
-        "help": {
-          "title": "ДОПОМОГА",
-          "quickstart": "Швидкий старт",
-          "docs": "Вікі",
-          "help_center": "Довідковий центр"
-        },
-        "source_code": {
-          "title": "ВИХІДНИЙ КОД"
-        },
-        "legal": {
-          "title": "ПРАВОВЕ",
-          "terms": "Умови використання",
-          "privacy": "Політика конфіденційності"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Гаманець"
-      },
-      "balance": "Баланс",
-      "modals": {
-        "sign_out": {
-          "confirm": "Ви впевнені, що хочете вийти?"
-        },
-        "disconnect": {
-          "confirm": "Ви впевнені, що хочете відключити свій гаманець?"
-        },
-        "send": {
-          "button": "Надіслати",
-          "withdraw_to_crypto": {
-            "description": "Вивести WDD на крипторахунок.",
-            "amount_label": "Сума",
-            "address_label": "Адреса гаманця",
-            "network_label": "Мережа"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD на Jumper",
-          "ethereum_uniswap": "Ethereum WDD на Uniswap",
-          "base_jumper": "Base Chain WDD на Jumper",
-          "base_uniswap": "Base Chain WDD на Uniswap",
-          "worldchain_jumper": "World Chain WDD на Jumper",
-          "worldchain_uniswap": "World Chain WDD на Uniswap"
-        },
-        "delete_account": {
-          "description": "Це назавжди видалить ваш обліковий запис та прибере всі ваші дані з наших серверів. Цю дію неможливо скасувати — будь ласка, продовжуйте обережно.",
-          "deleting": "Видаляється..."
-        },
-        "connect_wallet_browser": {
-          "title": "Відкрити в MetaMask",
-          "description": "Щоб підключитися, скопіюйте це посилання і відкрийте його у вбудованому браузері MetaMask.",
-          "copy_link": "Скопіювати посилання"
-        },
-        "connect_wallet_picker": {
-          "description": "Знайдено кілька гаманців. Виберіть один для підключення."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Немає гаманця?",
-          "find_wallet_link": "Знайдіть один на WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ОБЛІКОВИЙ ЗАПИС",
-        "security": "БЕЗПЕКА",
-        "google_account": "Обліковий запис Google",
-        "google_not_linked": "Не підключено",
-        "passkeys": "Ключі доступу",
-        "passkeys_linked": "{count} підключено",
-        "danger_zone": "НЕБЕЗПЕЧНА ЗОНА",
-        "delete_account": {
-          "description": "Назавжди видалити всі ваші дані"
-        },
-        "verification": "ВЕРИФІКАЦІЯ",
-        "google_linked": "Підключено",
-        "account_label": "Обліковий запис"
-      },
-      "username": {
-        "label": "Ім'я користувача",
-        "edit_title": "Редагувати ім'я користувача",
-        "description": "3-30 символів, буквено-цифрові, підкреслення та дефіси"
-      },
-      "history": {
-        "title": "ІСТОРІЯ"
-      },
-      "transactions": {
-        "failed_to_load": "Не вдалося завантажити",
-        "no_transactions": "Поки немає транзакцій",
-        "wdd_per_day": "WDD/день",
-        "just_now": "Щойно",
-        "minutes_ago": "{minutes}хв тому",
-        "hours_ago": "{hours}год тому",
-        "days_ago": "{days}д тому",
-        "filter": {
-          "all_types": "Всі типи",
-          "select_type": "Виберіть тип",
-          "rewards": "Нагороди"
-        },
-        "types": {
-          "withdrawal": "Виведення",
-          "received": "Отримано",
-          "sent": "Відправлено",
-          "ambassador_reward": "Нагорода посла",
-          "party_subsidy": "Партійна субсидія",
-          "stream_created": "Потік створено",
-          "stream_updated": "Потік оновлено",
-          "savings_deposit": "Заощадження покласти",
-          "savings_withdrawal": "Заощадження зняти",
-          "savings_interest": "Заощадження відсотки",
-          "referral_reward": "Реферальна винагорода"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Скануйте цей QR‑код, щоб пройти верифікацію через Self.",
-        "mobile_dialog_description": "Вас буде перенаправлено до застосунку Self, щоб пройти верифікацію.",
-        "support_telegram": "Підтримка Self",
-        "verification_guide": "Посібник з верифікації",
-        "qr_alt": "QR-код верифікації Self",
-        "callback_warning": "Попередження",
-        "callback_warning_description": "URL зворотного виклику верифікації недоступний з вашого телефону. Встановіть NEXT_PUBLIC_SELF_CALLBACK на публічну URL-адресу (або встановіть NEXT_PUBLIC_PUBLIC_BASE_URL на домен тунелю/попереднього перегляду).",
-        "label": "Self",
-        "status_completed": "Підтверджено",
-        "status_not_completed": "Не підтверджено",
-        "learn_about_self": "Дізнайтеся про Self",
-        "primer": {
-          "title": "Self Протокол",
-          "description": "Пройдіть верифікацію, не розкриваючи жодних персональних даних."
-        }
-      },
-      "verification_warning": {
-        "title": "Отримайте верифікацію",
-        "reward_cap_banner": "Винагороди за базовий дохід і заощадження обмежені для неперевірених громадян. Підтвердьте свій акаунт, щоб заробляти без обмежень."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Більшість гаманців показують WDD лише після ручного імпорту в обрану мережу за її ",
-      "contract_address": "адресою контракту"
-    }
-  },
-  "toasts": {
-    "generic_error": "Сталася помилка",
-    "copied": "Скопійовано",
-    "wallet": {
-      "no_wallet": "Немає адреси гаманця",
-      "min_amount": "Мінімум 10 WDD",
-      "sent": "Надіслано",
-      "account_deleted": "Обліковий запис видалено",
-      "delete_failed": "Не вдалося видалити обліковий запис",
-      "contract_address_error": "Не можна зняти на адресу контракту",
-      "sign_out_failed": "Вихід не вдався",
-      "google_linked": "Обліковий запис Google підключено",
-      "google_already_linked": "Обліковий запис Google вже підключено до іншого облікового запису",
-      "google_link_failed": "Не вдалося розпочати підключення Google",
-      "passkey_added": "Ключ доступу додано",
-      "passkey_add_failed": "Не вдалося додати ключ доступу"
-    },
-    "parties": {
-      "updated": "Оновлено",
-      "update_failed": "Не вдалося оновити",
-      "update_error": "Помилка при оновленні партії",
-      "registered": "Партію зареєстровано",
-      "register_failed": "Не вдалося зареєструвати партію",
-      "register_error": "Помилка реєстрації партії",
-      "deleted": "Видалено",
-      "delete_failed": "Не вдалося видалити",
-      "delete_error": "Помилка видалення"
-    },
-    "basic_income": {
-      "activated": "Базовий дохід активовано",
-      "activate_failed": "Не вдалося активувати",
-      "claimed": "Отримано",
-      "claim_failed": "Не вдалося отримати"
-    },
-    "savings": {
-      "collected": "Зібрано",
-      "collect_failed": "Не вдалося зібрати",
-      "deposited": "Покладено",
-      "deposit_failed": "Не вдалося покласти",
-      "withdrawn": "Знято",
-      "withdraw_failed": "Не вдалося зняти"
-    }
-  },
-  "common": {
-    "confirm": "Підтвердити",
-    "sign_in": "Увійти",
-    "connect": "Підключити",
-    "disconnect": "Відключити",
-    "connect_wallet": "Підключити гаманець",
-    "max": "Макс",
-    "loading": "Завантаження...",
-    "processing": "Обробка...",
-    "insufficient_balance": "Недостатньо WDD",
-    "delete_account": "Видалити акаунт",
-    "sign_out": "Вийти",
-    "invalid_address": "Невірна адреса",
-    "coming_soon": "Незабаром",
-    "withdraw": "Вивести",
-    "trade": "Торгувати",
-    "continue": "Продовжити",
-    "close": "Закрити",
-    "updating": "Оновлення...",
-    "save": "Зберегти",
-    "vote": "Голосувати",
-    "switch_to_base_chain": "Перемкнутися на Base Chain"
-  },
-  "auth": {
-    "choose_method": "Виберіть бажаний метод.",
-    "sign_in_with_google": "Продовжити з Google",
-    "sign_in_with_passkey": "Використати біометрію",
-    "sign_in_or_create": "Доступ до вашого облікового запису за допомогою passkey, використовуючи відбиток пальця, сканування обличчя або блокування екрана.",
-    "create_account": "Створити обліковий запис",
-    "create_passkey_name": "Створити ім'я passkey",
-    "passkey_name_description": "Назвіть свій passkey, щоб ідентифікувати його в менеджері паролів.",
-    "passkey_name": "Ім'я passkey"
-  }
+	"nav": {
+		"earn": "Заробляти",
+		"govern": "Керувати",
+		"menu": "Меню"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Партії",
+				"elections": "Вибори",
+				"referendums": "Референдуми"
+			},
+			"sections": {
+				"parties": {
+					"title": "Політичні партії"
+				},
+				"elections": {
+					"title": "Тестові вибори",
+					"subtitle": "Експериментуйте з глобальною демократією"
+				},
+				"referendums": {
+					"title": "Світовий конституційний референдум",
+					"subtitle": "Голосуйте за наші основоположні принципи"
+				}
+			},
+			"vote": {
+				"no_active_election": "Вибори скоро розпочнуться",
+				"test_verification": {
+					"description": "Спробуйте нашу систему перевірки зараз, щоб бути готовими до голосування",
+					"button": "Тест"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Субсидії",
+					"ambassadors": "Амбасадори"
+				},
+				"discover": "Відкрити",
+				"search_placeholder": "Пошук партій...",
+				"no_parties_found": "Партії не знайдено",
+				"error_loading": "Не вдалося завантажити партії",
+				"refresh": "Оновити",
+				"party_details": "Деталі партії",
+				"share_party": "Поділитися партією",
+				"my_party": "Моя партія",
+				"learn_more": "Дізнатися більше",
+				"party_management": "Управління партією",
+				"edit_party_info": "Редагувати інформацію про партію",
+				"dialogs": {
+					"party_name": "Назва партії",
+					"description_optional": "Опис (необов'язково)",
+					"official_link_optional": "Офіційне посилання (необов'язково)",
+					"updating": "Оновлення...",
+					"save": "Зберегти",
+					"register_party": "Зареєструвати партію",
+					"register": "Реєстрація",
+					"registering": "Реєстрація...",
+					"leader_warning_register": "Ви зараз є лідером {partyName}. Реєстрація нової партії видалить вашу поточну партію.",
+					"deleting": "Видалення...",
+					"about_to_delete": "Ви збираєтеся видалити {partyName}. Цю дію неможливо скасувати.",
+					"about_to_register": "Ви збираєтеся заснувати нову партію."
+				},
+				"detail": {
+					"failed_to_load": "Не вдалося завантажити дані партії",
+					"party_not_found": "Партію не знайдено",
+					"error_loading": "Помилка завантаження партії",
+					"back_to_parties": "Повернутися до партій",
+					"description": "Опис",
+					"party_info": "Інформація про партію",
+					"leader": "Лідер",
+					"website": "Веб-сайт",
+					"not_found_description": "Партія, яку ви шукаєте, не існує або була розпущена."
+				},
+				"delete_party": "Видалити партію",
+				"run_on_elections_and_earn": "Беріть участь у виборах і отримуйте субсидії",
+				"ambassadors": {
+					"title": "Програма Амбасадорів",
+					"description": "Запрошуйте друзів і отримуйте винагороди, коли вони проходять верифікацію та коли їхня партія отримує субсидії",
+					"leaderboard": "Таблиця лідерів",
+					"no_rewards_yet": "Винагород поки немає",
+					"col_ambassador": "Амбасадори",
+					"col_invited": "Запрошені",
+					"col_reward": "Винагорода",
+					"share_referral_link": "Поділитися реферальним посиланням"
+				},
+				"subsidies": {
+					"title": "Програма Субсидування Партій",
+					"no_subsidies_yet": "Субсидій поки немає",
+					"description": "Фінансування на основі виборчих результатів",
+					"col_subsidy": "Субсидія"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Вибори",
+					"not_found": "Вибори не знайдено",
+					"not_found_description": "Вибори, які ви шукаєте, не існують.",
+					"back_to_elections": "Повернутися до виборів",
+					"status_active": "Активні",
+					"status_upcoming": "Майбутні",
+					"status_ended": "Завершені",
+					"election_info": "Інформація про вибори",
+					"reward_pool": "Призовий фонд: {amount} WDD",
+					"reward_pool_minimum": "Призовий фонд: мінімум {amount} WDD",
+					"choose_a_party": "Оберіть партію",
+					"no_parties_for_election": "Для цих виборів немає доступних партій.",
+					"results_title": "Результати",
+					"vote_singular": "голос",
+					"vote_plural": "голосів",
+					"no_votes": "У цих виборах не було подано голосів.",
+					"test_election_name": "Тестові вибори {n}"
+				},
+				"list": {
+					"empty_state": "Виборів не знайдено",
+					"active_section": "Активні вибори",
+					"upcoming_section": "Майбутні вибори",
+					"previous_section": "Попередні вибори"
+				}
+			}
+		},
+		"error": {
+			"title": "Щось пішло не так",
+			"description": "Сталася непередбачена помилка. Будь ласка, спробуйте ще раз.",
+			"error_id": "ID помилки: {digest}",
+			"try_again": "Спробувати знову"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Базовий дохід",
+				"savings": "Заощадження"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Отримуйте гроші за те, що ви людина",
+				"subtitle_claim": "Заберіть свою драхму",
+				"tooltip_claim": "1 WDD/день, максимум 1 WDD. Повертайтеся протягом 24 годин, щоб максимізувати заробіток.",
+				"claim_button": "Забрати",
+				"alert": {
+					"claim": {
+						"title": "Підтвердити отримання",
+						"description": "Ви збираєтеся забрати {amount} WDD. Це буде додано до балансу вашого гаманця."
+					}
+				},
+				"setup_subtitle": "Налаштуйте свій базовий дохід",
+				"activate_loading": "Активується...",
+				"activate_button": "Активувати базовий дохід",
+				"world_drachma": "Що таке світова драхма (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Отримайте свій глобальний дивіденд від ШІ"
+			},
+			"savings": {
+				"title": "Ощадний рахунок",
+				"subtitle": "Заробляйте відсотки кожну секунду",
+				"tooltip": "69% річна базова ставка. Збирайте та реінвестуйте регулярно, щоб досягти майже 100% ефективної прибутковості. Знімайте в будь-який час.",
+				"deposit": "Покласти",
+				"withdraw": "Зняти",
+				"balance": "Баланс",
+				"amount_deposit": "Сума для покладання",
+				"amount_withdraw": "Сума для зняття",
+				"interest": "Відсотки",
+				"collect": "Зібрати",
+				"alert": {
+					"collect": {
+						"title": "Підтвердити збір",
+						"description": "Ви збираєтеся зібрати {amount} WDD у відсотках."
+					},
+					"deposit": {
+						"title": "Підтвердити покладання",
+						"description": "Ви збираєтеся покласти {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Підтвердити зняття",
+						"description": "Ви збираєтеся зняти {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Переглянути смартконтракт",
+				"verify": "Підтвердити"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ОБЛІКОВИЙ ЗАПИС",
+					"account_info": "Інформація про обліковий запис",
+					"referral_code": "Реферальний код",
+					"referred_by": "Запросив",
+					"language": "Мова"
+				},
+				"help": {
+					"title": "ДОПОМОГА",
+					"quickstart": "Швидкий старт",
+					"docs": "Вікі",
+					"help_center": "Довідковий центр"
+				},
+				"source_code": {
+					"title": "ВИХІДНИЙ КОД"
+				},
+				"legal": {
+					"title": "ПРАВОВЕ",
+					"terms": "Умови використання",
+					"privacy": "Політика конфіденційності"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Гаманець"
+			},
+			"balance": "Баланс",
+			"modals": {
+				"sign_out": {
+					"confirm": "Ви впевнені, що хочете вийти?"
+				},
+				"disconnect": {
+					"confirm": "Ви впевнені, що хочете відключити свій гаманець?"
+				},
+				"send": {
+					"button": "Надіслати",
+					"withdraw_to_crypto": {
+						"description": "Вивести WDD на крипторахунок.",
+						"amount_label": "Сума",
+						"address_label": "Адреса гаманця",
+						"network_label": "Мережа"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD на Jumper",
+					"ethereum_uniswap": "Ethereum WDD на Uniswap",
+					"base_jumper": "Base Chain WDD на Jumper",
+					"base_uniswap": "Base Chain WDD на Uniswap",
+					"worldchain_jumper": "World Chain WDD на Jumper",
+					"worldchain_uniswap": "World Chain WDD на Uniswap"
+				},
+				"delete_account": {
+					"description": "Це назавжди видалить ваш обліковий запис та прибере всі ваші дані з наших серверів. Цю дію неможливо скасувати — будь ласка, продовжуйте обережно.",
+					"deleting": "Видаляється..."
+				},
+				"connect_wallet_browser": {
+					"title": "Відкрити в MetaMask",
+					"description": "Щоб підключитися, скопіюйте це посилання і відкрийте його у вбудованому браузері MetaMask.",
+					"copy_link": "Скопіювати посилання"
+				},
+				"connect_wallet_picker": {
+					"description": "Знайдено кілька гаманців. Виберіть один для підключення."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Немає гаманця?",
+					"find_wallet_link": "Знайдіть один на WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ОБЛІКОВИЙ ЗАПИС",
+				"security": "БЕЗПЕКА",
+				"google_account": "Обліковий запис Google",
+				"google_not_linked": "Не підключено",
+				"passkeys": "Ключі доступу",
+				"passkeys_linked": "{count} підключено",
+				"danger_zone": "НЕБЕЗПЕЧНА ЗОНА",
+				"delete_account": {
+					"description": "Назавжди видалити всі ваші дані"
+				},
+				"verification": "ВЕРИФІКАЦІЯ",
+				"google_linked": "Підключено",
+				"account_label": "Обліковий запис"
+			},
+			"username": {
+				"label": "Ім'я користувача",
+				"edit_title": "Редагувати ім'я користувача",
+				"description": "3-30 символів, буквено-цифрові, підкреслення та дефіси"
+			},
+			"history": {
+				"title": "ІСТОРІЯ"
+			},
+			"transactions": {
+				"failed_to_load": "Не вдалося завантажити",
+				"no_transactions": "Поки немає транзакцій",
+				"wdd_per_day": "WDD/день",
+				"just_now": "Щойно",
+				"minutes_ago": "{minutes}хв тому",
+				"hours_ago": "{hours}год тому",
+				"days_ago": "{days}д тому",
+				"filter": {
+					"all_types": "Всі типи",
+					"select_type": "Виберіть тип",
+					"rewards": "Нагороди"
+				},
+				"types": {
+					"withdrawal": "Виведення",
+					"received": "Отримано",
+					"sent": "Відправлено",
+					"ambassador_reward": "Нагорода посла",
+					"party_subsidy": "Партійна субсидія",
+					"stream_created": "Потік створено",
+					"stream_updated": "Потік оновлено",
+					"savings_deposit": "Заощадження покласти",
+					"savings_withdrawal": "Заощадження зняти",
+					"savings_interest": "Заощадження відсотки",
+					"referral_reward": "Реферальна винагорода"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Скануйте цей QR‑код, щоб пройти верифікацію через Self.",
+				"mobile_dialog_description": "Вас буде перенаправлено до застосунку Self, щоб пройти верифікацію.",
+				"support_telegram": "Підтримка Self",
+				"verification_guide": "Посібник з верифікації",
+				"qr_alt": "QR-код верифікації Self",
+				"callback_warning": "Попередження",
+				"callback_warning_description": "URL зворотного виклику верифікації недоступний з вашого телефону. Встановіть NEXT_PUBLIC_SELF_CALLBACK на публічну URL-адресу (або встановіть NEXT_PUBLIC_PUBLIC_BASE_URL на домен тунелю/попереднього перегляду).",
+				"label": "Self",
+				"status_completed": "Підтверджено",
+				"status_not_completed": "Не підтверджено",
+				"learn_about_self": "Дізнайтеся про Self",
+				"primer": {
+					"title": "Self Протокол",
+					"description": "Пройдіть верифікацію, не розкриваючи жодних персональних даних."
+				}
+			},
+			"verification_warning": {
+				"title": "Отримайте верифікацію",
+				"reward_cap_banner": "Винагороди за базовий дохід і заощадження обмежені для неперевірених громадян. Підтвердьте свій акаунт, щоб заробляти без обмежень."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Більшість гаманців показують WDD лише після ручного імпорту в обрану мережу за її ",
+			"contract_address": "адресою контракту"
+		}
+	},
+	"toasts": {
+		"generic_error": "Сталася помилка",
+		"copied": "Скопійовано",
+		"wallet": {
+			"no_wallet": "Немає адреси гаманця",
+			"min_amount": "Мінімум 10 WDD",
+			"sent": "Надіслано",
+			"account_deleted": "Обліковий запис видалено",
+			"delete_failed": "Не вдалося видалити обліковий запис",
+			"contract_address_error": "Не можна зняти на адресу контракту",
+			"sign_out_failed": "Вихід не вдався",
+			"google_linked": "Обліковий запис Google підключено",
+			"google_already_linked": "Обліковий запис Google вже підключено до іншого облікового запису",
+			"google_link_failed": "Не вдалося розпочати підключення Google",
+			"passkey_added": "Ключ доступу додано",
+			"passkey_add_failed": "Не вдалося додати ключ доступу"
+		},
+		"parties": {
+			"updated": "Оновлено",
+			"update_failed": "Не вдалося оновити",
+			"update_error": "Помилка при оновленні партії",
+			"registered": "Партію зареєстровано",
+			"register_failed": "Не вдалося зареєструвати партію",
+			"register_error": "Помилка реєстрації партії",
+			"deleted": "Видалено",
+			"delete_failed": "Не вдалося видалити",
+			"delete_error": "Помилка видалення"
+		},
+		"basic_income": {
+			"activated": "Базовий дохід активовано",
+			"activate_failed": "Не вдалося активувати",
+			"claimed": "Отримано",
+			"claim_failed": "Не вдалося отримати"
+		},
+		"savings": {
+			"collected": "Зібрано",
+			"collect_failed": "Не вдалося зібрати",
+			"deposited": "Покладено",
+			"deposit_failed": "Не вдалося покласти",
+			"withdrawn": "Знято",
+			"withdraw_failed": "Не вдалося зняти"
+		}
+	},
+	"common": {
+		"confirm": "Підтвердити",
+		"sign_in": "Увійти",
+		"connect": "Підключити",
+		"disconnect": "Відключити",
+		"connect_wallet": "Підключити гаманець",
+		"max": "Макс",
+		"loading": "Завантаження...",
+		"processing": "Обробка...",
+		"insufficient_balance": "Недостатньо WDD",
+		"delete_account": "Видалити акаунт",
+		"sign_out": "Вийти",
+		"invalid_address": "Невірна адреса",
+		"coming_soon": "Незабаром",
+		"withdraw": "Вивести",
+		"trade": "Торгувати",
+		"continue": "Продовжити",
+		"close": "Закрити",
+		"updating": "Оновлення...",
+		"save": "Зберегти",
+		"vote": "Голосувати",
+		"switch_to_base_chain": "Перемкнутися на Base Chain"
+	},
+	"auth": {
+		"choose_method": "Виберіть бажаний метод.",
+		"sign_in_with_google": "Продовжити з Google",
+		"sign_in_with_passkey": "Використати біометрію",
+		"sign_in_or_create": "Доступ до вашого облікового запису за допомогою passkey, використовуючи відбиток пальця, сканування обличчя або блокування екрана.",
+		"create_account": "Створити обліковий запис",
+		"create_passkey_name": "Створити ім'я passkey",
+		"passkey_name_description": "Назвіть свій passkey, щоб ідентифікувати його в менеджері паролів.",
+		"passkey_name": "Ім'я passkey"
+	}
 }

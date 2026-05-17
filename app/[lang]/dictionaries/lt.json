@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Uždirbti",
-    "govern": "Valdyti",
-    "menu": "Meniu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partijos",
-        "elections": "Rinkimai",
-        "referendums": "Referendumai"
-      },
-      "sections": {
-        "parties": {
-          "title": "Politinės partijos"
-        },
-        "elections": {
-          "title": "Testiniai rinkimai",
-          "subtitle": "Eksperimentuokite su globalia demokratija"
-        },
-        "referendums": {
-          "title": "Pasaulio konstitucinis referendumas",
-          "subtitle": "Balsuokite už mūsų pagrindinius principus"
-        }
-      },
-      "vote": {
-        "no_active_election": "Rinkimai prasidės netrukus",
-        "test_verification": {
-          "description": "Išbandykite mūsų patvirtinimo sistemą dabar, kad būtumėte pasiruošę balsavimui",
-          "button": "Testas"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidijos",
-          "ambassadors": "Ambasadoriai"
-        },
-        "discover": "Atrasti",
-        "search_placeholder": "Ieškoti partijų...",
-        "no_parties_found": "Partijų nerasta",
-        "error_loading": "Nepavyko įkelti partijų",
-        "refresh": "Atnaujinti",
-        "party_details": "Partijos detalės",
-        "share_party": "Dalintis partija",
-        "my_party": "Mano partija",
-        "learn_more": "Sužinokite daugiau",
-        "party_management": "Partijos valdymas",
-        "edit_party_info": "Redaguoti partijos informaciją",
-        "dialogs": {
-          "party_name": "Partijos pavadinimas",
-          "description_optional": "Aprašymas (neprivalomas)",
-          "official_link_optional": "Oficialus nuoroda (neprivalomas)",
-          "updating": "Atnaujinama...",
-          "save": "Išsaugoti",
-          "register_party": "Registruoti partiją",
-          "register": "Registruotis",
-          "registering": "Registruojama...",
-          "leader_warning_register": "Šiuo metu esate {partyName} lyderis. Naujos partijos registravimas ištrins jūsų dabartinę partiją.",
-          "deleting": "Trinama...",
-          "about_to_delete": "Ketinate ištrinti {partyName}. Šio veiksmo negalima atšaukti.",
-          "about_to_register": "Jūs ketinate įkurti naują partiją."
-        },
-        "detail": {
-          "failed_to_load": "Nepavyko įkelti partijos duomenų",
-          "party_not_found": "Partija nerasta",
-          "error_loading": "Klaida įkeliant partiją",
-          "back_to_parties": "Atgal į partijas",
-          "description": "Aprašymas",
-          "party_info": "Partijos informacija",
-          "leader": "Lyderis",
-          "website": "Svetainė",
-          "not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
-        },
-        "delete_party": "Ištrinti partiją",
-        "run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas",
-        "ambassadors": {
-          "title": "Ambasadorių Programa",
-          "description": "Pakvieskite draugus ir gaukite atlygį, kai jie patvirtina tapatybę ir kai jų partija gauna subsidijas",
-          "leaderboard": "Lyderių lentelė",
-          "no_rewards_yet": "Kol kas atlygių nėra",
-          "col_ambassador": "Ambasadoriai",
-          "col_invited": "Pakviestieji",
-          "col_reward": "Atlygis",
-          "share_referral_link": "Dalintis rekomendacijos nuoroda"
-        },
-        "subsidies": {
-          "title": "Partijų Subsidijavimo Programa",
-          "no_subsidies_yet": "Subsidijų dar nėra",
-          "description": "Finansavimas pagal rinkimų rezultatyvumą",
-          "col_subsidy": "Subsidija"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Rinkimai",
-          "not_found": "Rinkimai nerasti",
-          "not_found_description": "Rinkimai, kurių ieškote, neegzistuoja.",
-          "back_to_elections": "Grįžti į rinkimus",
-          "status_active": "Aktyvūs",
-          "status_upcoming": "Būsimi",
-          "status_ended": "Pasibaigę",
-          "election_info": "Rinkimų informacija",
-          "reward_pool": "Atlygio fondas: {amount} WDD",
-          "reward_pool_minimum": "Atlygio fondas: mažiausiai {amount} WDD",
-          "choose_a_party": "Pasirinkite partiją",
-          "no_parties_for_election": "Šiems rinkimams nėra prieinamų partijų.",
-          "results_title": "Rezultatai",
-          "vote_singular": "balsas",
-          "vote_plural": "balsų",
-          "no_votes": "Šiuose rinkimuose nebuvo balsuota.",
-          "test_election_name": "Testiniai rinkimai {n}"
-        },
-        "list": {
-          "empty_state": "Rinkimų nerasta",
-          "active_section": "Aktyvūs rinkimai",
-          "upcoming_section": "Būsimi rinkimai",
-          "previous_section": "Ankstesni rinkimai"
-        }
-      }
-    },
-    "error": {
-      "title": "Kažkas nutiko",
-      "description": "Įvyko netikėta klaida. Bandykite dar kartą.",
-      "error_id": "Klaidos ID: {digest}",
-      "try_again": "Bandyti dar kartą"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Bazinis pajamas",
-        "savings": "Santaupos"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Gaukite pinigus už tai, kad esate žmogus",
-        "subtitle_claim": "Atsiimkite savo drakmas",
-        "tooltip_claim": "1 WDD/dieną, maksimaliai 1 WDD. Grįžkite per 24 valandas, kad maksimaliai padidintumėte uždarbį.",
-        "claim_button": "Atsiimti",
-        "alert": {
-          "claim": {
-            "title": "Patvirtinti atsiėmimą",
-            "description": "Ketinate atsiimti {amount} WDD. Tai bus pridėta prie jūsų piniginės likučio."
-          }
-        },
-        "setup_subtitle": "Nustatykite savo bazinius pajamas",
-        "activate_loading": "Aktyvuojama...",
-        "activate_button": "Aktyvuoti bazinius pajamas",
-        "world_drachma": "Kas yra pasaulio drachma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Atsiimkite savo pasaulinį AI dividendą"
-      },
-      "savings": {
-        "title": "Sąskaita santaupoms",
-        "subtitle": "Uždirbkite palūkanas kas sekundę",
-        "tooltip": "69% metinė bazinė norma. Rinkite ir reinvestuokite reguliariai, kad pasiektumėte beveik 100% efektyvų grąžą. Išimkite bet kada.",
-        "deposit": "Įdėti",
-        "withdraw": "Išimti",
-        "balance": "Likutis",
-        "amount_deposit": "Suma įdėjimui",
-        "amount_withdraw": "Suma išėmimui",
-        "interest": "Palūkanos",
-        "collect": "Rinkti",
-        "alert": {
-          "collect": {
-            "title": "Patvirtinti rinkimą",
-            "description": "Ketinate surinkti {amount} WDD palūkanų."
-          },
-          "deposit": {
-            "title": "Patvirtinti įdėjimą",
-            "description": "Ketinate įdėti {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Patvirtinti išėmimą",
-            "description": "Ketinate išimti {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Peržiūrėti išmaniąją sutartį",
-        "verify": "Patvirtinti"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "PASKYRA",
-          "account_info": "Paskyros informacija",
-          "referral_code": "Rekomendacijos kodas",
-          "referred_by": "Pakvietė",
-          "language": "Kalba"
-        },
-        "help": {
-          "title": "PAGALBA",
-          "quickstart": "Greita pradžia",
-          "docs": "Wiki",
-          "help_center": "Pagalbos centras"
-        },
-        "source_code": {
-          "title": "IŠANKINIS KODAS"
-        },
-        "legal": {
-          "title": "TEISINIS",
-          "terms": "Naudojimo sąlygos",
-          "privacy": "Privatumo politika"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Piniginė"
-      },
-      "balance": "Likutis",
-      "modals": {
-        "sign_out": {
-          "confirm": "Ar tikrai norite atsijungti?"
-        },
-        "disconnect": {
-          "confirm": "Ar tikrai norite atjungti savo piniginę?"
-        },
-        "send": {
-          "button": "Siųsti",
-          "withdraw_to_crypto": {
-            "description": "Išimti WDD į kripto sąskaitą.",
-            "amount_label": "Suma",
-            "address_label": "Piniginės adresas",
-            "network_label": "Tinklas"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumper",
-          "ethereum_uniswap": "Ethereum WDD Uniswap",
-          "base_jumper": "Base Chain WDD Jumper",
-          "base_uniswap": "Base Chain WDD Uniswap",
-          "worldchain_jumper": "World Chain WDD Jumper",
-          "worldchain_uniswap": "World Chain WDD Uniswap"
-        },
-        "delete_account": {
-          "description": "Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių. Šio veiksmo negalima atšaukti — tęskite atsargiai.",
-          "deleting": "Ištrinama..."
-        },
-        "connect_wallet_browser": {
-          "title": "Atidaryti MetaMask",
-          "description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją MetaMask integruotoje naršyklėje.",
-          "copy_link": "Kopijuoti nuorodą"
-        },
-        "connect_wallet_picker": {
-          "description": "Rasta kelios piniginės. Pasirinkite vieną prisijungimui."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Neturite piniginės?",
-          "find_wallet_link": "Raskite vieną WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "PASKYRA",
-        "security": "SAUGUMAS",
-        "google_account": "Google paskyra",
-        "google_not_linked": "Neprijungta",
-        "passkeys": "Prieigos raktai",
-        "passkeys_linked": "{count} prijungta",
-        "danger_zone": "PAVOJINGA ZONA",
-        "delete_account": {
-          "description": "Permanentiškai pašalinkite visus savo duomenis"
-        },
-        "verification": "PATVIRTINIMAS",
-        "google_linked": "Prijungta",
-        "account_label": "Paskyra"
-      },
-      "username": {
-        "label": "Vartotojo vardas",
-        "edit_title": "Redaguoti vartotojo vardą",
-        "description": "3-30 simbolių, alfanumeriniai, pabraukimai ir brūkšneliai"
-      },
-      "history": {
-        "title": "ISTORIJA"
-      },
-      "transactions": {
-        "failed_to_load": "Įkelti nepavyko",
-        "no_transactions": "Dar nėra operacijų",
-        "wdd_per_day": "WDD/diena",
-        "just_now": "Ką tik",
-        "minutes_ago": "prieš {minutes}min",
-        "hours_ago": "prieš {hours}val",
-        "days_ago": "prieš {days}d",
-        "filter": {
-          "all_types": "Visi tipai",
-          "select_type": "Pasirinkite tipą",
-          "rewards": "Apdovanojimai"
-        },
-        "types": {
-          "withdrawal": "Išėmimas",
-          "received": "Gauta",
-          "sent": "Išsiųsta",
-          "ambassador_reward": "Ambasadoriaus atlygis",
-          "party_subsidy": "Partijos subsidija",
-          "stream_created": "Srautas sukurtas",
-          "stream_updated": "Srautas atnaujintas",
-          "savings_deposit": "Santaupos įdėti",
-          "savings_withdrawal": "Santaupos išimti",
-          "savings_interest": "Santaupos palūkanos",
-          "referral_reward": "Rekomendacijos atlygis"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Nuskenuokite šį QR kodą, kad patvirtintumėte su Self.",
-        "mobile_dialog_description": "Būsite nukreipti į Self programėlę, kad užbaigtumėte patvirtinimą.",
-        "support_telegram": "Self palaikymas",
-        "verification_guide": "Patvirtinimo vadovas",
-        "qr_alt": "Self patvirtinimo QR",
-        "callback_warning": "Įspėjimas",
-        "callback_warning_description": "Patvirtinimo atgalinio iškvietimo URL nepasiekiamas iš jūsų telefono. Nustatykite NEXT_PUBLIC_SELF_CALLBACK į viešą URL (arba nustatykite NEXT_PUBLIC_PUBLIC_BASE_URL į tunelio/peržiūros domeną).",
-        "label": "Self",
-        "status_completed": "Patvirtinta",
-        "status_not_completed": "Nepatvirtinta",
-        "learn_about_self": "Sužinokite apie Self",
-        "primer": {
-          "title": "Self Protokolas",
-          "description": "Tapkite patvirtintu(-a) neatskleisdami jokių asmeninių duomenų."
-        }
-      },
-      "verification_warning": {
-        "title": "Gaukite patvirtinimą",
-        "reward_cap_banner": "Pagrindinių pajamų ir taupymo atlygiams nepatvirtintiems piliečiams taikomas limitas. Patvirtinkite paskyrą, kad gautumėte be apribojimų."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Dauguma piniginių rodo WDD tik po to, kai jis rankiniu būdu importuotas į pasirinktą grandinę pagal jo ",
-      "contract_address": "sutarties adresą"
-    }
-  },
-  "toasts": {
-    "generic_error": "Įvyko klaida",
-    "copied": "Nukopijuota",
-    "wallet": {
-      "no_wallet": "Nėra piniginės adreso",
-      "min_amount": "Minimaliai 10 WDD",
-      "sent": "Išsiųsta",
-      "account_deleted": "Paskyra ištrinta",
-      "delete_failed": "Nepavyko ištrinti paskyros",
-      "contract_address_error": "Negalima išimti į sutarties adresą",
-      "sign_out_failed": "Atsijungimas nepavyko",
-      "google_linked": "Google paskyra prijungta",
-      "google_already_linked": "Google paskyra jau prijungta prie kitos paskyros",
-      "google_link_failed": "Nepavyko pradėti Google prijungimo",
-      "passkey_added": "Prieigos raktas pridėtas",
-      "passkey_add_failed": "Nepavyko pridėti prieigos rakto"
-    },
-    "parties": {
-      "updated": "Atnaujinta",
-      "update_failed": "Atnaujinimas nepavyko",
-      "update_error": "Klaida atnaujinant partiją",
-      "registered": "Partija užregistruota",
-      "register_failed": "Nepavyko užregistruoti partijos",
-      "register_error": "Klaida registruojant partiją",
-      "deleted": "Ištrinta",
-      "delete_failed": "Nepavyko ištrinti",
-      "delete_error": "Klaida trinant"
-    },
-    "basic_income": {
-      "activated": "Baziniai pajamai aktyvuoti",
-      "activate_failed": "Aktyvavimas nepavyko",
-      "claimed": "Atsiimta",
-      "claim_failed": "Atsiėmimas nepavyko"
-    },
-    "savings": {
-      "collected": "Surinkta",
-      "collect_failed": "Rinkimas nepavyko",
-      "deposited": "Įdėta",
-      "deposit_failed": "Įdėjimas nepavyko",
-      "withdrawn": "Išimta",
-      "withdraw_failed": "Išėmimas nepavyko"
-    }
-  },
-  "common": {
-    "confirm": "Patvirtinti",
-    "sign_in": "Prisijungti",
-    "connect": "Prijungti",
-    "disconnect": "Atsijungti",
-    "connect_wallet": "Prijungti piniginę",
-    "max": "Maks",
-    "loading": "Kraunama...",
-    "processing": "Apdorojama...",
-    "insufficient_balance": "Nepakanka WDD",
-    "delete_account": "Ištrinti paskyrą",
-    "sign_out": "Atsijungti",
-    "invalid_address": "Neteisingas adresas",
-    "coming_soon": "Netrukus",
-    "withdraw": "Išsiimti",
-    "trade": "Prekiauti",
-    "continue": "Tęsti",
-    "close": "Uždaryti",
-    "updating": "Atnaujinama...",
-    "save": "Išsaugoti",
-    "vote": "Balsuoti",
-    "switch_to_base_chain": "Perjungti į Base Chain"
-  },
-  "auth": {
-    "choose_method": "Pasirinkite pageidaujamą metodą.",
-    "sign_in_with_google": "Tęsti su Google",
-    "sign_in_with_passkey": "Naudoti biometriją",
-    "sign_in_or_create": "Prieiga prie jūsų paskyros naudojant passkey, naudojant piršto atspaudą, veido nuskaitymą arba ekrano užraktą.",
-    "create_account": "Sukurti paskyrą",
-    "create_passkey_name": "Sukurti passkey pavadinimą",
-    "passkey_name_description": "Pavadinkite savo passkey, kad galėtumėte jį identifikuoti slaptažodžių tvarkytuvėje.",
-    "passkey_name": "Passkey pavadinimas"
-  }
+	"nav": {
+		"earn": "Uždirbti",
+		"govern": "Valdyti",
+		"menu": "Meniu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partijos",
+				"elections": "Rinkimai",
+				"referendums": "Referendumai"
+			},
+			"sections": {
+				"parties": {
+					"title": "Politinės partijos"
+				},
+				"elections": {
+					"title": "Testiniai rinkimai",
+					"subtitle": "Eksperimentuokite su globalia demokratija"
+				},
+				"referendums": {
+					"title": "Pasaulio konstitucinis referendumas",
+					"subtitle": "Balsuokite už mūsų pagrindinius principus"
+				}
+			},
+			"vote": {
+				"no_active_election": "Rinkimai prasidės netrukus",
+				"test_verification": {
+					"description": "Išbandykite mūsų patvirtinimo sistemą dabar, kad būtumėte pasiruošę balsavimui",
+					"button": "Testas"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidijos",
+					"ambassadors": "Ambasadoriai"
+				},
+				"discover": "Atrasti",
+				"search_placeholder": "Ieškoti partijų...",
+				"no_parties_found": "Partijų nerasta",
+				"error_loading": "Nepavyko įkelti partijų",
+				"refresh": "Atnaujinti",
+				"party_details": "Partijos detalės",
+				"share_party": "Dalintis partija",
+				"my_party": "Mano partija",
+				"learn_more": "Sužinokite daugiau",
+				"party_management": "Partijos valdymas",
+				"edit_party_info": "Redaguoti partijos informaciją",
+				"dialogs": {
+					"party_name": "Partijos pavadinimas",
+					"description_optional": "Aprašymas (neprivalomas)",
+					"official_link_optional": "Oficialus nuoroda (neprivalomas)",
+					"updating": "Atnaujinama...",
+					"save": "Išsaugoti",
+					"register_party": "Registruoti partiją",
+					"register": "Registruotis",
+					"registering": "Registruojama...",
+					"leader_warning_register": "Šiuo metu esate {partyName} lyderis. Naujos partijos registravimas ištrins jūsų dabartinę partiją.",
+					"deleting": "Trinama...",
+					"about_to_delete": "Ketinate ištrinti {partyName}. Šio veiksmo negalima atšaukti.",
+					"about_to_register": "Jūs ketinate įkurti naują partiją."
+				},
+				"detail": {
+					"failed_to_load": "Nepavyko įkelti partijos duomenų",
+					"party_not_found": "Partija nerasta",
+					"error_loading": "Klaida įkeliant partiją",
+					"back_to_parties": "Atgal į partijas",
+					"description": "Aprašymas",
+					"party_info": "Partijos informacija",
+					"leader": "Lyderis",
+					"website": "Svetainė",
+					"not_found_description": "Partija, kurią ieškote, neegzistuoja arba buvo išardyta."
+				},
+				"delete_party": "Ištrinti partiją",
+				"run_on_elections_and_earn": "Dalyvaukite rinkimuose ir gaukite subsidijas",
+				"ambassadors": {
+					"title": "Ambasadorių Programa",
+					"description": "Pakvieskite draugus ir gaukite atlygį, kai jie patvirtina tapatybę ir kai jų partija gauna subsidijas",
+					"leaderboard": "Lyderių lentelė",
+					"no_rewards_yet": "Kol kas atlygių nėra",
+					"col_ambassador": "Ambasadoriai",
+					"col_invited": "Pakviestieji",
+					"col_reward": "Atlygis",
+					"share_referral_link": "Dalintis rekomendacijos nuoroda"
+				},
+				"subsidies": {
+					"title": "Partijų Subsidijavimo Programa",
+					"no_subsidies_yet": "Subsidijų dar nėra",
+					"description": "Finansavimas pagal rinkimų rezultatyvumą",
+					"col_subsidy": "Subsidija"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Rinkimai",
+					"not_found": "Rinkimai nerasti",
+					"not_found_description": "Rinkimai, kurių ieškote, neegzistuoja.",
+					"back_to_elections": "Grįžti į rinkimus",
+					"status_active": "Aktyvūs",
+					"status_upcoming": "Būsimi",
+					"status_ended": "Pasibaigę",
+					"election_info": "Rinkimų informacija",
+					"reward_pool": "Atlygio fondas: {amount} WDD",
+					"reward_pool_minimum": "Atlygio fondas: mažiausiai {amount} WDD",
+					"choose_a_party": "Pasirinkite partiją",
+					"no_parties_for_election": "Šiems rinkimams nėra prieinamų partijų.",
+					"results_title": "Rezultatai",
+					"vote_singular": "balsas",
+					"vote_plural": "balsų",
+					"no_votes": "Šiuose rinkimuose nebuvo balsuota.",
+					"test_election_name": "Testiniai rinkimai {n}"
+				},
+				"list": {
+					"empty_state": "Rinkimų nerasta",
+					"active_section": "Aktyvūs rinkimai",
+					"upcoming_section": "Būsimi rinkimai",
+					"previous_section": "Ankstesni rinkimai"
+				}
+			}
+		},
+		"error": {
+			"title": "Kažkas nutiko",
+			"description": "Įvyko netikėta klaida. Bandykite dar kartą.",
+			"error_id": "Klaidos ID: {digest}",
+			"try_again": "Bandyti dar kartą"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Bazinis pajamas",
+				"savings": "Santaupos"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Gaukite pinigus už tai, kad esate žmogus",
+				"subtitle_claim": "Atsiimkite savo drakmas",
+				"tooltip_claim": "1 WDD/dieną, maksimaliai 1 WDD. Grįžkite per 24 valandas, kad maksimaliai padidintumėte uždarbį.",
+				"claim_button": "Atsiimti",
+				"alert": {
+					"claim": {
+						"title": "Patvirtinti atsiėmimą",
+						"description": "Ketinate atsiimti {amount} WDD. Tai bus pridėta prie jūsų piniginės likučio."
+					}
+				},
+				"setup_subtitle": "Nustatykite savo bazinius pajamas",
+				"activate_loading": "Aktyvuojama...",
+				"activate_button": "Aktyvuoti bazinius pajamas",
+				"world_drachma": "Kas yra pasaulio drachma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Atsiimkite savo pasaulinį AI dividendą"
+			},
+			"savings": {
+				"title": "Sąskaita santaupoms",
+				"subtitle": "Uždirbkite palūkanas kas sekundę",
+				"tooltip": "69% metinė bazinė norma. Rinkite ir reinvestuokite reguliariai, kad pasiektumėte beveik 100% efektyvų grąžą. Išimkite bet kada.",
+				"deposit": "Įdėti",
+				"withdraw": "Išimti",
+				"balance": "Likutis",
+				"amount_deposit": "Suma įdėjimui",
+				"amount_withdraw": "Suma išėmimui",
+				"interest": "Palūkanos",
+				"collect": "Rinkti",
+				"alert": {
+					"collect": {
+						"title": "Patvirtinti rinkimą",
+						"description": "Ketinate surinkti {amount} WDD palūkanų."
+					},
+					"deposit": {
+						"title": "Patvirtinti įdėjimą",
+						"description": "Ketinate įdėti {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Patvirtinti išėmimą",
+						"description": "Ketinate išimti {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Peržiūrėti išmaniąją sutartį",
+				"verify": "Patvirtinti"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "PASKYRA",
+					"account_info": "Paskyros informacija",
+					"referral_code": "Rekomendacijos kodas",
+					"referred_by": "Pakvietė",
+					"language": "Kalba"
+				},
+				"help": {
+					"title": "PAGALBA",
+					"quickstart": "Greita pradžia",
+					"docs": "Wiki",
+					"help_center": "Pagalbos centras"
+				},
+				"source_code": {
+					"title": "IŠANKINIS KODAS"
+				},
+				"legal": {
+					"title": "TEISINIS",
+					"terms": "Naudojimo sąlygos",
+					"privacy": "Privatumo politika"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Piniginė"
+			},
+			"balance": "Likutis",
+			"modals": {
+				"sign_out": {
+					"confirm": "Ar tikrai norite atsijungti?"
+				},
+				"disconnect": {
+					"confirm": "Ar tikrai norite atjungti savo piniginę?"
+				},
+				"send": {
+					"button": "Siųsti",
+					"withdraw_to_crypto": {
+						"description": "Išimti WDD į kripto sąskaitą.",
+						"amount_label": "Suma",
+						"address_label": "Piniginės adresas",
+						"network_label": "Tinklas"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumper",
+					"ethereum_uniswap": "Ethereum WDD Uniswap",
+					"base_jumper": "Base Chain WDD Jumper",
+					"base_uniswap": "Base Chain WDD Uniswap",
+					"worldchain_jumper": "World Chain WDD Jumper",
+					"worldchain_uniswap": "World Chain WDD Uniswap"
+				},
+				"delete_account": {
+					"description": "Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių. Šio veiksmo negalima atšaukti — tęskite atsargiai.",
+					"deleting": "Ištrinama..."
+				},
+				"connect_wallet_browser": {
+					"title": "Atidaryti MetaMask",
+					"description": "Norėdami prisijungti, nukopijuokite šią nuorodą ir atidarykite ją MetaMask integruotoje naršyklėje.",
+					"copy_link": "Kopijuoti nuorodą"
+				},
+				"connect_wallet_picker": {
+					"description": "Rasta kelios piniginės. Pasirinkite vieną prisijungimui."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Neturite piniginės?",
+					"find_wallet_link": "Raskite vieną WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "PASKYRA",
+				"security": "SAUGUMAS",
+				"google_account": "Google paskyra",
+				"google_not_linked": "Neprijungta",
+				"passkeys": "Prieigos raktai",
+				"passkeys_linked": "{count} prijungta",
+				"danger_zone": "PAVOJINGA ZONA",
+				"delete_account": {
+					"description": "Permanentiškai pašalinkite visus savo duomenis"
+				},
+				"verification": "PATVIRTINIMAS",
+				"google_linked": "Prijungta",
+				"account_label": "Paskyra"
+			},
+			"username": {
+				"label": "Vartotojo vardas",
+				"edit_title": "Redaguoti vartotojo vardą",
+				"description": "3-30 simbolių, alfanumeriniai, pabraukimai ir brūkšneliai"
+			},
+			"history": {
+				"title": "ISTORIJA"
+			},
+			"transactions": {
+				"failed_to_load": "Įkelti nepavyko",
+				"no_transactions": "Dar nėra operacijų",
+				"wdd_per_day": "WDD/diena",
+				"just_now": "Ką tik",
+				"minutes_ago": "prieš {minutes}min",
+				"hours_ago": "prieš {hours}val",
+				"days_ago": "prieš {days}d",
+				"filter": {
+					"all_types": "Visi tipai",
+					"select_type": "Pasirinkite tipą",
+					"rewards": "Apdovanojimai"
+				},
+				"types": {
+					"withdrawal": "Išėmimas",
+					"received": "Gauta",
+					"sent": "Išsiųsta",
+					"ambassador_reward": "Ambasadoriaus atlygis",
+					"party_subsidy": "Partijos subsidija",
+					"stream_created": "Srautas sukurtas",
+					"stream_updated": "Srautas atnaujintas",
+					"savings_deposit": "Santaupos įdėti",
+					"savings_withdrawal": "Santaupos išimti",
+					"savings_interest": "Santaupos palūkanos",
+					"referral_reward": "Rekomendacijos atlygis"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Nuskenuokite šį QR kodą, kad patvirtintumėte su Self.",
+				"mobile_dialog_description": "Būsite nukreipti į Self programėlę, kad užbaigtumėte patvirtinimą.",
+				"support_telegram": "Self palaikymas",
+				"verification_guide": "Patvirtinimo vadovas",
+				"qr_alt": "Self patvirtinimo QR",
+				"callback_warning": "Įspėjimas",
+				"callback_warning_description": "Patvirtinimo atgalinio iškvietimo URL nepasiekiamas iš jūsų telefono. Nustatykite NEXT_PUBLIC_SELF_CALLBACK į viešą URL (arba nustatykite NEXT_PUBLIC_PUBLIC_BASE_URL į tunelio/peržiūros domeną).",
+				"label": "Self",
+				"status_completed": "Patvirtinta",
+				"status_not_completed": "Nepatvirtinta",
+				"learn_about_self": "Sužinokite apie Self",
+				"primer": {
+					"title": "Self Protokolas",
+					"description": "Tapkite patvirtintu(-a) neatskleisdami jokių asmeninių duomenų."
+				}
+			},
+			"verification_warning": {
+				"title": "Gaukite patvirtinimą",
+				"reward_cap_banner": "Pagrindinių pajamų ir taupymo atlygiams nepatvirtintiems piliečiams taikomas limitas. Patvirtinkite paskyrą, kad gautumėte be apribojimų."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Dauguma piniginių rodo WDD tik po to, kai jis rankiniu būdu importuotas į pasirinktą grandinę pagal jo ",
+			"contract_address": "sutarties adresą"
+		}
+	},
+	"toasts": {
+		"generic_error": "Įvyko klaida",
+		"copied": "Nukopijuota",
+		"wallet": {
+			"no_wallet": "Nėra piniginės adreso",
+			"min_amount": "Minimaliai 10 WDD",
+			"sent": "Išsiųsta",
+			"account_deleted": "Paskyra ištrinta",
+			"delete_failed": "Nepavyko ištrinti paskyros",
+			"contract_address_error": "Negalima išimti į sutarties adresą",
+			"sign_out_failed": "Atsijungimas nepavyko",
+			"google_linked": "Google paskyra prijungta",
+			"google_already_linked": "Google paskyra jau prijungta prie kitos paskyros",
+			"google_link_failed": "Nepavyko pradėti Google prijungimo",
+			"passkey_added": "Prieigos raktas pridėtas",
+			"passkey_add_failed": "Nepavyko pridėti prieigos rakto"
+		},
+		"parties": {
+			"updated": "Atnaujinta",
+			"update_failed": "Atnaujinimas nepavyko",
+			"update_error": "Klaida atnaujinant partiją",
+			"registered": "Partija užregistruota",
+			"register_failed": "Nepavyko užregistruoti partijos",
+			"register_error": "Klaida registruojant partiją",
+			"deleted": "Ištrinta",
+			"delete_failed": "Nepavyko ištrinti",
+			"delete_error": "Klaida trinant"
+		},
+		"basic_income": {
+			"activated": "Baziniai pajamai aktyvuoti",
+			"activate_failed": "Aktyvavimas nepavyko",
+			"claimed": "Atsiimta",
+			"claim_failed": "Atsiėmimas nepavyko"
+		},
+		"savings": {
+			"collected": "Surinkta",
+			"collect_failed": "Rinkimas nepavyko",
+			"deposited": "Įdėta",
+			"deposit_failed": "Įdėjimas nepavyko",
+			"withdrawn": "Išimta",
+			"withdraw_failed": "Išėmimas nepavyko"
+		}
+	},
+	"common": {
+		"confirm": "Patvirtinti",
+		"sign_in": "Prisijungti",
+		"connect": "Prijungti",
+		"disconnect": "Atsijungti",
+		"connect_wallet": "Prijungti piniginę",
+		"max": "Maks",
+		"loading": "Kraunama...",
+		"processing": "Apdorojama...",
+		"insufficient_balance": "Nepakanka WDD",
+		"delete_account": "Ištrinti paskyrą",
+		"sign_out": "Atsijungti",
+		"invalid_address": "Neteisingas adresas",
+		"coming_soon": "Netrukus",
+		"withdraw": "Išsiimti",
+		"trade": "Prekiauti",
+		"continue": "Tęsti",
+		"close": "Uždaryti",
+		"updating": "Atnaujinama...",
+		"save": "Išsaugoti",
+		"vote": "Balsuoti",
+		"switch_to_base_chain": "Perjungti į Base Chain"
+	},
+	"auth": {
+		"choose_method": "Pasirinkite pageidaujamą metodą.",
+		"sign_in_with_google": "Tęsti su Google",
+		"sign_in_with_passkey": "Naudoti biometriją",
+		"sign_in_or_create": "Prieiga prie jūsų paskyros naudojant passkey, naudojant piršto atspaudą, veido nuskaitymą arba ekrano užraktą.",
+		"create_account": "Sukurti paskyrą",
+		"create_passkey_name": "Sukurti passkey pavadinimą",
+		"passkey_name_description": "Pavadinkite savo passkey, kad galėtumėte jį identifikuoti slaptažodžių tvarkytuvėje.",
+		"passkey_name": "Passkey pavadinimas"
+	}
 }

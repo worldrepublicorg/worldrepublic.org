@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Daromad",
-    "govern": "Boshqaruv",
-    "menu": "Menyu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partiyalar",
-        "elections": "Saylovlar",
-        "referendums": "Referendumlar"
-      },
-      "sections": {
-        "parties": {
-          "title": "Siyosiy partiyalar"
-        },
-        "elections": {
-          "title": "Sinov saylovlari",
-          "subtitle": "Global demokratiya bilan tajriba qiling"
-        },
-        "referendums": {
-          "title": "Jahon Konstitutsiyaviy Referendumi",
-          "subtitle": "Asosiy tamoyillarimiz bo'yicha ovoz bering"
-        }
-      },
-      "vote": {
-        "no_active_election": "Saylov tez orada boshlanadi",
-        "test_verification": {
-          "description": "Ovoz berishga tayyor bo'lish uchun tasdiqlash tizimimizni hoziroq sinab ko'ring",
-          "button": "Sinov"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidiyalar",
-          "ambassadors": "Elchilar"
-        },
-        "discover": "Topish",
-        "search_placeholder": "Partiyalarni qidirish...",
-        "no_parties_found": "Partiyalar topilmadi",
-        "error_loading": "Partiyalarni yuklab bo‘lmadi",
-        "refresh": "Yangilash",
-        "party_details": "Partiya tafsilotlari",
-        "share_party": "Partiyani ulashish",
-        "my_party": "Mening partiyam",
-        "learn_more": "Ko'proq biling",
-        "party_management": "Partiya boshqaruvi",
-        "edit_party_info": "Partiya ma'lumotlarini tahrirlash",
-        "dialogs": {
-          "party_name": "Partiya nomi",
-          "description_optional": "Tavsif (ixtiyoriy)",
-          "official_link_optional": "Rasmiy havola (ixtiyoriy)",
-          "updating": "Yangilanmoqda...",
-          "save": "Saqlash",
-          "register_party": "Partiyani ro'yxatdan o'tkazish",
-          "register": "Ro'yxatdan o'tish",
-          "registering": "Ro'yxatdan o'tkazilmoqda...",
-          "leader_warning_register": "Siz hozirda {partyName} liderisiz. Yangi partiyani ro'yxatdan o'tkazish joriy partiyangizni o'chiradi.",
-          "deleting": "O'chirilmoqda...",
-          "about_to_delete": "Siz {partyName} partiyasini o'chirmoqchisiz. Bu harakatni bekor qilib bo'lmaydi.",
-          "about_to_register": "Siz yangi partiya tuzmoqchisiz."
-        },
-        "detail": {
-          "failed_to_load": "Partiya ma'lumotlarini yuklashda xatolik",
-          "party_not_found": "Partiya topilmadi",
-          "error_loading": "Partiyani yuklashda xatolik",
-          "back_to_parties": "Partiyalarga qaytish",
-          "description": "Tavsif",
-          "party_info": "Partiya ma'lumotlari",
-          "leader": "Rahbar",
-          "website": "Veb-sayt",
-          "not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
-        },
-        "delete_party": "Partiyani o'chirish",
-        "run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling",
-        "ambassadors": {
-          "title": "Elchilar Dasturi",
-          "description": "Do‘stlaringizni taklif qiling va ular tasdiqlanganda hamda ularning partiyasi subsidiya olganda mukofot oling",
-          "leaderboard": "Peshqadamlar jadvali",
-          "no_rewards_yet": "Hali mukofotlar yo'q",
-          "col_ambassador": "Elchilar",
-          "col_invited": "Taklif qilinganlar",
-          "col_reward": "Mukofot",
-          "share_referral_link": "Tavsiya havolasini ulashish"
-        },
-        "subsidies": {
-          "title": "Partiyalarni Subsidiyalash Dasturi",
-          "no_subsidies_yet": "Hozircha subsidiyalar yo'q",
-          "description": "Saylovdagi natijalarga asoslangan moliyalashtirish",
-          "col_subsidy": "Subsidiya"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Saylov",
-          "not_found": "Saylov topilmadi",
-          "not_found_description": "Siz qidirayotgan saylov mavjud emas.",
-          "back_to_elections": "Saylovlarga qaytish",
-          "status_active": "Faol",
-          "status_upcoming": "Kelayotgan",
-          "status_ended": "Tugagan",
-          "election_info": "Saylov ma'lumotlari",
-          "reward_pool": "Mukofot jamg'armasi: {amount} WDD",
-          "reward_pool_minimum": "Mukofot jamg'armasi: minimal {amount} WDD",
-          "choose_a_party": "Partiyani tanlang",
-          "no_parties_for_election": "Bu saylov uchun partiyalar mavjud emas.",
-          "results_title": "Natijalar",
-          "vote_singular": "ovoz",
-          "vote_plural": "ovoz",
-          "no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
-          "test_election_name": "Sinov saylovi {n}"
-        },
-        "list": {
-          "empty_state": "Saylovlar topilmadi",
-          "active_section": "Faol saylovlar",
-          "upcoming_section": "Kelgusi saylovlar",
-          "previous_section": "Oldingi saylovlar"
-        }
-      }
-    },
-    "error": {
-      "title": "Nimadir xato ketdi",
-      "description": "Kutilmagan xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
-      "error_id": "Xato ID: {digest}",
-      "try_again": "Qayta urinib ko'ring"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Asosiy daromad",
-        "savings": "Jamg'arma"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Inson bo'lganingiz uchun pul oling",
-        "subtitle_claim": "Draxmani talab qiling",
-        "tooltip_claim": "Kuniga 1 WDD, 1 WDD bilan cheklanadi. Daromadni oshirish uchun 24 soat ichida qayting.",
-        "claim_button": "Talab qil",
-        "alert": {
-          "claim": {
-            "title": "Talabni tasdiqlang",
-            "description": "Siz {amount} WDD talab qilmoqdasiz. Bu mablag' hamyon balansingizga qo'shiladi."
-          }
-        },
-        "setup_subtitle": "Asosiy daromadni sozlang",
-        "activate_loading": "Faollashtirilmoqda...",
-        "activate_button": "Asosiy daromadni faollashtir",
-        "world_drachma": "Jahon draxmasi (WDD) nima?",
-        "subtitle_unauth_raised_by_humanity": "Umumjahon AI dividendini talab qiling"
-      },
-      "savings": {
-        "title": "Jamg'arma hisobi",
-        "subtitle": "Har soniyada foiz oling",
-        "tooltip": "Yiliga 69% bazaviy stavka. To'plangan foizlarni muntazam yig'ib qayta kiritib, 100% ga yaqin samarali daromadga erishing. Istalgan vaqtda yechib oling.",
-        "deposit": "Kiritish",
-        "withdraw": "Yechib olish",
-        "balance": "Balans",
-        "amount_deposit": "Kiritiladigan summa",
-        "amount_withdraw": "Yechib olinadigan summa",
-        "interest": "Foiz",
-        "collect": "Yig'ish",
-        "alert": {
-          "collect": {
-            "title": "Yig'ishni tasdiqlang",
-            "description": "Siz {amount} WDD foiz yig'moqdasiz."
-          },
-          "deposit": {
-            "title": "Kiritishni tasdiqlang",
-            "description": "Siz {amount} WDD kiritmoqdasiz."
-          },
-          "withdraw": {
-            "title": "Yechib olishni tasdiqlang",
-            "description": "Siz {amount} WDD yechib olmoqdasiz."
-          }
-        },
-        "smart_contract_link": "Aqlli shartnomani ko‘rish",
-        "verify": "Tasdiqlash"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "HISOB",
-          "account_info": "Hisob ma'lumoti",
-          "referral_code": "Tavsiya kodi",
-          "referred_by": "Taklif qilgan",
-          "language": "Til"
-        },
-        "help": {
-          "title": "YORDAM",
-          "quickstart": "Tezkor boshlash",
-          "docs": "Wiki",
-          "help_center": "Yordam markazi"
-        },
-        "source_code": {
-          "title": "MANBA KODI"
-        },
-        "legal": {
-          "title": "HUQUQIY",
-          "terms": "Foydalanish shartlari",
-          "privacy": "Maxfiylik siyosati"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Hamyon"
-      },
-      "balance": "Balans",
-      "modals": {
-        "sign_out": {
-          "confirm": "Chiqishni xohlaysizmi?"
-        },
-        "disconnect": {
-          "confirm": "Hamyoningizni uzmoqchi ekanligingizga ishonchingiz komilmi?"
-        },
-        "send": {
-          "button": "Yuborish",
-          "withdraw_to_crypto": {
-            "description": "WDD ni kripto hisobga yechib olish.",
-            "amount_label": "Miqdor",
-            "address_label": "Hamyon manzili",
-            "network_label": "Tarmoq"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD Jumperda",
-          "ethereum_uniswap": "Ethereum WDD Uniswapda",
-          "base_jumper": "Base Chain WDD Jumperda",
-          "base_uniswap": "Base Chain WDD Uniswapda",
-          "worldchain_jumper": "World Chain WDD Jumperda",
-          "worldchain_uniswap": "World Chain WDD Uniswapda"
-        },
-        "delete_account": {
-          "description": "Bu hisobingizni butunlay o'chiradi va barcha ma'lumotlaringizni serverlarimizdan olib tashlaydi. Bu amalni qaytarib bo'lmaydi — iltimos ehtiyotkorlik bilan davom eting.",
-          "deleting": "O'chirilmoqda..."
-        },
-        "connect_wallet_browser": {
-          "title": "MetaMask'da oching",
-          "description": "Ulanish uchun ushbu havolani nusxalang va uni MetaMask'ning ichki brauzerida oching.",
-          "copy_link": "Havolani nusxalash"
-        },
-        "connect_wallet_picker": {
-          "description": "Bir nechta hamyon topildi. Ulanish uchun bittasini tanlang."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Hamyoningiz yo'qmi?",
-          "find_wallet_link": "WalletGuide'da bittasini toping"
-        }
-      },
-      "sections": {
-        "account": "HISOB",
-        "security": "XAVFSIZLIK",
-        "google_account": "Google hisobi",
-        "google_not_linked": "Ulangan emas",
-        "passkeys": "Kirish kalitlari",
-        "passkeys_linked": "{count} ulangan",
-        "danger_zone": "XAVF HUDUDI",
-        "delete_account": {
-          "description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
-        },
-        "verification": "TASDIQLASH",
-        "google_linked": "Ulangan",
-        "account_label": "Hisob"
-      },
-      "username": {
-        "label": "Foydalanuvchi nomi",
-        "edit_title": "Foydalanuvchi nomini tahrirlash",
-        "description": "3-30 belgi, alfanumerik, pastki chiziq va tire"
-      },
-      "history": {
-        "title": "TARIX"
-      },
-      "transactions": {
-        "failed_to_load": "Yuklashda xatolik",
-        "no_transactions": "Hali tranzaksiyalar yo'q",
-        "wdd_per_day": "WDD/kun",
-        "just_now": "Hozir",
-        "minutes_ago": "{minutes}daq oldin",
-        "hours_ago": "{hours}soat oldin",
-        "days_ago": "{days}kun oldin",
-        "filter": {
-          "all_types": "Barcha turlar",
-          "select_type": "Turini tanlang",
-          "rewards": "Mukofotlar"
-        },
-        "types": {
-          "withdrawal": "Yechib olish",
-          "received": "Qabul qilindi",
-          "sent": "Yuborildi",
-          "ambassador_reward": "Elchi mukofoti",
-          "party_subsidy": "Partiya subsidiyasi",
-          "stream_created": "Oqim yaratildi",
-          "stream_updated": "Oqim yangilandi",
-          "savings_deposit": "Jamg'arma kiritish",
-          "savings_withdrawal": "Jamg'arma yechib olish",
-          "savings_interest": "Jamg'arma foiz",
-          "referral_reward": "Referal mukofoti"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Self bilan tasdiqlash uchun ushbu QR kodni skaner qiling.",
-        "mobile_dialog_description": "Tasdiqlashni yakunlash uchun Self ilovasiga yo‘naltirilasiz.",
-        "support_telegram": "Self yordami",
-        "verification_guide": "Tasdiqlash qo'llanmasi",
-        "qr_alt": "Self tasdiqlash QR",
-        "callback_warning": "Ogohlantirish",
-        "callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating).",
-        "label": "Self",
-        "status_completed": "Tasdiqlangan",
-        "status_not_completed": "Tasdiqlanmagan",
-        "learn_about_self": "Self haqida bilib oling",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Shaxsiy ma'lumotlarni oshkor qilmasdan tasdiqlanishingizni oling."
-        }
-      },
-      "verification_warning": {
-        "title": "Tasdiqlash",
-        "reward_cap_banner": "Tasdiqlanmagan fuqarolar uchun asosiy daromad va jamg‘arma mukofotlari cheklangan. Cheklovsiz daromad olish uchun hisobingizni tasdiqlang."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Ko'pchilik hamyonlar WDD ni faqat tanlangan zanjirga qo'lda import qilingandan keyin ko'rsatadi. Uning ",
-      "contract_address": "shartnoma manzili"
-    }
-  },
-  "toasts": {
-    "generic_error": "Xato yuz berdi",
-    "copied": "Nusxa olindi",
-    "wallet": {
-      "no_wallet": "Hamyon manzili yo'q",
-      "min_amount": "Minimal 10 WDD",
-      "sent": "Yuborildi",
-      "account_deleted": "Hisob o'chirildi",
-      "delete_failed": "Hisobni o'chirish muvaffaqiyatsiz",
-      "contract_address_error": "Shartnoma manziliga yechib bo'lmaydi",
-      "sign_out_failed": "Chiqish muvaffaqiyatsiz",
-      "google_linked": "Google hisobi ulandi",
-      "google_already_linked": "Google hisobi allaqachon boshqa hisobga ulangan",
-      "google_link_failed": "Google ulanishini boshlab bo'lmadi",
-      "passkey_added": "Kirish kaliti qo'shildi",
-      "passkey_add_failed": "Kirish kalitini qo'shib bo'lmadi"
-    },
-    "parties": {
-      "updated": "Yangilandi",
-      "update_failed": "Yangilash muvaffaqiyatsiz",
-      "update_error": "Partiyani yangilashda xato",
-      "registered": "Partiya ro'yxatga olindi",
-      "register_failed": "Partiyani ro'yxatdan o'tkazib bo'lmadi",
-      "register_error": "Partiyani ro'yxatdan o'tkazishda xatolik",
-      "deleted": "O'chirildi",
-      "delete_failed": "O'chirib bo'lmadi",
-      "delete_error": "O'chirishda xatolik"
-    },
-    "basic_income": {
-      "activated": "Asosiy daromad faollashtirildi",
-      "activate_failed": "Faollashtirib bo'lmadi",
-      "claimed": "Talab qilindi",
-      "claim_failed": "Talab muvaffaqiyatsiz"
-    },
-    "savings": {
-      "collected": "Yig'ildi",
-      "collect_failed": "Yig'ish muvaffaqiyatsiz",
-      "deposited": "Kiritildi",
-      "deposit_failed": "Kiritish muvaffaqiyatsiz",
-      "withdrawn": "Yechib olindi",
-      "withdraw_failed": "Yechib olish muvaffaqiyatsiz"
-    }
-  },
-  "common": {
-    "confirm": "Tasdiqlash",
-    "sign_in": "Kirish",
-    "connect": "Ulanish",
-    "disconnect": "Uzish",
-    "connect_wallet": "Hamyonni ulash",
-    "max": "Maks",
-    "loading": "Yuklanmoqda...",
-    "processing": "Ishlanmoqda...",
-    "insufficient_balance": "Yetarli WDD yo'q",
-    "delete_account": "Hisobni o'chirish",
-    "sign_out": "Chiqish",
-    "invalid_address": "Noto'g'ri manzil",
-    "coming_soon": "Tez orada",
-    "withdraw": "Yechib olish",
-    "trade": "Savdo",
-    "continue": "Davom etish",
-    "close": "Yopish",
-    "updating": "Yangilanmoqda...",
-    "save": "Saqlash",
-    "vote": "Ovoz bering",
-    "switch_to_base_chain": "Base Chain ga o‘ting"
-  },
-  "auth": {
-    "choose_method": "Afzal ko'rgan usulni tanlang.",
-    "sign_in_with_google": "Google bilan davom eting",
-    "sign_in_with_passkey": "Biometrikadan foydalaning",
-    "sign_in_or_create": "Hisobingizga passkey yordamida kirish, barmoq izi, yuz skanerlash yoki ekran qulfidan foydalanish.",
-    "create_account": "Hisob yaratish",
-    "create_passkey_name": "Passkey nomini yaratish",
-    "passkey_name_description": "Parol menejerida aniqlash uchun passkey-ingizga nom bering.",
-    "passkey_name": "Passkey nomi"
-  }
+	"nav": {
+		"earn": "Daromad",
+		"govern": "Boshqaruv",
+		"menu": "Menyu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partiyalar",
+				"elections": "Saylovlar",
+				"referendums": "Referendumlar"
+			},
+			"sections": {
+				"parties": {
+					"title": "Siyosiy partiyalar"
+				},
+				"elections": {
+					"title": "Sinov saylovlari",
+					"subtitle": "Global demokratiya bilan tajriba qiling"
+				},
+				"referendums": {
+					"title": "Jahon Konstitutsiyaviy Referendumi",
+					"subtitle": "Asosiy tamoyillarimiz bo'yicha ovoz bering"
+				}
+			},
+			"vote": {
+				"no_active_election": "Saylov tez orada boshlanadi",
+				"test_verification": {
+					"description": "Ovoz berishga tayyor bo'lish uchun tasdiqlash tizimimizni hoziroq sinab ko'ring",
+					"button": "Sinov"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidiyalar",
+					"ambassadors": "Elchilar"
+				},
+				"discover": "Topish",
+				"search_placeholder": "Partiyalarni qidirish...",
+				"no_parties_found": "Partiyalar topilmadi",
+				"error_loading": "Partiyalarni yuklab bo‘lmadi",
+				"refresh": "Yangilash",
+				"party_details": "Partiya tafsilotlari",
+				"share_party": "Partiyani ulashish",
+				"my_party": "Mening partiyam",
+				"learn_more": "Ko'proq biling",
+				"party_management": "Partiya boshqaruvi",
+				"edit_party_info": "Partiya ma'lumotlarini tahrirlash",
+				"dialogs": {
+					"party_name": "Partiya nomi",
+					"description_optional": "Tavsif (ixtiyoriy)",
+					"official_link_optional": "Rasmiy havola (ixtiyoriy)",
+					"updating": "Yangilanmoqda...",
+					"save": "Saqlash",
+					"register_party": "Partiyani ro'yxatdan o'tkazish",
+					"register": "Ro'yxatdan o'tish",
+					"registering": "Ro'yxatdan o'tkazilmoqda...",
+					"leader_warning_register": "Siz hozirda {partyName} liderisiz. Yangi partiyani ro'yxatdan o'tkazish joriy partiyangizni o'chiradi.",
+					"deleting": "O'chirilmoqda...",
+					"about_to_delete": "Siz {partyName} partiyasini o'chirmoqchisiz. Bu harakatni bekor qilib bo'lmaydi.",
+					"about_to_register": "Siz yangi partiya tuzmoqchisiz."
+				},
+				"detail": {
+					"failed_to_load": "Partiya ma'lumotlarini yuklashda xatolik",
+					"party_not_found": "Partiya topilmadi",
+					"error_loading": "Partiyani yuklashda xatolik",
+					"back_to_parties": "Partiyalarga qaytish",
+					"description": "Tavsif",
+					"party_info": "Partiya ma'lumotlari",
+					"leader": "Rahbar",
+					"website": "Veb-sayt",
+					"not_found_description": "Siz qidirayotgan partiya mavjud emas yoki tarqatib yuborilgan."
+				},
+				"delete_party": "Partiyani o'chirish",
+				"run_on_elections_and_earn": "Saylovlarda qatnashing va subsidiyalar oling",
+				"ambassadors": {
+					"title": "Elchilar Dasturi",
+					"description": "Do‘stlaringizni taklif qiling va ular tasdiqlanganda hamda ularning partiyasi subsidiya olganda mukofot oling",
+					"leaderboard": "Peshqadamlar jadvali",
+					"no_rewards_yet": "Hali mukofotlar yo'q",
+					"col_ambassador": "Elchilar",
+					"col_invited": "Taklif qilinganlar",
+					"col_reward": "Mukofot",
+					"share_referral_link": "Tavsiya havolasini ulashish"
+				},
+				"subsidies": {
+					"title": "Partiyalarni Subsidiyalash Dasturi",
+					"no_subsidies_yet": "Hozircha subsidiyalar yo'q",
+					"description": "Saylovdagi natijalarga asoslangan moliyalashtirish",
+					"col_subsidy": "Subsidiya"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Saylov",
+					"not_found": "Saylov topilmadi",
+					"not_found_description": "Siz qidirayotgan saylov mavjud emas.",
+					"back_to_elections": "Saylovlarga qaytish",
+					"status_active": "Faol",
+					"status_upcoming": "Kelayotgan",
+					"status_ended": "Tugagan",
+					"election_info": "Saylov ma'lumotlari",
+					"reward_pool": "Mukofot jamg'armasi: {amount} WDD",
+					"reward_pool_minimum": "Mukofot jamg'armasi: minimal {amount} WDD",
+					"choose_a_party": "Partiyani tanlang",
+					"no_parties_for_election": "Bu saylov uchun partiyalar mavjud emas.",
+					"results_title": "Natijalar",
+					"vote_singular": "ovoz",
+					"vote_plural": "ovoz",
+					"no_votes": "Bu saylovda hech qanday ovoz berilmadi.",
+					"test_election_name": "Sinov saylovi {n}"
+				},
+				"list": {
+					"empty_state": "Saylovlar topilmadi",
+					"active_section": "Faol saylovlar",
+					"upcoming_section": "Kelgusi saylovlar",
+					"previous_section": "Oldingi saylovlar"
+				}
+			}
+		},
+		"error": {
+			"title": "Nimadir xato ketdi",
+			"description": "Kutilmagan xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
+			"error_id": "Xato ID: {digest}",
+			"try_again": "Qayta urinib ko'ring"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Asosiy daromad",
+				"savings": "Jamg'arma"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Inson bo'lganingiz uchun pul oling",
+				"subtitle_claim": "Draxmani talab qiling",
+				"tooltip_claim": "Kuniga 1 WDD, 1 WDD bilan cheklanadi. Daromadni oshirish uchun 24 soat ichida qayting.",
+				"claim_button": "Talab qil",
+				"alert": {
+					"claim": {
+						"title": "Talabni tasdiqlang",
+						"description": "Siz {amount} WDD talab qilmoqdasiz. Bu mablag' hamyon balansingizga qo'shiladi."
+					}
+				},
+				"setup_subtitle": "Asosiy daromadni sozlang",
+				"activate_loading": "Faollashtirilmoqda...",
+				"activate_button": "Asosiy daromadni faollashtir",
+				"world_drachma": "Jahon draxmasi (WDD) nima?",
+				"subtitle_unauth_raised_by_humanity": "Umumjahon AI dividendini talab qiling"
+			},
+			"savings": {
+				"title": "Jamg'arma hisobi",
+				"subtitle": "Har soniyada foiz oling",
+				"tooltip": "Yiliga 69% bazaviy stavka. To'plangan foizlarni muntazam yig'ib qayta kiritib, 100% ga yaqin samarali daromadga erishing. Istalgan vaqtda yechib oling.",
+				"deposit": "Kiritish",
+				"withdraw": "Yechib olish",
+				"balance": "Balans",
+				"amount_deposit": "Kiritiladigan summa",
+				"amount_withdraw": "Yechib olinadigan summa",
+				"interest": "Foiz",
+				"collect": "Yig'ish",
+				"alert": {
+					"collect": {
+						"title": "Yig'ishni tasdiqlang",
+						"description": "Siz {amount} WDD foiz yig'moqdasiz."
+					},
+					"deposit": {
+						"title": "Kiritishni tasdiqlang",
+						"description": "Siz {amount} WDD kiritmoqdasiz."
+					},
+					"withdraw": {
+						"title": "Yechib olishni tasdiqlang",
+						"description": "Siz {amount} WDD yechib olmoqdasiz."
+					}
+				},
+				"smart_contract_link": "Aqlli shartnomani ko‘rish",
+				"verify": "Tasdiqlash"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "HISOB",
+					"account_info": "Hisob ma'lumoti",
+					"referral_code": "Tavsiya kodi",
+					"referred_by": "Taklif qilgan",
+					"language": "Til"
+				},
+				"help": {
+					"title": "YORDAM",
+					"quickstart": "Tezkor boshlash",
+					"docs": "Wiki",
+					"help_center": "Yordam markazi"
+				},
+				"source_code": {
+					"title": "MANBA KODI"
+				},
+				"legal": {
+					"title": "HUQUQIY",
+					"terms": "Foydalanish shartlari",
+					"privacy": "Maxfiylik siyosati"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Hamyon"
+			},
+			"balance": "Balans",
+			"modals": {
+				"sign_out": {
+					"confirm": "Chiqishni xohlaysizmi?"
+				},
+				"disconnect": {
+					"confirm": "Hamyoningizni uzmoqchi ekanligingizga ishonchingiz komilmi?"
+				},
+				"send": {
+					"button": "Yuborish",
+					"withdraw_to_crypto": {
+						"description": "WDD ni kripto hisobga yechib olish.",
+						"amount_label": "Miqdor",
+						"address_label": "Hamyon manzili",
+						"network_label": "Tarmoq"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD Jumperda",
+					"ethereum_uniswap": "Ethereum WDD Uniswapda",
+					"base_jumper": "Base Chain WDD Jumperda",
+					"base_uniswap": "Base Chain WDD Uniswapda",
+					"worldchain_jumper": "World Chain WDD Jumperda",
+					"worldchain_uniswap": "World Chain WDD Uniswapda"
+				},
+				"delete_account": {
+					"description": "Bu hisobingizni butunlay o'chiradi va barcha ma'lumotlaringizni serverlarimizdan olib tashlaydi. Bu amalni qaytarib bo'lmaydi — iltimos ehtiyotkorlik bilan davom eting.",
+					"deleting": "O'chirilmoqda..."
+				},
+				"connect_wallet_browser": {
+					"title": "MetaMask'da oching",
+					"description": "Ulanish uchun ushbu havolani nusxalang va uni MetaMask'ning ichki brauzerida oching.",
+					"copy_link": "Havolani nusxalash"
+				},
+				"connect_wallet_picker": {
+					"description": "Bir nechta hamyon topildi. Ulanish uchun bittasini tanlang."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Hamyoningiz yo'qmi?",
+					"find_wallet_link": "WalletGuide'da bittasini toping"
+				}
+			},
+			"sections": {
+				"account": "HISOB",
+				"security": "XAVFSIZLIK",
+				"google_account": "Google hisobi",
+				"google_not_linked": "Ulangan emas",
+				"passkeys": "Kirish kalitlari",
+				"passkeys_linked": "{count} ulangan",
+				"danger_zone": "XAVF HUDUDI",
+				"delete_account": {
+					"description": "Barcha ma'lumotlaringizni doimiy ravishda olib tashlang"
+				},
+				"verification": "TASDIQLASH",
+				"google_linked": "Ulangan",
+				"account_label": "Hisob"
+			},
+			"username": {
+				"label": "Foydalanuvchi nomi",
+				"edit_title": "Foydalanuvchi nomini tahrirlash",
+				"description": "3-30 belgi, alfanumerik, pastki chiziq va tire"
+			},
+			"history": {
+				"title": "TARIX"
+			},
+			"transactions": {
+				"failed_to_load": "Yuklashda xatolik",
+				"no_transactions": "Hali tranzaksiyalar yo'q",
+				"wdd_per_day": "WDD/kun",
+				"just_now": "Hozir",
+				"minutes_ago": "{minutes}daq oldin",
+				"hours_ago": "{hours}soat oldin",
+				"days_ago": "{days}kun oldin",
+				"filter": {
+					"all_types": "Barcha turlar",
+					"select_type": "Turini tanlang",
+					"rewards": "Mukofotlar"
+				},
+				"types": {
+					"withdrawal": "Yechib olish",
+					"received": "Qabul qilindi",
+					"sent": "Yuborildi",
+					"ambassador_reward": "Elchi mukofoti",
+					"party_subsidy": "Partiya subsidiyasi",
+					"stream_created": "Oqim yaratildi",
+					"stream_updated": "Oqim yangilandi",
+					"savings_deposit": "Jamg'arma kiritish",
+					"savings_withdrawal": "Jamg'arma yechib olish",
+					"savings_interest": "Jamg'arma foiz",
+					"referral_reward": "Referal mukofoti"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Self bilan tasdiqlash uchun ushbu QR kodni skaner qiling.",
+				"mobile_dialog_description": "Tasdiqlashni yakunlash uchun Self ilovasiga yo‘naltirilasiz.",
+				"support_telegram": "Self yordami",
+				"verification_guide": "Tasdiqlash qo'llanmasi",
+				"qr_alt": "Self tasdiqlash QR",
+				"callback_warning": "Ogohlantirish",
+				"callback_warning_description": "Tasdiqlash callback URL telefoningizdan foydalanib bo'lmaydi. NEXT_PUBLIC_SELF_CALLBACK ni ommaviy URL ga o'rnating (yoki NEXT_PUBLIC_PUBLIC_BASE_URL ni tunnel/preview domenga o'rnating).",
+				"label": "Self",
+				"status_completed": "Tasdiqlangan",
+				"status_not_completed": "Tasdiqlanmagan",
+				"learn_about_self": "Self haqida bilib oling",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Shaxsiy ma'lumotlarni oshkor qilmasdan tasdiqlanishingizni oling."
+				}
+			},
+			"verification_warning": {
+				"title": "Tasdiqlash",
+				"reward_cap_banner": "Tasdiqlanmagan fuqarolar uchun asosiy daromad va jamg‘arma mukofotlari cheklangan. Cheklovsiz daromad olish uchun hisobingizni tasdiqlang."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Ko'pchilik hamyonlar WDD ni faqat tanlangan zanjirga qo'lda import qilingandan keyin ko'rsatadi. Uning ",
+			"contract_address": "shartnoma manzili"
+		}
+	},
+	"toasts": {
+		"generic_error": "Xato yuz berdi",
+		"copied": "Nusxa olindi",
+		"wallet": {
+			"no_wallet": "Hamyon manzili yo'q",
+			"min_amount": "Minimal 10 WDD",
+			"sent": "Yuborildi",
+			"account_deleted": "Hisob o'chirildi",
+			"delete_failed": "Hisobni o'chirish muvaffaqiyatsiz",
+			"contract_address_error": "Shartnoma manziliga yechib bo'lmaydi",
+			"sign_out_failed": "Chiqish muvaffaqiyatsiz",
+			"google_linked": "Google hisobi ulandi",
+			"google_already_linked": "Google hisobi allaqachon boshqa hisobga ulangan",
+			"google_link_failed": "Google ulanishini boshlab bo'lmadi",
+			"passkey_added": "Kirish kaliti qo'shildi",
+			"passkey_add_failed": "Kirish kalitini qo'shib bo'lmadi"
+		},
+		"parties": {
+			"updated": "Yangilandi",
+			"update_failed": "Yangilash muvaffaqiyatsiz",
+			"update_error": "Partiyani yangilashda xato",
+			"registered": "Partiya ro'yxatga olindi",
+			"register_failed": "Partiyani ro'yxatdan o'tkazib bo'lmadi",
+			"register_error": "Partiyani ro'yxatdan o'tkazishda xatolik",
+			"deleted": "O'chirildi",
+			"delete_failed": "O'chirib bo'lmadi",
+			"delete_error": "O'chirishda xatolik"
+		},
+		"basic_income": {
+			"activated": "Asosiy daromad faollashtirildi",
+			"activate_failed": "Faollashtirib bo'lmadi",
+			"claimed": "Talab qilindi",
+			"claim_failed": "Talab muvaffaqiyatsiz"
+		},
+		"savings": {
+			"collected": "Yig'ildi",
+			"collect_failed": "Yig'ish muvaffaqiyatsiz",
+			"deposited": "Kiritildi",
+			"deposit_failed": "Kiritish muvaffaqiyatsiz",
+			"withdrawn": "Yechib olindi",
+			"withdraw_failed": "Yechib olish muvaffaqiyatsiz"
+		}
+	},
+	"common": {
+		"confirm": "Tasdiqlash",
+		"sign_in": "Kirish",
+		"connect": "Ulanish",
+		"disconnect": "Uzish",
+		"connect_wallet": "Hamyonni ulash",
+		"max": "Maks",
+		"loading": "Yuklanmoqda...",
+		"processing": "Ishlanmoqda...",
+		"insufficient_balance": "Yetarli WDD yo'q",
+		"delete_account": "Hisobni o'chirish",
+		"sign_out": "Chiqish",
+		"invalid_address": "Noto'g'ri manzil",
+		"coming_soon": "Tez orada",
+		"withdraw": "Yechib olish",
+		"trade": "Savdo",
+		"continue": "Davom etish",
+		"close": "Yopish",
+		"updating": "Yangilanmoqda...",
+		"save": "Saqlash",
+		"vote": "Ovoz bering",
+		"switch_to_base_chain": "Base Chain ga o‘ting"
+	},
+	"auth": {
+		"choose_method": "Afzal ko'rgan usulni tanlang.",
+		"sign_in_with_google": "Google bilan davom eting",
+		"sign_in_with_passkey": "Biometrikadan foydalaning",
+		"sign_in_or_create": "Hisobingizga passkey yordamida kirish, barmoq izi, yuz skanerlash yoki ekran qulfidan foydalanish.",
+		"create_account": "Hisob yaratish",
+		"create_passkey_name": "Passkey nomini yaratish",
+		"passkey_name_description": "Parol menejerida aniqlash uchun passkey-ingizga nom bering.",
+		"passkey_name": "Passkey nomi"
+	}
 }

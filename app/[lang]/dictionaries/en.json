@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Earn",
-    "govern": "Govern",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Parties",
-        "elections": "Elections",
-        "referendums": "Referendums"
-      },
-      "sections": {
-        "parties": {
-          "title": "Political parties"
-        },
-        "elections": {
-          "title": "Test elections",
-          "subtitle": "Experiment with global democracy"
-        },
-        "referendums": {
-          "title": "World Constitutional Referendum",
-          "subtitle": "Vote on our foundational principles"
-        }
-      },
-      "vote": {
-        "no_active_election": "Election is starting soon",
-        "test_verification": {
-          "description": "Try our verification system now to be ready for voting",
-          "button": "Test"
-        }
-      },
-      "elections": {
-        "list": {
-          "empty_state": "No elections found",
-          "active_section": "Active elections",
-          "upcoming_section": "Upcoming elections",
-          "previous_section": "Previous elections"
-        },
-        "detail": {
-          "topbar_title": "Election",
-          "not_found": "Election not found",
-          "not_found_description": "The election you're looking for doesn't exist.",
-          "back_to_elections": "Back to elections",
-          "status_active": "Active",
-          "status_upcoming": "Upcoming",
-          "status_ended": "Ended",
-          "election_info": "Election info",
-          "reward_pool": "Reward pool: {amount} WDD",
-          "reward_pool_minimum": "Reward pool: minimum {amount} WDD",
-          "choose_a_party": "Choose a party",
-          "no_parties_for_election": "No parties available for this election.",
-          "results_title": "Results",
-          "vote_singular": "vote",
-          "vote_plural": "votes",
-          "no_votes": "No votes were cast in this election.",
-          "test_election_name": "Test election {n}"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidies",
-          "ambassadors": "Ambassadors"
-        },
-        "ambassadors": {
-          "title": "Ambassador Program",
-          "description": "Invite friends and earn rewards when they get verified and when their party receives subsidies",
-          "share_referral_link": "Share referral link",
-          "leaderboard": "Leaderboard",
-          "no_rewards_yet": "No rewards yet",
-          "col_ambassador": "Ambassador",
-          "col_invited": "Invited",
-          "col_reward": "Reward"
-        },
-        "subsidies": {
-          "title": "Party Subsidy Program",
-          "description": "Funding based on electoral performance",
-          "no_subsidies_yet": "No subsidies yet",
-          "col_subsidy": "Subsidy"
-        },
-        "discover": "Discover",
-        "search_placeholder": "Search parties...",
-        "no_parties_found": "No parties found",
-        "error_loading": "Failed to load parties",
-        "refresh": "Refresh",
-        "party_details": "Party details",
-        "share_party": "Share party",
-        "my_party": "My party",
-        "learn_more": "Learn more",
-        "party_management": "Party management",
-        "edit_party_info": "Edit party info",
-        "dialogs": {
-          "party_name": "Party name",
-          "description_optional": "Description (optional)",
-          "official_link_optional": "Official link (optional)",
-          "updating": "Updating...",
-          "save": "Save",
-          "register_party": "Register a party",
-          "register": "Register",
-          "registering": "Registering...",
-          "leader_warning_register": "You're currently the leader of {partyName}. Registering a new party will delete your current party.",
-          "deleting": "Deleting...",
-          "about_to_delete": "You are about to delete {partyName}. This action cannot be undone.",
-          "about_to_register": "You are about to register a new party."
-        },
-        "detail": {
-          "failed_to_load": "Failed to load party data",
-          "party_not_found": "Party not found",
-          "error_loading": "Error loading party",
-          "back_to_parties": "Back to parties",
-          "description": "Description",
-          "party_info": "Party info",
-          "leader": "Leader",
-          "website": "Website",
-          "not_found_description": "The party you're looking for doesn't exist or has been dissolved."
-        },
-        "delete_party": "Delete party",
-        "run_on_elections_and_earn": "Run on elections and get subsidies"
-      }
-    },
-    "error": {
-      "title": "Something went wrong",
-      "description": "An unexpected error occurred. Please try again.",
-      "error_id": "Error ID: {digest}",
-      "try_again": "Try again"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Basic income",
-        "savings": "Savings"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Get money for being human",
-        "subtitle_claim": "Claim your drachma",
-        "tooltip_claim": "1 WDD/day, capped at 1 WDD. Return within 24 hours to maximize earnings.",
-        "claim_button": "Claim",
-        "alert": {
-          "claim": {
-            "title": "Confirm claim",
-            "description": "You are about to claim {amount} WDD. This will be added to your wallet balance."
-          }
-        },
-        "setup_subtitle": "Set up your basic income",
-        "activate_loading": "Activating...",
-        "activate_button": "Activate basic income",
-        "world_drachma": "What is world drachma (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Claim your global AI dividend"
-      },
-      "savings": {
-        "title": "Savings account",
-        "subtitle": "Earn interest every second",
-        "tooltip": "69% annual base rate. Collect and reinvest regularly to achieve close to 100% effective returns. Withdraw anytime.",
-        "deposit": "Deposit",
-        "withdraw": "Withdraw",
-        "balance": "Balance",
-        "amount_deposit": "Amount to deposit",
-        "amount_withdraw": "Amount to withdraw",
-        "interest": "Interest",
-        "collect": "Collect",
-        "alert": {
-          "collect": {
-            "title": "Confirm collection",
-            "description": "You are about to collect {amount} WDD in interest."
-          },
-          "deposit": {
-            "title": "Confirm deposit",
-            "description": "You are about to deposit {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Confirm withdrawal",
-            "description": "You are about to withdraw {amount} WDD."
-          }
-        },
-        "smart_contract_link": "View smart contract",
-        "verify": "Verify"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "ACCOUNT",
-          "account_info": "Account info",
-          "referral_code": "Referral code",
-          "referred_by": "Referred by",
-          "language": "Language"
-        },
-        "help": {
-          "title": "HELP",
-          "quickstart": "Quickstart",
-          "docs": "Wiki",
-          "help_center": "Help Center"
-        },
-        "source_code": {
-          "title": "SOURCE CODE"
-        },
-        "legal": {
-          "title": "LEGAL",
-          "terms": "Terms of Use",
-          "privacy": "Privacy Policy"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Wallet"
-      },
-      "balance": "Balance",
-      "modals": {
-        "sign_out": {
-          "confirm": "Are you sure you want to sign out?"
-        },
-        "disconnect": {
-          "confirm": "Are you sure you want to disconnect your wallet?"
-        },
-        "send": {
-          "button": "Send",
-          "withdraw_to_crypto": {
-            "description": "Withdraw WDD to a crypto account.",
-            "amount_label": "Amount",
-            "address_label": "Wallet address",
-            "network_label": "Network"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD on Jumper",
-          "ethereum_uniswap": "Ethereum WDD on Uniswap",
-          "base_jumper": "Base Chain WDD on Jumper",
-          "base_uniswap": "Base Chain WDD on Uniswap",
-          "worldchain_jumper": "World Chain WDD on Jumper",
-          "worldchain_uniswap": "World Chain WDD on Uniswap"
-        },
-        "delete_account": {
-          "description": "This will permanently delete your account and remove all your data from our servers. This action cannot be undone — please continue with caution.",
-          "deleting": "Deleting..."
-        },
-        "connect_wallet_browser": {
-          "title": "Open in MetaMask",
-          "description": "To connect, copy this link and open it in MetaMask's built-in browser.",
-          "copy_link": "Copy link"
-        },
-        "connect_wallet_picker": {
-          "description": "Multiple wallets were found. Select one to connect."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Haven't got a wallet?",
-          "find_wallet_link": "Find one on WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "ACCOUNT",
-        "security": "SECURITY",
-        "google_account": "Google account",
-        "google_not_linked": "Not linked",
-        "passkeys": "Passkeys",
-        "passkeys_linked": "{count} linked",
-        "danger_zone": "DANGER ZONE",
-        "delete_account": {
-          "description": "Permanently remove all your data"
-        },
-        "verification": "VERIFICATION",
-        "google_linked": "Linked",
-        "account_label": "Account"
-      },
-      "username": {
-        "label": "Username",
-        "edit_title": "Edit username",
-        "description": "3-30 characters, alphanumeric, underscores, and hyphens"
-      },
-      "history": {
-        "title": "HISTORY"
-      },
-      "transactions": {
-        "failed_to_load": "Failed to load",
-        "no_transactions": "No transactions yet",
-        "wdd_per_day": "WDD/day",
-        "just_now": "Just now",
-        "minutes_ago": "{minutes}m ago",
-        "hours_ago": "{hours}h ago",
-        "days_ago": "{days}d ago",
-        "filter": {
-          "all_types": "All types",
-          "select_type": "Select type",
-          "rewards": "Rewards"
-        },
-        "types": {
-          "withdrawal": "Withdrawal",
-          "received": "Received",
-          "sent": "Sent",
-          "ambassador_reward": "Ambassador reward",
-          "party_subsidy": "Party subsidy",
-          "stream_created": "Stream created",
-          "stream_updated": "Stream updated",
-          "savings_deposit": "Savings deposit",
-          "savings_withdrawal": "Savings withdrawal",
-          "savings_interest": "Savings interest",
-          "referral_reward": "Referral reward"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Scan this QR code to verify with Self.",
-        "mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
-        "learn_about_self": "Learn about Self",
-        "verification_guide": "Verification guide",
-        "qr_alt": "Self verification QR",
-        "callback_warning": "Warning",
-        "callback_warning_description": "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).",
-        "support_telegram": "Self Support",
-        "label": "Self",
-        "status_completed": "Verified",
-        "status_not_completed": "Not verified",
-        "primer": {
-          "title": "Self Protocol",
-          "description": "Get verified without revealing any personal data."
-        }
-      },
-      "verification_warning": {
-        "title": "Get verified",
-        "reward_cap_banner": "Basic income and savings rewards are capped for unverified citizens. Verify your account to earn without limits."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Most wallets only display WDD after it's manually imported on the selected chain by its ",
-      "contract_address": "contract address"
-    }
-  },
-  "toasts": {
-    "generic_error": "An error occurred",
-    "copied": "Copied",
-    "wallet": {
-      "no_wallet": "No wallet address",
-      "min_amount": "Minimum 10 WDD",
-      "sent": "Sent",
-      "account_deleted": "Account deleted",
-      "delete_failed": "Failed to delete account",
-      "contract_address_error": "Cannot withdraw to contract address",
-      "sign_out_failed": "Failed to sign out",
-      "google_linked": "Google account linked",
-      "google_already_linked": "Google account linked to another account",
-      "google_link_failed": "Could not start Google linking",
-      "passkey_added": "Passkey added",
-      "passkey_add_failed": "Could not add passkey"
-    },
-    "parties": {
-      "updated": "Updated",
-      "update_failed": "Failed to update",
-      "update_error": "Error updating party",
-      "registered": "Party registered",
-      "register_failed": "Failed to register party",
-      "register_error": "Error registering party",
-      "deleted": "Deleted",
-      "delete_failed": "Failed to delete",
-      "delete_error": "Error deleting party"
-    },
-    "basic_income": {
-      "activated": "Basic income activated",
-      "activate_failed": "Failed to activate",
-      "claimed": "Claimed",
-      "claim_failed": "Failed to claim"
-    },
-    "savings": {
-      "collected": "Collected",
-      "collect_failed": "Failed to collect",
-      "deposited": "Deposited",
-      "deposit_failed": "Deposit failed",
-      "withdrawn": "Withdrawn",
-      "withdraw_failed": "Withdrawal failed"
-    }
-  },
-  "common": {
-    "confirm": "Confirm",
-    "sign_in": "Sign in",
-    "connect": "Connect",
-    "disconnect": "Disconnect",
-    "connect_wallet": "Connect wallet",
-    "max": "Max",
-    "loading": "Loading...",
-    "processing": "Processing...",
-    "insufficient_balance": "Not enough WDD",
-    "delete_account": "Delete account",
-    "sign_out": "Sign out",
-    "invalid_address": "Invalid address",
-    "coming_soon": "Coming soon",
-    "withdraw": "Withdraw",
-    "trade": "Trade",
-    "continue": "Continue",
-    "close": "Close",
-    "updating": "Updating...",
-    "save": "Save",
-    "vote": "Vote",
-    "switch_to_base_chain": "Switch to Base Chain"
-  },
-  "auth": {
-    "choose_method": "Choose your preferred method.",
-    "sign_in_with_google": "Continue with Google",
-    "sign_in_with_passkey": "Use biometrics",
-    "sign_in_or_create": "Access your account with a passkey, using your fingerprint, face scan or screen lock.",
-    "create_account": "Create account",
-    "create_passkey_name": "Create a passkey name",
-    "passkey_name_description": "Name your passkey to identify it in your password manager.",
-    "passkey_name": "Passkey name"
-  }
+	"nav": {
+		"earn": "Earn",
+		"govern": "Govern",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Parties",
+				"elections": "Elections",
+				"referendums": "Referendums"
+			},
+			"sections": {
+				"parties": {
+					"title": "Political parties"
+				},
+				"elections": {
+					"title": "Test elections",
+					"subtitle": "Experiment with global democracy"
+				},
+				"referendums": {
+					"title": "World Constitutional Referendum",
+					"subtitle": "Vote on our foundational principles"
+				}
+			},
+			"vote": {
+				"no_active_election": "Election is starting soon",
+				"test_verification": {
+					"description": "Try our verification system now to be ready for voting",
+					"button": "Test"
+				}
+			},
+			"elections": {
+				"list": {
+					"empty_state": "No elections found",
+					"active_section": "Active elections",
+					"upcoming_section": "Upcoming elections",
+					"previous_section": "Previous elections"
+				},
+				"detail": {
+					"topbar_title": "Election",
+					"not_found": "Election not found",
+					"not_found_description": "The election you're looking for doesn't exist.",
+					"back_to_elections": "Back to elections",
+					"status_active": "Active",
+					"status_upcoming": "Upcoming",
+					"status_ended": "Ended",
+					"election_info": "Election info",
+					"reward_pool": "Reward pool: {amount} WDD",
+					"reward_pool_minimum": "Reward pool: minimum {amount} WDD",
+					"choose_a_party": "Choose a party",
+					"no_parties_for_election": "No parties available for this election.",
+					"results_title": "Results",
+					"vote_singular": "vote",
+					"vote_plural": "votes",
+					"no_votes": "No votes were cast in this election.",
+					"test_election_name": "Test election {n}"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidies",
+					"ambassadors": "Ambassadors"
+				},
+				"ambassadors": {
+					"title": "Ambassador Program",
+					"description": "Invite friends and earn rewards when they get verified and when their party receives subsidies",
+					"share_referral_link": "Share referral link",
+					"leaderboard": "Leaderboard",
+					"no_rewards_yet": "No rewards yet",
+					"col_ambassador": "Ambassador",
+					"col_invited": "Invited",
+					"col_reward": "Reward"
+				},
+				"subsidies": {
+					"title": "Party Subsidy Program",
+					"description": "Funding based on electoral performance",
+					"no_subsidies_yet": "No subsidies yet",
+					"col_subsidy": "Subsidy"
+				},
+				"discover": "Discover",
+				"search_placeholder": "Search parties...",
+				"no_parties_found": "No parties found",
+				"error_loading": "Failed to load parties",
+				"refresh": "Refresh",
+				"party_details": "Party details",
+				"share_party": "Share party",
+				"my_party": "My party",
+				"learn_more": "Learn more",
+				"party_management": "Party management",
+				"edit_party_info": "Edit party info",
+				"dialogs": {
+					"party_name": "Party name",
+					"description_optional": "Description (optional)",
+					"official_link_optional": "Official link (optional)",
+					"updating": "Updating...",
+					"save": "Save",
+					"register_party": "Register a party",
+					"register": "Register",
+					"registering": "Registering...",
+					"leader_warning_register": "You're currently the leader of {partyName}. Registering a new party will delete your current party.",
+					"deleting": "Deleting...",
+					"about_to_delete": "You are about to delete {partyName}. This action cannot be undone.",
+					"about_to_register": "You are about to register a new party."
+				},
+				"detail": {
+					"failed_to_load": "Failed to load party data",
+					"party_not_found": "Party not found",
+					"error_loading": "Error loading party",
+					"back_to_parties": "Back to parties",
+					"description": "Description",
+					"party_info": "Party info",
+					"leader": "Leader",
+					"website": "Website",
+					"not_found_description": "The party you're looking for doesn't exist or has been dissolved."
+				},
+				"delete_party": "Delete party",
+				"run_on_elections_and_earn": "Run on elections and get subsidies"
+			}
+		},
+		"error": {
+			"title": "Something went wrong",
+			"description": "An unexpected error occurred. Please try again.",
+			"error_id": "Error ID: {digest}",
+			"try_again": "Try again"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Basic income",
+				"savings": "Savings"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Get money for being human",
+				"subtitle_claim": "Claim your drachma",
+				"tooltip_claim": "1 WDD/day, capped at 1 WDD. Return within 24 hours to maximize earnings.",
+				"claim_button": "Claim",
+				"alert": {
+					"claim": {
+						"title": "Confirm claim",
+						"description": "You are about to claim {amount} WDD. This will be added to your wallet balance."
+					}
+				},
+				"setup_subtitle": "Set up your basic income",
+				"activate_loading": "Activating...",
+				"activate_button": "Activate basic income",
+				"world_drachma": "What is world drachma (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Claim your global AI dividend"
+			},
+			"savings": {
+				"title": "Savings account",
+				"subtitle": "Earn interest every second",
+				"tooltip": "69% annual base rate. Collect and reinvest regularly to achieve close to 100% effective returns. Withdraw anytime.",
+				"deposit": "Deposit",
+				"withdraw": "Withdraw",
+				"balance": "Balance",
+				"amount_deposit": "Amount to deposit",
+				"amount_withdraw": "Amount to withdraw",
+				"interest": "Interest",
+				"collect": "Collect",
+				"alert": {
+					"collect": {
+						"title": "Confirm collection",
+						"description": "You are about to collect {amount} WDD in interest."
+					},
+					"deposit": {
+						"title": "Confirm deposit",
+						"description": "You are about to deposit {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Confirm withdrawal",
+						"description": "You are about to withdraw {amount} WDD."
+					}
+				},
+				"smart_contract_link": "View smart contract",
+				"verify": "Verify"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "ACCOUNT",
+					"account_info": "Account info",
+					"referral_code": "Referral code",
+					"referred_by": "Referred by",
+					"language": "Language"
+				},
+				"help": {
+					"title": "HELP",
+					"quickstart": "Quickstart",
+					"docs": "Wiki",
+					"help_center": "Help Center"
+				},
+				"source_code": {
+					"title": "SOURCE CODE"
+				},
+				"legal": {
+					"title": "LEGAL",
+					"terms": "Terms of Use",
+					"privacy": "Privacy Policy"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Wallet"
+			},
+			"balance": "Balance",
+			"modals": {
+				"sign_out": {
+					"confirm": "Are you sure you want to sign out?"
+				},
+				"disconnect": {
+					"confirm": "Are you sure you want to disconnect your wallet?"
+				},
+				"send": {
+					"button": "Send",
+					"withdraw_to_crypto": {
+						"description": "Withdraw WDD to a crypto account.",
+						"amount_label": "Amount",
+						"address_label": "Wallet address",
+						"network_label": "Network"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD on Jumper",
+					"ethereum_uniswap": "Ethereum WDD on Uniswap",
+					"base_jumper": "Base Chain WDD on Jumper",
+					"base_uniswap": "Base Chain WDD on Uniswap",
+					"worldchain_jumper": "World Chain WDD on Jumper",
+					"worldchain_uniswap": "World Chain WDD on Uniswap"
+				},
+				"delete_account": {
+					"description": "This will permanently delete your account and remove all your data from our servers. This action cannot be undone — please continue with caution.",
+					"deleting": "Deleting..."
+				},
+				"connect_wallet_browser": {
+					"title": "Open in MetaMask",
+					"description": "To connect, copy this link and open it in MetaMask's built-in browser.",
+					"copy_link": "Copy link"
+				},
+				"connect_wallet_picker": {
+					"description": "Multiple wallets were found. Select one to connect."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Haven't got a wallet?",
+					"find_wallet_link": "Find one on WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "ACCOUNT",
+				"security": "SECURITY",
+				"google_account": "Google account",
+				"google_not_linked": "Not linked",
+				"passkeys": "Passkeys",
+				"passkeys_linked": "{count} linked",
+				"danger_zone": "DANGER ZONE",
+				"delete_account": {
+					"description": "Permanently remove all your data"
+				},
+				"verification": "VERIFICATION",
+				"google_linked": "Linked",
+				"account_label": "Account"
+			},
+			"username": {
+				"label": "Username",
+				"edit_title": "Edit username",
+				"description": "3-30 characters, alphanumeric, underscores, and hyphens"
+			},
+			"history": {
+				"title": "HISTORY"
+			},
+			"transactions": {
+				"failed_to_load": "Failed to load",
+				"no_transactions": "No transactions yet",
+				"wdd_per_day": "WDD/day",
+				"just_now": "Just now",
+				"minutes_ago": "{minutes}m ago",
+				"hours_ago": "{hours}h ago",
+				"days_ago": "{days}d ago",
+				"filter": {
+					"all_types": "All types",
+					"select_type": "Select type",
+					"rewards": "Rewards"
+				},
+				"types": {
+					"withdrawal": "Withdrawal",
+					"received": "Received",
+					"sent": "Sent",
+					"ambassador_reward": "Ambassador reward",
+					"party_subsidy": "Party subsidy",
+					"stream_created": "Stream created",
+					"stream_updated": "Stream updated",
+					"savings_deposit": "Savings deposit",
+					"savings_withdrawal": "Savings withdrawal",
+					"savings_interest": "Savings interest",
+					"referral_reward": "Referral reward"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Scan this QR code to verify with Self.",
+				"mobile_dialog_description": "You will be redirected to the Self app to complete verification.",
+				"learn_about_self": "Learn about Self",
+				"verification_guide": "Verification guide",
+				"qr_alt": "Self verification QR",
+				"callback_warning": "Warning",
+				"callback_warning_description": "The verification callback URL is not reachable from your phone. Set NEXT_PUBLIC_SELF_CALLBACK to a public URL (or set NEXT_PUBLIC_PUBLIC_BASE_URL to a tunnel/preview domain).",
+				"support_telegram": "Self Support",
+				"label": "Self",
+				"status_completed": "Verified",
+				"status_not_completed": "Not verified",
+				"primer": {
+					"title": "Self Protocol",
+					"description": "Get verified without revealing any personal data."
+				}
+			},
+			"verification_warning": {
+				"title": "Get verified",
+				"reward_cap_banner": "Basic income and savings rewards are capped for unverified citizens. Verify your account to earn without limits."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Most wallets only display WDD after it's manually imported on the selected chain by its ",
+			"contract_address": "contract address"
+		}
+	},
+	"toasts": {
+		"generic_error": "An error occurred",
+		"copied": "Copied",
+		"wallet": {
+			"no_wallet": "No wallet address",
+			"min_amount": "Minimum 10 WDD",
+			"sent": "Sent",
+			"account_deleted": "Account deleted",
+			"delete_failed": "Failed to delete account",
+			"contract_address_error": "Cannot withdraw to contract address",
+			"sign_out_failed": "Failed to sign out",
+			"google_linked": "Google account linked",
+			"google_already_linked": "Google account linked to another account",
+			"google_link_failed": "Could not start Google linking",
+			"passkey_added": "Passkey added",
+			"passkey_add_failed": "Could not add passkey"
+		},
+		"parties": {
+			"updated": "Updated",
+			"update_failed": "Failed to update",
+			"update_error": "Error updating party",
+			"registered": "Party registered",
+			"register_failed": "Failed to register party",
+			"register_error": "Error registering party",
+			"deleted": "Deleted",
+			"delete_failed": "Failed to delete",
+			"delete_error": "Error deleting party"
+		},
+		"basic_income": {
+			"activated": "Basic income activated",
+			"activate_failed": "Failed to activate",
+			"claimed": "Claimed",
+			"claim_failed": "Failed to claim"
+		},
+		"savings": {
+			"collected": "Collected",
+			"collect_failed": "Failed to collect",
+			"deposited": "Deposited",
+			"deposit_failed": "Deposit failed",
+			"withdrawn": "Withdrawn",
+			"withdraw_failed": "Withdrawal failed"
+		}
+	},
+	"common": {
+		"confirm": "Confirm",
+		"sign_in": "Sign in",
+		"connect": "Connect",
+		"disconnect": "Disconnect",
+		"connect_wallet": "Connect wallet",
+		"max": "Max",
+		"loading": "Loading...",
+		"processing": "Processing...",
+		"insufficient_balance": "Not enough WDD",
+		"delete_account": "Delete account",
+		"sign_out": "Sign out",
+		"invalid_address": "Invalid address",
+		"coming_soon": "Coming soon",
+		"withdraw": "Withdraw",
+		"trade": "Trade",
+		"continue": "Continue",
+		"close": "Close",
+		"updating": "Updating...",
+		"save": "Save",
+		"vote": "Vote",
+		"switch_to_base_chain": "Switch to Base Chain"
+	},
+	"auth": {
+		"choose_method": "Choose your preferred method.",
+		"sign_in_with_google": "Continue with Google",
+		"sign_in_with_passkey": "Use biometrics",
+		"sign_in_or_create": "Access your account with a passkey, using your fingerprint, face scan or screen lock.",
+		"create_account": "Create account",
+		"create_passkey_name": "Create a passkey name",
+		"passkey_name_description": "Name your passkey to identify it in your password manager.",
+		"passkey_name": "Passkey name"
+	}
 }

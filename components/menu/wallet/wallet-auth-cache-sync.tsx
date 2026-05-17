@@ -11,27 +11,27 @@ import { setCachedWalletData } from "@/lib/wallet-auth-cache";
  * the cache so the wallet page can show the correct state on next visit.
  */
 export function WalletAuthCacheSync() {
-  const { status } = useSession();
-  const previousStatusRef = useRef(status);
+	const { status } = useSession();
+	const previousStatusRef = useRef(status);
 
-  useEffect(() => {
-    const becameAuthenticated =
-      previousStatusRef.current !== "authenticated" &&
-      status === "authenticated";
-    previousStatusRef.current = status;
+	useEffect(() => {
+		const becameAuthenticated =
+			previousStatusRef.current !== "authenticated" &&
+			status === "authenticated";
+		previousStatusRef.current = status;
 
-    if (!becameAuthenticated) return;
+		if (!becameAuthenticated) return;
 
-    let cancelled = false;
-    getWalletAuthAndData().then((result) => {
-      if (cancelled) return;
-      setCachedWalletData(result);
-    });
+		let cancelled = false;
+		getWalletAuthAndData().then((result) => {
+			if (cancelled) return;
+			setCachedWalletData(result);
+		});
 
-    return () => {
-      cancelled = true;
-    };
-  }, [status]);
+		return () => {
+			cancelled = true;
+		};
+	}, [status]);
 
-  return null;
+	return null;
 }

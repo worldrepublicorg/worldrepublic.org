@@ -1,407 +1,407 @@
 {
-  "nav": {
-    "earn": "Pendapatan",
-    "govern": "Tata kelola",
-    "menu": "Menu"
-  },
-  "pages": {
-    "govern": {
-      "tabs": {
-        "parties": "Partai",
-        "elections": "Pemilu",
-        "referendums": "Referendum"
-      },
-      "sections": {
-        "parties": {
-          "title": "Partai politik"
-        },
-        "elections": {
-          "title": "Pemilu uji coba",
-          "subtitle": "Bereksperimen dengan demokrasi global"
-        },
-        "referendums": {
-          "title": "Referendum Konstitusi Dunia",
-          "subtitle": "Beri suara atas prinsip-prinsip dasar kita"
-        }
-      },
-      "vote": {
-        "no_active_election": "Pemilihan segera dimulai",
-        "test_verification": {
-          "description": "Coba sistem verifikasi kami sekarang agar siap untuk pemungutan suara",
-          "button": "Uji"
-        }
-      },
-      "parties": {
-        "tabs": {
-          "subsidies": "Subsidi",
-          "ambassadors": "Duta"
-        },
-        "discover": "Temukan",
-        "search_placeholder": "Cari partai...",
-        "no_parties_found": "Tidak ada partai ditemukan",
-        "error_loading": "Gagal memuat partai",
-        "refresh": "Segarkan",
-        "party_details": "Detail partai",
-        "share_party": "Bagikan partai",
-        "my_party": "Partai saya",
-        "learn_more": "Pelajari lebih lanjut",
-        "party_management": "Manajemen partai",
-        "edit_party_info": "Edit informasi partai",
-        "dialogs": {
-          "party_name": "Nama partai",
-          "description_optional": "Deskripsi (opsional)",
-          "official_link_optional": "Tautan resmi (opsional)",
-          "updating": "Memperbarui...",
-          "save": "Simpan",
-          "register_party": "Daftarkan partai",
-          "register": "Daftar",
-          "registering": "Mendaftar...",
-          "leader_warning_register": "Anda saat ini adalah pemimpin {partyName}. Mendaftarkan partai baru akan menghapus partai Anda saat ini.",
-          "deleting": "Menghapus...",
-          "about_to_delete": "Anda akan menghapus {partyName}. Tindakan ini tidak dapat dibatalkan.",
-          "about_to_register": "Anda akan mendirikan partai baru."
-        },
-        "detail": {
-          "failed_to_load": "Gagal memuat data partai",
-          "party_not_found": "Partai tidak ditemukan",
-          "error_loading": "Kesalahan memuat partai",
-          "back_to_parties": "Kembali ke partai",
-          "description": "Deskripsi",
-          "party_info": "Informasi partai",
-          "leader": "Pemimpin",
-          "website": "Situs web",
-          "not_found_description": "Partai yang Anda cari tidak ada atau telah dibubarkan."
-        },
-        "delete_party": "Hapus partai",
-        "run_on_elections_and_earn": "Ikut pemilu dan dapatkan subsidi",
-        "ambassadors": {
-          "title": "Program Duta",
-          "description": "Undang teman dan dapatkan hadiah saat mereka terverifikasi dan saat partai mereka menerima subsidi",
-          "leaderboard": "Papan peringkat",
-          "no_rewards_yet": "Belum ada hadiah",
-          "col_ambassador": "Duta",
-          "col_invited": "Diundang",
-          "col_reward": "Hadiah",
-          "share_referral_link": "Bagikan tautan referensi"
-        },
-        "subsidies": {
-          "title": "Program Subsidi Partai",
-          "no_subsidies_yet": "Belum ada subsidi",
-          "description": "Pendanaan berdasarkan kinerja pemilu",
-          "col_subsidy": "Subsidi"
-        }
-      },
-      "elections": {
-        "detail": {
-          "topbar_title": "Pemilihan",
-          "not_found": "Pemilihan tidak ditemukan",
-          "not_found_description": "Pemilihan yang Anda cari tidak ada.",
-          "back_to_elections": "Kembali ke pemilihan",
-          "status_active": "Aktif",
-          "status_upcoming": "Mendatang",
-          "status_ended": "Berakhir",
-          "election_info": "Info pemilihan",
-          "reward_pool": "Kumpulan hadiah: {amount} WDD",
-          "reward_pool_minimum": "Kumpulan hadiah: minimal {amount} WDD",
-          "choose_a_party": "Pilih partai",
-          "no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini.",
-          "results_title": "Hasil",
-          "vote_singular": "suara",
-          "vote_plural": "suara",
-          "no_votes": "Tidak ada suara yang diberikan dalam pemilihan ini.",
-          "test_election_name": "Pemilu uji coba {n}"
-        },
-        "list": {
-          "empty_state": "Tidak ada pemilihan ditemukan",
-          "active_section": "Pemilihan aktif",
-          "upcoming_section": "Pemilihan mendatang",
-          "previous_section": "Pemilihan sebelumnya"
-        }
-      }
-    },
-    "error": {
-      "title": "Terjadi kesalahan",
-      "description": "Terjadi kesalahan tak terduga. Silakan coba lagi.",
-      "error_id": "ID Kesalahan: {digest}",
-      "try_again": "Coba lagi"
-    },
-    "earn": {
-      "tabs": {
-        "basic_income": "Pendapatan dasar",
-        "savings": "Tabungan"
-      },
-      "basic_income": {
-        "subtitle_unauth": "Dapatkan uang karena Anda manusia",
-        "subtitle_claim": "Klaim drachma Anda",
-        "tooltip_claim": "1 WDD/hari, dibatasi 1 WDD. Kembali dalam 24 jam untuk memaksimalkan hasil.",
-        "claim_button": "Klaim",
-        "alert": {
-          "claim": {
-            "title": "Konfirmasi klaim",
-            "description": "Anda akan mengklaim {amount} WDD. Ini akan ditambahkan ke saldo dompet Anda."
-          }
-        },
-        "setup_subtitle": "Siapkan pendapatan dasar Anda",
-        "activate_loading": "Mengaktifkan...",
-        "activate_button": "Aktifkan pendapatan dasar",
-        "world_drachma": "Apa itu Drachma dunia (WDD)?",
-        "subtitle_unauth_raised_by_humanity": "Klaim dividen AI global Anda"
-      },
-      "savings": {
-        "title": "Rekening tabungan",
-        "subtitle": "Dapatkan bunga setiap detik",
-        "tooltip": "Suku bunga dasar tahunan 69%. Cairkan dan investasikan kembali secara rutin untuk mencapai imbal hasil efektif mendekati 100%. Tarik kapan saja.",
-        "deposit": "Setor",
-        "withdraw": "Tarik",
-        "balance": "Saldo",
-        "amount_deposit": "Jumlah untuk disetor",
-        "amount_withdraw": "Jumlah untuk ditarik",
-        "interest": "Bunga",
-        "collect": "Cairkan",
-        "alert": {
-          "collect": {
-            "title": "Konfirmasi pencairan",
-            "description": "Anda akan mencairkan {amount} WDD dalam bentuk bunga."
-          },
-          "deposit": {
-            "title": "Konfirmasi setoran",
-            "description": "Anda akan menyetor {amount} WDD."
-          },
-          "withdraw": {
-            "title": "Konfirmasi penarikan",
-            "description": "Anda akan menarik {amount} WDD."
-          }
-        },
-        "smart_contract_link": "Lihat kontrak pintar",
-        "verify": "Verifikasi"
-      }
-    },
-    "menu": {
-      "sections": {
-        "account": {
-          "title": "AKUN",
-          "account_info": "Informasi akun",
-          "referral_code": "Kode referral",
-          "referred_by": "Dirujuk oleh",
-          "language": "Bahasa"
-        },
-        "help": {
-          "title": "BANTUAN",
-          "quickstart": "Mulai Cepat",
-          "docs": "Wiki",
-          "help_center": "Pusat Bantuan"
-        },
-        "source_code": {
-          "title": "KODE SUMBER"
-        },
-        "legal": {
-          "title": "LEGAL",
-          "terms": "Ketentuan Penggunaan",
-          "privacy": "Kebijakan Privasi"
-        }
-      }
-    },
-    "wallet": {
-      "topbar": {
-        "title": "Dompet"
-      },
-      "balance": "Saldo",
-      "modals": {
-        "sign_out": {
-          "confirm": "Anda yakin ingin keluar?"
-        },
-        "disconnect": {
-          "confirm": "Apakah Anda yakin ingin memutuskan koneksi dompet Anda?"
-        },
-        "send": {
-          "button": "Kirim",
-          "withdraw_to_crypto": {
-            "description": "Tarik WDD ke akun crypto.",
-            "amount_label": "Jumlah",
-            "address_label": "Alamat dompet",
-            "network_label": "Jaringan"
-          }
-        },
-        "trade": {
-          "ethereum_jumper": "Ethereum WDD di Jumper",
-          "ethereum_uniswap": "Ethereum WDD di Uniswap",
-          "base_jumper": "Base Chain WDD di Jumper",
-          "base_uniswap": "Base Chain WDD di Uniswap",
-          "worldchain_jumper": "World Chain WDD di Jumper",
-          "worldchain_uniswap": "World Chain WDD di Uniswap"
-        },
-        "delete_account": {
-          "description": "Ini akan menghapus akun Anda secara permanen dan menghapus semua data Anda dari server kami. Tindakan ini tidak dapat dibatalkan — silakan lanjutkan dengan hati-hati.",
-          "deleting": "Menghapus..."
-        },
-        "connect_wallet_browser": {
-          "title": "Buka di MetaMask",
-          "description": "Untuk terhubung, salin tautan ini lalu buka di browser bawaan MetaMask.",
-          "copy_link": "Salin tautan"
-        },
-        "connect_wallet_picker": {
-          "description": "Beberapa dompet ditemukan. Pilih satu untuk terhubung."
-        },
-        "connect_wallet_no_wallet": {
-          "description": "Belum punya dompet?",
-          "find_wallet_link": "Temukan satu di WalletGuide"
-        }
-      },
-      "sections": {
-        "account": "AKUN",
-        "security": "KEAMANAN",
-        "google_account": "Akun Google",
-        "google_not_linked": "Belum ditautkan",
-        "passkeys": "Kunci sandi",
-        "passkeys_linked": "{count} tertaut",
-        "danger_zone": "ZONA BERBAHAYA",
-        "delete_account": {
-          "description": "Hapus permanen semua data Anda"
-        },
-        "verification": "VERIFIKASI",
-        "google_linked": "Ditautkan",
-        "account_label": "Akun"
-      },
-      "username": {
-        "label": "Nama pengguna",
-        "edit_title": "Edit nama pengguna",
-        "description": "3-30 karakter, alfanumerik, garis bawah dan tanda hubung"
-      },
-      "history": {
-        "title": "RIWAYAT"
-      },
-      "transactions": {
-        "failed_to_load": "Gagal memuat",
-        "no_transactions": "Belum ada transaksi",
-        "wdd_per_day": "WDD/hari",
-        "just_now": "Baru saja",
-        "minutes_ago": "{minutes}m yang lalu",
-        "hours_ago": "{hours}j yang lalu",
-        "days_ago": "{days}h yang lalu",
-        "filter": {
-          "all_types": "Semua jenis",
-          "select_type": "Pilih jenis",
-          "rewards": "Hadiah"
-        },
-        "types": {
-          "withdrawal": "Penarikan",
-          "received": "Diterima",
-          "sent": "Terkirim",
-          "ambassador_reward": "Hadiah duta",
-          "party_subsidy": "Subsidi partai",
-          "stream_created": "Stream dibuat",
-          "stream_updated": "Stream diperbarui",
-          "savings_deposit": "Tabungan setor",
-          "savings_withdrawal": "Tabungan tarik",
-          "savings_interest": "Tabungan bunga",
-          "referral_reward": "Hadiah referral"
-        }
-      }
-    }
-  },
-  "components": {
-    "identity": {
-      "self": {
-        "dialog_description": "Pindai kode QR ini untuk verifikasi dengan Self.",
-        "mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melakukan verifikasi.",
-        "support_telegram": "Dukungan Self",
-        "verification_guide": "Panduan verifikasi",
-        "qr_alt": "QR verifikasi Self",
-        "callback_warning": "Peringatan",
-        "callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
-        "label": "Self",
-        "status_completed": "Terverifikasi",
-        "status_not_completed": "Belum terverifikasi",
-        "learn_about_self": "Pelajari tentang Self",
-        "primer": {
-          "title": "Self Protokol",
-          "description": "Dapatkan verifikasi tanpa mengungkapkan data pribadi apa pun."
-        }
-      },
-      "verification_warning": {
-        "title": "Dapatkan verifikasi",
-        "reward_cap_banner": "Reward pendapatan dasar dan tabungan dibatasi untuk warga yang belum terverifikasi. Verifikasi akun Anda untuk memperoleh tanpa batas."
-      }
-    },
-    "wdd_import_info": {
-      "message_prefix": "Sebagian besar dompet hanya menampilkan WDD setelah diimpor secara manual di chain yang dipilih menggunakan ",
-      "contract_address": "alamat kontrak"
-    }
-  },
-  "toasts": {
-    "generic_error": "Terjadi kesalahan",
-    "copied": "Disalin",
-    "wallet": {
-      "no_wallet": "Tidak ada alamat dompet",
-      "min_amount": "Minimal 10 WDD",
-      "sent": "Terkirim",
-      "account_deleted": "Akun dihapus",
-      "delete_failed": "Gagal menghapus akun",
-      "contract_address_error": "Tidak dapat menarik ke alamat kontrak",
-      "sign_out_failed": "Keluar gagal",
-      "google_linked": "Akun Google tertaut",
-      "google_already_linked": "Akun Google sudah tertaut ke akun lain",
-      "google_link_failed": "Tidak dapat memulai penautan Google",
-      "passkey_added": "Kunci sandi ditambahkan",
-      "passkey_add_failed": "Tidak dapat menambahkan kunci sandi"
-    },
-    "parties": {
-      "updated": "Diperbarui",
-      "update_failed": "Gagal memperbarui",
-      "update_error": "Kesalahan saat memperbarui partai",
-      "registered": "Partai terdaftar",
-      "register_failed": "Gagal mendaftarkan partai",
-      "register_error": "Kesalahan mendaftarkan partai",
-      "deleted": "Dihapus",
-      "delete_failed": "Gagal menghapus",
-      "delete_error": "Kesalahan menghapus"
-    },
-    "basic_income": {
-      "activated": "Pendapatan dasar diaktifkan",
-      "activate_failed": "Gagal mengaktifkan",
-      "claimed": "Berhasil diklaim",
-      "claim_failed": "Gagal mengklaim"
-    },
-    "savings": {
-      "collected": "Berhasil dicairkan",
-      "collect_failed": "Gagal mencairkan",
-      "deposited": "Disetor",
-      "deposit_failed": "Setoran gagal",
-      "withdrawn": "Ditarik",
-      "withdraw_failed": "Penarikan gagal"
-    }
-  },
-  "common": {
-    "confirm": "Konfirmasi",
-    "sign_in": "Masuk",
-    "connect": "Hubungkan",
-    "disconnect": "Putuskan koneksi",
-    "connect_wallet": "Hubungkan dompet",
-    "max": "Maks",
-    "loading": "Memuat...",
-    "processing": "Memproses...",
-    "insufficient_balance": "WDD tidak cukup",
-    "delete_account": "Hapus akun",
-    "sign_out": "Keluar",
-    "invalid_address": "Alamat tidak valid",
-    "coming_soon": "Segera hadir",
-    "withdraw": "Tarik",
-    "trade": "Perdagangan",
-    "continue": "Lanjutkan",
-    "close": "Tutup",
-    "updating": "Memperbarui...",
-    "save": "Simpan",
-    "vote": "Pilih",
-    "switch_to_base_chain": "Beralih ke Base Chain"
-  },
-  "auth": {
-    "choose_method": "Pilih metode pilihan Anda.",
-    "sign_in_with_google": "Lanjutkan dengan Google",
-    "sign_in_with_passkey": "Gunakan biometrik",
-    "sign_in_or_create": "Akses akun Anda dengan passkey, menggunakan sidik jari, pemindaian wajah, atau kunci layar.",
-    "create_account": "Buat akun",
-    "create_passkey_name": "Buat nama passkey",
-    "passkey_name_description": "Beri nama passkey Anda untuk mengidentifikasinya di pengelola kata sandi.",
-    "passkey_name": "Nama passkey"
-  }
+	"nav": {
+		"earn": "Pendapatan",
+		"govern": "Tata kelola",
+		"menu": "Menu"
+	},
+	"pages": {
+		"govern": {
+			"tabs": {
+				"parties": "Partai",
+				"elections": "Pemilu",
+				"referendums": "Referendum"
+			},
+			"sections": {
+				"parties": {
+					"title": "Partai politik"
+				},
+				"elections": {
+					"title": "Pemilu uji coba",
+					"subtitle": "Bereksperimen dengan demokrasi global"
+				},
+				"referendums": {
+					"title": "Referendum Konstitusi Dunia",
+					"subtitle": "Beri suara atas prinsip-prinsip dasar kita"
+				}
+			},
+			"vote": {
+				"no_active_election": "Pemilihan segera dimulai",
+				"test_verification": {
+					"description": "Coba sistem verifikasi kami sekarang agar siap untuk pemungutan suara",
+					"button": "Uji"
+				}
+			},
+			"parties": {
+				"tabs": {
+					"subsidies": "Subsidi",
+					"ambassadors": "Duta"
+				},
+				"discover": "Temukan",
+				"search_placeholder": "Cari partai...",
+				"no_parties_found": "Tidak ada partai ditemukan",
+				"error_loading": "Gagal memuat partai",
+				"refresh": "Segarkan",
+				"party_details": "Detail partai",
+				"share_party": "Bagikan partai",
+				"my_party": "Partai saya",
+				"learn_more": "Pelajari lebih lanjut",
+				"party_management": "Manajemen partai",
+				"edit_party_info": "Edit informasi partai",
+				"dialogs": {
+					"party_name": "Nama partai",
+					"description_optional": "Deskripsi (opsional)",
+					"official_link_optional": "Tautan resmi (opsional)",
+					"updating": "Memperbarui...",
+					"save": "Simpan",
+					"register_party": "Daftarkan partai",
+					"register": "Daftar",
+					"registering": "Mendaftar...",
+					"leader_warning_register": "Anda saat ini adalah pemimpin {partyName}. Mendaftarkan partai baru akan menghapus partai Anda saat ini.",
+					"deleting": "Menghapus...",
+					"about_to_delete": "Anda akan menghapus {partyName}. Tindakan ini tidak dapat dibatalkan.",
+					"about_to_register": "Anda akan mendirikan partai baru."
+				},
+				"detail": {
+					"failed_to_load": "Gagal memuat data partai",
+					"party_not_found": "Partai tidak ditemukan",
+					"error_loading": "Kesalahan memuat partai",
+					"back_to_parties": "Kembali ke partai",
+					"description": "Deskripsi",
+					"party_info": "Informasi partai",
+					"leader": "Pemimpin",
+					"website": "Situs web",
+					"not_found_description": "Partai yang Anda cari tidak ada atau telah dibubarkan."
+				},
+				"delete_party": "Hapus partai",
+				"run_on_elections_and_earn": "Ikut pemilu dan dapatkan subsidi",
+				"ambassadors": {
+					"title": "Program Duta",
+					"description": "Undang teman dan dapatkan hadiah saat mereka terverifikasi dan saat partai mereka menerima subsidi",
+					"leaderboard": "Papan peringkat",
+					"no_rewards_yet": "Belum ada hadiah",
+					"col_ambassador": "Duta",
+					"col_invited": "Diundang",
+					"col_reward": "Hadiah",
+					"share_referral_link": "Bagikan tautan referensi"
+				},
+				"subsidies": {
+					"title": "Program Subsidi Partai",
+					"no_subsidies_yet": "Belum ada subsidi",
+					"description": "Pendanaan berdasarkan kinerja pemilu",
+					"col_subsidy": "Subsidi"
+				}
+			},
+			"elections": {
+				"detail": {
+					"topbar_title": "Pemilihan",
+					"not_found": "Pemilihan tidak ditemukan",
+					"not_found_description": "Pemilihan yang Anda cari tidak ada.",
+					"back_to_elections": "Kembali ke pemilihan",
+					"status_active": "Aktif",
+					"status_upcoming": "Mendatang",
+					"status_ended": "Berakhir",
+					"election_info": "Info pemilihan",
+					"reward_pool": "Kumpulan hadiah: {amount} WDD",
+					"reward_pool_minimum": "Kumpulan hadiah: minimal {amount} WDD",
+					"choose_a_party": "Pilih partai",
+					"no_parties_for_election": "Tidak ada partai yang tersedia untuk pemilihan ini.",
+					"results_title": "Hasil",
+					"vote_singular": "suara",
+					"vote_plural": "suara",
+					"no_votes": "Tidak ada suara yang diberikan dalam pemilihan ini.",
+					"test_election_name": "Pemilu uji coba {n}"
+				},
+				"list": {
+					"empty_state": "Tidak ada pemilihan ditemukan",
+					"active_section": "Pemilihan aktif",
+					"upcoming_section": "Pemilihan mendatang",
+					"previous_section": "Pemilihan sebelumnya"
+				}
+			}
+		},
+		"error": {
+			"title": "Terjadi kesalahan",
+			"description": "Terjadi kesalahan tak terduga. Silakan coba lagi.",
+			"error_id": "ID Kesalahan: {digest}",
+			"try_again": "Coba lagi"
+		},
+		"earn": {
+			"tabs": {
+				"basic_income": "Pendapatan dasar",
+				"savings": "Tabungan"
+			},
+			"basic_income": {
+				"subtitle_unauth": "Dapatkan uang karena Anda manusia",
+				"subtitle_claim": "Klaim drachma Anda",
+				"tooltip_claim": "1 WDD/hari, dibatasi 1 WDD. Kembali dalam 24 jam untuk memaksimalkan hasil.",
+				"claim_button": "Klaim",
+				"alert": {
+					"claim": {
+						"title": "Konfirmasi klaim",
+						"description": "Anda akan mengklaim {amount} WDD. Ini akan ditambahkan ke saldo dompet Anda."
+					}
+				},
+				"setup_subtitle": "Siapkan pendapatan dasar Anda",
+				"activate_loading": "Mengaktifkan...",
+				"activate_button": "Aktifkan pendapatan dasar",
+				"world_drachma": "Apa itu Drachma dunia (WDD)?",
+				"subtitle_unauth_raised_by_humanity": "Klaim dividen AI global Anda"
+			},
+			"savings": {
+				"title": "Rekening tabungan",
+				"subtitle": "Dapatkan bunga setiap detik",
+				"tooltip": "Suku bunga dasar tahunan 69%. Cairkan dan investasikan kembali secara rutin untuk mencapai imbal hasil efektif mendekati 100%. Tarik kapan saja.",
+				"deposit": "Setor",
+				"withdraw": "Tarik",
+				"balance": "Saldo",
+				"amount_deposit": "Jumlah untuk disetor",
+				"amount_withdraw": "Jumlah untuk ditarik",
+				"interest": "Bunga",
+				"collect": "Cairkan",
+				"alert": {
+					"collect": {
+						"title": "Konfirmasi pencairan",
+						"description": "Anda akan mencairkan {amount} WDD dalam bentuk bunga."
+					},
+					"deposit": {
+						"title": "Konfirmasi setoran",
+						"description": "Anda akan menyetor {amount} WDD."
+					},
+					"withdraw": {
+						"title": "Konfirmasi penarikan",
+						"description": "Anda akan menarik {amount} WDD."
+					}
+				},
+				"smart_contract_link": "Lihat kontrak pintar",
+				"verify": "Verifikasi"
+			}
+		},
+		"menu": {
+			"sections": {
+				"account": {
+					"title": "AKUN",
+					"account_info": "Informasi akun",
+					"referral_code": "Kode referral",
+					"referred_by": "Dirujuk oleh",
+					"language": "Bahasa"
+				},
+				"help": {
+					"title": "BANTUAN",
+					"quickstart": "Mulai Cepat",
+					"docs": "Wiki",
+					"help_center": "Pusat Bantuan"
+				},
+				"source_code": {
+					"title": "KODE SUMBER"
+				},
+				"legal": {
+					"title": "LEGAL",
+					"terms": "Ketentuan Penggunaan",
+					"privacy": "Kebijakan Privasi"
+				}
+			}
+		},
+		"wallet": {
+			"topbar": {
+				"title": "Dompet"
+			},
+			"balance": "Saldo",
+			"modals": {
+				"sign_out": {
+					"confirm": "Anda yakin ingin keluar?"
+				},
+				"disconnect": {
+					"confirm": "Apakah Anda yakin ingin memutuskan koneksi dompet Anda?"
+				},
+				"send": {
+					"button": "Kirim",
+					"withdraw_to_crypto": {
+						"description": "Tarik WDD ke akun crypto.",
+						"amount_label": "Jumlah",
+						"address_label": "Alamat dompet",
+						"network_label": "Jaringan"
+					}
+				},
+				"trade": {
+					"ethereum_jumper": "Ethereum WDD di Jumper",
+					"ethereum_uniswap": "Ethereum WDD di Uniswap",
+					"base_jumper": "Base Chain WDD di Jumper",
+					"base_uniswap": "Base Chain WDD di Uniswap",
+					"worldchain_jumper": "World Chain WDD di Jumper",
+					"worldchain_uniswap": "World Chain WDD di Uniswap"
+				},
+				"delete_account": {
+					"description": "Ini akan menghapus akun Anda secara permanen dan menghapus semua data Anda dari server kami. Tindakan ini tidak dapat dibatalkan — silakan lanjutkan dengan hati-hati.",
+					"deleting": "Menghapus..."
+				},
+				"connect_wallet_browser": {
+					"title": "Buka di MetaMask",
+					"description": "Untuk terhubung, salin tautan ini lalu buka di browser bawaan MetaMask.",
+					"copy_link": "Salin tautan"
+				},
+				"connect_wallet_picker": {
+					"description": "Beberapa dompet ditemukan. Pilih satu untuk terhubung."
+				},
+				"connect_wallet_no_wallet": {
+					"description": "Belum punya dompet?",
+					"find_wallet_link": "Temukan satu di WalletGuide"
+				}
+			},
+			"sections": {
+				"account": "AKUN",
+				"security": "KEAMANAN",
+				"google_account": "Akun Google",
+				"google_not_linked": "Belum ditautkan",
+				"passkeys": "Kunci sandi",
+				"passkeys_linked": "{count} tertaut",
+				"danger_zone": "ZONA BERBAHAYA",
+				"delete_account": {
+					"description": "Hapus permanen semua data Anda"
+				},
+				"verification": "VERIFIKASI",
+				"google_linked": "Ditautkan",
+				"account_label": "Akun"
+			},
+			"username": {
+				"label": "Nama pengguna",
+				"edit_title": "Edit nama pengguna",
+				"description": "3-30 karakter, alfanumerik, garis bawah dan tanda hubung"
+			},
+			"history": {
+				"title": "RIWAYAT"
+			},
+			"transactions": {
+				"failed_to_load": "Gagal memuat",
+				"no_transactions": "Belum ada transaksi",
+				"wdd_per_day": "WDD/hari",
+				"just_now": "Baru saja",
+				"minutes_ago": "{minutes}m yang lalu",
+				"hours_ago": "{hours}j yang lalu",
+				"days_ago": "{days}h yang lalu",
+				"filter": {
+					"all_types": "Semua jenis",
+					"select_type": "Pilih jenis",
+					"rewards": "Hadiah"
+				},
+				"types": {
+					"withdrawal": "Penarikan",
+					"received": "Diterima",
+					"sent": "Terkirim",
+					"ambassador_reward": "Hadiah duta",
+					"party_subsidy": "Subsidi partai",
+					"stream_created": "Stream dibuat",
+					"stream_updated": "Stream diperbarui",
+					"savings_deposit": "Tabungan setor",
+					"savings_withdrawal": "Tabungan tarik",
+					"savings_interest": "Tabungan bunga",
+					"referral_reward": "Hadiah referral"
+				}
+			}
+		}
+	},
+	"components": {
+		"identity": {
+			"self": {
+				"dialog_description": "Pindai kode QR ini untuk verifikasi dengan Self.",
+				"mobile_dialog_description": "Anda akan dialihkan ke aplikasi Self untuk melakukan verifikasi.",
+				"support_telegram": "Dukungan Self",
+				"verification_guide": "Panduan verifikasi",
+				"qr_alt": "QR verifikasi Self",
+				"callback_warning": "Peringatan",
+				"callback_warning_description": "URL callback verifikasi tidak dapat dijangkau dari ponsel Anda. Atur NEXT_PUBLIC_SELF_CALLBACK ke URL publik (atau atur NEXT_PUBLIC_PUBLIC_BASE_URL ke domain tunnel/pratinjau).",
+				"label": "Self",
+				"status_completed": "Terverifikasi",
+				"status_not_completed": "Belum terverifikasi",
+				"learn_about_self": "Pelajari tentang Self",
+				"primer": {
+					"title": "Self Protokol",
+					"description": "Dapatkan verifikasi tanpa mengungkapkan data pribadi apa pun."
+				}
+			},
+			"verification_warning": {
+				"title": "Dapatkan verifikasi",
+				"reward_cap_banner": "Reward pendapatan dasar dan tabungan dibatasi untuk warga yang belum terverifikasi. Verifikasi akun Anda untuk memperoleh tanpa batas."
+			}
+		},
+		"wdd_import_info": {
+			"message_prefix": "Sebagian besar dompet hanya menampilkan WDD setelah diimpor secara manual di chain yang dipilih menggunakan ",
+			"contract_address": "alamat kontrak"
+		}
+	},
+	"toasts": {
+		"generic_error": "Terjadi kesalahan",
+		"copied": "Disalin",
+		"wallet": {
+			"no_wallet": "Tidak ada alamat dompet",
+			"min_amount": "Minimal 10 WDD",
+			"sent": "Terkirim",
+			"account_deleted": "Akun dihapus",
+			"delete_failed": "Gagal menghapus akun",
+			"contract_address_error": "Tidak dapat menarik ke alamat kontrak",
+			"sign_out_failed": "Keluar gagal",
+			"google_linked": "Akun Google tertaut",
+			"google_already_linked": "Akun Google sudah tertaut ke akun lain",
+			"google_link_failed": "Tidak dapat memulai penautan Google",
+			"passkey_added": "Kunci sandi ditambahkan",
+			"passkey_add_failed": "Tidak dapat menambahkan kunci sandi"
+		},
+		"parties": {
+			"updated": "Diperbarui",
+			"update_failed": "Gagal memperbarui",
+			"update_error": "Kesalahan saat memperbarui partai",
+			"registered": "Partai terdaftar",
+			"register_failed": "Gagal mendaftarkan partai",
+			"register_error": "Kesalahan mendaftarkan partai",
+			"deleted": "Dihapus",
+			"delete_failed": "Gagal menghapus",
+			"delete_error": "Kesalahan menghapus"
+		},
+		"basic_income": {
+			"activated": "Pendapatan dasar diaktifkan",
+			"activate_failed": "Gagal mengaktifkan",
+			"claimed": "Berhasil diklaim",
+			"claim_failed": "Gagal mengklaim"
+		},
+		"savings": {
+			"collected": "Berhasil dicairkan",
+			"collect_failed": "Gagal mencairkan",
+			"deposited": "Disetor",
+			"deposit_failed": "Setoran gagal",
+			"withdrawn": "Ditarik",
+			"withdraw_failed": "Penarikan gagal"
+		}
+	},
+	"common": {
+		"confirm": "Konfirmasi",
+		"sign_in": "Masuk",
+		"connect": "Hubungkan",
+		"disconnect": "Putuskan koneksi",
+		"connect_wallet": "Hubungkan dompet",
+		"max": "Maks",
+		"loading": "Memuat...",
+		"processing": "Memproses...",
+		"insufficient_balance": "WDD tidak cukup",
+		"delete_account": "Hapus akun",
+		"sign_out": "Keluar",
+		"invalid_address": "Alamat tidak valid",
+		"coming_soon": "Segera hadir",
+		"withdraw": "Tarik",
+		"trade": "Perdagangan",
+		"continue": "Lanjutkan",
+		"close": "Tutup",
+		"updating": "Memperbarui...",
+		"save": "Simpan",
+		"vote": "Pilih",
+		"switch_to_base_chain": "Beralih ke Base Chain"
+	},
+	"auth": {
+		"choose_method": "Pilih metode pilihan Anda.",
+		"sign_in_with_google": "Lanjutkan dengan Google",
+		"sign_in_with_passkey": "Gunakan biometrik",
+		"sign_in_or_create": "Akses akun Anda dengan passkey, menggunakan sidik jari, pemindaian wajah, atau kunci layar.",
+		"create_account": "Buat akun",
+		"create_passkey_name": "Buat nama passkey",
+		"passkey_name_description": "Beri nama passkey Anda untuk mengidentifikasinya di pengelola kata sandi.",
+		"passkey_name": "Nama passkey"
+	}
 }
