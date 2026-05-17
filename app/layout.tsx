@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { headers } from "next/headers";
 import "./globals.css";
 import "@worldcoin/mini-apps-ui-kit-react/styles.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
 import { Suspense } from "react";
 import BottomNav from "@/components/bottom-nav";
@@ -135,7 +134,6 @@ export default async function RootLayout({
           <ReferralCapture />
         </Suspense>
         <BottomNav />
-        <SpeedInsights />
       </body>
     </html>
   );
