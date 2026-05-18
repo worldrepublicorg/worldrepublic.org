@@ -6,6 +6,11 @@ const localePattern = locales.join("|");
 const nextConfig: NextConfig = {
 	transpilePackages: ["@selfxyz/core", "@selfxyz/qrcode"],
 	reactCompiler: true,
+	// Enables Partial Prerendering (PPR) and the `"use cache"` directive.
+	// Routes are statically prerendered by default; dynamic data must live inside
+	// a Suspense boundary (or a runtime API call like cookies()/headers() opts the
+	// route out automatically).
+	cacheComponents: true,
 	async redirects() {
 		return [
 			{

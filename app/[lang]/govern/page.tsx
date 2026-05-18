@@ -1,4 +1,4 @@
-import { unstable_cache } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 import { Suspense } from "react";
 import {
 	type Dictionary,
@@ -12,30 +12,27 @@ import type { Election } from "@/lib/types/elections";
 import type { Party } from "@/lib/types/parties";
 import GovernPageClient from "./page-client";
 
-// Cache elections list for 1 day
-const getCachedElections = unstable_cache(
-	async () => {
-		return await getElections();
-	},
-	["elections-list"],
-	{ revalidate: 86400, tags: ["elections-list"] },
-);
+// Cache elections list for 1 day. Invalidated via revalidateTag("elections-list").
+async function getCachedElections() {
+	"use cache";
+	cacheTag("elections-list");
+	cacheLife("days");
+	return await getElections();
+}
 
-// Cache parties list for 1 day - same for all users
-// Invalidated via revalidateTag("parties-list") when parties change
-const getCachedParties = unstable_cache(
-	async () => {
-		const parties = await getParties({ limit: 100 });
-		// If parties is null (error), return empty array but log it
-		// ideally we would want to not cache this, but unstable_cache doesn't support conditional caching
-		if (parties === null) {
-			throw new Error("Failed to fetch parties");
-		}
-		return parties;
-	},
-	["parties-list"],
-	{ revalidate: 86400, tags: ["parties-list"] },
-);
+// Cache parties list for 1 day - same for all users.
+// Invalidated via revalidateTag("parties-list") when parties change.
+// We throw on a null result so the cache layer doesn't memoize the error path.
+async function getCachedParties() {
+	"use cache";
+	cacheTag("parties-list");
+	cacheLife("days");
+	const parties = await getParties({ limit: 100 });
+	if (parties === null) {
+		throw new Error("Failed to fetch parties");
+	}
+	return parties;
+}
 
 export async function generateStaticParams() {
 	return locales.map((lang) => ({ lang }));

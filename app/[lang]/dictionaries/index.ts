@@ -58,6 +58,10 @@ const dictionaries = {
 
 const DEFAULT_LOCALE: keyof typeof dictionaries = "en";
 
+// Note: kept on legacy `unstable_cache` because this module is imported by
+// `app/[lang]/error.tsx` (a Client Component). Migrating to the `"use cache"`
+// directive would require splitting the file or routing through a Server Action
+// wrapper. Revisit when the error boundary is refactored.
 export const getDictionary = unstable_cache(
 	async (locale: string) => {
 		const hasLocale = locale in dictionaries;
@@ -68,7 +72,7 @@ export const getDictionary = unstable_cache(
 		return loader();
 	},
 	["dictionary"],
-	{ revalidate: 60 },
+	{ revalidate: 86400 },
 );
 
 // Export locales for static generation
