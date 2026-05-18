@@ -1,21 +1,19 @@
 import "server-only";
 import "dotenv/config";
-import { neon, Pool } from "@neondatabase/serverless";
+import { neon, neonConfig, Pool } from "@neondatabase/serverless";
 import { sql } from "drizzle-orm";
 import { drizzle as drizzleHttp } from "drizzle-orm/neon-http";
 import { drizzle } from "drizzle-orm/neon-serverless";
+import { WebSocket } from "ws";
 import { applyIpv4Fetch } from "./ipv4-fetch";
 import * as schema from "./schema";
 
-// DATABASE_URL_LOCAL_DEV: direct (non-pooled) endpoint, used when developing locally
-// DATABASE_URL: pooler endpoint, used in production (Vercel)
-const connectionString =
-	process.env.DATABASE_URL_LOCAL_DEV || process.env.DATABASE_URL;
+neonConfig.webSocketConstructor = WebSocket;
+
+const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-	throw new Error(
-		"DATABASE_URL or DATABASE_URL_LOCAL_DEV environment variable is required",
-	);
+	throw new Error("DATABASE_URL environment variable is required");
 }
 
 if (process.env.FORCE_IPV4_FETCH === "true") {
@@ -38,19 +36,15 @@ if (global.__neonPool) {
 	global.__neonPool = pool;
 }
 
-// Use WebSocket Pool for writes in production (supports transactions)
-// Use HTTP driver for local dev — simpler, no WebSocket needed
-const db = process.env.DATABASE_URL_LOCAL_DEV
-	? dbReadOnly
-	: drizzle(pool, { schema });
+const db = drizzle(pool, { schema });
 
 export const getDbReadOnly = () => dbReadOnly;
 
 export function getConnectionInfo() {
 	return {
-		hasLocalDb: !!process.env.DATABASE_URL_LOCAL_DEV,
-		hasRemoteDb: !!process.env.DATABASE_URL,
+		hasDatabaseUrl: !!process.env.DATABASE_URL,
 		connectionType: "neon-http",
+		writeConnectionType: "neon-serverless",
 		poolCached: !!global.__neonPool,
 	};
 }

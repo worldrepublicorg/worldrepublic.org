@@ -78,6 +78,9 @@ importers:
       wagmi:
         specifier: ^3.6.15
         version: 3.6.15(@base-org/account@2.5.6(@types/react@19.2.7)(react@19.2.6)(typescript@5.9.3)(use-sync-external-store@1.4.0(react@19.2.6))(zod@3.25.76))(@tanstack/query-core@5.100.10)(@tanstack/react-query@5.100.10(react@19.2.6))(@types/react@19.2.7)(react@19.2.6)(typescript@5.9.3)(viem@2.49.2(typescript@5.9.3)(zod@3.25.76))
+      ws:
+        specifier: ^8.20.1
+        version: 8.20.1
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.4.15
@@ -97,6 +100,9 @@ importers:
       '@types/react-dom':
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.7)
+      '@types/ws':
+        specifier: ^8.18.1
+        version: 8.18.1
       babel-plugin-react-compiler:
         specifier: ^1.0.0
         version: 1.0.0
@@ -2234,6 +2240,9 @@ packages:
   '@types/stylis@4.2.5':
     resolution: {integrity: sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==}
 
+  '@types/ws@8.18.1':
+    resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
+
   '@uidotdev/usehooks@2.4.1':
     resolution: {integrity: sha512-1I+RwWyS+kdv3Mv0Vmc+p0dPYH0DTRAo04HLyXReYBL9AeseDWUJyi4THuksBJcu9F0Pih69Ak150VDnqbVnXg==}
     engines: {node: '>=16'}
@@ -4097,8 +4106,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.20.0:
-    resolution: {integrity: sha512-sAt8BhgNbzCtgGbt2OxmpuryO63ZoDk/sqaB/znQm94T4fCEsy/yV+7CdC1kJhOU9lboAEU7R3kquuycDoibVA==}
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -5972,7 +5981,7 @@ snapshots:
       '@solana/functional': 5.5.1(typescript@5.9.3)
       '@solana/rpc-subscriptions-spec': 5.5.1(typescript@5.9.3)
       '@solana/subscribable': 5.5.1(typescript@5.9.3)
-      ws: 8.20.0
+      ws: 8.20.1
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -6285,6 +6294,10 @@ snapshots:
   '@types/snarkjs@0.7.9': {}
 
   '@types/stylis@4.2.5': {}
+
+  '@types/ws@8.18.1':
+    dependencies:
+      '@types/node': 25.8.0
 
   '@uidotdev/usehooks@2.4.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
@@ -8380,7 +8393,7 @@ snapshots:
 
   ws@8.18.3: {}
 
-  ws@8.20.0: {}
+  ws@8.20.1: {}
 
   xmlhttprequest-ssl@2.1.2: {}
 

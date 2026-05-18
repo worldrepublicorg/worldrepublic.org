@@ -53,8 +53,7 @@ This repository contains the UI and server logic to interact with the WDD ecosys
    ```
 
 3. **Configure environment variables:**
-   - `DATABASE_URL_LOCAL_DEV` — direct (non-pooled) Postgres URL for local dev — https://console.neon.tech/
-   - `DATABASE_URL` — pooler Postgres URL (used in production) — https://console.neon.tech/
+   - `DATABASE_URL` — Neon Postgres URL (pooler) — https://console.neon.tech/
    - `NEXTAUTH_SECRET` — secret for NextAuth (generate with `openssl rand -base64 32`)
    - `NEXTAUTH_URL` — optional canonical app URL (e.g., http://localhost:3000)
    - `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` — Google OAuth credentials — https://console.cloud.google.com/apis/credentials
