@@ -31,8 +31,7 @@
 		"server-only": "^0.0.1",
 		"tailwind-merge": "^3.6.0",
 		"viem": "^2.49.2",
-		"wagmi": "^3.6.15",
-		"ws": "^8.20.1"
+		"wagmi": "^3.6.15"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.15",
@@ -41,7 +40,6 @@
 		"@types/node": "^25.8.0",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
-		"@types/ws": "^8.18.1",
 		"babel-plugin-react-compiler": "^1.0.0",
 		"dotenv": "^17.4.2",
 		"drizzle-kit": "^0.31.10",

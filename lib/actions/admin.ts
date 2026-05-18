@@ -1,4 +1,4 @@
-import { and, count, desc, eq, gt, isNull, sql } from "drizzle-orm";
+import { and, count, desc, eq, gt, sql } from "drizzle-orm";
 import type { PgDatabase } from "drizzle-orm/pg-core";
 import type * as schemaImport from "../db/schema";
 import {
@@ -255,19 +255,26 @@ export async function distributeElectionSubsidies(
 
 	// ── Phase 3: Write (only if not dry run) ──────────────────────
 
-	await db.transaction(async (tx) => {
-		const claimed = await tx
-			.update(elections)
-			.set({ distributedAt: nowDate })
-			.where(and(eq(elections.id, electionId), isNull(elections.distributedAt)))
-			.returning({ id: elections.id });
+	// Re-check guard to narrow the race window
+	const [recheck] = await db
+		.select({ distributedAt: elections.distributedAt })
+		.from(elections)
+		.where(eq(elections.id, electionId))
+		.limit(1);
 
-		if (claimed.length === 0) {
-			throw new Error(
-				`Election ${electionId} was already distributed by another process`,
-			);
-		}
+	if (recheck?.distributedAt) {
+		throw new Error(
+			`Election ${electionId} was distributed by another process at ${recheck.distributedAt.toISOString()}`,
+		);
+	}
 
+	// Claim the election first to prevent concurrent runs
+	await db
+		.update(elections)
+		.set({ distributedAt: nowDate })
+		.where(eq(elections.id, electionId));
+
+	try {
 		for (const write of pendingWrites) {
 			if (write.freezeStreamId) {
 				if (!write.freezeEndsAt) {
@@ -275,30 +282,39 @@ export async function distributeElectionSubsidies(
 						`Missing freezeEndsAt for stream ${write.freezeStreamId}`,
 					);
 				}
-				await tx
+				await db
 					.update(streams)
 					.set({ endsAt: write.freezeEndsAt })
 					.where(eq(streams.id, write.freezeStreamId));
 			}
 
-			const [newStream] = await tx
+			const [newStream] = await db
 				.insert(streams)
 				.values(write.insertStream)
 				.returning({ id: streams.id });
 
-			await tx.insert(transactions).values({
+			await db.insert(transactions).values({
 				...write.insertTransaction,
 				streamId: newStream.id,
 			});
 		}
-	});
+	} catch (error) {
+		// If writes fail, clear distributedAt so it can be retried
+		await db
+			.update(elections)
+			.set({ distributedAt: null })
+			.where(eq(elections.id, electionId))
+			.catch(() => undefined);
+		throw error;
+	}
 
 	return summary;
 }
 
 /**
  * Reads existing stream state and computes the write operations needed,
- * without actually executing them. Phase 3 commits via db.transaction().
+ * without actually executing them. This separates reads from writes so
+ * the function works with HTTP-only database drivers (no transactions).
  */
 async function computeStreamWrite(
 	db: AnyDb,

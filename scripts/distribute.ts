@@ -1,11 +1,11 @@
 import "dotenv/config";
-import { neonConfig, Pool } from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-serverless";
-import { WebSocket } from "ws";
+import { neon } from "@neondatabase/serverless";
+import { drizzle } from "drizzle-orm/neon-http";
 import { distributeElectionSubsidies } from "../lib/actions/admin";
+import { applyIpv4Fetch } from "../lib/db/ipv4-fetch";
 import * as schema from "../lib/db/schema";
 
-neonConfig.webSocketConstructor = WebSocket;
+applyIpv4Fetch();
 
 const connectionString = process.env.DATABASE_URL;
 if (!connectionString) {
@@ -25,6 +25,9 @@ if (!electionIdArg) {
 }
 
 const electionId: string = electionIdArg;
+
+const sql = neon(connectionString);
+const db = drizzle(sql, { schema });
 
 function printSummary(summary: {
 	electionName: string;
@@ -59,11 +62,8 @@ function printSummary(summary: {
 }
 
 async function main() {
-	const pool = new Pool({ connectionString });
-	const db = drizzle(pool, { schema });
-
 	try {
-		console.log("Connecting via Neon WebSocket pool...");
+		console.log("Connecting via Neon HTTP (IPv4)...");
 		const summary = await distributeElectionSubsidies(db, electionId, {
 			dryRun,
 		});
@@ -77,8 +77,6 @@ async function main() {
 		console.error("Distribution failed:");
 		console.error(error);
 		process.exit(1);
-	} finally {
-		await pool.end();
 	}
 }
 
