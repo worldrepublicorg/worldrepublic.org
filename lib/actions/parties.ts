@@ -21,10 +21,6 @@ import type {
 	UpdatePartyData,
 } from "@/lib/types/parties";
 
-// Verbose query logging is gated behind DEBUG_DB to keep build/runtime output quiet.
-// Set DEBUG_DB=1 to re-enable per-query "starting"/"success" lines for local debugging.
-const DEBUG_DB = process.env.DEBUG_DB === "1";
-
 // Helper to generate party UUID
 // Uses PostgreSQL's gen_random_uuid() via Drizzle's defaultRandom()
 async function generatePartyId(): Promise<string> {
@@ -145,16 +141,13 @@ export async function createParty(
 			dissolvedAt: null,
 		});
 
-		// Revalidate paths and cache tags that show party/parties data.
-		// New party affects parties list, ambassador leaderboard (referrer column),
-		// and subsidy leaderboard (party row will appear when subsidies distribute).
+		// Revalidate paths and cache tags that show party/parties data
 		revalidatePath("/[lang]/govern", "page");
 		revalidatePath("/[lang]/govern/parties/[id]", "page");
 		revalidatePath("/[lang]/parties", "page");
 		revalidatePath("/[lang]/parties/[id]", "page");
 		revalidateTag("parties-list", "default");
 		revalidateTag("ambassador-leaderboard", "default");
-		revalidateTag("subsidy-leaderboard", "default");
 
 		return { success: true, partyId };
 	} catch (error) {
@@ -308,13 +301,12 @@ export async function updateParty(
 
 		await db.update(parties).set(pgUpdates).where(eq(parties.id, partyId));
 
-		// Party name appears in subsidy leaderboard, so bust it too if the name changed.
+		// Revalidate paths and cache tags that show party/parties data
 		revalidatePath("/[lang]/govern", "page");
 		revalidatePath("/[lang]/govern/parties/[id]", "page");
 		revalidatePath("/[lang]/parties", "page");
 		revalidatePath(`/[lang]/parties/${partyId}`, "page");
 		revalidateTag("parties-list", "default");
-		revalidateTag("subsidy-leaderboard", "default");
 
 		return { success: true };
 	} catch (error) {
@@ -351,13 +343,13 @@ export async function deleteParty(
 			.set({ dissolvedAt: new Date() })
 			.where(eq(parties.id, partyId));
 
+		// Revalidate paths and cache tags that show party/parties data
 		revalidatePath("/[lang]/govern", "page");
 		revalidatePath("/[lang]/govern/parties/[id]", "page");
 		revalidatePath("/[lang]/parties", "page");
 		revalidatePath("/[lang]/parties/[id]", "page");
 		revalidateTag("parties-list", "default");
 		revalidateTag("ambassador-leaderboard", "default");
-		revalidateTag("subsidy-leaderboard", "default");
 
 		return { success: true };
 	} catch (error) {
@@ -457,11 +449,10 @@ async function executeQueryWithTimeout<T>(
 	const connInfo = getConnectionInfo();
 	const readDb = getDbReadOnly();
 
-	if (DEBUG_DB) {
-		console.log(
-			`[${context}] Starting query (requestId: ${requestId}, connection: ${connInfo.connectionType}, timeout: ${timeoutMs}ms)`,
-		);
-	}
+	// Log connection info for debugging
+	console.log(
+		`[${context}] Starting query (requestId: ${requestId}, connection: ${connInfo.connectionType}, timeout: ${timeoutMs}ms)`,
+	);
 
 	const startTime = performance.now();
 	const result = await Promise.race([
@@ -560,11 +551,9 @@ export async function getParties(
 		// Convert PostgreSQL rows to Party objects
 		const result = partyRows.map(pgRowToParty);
 
-		if (DEBUG_DB) {
-			console.log(
-				`[getParties] Success: ${result.length} parties in ${totalDuration.toFixed(2)}ms (requestId: ${requestId})`,
-			);
-		}
+		console.log(
+			`[getParties] Success: ${result.length} parties in ${totalDuration.toFixed(2)}ms (requestId: ${requestId})`,
+		);
 
 		return result;
 	} catch (error) {

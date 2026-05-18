@@ -1563,16 +1563,12 @@ export async function setUsername(username: string) {
 				.where(eq(parties.foundedBy, userUuid));
 		});
 
-		// Revalidate paths and cache tags that show user profile and parties.
-		// Username appears in: parties (leaderUsername), ambassador leaderboard
-		// (userProfiles.username), and subsidy leaderboard (parties.leaderUsername).
+		// Revalidate paths and cache tags that show user profile and parties
 		revalidatePath("/[lang]/menu/account", "page");
 		revalidatePath("/[lang]/govern", "page");
 		revalidatePath("/[lang]/govern/parties/[id]", "page");
 		revalidatePath("/[lang]/parties", "page");
 		revalidateTag("parties-list", "default");
-		revalidateTag("ambassador-leaderboard", "default");
-		revalidateTag("subsidy-leaderboard", "default");
 
 		return { success: true };
 	} catch (error) {
