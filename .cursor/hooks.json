@@ -1,10 +1,16 @@
 {
 	"version": 1,
 	"hooks": {
+		"stop": [
+			{
+				"command": "bash .cursor/hooks/check-org-status.sh",
+				"description": "Remind to commit and push private org/ repo"
+			}
+		],
 		"subagentStop": [
 			{
 				"command": "bash .cursor/hooks/check-org-status.sh",
-				"description": "Check for uncommitted private notes"
+				"description": "Remind to commit and push private org/ repo"
 			}
 		]
 	}
