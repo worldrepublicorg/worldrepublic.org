@@ -26,5 +26,8 @@ npm-debug.log*
 # local org files
 org/
 
+# local wiki (Mintlify)
+docs/
+
 # Cursor 
 .cursor/

@@ -69,6 +69,16 @@ This repository contains the UI and server logic to interact with the WDD ecosys
    ```
    Then open `http://localhost:3000`
 
+## Repository layout
+
+| Path | Git in this repo | Purpose |
+| :--- | :--- | :--- |
+| `app/`, `lib/`, `components/` | Tracked | Public Next.js app (AGPL) |
+| `org/` | Ignored (nested private repo) | Operating docs — outreach, funding, backlog |
+| `docs/` | Ignored (nested private repo) | Mintlify wiki → [wiki.worldrepublic.org](https://wiki.worldrepublic.org) |
+
+Nested folders have their own remotes on GitHub. Cursor hooks remind you to commit and push after agent edits. Use `@org-sync` or `@docs-sync` for status.
+
 ## Scripts
 
 - `pnpm dev` — Start development server with Turbopack
