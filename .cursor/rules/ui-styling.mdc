@@ -1,0 +1,19 @@
+---
+description: "UI development guidelines using the Worldcoin UI Kit and Tailwind CSS."
+alwaysApply: false
+---
+## Core principle
+
+We use the `@worldcoin/mini-apps-ui-kit-react` for all major UI elements and Tailwind CSS for all styling.
+
+## Component usage
+
+- **Must**: Use components from `@worldcoin/mini-apps-ui-kit-react` instead of native HTML elements where an equivalent exists. For example, use `<Button>` instead of `<button>`, and `<Typography>` for all text.
+- **Must**: Use the `useToast()` hook from the UI kit for all user notifications (success, error, info).
+- **Icons**: Use icons from `react-icons/pi` to maintain visual consistency.
+
+## Styling with Tailwind CSS
+
+- **Must**: All styling must be done with Tailwind CSS utility classes in the `className` prop.
+- **Do not**: Write custom CSS files or use inline `style={{}}` objects.
+- **Maintainability**: If you find yourself repeating the same combination of Tailwind classes on multiple elements, extract that element into a reusable React component ([Tailwind Best Practice](https://tailwindcss.com/docs/utility-first#maintainability-concerns)). Do not use `@apply`.

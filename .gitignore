@@ -28,6 +28,3 @@ org/
 
 # local wiki (Mintlify)
 docs/
-
-# Cursor 
-.cursor/

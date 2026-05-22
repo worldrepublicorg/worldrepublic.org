@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"hooks": {
+		"afterFileEdit": [
+			{
+				"command": "bash .cursor/hooks/mark-nested-repo-dirty.sh",
+				"matcher": "Write",
+				"description": "Flag org/ or docs/ edits for sync reminder on stop"
+			}
+		],
+		"stop": [
+			{
+				"command": "bash .cursor/hooks/check-nested-repo-status.sh",
+				"loop_limit": 1,
+				"description": "Remind to sync nested repos edited this turn"
+			}
+		]
+	}
+}

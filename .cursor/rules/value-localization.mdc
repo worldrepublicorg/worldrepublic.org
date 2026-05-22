@@ -1,0 +1,30 @@
+---
+description: "Localize UI-visible numeric values from lang/locale."
+alwaysApply: false
+---
+
+# Value Localization
+
+UI-visible numbers must be locale-aware.
+
+- **Must**: Derive locale from route language using `getSafeLocale(lang)` (or equivalent safe fallback).
+- **Must**: Format displayed numbers with `Intl.NumberFormat(locale, ...)` or `value.toLocaleString(locale, ...)`.
+- **Must**: Reuse the same localized formatted string in UI text interpolation (dialogs, toasts, labels).
+- **Must not**: Use raw `toFixed()` output directly in rendered UI text.
+- **Allowed**: Use `toFixed()` only for internal math/precision steps, then pass the result through locale formatting before rendering.
+
+## Examples
+
+```tsx
+// ❌ BAD
+const amount = reward.toFixed(6);
+return <span>{amount}</span>;
+
+// ✅ GOOD
+const locale = getSafeLocale(lang);
+const amount = new Intl.NumberFormat(locale, {
+  minimumFractionDigits: 6,
+  maximumFractionDigits: 6,
+}).format(reward);
+return <span>{amount}</span>;
+```
