@@ -22,12 +22,3 @@ npm-debug.log*
 
 # misc
 .DS_Store
-
-# org files
-org/
-
-# mintlify wiki
-docs/
-
-# multipass mobile app
-multipass/
