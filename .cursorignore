@@ -1,3 +1,4 @@
 # Unignore nested repos for Cursor indexing even though they are gitignored
 !/org/
 !/docs/
+!/multipass/

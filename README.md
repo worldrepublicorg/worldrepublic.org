@@ -76,6 +76,7 @@ This repository contains the UI and server logic to interact with the WDD ecosys
 | `app/`, `lib/`, `components/` | Tracked | Public Next.js app (AGPL) |
 | `org/` | Ignored (nested private repo) | Operating docs — distribution, relationships, capital, backlog |
 | `docs/` | Ignored (nested private repo) | Mintlify wiki → [wiki.worldrepublic.org](https://wiki.worldrepublic.org) |
+| `multipass/` | Ignored (nested private repo) | Verification app — see [org/product/backlog.md](org/product/backlog.md) |
 
 Nested folders have their own remotes on GitHub.
 
