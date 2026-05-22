@@ -9,7 +9,5 @@ alwaysApply: false
 The `/docs/` folder is the **Mintlify wiki** source (private repo until published).
 
 - **Separate lifecycle**: Nested git repository (`github.com/worldrepublicorg/docs`), gitignored in the main app repo. Cursor Changes will not show it.
-- **After edits**: Remind the user to sync `docs/` (commit + push). Suggest `@docs-sync` or `bash .cursor/hooks/check-nested-repo-status.sh --report --repo docs`.
 - **User-visible app changes**: Update wiki pages when behavior is public; follow [world-republic-docs.mdc](../../docs/.cursor/rules/world-republic-docs.mdc).
 - **Privacy**: Never copy private `org/` content into `docs/`.
-- **Do not commit** unless the user explicitly asks.

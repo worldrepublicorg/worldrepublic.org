@@ -77,7 +77,7 @@ This repository contains the UI and server logic to interact with the WDD ecosys
 | `org/` | Ignored (nested private repo) | Operating docs — distribution, relationships, capital, backlog |
 | `docs/` | Ignored (nested private repo) | Mintlify wiki → [wiki.worldrepublic.org](https://wiki.worldrepublic.org) |
 
-Nested folders have their own remotes on GitHub. Cursor hooks remind you to commit and push after agent edits. Use `@org-sync` or `@docs-sync` for status.
+Nested folders have their own remotes on GitHub.
 
 ## Scripts
 

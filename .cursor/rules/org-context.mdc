@@ -10,4 +10,4 @@ alwaysApply: false
 
 - Index: [org/README.md](../../org/README.md) · [org/AGENTS.md](../../org/AGENTS.md)
 - Ship code in main repo; public docs in `docs/` — do not copy org into public paths
-- No secrets or full email threads in git; `@org-sync` to commit when the user asks
+- No secrets or full email threads in git
