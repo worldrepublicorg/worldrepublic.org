@@ -5,6 +5,8 @@ import { randomUUID } from "node:crypto";
 export type MultipassDevSession = {
 	id: string;
 	createdAt: number;
+	verifiedAt?: number;
+	nullifier?: string;
 };
 
 const globalForSessions = globalThis as typeof globalThis & {
@@ -31,6 +33,39 @@ export function getMultipassDevSession(
 	id: string,
 ): MultipassDevSession | undefined {
 	return sessionStore().get(id);
+}
+
+export function markMultipassDevSessionVerified(
+	id: string,
+	nullifier: string,
+): MultipassDevSession | undefined {
+	const session = sessionStore().get(id);
+	if (!session) {
+		return undefined;
+	}
+	session.verifiedAt = Date.now();
+	session.nullifier = nullifier;
+	return session;
+}
+
+export type MultipassDevSessionStatus = {
+	verified: boolean;
+	nullifier?: string;
+	verifiedAt?: number;
+};
+
+export function getMultipassDevSessionStatus(
+	id: string,
+): MultipassDevSessionStatus | undefined {
+	const session = getMultipassDevSession(id);
+	if (!session) {
+		return undefined;
+	}
+	return {
+		verified: typeof session.verifiedAt === "number",
+		nullifier: session.nullifier,
+		verifiedAt: session.verifiedAt,
+	};
 }
 
 /** Public origin for verifyUrl (tunnel / deploy must set NEXTAUTH_URL). */

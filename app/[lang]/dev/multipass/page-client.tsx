@@ -5,7 +5,7 @@ import {
 	Typography,
 	useToast,
 } from "@worldcoin/mini-apps-ui-kit-react";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { TopBar } from "@/components/topbar";
 import { copyToClipboard } from "@/lib/utils";
 
@@ -14,10 +14,17 @@ type SessionResponse = {
 	verifyUrl: string;
 };
 
+type SessionStatus = {
+	verified: boolean;
+	nullifier?: string;
+	verifiedAt?: number;
+};
+
 export default function MultipassDevPageClient() {
 	const { toast } = useToast();
 	const [loading, setLoading] = useState(false);
 	const [session, setSession] = useState<SessionResponse | null>(null);
+	const [status, setStatus] = useState<SessionStatus | null>(null);
 	const [error, setError] = useState<string | null>(null);
 
 	const createSession = useCallback(async () => {
@@ -32,8 +39,10 @@ export default function MultipassDevPageClient() {
 				throw new Error(body.error || `Failed (${resp.status})`);
 			}
 			setSession({ id: body.id, verifyUrl: body.verifyUrl });
+			setStatus({ verified: false });
 		} catch (err) {
 			setSession(null);
+			setStatus(null);
 			const message =
 				err instanceof Error ? err.message : "Failed to create session";
 			setError(message);
@@ -50,6 +59,39 @@ export default function MultipassDevPageClient() {
 			error: "Could not copy",
 		});
 	}, [session?.verifyUrl, toast]);
+
+	useEffect(() => {
+		if (!session?.id || status?.verified) {
+			return;
+		}
+
+		let cancelled = false;
+
+		const poll = async () => {
+			try {
+				const resp = await fetch(
+					`/api/dev/multipass/sessions/${session.id}/status`,
+				);
+				if (!resp.ok || cancelled) {
+					return;
+				}
+				const body = (await resp.json()) as SessionStatus;
+				if (!cancelled) {
+					setStatus(body);
+				}
+			} catch {
+				// Keep polling; dev page is unauthenticated test harness only.
+			}
+		};
+
+		void poll();
+		const interval = setInterval(() => void poll(), 2000);
+
+		return () => {
+			cancelled = true;
+			clearInterval(interval);
+		};
+	}, [session?.id, status?.verified]);
 
 	return (
 		<div className="pb-safe flex min-h-dvh flex-col">
@@ -130,6 +172,34 @@ export default function MultipassDevPageClient() {
 						>
 							Copy verify URL
 						</Button>
+
+						<div>
+							<Typography
+								variant="subtitle"
+								level={3}
+								className="mb-1 text-xs font-medium text-gray-500"
+							>
+								Status
+							</Typography>
+							<Typography
+								variant="body"
+								level={3}
+								className={`text-[14px]! ${status?.verified ? "text-green-700" : "text-gray-600"}`}
+							>
+								{status?.verified
+									? "Verified (stub aggregate received)"
+									: "Waiting for multipass to sign…"}
+							</Typography>
+							{status?.verified && status.nullifier ? (
+								<Typography
+									variant="body"
+									level={3}
+									className="mt-2 break-all font-mono text-[12px]! text-gray-700"
+								>
+									{status.nullifier}
+								</Typography>
+							) : null}
+						</div>
 					</div>
 				) : null}
 			</div>

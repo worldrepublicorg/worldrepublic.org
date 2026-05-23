@@ -4,7 +4,29 @@ import { createHash, randomUUID } from "node:crypto";
 
 type AggregateRequestBody = {
 	request?: { petitionId?: string };
+	disclosures?: unknown[];
 };
+
+export type AggregateRequestMetrics = {
+	bodyBytes: number;
+	disclosuresLength: number;
+	sessionId?: string;
+};
+
+export function getAggregateRequestMetrics(
+	raw: string,
+	body: AggregateRequestBody,
+): AggregateRequestMetrics {
+	const disclosures = body.disclosures;
+	return {
+		bodyBytes: new TextEncoder().encode(raw).length,
+		disclosuresLength: Array.isArray(disclosures) ? disclosures.length : 0,
+		sessionId:
+			typeof body.request?.petitionId === "string"
+				? body.request.petitionId
+				: undefined,
+	};
+}
 
 export function parseAggregateRequestBody(
 	raw: string,
