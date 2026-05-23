@@ -1,6 +1,9 @@
 import "server-only";
 
 import { randomUUID } from "node:crypto";
+import { and, eq } from "drizzle-orm";
+import { db } from "@/lib/db/connection";
+import { multipassDevSessions } from "@/lib/db/schema";
 
 export type MultipassDevSession = {
 	id: string;
@@ -9,66 +12,144 @@ export type MultipassDevSession = {
 	nullifier?: string;
 };
 
-const globalForSessions = globalThis as typeof globalThis & {
-	__multipassDevSessions?: Map<string, MultipassDevSession>;
-};
+const SESSION_TTL_MS = 24 * 60 * 60 * 1000;
 
-function sessionStore(): Map<string, MultipassDevSession> {
-	if (!globalForSessions.__multipassDevSessions) {
-		globalForSessions.__multipassDevSessions = new Map();
-	}
-	return globalForSessions.__multipassDevSessions;
-}
-
-export function createMultipassDevSession(): MultipassDevSession {
-	const session: MultipassDevSession = {
-		id: randomUUID(),
-		createdAt: Date.now(),
+function rowToSession(
+	row: typeof multipassDevSessions.$inferSelect,
+): MultipassDevSession {
+	return {
+		id: row.id,
+		createdAt: row.createdAt.getTime(),
+		verifiedAt: row.verifiedAt?.getTime(),
+		nullifier: row.nullifier ?? undefined,
 	};
-	sessionStore().set(session.id, session);
-	return session;
 }
 
-export function getMultipassDevSession(
-	id: string,
-): MultipassDevSession | undefined {
-	return sessionStore().get(id);
+async function expirePendingSessionIfStale(id: string): Promise<void> {
+	await db
+		.update(multipassDevSessions)
+		.set({ status: "expired" })
+		.where(
+			and(
+				eq(multipassDevSessions.id, id),
+				eq(multipassDevSessions.status, "pending"),
+			),
+		);
 }
 
-export function markMultipassDevSessionVerified(
+async function loadSession(
 	id: string,
-	nullifier: string,
-): MultipassDevSession | undefined {
-	const session = sessionStore().get(id);
-	if (!session) {
+): Promise<MultipassDevSession | undefined> {
+	const [row] = await db
+		.select()
+		.from(multipassDevSessions)
+		.where(eq(multipassDevSessions.id, id))
+		.limit(1);
+
+	if (!row) {
 		return undefined;
 	}
-	session.verifiedAt = Date.now();
-	session.nullifier = nullifier;
-	return session;
+
+	if (row.status === "pending" && row.expiresAt.getTime() <= Date.now()) {
+		await expirePendingSessionIfStale(id);
+		return undefined;
+	}
+
+	if (row.status === "expired") {
+		return undefined;
+	}
+
+	return rowToSession(row);
 }
 
-export type MultipassDevSessionStatus = {
+export async function createMultipassDevSession(): Promise<MultipassDevSession> {
+	const id = randomUUID();
+	const expiresAt = new Date(Date.now() + SESSION_TTL_MS);
+
+	await db.insert(multipassDevSessions).values({
+		id,
+		status: "pending",
+		nullifier: null,
+		verifiedAt: null,
+		expiresAt,
+	});
+
+	return {
+		id,
+		createdAt: Date.now(),
+	};
+}
+
+export async function getMultipassDevSession(
+	id: string,
+): Promise<MultipassDevSession | undefined> {
+	return loadSession(id);
+}
+
+export async function markMultipassDevSessionVerified(
+	id: string,
+	nullifier: string,
+): Promise<MultipassDevSession | undefined> {
+	const verifiedAt = new Date();
+
+	const [row] = await db
+		.update(multipassDevSessions)
+		.set({
+			status: "verified",
+			nullifier,
+			verifiedAt,
+		})
+		.where(
+			and(
+				eq(multipassDevSessions.id, id),
+				eq(multipassDevSessions.status, "pending"),
+			),
+		)
+		.returning();
+
+	if (!row) {
+		return loadSession(id);
+	}
+
+	return rowToSession(row);
+}
+
+export type MultipassDevSessionStatusResponse = {
 	verified: boolean;
 	nullifier?: string;
 	verifiedAt?: number;
 };
 
-export function getMultipassDevSessionStatus(
+export async function getMultipassDevSessionStatus(
 	id: string,
-): MultipassDevSessionStatus | undefined {
-	const session = getMultipassDevSession(id);
-	if (!session) {
+): Promise<MultipassDevSessionStatusResponse | undefined> {
+	const [row] = await db
+		.select()
+		.from(multipassDevSessions)
+		.where(eq(multipassDevSessions.id, id))
+		.limit(1);
+
+	if (!row) {
 		return undefined;
 	}
+
+	if (row.status === "pending" && row.expiresAt.getTime() <= Date.now()) {
+		await expirePendingSessionIfStale(id);
+		return undefined;
+	}
+
+	if (row.status === "expired") {
+		return undefined;
+	}
+
 	return {
-		verified: typeof session.verifiedAt === "number",
-		nullifier: session.nullifier,
-		verifiedAt: session.verifiedAt,
+		verified: row.status === "verified",
+		nullifier: row.nullifier ?? undefined,
+		verifiedAt: row.verifiedAt?.getTime(),
 	};
 }
 
-/** Public origin for verifyUrl (tunnel / deploy must set NEXTAUTH_URL). */
+/** Public origin for verifyUrl; prefers NEXTAUTH_URL when set. */
 export function getMultipassDevOrigin(request: Request): string {
 	const fromEnv = process.env.NEXTAUTH_URL?.trim().replace(/\/$/, "");
 	if (fromEnv) {

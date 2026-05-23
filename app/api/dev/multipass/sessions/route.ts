@@ -6,7 +6,7 @@ import {
 } from "@/lib/dev/multipass/sessions";
 
 export async function POST(request: Request) {
-	const session = createMultipassDevSession();
+	const session = await createMultipassDevSession();
 	const origin = getMultipassDevOrigin(request);
 	const verifyUrl = multipassVerifyUrl(origin, session.id);
 

@@ -297,6 +297,23 @@ export const selfVerificationSessionsRelations = relations(
 	}),
 );
 
+/** Ephemeral multipass dev verification sessions (paste verifyUrl + poll status); replaces process-local Map */
+export const multipassDevSessions = pgTable(
+	"multipass_dev_sessions",
+	{
+		id: uuid("id").primaryKey().defaultRandom(),
+		status: varchar("status", { length: 16 }).notNull(),
+		nullifier: text("nullifier"),
+		createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+		verifiedAt: timestamp("verified_at", { mode: "date" }),
+		expiresAt: timestamp("expires_at", { mode: "date" }).notNull(),
+	},
+	(table) => [
+		index("multipass_dev_sessions_expires_idx").on(table.expiresAt),
+		index("multipass_dev_sessions_status_idx").on(table.status),
+	],
+);
+
 // Referrals table - tracks ambassador referral relationships
 export const referrals = pgTable(
 	"referrals",

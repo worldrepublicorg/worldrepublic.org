@@ -20,7 +20,10 @@ export async function POST(request: Request) {
 
 	const response = buildStubAggregateResponse(parsed);
 	if (metrics.sessionId) {
-		markMultipassDevSessionVerified(metrics.sessionId, response.nullifier);
+		await markMultipassDevSessionVerified(
+			metrics.sessionId,
+			response.nullifier,
+		);
 	}
 
 	return NextResponse.json(response);
