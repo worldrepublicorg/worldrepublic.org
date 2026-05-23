@@ -23,6 +23,6 @@ npm-debug.log*
 # misc
 .DS_Store
 
-docs/
-multipass/
-org/
+/docs/
+/multipass/
+/org/
