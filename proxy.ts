@@ -43,9 +43,9 @@ function getLocale(request: NextRequest): string {
 	}
 
 	const negotiatorHeaders: Record<string, string> = {};
-	request.headers.forEach((value, key) => {
+	for (const [key, value] of request.headers.entries()) {
 		negotiatorHeaders[key] = value;
-	});
+	}
 
 	try {
 		const languages = new Negotiator({

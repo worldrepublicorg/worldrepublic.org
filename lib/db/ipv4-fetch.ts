@@ -24,9 +24,9 @@ export function applyIpv4Fetch() {
 			if (init?.headers) {
 				const h = init.headers;
 				if (h instanceof Headers) {
-					h.forEach((v, k) => {
+					for (const [k, v] of h.entries()) {
 						headers[k] = v;
-					});
+					}
 				} else if (Array.isArray(h)) {
 					for (const [k, v] of h) headers[k] = v;
 				} else {
