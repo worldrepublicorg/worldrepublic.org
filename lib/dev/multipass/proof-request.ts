@@ -28,7 +28,8 @@ export function buildDevProofRequestPayload(
 		kind: "vocdoni-passport-request",
 		version: 1,
 		petitionId: session.id,
-		aggregateUrl: `${origin}/api/dev/multipass/proofs/aggregate`,
+		// Service base only — multipass appends `/api/proofs/aggregate` and `/api/health` (ServerClient.ts).
+		aggregateUrl: `${origin}/api/dev/multipass`,
 		service: {
 			name: "World Republic (dev)",
 			purpose: "Dev verification session",
