@@ -173,6 +173,15 @@ export default function MultipassDevPageClient() {
 							Copy verify URL
 						</Button>
 
+						<Typography
+							variant="body"
+							level={3}
+							className="text-[13px]! text-gray-600"
+						>
+							Heavy inner proofs (e.g. RSA-4096 DSC) run on this dev server;
+							witness bytes are sent over TLS and are not logged.
+						</Typography>
+
 						<div>
 							<Typography
 								variant="subtitle"

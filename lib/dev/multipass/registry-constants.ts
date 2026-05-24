@@ -1,0 +1,2 @@
+export const MULTIPASS_CHAIN_ID = 11155111;
+export const MULTIPASS_CIRCUIT_VERSION = "0.18.0";
