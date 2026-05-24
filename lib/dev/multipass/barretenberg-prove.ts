@@ -47,13 +47,18 @@ function initOptions() {
 	};
 }
 
+/** Vercel omits native `bb` binaries from the bundle; use WASM there. */
+function useNativeBbBackend(bbPath: string | undefined): bbPath is string {
+	return Boolean(bbPath) && !process.env.VERCEL;
+}
+
 async function getBarretenberg(): Promise<Barretenberg> {
 	if (!bbInit) {
 		bbInit = (async () => {
 			await mkdir(crsPath(), { recursive: true });
 			const options = initOptions();
 			let bb: Barretenberg;
-			if (options.bbPath) {
+			if (useNativeBbBackend(options.bbPath)) {
 				try {
 					bb = await Barretenberg.initSingleton({
 						...options,
