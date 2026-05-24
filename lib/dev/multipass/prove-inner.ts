@@ -1,7 +1,10 @@
 import "server-only";
 
-import { registryBytecodeToProveBytes } from "@/lib/dev/multipass/witness-bytecode";
 import type { ProveInnerValidatedRequest } from "@/lib/dev/multipass/prove-inner-request";
+import {
+	registryBytecodeToProveBytes,
+	witnessWireFormat,
+} from "@/lib/dev/multipass/witness-bytecode";
 
 export type ProveInnerSuccess = {
 	proof: string[];
@@ -40,6 +43,7 @@ export async function runProveInner(
 			JSON.stringify({
 				circuitName,
 				circuitVersion,
+				witnessWire: witnessWireFormat(witnessGzip),
 				witnessBytes: witnessGzip.length,
 				acirBytes: acir.length,
 				proofFields: result.proof.length,

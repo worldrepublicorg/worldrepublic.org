@@ -4,8 +4,10 @@ import { mkdir } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { Barretenberg } from "@aztec/bb.js";
-import pako from "pako";
-import { registryBytecodeToProveBytes } from "@/lib/dev/multipass/witness-bytecode";
+import {
+	registryBytecodeToProveBytes,
+	witnessBytesForProve,
+} from "@/lib/dev/multipass/witness-bytecode";
 
 const PROVE_SETTINGS = {
 	ipaAccumulation: false,
@@ -56,7 +58,7 @@ export async function proveCircuitOnServer(params: {
 }): Promise<ServerCircuitProveResult> {
 	const bytecode = registryBytecodeToProveBytes(params.registryBytecodeBase64);
 	const vk = new Uint8Array(Buffer.from(params.vkeyBase64, "base64"));
-	const witness = pako.ungzip(params.witnessGzip);
+	const witness = witnessBytesForProve(params.witnessGzip);
 
 	const bb = await getBarretenberg();
 

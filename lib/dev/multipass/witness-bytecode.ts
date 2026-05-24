@@ -27,3 +27,26 @@ export function registryBytecodeToProveBytes(
 		),
 	);
 }
+
+export function witnessWireFormat(
+	bytes: Uint8Array,
+): "empty" | "gzip" | "stack" {
+	if (bytes.length < 2) {
+		return "empty";
+	}
+	if (bytes[0] === 0x1f && bytes[1] === 0x8b) {
+		return "gzip";
+	}
+	return "stack";
+}
+
+/**
+ * ACVM may return gzip-wrapped witness bytes or a raw witness stack (JNI / Noir).
+ * Barretenberg `circuitProve` expects the uncompressed stack.
+ */
+export function witnessBytesForProve(witnessWire: Uint8Array): Uint8Array {
+	if (witnessWireFormat(witnessWire) === "gzip") {
+		return pako.ungzip(witnessWire);
+	}
+	return witnessWire;
+}
