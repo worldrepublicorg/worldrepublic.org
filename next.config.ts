@@ -3,24 +3,9 @@ import { locales } from "./lib/locales";
 
 const localePattern = locales.join("|");
 
-const proveInnerRoute = "/api/dev/multipass/api/proofs/prove-inner";
-
 const nextConfig: NextConfig = {
 	transpilePackages: ["@selfxyz/core", "@selfxyz/qrcode"],
 	reactCompiler: true,
-	// prove-inner: WASM only on Vercel (native build/ is ~130MB+ and exceeds the 250MB limit).
-	serverExternalPackages: ["@aztec/bb.js", "pako"],
-	outputFileTracingIncludes: {
-		[proveInnerRoute]: [
-			"./node_modules/@aztec/bb.js/dest/node/barretenberg_wasm/barretenberg-threads.wasm.gz",
-		],
-	},
-	outputFileTracingExcludes: {
-		[proveInnerRoute]: [
-			"./node_modules/@aztec/bb.js/build/**/*",
-			"./node_modules/@aztec/bb.js/src/**/*",
-		],
-	},
 	async redirects() {
 		return [
 			{

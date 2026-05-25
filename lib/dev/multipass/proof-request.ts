@@ -7,7 +7,6 @@ export type MultipassProofRequestPayload = {
 	kind: string;
 	version: number;
 	aggregateUrl: string;
-	proveInnerUrl: string;
 	petitionId?: string;
 	service?: {
 		name?: string;
@@ -31,7 +30,6 @@ export function buildDevProofRequestPayload(
 		petitionId: session.id,
 		// Service base only — multipass appends `/api/proofs/aggregate` and `/api/health` (ServerClient.ts).
 		aggregateUrl: `${origin}/api/dev/multipass`,
-		proveInnerUrl: `${origin}/api/dev/multipass/api/proofs/prove-inner`,
 		service: {
 			name: "World Republic (dev)",
 			purpose: "Dev verification session",
