@@ -8,6 +8,7 @@ export type MultipassProofRequestPayload = {
 	version: number;
 	aggregateUrl: string;
 	petitionId?: string;
+	validityMode?: "trusted" | "zk";
 	service?: {
 		name?: string;
 		logo?: string;
@@ -28,16 +29,16 @@ export function buildDevProofRequestPayload(
 		kind: "vocdoni-passport-request",
 		version: 1,
 		petitionId: session.id,
+		validityMode: "trusted",
 		// Service base only — multipass appends `/api/proofs/aggregate` and `/api/health` (ServerClient.ts).
 		aggregateUrl: `${origin}/api/dev/multipass`,
 		service: {
 			name: "World Republic (dev)",
 			purpose: "Dev verification session",
+			scope: `verification:${session.id}`,
 			devMode: true,
 			domain: new URL(origin).host,
 		},
-		query: {
-			nationality: { disclose: true },
-		},
+		query: {},
 	};
 }
