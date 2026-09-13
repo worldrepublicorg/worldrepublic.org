@@ -17,7 +17,7 @@
 		"@selfxyz/core": "^1.2.0-beta.1",
 		"@selfxyz/qrcode": "^1.0.22",
 		"@simplewebauthn/browser": "^9.0.1",
-		"@simplewebauthn/server": "^9.0.3",
+		"@simplewebauthn/server": "^13.3.2",
 		"@tanstack/react-query": "^5.100.10",
 		"@worldcoin/mini-apps-ui-kit-react": "^1.3.2",
 		"clsx": "^2.1.1",
